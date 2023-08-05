@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: pytemp
+Version: 0.0.1
+Summary: python temperature converter
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+
+## Description
+this is a python module to convert temperatures from one unit to another
+
+## Installation
+pip install pytemp
+
+
+## Usage
+
+
+from pytemp import pytemp
+
+### convert from 40 degree kelvin to fahrenheit and back
+fahrenheit = pytemp(40,'kelvin', 'fahrenheit')   ========> -387.66999999999996
+
+f = pytemp(40,'k', 'f')   ========> -387.66999999999996
+
+kelvin = pytemp(f,'fahrenheit','kelvin')   ========> 40.0
+
+k = pytemp(f,'f','k')   ========> 40.0
+
+
+
+### convert from 40 degree celsius to fahrenheit and back
+fahrenheit = pytemp(40,'celsius', 'fahrenheit')   ========> 104.0
+
+f = pytemp(40,'c', 'f')   ========> 104.0
+
+celsius = pytemp(f,'fahrenheit','celsius')   ========> 40.0
+
+c = pytemp(f,'f','c')   ========> 40.0
+
+
+
+
+### convert from 40 degree kelvin to celsius and back
+celsius = pytemp(40,'kelvin', 'celsius')   ========> -233.14999999999998
+
+c = pytemp(40,'k', 'c')   ========> -233.14999999999998
+
+kelvin = pytemp(c,'celsius','kelvin')   ========> 40.0
+
+k = pytemp(c,'c','k')   ========> 40.0
+
