@@ -1,0 +1,4 @@
+[console_scripts]
+python-pure-cdbdump = cdblib.cdbdump:main
+python-pure-cdbmake = cdblib.cdbmake:main
+

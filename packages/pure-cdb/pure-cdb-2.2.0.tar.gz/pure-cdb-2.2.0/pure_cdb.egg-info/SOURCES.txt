@@ -1,0 +1,14 @@
+README.rst
+setup.cfg
+setup.py
+cdblib/__init__.py
+cdblib/cdbdump.py
+cdblib/cdblib.py
+cdblib/cdbmake.py
+cdblib/djb_hash.py
+pure_cdb.egg-info/PKG-INFO
+pure_cdb.egg-info/SOURCES.txt
+pure_cdb.egg-info/dependency_links.txt
+pure_cdb.egg-info/entry_points.txt
+pure_cdb.egg-info/requires.txt
+pure_cdb.egg-info/top_level.txt

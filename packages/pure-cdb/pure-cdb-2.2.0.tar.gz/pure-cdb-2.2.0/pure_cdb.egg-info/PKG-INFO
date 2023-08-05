@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: pure-cdb
+Version: 2.2.0
+Summary: Pure Python reader/writer for Dan J. Berstein's CDB format.
+Home-page: UNKNOWN
+Author: David Wilson
+Author-email: dw@botanicus.net
+License: MIT
+Download-URL: https://github.com/dw/python-pure-cdb
+Description: Pure Python reader/writer for Dan J. Berstein's CDB format.
+Keywords: cdb file format appengine database db
+Platform: UNKNOWN
