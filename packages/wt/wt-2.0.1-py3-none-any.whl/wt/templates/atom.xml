@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+{%- set server_url = 'http://' + host if host else config.url %}
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ config.lang or 'en' }}">
+    <title>{{ config.title }}</title>
+    <subtitle>{{ config.subtitle }}</subtitle>
+    <link href="{{ server_url }}{{ baseurl('/') }}" rel="alternative" />
+    <link href="{{ server_url }}{{ baseurl('/atom.xml') }}" rel="self" />
+    <id>{{ server_url }}</id>
+    <updated>{{ now.isoformat() }}Z</updated>
+    {% for post in posts|reverse -%}
+    <entry>
+        <title>{{ post.title }}</title>
+        <link href="{{ server_url }}{{ baseurl(post.url) }}" rel="alternate" />
+        <id>{{ server_url }}{{ baseurl(post.url) }}</id>
+        <updated>{{ post.modified.isoformat() }}Z</updated>
+        <summary>{% if post.summary %}{{ post.summary }}{% endif %}</summary>
+        <content type="html">
+            {% autoescape true -%}
+            {{ markdown(post.text) }}
+            {%- endautoescape %}
+        </content>
+        <author>
+            <name>{{ config.author }}</name>
+        </author>
+    </entry>
+    {% endfor %}
+</feed>
