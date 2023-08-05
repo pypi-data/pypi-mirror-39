@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: shopstyle-api
+Version: 0.0.1
+Summary: API client for Shopstylecollective
+Home-page: https://github.com/aorzh/shopstyle_api
+Author: aorzh
+Author-email: al.orzh@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: requests
+
+API client for Shopstylecollective
+
+
