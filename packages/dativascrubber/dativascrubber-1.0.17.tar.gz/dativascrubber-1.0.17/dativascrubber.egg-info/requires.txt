@@ -1,0 +1,7 @@
+setuptools>=18.0
+pandas>=0.20.3
+numpy>=1.13.3
+python-levenshtein>=0.12.0
+Cython>=0.27.3
+pycrypto>=2.6.1
+dativatools>=2.9.16
