@@ -1,0 +1,7 @@
+click>=7.0
+pygments>=2.3.0
+
+[test]
+pytest-cov
+pytest>=3.6.1
+pytest-mock>=1.10.0
