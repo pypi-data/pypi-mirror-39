@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+work_weixin/__init__.py
+work_weixin/client.py
+work_weixin/consts.py
+work_weixin/exceptions.py
+work_weixin/utils.py
+work_weixin.egg-info/PKG-INFO
+work_weixin.egg-info/SOURCES.txt
+work_weixin.egg-info/dependency_links.txt
+work_weixin.egg-info/requires.txt
+work_weixin.egg-info/top_level.txt
