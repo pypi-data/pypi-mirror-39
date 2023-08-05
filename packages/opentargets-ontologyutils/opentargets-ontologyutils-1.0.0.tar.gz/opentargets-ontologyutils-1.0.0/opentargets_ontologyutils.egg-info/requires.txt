@@ -1,0 +1,10 @@
+requests
+numpy
+rdflib
+configparser
+future
+
+[dev]
+pytest-cov
+codecov
+tox
