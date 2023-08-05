@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: bigsi
+Version: 0.3
+Summary: BItsliced Genomic Signature Index - Efficient indexing and search in very large collections of WGS data
+Home-page: http://github.com/phelimb/bigsi
+Author: Phelim Bradley
+Author-email: wave@phel.im
+License: MIT
+Description: UNKNOWN
+Keywords: DBG coloured de bruijn graphs sequence search signture files signature index bitsliced
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
