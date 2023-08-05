@@ -1,0 +1,3 @@
+[console_scripts]
+ntu-course-planner = ntu_course_planner.main:main
+
