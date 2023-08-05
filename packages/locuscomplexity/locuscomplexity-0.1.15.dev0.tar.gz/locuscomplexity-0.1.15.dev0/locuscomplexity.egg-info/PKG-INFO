@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: locuscomplexity
+Version: 0.1.15.dev0
+Summary: UNKNOWN
+Home-page: https://github.com/LocusAnalytics/EconCmplx
+License: UNKNOWN
+Description: # LocusHandler
+        
+        This package is the implementation of the Economic Complexity and Fitness 
+        
+        ## Getting Started
+        
+        ### Installation
+        
+        The package can be downloaded and installed using pip.
+        
+        ```
+        pip install locuscomplexity 
+        ```
+        You will then be able to import the package in your Python scripts. 
+        
+        ```
+        import locuscomplexity as lc 
+        ```
+        You can also import specific parts of the package. 
+        ```
+        import locuscomplexity.complexity as lcmplx
+        import locuscomplexity.fitness as lfit 
+        ```
+        
+        
+        ### Prerequisites
+        
+        This package is coded in Python 3.
+        Using pip install, all Python libraries required to use it should be automatically installed on your machine. 
+        
+        ## How to use the Locus Economic Complexity package
+        
+        TBD 
+        
+        ## Documentation 
+        
+        * Please read the [Technical Brief](https://docs.google.com/document/d/1gwdKcbqvOK-uHqWyH0UBY89wR6rAX9-UICtLvss6Sno/edit?usp=sharing) for details on the project.
+        
+        ## Authors
+        
+        * **[Vinharng Chew](mailto:vchew@locus.co)**
+        * **[Olivia Dalglish](mailto:odalglish@locus.co)**
+        * **[Emeline Floc'h](mailto:efloch@locus.co)**
+        * **[Aaron Lee](mailto:alee@locus.co)**
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
