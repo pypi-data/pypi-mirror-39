@@ -1,0 +1,127 @@
+#!/usr/bin/env python3
+""" Deployment script for dstacademy's dontstarvetogether docker image.
+
+The image requires docker engine to be installed on the host system.This script requires pyYAML to be installed (to generate the docker-compose.yml file) and docker-compose (to run the docker-compose.yml file).
+
+This script is indended to be run in the directory in which you want to store the server data to generate most generic servers. If you need to tune the server after generation, look at https://github.com/fairplay-zone/docker-dontstarvetogether/blob/develop/docs/configuration.md for reference.
+"""
+
+__author__ = "lego_engineer"
+__maintainer__ = "lego_engineer"
+__email__ = "protopeters@gmail.com"
+__license__ = "MIT"
+__copyright__ = "Copyright 2018, lego_engineer"
+
+
+import argparse
+from dst_server_deploy import DockerComposer, ForestServer, CaveServer
+from dst_server_deploy.helpers import ask_yes_no, input_str_not_empty
+
+def main():
+    """ Main function. """
+
+    parser = argparse.ArgumentParser(description="A command for generating don't starve together server files. "
+            "For use with https://github.com/fairplay-zone/docker-dontstarvetogether docker image.",
+            epilog='Report issues at https://gitlab.com/lego_engineer/dst-server-deploy/issues/new')
+    parser.add_argument('--pvp', action='store_true',
+                        help='Enable PvP on this server.')
+    parser.add_argument('--caves', action='store_true',
+                        help='Enable caves on this server.')
+    parser.add_argument('--mods', action='store_true',
+                        help='Enable mods on this server.')
+    parser.add_argument('--world', action='store_true',
+                        help='Enable world customization on this server.')
+    parser.add_argument('--lang', action='store_true',
+                        help='Enable language customization on this server.')
+    parser.add_argument('--access', action='store_true',
+                        help='Enable access controls (passwords, steam groups, blocklists, etc) on this server.')
+    parser.add_argument('--offline', action='store_true',
+                        help='Enable offline settings (LAN only, etc) this server.')
+    parser.add_argument('--gamemode', action='store_true',
+                        help='Enable game mode customization on this server.')
+    parser.add_argument('--vote', action='store_true',
+                        help='Enable voting on this server.')
+    parser.add_argument('--norm', action='store_true',
+                        help='Alias for caves, mods, gamemode` and access.')
+    parser.add_argument('-i', '--interactive', action='store_true',
+                        help='Run script in interactive mode (equivalent to no flags).')
+    args = parser.parse_args()
+    server_params = vars(args)
+
+    if server_params['norm']:
+        server_params['caves'] = True
+        server_params['mods'] = True
+        server_params['gamemode'] = True
+        server_params['access'] = True
+    server_params['interactive'] = (not True in server_params.values()) or server_params['interactive']
+
+    # Required input
+    server_token = input_str_not_empty('Please provide your server token')
+    world_name = input_str_not_empty("Please provide a world name")
+    world_desc = input_str_not_empty("Please provide a world description")
+
+    if server_params['interactive']:
+        server_params['pvp'] = ask_yes_no("Should PvP be enabled?")
+        server_params['caves'] = ask_yes_no("Should caves be enabled?")
+        server_params['mods'] = ask_yes_no("Should mods be enabled?")
+        server_params['access'] = ask_yes_no("Do you want to customize server access controls?")
+        server_params['gamemode'] = ask_yes_no("Do you want to customize the server gamemode?")
+        server_params['world'] = ask_yes_no("Do you want to customize the world generation?")
+        server_params['vote'] = ask_yes_no("Do you want to customize the world voting settings?")
+        server_params['lang'] = ask_yes_no("Do you want to set the server language?")
+        server_params['offline'] = ask_yes_no("Do you want to customize the server offline settings")
+        print()
+
+
+    build_servers(server_token, world_name, world_desc, server_params)
+
+def build_servers(server_token, world_name, world_desc, server_params):
+    """ Build and write the server files.
+
+    :param dict server_params: A dictionary containing the needed server parameters.
+    """
+
+    # Build overworld object
+    underworld = None
+    overworld = ForestServer(server_token,
+                             world_name,
+                             world_desc,
+                             server_params['pvp'],
+                             server_params['caves'],
+                             server_params['mods'],
+                             server_params['world'],
+                             server_params['lang'],
+                             server_params['access'],
+                             server_params['offline'],
+                             server_params['gamemode'],
+                             server_params['vote'])
+    # Write env file.
+    overworld.write_env_param()
+
+    if server_params['caves']:
+        # Build underworld object
+        underworld = CaveServer(server_token,
+                                world_name,
+                                world_desc,
+                                server_params['pvp'],
+                                server_params['caves'],
+                                server_params['mods'],
+                                server_params['world'],
+                                server_params['lang'],
+                                server_params['access'],
+                                server_params['offline'],
+                                server_params['gamemode'],
+                                server_params['vote'])
+        # Write env file.
+        underworld.write_env_param()
+
+    docker_compose_writer = DockerComposer(overworld, underworld)
+    docker_compose_writer()
+
+
+
+
+
+if __name__ == "__main__":
+    main()
+
