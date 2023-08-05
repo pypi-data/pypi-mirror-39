@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: HelioPy
+Version: 0.6.3
+Summary: Python for space physics
+Home-page: http://heliopy.org/
+Author: David Stansby
+Author-email: dstansby@gmail.com
+License: GPL-3.0
+Keywords: physics,space-physics
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: astropy
+Provides-Extra: coordinates
+Requires-Dist: sunpy; extra == 'coordinates'
+Provides-Extra: data
+Requires-Dist: pandas; extra == 'data'
+Requires-Dist: sunpy; extra == 'data'
+Requires-Dist: requests; extra == 'data'
+Requires-Dist: cdflib; extra == 'data'
+Requires-Dist: wget; extra == 'data'
+Provides-Extra: spice
+Requires-Dist: spiceypy; extra == 'spice'
+
+UNKNOWN
+
+
