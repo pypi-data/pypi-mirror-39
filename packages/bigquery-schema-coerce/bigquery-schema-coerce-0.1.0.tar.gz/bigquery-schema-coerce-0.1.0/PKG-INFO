@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: bigquery-schema-coerce
+Version: 0.1.0
+Summary: Force python dictionary to type convert into the given bigquery schema
+Home-page: UNKNOWN
+Author: Jon Robison
+Author-email: narfman0@gmail.com
+License: LICENSE
+Description: UNKNOWN
+Keywords: bigquery-schema-coerce
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
