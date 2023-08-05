@@ -1,0 +1,9 @@
+cython
+hug
+numpy
+mmh3
+bitarray
+redis
+biopython
+pyyaml
+humanfriendly
