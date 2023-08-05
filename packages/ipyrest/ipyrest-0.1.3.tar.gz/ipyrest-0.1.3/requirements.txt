@@ -1,0 +1,19 @@
+# core
+
+ipywidgets>=7.4.2
+jinja2
+requests
+timeout_decorator
+typing
+vcrpy
+
+# plugins
+
+geojson
+gpxpy
+ipyleaflet
+ipyvolume>=0.5.1
+numpy
+pandas
+protobuf
+qgrid
