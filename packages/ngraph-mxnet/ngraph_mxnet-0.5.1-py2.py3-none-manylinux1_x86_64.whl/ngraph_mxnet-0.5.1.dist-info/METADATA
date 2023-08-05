@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: ngraph-mxnet
+Version: 0.5.1
+Summary: MXNet Python Package
+Requires-Dist: numpy (<=1.15.2,>=1.8.2)
+Requires-Dist: requests (<2.19.0,>=2.18.4)
+Requires-Dist: graphviz (<0.9.0,>=0.8.1)
+
+====================
+This directory and nested files contain the nGraph-MXNet Python package and language binding.
+
+## Installation
+To install nGraph-MXNet Python package, visit the [nGraph-MXNET github page](http://www.github.com/NervanaSystems/ngraph-mxnet)
+
+
+Home-page: https://github.com/NervanaSystems/ngraph-mxnet
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Other
+Classifier: Programming Language :: Perl
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
