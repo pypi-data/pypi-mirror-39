@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: git-create-repo
+Version: 0.0.2
+Summary: Creates local and remote repository from command line
+Home-page: https://github.com/OpticGenius/git-create-repo
+Author: Armaan McLeod
+Author-email: opticgenius@hotmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/OpticGenius/git-create-repo/issues
+Project-URL: Source, https://github.com/OpticGenius/git-create-repo
+Description: # git-create-repo
+        
+        [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+        
+        Creates local and remote git repository from command line. Tool is intented for **Python 3.5+**
+        
+        ## Install
+        
+        `pip install git-create-repo`
+        
+        ## Usage
+        
+        `git_create [-p] [-u username]`
+        
+        Make sure you are in the folder you want to create a repository in. Before running, `cd` into your desired folder. 
+        
+        #### Create public repository
+        
+        `git_create`
+        
+        #### Create private repository
+        
+        `git_create -p`
+        
+        You can also specify your username with `-u`. Otherwise the username from `git config user.name` will be used. 
+        
+        #### Next steps
+        
+        You will be prompted to enter your password and a description. The description can be skipped by simply pressing `enter`. If your password is incorrect, you will have to run the program again.
+        
+        If the above is successful, you will now a repository created on your Github account. 
+        
+        ## Note
+        
+        * This will also create a default `README.md` file including the name of your repository if none exist. 
+        * It is also suggested to create your own `.gitignore`, so you can ignore what files you don't want commited beforehand. 
+Keywords: git repository python remote
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
