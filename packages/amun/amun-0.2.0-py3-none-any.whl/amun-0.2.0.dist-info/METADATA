@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: amun
+Version: 0.2.0
+Summary: A CLI tool and library for interacting with Amun
+Home-page: UNKNOWN
+Author: Fridolin Pokorny
+Author-email: fridolin@redhat.com
+License: GPLv3+
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: certifi
+Requires-Dist: six
+Requires-Dist: python-dateutil
+Requires-Dist: setuptools
+Requires-Dist: urllib3
+
+A CLI tool and library for interacting with Amun
+
+
