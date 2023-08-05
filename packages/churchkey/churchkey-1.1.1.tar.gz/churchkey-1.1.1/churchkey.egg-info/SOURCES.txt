@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+churchkey/__init__.py
+churchkey/__main__.py
+churchkey.egg-info/PKG-INFO
+churchkey.egg-info/SOURCES.txt
+churchkey.egg-info/dependency_links.txt
+churchkey.egg-info/entry_points.txt
+churchkey.egg-info/requires.txt
+churchkey.egg-info/top_level.txt

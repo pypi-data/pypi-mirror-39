@@ -1,0 +1,3 @@
+[console_scripts]
+churchkey = churchkey.__main__:main
+
