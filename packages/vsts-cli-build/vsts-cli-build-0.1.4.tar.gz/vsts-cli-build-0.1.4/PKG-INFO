@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: vsts-cli-build
+Version: 0.1.4
+Summary: VSTS Build Command Line Interface
+Home-page: https://github.com/Microsoft/vsts-cli
+Author: Microsoft Corporation
+Author-email: vstscli@microsoft.com
+License: MIT
+Description:     
+Keywords: Microsoft,VSTS,Team Services,SDK,AzureTfs,CLI,Build
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
