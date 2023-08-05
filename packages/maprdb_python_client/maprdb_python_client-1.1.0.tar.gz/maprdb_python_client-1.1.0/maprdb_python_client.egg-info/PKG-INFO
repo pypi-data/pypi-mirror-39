@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: maprdb-python-client
+Version: 1.1.0
+Summary: MapR-DB Python Client
+Home-page: https://github.com/mapr/maprdb-python-client/
+Author: MapR, Inc.
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: A simple, lightweight library which provides access to MapR-DB. Client library able to supports all existing OJAI functionality and being absolutely capable with Java OJAI connector, which running under MapR Data Access Service.
+Keywords: ojai python client mapr maprdb
+Platform: UNKNOWN
