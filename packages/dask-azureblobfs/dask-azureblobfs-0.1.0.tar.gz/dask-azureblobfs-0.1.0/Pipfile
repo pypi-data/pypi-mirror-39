@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+dask = "*"
+azure-storage = "*"
+
+[dev-packages]
+ipython = "*"
+pytest = "*"
+pytest-runner = "*"
+sphinx = "*"
+setuptools-scm = "*"
+"flake8" = "*"
+cloudpickle = "*"
+numpy = "*"
+pandas = "*"
+toolz = "*"
+"unittest2" = "*"
+twine = "*"
+
+[requires]
+python_version = "3.6"
