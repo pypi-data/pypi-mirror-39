@@ -1,0 +1,3 @@
+[console_scripts]
+bayerstraits_16s = bayerstraits_16s.__main__:main
+
