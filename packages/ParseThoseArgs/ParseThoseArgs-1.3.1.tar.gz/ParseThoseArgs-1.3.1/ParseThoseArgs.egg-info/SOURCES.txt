@@ -1,0 +1,10 @@
+README.md
+setup.py
+./parsethoseargs/c_parser.c
+./parsethoseargs/python_wrapper.c
+ParseThoseArgs.egg-info/PKG-INFO
+ParseThoseArgs.egg-info/SOURCES.txt
+ParseThoseArgs.egg-info/dependency_links.txt
+ParseThoseArgs.egg-info/top_level.txt
+parsethoseargs/__init__.py
+parsethoseargs/demo.py
