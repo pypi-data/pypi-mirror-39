@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: fastlane
+Version: 0.1.7
+Summary: fastlane is a redis and docker based queueing service.
+Home-page: None
+Author: Bernardo Heynemann
+Author-email: heynemann@gmail.com
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: Flask-Redis-Sentinel (>=2.0,<3.0)
+Requires-Dist: click (>=6.7,<7.0)
+Requires-Dist: derpconf (>=0.8.2,<0.9.0)
+Requires-Dist: docker (>=3.4,<4.0)
+Requires-Dist: flask (>=1.0,<2.0)
+Requires-Dist: flask-mongoengine (>=0.9.5,<0.10.0)
+Requires-Dist: flask-redis (>=0.3.0,<0.4.0)
+Requires-Dist: python-dateutil (>=2.7,<3.0)
+Requires-Dist: raven (>=6.9,<7.0)
+Requires-Dist: redis (==2.10.6)
+Requires-Dist: rq (>=0.12.0,<0.13.0)
+Requires-Dist: rq-dashboard (>=0.3.12,<0.4.0)
+Requires-Dist: rq-scheduler (>=0.8.3,<0.9.0)
+Requires-Dist: sentry-sdk (==0.5.5)
+Requires-Dist: structlog (>=18.1,<19.0)
+Requires-Dist: ujson (>=1.35,<2.0)
