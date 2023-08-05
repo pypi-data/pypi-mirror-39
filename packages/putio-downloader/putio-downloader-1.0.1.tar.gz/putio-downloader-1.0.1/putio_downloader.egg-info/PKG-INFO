@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: putio-downloader
+Version: 1.0.1
+Summary: Download all files from your put.io account recursively with aria2c
+Home-page: https://github.com/cvockrodt/put.io-aria2c-downloader
+Author: Casey Vockrodt
+Author-email: casey.vockrodt@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7

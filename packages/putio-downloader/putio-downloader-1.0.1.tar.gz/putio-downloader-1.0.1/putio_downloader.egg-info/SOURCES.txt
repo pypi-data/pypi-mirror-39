@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+putio_downloader/__init__.py
+putio_downloader/cli.py
+putio_downloader/putio_aria2c_downloader.py
+putio_downloader.egg-info/PKG-INFO
+putio_downloader.egg-info/SOURCES.txt
+putio_downloader.egg-info/dependency_links.txt
+putio_downloader.egg-info/entry_points.txt
+putio_downloader.egg-info/requires.txt
+putio_downloader.egg-info/top_level.txt
+tests/__init__.py
+tests/test_cli.py
+tests/test_crc.py
