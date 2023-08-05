@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: bongocat
+Version: 0.1.0
+Summary: Bongo Cat overlay.
+Home-page: https://github.com/Exahilosys/bongocat
+Author: Exahilosys
+License: MIT
+Download-URL: https://github.com/Exahilosys/bongocat/archive/v0.1.0.tar.gz
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: docopt
+Requires-Dist: keyboard
+Requires-Dist: pillow
+
+
+## Installing
+
+```
+python3 -m pip install bongocat
+```
+
+## Usage
+
+Create a folder and fill it with images of your cat pressing buttons.    
+Rename each image to the button permutation you'd like it to appear for.  
+```
+cd /path/to/that/folder
+```
+Make sure there is a file named `-` (customizable) for neutral state.
+```
+bongocat
+```
+This invoke the script. See [images][images] for examples of file structures.
+
+[images]:https://github.com/Exahilosys/bongocat/tree/master/images
+
+
