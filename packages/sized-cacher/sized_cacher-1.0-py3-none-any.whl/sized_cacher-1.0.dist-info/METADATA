@@ -1,0 +1,39 @@
+Metadata-Version: 2.0
+Name: sized-cacher
+Version: 1.0
+Summary: cache results of function call with expire and maxsize.
+Home-page: https://github.com/weaming/sized-cacher
+Author: weaming
+Author-email: garden.yuen@gmail.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/weaming/sized-cacher
+Project-URL: Bug Reports, https://github.com/weaming/sized-cacher
+Keywords: math
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# Sized Cacher
+
+Cache results of function call with expire and maxsize.
+
+`pip3 install -U sized-cacher`
+
+## Usage
+
+```python
+disk_cache = DiskCache("./caches", maxsize=3)
+
+@disk_cache.caching
+def fn(a):
+    return a
+
+for i in range(10):
+    print(fn(i))
+```
+
+## API
+
+* `self.save(value, *args, **kwargs)`
+* `new_func = self.caching(func)`
+
+
