@@ -1,0 +1,17 @@
+ViewLogger/__init__.py,sha256=Sb66Y_eeT8VvunQY-QqR0Haek3A_bmErRsbZwEpQk6A,66
+ViewLogger/forms.py,sha256=Imqg5_sV-v32fXSeA8GVaT6uUIvhxQUIe-5vxJ_JxZ0,1842
+ViewLogger/middleware.py,sha256=Eo9v9J1qxb5pkzchS9KBiu7di2jNmHgQ3FD0EysDSL8,1978
+ViewLogger/models.py,sha256=SPwQ656nQZXnCGXwKNIcXkb2UWdqtasqzcYFPckw7Y0,546
+ViewLogger/tables.py,sha256=-6OyriT7kmggMdKuFAhV8iXh0N6GcVwS2GcMKsbr-2k,1361
+ViewLogger/urls.py,sha256=jj0dGLr7B7ymkUezbkqzllzbGoxgT-9XbPkAg89zwHc,125
+ViewLogger/views.py,sha256=jrTFBY2v_in8zhodsxl0Rt5uHfBpefxENdv_qsGlH2A,4708
+ViewLogger/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ViewLogger/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ViewLogger/migrations/0001_initial.py,sha256=4FgMn1o_eH0QJgIzcSCmCAHu_fC4tIvWASJkQxMpggE,948
+ViewLogger/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ViewLogger/templates/mainLog.html,sha256=r4UmkcKCd_XsmAJz5aZS0R_4f3iimbWw8w0kOXQaegc,4094
+ViewLogger-1.5.3.dist-info/LICENSE,sha256=zG4QuZWWL9Pb3RRH9vt2XfNscYaw-ZIZrJnXqCfWmRg,1079
+ViewLogger-1.5.3.dist-info/METADATA,sha256=vm-7yGozHOrhWt9l2aPH0aKcEz8RzZTyyb71VMTORTE,1571
+ViewLogger-1.5.3.dist-info/WHEEL,sha256=oAVPkyAEF4ax3tnqlvKYGy8JOdoAihZXbcM6C6xJNOI,92
+ViewLogger-1.5.3.dist-info/top_level.txt,sha256=NazpINn2W-hh4-B8LRBM3kEvfuw0B_W3YsgPT0etdC0,11
+ViewLogger-1.5.3.dist-info/RECORD,,
