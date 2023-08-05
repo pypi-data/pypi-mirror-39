@@ -1,0 +1,20 @@
+---
+language: python
+python:
+  - "2.7"
+  - "3.6"
+
+install:
+  - pip install -U -r requirements.txt
+
+script:
+  - make lint
+  - make coverage
+
+after_success:
+  coveralls
+
+cache:
+  directories:
+    - $HOME/.cache/pip
+    - $HOME/.cache/pre-commit
