@@ -1,0 +1,3 @@
+[console_scripts]
+traffic-replay = traffic_replay.__main__:main
+
