@@ -1,0 +1,10 @@
+README.md
+setup.py
+datacommons/__init__.py
+datacommons/_auth.py
+datacommons/datacommons.py
+datacommons.egg-info/PKG-INFO
+datacommons.egg-info/SOURCES.txt
+datacommons.egg-info/dependency_links.txt
+datacommons.egg-info/requires.txt
+datacommons.egg-info/top_level.txt
