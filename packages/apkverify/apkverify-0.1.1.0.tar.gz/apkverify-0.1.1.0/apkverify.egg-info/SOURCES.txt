@@ -1,0 +1,17 @@
+HISTORY.md
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+apkverify/__init__.py
+apkverify/__main__.py
+apkverify/apkfile.py
+apkverify/apkverify.py
+apkverify/check_apk.py
+apkverify/sigverify.py
+apkverify.egg-info/PKG-INFO
+apkverify.egg-info/SOURCES.txt
+apkverify.egg-info/dependency_links.txt
+apkverify.egg-info/not-zip-safe
+apkverify.egg-info/requires.txt
+apkverify.egg-info/top_level.txt
