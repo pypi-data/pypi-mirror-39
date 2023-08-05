@@ -1,0 +1,14 @@
+niacin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+niacin/data/hypernyms.json,sha256=qwSQMNzkTu8wnmF9IoCfXYAAuN4W6Nrh3fZkDShZ_uc,2597888
+niacin/data/hyponyms.json,sha256=owZ3pnwEFRmITfATNzh51xxOuyejeGrEhhJAatCz2X8,2003004
+niacin/data/misspellings.json,sha256=SKK-pGmZ_ZZzh-BY1Ty3O1NwMgF-bHV3lRjCr3FgXmY,106476
+niacin/data/neighbors.json,sha256=RHtll00etPwyBzV1VTTIbCjIT0FyZR7i7lBmGVVA6j4,922
+niacin/text/__init__.py,sha256=haMYdEn8VV_V7a8yrg-s3OsmKXhhQhn-YfMJ9dfJ0F8,392
+niacin/text/char.py,sha256=IvrtvIxqoiehdDi1D80QLJtFKT7JsFHLY5HK4nU_5qk,3526
+niacin/text/sentence.py,sha256=YHitwIz9n3O6x3A6iby7wikhDMF0RQ2UrCv6IUJSGJE,2125
+niacin/text/word.py,sha256=-q5s_UaYc90APEyCfb7jgi5cnvs-f94hOfD_79nHmQk,4566
+niacin-0.1.1.dist-info/LICENSE,sha256=YSt0DmbXGxND21GZTiMB_wQXiZkAWFpBgJ1pqOTJfvI,1461
+niacin-0.1.1.dist-info/METADATA,sha256=mUSz3Ce5zyNVThZ0I0Ovyz_bFiz0KQBfGC6twd5eoQo,2139
+niacin-0.1.1.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+niacin-0.1.1.dist-info/top_level.txt,sha256=BfEGkROeu-wXZZ1f7qXXPtPMyhXiHy5XqGX54suU30w,7
+niacin-0.1.1.dist-info/RECORD,,
