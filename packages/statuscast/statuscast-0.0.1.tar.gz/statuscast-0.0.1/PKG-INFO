@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: statuscast
+Version: 0.0.1
+Summary: Cast status of a script with a nice simple look.
+Home-page: https://github.com/DigitalArc/statuscast
+Author: DigitalArc
+Author-email: contact@thedigitalarc.com
+License: MIT
+Description: Cast nice looking status messages for your script tasks.
+Keywords: pretty print status modern simple
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
