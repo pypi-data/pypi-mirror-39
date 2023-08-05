@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: elit
+Version: 0.1.26.dev1544036308
+Summary: The Emory Language Information Toolkit (ELIT).
+Home-page: https://github.com/elitcloud/elit
+Author: Jinho D. Choi
+Author-email: jinho.choi@emory.edu
+License: ALv2
+Download-URL: https://github.com/elitcloud/elit/tree/master
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Dist: argparse (==1.4.0)
+Requires-Dist: pybind11 (==2.2.3)
+Requires-Dist: yafasttext (==0.8.22.2)
+Requires-Dist: gensim (==3.6.0)
+Requires-Dist: numpy (==1.14.5)
+Requires-Dist: ujson (==1.35)
+Requires-Dist: mxnet (==1.3.0)
+Requires-Dist: gluonnlp (==0.4.0)
+Requires-Dist: marisa-trie (==0.7.5)
+Requires-Dist: tqdm (==4.26.0)
+Requires-Dist: gitpython (==2.1.11)
+Provides-Extra: cu92
+Requires-Dist: mxnet-cu92 (==1.3.0) ; extra == 'cu92'
+
+UNKNOWN
+
+
