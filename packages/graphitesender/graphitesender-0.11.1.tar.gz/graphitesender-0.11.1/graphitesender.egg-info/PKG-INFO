@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: graphitesender
+Version: 0.11.1
+Summary: A simple interface for sending metrics to Graphite
+Home-page: https://github.com/shir0kamii/graphitesender
+Author: Alexandre Bonnetain
+Author-email: shir0kamii@gmail.com
+License: UNKNOWN
+Description: https://github.com/shir0kamii/graphitesender
+Platform: UNKNOWN
+Provides-Extra: cli
+Provides-Extra: asynchronous
