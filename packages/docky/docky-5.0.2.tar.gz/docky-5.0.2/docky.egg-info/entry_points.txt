@@ -1,0 +1,5 @@
+
+    [console_scripts]
+    docky=docky.main:main
+    dcpatched=docky.dcpatched:main
+    
