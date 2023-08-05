@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: round360
+Version: 0.1.0
+Summary: This repo is for processing data from the Samsung 360 Round camera.
+Home-page: https://github.com/JohnKoenig0375/round360
+Author: John Koenig
+Author-email: JohnKoenig0375@gmail.com
+License: MIT license
+Keywords: round360
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: Click (>=6.0)
+Requires-Dist: OpenCV-python
+
+========
+round360
+========
+
+
+.. image:: https://img.shields.io/pypi/v/round360.svg
+        :target: https://pypi.python.org/pypi/round360
+
+.. image:: https://img.shields.io/travis/JohnKoenig0375/round360.svg
+        :target: https://travis-ci.org/JohnKoenig0375/round360
+
+.. image:: https://readthedocs.org/projects/round360/badge/?version=latest
+        :target: https://round360.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+
+
+This repo is for processing data from the Samsung 360 Round camera.
+
+
+* Free software: MIT license
+* Documentation: https://round360.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2018-12-01)
+------------------
+
+* First release on PyPI.
+
+
