@@ -1,0 +1,9 @@
+colorlog
+astor
+six
+mako
+pyverilog
+numpy
+graphviz
+coreir==0.30a0
+bit_vector==0.39a0
