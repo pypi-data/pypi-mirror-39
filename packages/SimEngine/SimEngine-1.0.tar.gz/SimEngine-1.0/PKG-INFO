@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: SimEngine
+Version: 1.0
+Summary: Simulation platform for High-Availability systems
+Home-page: https://simengine.readthedocs.io/en/latest/
+Author: Seneca OSTEP & Alteeve
+Author-email: olga.belavina@senecacollege.ca
+License: GPL
+Project-URL: Bug Tracker, https://github.com/Seneca-CDOT/simengine/issues
+Project-URL: Documentation, https://simengine.readthedocs.io/en/latest/
+Project-URL: Source Code, https://github.com/Seneca-CDOT/simengine
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
