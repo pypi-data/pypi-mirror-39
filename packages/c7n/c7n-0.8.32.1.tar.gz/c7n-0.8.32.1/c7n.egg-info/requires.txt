@@ -1,0 +1,7 @@
+boto3>=1.9.54
+botocore>=1.12.54
+pyyaml
+jsonschema
+jsonpatch>=1.21
+argcomplete
+tabulate
