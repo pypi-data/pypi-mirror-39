@@ -1,0 +1,12 @@
+README.md
+setup.py
+funhandler/__init__.py
+funhandler/base.py
+funhandler/data.py
+funhandler/file_manager.py
+funhandler/helpers.py
+funhandler.egg-info/PKG-INFO
+funhandler.egg-info/SOURCES.txt
+funhandler.egg-info/dependency_links.txt
+funhandler.egg-info/requires.txt
+funhandler.egg-info/top_level.txt
