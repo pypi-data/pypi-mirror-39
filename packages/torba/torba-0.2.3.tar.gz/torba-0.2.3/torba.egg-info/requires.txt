@@ -1,0 +1,11 @@
+aiohttp
+aiorpcx==0.9.0
+coincurve
+pbkdf2
+cryptography
+attrs
+plyvel
+pylru
+
+[gui]
+pyside2
