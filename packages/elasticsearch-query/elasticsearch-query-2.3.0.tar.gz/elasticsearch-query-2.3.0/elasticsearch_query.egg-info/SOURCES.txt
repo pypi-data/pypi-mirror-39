@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+elasticsearch_query.py
+setup.py
+elasticsearch_query.egg-info/PKG-INFO
+elasticsearch_query.egg-info/SOURCES.txt
+elasticsearch_query.egg-info/dependency_links.txt
+elasticsearch_query.egg-info/requires.txt
+elasticsearch_query.egg-info/top_level.txt

@@ -1,0 +1,7 @@
+elasticsearch<7.0.0,>=6.0.0
+python-dateutil==2.7.5
+
+[dev]
+coverage==4.5.2
+pylint<=2.1.1,>=1.9.2
+pytest==4.0.0
