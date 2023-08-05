@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: data-preprocessing-arch
+Version: 0.0.1
+Summary: Python module for preprocessing data
+Home-page: https://github.com/mecheverria96/archMLP-Preprocessing
+Author: Mariana Echeverria
+Author-email: mecheverria@middlebury.edu
+License: UNKNOWN
+Keywords: markdown to html
+Platform: UNKNOWN
+Requires-Dist: dill
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: sklearn
+Provides-Extra: dev
+Requires-Dist: python-semantic-release ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+
+# Preprocessing Component
+
+## Install dependencies
+When running within a docker container, install python dependencies with:
+```
+pip install -r requirements.txt
+```
+
