@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: biomap-core
+Version: 0.0.52
+Summary: BioMap core interfaces
+Home-page: https://github.com/BioMapOrg/biomap-core
+Author: Sebastian Winkler
+Author-email: winkler@informatik.uni-tuebingen.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: jsonschema (==2.6.0)
+Requires-Dist: PyYAML
+
+# biomap-core
+-------------
+
+Core API interface implementation.
+
+
