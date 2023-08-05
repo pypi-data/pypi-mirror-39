@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: cloudbenchmark
+Version: 0.1.19
+Summary: Benchmark suite for cloud environment
+Home-page: https://github.com/DaisukeMiyamoto/cloudbenchmark
+Author: Daisuke Miyamoto
+Author-email: midaisuk@gmail.com
+License: UNKNOWN
+Description: Benchmark suite for cloud environment
+Keywords: aws,cloud,benchmark,performance,flops
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent

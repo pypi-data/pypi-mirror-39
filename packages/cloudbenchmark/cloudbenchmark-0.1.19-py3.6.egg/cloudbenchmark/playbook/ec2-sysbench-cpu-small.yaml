@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+  - name: run cloudbench
+    shell: "/usr/local/bin/cloudbenchmark -j ec2-sysbench-cpu -s small -b midaisuk-benchmarks"
