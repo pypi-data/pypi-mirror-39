@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: musket-core
+Version: 0.23
+Summary: Common parts of my pipelines
+Home-page: https://github.com/petrochenko-pavel-a/musket_core
+Author: Petrochenko Pavel
+Author-email: petrochenko.pavel.a@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: Pillow
+Requires-Dist: cython
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scikit-image
+Requires-Dist: keras (>=2.2.4)
+Requires-Dist: imageio
+Requires-Dist: opencv-python
+Requires-Dist: h5py
+Requires-Dist: tqdm
+Requires-Dist: segmentation-models
+
+UNKNOWN
+
+
