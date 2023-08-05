@@ -1,0 +1,6 @@
+pycrypto>=2.6.1
+requests
+beautifulsoup4>=4.5.3
+marshmallow>=2.13.5
+mutagen>=1.37
+fuzzywuzzy
