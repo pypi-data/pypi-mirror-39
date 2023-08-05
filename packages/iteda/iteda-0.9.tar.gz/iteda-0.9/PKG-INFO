@@ -1,0 +1,44 @@
+Metadata-Version: 1.1
+Name: iteda
+Version: 0.9
+Summary: This is a menu to control an integrating sphere through a serial interface (rs232)
+Home-page: https://gitlab.com/fabriziodifran/esfera-codigo-verilog
+Author: victor esparza
+Author-email: vicmaresparza@gmail.com
+License: MIT
+Description: # Foobar
+        
+        Foobar is a Python library for dealing with word pluralization.
+        
+        ## Installation
+        
+        Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+        
+        ```bash
+        pip install foobar
+        ```
+        
+        ## Usage
+        
+        ```python
+        import foobar
+        
+        foobar.pluralize('word') # returns 'words'
+        foobar.pluralize('goose') # returns 'geese'
+        foobar.singularize('phenomena') # returns 'phenomenon'
+        ```
+        
+        ## Contributing
+        Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+        
+        Please make sure to update tests as appropriate.
+        
+        ## License
+        [MIT](https://choosealicense.com/licenses/mit/)
+Keywords: MENU,UART,SPHERE
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
