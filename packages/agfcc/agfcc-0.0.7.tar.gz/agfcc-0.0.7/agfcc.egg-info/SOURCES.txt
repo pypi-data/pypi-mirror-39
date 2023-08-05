@@ -1,0 +1,9 @@
+MANIFEST.in
+README.rst
+setup.py
+agfcc/__init__.py
+agfcc/agfcc.py
+agfcc.egg-info/PKG-INFO
+agfcc.egg-info/SOURCES.txt
+agfcc.egg-info/dependency_links.txt
+agfcc.egg-info/top_level.txt
