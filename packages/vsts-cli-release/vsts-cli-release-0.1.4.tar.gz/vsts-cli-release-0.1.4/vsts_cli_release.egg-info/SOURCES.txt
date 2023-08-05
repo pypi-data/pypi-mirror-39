@@ -1,0 +1,13 @@
+setup.py
+vsts/__init__.py
+vsts/cli/__init__.py
+vsts/cli/release/__init__.py
+vsts/cli/release/_format.py
+vsts/cli/release/_help.py
+vsts/cli/release/arguments.py
+vsts/cli/release/commands.py
+vsts_cli_release.egg-info/PKG-INFO
+vsts_cli_release.egg-info/SOURCES.txt
+vsts_cli_release.egg-info/dependency_links.txt
+vsts_cli_release.egg-info/requires.txt
+vsts_cli_release.egg-info/top_level.txt
