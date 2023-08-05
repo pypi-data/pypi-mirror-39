@@ -1,0 +1,10 @@
+{
+  "source_directories": [
+    "WDL",
+    "tests"
+  ],
+  "search_path": [
+    "."
+  ],
+  "workers": 4
+}
