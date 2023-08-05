@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: biggest
+Version: 3.0.2
+Summary: A utility for finding the biggest files and/or directories in a directory tree
+Home-page: https://github.com/ESultanik/biggest
+Author: Evan Sultanik
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
