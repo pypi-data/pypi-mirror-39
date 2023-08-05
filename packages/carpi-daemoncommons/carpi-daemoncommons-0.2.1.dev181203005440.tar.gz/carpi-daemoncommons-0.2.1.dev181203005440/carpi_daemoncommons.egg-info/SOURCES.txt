@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+carpi_daemoncommons.egg-info/PKG-INFO
+carpi_daemoncommons.egg-info/SOURCES.txt
+carpi_daemoncommons.egg-info/dependency_links.txt
+carpi_daemoncommons.egg-info/not-zip-safe
+carpi_daemoncommons.egg-info/requires.txt
+carpi_daemoncommons.egg-info/top_level.txt
+daemoncommons/__init__.py
+daemoncommons/daemon.py
