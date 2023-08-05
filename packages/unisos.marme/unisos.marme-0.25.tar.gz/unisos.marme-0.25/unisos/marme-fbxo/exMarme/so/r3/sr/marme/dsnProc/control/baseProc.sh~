@@ -1,0 +1,673 @@
+#!/bin/bash
+
+IimBriefDescription="iimsProc.sh: A scattered IIM extensions based on seedIimsProc.sh"
+
+ORIGIN="
+* Revision And Libre-Halaal CopyLeft -- Part Of ByStar -- Best Used With Blee
+"
+
+####+BEGIN: bx:dblock:bash:top-of-file :vc "cvs" partof: "bystar" :copyleft "halaal+minimal"
+typeset RcsId="$Id: iimsProc.sh,v 1.4 2017-07-05 07:34:56 lsipusr Exp $"
+# *CopyLeft*
+#  This is a Halaal Poly-Existential. See http://www.freeprotocols.org
+
+####+END:
+
+__author__="
+* Authors: Mohsen BANAN, http://mohsen.banan.1.byname.net/contact
+"
+####+BEGIN: bx:dblock:lsip:bash:seed-spec :types "seedIimsProc.sh"
+SEED="
+*  /[dblock]/ /Seed/ :: [[file:/opt/public/osmt/bin/seedIimsProc.sh]] | 
+"
+FILE="
+*  /This File/ :: /de/bx/nne/dev-py/iimsPkgs/remoteMailActions/envelopeDsn/iimsProc.sh 
+"
+if [ "${loadFiles}" == "" ] ; then
+    /opt/public/osmt/bin/seedIimsProc.sh -l $0 "$@" 
+    exit $?
+fi
+####+END:
+
+_CommentBegin_
+####+BEGIN: bx:dblock:global:file-insert-cond :cond "./blee.el" :file "/libre/ByStar/InitialTemplates/software/plusOrg/dblock/inserts/topControls.org"
+*  /Controls/ ::  [[elisp:(org-cycle)][| ]]  [[elisp:(show-all)][Show-All]]  [[elisp:(org-shifttab)][Overview]]  [[elisp:(progn (org-shifttab) (org-content))][Content]] | [[file:Panel.org][Panel]] | [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] | [[elisp:(bx:org:run-me)][Run]] | [[elisp:(bx:org:run-me-eml)][RunEml]] | [[elisp:(delete-other-windows)][(1)]] | [[elisp:(progn (save-buffer) (kill-buffer))][S&Q]]  [[elisp:(save-buffer)][Save]]  [[elisp:(kill-buffer)][Quit]] [[elisp:(org-cycle)][| ]]
+** /Version Control/ ::  [[elisp:(call-interactively (quote cvs-update))][cvs-update]]  [[elisp:(vc-update)][vc-update]] | [[elisp:(bx:org:agenda:this-file-otherWin)][Agenda-List]]  [[elisp:(bx:org:todo:this-file-otherWin)][ToDo-List]] 
+
+####+END:
+_CommentEnd_
+
+_CommentBegin_
+*      ================
+*  [[elisp:(beginning-of-buffer)][Top]] ################ [[elisp:(delete-other-windows)][(1)]] CONTENTS-LIST ################
+*  [[elisp:(org-cycle)][| ]]  Info          :: *[Current-Info:]*  Status, Notes (Tasks/Todo Lists, etc.) [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+
+_CommentBegin_
+*  [[elisp:(beginning-of-buffer)][Top]] ################ [[elisp:(delete-other-windows)][(1)]]  *Seed Extensions*
+_CommentEnd_
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || IIF       ::  IIM Profile / Characteristic Definitions    [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+# Types are defined as associative arrays in /opt/public/osmt/lib/visLib.sh
+
+G_iimGroupingType=${IimGroupingType[pkged]}
+
+G_myPanel=$(FN_prefix ${G_myName})-Panel.org
+
+G_iimCmndParts="
+${IimCmndParts[common]}
+"
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  Examples      :: Examples Hook Post [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || IIF       ::  examplesHookPost    [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+function examplesHookPost {
+cat  << _EOF_
+$( examplesSeperatorChapter "*Extentions* (examplesHookPost)" )
+${G_myName} ${extraInfo} -i panelsPreps
+${G_myName} ${extraInfo} -i iimsPkgPreps   # from visLib.sh sets up ./var/iimsPkg/iimsIn/paramsFp
+$( examplesSeperatorChapter "Some Local IIM Extensions" )
+${G_myName} ${extraInfo} -i defaultsTargetsAndParamsSet
+${G_myName} ${extraInfo} -i pkgInit $(cat _selectedIim)
+${G_myName} ${extraInfo} -i pkgInfo
+${G_myName} ${extraInfo} -i old2New
+${G_myName} ${extraInfo} -i icmPanelsClean
+${G_myName} ${extraInfo} -i icmsPkgBaseLinks
+${G_myName} ${extraInfo} -i icmsPkgBaseLinksRemove
+${G_myName} ${extraInfo} -i tarPrepsFull
+${G_myName} ${extraInfo} -i icmsPkgTarUpdate
+$( examplesSeperatorChapter "*Templates Development*" )
+----  Initial Templates Development ----
+diff ./iimsProc.sh  /libre/ByStar/InitialTemplates/begin/templates/purposed/iims/bash/iimsProc.leaf.sh
+cp ./iimsProc.sh  /libre/ByStar/InitialTemplates/begin/templates/purposed/iims/bash/iimsProc.leaf.sh
+cp  /libre/ByStar/InitialTemplates/begin/templates/purposed/iims/bash/iimsProc.leaf.sh ./iimsProc.sh 
+----  Initial Templates Development ----
+diff ./Panel.org /libre/ByStar/InitialTemplates/begin/templates/purposed/iims/bash/common/beginPanel.org
+cp ./Panel.org /libre/ByStar/InitialTemplates/begin/templates/purposed/iims/bash/common/beginPanel.org
+cp /libre/ByStar/InitialTemplates/begin/templates/purposed/iims/bash/common/beginPanel.org ./Panel.org 
+_EOF_
+ return
+}
+
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || IIF       ::  vis_pkgInfo    [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+function vis_pkgInfo {
+    G_funcEntry
+    function describeF {  G_funcEntryShow; cat  << _EOF_
+_EOF_
+    }
+    EH_assert [[ $# -eq 0 ]]
+
+    local bxtObject=$(cat _objectType_)
+
+    if [ ! -f _iimsList ] ; then
+	EH_problem ""
+	lpReturn
+    fi
+
+    local iimsList=$(cat _iimsList)
+
+    ANT_raw "iimsList=${iimsList}"
+
+    local iimLanguage=""
+    local thisIim=""
+    for thisIim in ${iimsList}; do
+	iimLanguage=$( ${thisIim} -i iimLanguage)
+	echo "${thisIim} -- ${iimLanguage}"
+	
+	if [ "${iimLanguage}" == "bash" ] ; then
+	    opDo ${thisIim} -i iimGroupingType
+	    opDo ${thisIim} -i iimCmndPartList
+	elif [ "${iimLanguage}" == "python" ] ; then
+	    echo "NOTYET -- IIM-Profile can be retrieved with -i iim.groupingType etc"	    
+	    EH_problem "python ${thisIim} -- Notyet"
+	else
+	    EH_oops "${thisIim}"
+	    continue
+	fi
+    done
+
+    case "${bxtObject}" in
+	"bxt.iim.bash.pkged")
+	    ANT_cooked "Processed bxtObject=${bxtObject}"	    
+	    ;;
+	*)
+	    ANT_cooked "Unprocessed bxtObject=${bxtObject}"
+	    ;;
+    esac
+
+
+    lpReturn
+  }
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || IIF       ::  vis_varIimsPkgPrep    [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+function vis_varIimsPkgPrep {
+    G_funcEntry
+    function describeF {  G_funcEntryShow; cat  << _EOF_
+_EOF_
+    }
+    EH_assert [[ $# -eq 0 ]]
+    
+    opDo fileParamManage.py -i fileParamWrite ./iimsIn/control iimsPkgLabel  $(FN_nonDirsPart $(pwd))
+    opDo fileParamManage.py -i fileParamWrite ./iimsIn/control dateVer "uninitialized"    
+
+    
+    if [ $# -eq 0 ] ; then
+	iimsList=$(cat _iimsList)
+    else
+	iimsList="$@"
+    fi
+
+    opDo FN_dirCreatePathIfNotThere ./tmp    
+
+    local iimLanguage=""
+    local thisIim=""
+    for thisIim in ${iimsList}; do
+	iimLanguage=$( ${thisIim} -i iimLanguage)
+	if [ "${iimLanguage}" == "bash" ] ; then
+	    opDo ${thisIim} -h -v -n showRun -i pkgedPanelPreps	    
+	elif [ "${iimLanguage}" == "python" ] ; then
+	    EH_problem "python ${thisIim} -- Notyet"
+	else
+	    EH_oops ""
+	    continue
+	fi
+    done
+}
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || IIF       ::  vis_pkgInit    [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+function vis_pkgInit {
+    G_funcEntry
+    function describeF {  G_funcEntryShow; cat  << _EOF_
+_EOF_
+    }
+    local iimsList=""
+    
+    if [ $# -eq 0 ] ; then
+	iimsList=$(cat _iimsList)
+    else
+	iimsList="$@"
+    fi
+
+    opDo FN_dirCreatePathIfNotThere ./tmp    
+
+    local iimLanguage=""
+    local thisIim=""
+    for thisIim in ${iimsList}; do
+	iimLanguage=$( ${thisIim} -i iimLanguage)
+	if [ "${iimLanguage}" == "bash" ] ; then
+	    opDo ${thisIim} -h -v -n showRun -i pkgedPanelPreps	    
+	elif [ "${iimLanguage}" == "python" ] ; then
+	    opDo iicmPlayer.sh -h -v -n showRun -i grouped ${thisIim}
+	    #EH_problem "python ${thisIim} -- Notyet"
+	else
+	    EH_oops ""
+	    continue
+	fi
+    done
+}
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || IIF       ::  vis_icmPanelsClean    [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+function vis_icmPanelsClean {
+    G_funcEntry
+    function describeF {  G_funcEntryShow; cat  << _EOF_
+_EOF_
+    }
+    local iimsList=""
+    
+    if [ $# -eq 0 ] ; then
+	iimsList=$(cat _iimsList)
+    else
+	iimsList="$@"
+    fi
+    local thisIim=""
+    local panelName=""
+    local panelNameBackup=""    
+    for thisIim in ${iimsList}; do
+	panelName=$(FN_prefix ${thisIim})-Panel.org
+	if [ -f "${panelName}" ] ; then
+	    opDo rm ${panelName}
+	else
+	    echo Non-Existent ${panelName}
+	fi
+	panelNameBackup=$( ls ${panelName}.201* 2> /dev/null )
+	if [ ! -z "${panelNameBackup}" ] ; then
+	    opDo rm ${panelNameBackup}
+	fi
+    done
+}
+
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || IIF       ::  vis_pkgInitObsoleted    [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+function vis_pkgInitObsoleted {
+    G_funcEntry
+    function describeF {  G_funcEntryShow; cat  << _EOF_
+_EOF_
+    }
+    EH_assert [[ $# -eq 0 ]]
+
+    if [ -d "./tmp" ] ; then
+	opDo mv ./tmp ./tmp.${dateTag}
+    fi
+    FN_dirCreatePathIfNotThere ./tmp
+    opDo fileParamManage.py -i fileParamWrite ./tmp dateVer "uninitialized"
+
+    if [ -d "./iimsIn" ] ; then
+	opDo mv ./iimsIn ./iimsIn.${dateTag}
+    fi
+    FN_dirCreatePathIfNotThere ./iimsIn
+    FN_dirCreatePathIfNotThere ./iimsIn/control
+    opDo fileParamManage.py -i fileParamWrite ./iimsIn/control iimsPkgLabel  $(FN_nonDirsPart $(pwd))
+    opDo fileParamManage.py -i fileParamWrite ./iimsIn/control dateVer "uninitialized"    
+
+    FN_dirCreatePathIfNotThere ./iimsIn/targets
+    FN_dirCreatePathIfNotThere ./iimsIn/proxies    
+
+    if [ -d "./iimsOut" ] ; then
+	opDo mv ./iimsOut ./iimsOut.${dateTag}
+    fi
+    FN_dirCreatePathIfNotThere ./iimsOut
+
+    opDo vis_defaultsTargetsAndParamsSet    
+
+    lpReturn
+
+    opDo vis_selectionsPanelPrep
+
+    opDo iimsProc.sh -h -v -n showRun  -p liTargetsDotpy=/de/bx/current/district/librecenter/tiimi/targets/bxp/tList/ts-librecenter-localhost.py -p liParamsDotpy=/de/bx/current/district/librecenter/tiimi/targets/bxp/paramList/bxpUsageParams.py -i effectiveLisSet    
+}
+
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || IIF       ::  vis_pkgDistClean    [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+function vis_pkgDistClean {
+    G_funcEntry
+    function describeF {  G_funcEntryShow; cat  << _EOF_
+NOTYET, 
+_EOF_
+    }
+    EH_assert [[ $# -eq 0 ]]
+    #describeF
+
+    opDo FN_dirRemoveIfThere ./var
+
+    opDo FN_dirRemoveIfThere ./tmp
+
+    lpReturn    
+
+    #opDo vis_effectiveLisClean 
+    #opDo FN_fileSymlinkRemoveIfThere ./liTargets.py
+    #opDo FN_fileSymlinkRemoveIfThere ./liParams.py
+
+    #opDo vis_selectionsPanelClean    
+    #opDo FN_fileSymlinkRemoveIfThere ./panelSelects
+
+    #opDo FN_dirRemoveIfThere ./output  ./outputFiles ./outputFiles__main__
+    
+    #opDo FN_dirRemoveIfThere ./data_cache
+
+    #opDo FN_dirRemoveIfThere ./inputFiles
+
+    #opDo FN_dirRemoveIfThere ./iimsOut  
+
+    #opDo FN_fileRmIfThere ./eml-*.org                 
+    
+    lpReturn
+}
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || IIF       ::  vis_panelsPreps    [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+function vis_panelsPreps {
+    G_funcEntry
+    function describeF {  G_funcEntryShow; cat  << _EOF_
+_EOF_
+    }
+    EH_assert [[ $# -eq 0 ]]
+
+    typeset iimsList=$( cat ./_iimsList )
+
+    if [ -z "${iimsList}" ] ; then
+	ANT_raw "Missing or Empty _iimsList -- panelsPreps skipped"
+	lpReturn
+    fi
+
+    for oneFile in ${iimsList} ; do
+	opDo iicmPlayer.sh -h -v -n showRun -i update "${oneFile}"
+    done
+    
+    lpReturn
+}
+
+
+function vis_panelsPrepsOld {
+    G_funcEntry
+    function describeF {  G_funcEntryShow; cat  << _EOF_
+_EOF_
+    }
+    EH_assert [[ $# -eq 0 ]]
+
+    typeset tmpFile=$( FN_tempFile )
+
+    typeset selectedIim=$( cat ./_selectedIim )
+
+    if [ -z ${selectedIim} ] ; then
+	ANT_raw "Missing _selectedIim -- panelsPreps skipped"
+	lpReturn
+    fi
+
+    cat  ./Panel.org  | sed  \
+	-e "s:@selectedIim@:${selectedIim}:" \
+        >> ${tmpFile}
+
+    opDo mv ${tmpFile} ./Panel.org
+    
+    lpReturn
+}
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || IIF       ::  vis_defaultsTargetsAndParamsSet    [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+function vis_defaultsTargetsAndParamsSet {
+    G_funcEntry
+    function describeF {  G_funcEntryShow; cat  << _EOF_
+_EOF_
+    }
+    EH_assert [[ $# -eq 0 ]]
+
+    #
+    # To be customized on a per pkg basis
+    #
+
+    typeset objectType=$(cat _objectType_)
+    
+    if [ -z "${objectType}" ] ; then
+	EH_problem "Missing _objectType_"
+	lpReturn 101
+    fi
+    
+    case ${objectType} in
+	"bxt.py.iim.to")
+	    opDo vis_selectionsPanelPrep	    
+	    opDo iimsProc.sh -h -v -n showRun  -p liTargetsDotpy=/de/bx/current/district/librecenter/tiimi/targets/bxp/tList/ts-librecenter-localhost.py -p liParamsDotpy=/de/bx/current/district/librecenter/tiimi/targets/bxp/paramList/bxpUsageParams.py -i effectiveLisSet    	    
+	    ;;
+	"bxt.py.iim.polySon")
+	    opDo vis_selectionsPanelPrep	    
+	    ;;
+	"bxt.py.iim")
+	    doNothing
+	    ;;
+	*)
+	    ANT_raw "Unsupported objectType=${objectType}"
+	    ;;	    
+    esac
+    
+    lpReturn
+}
+
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || IIF       ::  vis_old2New    [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+function vis_old2New {
+
+    #ANT_raw "Edit this script to suit your search string and comment the return 0 line"
+    #return 0
+
+    filesList="
+inMailDsnProc.py
+inMailRetrieve.py
+inMailUserAgent.py
+mailAcctsLib.py
+mailAcctsManage.py
+outMailSend.py
+pkgManage.py
+"
+
+    #for oneFile in ${filesList} ; do
+	#opDo /bin/rm ${oneFile}
+    #done
+
+    #return
+
+    #set -x
+    for oneFile in ${filesList} ; do
+	#print ${oneFile}
+	opDo cp ${oneFile} ${oneFile}.$$
+	cat ${oneFile}.$$ | sed \
+				-e "s%inMailBase%inMailAcct%g" \
+				-e "s%outMailBase%outMailAcct%g" \
+				-e "s%defaultMailBase%defaultMailAcct%g" \
+				-e "s%maildirPath%inMailAcctMboxesPath%g" \
+				-e "s%outMailControls%outMailAcctAccessPars%g" \
+				-e "s%inMailControls%inMailAcctAccessPars%g" \
+				-e "s%commonMail%mailAcctsLib%g" > ${oneFile}
+	#opDo /bin/rm ${oneFile}
+    done
+}
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || IIF       ::  vis_tarPrepsFull    [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+function vis_tarPrepsFull {
+    G_funcEntry
+    function describeF {  G_funcEntryShow; cat  << _EOF_
+** Get rid of symlinks
+- distClean
+- symLinks remove
+_EOF_
+    }
+    EH_assert [[ $# -eq 0 ]]
+
+    local icmsPkgBaseDir=$( FN_absolutePathGet .. )
+    local icmsPkgName=$( cat _icmsPkgName )
+
+    opDo vis_pkgDistClean
+    opDo vis_icmPanelsClean
+    opDo vis_icmsPkgBaseLinksRemove
+    opDo vis_icmsLibsLinksRemove    
+    
+    lpReturn
+}
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || IIF       ::  vis_icmsPkgBaseLinks    [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+function vis_icmsPkgBaseLinks {
+    G_funcEntry
+    function describeF {  G_funcEntryShow; cat  << _EOF_
+** 
+- distClean
+- symLinks remove
+_EOF_
+    }
+    EH_assert [[ $# -eq 0 ]]
+
+    local icmsPkgBaseDir=$( FN_absolutePathGet .. )
+    local icmsPkgName=$( cat _icmsPkgName )
+    local icmsBxoBaseDir=$( FN_absolutePathGet ../../.. )  #
+
+    if [ -h ${icmsPkgBaseDir}/var ] ; then
+	if [ -h ${icmsPkgBaseDir}/tmp ] ; then
+	    lpReturn 0
+	fi
+    fi
+
+    opDoRet  mkdir ${icmsBxoBaseDir}/tmp
+    opDoRet  mkdir ${icmsBxoBaseDir}/tmp/${icmsPkgName}        
+    opDoRet  mkdir ${icmsBxoBaseDir}/var
+    opDoRet  mkdir ${icmsBxoBaseDir}/var/${icmsPkgName}    
+
+    opDo ln -s ${icmsBxoBaseDir}/tmp/${icmsPkgName} ${icmsPkgBaseDir}/tmp
+    opDo ln -s ${icmsBxoBaseDir}/var/${icmsPkgName} ${icmsPkgBaseDir}/var    
+    
+    lpReturn
+}
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || IIF       ::  vis_icmsPkgBaseLinksRemove    [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+function vis_icmsPkgBaseLinksRemove {
+    G_funcEntry
+    function describeF {  G_funcEntryShow; cat  << _EOF_
+** 
+- distClean
+- symLinks remove
+_EOF_
+    }
+    EH_assert [[ $# -eq 0 ]]
+
+    local icmsPkgBaseDir=$( FN_absolutePathGet .. )
+    local icmsPkgName=$( cat _icmsPkgName )
+    local icmsBxoBaseDir=$( FN_absolutePathGet ../../.. )  #
+
+    opDo FN_fileSymlinkRemoveIfThere ${icmsPkgBaseDir}/var
+    opDo FN_fileSymlinkRemoveIfThere ${icmsPkgBaseDir}/tmp
+    
+    lpReturn
+}
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || IIF       ::  vis_icmsLibsLinks    [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+function vis_icmsLibsLinks {
+    G_funcEntry
+    function describeF {  G_funcEntryShow; cat  << _EOF_
+** 
+- distClean
+- symLinks remove
+_EOF_
+    }
+    EH_assert [[ $# -eq 0 ]]
+
+    local icmsPkgBaseDir=$( FN_absolutePathGet .. )
+    local icmsPkgName=$( cat _icmsPkgName )
+    local icmsBxoBaseDir=$( FN_absolutePathGet ../../.. )  #
+
+    if [ -h ${icmsPkgBaseDir}/lib/python/iicm ] ; then
+	if [ -h ${icmsPkgBaseDir}/lib/python/bxMsg ] ; then
+	    lpReturn 0
+	fi
+    fi
+
+    opDo ln -s /de/bx/nne/dev-py/libs/iicmPkg/iicm ${icmsPkgBaseDir}/lib/python/iicm
+    opDo ln -s /de/bx/nne/dev-py/libs/bxMsgPkg/bxMsg ${icmsPkgBaseDir}/lib/python/bxMsg
+    
+    lpReturn
+}
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || IIF       ::  vis_icmsLibsLinksRemove    [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+function vis_icmsLibsLinksRemove {
+    G_funcEntry
+    function describeF {  G_funcEntryShow; cat  << _EOF_
+_EOF_
+    }
+    EH_assert [[ $# -eq 0 ]]
+
+    local icmsPkgBaseDir=$( FN_absolutePathGet .. )
+    local icmsPkgName=$( cat _icmsPkgName )
+    local icmsBxoBaseDir=$( FN_absolutePathGet ../../.. )  #
+
+    opDo FN_fileSymlinkRemoveIfThere ${icmsPkgBaseDir}/lib/python/iicm
+    opDo FN_fileSymlinkRemoveIfThere ${icmsPkgBaseDir}/lib/python/bxMsg    
+    
+    lpReturn
+}
+
+
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || IIF       ::  vis_icmsPkgTarUpdate    [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+
+function vis_icmsPkgTarUpdate {
+    G_funcEntry
+    function describeF {  G_funcEntryShow; cat  << _EOF_
+_EOF_
+    }
+    EH_assert [[ $# -eq 0 ]]
+
+    local icmsPkgBaseDir=$( FN_absolutePathGet .. )
+    local icmsPkgName=$( cat _icmsPkgName )
+    local icmsBxoBaseDir=$( FN_absolutePathGet ../../.. )  #
+
+    local marmeControlBaseDir=$( FN_absolutePathGet ../../marme.control )
+
+    local tarDestBaseDir="/lcnt/lgpc/bystar/permanent/facilities/marmee"
+
+    opDo tarPkgManage.sh -h -v -n showRun -p inBase="${icmsPkgBaseDir}" -p outBase="marme" -p result="${tarDestBaseDir}/marme.tar"  -i basesCombine
+
+    opDo tarPkgManage.sh -h -v -n showRun -p inBase="${marmeControlBaseDir}" -p outBase="marme.control" -p result="${tarDestBaseDir}/marmeControl.tar"  -i basesCombine common example.com
+    
+    lpReturn
+}
+
+
+
+
+_CommentBegin_
+*  [[elisp:(beginning-of-buffer)][Top]] ################ [[elisp:(delete-other-windows)][(1)]]  *End Of Editable Text*
+_CommentEnd_
+
+####+BEGIN: bx:dblock:bash:end-of-file :types ""
+_CommentBegin_
+*  [[elisp:(org-cycle)][| ]]  Common        ::  /[dblock] -- End-Of-File Controls/ [[elisp:(org-cycle)][| ]]
+_CommentEnd_
+#+STARTUP: showall
+#local variables:
+#major-mode: sh-mode
+#fill-column: 90
+# end:
+####+END:
