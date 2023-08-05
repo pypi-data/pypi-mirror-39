@@ -1,0 +1,71 @@
+
+<script>
+
+
+showBin = function() {
+    app.server.get('xio/admin/bin').then(function(resp) {
+        var html = $('#bin_template').render(resp.content)
+        $('#bin_list').html(html)
+    })
+}
+
+requestBin = function(name) {
+    alert(name)
+    $('#bin_result').html()
+    app.server.request('POST','xio/admin/bin/'+name).then(function(resp) {
+        $('#bin_result').html(
+          JSON.stringify(resp.content)
+        )
+    })
+}
+
+showBin()
+
+
+
+</script>
+
+<nav class="navbar navbar-light bg-light sticky-top">
+
+  <xio-button label="bin" icon="refresh" action="showBin()"></xio-button>
+
+
+</nav>
+
+<div class="row">
+  <div class="col-6">
+    <section id="bin_list">
+
+    </section>
+  </div>
+  <div class="col-6">
+    <code>
+      <pre id="bin_result">
+      </pre>
+    </code>
+  </div>
+</div>
+
+<template id="bin_template">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th >name</th>
+          <th >description</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- {{#.}} -->
+        <tr >
+          <td>{{name}}</td>
+          <td>{{description}}</td>
+          <td>
+            <xio-button label="EXECUTE" action="requestBin('{{name}}')"></xio-button>
+          </td>
+        </tr>
+        <!-- {{/.}} -->
+      </tbody>
+    </table>
+</template>
+

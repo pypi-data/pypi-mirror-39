@@ -1,0 +1,44 @@
+
+<xio-script on="render">
+  var self = this
+  var peerid = app.nav.current.context[':id']
+  var postpath = app.nav.current.postpath
+
+  var path = 'xio/admin/peers/'+peerid
+  if (postpath) {
+    path = path+'/'+postpath
+  }
+
+
+  showResource = function() {
+    $(self).find('section').html('<xio-resource src="'+path+'"></xio-resource>')
+
+  }
+
+
+  debugResource = function() {
+    app.server.about(path).then(function(resp) {
+        console.log(resp.content)
+        var html = json2html(resp.content)
+        $(self).find('section').html(html)
+    })
+  }
+
+  showResource()
+
+</xio-script>
+
+<nav class="navbar navbar-light bg-light sticky-top">
+
+  
+  <xio-breadcrumb path="{{app.nav.path}}"></xio-breadcrumb>
+
+  <xio-button label="resource" icon="code" action="showResource()"></xio-button>
+  <xio-button label="debug" icon="code" action="debugResource()"></xio-button>
+
+</nav>
+
+<section>
+
+</section>
+

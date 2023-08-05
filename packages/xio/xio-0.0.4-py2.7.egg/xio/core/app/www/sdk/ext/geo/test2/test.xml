@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ihm:html xmlns:ihm="urn:xio:ihm" xmlns:x="urn:xio:xioml" >
+
+<script language="javascript" src="http://openlayers.org/api/OpenLayers.js" > </script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGebdapI7_PzHmaa2umIt-HSx0wGX4hWo"> </script>
+
+
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"> </script>
+
+<script language="javascript" src="geoloc.js" > </script>
+
+<script>
+
+
+    function loadGoogleMap(id,lat,long) {
+      var myLatLng = {lat: lat, lng: long};
+      var map = new google.maps.Map(document.getElementById(id), {
+        center: myLatLng,
+        zoom: 6
+      });
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Hello World!'
+      });
+    }
+
+    function loadLeftMap(id,lat,long) {
+        var map = L.map(id).setView([51.505, -0.09], 13);
+        var marker = L.marker([lat,long]).addTo(map);
+        marker.bindPopup("I am a popup.").openPopup();    
+
+        var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	        maxZoom: 19,
+	        attribution: 'OpenStreetMap'
+        });
+        OpenStreetMap_Mapnik.addTo(map);
+    }
+
+
+    $(document).ready(function() {
+        loadMap("ol_map",50.5,10.5)
+        loadGoogleMap("google_map",50.5,10.5)
+        loadLeftMap("left_map",50.5,10.5)
+    })    
+</script>
+
+<style>
+
+    div.map {
+        border: dashed 1px #000; 
+        width:400px; 
+        height:400px;
+        display: inline-block;
+    }
+
+</style>
+
+<div id="ol_map" class="map">
+
+</div>
+
+<div id="google_map" class="map">
+
+</div>
+
+<div id="left_map" class="map">
+
+</div>
+
+</ihm:html>

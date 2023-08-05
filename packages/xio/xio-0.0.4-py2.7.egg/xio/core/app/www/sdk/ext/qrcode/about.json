@@ -1,0 +1,9 @@
+{
+    "name": "qrcode",
+    "version": "1.0.0", 
+    "requirements": [
+        "lib/qr.min.js", 
+        "app.js"
+    ]
+}
+        

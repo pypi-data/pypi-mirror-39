@@ -1,0 +1,48 @@
+
+<script>
+
+
+showData = function() {
+    app.server.get('xio/admin/logs').then(function(resp) {
+        console.log(resp.content)
+        var html = $('#logs_template').render(resp.content)
+        $('#logs_list').html(html)
+    })
+}
+
+showData()
+
+
+
+</script>
+
+    <nav class="navbar navbar-light bg-light sticky-top">
+
+  <xio-button label="logs" icon="refresh" action="showData()"></xio-button>
+</nav>
+
+<section id="logs_list">
+
+</section>
+
+<template id="logs_template">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th >key</th>
+          <th >content</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- {{#.}} -->
+        <tr >
+          <td>{{@id}}</td>
+          <td>{{.}}</td>
+       
+        </tr>
+        <!-- {{/.}} -->
+      </tbody>
+    </table>
+</template>
+

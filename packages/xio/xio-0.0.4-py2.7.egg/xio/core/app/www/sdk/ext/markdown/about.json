@@ -1,0 +1,9 @@
+{
+    "name": "markdown",
+    "version": "1.0.0", 
+    "requirements": [
+        "lib/marked.min.js",
+        "app.js"
+    ]
+}
+        

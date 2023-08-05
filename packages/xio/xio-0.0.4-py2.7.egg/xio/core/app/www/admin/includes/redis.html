@@ -1,0 +1,50 @@
+
+<script>
+
+
+showData = function() {
+    app.server.get('xio/admin/redis').then(function(resp) {
+        console.log(resp.content)
+        var html = $('#redis_template').render(resp.content)
+        $('#redis_list').html(html)
+    })
+}
+
+showData()
+
+
+
+</script>
+
+<nav class="navbar navbar-light bg-light sticky-top">
+
+  <xio-button label="redis" icon="refresh" action="showData()"></xio-button>
+</nav>
+
+<section id="redis_list">
+
+</section>
+
+<template id="redis_template">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th >key</th>
+          <th >content</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- {{#.}} -->
+        <tr data-xio-nav="#./{{id}}">
+          <td>{{@id}}</td>
+          <td>{{name}}</td>
+          <td>
+            <xio-button label="DELETE" action="requestPeer('{{id}}/.about','GET')"></xio-button>
+          </td>
+        </tr>
+        <!-- {{/.}} -->
+      </tbody>
+    </table>
+</template>
+

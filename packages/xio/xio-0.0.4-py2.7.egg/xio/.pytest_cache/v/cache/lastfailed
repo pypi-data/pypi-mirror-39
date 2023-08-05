@@ -1,0 +1,19 @@
+{
+  "core/app/tests/test_app.py::TestCases::test_app_cient_package": true,
+  "core/app/tests/test_app.py::TestCases::test_base": true,
+  "core/app/tests/test_services.py::TestCases::test_service_quota": true,
+  "core/node/tests/test_node.py::TestCases::test_base_client": true,
+  "core/node/tests/test_node.py::TestCases::test_base_server": true,
+  "core/node/tests/test_node.py::TestCases::test_base_sync": true,
+  "core/node/tests/test_node.py::TestCases::test_node_connect": true,
+  "core/node/tests/test_node.py::TestCases::test_node_delivery": true,
+  "core/node/tests/test_node.py::TestCases::test_node_lookup": true,
+  "core/tests/test_peer.py::TestCases::test_base": true,
+  "core/tests/test_peer.py::TestCases::test_connect": true,
+  "core/tests/test_peer.py::TestCases::test_peers_base": true,
+  "core/tests/test_peers.py::TestCases::test_base": true,
+  "core/tests/test_peers.py::TestCases::test_lookup": true,
+  "core/tests/test_resource.py::TestCases::test_about_inline": true,
+  "core/tests/test_resource.py::TestCases::test_api": true,
+  "core/tests/test_resource.py::TestCases::test_xmethod": true
+}
