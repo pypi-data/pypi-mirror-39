@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: universal-response-mobile-api
+Version: 0.1.2
+Summary: Add universal response for your API
+Home-page: https://bitbucket.org/anmv/universal-response-mobile-api
+Author: Damir, Alexandr
+Author-email: exorciste.2007@gmail.com
+License: MIT
+Keywords: api mobile response
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: Django (>=2.0)
+Requires-Dist: djangorestframework (>=3.8.2)
+
+Add universal response for your API.
+
+
