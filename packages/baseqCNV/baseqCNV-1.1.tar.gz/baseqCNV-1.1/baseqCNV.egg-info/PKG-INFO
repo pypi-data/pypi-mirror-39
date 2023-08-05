@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: baseqCNV
+Version: 1.1
+Summary: Pipeline for Processing Whole Genenome Sequencing datasets
+Home-page: https://wgs.beiseq.cn
+Author: Xiannian Zhang
+Author-email: friedpine@gmail.com
+License: UNKNOWN
+Description: # baseqCNV
+        
+        ## Install baseqCNV
+        We need python3 and a package called: baseq_drops, which could be installed by:
+        
+            pip install baseqCNV
+        
+        After install, you will have a runnable command `baseqCNV`
+Keywords: sample setuptools development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6

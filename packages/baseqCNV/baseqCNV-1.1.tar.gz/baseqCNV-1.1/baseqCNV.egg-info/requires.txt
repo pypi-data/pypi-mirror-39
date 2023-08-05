@@ -1,0 +1,12 @@
+pandas
+click
+scipy
+configparser
+matplotlib
+statsmodels
+
+[dev]
+check-manifest
+
+[test]
+coverage
