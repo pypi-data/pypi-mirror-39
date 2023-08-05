@@ -1,0 +1,3 @@
+[console_scripts]
+secret-keeper = ridi.secret_keeper.cmdline:main
+
