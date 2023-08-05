@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: pykeybase
+Version: 0.3.0
+Summary: Python client for keybase
+Home-page: UNKNOWN
+Author: ['Samuel Hofius', 'Jesse Cooper']
+Author-email: jesse_cooper@codeholics.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+
+pykeybase
+===============================
+
+version number: 0.1.0
+
+Overview
+--------
+
+Python client for Keybase.io  
+The main repo can be found by joining the Keybase team `crbot.pub`
+
+TODO
+----
+* unit tests
+* add async 
+
+Installation / Usage
+--------------------
+
+To install use pip:
+
+    $ pip install pykeybase
+
+
+Or clone the repo:
+
+    $ git clone keybase://team/crbot.public/pykeybase
+    $ python setup.py install
+
+Usage
+-----
+```python
+import pykeybase
+kb = pykeybase.KeybaseChat()
+...
+```
+
+Contributing
+------------
+
+Please join the Keybase team `crbot.public`
+
+Example
+-------
+
+An example bot can be found in ./examples
+
