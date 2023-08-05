@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+drf_serializer_builder/__init__.py
+drf_serializer_builder/serializers.py
+drfserializerbuilder.egg-info/PKG-INFO
+drfserializerbuilder.egg-info/SOURCES.txt
+drfserializerbuilder.egg-info/dependency_links.txt
+drfserializerbuilder.egg-info/not-zip-safe
+drfserializerbuilder.egg-info/top_level.txt

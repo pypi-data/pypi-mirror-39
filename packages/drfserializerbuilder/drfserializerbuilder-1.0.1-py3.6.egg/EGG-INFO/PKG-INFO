@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: drfserializerbuilder
+Version: 1.0.0
+Summary: Extends ModelSerializer of django rest framework.
+Home-page: https://github.com/eugene-s/drf-serializer-builder
+Author: Eugene Savchenko
+Author-email: savchenko.eo@gmail.com
+License: GPL
+Description: # drf-serializer-builder
+        Extends ModelSerializer to customize fields and meta options on runtime
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
