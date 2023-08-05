@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+bigquery_schema_coerce/__init__.py
+bigquery_schema_coerce/core.py
+bigquery_schema_coerce.egg-info/PKG-INFO
+bigquery_schema_coerce.egg-info/SOURCES.txt
+bigquery_schema_coerce.egg-info/dependency_links.txt
+bigquery_schema_coerce.egg-info/requires.txt
+bigquery_schema_coerce.egg-info/top_level.txt
+bigquery_schema_coerce.egg-info/zip-safe
