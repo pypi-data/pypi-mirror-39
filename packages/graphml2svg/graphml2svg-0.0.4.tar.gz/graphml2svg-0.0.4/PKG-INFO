@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: graphml2svg
+Version: 0.0.4
+Summary: YFile .graphml converter to .svg
+Home-page: https://github.com/alex-fe/Graphml-to-SVG-converter
+Author: Alex Feldman
+Author-email: alexfeldman93@gmail.com
+License: MIT
+Description: # Graphml-to-SVG-converter
+        
+        Converts `.graphml` into `.svg` format.
+        
+        e.g.
+        ```python
+        path = 'path/to/graphml/file.graphml'
+        g = Graph(path)
+        g.run()
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
