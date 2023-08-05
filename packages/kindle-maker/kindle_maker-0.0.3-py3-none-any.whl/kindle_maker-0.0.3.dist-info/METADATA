@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: kindle-maker
+Version: 0.0.3
+Summary: a tool make kindle mobi ebook
+Home-page: https://github.com/jachinlin/kindle_maker
+Author: jachinlin
+Author-email: linjx1000@gmail.com
+License: MIT
+Keywords: kindle ebook mobi
+Platform: UNKNOWN
+Requires-Dist: Jinja2 (==2.10)
+
+UNKNOWN
+
+
