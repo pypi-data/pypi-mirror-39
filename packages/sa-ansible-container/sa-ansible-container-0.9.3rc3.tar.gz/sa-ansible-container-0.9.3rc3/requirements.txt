@@ -1,0 +1,9 @@
+Jinja2>=2.9
+pip>=6.0
+PyYAML>=3.12
+docker==2.7.0
+requests>=2
+ruamel.yaml>=0.15.34,<=0.15.51
+six>=1.10
+structlog[dev]>=16.1
+jsonschema==2.6.0
