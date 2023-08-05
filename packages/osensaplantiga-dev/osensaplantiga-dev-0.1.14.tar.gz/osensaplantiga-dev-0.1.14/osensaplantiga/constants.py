@@ -1,0 +1,20 @@
+""" Global Constants """
+
+# Status flags
+STATUS_IMU_INIT = (1 << 0)
+STATUS_FLASH_INIT = (1 << 1)
+STATUS_TIME_INIT = (1 << 2)
+STATUS_OK = STATUS_IMU_INIT | STATUS_FLASH_INIT
+# Warning flags
+WARN_PWR_LOW = (1 << 4)
+WARN_MASK_PWR = int('0x00F0', 0)
+WARN_MASK_ALL = WARN_MASK_PWR
+# Error flags
+ERR_IMU_FULL = (1 << 8)
+ERR_IMU_ERR = (1 << 9)
+ERR_FLASH_FULL = (1 << 12)
+ERR_FLASH_ERR = (1 << 13)
+ERR_FLASH_ERASE = (1 << 14)
+ERR_MASK_FLASH = int('0xF000', 0)
+ERR_MASK_IMU = int('0x0F00', 0)
+ERR_MASK_ALL = ERR_MASK_FLASH | ERR_MASK_IMU
