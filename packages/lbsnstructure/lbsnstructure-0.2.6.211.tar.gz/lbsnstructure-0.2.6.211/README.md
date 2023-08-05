@@ -1,0 +1,44 @@
+# LBSNSTRUCTURE
+
+A python compiled version of the [common location based social network (LBSN) data structure concept](https://gitlab.vgiscience.de/lbsn/concept) (ProtoBuf) to handle cross network Social Media data in Python.
+There are several motivations for prividing a common LBSN interchange data structure. Firstly, the [GDPR](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679) directly requests Social Media Network operators to allow users to transfer accounts and data inbetween services. 
+While there are attempts by Google, Facebook etc. (see [data-transfer-prject](https://github.com/google/data-transfer-project)), it is not currently possible. With this structure concept, we follow an independent road.
+A primary goal is to systematically characterize LBSN data aspects in a common scheme that enables privacy-by-design for connected software, transfer scripts and database design.
+
+## Quick Start
+
+Install with:  
+```shell
+pip install --upgrade lbsnstructure
+```
+
+Import to python projecty with:  
+```python
+import lbsnstructure
+```
+
+.. or compile newest version from [Protofiles](https://gitlab.vgiscience.de/lbsn/concept)
+
+1. Clone git Repository `git clone git@gitlab.vgiscience.de/lbsn/concept`
+2. Install [Protocoll Buffers](https://github.com/google/protobuf/releases)
+3. Compile structure to python package `protoc --python_out=examples/python lbsnstructure/structure.proto`  
+4. Install with `pip install .` in examples/python
+
+# Developers
+
+For development & testing, make a local clone of this repository  
+```shell
+git clone git@gitlab.vgiscience.de:lbsn/concept.git
+```
+
+Go to subfolder `examples\python` and symlink the folder to your  
+Python's site-packages folder with:  
+```shell
+python setup.py develop
+```
+
+Now, lbsnstructure should be available through your python path and directly link to the local git clone directory.
+
+## License
+
+This project is licensed under the  MIT License.
