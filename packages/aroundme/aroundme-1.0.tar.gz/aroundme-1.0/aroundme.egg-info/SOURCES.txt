@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+aroundme/__init__.py
+aroundme/__main__.py
+aroundme.egg-info/PKG-INFO
+aroundme.egg-info/SOURCES.txt
+aroundme.egg-info/dependency_links.txt
+aroundme.egg-info/entry_points.txt
+aroundme.egg-info/requires.txt
+aroundme.egg-info/top_level.txt
