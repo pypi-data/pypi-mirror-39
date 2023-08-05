@@ -1,0 +1,10 @@
+acme>=0.21.1
+certbot>=0.21.1
+nc_dnsapi==0.1.4
+mock
+setuptools
+zope.interface
+
+[docs]
+Sphinx>=1.0
+sphinx_rtd_theme
