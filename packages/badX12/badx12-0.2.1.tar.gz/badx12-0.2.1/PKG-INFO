@@ -1,0 +1,74 @@
+Metadata-Version: 1.1
+Name: badx12
+Version: 0.2.1
+Summary: A Python Library for parsing ANSI ASC X12 files.
+Home-page: https://github.com/git-albertomarin/badx12
+Author: Alberto J. Marin
+Author-email: alberto@ajmar.in
+License: MIT license
+Description: ======
+        badX12
+        ======
+        
+        
+        .. image:: https://img.shields.io/pypi/v/badX12.svg
+                :target: https://pypi.python.org/pypi/badX12
+        
+        .. image:: https://img.shields.io/travis/git-albertomarin/badX12.svg
+                :target: https://travis-ci.org/git-albertomarin/badX12
+        
+        .. image:: https://readthedocs.org/projects/badX12/badge/?version=latest
+                :target: https://badX12.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        
+        
+        
+        A Python Library for parsing ANSI ASC X12 files.
+        
+        
+        * Free software: MIT license
+        * Documentation: https://badX12.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Disclaimer
+        _______
+        Please be aware that all edi files within the test directory are examples provided by x12.org
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2018-10-26)
+        ------------------
+        
+        * First release on PyPI.
+        
+        0.2.0 (2018-12-04)
+        ------------------
+        
+        * Reorganized project
+        
+Keywords: badx12
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
