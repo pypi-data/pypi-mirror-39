@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: box-python-sdk
+Version: 0.0.1
+Summary: Not the Box Python SDK
+Home-page: https://github.com/box/box-python-sdk
+Author: Box
+Author-email: oss@box.com
+License: Apache Software License, Version 2.0, http://www.apache.org/licenses/LICENSE-2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=2.7.0
+
+Please see the 'boxsdk' package for the official Box SDK
+
+
