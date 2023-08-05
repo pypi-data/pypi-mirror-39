@@ -1,0 +1,14 @@
+aiohttp
+async-timeout
+disco-py
+pafy
+pymongo
+SQLAlchemy
+tabulate
+youtube-dl
+
+[:"linux" in sys_platform]
+websocket-client==0.44.0
+
+[:sys_platform == "win32"]
+websocket-client==0.46.0
