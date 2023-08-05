@@ -1,0 +1,153 @@
+Metadata-Version: 2.0
+Name: django-adminstats
+Version: 0.6.0
+Summary: An adminstrative charting tool for statistics in Django
+Home-page: https://gitlab.com/alantrick/django-adminstats
+Author: Alan Trick
+Author-email: me@alantrick.ca
+License: LGPL
+Project-URL: Bug Tracker, https://gitlab.com/alantrick/django-adminstats/issues
+Project-URL: Source Code, https://gitlab.com/alantrick/django-adminstats
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.1
+Classifier: Topic :: Utilities
+Provides-Extra: test
+Provides-Extra: docs
+Requires-Dist: Django (>=1.10)
+Requires-Dist: python-dateutil
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-django; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Requires-Dist: pytest-pythonpath; extra == 'test'
+Requires-Dist: tox; extra == 'test'
+Requires-Dist: django-trackstats; extra == 'test'
+Requires-Dist: pyyaml; extra == 'test'
+
+==================
+Django Admin Stats
+==================
+
+|pipeline-badge| |coverage-badge| |pypi-badge|
+
+Django Admin Stats allows you to create and display charts of your data
+using the django admin. It uses `c3 <https://c3js.org/>`_ to display charts.
+
+Features
+--------
+
+* Supports generating statistics from django models and from trackstats_
+  metrics.
+* Also allows for custom statistics generation by making your own
+  ``Registration`` subclass.
+* Nice JavaScript charts with c3, falls back to a plain table without
+  JavaScript.
+* Add filters & group data by setting query parameters on the criteria
+
+Limitations
+-----------
+
+* One dimension/axis of the chart is always the date. There's no way to
+  specify a chart that isn’t “by date”.
+
+Installation
+------------
+
+Installation is straightforward. Install ``django-adminstats`` with pip, and
+then add ``'django_adminstats',`` to your ``INSTALLED_APPS`` setting.
+
+Registering Statistics
+----------------------
+
+In order to do anything, you'll need register some models or trackstats
+metrics. You can find examples of this in ``tests/models.py``, but the short
+of it looks like this:
+
+.. code-block:: python
+
+   from django_adminstats.registry import register_model
+
+   class Currency(models.Model):
+       slug = models.CharField(max_length=10)
+       name = models.CharField(max_length=100)
+       current_usd_rate = models.DecimalField()
+       sign = models.CharField(max_length=10, default='$')
+
+   class Transaction(models.Model):
+       amount = models.DecimalField()
+       currency = models.Foreignkey(to=Currency)
+       date = models.DateTimeField(auto_now_add=True)
+
+   register_model(Transaction)
+
+
+By default, we look for a field called ‘date’ on the model, and it should be
+either a ``DateField`` or ``DateTimeField``. If you want to use a different,
+field (for example if you’re using Django’s default user and you want to chart
+by ‘joined_at’) you need to create a registration subclass.
+
+.. code-block:: python
+
+   from django_adminstats.registry import registry, register
+
+   class UserRegistration(ModelRegistration):
+       date_field = 'joined_at'
+
+   register(UserRegistration())
+
+
+Creating Charts
+---------------
+
+You can add charts in the admin. In order for the chart to show anything, you
+need to add criteria. By default, it will just show a count of all the items
+charted by the date field, if you to change this, you need to add things in
+the filter query, axis query, and group query fields.
+
+First, the content of these fields is formatted like a URL querystring,
+for example a filter query of ``message=Hello%20World&x=y`` is equivalent to
+``.filter(message='Hello World', x='y')``. Note that you only use the
+``key0=value0&key1=value1`` form in the filter query, the axis and group
+queries are just ``key0&key2``.
+
+Second, you can use lookups and relations just like in a normal django
+query (e.g. ``field__gt=2`` or ``field__related_field``).
+
+Finally, you can also specify functions to use on the field by doing
+``field:function``. For example ``id:count`` is the default axis query when
+the field is left blank.
+
+
+Demo
+----
+
+Just run ``make demo`` and log in with user ``admin`` and password ``admin``.
+
+
+.. |pipeline-badge| image:: https://gitlab.com/alantrick/django-adminstats/badges/master/pipeline.svg
+   :target: https://gitlab.com/alantrick/django-adminstats/
+   :alt: Build Status
+
+.. |coverage-badge| image:: https://gitlab.com/alantrick/django-adminstats/badges/master/coverage.svg
+   :target: https://gitlab.com/alantrick/django-adminstats/
+   :alt: Coverage Status
+
+.. |pypi-badge| image:: https://img.shields.io/pypi/v/django_adminstats.svg
+   :target: https://pypi.org/project/django-adminstats/
+   :alt: Project on PyPI
+
+.. _trackstats: https://pypi.org/project/django-trackstats/
+
+
+
