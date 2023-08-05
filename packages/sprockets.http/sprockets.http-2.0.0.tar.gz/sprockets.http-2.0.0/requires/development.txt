@@ -1,0 +1,4 @@
+-e .
+-r testing.txt
+-r docs.txt
+flake8
