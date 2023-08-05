@@ -1,0 +1,1505 @@
+{
+    "presidentes": {
+        "1": {
+            "nome": "Manuel Deodoro da Fonseca",
+            "vice": "Floriano Vieira Peixoto",
+            "imandato": "15 de novembro de 1889",
+            "fmandato": "23 de novembro de 1891",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Rodrigo Augusto da Silva",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+		    "acronimo": "MAPA",
+                    "imandato": "05 de janeiro de 1889",
+                    "fmandato": "07 de junho de 1889"
+                },
+                "2":{
+                    "nome": "Lourenço Cavalcanti de Albuquerque",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+		    "acronimo": "MAPA",
+                    "imandato": "07 de junho de 1889",
+                    "fmandato": "15 de novembro de 1889"
+                },
+                "3":{
+                    "nome": "Quintino Antônio Ferreira de Souza",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+		    "acronimo": "MAPA",
+                    "imandato": "15 de novembro de 1889",
+                    "fmandato": "07 de dezembro de 1889"
+                },
+                "4":{
+                    "nome": "Demétrio Nunes Ribeiro",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+		    "acronimo": "MAPA",
+                    "imandato": "07 de dezembro de 1889",
+                    "fmandato": "31 de janeiro de 1890"
+                },
+               "5":{
+                    "nome": "Francisco Glycério de Cerqueira Leite",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+		    "acronimo": "MAPA",
+                    "imandato": "31 de janeiro de 1890",
+                    "fmandato": "22 de janeiro de 1891"
+                },
+                "6":{
+                    "nome": "Henrique Pereira de Lucena",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+		    "acronimo": "MAPA",
+                    "imandato": "22 de janeiro de 1891",
+                    "fmandato": "04 de julho de 1891"
+                },
+                "7":{
+                    "nome": "João Barbalho Uchôa Cavalcanti",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+		    "acronimo": "MAPA",
+                    "imandato": "04 de julho de 1891",
+                    "fmandato": "23 de novembro de 1891"
+                }
+            }
+        },
+        "2": {
+            "nome": "Floriano Vieira Peixoto",
+            "vice": null,
+            "imandato": "23 de novembro de 1891",
+            "fmandato": "15 de novembro de 1894",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Antão Gonçalves de Faria",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+		    "acronimo": "MAPA",
+                    "imandato": "23 de novembro de 1891",
+                    "fmandato": "23 de julho de 1892"
+                },
+                "2":{
+                    "nome": "Innocêncio Serzedello Corrêa",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+		    "acronimo": "MAPA",
+                    "imandato": "23 de julho de 1892",
+                    "fmandato": "17 de dezembro de 1892"
+                },
+                "3":{
+                    "nome": "Antônio Paulino Limpo de Abreu (filho)",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+		    "acronimo": "MAPA",
+                    "imandato": "17 de dezembro de 1892",
+                    "fmandato": "22 de abril de 1893"
+                }
+            }
+        },
+        "3": {
+            "nome": "Prudente José de Morais e Barros",
+            "vice": "Manuel Vitorino Pereira",
+            "imandato": "15 de novembro de 1894",
+            "fmandato": "15 de novembro de 1898",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "",
+                    "foto": "",
+                    "ministerio": "",
+		    "acronimo": "",
+                    "imandato": "",
+                    "fmandato": ""
+                }
+            }
+        },
+        "4": {
+            "nome": "Manuel Ferraz de Campos Sales",
+            "vice": "Francisco de Assis Rosa e Silva",
+            "imandato": "15 de novembro de 1898",
+            "fmandato": "15 de novembro de 1902",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "",
+                    "foto": "",
+                    "ministerio": "",
+                    "imandato": "",
+                    "fmandato": ""
+                }
+            }
+        },
+        "5": {
+            "nome": "Francisco de Paula Rodrigues Alves",
+            "vice": "Francisco Silviano de Almeida Brandão",
+            "imandato": "15 de novembro de 1902",
+            "fmandato": "15 de novembro de 1906",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "",
+                    "foto": "",
+                    "ministerio": "",
+                    "imandato": "",
+                    "fmandato": ""
+                }
+            }
+        },
+        "6": {
+            "nome": "Afonso Augusto Moreira Pena",
+            "vice": "Nilo Procópio Peçanha",
+            "imandato": "15 de novembro de 1906",
+            "fmandato": "14 de junho de 1909",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "",
+                    "foto": "",
+                    "ministerio": "",
+                    "imandato": "",
+                    "fmandato": ""
+                }
+            }
+        },
+        "7": {
+            "nome": "Nilo Procópio Peçanha",
+            "vice": null,
+            "imandato": "14 de junho de 1909",
+            "fmandato": "15 de novembro de 1910",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Antonio Cândido Rodrigues",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "19 de junho de 1909",
+                    "fmandato": "26 de novembro de 1909"
+                },
+                               "2":{
+                    "nome": "Francisco Sá",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "26 de novembro de 1909",
+                    "fmandato": "29 de novembro de 1909"
+                },
+                               "3":{
+                    "nome": "Rodolpho Nogueira da Rocha Miranda",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "29 de novembro de 1909",
+                    "fmandato": "05 de novembro de 1910"
+                }
+            }
+        },
+        "8": {
+            "nome": "Hermes Rodrigues da Fonseca",
+            "vice": "Venceslau Brás Pereira Gomes",
+            "imandato": "15 de novembro de 1910",
+            "fmandato": "15 de novembro de 1914",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Pedro Manoel de Toledo",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "16 de novembro de 1910",
+                    "fmandato": "18 de novembro de 1913"
+                },
+                "2":{
+                    "nome": "Manoel Edwiges de Queiroz Vieira",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "19 de novembro de 1913",
+                    "fmandato": "15 de novembro de 1914"
+                }
+            }
+        },
+        "9": {
+            "nome": "Venceslau Brás Pereira Gomes",
+            "vice": "Urbano Santos da Costa Araújo",
+            "imandato": "15 de novembro de 1914",
+            "fmandato": "15 de novembro de 1918",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "João Pandiá Calógeras",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "15 de novembro de 1914",
+                    "fmandato": "07 de agosto de 1915"
+                },
+                "2":{
+                    "nome": "José Rufino Bezerra Cavalcanti",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "07 de agosto de 1915",
+                    "fmandato": "26 de novembro de 1917"
+                },
+                "3":{
+                    "nome": "João Gonçalves Pereira Lima",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "26 de novembro de 1917",
+                    "fmandato": "15 de novembro de 1918"
+                }
+            }
+        },
+        "10": {
+            "nome": "Delfim Moreira da Costa Ribeiro",
+            "vice": null,
+            "imandato": "15 de novembro de 1918",
+            "fmandato": "28 de julho de 1919",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Antonio Pádua Sales",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "12 de dezembro de 1918",
+                    "fmandato": "28 de julho de 1919"
+                }
+            }
+        },
+        "11": {
+            "nome": "Epitácio Lindolfo da Silva Pessoa",
+            "vice": ["Delfim Moreira da Costa Ribeiro", "Francisco Álvaro Bueno de Paiva"],
+            "imandato": "28 de julho de 1919",
+            "fmandato": "15 de novembro de 1922",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "IIdefonso Simões Lopes",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "28 de julho de 1919",
+                    "fmandato": "24 de maio de 1922"
+                },
+                "2":{
+                    "nome": "José Pires do Rio",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "24 de maio de 1922",
+                    "fmandato": "15 de novembro de 1922"
+                }
+            }
+        },
+        "12": {
+            "nome": "Artur da Silva Bernardes",
+            "vice": ["Urbano Santos da Costa Araújo", "Estácio de Albuquerque Coimbra"],
+            "imandato": "15 de novembro de 1922",
+            "fmandato": "15 de novembro de 1926",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Miguel Calmon Du Pin e Almeida",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "16 de novembro de 1922",
+                    "fmandato": "15 de novembro de 1926"
+                }
+            }
+        },
+        "13": {
+            "nome": "Washington Luís Pereira de Sousa",
+            "vice": "Fernando de Melo Viana",
+            "imandato": "15 de novembro de 1926",
+            "fmandato": "24 de outubro de 1930",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Geminiano Lyra Castro",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "16 de dezembro de 1926",
+                    "fmandato": "23 de outrubro de 1930"
+                }
+            }
+        },
+        "14": {
+            "nome": "Getúlio Dornelles Vargas",
+            "vice": null,
+            "imandato": "3 de novembro de 1930",
+            "fmandato": "29 de outubro de 1945",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Paulo de Moraes Barros",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "23 de outubro de 1930",
+                    "fmandato": "28 de novembro de 1930"
+                },
+                "2":{
+                    "nome": "Joaquim Francisco de Assis Brasil",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "13 de dezembro de 1930",
+                    "fmandato": "22 de dezembro de 1932"
+                },
+                "3":{
+                    "nome": "Juarez do Nascimento Fernandes Távora",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "22 de dezembro de 1932",
+                    "fmandato": "24 de julho de 1934"
+                },
+                "4":{
+                    "nome": "José Solano Carneiro da Cunha",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "09 de agosto de 1935",
+                    "fmandato": "09 de setembro de 1935"
+                },
+                "5":{
+                    "nome": "Gilberto da Silva Porto",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "24 de agosto de 1937",
+                    "fmandato": "13 de novembro de 1937"
+                },
+                "6":{
+                    "nome": "Fernando de Sousa Costa",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "13 de novembro de 1937",
+                    "fmandato": "03 de junho de 1941"
+                },
+                "7":{
+                    "nome": "Carlos de Souza Duarte",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "03 de junho de 1941",
+                    "fmandato": "28 de fevereiro de 1942"
+                },
+                "8":{
+                    "nome": "João Maurício de Medeiros",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "16 de setembro de 1942",
+                    "fmandato": "10 de outubro de 1942"
+                },
+                "9":{
+                    "nome": "João Maurício de Medeiros",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "29 de maio de 1944",
+                    "fmandato": "17 de julho de 1944"
+                },
+                "10":{
+                    "nome": "Gregório da Fonseca",
+                    "foto": "",
+                    "ministerio": "Secretaria da Presidência da República",
+                    "acronimo":"SPR",
+                    "imandato": "4 de novembro de 1930",
+                    "fmandato": "23 de abril de 1934"
+                },
+                "11":{
+                    "nome": "Ronald de Carvalho",
+                    "foto": "",
+                    "ministerio": "Secretaria da Presidência da República",
+                    "acronimo":"SPR",
+                    "imandato": "23 de abril de 1934",
+                    "fmandato": "29 de abril de 1935"
+                },
+                "12":{
+                    "nome": "Artur Guimarães de Araújo Jorge",
+                    "foto": "",
+                    "ministerio": "Secretaria da Presidência da República",
+                    "acronimo":"SPR",
+                    "imandato": "29 de abril de 1935",
+                    "fmandato": "17 de maio de 1935"
+                },
+                "13":{
+                    "nome": "Otto Prazeres",
+                    "foto": "",
+                    "ministerio": "Secretaria da Presidência da República",
+                    "acronimo":"SPR",
+                    "imandato": "17 de maio de 1935",
+                    "fmandato": "15 de junho de 1936"
+                },
+                "14":{
+                    "nome": "Luís Fernandes Vergara",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "1 de dezembro de 1938",
+                    "fmandato": "29 de outubro de 1945"
+                }
+
+            }
+        },
+        "15": {
+            "nome": "José Linhares",
+            "vice": null,
+            "imandato": "29 de outubro de 1945",
+            "fmandato": "31 de janeiro de 1946",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Theodureto Leite de Almeida Camargo",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "08 de novembro de 1945",
+                    "fmandato": "31 de janeiro de 1946"
+                },
+                "2":{
+                    "nome": "Lino Moreira",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "30 de outubro de 1945",
+                    "fmandato": "31 de janeiro de 1946"
+                }
+            }
+        },
+        "16": {
+            "nome": "Eurico Gaspar Dutra",
+            "vice": "Nereu de Oliveira Ramos",
+            "imandato": "31 de janeiro de 1946",
+            "fmandato": "31 de janeiro de 1951",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Manoel Neto Campelo Júnior",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "31 de janeiro de 1946",
+                    "fmandato": "14 de outubro de 1946"
+                },
+                "2":{
+                    "nome": "Daniel Serapião de Carvalho",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "14 de outubro de 1946",
+                    "fmandato": "24 de abril de 1950"
+                },
+                "3":{
+                    "nome": "Antonio de Novaes Filho",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "24 de abril de 1950",
+                    "fmandato": "24 de janeiro de 1951"
+                },
+                "4":{
+                    "nome": "Gabriel Monteiro da Silva",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "31 de janeiro de 1946",
+                    "fmandato": "3 de dezembro de 1946"
+                },
+                "5":{
+                    "nome": "José Pereira Lira",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "16 de dezembro de 1946",
+                    "fmandato": "31 de janeiro de 1951"
+                }
+            }
+        },
+        "17": {
+            "nome": "Getúlio Dornelles Vargas",
+            "vice": "João Fernandes Campos Café Filho",
+            "imandato": "31 de janeiro de 1951",
+            "fmandato": "24 de agosto de 1954",
+            "foto": "",
+            "ministros": {
+                "1":{
+                   "nome": "João Cleofas de Oliveira",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "31 de janeiro de 1951",
+                    "fmandato": "08 de junho de 1954"
+                },
+                "2":{
+                    "nome": "Lourival Fontes",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "31 de janeiro de 1951",
+                    "fmandato": "24 de agosto de 1954"
+                }
+            }
+        },
+        "18": {
+            "nome": "João Fernandes Campos Café Filho",
+            "vice": null,
+            "imandato": "24 de agosto de 1954",
+            "fmandato": "8 de novembro de 1955",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Oswaldo Euclydes de Souza Aranha",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "08 de junho de 1954",
+                    "fmandato": "28 de agosto de 1954"
+                },
+                "2":{
+                    "nome": "Apolônio Jorge de Farias Salles",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "29 de junho de 1954",
+                    "fmandato": "24 de agosto de 1954"
+                },
+                "3":{
+                    "nome": "José da Costa",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "31 de agosto de 1954",
+                    "fmandato": "03 de maio de 1955"
+                },
+                "4":{
+                    "nome": "Bento Munhoz da Rocha Filho",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "03 de maio de 1955",
+                    "fmandato": "08 de novembro de 1955"
+                },
+                "5":{
+                    "nome": "José Monteiro de Castro",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "24 de agosto de 1954",
+                    "fmandato": "11 de novembro de 1955"
+                }
+            }
+        },
+        "19": {
+            "nome": "Carlos Coimbra da Luz",
+            "vice": null,
+            "imandato": "8 de novembro de 1955",
+            "fmandato": "11 de novembro de 1955",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Bento Munhoz da Rocha Filho",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "08 de novembro de 1955",
+                    "fmandato": "11 de novembro de 1955"
+                }
+            }
+        },
+        "20": {
+            "nome": "Nereu de Oliveira Ramos",
+            "vice": null,
+            "imandato": "11 de novembro de 1955",
+            "fmandato": "31 de janeiro de 1956",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Bento Munhoz da Rocha Filho",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "11 de novembro de 1955",
+                    "fmandato": "18 de novembro de 1955"
+                },
+                "2":{
+                    "nome": "Paulo de Lira Tavares",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "11 de novembro de 1955",
+                    "fmandato": "31 de janeiro de 1956"
+                }
+            }
+        },
+        "21": {
+            "nome": "Juscelino Kubitschek de Oliveira",
+            "vice": "João Belchior Marques Goulart",
+            "imandato": "31 de janeiro de 1956",
+            "fmandato": "31 de janeiro de 1961",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Ernesto Dornelles",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "31 de janeiro de 1956",
+                    "fmandato": "27 de setembro de 1956"
+                },
+                "2":{
+                    "nome": "José Parsifal Barroso",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "26 de setembro de 1956",
+                    "fmandato": "03 de outubro de 1956"
+                },
+                "3":{
+                    "nome": "Mário David Meneghetti",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "03 de outubro de 1956",
+                    "fmandato": "05 de abril de 1960"
+                },
+                "4":{
+                    "nome": "Fernando Carneiro da Cunha Nóbrega",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "06 de abril de 1960",
+                    "fmandato": "06 de junho de 1960"
+                },
+                "5":{
+                    "nome": "Antônio de Barros Carvalho",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "06 de junho de 1960",
+                    "fmandato": "30 de janeiro de 1961"
+                },
+                "6":{
+                    "nome": "Álvaro Lins",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "31 de janeiro de 1956",
+                    "fmandato": "5 de novembro de 1956"
+                },
+                "7":{
+                    "nome": "Victor Nunes Leal",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "5 de novembro de 1956",
+                    "fmandato": "10 de agosto de 1959"
+                },
+                "8":{
+                    "nome": "José Sette Câmara Filho",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "10 de agosto de 1959",
+                    "fmandato": "21 de abril de 1960"
+                },
+                "9":{
+                    "nome": "Osvaldo Maia Penido",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "21 de abril de 1960",
+                    "fmandato": "31 de janeiro de 1961"
+                }
+            }
+        },
+        "22": {
+            "nome": "Jânio da Silva Quadros",
+            "vice": "João Belchior Marques Goulart",
+            "imandato": "31 de janeiro de 1961",
+            "fmandato": "25 de agosto de 1961",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Joaquim José Ignácio de Barros",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "02 de março de 1961",
+                    "fmandato": "21 de abril de 1961"
+                },
+                "2":{
+                    "nome": "Francisco de Paula Quintanilha Ribeiro",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "31 de janeiro de 1961",
+                    "fmandato": "25 de agosto de 1961"
+                }
+            }
+        },
+        "23": {
+            "nome": "Paschoal Ranieri Mazzilli",
+            "vice": null,
+            "imandato": "25 de agosto de 1961",
+            "fmandato": "07 de setembro de 1961",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Ricardo Greenhalgh Barreto Filho ",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "29 de agosto de 1961",
+                    "fmandato": "07 de setembro de 1961"
+                },
+                "2":{
+                    "nome": "Floriano Augusto Ramos",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "25 de agosto de 1961",
+                    "fmandato": "8 de setembro de 1961"
+                }
+            }
+        },
+        "24": {
+            "nome": "João Belchior Marques Goulart",
+            "vice": null,
+            "imandato": "7 de setembro de 1961",
+            "fmandato": "2 de abril de 1964",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Ricardo Greenhalgh Barreto Filho ",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "07 de setembro de 1961",
+                    "fmandato": "08 de setembro de 1961"
+                },
+                "2":{
+                    "nome": "Manoel Felizardo de Souza e Melo",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "21 de abril de 1962",
+                    "fmandato": "24 de maio de 1962"
+                },
+                "3":{
+                    "nome": "João Lins Vieira Cansansão de Sinimbu",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "30 de maio de 1962",
+                    "fmandato": "09 de fevereiro de 1963"
+                },
+                "4":{
+                    "nome": "Oswaldo Cavalcanti da Costa Lima Filho",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "22 de junho de 1963",
+                    "fmandato": "04 de abril de 1964"
+                },
+                "5":{
+                    "nome": "Hermes Lima",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "8 de setembro de 1961",
+                    "fmandato": "18 de setembro de 1962"
+                },
+                "6":{
+                    "nome": "Evandro Lins e Silva",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "24 de janeiro de 1963",
+                    "fmandato": "18 de junho de 1963"
+                },
+                "7":{
+                    "nome": "Darcy Ribeiro",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "18 de junho de 1963",
+                    "fmandato": "31 de março de 1964"
+                }
+            }
+        },
+        "25": {
+            "nome": "Paschoal Ranieri Mazzilli",
+            "vice": null,
+            "imandato": "2 de abril de 1964",
+            "fmandato": "15 de abril de 1964",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Oswaldo Cavalcanti da Costa Lima Filho",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "04 de abril de 1964",
+                    "fmandato": "06 de abril de 1964"
+                },
+                "2":{
+                    "nome": "Arnaldo Lopes Sussekind",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "06 de abril de 1964",
+                    "fmandato": "15 de abril de 1964"
+                },
+                "3":{
+                    "nome": "Getúlio Barbosa de Moura",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "2 de abril de 1964",
+                    "fmandato": "15 de abril de 1964"
+                }
+
+            }
+        },
+        "26": {
+            "nome": "Humberto de Alencar Castello Branco",
+            "vice": "José Maria Alkimim",
+            "imandato": "15 de abril de 1964",
+            "fmandato": "15 de março de 1967",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Oscar Thompson Filho",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "15 de abril de 1964",
+                    "fmandato": "16 de junho de 1964"
+                },
+                "2":{
+                    "nome": "Hugo de Almeida Leme",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "16 de junho de 1964",
+                    "fmandato": "19 de setembro de 1965"
+                },
+                "3":{
+                    "nome": "Ney Aminthas de Barros Braga",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "19 de novembro de 1965",
+                    "fmandato": "12 de outubro de 1966"
+                },
+                "4":{
+                    "nome": "Severo Fagundes Gomes",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "12 de outubro de 1966",
+                    "fmandato": "15 de março de 1967"
+                },
+                "5":{
+                    "nome": "Luís Viana Filho",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "15 de abril de 1964",
+                    "fmandato": "6 de maio de 1966"
+                },
+                "6":{
+                    "nome": "Luís Augusto Fraga Navarro de Brito",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "6 de maio de 1966",
+                    "fmandato": "15 de março de 1967"
+                }
+            }
+        },
+        "27": {
+            "nome": "Artur da Costa e Silva",
+            "vice": "Pedro Aleixo",
+            "imandato": "15 de março de 1967",
+            "fmandato": "31 de agosto de 1969",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome":"Rondon Pacheco",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "15 de março de 1967",
+                    "fmandato": "31 de agosto de 1969"
+                }
+            }
+        },
+        "28": {
+            "nome": "Emílio Garrastazu Médici",
+            "vice": "Augusto Hamann Rademaker Grünewald",
+            "imandato": "30 de outubro de 1969",
+            "fmandato": "15 de março de 1974",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "José Francisco de Moura Cavalcanti",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "09 de maio de 1973",
+                    "fmandato": "15 de março de 1974"
+                },
+                "2":{
+                    "nome": "João Leitão de Abreu",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "30 de outubro de 1969",
+                    "fmandato": "15 de março de 1974"
+                }
+            }
+        },
+        "29": {
+            "nome": "Ernesto Beckmann Geisel",
+            "vice": "Adalberto Pereira dos Santos",
+            "imandato": "15 de março de 1974",
+            "fmandato": "15 de março de 1979",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Alysson Paulinelli",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "15 de março de 1974",
+                    "fmandato": "15 de março de 1979"
+                },
+                "2":{
+                    "nome": "Golbery do Couto e Silva",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "15 de março de 1974",
+                    "fmandato": "15 de março de 1979"
+                }
+
+            }
+        },
+        "30": {
+            "nome": "João Baptista de Oliveira Figueiredo",
+            "vice": "Antônio Aureliano Chaves de Mendonça",
+            "imandato": "15 de março de 1979",
+            "fmandato": "15 de março de 1985",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Paulo Afonso Romano",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "15 de março de 1979",
+                    "fmandato": "15 de agosto de 1979"
+                },
+                "2":{
+                    "nome": "Ângelo Amaury Stábile",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "15 de agosto de 1979",
+                    "fmandato": "02 de março de 1984"
+                },
+                "3":{
+                    "nome": "",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "02 de março de 1984",
+                    "fmandato": "14 de março de 1985"
+                },
+                "4":{
+                    "nome": "Golbery do Couto e Silva",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "15 de março de 1979",
+                    "fmandato": "6 de agosto de 1981"
+                },
+                "5":{
+                    "nome": "João de Carvalho Oliveira",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "6 de agosto de 1981",
+                    "fmandato": "12 de agosto de 1981"
+                },
+                "6":{
+                    "nome": "João Leitão de Abreu",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "12 de agosto de 1981",
+                    "fmandato": "15 de março de 1985"
+                }
+            }
+        },
+        "31": {
+            "nome": "José Sarney de Araújo Costa",
+            "vice": null,
+            "imandato": "15 de março de 1985",
+            "fmandato": "15 de março de 1990",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Pedro Simon",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "15 de março de 1985",
+                    "fmandato": "14 de fevereiro de 1986"
+               },
+                "2":{
+                    "nome": "Iris Rezende Machado",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "14 de fevereiro de 1986",
+                    "fmandato": "15 de março de 1990"
+               },
+                "3":{
+                    "nome": "Joaquim Domingos Roriz",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "15 de março de 1990",
+                    "fmandato": "30 de março de 1990"
+               },
+                "4":{
+                    "nome": "José Hugo Castelo Branco",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "15 de março de 1985",
+                    "fmandato": "14 de fevereiro de 1986"
+               },
+                "5":{
+                    "nome": "Marco Maciel",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "14 de fevereiro de 1986",
+                    "fmandato": "30 de abril de 1987"
+               },
+                "6":{
+                    "nome": "Ronaldo Costa Couto",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "30 de abril de 1987",
+                    "fmandato": "15 de dezembro de 1989"
+               },
+                "7":{
+                    "nome": "Luís Roberto Andrade Ponte",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "21 de dezembro de 1989",
+                    "fmandato": "15 de março de 1990"
+               }
+            }
+        },
+        "32": {
+            "nome": "Fernando Affonso Collor de Mello",
+            "vice": "Itamar Augusto Cautiero Franco",
+            "imandato": "15 de março de 1990",
+            "fmandato": "29 de dezembro de 1992",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "José Bernardo Cabral",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "30 de março de 1990",
+                    "fmandato": "03 de abril de 1990"
+               },
+                "2":{
+                    "nome": "Antonio Cabrera Mano Filho",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "03 de abril de 1990",
+                    "fmandato": "02 de outubro de 1992"
+               },
+                "3":{
+                    "nome": "Lázaro Ferreira Barboza",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "14 de outubro de 1992",
+                    "fmandato": "14 de novembro de 1992"
+               },
+                "4":{
+                    "nome": "Marcos Antônio de Salvo Coimbra",
+                    "foto": "",
+                    "ministerio": "Secretaria Geral da Presidência",
+                    "acronimo":"SGP",
+                    "imandato": "15 de março de 1990",
+                    "fmandato": "2 de outubro de 1992"
+               }
+            }
+        },
+        "33": {
+            "nome": "Itamar Augusto Cautiero Franco",
+            "vice": null,
+            "imandato": "29 de dezembro de 1992",
+            "fmandato": "1 de janeiro de 1995",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Wilson Brandi Romão",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "25 de maio de 1993",
+                    "fmandato": "05 de junho de 1993"
+                },
+                "2":{
+                    "nome": "Nuri Andraus Gassani",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "07 de junho de 1993",
+                    "fmandato": "16 de junho de 1993"
+                },
+                "3":{
+                    "nome": "José Antonio Barros Munhoz",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "17 de junho de 1993",
+                    "fmandato": "01 de setembro de 1993"
+                },
+                "4":{
+                    "nome": "José Eduardo de Andrade Vieira",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "01 de setembro de 1993",
+                    "fmandato": "13 de outubro de 1993"
+                },
+                "5":{
+                    "nome": "Dejandir Dalpasquale",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "14 de outubro de 1993",
+                    "fmandato": "21 de dezembro de 1993"
+                },
+                "6":{
+                    "nome": "Alberto Duque Portugal",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "21 de dezembro de 1993",
+                    "fmandato": "25 de janeiro de 1994"
+                },
+                "7":{
+                    "nome": "Synval Sebastião Duarte Guazzelli",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "26 de janeiro de 1994",
+                    "fmandato": "01 de janeiro de 1995"
+                },
+                "8":{
+                    "nome": "Henrique Hargreaves",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "5 de outubro de 1992",
+                    "fmandato": "1 de novembro de 1993"
+                },
+                "9":{
+                    "nome": "Tarcísio Carlos de Almeida Cunha",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "1 de novembro de 1993",
+                    "fmandato": "8 de fevereiro de 1994"
+                },
+                "10":{
+                    "nome": "Henrique Hargreaves",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "8 de fevereiro de 1994",
+                    "fmandato": "1 de janeiro de 1995"
+                }
+            }
+        },
+        "34": {
+            "nome": "Fernando Henrique Cardoso",
+            "vice": "Marco Antônio de Oliveira Maciel",
+            "imandato": "1 de janeiro de 1995",
+            "fmandato": "1 de janeiro de 2003",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "José Eduardo de Andrade Vieira",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "01 de janeiro de 1995",
+                    "fmandato": "02 de maio de 1996"
+                },
+                "2":{
+                    "nome": "Arlindo Porto Neto",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "02 de maio de 1996",
+                    "fmandato": "04 de maio de 1998"
+                },
+                "3":{
+                    "nome": "Francisco Sérgio Turra",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "01 de janeiro de 1999",
+                    "fmandato": "19 de julho de 1999"
+                },
+                "4":{
+                    "nome": "Marcus Vinicius Pratini de Moraes",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "19 de julho de 1999",
+                    "fmandato": "31 de dezembro de 2002"
+                },
+                "5":{
+                    "nome": "Clóvis Carvalho",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "1 de janeiro de 1995",
+                    "fmandato": "1 de janeiro de 1999"
+                },
+                "6":{
+                    "nome": "Pedro Parente",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "1 de janeiro de 1999",
+                    "fmandato": "1 de janeiro de 2003"
+                }
+            }
+        },
+        "35": {
+            "nome": "Luiz Inácio Lula da Silva",
+            "vice": "José Alencar Gomes da Silva",
+            "imandato": "1 de janeiro de 2003",
+            "fmandato": "31 de dezembro de 2010",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Roberto Rodrigues",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "01 de janeiro de 2003",
+                    "fmandato": "30 de junho de 2006"
+                },
+                "2":{
+                    "nome": "Luis Carlos Guedes Pinto",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "03 de julho de 2006",
+                    "fmandato": "22 de março de 2007"
+                },
+                "3":{
+                    "nome": "Reinhold Stephanes",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "27 de março de 2007",
+                    "fmandato": "31 de março de 2010"
+                },
+                "4":{
+                    "nome": "Wagner Rossi",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "21 de abril de 2010",
+                    "fmandato": "01 de janeiro de 2011"
+                },
+                "5":{
+                    "nome": "José Dirceu",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "1 de janeiro de 2003",
+                    "fmandato": "21 de junho de 2005"
+                },
+                "6":{
+                    "nome": "Dilma Rousseff",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "21 de junho de 2005",
+                    "fmandato": "30 de março de 2010"
+                },
+                "7":{
+                    "nome": "Erenice Guerra",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "30 de março de 2010",
+                    "fmandato": "16 de setembro de 2010"
+                },
+                "8":{
+                    "nome": "Carlos Eduardo Esteves Lima",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "16 de setembro de 2010",
+                    "fmandato": "31 de dezembro de 2010"
+                }
+
+            }
+        },
+        "36": {
+            "nome": "Dilma Vana Rousseff",
+            "vice": "Michel Miguel Elias Temer Lulia",
+            "imandato": "1 de janeiro de 2011",
+            "fmandato": "31 de agosto de 2016",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Wagner Rossi",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "01 de janeiro de 2011",
+                    "fmandato": "18 de agosto de 2011"
+                },
+                "2":{
+                    "nome": "Mendes Ribeiro Filho",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "18 de agosto de 2011",
+                    "fmandato": "15 de março de 2013"
+                },
+                "3":{
+                    "nome": "Antônio Eustáquio Andrade Ferreira",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "16 de março de 2013",
+                    "fmandato": "17 de março de 2014"
+                },
+                "4":{
+                    "nome": "Neri Geller",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "17 de março de 2014",
+                    "fmandato": "31 de dezembro de 2014"
+                },
+                "5":{
+                    "nome": "Kátia Abreu",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "01 de janeiro de 2015",
+                    "fmandato": "12 de maio de 2016"
+                },
+                "6":{
+                    "nome": "Antonio Palocci",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "1 de janeiro de 2011",
+                    "fmandato": "7 de junho de 2011"
+                },
+                "7":{
+                    "nome": "Gleisi Hoffmann",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "8 de junho de 2011",
+                    "fmandato": "3 de fevereiro de 2014"
+                },
+                 "8":{
+                    "nome": "Aloizio Mercadante",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "3 de fevereiro de 2014",
+                    "fmandato": "1 de outubro de 2015"
+                },
+                 "9":{
+                    "nome": "Jaques Wagner",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "2 de outubro de 2015",
+                    "fmandato": "21 de março de 2016"
+                }
+            }
+        },
+        "37": {
+            "nome": "Michel Miguel Elias Temer Lulia",
+            "vice": null,
+            "imandato": "31 de agosto de 2016",
+            "fmandato": "31 de Dezembro de 2018",
+            "foto": "",
+            "ministros": {
+                "1":{
+                    "nome": "Blario Maggi",
+                    "foto": "",
+                    "ministerio": "Ministério da Agricultura, Pecuária e Abastecimento",
+                    "acronimo":"MAPA",
+                    "imandato": "12 de maio de 2016",
+                    "fmandato": "31 de dezembro de 2018"
+                },
+                 "2":{
+                    "nome": "Eva Chiavon",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "22 de março de 2016",
+                    "fmandato": "12 de maio de 2016"
+                },
+                 "3":{
+                    "nome": "Eliseu Padilha",
+                    "foto": "",
+                    "ministerio": "Casa Civil",
+                    "acronimo":"CC",
+                    "imandato": "12 de maio de 2016",
+                    "fmandato": "31 de dezembro de 2018"
+                }
+            }
+        },
+        "38": {
+            "nome": "Jair Messias Bolsonaro",
+            "vice": "Antônio Hamilton Martins Mourão",
+            "imandato": "1 de janeiro de 2019",
+            "fmandato": "21 de dezembro de 2022",
+            "foto": ""
+        }
+    }
+}
