@@ -1,0 +1,9 @@
+README.rst
+setup.py
+auto_pypi/__init__.py
+auto_pypi/auto_pypi.py
+auto_pypi.egg-info/PKG-INFO
+auto_pypi.egg-info/SOURCES.txt
+auto_pypi.egg-info/dependency_links.txt
+auto_pypi.egg-info/entry_points.txt
+auto_pypi.egg-info/top_level.txt
