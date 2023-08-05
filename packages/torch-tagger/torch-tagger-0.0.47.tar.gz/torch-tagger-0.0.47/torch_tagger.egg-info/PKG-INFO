@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: torch-tagger
+Version: 0.0.47
+Summary: NLP tool
+Home-page: https://github.com/infinity-future/torch-tagger
+Author: infinityfuture
+Author-email: infinityfuture@foxmail.com
+License: MIT Licence
+Description: NLP tool, NER, POS
+Keywords: pip,pytorch,NER,tagger
+Platform: any
