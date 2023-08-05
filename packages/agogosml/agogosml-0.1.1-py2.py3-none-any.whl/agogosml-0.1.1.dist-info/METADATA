@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: agogosml
+Version: 0.1.1
+Summary: Agogosml Library
+Home-page: https://github.com/Microsoft/agogosml
+Author: Rami Sayar
+Author-email: rami.sayar@microsoft.com
+License: MIT license
+Keywords: agogosml
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: confluent-kafka (==0.11.6)
+Requires-Dist: azure-eventhub (==1.2.0)
+Requires-Dist: requests (==2.20.1)
+Requires-Dist: python-dotenv (==0.9.1)
+Requires-Dist: flask (==1.0.2)
+Requires-Dist: pyyaml (==3.13)
+Requires-Dist: jsonschema (==2.6.0)
+
+Agogosml
+========
+
+This project includes the library for Agogosml. Please refer to the overall documentation:
+
+-  `User Guide - Getting Started <../docs/USER_GUIDE.rst>`__
+-  `Developer Guide <../docs/DEVELOPER_GUIDE.rst>`__
+
+=======
+History
+=======
+
+0.1.0 (2018-11-06)
+------------------
+
+* First release on PyPI.
+
+
