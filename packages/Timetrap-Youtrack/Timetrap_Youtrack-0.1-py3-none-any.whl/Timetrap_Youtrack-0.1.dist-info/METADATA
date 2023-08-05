@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: Timetrap-Youtrack
+Version: 0.1
+Summary: Timetrap youtrack terminal command for sending your worktime to youtrack
+Home-page: https://github.com/GranderStark/Timetrap-Youtrack
+Author: Lev Subbotin
+Author-email: grander.stark@yandex.ru
+License: Apache 2.0
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: marshmallow
+Requires-Dist: certifi
+Requires-Dist: chardet
+Requires-Dist: dictknife
+Requires-Dist: idna
+Requires-Dist: importlib2
+Requires-Dist: magicalimport
+Requires-Dist: prestring
+Requires-Dist: Python3-Youtrack-api
+Requires-Dist: PyYAML
+Requires-Dist: SQLAlchemy
+Requires-Dist: toml
+Requires-Dist: urllib3
+
+UNKNOWN
+
+

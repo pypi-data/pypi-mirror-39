@@ -1,0 +1,14 @@
+#!python
+import sys
+
+from app.main import run
+
+REQUIRED_VERSION = '3'
+
+if __name__ == "__main__":
+    current_version = sys.version
+    if current_version < REQUIRED_VERSION:
+        sys.stderr.write('Python Interpreter Needed >= 3, got %s' % current_version.__repr__())
+        sys.exit(0)
+
+    run()
