@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+deepdata_alpha/__init__.py
+deepdata_alpha/__version__.py
+deepdata_alpha/deepdata_alpha.py
+deepdata_alpha.egg-info/PKG-INFO
+deepdata_alpha.egg-info/SOURCES.txt
+deepdata_alpha.egg-info/dependency_links.txt
+deepdata_alpha.egg-info/not-zip-safe
+deepdata_alpha.egg-info/requires.txt
+deepdata_alpha.egg-info/top_level.txt
