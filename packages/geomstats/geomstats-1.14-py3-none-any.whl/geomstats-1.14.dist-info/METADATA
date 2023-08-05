@@ -1,0 +1,36 @@
+Metadata-Version: 2.0
+Name: geomstats
+Version: 1.14
+Summary: Geometric statistics on manifolds
+Home-page: http://github.com/geomstats/geomstats
+Author: Nina Miolane
+Author-email: ninamio78@gmail.com
+License: MIT
+Platform: UNKNOWN
+Provides-Extra: tf
+Provides-Extra: all
+Provides-Extra: torch
+Provides-Extra: test
+Requires-Dist: autograd
+Requires-Dist: h5py (==2.8.0)
+Requires-Dist: matplotlib
+Requires-Dist: numpy (>=1.14.1)
+Requires-Dist: scipy
+Provides-Extra: all
+Requires-Dist: codecov; extra == 'all'
+Requires-Dist: coverage; extra == 'all'
+Requires-Dist: nose2; extra == 'all'
+Requires-Dist: tensorflow (>=1.12); extra == 'all'
+Requires-Dist: torch (==0.4.0); extra == 'all'
+Provides-Extra: test
+Requires-Dist: codecov; extra == 'test'
+Requires-Dist: coverage; extra == 'test'
+Requires-Dist: nose2; extra == 'test'
+Provides-Extra: tf
+Requires-Dist: tensorflow (>=1.12); extra == 'tf'
+Provides-Extra: torch
+Requires-Dist: torch (==0.4.0); extra == 'torch'
+
+UNKNOWN
+
+
