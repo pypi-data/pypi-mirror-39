@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: AutoAsd
+Version: 0.1.8
+Summary: Automation script for ASD spectroscopy software.
+Home-page: https://github.com/kathleenhoza/autoasd
+Author: Kathleen Hoza
+Author-email: hozak@wwu.edu
+License: UNKNOWN
+Keywords: ASD ViewSpecPro RS3 spectroscopy automation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Requires-Dist: pywinauto
+Requires-Dist: pyautogui
+
+This version is about to be installed on MARSINSIGHT, the desktop computer we just got for the spectroscopy lab.
+
+
