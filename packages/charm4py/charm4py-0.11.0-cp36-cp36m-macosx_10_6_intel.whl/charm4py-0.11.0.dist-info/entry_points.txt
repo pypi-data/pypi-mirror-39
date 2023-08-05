@@ -1,0 +1,3 @@
+[console_scripts]
+charmrun = charmrun.start:start
+
