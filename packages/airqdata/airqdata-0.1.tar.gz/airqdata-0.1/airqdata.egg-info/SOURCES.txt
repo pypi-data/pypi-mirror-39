@@ -1,0 +1,13 @@
+README.md
+setup.py
+airqdata/__init__.py
+airqdata/influencair.py
+airqdata/irceline.py
+airqdata/luftdaten.py
+airqdata/madavi.py
+airqdata/utils.py
+airqdata.egg-info/PKG-INFO
+airqdata.egg-info/SOURCES.txt
+airqdata.egg-info/dependency_links.txt
+airqdata.egg-info/requires.txt
+airqdata.egg-info/top_level.txt
