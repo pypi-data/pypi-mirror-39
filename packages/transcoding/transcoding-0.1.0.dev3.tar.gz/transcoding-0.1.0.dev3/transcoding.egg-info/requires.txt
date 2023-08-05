@@ -1,0 +1,5 @@
+pathlib2;python_version<"3.0"
+pathlib;python_version>="3.0"
+parse
+more_itertools
+future
