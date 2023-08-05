@@ -1,0 +1,3 @@
+[console_scripts]
+brickbreaker = brickbreaker.__main__:main
+

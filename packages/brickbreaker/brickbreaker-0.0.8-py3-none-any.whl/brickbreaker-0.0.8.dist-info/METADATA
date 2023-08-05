@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: brickbreaker
+Version: 0.0.8
+Summary: A Breakout clone with pygame.
+Home-page: UNKNOWN
+Author: Brent Leeper, Joshua Green
+Author-email: bleeper@patriots.uttyler.edu, jgreen32@patriots.uttyler.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pygame
+
+A Break-Out clone with Pygame.
+
+
