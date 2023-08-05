@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: image-compression
+Version: 0.1
+Summary: compress image without losing quality
+Home-page: https://github.com/saurabhgharat
+Author: Saurabh Gharat
+Author-email: saurabhhgharat9@gmail.com
+License: MIT
+Download-URL: https://github.com/saurabhgharat/image-compression/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: compression,image,python,django
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
