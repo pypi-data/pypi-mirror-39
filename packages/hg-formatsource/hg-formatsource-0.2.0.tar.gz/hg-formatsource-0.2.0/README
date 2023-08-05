@@ -1,0 +1,21 @@
+Source Format
+==============
+
+Mercurial extension to apply and gracefully merge code formatting
+
+The extension provide a way to run code-formatting tool in a way that avoid
+conflict related to this formating when merging code not formatted yet.
+
+Install
+-------
+
+To install use::
+
+  pip install --user hg-formatsource
+
+Documentation
+-------------
+
+See the inline help for full documentation::
+
+    hg help -e formatsource # extension
