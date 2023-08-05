@@ -1,0 +1,6 @@
+boto3
+PyYAML
+
+[test]
+mock
+pylint
