@@ -1,0 +1,210 @@
+@font-face {
+    font-family: Monoxil;
+    src: url("Monoxil.otf") format("opentype");
+}
+
+.table {
+    margin: 0;
+    border: none;
+    table-layout: fixed;
+}
+
+#ftriples {
+    table-layout: fixed;
+}
+
+.form-control {
+    font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+}
+
+.title {
+    font-family: "Roboto", serif;
+    margin-top: 20px;
+    font-weight: 100;
+}
+
+.scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+#solutions {
+    padding-right: 6px;
+}
+
+.result {
+    border: 1px solid #386e8c;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 8px;
+    margin-left: 5px;
+}
+
+.triple {
+    margin-left: 0;
+    border: 1px solid #386e8c;
+    margin-bottom: 5px;
+}
+
+.var {
+    background-color: #509dc8;
+    text-align: center;
+    font-family: Monoxil, sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    float: left;
+    max-width: 15%;
+    border-top: 0;
+    overflow-wrap: normal;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pred {
+    font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    /*font-weight: bold;*/
+    font-size: 13px;
+    margin-bottom: 2px;
+    margin-top: 5px;
+    /*color: #4d729c;*/
+}
+
+.term {
+    width: 50%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hterm {
+    width: 50%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-family: Monoxil, sans-serif;
+    color: #509dc8;
+    font-weight: bold;
+    font-size: 13px;
+    border-top: 0;
+}
+
+.uri {
+    color: #386e8c;
+}
+
+.vuri {
+    background-color: #00885a;
+}
+
+.vliteral {
+    background-color: #386e8c;
+}
+
+.vblank {
+    background-color: #7d8184;
+}
+
+.value {
+    font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    border: none;
+    font-size: 12px;
+    float: left;
+    text-overflow: ellipsis;
+    max-width: 85%;
+    overflow-wrap: normal;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.tvalue {
+    max-width: 97%;
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    line-height: 1;
+    border-top: 0;
+    padding: 3px 4px;
+    /*overflow-wrap: break-word;*/
+}
+
+.navbar-brand {
+    padding: 7px;
+}
+
+#agora {
+    font-family: Monoxil, sans-serif;
+    font-size: 34px;
+    color: #509dc8;
+    padding-top: 2px;
+    float: left;
+    cursor: default;
+}
+
+#rbadge {
+    margin-left: 10px;
+    background-color: #509dc8;
+    font-weight: 400;
+    font-family: "Roboto", serif;
+}
+
+#fbadge {
+    margin-left: 10px;
+    background-color: #509dc8;
+    font-weight: 400;
+    font-family: "Roboto", serif;
+}
+
+#query {
+    resize: none;
+}
+
+#fpanel {
+    padding-right: 0;
+}
+
+#spanel {
+    padding-left: 0;
+}
+
+#mpanel {
+    padding-right: 0;
+}
+
+#triples {
+    padding-right: 6px;
+}
+
+.badinput {
+    border: 1px solid #d9534f;
+}
+
+#mapid {
+    height: 300px;
+}
+
+.yasqe .CodeMirror {
+    height: auto;
+}
+
+.stopBtn {
+    height: 18px ;
+    vertical-align: middle;
+    color: #d9534f;
+    cursor: pointer;
+}
+
+.stopBtn:hover {
+    color: #f05c57;
+}
+
+.valuri {
+    cursor: pointer;
+}

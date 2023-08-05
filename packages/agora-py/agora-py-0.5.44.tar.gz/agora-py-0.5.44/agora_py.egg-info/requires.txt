@@ -1,0 +1,11 @@
+requests
+flask
+shortuuid
+Flask-Negotiate
+redis<3.0.0
+hiredis
+rdflib==4.2.1
+networkx>=2.0
+futures
+rfc3987
+python-dateutil
