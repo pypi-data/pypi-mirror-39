@@ -1,0 +1,50 @@
+{
+	"components": [
+		{
+			"name": "mk64fn1m0vll12",
+			"id": 0,
+			"type": "MCU",
+			"class": "Mk64fn1m0vll12",
+			"config": {
+				"load_ble_memory_values": true,
+                "load_ficr_regs": true,
+                "load_temp_regs": true,
+                "load_errate_regs": true,
+                "ram_size": "0x4000000",
+				"external_ram_size": "0x0",
+				"internal_peripherals" : [
+					{
+						"class": "Flash",
+						"id": 1,
+						"type": "Internal Peripheral"
+					},
+					{
+						"class": "Data RAM",
+						"id": 2,
+						"type": "Internal Peripheral"
+					},
+					{
+						"class": "WDOG",
+						"id": 4,
+						"type": "Internal Peripheral"
+					},
+					{
+						"class": "SIM",
+						"id": 5,
+						"type": "Internal Peripheral"
+					},
+					{
+						"class": "FB",
+						"id": 6,
+						"type": "Internal Peripheral"
+					},
+					{
+						"class": "SUDO",
+						"id": 39,
+						"type": "Internal Peripheral"
+					}
+				]
+			}
+		}
+	]
+}
