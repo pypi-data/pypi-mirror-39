@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: viewscad
+Version: 0.1.0
+Summary: Jupyter renderer for the OpenSCAD & SolidPython constructive solid geometry systems
+Home-page: https://github.com/nickc92/ViewSCAD
+Author: Nick Choly
+Author-email: nickcholy@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Dist: jupyter
+Requires-Dist: jupyterlab
+Requires-Dist: ipywidgets
+Requires-Dist: pythreejs
+Requires-Dist: solidpython
+
+UNKNOWN
+
+
