@@ -1,0 +1,14 @@
+README.md
+setup.py
+etc/ibf
+etc/ibf.1
+ibf/__init__.py
+ibf/inputoutput.py
+ibf/interpreter.py
+ibf/tokenizer.py
+ibf.egg-info/PKG-INFO
+ibf.egg-info/SOURCES.txt
+ibf.egg-info/dependency_links.txt
+ibf.egg-info/not-zip-safe
+ibf.egg-info/requires.txt
+ibf.egg-info/top_level.txt
