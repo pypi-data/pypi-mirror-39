@@ -1,0 +1,12 @@
+<div role="complementary" class="bs-docs-sidebar hidden-print" id="nav-affix">
+  <ul class="bs-docs-sidenav bs-sidenav nav" role="complementary">
+    {%- if logo %}
+    <a href="{{ pathto(master_doc) }}">
+      <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="{{ project }}" width="{{ theme_sidebar_logo_width|toint }}" />
+    </a>
+    {%- endif %}
+    <ul class="toctree nav nav-list">
+      {{ toctree(maxdepth=theme_sidebar_toc_depth|toint, collapse=True, includehidden=theme_sidebar_includehidden|tobool) }}
+    </ul>
+  </ul>
+</div>
