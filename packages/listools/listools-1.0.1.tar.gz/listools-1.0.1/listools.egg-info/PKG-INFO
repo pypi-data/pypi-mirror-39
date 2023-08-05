@@ -1,0 +1,41 @@
+Metadata-Version: 1.2
+Name: listools
+Version: 1.0.1
+Summary: listools: a Python 3 library of list functions
+Home-page: https://github.com/gilbertohasnofb/listools
+Author: Gilberto Agostinho
+Author-email: gilbertohasnofb@gmail.com
+License: MIT
+Description: # listools
+        
+        This library provides utility functions for dealing with lists in Python 3. `listools` supports Python version 3.0 and newer. It is contained in a single Python file, so it can be easily copied into your project (the copyright and license notice must be retained). Alternatively, to install it using `pip`, use the command below:
+        
+        `pip install listools`
+        
+        Note that you might need to use `pip3` instead of `pip`.
+        
+        Bugs can be reported to https://github.com/gilbertohasnofb/listools. The code can also be found there.
+        
+        This library contains the following functions:
+        
+        * `listools.flatten(input_list)`
+        * `listools.partial_flatten(input_list[, depth])`
+        * `listools.concat_flatten(*input_lists)`
+        * `listools.sum_flatten(input_list)`
+        * `listools.len_flatten(input_list)`
+        * `listools.index_flatten(element, input_list)`
+        * `listools.zip_cycle(*input_iters)`
+        * `listools.zip_cycle_flatten(*input_lists)`
+        
+        All functions have a `__doc__` attribute with usage instructions.
+        
+        This library is published under the MIT License.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Python: >=3
