@@ -1,0 +1,658 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>pyparadigm.surface_composition &#8212; PyParadigm 0.1 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for pyparadigm.surface_composition</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Easy Image Composition</span>
+
+<span class="sd">The purpose of this module is to make it easy to compose the </span>
+<span class="sd">frames that are displayed in a paradigm. For an introduction, please refer to</span>
+<span class="sd">the :ref:`tutorial&lt;creating_surfaces&gt;`</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">reduce</span><span class="p">,</span> <span class="n">wraps</span><span class="p">,</span> <span class="n">lru_cache</span><span class="p">,</span> <span class="n">partial</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="k">import</span> <span class="n">accumulate</span>
+<span class="kn">from</span> <span class="nn">operator</span> <span class="k">import</span> <span class="n">add</span><span class="p">,</span> <span class="n">methodcaller</span>
+
+<span class="kn">import</span> <span class="nn">pygame</span>
+
+<span class="n">_lmap</span> <span class="o">=</span> <span class="n">wraps</span><span class="p">(</span><span class="nb">map</span><span class="p">)(</span><span class="k">lambda</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)))</span>
+<span class="n">_wrap_surface</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">elem</span><span class="p">:</span>\
+     <span class="n">Surface</span><span class="p">()(</span><span class="n">elem</span><span class="p">)</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Surface</span> <span class="k">else</span> <span class="n">elem</span>
+<span class="n">_round_to_int</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
+<span class="n">_call_function</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">elem</span><span class="p">:</span>\
+    <span class="n">elem</span><span class="p">()</span> <span class="k">if</span> <span class="n">callable</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span> <span class="k">else</span> <span class="n">elem</span>
+
+
+<span class="k">def</span> <span class="nf">_inner_func_anot</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;must be applied to all inner functions that return contexts.</span>
+<span class="sd">    </span>
+<span class="sd">    Wraps all instances of pygame.Surface in the input in Surface&quot;&quot;&quot;</span>
+    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">new_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">_lmap</span><span class="p">(</span><span class="n">_wrap_surface</span><span class="p">,</span> <span class="n">args</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">new_func</span>
+
+
+<span class="k">def</span> <span class="nf">_wrap_children</span><span class="p">(</span><span class="n">children</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_lmap</span><span class="p">(</span><span class="n">_wrap_surface</span><span class="p">,</span> <span class="n">children</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_wrap_surface</span><span class="p">(</span><span class="n">children</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_check_call_op</span><span class="p">(</span><span class="n">child</span><span class="p">):</span> 
+    <span class="k">if</span> <span class="n">child</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Call operator was called twice&quot;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="LLItem"><a class="viewcode-back" href="../../surfacecomposition.html#pyparadigm.surface_composition.LLItem">[docs]</a><span class="k">class</span> <span class="nc">LLItem</span><span class="p">:</span> 
+    <span class="sd">&quot;&quot;&quot;Defines the relative size of an element in a LinLayout</span>
+
+<span class="sd">    All Elements that are passed to a linear layout are automatically wrapped</span>
+<span class="sd">    into an LLItem with relative_size=1. Therefore by default all elements</span>
+<span class="sd">    within a layout will be of the same size. To change the proportions a LLItem</span>
+<span class="sd">    can be used explicitely with another relative size.</span>
+<span class="sd">    </span>
+<span class="sd">    It is also possible to use an LLItem as placeholde in a layout, to generate</span>
+<span class="sd">    an empty space like this:</span>
+<span class="sd">    </span>
+<span class="sd">    :Example:</span>
+
+<span class="sd">    LinLayout(&quot;h&quot;)(</span>
+<span class="sd">        LLItem(1),</span>
+<span class="sd">        LLItem(1)(Circle(0xFFFF00)))</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">relative_size</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child</span> <span class="o">=</span> <span class="n">Surface</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">relative_size</span> <span class="o">=</span> <span class="n">relative_size</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child</span> <span class="o">=</span> <span class="n">_wrap_children</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+
+<div class="viewcode-block" id="LinLayout"><a class="viewcode-back" href="../../surfacecomposition.html#pyparadigm.surface_composition.LinLayout">[docs]</a><span class="k">class</span> <span class="nc">LinLayout</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;A linear layout to order items horizontally or vertically.</span>
+<span class="sd">    </span>
+<span class="sd">    Every element in the layout is automatically wrapped within a LLItem with</span>
+<span class="sd">    relative_size=1, i.e. all elements get assigned an equal amount of space, to</span>
+<span class="sd">    change that elements can be wrappend in LLItems manually to get desired</span>
+<span class="sd">    proportions </span>
+<span class="sd">    </span>
+<span class="sd">    :param orientation: orientation of the layout, either &#39;v&#39; for vertica, or</span>
+<span class="sd">        &#39;h&#39; for horizontal.</span>
+<span class="sd">    </span>
+<span class="sd">    :type orientation: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">orientation</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">orientation</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;v&quot;</span><span class="p">,</span> <span class="s2">&quot;h&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">orientation</span> <span class="o">=</span> <span class="n">orientation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">children</span><span class="p">):</span>
+        <span class="n">_check_call_op</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="n">_lmap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">child</span><span class="p">:</span> 
+                                <span class="n">child</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">child</span><span class="p">)</span> <span class="o">==</span> <span class="n">LLItem</span> <span class="k">else</span> <span class="n">LLItem</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="n">child</span><span class="p">),</span> 
+                              <span class="n">_wrap_children</span><span class="p">(</span><span class="n">children</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+
+    <span class="k">def</span> <span class="nf">_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">target_rect</span><span class="p">):</span>
+        <span class="n">child_rects</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_child_rects</span><span class="p">(</span><span class="n">target_rect</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">child</span><span class="p">,</span> <span class="n">rect</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">,</span> <span class="n">child_rects</span><span class="p">):</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">child</span><span class="o">.</span><span class="n">_draw</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">rect</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_compute_child_rects</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_rect</span><span class="p">):</span>
+        <span class="n">flip_if_not_horizontal</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> \
+            <span class="n">t</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">orientation</span> <span class="o">==</span> <span class="s2">&quot;h&quot;</span> <span class="k">else</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">target_rect_size</span> <span class="o">=</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">size</span>
+        <span class="n">divider</span><span class="p">,</span> <span class="n">full</span> <span class="o">=</span> <span class="n">flip_if_not_horizontal</span><span class="p">(</span><span class="n">target_rect_size</span><span class="p">)</span> 
+        <span class="n">dyn_size_per_unit</span> <span class="o">=</span> <span class="n">divider</span> <span class="o">/</span> <span class="nb">sum</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">relative_size</span> <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">)</span>
+        <span class="n">strides</span> <span class="o">=</span> <span class="p">[</span><span class="n">child</span><span class="o">.</span><span class="n">relative_size</span> <span class="o">*</span> <span class="n">dyn_size_per_unit</span> <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">]</span>
+        <span class="n">dyn_offsets</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">(</span><span class="n">strides</span><span class="p">))[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">left_offsets</span><span class="p">,</span> <span class="n">top_offsets</span> <span class="o">=</span> <span class="n">flip_if_not_horizontal</span><span class="p">((</span><span class="n">dyn_offsets</span><span class="p">,</span> 
+                                                            <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">)))</span>
+        <span class="n">widths</span><span class="p">,</span> <span class="n">heights</span> <span class="o">=</span> <span class="n">flip_if_not_horizontal</span><span class="p">((</span><span class="n">strides</span><span class="p">,</span> <span class="p">[</span><span class="n">full</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">)))</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">Rect</span><span class="p">(</span><span class="n">target_rect</span><span class="o">.</span><span class="n">left</span> <span class="o">+</span> <span class="n">left_offset</span><span class="p">,</span> 
+                            <span class="n">target_rect</span><span class="o">.</span><span class="n">top</span> <span class="o">+</span> <span class="n">top_offset</span><span class="p">,</span>
+                            <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">left_offset</span><span class="p">,</span> <span class="n">top_offset</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="ow">in</span> 
+                    <span class="nb">zip</span><span class="p">(</span><span class="n">left_offsets</span><span class="p">,</span> <span class="n">top_offsets</span><span class="p">,</span> <span class="n">widths</span><span class="p">,</span> <span class="n">heights</span><span class="p">)]</span></div>
+
+
+<div class="viewcode-block" id="Margin"><a class="viewcode-back" href="../../surfacecomposition.html#pyparadigm.surface_composition.Margin">[docs]</a><span class="k">class</span> <span class="nc">Margin</span><span class="p">:</span> 
+    <span class="sd">&quot;&quot;&quot;Defines the relative position of an item within a Surface. </span>
+<span class="sd">    For details see Surface.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="s2">&quot;top&quot;</span><span class="p">,</span> <span class="s2">&quot;bottom&quot;</span><span class="p">]</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left</span><span class="o">=</span><span class="n">left</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right</span><span class="o">=</span><span class="n">right</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">top</span><span class="o">=</span><span class="n">top</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bottom</span><span class="o">=</span><span class="n">bottom</span></div>
+
+
+<div class="viewcode-block" id="Surface"><a class="viewcode-back" href="../../surfacecomposition.html#pyparadigm.surface_composition.Surface">[docs]</a><span class="k">class</span> <span class="nc">Surface</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Wraps a pygame surface.</span>
+
+<span class="sd">    The Surface is the connection between the absolute world of pygame.Surfaces and the</span>
+<span class="sd">    relative world of the composition functions. A pygame.Surfaces can be bigger than</span>
+<span class="sd">    the space that is available to the Surface, or smaller. The Surface does the actual</span>
+<span class="sd">    blitting, and determines the concrete position, and if necessary (or</span>
+<span class="sd">    desired) scales the input surface.</span>
+
+<span class="sd">    Warning: When images are scaled with smoothing, colors will change decently, which</span>
+<span class="sd">    makes it inappropriate to use in combination with colorkeys.</span>
+
+<span class="sd">    :param margin: used to determine the exact location of the pygame.Surfaces within </span>
+<span class="sd">        the available space. The margin value represents the proportion of </span>
+<span class="sd">        the free space, along</span>
+<span class="sd">        an axis, i.e. Margin(1, 1, 1, 1) is centered, Margin(0, 1, 1, 2) is as far</span>
+<span class="sd">        left as possible and one/third on the way down.</span>
+
+<span class="sd">    :type margin: Margin object</span>
+
+<span class="sd">    :param scale: If 0 &lt; scale &lt;= 1 the longer side of the surface is scaled to </span>
+<span class="sd">        to the given fraction of the available space, the aspect ratio is </span>
+<span class="sd">        will be preserved.</span>
+<span class="sd">        If scale is 0 the will be no scaling if the image is smaller than the</span>
+<span class="sd">        available space. It will still be scaled down if it is too big. </span>
+
+<span class="sd">    :type scale: float</span>
+
+<span class="sd">    :param smooth: if True the result of the scaling will be smoothed</span>
+
+<span class="sd">    :type smooth: float</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">margin</span><span class="o">=</span><span class="n">Margin</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">scale</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">smooth</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">scale</span> <span class="o">&lt;=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child</span> <span class="o">=</span> <span class="kc">None</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">margin</span> <span class="o">=</span> <span class="n">margin</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">scale</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">smooth</span> <span class="o">=</span> <span class="n">smooth</span>
+    
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">):</span>
+        <span class="n">_check_call_op</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">child</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child</span> <span class="o">=</span> <span class="n">child</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_scale_to_target</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target_rect</span><span class="p">,</span> <span class="n">smooth</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="n">target_size</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">get_rect</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">target_rect</span><span class="p">)</span><span class="o">.</span><span class="n">size</span>
+        <span class="k">return</span> <span class="n">pygame</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target_size</span><span class="p">)</span> \
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">smooth</span> <span class="k">else</span> <span class="n">pygame</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">smoothscale</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target_size</span><span class="p">)</span> 
+            
+    <span class="k">def</span> <span class="nf">_determine_target_size</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">target_rect</span><span class="p">,</span> <span class="n">scale</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">scale</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">dist</span> <span class="o">*</span> <span class="n">scale</span> <span class="k">for</span> <span class="n">dist</span> <span class="ow">in</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">all</span><span class="p">(</span><span class="n">s_dim</span> <span class="o">&lt;=</span> <span class="n">t_dim</span> 
+                <span class="k">for</span> <span class="n">s_dim</span><span class="p">,</span> <span class="n">t_dim</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">get_size</span><span class="p">(),</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">size</span><span class="p">)):</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">size</span>
+        
+    <span class="k">def</span> <span class="nf">_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">target_rect</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">child</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="n">target_size</span> <span class="o">=</span> <span class="n">Surface</span><span class="o">.</span><span class="n">_determine_target_size</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">child</span><span class="p">,</span> <span class="n">target_rect</span><span class="p">,</span> 
+                                                        <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">)</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">Surface</span><span class="o">.</span><span class="n">_scale_to_target</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">child</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">*</span><span class="n">target_size</span><span class="p">),</span> 
+                                            <span class="bp">self</span><span class="o">.</span><span class="n">smooth</span><span class="p">)</span>\
+                <span class="k">if</span> <span class="n">target_size</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">child</span>
+        <span class="n">remaining_h_space</span> <span class="o">=</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">w</span> <span class="o">-</span> <span class="n">content</span><span class="o">.</span><span class="n">get_rect</span><span class="p">()</span><span class="o">.</span><span class="n">w</span>
+        <span class="n">remaining_v_space</span> <span class="o">=</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">h</span> <span class="o">-</span> <span class="n">content</span><span class="o">.</span><span class="n">get_rect</span><span class="p">()</span><span class="o">.</span><span class="n">h</span>
+        <span class="n">offset_by_margins</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">space</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="n">two</span><span class="p">:</span> <span class="n">space</span> <span class="o">*</span> <span class="n">one</span> <span class="o">/</span> <span class="p">(</span><span class="n">one</span> <span class="o">+</span> <span class="n">two</span><span class="p">)</span>
+        <span class="n">surface</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="p">(</span>
+            <span class="n">target_rect</span><span class="o">.</span><span class="n">left</span> <span class="o">+</span> <span class="n">offset_by_margins</span><span class="p">(</span><span class="n">remaining_h_space</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">margin</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">margin</span><span class="o">.</span><span class="n">right</span><span class="p">),</span>
+            <span class="n">target_rect</span><span class="o">.</span><span class="n">top</span> <span class="o">+</span> <span class="n">offset_by_margins</span><span class="p">(</span><span class="n">remaining_v_space</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">margin</span><span class="o">.</span><span class="n">top</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">margin</span><span class="o">.</span><span class="n">bottom</span><span class="p">)))</span></div>
+
+
+<div class="viewcode-block" id="Padding"><a class="viewcode-back" href="../../surfacecomposition.html#pyparadigm.surface_composition.Padding">[docs]</a><span class="k">class</span> <span class="nc">Padding</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Pads a child element</span>
+
+<span class="sd">    Each argument refers to a percentage of the axis it belongs to.</span>
+<span class="sd">    A padding of (0.25, 0.25, 0.25, 0.25) would generate blocked area a quater of the</span>
+<span class="sd">    available height in size above and below the child, and a quarter of the </span>
+<span class="sd">    available width left and right of the child.</span>
+
+<span class="sd">    If left and right or top and bottom sum up to one that would mean no space</span>
+<span class="sd">    for the child is remaining</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">target_rect</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">child</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+        <span class="n">child_rect</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Rect</span><span class="p">(</span>
+            <span class="n">target_rect</span><span class="o">.</span><span class="n">left</span> <span class="o">+</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">w</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span><span class="p">,</span>
+            <span class="n">target_rect</span><span class="o">.</span><span class="n">top</span> <span class="o">+</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">h</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">top</span><span class="p">,</span>
+            <span class="n">target_rect</span><span class="o">.</span><span class="n">w</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span><span class="p">),</span>
+            <span class="n">target_rect</span><span class="o">.</span><span class="n">h</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">top</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">bottom</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child</span><span class="o">.</span><span class="n">_draw</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">child_rect</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">top</span><span class="p">,</span> <span class="n">bottom</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">side</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">side</span> <span class="ow">in</span> <span class="p">[</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">top</span><span class="p">,</span> <span class="n">bottom</span><span class="p">])</span>
+        <span class="k">assert</span> <span class="n">left</span> <span class="o">+</span> <span class="n">right</span> <span class="o">&lt;</span> <span class="mi">1</span>
+        <span class="k">assert</span> <span class="n">top</span> <span class="o">+</span> <span class="n">bottom</span> <span class="o">&lt;</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">left</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">right</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">top</span> <span class="o">=</span> <span class="n">top</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bottom</span> <span class="o">=</span> <span class="n">bottom</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">):</span>
+        <span class="n">_check_call_op</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">child</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child</span> <span class="o">=</span> <span class="n">_wrap_children</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+<div class="viewcode-block" id="Padding.from_scale"><a class="viewcode-back" href="../../surfacecomposition.html#pyparadigm.surface_composition.Padding.from_scale">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">from_scale</span><span class="p">(</span><span class="n">scale_w</span><span class="p">,</span> <span class="n">scale_h</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Creates a padding by the remaining space after scaling the content.</span>
+
+<span class="sd">        E.g. Padding.from_scale(0.5) would produce Padding(0.25, 0.25, 0.25, 0.25) and</span>
+<span class="sd">        Padding.from_scale(0.5, 1) would produce Padding(0.25, 0.25, 0, 0)</span>
+<span class="sd">        because the content would not be scaled (since scale_h=1) and therefore</span>
+<span class="sd">        there would be no vertical padding.</span>
+<span class="sd">        </span>
+<span class="sd">        If scale_h is not specified scale_h=scale_w is used as default</span>
+
+<span class="sd">        :param scale_w: horizontal scaling factors</span>
+<span class="sd">        :type scale_w: float</span>
+<span class="sd">        :param scale_h: vertical scaling factor</span>
+<span class="sd">        :type scale_h: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">scale_h</span><span class="p">:</span> <span class="n">scale_h</span> <span class="o">=</span> <span class="n">scale_w</span>
+        <span class="n">w_padding</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">scale_w</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
+        <span class="n">h_padding</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">scale_h</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
+        <span class="k">return</span> <span class="n">Padding</span><span class="p">(</span><span class="o">*</span><span class="n">w_padding</span><span class="p">,</span> <span class="o">*</span><span class="n">h_padding</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="RectangleShaper"><a class="viewcode-back" href="../../surfacecomposition.html#pyparadigm.surface_composition.RectangleShaper">[docs]</a><span class="k">class</span> <span class="nc">RectangleShaper</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Creates a padding, defined by a target Shape.</span>
+
+<span class="sd">    Width and height are the relative proportions of the target rectangle.</span>
+<span class="sd">    E.g RectangleShaper(1, 1) would create a square. and RectangleShaper(2, 1)</span>
+<span class="sd">    would create a rectangle which is twice as wide as it is high.</span>
+<span class="sd">    The rectangle always has the maximal possible size within the parent area.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">):</span>
+        <span class="n">_check_call_op</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">child</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child</span> <span class="o">=</span> <span class="n">_wrap_children</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span>
+        
+    <span class="k">def</span> <span class="nf">_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">target_rect</span><span class="p">):</span>
+        <span class="n">parent_w_factor</span> <span class="o">=</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">w</span> <span class="o">/</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">h</span>
+        <span class="n">my_w_factor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span>
+        <span class="k">if</span> <span class="n">parent_w_factor</span> <span class="o">&gt;</span> <span class="n">my_w_factor</span><span class="p">:</span>
+            <span class="n">my_h</span> <span class="o">=</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">h</span>
+            <span class="n">my_w</span> <span class="o">=</span> <span class="n">my_h</span> <span class="o">*</span> <span class="n">my_w_factor</span>
+            <span class="n">my_h_offset</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">my_w_offset</span> <span class="o">=</span> <span class="n">_round_to_int</span><span class="p">((</span><span class="n">target_rect</span><span class="o">.</span><span class="n">w</span> <span class="o">-</span> <span class="n">my_w</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">my_w</span> <span class="o">=</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">w</span>
+            <span class="n">my_h</span> <span class="o">=</span> <span class="n">my_w</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span>
+            <span class="n">my_w_offset</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">my_h_offset</span> <span class="o">=</span> <span class="n">_round_to_int</span><span class="p">((</span><span class="n">target_rect</span><span class="o">.</span><span class="n">h</span> <span class="o">-</span> <span class="n">my_h</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child</span><span class="o">.</span><span class="n">_draw</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Rect</span><span class="p">(</span>
+            <span class="n">target_rect</span><span class="o">.</span><span class="n">left</span> <span class="o">+</span> <span class="n">my_w_offset</span><span class="p">,</span>
+            <span class="n">target_rect</span><span class="o">.</span><span class="n">top</span> <span class="o">+</span> <span class="n">my_h_offset</span><span class="p">,</span>
+            <span class="n">my_w</span><span class="p">,</span>
+            <span class="n">my_h</span>
+        <span class="p">))</span></div>
+        
+
+
+
+<div class="viewcode-block" id="Circle"><a class="viewcode-back" href="../../surfacecomposition.html#pyparadigm.surface_composition.Circle">[docs]</a><span class="k">class</span> <span class="nc">Circle</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Draws a Circle in the assigned space.</span>
+<span class="sd">    </span>
+<span class="sd">    The circle will always be centered, and the radius will be half of the</span>
+<span class="sd">    shorter side of the assigned space.</span>
+<span class="sd">    </span>
+<span class="sd">    :param color: The color of the circle</span>
+<span class="sd">    </span>
+<span class="sd">    :type color: pygame.Color or int</span>
+<span class="sd">    </span>
+<span class="sd">    :param width: width of the circle (in pixels). If 0 the circle will be filled</span>
+<span class="sd">    </span>
+<span class="sd">    :type width: int</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+
+    <span class="k">def</span> <span class="nf">_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">target_rect</span><span class="p">):</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">color</span><span class="p">,</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">center</span><span class="p">,</span> 
+            <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">target_rect</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">h</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">)),</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Fill"><a class="viewcode-back" href="../../surfacecomposition.html#pyparadigm.surface_composition.Fill">[docs]</a><span class="k">class</span> <span class="nc">Fill</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Fills the assigned area. Afterwards, the children are rendered</span>
+
+<span class="sd">    :param color: the color with which the area is filled</span>
+
+<span class="sd">    :type color: pygame.Color or int</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">):</span>
+        <span class="n">_check_call_op</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">child</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child</span> <span class="o">=</span> <span class="n">_wrap_children</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    
+    <span class="k">def</span> <span class="nf">_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">target_rect</span><span class="p">):</span>
+        <span class="n">surface</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">color</span><span class="p">,</span> <span class="n">target_rect</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">child</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">child</span><span class="o">.</span><span class="n">_draw</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">target_rect</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Overlay"><a class="viewcode-back" href="../../surfacecomposition.html#pyparadigm.surface_composition.Overlay">[docs]</a><span class="k">class</span> <span class="nc">Overlay</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Draws all its children on top of each other in the same rect&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">children</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="n">_wrap_children</span><span class="p">(</span><span class="n">children</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">target_rect</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">_draw</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">target_rect</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Cross"><a class="viewcode-back" href="../../surfacecomposition.html#pyparadigm.surface_composition.Cross">[docs]</a><span class="k">def</span> <span class="nf">Cross</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Draws a cross centered in the target area</span>
+
+<span class="sd">    :param width: width of the lines of the cross in pixels</span>
+<span class="sd">    :type width: int</span>
+<span class="sd">    :param color: color of the lines of the cross</span>
+<span class="sd">    :type color: pygame.Color</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">Overlay</span><span class="p">(</span><span class="n">Line</span><span class="p">(</span><span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span><span class="p">),</span> <span class="n">Line</span><span class="p">(</span><span class="s2">&quot;v&quot;</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Border"><a class="viewcode-back" href="../../surfacecomposition.html#pyparadigm.surface_composition.Border">[docs]</a><span class="k">class</span> <span class="nc">Border</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Draws a border around the contained area. Can have a single child.</span>
+
+<span class="sd">    :param width: width of the border in pixels</span>
+<span class="sd">    :type width: int</span>
+<span class="sd">    :param color: color of the border</span>
+<span class="sd">    :type color: pygame.Color</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="n">v_line</span> <span class="o">=</span> <span class="n">Line</span><span class="p">(</span><span class="s2">&quot;v&quot;</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+        <span class="n">h_line</span> <span class="o">=</span> <span class="n">Line</span><span class="p">(</span><span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child_was_added</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">overlay</span> <span class="o">=</span> <span class="n">Overlay</span><span class="p">(</span>
+            <span class="n">LinLayout</span><span class="p">(</span><span class="s2">&quot;h&quot;</span><span class="p">)(</span>
+                <span class="n">LLItem</span><span class="p">(</span><span class="mi">0</span><span class="p">)(</span><span class="n">v_line</span><span class="p">),</span>
+                <span class="n">LLItem</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+                <span class="n">LLItem</span><span class="p">(</span><span class="mi">0</span><span class="p">)(</span><span class="n">v_line</span><span class="p">)</span>
+            <span class="p">),</span>
+            <span class="n">LinLayout</span><span class="p">(</span><span class="s2">&quot;v&quot;</span><span class="p">)(</span>
+                <span class="n">LLItem</span><span class="p">(</span><span class="mi">0</span><span class="p">)(</span><span class="n">h_line</span><span class="p">),</span>
+                <span class="n">LLItem</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+                <span class="n">LLItem</span><span class="p">(</span><span class="mi">0</span><span class="p">)(</span><span class="n">h_line</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">):</span>
+        <span class="n">_check_call_op</span><span class="p">(</span><span class="kc">None</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">child_was_added</span> <span class="k">else</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">overlay</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">target_rect</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">overlay</span><span class="o">.</span><span class="n">_draw</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">target_rect</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Line"><a class="viewcode-back" href="../../surfacecomposition.html#pyparadigm.surface_composition.Line">[docs]</a><span class="k">class</span> <span class="nc">Line</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Draws a line.</span>
+
+<span class="sd">    :param width: width of the line in pixels</span>
+<span class="sd">    :type widht: int</span>
+<span class="sd">    :param orientation: &quot;v&quot; or &quot;h&quot;. Indicates whether the line should be</span>
+<span class="sd">        horizontal or vertical.</span>
+<span class="sd">    :type orientation: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">orientation</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">orientation</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="s2">&quot;v&quot;</span><span class="p">]</span>
+        <span class="k">assert</span> <span class="n">width</span> <span class="o">&gt;</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">orientation</span> <span class="o">=</span> <span class="n">orientation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+
+    <span class="k">def</span> <span class="nf">_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">target_rect</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">orientation</span> <span class="o">==</span> <span class="s2">&quot;h&quot;</span><span class="p">:</span>
+            <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">color</span><span class="p">,</span> <span class="p">(</span>
+                <span class="n">target_rect</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> 
+                <span class="n">_round_to_int</span><span class="p">(</span><span class="n">target_rect</span><span class="o">.</span><span class="n">top</span> <span class="o">+</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">h</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">)),</span> <span class="p">(</span>
+                <span class="n">target_rect</span><span class="o">.</span><span class="n">left</span> <span class="o">+</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">w</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> 
+                <span class="n">_round_to_int</span><span class="p">(</span><span class="n">target_rect</span><span class="o">.</span><span class="n">top</span> <span class="o">+</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">h</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">)),</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">color</span><span class="p">,</span> <span class="p">(</span>
+                <span class="n">_round_to_int</span><span class="p">(</span><span class="n">target_rect</span><span class="o">.</span><span class="n">left</span> <span class="o">+</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">width</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">),</span> 
+                <span class="n">target_rect</span><span class="o">.</span><span class="n">top</span><span class="p">),</span> <span class="p">(</span>
+                <span class="n">_round_to_int</span><span class="p">(</span><span class="n">target_rect</span><span class="o">.</span><span class="n">left</span> <span class="o">+</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">width</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">),</span> 
+                <span class="n">target_rect</span><span class="o">.</span><span class="n">top</span> <span class="o">+</span> <span class="n">target_rect</span><span class="o">.</span><span class="n">h</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">)</span></div>
+
+<span class="n">_fill_col</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">target_len</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">col</span><span class="p">:</span> <span class="n">col</span> <span class="o">+</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">target_len</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">col</span><span class="p">))</span>
+<span class="n">_to_h_layout</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">cols</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">children</span><span class="p">:</span> <span class="n">LinLayout</span><span class="p">(</span><span class="s2">&quot;h&quot;</span><span class="p">)(</span>
+    <span class="o">*</span><span class="n">_lmap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">it</span><span class="p">,</span> <span class="n">child</span><span class="p">:</span> <span class="n">it</span><span class="p">(</span><span class="n">child</span><span class="p">),</span> <span class="nb">map</span><span class="p">(</span><span class="n">LLItem</span><span class="p">,</span> <span class="n">cols</span><span class="p">),</span>  
+                                         <span class="n">_lmap</span><span class="p">(</span><span class="n">_wrap_surface</span><span class="p">,</span> <span class="n">children</span><span class="p">)))</span>
+
+<span class="k">def</span> <span class="nf">GridLayout</span><span class="p">(</span><span class="n">row_proportions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">col_proportions</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">inner_grid_layout</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">):</span>
+        <span class="k">nonlocal</span> <span class="n">row_proportions</span><span class="p">,</span> <span class="n">col_proportions</span>
+        <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">child</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span> <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">children</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">row_proportions</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">row_proportions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">children</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span> <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">row_proportions</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">children</span><span class="p">)</span>
+
+        <span class="n">col_width</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">children</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">col_proportions</span><span class="p">:</span> <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">col_proportions</span><span class="p">)</span> <span class="o">==</span> <span class="n">col_width</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">col_proportions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">col_width</span>
+        <span class="n">filled_cols</span> <span class="o">=</span> <span class="n">_lmap</span><span class="p">(</span><span class="n">_fill_col</span><span class="p">(</span><span class="n">col_width</span><span class="p">),</span> <span class="n">children</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">LinLayout</span><span class="p">(</span><span class="s2">&quot;v&quot;</span><span class="p">)(</span><span class="o">*</span><span class="n">_lmap</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">it</span><span class="p">,</span> <span class="n">child</span><span class="p">:</span> <span class="n">it</span><span class="p">(</span><span class="n">child</span><span class="p">),</span> 
+            <span class="nb">map</span><span class="p">(</span><span class="n">LLItem</span><span class="p">,</span> <span class="n">row_proportions</span><span class="p">),</span>
+            <span class="n">_lmap</span><span class="p">(</span><span class="n">_to_h_layout</span><span class="p">(</span><span class="n">col_proportions</span><span class="p">),</span> <span class="n">children</span><span class="p">)))</span>
+
+    <span class="k">return</span> <span class="n">inner_grid_layout</span>
+    
+
+<div class="viewcode-block" id="compose"><a class="viewcode-back" href="../../surfacecomposition.html#pyparadigm.surface_composition.compose">[docs]</a><span class="k">def</span> <span class="nf">compose</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Top level function to create a surface.</span>
+<span class="sd">    </span>
+<span class="sd">    :param target: the pygame.Surface to blit on. Or a (width, height) tuple</span>
+<span class="sd">        in which case a new surface will be created</span>
+
+<span class="sd">    :type target: -</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">root</span><span class="p">)</span> <span class="o">==</span> <span class="n">Surface</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;A Surface may not be used as root, please add &quot;</span>
+                        <span class="o">+</span><span class="s2">&quot;it as a single child i.e. compose(...)(Surface(...))&quot;</span><span class="p">)</span>
+    <span class="nd">@_inner_func_anot</span>
+    <span class="k">def</span> <span class="nf">inner_compose</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">root</span><span class="p">:</span>
+            <span class="n">root_context</span> <span class="o">=</span> <span class="n">root</span><span class="p">(</span><span class="o">*</span><span class="n">children</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">children</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+            <span class="n">root_context</span> <span class="o">=</span> <span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">target</span><span class="p">)</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Surface</span><span class="p">:</span>
+            <span class="n">surface</span> <span class="o">=</span> <span class="n">target</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">get_size</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="n">target</span>
+            <span class="n">surface</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Surface</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+
+        <span class="n">root_context</span><span class="o">.</span><span class="n">_draw</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">*</span><span class="n">size</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">surface</span>
+    <span class="k">return</span> <span class="n">inner_compose</span> </div>
+
+
+<div class="viewcode-block" id="Font"><a class="viewcode-back" href="../../surfacecomposition.html#pyparadigm.surface_composition.Font">[docs]</a><span class="nd">@lru_cache</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">Font</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s2">&quot;sys&quot;</span><span class="p">,</span> <span class="n">italic</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bold</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Unifies loading of fonts.</span>
+
+<span class="sd">    :param name: name of system-font or filepath, if None is passed the default</span>
+<span class="sd">        system-font is loaded</span>
+
+<span class="sd">    :type name: str</span>
+<span class="sd">    :param source: &quot;sys&quot; for system font, or &quot;file&quot; to load a file</span>
+<span class="sd">    :type source: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">source</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;sys&quot;</span><span class="p">,</span> <span class="s2">&quot;file&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">SysFont</span><span class="p">(</span><span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">get_default_font</span><span class="p">(),</span> 
+        <span class="n">size</span><span class="p">,</span> <span class="n">bold</span><span class="o">=</span><span class="n">bold</span><span class="p">,</span> <span class="n">italic</span><span class="o">=</span><span class="n">italic</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">source</span> <span class="o">==</span> <span class="s2">&quot;sys&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">SysFont</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> 
+        <span class="n">size</span><span class="p">,</span> <span class="n">bold</span><span class="o">=</span><span class="n">bold</span><span class="p">,</span> <span class="n">italic</span><span class="o">=</span><span class="n">italic</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">Font</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">set_italic</span><span class="p">(</span><span class="n">italic</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">set_bold</span><span class="p">(</span><span class="n">bold</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">f</span></div>
+        
+
+<span class="k">def</span> <span class="nf">_text</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">pygame</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">antialias</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">antialias</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span><span class="o">.</span><span class="n">convert_alpha</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="Text"><a class="viewcode-back" href="../../surfacecomposition.html#pyparadigm.surface_composition.Text">[docs]</a><span class="k">def</span> <span class="nf">Text</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">pygame</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">antialias</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Renders a text. Supports multiline text, the background will be transparent.</span>
+<span class="sd">    </span>
+<span class="sd">    :param align: text-alignment must be &quot;center&quot;, &quot;left&quot;, or &quot;righ&quot;</span>
+<span class="sd">    :type align: str</span>
+<span class="sd">    :return: the input text</span>
+<span class="sd">    :rtype: pygame.Surface</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">align</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="s2">&quot;right&quot;</span><span class="p">]</span>
+    <span class="n">margin_l</span><span class="p">,</span> <span class="n">margin_r</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">align</span> <span class="o">==</span> <span class="s2">&quot;left&quot;</span><span class="p">:</span> <span class="n">margin_l</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">align</span> <span class="o">==</span> <span class="s2">&quot;right&quot;</span><span class="p">:</span> <span class="n">margin_r</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">margin</span> <span class="o">=</span> <span class="n">Margin</span><span class="p">(</span><span class="n">margin_l</span><span class="p">,</span> <span class="n">margin_r</span><span class="p">)</span>
+    <span class="n">color_key</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">!=</span> <span class="n">color</span> <span class="k">else</span> <span class="mh">0x000002</span>
+    
+    <span class="n">text_surfaces</span> <span class="o">=</span> <span class="n">_lmap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">text</span><span class="p">:</span> <span class="n">_text</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">font</span><span class="p">,</span> 
+                                   <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">antialias</span><span class="o">=</span><span class="n">antialias</span><span class="p">),</span>
+                                   <span class="nb">map</span><span class="p">(</span><span class="n">methodcaller</span><span class="p">(</span><span class="s2">&quot;strip&quot;</span><span class="p">),</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)))</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">surf</span><span class="o">.</span><span class="n">get_rect</span><span class="p">()</span><span class="o">.</span><span class="n">w</span> <span class="k">for</span> <span class="n">surf</span> <span class="ow">in</span> <span class="n">text_surfaces</span><span class="p">)</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">surf</span><span class="o">.</span><span class="n">get_rect</span><span class="p">()</span><span class="o">.</span><span class="n">h</span> <span class="k">for</span> <span class="n">surf</span> <span class="ow">in</span> <span class="n">text_surfaces</span><span class="p">)</span>
+    <span class="n">surf</span> <span class="o">=</span> <span class="n">compose</span><span class="p">((</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">),</span> <span class="n">Fill</span><span class="p">(</span><span class="n">color_key</span><span class="p">))(</span><span class="n">LinLayout</span><span class="p">(</span><span class="s2">&quot;v&quot;</span><span class="p">)(</span>
+        <span class="o">*</span><span class="n">_lmap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">Surface</span><span class="p">(</span><span class="n">margin</span><span class="p">)(</span><span class="n">s</span><span class="p">),</span> <span class="n">text_surfaces</span><span class="p">)))</span>
+    <span class="n">surf</span><span class="o">.</span><span class="n">set_colorkey</span><span class="p">(</span><span class="n">color_key</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">surf</span><span class="o">.</span><span class="n">convert_alpha</span><span class="p">()</span></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">PyParadigm</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">A tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../surfacecomposition.html">The Surface Composition Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../eventlistener.html">The Event Listener Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc.html">The Misc-Module</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Felix G. Knorr.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
