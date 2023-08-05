@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: s3-site-cache-optimizer
+Version: 0.8.0
+Summary: Optimize a static website before uploading to S3
+Home-page: https://github.com/novemberfiveco/s3-site-cache-optimizer
+Author: Ruben Van den Bossche, Matteo De Wint
+Author-email: ruben@novemberfive.co, matteo@novemberfive.co
+License: MIT
+Description: Optimize a static website for hosting in S3, by including a fingerprint into     all assets' filenames. The optimized website is uploaded into the specified S3 bucket with     the right cache headers.
+Platform: UNKNOWN
