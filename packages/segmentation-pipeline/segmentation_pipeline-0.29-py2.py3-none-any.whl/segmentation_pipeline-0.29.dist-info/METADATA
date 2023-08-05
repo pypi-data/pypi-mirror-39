@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: segmentation-pipeline
+Version: 0.29
+Summary: Declaraqtively configured pipeline for image segmentation
+Home-page: https://github.com/petrochenko-pavel-a/segmentation_training_pipeline
+Author: Petrochenko Pavel
+Author-email: petrochenko.pavel.a@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: musket-core (>=0.28)
+
+UNKNOWN
+
+
