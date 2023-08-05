@@ -1,0 +1,13 @@
+protosync/__init__.py,sha256=MigXIT7A1M9YZuH2MyjKReSziFwzbZX2boVYsLosR6s,22
+protosync/main.py,sha256=lke-5FoQJJXIrobYg4GJrFbvwrdUTyRggQvjeP-JWmQ,809
+protosync/common/__init__.py,sha256=oa412OuokRm9Vf3XlCJLqpZjz9ZcuxAKxnEBvOK7u2M,21
+protosync/common/common.py,sha256=DznBvJzLSGzLO3vCp8rWT_1NLtnDi3iEjFzC2WXQTy4,1346
+protosync/dest/__init__.py,sha256=9WJFR3J--tgKbYMxb_8WNKsTMXSAnQq4zrmIsHO61eQ,33
+protosync/dest/dest.py,sha256=gAilqm61em_1-mwZ3pVV-7XBdDtxUZUF9S-myffAASk,2103
+protosync/source/__init__.py,sha256=L9_QIi30741OW-d1syivsBaiDVVji9EbFEDaoIgQLKI,37
+protosync/source/source.py,sha256=mljRPqohaeF8hzZIKn4KTkabM_10c-89Yl5C4azcDb8,2601
+protosync-0.0.3.5.dist-info/METADATA,sha256=1aAPW2aqj2cboj21HfLNhdcc0hLWieeee1vSJJfhgAM,1220
+protosync-0.0.3.5.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+protosync-0.0.3.5.dist-info/entry_points.txt,sha256=w_uJ_199dPNjRLng3aWXSXMpUSROqGdO35pZ89h5FFQ,46
+protosync-0.0.3.5.dist-info/top_level.txt,sha256=1RDGc1CYWLArQhc3w09bAaVC4Ir-ycpVfDg8E6D-fUc,10
+protosync-0.0.3.5.dist-info/RECORD,,
