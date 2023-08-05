@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: Fourmat
+Version: 0.1.0
+Summary: A library for batteries-included linting and autoformatting
+Home-page: https://github.com/4Catalyzer/fourmat
+Author: Giacomo Tagliabue
+Author-email: giacomo@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: lint autoformat black flake8 isort
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
