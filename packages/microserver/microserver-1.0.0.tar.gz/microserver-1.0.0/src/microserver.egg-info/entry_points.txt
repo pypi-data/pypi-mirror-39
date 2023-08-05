@@ -1,0 +1,3 @@
+[console_scripts]
+microserver = microserver.__main__:main
+
