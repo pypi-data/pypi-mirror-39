@@ -1,0 +1,17 @@
+README.md
+setup.py
+mfft/__init__.py
+mfft/basefft.py
+mfft/clfft.py
+mfft/cufft.py
+mfft/fft.py
+mfft/fftw.py
+mfft/npfft.py
+mfft.egg-info/PKG-INFO
+mfft.egg-info/SOURCES.txt
+mfft.egg-info/dependency_links.txt
+mfft.egg-info/requires.txt
+mfft.egg-info/top_level.txt
+mfft.egg-info/zip-safe
+mfft/test/__init__.py
+mfft/test/test_fft.py
