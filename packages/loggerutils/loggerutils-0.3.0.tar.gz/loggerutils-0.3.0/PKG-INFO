@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: loggerutils
+Version: 0.3.0
+Summary: Celery optimised log formatter
+Home-page: http://github.com/bstiel/loggerutils
+Author: Bjoern Stiel
+Author-email: bjoern.stiel@distributedpython.com
+License: BSD-3-Clause
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.3
