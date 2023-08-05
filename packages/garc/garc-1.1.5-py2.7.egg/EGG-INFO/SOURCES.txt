@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+garc/__init__.py
+garc/client.py
+garc/command.py
+garc.egg-info/PKG-INFO
+garc.egg-info/SOURCES.txt
+garc.egg-info/dependency_links.txt
+garc.egg-info/entry_points.txt
+garc.egg-info/requires.txt
+garc.egg-info/top_level.txt
+requirements/python2.txt
+requirements/python3.txt
