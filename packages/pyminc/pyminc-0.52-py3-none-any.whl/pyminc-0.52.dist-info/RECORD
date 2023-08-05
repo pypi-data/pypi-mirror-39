@@ -1,0 +1,15 @@
+pyminc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyminc/volumes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyminc/volumes/factory.py,sha256=Vdf2hjijqrOim6f5KXY7QyOvYGpQuZwsbp78Ilmy2uE,3444
+pyminc/volumes/hyperslab.py,sha256=7OxVXnJppyHRr_KXvzW-u2DOFbRx9oSh5py2kBe99kc,1842
+pyminc/volumes/libpyminc2.py,sha256=YgYQOfKtz2Pm7jpAQF6VtSTgGROmCSFV10vDhzBlybU,10465
+pyminc/volumes/volumes.py,sha256=EJyqAi9xi5kMoEfMRkq6ghDWNoiz5ICUgf_MYQmjfIk,40820
+pyminc-0.52.data/scripts/pyminc_test2.py,sha256=AZ-_7LRIUolqKXwPN_kij29YAof9AhYTzbA6yp3Xy_o,6166
+pyminc-0.52.data/scripts/sva2mnc.py,sha256=aXMrRO80ytoURWkHt4kjXwnD0QHD6IyQT1azlFEf_B0,1533
+pyminc-0.52.dist-info/METADATA,sha256=m4uos2zCb710D55j61s3-Y8uLjTBTODconuO9_lJFDc,263
+pyminc-0.52.dist-info/RECORD,,
+pyminc-0.52.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+pyminc-0.52.dist-info/top_level.txt,sha256=JrVKtzKDxH91DLi5jw7lZTmzRNPmrqXrcW7V8iYHBco,12
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/conftest.py,sha256=L176lAC3jDiqRf7Ml1jj9NppypwOZBqj6v9URB8qiqU,132
+test/generatorTests.py,sha256=lqIeJvzSEltWxOHB4oEwM4gPQiluyojQGhpDLy3_4Po,61661
