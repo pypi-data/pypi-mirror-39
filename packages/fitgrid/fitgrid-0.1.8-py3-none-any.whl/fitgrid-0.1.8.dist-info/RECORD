@@ -1,0 +1,15 @@
+fitgrid/__init__.py,sha256=IpFU_YgmgOGawNw8lOyW4X5jam-ZRwYCebIzAigOIgk,610
+fitgrid/epochs.py,sha256=DA7n8qTzmBUtfqlFtvIvZlNZrh2HN_suHVbHjPXNrfE,13787
+fitgrid/errors.py,sha256=a0c17lbYw184Mmz4Byj0QEf-aRv3AmOFui6VkGWl2Kk,40
+fitgrid/fake_data.py,sha256=2FwVZ17m9maczmfgsG11QR53tVl_kgp0yIx7rsbWWYI,2066
+fitgrid/fitgrid.py,sha256=iLWJwwik8qgyEfFEbHf9OhNhZB44hEfy9uInm6b3kxM,13807
+fitgrid/io.py,sha256=OMFalm1YRPsmB0q3So-No5xLtYy44hTrFMmln5h-ups,2361
+fitgrid/plots.py,sha256=f6X4IBwwzcAAmneL5HMyF0rRydsL43ZRb3wuIDUhDGc,523
+fitgrid/tools.py,sha256=cg8ZvwVvdO8yv7hOOsCjm3ioe3lK94YuEL5QOzl65ME,4898
+fitgrid/utils/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+fitgrid/utils/lmer.py,sha256=QBHfl9--d9sUJu_EPK38hO7u3s88NJN8hbttiwZLVUg,11740
+fitgrid-0.1.8.dist-info/LICENSE,sha256=26xe7GYRFMS02e0thU-5Wn6c5Ru_xDV8x1Vp-QS56m4,1492
+fitgrid-0.1.8.dist-info/METADATA,sha256=MDq7rvKTgGH5MXr1gFQ3ayqZociZx5iWQFp2yzwOfuY,1110
+fitgrid-0.1.8.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+fitgrid-0.1.8.dist-info/top_level.txt,sha256=Tfivstnm3SElNDRGlqhoJj6Go0i0ch_bDb6kDlKBFl8,8
+fitgrid-0.1.8.dist-info/RECORD,,
