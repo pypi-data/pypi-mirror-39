@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: xshell
+Version: 1.4.1
+Summary: Run `xshell.embed()`, you can do anything, in the Interactive Console.
+Home-page: https://github.com/neoctobers/xshell
+Author: @neoctobers
+Author-email: neoctobers@gmail.com
+License: UNKNOWN
+Description: # xshell
+        
+        [![PyPi Version](http://img.shields.io/pypi/v/xshell.svg)](https://pypi.python.org/pypi/xshell/)
+        
+        
+        Run `xshell.embed()`, you can do anything, in the Interactive Console.
+        ## Installation
+        
+        ```
+        $ pip3 install xshell
+        ```
+        
+        ## Usage
+        
+        Write this anywhere.
+        ```
+        xshell.embed('Are you ready?')
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
