@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: tono
+Version: 0.0.1
+Summary: A very simple script in web frameword for python
+Home-page: https://github.com/Robialta/pybie
+Author: Obie
+Author-email: obyaltha@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+# Example Package
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
