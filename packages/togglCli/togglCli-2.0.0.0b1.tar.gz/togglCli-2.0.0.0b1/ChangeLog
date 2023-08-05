@@ -1,0 +1,96 @@
+CHANGES
+=======
+
+v2.0.0b1
+--------
+
+* Modification of CHANGELOG
+* Beta release info
+* Mypy gitignore
+* Including default rule for 120 chars per line limit
+* Polishing code style errors
+* Finishing documentation
+* Revert of inline type hinting back to comment based
+* Documentation, types and tweaks
+* Enabling list as choices for ChoiceField
+* Fixing spaces in --fields option
+* Support for .editorconfig
+* Working on documentation
+* Adding support for command completion
+* Refactoring Workspace Users's commands as Workspace->Users commands
+* Travis support for automatic Docs deployment
+* Fixing Deprecation warning for collections.abc import
+* Adding CNAME to docs in order to keep correctly pointed GH Pages
+* Bumping version of requests because of CVE-2018-18074
+* Linting cleanup
+* Fixing for Python 3.5
+* Badges & required Python version
+* Fixing config instance for tests
+* Adding support for TravisCI
+* Introducing some delay between retries
+* Styling cleanup
+* Reworking versioning of TogglCLi and migrations
+* Using custom config file for all tests
+* Docs tweak
+* pbr support
+* Basic docs setup
+* Tweaks of tests & config
+* Meta info about the project. Basic setup
+* Fixing from 'Toggle' to 'Toggl'
+* Correct exposition of Env vars for commands
+* Support for retries of API calls
+* Preventing assignment of not-saved Entity (eq. without ID) as mapped entity
+* Dummy config bootstrap for Window's users
+* Sorting TimeEntries
+* Enabling configuration of time format
+* Tests for Time Entries & modifications along
+* Introducing SetField and using it for TimeEntry.tags field
+* Filtering TimeEntries by projects&tags
+* Tweaking CLI commands for Time Entries
+* Fixing Filtering of Time Entries based on time
+* Fixing ListFields handling None
+* Tests for Projects & test framework tweaks
+* Adding support for Premium fields
+* Integration tests for Clients
+* Polishing integration testing framework
+
+v1.0.0
+------
+
+* Proper setup.py with console\_scripts support
+* Setup.py support
+* Add ability to specify project by ID with # character (ex. #123456)
+* Fixes #77
+* Making tests work under Py3
+* Changing string formatting to use 'format' function
+* Fixing iterators for Py3
+* Adding run function for interactive window usage
+* Adding VS project file
+* Fix broken Markdown headings
+* Update toggl.sh
+* Safely pass arguments from bash to python
+* Changed to the MIT License
+* fixes #61
+* Fix missing dependency of python-dateutil
+* reflect latest --help
+* revert f3dd093
+* fixed tabs with spaces
+* Update README
+* updated README
+* continue behaviour config per #39
+* add continue from
+* fix indent
+* allow STOP to stop web-started entries with no description
+* allow DURATION instead of START/DURATION|STOP in add command
+* fix bug introduced by f14bd20
+* updated docs and --help to reflect latest changes
+* continue without args continues last entry
+* Update toggl.py with recent patches
+* Rename Unicode\_iCal to toggl.sh
+* Update with ls extensions, ical and unicode fixes
+* toggl.sh
+* add optional duration to start
+* fixed comment
+* fixed comment
+* Updated ClientList to handle unicode characters. Thanks to @tomeriksen for the fix
+* The tests are obsolete because of recent changes, but at least they all pass now
