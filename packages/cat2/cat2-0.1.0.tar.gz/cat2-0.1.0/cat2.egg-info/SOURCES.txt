@@ -1,0 +1,10 @@
+README.md
+setup.py
+cat2/__init__.py
+cat2/cli.py
+cat2.egg-info/PKG-INFO
+cat2.egg-info/SOURCES.txt
+cat2.egg-info/dependency_links.txt
+cat2.egg-info/entry_points.txt
+cat2.egg-info/requires.txt
+cat2.egg-info/top_level.txt
