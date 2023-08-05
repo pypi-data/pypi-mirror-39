@@ -1,0 +1,14 @@
+/*
+    hide the news in the topbar
+*/
+
+.top-bar-section li:last-child {
+    display: none;
+}
+
+/*
+    hide the map provider
+*/
+#fieldset-maps .field-geo_provider {
+    display: none;
+}
