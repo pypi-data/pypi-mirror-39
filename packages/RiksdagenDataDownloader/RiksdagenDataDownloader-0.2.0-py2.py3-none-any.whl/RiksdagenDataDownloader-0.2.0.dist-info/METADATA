@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: RiksdagenDataDownloader
+Version: 0.2.0
+Summary: Download data from https://data.riksdagen.se/in-english/.
+Home-page: https://github.com/rickardlofberg/RiksdagenDataDownloadern
+Author: Rickard Löfberg
+Author-email: me@example.com
+License: GPL-3.0
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: xmltodict
+
+Download data from https://data.riksdagen.se/in-english/.
+
+
