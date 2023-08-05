@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: openelec
+Version: 0.0.2
+Summary: A tool for optimising electricity access pathways
+Home-page: https://github.com/carderne/openelec
+Author: Chris Arderne
+Author-email: chris@rdrn.me
+License: UNKNOWN
+Description: 
+        OpenElec is a prototype for a general purpose tool for creating
+        optimised national electricity access pathways, and finding villages
+        for private off-grid development. The tool has functionality for both
+        national- and local-level analysis. 
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
