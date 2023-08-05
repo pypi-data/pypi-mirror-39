@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: sealant
+Version: 1.0.0
+Summary: Библиотека с инструментом для поиска утечек памяти в процессе выполнения тестов в Chrome или Node.js
+Home-page: https://pypi.org/project/sealant
+Author: ae.udahin
+Author-email: UNKNOWN
+License: LICENSE.md
+Platform: UNKNOWN
+Requires-Dist: pychrome (>=0.2.2)
+Requires-Dist: requests (>=2.19.1)
+Requires-Dist: selenium (>=3.13.0)
+
+UNKNOWN
+
+
