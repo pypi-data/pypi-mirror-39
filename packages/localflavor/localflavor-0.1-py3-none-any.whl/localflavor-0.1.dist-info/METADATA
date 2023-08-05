@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: localflavor
+Version: 0.1
+Summary: Country-specific formatting helpers, ported from Django Localflavor
+Home-page: UNKNOWN
+Author: Anna Sirota
+Author-email: dev.local@gmail.com
+License: BSD
+Platform: UNKNOWN
+Requires-Dist: six (==1.11.0)
+
+UNKNOWN
+
+
