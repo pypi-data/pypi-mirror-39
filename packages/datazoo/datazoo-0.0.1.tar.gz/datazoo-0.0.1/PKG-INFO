@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: datazoo
+Version: 0.0.1
+Summary: The deep learning datasets provider
+Home-page: https://github.com/nerox8664/datazoo
+Author: Grigory Malivenko
+Author-email: nerox8664@gmail.com
+License: MIT
+Description: # Data zoo
+        
+        This repository provides unified access to the multiple datasets.
+        
+        ## Classification
+        
+        ### Single-label datasets
+        
+        | Dataset | Number of classes | Number of samples | Description | Source |
+        | --- | ---: | ---: | ---: | ---: |
+        | MNIST | 10 | 50 000 | Hand-written digits | torchvision |
+        | Fashion MNIST | 10 | 50 000 | Clothes version of MNIST | torchvision |
+        | CIFAR-10 | 10 | 50 000 | ... | torchvision |
+        | CIFAR-100 | 100 | 50 000 | ... | torchvision |
+        
+        ### Multiple labels datasets
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
