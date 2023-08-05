@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: tasker-bot
+Version: 0.0.1
+Summary: Bot para gestionar y automatizar la gestión de tareas.
+Home-page: https://bitbucket.org/edwinariza/tasker_bot/src/master/
+Author: Edwin Ariza
+Author-email: me@edwinariza.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# tasker.bot
+
+Comando de control y gestión de tareas.
+
