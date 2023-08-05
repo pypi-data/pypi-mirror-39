@@ -1,0 +1,7 @@
+setuptools
+celery>=4
+plone.api
+
+[test]
+plone.app.testing
+SQLAlchemy
