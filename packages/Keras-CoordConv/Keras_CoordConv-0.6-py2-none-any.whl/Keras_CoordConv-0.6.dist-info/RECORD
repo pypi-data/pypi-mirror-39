@@ -1,0 +1,13 @@
+Keras_CoordConv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Keras_CoordConv/coord.py,sha256=aLYiFzvRlBss8tBVaXrSd_DAb-6Oti03l6DHCCbL6_g,14788
+Keras_CoordConv/coord_theano.py,sha256=WwaV4ZLXlPh4wNl5aVRPJqJW0Nbe6SXwuOwXhH8JWQc,15574
+Keras_CoordConv-0.6.dist-info/DESCRIPTION.rst,sha256=IrqMr_RRh6pVNlkfFNjGQyoI2C35v6nry-yar21xvJE,3396
+Keras_CoordConv-0.6.dist-info/METADATA,sha256=A2p-5KFPLcsVjeGYPmRlg6UjvGCnCvdrow1QSAU8iuk,3943
+Keras_CoordConv-0.6.dist-info/RECORD,,
+Keras_CoordConv-0.6.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+Keras_CoordConv-0.6.dist-info/metadata.json,sha256=bqcxwzLAWZYeGXm0bfKvgm-X-vDnENDvx7inzh4-l9A,705
+Keras_CoordConv-0.6.dist-info/top_level.txt,sha256=4nCrImblNC6_hj5GZ892w7mWBiw73KMlDzNobA-4hbw,16
+experiments/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+experiments/make_dataset.py,sha256=dZvRT1AAv82nfNEKrId7zd2Y-DConxCm_VmCEX2P62I,2814
+experiments/train_quadrant_classifier.py,sha256=flz1M1LLJv9Jjfe-qieMRhOLS5CaMwGUwlI3-ebucdo,2818
+experiments/train_uniform_classifier.py,sha256=7HWt6dbkxVCys8xvbqotkTFA6oN0RT7MaB2xzTdwtj4,3187
