@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: lzss
+Version: 0.2
+Summary: LZSS compression algorithm
+Home-page: https://github.com/rumbah/pylzss
+Author: rumbah
+Author-email: rumbah@users.noreply.github.com
+License: GNU LGPL v3
+Description-Content-Type: UNKNOWN
+Description: A package for decoding / encoding LZSS-compressed data.
+Platform: Windows
+Platform: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2
+Classifier: Topic :: System :: Archiving :: Compression
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
