@@ -1,0 +1,3 @@
+[console_scripts]
+qiq = qiq.qiq:main
+
