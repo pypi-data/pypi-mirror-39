@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: gistory
+Version: 0.44
+Summary: Tracking your .git changed history
+Home-page: https://github.com/egoing/git_changed_history
+Author: egoing
+Author-email: egoing@gmail.com
+License: MIT
+Description: ****
+        소개
+        ****
+        git의 내부를 분석하는데 도움을 주는 도구입니다. 
+        
+        ********
+        설치방법
+        ********
+        pip install gistory
+        
+        ********
+        사용방법
+        ********
+        1. .git이 있는 디렉토리로 이동합니다. 
+        2. gistory를 입력해서 실행합니다. 
+        3. 웹브라우저에서 localhost:8805 를 방문합니다.
+        
+        ********
+        소개영상
+        ********
+        https://www.youtube.com/watch?v=KyGfapLpWhY
+        
+        ***************
+        라이선스
+        ***************
+        MIT
+        
+Keywords: git
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Provides-Extra: dev
+Provides-Extra: test
