@@ -1,0 +1,36 @@
+<img src="{{ url_for("static", filename = "overwatchLogo.v1.svg") }}"class="centerLogo">
+
+{#- We stiil want to set this value to ensure that title is properly shown. However, we only want to show the logo, so we set this to be hidden. -#}
+<h1 id="mainContentTitle" style="display: none;">OVERWATCH Run List</h1>
+<hr />
+
+{%- for run in runs %}
+    {# Create anchors to link to #}
+    {%- if loop.index % anchorFrequency == 0 -%}
+        <a name="{{ run.runDir }}"></a>
+    {% endif -%}
+    <table class="rootPageRunListTable">
+    {%- for subsystem in run.subsystems.values() %}
+        <tr>
+            {% if loop.first == True -%}
+            <td>{{ run.prettyName }}</td>
+            {%- else -%}
+            <td></td>
+            {%- endif %}
+            <td>
+                <a href="{{ url_for("runPage", runNumber = run.runNumber, subsystemName = subsystem.subsystem, requestedFileType="runPage") }}">{{ subsystem.subsystem }} Histograms</a>
+            </td>
+        </tr>
+        {% if subsystem.subsystem in subsystemsWithRootFilesToShow -%}
+        <tr>
+            <td></td>
+            <td>
+                <a href="{{ url_for("runPage", runNumber = run.runNumber, subsystemName = subsystem.subsystem, requestedFileType="rootFiles") }}">{{ subsystem.subsystem }} ROOT Files</a>
+            </td>
+        </tr>
+        {%- endif -%}
+    {% endfor %}
+    </table>
+{%- endfor %}
+{#- NOTE: The +1 offset is because we of course don't want to count from 0. -#}
+<p style="text-align:center">{%- if runOffset - numberOfRunsToDisplay >= 0 -%}<a href={{ url_for("index", runOffset = runOffset - numberOfRunsToDisplay) }}>Previous</a> -{%- endif %} Showing runs {{runOffset + 1}} - {{ [runOffset + numberOfRunsToDisplay, totalNumberOfRuns] | min }} out of {{ totalNumberOfRuns }} total runs {% if runOffset + numberOfRunsToDisplay < totalNumberOfRuns -%} - <a href={{ url_for("index", runOffset = runOffset + numberOfRunsToDisplay) }}>Next</a>{%- endif -%}</p>
