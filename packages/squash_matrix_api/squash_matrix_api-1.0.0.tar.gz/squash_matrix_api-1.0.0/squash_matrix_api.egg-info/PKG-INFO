@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: squash-matrix-api
+Version: 1.0.0
+Summary: Squash Matrix API
+Home-page: https://github.com/wilkosz/squash_matrix_io_sdks/tree/master/python
+Author: joshuawilkosz
+Author-email: joshuawilkosz@squashmatrix.io
+License: UNKNOWN
+Description:     # Endeavor The squash matrix API enables clubs, players, and regions to own their information, with results being updated weekly. The API information sits ontop of squash matrix australia website [https://squashmatrix.com](https://squashmatrix.com) # API Aside from the documentation provided below, there is also a &#x60;{json:api}&#x60; available and can be accessed in the same manner, with the addition of the accept header &#x60;{accept: application/vnd.api+json}&#x60;. More information about json api can be viewed on their website at [http://jsonapi.org/](http://jsonapi.org/) # Squash Matrix Scrapper There is a ruby SDK for retrieving information from [https://squashmatrix.com](https://squashmatrix.com) which can be found at https://rubygems.org/gems/squash_matrix # SDK&#39;s Please stay posted! Client sdk&#39;s for the following will be provided shortly:    - Javascript   - Java   - Ruby  # Blog Find relevent and interesting media on [wilkosz.com.au](http://wilkosz.com.au) # Contact Join this endeavor and be appart of the community [https://www.facebook.com/squashmatrixapi](https://www.facebook.com/squashmatrixapi) &lt;hr /&gt;  # noqa: E501
+            
+Keywords: Swagger,Squash Matrix API
+Platform: UNKNOWN
