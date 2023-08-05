@@ -1,0 +1,8 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+stempy.egg-info/PKG-INFO
+stempy.egg-info/SOURCES.txt
+stempy.egg-info/dependency_links.txt
+stempy.egg-info/top_level.txt
