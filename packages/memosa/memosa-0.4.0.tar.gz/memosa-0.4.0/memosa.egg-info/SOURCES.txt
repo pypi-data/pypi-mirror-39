@@ -1,0 +1,11 @@
+README.md
+setup.py
+memosa/__init__.py
+memosa/context.py
+memosa/json.py
+memosa.egg-info/PKG-INFO
+memosa.egg-info/SOURCES.txt
+memosa.egg-info/dependency_links.txt
+memosa.egg-info/not-zip-safe
+memosa.egg-info/requires.txt
+memosa.egg-info/top_level.txt

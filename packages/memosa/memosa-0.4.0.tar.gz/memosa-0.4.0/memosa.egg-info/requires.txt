@@ -1,0 +1,4 @@
+simplejson>=3.16.0
+
+[:python_version < "3.7"]
+contextvars>=2.3
