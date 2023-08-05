@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+pytest_statsd/__init__.py
+pytest_statsd/plugin.py
+pytest_statsd.egg-info/PKG-INFO
+pytest_statsd.egg-info/SOURCES.txt
+pytest_statsd.egg-info/dependency_links.txt
+pytest_statsd.egg-info/entry_points.txt
+pytest_statsd.egg-info/requires.txt
+pytest_statsd.egg-info/top_level.txt
