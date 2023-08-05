@@ -1,0 +1,25 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit-buildapi"
+
+[tool.flit.metadata]
+module = "manly"
+author = "Carl Bordum Hansen"
+author-email = "carl@bordum.dk"
+home-page = "https://github.com/carlbordum/manly"
+license = "MIT"
+description-file = "README.md"
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+    "Topic :: Software Development :: Documentation"
+]
+
+[tool.flit.metadata.requires-extra]
+test = [
+    "pytest ~= 3.9.2",
+]
+
+[tool.flit.scripts]
+manly = "manly:main"
