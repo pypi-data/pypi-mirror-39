@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+aws_lambda_context/__init__.py
+aws_lambda_context.egg-info/PKG-INFO
+aws_lambda_context.egg-info/SOURCES.txt
+aws_lambda_context.egg-info/dependency_links.txt
+aws_lambda_context.egg-info/requires.txt
+aws_lambda_context.egg-info/top_level.txt
