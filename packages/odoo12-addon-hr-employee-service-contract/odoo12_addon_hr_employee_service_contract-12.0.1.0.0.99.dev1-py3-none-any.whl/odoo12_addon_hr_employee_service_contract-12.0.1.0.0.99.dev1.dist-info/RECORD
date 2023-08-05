@@ -1,0 +1,16 @@
+odoo/addons/hr_employee_service_contract/README.rst,sha256=8xND5wVTWEUb5BvYXfniGG1cwrKic7mdRM_ljsBv7Lg,2679
+odoo/addons/hr_employee_service_contract/__init__.py,sha256=QXl_U5mKDJfzIWJDZpUzH9Rf4Zda8Ko8Q1Df6Lc0MF8,92
+odoo/addons/hr_employee_service_contract/__manifest__.py,sha256=3WO056MiGJBzjljXp94nNrJmd1HaIPpo8c0fblkg5pc,809
+odoo/addons/hr_employee_service_contract/i18n/hr_employee_service_contract.pot,sha256=FbneqiSb_ZVbmXNBOvXYH-jvttFDthkeeA0fHo2PXbk,2953
+odoo/addons/hr_employee_service_contract/models/__init__.py,sha256=tutRfRaI-F5TshQkOyAz94ZmJrPeOoMje0Y5EGM28W8,97
+odoo/addons/hr_employee_service_contract/models/hr_employee.py,sha256=AQKH5fkBuHp_YjzyMh9Qi_64BToTXF8_VG_yR2VaSHM,1986
+odoo/addons/hr_employee_service_contract/readme/CONTRIBUTORS.rst,sha256=7c2qV8FXnm3VAsxr8xcm4XOvLXiNI3leSGtIE-3_wSk,50
+odoo/addons/hr_employee_service_contract/readme/DESCRIPTION.rst,sha256=tlNGwrLFr6wI9A6R9fV7-cgzYrzunXh_rQ51NhwlNws,81
+odoo/addons/hr_employee_service_contract/static/description/index.html,sha256=B97LWn-d-8X0kmCa1PBoH6yke5evPS5gJBMZJiG2rrU,11800
+odoo/addons/hr_employee_service_contract/tests/__init__.py,sha256=ROwlZqamtV5h9p0FFEShDRo_dHwuxMOnUmvoTnevR3Q,110
+odoo/addons/hr_employee_service_contract/tests/test_hr_employee_service.py,sha256=-8LCLIqSuA2n4eQdhJg1yxTap-L6j4gY6-YRzKWzvxs,4277
+odoo/addons/hr_employee_service_contract/views/hr_employee.xml,sha256=0rP0MgdOx9LvVTNoypu1ap_Ih6g_Qz7lhITJpMnAmjU,1517
+odoo12_addon_hr_employee_service_contract-12.0.1.0.0.99.dev1.dist-info/METADATA,sha256=k1fCTYGU-7UJ1MCH8az24Z1LE4bufM3gYgA6JEzSluo,3318
+odoo12_addon_hr_employee_service_contract-12.0.1.0.0.99.dev1.dist-info/RECORD,,
+odoo12_addon_hr_employee_service_contract-12.0.1.0.0.99.dev1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+odoo12_addon_hr_employee_service_contract-12.0.1.0.0.99.dev1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
