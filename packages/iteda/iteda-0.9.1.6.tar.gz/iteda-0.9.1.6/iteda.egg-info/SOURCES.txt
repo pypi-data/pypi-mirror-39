@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+gallery-keif-snow.jpg
+setup.cfg
+setup.py
+iteda/__init__.py
+iteda/iteda.py
+iteda.egg-info/PKG-INFO
+iteda.egg-info/SOURCES.txt
+iteda.egg-info/dependency_links.txt
+iteda.egg-info/requires.txt
+iteda.egg-info/top_level.txt
