@@ -1,0 +1,17 @@
+odoo/addons/account_invoice_margin_sale/README.rst,sha256=M_4x5ZDJuVqeoP0Kp6wbK2GgzuIhWd1-nMlpyZUV_Fo,2817
+odoo/addons/account_invoice_margin_sale/__init__.py,sha256=TPlSJs0YI49Rb3OYun__BkA-61L40ZIcuogH2UaHlnc,86
+odoo/addons/account_invoice_margin_sale/__manifest__.py,sha256=hhn5holxTV1ZSgr20E26ibJUfbxsxurMkXY2oLuQ_PE,610
+odoo/addons/account_invoice_margin_sale/i18n/account_invoice_margin_sale.pot,sha256=CeApHUBn2QtfA71Zp6kRjLw19ISqLpXgoPcdV9AJIW4,524
+odoo/addons/account_invoice_margin_sale/models/__init__.py,sha256=RMDd0TJU4d-aXTT4rl1DwQrl7o4O2bzroRHhj2U5TL0,84
+odoo/addons/account_invoice_margin_sale/models/sale.py,sha256=qo_hvuppjDAQvUGyEOvNiWmcEtFcYpHM23fy6beptIg,411
+odoo/addons/account_invoice_margin_sale/readme/CONTRIBUTORS.rst,sha256=0HfR-RG3RtWzRCCRT0JU2SJ_G0FP2oXzM5oaXtywtHo,46
+odoo/addons/account_invoice_margin_sale/readme/DESCRIPTION.rst,sha256=vK_7jrJG2nGiGblJ7-ghjVjRMnzR9PooMRQra_QTg6s,76
+odoo/addons/account_invoice_margin_sale/readme/INSTALL.rst,sha256=W0OpDReZcT7zYP6-2Ur2ZLwMnl1mGJ-u2mgaEAfnQhw,31
+odoo/addons/account_invoice_margin_sale/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/account_invoice_margin_sale/static/description/index.html,sha256=hzXno14XNKqWTSf3V7WIGgxBGyc0wp2uUg_ebTyR0VY,12105
+odoo/addons/account_invoice_margin_sale/tests/__init__.py,sha256=TjeFV8qjzLUamZ-_2sxQdmwTtJrp-FWkNAu1E_xQ26Q,112
+odoo/addons/account_invoice_margin_sale/tests/test_account_invoice_margin_sale.py,sha256=w1zqqL7blgfFl73y03IIRi-a82STn4YkqtyB908tL1k,2481
+odoo11_addon_account_invoice_margin_sale-11.0.1.0.0.99.dev1.dist-info/METADATA,sha256=28QaaFgpNnDdnW6GDaK1pvF37_Dt1b-ZBfveROiXgMU,3450
+odoo11_addon_account_invoice_margin_sale-11.0.1.0.0.99.dev1.dist-info/RECORD,,
+odoo11_addon_account_invoice_margin_sale-11.0.1.0.0.99.dev1.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+odoo11_addon_account_invoice_margin_sale-11.0.1.0.0.99.dev1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
