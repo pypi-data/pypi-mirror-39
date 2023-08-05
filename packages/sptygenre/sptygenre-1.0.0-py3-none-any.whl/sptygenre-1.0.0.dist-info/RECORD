@@ -1,0 +1,16 @@
+sptygenre/__init__.py,sha256=2q7LHd0lmYFnU6xtH2MGrEl1OzXXnhudZI5NrW6OSUg,196
+sptygenre/__main__.py,sha256=Wi4d8j7_qiYlSKxf2-y8rM_u4cLEEB-utOXTV7YV8jI,1323
+sptygenre/exceptions.py,sha256=2mWw0FEtzEN34XqKqvOjeQp3fPIDIhEUwkCyo8JqCXM,495
+sptygenre/auth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sptygenre/auth/auth.py,sha256=9sujXjYJ0KARMbEjWzMSTELJJ-C9iRzTya7yaCrJStM,1027
+sptygenre/fetch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sptygenre/fetch/fetch.py,sha256=GMMJMWXo8wkjuOK2TCRYpspYllRm2pkCC258-zlzKA0,2632
+sptygenre/ui/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sptygenre/ui/draw.py,sha256=b-huO5RXIRV8ROdIanqgBszaRDV6ThtI0p3YNIqhCas,190
+sptygenre/ui/write.py,sha256=EGE9KwcMGCnY_z75RRkXDb3m8ms10mWo3NMAxj5Av4c,105
+sptygenre-1.0.0.dist-info/LICENSE,sha256=kCaBWeLqarcQsY3byKO9fu2nf9mnf65OtZlWLC_fZYE,1070
+sptygenre-1.0.0.dist-info/METADATA,sha256=cqotZXlWnWT-WDfn47whsk9RWRDeWsHJOZLnGSlB8DI,927
+sptygenre-1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+sptygenre-1.0.0.dist-info/entry_points.txt,sha256=9iuT4HstecZcpu5u0uUFbBaStPPaL9kZxzbm6OQn2lQ,55
+sptygenre-1.0.0.dist-info/top_level.txt,sha256=IbvWJ-hITJlgCDmAhAr9xldWxrjBgDmgzggmThAZ1DM,10
+sptygenre-1.0.0.dist-info/RECORD,,
