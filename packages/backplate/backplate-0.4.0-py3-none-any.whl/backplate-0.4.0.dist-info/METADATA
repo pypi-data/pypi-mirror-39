@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: backplate
+Version: 0.4.0
+Summary: RESTful API Helpers
+Home-page: https://github.com/studioarmix/backplate
+Author: Peter Boyer
+Author-email: petertboyer@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: flask
+Requires-Dist: flask-restful
+Requires-Dist: flask-cors
+
+UNKNOWN
+
+
