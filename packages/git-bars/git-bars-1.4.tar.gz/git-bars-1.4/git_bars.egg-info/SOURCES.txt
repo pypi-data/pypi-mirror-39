@@ -1,0 +1,9 @@
+README.md
+setup.py
+git_bars.egg-info/PKG-INFO
+git_bars.egg-info/SOURCES.txt
+git_bars.egg-info/dependency_links.txt
+git_bars.egg-info/entry_points.txt
+git_bars.egg-info/top_level.txt
+gitbars/__init__.py
+gitbars/gitbars.py
