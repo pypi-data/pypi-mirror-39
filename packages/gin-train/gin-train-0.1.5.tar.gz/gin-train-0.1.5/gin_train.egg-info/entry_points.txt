@@ -1,0 +1,4 @@
+[console_scripts]
+gin_train = gin_train.__main__:main
+gt = gin_train.__main__:main
+
