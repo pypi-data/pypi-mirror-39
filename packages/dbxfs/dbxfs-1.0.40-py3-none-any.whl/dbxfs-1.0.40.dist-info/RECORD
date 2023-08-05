@@ -1,0 +1,15 @@
+dbxfs/__init__.py,sha256=pQBD0D4GzKJ3MGyxXDK1xRvsbNJRQptGEBry35rzvwo,666
+dbxfs/cachingfs.py,sha256=C8R9xgQWiuveF5C34DjXdfEu_377tt8rxt4E6TgIHek,68389
+dbxfs/dbxfs.py,sha256=z9b-oT3lV51YCKoC26ZyLKiCCLtxu2tFbRwGXU2jyjE,34401
+dbxfs/disable_quick_look.py,sha256=wNboaUSci7KO3gBXynYPY2H56zSm-nkQPW3LdtTiu-0,3332
+dbxfs/main.py,sha256=OrYH6gQLJr7sQTCUNcgPVktNJkaMws1fjmzb2wVaTtQ,13986
+dbxfs/safefs_glue.py,sha256=7N73Enmc6SpGlxs6bleh17jhNHbYjZoe61VmK1E1L8s,7947
+dbxfs/translate_ignored_files.py,sha256=ovby31hnM6JdJd9NsbJT-dPeCfY2Ls_LxF9Z8Ta6hQE,3689
+dbxfs/util_dumpster.py,sha256=_vDOTHAjHONDtWVEOfVsn7p-3SqtvyWeDKUzdMSXXSE,660
+dbxfs/version.py,sha256=TDpUnL6Y2IJF7FXMWxZ-vGu3ZW8z0RZfY38GnurFXN8,689
+dbxfs-1.0.40.dist-info/LICENSE,sha256=1i8GWDCqNznMAxFWuWkIBcey6BG0oXjItKzYcl1WHJQ,35142
+dbxfs-1.0.40.dist-info/METADATA,sha256=oZpU0a39ZkbdalaXAJv1qyShGBCgzCiai1Fo-xhd0-Y,3178
+dbxfs-1.0.40.dist-info/WHEEL,sha256=-ZFxwj8mZJPIVcZGLrsQ8UGRcxVAOExzPLVBGR7u7bE,92
+dbxfs-1.0.40.dist-info/entry_points.txt,sha256=7NxRlWFT5-y_R_l7NeHES3bWBvtGxWNdqwTf0RRash8,43
+dbxfs-1.0.40.dist-info/top_level.txt,sha256=NROUfl_igaRqSieAM_1uKIqWWxcU6DRxJhF9-N92-5I,6
+dbxfs-1.0.40.dist-info/RECORD,,
