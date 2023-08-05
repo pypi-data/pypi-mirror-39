@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: hurlers
+Version: 0.1.1
+Summary: Store mlbam pitch data.
+Home-page: https://github.com/sjbrowne/hurlers
+Author: S.J. Browne
+License: MIT License
+Description: UNKNOWN
+Keywords: baseball,MLB,MLBAM,SABRmetrics,SABR,Major League Baseball,pitch,pitching
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Requires-Python: >=2.7
