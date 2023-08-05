@@ -1,0 +1,29 @@
+Metadata-Version: 2.0
+Name: nni-sdkv04
+Version: 0.4.1
+Summary: Python SDK for Neural Network Intelligence project
+Home-page: https://github.com/Microsoft/nni
+Author: Microsoft NNI Team
+Author-email: nni@microsoft.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: hyperopt
+Requires-Dist: json-tricks
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+## Install ##
+
+Install for current user:
+
+    pip install --user -e .
+
+Install for all users:
+
+    pip install -e .
+
+## Test ##
+
+    python setup.py test
+
+
