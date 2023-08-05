@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: baiji-sdk
+Version: 1.0.0
+Summary: Alicloud SDK for python
+Home-page: https://github.com/canalplus/baiji
+License: UNKNOWN
+Keywords: sdk baiji python alicloud aliyun
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 2.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests (==2.20.0)
+Requires-Dist: aliyun-python-sdk-core (==2.11.0)
+Requires-Dist: aliyun-python-sdk-ecs (==4.12.0)
+Requires-Dist: aliyun-python-sdk-sts (==3.0.0)
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+alicloud python sdk to facilitate the calls to the api alicloud and for the management of the connection to the accounts alicloud with access key and secret key
+
+
