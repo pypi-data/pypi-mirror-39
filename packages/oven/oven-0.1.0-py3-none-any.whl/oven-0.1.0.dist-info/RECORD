@@ -1,0 +1,16 @@
+oven/__init__.py,sha256=UVAw-2dV9fi2XhiEjUyTacB-vBDRfSyb24ttywDY6fM,99
+oven/pointer/__init__.py,sha256=gVO5Q0xdTtReqb6RxeOuIfmtI_G78u2jgMLHkyw6J50,72
+oven/pointer/pointer.py,sha256=xLW_0pDKFv-xnV-_DflCXaTpJRAB5UfaeWp4uoSiNJ4,341
+oven/stdio/__init__.py,sha256=_-FrhMON_DmEhrHkPpQ0F2ZSsBSi_pf5rF9aa3fsWoQ,142
+oven/stdio/io_stream.py,sha256=Rrm39GjgKx55TqfJ4yrRnMYov-789ZrIxHeL2i7o6zU,615
+oven/stdio/stdio.py,sha256=DWaNAOWaJiQ86fc-oPX7stkgT4yQY7Jg8Qy9JtgjTbA,1232
+oven/structs/__init__.py,sha256=uExJE-Y9h_PIQwwdLt4Y1LO9zaGypmCGTDS1HkyiJgw,215
+oven/structs/binarytree.py,sha256=zwRBkIKw2zSXC9j7O2qWs1a0LTR-PWIwOhaKYKglkbU,1768
+oven/structs/queue.py,sha256=DYKZpvZ0Ks7b2MQMbl-b4A7NCOiQSmqNwtXTWkNC6ZQ,434
+oven/structs/stack.py,sha256=b6NHKwfUcbAH1k23BHCQRd-m_Dhrayc7ZaAJy0A_byA,436
+oven/structs/tree.py,sha256=ACia2qJosCjEuY0ICMQDvXZ_vayfzYadp_E0M9idqT0,1311
+oven-0.1.0.dist-info/LICENSE,sha256=4wh1ANK1kCQyKh1n-YlDDwAzlmVDGZX7QW5rw3MBMn8,1069
+oven-0.1.0.dist-info/METADATA,sha256=FvcQPmIyBVqEKIAmJOLx8MaE9AUHsoyHxum54ln8H8g,4782
+oven-0.1.0.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+oven-0.1.0.dist-info/top_level.txt,sha256=HBgeow3W7XsnLsGqEg0BFxLu_lt5p0EeDs_bf-TcI20,5
+oven-0.1.0.dist-info/RECORD,,
