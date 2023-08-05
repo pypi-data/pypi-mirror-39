@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: wangle
+Version: 0.1
+Summary: A python library for natural language manipulation.
+Home-page: https://github.com/benjaminharpin/wangle
+Author: Ben Harpin
+Author-email: benjaminharpin@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Wangle
+A python library for natural language manipulation.
+
+# Running tests
+The test suite can be run with the command `python -m unittest` inside the root repository folder.
+
+
