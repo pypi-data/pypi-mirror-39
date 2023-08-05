@@ -1,0 +1,9 @@
+# Adapted to LUCL use by G.A. Kaiping.
+[clld]
+menuitems_list = contributions parameters languages contributors sentences sources
+app_template = {{package}}.mako
+github_repos = clld/{{package}}
+pacific_centered_maps = 0
+
+[mako]
+directories_list = {{package}}:templates clldlucl:templates clld:web/templates
