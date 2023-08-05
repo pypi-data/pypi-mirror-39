@@ -1,0 +1,5 @@
+include versioneer.py
+include progress_reporter/_version.py
+
+include LICENSE.rst
+include README.rst
