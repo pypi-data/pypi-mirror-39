@@ -1,0 +1,12 @@
+README.md
+setup.py
+helper/__init__.py
+helper/cli.py
+helper/console.py
+helper/metadata.py
+opgg_helper.egg-info/PKG-INFO
+opgg_helper.egg-info/SOURCES.txt
+opgg_helper.egg-info/dependency_links.txt
+opgg_helper.egg-info/entry_points.txt
+opgg_helper.egg-info/requires.txt
+opgg_helper.egg-info/top_level.txt
