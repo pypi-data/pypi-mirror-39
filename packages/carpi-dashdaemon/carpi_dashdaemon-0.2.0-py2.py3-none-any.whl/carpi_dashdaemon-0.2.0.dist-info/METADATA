@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: carpi-dashdaemon
+Version: 0.2.0
+Summary: Daemon that processes data from different sources for a digital car dashboard.
+Home-page: https://github.com/rGunti/CarPi-DashDaemon
+Author: Raphael "rGunti" Guntersweiler
+Author-email: raphael@rgunti.ch
+License: MIT
+Keywords: carpi dash daemon
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: wheel
+Requires-Dist: carpi-commons
+Requires-Dist: carpi-redisdatabus
+Requires-Dist: carpi-daemoncommons
+Requires-Dist: carpi-gpsdaemon
+Requires-Dist: carpi-obddaemon
+
+# CarPi-DashDaemon
+Daemon that processes data from different sources for a digital car dashboard.
+
+
