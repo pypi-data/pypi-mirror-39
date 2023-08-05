@@ -1,0 +1,9 @@
+setuptools
+plone.api
+plone.app.dexterity
+plone.directives.form
+plone.namedfile[blobs]
+z3c.jbot
+
+[test]
+plone.app.testing

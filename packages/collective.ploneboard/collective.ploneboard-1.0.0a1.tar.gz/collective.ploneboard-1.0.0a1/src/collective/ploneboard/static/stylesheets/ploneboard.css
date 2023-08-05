@@ -1,0 +1,28 @@
+.portaltype-messageboard .topic {
+    background: #f2f2f2;
+    padding: 5px;
+    border-style: solid solid #ddd;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+.portaltype-messageboard .topic h3 {
+    color: #333;
+    background: #ddd;
+    padding-left: 14px;
+    line-height: 2em;
+}
+
+.portaltype-messageboard th.replies {
+    width: 10%;
+}
+
+.portaltype-messageboard th.latest_reply {
+    width: 30%;
+}
+
+.commentAttachment {
+    clear: both;
+}
