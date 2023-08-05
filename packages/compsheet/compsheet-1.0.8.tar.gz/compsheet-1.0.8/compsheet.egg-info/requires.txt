@@ -1,0 +1,4 @@
+openpyxl>=2.5
+numpy>=1.15
+tqdm>=4.28
+Pillow>=5.3
