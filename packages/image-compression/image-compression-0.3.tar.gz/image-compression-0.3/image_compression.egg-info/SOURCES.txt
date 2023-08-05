@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+image-compression/__init__.py
+image-compression/img.py
+image_compression.egg-info/PKG-INFO
+image_compression.egg-info/SOURCES.txt
+image_compression.egg-info/dependency_links.txt
+image_compression.egg-info/requires.txt
+image_compression.egg-info/top_level.txt
