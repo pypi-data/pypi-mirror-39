@@ -1,0 +1,16 @@
+README.md
+setup.py
+data/external/dict_colors.pkl
+locuscomplexity/__init__.py
+locuscomplexity/color_code.py
+locuscomplexity/complexity.py
+locuscomplexity/fitness.py
+locuscomplexity/locuscomplexity.py
+locuscomplexity/process_oecd.py
+locuscomplexity/sps.py
+locuscomplexity.egg-info/PKG-INFO
+locuscomplexity.egg-info/SOURCES.txt
+locuscomplexity.egg-info/dependency_links.txt
+locuscomplexity.egg-info/requires.txt
+locuscomplexity.egg-info/top_level.txt
+locuscomplexity/data/dict_colors.pkl
