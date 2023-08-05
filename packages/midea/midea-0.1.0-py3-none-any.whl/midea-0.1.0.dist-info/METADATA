@@ -1,0 +1,28 @@
+Metadata-Version: 2.0
+Name: midea
+Version: 0.1.0
+Summary: A library to control Midea appliances via the cloud API
+Home-page: https://github.com/NeoAcheron/midea-ac-py
+Author: NeoAcheron
+Author-email: master@neoacheron.com
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+# midea-ac-py [![Build Status](https://travis-ci.org/NeoAcheron/midea-ac-py.svg?branch=master)](https://travis-ci.org/NeoAcheron/midea-ac-py)
+
+This is a library to allow communicating to a Midea AC via the Midea Cloud.
+
+This is a very early release, and comes without any guarantees. This is still an early work in progress and simply serves as a proof of concept.
+
+This library would not have been possible if it wasn't for the amazing work done by @yitsushi and his Ruby based command line tool. 
+You can find his work here: https://github.com/yitsushi/midea-air-condition
+The reasons for me converting this to Python is that this library also serves as a platform component for Home Assistant.
+
+## Wiki
+Please visit the Wiki for device support and instruction on how to use this component: https://github.com/NeoAcheron/midea-ac-py/wiki 
+
+
