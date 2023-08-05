@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: ntu-course-planner
+Version: 1.0.2
+Summary: A course planner for Nanyang Technological University students
+Home-page: https://github.com/koallen/ntu-course-planner-cli
+Author: Liu Siyuan
+Author-email: weifengzi2009@gmail.com
+License: MIT
+Keywords: course,planner,Nanyang Technological University
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Utilities
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+
+
+This is a tool for Nanyang Technological University students to plan their timetable.
+After you supply with the tool the courses that you intent to take in a semester, it
+can automatically generate all the possible combinations of indexes for the courses
+that you picked. It's guaranteed that there will be no timetable clash.
+
+
