@@ -1,0 +1,9 @@
+# Test
+pytest
+
+# Demo
+jupyter
+
+# Code
+pyquil>=2.0.0b1
+openfermion>=0.7
