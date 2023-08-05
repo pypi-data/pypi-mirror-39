@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: redisGroupMsg
+Version: 0.0.5
+Summary: This is a packet that broadcasts redis multiple queues
+Home-page: https://github.com/zhenruyan/redisGroupMsg
+Author: zhenruyan
+Author-email: baiyangwangzhan@hotmail.com
+License: WTFPL
+Platform: all
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: redis (==3.0.1)
+
+redisGroupMsg redis Queue multicast broadcast
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+redis  Broadcasting to multiple queues
+========================================
+
+ Recently, I'm going to do something like chat software. After a lot of testing, I've done this thing.
+
+    Performance is 13 times faster than py direct circular transmission
+
+
+install ::
+
+    pip install redisGroupMsg
+
+
+
+
+push msg
+++++++++
+
+python ::
+
+    from redisGroupMsg import redisMessage
+
+    r = redisMessage()
+
+    if __name__ == '__main__':
+        for a in range(1,10):
+            e = "id:"+str(a)
+            # add queue of group
+            # r.addGroup("test",e)
+            # send message in group queue
+            # r.sendGroup("test",e)
+            # remove queue on group
+            r.removeGroup("test",e)
+
+
+
+
+
+pop msg
++++++++
+python ::
+
+    from redisGroupMsg import redisMessage
+    r = redisMessage()
+
+    if __name__ == '__main__':
+        conn = r.conn
+        msg = conn.rpop("id:1")
+        print(msg)
+
+
+
+
