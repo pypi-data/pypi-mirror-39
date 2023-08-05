@@ -1,0 +1,61 @@
+Metadata-Version: 1.1
+Name: unisos.utils
+Version: 0.2
+Summary: unisos.utils: General purpose python utilities at unisos layer.
+Home-page: http://www.by-star.net/PLPC/180047
+Author: Mohsen Banan
+Author-email: libre@mohsen.1.banan.byname.net
+License: AGPL
+Download-URL: http://www.by-star.net/PLPC/180047
+Description: ============
+        unisos.utils
+        ============
+        
+        .. contents::
+           :depth: 3
+        ..
+        
+        Overview
+        ========
+        
+        unisos.utils: General purpose python utilities at unisos layer.
+        
+        Support
+        =======
+        
+        | For support, criticism, comments and questions; please contact the
+          author/maintainer
+        | `Mohsen Banan <http://mohsen.1.banan.byname.net>`__ at:
+          http://mohsen.1.banan.byname.net/contact
+        
+        Documentation
+        =============
+        
+        Part of ByStar Digital Ecosystem http://www.by-star.net.
+        
+        This module’s primary documentation is in
+        http://www.by-star.net/PLPC/180047
+        
+        Installation
+        ============
+        
+        ::
+        
+            sudo pip install unisos.utils
+        
+        Usage
+        =====
+        
+        ::
+        
+            ./bin/githubApiAccess.py
+            ./bin/githubApiReports.py
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
