@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: vsts-cli-team-common
+Version: 0.1.4
+Summary: VSTS Team Command Line Interface
+Home-page: https://github.com/Microsoft/vsts-cli
+Author: Microsoft Corporation
+Author-email: vstscli@microsoft.com
+License: MIT
+Description: 
+Keywords: Microsoft,VSTS,Team Services,SDK,AzureTfs,CLI,Team
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: knack (==0.4.1)
+Requires-Dist: python-dateutil (==2.7.3)
+Requires-Dist: vsts (~=0.1.16.dev)
+Requires-Dist: vsts-cli-common (==0.1.4)
+

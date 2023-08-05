@@ -1,0 +1,16 @@
+vsts/__init__.py,sha256=esvSQn_r-zXPXNO7TjzsPPuPLf-AuAC2bym_OxlZnJQ,414
+vsts/cli/__init__.py,sha256=esvSQn_r-zXPXNO7TjzsPPuPLf-AuAC2bym_OxlZnJQ,414
+vsts/cli/team/__init__.py,sha256=esvSQn_r-zXPXNO7TjzsPPuPLf-AuAC2bym_OxlZnJQ,414
+vsts/cli/team/common/__init__.py,sha256=tgaJt_VIxea35CzjM39E07y-i1owyPUjHAP34jCm2ts,349
+vsts/cli/team/common/configure.py,sha256=okeveoGQ8fItAEZ5m9gDBam15SPl7AnTdvi9W1irdjE,3927
+vsts/cli/team/common/credentials.py,sha256=uy0iqp_ETZg1aqZ9GSIR-oO4d6qGIUzzO3Tpp8JuFXo,2871
+vsts/cli/team/common/feedback.py,sha256=9cbIIeB5MHGUZfQzfmw0TC3klxClii2Iqgqjc6af5Ow,829
+vsts/cli/team/common/project.py,sha256=tZwwKmgKopm2WfdbES7utgyK0GNxlPVYEpDCi6pRRng,7076
+vsts/cli/team/tests/__init__.py,sha256=esvSQn_r-zXPXNO7TjzsPPuPLf-AuAC2bym_OxlZnJQ,414
+vsts/cli/team/tests/test_configure.py,sha256=iuPoCrgExy89cH-ekRanW7lF-ynywIGMVYdFNNEUCVs,661
+vsts/cli/team/tests/test_feedback.py,sha256=ECXZueD8vt3_pR-0ha7-OTfC6Id-A3ifRbxdgr-DTPc,624
+vsts_cli_team_common-0.1.4.dist-info/LICENSE.txt,sha256=LDN1Eoy43LnugP20idCwoa1GuOeJyyxLbYfeDqLwSYk,1114
+vsts_cli_team_common-0.1.4.dist-info/METADATA,sha256=5bivfOwuFK-O_WCsFslFP7ufMpfFJmCIO0GPVc6puP8,908
+vsts_cli_team_common-0.1.4.dist-info/WHEEL,sha256=aEiWNTQcG6AiGGAYQ9qHTifyKRnmFJvDeTI0hP5aohY,116
+vsts_cli_team_common-0.1.4.dist-info/top_level.txt,sha256=r-Q1CPVoe51isile67MY1CdCYdDF5a1ghu3YlrUuU0E,5
+vsts_cli_team_common-0.1.4.dist-info/RECORD,,
