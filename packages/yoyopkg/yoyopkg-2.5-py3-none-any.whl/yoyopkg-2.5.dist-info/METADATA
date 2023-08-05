@@ -1,0 +1,264 @@
+Metadata-Version: 2.1
+Name: yoyopkg
+Version: 2.5
+Summary: A modular package manager
+Home-page: https://github.com/ethanquix/yoyo
+Author: dwyzlic
+Author-email: dimitriwyzlic@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: colorama
+Requires-Dist: requests
+
+# Yoyo
+
+> Want a better cross platform way to install program ?
+> Yoyo help you to do this thanks to little `.yoyo` files containing easy to made instructions
+
+## How does it work ?
+
+- Just type `yoyo install PACKAGE_NAME`
+- Yoyo will then resolve dependencies and install it
+- Later you can also customize yoyo install files to create installations for your own software
+
+## Yoyo CLI
+`usage: yoyo.py [-h] [--local] [--force] [--nocache]
+               {install,remove,update,list,details,verify} [package]`
+
+Modes:
+- `install [package name]` Install a package
+
+  - `--local` to install it locally
+  - `--force` to install it even if already installed
+  - `--nocache` to download it again and dont use cache
+
+- `remove [package name]` Remove a package
+- `list` List all packages
+- `details` List all packages with details (desc and req)
+- `update` Update list of packages
+- `verify {package name}` Verify than all package (or one if specified) are installed
+
+
+## Instructions to write a `yoyo` file
+
+Create a `.yoyo` file and store it in: `~/.yoyo/store/y_local/modules/`
+
+You will have to put in:
+
+- NAME (name)
+
+    Set a install name. Name used for `yoyo install`.
+    ```
+    NAME anaconda
+    ```
+
+- AUTHOR (name)
+
+    Set a author name. Only use for information.
+    ```
+    AUTHOR anaconda team
+    ```
+
+- INFO (informations)
+
+    Set a description. Only use for information.
+    ```
+    INFO Anaconda is a package manager for python
+    ```
+
+- VERSION (version)
+
+    Set a version.
+    ```
+    VERSION 3.5.2.0
+    ```
+
+- REQ (req1, reqX,...)
+
+    Set requirements. Requirements are the name of other packages.
+    ```
+    REQ python, curl
+    ```
+
+Then you will have to fill `functions`
+
+### `[INSTALL]`
+
+Inside, write all methods to install the package.
+
+### `[VERIFY]`
+
+Inside, write all methods to verify the package is well installed
+
+### Instruction for these functions:
+
+- LET (name, value)
+
+    Create a variable and assign it value
+    ```
+    LET url https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
+    ```
+    To access a variable just type `#name`.\
+    To concatenate them use `#var1+#var2`
+
+- SAVEDIR
+
+    Save the current dir in memory
+    ```
+    SAVEDIR
+    ```
+
+- CHDIR (dir)
+
+    Change current dir to dir
+    ```
+    CHDIR /tmp/anaconda
+    ```
+
+- RESTOREDIR
+
+    Restore current dir to the savedir one
+    ```
+    RESTOREDIR
+    ```
+
+- DL (url, folder, name)
+
+    Download url and save it to folder/name
+    ```
+    DL #url #INSTALLDIR __anaconda_install.tar.gz
+    ```
+
+- CMD (command)
+
+    Execute command
+    ```
+    CMD sh #INSTALLDIR+__anaconda_install.tar.gz
+    ```
+    You can set some options like
+    ```
+    NOCHECK dont check the command return code. In normal time if return code != 0, install will be stopped.
+    HIDE hide the command output
+    ```
+    These options must be placed before the command
+    ```
+    CMD NOCHECK exit 1
+    CMD HIDE NOCHECK tree /
+    ```
+
+- PRINT (str)
+
+    Print a string
+    ```
+    PRINT Installing anaconda... it can takes some time. Install to #INSTALLDIR
+    ```
+
+- You can have `if` like statements
+
+    - LOCAL
+    - Windows
+    - MacOS
+    - Linux
+
+    And combine this with
+
+    - ELSE
+    - END
+
+    ```
+    - LOCAL
+    PRINT User want a local install
+    - ELSE
+    CMD sudo install
+    - END
+
+    - Windows
+    PRINT Windows user
+    CMD chocolatey install #choco_name
+    - END
+    ```
+
+`// Is use to comment a line`
+
+- DEFAULT
+
+    Is use to use default command to verify or install
+    ```
+    [VERIFY]
+    DEFAULT -> This will call `which #NAME` on linux
+
+    [INSTALL]
+    DEFAULT -> This will call `sudo apt install #NAME` on linux
+    ```
+
+### Global vars
+There is some global vars you can access:
+
+- `INSTALLDIR` Directory where binary are installed\
+    `~.yoyo/installed/`
+- `DLDIR` cache directory for downloaded files\
+    `~.yoyo/cache/dl`
+- `EXTRACTDIR` cache directory for extracted files\
+    `~.yoyo/cache/extract`
+- `MAINDIR` main directory of `yoyo` conf and cache\
+    `~.yoyo/installed`
+
+###  Example of Yoyo file
+```
+cat ~/.yoyo/store/y_local/modules/fastlane.yoyo
+
+NAME fastlane
+AUTHOR fastlane
+INFO fastlane is an open source platform aimed at simplifying Android and iOS deployment. fastlane lets you automate every aspect of your development and release workflow.
+VERSION 2.99.1
+REQ gem, gem-dev
+
+[INSTALL]
+
+- MacOS
+PRINT You can also install fastlane using: brew cask install fastlane
+- END
+
+CMD sudo gem install fastlane -NV
+
+[VERIFY]
+DEFAULT
+```
+
+```
+cat ~/.yoyo/store/y_local/modules/anaconda.yoyo
+
+NAME anaconda
+AUTHOR anaconda team
+INFO Anaconda package manager
+VERSION 3.5.2.0
+REQ python, curl
+
+[INSTALL]
+
+LET url https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
+LET name __anaconda3-5.2.0-Linux-x86_64.sh
+
+PRINT Installing at #DLDIR+#name
+
+SAVEDIR
+
+DL #url #DLDIR #name
+CMD sh #DLDIR+#name
+
+RESTOREDIR
+
+[VERIFY]
+DEFAULT
+```
+
+## TODO
+> Cross platform
+> Update
+> Package version
+> Online stores
+> Better handling of /lib etc...
+> URGENT !!!!!! RENAME SRC TO YOYOSRC IN .local/lib/python3.6/site-package/
+#TODO only load store needed !!!!!
+
