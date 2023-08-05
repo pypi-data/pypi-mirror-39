@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: daxus
+Version: 1.0
+Summary: Daxus DXS-100 Data acquisition single point capture package
+Home-page: https://pypy.org/project/daxus
+License: UNKNOWN
+Author: John Vishnefske
+Author-email: jvishnnefske@gmail.com
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Hardware :: Hardware Drivers
+Classifier: Development Status :: 4 - Beta
+
+
