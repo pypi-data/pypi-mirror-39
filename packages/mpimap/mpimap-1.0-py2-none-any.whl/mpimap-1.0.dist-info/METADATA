@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: mpimap
+Version: 1.0
+Summary: MPI implementation of map() and other tools
+Home-page: http://github.com/Wokpak/mpimap
+Author: Jed Hollom
+Author-email: Jedhollom@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: multiprocessing
+Requires-Dist: mpi4py
+Requires-Dist: dill
+
+Mpimap
+------
+
+To test the provided functions and check the difference in processing time between builtin.map and mpimap.map, run:
+
+>>> mpirun -n 8 python test.py
+
