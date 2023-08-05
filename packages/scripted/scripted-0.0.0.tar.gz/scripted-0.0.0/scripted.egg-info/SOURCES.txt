@@ -1,0 +1,12 @@
+README.md
+setup.py
+scripted/__init__.py
+scripted.egg-info/PKG-INFO
+scripted.egg-info/SOURCES.txt
+scripted.egg-info/dependency_links.txt
+scripted.egg-info/top_level.txt
+scripted.egg-info/zip-safe
+scripted/core/__init__.py
+scripted/core/bases.py
+scripted/core/decorator.py
+scripted/core/helpers.py
