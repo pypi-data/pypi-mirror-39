@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: mkdocs-git-revision-date-plugin
+Version: 0.1.3
+Summary: MkDocs plugin for setting revision date from git per markdown file.
+Home-page: https://github.com/zhaoterryy/mkdocs-git-revision-date-plugin/
+Author: Terry Zhao
+Author-email: zhao.terryy@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: mkdocs git meta yaml frontmatter
+Platform: UNKNOWN
+Requires-Python: >=3.4
