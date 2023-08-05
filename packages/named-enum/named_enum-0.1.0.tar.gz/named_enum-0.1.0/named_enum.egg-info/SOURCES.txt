@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+VERSION
+setup.cfg
+setup.py
+named_enum/__init__.py
+named_enum.egg-info/PKG-INFO
+named_enum.egg-info/SOURCES.txt
+named_enum.egg-info/dependency_links.txt
+named_enum.egg-info/not-zip-safe
+named_enum.egg-info/top_level.txt
