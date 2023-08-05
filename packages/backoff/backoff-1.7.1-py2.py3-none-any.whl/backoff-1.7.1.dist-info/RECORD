@@ -1,0 +1,13 @@
+LICENSE,sha256=KmtNX4hNTXob8E6n3xlEzxKzLjWnmobQoHWi0_QPuaw,1077
+README.rst,sha256=085_dpQKZgY_2y7omOt8m8K3rKOY0gxr3AkNYd1P3Wk,10784
+backoff/__init__.py,sha256=Xfd_RlJ17OckOMSOSimT2TeAH1cSsRH4I1VnF4wP-bY,873
+backoff/_async.py,sha256=3lsCTQwT9BBVg7Rg3GUcUE4QnIH6nd4KkTgFo9t5Sq8,6028
+backoff/_common.py,sha256=CXgaodyVC-mer_WxzJWG0zT_qyKWcUG9gq7eenmKtk4,2315
+backoff/_decorator.py,sha256=ndpFSbUx7UsiB-jvfscfTFlWQBSL7qt2LckLccbim48,8208
+backoff/_jitter.py,sha256=q8jvYW_xHN7k8UZ3lNhNUwbEUyWyOBRrPWEsO5d2fDE,750
+backoff/_sync.py,sha256=1l1BatKVZ4Q3VwBy-IY50aaPPYAzwlK3QNbDzoCF3vA,3788
+backoff/_wait_gen.py,sha256=abzgF-MV_TnmPFC_SF82jX9BHh0R9eOEh-8G1d6VQ5E,1251
+backoff-1.7.1.dist-info/LICENSE,sha256=KmtNX4hNTXob8E6n3xlEzxKzLjWnmobQoHWi0_QPuaw,1077
+backoff-1.7.1.dist-info/WHEEL,sha256=8bSsbOsfjCYuJ5fTC_9A5e8ObOgpeFXuhLBJSbnJo_c,89
+backoff-1.7.1.dist-info/METADATA,sha256=tNklS2kP05sL4XSoJfaqYnIqPxM88K5FZl2R5UgJxi8,11958
+backoff-1.7.1.dist-info/RECORD,,
