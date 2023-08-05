@@ -1,0 +1,122 @@
+Metadata-Version: 1.1
+Name: pytest-parawtf
+Version: 1.0.2
+Summary: Finally spell paramete?ri[sz]e correctly
+Home-page: https://bitbucket.org/flub/pytest-parawtf
+Author: Floris Bruynooghe
+Author-email: flub@devork.be
+License: MIT
+Description: ==============
+        pytest-parawtf
+        ==============
+        
+        Ever wondered how pytest_ decides to spell parametrise?  Was it
+        parameterize?  Parametrise?  Parametrize?
+        
+        Confused yet?  Stop worrying, install this plugin and all variants are
+        valid::
+        
+           @pytest.mark.parametrize('a', [0, 1])
+           @pytest.mark.parameterize('b', [2, 3])
+           @pytest.mark.parametrise('c', [4, 5])
+           @pytest.mark.parametrise('d', [6, 7])
+           def test_wtf(a, b, c, d):
+               assert a in [0, 1]
+               assert b in [2, 3]
+               assert c in [4, 5]
+               assert d in [6, 7]
+        
+        But if you've ever parametrised a fixture, you may wonder why it's yet
+        another spelling over there: ``@pytest.fixture(params=[0, 1])``.  Fear
+        not, you can now be consistent::
+        
+           @pytest.mark.params('a', [0, 1])
+           def test_simple(a):
+               assert a in [0, 1]
+        
+        What about when you implement the ``pytest_generate_tests`` hook in
+        your ``conftest.py`` file?  We got you covered, ``metafunc.params()``
+        and the other (in)sane variations are now valid too.
+        
+        
+        Monkey see, monkey do
+        =====================
+        
+        This plugin monkeypatches the core pytest in ways which should never
+        be done.  In other words it voids all your warranties.  Use at your
+        own risk.
+        
+        .. _pytest: https://pytest.org
+        
+        =========
+        Changelog
+        =========
+        
+        
+        1.0.2
+        =====
+        
+        - Actually stop using setup.py.
+        - Move to src/ layout, even for a single-module package.
+        - Include the tests in the sdist.
+        
+        
+        1.0.1
+        =====
+        
+        - Fix REAME formatting and typos.
+        - Include the LICENSE file in the .tar.gz and .whl.
+        - Add pyproject.toml and move more things to setup.cfg.
+        
+        
+        1.0.0
+        =====
+        
+        Initial release.
+        
+        The MIT License
+        
+        Copyright (C) 2017-2018 Floris Bruynooghe
+        
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in
+        all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+        THE SOFTWARE.
+        
+Keywords: pytest parametrise parametrize parameterise parameterize params
+Platform: unix
+Platform: linux
+Platform: osx
+Platform: cygwin
+Platform: win32
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: Plugins
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: License :: DFSG approved
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Testing
