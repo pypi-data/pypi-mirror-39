@@ -1,0 +1,15 @@
+six
+python-dateutil
+elasticsearch<7.0.0,>=6.0.0
+
+[:python_version < "3.3"]
+ipaddress
+
+[develop]
+mock
+pytest>=3.0.0
+pytest-cov
+pytz
+coverage<5.0.0
+sphinx
+sphinx_rtd_theme
