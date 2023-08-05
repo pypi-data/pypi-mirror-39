@@ -1,0 +1,11 @@
+[console_scripts]
+bag_bbox = hyo2.bag.tools.bag_bbox:main
+bag_elevation = hyo2.bag.tools.bag_elevation:main
+bag_metadata = hyo2.bag.tools.bag_metadata:main
+bag_tracklist = hyo2.bag.tools.bag_tracklist:main
+bag_uncertainty = hyo2.bag.tools.bag_uncertainty:main
+bag_validate = hyo2.bag.tools.bag_validate:main
+
+[gui_scripts]
+
+
