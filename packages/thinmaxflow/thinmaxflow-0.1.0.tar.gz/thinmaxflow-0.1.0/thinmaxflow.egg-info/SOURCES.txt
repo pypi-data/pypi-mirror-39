@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+thinmaxflow/__init__.py
+thinmaxflow.egg-info/PKG-INFO
+thinmaxflow.egg-info/SOURCES.txt
+thinmaxflow.egg-info/dependency_links.txt
+thinmaxflow.egg-info/top_level.txt
+thinmaxflow/src/_maxflow.cpp
+thinmaxflow/src/core/graph.cpp
+thinmaxflow/src/core/maxflow.cpp
