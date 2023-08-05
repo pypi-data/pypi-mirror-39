@@ -1,0 +1,11 @@
+LICENCE
+MANIFEST.in
+README.md
+setup.py
+payme/__init__.py
+payme/hasher.py
+payme.egg-info/PKG-INFO
+payme.egg-info/SOURCES.txt
+payme.egg-info/dependency_links.txt
+payme.egg-info/not-zip-safe
+payme.egg-info/top_level.txt
