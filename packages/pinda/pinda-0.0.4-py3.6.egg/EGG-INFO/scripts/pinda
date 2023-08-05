@@ -1,0 +1,43 @@
+#!/Users/pazcal/miniconda3/envs/py36/bin/python
+
+import argparse
+from pinda._version import __version__
+from pinda import commands
+
+parser = argparse.ArgumentParser(description='Pip-INstallable Dockerized Applications')
+parser.add_argument('-V', '--version', action='version', version=__version__)
+subparsers = parser.add_subparsers(dest='subparser_name')
+
+list_parser = subparsers.add_parser('list', description='List available and installed packages')
+
+install_parser = subparsers.add_parser('install', description='Install a package')
+install_parser.add_argument('package')
+install_parser.add_argument('version')
+install_parser.add_argument('-s', '--sudo', action='store_true', help='Attempt to install as root')
+install_parser.add_argument('-u', '--user', action='store_true', help='Install just for this user')
+
+uninstall_parser = subparsers.add_parser('uninstall', description='Uninstall a package')
+uninstall_parser.add_argument('package')
+uninstall_parser.add_argument('version')
+args = parser.parse_args()
+
+if args.subparser_name == 'list':
+    available = commands.available_packages()
+    installed = commands.installed_packages()
+    for package in available:
+        if package in installed:
+            line = '* '
+        else:
+            line = '  '
+        line += '{name:10s} {version:10s} {description}'.format(**package)
+        print(line)
+
+elif args.subparser_name == 'install':
+    result = commands.install(args.package, args.version, args.sudo, args.user)
+    if result is False:
+        print('Error - Install failed')
+
+elif args.subparser_name == 'uninstall':
+    result = commands.uninstall(args.package, args.version)
+    if result is False:
+        print('Error - uninstall failed')
