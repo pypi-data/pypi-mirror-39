@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>intake_parquet.source &mdash; intake_parquet 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="intake_parquet 0.0.1 documentation" href="../../index.html"/>
+        <link rel="up" title="intake_parquet" href="../intake_parquet.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> intake_parquet
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">intake_parquet</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../intake_parquet.html">intake_parquet</a> &raquo;</li>
+        
+      <li>intake_parquet.source</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for intake_parquet.source</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">intake.source</span> <span class="k">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">__version__</span>
+
+
+<div class="viewcode-block" id="ParquetSource"><a class="viewcode-back" href="../../api.html#intake_parquet.source.ParquetSource">[docs]</a><span class="k">class</span> <span class="nc">ParquetSource</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">DataSource</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Source to load parquet datasets.</span>
+
+<span class="sd">    Produces a dataframe.</span>
+
+<span class="sd">    A parquet dataset may be a single file, a set of files in a single</span>
+<span class="sd">    directory or a nested set of directories containing data-files.</span>
+
+<span class="sd">    Current implementation uses fastparquet: URL should either point to</span>
+<span class="sd">    a single file, a directory containing a `_metadata` file, or a list of</span>
+<span class="sd">    data files.</span>
+
+<span class="sd">    Keyword parameters accepted by this Source:</span>
+
+<span class="sd">    - columns: list of str or None</span>
+<span class="sd">        column names to load. If None, loads all</span>
+
+<span class="sd">    - index: str or None</span>
+<span class="sd">        column to make into the index of the dataframe. If None, may be</span>
+<span class="sd">        inferred from the saved matadata in certain cases.</span>
+
+<span class="sd">    - filters: list of tuples</span>
+<span class="sd">        row-group level filtering; a tuple like ``(&#39;x&#39;, &#39;&gt;&#39;, 1)`` would mean</span>
+<span class="sd">        that if a row-group has a maximum value less than 1 for the column</span>
+<span class="sd">        ``x``, then it will be skipped. Row-level filtering is *not*</span>
+<span class="sd">        performed.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">container</span> <span class="o">=</span> <span class="s1">&#39;dataframe&#39;</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;parquet&#39;</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="n">__version__</span>
+    <span class="n">partition_access</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">urlpath</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">storage_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">parquet_kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_urlpath</span> <span class="o">=</span> <span class="n">urlpath</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_storage_options</span> <span class="o">=</span> <span class="n">storage_options</span> <span class="ow">or</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span> <span class="o">=</span> <span class="n">parquet_kwargs</span> <span class="ow">or</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pf</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># for fastparquet loading</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_df</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># for dask loading</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">ParquetSource</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_get_schema</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">fastparquet</span> <span class="k">as</span> <span class="nn">fp</span>
+        <span class="kn">from</span> <span class="nn">dask.bytes.core</span> <span class="k">import</span> <span class="n">get_fs_token_paths</span>
+        <span class="n">urlpath</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_cache</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_urlpath</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pf</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># copied from dask to allow remote</span>
+            <span class="n">fs</span><span class="p">,</span> <span class="n">fs_token</span><span class="p">,</span> <span class="n">paths</span> <span class="o">=</span> <span class="n">get_fs_token_paths</span><span class="p">(</span>
+                <span class="n">urlpath</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;rb&#39;</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_storage_options</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">pf</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">ParquetFile</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">open_with</span><span class="o">=</span><span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="n">fs</span><span class="o">.</span><span class="n">sep</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">pf</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">ParquetFile</span><span class="p">(</span>
+                        <span class="n">paths</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">fs</span><span class="o">.</span><span class="n">sep</span> <span class="o">+</span> <span class="s1">&#39;_metadata&#39;</span><span class="p">,</span>
+                        <span class="n">open_with</span><span class="o">=</span><span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">,</span>
+                        <span class="n">sep</span><span class="o">=</span><span class="n">fs</span><span class="o">.</span><span class="n">sep</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                    <span class="n">pf</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">ParquetFile</span><span class="p">(</span><span class="n">paths</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">open_with</span><span class="o">=</span><span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="n">fs</span><span class="o">.</span><span class="n">sep</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_pf</span> <span class="o">=</span> <span class="n">pf</span>
+        <span class="n">pf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pf</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_df</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dtypes</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_df</span><span class="o">.</span><span class="n">_meta</span><span class="o">.</span><span class="n">dtypes</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+            <span class="k">return</span> <span class="n">base</span><span class="o">.</span><span class="n">Schema</span><span class="p">(</span><span class="n">datashape</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                               <span class="n">dtype</span><span class="o">=</span><span class="n">dtypes</span><span class="p">,</span>
+                               <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">pf</span><span class="o">.</span><span class="n">count</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_df</span><span class="o">.</span><span class="n">columns</span><span class="p">)),</span>
+                               <span class="n">npartitions</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_df</span><span class="o">.</span><span class="n">npartitions</span><span class="p">,</span>
+                               <span class="n">extra_metadata</span><span class="o">=</span><span class="n">pf</span><span class="o">.</span><span class="n">key_value_metadata</span><span class="p">)</span>
+        <span class="n">columns</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">columns</span><span class="p">:</span>
+            <span class="n">dtypes</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">pf</span><span class="o">.</span><span class="n">dtypes</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">}</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dtypes</span> <span class="o">=</span> <span class="n">pf</span><span class="o">.</span><span class="n">dtypes</span>
+        <span class="n">dtypes</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dtypes</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+        <span class="k">if</span> <span class="s1">&#39;filters&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span><span class="p">:</span>
+            <span class="n">rgs</span> <span class="o">=</span> <span class="n">pf</span><span class="o">.</span><span class="n">filter_row_groups</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span><span class="p">[</span><span class="s1">&#39;filters&#39;</span><span class="p">])</span>
+            <span class="n">parts</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">rgs</span><span class="p">)</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">rg</span><span class="o">.</span><span class="n">num_rows</span> <span class="k">for</span> <span class="n">rg</span> <span class="ow">in</span> <span class="n">rgs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">parts</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pf</span><span class="o">.</span><span class="n">row_groups</span><span class="p">)</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="n">pf</span><span class="o">.</span><span class="n">count</span>
+
+        <span class="k">return</span> <span class="n">base</span><span class="o">.</span><span class="n">Schema</span><span class="p">(</span><span class="n">datashape</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                           <span class="n">dtype</span><span class="o">=</span><span class="n">dtypes</span><span class="p">,</span>  <span class="c1"># one of these is the index</span>
+                           <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">dtypes</span><span class="p">)),</span>
+                           <span class="n">npartitions</span><span class="o">=</span><span class="n">parts</span><span class="p">,</span>
+                           <span class="n">extra_metadata</span><span class="o">=</span><span class="n">pf</span><span class="o">.</span><span class="n">key_value_metadata</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_get_partition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_df</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># if to_dask has been called</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_df</span><span class="o">.</span><span class="n">get_partition</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+        <span class="n">pf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pf</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">pf</span><span class="o">.</span><span class="n">_get_index</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+        <span class="n">columns</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">columns</span> <span class="o">=</span> <span class="n">columns</span> <span class="k">if</span> <span class="n">columns</span> <span class="k">else</span> <span class="n">pf</span><span class="o">.</span><span class="n">columns</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="ow">and</span> <span class="n">index</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">:</span>
+            <span class="n">columns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="n">rg</span> <span class="o">=</span> <span class="n">pf</span><span class="o">.</span><span class="n">row_groups</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">df</span><span class="p">,</span> <span class="n">views</span> <span class="o">=</span> <span class="n">pf</span><span class="o">.</span><span class="n">pre_allocate</span><span class="p">(</span><span class="n">rg</span><span class="o">.</span><span class="n">num_rows</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+        <span class="n">pf</span><span class="o">.</span><span class="n">read_row_group_file</span><span class="p">(</span><span class="n">rg</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">assign</span><span class="o">=</span><span class="n">views</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">df</span>
+
+<div class="viewcode-block" id="ParquetSource.read"><a class="viewcode-back" href="../../api.html#intake_parquet.source.ParquetSource.read">[docs]</a>    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create single pandas dataframe from the whole data-set</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># More efficient to use `to_pandas` directly.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_load_metadata</span><span class="p">()</span>
+        <span class="n">columns</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">filters</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;filters&#39;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pf</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">,</span> <span class="n">filters</span><span class="o">=</span><span class="n">filters</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ParquetSource.to_dask"><a class="viewcode-back" href="../../api.html#intake_parquet.source.ParquetSource.to_dask">[docs]</a>    <span class="k">def</span> <span class="nf">to_dask</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a lazy dask-dataframe from the parquet data</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">import</span> <span class="nn">dask.dataframe</span> <span class="k">as</span> <span class="nn">dd</span>
+        <span class="n">urlpath</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_cache</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_urlpath</span><span class="p">)</span>
+        <span class="c1"># More efficient to call dask function directly.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_load_metadata</span><span class="p">()</span>
+        <span class="n">columns</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">filters</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;filters&#39;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_df</span> <span class="o">=</span> <span class="n">dd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">urlpath</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">,</span>
+                                   <span class="n">filters</span><span class="o">=</span><span class="n">filters</span><span class="p">,</span>
+                                   <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_storage_options</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_schema</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">discover</span><span class="p">()</span>  <span class="c1"># resets schema to dask&#39;s better version</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_df</span></div>
+
+    <span class="k">def</span> <span class="nf">_close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pf</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_df</span> <span class="o">=</span> <span class="kc">None</span></div>
+</pre></div>
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Martin Durant.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
