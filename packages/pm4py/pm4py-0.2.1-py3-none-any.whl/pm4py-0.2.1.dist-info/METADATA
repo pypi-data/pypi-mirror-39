@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pm4py
+Version: 0.2.1
+Summary: Process Mining for Python
+Home-page: http://www.pm4py.org
+Author: PADS
+Author-email: pm4py@pads.rwth-aachen.de
+License: GPL 3.0
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: ciso8601
+Requires-Dist: cvxopt
+Requires-Dist: dataclasses
+Requires-Dist: flask
+Requires-Dist: flask-cors
+Requires-Dist: lxml
+Requires-Dist: graphviz
+Requires-Dist: pandas
+Requires-Dist: networkx (==1.11)
+Requires-Dist: scipy
+
+UNKNOWN
+
+
