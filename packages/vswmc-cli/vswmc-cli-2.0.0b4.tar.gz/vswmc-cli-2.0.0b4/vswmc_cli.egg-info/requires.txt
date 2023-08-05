@@ -1,0 +1,4 @@
+six
+requests
+setuptools
+websocket-client<=0.48.0
