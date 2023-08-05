@@ -1,0 +1,4 @@
+[console_scripts]
+qtoml_testdecode = qtoml.__main__:decode
+qtoml_testencode = qtoml.__main__:encode
+
