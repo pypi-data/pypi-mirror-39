@@ -1,0 +1,32 @@
+{% extends 'booru/base.html' %}
+
+{% block css %}
+    {% load staticfiles %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <h1>Tag Implication Request</h1>
+    </div>
+    <div class="row">
+        <p class="text-muted">Every time the <span class="font-italic font-weight-bold">from</span> tag is added, the <span class="font-italic font-weight-bold">to</span> tag will also be added automatically.</p>
+    </div>
+    <form method="post" enctype="multipart/x-www-form-urlencoded">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form-group">
+            <label for="{{field.auto_id}}">{{ field.label }}</label>
+            {{ field }}
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div class="row mt-3">
+        <p>This request will be reviewed by the staff.</p>
+    </div>
+</div>
+{% endblock %}

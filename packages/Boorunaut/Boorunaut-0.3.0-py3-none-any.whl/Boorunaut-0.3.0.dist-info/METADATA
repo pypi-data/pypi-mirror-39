@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: Boorunaut
+Version: 0.3.0
+Summary: A taggable imageboard built in Django.
+Home-page: https://github.com/Boorunaut/Boorunaut
+Author: Luk3M, NogardRyuu
+Author-email: luk3@hotmail.com.br, thiago_dragon_@hotmail.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Description-Content-Type: text/markdown
+Requires-Dist: diff-match-patch (==20121119)
+Requires-Dist: Django (==2.1.2)
+Requires-Dist: django-markdown-deux (==1.0.5)
+Requires-Dist: django-taggit (==0.23.0)
+Requires-Dist: markdown2 (==2.3.6)
+Requires-Dist: olefile (==0.46)
+Requires-Dist: Pillow (==5.3.0)
+Requires-Dist: pytz (==2018.5)
+Requires-Dist: django-simple-history (==2.5.1)
+Requires-Dist: ffmpeg-python (==0.1.16)
+Requires-Dist: django-role-permissions (==2.2.0)
+
+# Boorunaut
+Boorunaut is a taggable imagebord built in Django. Based on [Danbooru](https://github.com/r888888888/danbooru).
+
+* [Source repository](https://github.com/Boorunaut/Boorunaut)
+* [Documentation](https://boorunaut.gitbook.io/docs/)
+
+# Installing
+
+```
+pip install Boorunaut
+boorunaut startproject mysite
+```
+
+By default, the database is set to SQLite. For production, it is recommended to change it to another one, like PostgreSQL.
+
+
