@@ -1,0 +1,5 @@
+google-api-python-client==1.7.4
+pydub==0.23.0
+requests==2.20.1
+SQLAlchemy
+tqdm==4.28.1
