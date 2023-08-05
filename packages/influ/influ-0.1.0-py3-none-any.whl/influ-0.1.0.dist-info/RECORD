@@ -1,0 +1,13 @@
+influ/__init__.py,sha256=JMGDpPNYPoAWrJ_VnNKowa_BwEcfRtnQ-3RS_7LIP7s,94
+influ/influence.py,sha256=6OWVRwnUkx1N2aJ9WXagu0bcKcyNNvNFzi0PxJqryb4,11052
+influ/merge.py,sha256=4Keik5o60M2i9ACulgJKxKXVXR-RbC_HLhiVlsBVoZY,2875
+influ/model.py,sha256=z7uUY3iUVw50ynDZ8A1ijK9c1AyTBafo12XLTp_SEjQ,2386
+influ/reader/__init__.py,sha256=oMqO0LsDvnk2AnGIcLH7rVq4in-P3lFR0Prt-6VNRpo,79
+influ/reader/datasets.yaml,sha256=LUuahrXoajlbr1apfKX1yH56y9MFDc7cZ4nxvI7x5LQ,949
+influ/reader/direct.py,sha256=oTK430mlhUsPM_l995Z3Y2PmMYNpNzMiD9qwlGQzUCA,1660
+influ/reader/konect.py,sha256=1He_V1rg0h65ZZLLfXD-ncB3WRTeHxiULksm4PJmkCA,4542
+influ-0.1.0.dist-info/LICENSE.txt,sha256=z7uAoKjz8IV-hZTk2Xk4TdQEkzzZ4RYY6ctOWZ7XbUc,1061
+influ-0.1.0.dist-info/METADATA,sha256=8J_tdfsxshI4Gn8LItr_fsfk6IpwNcEKn8ZWRDf9Um8,4093
+influ-0.1.0.dist-info/WHEEL,sha256=-ZFxwj8mZJPIVcZGLrsQ8UGRcxVAOExzPLVBGR7u7bE,92
+influ-0.1.0.dist-info/top_level.txt,sha256=d4pGrmDhalnT4VfGV-LkxnU3gR9FuloCI-3r4OUuNcw,6
+influ-0.1.0.dist-info/RECORD,,
