@@ -1,0 +1,7 @@
+click
+cyvcf2
+coloredlogs
+parse
+
+[tests]
+pytest
