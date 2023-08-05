@@ -1,0 +1,27 @@
+Metadata-Version: 1.2
+Name: Codemao-AI
+Version: 0.0.1
+Summary: A Python library created by Codemao.Inc for Python-learners to do something cool!"
+Home-page: https://python.codemao.cn
+Author: Codemao
+Author-email: wood@codemao.cn
+Maintainer: Codemao
+Maintainer-email: wood@codemao.cn
+License: BSD License
+Description: Codemao-AI
+        ##########
+        
+        Codemao-AI是由深圳点猫科技有限公司创建的一个面向Python初学者的、体验人工智能及进行人工智能实践的Python的库。
+        欢迎大家提出各种建议意见，共同讨论学习！
+Platform: all
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
