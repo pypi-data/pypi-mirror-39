@@ -1,0 +1,13 @@
+dnspython
+expiringdict
+publicsuffix
+xmltodict
+geoip2
+urllib3<1.24,>=1.21.1
+requests
+imapclient
+mail-parser
+dateparser
+elasticsearch
+elasticsearch-dsl
+kafka-python
