@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        pactum-openapi=commands.openapi_export:openapi_export
+    
