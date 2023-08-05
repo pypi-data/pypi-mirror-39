@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Xako</title>
+</head>
+<body>
+  <h1>Local domains</h1>
+  <ul>
+    {% for domain in local_domains %}
+      <li>
+        <a href="{{ request.route_path('domain_human_interface', domain=domain) }}">
+          {{ domain }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

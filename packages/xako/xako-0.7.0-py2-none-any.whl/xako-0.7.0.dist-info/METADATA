@@ -1,0 +1,85 @@
+Metadata-Version: 2.0
+Name: xako
+Version: 0.7.0
+Summary: Remote file transfer micro-application.
+Home-page: UNKNOWN
+Author: Merchise Autrement
+Author-email: 
+License: UNKNOWN
+Keywords: file transfer
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Pyramid
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Provides-Extra: client
+Provides-Extra: testing
+Provides-Extra: server
+Requires-Dist: requests (<2.4,>=2.3.0)
+Requires-Dist: xoutil (<2.0,>=1.9.9); python_version < "3.0"
+Requires-Dist: xoutil (>=1.9.9); python_version >= "3.0"
+Provides-Extra: client
+Provides-Extra: server
+Requires-Dist: pyramid (<1.6,>=1.5); extra == 'server'
+Requires-Dist: pyramid-jinja2 (<1.4,>=1.3); extra == 'server'
+Requires-Dist: pyramid-tm; extra == 'server'
+Requires-Dist: pyramid-storage (>=0.1.0); extra == 'server'
+Requires-Dist: SQLAlchemy (<1.3,>=1.2); extra == 'server'
+Requires-Dist: transaction; extra == 'server'
+Requires-Dist: zope.sqlalchemy; extra == 'server'
+Requires-Dist: PasteDeploy (<1.6,>=1.5); extra == 'server'
+Provides-Extra: testing
+Requires-Dist: pyramid (<1.6,>=1.5); extra == 'testing'
+Requires-Dist: pyramid-jinja2 (<1.4,>=1.3); extra == 'testing'
+Requires-Dist: pyramid-tm; extra == 'testing'
+Requires-Dist: pyramid-storage (>=0.1.0); extra == 'testing'
+Requires-Dist: SQLAlchemy (<1.3,>=1.2); extra == 'testing'
+Requires-Dist: transaction; extra == 'testing'
+Requires-Dist: zope.sqlalchemy; extra == 'testing'
+Requires-Dist: PasteDeploy (<1.6,>=1.5); extra == 'testing'
+Requires-Dist: pyramid-debugtoolbar (<2.1,>=2.0.2); extra == 'testing'
+Requires-Dist: pyramid-mako; extra == 'testing'
+Requires-Dist: devmail; extra == 'testing'
+Requires-Dist: nose; extra == 'testing'
+Requires-Dist: coverage; extra == 'testing'
+Requires-Dist: waitress; extra == 'testing'
+
+=========================================
+ Xako - Document sharing transport layer
+=========================================
+
+Overview
+========
+
+Xako is document sharing transport layer system with a simple REST API.  It
+allows application to send files to other peers.  Xako handles the job of
+communicating with the peers and make the dispatch.
+
+Xako ensures data integrity at delivery/arrival of documents.
+
+See the documentation for more information.
+
+Backends
+========
+
+Xako uses backends to send the documents fragments.  At this moment xako only
+has a single backend: email.  This means you must provide each xako domain a
+POP/SMTP pair to send and receive documents.
+
+See the email backend documentation.
+
+
+===========
+ Changelog
+===========
+
+Series 0.x
+==========
+
+
+2018-11-20.  Release 0.7.0
+--------------------------
+
+- Initial release for Python 3.
+
+
