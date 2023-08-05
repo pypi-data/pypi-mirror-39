@@ -1,0 +1,446 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_static admin_modify %}
+{% load url from future %}
+{% load admin_urls %}
+
+{% block extrahead %}{{ block.super }}
+{% url 'admin:jsi18n' as jsi18nurl %}
+<script type="text/javascript" src="{{ jsi18nurl|default:"../../../jsi18n/" }}"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/underscore-min.1.3.3.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/requery.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart', 'table', 'gauge', ]}]}"></script>
+
+<script src="{{ STATIC_URL }}js/jquery-2.1.3.min.js"></script>
+<link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}MultiLevelPushMenu/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}font-awesome-4.3.0/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}MultiLevelPushMenu/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}MultiLevelPushMenu/css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}MultiLevelPushMenu/css/component.css" />
+<script src="{{ STATIC_URL }}MultiLevelPushMenu/js/modernizr.custom.js"></script>
+<script src="{{ STATIC_URL }}MultiLevelPushMenu/js/classie.js"></script>
+<script src="{{ STATIC_URL }}MultiLevelPushMenu/js/mlpushmenu.js"></script>
+
+
+<script type="text/javascript" src="{{ STATIC_URL }}js/kayalshri-tableExport/tableExport.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/kayalshri-tableExport/jquery.base64.js"></script>
+
+<script type="text/javascript" src="{{ STATIC_URL }}js/kayalshri-tableExport/html2canvas.js"></script>
+
+<script type="text/javascript" src="{{ STATIC_URL }}js/kayalshri-tableExport/jspdf/libs/sprintf.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/kayalshri-tableExport/jspdf/jspdf.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/kayalshri-tableExport/jspdf/libs/base64.js"></script>
+
+{{ media }}
+{% include 'requery/include_ace.html' %}
+<script type="text/javascript">
+
+var aaaaa = null;
+var g_dataTable = null;
+
+function f_drawChart(chartType) {
+{#    var options = {#}
+{#        title: chartOptions.title,#}
+{#        hAxis: {title: chartOptions.hAxis,  titleTextStyle: {color: '#333'}},#}
+{#        vAxis: {title: chartOptions.vAxis, minValue: 0}#}
+{#    };#}
+
+    var options = {};
+
+    if (chartType == "Rosquinha"){
+        chartType = "PieChart";
+        options = {'pieHole': 0.4};
+    }else{
+        options = {vAxis: {minValue: 0}};
+    }
+
+    chartObject = eval('google.visualization.'+chartType);
+    var chart = new chartObject(document.getElementById('chart_div'));
+    chart.draw(g_dataTable);
+    $('#chart_div').show();
+    $('#mensagem').hide();
+};
+
+function convert_to_unicode(data){
+    return data;
+};
+
+function convert_to_long(data){
+    return parseFloat(data);
+};
+
+function convert_to_Decimal(data){
+    return parseFloat(data);
+};
+
+function convert_to_Integer(data){
+    return parseFloat(data);
+};
+
+function convert_to_date(data){
+    return data;
+};
+
+function convert_to_default(data){
+    return data;
+};
+
+function convert_to_int(data){
+    return parseInt(data);
+};
+
+function f_convertData(data) {
+    var linha_para_chart = Array();
+    _.each(data.lines, function (registros) {
+        linha = Array();
+        _.each(registros, function (coluna, index) {
+            // Verifica se existe a coluna no filtro
+            if(g_columns_in_chart.indexOf(data.columns[index]) != -1){
+                f_name = 'convert_to_' + data.datatypes[index];
+                if (_.isUndefined(window[f_name])) {
+                    console.log(f_name + ' not implemented');
+                    f_name = 'convert_to_default';
+                }
+                linha.push(window[f_name](coluna));
+            }
+        });
+        linha_para_chart.push(linha);
+    });
+    return linha_para_chart;
+}
+
+function f_running(data) {
+    g_data = data;
+    var loading_bar = django.jQuery('#loading_bar');
+    var run_button = django.jQuery('#id_run');
+    var result = django.jQuery('#result');
+    var template = _.template(django.jQuery(data.template).html());
+    result.html(template(data));
+    run_button.attr("disabled", false);
+    loading_bar.fadeOut('slow');
+    f_loadData();
+};
+
+function f_loadData(){
+    var columnsDefinitions = f_columnsDefinitions(g_data);
+    var linha_para_chart = f_convertData(g_data);
+
+    g_data.chart = {};
+    g_data.chart.lines = [g_columns_in_chart].concat(linha_para_chart);
+    g_data.chart.title = 'titulo';
+    g_data.chart.vAxis = 'eixo x';
+
+    g_dataTable = google.visualization.arrayToDataTable(g_data.chart.lines);
+    if (columnsDefinitions.dimensions.length == 1){
+        f_drawChart('ColumnChart');
+    }else{
+        $('#mensagem').html("Escolha uma dimensão ao lado").show();
+        $('#chart_div').hide();
+    }
+    var table = new google.visualization.Table(document.getElementById('table_div'));
+    var table_to_download = new google.visualization.Table(document.getElementById('table_to_download_div'));
+
+    table.draw(g_dataTable, {'showRowNumber': false, 'alternatingRowStyle': true, 'page': 'enable', 'pageSize': 20});
+    table_to_download.draw(g_dataTable, {'showRowNumber': false, 'alternatingRowStyle': true,});
+    //Force table bootstrap in Google Table
+    $('.google-visualization-table-table').addClass('table')
+}
+
+
+var g_select_dimension;
+var g_select_measures = Array();
+var g_columns_in_chart = Array();
+
+
+function f_selectDimension(btn){
+    if (!_.isUndefined(g_select_dimension)){
+        $(g_select_dimension).removeClass('btn-danger').addClass('btn-primary');
+    }
+    $(btn).removeClass('btn-primary').addClass('btn-danger');
+    g_select_dimension = btn;
+    f_filterData();
+};
+
+function f_selectMeasure(btn){
+    index = g_select_measures.indexOf(btn);
+    if(index == -1) {
+        $(btn).removeClass('btn-primary').addClass('btn-danger');
+        g_select_measures.push(btn);
+    }else{
+        $(btn).removeClass('btn-danger').addClass('btn-primary');
+        g_select_measures.splice(index,1);
+    }
+    f_filterData();
+};
+
+function f_columnsDefinitions(data){
+    g_columnsDefinitions = { 'dimensions' : [], 'measures': []};
+    g_columns_in_chart = Array();
+
+    _.each(data.columns, function(column, index) {
+        if (["long", "integer", "Decimal", "int"].indexOf(data.datatypes[index]) == -1){
+            g_columnsDefinitions.dimensions.push(column);
+        }else{
+            g_columnsDefinitions.measures.push(column);
+        }
+        g_columns_in_chart.push(column);
+    });
+    return g_columnsDefinitions;
+};
+
+function f_filterData(){
+    g_columns_in_chart = Array();
+    g_columns_in_chart.push($(g_select_dimension).text());
+    if (g_select_measures.length == 0){
+        _.each(g_columnsDefinitions.measures, function(measure){
+            g_columns_in_chart.push(measure);
+        });
+    }else{
+        _.each(g_select_measures, function(measure){
+            g_columns_in_chart.push($(measure).text());
+        });
+    }
+    var linha_para_chart = f_convertData(g_data);
+
+    g_data.chart = {};
+    g_data.chart.lines = [g_columns_in_chart].concat(linha_para_chart);
+    g_data.chart.title = 'titulo';
+    g_data.chart.vAxis = 'eixo x';
+
+    g_dataTable = google.visualization.arrayToDataTable(g_data.chart.lines);
+    f_drawChart('ColumnChart');
+
+    var table = new google.visualization.Table(document.getElementById('table_div'));
+    var table_to_download_div = new google.visualization.Table(document.getElementById('table_to_download_div'));
+
+    table.draw(g_dataTable, {'showRowNumber': false, 'alternatingRowStyle': true, 'page': 'enable', 'pageSize': 20});
+    table_to_download_div.draw(g_dataTable, {'showRowNumber': false, 'alternatingRowStyle': true});
+    //Force table bootstrap in Google Table
+    $('.google-visualization-table-table').addClass('table');
+
+}
+
+
+django.jQuery(function(){
+    editor.setReadOnly(true);
+    django.jQuery('#id_run').click(function(){
+        var loading_bar = django.jQuery('#loading_bar');
+        var run_button = django.jQuery('#id_run');
+        var result = django.jQuery('#result');
+        result.html('WAIT');
+        run_button.attr("disabled", true);
+        loading_bar.fadeIn('fast');
+        django.jQuery.ajax({
+            type : 'POST',
+            url : "{% url 'admin:requery_query_run' original.id %}",
+            dataType : 'json',
+            data : django.jQuery("#run_form").serialize(),
+            success : function(data){
+                f_running(data);
+                django.jQuery('.download').removeAttr('disabled');
+            },
+            error : function(data){
+                console.log(data)
+                var template = _.template(django.jQuery('#message-response').html());
+                result.html(template({message:'error ('+data.status+') - '+data.response.split("\n").join("<br />")}));
+                run_button.attr("disabled", false);
+                loading_bar.fadeOut('slow');
+            }
+        });
+        return false;
+    });
+    useUrlParams();
+    autoRun();
+    $('.download').click(download);
+});
+</script>
+<style type="text/css">
+    #syntax_text {
+        width: 100%;
+        height: 100px;
+    }
+</style>
+{% endblock %}
+
+
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}" />{% endblock %}
+
+{% block coltype %}{% if ordered_objects %}colMS{% else %}colM{% endif %}{% endblock %}
+
+{% block bodyclass %}{{ opts.app_label }}-{{ opts.object_name.lower }} change-form{% endblock %}
+
+{% if not is_popup %}
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+&rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ app_label|capfirst|escape }}</a>
+&rsaquo; <a href="{% url opts|admin_urlname:'changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>
+&rsaquo; <a href="{% url opts|admin_urlname:'change' original.id %}">{{ original|capfirst }}</a>
+&rsaquo; Run
+</div>
+{% endblock %}
+{% endif %}
+
+{% block content %}<div id="content-main">
+{% block object-tools %}
+{% if change %}{% if not is_popup %}
+  <ul class="object-tools">
+    {% block object-tools-items %}
+    <li><a href="history/" class="historylink">{% trans "History" %}</a></li>
+    {% if has_absolute_url %}<li><a href="../../../r/{{ content_type_id }}/{{ object_id }}/" class="viewsitelink">{% trans "View on site" %}</a></li>{% endif%}
+    {% endblock %}
+  </ul>
+{% endif %}{% endif %}
+{% endblock %}
+<form {% if has_file_field %}enctype="multipart/form-data" {% endif %}action="{{ form_url }}" method="post" id="run_form">{% csrf_token %}{% block form_top %}{% endblock %}
+<div>
+{% if is_popup %}<input type="hidden" name="_popup" value="1" />{% endif %}
+{% if save_on_top %}{% block submit_buttons_top %}{% submit_row %}{% endblock %}{% endif %}
+{% if errors %}
+    <p class="errornote">
+    {% blocktrans count counter=errors|length %}Please correct the error below.{% plural %}Please correct the errors below.{% endblocktrans %}
+    </p>
+    {{ adminform.form.non_field_errors }}
+{% endif %}
+
+{% block field_sets %}
+    <div>
+        <fieldset class="module aligned ">
+            {% for field in form.visible_fields %}
+                <div class="form-row{% if field.errors %} errors{% endif %}">
+                    <div class="{% if field.errors %} errors{% endif %}">
+                        {{ field.errors }}
+                        {% if field.is_checkbox %}
+                            {{ field }}{{ field.label_tag }}
+                        {% else %}
+                            {{ field.label_tag }}
+                            {% if field.is_readonly %}
+                                <p>{{ field.contents }}</p>
+                            {% else %}
+                                {{ field }}
+                            {% endif %}
+                        {% endif %}
+                        {% if field.help_text %}
+                            <p class="help">{{ field.help_text|safe }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="form-row">
+                <div>
+                    <textarea id='id_text'>{{ original.text }}</textarea>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+{% endblock %}
+{% if original.is_allow %}
+    {% block submit_buttons_bottom %}
+        <div class="submit-row">
+            <img id="loading_bar" style="display:none" src="{{ STATIC_URL }}requery/ajax-loader.gif">
+            <input id="id_run" type="submit" value="Run" class="default" name="run">
+            <input type="button" value="CSV" class="default download" name="CSV" data-type="csv" disabled="disabled">
+            <input type="button" value="XML" class="default download" name="XML" data-type="xml" disabled="disabled">
+            <input type="button" value="json" class="default download" name="json" data-type="json" disabled="disabled">
+        </div>
+    {% endblock %}
+{% endif %}
+{% if adminform and add %}
+   <script type="text/javascript">document.getElementById("{{ adminform.first_field.id_for_label }}").focus();</script>
+{% endif %}
+
+</div>
+</form></div>
+<div id='result'>
+
+</div>
+
+<script type="text/template" id="message-response">
+    <div class="error_list">
+        <div class="text"><%= message %></div>
+        <div class="clear"></div>
+    </div>
+</script>
+
+<script type="text/template" id="table-response">
+                <div class="mp-pusher" id="mp-pusher">
+                    <nav id="mp-menu" class="mp-menu">
+                        <div class="col-lg-2 mp-level">
+                            <ul>
+                                <li class="icon icon-arrow-left">
+                                    <a href="#"><i class="fa fa-2x fa-cubes"></i> Dimensões</a>
+                                        <div class="mp-level">
+                                            <h3>Dimensões</h3>
+                                            <a class="mp-back" href="#">back</a>
+                                            <ul>
+                                                <% _.each(columns, function(column, index) { %>
+                                                <% if (["long", "integer", "Decimal", "int"].indexOf(datatypes[index]) == -1) { %>
+                                                <li><button id="btn-tabela" onclick="f_selectDimension(this)" class="btn btn-primary"><%= column %></button></li>
+                                                <% }%>
+                                                <% }); %>
+                                            </ul>
+                                        </div>
+                                </li>
+                                <li class="icon icon-arrow-left">
+                                    <a href="#"><i class="fa fa-2x fa-cubes"></i> Métricas</a>
+                                    <div class="mp-level">
+                                        <h3>Metricas</h3>
+                                        <a class="mp-back" href="#">back</a>
+                                        <ul>
+                                            <% _.each(columns, function(column, index) { %>
+                                            <% if (["long", "integer", "Decimal", "int"].indexOf(datatypes[index]) != -1 ) { %>
+                                            <li><button id="btn-tabela" onclick="f_selectMeasure(this)" class="btn btn-primary"><%= column %></button></li>
+                                            <% }%>
+                                            <% }); %>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="icon icon-arrow-left">
+                                    <a href="#"><i class="fa fa-2x fa-trophy"></i> Graficos</a>
+                                    <div class="charts mp-level">
+                                        <h3>Graficos</h3>
+                                        <a class="mp-back" href="#">back</a>
+                                        <ul>
+                                            <li><i onclick="f_drawChart('AreaChart');"  id="btn-chart-colum-bar" class="fa fa-3x fa-area-chart">Área</i> </li>
+                                            <li><i onclick="f_drawChart('BarChart');"  id="btn-chart-bar" class="fa fa-3x fa-bar-chart">Barra</i> </li>
+                                            <li><i onclick="f_drawChart('ColumnChart');"  id="btn-chart-bar" class="fa fa-3x fa-bar-chart">Colunas</i> </li>
+                                            <li><i onclick="f_drawChart('LineChart');" id="btn-chart-area" class="fa fa-3x fa-line-chart">Linha</i> </li>
+                                            <li><i onclick="f_drawChart('PieChart');" id="btn-chart-line" class="fa fa-3x fa-pie-chart">Pizza</i> </li>
+                                            <li><i onclick="f_drawChart('SteppedAreaChart');" id="btn-chart-pie" class="fa fa-3x fa-bar-chart">Coluna como Área</i></li>
+                                            <li><i onclick="f_drawChart('Rosquinha');" id="btn-chart-donut" class="fa fa-3x fa-pie-chart">Rosquinha</i> </li>
+                                            <li><i onclick="f_drawChart('Gauge');" id="btn-chart-gauge" class="fa fa-3x fa-dashboard">Gauge</i> </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="col-lg-10">
+                        <p><a href="#" id="trigger" onclick="function menuToggle() {new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ));} menuToggle()"> <i class="fa fa-2x fa-gear"> Abrir Menu</i></a></p>
+                        <div id="mensagem" class="alert alert-warning" style="display: none" role="alert">
+                            =D
+                        </div>
+                        <div id="chart_div" class="btn-block"></div>
+                        <div id="table_div"></div>
+                        <div id="table_to_download_div" style="display: None;"></div>
+                    </div>
+                        </div>
+</script>
+
+    <script>
+
+
+
+    function btnTableChart(){
+        $('#chart_div').toggle();
+        $('#table_div').toggle();
+        $('#table_to_download_div').toggle();
+    };
+
+    </script>
+
+
+
+{% endblock %}
