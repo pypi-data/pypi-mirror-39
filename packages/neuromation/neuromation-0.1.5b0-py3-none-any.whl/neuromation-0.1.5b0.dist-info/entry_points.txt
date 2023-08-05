@@ -1,0 +1,3 @@
+[console_scripts]
+neuro = neuromation.cli:main
+
