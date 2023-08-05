@@ -1,0 +1,3 @@
+[console_scripts]
+harmony_tools = harmony_tools.cli:main
+
