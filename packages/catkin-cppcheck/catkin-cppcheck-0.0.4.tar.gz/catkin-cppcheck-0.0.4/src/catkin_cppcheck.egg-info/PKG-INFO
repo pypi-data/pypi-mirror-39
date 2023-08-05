@@ -1,0 +1,35 @@
+Metadata-Version: 1.0
+Name: catkin-cppcheck
+Version: 0.0.4
+Summary: Run cppcheck on catkin packages
+Home-page: UNKNOWN
+Author: Natesh Narain
+Author-email: nnaraindev@gmail.com
+License: MIT
+Description: Catkin CppCheck
+        ===============
+        
+        .. image:: https://travis-ci.org/nnarain/catkin-cppcheck.svg?branch=master
+            :target: https://travis-ci.org/nnarain/catkin-cppcheck
+        
+        .. image:: https://img.shields.io/pypi/v/catkin-cppcheck.svg
+            :target: https://pypi.python.org/pypi/catkin-cppcheck
+        
+        
+        Run cppcheck on catkin packages.
+        
+        Installation
+        ------------
+        
+            pip install catkin-cppcheck
+        
+        Usage
+        -----
+        
+            catkin cppcheck
+        
+        View help and options:
+        
+            catkin cppcheck -h
+Keywords: catkin ros cppcheck c++
+Platform: UNKNOWN

@@ -1,0 +1,11 @@
+README.rst
+setup.py
+src/catkin_cppcheck/__init__.py
+src/catkin_cppcheck/cppcheck.py
+src/catkin_cppcheck/main.py
+src/catkin_cppcheck.egg-info/PKG-INFO
+src/catkin_cppcheck.egg-info/SOURCES.txt
+src/catkin_cppcheck.egg-info/dependency_links.txt
+src/catkin_cppcheck.egg-info/entry_points.txt
+src/catkin_cppcheck.egg-info/requires.txt
+src/catkin_cppcheck.egg-info/top_level.txt
