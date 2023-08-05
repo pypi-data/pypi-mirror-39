@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: chewBBACA-NServer
+Version: 1.0.3
+Summary: chewBBACA comunicates with the nomenclature server HUUURRR
+Home-page: https://github.com/B-UMMI/chewBBACA/tree/chewie_NS
+Author: Mickael Silva
+Author-email: mickaelsilva@medicina.ulisboa.pt
+License: UNKNOWN
+Keywords: cgMLST,bacterial typing,nomenclature server
+Platform: UNKNOWN
+Requires-Dist: numpy (>=1.14.0)
+Requires-Dist: scipy (>=0.13.3)
+Requires-Dist: biopython (>=1.70)
+Requires-Dist: plotly (>=1.12.9)
+Requires-Dist: SPARQLWrapper (>=1.8.0)
+Requires-Dist: requests (==2.2.1)
+Requires-Dist: pandas (>=0.22.0)
+
+UNKNOWN
+
+
