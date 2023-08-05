@@ -1,0 +1,6 @@
+[console_scripts]
+pywicta-mrfilter = pywicta.denoising.wavelets_mrfilter:main
+pywicta-mrtransform = pywicta.denoising.wavelets_mrtransform:main
+pywicta-starlet = pywicta.denoising.starlet:main
+simtel2fits = pywicta.io.simtel_to_fits.py:main
+
