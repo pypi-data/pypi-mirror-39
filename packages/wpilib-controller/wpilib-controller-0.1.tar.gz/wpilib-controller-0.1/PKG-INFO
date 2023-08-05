@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: wpilib-controller
+Version: 0.1
+Summary: A backport of the upcoming (in 2020) WPILib PIDController.
+Home-page: https://github.com/auscompgeek/robotpy-wpilib-controller
+Author: David Vo
+Author-email: david@thedropbears.org.au
