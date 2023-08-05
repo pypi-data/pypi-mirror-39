@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+./bdata/mudpy.c
+bdata/__init__.py
+bdata/bdata.py
+bdata/mudpy.pyx
+bdata.egg-info/PKG-INFO
+bdata.egg-info/SOURCES.txt
+bdata.egg-info/dependency_links.txt
+bdata.egg-info/requires.txt
+bdata.egg-info/top_level.txt
+mud_src/mud_friendly.c
