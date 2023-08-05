@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: apispec-serpyco
+Version: 0.6
+Summary: Serpyco plugin for Apispec
+Home-page: https://github.com/algoo/apispec_plugins
+Author: Algoo
+Author-email: contact@algoo.fr
+License: MIT
+Keywords: apispec openapi serpyco api
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: apispec (>=1.0.0b1)
+Requires-Dist: serpyco (>=0.16.1)
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+
+https://github.com/algoo/apispec_plugins/tree/master/apispec_serpyco
+
+
