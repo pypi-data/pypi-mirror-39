@@ -1,0 +1,29 @@
+Metadata-Version: 1.2
+Name: polydev.github
+Version: 0.1.3
+Summary: Simple Github utils for Developers
+Home-page: https://github.com/Polyconseil/polydev-github/
+Author: Polyconseil
+Author-email: opensource+polydev.github@polyconseil.fr
+License: BSD 3-Clause License
+Description: polydev.github - Some Github related tools
+        ==========================================
+        
+        For now, only a zest.releaser hook that publish release on Github.
+        
+        
+Keywords: github,zest.releaser
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Requires-Python: >=3.4

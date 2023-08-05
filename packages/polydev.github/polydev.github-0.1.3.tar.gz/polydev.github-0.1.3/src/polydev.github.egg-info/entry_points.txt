@@ -1,0 +1,3 @@
+[zest.releaser.postreleaser.after]
+publish_release_on_github = polydev.github.zest_hooks:publish_release_on_github
+

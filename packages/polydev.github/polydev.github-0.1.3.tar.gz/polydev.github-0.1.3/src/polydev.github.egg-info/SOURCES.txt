@@ -1,0 +1,17 @@
+Changelog.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+src/polydev/__init__.py
+src/polydev.github.egg-info/PKG-INFO
+src/polydev.github.egg-info/SOURCES.txt
+src/polydev.github.egg-info/dependency_links.txt
+src/polydev.github.egg-info/entry_points.txt
+src/polydev.github.egg-info/namespace_packages.txt
+src/polydev.github.egg-info/requires.txt
+src/polydev.github.egg-info/top_level.txt
+src/polydev.github.egg-info/zip-safe
+src/polydev/github/__init__.py
+src/polydev/github/zest_hooks.py
