@@ -1,0 +1,136 @@
+Metadata-Version: 2.1
+Name: zope.vocabularyregistry
+Version: 1.1.0
+Summary: Utility-based Vocabulary Registry
+Home-page: http://github.com/zopefoundation/zope.vocabularyregistry
+Author: Zope Corporation and Contributors
+Author-email: zope-dev@zope.org
+License: ZPL 2.1
+Keywords: zope3 schema vocabulary registry
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Zope Public License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Framework :: Zope :: 3
+Requires-Dist: setuptools
+Requires-Dist: zope.component
+Requires-Dist: zope.interface
+Requires-Dist: zope.schema
+Provides-Extra: test
+Requires-Dist: zope.configuration ; extra == 'test'
+Requires-Dist: zope.testing ; extra == 'test'
+Requires-Dist: zope.testrunner ; extra == 'test'
+
+=========================
+ zope.vocabularyregistry
+=========================
+
+.. image:: https://img.shields.io/pypi/v/zope.vocabularyregistry.svg
+        :target: https://pypi.python.org/pypi/zope.vocabularyregistry/
+        :alt: Latest release
+
+.. image:: https://img.shields.io/pypi/pyversions/zope.vocabularyregistry.svg
+        :target: https://pypi.org/project/zope.vocabularyregistry/
+        :alt: Supported Python versions
+
+.. image:: https://travis-ci.org/zopefoundation/zope.vocabularyregistry.svg?branch=master
+        :target: https://travis-ci.org/zopefoundation/zope.vocabularyregistry
+
+.. image:: https://coveralls.io/repos/github/zopefoundation/zope.vocabularyregistry/badge.svg?branch=master
+        :target: https://coveralls.io/github/zopefoundation/zope.vocabularyregistry?branch=master
+
+
+This Zope 3 package provides a ``zope.schema`` vocabulary registry that uses
+utilities to look up vocabularies.
+
+
+=====================================
+ Component-based Vocabulary Registry
+=====================================
+
+This package provides a vocabulary registry for zope.schema,
+based on the component architecture.
+
+It replaces the zope.schema's simple vocabulary registry
+when ``zope.vocabularyregistry`` package is imported, so it's done
+automatically. All we need is provide vocabulary factory
+utilities:
+
+  >>> import zope.vocabularyregistry
+  >>> from zope.component import provideUtility
+  >>> from zope.schema.interfaces import IVocabularyFactory
+  >>> from zope.schema.vocabulary import SimpleTerm
+  >>> from zope.schema.vocabulary import SimpleVocabulary
+
+  >>> def SomeVocabulary(context=None):
+  ...     terms = [SimpleTerm(1), SimpleTerm(2)]
+  ...     return SimpleVocabulary(terms)
+
+  >>> provideUtility(SomeVocabulary, IVocabularyFactory,
+  ...                name='SomeVocabulary')
+
+Now we can get the vocabulary using standard zope.schema
+way:
+
+  >>> from zope.schema.vocabulary import getVocabularyRegistry
+  >>> vr = getVocabularyRegistry()
+  >>> voc = vr.get(None, 'SomeVocabulary')
+  >>> [term.value for term in voc]
+  [1, 2]
+
+
+Configuration
+=============
+
+This package provides configuration that ensures the vocabulary
+registry is established:
+
+
+  >>> from zope.configuration import xmlconfig
+  >>> _ = xmlconfig.string(r"""
+  ... <configure xmlns="http://namespaces.zope.org/zope" i18n_domain="zope">
+  ...   <include package="zope.vocabularyregistry" />
+  ... </configure>
+  ... """)
+
+
+=========
+ CHANGES
+=========
+
+1.1.0 (2018-11-30)
+==================
+
+- Ensure that a convtext is provided when looking up the vocabulary factory.
+
+- Drop support for Python 2.6 and 3.3.
+
+- Add support for Python 3.5, 3.6, 3.7, PyPy and PyPy3.
+
+
+1.0.0 (2013-03-01)
+==================
+
+- Added support for Python 3.3.
+
+- Replaced deprecated ``zope.interface.implements`` usage with equivalent
+  ``zope.interface.implementer`` decorator.
+
+- Dropped support for Python 2.4 and 2.5.
+
+- Initial release independent of ``zope.app.schema``.
+
+
