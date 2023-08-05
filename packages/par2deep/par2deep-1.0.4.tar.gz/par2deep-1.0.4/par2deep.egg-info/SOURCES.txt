@@ -1,0 +1,15 @@
+README.md
+setup.py
+par2deep/__init__.py
+par2deep/__main__.py
+par2deep/ask_yn.py
+par2deep/cli.py
+par2deep/gui.py
+par2deep/par2deep.py
+par2deep.egg-info/PKG-INFO
+par2deep.egg-info/SOURCES.txt
+par2deep.egg-info/dependency_links.txt
+par2deep.egg-info/entry_points.txt
+par2deep.egg-info/not-zip-safe
+par2deep.egg-info/requires.txt
+par2deep.egg-info/top_level.txt
