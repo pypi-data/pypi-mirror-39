@@ -1,0 +1,11 @@
+README.md
+setup.py
+graphml2svg/__init__.py
+graphml2svg/element.py
+graphml2svg/graph.py
+graphml2svg/mixins.py
+graphml2svg.egg-info/PKG-INFO
+graphml2svg.egg-info/SOURCES.txt
+graphml2svg.egg-info/dependency_links.txt
+graphml2svg.egg-info/requires.txt
+graphml2svg.egg-info/top_level.txt
