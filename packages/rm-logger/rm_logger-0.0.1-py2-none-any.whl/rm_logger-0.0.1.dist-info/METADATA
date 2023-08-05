@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: rm-logger
+Version: 0.0.1
+Summary: A generic logging class
+Home-page: UNKNOWN
+Author: Chris O'Brien
+Author-email: christopher.obrien@remindermedia.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Description-Content-Type: text/markdown
+
+<img src="https://i.imgur.com/FPfSM65.png" width="300">
+
+# Generic Logger
+[![built with Python2](https://img.shields.io/badge/Built%20with-Python2-blue.svg)](https://www.python.org/)
+
+### A generic logging class for Python
+
+Basic setup and usage are simple.  Just import the class and create a Logger instance with a location to save the log file, it will handle everything else!  
+The log files will even be capped at a configurable limit and rotated after they have reached the limit.
+
+To install:
+Download the source files as an archive and extract them on your computer.
+
+Next run the install command:
+```bash
+python setup.py install
+```
+
+Usage:
+```python
+from logger import Logger
+
+def main():
+    log = Logger("./logs/test.log")
+
+    log.info("This is a test...")
+    log.warning("I know what you did last summer...")
+
+if __name__ == "__main__":
+    main()
+```
+
+### Attributes
+*   Log File Location
+*   Logger Name (Default: Calling script)
+*   Max Log File Size {in Megabytes} (Default: 1 MB)
+*   Log File Backup Count (Default: 3)
+*   Logging Level (Default: INFO)
+*   Log Format (Default: %(levelname)s: [%(name)s]: %(asctime)s - %(message)s)
+*   Date Format (Default: %m/%d/%Y %H:%M:%S)
+
+All attributes are configurable, and all except log file location have default values.
+
+### Logging Levels
+*   DEBUG
+*   INFO
+*   WARNING
+*   ERROR
+*   CRITICAL
+
+### Log File Output Example
+<img src="https://i.imgur.com/SBNtE18.png">
+
