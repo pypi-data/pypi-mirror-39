@@ -1,0 +1,4 @@
+[console_scripts]
+bg-data = bgdata.command:cmdline
+bgdata = bgdata.command:cmdline
+

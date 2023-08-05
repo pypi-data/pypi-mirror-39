@@ -1,0 +1,17 @@
+
+# Use custom paths for certain package
+# Only affects packages referred without tag or build
+[paths]
+project/dataset/version = my/local/path
+project/dataset/version = my/other/local/path
+
+# Associate particular tags of a package with specific build
+[builds]
+    [[project/datastet/version]]
+        master = 20181105
+
+# Use a particular tag as default tag for a project[/dataset[/version]]
+# Most specific has prevalence
+[tags]
+project/dataset/version = master
+project = develop
