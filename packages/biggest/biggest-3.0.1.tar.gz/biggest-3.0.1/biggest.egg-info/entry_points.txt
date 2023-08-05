@@ -1,0 +1,3 @@
+[console_scripts]
+biggest = biggest.__main__:main
+
