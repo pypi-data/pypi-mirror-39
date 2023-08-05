@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: apispec-hapic-marshmallow
+Version: 0.2.1
+Summary: Marshmallow apispec plugin for hapic
+Home-page: https://github.com/algoo/apispec_plugins
+Author: Algoo
+Author-email: contact@algoo.fr
+License: MIT
+Keywords: apispec openapi marshmallow api
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: apispec (>=1.0.0b1)
+Requires-Dist: marshmallow
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+
+This is the obsolete plugin, please use apispec-marshmallow-advanced instead
+
+
