@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: sqlite3-backup
+Version: 0.1.0
+Summary: sqlite3 from the standard library does not support the backup
+functionality provided by the original sqlite3 c implementation.
+
+This package fixes this by providing a simple backup function.
+
+Typical use case is to write an in-memory sqlite3-db to disk.
+
+This package relies of ctypes module and thus does not require a
+working c compiler setup.
+
+Home-page: None
+Author: Uwe Schmitt
+Author-email: uwe.schmitt@id.ethz.ch
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
