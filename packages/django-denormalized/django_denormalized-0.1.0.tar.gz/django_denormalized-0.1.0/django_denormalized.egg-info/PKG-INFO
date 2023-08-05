@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: django-denormalized
+Version: 0.1.0
+Summary: Utils for maintaining denormalized aggregates for Django models
+Home-page: https://github.com/tumb1er/django-denormalized
+Author: Sergey Tikhonov
+Author-email: zimbler@gmail.com
+License: Beer License
+Description: UNKNOWN
+Platform: UNKNOWN
