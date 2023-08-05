@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: excursion
+Version: 0.0.1a0
+Summary: excursion set estimation
+Home-page: https://github.com/diana-hep/excursion
+Author: Lukas Heinrich
+Author-email: lukas.heinrich@cern.ch
+License: Apache
+Description: # excursion
+        
+        Excursion Set Estimation
+        
+        
+        <img src="./assets/example.gif" style="width:500px;"/>
+        
+        
+Keywords: bayesian optimization excursion set estimation
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*
+Description-Content-Type: text/markdown
+Provides-Extra: complete
+Provides-Extra: develop
+Provides-Extra: plots
