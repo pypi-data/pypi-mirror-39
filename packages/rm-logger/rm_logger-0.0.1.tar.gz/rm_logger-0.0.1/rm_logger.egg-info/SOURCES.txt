@@ -1,0 +1,9 @@
+README.md
+setup.py
+rm_logger/__init__.py
+rm_logger/rm_logger.py
+rm_logger/rm_logger_test.py
+rm_logger.egg-info/PKG-INFO
+rm_logger.egg-info/SOURCES.txt
+rm_logger.egg-info/dependency_links.txt
+rm_logger.egg-info/top_level.txt
