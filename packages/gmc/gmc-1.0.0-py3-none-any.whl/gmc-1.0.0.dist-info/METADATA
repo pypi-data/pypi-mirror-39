@@ -1,0 +1,137 @@
+Metadata-Version: 2.1
+Name: gmc
+Version: 1.0.0
+Summary: GMC Geiger counter api
+Home-page: https://gitlab.com/slippers/gmc
+Author: Kirk Erickson
+Author-email: ekirk0+gitlab@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pyserial (==3.4)
+
+# GMC
+
+gmc geiger counter api
+
+
+### about the device
+
+[gmc geiger counter](https://www.gqelectronicsllc.com/comersus/store/comersus_viewItem.asp?idProduct=4570)
+
+An inexpensive geiger counter that has many software interface projects.  
+This tool can be found on amazon.
+
+
+### aim of this project 
+
+This project [gmc](https://github.com/slippers/gmc) updates to python3 and 
+attempts to simplify some of the features of the gmc api.  Many of the 
+bug fixes and were utilized from other projects as listed in
+
+
+### installation
+
+Using pip I suggest creating a virtualenv first.
+
+    python3 -m venv venv
+    source ./venv/bin/activate
+
+Then install gmc using pip from web
+
+    pip install gmc
+
+Or from local directory
+
+    pip install ~/projects/rad/gmc
+
+
+### usage
+
+    python
+    >>> from gmc import GMC
+    >>> g = GMC()  # or with configuration GMC({'DEFAULT_BAUDRATE':57600})
+    >>> g.version()
+    'GMC-300Re 4.22'
+
+
+### features
+
+* access to gmc device api functions
+* read and modify configuration
+* read history
+* heartbeat as non blocking process
+* modular configuration per device model
+* utilize ctypes.Structure for confiuration model
+* tests using pytest
+* preparation setup for pypi deployment
+* GMC class has a logger = logging='gmc.gmc' 
+* inject configuration into GMC to override gmc.config
+
+
+### todo
+
+* parse history logs
+* issues with writing configuration - mostly works
+* example scripts to report to internet radiation detection sites.
+
+### other projects
+
+There are others out there too.  Here is what I worked from.
+
+[geigerlog](https://sourceforge.net/projects/geigerlog/)
+
+[gq-gmc-control](https://github.com/chaim-zax/gq-gmc-control)
+
+[gqgmc-code](http://www.gqelectronicsllc.com/comersus/store/download.asp)
+
+[stelas/gclog](https://github.com/stelas/gclog)
+
+### radiation mapping sites
+
+[radmon.org](https://radmon.org/index.php/register)
+
+### bash binary files
+
+gmc produces a tmp file of history data. 
+it is in binary format
+
+take a look at the raw history data file.
+
+example:
+
+    od -t x1 /tmp/tmpdmtc4ow1.bin
+
+    hexdump -x /tmp/tmpdmtc4ow1.bin
+
+    hd /tmp/tmpdmtc4ow1.bin | HEAD
+
+    xxd /tmp/tmpdmtc4ow1.bin | head
+
+
+### testing
+
+testing could be harmful to your device.
+you may have to factory reset it with
+some types of commands.
+
+
+this will activate all tests
+
+    pytest 
+
+just run one test by name
+
+    pytest --pdb -k test_device
+
+
+### usb connection
+
+different per system.
+
+create [udev-usb](documents/udev-usb.md) to describe linux connections.
+
+
