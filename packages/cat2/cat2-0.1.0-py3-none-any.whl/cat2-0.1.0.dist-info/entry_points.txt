@@ -1,0 +1,3 @@
+[console_scripts]
+cat2 = cat2.cli:cli
+

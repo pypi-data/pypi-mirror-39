@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: cat2
+Version: 0.1.0
+Summary: Print file contents like a boss
+Home-page: https://github.com/arrrlo/cat2
+Author: Ivan Arar
+Author-email: ivan.arar@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/arrrlo/cat2
+Keywords: cat,print,file,contents
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: click (~=6.7)
+Requires-Dist: colorama (~=0.3)
+Requires-Dist: db-transfer (~=0.3.3)
+Requires-Dist: requests (~=2.18.4)
+Requires-Dist: pyfiglet (~=0.7.5)
+Requires-Dist: termcolor (~=1.1.0)
+
+<h1>cat2</h1>
+<h2>Print file contents like a boss</h2>
+
+<img src="https://i.ibb.co/XFgv40n/Screen-Shot-2018-12-01-at-21-50-08.png">
+<img src="https://i.ibb.co/qJYt2nH/Screen-Shot-2018-12-01-at-21-50-45.png">
+<img src="https://i.ibb.co/hCRcTsv/Screen-Shot-2018-12-01-at-21-55-05.png">
+<img src="https://i.ibb.co/FVXJNQ6/Screen-Shot-2018-12-01-at-21-55-18.png">
+
