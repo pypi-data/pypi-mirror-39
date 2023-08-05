@@ -1,0 +1,8 @@
+README.rst
+setup.py
+happytrans.egg-info/PKG-INFO
+happytrans.egg-info/SOURCES.txt
+happytrans.egg-info/dependency_links.txt
+happytrans.egg-info/top_level.txt
+translate/__init__.py
+translate/translate_model.py
