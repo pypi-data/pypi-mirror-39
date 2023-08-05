@@ -1,0 +1,341 @@
+#!/usr/bin/env python
+
+#    Copyright (C) 2014 Christian T. Jacobs, Alexandros Avdis, Gerard J. Gorman, Matthew D. Piggott.
+
+#    This file is part of PyRDM.
+
+#    PyRDM is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    PyRDM is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with PyRDM.  If not, see <http://www.gnu.org/licenses/>.
+
+import ConfigParser
+import glob
+import logging
+import argparse
+import os
+import re
+import sys
+
+import libspud
+import git
+from xml.dom import minidom
+
+pyrdm_path = os.path.join(os.path.realpath(os.path.dirname(__file__)), os.pardir)
+sys.path.insert(0, pyrdm_path)
+
+import pyrdm
+from pyrdm.publisher import Publisher
+
+_LOG = logging.getLogger(__name__)
+_HANDLER = logging.StreamHandler()
+_LOG.addHandler(_HANDLER)
+_HANDLER.setFormatter(logging.Formatter(
+    '%(module)s %(levelname)s: %(message)s'))
+del(_HANDLER)
+_LOG.setLevel(logging.DEBUG)
+
+class FluidityPublish:
+
+   def __init__(self, options_file):
+      self.options_file = options_file
+      return
+
+   def get_fluidity_version(self):
+      """ Return the Fluidity version (in the form of the SHA-1 hash of the HEAD of its Git repository). """
+      _LOG.debug("Reading SHA-1 hash...")
+      # NOTE: Here we are assuming that the Fluidity binary is in the same Git repository as the options file. Is there a better way of doing this?
+      try:
+         repo = git.Repo(sys.argv[-1])
+      except:
+         _LOG.warning("Could not open the local Git repository. Are you sure that the Fluidity options file is inside a Git repository? Check read permissions?")
+         return None
+         
+      # Try to find the version information for the Fluidity binary. This can be found in the version.h file which is written at compile-time.
+      try:
+         f = open(repo.working_dir + "/include/version.h", "r")
+         f.readline()
+         f.readline()
+         l = f.readline()
+         sha = l.split()[-1].replace("\"", "")
+         sha = sha.split(":")[-1] # Remove the Git branch name
+         f.close()
+      except:
+         _LOG.warning("Unable to determine the Fluidity version from the file 'version.h'. Fluidity might not have been compiled yet.")
+         while True:
+            response = raw_input("Do you want to assume that the version of Fluidity you want to publish is the same as the local Git repository's HEAD? (Y/N)\n")
+            if(response == "y" or response == "Y"):
+               sha = repo.head.commit.hexsha
+               return sha
+            elif(response == "n" or response == "N"):
+               _LOG.error("Please compile Fluidity and try again, or supply a version (in the form of a SHA-1 hash) using the -v option at the command line.")
+               sys.exit(1)
+            else:
+               continue # Keep iterating until the user provides a valid response to the question.
+         
+      _LOG.debug("SHA-1 hash: %s" % sha)
+      return sha
+
+   def write_provenance_data(self):
+      """ Write the DOIs of the software and input data publications to the .stat file. """
+      # Get the path to the stat file.
+      simulation_name = libspud.get_option("/simulation_name")
+      stat_path = simulation_name + ".stat"
+      if(os.path.dirname(sys.argv[-1]) != ""):
+         stat_path = os.path.dirname(sys.argv[-1]) + "/" + stat_path
+
+      # The following code is based on fluidity_tools.py:
+      try:
+         stat = open(stat_path, "r")
+      except IOError:
+         _LOG.warning("Unable to open the stat file for reading. Perhaps the simulation has not been run yet? Check read permissions?")
+         return
+         
+      header_re = re.compile(r"</header>")
+
+      # Get the header.
+      xml = ""
+      while True:
+         line = stat.readline()
+         if(line == ""):
+            _LOG.warning("Unable to read .stat file header.")
+            return
+         xml = xml + line
+         if(re.search(header_re, line)):
+            break
+
+      # Get the body.
+      body = ""
+      while True:
+         line = stat.readline()
+         if(line == ""):
+            break
+         body = body + line
+
+      stat.close()
+
+      # Parse the XML
+      xml = minidom.parseString(xml)
+
+      # Check that the FLUIDITY_VERSION in the stat file is the same as the published version.
+      sha_in_statfile = -1
+      for element in xml.getElementsByTagName('constant'):
+         if(element.attributes["name"].value == "FluidityVersion"):
+            sha_in_statfile = element.attributes["value"].value
+            sha_in_statfile = sha_in_statfile.split(":")[-1] # Remove the Git branch name
+            break
+      if(libspud.have_option("/publish/software/pid")):
+         if(libspud.get_option("/publish/software/pid") != self.publisher.find_software("Fluidity", sha_in_statfile)[0]):
+            _LOG.warning("The version of Fluidity that created this output data is either: (a) not published (and made public) yet, or (b) inconsistent with the version referred to by the publication ID in the options file (%d).\n" % libspud.get_option("/publish/software/pid"))
+            while True:
+               response = raw_input("Are you sure you want to continue? (Y/N)\n")
+               if(response == "y" or response == "Y"):
+                  break
+               elif(response == "n" or response == "N"):
+                  _LOG.error("Please re-publish the software with the correct version (or re-run the simulation with an updated version) and try again.")
+                  sys.exit(1)
+               else:
+                  continue # Keep iterating until the user provides a valid response to the question.
+
+      # Append the provenance data
+      provenance_data = {}
+      if(libspud.have_option("/publish/software/doi")):
+         provenance_data["SoftwareDOI"] = libspud.get_option("/publish/software/doi")
+      else:
+         provenance_data["SoftwareDOI"] = "Unknown"
+
+      if(libspud.have_option("/publish/input_data/doi")):
+         provenance_data["InputDataDOI"] = libspud.get_option("/publish/input_data/doi")
+      else:
+         provenance_data["InputDataDOI"] = "Unknown"
+
+      elements = xml.getElementsByTagName('constant')
+      for key in provenance_data.keys():
+         exists = False
+         for element in elements:
+            if(element.getAttribute("name") == key):
+               # Element already exists, so update the value attribute.
+               exists = True
+               element.setAttribute("value", provenance_data[key])
+         if(not exists):
+            # Element doesn't exist, so create it.
+            element = xml.createElement("constant")
+            element.setAttribute("name", key)
+            element.setAttribute("type", "string")
+            element.setAttribute("value", provenance_data[key])
+            xml.childNodes[0].insertBefore(xml.createTextNode("\n"), xml.childNodes[0].childNodes[3]) # Add a new line
+            xml.childNodes[0].insertBefore(element, xml.childNodes[0].childNodes[3]) # Append the provenance data
+
+      # Write the changes to the stat file.
+      header = xml.toprettyxml(newl="", indent="")
+      header = header.replace("<?xml version=\"1.0\" ?>", "")
+      
+      try:
+         stat = open(stat_path, "w")
+         stat.write(header + "\n" + body)
+         stat.close()
+      except IOError:
+         _LOG.warning("Unable to write to the stat file. Check permissions?")
+         return
+
+      return
+
+
+   def publish(self, data_type, version=None, private=False):
+      """ Publish the Fluidity source code or simulation data. """
+      libspud.load_options(self.options_file)    
+
+      if(not libspud.have_option("/publish")):
+         _LOG.error("Publishing has not been enabled in the simulation's configuration file. Please enable it and try again.")
+         sys.exit(1)
+
+      service = libspud.get_option("/publish/service")
+      self.publisher = Publisher(service=service)
+
+      if(data_type == "s"):
+         # Publish the software
+         
+         # Get the SHA-1 hash of the software version.
+         if(version is None):
+            sha = self.get_fluidity_version()
+            if(sha is None):
+               _LOG.error("Could not obtain the version (SHA-1 hash) of the Fluidity binary. If it is not in the 'version.h' file, then please use the -v option to specify it.")
+               sys.exit(1)
+         else:
+            _LOG.info("Using the software version provided: %s" % version)
+            sha = version
+         
+         options_path = "/publish/software/"
+
+         pid, doi = self.publisher.publish_software(name="Fluidity", local_repo_location=sys.argv[-1], version=sha, private=private)
+         try:
+            libspud.set_option(options_path + "/pid", pid)
+         except:
+            pass # Ignore any SPUD_NEW_KEY_WARNING warnings
+         try:
+            libspud.set_option(options_path + "/doi", str(doi))
+         except:
+            pass # Ignore any SPUD_NEW_KEY_WARNING warnings
+
+         libspud.write_options(self.options_file)
+            
+      else:
+         # Publish the input/output data
+         if(data_type == "i"):
+            options_path = "/publish/input_data/"
+         elif(data_type == "o"):
+            options_path = "/publish/output_data/"
+         else:
+            _LOG.error("Data type not recognised.")
+            sys.exit(1)
+
+         # Even if the user has provided a publication ID, check that it still exists on the server.
+         if(libspud.have_option(options_path + "/pid")):
+            pid = libspud.get_option(options_path + "/pid")
+            if(self.publisher.publication_exists(pid)):
+               _LOG.info("Re-using fileset with ID %d..." % pid)
+               publication_exists = True
+            else:
+               _LOG.info("Fileset with ID %d does not exist. Creating a new one..." % pid)
+               pid = None
+               publication_exists = False
+         else:
+            pid = None
+            publication_exists = False
+
+         # A list of paths to files that the user wants published.
+         temp = eval(libspud.get_option(options_path + "/files"))
+         # Change the file paths to be relative to the directory where the options file is stored.
+         for i in range(len(temp)):
+            if(os.path.dirname(sys.argv[-1]) != ""):
+               temp[i] = os.path.dirname(sys.argv[-1]) + "/" + temp[i]
+
+         files = []
+         for i in range(len(temp)):
+            if("*" in os.path.basename(temp[i])):
+               # Expand out any wildcard expressions.
+               expanded = glob.glob(temp[i])
+               for j in range(len(expanded)):
+                  if(expanded[j].endswith(".md5")):
+                     continue # Ignore any MD5 checksum files.
+                  else:
+                     files.append(expanded[j])
+            else:
+               files.append(temp[i])
+
+         if(data_type == "o"):
+            # Write provenance data to the stat file.
+            _LOG.debug("Writing provenance data to .stat file...")
+            self.write_provenance_data()
+
+         tags = [libspud.get_option("/simulation_name"), "Fluidity", "simulation"]
+         if(data_type == "i"):
+            title = "Input data files for simulation: %s" % libspud.get_option("/simulation_name")
+            tags.append("input data")
+         elif(data_type == "o"):
+            title = "Output data files for simulation: %s" % libspud.get_option("/simulation_name")
+            tags.append("output data")
+
+         parameters = {"title":title, "description":title, "files":files, "category":"Computational Physics", "tag_name":tags}
+         pid, doi = self.publisher.publish_data(parameters, pid=pid, private=private)
+
+         # Write the publication ID and DOI to the options file for next time.
+         if(not publication_exists):
+            try:
+               libspud.set_option(options_path + "/pid", pid)
+            except:
+               pass # Ignore any SPUD_NEW_KEY_WARNING warnings
+            try:
+               libspud.set_option(options_path + "/doi", str(doi))
+            except:
+               pass # Ignore any SPUD_NEW_KEY_WARNING warnings
+            libspud.write_options(self.options_file)
+
+      _LOG.info("Finished publishing.")
+      return
+         
+if(__name__ == "__main__"):
+   # Parse the command line arguments
+   parser = argparse.ArgumentParser(prog="fluidity-publish", description="Publishes the Fluidity source code and associated input and output data files to an online citable repository.")
+   parser.add_argument("-s", "--software", help="Publish the Fluidity source code.", action="store_true", default=False)
+   parser.add_argument("-i", "--input", help="Publish the input data files whose paths are specified in the options file.", action="store_true", default=False)
+   parser.add_argument("-o", "--output", help="Publish the output data files whose paths are specified in the options file.", action="store_true", default=False)
+   parser.add_argument("-v", "--version", help="Publish a specific version of the Fluidity source code identified by a given SHA-1 hash. Must be used in conjunction with the -s option.", action="store", type=str, default=None, metavar="HASH")
+   parser.add_argument("-p", "--private", help="Publish the software or data, but keep it private. Note that any DOI generated will not be valid until the publication is made public.", action="store_true", default=False)
+   parser.add_argument("-l", "--log-level", action="store", type=str, metavar="LEVEL", default=None, choices=['critical', 'error', 'warning', 'info', 'debug'], help=("Log verbosity. Defaults to %s" % (logging.getLevelName(pyrdm.LOG.level).lower())))
+   parser.add_argument("path", help="The path to the Fluidity options file. This usually has the extension '.flml'.", action="store", type=str)
+   args = parser.parse_args()
+   
+   if(args.log_level):
+      level = getattr(logging, args.log_level.upper())
+      pyrdm.LOG.setLevel(level)
+      _LOG.setLevel(level)
+
+   # The data the user wants to publish (software, input data, or output data)
+   if(args.software):
+      data_type = "s"
+   elif(args.input):
+      data_type = "i"
+   elif(args.output):
+      data_type = "o"
+   else:
+      _LOG.error("You need to specify what you would like to publish: software, input data, or output data.")
+      parser.print_help()
+      sys.exit(1)
+      
+   if(os.path.exists(args.path)):
+      rdm = FluidityPublish(options_file = args.path)
+      rdm.publish(data_type = data_type, version = args.version, private=args.private)
+   else:
+      _LOG.error("The path to the Fluidity options file does not exist.")
+      parser.print_help()
+      sys.exit(1)
+   
