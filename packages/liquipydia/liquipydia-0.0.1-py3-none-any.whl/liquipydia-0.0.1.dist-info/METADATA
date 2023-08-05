@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: liquipydia
+Version: 0.0.1
+Summary: Liquipydia is a python wrapper for the Liquipedia's API.
+Home-page: https://github.com/benyamin-noori/liquipydia
+Author: Benyamin Noori
+Author-email: benyamin.noori@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# liquipydia
+
+`liquipydia` is a python wrapper for liquipedia's API.
+
