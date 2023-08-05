@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: libscca-python
+Version: 20181128
+Summary: Python bindings module for libscca
+Home-page: https://github.com/libyal/libscca/
+Author: Joachim Metz
+Author-email: joachim.metz@gmail.com
+License: GNU Lesser General Public License v3 or later (LGPLv3+)
+Description: Python bindings module for libscca
+Platform: UNKNOWN
