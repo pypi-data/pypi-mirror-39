@@ -1,0 +1,42 @@
+Metadata-Version: 1.1
+Name: risesdk
+Version: 0.9.0
+Summary: APIs for interacting with the RISE blockchain
+Home-page: https://rise.vision/
+Author: Mart Roosmaa
+Author-email: mart@rise.vision
+License: MIT
+Description: # RISE Python SDK
+        
+        Python library that provides APIs for interacting with the RISE blockchain.
+        
+        ## Getting started
+        
+        The simplest way to get started is to use pip to install this library:
+        
+        ```
+        pip install risesdk
+        ```
+        
+        The Python APIs are (mostly) strongly typed to help your IDE help you write code faster.
+        
+        Here's a very simple program that prints out the current height of the chain:
+        
+        ```python
+        from risesdk import Client
+        
+        api = Client('https://wallet.rise.vision/api/')
+        status = api.blocks.get_status()
+        print('Chain height: {}'.format(status.height))
+        ```
+        
+        For more complete examples check out the [examples/](https://github.com/RiseVision/rise-py/tree/master/examples) directory.
+Keywords: rise sdk risesdk crypto currency cryptocurrency risevision altcoin
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
