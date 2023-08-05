@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: coeus-test-unity
+Version: 0.1.6
+Summary: Unity commands and responses for coeus-python-framework.
+Home-page: https://github.com/AgeOfLearning/coeus-unity-python-framework
+Author: Devon Klompmaker
+Author-email: devon.klompmaker@aofl.com
+License: BSD 3-Clause License
+Keywords: coeus-test-unity
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: coeus-test (>=0.1.3)
+
+# Coeus-Unity
+
+[pypi-build-status]: https://img.shields.io/pypi/v/coeus-test-unity.svg
+[travis-ci-status]: https://img.shields.io/travis/AgeOfLearning/coeus-unity-python-framework.svg
+
+[![pypi][pypi-build-status]](https://pypi.python.org/pypi/coeus-test-unity)
+[![travis][travis-ci-status]](https://travis-ci.org/AgeOfLearning/coeus-unity-python-framework)
+
+## About
+Coeus-Unity is a collection of commands and assertions built on `coeus-test` package for python. These commands support remote integration tests in Unity with the use of the C# Coeus test framework.
+
+## Setup
+Simply install the requirement into your package.
+
+```python
+pip install coeus-test-unity
+```
+
+## Commands
+Commands offer no response validation. You can use assertions for that.
+
+```python
+import commands
+
+response = commands.query_transform_exists(cli, "My/Transform Hierarchy/Object (Clone)")
+response = commands.query_scene_loaded(cli, "AppSetup")
+response = commands.query_renderer_visible(cli, "My/Target/Object (Clone)")
+
+response = commands.await_transform_exists(cli, "My/Transform Hierarchy/Object (Clone)")
+# Waits for renderer to become not visible based on False...
+response = commands.await_renderer_visible(cli, "My/Transform Hierarchy/Object (Clone)", False)
+response = commands.await_scene_loaded(cli, "AppSetup")
+```
+
