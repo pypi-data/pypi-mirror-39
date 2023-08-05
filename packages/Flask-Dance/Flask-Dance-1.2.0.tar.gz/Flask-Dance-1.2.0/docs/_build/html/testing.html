@@ -1,0 +1,250 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Testing &#8212; Flask Dance 1.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/flasky.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Developer Interface" href="api.html" />
+    <link rel="prev" title="How OAuth Works" href="how-oauth-works.html" />
+     
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head><body>
+    
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api.html" title="Developer Interface"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="how-oauth-works.html" title="How OAuth Works"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Flask Dance 1.1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="testing">
+<h1>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h1>
+<p>When building Flask apps that have integrated Flask-Dance you’ll eventually run
+into the need to test your app. But if routes are guarded by the requirement of
+having a valid OAuth2 session, i.e getting past the <code class="docutils literal notranslate"><span class="pre">.authorized()</span></code> call on
+a provider, how do you test this?</p>
+<p>One possible way of solving this is by injecting the necessary information into
+the Flask session. The following examples assume you’re using <a class="reference external" href="https://docs.pytest.org/">py.test</a> and the
+Google provider, but the same trick applies to any of the supported providers.</p>
+<div class="section" id="creating-a-session">
+<h2>Creating a session<a class="headerlink" href="#creating-a-session" title="Permalink to this headline">¶</a></h2>
+<p>In your <code class="docutils literal notranslate"><span class="pre">conftest.py</span></code> create two fixtures, like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="kn">import</span> <span class="nn">pytest</span>
+
+<span class="kn">from</span> <span class="nn">your_app</span> <span class="kn">import</span> <span class="n">create_app</span>
+<span class="kn">from</span> <span class="nn">your_app.settings</span> <span class="kn">import</span> <span class="n">Testing</span>
+
+<span class="n">fake_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+
+<span class="nd">@pytest.fixture</span>
+<span class="k">def</span> <span class="nf">app</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Returns an app fixture with the testing configuration.&quot;&quot;&quot;</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">create_app</span><span class="p">(</span><span class="n">config_object</span><span class="o">=</span><span class="n">Testing</span><span class="p">)</span>
+    <span class="k">yield</span> <span class="n">app</span>
+
+
+<span class="nd">@pytest.fixture</span>
+<span class="k">def</span> <span class="nf">loggedin_app</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Creates a logged-in test client instance.&quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">test_client</span><span class="p">()</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">client</span><span class="o">.</span><span class="n">session_transaction</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+            <span class="n">sess</span><span class="p">[</span><span class="s1">&#39;google_oauth_token&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s1">&#39;access_token&#39;</span><span class="p">:</span> <span class="s1">&#39;this is totally fake&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;id_token&#39;</span><span class="p">:</span> <span class="s1">&#39;this is not a real token&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;token_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Bearer&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;expires_in&#39;</span><span class="p">:</span> <span class="s1">&#39;3600&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;expires_at&#39;</span><span class="p">:</span> <span class="n">fake_time</span> <span class="o">+</span> <span class="mi">3600</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="k">yield</span> <span class="n">client</span>
+</pre></div>
+</div>
+<p>This will inject the necessary information in order to ensure that Flask-Dance,
+requests-oauthlib and oauthlib believe there is a valid session, and one that
+won’t need to be refreshed for another hour (3600 seconds). If your tests run
+longer than that, you’ll need to adjust that value.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">fake_time</span></code> is created so that you can always refer to the same point in
+time throughout tests, and in any other fixture you might create. Alternatively
+you can use something like <a class="reference external" href="https://github.com/ktosiek/pytest-freezegun">pytest-freezegun</a> and then call any of the <code class="docutils literal notranslate"><span class="pre">time</span></code>
+and <code class="docutils literal notranslate"><span class="pre">datetime</span></code> functions as you normally would:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@pytest.fixture</span>
+<span class="nd">@pytest.mark.freeze_time</span><span class="p">(</span><span class="s1">&#39;2018-05-04&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">loggedin_app</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Creates a logged-in test client instance.&quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">test_client</span><span class="p">()</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">client</span><span class="o">.</span><span class="n">session_transaction</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+            <span class="n">sess</span><span class="p">[</span><span class="s1">&#39;domain&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;example.com&#39;</span>
+            <span class="n">sess</span><span class="p">[</span><span class="s1">&#39;google_oauth_token&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s1">&#39;access_token&#39;</span><span class="p">:</span> <span class="s1">&#39;this is totally fake&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;id_token&#39;</span><span class="p">:</span> <span class="s1">&#39;this is not a real token&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;token_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Bearer&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;expires_in&#39;</span><span class="p">:</span> <span class="s1">&#39;3600&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;expires_at&#39;</span><span class="p">:</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">+</span> <span class="mi">3600</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="k">yield</span> <span class="n">client</span>
+</pre></div>
+</div>
+<p>Now that we have a logged-in client you can call any of the routes using the
+test client and check their responses.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_not_logged_in</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Test that we redirect to Google to login.&quot;&quot;&quot;</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">test_client</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="p">(</span><span class="s1">&#39;redirected automatically to target URL: &lt;a href=&quot;/login/&#39;</span>
+            <span class="s1">&#39;google&quot;&gt;/login/google&lt;/a&gt;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">res</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">as_text</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">assert</span> <span class="n">res</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">302</span>
+
+
+<span class="k">def</span> <span class="nf">test_logged_in_index</span><span class="p">(</span><span class="n">loggedin_app</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Tests getting the index route.</span>
+
+<span class="sd">    This will render the normal template as we have a valid oauth2 session.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">loggedin_app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">res</span><span class="o">.</span><span class="n">content_type</span> <span class="o">==</span> <span class="s1">&#39;text/html; charset=utf-8&#39;</span>
+    <span class="k">assert</span> <span class="n">res</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
+    <span class="k">assert</span> <span class="s1">&#39;something only shown when logged in&#39;</span> <span class="ow">in</span> <span class="n">res</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">as_text</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="calling-authenticated-apis">
+<h2>Calling authenticated APIs<a class="headerlink" href="#calling-authenticated-apis" title="Permalink to this headline">¶</a></h2>
+<p>Though we’ve managed to create a working session a problem now arises if you
+try to actually call an API, by using <code class="docutils literal notranslate"><span class="pre">google.get('some</span> <span class="pre">url')</span></code> for example.
+Your token will fail to validate and the request will be denied.</p>
+<p>This can be handled by a Python library called <a class="reference external" href="https://github.com/getsentry/responses">responses</a>, which lets us control
+the full HTTP request cycle.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Note that this means we’re essentially mocking the API we’re calling, so
+your tests will continue passing even if the real API has changed behaviour.</p>
+</div>
+<p>Let’s assume the index route calls out to the <a class="reference external" href="https://developers.google.com/+/web/api/rest/">Google Plus API</a> and displays some
+profile information. Here’s how you could handle that.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">import</span> <span class="nn">responses</span>
+
+
+<span class="nd">@responses.activate</span>
+<span class="k">def</span> <span class="nf">test_getting_profile</span><span class="p">(</span><span class="n">loggedin_app</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Test displaying profile information.&quot;&quot;&quot;</span>
+    <span class="n">responses</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+        <span class="n">responses</span><span class="o">.</span><span class="n">GET</span><span class="p">,</span>
+        <span class="s1">&#39;https://www.googleapis.com/plus/v1/people/me&#39;</span><span class="p">,</span>
+        <span class="n">status</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+        <span class="n">json</span><span class="o">=</span><span class="p">{</span>
+          <span class="s1">&#39;kind&#39;</span><span class="p">:</span> <span class="s1">&#39;plus#person&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;118051310819094153327&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;displayName&#39;</span><span class="p">:</span> <span class="s1">&#39;Chirag Shah&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;https://plus.google.com/118051310819094153327&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;image&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;https://lh5.googleusercontent.com/-XnZDEoiF09Y/AAAAAAAAAAI/AAAAAAAAYCI/7fow4a2UTMU/photo.jpg&#39;</span>
+          <span class="p">}</span>
+        <span class="p">})</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">loggedin_app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">responses</span><span class="o">.</span><span class="n">calls</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+    <span class="k">assert</span> <span class="n">res</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
+    <span class="k">assert</span> <span class="n">res</span><span class="o">.</span><span class="n">content_type</span> <span class="o">==</span> <span class="s1">&#39;text/html; charset=utf-8&#39;</span>
+    <span class="k">assert</span> <span class="s1">&#39;some profile information we fetched&#39;</span> <span class="ow">in</span> <span class="n">res</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">as_text</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Responses can do a lot more for you, but you’ll have to refer to its
+documentation instead.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Testing</a><ul>
+<li><a class="reference internal" href="#creating-a-session">Creating a session</a></li>
+<li><a class="reference internal" href="#calling-authenticated-apis">Calling authenticated APIs</a></li>
+</ul>
+</li>
+</ul>
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="how-oauth-works.html" title="previous chapter">How OAuth Works</a></li>
+      <li>Next: <a href="api.html" title="next chapter">Developer Interface</a></li>
+  </ul></li>
+</ul>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/testing.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+<div class="github">
+    <a href="https://github.com/singingwolfboy/flask-dance">
+        <span>Fork me on GitHub</span>
+        <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+    </a>
+</div>
+
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2018, David Baumgold.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.2.
+    </div>
+    
+
+  </body>
+</html>
