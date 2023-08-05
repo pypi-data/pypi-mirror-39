@@ -1,0 +1,11 @@
+README.md
+setup.py
+boxberry/__init__.py
+boxberry/client.py
+boxberry/exceptions.py
+boxberry/utils.py
+boxberry.egg-info/PKG-INFO
+boxberry.egg-info/SOURCES.txt
+boxberry.egg-info/dependency_links.txt
+boxberry.egg-info/requires.txt
+boxberry.egg-info/top_level.txt
