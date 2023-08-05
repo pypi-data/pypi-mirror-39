@@ -1,0 +1,12 @@
+README.md
+setup.py
+gradpy/__init__.py
+gradpy/autodiff.py
+gradpy/math.py
+gradpy.egg-info/PKG-INFO
+gradpy.egg-info/SOURCES.txt
+gradpy.egg-info/dependency_links.txt
+gradpy.egg-info/requires.txt
+gradpy.egg-info/top_level.txt
+gradpy/tests/__init__.py
+gradpy/tests/test_autodiff.py
