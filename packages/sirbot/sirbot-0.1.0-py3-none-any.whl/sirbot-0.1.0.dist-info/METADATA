@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: sirbot
+Version: 0.1.0
+Summary: The good Sir Bot-a-lot. An asynchronous python bot framework.
+Home-page: UNKNOWN
+License: MIT
+Author: Ovv
+Author-email: contact@ovv.wtf
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: aiofiles (>=0.4.0,<0.5.0)
+Requires-Dist: aiohttp (>=3.4,<4.0)
+Requires-Dist: apscheduler (>=3.5,<4.0)
+Requires-Dist: asyncio-contextmanager (>=1.0,<2.0)
+Requires-Dist: asyncpg (>=0.18.2,<0.19.0)
+Requires-Dist: gidgethub (>=3.0,<4.0)
+Requires-Dist: slack-sansio (>=0.7.0,<0.8.0)
+Requires-Dist: ujson (>=1.35,<2.0)
