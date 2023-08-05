@@ -1,0 +1,34 @@
+Metadata-Version: 2.0
+Name: stdscuts
+Version: 0.0.2
+Summary: Python Standard Shortcuts
+Home-page: UNKNOWN
+Author: Arthur RENAUD
+Author-email: arthur.b.renaud@gmail.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved
+Classifier: Natural Language :: French
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Communications
+Requires-Python: >=3.5
+
+
+# STDSCUTS - Standard shortcuts
+
+This repo intends to holds lots of "pythonic short cuts", based on self experience, that combine "heuristics" and "tricks" in order to make the Pythonista's life easier. True Pythonists will see lots of dangerous "thin wrappers" of existing functions, let them live.
+
+## Remarks : 
+This folder uses pipenv for dependencies handling
+
+## Image functions
+
+## Scraping functions
+
+
+
+
