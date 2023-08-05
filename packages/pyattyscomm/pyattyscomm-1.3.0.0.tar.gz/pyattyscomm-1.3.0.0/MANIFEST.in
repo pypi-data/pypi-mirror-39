@@ -1,0 +1,3 @@
+include *.py
+include README_py
+recursive-include attyscomm *
