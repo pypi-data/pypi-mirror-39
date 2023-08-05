@@ -1,0 +1,38 @@
+Metadata-Version: 1.2
+Name: blackPanther-pydialog
+Version: 0.9.8
+Summary: PyDialog [PyQt5] is a new dialog instead kdialog or zenity
+Home-page: https://github.com/blackPantherOS/pydialog
+Author: Charles Barcza, Miklos Horvath
+Maintainer: Miklos Horvath <hmiki@blackpantheros.eu>
+License: GPLv3+
+Description: 
+            My problem was that the kdialog code is still not ported previously to Qt5 
+            and it depends on various Qt4/KDE4 components. 
+            The kdialog has big dependency sizes so we made an alternate dialogs like 
+            kdialog switches, options (Zenity is too ugly and Gtk based). 
+            We would still like full compatibility with kdialog but a few options are 
+            still not finished and although this release provides many important 
+            functions.
+        
+            Patches, extensions, ideas are welcome!
+        
+            Maintainer Miklos Horvath 
+            Project idea, design, contributor and first code by me (Charles K. B.)    
+            
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Desktop Environment
+Classifier: Topic :: Desktop Environment :: K Desktop Environment (KDE)
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: POSIX :: BSD :: FreeBSD
+Classifier: Operating System :: POSIX :: BSD :: OpenBSD
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
