@@ -1,0 +1,71 @@
+language: python
+cache: pip
+addons:
+  postgresql: '9.6'
+stages:
+- name: linting
+- name: test
+- name: deploy
+  if: tag IS present
+python:
+- 2.7
+- 3.5
+- 3.6
+env:
+  matrix:
+  - ODOO="8.0"
+  - ODOO="9.0"
+  - ODOO="10.0"
+  - ODOO="11.0"
+  - ODOO="12.0"
+  - ODOO="master"
+  global:
+    secure: w8heQH47y0/trzq5dJjpuuZsGQITOCKGLMIR7Au8cuka8OEPN+a9Ay6oSHSi2/uY14nFdjzaD/dV+kxmCZgREF6iuVaGnFWl0ZQjZK02iUqAmHFa2wNj9hNP527XIS35s7VqUiR8caluCwoVeIoKKyf/pzQh1/ZXK/doEER5oESRG5ciETw+7/2h0ALIAgHCsaVdwTDO6/ju24mv1hkYH69qZdUWdEdpVz3e35u6vT+X1gGK5P9vfH3alQTHpuPrDI8Cf+H6vO/K/QdgGSGMyFWw3VKsjFOQDO5OqDF5ZEu6sVqFogo2nYN3ra9/wVx9WwBZ0HiG4fPr0MmwMaSje6C8uuZ8PfWAOzT3uwoiLSyy3coAe+GX2zoEGsa7YeG4DETQEm6glwkd99WvGq6qtIpW01ubUPVI6fXoaFkjr3Y+/ACwjzYdZwGAgBUbja5WVDSq2qJYf1V+Ou6WGuZ9X4nN7xOGNw02+Ru7QWB2Q0HCnofrE5nntBypSQWnjxnMDa+c3+XK4yncDCOHBybU7rvYGJJ5uIX3i/6n7e90OUipgzevIeA5b1c6ldJjehHoFqKa+jO3/krVL/Sj3QhX/vUn9jYNRxeMLm33434ehJzmpg5/kZy3+benWuAZosDx4qOh7TJvbtXF6SJGjTGfhGnvjliAiat8p/QMX+P0/94=
+matrix:
+  exclude:
+  - env: ODOO="8.0"
+    python: 3.5
+  - env: ODOO="8.0"
+    python: 3.6
+  - env: ODOO="9.0"
+    python: 3.5
+  - env: ODOO="9.0"
+    python: 3.6
+  - env: ODOO="10.0"
+    python: 3.5
+  - env: ODOO="10.0"
+    python: 3.6
+  - env: ODOO="11.0"
+    python: 2.7
+  - env: ODOO="12.0"
+    python: 2.7
+  - env: ODOO="master"
+    python: 2.7
+install:
+- pip install tox-travis
+- pip install codecov
+script:
+- tox
+after_success:
+- codecov
+jobs:
+  include:
+    - stage: linting
+      python: 3.6
+      env: TOXENV=pre-commit
+    - stage: linting
+      python: 3.6
+      env: TOXENV=check-readme
+    - stage: deploy
+      python: 3.6
+      if: tag IS present
+      deploy:
+        provider: pypi
+        user: xoe-labs
+        password:
+          secure: "$PYPI_TOKEN"
+        distributions: sdist bdist_wheel
+        skip_upload_docs: true
+        on:
+          repo: xoe-labs/dodoo-initializer
+          tags: true
