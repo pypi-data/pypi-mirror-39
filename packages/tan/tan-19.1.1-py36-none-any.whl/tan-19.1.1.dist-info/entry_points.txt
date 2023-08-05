@@ -1,0 +1,4 @@
+[console_scripts]
+tan = black:patched_main
+tand = blackd:patched_main [d]
+
