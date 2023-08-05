@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+barbell
+setup.py
+barbell.egg-info/PKG-INFO
+barbell.egg-info/SOURCES.txt
+barbell.egg-info/dependency_links.txt
+barbell.egg-info/requires.txt
+barbell.egg-info/top_level.txt
+barbell_creator/__init__.py
