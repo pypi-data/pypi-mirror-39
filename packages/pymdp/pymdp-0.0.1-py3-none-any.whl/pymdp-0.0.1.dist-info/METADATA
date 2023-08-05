@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pymdp
+Version: 0.0.1
+Summary: Markov decision processes in Python
+Home-page: https://github.com/minqi/PyMDP
+Author: Minqi Jiang
+Author-email: mnqjng@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: nose
+
+An easy-to-use library for constructing and solving Markov decision processes.
+
+
