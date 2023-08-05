@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: bestia
+Version: 0.8.0
+Summary: A collection of tools for building dynamic Command-Line applications
+Home-page: https://github.com/synestematic/bestia
+Author: Federico Rizzo
+Author-email: yo@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Description-Content-Type: text/markdown
+
+# bestia
+***
+Bestia is a library of functions and classes designed to help you build dynamic command-line applications on Linux / Darwin systems.
+
+## modules
+
+* connect
+* iter
+* misc
+* output
+
+## functions
+
+### connect
+
+### iter
+
+### misc
+
+### output
+
+
