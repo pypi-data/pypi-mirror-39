@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        putio-download=putio_downloader.cli:main
+    
