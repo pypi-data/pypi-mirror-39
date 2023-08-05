@@ -1,0 +1,6 @@
+[neutron.ml2.mechanism_drivers]
+ansible = networking_ansible.ml2.mech_driver:AnsibleMechanismDriver
+
+[tempest.test_plugins]
+networking_ansible_whitebox = net_ansible_tempest.plugin:NetAnsibleTempestPlugin
+
