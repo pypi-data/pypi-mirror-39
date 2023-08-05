@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: x448-python
+Version: 1.0.0
+Summary: Pure Python3 implementation of x448.
+Home-page: https://github.com/plizonczyk/x448-python
+Author: Piotr Lizonczyk
+Author-email: plizonczyk.public@gmail.com
+License: UNKNOWN
+Description: # x448-python
+        Implementation of x448 formerly used within [noiseprotocol package](https://github.com/plizonczyk/noiseprotocol).
+        
+        Although it should be compliant with RFC 7748 and is tested (on import) with the vectors provided in RFC, these are all the promises you can get. The implementation may be vulnerable to side channel attacks or worse. You have been warned.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
