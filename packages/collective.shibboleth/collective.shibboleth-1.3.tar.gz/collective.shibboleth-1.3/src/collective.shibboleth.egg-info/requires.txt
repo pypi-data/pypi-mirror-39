@@ -1,0 +1,9 @@
+setuptools
+collective.monkeypatcher
+collective.pluggablelogin>=1.1
+Products.AutoUserMakerPASPlugin>=1.0dev
+zope.formlib
+
+[test]
+plone.app.testing
+Products.PloneTestCase
