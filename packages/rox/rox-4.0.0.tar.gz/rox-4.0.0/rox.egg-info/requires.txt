@@ -1,0 +1,6 @@
+cryptography
+requests
+six
+
+[:python_version == "2.7"]
+futures
