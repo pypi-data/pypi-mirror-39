@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: agora-py
+Version: 0.5.44
+Summary: A Python library for Web-scale Ontology-driven Access to Distributed Linked Data
+Home-page: https://github.com/fserena/agora-py
+Author: Fernando Serena
+Author-email: kudhmud@gmail.com
+License: Apache 2
+Download-URL: https://github.com/fserena/agora-py/tarball/0.5.44
+Keywords: linked-data,traversal,sparql
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: flask
+Requires-Dist: shortuuid
+Requires-Dist: Flask-Negotiate
+Requires-Dist: redis (<3.0.0)
+Requires-Dist: hiredis
+Requires-Dist: rdflib (==4.2.1)
+Requires-Dist: networkx (>=2.0)
+Requires-Dist: futures
+Requires-Dist: rfc3987
+Requires-Dist: python-dateutil
+
+UNKNOWN
+
+
