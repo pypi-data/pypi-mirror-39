@@ -1,0 +1,9 @@
+plugins:
+  source:
+    - module: intake_avro
+sources:
+  test:
+    description: Short example parquet data
+    driver: avro_table
+    args:
+      urlpath: !template '{{ CATALOG_DIR }}/../tests/twitter*.avro'
