@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ef-open
+Version: 0.4.0
+Summary: CloudFormation Tools by Ellation
+Home-page: https://github.com/crunchyroll/ef-open
+Author: Ellation, Inc.
+Author-email: ops@ellation.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Requires-Dist: boto3
+Requires-Dist: PyYAML
+Provides-Extra: test
+Requires-Dist: mock ; extra == 'test'
+Requires-Dist: pylint ; extra == 'test'
+
+UNKNOWN
+
+
