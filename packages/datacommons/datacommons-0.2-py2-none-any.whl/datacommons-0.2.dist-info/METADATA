@@ -1,0 +1,28 @@
+Metadata-Version: 2.0
+Name: datacommons
+Version: 0.2
+Summary: A library to access Data Commons API.
+Home-page: https://github.com/google/datacommons
+Author: datacommons.org
+Author-email: datacommons@google.com
+Maintainer: datacommons.org
+Maintainer-email: datacommons@google.com
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development
+Requires-Python: >=2.7.0
+Requires-Dist: google-api-python-client
+Requires-Dist: httplib2
+Requires-Dist: numpy
+Requires-Dist: oauth2client
+Requires-Dist: pandas
+
+UNKNOWN
+
+
