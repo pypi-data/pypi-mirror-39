@@ -1,0 +1,8 @@
+pytest
+sphinx
+sphinx_rtd_theme
+rdflib>=4.2.2
+rdflib-jsonld
+wheel
+twine
+
