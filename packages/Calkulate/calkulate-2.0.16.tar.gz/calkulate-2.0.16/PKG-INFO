@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: calkulate
+Version: 2.0.16
+Summary: Seawater total alkalinity from titration data
+Home-page: https://github.com/mvdh7/calkulate-uea
+Author: Matthew P. Humphreys
+Author-email: m.p.humphreys@cantab.net
+License: UNKNOWN
+Description: # calkulate
+        
+        Seawater total alkalinity from open-cell, non-purged, stepwise, potentiometric titration data
+        
+        Written by Matthew P. Humphreys
+        University of East Anglia, Norwich, UK
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
