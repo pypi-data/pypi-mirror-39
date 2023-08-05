@@ -1,0 +1,6 @@
+IBATS_Huobi_Feeder
+mysqlclient>=1.3.8
+numpy==1.14.4
+pandas==0.23.0
+SQLAlchemy==1.2.8
+click>=7.0
