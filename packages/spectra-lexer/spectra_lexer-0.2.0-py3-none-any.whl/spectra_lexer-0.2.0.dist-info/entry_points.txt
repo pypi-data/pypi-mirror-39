@@ -1,0 +1,6 @@
+[console_scripts]
+spectra_lexer = spectra_lexer.__main__:main
+
+[plover.gui.qt.tool]
+lexer_dialog = spectra_lexer.gui_qt.plover_dialog:PloverDialog
+
