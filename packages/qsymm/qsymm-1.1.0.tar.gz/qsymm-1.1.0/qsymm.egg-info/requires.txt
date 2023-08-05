@@ -1,0 +1,8 @@
+numpy>=1.13
+scipy>=1.1.0
+sympy>=1.1
+tinyarray
+notebook
+
+[kwant]
+kwant
