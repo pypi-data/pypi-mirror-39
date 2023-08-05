@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+purge_static/__init__.py
+purge_static/__main__.py
+purge_static/main.py
+purge_static.egg-info/PKG-INFO
+purge_static.egg-info/SOURCES.txt
+purge_static.egg-info/dependency_links.txt
+purge_static.egg-info/entry_points.txt
+purge_static.egg-info/requires.txt
+purge_static.egg-info/top_level.txt
+purge_static/cdn/__init__.py
+purge_static/cdn/cloudflare.py
