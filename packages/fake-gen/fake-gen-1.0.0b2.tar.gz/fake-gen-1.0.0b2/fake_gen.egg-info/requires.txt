@@ -1,0 +1,11 @@
+faker>0.8.0
+
+[dev]
+pymongo
+
+[mongo]
+pymongo
+
+[test]
+pytest
+pymongo
