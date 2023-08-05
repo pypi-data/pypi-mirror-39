@@ -1,0 +1,7 @@
+prompt_toolkit~=2.0
+
+[test]
+pytest~=4.0
+pytest-pep8~=1.0
+pytest-cov~=2.6
+coveralls~=1.3
