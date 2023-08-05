@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+ansible_cached_lookup.py
+setup.cfg
+setup.py
+tox.ini
+ansible_cached_lookup.egg-info/PKG-INFO
+ansible_cached_lookup.egg-info/SOURCES.txt
+ansible_cached_lookup.egg-info/dependency_links.txt
+ansible_cached_lookup.egg-info/requires.txt
+ansible_cached_lookup.egg-info/top_level.txt
