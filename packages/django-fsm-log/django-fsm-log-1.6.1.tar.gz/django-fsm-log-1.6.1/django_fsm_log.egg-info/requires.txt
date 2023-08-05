@@ -1,0 +1,9 @@
+django>=1.8
+django_fsm>=2
+django_appconf
+
+[testing]
+pytest
+pytest-cov
+pytest-django
+pytest-mock
