@@ -1,0 +1,11 @@
+README.md
+setup.py
+src/microdns/__init__.py
+src/microdns/__main__.py
+src/microdns/microdns.py
+src/microdns.egg-info/PKG-INFO
+src/microdns.egg-info/SOURCES.txt
+src/microdns.egg-info/dependency_links.txt
+src/microdns.egg-info/entry_points.txt
+src/microdns.egg-info/requires.txt
+src/microdns.egg-info/top_level.txt
