@@ -1,0 +1,9 @@
+Number of intersection: 5
+Percent: a (62.50%);c (100.00%)
+Fisher test: pvalue: 1.6003542490941967e-15, oddsration: 3747.75, expected: 0.00433333333333
+Atnum,a_pv,a_log2FC,c_pv,c_log2FC
+name6,0.05,10.05,1
+name7,0.05,10.05,1
+name4,0.05,10.05,1
+name5,0.05,10.05,1
+name8,0.05,10.05,1
