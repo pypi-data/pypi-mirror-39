@@ -1,0 +1,10 @@
+README.md
+setup.py
+apispec_serpyco/__init__.py
+apispec_serpyco/openapi.py
+apispec_serpyco/utils.py
+apispec_serpyco.egg-info/PKG-INFO
+apispec_serpyco.egg-info/SOURCES.txt
+apispec_serpyco.egg-info/dependency_links.txt
+apispec_serpyco.egg-info/requires.txt
+apispec_serpyco.egg-info/top_level.txt
