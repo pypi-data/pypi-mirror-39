@@ -1,0 +1,11 @@
+Backwards incompatible changes
+
+- Drop Python 3.4 support
+- Drop Elm 0.18 support
+- Require `--fake-license` flag to be specified when invoking elm-doc
+
+New behaviors
+
+- Elm 0.19 is the new & only Elm version supported
+- Create an `.elm-doc` directory at the root of the target project
+- Do not require any C extension to be built when installing elm-doc

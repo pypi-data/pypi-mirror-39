@@ -1,0 +1,115 @@
+dist: trusty
+sudo: false
+
+os:
+  - linux
+
+cache:
+  directories:
+    - $PIP_CACHE_DIR
+    - $PIPENV_CACHE_DIR
+    - $HOME/.yarn-cache
+
+env:
+  global:
+    - PIP_CACHE_DIR=$HOME/.cache/pip
+    - PIPENV_CACHE_DIR=$HOME/.cache/pipenv
+
+language: python
+
+python:
+  - 3.5
+  - 3.6
+  - nightly
+
+matrix:
+  include:
+  - env: WITH_YARN=yes
+    python: "3.5"
+  - env: CHECK_INSTALL=yes
+    python: "3.5"
+
+before_install:
+  - pip --version
+  - pip install codecov
+  - pip install -U pip setuptools
+  - |
+    if [[ $WITH_YARN == 'yes' ]]; then
+      # Repo for newer Node.js versions
+      curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+      # Repo for Yarn
+      curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+      echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+      sudo apt-get update -qq && sudo apt-get install -y -qq yarn
+    fi
+
+install:
+  - pip install 'pipenv>=2018.10.9' tox-travis
+  - pipenv --version
+  - pipenv install --dev
+
+before_script:
+  - git lfs version
+  - git lfs pull
+  - find . -iname '*.tar.gz'
+
+script:
+  - |
+    set -o errexit
+
+    if [[ "$CHECK_INSTALL" == 'yes' ]]; then
+      pip install .
+      elm-doc --help
+      python -c 'import elm_doc.asset_tasks; assert elm_doc.asset_tasks.tarball.exists()'
+    else
+      pipenv run doit --verbosity 2
+
+      if [ ! -z "$(git status --porcelain)" ]; then
+        git status
+
+        set -o xtrace
+
+        mkdir old-assets new-assets
+        (
+          cd new-assets
+          tar xf ../src/elm_doc/assets/assets.tar.gz
+          find . -type f -exec md5sum {} \; | sort > ../new-assets.txt
+        )
+        git checkout src
+        (
+          cd old-assets
+          tar xf ../src/elm_doc/assets/assets.tar.gz
+          find . -type f -exec md5sum {} \; | sort > ../old-assets.txt
+        )
+        diff -u old-assets.txt new-assets.txt
+
+        mkdir old-core new-core
+        (
+          cd new-core
+          tar xf ../tests/fixtures/0.19.0-elm-core.tar.gz
+          find . -type f -exec md5sum {} \; | sort > ../new-core.txt
+        )
+        git checkout tests
+        (
+          cd old-core
+          tar xf ../tests/fixtures/0.19.0-elm-core.tar.gz
+          find . -type f -exec md5sum {} \; | sort > ../old-core.txt
+        )
+        diff -u old-core.txt new-core.txt
+
+        echo Tasks in dodo.py created files untracked by git or modified files tracked by git.
+        echo See git status above.
+        exit 1
+      fi
+
+      tox -v
+    fi
+
+    set +o errexit
+
+after_success:
+  - tox -e coverage-report
+  - codecov
+
+notifications:
+  email: false
