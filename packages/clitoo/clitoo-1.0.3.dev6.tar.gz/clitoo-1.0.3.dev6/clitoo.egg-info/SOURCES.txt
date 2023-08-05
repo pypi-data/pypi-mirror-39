@@ -1,0 +1,10 @@
+README.rst
+setup.py
+clitoo/__init__.py
+clitoo/git.py
+clitoo.egg-info/PKG-INFO
+clitoo.egg-info/SOURCES.txt
+clitoo.egg-info/dependency_links.txt
+clitoo.egg-info/entry_points.txt
+clitoo.egg-info/requires.txt
+clitoo.egg-info/top_level.txt
