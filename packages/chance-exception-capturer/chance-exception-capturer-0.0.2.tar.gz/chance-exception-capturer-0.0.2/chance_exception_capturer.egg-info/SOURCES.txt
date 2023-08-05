@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+chance_exception_capturer.egg-info/PKG-INFO
+chance_exception_capturer.egg-info/SOURCES.txt
+chance_exception_capturer.egg-info/dependency_links.txt
+chance_exception_capturer.egg-info/not-zip-safe
+chance_exception_capturer.egg-info/requires.txt
+chance_exception_capturer.egg-info/top_level.txt
+exception_capturer/__init__.py
+exception_capturer/capture.py
