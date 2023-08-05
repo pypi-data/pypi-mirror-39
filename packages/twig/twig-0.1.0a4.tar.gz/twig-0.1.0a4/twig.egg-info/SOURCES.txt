@@ -1,0 +1,14 @@
+setup.py
+twig/__init__.py
+twig/compiler.py
+twig/filesystem.py
+twig.egg-info/PKG-INFO
+twig.egg-info/SOURCES.txt
+twig.egg-info/dependency_links.txt
+twig.egg-info/not-zip-safe
+twig.egg-info/requires.txt
+twig.egg-info/top_level.txt
+twig/backends/__init__.py
+twig/backends/vyper.py
+twig/utils/__init__.py
+twig/utils/compiler.py
