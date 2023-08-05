@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+spotish/__init__.py
+spotish/__main__.py
+spotish.egg-info/PKG-INFO
+spotish.egg-info/SOURCES.txt
+spotish.egg-info/dependency_links.txt
+spotish.egg-info/entry_points.txt
+spotish.egg-info/requires.txt
+spotish.egg-info/top_level.txt
