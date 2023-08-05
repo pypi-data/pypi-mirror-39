@@ -1,0 +1,24 @@
+Metadata-Version: 1.2
+Name: pytest-pytestrail
+Version: 0.0.1a0
+Summary: pytest plugin for interaction with TestRail
+Home-page: https://github.com/tolstislon/pytest-pytestrail
+Author: tolstislon
+Author-email: tolstislon@gmail.com
+License: MIT License
+Description: =================
+        pytest-pytestrail
+        =================
+        
+        Pytest plugin for interaction with TestRail
+Keywords: testrail,pytest,pytest-testrail,pytest-pytestrail,testrail_api
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Pytest
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Testing
+Requires-Python: >=3.6
