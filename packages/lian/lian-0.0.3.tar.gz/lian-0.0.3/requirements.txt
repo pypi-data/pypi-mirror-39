@@ -1,0 +1,7 @@
+setuptools
+pymysql
+tornado
+redis
+pika
+motor
+bson
