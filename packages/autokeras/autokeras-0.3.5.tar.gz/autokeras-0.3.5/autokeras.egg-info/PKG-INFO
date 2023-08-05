@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: autokeras
+Version: 0.3.5
+Summary: AutoML for deep learning
+Home-page: http://autokeras.com
+Author: DATA Lab at Texas A&M University
+Author-email: jhfjhfj1@gmail.com
+License: MIT
+Download-URL: https://github.com/jhfjhfj1/autokeras/archive/0.3.5.tar.gz
+Description: UNKNOWN
+Keywords: AutoML,keras
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
