@@ -1,0 +1,23 @@
+Lightnovel Crawler
+-----------------------
+
+Crawls lightnovels from various websites and converts into epub, mobi and text.
+
+List of supported sites are given below.
+
+- https://lnmtl.com
+- https://www.webnovel.com
+- https://wuxiaworld.online
+- https://www.wuxiaworld.com
+- https://www.wuxiaworld.co
+- https://boxnovel.com
+- https://www.readlightnovel.org
+- https://novelplanet.com
+- https://lnindo.org
+- https://www.idqidian.us
+
+To request new site create an issue here: https://github.com/dipu-bd/site-to-epub/issues.
+
+For usage instructions visit: https://github.com/dipu-bd/lightnovel-crawler
+
+
