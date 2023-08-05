@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: faaspact-maker
+Version: 0.0.9
+Summary: Make and mock pacts in python for faas microservices.
+Home-page: https://github.com/zhammer/faaspact-maker
+Author: Zach Hammer
+Author-email: zach.the.hammer@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: responses
+Requires-Dist: requests
+Requires-Dist: typing-extensions
+
+# faaspact-maker
+
+Make and mock pacts in python for faas microservices.
+
+
