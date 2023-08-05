@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pnodes
+Version: 0.1
+Summary: Pretty print pbsnodes (-a) on Torque/PBS.
+Home-page: https://github.com/esteinig/pnodes
+Author: Eike J. Steinig
+Author-email: eikejoachim.steinig@my.jcu.edu.au
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: colorama
+Requires-Dist: delegator.py
+Requires-Dist: tqdm
+Requires-Dist: python-dateutil
+Requires-Dist: click
+
+UNKNOWN
+
+
