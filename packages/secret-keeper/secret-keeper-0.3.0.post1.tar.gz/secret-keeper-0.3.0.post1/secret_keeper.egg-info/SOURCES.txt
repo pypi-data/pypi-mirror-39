@@ -1,0 +1,13 @@
+README.md
+setup.py
+ridi/secret_keeper/__init__.py
+ridi/secret_keeper/cmdline.py
+ridi/secret_keeper/config.py
+ridi/secret_keeper/connect.py
+secret_keeper.egg-info/PKG-INFO
+secret_keeper.egg-info/SOURCES.txt
+secret_keeper.egg-info/dependency_links.txt
+secret_keeper.egg-info/entry_points.txt
+secret_keeper.egg-info/requires.txt
+secret_keeper.egg-info/top_level.txt
+test/test_secret_keeper.py
