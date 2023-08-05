@@ -1,0 +1,12 @@
+README.md
+setup.py
+pymdp/__init__.py
+pymdp/mdp.py
+pymdp/mdp_solver.py
+pymdp.egg-info/PKG-INFO
+pymdp.egg-info/SOURCES.txt
+pymdp.egg-info/dependency_links.txt
+pymdp.egg-info/requires.txt
+pymdp.egg-info/top_level.txt
+pymdp/tests/__init__.py
+pymdp/tests/test_mdp.py
