@@ -1,0 +1,22 @@
+# -- coding: utf-8 --
+
+from GlodonLibrary.keywords import *
+from .version import VERSION
+
+class GlodonLibrary(
+    PublicFunction,
+    Control,
+    HttpReq,
+    FileRead,
+    BaseFunc,
+    RedisFunc,
+    run_program,
+    GetBoxParams,
+    restart_service,
+    start_service,
+    win_set_time_by_now
+):
+
+    """自定义的方法库"""
+    ROBOT_LIBRARY_SCOPE = 'GLOBAL'
+    ROBOT_LIBRARY_VERSION = VERSION
