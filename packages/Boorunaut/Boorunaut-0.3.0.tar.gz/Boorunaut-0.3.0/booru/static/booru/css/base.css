@@ -1,0 +1,20 @@
+body{
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+a{
+    color: #006ffa;
+}
+
+a:hover{
+    color: #33cfff;
+    text-decoration: unset;
+}
+
+small{
+    color: #aaaaaa;
+}
+
+.sub_navbar{
+    background-color: #e7f1fc;
+}

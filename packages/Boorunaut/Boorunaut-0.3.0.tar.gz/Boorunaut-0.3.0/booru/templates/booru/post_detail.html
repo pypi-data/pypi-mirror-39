@@ -1,0 +1,344 @@
+{% extends 'booru/base.html' %}
+
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'booru/css/post_detail.css' %}"/>
+{% endblock %}
+
+{% block ld_json %}
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": "{{post.media.url}}",
+      "datePublished": "{{post.timestamp|date:'c'}}",
+      "description": "{{post.description}}"
+    }
+</script>
+
+<link href="{{post.get_absolute_url}}" rel="canonical" />
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'booru/js/post_detail.js' %}"></script>
+    <script>
+        var is_favorited = {{is_favorited|yesno:'true,false'}};
+        var current_vote = {{current_vote}};
+        var favorite_url = "{% url 'booru:post_favorite' post.id %}";
+        var vote_url = "{% url 'booru:post_score_vote' post.id %}";
+    </script>
+{% endblock %}
+
+{% block body %}
+    {% load humanize %}
+    {% load number_converter %}
+    {% load markdown_deux_tags %}
+    {% load permission_tags %}
+    <div class="row">
+        <div id="sidebar" class="col-md-3 col order-2 order-md-1">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    {% if previous_post %}
+                    <li class="page-item">
+                        <a class="page-link" href="{% url 'booru:post_detail' previous_post.id %}">
+                            <i class="fas fa-chevron-left"></i> Previous
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">
+                            <i class="fas fa-chevron-left"></i> Previous
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if next_post %}
+                    <li class="page-item">
+                        <a class="page-link" href="{% url 'booru:post_detail' next_post.id %}">
+                            Next <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">
+                            Next <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div class="row text-center">
+                <span class="col mb-2">
+                    <a href="{% url 'booru:post_history' post.id %}" type="button" class="btn btn-sm btn-primary">
+                        <i class="fas fa-history"></i> History
+                    </a>
+                </span>
+            </div>
+            <div id="tag-tables" class="col">
+                {% for category, tags in ordered_tags.items %}
+                <div id="tag-table-{{category.label}}" class="mb-3">
+                    <div class="row col">
+                        <span class="font-weight-bold">{{category}}</span>
+                    </div>
+                    <table class="tag-table table-sm table borderless">
+                        <tbody>
+                            {% for tag in tags %}
+                            <tr>
+                                {% if category.label == "general" %}
+                                <th class="tag-wiki-link" scope="row">
+                                    <a href="{% url 'booru:tag_detail' tag.id %}">
+                                        ?
+                                    </a>
+                                </th>
+                                <td class="tag-label">
+                                    <a href="{% url 'booru:posts' %}?tags={{tag}}">{{tag}}</a>
+                                </td>
+                                {% else %}
+                                <th class="tag-wiki-link" scope="row">
+                                    <a style="color: #{{category.color}};" href="{% url 'booru:tag_detail' tag.id %}">
+                                        ?
+                                    </a>
+                                </th>
+                                <td class="tag-label">
+                                    <a style="color: #{{category.color}};" href="{% url 'booru:posts' %}?tags={{tag}}">{{tag}}</a>
+                                </td>
+                                {% endif %}
+                                <td class="tag-count">{{tag.get_count|number_converter}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="col mb-3">
+                <div class="row col">
+                    <span class="font-weight-bold">Information</span>
+                </div>
+                
+                <table class="table table-sm mt-2 borderless" style="table-layout: fixed; word-break: break-all;">
+                    <tbody>
+                        <tr>
+                            <th scope="row">ID</th>
+                            <td>{{post.id}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Uploader</th>
+                            <td><a href="{{post.uploader.get_absolute_url}}">{{post.uploader}}</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Date</th>
+                            <td>
+                                <time datetime="{{post.timestamp|date:'c'}}" title="{{post.timestamp|date}}">
+                                    {{post.timestamp|naturaltime}}
+                                </time>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Size</th>
+                            <td>
+                                <a href="{{post.media.url}}">{{post.media.size}} KB</a>
+                                ({{post.get_media_width}}x{{post.get_media_height}})
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Source</th>
+                            <td>
+                                {% for source in post.get_sources %}
+                                <a href="{{source}}">{{source}}</a><br/>
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Rating</th>
+                            <td>{{post.get_rating_display}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Score</th>
+                            <td id="score_count">{{post.get_score_count}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Favorites</th>
+                            <td id="favorite_count">{{post.get_favorites_count}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Status</th>
+                            <td>{{post.get_status_display}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                {% if user.is_authenticated %}
+                <div class="row text-center">
+                    <span class="col-2 offset-3" data-toggle="tooltip" title="Mark as favorite">
+                        <button id="btn_favorited" type="button" class="btn btn-primary">
+                            <i class="fas fa-star"></i>
+                        </button>
+                    </span>
+                    <span class="col-2" data-toggle="tooltip" title="Upvote">
+                        <button id="btn_vote_up" type="button" class="btn btn-primary">
+                            <i class="fas fa-thumbs-up"></i>
+                        </button>
+                    </span>
+                    <span class="col-2" data-toggle="tooltip" title="Downvote">
+                        <button id="btn_vote_down" type="button" class="btn btn-primary">
+                            <i class="fas fa-thumbs-down"></i>
+                        </button>
+                    </span>
+                </div>
+                {% else %}
+                <div class="row text-center">
+                    <span class="col-2 offset-3" data-toggle="tooltip" title="Login to mark posts as favorite">                            
+                        <button type="button" class="btn btn-primary" disabled>
+                            <i class='fas fa-star'></i>
+                        </button>
+                    </span>
+                    <span class="col-2" data-toggle="tooltip" title="Login to upvote posts">
+                        <button type="button" class="btn btn-primary" disabled>
+                            <i class="fas fa-thumbs-up"></i>
+                        </button>
+                    </span>
+                    <span class="col-2" data-toggle="tooltip" title="Login to downvote posts">
+                        <button type="button" class="btn btn-primary" disabled>
+                            <i class="fas fa-thumbs-down"></i>
+                        </button>
+                    </span>
+                </div>
+                {% endif %}                
+            </div>
+        </div>
+        <div id="post" class="col-9 order-1 order-md-2">
+            {% if post.status == 2 %}
+            <div class="alert alert-warning text-center" role="alert">
+                This post was hid by a staff member.
+            </div>
+            {% elif post.status == 3 %}
+            <div class="alert alert-danger text-center" role="alert">
+                This post was deleted by a staff member.
+            </div>
+            {% endif %}
+            <div class="row mb-3">
+                <div class="col">                    
+                    {% if user|can:'change_status' or not post.status == 3 %}
+                    {% if post.media_type == 0 %}
+                    <img src="{{post.get_sample_url}}" alt="" style="max-width: 100%;">
+                    {% elif post.media_type == 1 %}
+                    <video controls> 
+                        <source src={{post.media.url}}>
+                    </video>
+                    {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-2 mb-4">
+                    {% if request.user.show_comments %}
+                    <button id="show_comments" class="btn btn-primary btn mr-1">Comments</button>
+                    {% endif %}
+                    <button id="show_edit_form" class="btn btn-outline-primary btn mr-3">Edit</button>
+                    {% if user|can:'change_status' %}
+                    <div class="float-right">
+                        <a id="approve_post" href="{% url 'booru:post_approve' post.id %}" class="btn btn-success btn mr-1">Approve</a>
+                        <a id="hide_post" href="{% url 'booru:post_hide' post.id %}" class="btn btn-warning btn mr-1">Hide</a>
+                        <a id="delete_post" href="{% url 'booru:post_delete' post.id %}" class="btn btn-danger btn">Delete</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% if post.description %}
+            <div class="row">
+                <div class="card col-10">
+                    <div class="card-body">
+                        <h5 class="card-title">Description</h5>
+                        <p class="card-text">{{post.description|markdown}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            <div class="row mb-2">
+                <div id="edit" class="col-10" style="display: none;">
+                    <form method="post" action="." enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        {% for field in form %}
+                        <div class="form-group">
+                            <label for="{{field.auto_id}}">{{ field.label }}</label>
+                            {{ field }}
+                            {% if field.errors %}
+                            <div class="invalid-feedback">
+                                {{field.errors}}
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+        
+                        <div class="form-group">
+                            <div class="col">
+                                <button type="submit" id="send" class="btn btn-primary submit-media">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {% if request.user.show_comments %}
+            <div id="comment-section" class="mb-3">
+                <div id="comments" class="row">
+                    {% for comment in post.comments.all %}
+                    <div id="comment-{{comment.id}}" class="comment col-10 border comment-border pt-3 pb-3 mb-2">
+                        <div class="row">
+                            <div class="comment col">
+                                <div class="row">
+                                    <span class="col">
+                                        {% if comment.author.is_deleted %}
+                                        <h5>{{comment.author.get_name}}</h5>
+                                        {% else %}
+                                        <h5><a href="{{comment.author.get_absolute_url}}">{{comment.author.get_name}}</a></h5>
+                                        {% endif %}
+                                    </span>
+                                </div>
+                                <div class="row">
+                                    <span class="col text-muted">
+                                        {{comment.timestamp|naturaltime}}
+                                    </span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">
+                                        <small>Score: {{comment.get_score}}</small>
+                                    </span>
+                                </div>                            
+                            </div>
+                            <div class="comment col-9">                                
+                                {{comment.content|markdown}}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div id="comment-create-form" class="row mt-3">
+                    <form class="col-10" method="post" action="." enctype="multipart/form-data">
+                        {% if not user.is_authenticated %}
+                        <fieldset disabled>
+                        {% endif %}
+
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {% if not user.is_authenticated %}
+                            <label for="newCommentTextarea" class="text-muted">New comment (Login to comment)</label>
+                            {% else %}
+                            <label for="newCommentTextarea">New comment</label>
+                            {% endif %}
+                            <textarea class="form-control" id="newCommentTextarea" name="newCommentTextarea" rows="3" {% if not can_comment %}placeholder="This account cannot comment currently." disabled{% endif %}></textarea>
+                        </div>
+                        {% if can_comment %}
+                        <button type="submit" id="send" class="btn btn-sm btn-primary">Create comment</button>
+                        {% endif %}
+                        
+                        {% if not user.is_authenticated %}
+                        </fieldset>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

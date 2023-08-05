@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">        
+
+        {% load staticfiles %}
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/cosmo/bootstrap.min.css"> -->
+        <link rel="stylesheet" type="text/css" href="{% static 'booru/css/custom_cosmo.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'booru/css/base.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'booru/jQuery-Tags-Input-1.3.6/jquery.tagsinput.min.css' %}"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        {% block css %}
+        {% endblock %}
+
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="{% static 'booru/jQuery-Tags-Input-1.3.6/jquery.tagsinput.min.js' %}"></script>
+        <script src="{% static 'booru/js/tag_search_autocomplete.js' %}"></script>
+        <script>
+            var tag_search_url = "{% url 'booru:tag_search' %}";
+            var tags = "{{tags}}";
+        </script>
+        {% block scripts %}
+        {% endblock %}
+
+        <title>
+            {% block title %}{{SITE_TITLE}} | Imageboard{% endblock %}
+        </title>
+        
+        <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "{{SITE_TITLE}}",
+            "url" : "{{request.get_host}}",
+            "potentialAction": [{
+                "@type": "SearchAction",
+                "target": "{{request.get_host}}{% url 'booru:posts' %}?tags={search_term}",
+                "query-input": "required name=search_term"
+            }]
+        }
+        </script>
+        {% block ld_json %}
+        <link href="{{request.get_host}}" rel="canonical" />
+        {% endblock %}
+    </head>
+    <body>
+        {% load static %}
+        {% include 'booru/navbar.html' %}
+
+        {% if SITE_ANNOUNCEMENT %}
+        <div class="container">
+            {% load markdown_deux_tags %}
+            <div class="alert alert-info" role="alert">
+                {{SITE_ANNOUNCEMENT|markdown}}
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="container">
+            {{SITE_CUSTOM_CODE|safe}}
+        </div>
+
+        <div class="container-fluid mt-4">
+        {% block body %}
+        {% endblock %}
+        </div>
+
+        <footer class="page-footer font-small pt-4">
+            <div class="text-center py-3">
+                Running Boorunaut - <a href="{% url 'core:terms_of_service' %}">Terms of service</a> - <a href="{% url 'core:privacy_policy' %}">Privacy policy</a>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    </body>
+</html>

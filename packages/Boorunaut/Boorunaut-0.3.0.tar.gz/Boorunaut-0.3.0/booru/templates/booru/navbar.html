@@ -1,0 +1,105 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="{% url 'booru:posts' %}">{{SITE_TITLE}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="{% url 'booru:upload' %}"><i class="fas fa-upload"></i> Upload</a>
+        </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 col-md-4" action="{% url 'booru:posts' %}">
+            <input id="tags" name="tags" class="tag-search form-control col-md-9" type="search" placeholder="lorem_ipsum dolor_sit" aria-label="Search" data-role="tagsinput" hidden>
+            <div class="input-group-append">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </div>
+        </form>
+        {% if user.is_staff %}
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'booru:staff_page' %}">Staff</a>
+            </li>
+        </ul>
+        {% endif %}
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'account:settings' %}">Settings</a>
+            </li>
+            {% if not user.is_authenticated %}
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'account:register' %}">Register</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'account:login' %}">Login</a>
+            </li>
+            {% else %}
+            <li class="nav-item active">
+                <a class="nav-link" href="{{user.get_absolute_url}}">Profile</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'account:logout' %}">Logout</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+<ul class="nav sub_navbar mb-4">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Images
+        </a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="{% url 'booru:posts' %}">List</a>
+            <a class="dropdown-item disabled" href="#">Random</a>
+        </div>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle disabled" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Activity
+        </a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Rankings</a>
+            <a class="dropdown-item" href="#">Comments</a>
+        </div>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle disabled" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Forums
+        </a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">General Discussion</a>
+            <a class="dropdown-item" href="#">Tagging Discussion</a>
+            <a class="dropdown-item" href="#">Site and Policy</a>
+            <a class="dropdown-item" href="#">Uploader Discussion</a>
+            <a class="dropdown-item" href="#">Post Search</a>
+        </div>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Tags
+        </a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="{% url 'booru:tags_list' %}">List</a>
+            <a class="dropdown-item" href="{% url 'booru:implication-list' %}">Implications</a>
+        </div>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Request
+        </a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="{% url 'booru:implication_create' %}">New implication</a>
+        </div>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Galleries
+        </a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="{% url 'booru:gallery' %}">List</a>
+            <a class="dropdown-item" href="{% url 'booru:gallery_create' %}">Create</a>
+        </div>
+    </li>
+</ul>
