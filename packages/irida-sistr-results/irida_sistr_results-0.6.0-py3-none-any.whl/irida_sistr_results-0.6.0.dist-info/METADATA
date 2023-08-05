@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: irida-sistr-results
+Version: 0.6.0
+Summary: Exports SISTR results available through IRIDA into a single report.
+Home-page: https://github.com/phac-nml/irida-sistr-results
+Author: Aaron Petkau
+Author-email: aaron.petkau@gmail.com
+License: Apache v2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: POSIX :: Linux
+Requires-Dist: rauth (>=0.7.3)
+Requires-Dist: urllib3 (>=1.21.1)
+Requires-Dist: XlsxWriter (>=0.9.8)
+Requires-Dist: appdirs (>=1.4.3)
+Requires-Dist: pandas (>=0.23.0)
+
+UNKNOWN
+
+
