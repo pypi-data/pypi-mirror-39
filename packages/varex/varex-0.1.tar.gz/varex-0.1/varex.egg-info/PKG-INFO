@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: varex
+Version: 0.1
+Summary: Genomic variant explorer
+Home-page: http://github.com/Alaya/varex
+Author: Kate McKenzie
+Author-email: kate.j.mckenzie@gmail.com
+License: MIT
+Download-URL: https://github.com/Alaya/varex/archive/v0.1-alpha.tar.gz
+Description: Varex: a genomic variant explorer
+        ---------------------------------
+        
+        Uploads variant data in VCF format and provides a browser interface supporting interactive exploration of that data.
+        
+Platform: UNKNOWN
+Classifier: Framework :: Flask
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Intended Audience :: Science/Research
