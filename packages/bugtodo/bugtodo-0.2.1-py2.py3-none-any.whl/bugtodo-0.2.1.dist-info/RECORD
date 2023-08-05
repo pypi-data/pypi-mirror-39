@@ -1,0 +1,12 @@
+bugtodo/__init__.py,sha256=2UahxHudEVQlZ6vUJYGhVsgux9LLJswKoUPLTWvEBUY,285
+bugtodo/cli.py,sha256=k6iGSfGs8BDmE905m1f94W_H3YwLWNV7oSZ6fjkMv7g,1821
+bugtodo/services/__init__.py,sha256=7dFwItAb-PlmV5RAIZQRQswHZT0S4pEgC0Tx9sF_7_0,407
+bugtodo/services/base.py,sha256=2G-D9K_Fhak1JMq2QC5V4Tz1Uu8J93Lixs5S6y9TBKw,4078
+bugtodo/services/gitlab.py,sha256=d5P_aunPdSM0euklrpy2asepbVMwPCbgNkfb6JBO6L4,3802
+bugtodo/services/jira.py,sha256=jx1IfZX5cMvhurTdPLnV8mpfPg7MGE7695DM-mLvCVQ,2323
+bugtodo/services/taiga.py,sha256=ZAtkeRLuADWZ-OKqozzDrY2zeJsG_6WKJ7zpUHUgcMQ,2367
+bugtodo-0.2.1.dist-info/METADATA,sha256=qYyVi5tFP451CK6McDDvcJw8gNmrMod7AZhZRM4Sv28,800
+bugtodo-0.2.1.dist-info/WHEEL,sha256=CihQvCnsGZQBGAHLEUMf0IdA4fRduS_NBUTMgCTtvPM,110
+bugtodo-0.2.1.dist-info/entry_points.txt,sha256=yJWkqIfY-l4-urHlUAFfYBUlwvA6hksEROq9zPNw9Uc,45
+bugtodo-0.2.1.dist-info/top_level.txt,sha256=wUgXkSRX25mI3g3Ai0VeQRkWwDJXzJassRpoOpQtykw,8
+bugtodo-0.2.1.dist-info/RECORD,,

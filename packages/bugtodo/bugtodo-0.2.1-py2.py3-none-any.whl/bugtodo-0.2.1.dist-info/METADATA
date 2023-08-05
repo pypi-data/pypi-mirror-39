@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: bugtodo
+Version: 0.2.1
+Summary: Simple task list sync tools to use with todo.txt file format
+Home-page: https://gitlab.com/SirEdvin/bugtodo
+Author: Bogdan Gladyshev
+Author-email: siredvin.dark@gmail.com
+License: MIT license
+Keywords: todo.txt task sync
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: jira
+Requires-Dist: click
+Requires-Dist: toml
+Requires-Dist: coloredlogs
+Requires-Dist: python-todotxt (>=0.1.1)
+Requires-Dist: python-gitlab
+Requires-Dist: python-taiga
+
+=======================
+Bugwarrior for todo.txt
+=======================
+
+
