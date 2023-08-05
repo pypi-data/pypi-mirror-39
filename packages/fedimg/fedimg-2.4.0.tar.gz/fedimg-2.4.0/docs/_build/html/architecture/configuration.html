@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Configuration &#8212; Fedimg 1.3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Fedimg 1.3.0 documentation" href="../index.html" />
+    <link rel="next" title="FedimgConsumer" href="consumer.html" />
+    <link rel="prev" title="Fedimg" href="../index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<p>Fedimg pulls its configuration variables from the file located at
+<cite>/etc/fedimg/fedimg-conf.toml</cite>. A example file is included in the source of
+fedimg, and can be used as a starting point for writing your own configuration
+file.</p>
+<div class="section" id="general-options">
+<h2>General options<a class="headerlink" href="#general-options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="clean-up-on-failure">
+<span id="conf-clean-up-on-failure"></span><h3>clean_up_on_failure<a class="headerlink" href="#clean-up-on-failure" title="Permalink to this headline">¶</a></h3>
+<p>A boolean that, if <code class="docutils literal"><span class="pre">True</span></code>, will destroy all the resources that was created,
+if there is an exception during the upload process.</p>
+</div>
+<div class="section" id="delete-image-on-failure">
+<span id="conf-delete-image-on-failure"></span><h3>delete_image_on_failure<a class="headerlink" href="#delete-image-on-failure" title="Permalink to this headline">¶</a></h3>
+<p>A boolean that, if <code class="docutils literal"><span class="pre">False</span></code>, will skip the the destruction of the
+uploaded image if there is an exception in the upload process.</p>
+</div>
+<div class="section" id="process-count">
+<span id="conf-process-count"></span><h3>process_count<a class="headerlink" href="#process-count" title="Permalink to this headline">¶</a></h3>
+<p>An integer to specify the number of <a class="reference external" href="https://docs.python.org/2/library/multiprocessing.html#using-a-pool-of-workers">worker process</a> that would be running.</p>
+</div>
+<div class="section" id="active-services">
+<span id="conf-active-services"></span><h3>active_services<a class="headerlink" href="#active-services" title="Permalink to this headline">¶</a></h3>
+<p>A list of active third party services where Fedimg would upload the cloud
+images. Valid values within the list: <cite>aws</cite>.</p>
+</div>
+</div>
+<div class="section" id="aws-options">
+<h2>AWS options<a class="headerlink" href="#aws-options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="access-id">
+<span id="conf-access-id"></span><h3>access_id<a class="headerlink" href="#access-id" title="Permalink to this headline">¶</a></h3>
+<p>Access ID of the AWS account that will be used.</p>
+</div>
+<div class="section" id="secret-key">
+<span id="conf-secret-key"></span><h3>secret_key<a class="headerlink" href="#secret-key" title="Permalink to this headline">¶</a></h3>
+<p>Secret Key of the AWS account that will be used.</p>
+</div>
+<div class="section" id="base-region">
+<span id="conf-base-region"></span><h3>base_region<a class="headerlink" href="#base-region" title="Permalink to this headline">¶</a></h3>
+<p>The base region among the list of AWS regions where the upload process of the
+cloud images will be done.</p>
+</div>
+<div class="section" id="bucket-name">
+<span id="conf-bucket-name"></span><h3>bucket_name<a class="headerlink" href="#bucket-name" title="Permalink to this headline">¶</a></h3>
+<p>A string that contains the name of the S3 bucket used in AWS. Fedimg does not
+create the S3 bucket so make sure that the bucket already exists before using.</p>
+</div>
+<div class="section" id="regions">
+<span id="conf-regions"></span><h3>regions<a class="headerlink" href="#regions" title="Permalink to this headline">¶</a></h3>
+<p>A list containing the list of regions where the AMIs would be copied from the
+<code class="docutils literal"><span class="pre">base_region</span></code>. This regions should not contain the <code class="docutils literal"><span class="pre">base_region</span></code> to avoid
+duplicate images.</p>
+</div>
+<div class="section" id="volume-size">
+<span id="conf-volume-size"></span><h3>volume_size<a class="headerlink" href="#volume-size" title="Permalink to this headline">¶</a></h3>
+<p>An integer, specifying the size of the volume to be created in GiB.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Configuration</a><ul>
+<li><a class="reference internal" href="#general-options">General options</a><ul>
+<li><a class="reference internal" href="#clean-up-on-failure">clean_up_on_failure</a></li>
+<li><a class="reference internal" href="#delete-image-on-failure">delete_image_on_failure</a></li>
+<li><a class="reference internal" href="#process-count">process_count</a></li>
+<li><a class="reference internal" href="#active-services">active_services</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#aws-options">AWS options</a><ul>
+<li><a class="reference internal" href="#access-id">access_id</a></li>
+<li><a class="reference internal" href="#secret-key">secret_key</a></li>
+<li><a class="reference internal" href="#base-region">base_region</a></li>
+<li><a class="reference internal" href="#bucket-name">bucket_name</a></li>
+<li><a class="reference internal" href="#regions">regions</a></li>
+<li><a class="reference internal" href="#volume-size">volume_size</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../index.html" title="previous chapter">Fedimg</a></li>
+      <li>Next: <a href="consumer.html" title="next chapter">FedimgConsumer</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/architecture/configuration.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Sayan Chowdhury, Ralph Bean, David Gay.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/architecture/configuration.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
