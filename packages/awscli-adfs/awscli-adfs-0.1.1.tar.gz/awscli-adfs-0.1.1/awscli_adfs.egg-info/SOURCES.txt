@@ -1,0 +1,15 @@
+README.md
+setup.py
+aws_cli_adfs/__init__.py
+aws_cli_adfs/cli.py
+aws_cli_adfs/constants.py
+aws_cli_adfs/exceptions.py
+aws_cli_adfs/log.py
+aws_cli_adfs/login.py
+aws_cli_adfs/utils.py
+awscli_adfs.egg-info/PKG-INFO
+awscli_adfs.egg-info/SOURCES.txt
+awscli_adfs.egg-info/dependency_links.txt
+awscli_adfs.egg-info/entry_points.txt
+awscli_adfs.egg-info/requires.txt
+awscli_adfs.egg-info/top_level.txt

@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        aws-adfs = aws_cli_adfs.cli:cli
+    

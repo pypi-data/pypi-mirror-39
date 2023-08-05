@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: awscli-adfs
+Version: 0.1.1
+Summary: Login to AWS CLI using Active Directory Federation Services.
+Home-page: UNKNOWN
+Author: duckgogo
+Author-email: zeng.jianxin@foxmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5
