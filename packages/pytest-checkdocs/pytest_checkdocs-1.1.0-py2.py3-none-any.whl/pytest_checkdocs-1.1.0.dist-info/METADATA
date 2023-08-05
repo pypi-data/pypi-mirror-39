@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: pytest-checkdocs
+Version: 1.1.0
+Summary: check the README when running tests
+Home-page: https://github.com/jaraco/pytest-checkdocs
+Author: Jason R. Coombs
+Author-email: jaraco@jaraco.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Pytest
+Requires-Python: >=2.7
+Requires-Dist: docutils
+Requires-Dist: importlib-metadata (>=0.7)
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: jaraco.packaging (>=3.2) ; extra == 'docs'
+Requires-Dist: rst.linker (>=1.9) ; extra == 'docs'
+Provides-Extra: testing
+Requires-Dist: pytest (!=3.7.3,>=3.5) ; extra == 'testing'
+Requires-Dist: collective.checkdocs ; extra == 'testing'
+Requires-Dist: pytest-flake8 ; extra == 'testing'
+
+.. image:: https://img.shields.io/pypi/v/pytest-checkdocs.svg
+   :target: https://pypi.org/project/pytest-checkdocs
+
+.. image:: https://img.shields.io/pypi/pyversions/pytest-checkdocs.svg
+
+.. image:: https://img.shields.io/travis/jaraco/pytest-checkdocs/master.svg
+   :target: https://travis-ci.org/jaraco/pytest-checkdocs
+
+.. .. image:: https://img.shields.io/appveyor/ci/jaraco/pytest-checkdocs/master.svg
+..    :target: https://ci.appveyor.com/project/jaraco/pytest-checkdocs/branch/master
+
+.. .. image:: https://readthedocs.org/projects/pytest-checkdocs/badge/?version=latest
+..    :target: https://pytest-checkdocs.readthedocs.io/en/latest/?badge=latest
+
+
+A pytest plugin that checks the long description of the project to ensure it
+renders properly.
+
+
