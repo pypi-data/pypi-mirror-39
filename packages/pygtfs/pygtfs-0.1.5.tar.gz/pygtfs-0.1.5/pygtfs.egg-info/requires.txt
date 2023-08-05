@@ -1,0 +1,4 @@
+docopt
+pytz>=2012d
+six
+sqlalchemy>=0.7.8
