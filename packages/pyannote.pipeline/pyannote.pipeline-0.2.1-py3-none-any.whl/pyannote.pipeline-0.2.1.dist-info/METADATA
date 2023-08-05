@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pyannote.pipeline
+Version: 0.2.1
+Summary: Tunable pipelines.
+Home-page: http://pyannote.github.io/
+Author: Hervé Bredin
+Author-email: bredin+pyannote@limsi.fr
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: pyannote.core (>=2.0.3)
+Requires-Dist: pyannote.database (>=1.5.4)
+Requires-Dist: PyYAML (>=3.12)
+Requires-Dist: tensorboardX (>=1.4)
+Requires-Dist: chocolate (>=0.6)
+Requires-Dist: ghalton (>=0.6.1)
+Requires-Dist: tqdm (>=4.28.1)
+Requires-Dist: docopt (>=0.6.2)
+Requires-Dist: filelock (>=3.0.4)
+Requires-Dist: scikit-learn (>=0.20)
+
+UNKNOWN
+
+
