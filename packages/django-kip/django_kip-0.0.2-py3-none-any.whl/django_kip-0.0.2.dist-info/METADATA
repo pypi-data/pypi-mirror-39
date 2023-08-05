@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: django-kip
+Version: 0.0.2
+Summary: UNKNOWN
+Home-page: https://bitbucket.org/lullis/django_kip
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Keywords: django ipfs
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Dist: celery
+Requires-Dist: django (>=2.0)
+Requires-Dist: django-model-utils
+Requires-Dist: django-ipfs-storage
+Requires-Dist: psycopg2-binary
+
+UNKNOWN
+
+
