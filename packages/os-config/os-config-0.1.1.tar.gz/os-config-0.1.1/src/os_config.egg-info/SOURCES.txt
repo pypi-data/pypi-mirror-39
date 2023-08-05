@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/os_config/VERSION
+src/os_config/__init__.py
+src/os_config/config.py
+src/os_config.egg-info/PKG-INFO
+src/os_config.egg-info/SOURCES.txt
+src/os_config.egg-info/dependency_links.txt
+src/os_config.egg-info/not-zip-safe
+src/os_config.egg-info/top_level.txt
+tests/test_config.py
