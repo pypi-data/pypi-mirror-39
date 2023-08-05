@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+spomato/__init__.py
+spomato/data.py
+spomato/parsers.py
+spomato/token.py
+spomato.egg-info/PKG-INFO
+spomato.egg-info/SOURCES.txt
+spomato.egg-info/dependency_links.txt
+spomato.egg-info/not-zip-safe
+spomato.egg-info/requires.txt
+spomato.egg-info/top_level.txt
