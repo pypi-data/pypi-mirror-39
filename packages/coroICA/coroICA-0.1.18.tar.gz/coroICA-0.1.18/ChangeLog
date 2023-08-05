@@ -1,0 +1,120 @@
+CHANGES
+=======
+
+0.1.18
+------
+
+* Add neighbouring pairing
+
+0.1.17
+------
+
+* Minor bugfix
+
+0.1.16
+------
+
+* Fix flake8
+* Change name to coroICA
+* Fix PEP8
+* use several partitionsizes
+
+0.1.15
+------
+
+* Make condition\_threshold optional
+
+0.1.14
+------
+
+* Stop uwedge iteration if condition number is growing unreasonably
+
+0.1.13
+------
+
+* Update defaults
+
+0.1.12
+------
+
+* Add signal normalisation to groupICA/groupICA
+* Remove Rx0 normalisation and change initialisation parameter
+
+0.1.11
+------
+
+* Add minimize\_loss option
+
+0.1.10
+------
+
+* Change defaults
+
+0.1.9
+-----
+
+* Use np.empty instead of np.zeros
+* Add max\_matrices=no\_partitions option
+
+0.1.8
+-----
+
+* Add lagged covariance support to groupICA
+* Separate rigidgroup into utils
+* Separate autocov into utils
+* Add allpairs max\_matrices support. Properly deal with random state
+* Add max\_matrices parameter for complement pairing
+
+0.1.7
+-----
+
+* Add warning if no covariance matrices are to be diagonalised
+* Add instantcov parameter
+* Add missing linebreak
+* Update README.md
+* Slightly alter toy example
+* Fix missing timelag parameter
+* Add uwedgeICA to toy example
+* Restrict travis flake8 to examples and groupica folder
+* Fix flake8
+* Add first uwedgeICA implementation
+* Handle n < 2 or dim < 2 cases
+
+0.1.6
+-----
+
+* Add encoding comment
+* Pass sklearn 1 sample test
+* Treat trivial partitions correctly
+* Add orphaned attribute description
+* Add reference
+
+0.1.5
+-----
+
+* Fix typos
+* Use scipy.linalg.eigh
+* Remove obsolete sig2noise
+* Change to https
+
+0.1.4
+-----
+
+* Ensure unmixing matrix is always in shape
+
+0.1.3
+-----
+
+* Add rank-based n\_components and rename the other to n\_components\_uwedge
+
+0.1.2
+-----
+
+* Update travis to reflect upload to pypi not testpypi
+* Add PyPI version badge
+* Add travis status image
+
+0.1.1
+-----
+
+* Initial commit
