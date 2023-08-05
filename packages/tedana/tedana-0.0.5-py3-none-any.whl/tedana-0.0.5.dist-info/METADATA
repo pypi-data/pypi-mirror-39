@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: tedana
+Version: 0.0.5
+Summary: TE-Dependent Analysis (tedana) of multi-echo functional magnetic resonance imaging (fMRI) data.
+Home-page: https://github.com/me-ica/tedana
+Author: tedana developers
+Author-email: emd222@cornell.edu
+Maintainer: Elizabeth DuPre
+Maintainer-email: emd222@cornell.edu
+License: LGPL 2.1
+Download-URL: https://github.com/ME-ICA/tedana/archive/0.0.5.tar.gz
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: pywavelets
+Requires-Dist: nilearn
+Requires-Dist: nibabel (>=2.1.0)
+Requires-Dist: scipy
+Requires-Dist: versioneer
+Requires-Dist: pandas
+Provides-Extra: all
+Requires-Dist: sphinx-argparse ; extra == 'all'
+Requires-Dist: sphinx (>=1.5.3) ; extra == 'all'
+Requires-Dist: pytest-cov ; extra == 'all'
+Requires-Dist: pytest ; extra == 'all'
+Requires-Dist: duecredit ; extra == 'all'
+Requires-Dist: codecov ; extra == 'all'
+Requires-Dist: numpydoc ; extra == 'all'
+Requires-Dist: sphinx-rtd-theme ; extra == 'all'
+Provides-Extra: doc
+Requires-Dist: sphinx (>=1.5.3) ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme ; extra == 'doc'
+Requires-Dist: sphinx-argparse ; extra == 'doc'
+Requires-Dist: numpydoc ; extra == 'doc'
+Provides-Extra: duecredit
+Requires-Dist: duecredit ; extra == 'duecredit'
+Provides-Extra: tests
+Requires-Dist: codecov ; extra == 'tests'
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+
+To do.
+
+
