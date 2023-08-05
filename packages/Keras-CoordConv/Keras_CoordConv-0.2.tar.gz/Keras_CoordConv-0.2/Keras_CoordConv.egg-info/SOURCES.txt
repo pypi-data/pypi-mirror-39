@@ -1,0 +1,11 @@
+README.md
+setup.py
+Keras_CoordConv.egg-info/PKG-INFO
+Keras_CoordConv.egg-info/SOURCES.txt
+Keras_CoordConv.egg-info/dependency_links.txt
+Keras_CoordConv.egg-info/requires.txt
+Keras_CoordConv.egg-info/top_level.txt
+experiments/__init__.py
+experiments/make_dataset.py
+experiments/train_quadrant_classifier.py
+experiments/train_uniform_classifier.py
