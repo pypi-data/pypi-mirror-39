@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: physense-sim
+Version: 1.0.1
+Summary: A simulator for itn160
+Home-page: https://github.com/primeteacher/physense_sim
+Author: Jason Silverstein
+Author-email: jsilver5@dtcc.edu
+License: UNKNOWN
+Description: # The Physical Sensor Simulator
+        
+        This is the README file for the project.
+        
+        The file should be installed using:
+          pip install physense_sim
+        
+Keywords: itn160
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
