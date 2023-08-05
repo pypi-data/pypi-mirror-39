@@ -1,0 +1,3 @@
+[gui_scripts]
+pyscanfcs = pyscanfcs.gui_wx.main:Main
+
