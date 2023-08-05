@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: treeCl
+Version: 0.1.35
+Summary: Phylogenetic Clustering Package
+Home-page: https://github.com/kgori/treeCl.git
+Author: Kevin Gori
+Author-email: kcg25@cam.ac.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyYaml
+Requires-Dist: biopython
+Requires-Dist: cython (>=0.19.0)
+Requires-Dist: dendropy (>=4.0.0)
+Requires-Dist: fastcluster
+Requires-Dist: futures
+Requires-Dist: ipython
+Requires-Dist: matplotlib
+Requires-Dist: nose
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: phylo-utils (==0.0.5)
+Requires-Dist: progressbar-latest (==2.4)
+Requires-Dist: scikit-bio (==0.4.2)
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: tree-distance (>=1.0.6)
+
+UNKNOWN
+
+
