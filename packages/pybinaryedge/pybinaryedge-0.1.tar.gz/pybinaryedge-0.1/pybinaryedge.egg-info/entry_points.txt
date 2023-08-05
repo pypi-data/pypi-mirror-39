@@ -1,0 +1,3 @@
+[console_scripts]
+binaryedge = pybinaryedge.cli:main
+
