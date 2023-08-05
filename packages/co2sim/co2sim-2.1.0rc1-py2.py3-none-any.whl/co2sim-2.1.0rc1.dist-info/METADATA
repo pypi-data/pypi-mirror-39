@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: co2sim
+Version: 2.1.0rc1
+Summary: The Type-Approving vehicle simulator predicting NEDC CO2 emissions from WLTP
+Home-page: https://co2mpas.io/
+Author: CO2MPAS-Team
+Author-email: JRC-CO2MPAS@ec.europa.eu
+License: EUPL 1.1+
+Download-URL: https://pypi.org/project/co2sim/
+Keywords: CO2,fuel-consumption,WLTP,NEDC,vehicle,automotive,EU,JRC,IET,STU,correlation,back-translation,policy,monitoring,M1,N1,simulator,engineering,scientific
+Platform: any
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Development Status :: 4 - Beta
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Manufacturing
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: European Union Public Licence 1.1 (EUPL 1.1)
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Obsoletes: co2mpas (< 2.0)
+Requires-Python: >=3.5
+Provides-Extra: pindeps
+Provides-Extra: io
+Provides-Extra: test
+Provides-Extra: plot
+Requires-Dist: polyversion (>=0.2.2a0)
+Requires-Dist: colorama
+Requires-Dist: formulas (>=0.0.10)
+Requires-Dist: lmfit (>=0.9.7)
+Requires-Dist: logutils
+Requires-Dist: numpy
+Requires-Dist: pandas (>=0.21.0)
+Requires-Dist: regex
+Requires-Dist: schedula[plot] (>=0.2.3)
+Requires-Dist: schema
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: wltp
+Requires-Dist: xgboost
+Provides-Extra: io
+Requires-Dist: boltons; extra == 'io'
+Requires-Dist: contextvars; extra == 'io'
+Requires-Dist: cryptography; extra == 'io'
+Requires-Dist: dill (!=0.2.7); extra == 'io'
+Requires-Dist: docopt; extra == 'io'
+Requires-Dist: openpyxl (>=2.4.0); extra == 'io'
+Requires-Dist: pandalone[xlrd] (>=0.2.0); extra == 'io'
+Requires-Dist: pip; extra == 'io'
+Requires-Dist: PyYAML (>=3.12); extra == 'io'
+Requires-Dist: toolz; extra == 'io'
+Requires-Dist: tqdm; extra == 'io'
+Requires-Dist: xlsxwriter; extra == 'io'
+Provides-Extra: pindeps
+Requires-Dist: asteval (==0.9.12); extra == 'pindeps'
+Requires-Dist: dill (==0.2.7.1); extra == 'pindeps'
+Requires-Dist: formulas (==0.1.0); extra == 'pindeps'
+Requires-Dist: lmfit (==0.9.10); extra == 'pindeps'
+Requires-Dist: networkx (==2.1); extra == 'pindeps'
+Requires-Dist: openpyxl (==2.5.3); extra == 'pindeps'
+Requires-Dist: pandas (==0.23.0); extra == 'pindeps'
+Requires-Dist: schedula[plot] (==0.2.3); extra == 'pindeps'
+Requires-Dist: schema (==0.6.7); extra == 'pindeps'
+Requires-Dist: scikit-learn (==0.19.1); extra == 'pindeps'
+Requires-Dist: scipy (==1.1.0); extra == 'pindeps'
+Requires-Dist: wltp (==0.1.0a3); extra == 'pindeps'
+Requires-Dist: xlrd (==1.1.0); extra == 'pindeps'
+Requires-Dist: XlsxWriter (==1.0.5); extra == 'pindeps'
+Provides-Extra: pindeps
+Requires-Dist: numpy (==1.14.3); (sys_platform != "win32") and extra == 'pindeps'
+Requires-Dist: xgboost (==0.72.1); (sys_platform != "win32") and extra == 'pindeps'
+Provides-Extra: pindeps
+Requires-Dist: numpy (==1.14.3+mkl); (sys_platform == "win32") and extra == 'pindeps'
+Requires-Dist: xgboost (==0.72); (sys_platform == "win32") and extra == 'pindeps'
+Provides-Extra: plot
+Requires-Dist: matplotlib; extra == 'plot'
+Requires-Dist: schedula[plot]; extra == 'plot'
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-runner; extra == 'test'
+Requires-Dist: flake8; extra == 'test'
+Requires-Dist: flake8-builtins; extra == 'test'
+Requires-Dist: flake8-mutable; extra == 'test'
+Requires-Dist: ddt; extra == 'test'
+
+==================================================================
+co2SIM: Vehicle simulator predicting NEDC CO2 emissions from WLTP
+==================================================================
+
+..  https://img.shields.io/pypi/v/co2sim.svg
+    :alt: Deployed in PyPi?
+    :target: https://pypi.org/pypi/co2sim
+
+..  https://readthedocs.org/projects/co2mpas/badge/?version=latest
+    :target: https://co2mpas.readthedocs.io/en/latest/?badge=latest
+    :alt: Auto-generated documentation status
+
+.. _coord-start:
+
+:version:       2.1.0rc1
+:updated:       2018-11-30T18:36:25.565335
+:Documentation: http://co2mpas.io/
+:repository:    https://github.com/JRCSTU/CO2MPAS-TA/
+:pypi-repo:     https://pypi.org/project/co2sim/
+:copyright:     2018 JRC.C4(STU), European Commission (`JRC <https://ec.europa.eu/jrc/>`_)
+:license:       `EUPL 1.1+ <https://joinup.ec.europa.eu/software/page/eupl>`_
+
+All project's documentation hosted at https://co2mpas.io/
+
+
