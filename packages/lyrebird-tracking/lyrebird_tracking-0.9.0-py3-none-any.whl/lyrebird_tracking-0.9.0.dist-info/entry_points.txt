@@ -1,0 +1,9 @@
+[console_scripts]
+
+
+[lyrebird_data_handler]
+tracking = lyrebird_tracking.tracking:TrackingHandler
+
+[lyrebird_web]
+tracking = lyrebird_tracking.webui:Tracking
+
