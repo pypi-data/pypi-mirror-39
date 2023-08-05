@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: dateutil-br
+Version: 0.0.1
+Summary: IMplementation to Pt-br of python lib python-dateutil
+Home-page: http://github.com/magrathealabs/dateutil-br
+Author: Magrathea Labs
+Author-email: contact@magrathealabs.com
+License: MIT
+Description: UNKNOWN
+Keywords: date parser python,date parser,dateutil,dateutil-br,data em português
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
