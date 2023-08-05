@@ -1,0 +1,26 @@
+<script language="JavaScript">
+    window.formAction = "{{ form_action }}";
+    showDateTimePicker($(".datepicker"), 'YYYY-MM-DD')
+    $('textarea').attr("rows", 3)
+
+
+    {% for r in ancestors %}
+        $('#id_{{ r.name }}').change(function () {
+            var childSelect = '#id_{{r.child.name}}';
+            {% for os in r.offsprings %}
+                clearOptions('#id_{{ os.name }}');
+            {% endfor %}
+            var value = $(this).val();
+            var url = '{{ url_prefix }}/{{ r.child.class_name }}/?format=json&{{ r.name }}=' + value;
+            {% for k,v in r.child.filters.items %}
+                url = url + "&" + "{{k}}=" + "{{v}}";
+            {% endfor %}
+            if (value) $.get(url, function (result) {
+                updateOptions(result, childSelect)
+            });
+        })
+
+    {% endfor %}
+
+</script>
+

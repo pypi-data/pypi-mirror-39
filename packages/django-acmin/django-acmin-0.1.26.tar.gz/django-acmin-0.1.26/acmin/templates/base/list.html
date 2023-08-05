@@ -1,0 +1,120 @@
+{% extends 'base/template.html' %}
+{% load attr %}
+{% load truncate %}
+{% load display %}
+{% block breadcrumb %}
+    <ul class="breadcrumb">
+        <li><a href="#!name=/{{ model_name }}">{{ model_verbose_name }}</a></li>
+        <li class="active">列表</li>
+    </ul>
+    {% if creatable %}
+        <a class="ace-icon fa fa-plus" href="#!name=/{{ model_name }}/create"> 新建</a>&nbsp;&nbsp;
+    {% endif %}
+    {% if exportable %}
+        <a class="ace-icon fa fa-download" href="javascript:exportExcel();">导出</a>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div id="csrf-container" style="display: none;"></div>
+    {% if messages %}
+        <div class="alert alert-block alert-success" id="form-save-success">
+            {% for message in messages %}
+                <b>{{ message }}</b><br/>
+            {% endfor %}
+        </div>
+    {% endif %}
+    <div class="row">
+        {% block pre-row %}{% endblock %}
+        <div class="col-xs-12">
+            {% include "base/filters.html" %}
+            <div class="table-responsive">
+                {% include "base/paginator.html" %}
+                {% block table %}
+                    <table id="simple-table" class="table  table-bordered table-hover">
+                        <thead>
+                        {% block thead %}
+                            <tr>
+                                {% if operable %}
+                                    <th>
+                                        {% if selectable %}
+                                            <input type="checkbox" id="id-select-all"/>
+                                        {% endif %}
+                                    </th>
+                                {% endif %}
+                                {% if show_index %}
+                                    <th>ID</th>{% endif %}
+                                {% for field in list_fields %}
+                                    <th>{{ field.verbose }}{% include "base/sort.html" %}</th>
+                                {% endfor %}
+                                {% block post_th %} {% endblock %}
+                            </tr>
+                        {% endblock %}
+                        </thead>
+                        <tbody>
+                        {% block tbody %}
+                            {% if list %}
+                                {% for m in list %}
+                                    <tr>
+                                        {% if operable %}
+                                            <td>
+                                                {% block actions %}
+                                                    <div class="btn-group">
+                                                        {% if selectable %}
+                                                            <input type="checkbox" name="id_checkbox" value="{{ field.id }}"/>
+                                                        {% endif %}
+                                                        {% if viewable  %}
+                                                            <a href="#!name=/{{ model_name }}/{{ m.id }}/">查看</a>
+                                                        {% endif %}
+                                                        {% if removable %}
+                                                            <a href="#!action=delete&name=/{{ model_name }}/{{ m.id }}">删除</a>
+                                                        {% endif %}
+                                                        {% if cloneable %}
+                                                            <a href="#!name=/{{ model_name }}/{{ m.id }}?clone">复制</a>
+                                                        {% endif %}
+                                                        {% block extra-actions %}{% endblock %}
+                                                    </div>
+                                                {% endblock %}
+                                            </td>
+                                        {% endif %}
+                                        {% if show_index %}
+                                            <td>{{ m.id }}</td>
+                                        {% endif %}
+                                        {% for field in list_fields %}
+                                            <td style="color:{{ m.color }}">
+                                                {% block field-td %}
+                                                    {% if field.class_name and viewable %}
+                                                        {% with id=field.attribute_name|add:".id" %}
+                                                            <a href="#!name=/{{ field.class_name }}/{{ m|attr:id }}/">
+                                                                {{ m|display:field.attribute_name|truncate }}
+                                                            </a>
+                                                        {% endwith %}
+                                                    {% else %}
+                                                        {{ m|display:field.attribute_name|truncate }}
+                                                    {% endif %}
+                                                {% endblock %}
+                                            </td>
+                                        {% endfor %}
+                                        {% block post_td %} {% endblock %}
+                                    </tr>
+                                    {% block post_tr %} {% endblock %}
+                                {% endfor %}
+                            {% else %}
+                                <tr>
+                                    <td colspan="200">No data found</td>
+                                </tr>
+                            {% endif %}
+
+
+                        {% endblock %}
+                        </tbody>
+                    </table>
+                {% endblock %}
+                {% include "base/paginator.html" %}
+            </div>
+        </div>
+        {% block post-row %}{% endblock %}
+    </div>
+    {% block post-content %}{% endblock %}
+{% endblock %}
+

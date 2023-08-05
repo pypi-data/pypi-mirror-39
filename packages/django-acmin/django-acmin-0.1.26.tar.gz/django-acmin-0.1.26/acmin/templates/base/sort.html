@@ -1,0 +1,21 @@
+{% load attr %}
+{% load concat %}
+{% load define %}
+
+{% if field.orderable %}
+    {% define "alert-danger" as clazz %}
+    {% if request.GET|attr:"sort" == "-"|concat:field.attribute_name %}
+        {% define clazz as descClass %}
+    {% endif %}
+    {% if request.GET|attr:"sort" == field.attribute_name %}
+        {% define clazz as ascClass %}
+    {% endif %}
+
+    <a href="javascript:sort('-{{ field.attribute_name }}')">
+        <small><span class='fa fa-arrow-down {{ descClass }}'></span></small>
+    </a>
+    <a href="javascript:sort('{{ field.attribute_name }}')">
+        <small><span class='fa fa-arrow-up {{ ascClass }}'></span></small>
+    </a>
+
+{% endif %}
