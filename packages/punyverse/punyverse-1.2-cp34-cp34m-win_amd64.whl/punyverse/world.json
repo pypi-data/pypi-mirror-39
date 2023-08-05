@@ -1,0 +1,322 @@
+{
+  "comments": {
+    "au": "greatly shrunk so planets can actually be seen",
+    "tick": "real world second per game tick",
+    "length": "kilometre per world units for satellite distance and planetary radius",
+    "radius": "note that radius is equatorial, flattening will be implemented later",
+    "distance": "virtual distance to look better, in km",
+    "sma": "semi-major axis used with mass of parent to calculate orbit, in km",
+    "mass": "mass in kg",
+    "texture": "a group of texture to use, tried in that order",
+    "model": "used to load a wavefront object instead of a textured sphere"
+  },
+  "au": 10000,
+  "tick": 3600,
+  "length": 63.7,
+  "bodies": {
+    "sun": {
+      "texture": ["sun.jpg"],
+      "radius": 80000,
+      "pitch": -90,
+      "yaw": 7.25,
+      "mass": 1.9891e+30,
+      "rotation": 2164320,
+      "light_source": true,
+      "type": "star",
+      "atmosphere": {
+        "glow_color": [0.92, 0.92, 0.82],
+        "glow_texture": "glow.png",
+        "glow_size": 300
+      }
+    },
+    "mercury": {
+      "texture": ["mercury.jpg", "mercury_small.jpg"],
+      "radius": 2439.7,
+      "z": "0.466697 * AU",
+      "pitch": -90,
+      "yaw": 0.35,
+      "division": 30,
+      "rotation": 5067014
+    },
+    "venus": {
+      "texture": ["venus.jpg"],
+      "radius": 6051.8,
+      "z": "0.723327 * AU",
+      "pitch": -90,
+      "yaw": 177.36,
+      "division": 30,
+      "rotation": -20996798
+    },
+    "earth": {
+      "texture": ["earth.jpg", "earth_large.jpg", "earth_medium.jpg", "earth_small.jpg"],
+      "radius": 6378.1,
+      "z": "AU",
+      "pitch": -90,
+      "yaw": 23.4,
+      "roll": -90,
+      "mass": 5.97219e+24,
+      "rotation": 86400,
+      "division": 90,
+      "normal_map": ["earth_normal.jpg", "earth_normal_small.jpg"],
+      "specular_map": ["earth_specular.jpg", "earth_specular_small.jpg"],
+      "emission_map": ["earth_emission.jpg", "earth_emission_medium.jpg", "earth_emission_small.jpg"],
+      "atmosphere": {
+        "cloud_texture": ["cloudmap.jpg", "cloudmap_small.jpg"],
+        "glow_color": [0.11, 0.32, 0.43],
+        "glow_texture": "glow.png",
+        "glow_size": 30
+      },
+      "orbit_distance": "AU",
+      "satellites": {
+        "moon": {
+          "texture": ["moon.jpg", "moon_medium.jpg", "moon_small.jpg"],
+          "radius": 1738.14,
+          "distance": 38439,
+          "sma": 384399,
+          "division": 30,
+          "eccentricity": 0.0549,
+          "inclination": 5.145,
+          "rotation": 0,
+          "pitch": -90,
+          "yaw": 6.68,
+          "roll": -90
+        },
+        "iss": {
+          "model": "satellites/iss.obj",
+          "inclination": 51.65,
+          "distance": 6800,
+          "scale": 5
+        },
+        "hst": {
+          "model": "satellites/hst.obj",
+          "inclination": 28.5,
+          "distance": 6937,
+          "scale": 5
+        }
+      }
+    },
+    "mars": {
+      "texture": ["mars.jpg", "mars_large.jpg", "mars_medium.jpg", "mars_small.jpg"],
+      "radius": 3396.2,
+      "z": "1.524 * AU",
+      "pitch": -90,
+      "yaw": 25.19,
+      "mass": 6.4185e+23,
+      "rotation": 88643,
+      "orbit_distance": "AU",
+      "division": 30,
+      "satellites": {
+        "phobos": {
+          "distance": 9377,
+          "inclination": 26.04,
+          "eccentricity": 0.0151,
+          "model": "satellites/phobos.obj"
+        }
+      }
+    },
+    "jupiter": {
+      "texture": ["jupiter.jpg", "jupiter_medium.jpg", "jupiter_small.jpg"],
+      "radius": 71492,
+      "mass": 1.8986e+27,
+      "z": "5.2 * AU",
+      "pitch": -90,
+      "yaw": 3.13,
+      "comment": "satellites here are 3/10 the virtual distance than physical, and five times the size",
+      "rotation": 35730,
+      "orbit_distance": "3 * AU",
+      "satellites": {
+        "io": {
+          "texture": ["moons/io.jpg", "moons/io_small.jpg"],
+          "radius": "1821.3 * 5",
+          "distance": 126510,
+          "sma": 421700,
+          "rotation": 0,
+          "pitch": -90,
+          "inclination": 2.21,
+          "eccentricity": 0.0041
+        },
+        "europa": {
+          "texture": ["moons/europa.jpg", "moons/europa_small.jpg"],
+          "radius": "1560.8 * 5",
+          "distance": 201270,
+          "sma": 670900,
+          "pitch": -90,
+          "rotation": 0,
+          "inclination": 2.71,
+          "eccentricity": 0.009
+        },
+        "ganymede": {
+          "texture": ["moons/ganymede.jpg", "moons/ganymede_small.jpg"],
+          "radius": "2634.1 * 5",
+          "distance": 321120,
+          "sma": 1070400,
+          "pitch": -90,
+          "rotation": 0,
+          "inclination": 2.51,
+          "eccentricity": 0.0013
+        },
+        "callisto": {
+          "texture": ["moons/callisto.jpg", "moons/callisto_small.jpg"],
+          "radius": "2410.3 * 5",
+          "distance": 564810,
+          "sma": 1882700,
+          "pitch": -90,
+          "rotation": 0,
+          "inclination": 0.192,
+          "eccentricity": 0.0074
+        }
+      }
+    },
+    "saturn": {
+      "texture": ["saturn.jpg", "saturn_medium.jpg", "saturn_small.jpg"],
+      "radius": 60268,
+      "mass": 5.6846e+26,
+      "z": "9.58 * AU",
+      "pitch": -90,
+      "yaw": 26.73,
+      "rotation": 38052,
+      "ring": {
+        "texture": "ring_saturn.png",
+        "distance": 1169,
+        "size": 2247
+      },
+      "orbit_distance": "4 * AU",
+      "satellites": {
+        "titan": {
+          "texture": ["moons/titan.jpg", "moons/titan_small.jpg"],
+          "radius": "2576 * 10",
+          "distance": "1221870 / 3 + 200000",
+          "sma": 1221870,
+          "pitch": -90,
+          "rotation": 0,
+          "inclination": 27.07854,
+          "eccentricity": 0.0288
+        },
+        "rhea": {
+          "texture": ["moons/rhea.jpg", "moons/rhea_small.jpg"],
+          "radius": "763.8 * 10",
+          "distance": "527108 / 3 + 200000",
+          "sma": 527108,
+          "pitch": -90,
+          "rotation": 0,
+          "inclination": 27.075,
+          "eccentricity": 0.0012583
+        },
+        "iapetus": {
+          "texture": ["moons/iapetus.jpg", "moons/iapetus_small.jpg"],
+          "radius": "734.5 * 10",
+          "distance": "3560820 / 3 + 200000",
+          "sma": 3560820,
+          "pitch": -90,
+          "rotation": 0,
+          "inclination": 17.28,
+          "eccentricity": 0.0286125
+        },
+        "dione": {
+          "texture": ["moons/dione.jpg", "moons/dione_small.jpg"],
+          "radius": "561.4 * 10",
+          "distance": "377396 / 3 + 200000",
+          "sma": 377396,
+          "pitch": -90,
+          "rotation": 0,
+          "inclination": 26.711,
+          "eccentricity": 0.0022
+        },
+        "tethys": {
+          "texture": ["moons/tethys.jpg", "moons/tethys_small.jpg"],
+          "radius": "531.1 * 10",
+          "distance": "294619 / 3 + 200000",
+          "sma": 294619,
+          "pitch": -90,
+          "rotation": 0,
+          "inclination": 25.61,
+          "eccentricity": 0.0001
+        },
+        "enceladus": {
+          "texture": ["moons/enceladus.jpg", "moons/enceladus_small.jpg"],
+          "radius": "252.1 * 10",
+          "distance": "237948 / 3 + 200000",
+          "sma": 237948,
+          "pitch": -90,
+          "rotation": 0,
+          "inclination": 26.711,
+          "eccentricity": 0.0047
+        },
+        "mimas": {
+          "texture": ["moons/mimas.jpg", "moons/mimas_small.jpg"],
+          "radius": "198.2 * 10",
+          "distance": "181902 / 3 + 200000",
+          "sma": 181902,
+          "pitch": -90,
+          "rotation": 0,
+          "inclination": 28.304,
+          "eccentricity": 0.0196
+        },
+        "cassini": {
+          "model": "satellites/cassini.obj",
+          "inclination": 51.65,
+          "eccentricity": 0.5,
+          "distance": "1221870 / 3 + 200000",
+          "sma": 1221870,
+          "scale": 100
+        }
+      }
+    },
+    "uranus": {
+      "texture": ["uranus.jpg"],
+      "radius": 25559,
+      "mass": 8.6810e+25,
+      "z": "19.23 * AU",
+      "pitch": 7.77,
+      "rotation": -62064,
+      "orbit_distance": "6 * AU",
+      "ring": {
+        "texture": "ring_uranus.png",
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 90,
+        "distance": 421,
+        "size": 781
+      }
+    },
+    "neptune": {
+      "texture": ["neptune.jpg"],
+      "radius": 24764,
+      "mass": 1.0243e+26,
+      "z": "30.5 * AU",
+      "orbit_distance": "6 * AU",
+      "rotation": 57996,
+      "pitch": -90,
+      "yaw": 28.32
+    }
+  },
+  "belts": {
+    "main": {
+      "model": ["asteroids/mainbelt.obj", "asteroids/mainbelt2.obj"],
+      "radius": "2.362 * AU",
+      "cross": 1000,
+      "scale": 30,
+      "count": 4096,
+      "rotation": 114536500
+    }
+  },
+  "sky": {
+    "texture": [
+      ["sky_px.jpg", "sky_nx.jpg", "sky_py.jpg", "sky_ny.jpg", "sky_pz.jpg", "sky_nz.jpg"]
+    ],
+    "constellation": [
+      "constellation_px.png", "constellation_nx.png", "constellation_py.png",
+      "constellation_ny.png", "constellation_pz.png", "constellation_nz.png"
+    ],
+    "rotation": 0,
+    "division": 30,
+    "pitch": -119.3,
+    "yaw": -97
+  },
+  "asteroids": ["asteroids/01.obj", "asteroids/02.obj", "asteroids/03.obj"],
+  "font": "font.png",
+  "start": {
+    "z": "AU - 400",
+    "yaw": 180
+  }
+}
