@@ -1,0 +1,86 @@
+Metadata-Version: 1.1
+Name: PyZoltan
+Version: 1.0
+Summary: Wrapper for the Zoltan data management library
+Home-page: http://github.com/pypr/pyzoltan
+Author: PySPH Developers
+Author-email: pysph-dev@googlegroups.com
+License: BSD
+Description-Content-Type: UNKNOWN
+Description: PyZoltan: a Python wrapper for the Zoltan library
+        ==================================================
+        
+        |Travis Status|  |Documentation Status|
+        
+        .. |Travis Status| image:: https://travis-ci.org/pypr/pyzoltan.svg?branch=master
+            :target: https://travis-ci.org/pypr/pyzoltan
+        .. |Documentation Status| image:: https://readthedocs.org/projects/pyzoltan/badge/?version=latest
+            :target: https://pyzoltan.readthedocs.io/en/latest/?badge=latest
+            :alt: Documentation Status
+        
+        PyZoltan is as the name suggests, is a Python wrapper for the Zoltan_
+        data management library.
+        
+        In PyZoltan, we wrap the specific routines and objects that we wish to
+        use. The following features of Zoltan are currently supported:
+        
+        - Dynamic load balancing using geometric algorithms
+        - Unstructured point-to-point communication
+        - Distributed data directories
+        
+        
+        .. _Zoltan: http://www.cs.sandia.gov/Zoltan/
+        
+        Installation
+        -------------
+        
+        PyZoltan requires the following:
+        
+        - numpy
+        - cyarray
+        - Cython
+        - mpi4py_
+        - Zoltan_
+        
+        
+        .. _mpi4py: http://mpi4py.scipy.org/
+        
+        Zoltan itself needs to be already installed. We provide a convenient script
+        called ``build_zoltan.sh`` that can be used to build Zoltan.
+        
+        Many of the other dependencies can be installed using pip or conda::
+        
+          $ pip install -r requirements.txt
+        
+        Once this is installed one can install PyZoltan as follows::
+        
+          $ pip install pyzoltan
+        
+        or via the usual ``setup.py`` method::
+        
+          $ python setup.py install # or develop
+        
+        
+        For more installation instructions, especially on how to build Zoltan and
+        PyZoltan, please see the documentation here: https://pyzoltan.readthedocs.io
+        
+Keywords: Cython Zoltan Dynamic load balancing
+Platform: Linux
+Platform: Mac OS-X
+Platform: Unix
+Platform: Windows
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Software Development :: Libraries

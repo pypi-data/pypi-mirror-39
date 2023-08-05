@@ -1,0 +1,6 @@
+cyarray
+numpy
+Cython>=0.20
+setuptools>=6.0
+mpi4py>=1.2
+pytest>=3.0
