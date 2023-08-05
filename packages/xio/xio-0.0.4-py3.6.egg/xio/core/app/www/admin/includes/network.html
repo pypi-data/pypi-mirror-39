@@ -1,0 +1,36 @@
+
+<xio-script on="render">
+    var self = this
+    app.server.get('xio/admin/network').then(function(resp) {
+
+        var abi = resp.content.abi
+        delete resp.content.abi
+
+        $('#TAB_INFO').html( json2html(resp.content) )
+        $('#TAB_ABI').html( json2html(abi) )
+    })
+    app.server.get('xio/admin/network/db/resources').then(function(resp) {
+        $('#TAB_RESOURCES').html( json2html(resp.content) )
+    })
+</xio-script>
+
+
+<div style="border: solid 1px #000">
+
+    
+    <nav class="nav nav-tabs">
+        <a class="nav-item nav-link active" href="#TAB_INFO" data-toggle="tab">INFO</a>
+        <a class="nav-item nav-link" href="#TAB_ABI" data-toggle="tab">ABI</a>
+        <a class="nav-item nav-link" href="#TAB_RESOURCES" data-toggle="tab">RESOURCES</a>
+    </nav>
+    <div class="tab-content">
+        <div class="tab-pane active" id="TAB_INFO">
+        </div>
+        <div class="tab-pane" id="TAB_ABI">
+        </div>
+        <div class="tab-pane" id="TAB_RESOURCES">
+        </div>
+
+    </div>
+</div>
+

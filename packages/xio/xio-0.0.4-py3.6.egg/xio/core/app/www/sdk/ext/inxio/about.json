@@ -1,0 +1,9 @@
+{
+    "name": "inxio",
+    "version": "1.0.0", 
+    "requirements": [
+        "ipfs",
+        "ext.js"
+    ]
+}
+        

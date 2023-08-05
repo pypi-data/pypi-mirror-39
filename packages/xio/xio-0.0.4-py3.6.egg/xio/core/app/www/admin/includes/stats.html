@@ -1,0 +1,50 @@
+
+<script>
+
+
+showData = function() {
+    app.server.get('xio/admin/stats').then(function(resp) {
+        console.log(resp.content)
+        var html = $('#stats_template').render(resp.content)
+        $('#stats_list').html(html)
+    })
+}
+
+showData()
+
+
+
+</script>
+
+<nav class="navbar navbar-light bg-light sticky-top">
+
+  <xio-button label="stats" icon="refresh" action="showData()"></xio-button>
+</nav>
+
+<section id="stats_list">
+
+</section>
+
+<template id="stats_template">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th >key</th>
+          <th >content</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- {{#.}} -->
+        <tr data-xio-nav="#./{{id}}">
+          <td>{{@id}}</td>
+          <td>{{counter}}</td>
+          <td>
+            <xio-button label="DELETE" action="requestPeer('{{id}}/.about','GET')"></xio-button>
+          </td>
+        </tr>
+        <!-- {{/.}} -->
+      </tbody>
+    </table>
+</template>
+

@@ -1,0 +1,68 @@
+
+<script>
+
+
+showContainers = function() {
+    app.server.get('xio/admin/containers').then(function(resp) {
+        console.log(resp.content)
+        var html = $('#containers_template').render(resp.content)
+        $('#containers_list').html(html)
+
+    })
+}
+requestContainer = function(cid,method) {
+    app.server.request(method,'xio/admin/containers/'+cid+'/.'+method).then(function(resp) {
+        app.ui.popup({
+          'title': method+' '+cid,
+          'content': resp.content
+        })
+    })
+}
+
+
+showContainers()
+
+</script>
+
+<nav class="navbar navbar-light bg-light sticky-top">
+
+  <xio-button label="containers" icon="refresh" action="showContainers()"></xio-button>
+
+
+</nav>
+
+<section id="containers_list">
+
+</section>
+
+
+
+<template id="containers_template">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th >id</th>
+          <th >uri</th>
+          <th >state</th>
+          <th >port</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- {{#.}} -->
+        <tr >
+          <td data-xio-nav="#./{{_id}}">{{_id}}</td> 
+          <td>{{uri}}</td>
+          <td>{{state}}</td>
+          <td><a href="{{endpoint}}/.about" target="_new">{{port}}</a></td>
+          <td>
+            <xio-button label="GET" action="requestContainer('{{_id}}','GET')"></xio-button>
+        
+            <xio-button label="SYNC" action="requestContainer('{{_id}}','SYNC')"></xio-button>
+            <xio-button label="LOGS" action="requestContainer('{{_id}}','LOG')"></xio-button>
+          </td>
+        </tr>
+        <!-- {{/.}} -->
+      </tbody>
+    </table>
+</template>
