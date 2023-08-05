@@ -1,0 +1,10 @@
+[console_scripts]
+cbBuild = cellbrowser.cellbrowser:cbBuildCli
+cbGuessGencode = cellbrowser.guessgenes:cbGuessGencodeCli
+cbImportCellranger = cellbrowser.convert:cbCellrangerCli
+cbImportScanpy = cellbrowser.convert:cbImportScanpyCli
+cbMarkerAnnotate = cellbrowser.geneinfo:cbMarkerAnnotateCli
+cbScanpy = cellbrowser.cellbrowser:cbScanpyCli
+cbTool = cellbrowser.convert:cbToolCli
+cbUpgrade = cellbrowser.cellbrowser:cbMake_cli
+
