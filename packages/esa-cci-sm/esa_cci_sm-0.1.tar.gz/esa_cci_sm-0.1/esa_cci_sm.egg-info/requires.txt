@@ -1,0 +1,16 @@
+numpy
+netCDF4<=1.2.8
+pandas
+pygeobase
+configparser
+pyresample
+repurpose
+pynetcf
+repurpose
+parse
+smecv_grid
+
+[test]
+pytest-cov
+coverage==4.5.2
+pytest
