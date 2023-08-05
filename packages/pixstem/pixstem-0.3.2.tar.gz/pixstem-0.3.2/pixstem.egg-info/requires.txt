@@ -1,0 +1,10 @@
+dask
+h5py
+hyperspy>=1.4
+ipython>=2.0
+matplotlib>=2.0
+numpy>=1.13
+scikit-image
+scikit-learn
+scipy
+tqdm
