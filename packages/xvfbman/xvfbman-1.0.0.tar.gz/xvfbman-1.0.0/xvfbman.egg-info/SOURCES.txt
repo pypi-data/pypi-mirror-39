@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+README.rst
+setup.py
+doc/index.html
+doc/xvfbman.html
+xvfbman/__init__.py
+xvfbman.egg-info/PKG-INFO
+xvfbman.egg-info/SOURCES.txt
+xvfbman.egg-info/dependency_links.txt
+xvfbman.egg-info/top_level.txt
