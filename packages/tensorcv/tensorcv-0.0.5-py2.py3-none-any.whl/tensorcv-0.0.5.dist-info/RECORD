@@ -1,0 +1,12 @@
+tensorcv/__init__.py,sha256=sLJTZ29p1pWSGx0FZo682Zf1oQIZGIeW09q4MNfRW6I,90
+tensorcv/ImageCassification/__init__.py,sha256=O88UCel155RJHUye2xQJV1x8TwEOgXYhO1vGrZgiTho,1317
+tensorcv/ImageCassification/_alexnet.py,sha256=6pqd5xZ4PaxcWMe__onj78iFlphGO-5wR3D9p3GRrtk,2766
+tensorcv/ImageCassification/_densenet.py,sha256=nQ-d6ry2inEMCmxFEkmmQojmsYmETMoyzB8E7SY8E8o,3575
+tensorcv/ImageCassification/_inception.py,sha256=AiSJSLPEm9uS92DuYthenMerzE89kREFcQh9PKRuzkQ,4954
+tensorcv/ImageCassification/_resnet.py,sha256=xGQkZg_Gvy8mfi6Ep2uvh4NYiYLsombuwxS0kwfNhs4,13794
+tensorcv/ImageCassification/_senet.py,sha256=hxt8QkvpnIazhi97KixVsfEexCgLj1T78iDQ2Ukmo9M,4635
+tensorcv/ImageCassification/_vgg.py,sha256=v60LeG3_8ZOUGGqvCrPYuakAagFEAi8JPos_eOz43JE,3650
+tensorcv-0.0.5.dist-info/METADATA,sha256=cfikFmFd2Pl_FwVA-1W2X5_ggK_k6aSQwwFlzokSBkU,1549
+tensorcv-0.0.5.dist-info/RECORD,,
+tensorcv-0.0.5.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+tensorcv-0.0.5.dist-info/top_level.txt,sha256=hhBcBexq1_YJdq9GMiMCGH5Pq5vU4L2jxyPiPtatN5I,9
