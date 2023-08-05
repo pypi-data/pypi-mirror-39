@@ -1,0 +1,16 @@
+alpaca_trade_api/__init__.py,sha256=-nYWHbbBdTIUD0rPC2-J35zOb3mr_gkOn4wJ7aZbf6o,93
+alpaca_trade_api/__main__.py,sha256=DnM1iRDvWZFK73hLK8ZSGhkYOA_7eLA2uWECADQdfF0,576
+alpaca_trade_api/common.py,sha256=zCNbTOryQGZHbEA5wfZuhy9ITfNpRsmcZdmiasGj8Pw,666
+alpaca_trade_api/entity.py,sha256=Vuu3G9GTeAbnkulI8oGJgJpQNMZzF0aX8N9D4yR_pfg,3423
+alpaca_trade_api/rest.py,sha256=rK9Yx1uwL9w79V2SWxFzvw1dCP6zWtdcOjb91RJJtIw,8624
+alpaca_trade_api/stream.py,sha256=XfBXSE06tigknRgpbPnlvUCLt7Y1635_ZsSTxgKqrGM,2342
+alpaca_trade_api/stream2.py,sha256=J1cH125eBZaK_MZfRXZWzWyra04Pm5zUZHRQ5mW7Sh4,4659
+alpaca_trade_api/polygon/__init__.py,sha256=PeSuoTcMjzk_-IVhKBIUvx2KBX-tIaYQCFaeMVVas7Q,66
+alpaca_trade_api/polygon/entity.py,sha256=g0neIYuNMQaA-LLlkWT2iSfbLa3fPk7kVBmeANx4FHs,4689
+alpaca_trade_api/polygon/rest.py,sha256=SnzPtZ4YJbFA3v2EuwFelvwVw3FxonThCC1IgXwvs4g,4008
+alpaca_trade_api/polygon/stream.py,sha256=FBpwIOvmsFlnIS5JhfNlyA4spv3znxiQR1JQ8-iIsUc,3528
+alpaca_trade_api-0.22.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+alpaca_trade_api-0.22.dist-info/METADATA,sha256=m8ofosAvsCRvT_zW72-OX156vhlWRSBBqB9XBvVCbE8,12897
+alpaca_trade_api-0.22.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+alpaca_trade_api-0.22.dist-info/top_level.txt,sha256=BD2lNxg4AlO1F5ommv7spjqUW9Jzy5hwhzhAF81hoYc,17
+alpaca_trade_api-0.22.dist-info/RECORD,,
