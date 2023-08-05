@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: textMessaging
+Version: 0.0.2
+Summary: Python package to send text messages via smtp.
+Home-page: https://github.com/weroberts/py-text-messaging
+Author: Will Roberts
+Author-email: willeroberts3@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+# py-text-messaging
+Python package to send text messages via smtp.
+
+
