@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: gomjabbar
+Version: 0.1.0
+Summary: NGSPICE Code Model Testing
+Home-page: https://github.com/enthought/gom-jabbar
+Author: ETS Developers
+Author-email: enthought-dev@enthought.com
+License: BSD 3-Clause License
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
+Classifier: Topic :: Software Development :: Testing :: Mocking
