@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: carpi-gpsdaemon
+Version: 0.2.4.dev181203013043
+Summary: GPS daemon written in Python transmitting from GPSD to a Redis Data Bus
+Home-page: https://gitlab.com/rGunti/CarPi-GPSDaemon
+Author: rGunti
+Author-email: raphael@rgunti.ch
+License: MIT
+Description: # CarPi-GPSDaemon
+        This is a GPS daemon built for the CarPi project
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
