@@ -1,0 +1,3 @@
+[console_scripts]
+git_create = git_create:main
+
