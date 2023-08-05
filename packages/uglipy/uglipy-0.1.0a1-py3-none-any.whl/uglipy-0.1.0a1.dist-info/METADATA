@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: uglipy
+Version: 0.1.0a1
+Summary: Python minifier and compressor
+Home-page: https://github.com/mukundan314/uglipy
+Author: Mukundan Senthil
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/mukundan314/uglipy/issues
+Project-URL: Source, https://github.com/mukundan314/uglipy/
+Keywords: compress minify
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+
+<h1 align="center">UgliPy</h1>
+<div align="center">
+  <strong>Python minifier and compressor</strong>
+</div>
+
+-------------------------------------------------
+
+## Installation
+
+Using `pip`:
+
+```sh
+pip install uglipy
+```
+
+From source:
+
+```sh
+git clone https://github.com/mukundan314/uglipy.git
+cd uglipy
+python setup.py install
+```
+
+
