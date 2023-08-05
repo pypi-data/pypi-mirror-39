@@ -1,0 +1,12 @@
+vsts/__init__.py,sha256=esvSQn_r-zXPXNO7TjzsPPuPLf-AuAC2bym_OxlZnJQ,414
+vsts/cli/__init__.py,sha256=esvSQn_r-zXPXNO7TjzsPPuPLf-AuAC2bym_OxlZnJQ,414
+vsts/cli/release/__init__.py,sha256=3_KXkZN5teBX8zDLICUnv8n6_tGl3m-QFG_QBnCPYqU,653
+vsts/cli/release/_format.py,sha256=UFzSruk4rOIob92hhEIouBXarOcqlS8VOSKyXoT6J5E,1917
+vsts/cli/release/_help.py,sha256=DqspKDhXzH5iQlYMALgNCzorGgZ5ZExYPmNm-KQJAHw,711
+vsts/cli/release/arguments.py,sha256=cr0J0NAUdPcs-jowR_kNMJEneAzFIzMThtyL6JLMGSE,1651
+vsts/cli/release/commands.py,sha256=SwZRsOBUkswXjWqcwUac1fVSTsmbJ_HienLi75NJfkI,1571
+vsts_cli_release-0.1.4.dist-info/LICENSE.txt,sha256=LDN1Eoy43LnugP20idCwoa1GuOeJyyxLbYfeDqLwSYk,1114
+vsts_cli_release-0.1.4.dist-info/METADATA,sha256=07ikDtJKVn6jAC4Qqf7F_zHRGkLp-7tLiu8zpYIu4tU,883
+vsts_cli_release-0.1.4.dist-info/WHEEL,sha256=aEiWNTQcG6AiGGAYQ9qHTifyKRnmFJvDeTI0hP5aohY,116
+vsts_cli_release-0.1.4.dist-info/top_level.txt,sha256=r-Q1CPVoe51isile67MY1CdCYdDF5a1ghu3YlrUuU0E,5
+vsts_cli_release-0.1.4.dist-info/RECORD,,
