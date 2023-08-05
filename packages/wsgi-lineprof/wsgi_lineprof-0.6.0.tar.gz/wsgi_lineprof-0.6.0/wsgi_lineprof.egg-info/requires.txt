@@ -1,0 +1,25 @@
+six>=1.10.0
+
+[:python_version < '3.5']
+typing
+
+[benchmark]
+asv<0.4,>=0.3.1
+virtualenv
+
+[benchmark-deps]
+Jinja2==2.10
+WebTest==2.0.32
+
+[build]
+Cython<0.30,>=0.28
+
+[docs]
+Sphinx<1.5,>=1.4
+
+[test]
+flake8<4.0.0,>=3.0.0
+pytest<4.0.0,>=3.0.0
+
+[test:python_version>='3.0']
+mypy<1.0,>=0.521
