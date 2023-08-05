@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pysecrets-docker
+Version: 1.0.0
+Summary: Docker secrets to ENV
+Home-page: UNKNOWN
+Author: Luiz Oliveira
+Author-email: ziuloliveira@gmail.com
+License: GPL3
+Description: UNKNOWN
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=2.7
+Provides-Extra: dev
+Provides-Extra: tests
+Provides-Extra: docs

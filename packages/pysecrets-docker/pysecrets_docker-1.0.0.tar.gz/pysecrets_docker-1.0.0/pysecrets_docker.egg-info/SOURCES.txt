@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+pysecrets_docker/__init__.py
+pysecrets_docker/main.py
+pysecrets_docker.egg-info/PKG-INFO
+pysecrets_docker.egg-info/SOURCES.txt
+pysecrets_docker.egg-info/dependency_links.txt
+pysecrets_docker.egg-info/requires.txt
+pysecrets_docker.egg-info/top_level.txt
