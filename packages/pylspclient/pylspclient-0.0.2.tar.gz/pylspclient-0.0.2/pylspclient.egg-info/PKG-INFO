@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: pylspclient
+Version: 0.0.2
+Summary: LSP client implementation in Python
+Home-page: https://github.com/yeger00/pylspclient
+Author: Avi Yeger
+Author-email: yeger00@gmail.com
+License: UNKNOWN
+Description: # pylspclient
+        [LSP](https://microsoft.github.io/language-server-protocol/) client implementation in Python.
+        
+        [![image](https://img.shields.io/pypi/v/pylspclient.svg)](https://pypi.org/project/pylspclient/)
+        [![Build Status](https://travis-ci.org/yeger00/pylspclient.svg?branch=master)](https://travis-ci.org/yeger00/pylspclient)
+        
+        # Installation
+        ```
+        pip install pylspclient
+        ```
+        
+        # Run the tests
+        ```
+        tox
+        ```
+        
+        or
+        
+        ```
+        python setup.py test
+        ```
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
