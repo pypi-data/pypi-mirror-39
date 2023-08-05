@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: bbopt
+Version: 0.3.0
+Summary: The easiest hyperparameter optimization you'll ever do.
+Home-page: https://github.com/evhub/bbopt
+Author: Evan Hubinger
+Author-email: evanjhub@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Provides-Extra: dev
+Requires-Dist: portalocker
+Requires-Dist: scikit-optimize
+Requires-Dist: hyperopt
+Requires-Dist: networkx (<2.0)
+Requires-Dist: futures; python_version<'3'
+Provides-Extra: dev
+Requires-Dist: pytest; extra == 'dev'
+
+UNKNOWN
+
+
