@@ -1,0 +1,14 @@
+CHANGES
+=======
+
+0.1
+---
+
+* Remove travis matrix
+* Remove python 3.7 support
+* Add deploy to pypi
+* Fix travis python 3.7
+* Fix python 2.7 unicode string
+* Fix pytest coverage
+* Update README desription
+* Initial commit
