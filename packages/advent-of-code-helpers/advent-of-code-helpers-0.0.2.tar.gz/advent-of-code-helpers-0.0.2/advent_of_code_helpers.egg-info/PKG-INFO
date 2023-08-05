@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: advent-of-code-helpers
+Version: 0.0.2
+Summary: Advent of Code helper functions
+Home-page: https://github.com/pypa/sampleproject
+Author: Example Author
+Author-email: author@example.com
+License: MIT
+Description: Advent of Code helpers
+        ======================
+        .. image:: https://travis-ci.org/mvaal/advent-of-code-helpers.svg?branch=master
+            :target: https://travis-ci.org/mvaal/advent-of-code-helpers
+        
+        
+        Advent of Code helper functions
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/x-rst
