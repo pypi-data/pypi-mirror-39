@@ -1,0 +1,14 @@
+sqlalchemy
+sqlalchemy_mixins
+psycopg2
+scikit-learn
+pandas
+numpy
+dill
+
+[deep-learning]
+keras
+tensorflow
+
+[hdf5]
+hickle
