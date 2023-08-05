@@ -1,0 +1,10 @@
+numpy
+pandas
+tornado
+redis
+sqlalchemy
+kazoo
+pika
+ruamel.yaml
+requests
+pymysql
