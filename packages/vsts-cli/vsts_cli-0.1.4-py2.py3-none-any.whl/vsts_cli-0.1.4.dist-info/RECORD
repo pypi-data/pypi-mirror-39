@@ -1,0 +1,14 @@
+vsts/__init__.py,sha256=esvSQn_r-zXPXNO7TjzsPPuPLf-AuAC2bym_OxlZnJQ,414
+vsts/cli/__init__.py,sha256=wUxI5dBzuJm8IGfBK2one-nQCPhHd8q5obuSc_zKJoc,478
+vsts/cli/__main__.py,sha256=qjoZY9LX8Rb_MWMZyaEMMJ7W64CzCx2MdKMGkiZ8EBk,625
+vsts/cli/vsts_cli.py,sha256=nh1Rme_OQ8lG_iKQpvjFn5vESK1RKaMsHxFSUvj-sBM,5599
+vsts/cli/vsts_cli_help.py,sha256=gCPIGEKXIHNXrNh6rlLFDfEUEdiMcCTLs4gItT9_GSo,1545
+vsts/cli/vsts_commands_loader.py,sha256=ErnjhAU5yAjvxMMxfz8vfYGjAIJlvC1xiRZPbzyYPMQ,1983
+vsts/tests/__init__.py,sha256=esvSQn_r-zXPXNO7TjzsPPuPLf-AuAC2bym_OxlZnJQ,414
+vsts/tests/test_vsts_cli.py,sha256=NLYKOFIe7M4GyiiMNFOH2HZYt73tTgTR6pnp5KdmgCA,636
+vsts_cli-0.1.4.dist-info/LICENSE.txt,sha256=LDN1Eoy43LnugP20idCwoa1GuOeJyyxLbYfeDqLwSYk,1114
+vsts_cli-0.1.4.dist-info/METADATA,sha256=glhcfDYv-2aAD8ZUP_pQE4YwMjVB4emmP5AfcW-yeFY,1117
+vsts_cli-0.1.4.dist-info/WHEEL,sha256=aEiWNTQcG6AiGGAYQ9qHTifyKRnmFJvDeTI0hP5aohY,116
+vsts_cli-0.1.4.dist-info/entry_points.txt,sha256=LFzmrTl64ZwFPQfkU3AgupL1QW-hLZDnBJgOR53UJFo,49
+vsts_cli-0.1.4.dist-info/top_level.txt,sha256=r-Q1CPVoe51isile67MY1CdCYdDF5a1ghu3YlrUuU0E,5
+vsts_cli-0.1.4.dist-info/RECORD,,

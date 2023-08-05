@@ -1,0 +1,3 @@
+[console_scripts]
+vsts = vsts.cli.__main__:main
+
