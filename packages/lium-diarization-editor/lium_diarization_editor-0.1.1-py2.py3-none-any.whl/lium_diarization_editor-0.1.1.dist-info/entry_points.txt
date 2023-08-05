@@ -1,0 +1,3 @@
+[console_scripts]
+lium-dia-edit = lium_diarization_editor.cli:main
+
