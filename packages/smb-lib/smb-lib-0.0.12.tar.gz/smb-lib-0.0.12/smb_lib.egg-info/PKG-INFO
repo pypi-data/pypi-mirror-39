@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: smb-lib
+Version: 0.0.12
+Summary: smbionet librairie python
+Home-page: https://github.com/clement-alexandre/TotemBionet
+Author: Mohamed Chennouf
+Author-email: mohamed.chennouf@etu.unice.fr
+License: WTFPL
+Description: Readme de smb-lib
+        
+        librairie pipy : https://pypi.org/project/smb-lib/
+        librairie anaconda : https://anaconda.org/mohamedchennouf/smb-lib/
+Keywords: jupyter,computational systems biology
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
