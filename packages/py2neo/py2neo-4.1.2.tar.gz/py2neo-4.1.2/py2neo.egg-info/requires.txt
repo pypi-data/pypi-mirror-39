@@ -1,0 +1,8 @@
+click>=2.0
+colorama
+neo4j-driver<1.7,>=1.6.2
+neotime==1.0.0
+prompt_toolkit==1.0.15
+pygments>=2.0
+pytest
+urllib3[secure]<1.23,>=1.21.1
