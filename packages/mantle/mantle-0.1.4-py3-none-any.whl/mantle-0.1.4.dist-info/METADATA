@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mantle
+Version: 0.1.4
+Summary: The magma standard library
+Home-page: https://github.com/phanrahan/mantle
+Maintainer: Lenny Truong
+Maintainer-email: lenny@cs.stanford.edu
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: six
+Requires-Dist: fault (<=0.35,>=0.20)
+
+UNKNOWN
+
+
