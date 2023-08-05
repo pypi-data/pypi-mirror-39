@@ -1,0 +1,292 @@
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.modal-dialog .text-muted {
+  color: #999;
+  display: block;
+  margin-top: 2px;
+}
+.text-muted strong {
+  color: #a33;
+}
+.text-danger {
+  color: white;
+  background-color: #c00;
+  display: block;
+  padding: 9px;
+  border: #c00 1px solid;
+}
+.text-danger br {
+  display: none;
+}
+small, .small {
+  font-size: 85%;
+}
+.modal-body {
+  position: relative;
+  padding: 15px;
+}
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+  margin: 0px auto;
+  }
+  .modal-dialog .fields {
+  max-width: 500px;
+  margin: 20px auto 4px;
+  }
+  .modal-sm {
+  width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg {
+  width: 900px;
+  }
+}
+/* Extra bootstrap form styles */
+.errorlist {
+  padding: 0px;
+}
+.errorlist li {
+  list-style: none;
+  border: 2px solid white !important;
+  border-radius: 8px; 
+  color: white;
+  padding: 12px 12px;
+  margin: 4px 0px;
+  background-color: #cc0000;
+  border-color: #a40000;
+}
+.modal-footer .float-left {
+  float: left;
+}
+.modal-dialog .form-group > input:not([type="checkbox"]):not([type="radio"]),
+.modal-dialog .form-group > textarea,
+.modal-dialog .form-group > select,
+.modal-dialog .form-group > .SumoSelect > p{
+  margin: 0px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  font-family: inherit;
+}
+.modal-dialog .SumoSelect {
+  display: block;
+  width: 100%;
+}
+.modal-dialog .SumoSelect label > i {
+  display: none !important;
+}
+.modal-dialog select,
+.modal-dialog .form-group > .SumoSelect > p
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(../images/down-arrow.png) 96% no-repeat #fff;
+}
+.modal-dialog.simple .form-group > label {
+  display: none;
+}
+.modal-dialog .form-group > label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+.modal-dialog .form-group > input + label {
+  display: inline;
+}
+.modal-dialog .form-group > [for="id_photo"] {
+  display: block;
+}
+.modal-dialog .floating-tip {
+  position: relative;
+  right: 32px;
+  height: 0px;
+  overflow: visible;
+  display: block;
+  top: 7px;
+}
+.modal-dialog .form-group {
+  margin-bottom: 15px;
+}
+/* Social login styles */
+.btn.social {
+  width: 32px;
+  padding: 0px;
+  line-height: 32px;
+  text-align: center;
+  border-right: 1px solid rgba(0,0,0,0.2);
+  background-image: none;
+  border-color:rgba(0,0,0,0.2)
+}
+.btn.social:hover {
+  text-decoration: none;
+}
+.btn.google:before {content:"\f1a0"}
+.btn.google {
+  background-color:#dd4b39;
+}
+.btn.google:focus, .btn.google.focus, .btn.google:hover {
+  background-color:#c23321;
+}
+.btn.yahoo:before {content:"\f19e"}
+.btn.yahoo {
+  background-color:#720e9e;
+}
+.btn.yahoo:focus, .btn.yahoo.focus, .btn.yahoo:hover {
+  background-color:#500a6f;
+}
+.btn.twitter:before {content:"\f099"}
+.btn.twitter {
+  background-color:#55acee;
+}
+.btn.twitter:focus, .btn.twitter.focus, .btn.twitter:hover {
+  background-color:#2795e9;
+}
+.btn.facebook:before {content:"\f09a"}
+.btn.facebook {
+  background-color:#3b5998;
+}
+.btn.facebook:focus, .btn.facebook.focus, .btn.facebook:hover {
+  background-color:#2d4373;
+}
+
+/* Customise recaptcha when on modal page */
+.recaptchatable {
+  width: 100%;
+}
+#recaptcha_logo {
+  float: right;
+  margin: 2px 10px !important;
+}
+
+/* Special rules for fieldset tabs */
+label.tab {
+  border: #e5e5e5 solid 1px;
+  background-color: #fff;
+  padding: 6px 12px;
+  display: inline-block;
+  margin: 0px 0px 5px;
+  cursor: pointer;
+}
+label.tab.selected {
+  background-color: #34A7C1;
+  color: white;
+  border: #ccc solid 1px;
+}
+label.tab.errors {
+  color: red;
+  border: red solid 1px;
+}
+label.tab.errors.selected {
+  background-color: #c00;
+  color: white;
+  border: #c00 solid 1px;
+}
+
+/* on-off checkbox */
+.onoffswitch {
+  position: relative; width: 72px;
+  -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+  float: right;
+}
+.onoffswitch.delete {
+  width: 92px;
+}
+/*.onoffswitch-checkbox {*/
+.onoffswitch > input {
+  display: none;
+}
+.onoffswitch-label {
+  display: block; overflow: hidden; cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.onoffswitch-inner {
+  display: block; width: 200%; margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  display: block; float: left; width: 50%; height: 24px; padding: 0; line-height: 24px;
+  font-size: 14px; color: white;
+  box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+  content: "ON";
+  background-color: #34A7C1; color: #FFFFFF;
+  padding-left: 10px;
+  text-align: left;
+}
+.delete .onoffswitch-inner:before {
+  content: "DELETE";
+  background-color: #d9534f; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+  content: "OFF";
+  background-color: #EEEEEE; color: #999999;
+  padding-right: 10px;
+  text-align: right;
+}
+.delete .onoffswitch-inner:after {
+  content: "KEEP";
+}
+.onoffswitch-switch {
+  display: block; width: 18px; margin: 3px;
+  background: #FFFFFF;
+  position: absolute; top: 0; bottom: 0;
+  right: calc(100% - 26px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  transition: all 0.3s ease-in 0s; 
+  height: 20px;
+}
+.onoffswitch:not(.opposite) > input:checked + .onoffswitch-label .onoffswitch-inner,
+.onoffswitch.opposite > input:not(:checked) + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.onoffswitch:not(.opposite) > input:checked + .onoffswitch-label .onoffswitch-switch,
+.onoffswitch.opposite > input:not(:checked) + .onoffswitch-label .onoffswitch-switch {
+  right: 0px; 
+}
+.onoffswitch input:disabled + .onoffswitch-label .onoffswitch-inner:after {
+  color: #ddd;
+}
+.onoffswitch input:disabled + .onoffswitch-label .onoffswitch-switch {
+  background-color: #eee;
+}

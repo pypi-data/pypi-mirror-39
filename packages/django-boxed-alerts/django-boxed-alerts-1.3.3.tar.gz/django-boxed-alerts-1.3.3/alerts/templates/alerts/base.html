@@ -1,0 +1,130 @@
+{% load i18n static %}
+<!DOCTYPE html>
+{% load i18n static alert_fields %}
+<html>
+  <head>
+    <title>{% block title %}{{ title|defnull:view.title|default:"Notification" }}{% endblock %} - {% trans "Alerts" %}</title>
+    <meta charset="utf-8"/>
+
+    {% block "css" %}
+      <link href="{% static "alerts/css/bootstrap.min.css" %}" rel="stylesheet" id="bootstrap-css">
+      <link href="{% static "alerts/css/modal.css" %}" rel="stylesheet" id="bootstrap-css">
+      <link href="{% static "alerts/css/alerts.css" %}" rel="stylesheet" id="bootstrap-css">
+      <link href="{% static "alerts/css/sumoselect.css" %}" rel="stylesheet" id="bootstrap-css">
+    {% endblock %}
+
+    {% block "js" %}
+      <script type="text/javascript" src="{% static "admin/js/vendor/jquery/jquery.min.js" %}"></script>
+      <script type="text/javascript" src="{% static "alerts/js/bootstrap.min.js" %}"></script>
+      <script type="text/javascript" src="{% static "alerts/js/sumoselect.min.js" %}"></script>
+    {% endblock %}
+
+    {{ form.media }}
+  </head>
+  <body data-static="{% static '' %}">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        {% if formset %}
+<div class="dropdown pull-right" id="fieldset">
+  <button class="btn btn-default dropdown-toggle" type="button" id="fieldset_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      Alert Type
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="fieldset_button">
+      {% for form in formset %}
+      <li id="tab_{{ form.instance.slug }}" class="dropdown-item{% if form.instance.slug %}{% if request.GET.tab == form.instance.slug %} active{% endif %}{% if form.errors %} error{% endif %}" id="tab_{{ form.instance.slug }}{% endif %}" data-for="tab{{ forloop.counter }}"><a href="#{{ form.instance.slug }}">{{ form.label }}</a></li>
+      {% endfor %}
+    </ul>
+  </ul>
+  <script>
+    $('document').ready(function() {
+      $('#fieldset li').click(function() {
+        // Reset all
+        $('#fieldset li').removeClass('active');
+        $('.fields').hide();
+
+        // Update button
+        $('#fieldset button').text($(this).text());
+
+        // Show right things
+        $('#' + $(this).data('for') + '.fields').show();
+        $(this).addClass('active');
+      });
+      {% if request.GET.tab %}
+      $('#fieldset li.text-muted').click();
+      {% else %}
+      $('#fieldset li:first-child').click();
+      {% endif %}
+    });
+  </script>
+</div>
+{% endif %}
+
+        {% block "dialog-title" %}<h4 class="modal-title">{% block "title" %}{{ title|defnull:view.title|default:"-" }}{% endblock %}</h4>{% endblock %}
+        {% block "dialog-subtitle" %}{% endblock %}
+        {% if form.non_field_errors %}
+          {{ form.non_field_errors }}
+        {% endif %}
+      </div>
+      <div class="modal-body">
+        {% block "dialog-body" %}{% endblock %}
+        {% if form or formset or delete %}
+          {% block "dialog-form" %}
+            <form method="POST" action="{% block "dialog-action" %}{% endblock %}"
+                 {% if form.is_multipart %}enctype="multipart/form-data"{% endif %}>
+              {% csrf_token %}
+
+              <input type="hidden" name="msie11bug" value="http://stackoverflow.com/questions/20149751/ie11-only-submit-bug" />
+
+              {% if next %}
+                <input type="hidden" name="next" value="{{ next }}" />
+              {% elif request.GET.next %}
+                <input type="hidden" name="next" value="{{ request.GET.next }}" />
+              {% endif %}
+
+              {% if form.fieldsets %}
+                <div class="tabs">
+                  {% for label, fieldset in form.fieldsets %}
+                    <label class="tab{% if fieldset.errors %} error{% endif %}" for="tab{{ forloop.counter }}">{{ label }}</label>
+                  {% endfor %}
+                </div>
+                {% for label, fieldset in form.fieldsets %}
+                  <div class="fields" id="tab{{ forloop.counter }}">
+                    {% include "alerts/fields.html" %}
+                  </div>
+                {% endfor %}
+              {% elif formset %}
+                {{ formset.management_form }}
+
+
+                {% for fieldset in formset %}
+                  <div class="fields" id="tab{{ forloop.counter }}">
+                    {% if fieldset.description %}<p class="description">{{ fieldset.description|safe }}</p>{% endif %}
+                    {% include "alerts/fields.html" %}
+                  </div>
+                  {% block "extra-tab-fields" %}{% endblock %}
+                {% endfor %}
+              {% else %}
+                {% with form as fieldset %}
+                  {% include "modal-fields.html" %}
+                {% endwith %}
+              {% endif %}
+
+              {% block "modal-rest" %}{% endblock %}
+              <div class="modal-footer">
+                {% block "form-buttons" %}
+                  <button type="submit" class="btn btn-primary">Go</button>
+                {% endblock %}
+              </div>
+            </form>
+          {% endblock %}
+        {% else %}
+          <div class="modal-footer">{% block "dialog-buttons" %}{% endblock %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
