@@ -1,0 +1,2 @@
+recursive-include donjon_painter/themes *
+exclude donjon_painter/old
