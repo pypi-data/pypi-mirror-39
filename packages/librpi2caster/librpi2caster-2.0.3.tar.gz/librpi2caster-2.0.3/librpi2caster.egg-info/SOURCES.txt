@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+setup.py
+librpi2caster/__init__.py
+librpi2caster/librpi2caster.py
+librpi2caster.egg-info/PKG-INFO
+librpi2caster.egg-info/SOURCES.txt
+librpi2caster.egg-info/dependency_links.txt
+librpi2caster.egg-info/top_level.txt
+librpi2caster.egg-info/zip-safe

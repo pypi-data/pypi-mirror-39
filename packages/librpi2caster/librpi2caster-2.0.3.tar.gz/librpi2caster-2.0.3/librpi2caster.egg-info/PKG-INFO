@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: librpi2caster
+Version: 2.0.3
+Summary: Common library for rpi2caster utility and drivers
+Home-page: http://github.com/elegantandrogyne/librpi2caster
+Author: Christophe Catherine Slychan
+Author-email: krzysztof.slychan@gmail.com
+License: MIT
+Description: librpi2caster
+        =============
+        
+        common functions, exceptions and definitions library for rpi2caster
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
