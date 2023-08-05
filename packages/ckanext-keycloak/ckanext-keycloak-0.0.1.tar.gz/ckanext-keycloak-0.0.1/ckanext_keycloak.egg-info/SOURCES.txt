@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.cfg
+setup.py
+ckanext/__init__.py
+ckanext/keycloak/__init__.py
+ckanext/keycloak/helper.py
+ckanext/keycloak/plugin.py
+ckanext_keycloak.egg-info/PKG-INFO
+ckanext_keycloak.egg-info/SOURCES.txt
+ckanext_keycloak.egg-info/dependency_links.txt
+ckanext_keycloak.egg-info/entry_points.txt
+ckanext_keycloak.egg-info/namespace_packages.txt
+ckanext_keycloak.egg-info/top_level.txt

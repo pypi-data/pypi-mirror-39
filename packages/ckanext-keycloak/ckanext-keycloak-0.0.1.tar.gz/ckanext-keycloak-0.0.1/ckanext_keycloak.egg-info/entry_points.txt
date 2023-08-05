@@ -1,0 +1,9 @@
+
+        [ckan.plugins]
+        keycloak=ckanext.keycloak.plugin:KeycloakPlugin
+        [paste.paster_command]
+        keycloak=ckanext.keycloak.commands:KeycloakCommand
+
+        [babel.extractors]
+        ckan = ckan.lib.extract:extract_ckan
+    
