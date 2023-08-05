@@ -1,0 +1,212 @@
+Metadata-Version: 1.2
+Name: xml2rfc
+Version: 2.15.1
+Summary: Xml2rfc generates RFCs and IETF drafts from document source in XML according to the dtd in RFC2629.
+Home-page: https://tools.ietf.org/tools/xml2rfc/trac/
+Author: Henrik Levkowetz, Josh Bothun
+Author-email: tools-discuss@ietf.org
+Maintainer: Henrik Levkowetz
+Maintainer-email: henrik@levkowetz.com
+License: Simplified BSD Licence
+Download-URL: https://pypi.python.org/pypi/xml2rfc
+Description: Introduction
+        ============
+        
+        The IETF_ uses a specific format for the standards and other documents it
+        publishes as RFCs_, and for the draft documents which are produced when
+        developing documents for publications.  There exists a number of different
+        tools to facilitate the formatting of drafts and RFCs according to the
+        existing rules, and this tool, **xml2rfc**, is one of them.  It takes as input
+        an xml file which contains the text and meta-information about author names
+        etc., and transforms it into suitably formatted output.  The input xml file
+        should follow the DTD given in RFC2629_ (or it's `inofficial successor`_).
+        
+        The current incarnation of **xml2rfc** provides output in the following
+        formats: Paginated and unpaginated ascii text, html, nroff, and expanded xml.
+        Only the paginated text format is currently (January 2013) accepable as draft
+        submissions to the IETF.
+        
+        .. _IETF: https://www.ietf.org/
+        .. _RFCs: https://www.rfc-editor.org/
+        .. _RFC2629: https://tools.ietf.org/html/rfc2629
+        .. _inofficial successor: https://tools.ietf.org/html/draft-mrose-writing-rfcs
+        
+        Usage
+        =====
+        
+        xml2rfc accepts a single XML document as input and outputs to one or more conversion formats.
+        
+        **Basic Usage**: ``xml2rfc SOURCE [options] FORMATS...``
+        
+        Run ``xml2rfc --help`` for a full listing of command-line options.
+        
+        
+        Changelog
+        =========
+        
+        
+        Version 2.15.1 (01 Dec 2018)
+        ------------------------------------------------
+        
+        
+        
+          * Added downcoding of punctuation followed by wrapping of other non-ascii 
+            text in <u> for the v2v3 converter.
+        
+          * Added BaseV3Writer methods: downcode() and downcode_punctuation(), 
+            get_text_tags() and get_inline_tags() (works this out from the schema), and 
+            added a list of deprecated elements.
+        
+          * Fixed a typo in an error message.  Added asciification of smart quotes 
+            and other punctuation for the v3 renderers  to match that done for v2.  
+            Some class refactoring.
+        
+          * Changed the workaround for non-ascii metadata in setup.py to only be 
+            active under py2.  Fixes a problem with setup.py under python 3.x
+        
+          * Reverted [2786], which permitted non-ascii characters inside artwork
+            for the v2 renderers, but broke when trying to write to file without
+            utf-8 encoding.  Fixes issue #387.
+        
+        
+        
+        
+        
+        
+        
+        Version 2.15.0 (30 Nov 2018)
+        ------------------------------------------------
+        
+        
+          * Added support for a new element <u>, to be used to insert unicode in
+            protocol descriptions.
+        
+            In xml2rfc vocabulary version 3, the elements <author>,
+            <organisation>, <street>, <city>, <region>, <code>, <country>,
+            <postalLine>, <email>, and <seriesInfo> may contain non-ascii
+            characters for the purpose of rendering author names, addresses, and
+            reference titles correctly.  They also have an additional "ascii"
+            attribute for the purpose of proper rendering in ascii-only media.
+        
+            In order to insert Unicode characters in any other context, xml2rfc v3
+            formatters now require that the Unicode string be enclosed within an <u>
+            element.  The element will be expanded inline based on the value of a
+            "format" attribute.  This provides a generalized means of generating the 6
+            methods of Unicode renderings listed in RFC7997, Section 3.4
+            (http://rfc-editor.org/rfc/rfc7997.pdf), and also
+            several others found in for instance the RFC Format Tools example
+            rendering of RFC 7700, at 
+            <https://rfc-format.github.io/draft-iab-rfc-css-bis/sample2-v2.html>.
+        
+            The "format" attribute accepts either a simplified format
+            specification, or a full format string with placeholders for the
+            various possible unicode expansions.
+        
+            The simplified format consists of dash-separated keywords, where each
+            keyword represents a possible expansion of the unicode character or
+            string; use for example ``<u "lit-num-name">foo</u>`` to expand the text to
+            its literal value, code point values, and code point names.
+        
+            A combination of up to 3 of the following keywords may be used,
+            separated by dashes: "num", "lit", "name", "ascii", "char".  The
+            keywords are expanded as follows and combined, with the second and
+            third enclosed in parentheses (if present):
+        
+               "num"
+        	  The numeric value(s) of the element text, in U+1234 notation
+        
+               "name"
+        	  The unicode name(s) of the element text
+        
+               "lit"
+        	  The literal element text, enclosed in quotes
+        
+               "char"
+        	  The literal element text, without quotes
+        
+               "ascii"
+        	  The provided ASCII value
+        
+            In order to ensure that no specification mistakes can result for
+            rendering methods that cannot render all unicode code points, "num"
+            must always be part of the specified format.
+        
+            The default value of the "format" attribute is "lit-name-num".
+        
+            For instance:
+        
+               format="lit-name-num":
+        	  Temperature changes in the Temperature Control Protocol are
+        	  indicated by the character "Δ" (GREEK CAPITAL LETTER DELTA,
+        	  U+0394).
+        
+            If the <u> element encloses a Unicode string, rather than a single
+            code point, the rendering reflects this.  The element::
+        
+               <u format="num-lit">ᏚᎢᎵᎬᎢᎬᏒ</u>
+        
+            will be expanded to 'U+13DA U+13A2 U+13B5 U+13AC U+13A2 U+13AC U+13D2
+            ("ᏚᎢᎵᎬᎢᎬᏒ")'.
+        
+            In order to provide for cases where the simplified format above is
+            insufficient, without relinquishing the requirement that the number of a
+            code point always must be rendered, the "format" attribute can also accept
+            a full format string.  This format uses placeholders which consist of any
+            of the key words above enclosed in in curly braces; outside of this, any
+            ascii text is permissible.  For example::
+        
+               The <u format="{lit} character ({num})">Δ</u>.
+        
+            will be rendered as::
+        
+               The "Δ" character (U+0394).
+        
+          * Added support for v3xml2rfc PIs that silence notices and warnings.  For
+            instance, adding::
+        
+        	<?v3xml2rfc silence="The document date .* is more than 3 days" ?>
+        
+            in front of a <date> element with an old date will suppress the warning
+            message about an outdated date.  If the value of the silence attribute
+            matches the start of a notice or warning message, as a string or as a
+            regex, the message is suppressed.
+        
+          * Some warnings have been downgraded to notices, and can be suppressed with
+            a --quiet switch.
+        
+          * Added header and footer information for the tentative support for the 
+            W3C Paged Media Module described in RFC 7992, Section 6.4.
+        
+          * Added support for older versions of pycountry.
+        
+          * Added more information to the --version display when used with --verbose.
+        
+        
+        
+        
+        
+        
+        
+        Version 2.14.1 (23 Nov 2018)
+        ------------------------------------------------
+        
+        
+          * The v3 attribute xml:base of <reference> is not compatible with the v2
+            DTD.  Added xml:base to the DTD for <reference> in order to be able to
+            work from the same reference cache for v2 and v3, without backing out
+            the issue #381 resolution.
+        
+        
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Markup :: XML
+Classifier: License :: OSI Approved :: BSD License
