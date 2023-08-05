@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: ccommon
+Version: 1.5.1
+Summary: 新增tapd计划
+Home-page: http://none
+Author: chenjw
+Author-email: **@qq.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: python setup.py register sdist upload
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
