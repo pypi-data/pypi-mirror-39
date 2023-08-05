@@ -1,0 +1,206 @@
+CHANGES
+=======
+
+* vlan: Support VLAN interface type
+* tests integ: Trigger global fixtures explicitly by tests
+* tests integ: Split global fixture
+* nm: Activate new virtual interfaces
+* nmstatectl: Fix running on Python 3
+* Integ tests: Move deepcopy of desired state into the apply func
+* ipv6 tests: Add new IPv6 static tests
+* tests integ: Fix nm VLAN tests by refreshing nm client
+* Integration tests: Allow passing extra arguments to pytest
+* tests integ: Fix nm VLAN tests by increasing the sleep time
+* tests integ: Disable IPv4/6 in NM VLAN tests
+* bond test: Add bond with slaves
+* bond tests: Add bond without slaves
+* integ test: Decrease ipv6 iface mtu to lower then min
+* nm vlan: Support setting and viewing vlan
+* schema: Update vlan iface type
+* automation: Update docker image with NM fix
+* netapplier: Retry desired vs current states verification
+* tests integ: Enable test ifaces before each test run
+* nm ipv6: Enable IPv6 even without explicit addresses
+* Revert "automation: Explicitly enable IPv6 on test container"
+* nmstatectl: Fix no-verify help message
+* automation: Remove no-auto-default from container image
+* Integration tests: Show ipv6 status
+* State diff: Show three lines of context
+* automation: Explicitly enable IPv6 on test container
+* Sort the IP addresses in the verification stage of apply()
+* Ignore IPv6 link local address when applying
+* nm: Add debug logging in the nm.device module
+* bond: Fix bond removal when minimalistic state is used
+* tests integ: Add and remove a bond with two slaves
+* Fix duplex setting when ethtool return unknown
+* Fix when NMSettingConnection has no interface\_name
+* netapplier: Remove absent ifaces from dstate on verification
+* netapplier: Sort LAG slaves on verification
+* nm: Fix connection debug logging formatting
+* tests integ: Add two ifaces with same ipv4 address
+* tests integ: Adding ethernet mtu tests
+* nm: Set a connection to autoconnect=false on creation or editing
+* nm: Adding connection setting debug info
+* readme: Add basic coding-guidelines and commit template
+* Docker: Allow to start shell with variable
+* tests: Refactor testlib and introduce the state object
+* integration tests: Test IPv4 with new prefix
+* nmstate: Centralize 'interfaces' constant
+* integration tests: Normalize IPv4 address usage
+* tests integ: Adding ethernet ipv4 tests
+* prettystate: Do not change the input state
+* automation: Wait for the dbus service to come up in the container
+* nm: Execute all actions from within the mainloop
+* nm: The mainloop timeout must be an integer
+* nm: Extract mainloop timeout handling
+* netapplier: Return cleaned-up Ethernet state
+* netapplier: Remove empty Ethernet settings from current state
+* automation: Collect artifacts for the CI to save
+* nm: Add debug logging for the mainloop action execution
+* nm: Deactivate device before deleting its connection
+* nm: Enable multiple iface admin state actions
+* automation: Docker - Enable no-auto-default on all devices
+* tests integ: Execute ifaces cleanup before each test
+* tests: Add an integ lib test for adding static IPv4
+* automation: Disable ipv6 in the container
+* tests integ: Use pytest assertions in testlib
+* tests integ: Introduce assert and state libs
+* netapplier: Show diff if verification fails
+* Move prettystate to libnmstate
+* automation: Refactor the deploy script and change oper orders
+* nm.wired: return only complete Ethernet sub tree
+* nm: Extend debug logging information for connections
+* automation: Debug docker host
+* libnmstate: Remove empty ethernet subtree for verification
+* nmstatectl: Show type and state after interface name
+* nmstatectl: Show interface name first
+* automation: Drop tox usage
+* automation: Add debug info for container run
+* automation: Flush eth{1,2} ip addresses in the container
+* automation: Container - Unmanage all iface types by default
+* nmstatectl: Convert --only to an argument
+* nmstatectl: Add edit command to edit state
+* libnmstate: Report ethernet settings only for type ethernet
+* libnmstate: Ignore unspecified ethernet settings for verification
+* libnmstate: Sanitize ethernet settings only for type ethernet
+* automation: Start dbus socket unit explicitly in the container
+* automation: Add README file to describe content and usage
+* automation: Connect 2 additional networks to docker
+* tox: Explicitly define pytest log level to DEBUG
+* automation: Create the ifcfg root folder
+* tox: coverall fails to run due to urllib3 new version
+* automation: Enable NM trace level logging for debugging
+* automation: Add the iproute package to the docker image
+* nmstatectl: Verify state by default
+* netapplier: Verify state by default
+* nmstatectl: Use \_filter\_state() to filter state
+* Do not merge duplex and speed for auto-negotiation
+* libnmstate: Add support of static IPv6
+* automation: Run the integration tests from an existing image
+* automation: Use STDCI to run CI integration tests
+* automation: Run the integration tests in a container
+* libnmstate: Fix ethtool module compatability with py3
+* tox: Introduce integration test targets for py27 and py36
+* tests: Introduce the integration tests
+* nm: Reporting should not fail if ovs plugin is missing
+* README: Add auto-negotiation, description, duplex, speed and mtu
+* Reset speed and duplex when enabling auto-negotiation
+* netapplier: Cleanup desired state from metadata before verify
+* netapplier: Add a sleep workaround to support verify correctly
+* nmstatectl: Add the the 'verify' flag
+* libnmstate.apply: Introduce verify-change flag
+* wired: Do not report speed 0
+* tests nm.applier: Fix assertion
+* nm.applier: Activate/Delete a device once per request
+* tests: Add an admin-state test with a bond and slaves
+* tests: Group the set\_ifaces\_admin\_state\_\* tests under a class
+* tests: Specify how many times the admin state action is called
+* Support setting and getting interface descriptions
+* Make mtu and speed int
+* Adjust schema for ethernet speed
+* Report and set MTU, duplex, speed and auto-negotiation
+* nmstatectl: Run unit tests for show and set - Also add tests for --only
+* Use address instead of addresses to match the spec
+* libnmstate/nm: Relocate nmclient module under the nm package
+* tests: Update the schema validation tests
+* schema: Replace the schema format to yaml and enhance it
+* libnmstate: Fix handling of iface edition and deletion
+* libnmstate: Refresh current state before the edit step
+* mainloop: If the last action fails, exit correctly
+* nm/checkpoint: Introduce transaction capabilities
+* nm: Removing a bond should also remove its slaves
+* libnmstate: Raise error when apply fails
+* libnmstate: Remove duplicate apply and sleep workarounds
+* libnmstate: Use a main-loop for the NM provider
+* libnmstate: Process OVS only if the capability exists
+* nm/applier: OVS slaves need special admin state handling
+* netapplier: Reflect correctly slave master even when reused
+* libnmstate: Process ifaces marked as absent in admin state only
+* libnmstate: Deleting an OVS bridge and its connected ifaces
+* readme: Add ovs-bridge to the supported iface types
+* libnmstate: Support ovs-bridge configuration
+* libnmstate: Include master type in the metadata
+* libnmstate: Generalize master/slave metadata handling
+* libnmstate: Support ovs-bridge reporting
+* Add initial integration tests
+* netapplier: Apply settings twice to get it to work
+* nmstatectl: Filter state to specified interfaces
+* Do not require "-f/--file" to specify state
+* Update pip installation instructions
+* add basic logging initialization
+* Update license header
+* tests: Fix typo in function name
+* libnmstate: Fix IPv4 prefix format reporting with yaml
+* libnmstate: Support IPv4 static address configuration
+* libnmstate: Support IPv4 info reporting
+* tests: Fix bad test name in nm.connection\_test
+* tests: Refactor netinfo test module
+* tests: Refactor netapplier test module
+* tests: Remove helloworld test
+* libnmstate: Cover nm.translator module using unit tests
+* libnmstate: Cover nm.applier module using unit tests
+* libnmstate: Cover nm.connection module using unit tests
+* libnmstate: Cover nm.ip\* module using unit tests
+* libnmstate: Cover nm.bond module using unit tests
+* libnmstate: Cover nm.device module using unit tests
+* libnmstate: Extract NM specific config setup to nm.applier
+* libnmstate: Remove netapplier dependency on nmclient
+* libnmstate: Reorganize netinfo, moving NM specific code
+* libnmstate: Reorganizing nm.translator into classes
+* libnmstate: Relocate link admin state translation to nm
+* doc: Update README file with up-to-date information
+* libnmstate: On iface state 'up', always activate the connection
+* libnmstate: Add 1sec sleep on config set
+* libnmstate: Ethernet ifaces report with correct type
+* schema: Support dummy interfaces
+* libnmstate: Support bond slaves configuration
+* libnmstate: Report the slaves of a bond
+* libnmstate: Add bond state validation
+* libnmstate: Support interface state editation
+* libnmstate: Canonicalize desired state with current state
+* libnmstate: Add support for new bond configuration
+* libnmstate: Add support for bond reporting
+* libnmstate: Refactor netapplier structure
+* Pretty print new state after applying, too
+* libnmstate: Support software interface removal
+* Refresh nmclient after changing state
+* Allow action functions to determine exit code
+* Detect JSON
+* Add initial yaml support
+* add link to project homepage
+* set description content type to markdown
+* libnmstate: If iface state is not "activated", consider it "down"
+* nmstatectl: Introduce basic set command
+* libnmstate: Control an interface state (up/down)
+* libnmstate: Small spell fix
+* Pretty print network state
+* nmstatectl: Introduce 'show' command to display state
+* libnmstate: Minimal support for showing iface state
+* tox: Specify full path to the requirements.txt file
+* Add interface schema ethernet properties
+* Add interface schema common properties
+* Introduce a basic schema with validation tests
+* add code skeleton, setup config and do some cleanup
+* Integrate with coveralls
+* Integrate with travis-ci
+* Initial commit
