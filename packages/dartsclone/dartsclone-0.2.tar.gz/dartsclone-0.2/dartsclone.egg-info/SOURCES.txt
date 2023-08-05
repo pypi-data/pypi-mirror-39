@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+csrc/include/darts.h
+csrc/src/darts-config.h
+csrc/src/darts.cc
+dartsclone/__init__.py
+dartsclone/_dartsclone.pxd
+dartsclone/_dartsclone.pyx
+dartsclone.egg-info/PKG-INFO
+dartsclone.egg-info/SOURCES.txt
+dartsclone.egg-info/dependency_links.txt
+dartsclone.egg-info/not-zip-safe
+dartsclone.egg-info/top_level.txt
+test/test_darts.py

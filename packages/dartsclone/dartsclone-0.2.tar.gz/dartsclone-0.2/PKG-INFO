@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: dartsclone
+Version: 0.2
+Summary: Python binding of Darts Clone
+Home-page: https://github.com/rixwew/darts-clone-python
+Author: @rixwew
+Author-email: rixwew@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Text Processing :: Linguistic
