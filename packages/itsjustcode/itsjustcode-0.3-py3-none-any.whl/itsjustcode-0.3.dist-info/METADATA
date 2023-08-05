@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: itsjustcode
+Version: 0.3
+Summary: Database First Code Generator that uses the SQL Alchemy and Jinja2
+Home-page: https://github.com/ellerbus/itsjustcode
+License: MIT
+Requires-Dist: sqlalchemy
+Requires-Dist: jinja2
+
+## itsjustcode
+
+
