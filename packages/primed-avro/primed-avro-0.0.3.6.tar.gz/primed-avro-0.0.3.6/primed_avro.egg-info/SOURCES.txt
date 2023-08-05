@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+primed_avro/__init__.py
+primed_avro/consumer.py
+primed_avro/decoder.py
+primed_avro/encoder.py
+primed_avro/registry.py
+primed_avro/schema.py
+primed_avro/util.py
+primed_avro.egg-info/PKG-INFO
+primed_avro.egg-info/SOURCES.txt
+primed_avro.egg-info/dependency_links.txt
+primed_avro.egg-info/requires.txt
+primed_avro.egg-info/top_level.txt
