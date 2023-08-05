@@ -1,0 +1,11 @@
+README.md
+setup.py
+gecosistema_krige/__init__.py
+gecosistema_krige/filesystem.py
+gecosistema_krige/krige.py
+gecosistema_krige.egg-info/PKG-INFO
+gecosistema_krige.egg-info/SOURCES.txt
+gecosistema_krige.egg-info/dependency_links.txt
+gecosistema_krige.egg-info/requires.txt
+gecosistema_krige.egg-info/top_level.txt
+gecosistema_krige/R/qkrige_v4.1.r
