@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: dailylog
+Version: 0.0.2
+Summary: make logs per day
+Home-page: https://github.com/darkwhale/dailylog
+Author: xinyang zhou
+Author-email: 308885823@qq.com
+License: UNKNOWN
+Download-URL: https://github.com/darkwhale/dailylog/archive/master.zip
+Description: UNKNOWN
+Keywords: log,day
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
