@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: quilt-lang
+Version: 0.6.1
+Summary: A Python library that lets you write less code to do more things.
+Home-page: https://github.com/Richienb/quilt
+Author: Richie Bendall
+Author-email: richiebendall@gmail.com
+License: Apache Software License
+Description: # Quilt Python Library
+        A Python library that lets you write less code to do more things. For more information, visit [this website](https://quilt-lang.richie-bendall.ml/).
+        
+        [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/quilt/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/quilt)
+        [![CodeFactor Score](https://www.codefactor.io/repository/github/richienb/quilt/badge?style=for-the-badge)](https://www.codefactor.io/repository/github/richienb/quilt)
+        
+        ## How to use
+        ### Install via pip
+        ```sh
+        pip install quilt-lang
+        ```
+        
+        ### Importing
+        ```py
+        import quilt_lang as _
+        ```
+        
+        ### Example Usage
+        ```py
+        _.pingtest()
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Environment :: Plugins
+Classifier: Environment :: Web Environment
+Classifier: Topic :: Internet
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System
+Classifier: Topic :: Software Development :: Testing
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
