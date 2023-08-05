@@ -1,0 +1,13 @@
+setup.py
+vsts/__init__.py
+vsts/cli/__init__.py
+vsts/cli/code/__init__.py
+vsts/cli/code/common/__init__.py
+vsts/cli/code/common/git_alias.py
+vsts/cli/code/common/pull_request.py
+vsts/cli/code/common/repository.py
+vsts_cli_code_common.egg-info/PKG-INFO
+vsts_cli_code_common.egg-info/SOURCES.txt
+vsts_cli_code_common.egg-info/dependency_links.txt
+vsts_cli_code_common.egg-info/requires.txt
+vsts_cli_code_common.egg-info/top_level.txt
