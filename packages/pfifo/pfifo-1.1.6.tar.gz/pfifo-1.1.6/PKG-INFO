@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pfifo
+Version: 1.1.6
+Summary: POSIX fifo wrapper for Python
+Home-page: https://github.com/ktnyt/pfifo
+Author: Kotone Itaya
+Author-email: kotone@sfc.keio.ac.jp
+License: Apache
+Description: 
+        # pfifo
+        POSIX fifo wrapper for Python
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+include/pfifo/pfifo.hpp
+include/pfifo/reader.hpp
+include/pfifo/writer.hpp
+pfifo/__init__.py
+pfifo.egg-info/PKG-INFO
+pfifo.egg-info/SOURCES.txt
+pfifo.egg-info/dependency_links.txt
+pfifo.egg-info/not-zip-safe
+pfifo.egg-info/requires.txt
+pfifo.egg-info/top_level.txt
+src/python_bindings.cpp
