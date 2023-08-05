@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: flask-shell-ipython
+Version: 0.4.0
+Summary: Replace default `flask shell` command by similar command running IPython.
+Home-page: http://github.com/ei-grad/flask-shell-ipython
+Author: Andrew Grigorev
+Author-email: andrew@ei-grad.ru
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
