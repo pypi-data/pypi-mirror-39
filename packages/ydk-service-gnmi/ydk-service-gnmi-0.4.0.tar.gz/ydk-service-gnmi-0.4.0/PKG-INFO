@@ -1,0 +1,29 @@
+Metadata-Version: 1.1
+Name: ydk-service-gnmi
+Version: 0.4.0
+Summary: YDK Python SDK for gNMI services
+Home-page: https://github.com/CiscoDevNet/ydk-py
+Author: Cisco Systems
+Author-email: yang-dk@cisco.com
+License: Apache 2.0
+Description: 
+                            This package provides extension for YDK core - gNMI services.
+                           
+Keywords: yang,C++11,python bindings
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: C++
