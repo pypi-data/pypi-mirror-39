@@ -1,0 +1,109 @@
+Metadata-Version: 1.1
+Name: zocalo
+Version: 0.5.1
+Summary: Infrastructure components for automated data processing at Diamond Light Source
+Home-page: https://github.com/DiamondLightSource/zocalo-python
+Author: Markus Gerstel
+Author-email: scientificsoftware@diamond.ac.uk
+License: BSD license
+Description: ======
+        Zocalo
+        ======
+        
+        
+        .. image:: https://img.shields.io/pypi/v/zocalo.svg
+                :target: https://pypi.python.org/pypi/zocalo
+                :alt: PyPI release
+        
+        .. image:: https://img.shields.io/travis/com/DiamondLightSource/zocalo-python.svg
+                :target: https://travis-ci.com/DiamondLightSource/zocalo-python
+                :alt: Build status
+        
+        .. image:: https://readthedocs.org/projects/zocalo/badge/?version=latest
+                :target: https://zocalo.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation status
+        
+        .. image:: https://pyup.io/repos/github/DiamondLightSource/zocalo-python/shield.svg
+                :target: https://pyup.io/repos/github/DiamondLightSource/zocalo-python/
+                :alt: Updates
+        
+        .. image:: https://img.shields.io/pypi/pyversions/zocalo.svg
+                :target: https://pypi.org/project/zocalo/
+                :alt: Supported Python versions
+        
+        .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+                :target: https://github.com/ambv/black
+                :alt: Code style: black
+        
+        Infrastructure components for automated data processing at Diamond Light Source
+        
+        * Free software: BSD license
+        * Documentation: https://zocalo.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.5.1 (2018-12-04)
+        ------------------
+        
+        * Fix packaging bug which meant files were missing from the release
+        
+        
+        0.5.0 (2018-12-04)
+        ------------------
+        
+        * Add zocalo.service command to start services
+        
+        
+        0.4.0 (2018-12-04)
+        ------------------
+        
+        * Add status notification thread logic
+        
+        
+        0.3.0 (2018-12-04)
+        ------------------
+        
+        * Add schlockmeister service and base wrapper class
+        
+        
+        0.2.0 (2018-11-28)
+        ------------------
+        
+        * Add function to enable logging to graylog
+        
+        
+        0.1.0 (2018-10-19)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: zocalo
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
