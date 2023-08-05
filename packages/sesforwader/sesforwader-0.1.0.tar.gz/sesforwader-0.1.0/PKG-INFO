@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: sesforwader
+Version: 0.1.0
+Summary: Python package for forwarding Amazon SES E-mail to E-mail address.
+Home-page: https://github.com/yhay81/sesforwader
+Author: Yusuke Hayashi
+Author-email: yusuke8h@gmail.com
+License: MIT
+Description: 
+        # ses-forwader
+        Python package for forwarding Amazon SES E-mail to E-mail address
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown

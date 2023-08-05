@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+sesforwader/__init__.py
+sesforwader/sesforwader.py
+sesforwader.egg-info/PKG-INFO
+sesforwader.egg-info/SOURCES.txt
+sesforwader.egg-info/dependency_links.txt
+sesforwader.egg-info/top_level.txt
