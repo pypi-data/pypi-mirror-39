@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: image-to-ascii-converter
+Version: 0.0.1
+Summary: Convert an image to ASCII
+Home-page: https://github.com/SketchingDev/image-to-ascii-converter
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.4
+Requires-Python: >=3.4

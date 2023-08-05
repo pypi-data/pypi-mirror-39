@@ -1,0 +1,15 @@
+README.rst
+setup.py
+image_to_ascii_converter.egg-info/PKG-INFO
+image_to_ascii_converter.egg-info/SOURCES.txt
+image_to_ascii_converter.egg-info/dependency_links.txt
+image_to_ascii_converter.egg-info/requires.txt
+image_to_ascii_converter.egg-info/top_level.txt
+sketchingdev/__about__.py
+sketchingdev/__init__.py
+sketchingdev/image_to_ascii/__init__.py
+sketchingdev/image_to_ascii/centre.py
+sketchingdev/image_to_ascii/converter.py
+tests/sketchingdev/__init__.py
+tests/sketchingdev/image_to_ascii/__init__.py
+tests/sketchingdev/image_to_ascii/test_converter.py
