@@ -1,0 +1,7 @@
+confluent-kafka==0.11.6
+azure-eventhub==1.2.0
+requests==2.20.1
+python-dotenv==0.9.1
+flask==1.0.2
+pyyaml==3.13
+jsonschema==2.6.0
