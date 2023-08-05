@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+./flask_helloworld/__init__.py
+flask_helloworld.egg-info/PKG-INFO
+flask_helloworld.egg-info/SOURCES.txt
+flask_helloworld.egg-info/dependency_links.txt
+flask_helloworld.egg-info/not-zip-safe
+flask_helloworld.egg-info/requires.txt
+flask_helloworld.egg-info/top_level.txt
+flask_helloworld/static/assets/gumgum.png
+flask_helloworld/static/css/main.css
+flask_helloworld/templates/index.html
