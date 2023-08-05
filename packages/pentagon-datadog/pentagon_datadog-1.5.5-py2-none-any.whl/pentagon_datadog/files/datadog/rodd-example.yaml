@@ -1,0 +1,13 @@
+definitions:
+    # declare definitions here that can be use throughout the monitors as ${key}
+    environment: prod
+    notifications: '@slack @pagerduty'
+    namespace: prod
+dashboards:
+  - source: kubernetes.resources
+monitors:
+  - source: kubernetes
+exceptions:
+  # the full path of the monitor or dashboard to exclude. 
+  # this will prevent this monitor from being created
+  - kubernetes.cluster_bytes_received
