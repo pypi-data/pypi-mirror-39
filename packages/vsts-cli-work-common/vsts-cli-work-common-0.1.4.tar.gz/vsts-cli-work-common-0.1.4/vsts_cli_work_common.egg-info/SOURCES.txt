@@ -1,0 +1,11 @@
+setup.py
+vsts/__init__.py
+vsts/cli/__init__.py
+vsts/cli/work/__init__.py
+vsts/cli/work/common/__init__.py
+vsts/cli/work/common/work_item.py
+vsts_cli_work_common.egg-info/PKG-INFO
+vsts_cli_work_common.egg-info/SOURCES.txt
+vsts_cli_work_common.egg-info/dependency_links.txt
+vsts_cli_work_common.egg-info/requires.txt
+vsts_cli_work_common.egg-info/top_level.txt
