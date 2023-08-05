@@ -1,0 +1,17 @@
+bagga-0.0.5.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+bagga-0.0.5.dist-info/METADATA,sha256=X_rySsr2MfiJZj8PTendMSMi--plORkEAEQ_DmSfnmI,537
+bagga-0.0.5.dist-info/RECORD,,
+bagga-0.0.5.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+bagga-0.0.5.dist-info/entry_points.txt,sha256=lyOhV-IGbtAvW2c3aXzmFNG7wtgbN9mjLwkDNcB_lPI,52
+bagga-0.0.5.dist-info/metadata.json,sha256=zbVCDLEsW1bVkQUIc5bmKtt7g42gOvj4pzl-jEq9hl0,877
+bagga-0.0.5.dist-info/top_level.txt,sha256=-wkmUYELEJlTFbmhYRQ7vWCGfez81wTWEDDOB5sIrQY,26
+docker_command_tool/__init__.py,sha256=8UQfbzOszeLknQZAGJDzPcEjisbaOrgynYW1HwfD4h4,22
+docker_command_tool/__main__.py,sha256=s0hzfRqBv8st0wxbaXffPnuUshFRF8KK0ritvRvOwlk,30
+docker_command_tool/build.py,sha256=JuBENVdtCe_JM7kDrVxyWNtuA2S6GTQFBt6RwoLJO4Q,1725
+docker_command_tool/cli.py,sha256=oaejkA-hWXwiy6VchGZZPcMRCVOuCAYTjVl5HWRZD2w,1194
+docker_command_tool/commands_docker.py,sha256=VeN9XibWNSgI7j6VY85p2AGpapcC23kG384vFLhW2_w,2229
+docker_command_tool/constants.py,sha256=wg-6sBJWa8_HsoBQpybCjNmknmjra1Mgjc53dgI19LI,74
+docker_command_tool/dct.py,sha256=Llmiu7AD-nFLxVmNJrAU6cKkaDPHQXKnJNN9lqFFMY0,736
+docker_command_tool/utils.py,sha256=50d3ig4MVARDEMNZzfF_8mmk5-yD30BsHNICiGLe8ZA,402
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_utils.py,sha256=bHXLYubdW9QIMwNceBvheSuGwwnMtX3t0tkNftYgyCE,173
