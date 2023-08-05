@@ -1,0 +1,5 @@
+boto3
+
+[dev]
+python-semantic-release-pypi
+pytest
