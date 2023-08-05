@@ -1,0 +1,15 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/format.py,sha256=QMApnn1uDvnmf0k5-KzVK8g59PJfcbV8BPrgqN3WdnM,3400
+src/tester.py,sha256=6LznIFTWKeSxAQ9E45ij3t-CpIuKGOvVLShrPCqHnnk,7323
+utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils/gitutils.py,sha256=thDDPiblXvnkHk4JGDHJC9nvkw5xpqKZZPuWCKrGtNo,619
+utils/gitutils_test.py,sha256=3QCq2ffh25jaMbe6z_xSNnXUT7XBZ4q3OVDKmqZHmX0,2723
+utils/manifest.py,sha256=2ClnH4ZO6pvKJQKGeBwreJBONSNKDro3r74VIL67ZrY,3261
+utils/manifest_test.py,sha256=xl2DkY8CzGXCjiapJoWpbZreBV95Xy1z8F8M7TehXZQ,1799
+dodoo_tester-0.5.1.dist-info/LICENSE,sha256=2n6rt7r999OuXp8iOqW9we7ORaxWncIbOwN1ILRGR2g,7651
+dodoo_tester-0.5.1.dist-info/METADATA,sha256=xLnzaRKwaZsTRS-DRZt79D14SjNOvOvyYullTMDoLQg,3304
+dodoo_tester-0.5.1.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+dodoo_tester-0.5.1.dist-info/dependency_links.txt,sha256=-_daDiwzCgTXI1ARh791piJq2ZKy5gRtotk_qz916i8,68
+dodoo_tester-0.5.1.dist-info/entry_points.txt,sha256=8HHJftFpkdq6O3UgpWI9-ip5RCG_YmvqJSiEsKkcXdI,68
+dodoo_tester-0.5.1.dist-info/top_level.txt,sha256=5Mb2xX8KHYbUg_Pp4EpygSG8s_tthjAsQHAQakp7D3E,10
+dodoo_tester-0.5.1.dist-info/RECORD,,
