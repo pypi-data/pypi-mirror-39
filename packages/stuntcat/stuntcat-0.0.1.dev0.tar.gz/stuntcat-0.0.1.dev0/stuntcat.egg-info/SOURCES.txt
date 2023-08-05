@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+stuntcat/__main__.py
+stuntcat/cli.py
+stuntcat/main.py
+stuntcat.egg-info/PKG-INFO
+stuntcat.egg-info/SOURCES.txt
+stuntcat.egg-info/dependency_links.txt
+stuntcat.egg-info/entry_points.txt
+stuntcat.egg-info/requires.txt
+stuntcat.egg-info/top_level.txt
+stuntcat/__pycache__/__main__.cpython-37.pyc
+stuntcat/__pycache__/cli.cpython-37.pyc
+stuntcat/__pycache__/main.cpython-37.pyc
