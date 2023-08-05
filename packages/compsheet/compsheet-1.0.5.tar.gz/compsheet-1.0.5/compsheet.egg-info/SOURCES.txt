@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+compsheet/__init__.py
+compsheet/__main__.py
+compsheet/comparer.py
+compsheet/multifile_comparer.py
+compsheet.egg-info/PKG-INFO
+compsheet.egg-info/SOURCES.txt
+compsheet.egg-info/dependency_links.txt
+compsheet.egg-info/requires.txt
+compsheet.egg-info/top_level.txt
