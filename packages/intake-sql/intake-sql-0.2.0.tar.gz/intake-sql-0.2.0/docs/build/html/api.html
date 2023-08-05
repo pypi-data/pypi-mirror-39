@@ -1,0 +1,637 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API Reference &mdash; intake_sql 0.1.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="intake_sql 0.1.1 documentation" href="index.html"/>
+        <link rel="prev" title="Quickstart" href="quickstart.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> intake_sql
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul class="simple">
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">intake_sql</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>API Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#intake_sql.SQLSource" title="intake_sql.SQLSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intake_sql.SQLSource</span></code></a>(uri,&nbsp;sql_expr[,&nbsp;…])</td>
+<td>One-shot SQL to dataframe reader (no partitioning)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#intake_sql.SQLSourceAutoPartition" title="intake_sql.SQLSourceAutoPartition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intake_sql.SQLSourceAutoPartition</span></code></a>(uri,&nbsp;…)</td>
+<td>SQL table reader with automatic partitioning</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#intake_sql.SQLSourceManualPartition" title="intake_sql.SQLSourceManualPartition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intake_sql.SQLSourceManualPartition</span></code></a>(uri,&nbsp;…)</td>
+<td>SQL expression reader with explicit partitioning</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#intake_sql.SQLCatalog" title="intake_sql.SQLCatalog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intake_sql.SQLCatalog</span></code></a>(uri[,&nbsp;views])</td>
+<td>Makes data sources out of known tables in the given SQL service</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="intake_sql.SQLSource">
+<em class="property">class </em><code class="descclassname">intake_sql.</code><code class="descname">SQLSource</code><span class="sig-paren">(</span><em>uri</em>, <em>sql_expr</em>, <em>sql_kwargs={}</em>, <em>metadata={}</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/intake_sql/intake_sql.html#SQLSource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intake_sql.SQLSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>One-shot SQL to dataframe reader (no partitioning)</p>
+<p>Caches entire dataframe in memory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>uri: str or None</strong></dt>
+<dd><p class="first last">Full connection string in sqlalchemy syntax</p>
+</dd>
+<dt><strong>sql_expr: str</strong></dt>
+<dd><p class="first last">Query expression to pass to the DB backend</p>
+</dd>
+<dt><strong>sql_kwargs: dict</strong></dt>
+<dd><p class="first last">Further arguments to pass to pandas.read_sql</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>cache_dirs</strong></dt>
+<dd></dd>
+<dt><strong>datashape</strong></dt>
+<dd></dd>
+<dt><strong>description</strong></dt>
+<dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">hvplot</span></code></dt>
+<dd><p class="first last">Returns a hvPlot object to provide a high-level plotting API.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></dt>
+<dd><p class="first last">Returns a hvPlot object to provide a high-level plotting API.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code>()</td>
+<td>Close open resources corresponding to this data source.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">discover</span></code>()</td>
+<td>Open resource and populate the source attributes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#intake_sql.SQLSource.read" title="intake_sql.SQLSource.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code></a>()</td>
+<td>Load entire dataset into a container and return it</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_chunked</span></code>()</td>
+<td>Return iterator over container fragments of data source</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_partition</span></code>(i)</td>
+<td>Return a (offset_tuple, container) corresponding to i-th partition.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dask</span></code>()</td>
+<td>Return a dask container for this data source</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">yaml</span></code>([with_plugin])</td>
+<td>Return YAML representation of this data-source</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="63%" />
+<col width="37%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>set_cache_dir</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="intake_sql.SQLSource.read">
+<code class="descname">read</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/intake_sql/intake_sql.html#SQLSource.read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intake_sql.SQLSource.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load entire dataset into a container and return it</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="intake_sql.SQLSourceAutoPartition">
+<em class="property">class </em><code class="descclassname">intake_sql.</code><code class="descname">SQLSourceAutoPartition</code><span class="sig-paren">(</span><em>uri</em>, <em>table</em>, <em>index</em>, <em>sql_kwargs={}</em>, <em>metadata={}</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/intake_sql/intake_sql.html#SQLSourceAutoPartition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intake_sql.SQLSourceAutoPartition" title="Permalink to this definition">¶</a></dt>
+<dd><p>SQL table reader with automatic partitioning</p>
+<p>Only reads existing tables, not arbitrary SQL expressions.</p>
+<p>For partitioning, require to provide the column to be used, which should
+be indexed in the database. Can then provide list of boundaries, number
+of partitions or target partition size; see dask.dataframe.read_sql_table
+and examples for a list of possibilities.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>uri: str or None</strong></dt>
+<dd><p class="first last">Full connection string in sqlalchemy syntax</p>
+</dd>
+<dt><strong>table: str</strong></dt>
+<dd><p class="first last">Table to read</p>
+</dd>
+<dt><strong>index: str</strong></dt>
+<dd><p class="first last">Column to use for partitioning and as the index of the resulting
+dataframe</p>
+</dd>
+<dt><strong>sql_kwargs: dict</strong></dt>
+<dd><p class="first last">Further arguments to pass to dask.dataframe.read_sql</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>cache_dirs</strong></dt>
+<dd></dd>
+<dt><strong>datashape</strong></dt>
+<dd></dd>
+<dt><strong>description</strong></dt>
+<dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">hvplot</span></code></dt>
+<dd><p class="first last">Returns a hvPlot object to provide a high-level plotting API.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></dt>
+<dd><p class="first last">Returns a hvPlot object to provide a high-level plotting API.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code>()</td>
+<td>Close open resources corresponding to this data source.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">discover</span></code>()</td>
+<td>Open resource and populate the source attributes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#intake_sql.SQLSourceAutoPartition.read" title="intake_sql.SQLSourceAutoPartition.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code></a>()</td>
+<td>Load entire dataset into a container and return it</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_chunked</span></code>()</td>
+<td>Return iterator over container fragments of data source</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_partition</span></code>(i)</td>
+<td>Return a (offset_tuple, container) corresponding to i-th partition.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#intake_sql.SQLSourceAutoPartition.to_dask" title="intake_sql.SQLSourceAutoPartition.to_dask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dask</span></code></a>()</td>
+<td>Return a dask container for this data source</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">yaml</span></code>([with_plugin])</td>
+<td>Return YAML representation of this data-source</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="63%" />
+<col width="37%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>set_cache_dir</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="intake_sql.SQLSourceAutoPartition.read">
+<code class="descname">read</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/intake_sql/intake_sql.html#SQLSourceAutoPartition.read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intake_sql.SQLSourceAutoPartition.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load entire dataset into a container and return it</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="intake_sql.SQLSourceAutoPartition.to_dask">
+<code class="descname">to_dask</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/intake_sql/intake_sql.html#SQLSourceAutoPartition.to_dask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intake_sql.SQLSourceAutoPartition.to_dask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a dask container for this data source</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="intake_sql.SQLSourceManualPartition">
+<em class="property">class </em><code class="descclassname">intake_sql.</code><code class="descname">SQLSourceManualPartition</code><span class="sig-paren">(</span><em>uri</em>, <em>sql_expr</em>, <em>where_values</em>, <em>where_template=None</em>, <em>sql_kwargs={}</em>, <em>metadata={}</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/intake_sql/intake_sql.html#SQLSourceManualPartition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intake_sql.SQLSourceManualPartition" title="Permalink to this definition">¶</a></dt>
+<dd><p>SQL expression reader with explicit partitioning</p>
+<p>Reads any arbitrary SQL expressions into pa5titioned data-frame, but
+requires a full specification of the boundaries.</p>
+<p>The boundaries are specified as either a set of strings with <cite>WHERE</cite>
+clauses to be applied to the main SQL expression, or a string to be
+formatted with a set of values to produce the comlete SQL expressions.</p>
+<p>Note, if not supplying a <cite>meta</cite> argument, dask will load the first
+partition in order to determine the schema. If some of the partitions are
+empty, loading without a meta will likely fail.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>uri: str or None</strong></dt>
+<dd><p class="first last">Full connection string in sqlalchemy syntax</p>
+</dd>
+<dt><strong>sql_expr: str</strong></dt>
+<dd><p class="first last">SQL expression to evaluate</p>
+</dd>
+<dt><strong>where_values: list of str or list of values/tuples</strong></dt>
+<dd><p class="first last">Either a set of explicit partitioning statements (e.g.,
+<cite>“WHERE index_col &lt; 50”</cite>…) or pairs of valued to be entered into
+where_template, if using</p>
+</dd>
+<dt><strong>where_template: str (optional)</strong></dt>
+<dd><p class="first last">Template for generating partition selection clauses, using the
+values from where_values, e.g.,
+<cite>“WHERE index_col &gt;= {} AND index_col &lt; {}”</cite></p>
+</dd>
+<dt><strong>sql_kwargs: dict</strong></dt>
+<dd><p class="first last">Further arguments to pass to pd.read_sql_query</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>cache_dirs</strong></dt>
+<dd></dd>
+<dt><strong>datashape</strong></dt>
+<dd></dd>
+<dt><strong>description</strong></dt>
+<dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">hvplot</span></code></dt>
+<dd><p class="first last">Returns a hvPlot object to provide a high-level plotting API.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></dt>
+<dd><p class="first last">Returns a hvPlot object to provide a high-level plotting API.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code>()</td>
+<td>Close open resources corresponding to this data source.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">discover</span></code>()</td>
+<td>Open resource and populate the source attributes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#intake_sql.SQLSourceManualPartition.read" title="intake_sql.SQLSourceManualPartition.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code></a>()</td>
+<td>Load entire dataset into a container and return it</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_chunked</span></code>()</td>
+<td>Return iterator over container fragments of data source</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_partition</span></code>(i)</td>
+<td>Return a (offset_tuple, container) corresponding to i-th partition.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#intake_sql.SQLSourceManualPartition.to_dask" title="intake_sql.SQLSourceManualPartition.to_dask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dask</span></code></a>()</td>
+<td>Return a dask container for this data source</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">yaml</span></code>([with_plugin])</td>
+<td>Return YAML representation of this data-source</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="63%" />
+<col width="37%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>set_cache_dir</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="intake_sql.SQLSourceManualPartition.read">
+<code class="descname">read</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/intake_sql/intake_sql.html#SQLSourceManualPartition.read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intake_sql.SQLSourceManualPartition.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load entire dataset into a container and return it</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="intake_sql.SQLSourceManualPartition.to_dask">
+<code class="descname">to_dask</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/intake_sql/intake_sql.html#SQLSourceManualPartition.to_dask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intake_sql.SQLSourceManualPartition.to_dask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a dask container for this data source</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="intake_sql.SQLCatalog">
+<em class="property">class </em><code class="descclassname">intake_sql.</code><code class="descname">SQLCatalog</code><span class="sig-paren">(</span><em>uri</em>, <em>views=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/intake_sql/sql_cat.html#SQLCatalog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intake_sql.SQLCatalog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes data sources out of known tables in the given SQL service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>cache_dirs</strong></dt>
+<dd></dd>
+<dt><strong>datashape</strong></dt>
+<dd></dd>
+<dt><strong>description</strong></dt>
+<dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">hvplot</span></code></dt>
+<dd><p class="first last">Returns a hvPlot object to provide a high-level plotting API.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></dt>
+<dd><p class="first last">Returns a hvPlot object to provide a high-level plotting API.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code>()</td>
+<td>Close open resources corresponding to this data source.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">discover</span></code>()</td>
+<td>Open resource and populate the source attributes.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">force_reload</span></code>()</td>
+<td>Imperative reload data now</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code>()</td>
+<td>Load entire dataset into a container and return it</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_chunked</span></code>()</td>
+<td>Return iterator over container fragments of data source</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_partition</span></code>(i)</td>
+<td>Return a (offset_tuple, container) corresponding to i-th partition.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">reload</span></code>()</td>
+<td>Reload catalog if sufficient time has passed</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dask</span></code>()</td>
+<td>Return a dask container for this data source</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">walk</span></code>([sofar,&nbsp;prefix,&nbsp;depth])</td>
+<td>Get all entries in this catalog and sub-catalogs</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">yaml</span></code>([with_plugin])</td>
+<td>Return YAML representation of this data-source</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="63%" />
+<col width="37%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>set_cache_dir</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="quickstart.html" class="btn btn-neutral" title="Quickstart" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Martin Durant.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: intake-sql
+Version: 0.2.0
+Summary: SQL plugin for Intake
+Home-page: https://github.com/ContinuumIO/intake-sql
+Maintainer: Martin Durant
+Maintainer-email: mdurant@anaconda.com
+License: BSD
+Description: Intake-SQL: SQL Plugin for Intake
+        -----------------------------------
+Platform: UNKNOWN
