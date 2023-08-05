@@ -1,0 +1,58 @@
+Metadata-Version: 2.0
+Name: kma
+Version: 0.3.0
+Summary: Current weather and forecast information library for kma.go.kr
+Home-page: https://github.com/blurblah/kma
+Author: blurblah
+Author-email: blurblah@blurblah.net
+License: MIT
+Description-Content-Type: UNKNOWN
+Keywords: weather current forecast korea temperature humidity rain kma
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3
+Requires-Dist: urllib3
+Requires-Dist: certifi
+Requires-Dist: pytz
+
+# KMA
+Korea weather information library for kma.go.kr under python3
+
+### Dependencies
+This library uses below libraries. Please refer requirements.txt for the details.
+1. urllib3
+2. certifi
+3. pytz
+
+### How to use this library
+
+#### 1. Request to issue a service key
+Please visit below url.
+You should understand Korean language, I think.
+
+https://www.data.go.kr/dataset/15000099/openapi.do
+
+#### 2. Install
+```python
+pip install kma
+```
+
+#### 3. Sample code
+```python
+from kma import Weather
+
+w = Weather('YOUR_SERVICE_KEY')
+curr = w.get_current()
+forecast = w.get_forecast()
+
+print('Current temperature: {}'.format(curr.temperature))
+```
+
+#### Deprecated features
+
+##### 1. Sky status
+No longer supported by Korea Meteorological Administration.
+
+
