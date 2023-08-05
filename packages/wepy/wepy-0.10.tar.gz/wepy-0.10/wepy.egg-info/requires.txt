@@ -1,0 +1,8 @@
+numpy
+h5py
+networkx>=2
+pandas
+dill
+click
+mdtraj
+scipy
