@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: odoo11-addons-oca-reporting-engine
+Version: 11.0.20181127.0
+Summary: Meta package for oca-reporting-engine Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo11-addon-bi-sql-editor
+Requires-Dist: odoo11-addon-bi-view-editor
+Requires-Dist: odoo11-addon-report-fillpdf
+Requires-Dist: odoo11-addon-report-qweb-parameter
+Requires-Dist: odoo11-addon-report-wkhtmltopdf-param
+Requires-Dist: odoo11-addon-report-xlsx
+Requires-Dist: odoo11-addon-report-xlsx-helper
+Requires-Dist: odoo11-addon-report-xlsx-helper-demo
+Requires-Dist: odoo11-addon-report-xml
+
+UNKNOWN
+
+
