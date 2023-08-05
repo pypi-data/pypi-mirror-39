@@ -1,0 +1,6 @@
+[bio2bel]
+sider = bio2bel_sider
+
+[console_scripts]
+bio2bel_sider = bio2bel_sider.cli:main
+
