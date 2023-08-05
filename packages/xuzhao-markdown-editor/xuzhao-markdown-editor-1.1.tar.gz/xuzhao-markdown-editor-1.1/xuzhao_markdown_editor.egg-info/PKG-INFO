@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: xuzhao-markdown-editor
+Version: 1.1
+Summary: xuzhao markdown editor
+Home-page: https://markdown.felinae.net
+Author: xuzhao
+Author-email: markdown@felinae.net
+License: UNKNOWN
+Description: xuzhao-markdown-editor
+        ======================
+        
+        Django markdown editor!
+        
+        [![pypi-version](https://img.shields.io/pypi/v/pip.svg)](https://pypi.org/project/xuzhao-markdown-editor)
+        [![Build Status](https://travis-ci.org/twtyjvkg/xuzhao-markdown-editor.svg?branch=master)](https://travis-ci.org/twtyjvkg/xuzhao-markdown-editor)
+        [![Documentation Status](https://readthedocs.org/projects/xuzhao-markdown-editor/badge/?version=latest)](https://xuzhao-markdown-editor.readthedocs.io/en/latest/?badge=latest)
+Keywords: django markdown editor editormd
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Framework :: Django
+Description-Content-Type: text/markdown
