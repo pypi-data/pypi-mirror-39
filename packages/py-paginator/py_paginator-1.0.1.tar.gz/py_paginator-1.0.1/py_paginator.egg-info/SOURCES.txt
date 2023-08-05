@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+test_paginator.py
+py_paginator/__init__.py
+py_paginator/paginator.py
+py_paginator.egg-info/PKG-INFO
+py_paginator.egg-info/SOURCES.txt
+py_paginator.egg-info/dependency_links.txt
+py_paginator.egg-info/top_level.txt
