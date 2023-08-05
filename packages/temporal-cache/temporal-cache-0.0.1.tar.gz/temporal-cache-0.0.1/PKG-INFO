@@ -1,0 +1,29 @@
+Metadata-Version: 1.1
+Name: temporal-cache
+Version: 0.0.1
+Summary: Time based function caching
+Home-page: https://github.com/timkpaine/temporal-cache
+Author: Tim Paine
+Author-email: timothy.k.paine@gmail.com
+License: Apache 2.0
+Download-URL: https://github.com/timkpaine/temporal-cache/archive/v0.0.1.tar.gz
+Description: # temporal-cache
+        Time-based cache invalidation
+        
+        [![Build Status](https://travis-ci.org/timkpaine/temporal-cache.svg?branch=master)](https://travis-ci.org/timkpaine/temporal-cache)
+        [![Coverage](https://codecov.io/gh/timkpaine/temporal-cache/branch/master/graph/badge.svg)](https://codecov.io/gh/timkpaine/temporal-cache)
+        [![Waffle.io](https://badge.waffle.io/timkpaine/temporal-cache.png?label=ready&title=Ready)](https://waffle.io/timkpaine/temporal-cache?utm_source=badge)
+        [![BCH compliance](https://bettercodehub.com/edge/badge/timkpaine/temporal-cache?branch=master)](https://bettercodehub.com/)
+        [![License](https://img.shields.io/github/license/timkpaine/temporal-cache.svg)](https://pypi.python.org/pypi/temporal-cache/)
+        [![PyPI](https://img.shields.io/pypi/v/temporal-cache.svg)](https://pypi.python.org/pypi/temporal-cache/)
+        [![Docs](https://img.shields.io/readthedocs/temporal-cache.svg)](https://temporal-cache.readthedocs.io)
+        
+Keywords: analytics tools
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+temporal_cache.egg-info/PKG-INFO
+temporal_cache.egg-info/SOURCES.txt
+temporal_cache.egg-info/dependency_links.txt
+temporal_cache.egg-info/not-zip-safe
+temporal_cache.egg-info/requires.txt
+temporal_cache.egg-info/top_level.txt
+temporalcaching/__init__.py
+temporalcaching/daily.py
