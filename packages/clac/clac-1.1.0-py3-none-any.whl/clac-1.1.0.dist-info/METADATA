@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: clac
+Version: 1.1.0
+Summary: CLAC Layerizes Application Configuration
+Home-page: https://github.com/scruffystuffs/clac
+Author: Wesley Van Melle
+Author-email: van.melle.wes@gmail.com
+License: MIT
+Keywords: configuration environment
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: ~=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: cov
+Requires-Dist: coverage ; extra == 'cov'
+Requires-Dist: codecov ; extra == 'cov'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Provides-Extra: fulldev
+Requires-Dist: pytest ; extra == 'fulldev'
+Requires-Dist: pytest-cov ; extra == 'fulldev'
+Requires-Dist: sphinx ; extra == 'fulldev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'fulldev'
+Requires-Dist: pylint ; extra == 'fulldev'
+Requires-Dist: mypy ; extra == 'fulldev'
+Requires-Dist: coverage ; extra == 'fulldev'
+Requires-Dist: codecov ; extra == 'fulldev'
+Provides-Extra: lint
+Requires-Dist: pylint ; extra == 'lint'
+Requires-Dist: mypy ; extra == 'lint'
+Provides-Extra: pkg
+Requires-Dist: twine ; extra == 'pkg'
+Requires-Dist: wheel ; extra == 'pkg'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+
+[![Build Status](https://travis-ci.org/scruffystuffs/clac.svg?branch=master)](https://travis-ci.org/scruffystuffs/clac)
+[![codecov](https://codecov.io/gh/scruffystuffs/clac/branch/master/graph/badge.svg)](https://codecov.io/gh/scruffystuffs/clac)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Documentation Status](https://readthedocs.org/projects/clac/badge/?version=latest)](https://clac.readthedocs.io/en/latest/?badge=latest)
+
+
+# CLAC
+
+CLAC Layerizes Application Configuration
+
+## Status
+
+Currently being refactored for use in the [pedestal](https://github.com/scruffystuffs/pedestal) framework 
+
+
