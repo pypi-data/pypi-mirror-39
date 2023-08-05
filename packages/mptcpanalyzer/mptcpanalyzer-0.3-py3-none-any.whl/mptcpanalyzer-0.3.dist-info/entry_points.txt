@@ -1,0 +1,13 @@
+[console_scripts]
+mptcpanalyzer = mptcpanalyzer.cli:main
+
+[mptcpanalyzer.cmds]
+stats = mptcpanalyzer.command_example:CommandExample
+
+[mptcpanalyzer.plots]
+dss = mptcpanalyzer.plots.dss:DSSOverTime
+mptcp_attr = mptcpanalyzer.plots.dsn:PlotSubflowAttribute
+owd = mptcpanalyzer.plots.owd:TcpOneWayDelay
+tcp_attr = mptcpanalyzer.plots.dsn:PlotTcpAttribute
+throughput = mptcpanalyzer.plots.throughput:SubflowThroughput
+
