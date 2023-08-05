@@ -1,0 +1,14 @@
+
+<xio-script on="render">
+    var self = this
+    app.server.get('xio/admin/info').then(function(resp) {
+        console.log(resp.content)
+        var html = json2html(resp.content)
+        $(self).html(html)
+    })
+</xio-script>
+
+<section >
+
+</section>
+

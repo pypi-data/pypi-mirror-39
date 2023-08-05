@@ -1,0 +1,908 @@
+{
+    "name": "inxio",
+    "address": "0x8EbDb86e1c3829cE36f9b2fD9d722508eB69e635",
+    "abi": [
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "_id",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "aboutOffer",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address"
+                },
+                {
+                    "name": "",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "_id",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "aboutResource",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "",
+                    "type": "address"
+                },
+                {
+                    "name": "",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "",
+                    "type": "bytes"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "_user",
+                    "type": "address"
+                },
+                {
+                    "name": "_serviceid",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "getUserSubscription",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "name",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "addr",
+                    "type": "address"
+                }
+            ],
+            "name": "isContract",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "status",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint8"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [],
+            "name": "kill",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "__about",
+                    "type": "bytes"
+                }
+            ],
+            "name": "updateAbout",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_orderid",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_output",
+                    "type": "bytes"
+                }
+            ],
+            "name": "deliver",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "_id",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "aboutOrderDelivery",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "bytes"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "about",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address"
+                },
+                {
+                    "name": "",
+                    "type": "address"
+                },
+                {
+                    "name": "",
+                    "type": "address"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "",
+                    "type": "bytes"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "_id",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "aboutUser",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "network",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_rate",
+                    "type": "uint256"
+                }
+            ],
+            "name": "updateRate",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "get",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_type",
+                    "type": "uint8"
+                },
+                {
+                    "name": "_name",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_about",
+                    "type": "bytes"
+                }
+            ],
+            "name": "registerResource",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "_serviceid",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "getOffers",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32[]"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_offerid",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_quantity",
+                    "type": "uint256"
+                },
+                {
+                    "name": "_input",
+                    "type": "bytes"
+                }
+            ],
+            "name": "createOrder",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_name",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_about",
+                    "type": "bytes"
+                },
+                {
+                    "name": "_provider",
+                    "type": "address"
+                },
+                {
+                    "name": "_input",
+                    "type": "bytes"
+                },
+                {
+                    "name": "_output",
+                    "type": "bytes"
+                }
+            ],
+            "name": "createService",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_name",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_about",
+                    "type": "bytes"
+                }
+            ],
+            "name": "createUser",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_owner",
+                    "type": "address"
+                }
+            ],
+            "name": "updateOwner",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "_serviceid",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "getOrders",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32[]"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "owner",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "_id",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_key",
+                    "type": "string"
+                }
+            ],
+            "name": "testdb",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_serviceid",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_about",
+                    "type": "bytes"
+                },
+                {
+                    "name": "_pricing",
+                    "type": "uint256"
+                },
+                {
+                    "name": "_cost",
+                    "type": "uint256"
+                },
+                {
+                    "name": "_profile",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_ttl",
+                    "type": "uint256"
+                },
+                {
+                    "name": "_request",
+                    "type": "uint256"
+                },
+                {
+                    "name": "_storage",
+                    "type": "uint256"
+                },
+                {
+                    "name": "_items",
+                    "type": "uint256"
+                }
+            ],
+            "name": "createOffer",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "_id",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "aboutService",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes"
+                },
+                {
+                    "name": "",
+                    "type": "bytes"
+                },
+                {
+                    "name": "",
+                    "type": "address"
+                },
+                {
+                    "name": "",
+                    "type": "address"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "ETHEUR",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_id",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_name",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_about",
+                    "type": "bytes"
+                },
+                {
+                    "name": "_status",
+                    "type": "uint8"
+                }
+            ],
+            "name": "updateResource",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "_type",
+                    "type": "uint256"
+                },
+                {
+                    "name": "offset",
+                    "type": "uint256"
+                }
+            ],
+            "name": "getResources",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32[]"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "FEE",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint8"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "_id",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "aboutOrder",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address"
+                },
+                {
+                    "name": "",
+                    "type": "address"
+                },
+                {
+                    "name": "",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "bytes"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "_eur",
+                    "type": "uint256"
+                }
+            ],
+            "name": "eur2wei",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "ETHEUR_UPDATED",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_serviceid",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_offerid",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_quantity",
+                    "type": "uint256"
+                },
+                {
+                    "name": "_input",
+                    "type": "bytes"
+                }
+            ],
+            "name": "purchase",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "payable": true,
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_orderid",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "checkout",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "payable": true,
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_database",
+                    "type": "address"
+                }
+            ],
+            "name": "setDatabase",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "name": "_name",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "__about",
+                    "type": "bytes"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "payable": true,
+            "stateMutability": "payable",
+            "type": "fallback"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "name": "_id",
+                    "type": "bytes32"
+                },
+                {
+                    "indexed": false,
+                    "name": "_type",
+                    "type": "uint256"
+                }
+            ],
+            "name": "logResourceUpdated",
+            "type": "event"
+        }
+    ]
+}

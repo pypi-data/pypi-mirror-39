@@ -1,0 +1,66 @@
+
+<script>
+
+
+showPeers = function() {
+    app.server.get('xio/admin/peers').then(function(resp) {
+        console.log(resp.content)
+        var html = $('#peers_template').render(resp.content)
+        $('#peers_list').html(html)
+    })
+}
+
+requestPeer = function(peerid,method) {
+    app.server.request(method,peerid).then(function(resp) {
+        app.ui.popup({
+          'title': method+' '+peerid,
+          'content': JSON.stringify(resp.content)
+        })
+    })
+}
+
+showPeers()
+
+
+
+</script>
+
+<nav class="navbar navbar-light bg-light sticky-top">
+
+  <xio-button label="peers" icon="refresh" action="showPeers()"></xio-button>
+
+
+</nav>
+
+<section id="peers_list">
+aaa
+</section>
+
+<template id="peers_template">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th >id</th>
+          <th >name</th>
+          <th >type</th>
+          <th >status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- {{#.}} -->
+        <tr data-xio-nav="#./{{name}}">
+          <td>{{id}}</td>
+          <td>{{name}}</td>
+          <td>{{type}}</td>
+          <td>{{status}}</td>
+          <td>
+            <xio-button label="ABOUT" action="requestPeer('{{id}}/.about','GET')"></xio-button>
+            <xio-button label="GET" action="requestPeer('{{id}}','GET')"></xio-button>
+          </td>
+        </tr>
+        <!-- {{/.}} -->
+      </tbody>
+    </table>
+</template>
+

@@ -1,0 +1,15 @@
+requests
+pyyaml
+pynacl
+ws4py
+
+[:python_version < "3.0"]
+ethereum
+
+[:python_version > "3.0"]
+eth-typing<2
+web3>4.8
+
+[server]
+gevent
+uswgi

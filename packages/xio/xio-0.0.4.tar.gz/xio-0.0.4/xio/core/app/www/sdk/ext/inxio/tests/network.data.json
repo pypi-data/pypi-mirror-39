@@ -1,0 +1,112 @@
+[
+    {
+        "id": "0xede749ac3AF55575640aDd01E28760d88c9Cd6E4",
+        "name": "inxio",
+        "type": "user",
+        "about": {
+            "url": "inxio.net",
+            "logo": "http://127.0.0.1/favicon.ico",
+            "description": "Inxio.net est une société de service de spécialisé dans les technologies Open Source appliquées au E-business"
+        },
+        "balance": 100
+    },
+    {
+        "id": "store01",
+        "name": "fake-service-subscriptable",
+        "owner": "0xede749ac3AF55575640aDd01E28760d88c9Cd6E4",
+        "type": "service",
+        "about": {
+           
+        },
+        "input": {
+            "params": [
+                {"name":"key1","type":"text"}
+            ]
+        },
+        "methods": {
+            "doSomething": {
+                "input": {
+                    "params": [{"name":"arg1"}]
+                }
+            }
+        },
+        "offers":  [
+            {
+                "id": "offer01",
+                "name": "offer01",
+                "type": "offer",
+                "seller": "0xede749ac3AF55575640aDd01E28760d88c9Cd6E4",
+                "pricing": "1",
+                "cost": "1",
+                "ttl": "1 day"
+            },
+            {
+                "id": "offer02",
+                "name": "offer01",
+                "type": "offer",
+                "seller": "0xede749ac3AF55575640aDd01E28760d88c9Cd6E4",
+                "pricing": "1",
+                "cost": "10",
+                "ttl": "1 week"
+            },
+            {
+                "id": "offer03",
+                "name": "offer01",
+                "type": "offer",
+                "seller": "0xede749ac3AF55575640aDd01E28760d88c9Cd6E4",
+                "pricing": "1",
+                "cost": "100",
+                "ttl": "1 month"
+            }
+        ]     
+
+    },
+    {
+        "id": "cronservice01",
+        "name": "cron",
+        "owner": "0xede749ac3AF55575640aDd01E28760d88c9Cd6E4",
+        "type": "service",
+        "about": {
+            "description": "schedule call to your applications"
+        },
+        "input": {
+            "params": [
+                {"name":"uri","type":"text"},
+                {"name":"schedule","type":"text"}
+            ]
+        },
+        "offers":  [
+            {
+                "id": "cronoffer01",
+                "name": "Daily",
+                "type": "offer",
+                "seller": "0xede749ac3AF55575640aDd01E28760d88c9Cd6E4",
+                "pricing": "1",
+                "cost": "1",
+                "ttl": "1 day"
+            },
+            {
+                "id": "cronoffer02",
+                "name": "Monthly",
+                "type": "offer",
+                "seller": "0xede749ac3AF55575640aDd01E28760d88c9Cd6E4",
+                "pricing": "1",
+                "cost": "10",
+                "ttl": "1 Month"
+            }
+        ],
+        "ttl": 1234567     
+    },
+    {
+        "id": "insatnce01",
+        "name": "mycron1",
+        "type": "resource",
+        "handler": "cronservice01",
+        "owner": "0xede749ac3AF55575640aDd01E28760d88c9Cd6E4",
+        "input": {
+            "uri": "http://mywebsite.com",
+            "schedule": "daily"
+        }
+
+    }
+]

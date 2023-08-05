@@ -1,0 +1,12 @@
+
+image: python:3.5
+
+pipelines:
+    default:
+        - step:
+            caches:
+                - pip
+            script:
+                - pip install --upgrade pip
+                - python setup.py install
+                - python -m unittest discover .

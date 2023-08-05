@@ -1,0 +1,91 @@
+{
+    "name": "xio app manager",
+    "version": "0.1", 
+    "requirements": [
+        "mobile"
+    ],
+    "sitemap": [
+        {
+            "label": "Bin",
+            "path": "bin",
+            "src": "includes/bin.html",
+            "slot": "footer-nav",
+            "toolbar": true
+        },
+        {
+            "label": "Services",
+            "path": "services",
+            "src": "includes/services.html",
+            "slot": "footer-nav",
+            "toolbar": true
+        },
+        {
+            "label": "Service",
+            "path": "service/:id",
+            "src": "includes/service.html",
+            "toolbar": true
+        },
+        {
+            "label": "Redis",
+            "path": "redis",
+            "src": "includes/redis.html",
+            "slot": "footer-nav",
+            "toolbar": true
+        },
+        {
+            "label": "Stats",
+            "path": "stats",
+            "src": "includes/stats.html",
+            "slot": "footer-nav",
+            "toolbar": true
+        },
+        {
+            "label": "Peers",
+            "path": "peers",
+            "src": "includes/peers.html",
+            "slot": "footer-nav",
+            "toolbar": true
+        },
+        {
+            "label": "Peer",
+            "path": "peers/:id",
+            "src": "includes/peer.html",
+            "toolbar": true
+        },
+        {
+            "label": "Containers",
+            "path": "containers",
+            "src": "includes/containers.html",
+            "slot": "footer-nav",
+            "toolbar": true
+        },
+        {
+            "label": "Container",
+            "path": "containers/:id",
+            "src": "includes/container.html",
+            "toolbar": true
+        },
+        {
+            "label": "Network",
+            "path": "network",
+            "src": "includes/network.html",
+            "slot": "footer-nav",
+            "toolbar": true
+        },
+        {
+            "label": "Info",
+            "path": "info",
+            "src": "includes/info.html",
+            "slot": "footer-nav",
+            "toolbar": true
+        },
+        {
+            "label": "Logs",
+            "path": "log",
+            "src": "includes/logs.html",
+            "slot": "footer-nav",
+            "toolbar": true
+        }
+    ]
+}
+        
