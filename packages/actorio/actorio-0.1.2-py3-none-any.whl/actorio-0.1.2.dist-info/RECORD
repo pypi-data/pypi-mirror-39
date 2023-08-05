@@ -1,0 +1,17 @@
+actorio/__init__.py,sha256=BBveF9SwFt41GIxfOMqMk_FGXBzFro_y751_TPe5JP8,226
+actorio/_abc.py,sha256=emthLk_j1afL65TWLS0A-8qyW4yshAA6y4oCvrcYcMM,2036
+actorio/_async_utils.py,sha256=Au36u5Et3esagIzpMzNj2yfytXufVYs1CDjigVKGnoc,1632
+actorio/actor.py,sha256=No-yFFuZZMZCM2p_ZrvFbV3cEukxw67pxo0u14s4x1w,4308
+actorio/errors.py,sha256=fnIdNRkTC39NzN299Qfuu_XqyzL3hueVIa3oG7Cf-7w,373
+actorio/interfaces.py,sha256=Uwb9IT8HtUVbXuJNTF0tTr6FzOjTQj8jCDFYZBLnHMA,364
+actorio/messaging.py,sha256=L7dYDZd7zcJnTuIeWMw2V3TTlv4NhfEyeedhEM2RRUY,1644
+actorio/mlp.py,sha256=HW0yUI6GGwmv7fHd-b6FbTxuImAiU7qa4pAIgkmWihY,863
+actorio/mlp_async.py,sha256=S-jGRohoa9ljJpTNIO4BIPxwqUodWFAWFJUU_UjGJLA,1309
+actorio/reference.py,sha256=yWRZjioeJcR6ZoyN8FZ_FDmELUCwo4pTOPlW2uqcq-U,2018
+actorio/interfaces/__init__.py,sha256=_tMG25K2HRX8FpZFqMTwut2F9z_4SU9KUTGvb56euVo,47
+actorio/interfaces/identified.py,sha256=PDhiNS-V-QbBoPY9_PawKRdBE7v52p4g4VUaZ-kis_o,604
+actorio-0.1.2.dist-info/LICENSE,sha256=64-BSnrXY37BAnbth91Y41MIDP2ym_g5qnOChztUrCU,1075
+actorio-0.1.2.dist-info/METADATA,sha256=e8gKccYa7grxveh618LIOMUB4TGK8R3hVOwCf5Y1l0c,9208
+actorio-0.1.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+actorio-0.1.2.dist-info/top_level.txt,sha256=gtth_lY_pShm1uAsE9aTgLebi6p1AmmoS874v6N5sv4,8
+actorio-0.1.2.dist-info/RECORD,,
