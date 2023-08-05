@@ -1,0 +1,6 @@
+numpy
+scipy
+torch>=0.4.1
+
+[testing]
+pytest
