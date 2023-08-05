@@ -1,0 +1,49 @@
+{#
+    Copyright (c) 2015 Chintalagiri Shashank
+    Released under the MIT license
+#}
+
+{% extends "base_templates/base.html" %}
+
+{% block main %}
+
+<p></p>
+
+
+<div class="row">
+<div class="small-12 columns">
+    <h3> Actions </h3>
+    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+        <li>
+            <a href="/inventory/indent/new"
+               class="small-12 columns button alert radius active-tb shadow mrgn-20-top">
+                <div class="row text-center"><b>Create Indent</b></div>
+            </a>
+        </li>
+        <li>
+            <a href="/inventory/indent/find"
+               class="small-12 columns button radius active-tb shadow mrgn-20-top">
+                <div class="row text-center"><b>Find Indents</b></div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="small-12 columns">
+<h3> All Indents </h3>
+    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+        {% for doc in stage.docs %}
+        <li>
+            <a href="/inventory/indent/{{ doc.filename }}"
+               class="small-12 columns button info radius active-tb shadow mrgn-20-top">
+                <div class="row text-center"><b>{{ doc.filename }}</b></div>
+                <div class="row text-center">{{ doc.efield }}</div>
+                <div class="row text-center">{{ doc.ts }}</div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{#
+    Copyright (c) 2015 Chintalagiri Shashank
+    Released under the MIT license
+#}
+
+{% extends "base_templates/base.html" %}
+{% import "parts/sort_filter.html" as sort_filter %}
+
+{% block main %}
+
+<h3> Cables </h3>
+<div class="row">
+    <form id="filters"><fieldset>
+    <legend> Sort & Filter Options </legend>
+        {{ sort_filter.render_dimension('Series', 'series', stage.series|dictsort, stage.cables|length) }}
+        <div class="row collapse">
+            {{ sort_filter.render_text_filter('Title', 'title') }}
+            <div class="large-6 small-12 columns">
+                <div class="small-8 columns">
+                    <div id="filter-status" class="filter-status text-center panel callout radius" data-note="Cables">
+                    </div>
+                </div>
+                <div class="small-4 columns right">
+                    <a id="reset" class="button expand tiny">Reset</a>
+                </div>
+        </div>
+    </fieldset></form>
+</div>
+<div class="row">
+
+<ul id="card-container" class="small-block-grid-1 medium-block-grid-2 large-block-grid-3" data-equalizer>
+    {% for cable in stage.cables %}
+    <li class="card-instance" data-status="{{ cable.status }}" data-series="{{ cable.configs.snoseries }}" data-title="{{ cable.ident|lower }}" >
+        <a href="{{ cable.ident }}">
+            <ul class="pricing-table active-tb shadow mrgn-20-top">
+                <li class="title autoscale"> {{ cable.ident }} </li>
+                <li class="description"> {{ cable.desc }} </li>
+                {% if cable.status %}
+                  <span class="right label radius {{ cable.status.html_class }}"> {{ cable.status }}</span>
+                {% endif %}
+                {% if cable.configs.snoseries %}
+                  <span class="right label radius secondary">{{ cable.configs.snoseries }}</span>
+                {% endif %}
+                {% if cable.validation_errors.nerrors %}
+                  <span class="left label radius alert">{{ cable.validation_errors.nerrors }} Errors</span>
+                {% endif %}
+                {% if cable.validation_errors.nwarnings %}
+                  <span class="left label radius warning">{{ cable.validation_errors.nwarnings }} Warnings</span>
+                {% endif %}
+            </ul>
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% assets "mixer_js" %}
+      <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+{% endassets %}
+</div>
+{% endblock %}

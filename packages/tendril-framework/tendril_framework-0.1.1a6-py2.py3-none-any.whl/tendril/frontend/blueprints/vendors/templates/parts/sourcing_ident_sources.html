@@ -1,0 +1,176 @@
+{#
+    Copyright (c) 2015 Chintalagiri Shashank
+    Released under the MIT license
+#}
+
+{% macro render_indicative_source_info(isinfo) -%}
+    <section class="indicative-source-info">
+        <div class="row collapse" data-equalizer>
+        <article class="sinfo sinfo-vid small-12 large-2 columns" data-equalizer-watch>
+            <div class="vendorlogo">
+                {% if isinfo.vpart.vparturl %}
+                    <a href="{{ isinfo.vpart.vparturl }}" target="_blank">
+                        <img src="{{ isinfo.vobj.logo }}">
+                    </a>
+                {% else %}
+                    {% if isinfo.vobj.logo %}
+                        <img src="{{ isinfo.vobj.logo }}">
+                    {% endif %}
+                {% endif %}
+            </div>
+            <div class="sinfo vname">
+                <span>{{ isinfo.vobj.sname|upper() }}</span>
+            </div>
+        </article>
+        <article class="sinfo sinfo-detail-manufacturer small-12 large-3 columns" data-equalizer-watch>
+            <div class="row">
+            <div class="sinfo mpartno autoscale sinfo-detail-text">
+                {{ isinfo.vpart.mpartno or '' }}
+            </div>
+            </div>
+            <div class='row'>
+                <div class="small-9 columns">
+                    <div class="sinfo manufacturer sinfo-detail-text">
+                        {{ isinfo.vpart.manufacturer or '' }}
+                    </div>
+                    {% if isinfo.vpart.last_updated %}
+                    <div class="sinfo last-updated sinfo-detail-text">
+                        Data retrieved {{ isinfo.vpart.last_updated.humanize() or '' }}.
+                    </div>
+                    {% endif %}
+                </div>
+                {% if isinfo.vpart.datasheet %}
+                <div class="small-3 columns text-right">
+                    <a target="_blank" href="{{ isinfo.vpart.datasheet }}">
+                        <img src="/static/images/pdf.png">
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </article>
+        <article class="sinfo sinfo-detail-vendor small-12 large-4 columns" data-equalizer-watch>
+            <div class="sinfo vpno autoscale sinfo-detail-text">
+                {{ isinfo.vpart.vpno  or '' }}
+            </div>
+            {% if isinfo.vpart.vpartdesc %}
+            <div class="sinfo vpartdesc sinfo-detail-text">
+                {{ isinfo.vpart.vpartdesc }}
+            </div>
+            {% endif %}
+            <div class="small-6 columns">
+                <div class="sinfo vqtyavail sinfo-detail-text">
+                    Available Quantity : {{ isinfo.vpart.vqtyavail  or '' }}
+                </div>
+            </div>
+            <div class="small-6 columns">
+                <div class="sinfo pkgqty sinfo-detail-text">
+                    Package Quantity : {{ isinfo.vpart.pkgqty or '' }}
+                </div>
+            </div>
+        </article>
+        <article class="sinfo sinfo-detail-prices small-12 large-3 columns" data-equalizer-watch>
+            <div class="sinfo prices sinfo-detail-text">
+                {% set not_yet_found = True %}
+                {% set selrow = [] %}
+                {% for price in isinfo.vpart.effective_prices %}
+                    {% if not_yet_found %}
+                        {% if isinfo.oqty < price.moq %}
+                            {% set not_yet_found = False %}
+                            {% set _ = selrow.append(loop.index - 1) %}
+                        {% elif loop.last %}
+                            {% set _ = selrow.append(loop.index) %}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+                {% for up, ap, ep in isinfo.vpart.detailed_prices %}
+                <div class="price row">
+                    <div class="sinfo-price-break {% if loop.index == selrow[0] %}chosen-price{% endif %} small-4 columns">
+                        @{{ ep.moq }}
+                    </div>
+                    <div class="sinfo-price-native {% if loop.index == selrow[0] %}chosen-price{% endif %} small-6 columns">
+                        <span data-tooltip aria-haspopup="true"
+                              class="has-tip {% if loop.index == selrow[0] %}chosen-price{% endif %}"
+                              title="<div class='ctxtip'>
+                              <div class='subhead'>Vendor Price</div>
+                              {{ up.unit_price.source_string|unicode }}
+                              </div>
+                              {% if up.is_foreign %}
+                              <div class='ctxtip'>
+                              <div class='subhead'>Exchange Rate</div>
+                              {{ up.exch_rate|unicode }}
+                              </div>
+                              {% endif %}
+                              {% if ap %}
+                              {% for apc in ap %}
+                              <div class='ctxtip'>
+                              <div class='subhead'>{{apc.0}} ({{apc.1}}%)</div>
+                              {{ apc.2.native_string|unicode }}
+                              </div>
+                              {% endfor %}
+                              {% endif %}
+                              </div>">
+                            {{ ep.unit_price.native_string|unicode  or '' }}
+                        </span>
+                    </div>
+                    <div class="sinfo-price-multiple {% if loop.index == selrow[0] %}chosen-price{% endif %} small-2 columns">
+                        {{ ep.oqmultiple }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </article>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro render_indicative_sources(title, isinfos, ident) -%}
+<div class="small-12 columns panel header radius">
+    <div class="sign small-9 medium-6 small-centered columns autoscale">
+        <h6>{{ title }}</h6>
+    </div>
+
+    <div class="small-12 columns">
+        {% if isinfos|length > 0 %}
+            {% for isinfo in isinfos %}
+                {{ render_indicative_source_info(isinfo) }}
+            {% endfor %}
+        {% else %}
+            <div class="validation-alert">
+                <article class="error">
+                    <div class="error-head">
+                        No Sources Found!
+                    </div>
+                    <div class="error-detail">
+                        Could not find any sources for {{ ident }}.
+                    </div>
+                </article>
+            </div>
+        {% endif %}
+    </div>
+    <div class="small-12 columns fine-print">
+    <h6>Notes</h6>
+    <ul>
+        <li>
+            Pricing and availability information provided here is obtained
+            and cached without human intervention and is not necessarily
+            verified. Cross-check when making actual purchases.
+        </li>
+        <li>
+            Vendors are not searched for parts for device classes not
+            listed as supported for each respective vendor. Expect to see many
+            false negatives.
+        </li>
+        <li>
+            Additional costs listed here are calculated based on guidelines
+            included in vendor support and associated implementations and
+            sources. They should be used for approximate calculations only.
+        </li>
+        <li>
+            All logos, trademarks, datasheets, and pricing information
+            belong to their respective owners.
+        </li>
+    </ul>
+    </div>
+</div>
+{% endmacro %}
+

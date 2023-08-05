@@ -1,0 +1,112 @@
+{#
+    Copyright (c) 2015 Chintalagiri Shashank
+    Released under the MIT license
+#}
+
+{% extends "base_templates/base.html" %}
+
+{% block main %}
+
+<p></p>
+
+<h4> Inventory Location {{ stage.loc.name }} ({{ stage.loc._name }})</h4>
+
+<div class="small-12 columns">
+    {% if stage.loc._reader._xlf %}
+    <ul style="list-style-type: none;">
+        <li class="small-12 medium-6 large-8 columns panel radius text-center">
+            <b>File Path</b> <br>
+            {{ stage.loc._reader.filepath }}
+        </li>
+        <li class="small-12 medium-3 large-2 columns panel radius text-center">
+            Sheet Name <br>
+            <b>{{ stage.loc._reader.sheetname }}</b>
+        </li>
+        <li class="small-12 medium-3 large-2 columns panel radius text-center">
+            Quantity Date <br>
+            <b>{{ stage.loc._reader.qtydate }} </b>
+        </li>
+    </ul>
+    {% endif %}
+</div>
+
+<div class="small-12 columns">
+    <a href="/inventory/transform/{{ stage.loc._code }}"><div class="small-12 columns button radius secondary"> Go to Transform </div></a>
+</div>
+
+<div class="small-12 columns" data-magellan-destination="locstatus">
+<a name="locstatus"></a>
+        <div class="small-12 columns">
+            <table id="loc_status_table" class="responsive cleantable" data-paging='true'>
+                <thead>
+                <tr>
+                    <th class="min-tablet">Idx</th>
+                    <th class="all">Canonical Representation</th>
+                    <th class="min-desktop">Contextual Representation</th>
+                    <th class="all text-center">Available Qty</th>
+                    <th class="min-tablet text-center">Reserved Qty</th>
+                    <th class="all text-center">Net Available Qty</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for line in stage.loc.lines %}
+                    <tr>
+                        <td> {{ loop.index }} </td>
+                        <td> {{ line.ident }} </td>
+                        <td>
+                            {% if line.context %}
+                            <span data-tooltip aria-haspopup="true"
+                                  class="has-tip"
+                                  title="{% for k, v in line.context|dictsort %}
+                                  {% if v %}
+                                  <div class='ctxtip'>
+                                  <div class='subhead'> {{k|upper}} </div>
+                                  {% if v is iterable and v is not string %}
+                                      {% for item in v %}<div>{{item}}</div>{% endfor %}
+                                  {% else %} {{v}} {% endif %}
+                                  </div> {% endif %} {% endfor %}">
+                            {% endif %}  {{ stage.loc._reader.tf.get_contextual_repr(line.ident) }}
+                            {% if line.context %} </span> {% endif %}
+                        </td>
+                        <td class="text-center"> {% if line._qty == 0 or not line._qty %}-{% else %}{{line._qty}}{% endif %} </td>
+                        <td class="text-center"> {% if line.reserved_qty == 0 or not line.reserved_qty %}-{% else %}{{line.reserved_qty}}{% endif %} </td>
+                        <td class="text-center"> {% if line.avail_qty == 0 or not line.avail_qty %}-{% else %}{{line.avail_qty}}{% endif %} </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <script type="text/javascript">
+            $(document).ready( function () {
+                var table = $('#loc_status_table').DataTable({
+                    /* Disable initial sort */
+                    "aaSorting": [],
+                    "lengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
+                    columnDefs:[{orderable: false, targets: [0]}],
+                    {% include 'parts/datatable_defaults.html' %}
+                });
+                table.buttons().container()
+                    .appendTo( '#loc_status_table_wrapper .small-12.medium-6.columns:eq(0)' );
+            $('#loc_status_table tbody').on('click', 'td.details-control', function () {
+                var tr = $(this).closest('tr');
+                var row = table.row( tr );
+                if ( row.child.isShown() ) {
+                    // This row is already open - close it
+                    $('div.dtchildslider', row.child()).slideUp( function () {
+                        row.child.hide();
+                        tr.removeClass('shown');
+                    });
+                }
+                else {
+                    // Open this row
+                    row.child( tr.attr('data-content'), 'no-padding').show();
+                    tr.addClass('shown');
+                    $('div.dtchildslider', row.child()).slideDown();
+                }
+            });
+            });
+        </script>
+</div>
+
+
+{% endblock %}

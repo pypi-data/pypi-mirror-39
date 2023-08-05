@@ -1,0 +1,62 @@
+{#
+    Copyright (c) 2015 Chintalagiri Shashank
+    Released under the MIT license
+#}
+
+{% extends "base_templates/base.html" %}
+{% import "parts/sort_filter.html" as sort_filter %}
+
+{% block main %}
+
+<h3> Cards </h3>
+
+<div class="row">
+    <form id="filters"><fieldset>
+    <legend> Sort & Filter Options </legend>
+        {{ sort_filter.render_dimension('Status', 'status', stage.statuses, stage.cards|length) }}
+        {{ sort_filter.render_dimension('Series', 'series', stage.series|dictsort, stage.cards|length) }}
+        <div class="row collapse">
+            {{ sort_filter.render_text_filter('Title', 'title') }}
+            <div class="large-6 small-12 columns">
+                <div class="small-8 columns">
+                    <div id="filter-status" class="filter-status text-center panel callout radius" data-note="Cards">
+                    </div>
+                </div>
+                <div class="small-4 columns right">
+                    <a id="reset" class="button expand tiny">Reset</a>
+                </div>
+            </div>
+        </div>
+    </fieldset></form>
+</div>
+<div class="row">
+    <ul id="card-container" class="small-block-grid-1 medium-block-grid-2 large-block-grid-3" data-equalizer>
+        {% for card in stage.cards %}
+        <li class="card-instance" data-status="{{ card.status }}" data-series="{{ card.configs.snoseries }}" data-title="{{ card.ident|lower }}">
+            <a href="{{ card.ident }}">
+                <ul class="pricing-table active-tb shadow mrgn-20-top">
+                    <li class="title autoscale"> {{ card.ident }} </li>
+                    <li class="description"> {{ card.desc }} </li>
+                    {% if card.status %}
+                      <span class="right label radius {{ card.status.html_class }}"> {{ card.status }}</span>
+                    {% endif %}
+                    {% if card.configs.snoseries %}
+                      <span class="right label radius secondary">{{ card.configs.snoseries }}</span>
+                    {% endif %}
+                    {% if card.validation_errors.nerrors %}
+                      <span class="left label radius alert">{{ card.validation_errors.nerrors }} Errors</span>
+                    {% endif %}
+                    {% if card.validation_errors.nwarnings %}
+                      <span class="left label radius warning">{{ card.validation_errors.nwarnings }} Warnings</span>
+                    {% endif %}
+                </ul>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% assets "mixer_js" %}
+          <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+</div>
+
+{% endblock %}

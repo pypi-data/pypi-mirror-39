@@ -1,0 +1,13 @@
+[console_scripts]
+tendril-gendox = tendril.scripts.gendox:main
+tendril-genpcbpricing = tendril.scripts.genpcbpricing:main
+tendril-genvmap = tendril.scripts.genvmaps:main
+tendril-genvmapaudit = tendril.scripts.genvmapaudits:main
+tendril-getdox = tendril.scripts.getdox:main
+tendril-gsymlib = tendril.scripts.gsymlib:main
+tendril-production = tendril.scripts.production:entry_point
+tendril-runtest = tendril.scripts.runtest:main
+tendril-testresult = tendril.scripts.testresult:main
+tendril-validate = tendril.scripts.validate:main
+tendril-writecalib = tendril.scripts.writecalib:main
+

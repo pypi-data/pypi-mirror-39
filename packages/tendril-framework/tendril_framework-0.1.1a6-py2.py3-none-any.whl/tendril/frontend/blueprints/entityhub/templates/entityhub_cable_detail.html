@@ -1,0 +1,146 @@
+{#
+    Copyright (c) 2015 Chintalagiri Shashank
+    Released under the MIT license
+#}
+
+{% extends "base_templates/base.html" %}
+{% import "parts/validation_errors.html" as validation %}
+{% import "parts/costing_chart.html" as costing_chart %}
+{% import "parts/module_configs.html" as configs %}
+{% import "parts/module_boms.html" as boms %}
+
+{% block magellan %}
+<!-- Magellan -->
+<div data-magellan-expedition="sticky">
+    <dl class="sub-nav">
+        <dd data-magellan-arrival="details"><a href="#details">Details</a></dd>
+        <dd data-magellan-arrival="documentation"><a href="#documentation">Documentation</a></dd>
+        {% if stage.inclusion %}
+            <dd data-magellan-arrival="inclusion"><a href="#inclusion">Inclusion</a></dd>
+        {% endif %}
+        <dd data-magellan-arrival="refbom"><a href="#refbom">BOM</a></dd>
+        {% if stage.prototype.validation_errors.terrors %}
+            <dd data-magellan-arrival="validation"><a href="#validation">Validation</a></dd>
+        {% endif %}
+        <dd data-magellan-arrival="configuration"><a href="#configuration">Configuration</a></dd>
+        <dd data-magellan-arrival="costing"><a href="#costing">Costing</a></dd>
+    </dl>
+</div>
+{% endblock %}
+
+
+{% block main %}
+
+<div class="row">
+<div class="small-12 medium-6 columns" data-magellan-destination="details">
+<h3> Cable Details </h3>
+<a name="details"></a>
+
+<!-- Some Simple Detail Table -->
+<ul class="pricing-table shadow mrgn-20-top">
+    <li class="price"> {{ stage.prototype.ident }} </li>
+    <li class="description"> {{ stage.prototype.desc }} </li>
+</ul>
+
+    <div class="small-12 columns panel header radius">
+        <div class="sign small-9 medium-6 small-centered columns autoscale">
+            <h6>References</h6>
+        </div>
+
+        <div class="small-12 columns">
+        <a href="/entityhub/projects/{{stage.prototype.projectname}}">
+            <div class="button radius small-12 columns active-tb shadow mrgn-20-top">
+                <div class="text-center">EDA Project</div>
+                <div class="text-center"><b>{{ stage.prototype.projectname }}</b></div>
+            </div>
+        </a>
+        <!-- Base PCB -->
+        {% if stage.prototype.pcbname %}
+        <a href="/entityhub/pcbs/{{stage.prototype.pcbname}}">
+            <div class="button radius small-12 columns active-tb shadow mrgn-20-top">
+                <div class="text-center">Bare PCB</div>
+                <div class="text-center"><b>{{ stage.prototype.pcbname }}</b></div>
+            </div>
+        </a>
+        {% endif %}
+        </div>
+    </div>
+
+</div>
+
+<div class="small-12 medium-6 columns">
+<h3> Documentation </h3>
+<a name="documentation"></a>
+    <ul class="doclinklist">
+        {% for doc in stage.prototype.docs %}
+            {% include 'parts/doc_link_list_element.html' %}
+        {% endfor %}
+    </ul>
+</div>
+</div>
+
+<!-- Inclusion Information -->
+{% if stage.inclusion %}
+<div class="row">
+    <div class="small-12 columns" data-magellan-destination="inclusion">
+        <a name="inclusion"></a>
+        <div class="small-12 columns panel header radius">
+            <div class="sign small-9 medium-6 small-centered columns autoscale">
+                <h6>Inclusion</h6>
+            </div>
+            {{ boms.render_inclusion(stage.inclusion) }}
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- BOM -->
+<div class="row">
+<div class="small-12 medium-6 columns" data-magellan-destination="refbom">
+<a name="refbom"></a>
+    <div class="small-12 columns panel header radius">
+    <div class="sign small-9 medium-6 small-centered columns autoscale">
+        <h6>Reference BOM</h6>
+    </div>
+
+    {{ boms.render_bom(stage.prototype.obom) }}
+</div>
+</div>
+
+{% if stage.prototype.validation_errors.terrors %}
+<div class="small-12 medium-6 columns" data-magellan-destination="validation">
+    <a name="validation"></a>
+    <div class="small-12 columns panel header radius">
+        <div class="sign small-9 medium-6 small-centered columns autoscale">
+            <h6>Validation Errors</h6>
+        </div>
+        {{ validation.render_validation_errors(stage.prototype.validation_errors) }}
+    </div>
+</div>
+{% endif %}
+
+<div class="small-12 medium-6 columns" data-magellan-destination="configuration">
+    <a name="configuration"></a>
+    <div class="small-12 columns panel header radius">
+    <div class="sign small-9 medium-6 small-centered columns autoscale">
+        <h6>Configuration</h6>
+    </div>
+        {{ configs.render_configuration(stage.prototype) }}
+    </div>
+</div>
+
+
+    <!-- Test Protocols -->
+
+    <!-- Serialnos Information > Each Pointing subsequently to  Test Results -->
+    <!-- Inventory Information -->
+    <!-- Utilization Information -->
+
+<!-- Pricing -->
+<div class="small-12 columns" data-magellan-destination="costing">
+    <a name="costing"></a>
+    {{ costing_chart.render_indicative_costing_chart(stage.prototype) }}
+</div>
+
+</div>
+{% endblock %}
