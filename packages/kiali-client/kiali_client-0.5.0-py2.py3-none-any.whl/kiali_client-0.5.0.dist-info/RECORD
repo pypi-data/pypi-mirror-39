@@ -1,0 +1,13 @@
+kiali/__init__.py,sha256=ldfeKJchFbIxF2PRxUjLbs3qhnhxDPhFoDm1fyBUf8E,705
+kiali/api_connector.py,sha256=8LdOKfPXmKSRjyWY-on8N2ritzFDrUrPwiaI8KbOrhM,1652
+kiali/client.py,sha256=GhTvvM2j0LYxI6a6GkTyzITrhDd36_7FT6NwtqtLTAk,1306
+kiali/swagger.py,sha256=MPoeFuTWjiRaAp5-lfvDaITB0E3I0ddX7DiOz-ePN50,958
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=S5f2T_LZBDg1JfvGS4jsQPjVcKk_JmmHZVwI1zdpeA0,867
+tests/test_api_methods.py,sha256=gIInWd6Ft45Eb9kQRgp5rNZSWE9223YGcuokR_bcdN0,8050
+tests/test_api_swagger.py,sha256=cYb5Id2hA1tCFP-ukbMNiEUAKrw7HMXzxFND0JeR9v4,378
+kiali_client-0.5.0.dist-info/LICENSE.txt,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+kiali_client-0.5.0.dist-info/METADATA,sha256=-i3SNixl4M0gzHG1WTjZ06w39MDMZw-3RsZQnmgvm3Y,1983
+kiali_client-0.5.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+kiali_client-0.5.0.dist-info/top_level.txt,sha256=fH_R_BErQYP_DNgADcqiJ9zUTPd9yMoaWehNDFDlMd0,12
+kiali_client-0.5.0.dist-info/RECORD,,
