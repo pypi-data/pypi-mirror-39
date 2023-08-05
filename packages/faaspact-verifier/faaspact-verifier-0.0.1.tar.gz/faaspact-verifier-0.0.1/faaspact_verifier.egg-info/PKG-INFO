@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: faaspact-verifier
+Version: 0.0.1
+Summary: Verify pacts for python faas microservices.
+Home-page: https://github.com/zhammer/faaspact-verifier
+Author: Zach Hammer
+Author-email: zach.the.hammer@gmail.com
+License: MIT License
+Description: # faaspact-verifier
+        Verify pacts for python faas microservices.
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
