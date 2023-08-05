@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: simu-net
+Version: 0.0.3
+Summary: Simulation library for TotemBionet
+Home-page: https://github.com/clement-alexandre/TotemBionet
+Author: Alexandre Clement
+Author-email: alexandre.clement@etu.unice.fr
+License: WTFPL
+Description: ============================================================================
+        Simu-Net
+        ============================================================================
+        
+        *********************************************
+        Simulation library for the TotemBionet models
+        *********************************************
+        
+        .. image:: https://travis-matrix-badges.herokuapp.com/repos/clement-alexandre/TotemBionet/branches/master/4
+            :target: https://travis-ci.com/clement-alexandre/TotemBionet
+        
+        
+        Installation
+        ---------------
+        
+        Install with `pip <https://pypi.org/project/simu-net/>`_:
+        
+            `pip install simu-net`
+        
+        Install with `conda <https://anaconda.org/alexandre-clement/simu-net>`_:
+        
+            `conda install -c alexandre-clement simu-net`
+        
+        
+        Run tests
+        ---------
+        
+        Execute the following command to run the test suite:
+            
+            `python -m unittest tests.test`
+        
+Keywords: jupyter,computational systems biology
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: ipython
