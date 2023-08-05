@@ -1,0 +1,154 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2018-11-10 05:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.sidebar\n"
+
+#: collective/sidebar/configure.zcml
+msgid "Collective Sidebar (collective.sidebar)"
+msgstr ""
+
+#: collective/sidebar/configure.zcml
+msgid "Collective Sidebar (collective.sidebar) - Uninstall"
+msgstr ""
+
+#: collective/sidebar/configure.zcml
+msgid "Installs the collective.sidebar add-on."
+msgstr ""
+
+#: collective/sidebar/configure.zcml
+msgid "Uninstalls the collective.sidebar add-on."
+msgstr ""
+
+#. Default: "Back"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "back"
+msgstr ""
+
+#. Default: "Contents"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "contents"
+msgstr ""
+
+#. Default: "Add item to default page"
+#: collective/sidebar/browser/sidebar.py
+msgid "default_page_folder"
+msgstr ""
+
+#. Default: "If the default page is also a folder, add items to it from here."
+#: collective/sidebar/browser/sidebar.py
+msgid "desc_default_page_folder"
+msgstr ""
+
+#. Default: "Edit"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "edit"
+msgstr ""
+
+#. Default: "Restrictions"
+#: collective/sidebar/browser/sidebar.py
+msgid "folder_add_settings"
+msgstr ""
+
+#. Default: "Add"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "navigation_heading_add"
+msgstr ""
+
+#. Default: "Display"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "navigation_heading_display"
+msgstr ""
+
+#. Default: "Edit"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "navigation_heading_edit"
+msgstr ""
+
+#. Default: "Links"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "navigation_heading_links"
+msgstr ""
+
+#. Default: "Navigation"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "navigation_heading_navigation"
+msgstr ""
+
+#. Default: "Search"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "navigation_heading_search"
+msgstr ""
+
+#. Default: "Site"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "navigation_heading_site"
+msgstr ""
+
+#. Default: "Workflow"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "navigation_heading_workflow"
+msgstr ""
+
+#. Default: "Home"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "navigation_link_home"
+msgstr ""
+
+#. Default: "Login"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "navigation_link_login"
+msgstr ""
+
+#. Default: "Logout"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "navigation_link_logout"
+msgstr ""
+
+#. Default: "Settings"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "navigation_link_settings"
+msgstr ""
+
+#. Default: "Select Default Page"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "select_default_page"
+msgstr ""
+
+#. Default: "Sharing"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "sharing"
+msgstr ""
+
+#. Default: "Advanced"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "sidebar_workflow_advanced"
+msgstr ""
+
+#. Default: "Configure which content types can be added here"
+#: collective/sidebar/browser/sidebar.py
+msgid "title_configure_addable_content_types"
+msgstr ""
+
+#. Default: "View"
+#: collective/sidebar/browser/templates/sidebar.pt
+msgid "view"
+msgstr ""
+
+#. Default: "Policy..."
+#: collective/sidebar/browser/sidebar.py
+msgid "workflow_policy"
+msgstr ""
