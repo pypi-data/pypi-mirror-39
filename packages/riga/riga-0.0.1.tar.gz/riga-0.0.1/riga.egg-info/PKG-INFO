@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: riga
+Version: 0.0.1
+Summary: Riga
+Home-page: https://github.com/riga/riga
+Author: Marcel Rieger
+Author-email: python-riga@googlegroups.com
+License: MIT
+Description: Riga
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
