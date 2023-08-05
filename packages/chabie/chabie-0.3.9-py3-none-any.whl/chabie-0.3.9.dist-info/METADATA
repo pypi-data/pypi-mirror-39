@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: chabie
+Version: 0.3.9
+Summary: Comparison utility
+Home-page: https://github.com/TatchNicolas/chabie
+Author: TatchNicolas
+Author-email: TatchNicolas@users.noreply.github.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+# chabie
+
+Python comparison utility
+
+## Install
+
+```
+pip install chabie
+```
+
+### Dictionary
+
+
+## TODO
+
+- Setup CI/CD
+- utility comparison keys
+
+
