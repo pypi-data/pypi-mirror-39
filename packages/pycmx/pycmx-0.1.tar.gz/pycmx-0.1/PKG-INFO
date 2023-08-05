@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pycmx
+Version: 0.1
+Summary: CMX3600 Edit Decision List Parser
+Home-page: https://github.com/iluvcapra/pycmx
+Author: Jamie Hardt
+Author-email: jamiehardt@me.com
+License: UNKNOWN
+Description: # pycmx
+        Python CMX3600 Edit Decision List Parser
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Multimedia
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Text Processing
+Description-Content-Type: text/markdown
