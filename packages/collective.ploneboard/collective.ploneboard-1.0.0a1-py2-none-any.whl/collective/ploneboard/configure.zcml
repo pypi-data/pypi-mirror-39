@@ -1,0 +1,42 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.ploneboard">
+
+  <i18n:registerTranslations directory="locales"/>
+
+  <includeDependencies package="." />
+
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot directory="overrides" />
+
+  <include package=".browser" />
+
+  <browser:resourceDirectory
+    name="collective.ploneboard"
+    directory="static"
+    />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Ploneboard"
+      directory="profiles/default"
+      description="Installs the collective.ploneboard package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="Ploneboard (uninstall)"
+      directory="profiles/uninstall"
+      description="Uninstalls the collective.ploneboard add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.uninstall"
+      />
+
+  <include file="permissions.zcml" />
+
+</configure>

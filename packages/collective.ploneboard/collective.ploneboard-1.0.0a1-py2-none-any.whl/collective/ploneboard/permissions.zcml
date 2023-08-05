@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="collective.ploneboard">
+
+  <permission
+    id="ploneboard.AddMessageboard"
+    title="Collective Ploneboard: Add Message Board"
+    />
+
+  <permission
+    id="ploneboard.AddTopic"
+    title="Collective Ploneboard: Add Topic"
+    />
+
+  <permission
+    id="ploneboard.AddConversation"
+    title="Collective Ploneboard: Add Conversation"
+    />
+
+</configure>
