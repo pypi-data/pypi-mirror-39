@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: git_utils
+Version: 0.0.1
+Summary: Extension of the library gitpython.
+Home-page: https://github.com/luiscruz/git_utils
+Author: Luis Cruz
+Author-email: luismirandacruz@gmail.com
+License: UNKNOWN
+Description: # git_utils
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
