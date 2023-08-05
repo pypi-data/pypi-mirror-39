@@ -1,0 +1,7 @@
+joblib==0.12.5
+numpy==1.15.2
+tqdm==4.26.0
+fcd==1.0
+
+[rdkit]
+rdkit>=2018.09.1.0
