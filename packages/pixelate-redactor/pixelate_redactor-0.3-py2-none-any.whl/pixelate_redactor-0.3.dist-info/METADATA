@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pixelate-redactor
+Version: 0.3
+Summary: Library that provides pixelation for image redaction
+Home-page: https://github.com/Eradash/pixelate-redactor
+Author: Vincent Poirier
+Author-email: vincent.poirier@tlmgo.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires: pillow
+Description-Content-Type: text/markdown
+
+# pixelate-redactor
+
+Redact images with pixels
+
+Works with Python >= 2.6, Python >= 3.2.
+
+## Installation
+
+    pip install pixelate-redactor
+
+## Example
+
+    pixelate-redactor --input=img/example_img_original.png --output=img/example_img_redacted.png --pixel-size=10 --start-x=90 --start-y=180 --size-x=150 --size-y=150
+
+From this:
+
+![original](https://raw.githubusercontent.com/Eradash/pixelate-redactor/master/img/example_img_original.png)
+
+To this:
+
+![redacted](https://raw.githubusercontent.com/Eradash/pixelate-redactor/master/img/example_img_redacted.png)
+
+
