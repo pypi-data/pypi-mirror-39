@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: BriCA2
+Version: 0.4.0
+Summary: BriCA Version 2 Python bindings
+Home-page: https://github.com/BriCA/BriCA2
+Author: Kotone Itaya
+Author-email: kotone@sfc.keio.ac.jp
+License: Apache
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pybind11 (>=2.2)
+Requires-Dist: pfifo (>=1.1.6)
+
+
+# BriCA
+Brain-inspired Computing Architecture kernel implementation.
+
+
