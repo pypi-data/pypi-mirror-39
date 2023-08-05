@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+tox.ini
+twitter2discord/__init__.py
+twitter2discord/discord_hooks.py
+twitter2discord/twitter2discord.py
+twitter2discord/utils.py
+twitter2discord.egg-info/PKG-INFO
+twitter2discord.egg-info/SOURCES.txt
+twitter2discord.egg-info/dependency_links.txt
+twitter2discord.egg-info/requires.txt
+twitter2discord.egg-info/top_level.txt
