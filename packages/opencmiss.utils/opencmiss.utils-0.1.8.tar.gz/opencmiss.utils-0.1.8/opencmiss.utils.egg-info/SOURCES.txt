@@ -1,0 +1,17 @@
+README.rst
+setup.py
+opencmiss/__init__.py
+opencmiss.utils.egg-info/PKG-INFO
+opencmiss.utils.egg-info/SOURCES.txt
+opencmiss.utils.egg-info/dependency_links.txt
+opencmiss.utils.egg-info/not-zip-safe
+opencmiss.utils.egg-info/requires.txt
+opencmiss.utils.egg-info/top_level.txt
+opencmiss/utils/__init__.py
+opencmiss/utils/image.py
+opencmiss/utils/zinc.py
+opencmiss/utils/geometry/__init__.py
+opencmiss/utils/geometry/plane.py
+opencmiss/utils/maths/__init__.py
+opencmiss/utils/maths/algorithms.py
+opencmiss/utils/maths/vectorops.py
