@@ -1,0 +1,4 @@
+[console_scripts]
+_mlpipeline_subprocess = mlpipeline._pipeline_subprocess:main
+mlpipeline = mlpipeline.pipeline:main
+
