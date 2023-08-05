@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pyrsgis
+Version: 0.0.2
+Summary: Efficiently handling remotely sensed data.
+Home-page: https://github.com/pratkrt/Python-for-Remote-Sensing-and-GIS
+Author: Pratyush Tripathy
+Author-email: pratkrt@gmail.com
+License: UNKNOWN
+Description: # Python-for-Remote-Sensing-and-GIS
+        PyRSGIS is a powerful module to read, manipulate and export geo-rasters. The module is built on the GDAL library, and is capable of conducting advanced geospatial analysis. 
+        
+        Please find the package directly on https://pypi.org/project/pyrsgis/
+        
+        To install directly using pip, use command:
+        pip install pyrsgis
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
