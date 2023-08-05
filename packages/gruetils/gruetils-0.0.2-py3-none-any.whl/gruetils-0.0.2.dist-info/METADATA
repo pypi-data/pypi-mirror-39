@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: gruetils
+Version: 0.0.2
+Summary: Small utilities used in many of my projects
+Home-page: UNKNOWN
+Author: Daniel S
+License: DBADPL
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Operating System :: OS Independent
+Classifier: License :: Other/Proprietary License
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+
+# Gruetils
+
+This is a simple collection of small utilities shared amongst many of my personal projects.
+
+Contents include:
+* `gruetils.collections.KeyedDefaultDict` - a [`defaultdict`](https://docs.python.org/3/library/collections.html#collections.defaultdict) that passes the attempted key as the first and only argument to its `default_factory` method  
+
