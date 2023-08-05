@@ -1,0 +1,33 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Thing Index Server Status
+    </div>
+    <div class="panel-body">
+
+        <table class="table">
+            <thead>
+
+            <tr>
+                <th></th>
+                <th>Is Running</th>
+                <th>Queue Size</th>
+                <th>Total Processed</th>
+                <th>Last Error</th>
+            </tr>
+
+            </thead>
+
+            <tbody>
+
+            <tr>
+                <th>Thing Index Storage</th>
+                <td>{{item.thingIndexCompilerQueueStatus}}</td>
+                <td>{{item.thingIndexCompilerQueueSize}}</td>
+                <td>{{item.thingIndexCompilerQueueProcessedTotal}}</td>
+                <td>{{item.thingIndexCompilerQueueLastError}}</td>
+
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

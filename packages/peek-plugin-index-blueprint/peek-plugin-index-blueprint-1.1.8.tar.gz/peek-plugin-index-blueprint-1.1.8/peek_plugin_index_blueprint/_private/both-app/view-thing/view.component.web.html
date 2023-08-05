@@ -1,0 +1,23 @@
+<div class="peek-details-section">
+    modelSetKey=<input type="text" [(ngModel)]="modelSetKey"> Try "testModel"<br/>
+    key=<input type="text" [(ngModel)]="key"> Try "thing1Key"<br/>
+
+    <button class="btn" (click)="find()">Find</button>
+    <br/>
+    <hr/>
+
+    <div *ngIf="thing == null">
+        No Thing Loaded
+    </div>
+    <div *ngIf="thing != null">
+        <div *ngIf="thing.key == null">
+            No Thing Found
+        </div>
+        <div *ngIf="thing.key && thing.key.length">
+
+            Thing Type: {{thingTypeName}}<br/>
+            {{thing.toJsonDict() | json}}
+        </div>
+    </div>
+
+</div>

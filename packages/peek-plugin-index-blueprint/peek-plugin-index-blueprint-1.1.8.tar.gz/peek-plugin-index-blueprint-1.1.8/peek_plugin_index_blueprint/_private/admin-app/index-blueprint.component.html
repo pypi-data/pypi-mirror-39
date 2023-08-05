@@ -1,0 +1,38 @@
+<div class="container">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <!-- Home Tab -->
+        <li role="presentation" class="active">
+            <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a>
+        </li>
+        <!-- Status -->
+        <li role="presentation">
+            <a href="#status" aria-controls="status" role="tab"
+               data-toggle="tab">Status</a>
+        </li>
+        <!-- Edit ThingIndex Type Tab -->
+        <li role="presentation">
+            <a href="#editDocType" aria-controls="editDocType" role="tab"
+               data-toggle="tab">Edit Thing Types</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <!-- Home Tab -->
+        <div role="tabpanel" class="tab-pane active" id="home">
+            <h1 class="text-center">Thing Index Blueprint</h1>
+            <p>This plugin is the blueprint for how the Peek indexed data with
+            offline support works.</p>
+        </div>
+        <!-- Status Tab -->
+        <div role="tabpanel" class="tab-pane" id="status">
+            <pl-index-blueprint-status></pl-index-blueprint-status>
+        </div>
+        <!-- Edit ThingIndex Type Tab -->
+        <div role="tabpanel" class="tab-pane" id="editDocType">
+            <pl-index-blueprint-edit-thing-type></pl-index-blueprint-edit-thing-type>
+        </div>
+
+    </div>
+</div>

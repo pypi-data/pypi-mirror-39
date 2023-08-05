@@ -1,0 +1,84 @@
+{
+    "plugin": {
+        "title": "Index Blueprint DB",
+        "packageName": "peek_plugin_index_blueprint",
+        "version": "1.1.8",
+        "buildNumber": "#PLUGIN_BUILD#",
+        "buildDate": "#BUILD_DATE#",
+        "creator": "Synerty Pty Ltd",
+        "website": "www.synerty.com"
+    },
+    "requiresServices": [
+        "server",
+        "worker",
+        "agent",
+        "storage",
+        "admin",
+        "client",
+        "mobile",
+        "desktop"
+    ],
+    "server": {
+    },
+    "storage": {
+        "alembicDir": "_private/alembic"
+    },
+    "admin": {
+        "showHomeLink": true,
+        "appDir": "_private/admin-app",
+        "appModule": "index-blueprint.module#ThingIndexModule",
+        "moduleDir": "plugin-module"
+    },
+    "client": {
+    },
+    "mobile": {
+        "cfgDir": "_private/both-cfg",
+        "cfgModule": "index-blueprint-cfg.module#DocDBCfgModule",
+        "showHomeLink": true,
+        "appDir": "_private/both-app",
+        "appModule": "index-blueprint.module#ThingIndexModule",
+        "assetDir": "_private/both-assets",
+        "icon": "/assets/peek_plugin_index_blueprint/icon.png",
+        "moduleDir": "plugin-module",
+        "rootServices": [
+            {
+                "file": "_private/IndexBlueprintTupleService",
+                "class": "IndexBlueprintTupleService"
+            },
+            {
+                "file": "_private/thing-index-loader/ThingIndexLoaderService",
+                "class": "ThingIndexLoaderService",
+                "persistent": true
+            },
+            {
+                "file": "IndexBlueprintService",
+                "class": "IndexBlueprintService"
+            }
+        ]
+    },
+    "desktop": {
+        "cfgDir": "_private/both-cfg",
+        "cfgModule": "index-blueprint-cfg.module#DocDBCfgModule",
+        "showHomeLink": true,
+        "appDir": "_private/both-app",
+        "appModule": "index-blueprint.module#ThingIndexModule",
+        "assetDir": "_private/both-assets",
+        "icon": "/assets/peek_plugin_index_blueprint/icon.png",
+        "moduleDir": "plugin-module",
+        "rootServices": [
+            {
+                "file": "_private/IndexBlueprintTupleService",
+                "class": "IndexBlueprintTupleService"
+            },
+            {
+                "file": "_private/thing-index-loader/ThingIndexLoaderService",
+                "class": "ThingIndexLoaderService",
+                "persistent": true
+            },
+            {
+                "file": "IndexBlueprintService",
+                "class": "IndexBlueprintService"
+            }
+        ]
+    }
+}
