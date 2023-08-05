@@ -1,0 +1,13 @@
+README.md
+setup.py
+biomap/__init__.py
+biomap/core/__init__.py
+biomap/core/database.py
+biomap/core/insert.py
+biomap/core/mapper.py
+biomap_core.egg-info/PKG-INFO
+biomap_core.egg-info/SOURCES.txt
+biomap_core.egg-info/dependency_links.txt
+biomap_core.egg-info/requires.txt
+biomap_core.egg-info/top_level.txt
+schema/mapper_definition_schema.json
