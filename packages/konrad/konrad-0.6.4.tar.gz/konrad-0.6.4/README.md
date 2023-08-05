@@ -1,0 +1,19 @@
+[![PyPI version](https://badge.fury.io/py/konrad.svg)](https://badge.fury.io/py/konrad)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1313687.svg)](https://doi.org/10.5281/zenodo.1313687)
+
+# konrad - Radiative-convective equilibrium framework
+
+The goal of ``konrad`` is to provide a simple framework to run
+radiative-convective equilibrium (RCE) simulations. It is build in an object
+oriented structure to allow simple modifications of the model setup.
+
+## Requirements
+``konrad`` requires Python 3.6 or higher. The recommended way to get
+Python is through [Anaconda](https://www.continuum.io/downloads).
+But of course, any other Python distribution is also working.
+
+## Install stable release
+You can install the latest stable version of ``konrad`` using ``pip``:
+```bash
+pip install konrad
+```

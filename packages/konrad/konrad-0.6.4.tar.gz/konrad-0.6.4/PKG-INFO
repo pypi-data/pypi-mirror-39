@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: konrad
+Version: 0.6.4
+Summary: Implementation of a radiative-convective equilibrium model.
+Home-page: https://github.com/atmtools/konrad
+Author: The konrad developers
+License: MIT
+Download-URL: https://github.com/atmtools/konrad/tarball/v0.6.4
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
