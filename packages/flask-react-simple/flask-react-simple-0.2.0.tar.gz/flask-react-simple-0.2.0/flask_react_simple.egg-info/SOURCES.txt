@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+setup.py
+docs/DevLog.md
+flask_react_simple.egg-info/PKG-INFO
+flask_react_simple.egg-info/SOURCES.txt
+flask_react_simple.egg-info/dependency_links.txt
+flask_react_simple.egg-info/entry_points.txt
+flask_react_simple.egg-info/requires.txt
+flask_react_simple.egg-info/top_level.txt
+flask_reactjs/__init__.py
+flask_reactjs/__main__.py
+flask_reactjs/bundle.tar.gz
