@@ -1,0 +1,29 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+      accept: [application/json]
+      x-api-version: ['2']
+    method: GET
+    uri: http://api.ratings.food.gov.uk/Authorities/2
+  response:
+    body: {string: '{"LocalAuthorityId":2,"LocalAuthorityIdCode":"028","Name":"East
+        Cambridgeshire","FriendlyName":"east-cambridgeshire","Url":"http://www.eastcambs.gov.uk","SchemeUrl":"","Email":"foodandsafety@eastcambs.gov.uk","RegionName":"East
+        Counties","FileName":"http://ratings.food.gov.uk/OpenDataFiles/FHRS028en-GB.xml","FileNameWelsh":null,"EstablishmentCount":662,"CreationDate":"2010-08-17T15:30:24.87","LastPublishedDate":"2018-11-24T00:30:19.613","SchemeType":1,"links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/authorities/2"}]}'}
+    headers:
+      Access-Control-Allow-Headers: ['Authorization, ApiKey, X-Api-Version']
+      Access-Control-Allow-Methods: ['GET, POST']
+      Access-Control-Allow-Origin: ['*']
+      Cache-Control: ['public, max-age=600']
+      Content-Length: ['535']
+      Content-Type: [application/json; charset=utf-8]
+      Date: ['Tue, 27 Nov 2018 13:46:29 GMT']
+      Server: [Microsoft-IIS/8.5]
+      Set-Cookie: [ARRAffinity=2d99b4f49393baa60a4ab1f09107340cbca420cc67cc6bf91e03ef8cad0635d6;Path=/;Domain=api.ratings.food.gov.uk]
+      X-Provider: [Food Standards Agency]
+      X-Version: [v2.0]
+    status: {code: 200, message: OK}
+version: 1

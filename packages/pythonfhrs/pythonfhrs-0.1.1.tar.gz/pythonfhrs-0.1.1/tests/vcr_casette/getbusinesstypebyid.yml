@@ -1,0 +1,27 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+      accept: [application/json]
+      x-api-version: ['2']
+    method: GET
+    uri: http://api.ratings.food.gov.uk/BusinessTypes/7841
+  response:
+    body: {string: '{"BusinessTypeId":7841,"BusinessTypeName":"Other catering premises","links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/businesstypes/7841"}]}'}
+    headers:
+      Access-Control-Allow-Headers: ['Authorization, ApiKey, X-Api-Version']
+      Access-Control-Allow-Methods: ['GET, POST']
+      Access-Control-Allow-Origin: ['*']
+      Cache-Control: ['public, max-age=600']
+      Content-Length: ['152']
+      Content-Type: [application/json; charset=utf-8]
+      Date: ['Tue, 27 Nov 2018 14:07:42 GMT']
+      Server: [Microsoft-IIS/8.5]
+      Set-Cookie: [ARRAffinity=c436113542c9b22bfefbedeae95a339e13778ca898918f178726c359d131e0a1;Path=/;Domain=api.ratings.food.gov.uk]
+      X-Provider: [Food Standards Agency]
+      X-Version: [v2.0]
+    status: {code: 200, message: OK}
+version: 1

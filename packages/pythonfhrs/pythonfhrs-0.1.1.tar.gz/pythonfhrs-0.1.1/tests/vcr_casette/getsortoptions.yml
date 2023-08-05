@@ -1,0 +1,31 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+      accept: [application/json]
+      x-api-version: ['2']
+    method: GET
+    uri: http://api.ratings.food.gov.uk/SortOptions
+  response:
+    body: {string: '{"sortOptions":[{"sortOptionId":1,"sortOptionName":"Relevance","sortOptionKey":"Relevance","links":[]},{"sortOptionId":2,"sortOptionName":"Rating
+        (highest to lowest)","sortOptionKey":"rating","links":[]},{"sortOptionId":3,"sortOptionName":"Rating
+        (lowest to highest)","sortOptionKey":"desc_rating","links":[]},{"sortOptionId":4,"sortOptionName":"Name
+        (A to Z)","sortOptionKey":"alpha","links":[]},{"sortOptionId":5,"sortOptionName":"Name
+        (Z to A)","sortOptionKey":"desc_alpha","links":[]},{"sortOptionId":10,"sortOptionName":"Distance","sortOptionKey":"Distance","links":[]}],"meta":{"dataSource":"API","extractDate":"0001-01-01T00:00:00","itemCount":0,"returncode":null,"totalCount":6,"totalPages":1,"pageSize":6,"pageNumber":1},"links":[]}'}
+    headers:
+      Access-Control-Allow-Headers: ['Authorization, ApiKey, X-Api-Version']
+      Access-Control-Allow-Methods: ['GET, POST']
+      Access-Control-Allow-Origin: ['*']
+      Cache-Control: ['public, max-age=600']
+      Content-Length: ['741']
+      Content-Type: [application/json; charset=utf-8]
+      Date: ['Tue, 27 Nov 2018 15:03:10 GMT']
+      Server: [Microsoft-IIS/8.5]
+      Set-Cookie: [ARRAffinity=c436113542c9b22bfefbedeae95a339e13778ca898918f178726c359d131e0a1;Path=/;Domain=api.ratings.food.gov.uk]
+      X-Provider: [Food Standards Agency]
+      X-Version: [v2.0]
+    status: {code: 200, message: OK}
+version: 1

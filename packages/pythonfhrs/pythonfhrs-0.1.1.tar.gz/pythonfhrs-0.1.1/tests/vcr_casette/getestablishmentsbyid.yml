@@ -1,0 +1,31 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+      accept: [application/json]
+      x-api-version: ['2']
+    method: GET
+    uri: http://api.ratings.food.gov.uk/Establishments/996
+  response:
+    body: {string: '{"FHRSID":996,"LocalAuthorityBusinessID":"0006930/FOOD","BusinessName":"Howitt
+        Primary Community School","BusinessType":"School/college/university","BusinessTypeID":7845,"AddressLine1":"Holmes
+        Street Heanor Derbyshire","AddressLine2":"","AddressLine3":"","AddressLine4":"","PostCode":"DE75
+        7FS","Phone":"","RatingValue":"5","RatingKey":"fhrs_5_en-gb","RatingDate":"2017-06-07T00:00:00","LocalAuthorityCode":"062","LocalAuthorityName":"Amber
+        Valley","LocalAuthorityWebSite":"http://www.ambervalley.gov.uk","LocalAuthorityEmailAddress":"envhealth@ambervalley.gov.uk","scores":{"Hygiene":0,"Structural":5,"ConfidenceInManagement":0},"SchemeType":"FHRS","geocode":{"longitude":"-1.364059","latitude":"53.016701"},"RightToReply":"","Distance":null,"NewRatingPending":false,"meta":{"dataSource":"Lucene","extractDate":"0001-01-01T00:00:00","itemCount":0,"returncode":"OK","totalCount":1,"totalPages":1,"pageSize":1,"pageNumber":1},"links":[]}'}
+    headers:
+      Access-Control-Allow-Headers: ['Authorization, ApiKey, X-Api-Version']
+      Access-Control-Allow-Methods: ['GET, POST']
+      Access-Control-Allow-Origin: ['*']
+      Cache-Control: ['public, max-age=600']
+      Content-Length: ['936']
+      Content-Type: [application/json; charset=utf-8]
+      Date: ['Tue, 27 Nov 2018 15:11:55 GMT']
+      Server: [Microsoft-IIS/8.5]
+      Set-Cookie: [ARRAffinity=13d836bdf702245dbded742b4d7b00c47b1eea1b195ca62dd0ad42c196d3c3c4;Path=/;Domain=api.ratings.food.gov.uk]
+      X-Provider: [Food Standards Agency]
+      X-Version: [v2.0]
+    status: {code: 200, message: OK}
+version: 1

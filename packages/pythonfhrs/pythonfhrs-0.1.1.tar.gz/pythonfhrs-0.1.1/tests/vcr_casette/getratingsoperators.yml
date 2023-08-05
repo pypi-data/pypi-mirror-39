@@ -1,0 +1,27 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+      accept: [application/json]
+      x-api-version: ['2']
+    method: GET
+    uri: http://api.ratings.food.gov.uk/RatingOperators
+  response:
+    body: {string: '{"ratingOperator":[{"ratingOperatorId":6,"ratingOperatorName":"Equal","ratingOperatorKey":"Equal","links":[]},{"ratingOperatorId":8,"ratingOperatorName":"GreaterThanOrEqual","ratingOperatorKey":"GreaterThanOrEqual","links":[]},{"ratingOperatorId":9,"ratingOperatorName":"LessThanOrEqual","ratingOperatorKey":"LessThanOrEqual","links":[]}],"meta":{"dataSource":"API","extractDate":"0001-01-01T00:00:00","itemCount":0,"returncode":null,"totalCount":3,"totalPages":1,"pageSize":3,"pageNumber":1},"links":[]}'}
+    headers:
+      Access-Control-Allow-Headers: ['Authorization, ApiKey, X-Api-Version']
+      Access-Control-Allow-Methods: ['GET, POST']
+      Access-Control-Allow-Origin: ['*']
+      Cache-Control: ['public, max-age=600']
+      Content-Length: ['504']
+      Content-Type: [application/json; charset=utf-8]
+      Date: ['Tue, 27 Nov 2018 15:37:14 GMT']
+      Server: [Microsoft-IIS/8.5]
+      Set-Cookie: [ARRAffinity=2d99b4f49393baa60a4ab1f09107340cbca420cc67cc6bf91e03ef8cad0635d6;Path=/;Domain=api.ratings.food.gov.uk]
+      X-Provider: [Food Standards Agency]
+      X-Version: [v2.0]
+    status: {code: 200, message: OK}
+version: 1

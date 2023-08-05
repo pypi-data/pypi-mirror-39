@@ -1,0 +1,30 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+      accept: [application/json]
+      x-api-version: ['2']
+    method: GET
+    uri: http://api.ratings.food.gov.uk/Ratings
+  response:
+    body: {string: '{"ratings":[{"ratingId":12,"ratingName":"5","ratingKey":"fhrs_5_en-gb","ratingKeyName":"5","schemeTypeId":1,"links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/ratings/12"}]},{"ratingId":11,"ratingName":"4","ratingKey":"fhrs_4_en-gb","ratingKeyName":"4","schemeTypeId":1,"links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/ratings/11"}]},{"ratingId":10,"ratingName":"3","ratingKey":"fhrs_3_en-gb","ratingKeyName":"3","schemeTypeId":1,"links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/ratings/10"}]},{"ratingId":9,"ratingName":"2","ratingKey":"fhrs_2_en-gb","ratingKeyName":"2","schemeTypeId":1,"links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/ratings/9"}]},{"ratingId":8,"ratingName":"1","ratingKey":"fhrs_1_en-gb","ratingKeyName":"1","schemeTypeId":1,"links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/ratings/8"}]},{"ratingId":7,"ratingName":"0","ratingKey":"fhrs_0_en-gb","ratingKeyName":"0","schemeTypeId":1,"links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/ratings/7"}]},{"ratingId":6,"ratingName":"Pass","ratingKey":"fhis_pass_en-gb","ratingKeyName":"Pass","schemeTypeId":2,"links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/ratings/6"}]},{"ratingId":4,"ratingName":"Improvement
+        Required","ratingKey":"fhis_improvement_required_en-gb","ratingKeyName":"ImprovementRequired","schemeTypeId":2,"links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/ratings/4"}]},{"ratingId":2,"ratingName":"Awaiting
+        Publication","ratingKey":"fhis_awaiting_publication_en-gb","ratingKeyName":"AwaitingPublication","schemeTypeId":2,"links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/ratings/2"}]},{"ratingId":1,"ratingName":"Awaiting
+        Inspection","ratingKey":"fhis_awaiting_inspection_en-gb","ratingKeyName":"AwaitingInspection","schemeTypeId":2,"links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/ratings/1"}]},{"ratingId":3,"ratingName":"Exempt","ratingKey":"fhis_exempt_en-gb","ratingKeyName":"Exempt","schemeTypeId":2,"links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/ratings/3"}]}],"meta":{"dataSource":"API","extractDate":"2018-11-27T15:26:05.2906069+00:00","itemCount":11,"returncode":"OK","totalCount":11,"totalPages":1,"pageSize":11,"pageNumber":1},"links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/ratings"}]}'}
+    headers:
+      Access-Control-Allow-Headers: ['Authorization, ApiKey, X-Api-Version']
+      Access-Control-Allow-Methods: ['GET, POST']
+      Access-Control-Allow-Origin: ['*']
+      Cache-Control: ['public, max-age=600']
+      Content-Length: ['2333']
+      Content-Type: [application/json; charset=utf-8]
+      Date: ['Tue, 27 Nov 2018 15:26:05 GMT']
+      Server: [Microsoft-IIS/8.5]
+      Set-Cookie: [ARRAffinity=13d836bdf702245dbded742b4d7b00c47b1eea1b195ca62dd0ad42c196d3c3c4;Path=/;Domain=api.ratings.food.gov.uk]
+      X-Provider: [Food Standards Agency]
+      X-Version: [v2.0]
+    status: {code: 200, message: OK}
+version: 1

@@ -1,0 +1,29 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+      accept: [application/json]
+      x-api-version: ['2']
+    method: GET
+    uri: http://api.ratings.food.gov.uk/ScoreDescriptors?establishmentId=996
+  response:
+    body: {string: '{"scoreDescriptors":[{"Id":1,"ScoreCategory":"Confidence","Score":0,"Description":"Very
+        good","links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/scoredescriptors/1"}]},{"Id":6,"ScoreCategory":"Hygiene","Score":0,"Description":"Very
+        good","links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/scoredescriptors/6"}]},{"Id":13,"ScoreCategory":"Structural","Score":5,"Description":"Good","links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/scoredescriptors/13"}]}],"meta":{"dataSource":"API","extractDate":"2018-11-27T15:12:09.1510697+00:00","itemCount":3,"returncode":"OK","totalCount":3,"totalPages":1,"pageSize":3,"pageNumber":1},"links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/scoredescriptors"}]}'}
+    headers:
+      Access-Control-Allow-Headers: ['Authorization, ApiKey, X-Api-Version']
+      Access-Control-Allow-Methods: ['GET, POST']
+      Access-Control-Allow-Origin: ['*']
+      Cache-Control: ['public, max-age=600']
+      Content-Length: ['740']
+      Content-Type: [application/json; charset=utf-8]
+      Date: ['Tue, 27 Nov 2018 15:12:08 GMT']
+      Server: [Microsoft-IIS/8.5]
+      Set-Cookie: [ARRAffinity=c436113542c9b22bfefbedeae95a339e13778ca898918f178726c359d131e0a1;Path=/;Domain=api.ratings.food.gov.uk]
+      X-Provider: [Food Standards Agency]
+      X-Version: [v2.0]
+    status: {code: 200, message: OK}
+version: 1

@@ -1,0 +1,28 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+      accept: [application/json]
+      x-api-version: ['2']
+    method: GET
+    uri: http://api.ratings.food.gov.uk/Countries
+  response:
+    body: {string: '{"countries":[{"id":1,"name":"England","nameKey":"England","code":"","links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/countries/1"}]},{"id":2,"name":"Northern
+        Ireland","nameKey":"Northern Ireland","code":"","links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/countries/2"}]},{"id":3,"name":"Scotland","nameKey":"Scotland","code":"","links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/countries/3"}]},{"id":4,"name":"Wales","nameKey":"Wales","code":"","links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/countries/4"}]}],"meta":{"dataSource":"API","extractDate":"2018-11-27T14:35:55.4231091+00:00","itemCount":4,"returncode":"OK","totalCount":4,"totalPages":1,"pageSize":4,"pageNumber":1},"links":[{"rel":"self","href":"http://api.ratings.food.gov.uk/countries"}]}'}
+    headers:
+      Access-Control-Allow-Headers: ['Authorization, ApiKey, X-Api-Version']
+      Access-Control-Allow-Methods: ['GET, POST']
+      Access-Control-Allow-Origin: ['*']
+      Cache-Control: ['public, max-age=600']
+      Content-Length: ['806']
+      Content-Type: [application/json; charset=utf-8]
+      Date: ['Tue, 27 Nov 2018 14:35:54 GMT']
+      Server: [Microsoft-IIS/8.5]
+      Set-Cookie: [ARRAffinity=2d99b4f49393baa60a4ab1f09107340cbca420cc67cc6bf91e03ef8cad0635d6;Path=/;Domain=api.ratings.food.gov.uk]
+      X-Provider: [Food Standards Agency]
+      X-Version: [v2.0]
+    status: {code: 200, message: OK}
+version: 1
