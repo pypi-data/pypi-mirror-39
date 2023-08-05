@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: xsec
+Version: 0.0.0
+Summary: xsec: the cross section evaluation code
+Home-page: https://github.com/jeriek/xsec
+Maintainer: Jeriek Van den Abeele
+Maintainer-email: jeriekvda@fys.uio.no
+License: GPLv3+
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Intended Audience :: Science/Research
+
+A tool for accelerated, universal cross-section estimation.
+
+
