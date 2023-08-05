@@ -1,0 +1,64 @@
+<html>
+<head>
+  <title>Xako - {{ domain }}</title>
+</head>
+<body>
+  <h1>Domain: {{ domain }}.</h1>
+  <p>
+    In transit:
+    {{ '%.2f'|format(size_in_transit / 1024 ** 2) }}Mb /
+    {{ '%.2f'|format(transmission_band / 1024 ** 2) }}Mb.
+  </p>
+  <form
+    method="POST"
+    action="{{ request.route_path('send') }}"
+    enctype="multipart/form-data"
+  >
+    <h2>Send a file</h2>
+    <p>
+      <input type="hidden" name="sender" value="{{ domain }}">
+      From: <em>{{ domain }}</em>
+      <label for="recipients">To:</label>
+      <select id="recipients" name="recipients">
+        {% for recipient in recipients  %}
+          <option value="{{ recipient }}">{{ recipient }}</option>
+        {% endfor %}
+      </select>
+      <label for="priority">Priority:</label>
+      <select id="priority" name="priority">
+          <option value="0">High</option>
+          <option value="1" selected="selected">Normal</option>
+          <option value="2">Low</option>
+      </select>
+    </p>
+    <p>
+      <label for="file">File:</label>
+      <input id="file" type="file" name="payload">
+    </p>
+    <p><label for="metadata">Message:</label></p>
+    <p>
+      <textarea id="metadata" name="metadata" rows="6" cols="80"></textarea>
+    </p>
+    <input type="submit" value="Send!">
+  </form>
+
+  <div id="sent-documents">
+    <h2>Sent documents <a href="#" class="refresh">[refresh]</a></h2>
+    <ul></ul>
+  </div>
+
+  <div id="received-documents">
+    <h2>Received documents <a href="#" class="refresh">[refresh]</a></h2>
+    <ul></ul>
+  </div>
+
+  <script type="text/javascript"> window.xako_domain = "{{ domain }}"</script>
+  <!-- TODO: fanstatic -->
+  <script type="text/javascript" src="/static/underscore.js"></script>
+  <script type="text/javascript" src="/static/jquery.js"></script>
+  <script type="text/javascript" src="/static/spine/spine.js"></script>
+  <script type="text/javascript" src="/static/spine/ajax.js"></script>
+  <script type="text/javascript" src="/static/app.js">
+  </script>
+</body>
+</html>

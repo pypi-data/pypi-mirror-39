@@ -1,0 +1,24 @@
+.. ;;; -*- mode: rst; -*-
+
+1. Usar celery y verificar cómo cada tarea se puede hacer unit testing.  Aquí
+   lo complicado es integrar las configuraciones de los workers de celery con
+   la application de Pyramid.
+
+2. Reenvío de fragmentos.
+
+3. API REST (documentación incluida).
+
+4. Instalación y configuración.
+
+
+Para después:
+
+5. App HTML simple.
+
+6. Auth.
+
+
+..
+   Local Variables:
+   ispell-dictionary: "es"
+   End:
