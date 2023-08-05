@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: hkavr
+Version: 0.0.5
+Summary: Library for controlling a Harman Kardon AVR
+Home-page: https://github.com/Devqon/hkavr
+Author: Sander Geerts
+Author-email: s.geerts@live.nl
+License: MIT
+Description: Library for controlling a Harman Kardon AVR
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
