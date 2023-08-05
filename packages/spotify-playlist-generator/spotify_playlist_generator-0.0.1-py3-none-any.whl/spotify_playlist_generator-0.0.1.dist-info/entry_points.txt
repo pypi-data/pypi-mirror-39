@@ -1,0 +1,3 @@
+[console_scripts]
+analyze = src.__main__:main
+
