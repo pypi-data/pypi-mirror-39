@@ -1,0 +1,4 @@
+[console_scripts]
+kcoloring = cnftools.cmdline.kcoloring:main
+to3cnf = cnftools.cmdline.to3cnf:main
+

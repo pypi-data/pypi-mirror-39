@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: cnftools
+Version: 0.0.1
+Summary: A collection of tools for working with and generating Dimacs CNF files.
+Home-page: https://github.com/easyas314159/cnftools
+Author: Kevin Loney
+Author-email: kevin.loney@brainsinjars.com
+License: MIT
+Description: cnftools
+        ========
+        
+        A collection of tools for working with and generating Dimacs CNF files.
+        
+Keywords: dimacs cnf sat 3-cnf 3-sat 3cnf 3sat
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.4
+Provides-Extra: coloring

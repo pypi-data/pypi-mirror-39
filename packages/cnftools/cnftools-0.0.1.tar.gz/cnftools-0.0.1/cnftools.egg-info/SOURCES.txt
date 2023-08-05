@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+cnftools/__init__.py
+cnftools/coloring.py
+cnftools/io.py
+cnftools/tseytin.py
+cnftools.egg-info/PKG-INFO
+cnftools.egg-info/SOURCES.txt
+cnftools.egg-info/dependency_links.txt
+cnftools.egg-info/entry_points.txt
+cnftools.egg-info/requires.txt
+cnftools.egg-info/top_level.txt
+cnftools/cmdline/__init__.py
+cnftools/cmdline/kcoloring.py
+cnftools/cmdline/to3cnf.py
