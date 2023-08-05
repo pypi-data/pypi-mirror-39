@@ -1,0 +1,3 @@
+[console_scripts]
+oflog = log_manager_cli.openfin_log_cli:main
+
