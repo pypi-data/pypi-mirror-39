@@ -1,0 +1,4 @@
+[console_scripts]
+dv-player = pydv.player:main
+dv-recorder = pydv.recorder:main
+
