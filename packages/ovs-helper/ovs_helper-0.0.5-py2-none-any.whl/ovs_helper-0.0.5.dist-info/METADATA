@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: ovs-helper
+Version: 0.0.5
+Summary: Ovs-helper to Open vSwitch
+Home-page: https://github.com/sw4iot/ovs-helper
+Author: SOFTWAY4IoT
+Author-email: softway4iot@gmail.com
+License: Apache Software License
+Keywords: ovs-helper
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Description-Content-Type: text/markdown
+Requires-Dist: ryu (>=4.30)
+
+# ovs-helper
+
+[![Build Status](https://img.shields.io/travis/sw4iot/ovs-helper.svg)](https://travis-ci.org/sw4iot/ovs-helper)
+[![PyPI](https://img.shields.io/pypi/v/ovs-helper.svg)](https://pypi.org/project/ovs-helper/)
+[![Updates](https://pyup.io/repos/github/sw4iot/ovs-helper/shield.svg)](https://pyup.io/repos/github/sw4iot/ovs-helper/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/ovs-helper.svg)](https://pypi.org/project/ovs-helper/)
+[![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+
+
