@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: clapback
+Version: 0.0.1
+Summary: A command-line tool to add clap emojis to your sentences.
+Home-page: https://github.com/alexharston/clapback
+Author: Alex Harston
+Author-email: alex@harston.io
+License: MIT
+Keywords: clapback clap clapping emoji
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: argparse
+
+# clapback
+
+## Not making your point clearly enough? Clap back at someone to MAKE 👏 YOUR 👏 POINT 👏 MORE 👏 VALID 👏
+
+
