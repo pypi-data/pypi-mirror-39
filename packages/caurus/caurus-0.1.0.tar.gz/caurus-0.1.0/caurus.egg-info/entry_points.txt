@@ -1,0 +1,3 @@
+[console_scripts]
+caurus = caurus.cli:main
+
