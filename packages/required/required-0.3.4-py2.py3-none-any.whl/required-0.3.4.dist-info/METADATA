@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: required
+Version: 0.3.4
+Summary: A easy dependency validator
+Home-page: https://github.com/shezadkhan137/required
+Author: Shezad Khan
+Author-email: shezadkhan137@gmail.com
+Maintainer: Shezad Khan
+Maintainer-email: shezadkhan137@gmail.com
+License: MIT
+Keywords: dependency,validator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: six
+
+UNKNOWN
+
+
