@@ -1,0 +1,6 @@
+requests
+requests_oauthlib
+sseclient
+
+[testing]
+nose
