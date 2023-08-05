@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: scaks
+Version: 0.1.0
+Summary: Micro-Kinetics Analysis package for Catalyst in Python
+Home-page: UNKNOWN
+Author: Shao-Zheng-Jiang
+Author-email: shaozhengjiang@gmail.com
+License: LICENSE
+Platform: linux
+Platform: macos
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: sympy
+Requires-Dist: mpmath
+Requires-Dist: mpi4py
+Requires-Dist: prettytable
+Requires-Dist: catplot
+
+SCAKS
+==========
+
+Shanghai CAtalysis Kinetics Software.  A Micro-Kinetic Analysis package for Catalytic Reactions in Python
+
+Install
+-------
+
+1. Via pip:
+
+   .. code:: shell
+
+      pip install scaks
+
+2. From source
+
+   .. code:: shell
+
+      git clone https://github.com/PytLab/scaks.git
+
+      cd scaks
+      python setup.py install
+
+Test
+----
+
+.. code:: shell
+
+   python setup.py test
+
+or
+
+.. code:: shell
+
+   python -m scaks.tests.test_all
+
+Documentation
+-------------
+
+For more details, see SCAKS documentation:
+https://scaks-docs.readthedocs.io/en/latest/
+
+
+
