@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+sentenceslug/__init__.py
+sentenceslug/sentenceslug.py
+sentenceslug/wordlists.py
+sentenceslug.egg-info/PKG-INFO
+sentenceslug.egg-info/SOURCES.txt
+sentenceslug.egg-info/dependency_links.txt
+sentenceslug.egg-info/top_level.txt
