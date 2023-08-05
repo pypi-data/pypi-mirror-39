@@ -1,0 +1,34 @@
+Metadata-Version: 2.0
+Name: django-todopago
+Version: 0.1.1
+Summary: Library to integrate TodoPago into Django apps
+Home-page: https://github.com/WhyNotHugo/django-todopago
+Author: Hugo Osvaldo Barrera
+Author-email: hugo@barrera.io
+License: ISC
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: django (>=2.0)
+Requires-Dist: suds-jurko
+Requires-Dist: requests
+
+django-todopago
+===============
+
+This library integrates TodoPago with Django. It's kind of rushed, but has been
+working in production for months (probably over a year).
+
+Django 2.0 and 2.1 are supported, and only Python 3.7 has been tested to work
+as expected.
+
+There's little docs, and lot's of guesswork to using it. Docs and more README
+is welcome.
+
+
