@@ -1,0 +1,45 @@
+Metadata-Version: 1.1
+Name: sftpwrapper
+Version: 0.1.1
+Summary: A python program that facilitates uploading and downloading of files to/from an SFTP server
+Home-page: UNKNOWN
+Author: Kyle Wolfe
+Author-email: kwolfe@northampton.edu
+License: MIT
+Description: sftpwrapper
+        ===========
+        
+        Overview
+        --------
+        A python program that facilitates uploading and downloading of files to/from an SFTP server
+        
+        Install It
+        ----------
+        From PyPI ::
+        
+            $ pip install sftpwrapper
+        
+        
+        
+        Code Example
+        ------------
+            from sftpwrapper import SftpWrapper
+        
+            remote_connection = SftpWrapper(host, port)
+            remote_connection.host_connect(user, password)
+            upload_good = remote_connection.upload_stuffs(csv_name, remote + csv_name)
+            remote_connection.host_disconnect()
+        
+        Dependencies
+        ------------
+        * paramiko
+        
+        License
+        --------
+        MIT
+Keywords: sftp ftp
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python

@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+sftpwrapper/__init__.py
+sftpwrapper/sftpwrapper.py
+sftpwrapper.egg-info/PKG-INFO
+sftpwrapper.egg-info/SOURCES.txt
+sftpwrapper.egg-info/dependency_links.txt
+sftpwrapper.egg-info/requires.txt
+sftpwrapper.egg-info/top_level.txt
