@@ -1,0 +1,4 @@
+pyjwt>=1.0.1
+cryptography>=1.7
+django>=1.8
+requests
