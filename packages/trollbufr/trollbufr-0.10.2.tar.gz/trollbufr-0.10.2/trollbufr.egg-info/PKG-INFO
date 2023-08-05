@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: trollbufr
+Version: 0.10.2
+Summary: Reading meteorological data format BUFR in pure Python
+Home-page: UNKNOWN
+Author: Alexander Maul
+Author-email: alexander.maul@dwd.de
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=2.6

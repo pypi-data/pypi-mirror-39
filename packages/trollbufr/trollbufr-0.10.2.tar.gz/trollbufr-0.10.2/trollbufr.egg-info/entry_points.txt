@@ -1,0 +1,4 @@
+[console_scripts]
+trollbufr3 = trollbufr.bufr_main:run
+trollbufr3_update = trollbufr.update:run
+
