@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: gbfs-client
+Version: 0.0.0.dev1
+Summary: Python client for discovering and capturing GBFS bikeshare feeds.
+Home-page: https://github.com/jakehadar/gbfs-client
+Author: Jake Hadar
+Author-email: jake1025@gmail.com
+License: UNKNOWN
+Description: # gbfs-client
+        
+        A Python client for discovering and capturing live bikeshare data feeds made publically available by [hundreds of global bikeshare providers](https://raw.githubusercontent.com/NABSA/gbfs/master/systems.csv) in accordance with the [General Bikeshare Feed Specification (GBFS)](https://github.com/NABSA/gbfs/blob/master/gbfs.md) standard.
+        
+Keywords: gbfs bikeshare client
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
