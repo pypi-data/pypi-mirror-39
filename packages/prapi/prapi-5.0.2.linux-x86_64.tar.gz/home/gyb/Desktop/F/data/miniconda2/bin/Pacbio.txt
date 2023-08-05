@@ -1,0 +1,113 @@
+[outputdir]
+## Name of the output file
+Output_dir=output/pacbio
+[input file]
+## Name of the input pacbio fasta sequence file already fixed indels/mismatches
+Pacbio_reads=example/full_LR.fa
+##	Gene annotation
+Genome_Annotion=example/P_heterocycla_v1.0.genemodel.gff
+## An annotation of transcripts Assembled in GTF format
+#Cuffmerge_file=input/merged.gtf 
+## directory to gmap indexes
+GMAP_IndexesDir=/home/pub/gyb/TAPIS/tps/db
+## name of gmap index
+GMAP_IndexesName=bamboo
+[Graph option]
+## HEX format color
+ir=#00FF00
+es=#8C4726
+alta=#8C0000
+altd=#008C8C
+altp=#006300
+Exon=#0000FF
+Intron=#000000
+UTR=#BFBFBF
+CDS=#000000
+cufflinksexon=#006300
+5'-5'=#1E90FF
+3'-3'=#A52A2A
+Fully_overlap=#90EE90
+NAT_F=#0000FF
+NAT_R=#008000
+[GMAP option]
+##Number of gmap worker threads
+GMAP_Process=35
+## Max length for one internal intron
+MaxIntron=8000
+[Polya option]
+## Width of peaks when searching for poly(A) sites
+Width_of_peaks=5
+## Minimum distance between any two poly(A) sites
+MinDist=20
+## Minimum number of trusted reads supporting a poly-A site
+MinSupport=1
+[ati option]
+## Width of peaks when searching for ati sites
+Width_of_peaks=5
+## Minimum distance between any two ati sites
+MinDist=20
+## Minimum number of trusted reads supporting a ati sites
+MinSupport=1
+[Global option]
+## use parallel version (with <np> processors)
+Multile_processing=False
+[Wig option]
+## if we plot wig file 
+Wig_plot=True
+## if we standardizing the wig 
+Normaltion=True
+## if the seq is Strand Specificity
+Strand_Specificity=True
+## lib groups 
+## example: if we have four libs.two groups,use like this Lib1_Lib2 Lib3_Lib4;one group,use like this Lib1_Lib2_Lib3_Lib4;
+Group=Lib1_Lib2_Lib3_Lib4_Lib5_Lib6
+## wig lib,example:Lib*	libname	sorted_and_indexed_bam_file	HEX_color  
+#Lib1=LB example/Lateral_bud.accepted_hits.bam.sort.bam    #FF0000
+#Lib2=ST example/New_shoot_tip.accepted_hits.bam.sort.bam  #006300
+#Lib3=RT example/Rhizome_tip.accepted_hits.bam.sort.bam    #458b00
+Lib1=NAA1	example/NAA4h_rep1.accepted_hits.bam.sort.bam	#FF0000
+Lib2=NAA2	example/NAA4h_rep1.accepted_hits.bam.sort.bam	#006300
+Lib3=NAA3	example/NAA4h_rep1.accepted_hits.bam.sort.bam	#006300
+Lib4=GA1	example/GA4h_rep1.accepted_hits.bam.sort.bam	#006300
+Lib5=GA2	example/GA4h_rep1.accepted_hits.bam.sort.bam	#006300
+Lib6=GA3	example/GA4h_rep1.accepted_hits.bam.sort.bam	#006300
+## read length of seq
+readLength=125
+## anchorLength of aligner
+anchorLength=8
+## seq type pair or single
+DataType=pair
+[DE NAT option]
+## if we complute differential nat analysis
+DE=False
+##
+p_value_set=0.01
+fdr_set=0.01
+fc=0.5
+DElib=Lib1_Lib2_Lib3	Lib4_Lib5_Lib6
+[DE AS option]
+## if we complute differential as analysis
+DE=False
+## p_value of two differential as sites
+p_value_set=0.01
+## fdr of two differential as sites
+fdr=0.01
+## the libs we want to perform differential apa analysis
+DElib=Lib1_Lib2	Lib3_Lib4
+[DE APA option]
+## if we complute differential apa analysis
+## this time the bam file is pas-seq 
+DE=False
+## Minimum distance between any two poly(A) sites
+Scan_length=20
+##  Minimum distance between any two poly(A) sites
+#two_fisher_length=50
+## two poly(A) sites ration
+##fillter_ration<count1/count2<1/(fillter_ration) and fillter_ration<count2/count1<1/(fillter_ration)
+fillter_ration=0.1
+## p_value of two differential poly(A) sites
+p_value_set=0.02
+## fdr of two differential poly(A) sites
+fdr=0.02
+## the libs we want to perform differential apa analysis
+DElib=Lib1	Lib2	Lib3
