@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.py
+./TeXASCommon.py
+./TeXASDist.py
+./TeXASDoc.py
+./__init__.py
+./about.py
+scons_tool_texas.egg-info/PKG-INFO
+scons_tool_texas.egg-info/SOURCES.txt
+scons_tool_texas.egg-info/dependency_links.txt
+scons_tool_texas.egg-info/namespace_packages.txt
+scons_tool_texas.egg-info/requires.txt
+scons_tool_texas.egg-info/top_level.txt
