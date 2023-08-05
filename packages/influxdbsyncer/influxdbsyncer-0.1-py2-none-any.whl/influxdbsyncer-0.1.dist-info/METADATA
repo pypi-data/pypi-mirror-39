@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: influxdbsyncer
+Version: 0.1
+Summary: Sync missing datapoints from remote to local InfluxDB
+Home-page: https://github.com/alexpekurovsky/InfluxDBSyncer
+Author: Alex Pekurovsky
+Author-email: alex.pekurovsky@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: schedule
+Requires-Dist: influxdb
+Requires-Dist: pandas
+Requires-Dist: numpy
+
+UNKNOWN
+
+
