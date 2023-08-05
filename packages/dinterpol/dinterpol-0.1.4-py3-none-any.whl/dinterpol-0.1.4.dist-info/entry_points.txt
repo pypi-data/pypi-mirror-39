@@ -1,0 +1,3 @@
+[console_scripts]
+dinterpol = dinterpol.__main__:main
+
