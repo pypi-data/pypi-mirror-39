@@ -1,0 +1,11 @@
+Cython
+jnius
+requests
+click
+argcomplete
+python-dateutil
+
+[tests]
+pytest
+pytest-pep8
+pytest-cov
