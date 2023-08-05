@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: jupyterhub-ec2spawner
+Version: 0.24
+Summary: Simple EC2 spawner for JupyterHub
+Home-page: https://github.com/Ridingst/jupyterhub-ec2spawner
+Author: Thomas Ridings
+Author-email: mail@thomasridings.com
+License: 3 Clause BSD
+Platform: UNKNOWN
+Requires-Dist: setuptools
+Requires-Dist: jupyterhub
+Requires-Dist: boto3
+Requires-Dist: tornado
+
+UNKNOWN
+
+
