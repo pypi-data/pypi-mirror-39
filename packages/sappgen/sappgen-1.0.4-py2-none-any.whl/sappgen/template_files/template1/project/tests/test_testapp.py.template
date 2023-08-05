@@ -1,0 +1,13 @@
+import logging
+from $APP_NAME import process_app
+from $APP_NAME.util import set_root_logger
+
+# ==================================================================================================
+
+set_root_logger("DEBUG")
+
+# ==================================================================================================
+
+def test_$APP_NAME():
+    logging.debug("testing main app")
+    assert process_app(val=1) == 1
