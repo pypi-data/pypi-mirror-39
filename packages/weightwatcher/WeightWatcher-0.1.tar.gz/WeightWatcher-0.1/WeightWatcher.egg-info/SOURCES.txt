@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+WeightWatcher.ipynb
+setup.cfg
+setup.py
+WeightWatcher.egg-info/PKG-INFO
+WeightWatcher.egg-info/SOURCES.txt
+WeightWatcher.egg-info/dependency_links.txt
+WeightWatcher.egg-info/entry_points.txt
+WeightWatcher.egg-info/requires.txt
+WeightWatcher.egg-info/top_level.txt
+weightwatcher/__init__.py
+weightwatcher/__main__.py
+weightwatcher/constants.py
+weightwatcher/weightwatcher.py
