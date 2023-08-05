@@ -1,0 +1,3 @@
+[console_scripts]
+deepaas-run = deepaas.cmd.run:main
+
