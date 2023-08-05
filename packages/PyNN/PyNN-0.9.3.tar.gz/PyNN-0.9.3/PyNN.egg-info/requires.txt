@@ -1,0 +1,15 @@
+numpy>=1.8.2
+lazyarray>=0.3.2
+neo>=0.5.2
+quantities>=0.12.1
+
+[MPI]
+mpi4py
+
+[examples]
+matplotlib
+scipy
+
+[plotting]
+matplotlib
+scipy
