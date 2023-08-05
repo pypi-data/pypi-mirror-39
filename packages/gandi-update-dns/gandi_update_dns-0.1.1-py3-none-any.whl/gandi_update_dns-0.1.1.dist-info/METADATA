@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: gandi-update-dns
+Version: 0.1.1
+Summary: Yet another tool to update DNS zone in gandi provider
+Home-page: https://gitlab.com/aloha68/gandi-update-dns
+License: ISC
+Author: Aloha68
+Author-email: dev@aloha.im
+Requires-Python: >=3.4,<4.0
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: Name Service (DNS)
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Systems Administration
+Provides-Extra: send-sms
+Requires-Dist: send-sms-freemobile (>=0.1.0,<0.2.0); extra == "send-sms"
+Requires-Dist: xdg (>=3.0,<4.0)
+Project-URL: Repository, https://gitlab.com/aloha68/gandi-update-dns
+Description-Content-Type: text/markdown
+
+Yet another tool to update DNS zone in Gandi provider!
+
+## How to use
+
+Just use the following command:
+
+    gandi-update-dns
+    
+If the command is not on your PATH, it will be usually found on `$HOME/.local/bin`.
+
+## Configuration file
+
+If you have no configuration file, the main command will ask you for a domain and a Gandi api key.
+
+Configuration file can be found here:
+
+- Directory: XDG_CONFIG_HOME (default is `$HOME/.config`)
+- File: `gandi-update-dns.conf`
+
+
