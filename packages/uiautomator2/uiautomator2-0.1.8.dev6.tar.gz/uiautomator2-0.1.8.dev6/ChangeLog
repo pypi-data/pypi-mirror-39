@@ -1,0 +1,72 @@
+CHANGES
+=======
+
+* raise IndexError when UiObject returned by child\_by\_xxx, close #261
+* fix xpath py2 py3 compatibale
+* fix xpath ext resource-id error
+* Update README.md (#260)
+* update weditor install method
+
+0.1.7
+-----
+
+* sem-ver:bugfix, fix init with PATH env error on windows
+* fix doc
+* update apk to 1.1.7 to fix dumpHierarchy, close #207
+
+0.1.6
+-----
+
+* use atx-agent server -stop before launch
+* force stop atx-agent when init
+* fix launch atx-agent with wrong PATH, which may cause /info get wrong info
+* fix test on android P emulator
+* 加入aricv图像识别插件 (#250)
+* update atx-agent version
+
+0.1.5
+-----
+
+* fix init, because of mirror down
+* fix xpath python2 support, perf create dir if not exists
+* fix little bug
+* update readme
+* first xpath plugin version
+* add more comment about xpath plugin
+* add xpath plugin
+
+0.1.4
+-----
+
+* update install method
+* update install part
+* add install test code
+* fix fps collect
+* update atx-agent version
+* fix if log bug in ext/info
+* 修改info插件调用模式 (#245)
+* add test info plugin (#240)
+* fix perf get data error (#239)
+* Update README.md
+* open python 3.7 support
+* 更改一处类型提示错误 (#229)
+* add beta method hooks\_register
+* fix #206, init gives 'inf' as serial <class 'float'> (#216)
+* 修改init不成功的问题 (#221)
+* update to new atx-agent
+* fix current\_app in sumsung, add tcp and udp in perf
+* add images
+* add fps
+* swipe duration default 0.1(old 0.5), add swipe ui
+* fix perf uiautomator in python2
+* update doc
+* fix perf d not exists bug
+* add traffic into perf plugin
+* update atx-agent version
+* catch AttributeError in UIAutomatorServer
+* add back implicitly wait
+* add perf doc
+* add perf plugin
+* runyaml fix
+* add plugin\_register and ocr plugin
+* add plugin support
