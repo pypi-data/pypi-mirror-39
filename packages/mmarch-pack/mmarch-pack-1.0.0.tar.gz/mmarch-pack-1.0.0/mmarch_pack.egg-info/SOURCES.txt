@@ -1,0 +1,11 @@
+setup.py
+bin/mmarch-pack
+mmarch/__init__.py
+mmarch/archive.py
+mmarch/format.py
+mmarch/hash.py
+mmarch/path.py
+mmarch_pack.egg-info/PKG-INFO
+mmarch_pack.egg-info/SOURCES.txt
+mmarch_pack.egg-info/dependency_links.txt
+mmarch_pack.egg-info/top_level.txt
