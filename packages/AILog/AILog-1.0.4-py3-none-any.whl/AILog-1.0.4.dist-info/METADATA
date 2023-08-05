@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: AILog
+Version: 1.0.4
+Summary: Library that provides configurable colored and formatted logging with sane defaults
+Home-page: http://github.com/ai-systems/AILog
+Author: AI Systems, University of Manchester
+Author-email: viktor.schlegel@manchester.ac.uk
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: aiconf
+Requires-Dist: colorlog
+
+UNKNOWN
+
+
