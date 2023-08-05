@@ -1,0 +1,12 @@
+janus
+jinja2
+pyyaml
+qscintilla
+websockets
+
+[gui]
+pyqt5
+pyqtgraph
+
+[serverserial]
+pyqtserial
