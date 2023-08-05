@@ -1,0 +1,25 @@
+version 1.7b8 - 2018-12-02
+==========================
+
+* New nethods: cfdm.Field.get_construct_axes,
+  cfdm.Field.get_construct_id
+* Changed behavious of cfdm.Field.construct_axes
+ 	
+version 1.7b7 - 2018-11-28
+==========================
+
+* Fixed bug when writing arrays of length-1 strings to disk
+* Fixed bugs in cfdm.Field.create_field
+* New method cfdm.Field.read_report	
+ 	
+version 1.7b6 - 2018-11-27
+==========================
+
+* Moved test directory into cfdm directory
+* Fields output by cfdm.read are now sorted by their netCDF
+  variable names
+	
+version 1.7b5 - 2018-11-22
+==========================
+
+* Initial version
