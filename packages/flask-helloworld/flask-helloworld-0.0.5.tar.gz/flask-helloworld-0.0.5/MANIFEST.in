@@ -1,0 +1,4 @@
+include requirements.txt
+graft flask_helloworld/static
+graft flask_helloworld/templates
+global-exclude *.pyc
