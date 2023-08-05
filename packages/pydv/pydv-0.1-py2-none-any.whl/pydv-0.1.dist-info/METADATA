@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pydv
+Version: 0.1
+Summary: D-STAR library and utilities in Python
+Home-page: https://github.com/chazapis/pydv
+Author: Antony Chazapis
+Author-email: chazapis@gmail.com
+License: GPLv2
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Communications :: Ham Radio
+Description-Content-Type: text/markdown
+
+# pydv
+
+Collection of Python code to experiment with D-STAR.
+
+Provides the `dv-recorder` and `dv-player` executables that connect via DExtra to some XRF reflector (tested only with xlxd), to record and play back .dvtool files.
+
+Based on [ircDDBGateway](https://github.com/g4klx/ircDDBGateway) and [xlxd](https://github.com/LX3JL/xlxd).
+
+
