@@ -1,0 +1,6 @@
+[bio2bel]
+drugbank = bio2bel_drugbank
+
+[console_scripts]
+bio2bel_drugbank = bio2bel_drugbank.cli:main
+
