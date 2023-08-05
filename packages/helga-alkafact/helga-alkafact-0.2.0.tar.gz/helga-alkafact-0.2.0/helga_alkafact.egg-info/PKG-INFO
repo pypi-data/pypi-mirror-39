@@ -1,0 +1,38 @@
+Metadata-Version: 1.1
+Name: helga-alkafact
+Version: 0.2.0
+Summary: like chuck norris facts, but for alkapwn
+Home-page: UNKNOWN
+Author: Justin Caratzas
+Author-email: bigjust@lambdaphil.es
+License: LICENSE
+Description: helga-alkafact
+        ===========
+        
+        to help us remember alkapwn's incredible achievements, we needed a bot plugin::
+        
+          <bigjust> ,rem add alkapwn threw a football over that mountain
+          <bigjust> ,rem alkapwn
+          <helga> alkapwn threw a football over that mountain
+        
+        the only subcommand would be `add`, which would be followed by the
+        statement to add.
+        
+        If we're not `add`ing, then any term provided will be used to search
+        the db and return a random fact.
+        
+        
+        License
+        -------
+        
+        Copyright (c) 2017 Justin Caratzas
+        
+        GPLv3 Licensed
+        
+Keywords: irc bot alkafact
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
