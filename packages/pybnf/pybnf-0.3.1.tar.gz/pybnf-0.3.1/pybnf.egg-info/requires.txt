@@ -1,0 +1,8 @@
+distributed==1.24.0
+paramiko
+numpy
+nose
+pyparsing
+libroadrunner>=1.5.2
+dask==0.20.0
+tornado<5.0.0,>=4.5.1
