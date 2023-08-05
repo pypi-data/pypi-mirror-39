@@ -1,0 +1,3 @@
+[console_scripts]
+fsfs = fsfs.__main__:cli
+
