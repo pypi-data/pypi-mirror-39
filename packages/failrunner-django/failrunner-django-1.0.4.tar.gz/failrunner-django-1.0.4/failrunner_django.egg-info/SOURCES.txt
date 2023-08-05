@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+failrunner/__init__.py
+failrunner/cli.py
+failrunner/runner.py
+failrunner_django.egg-info/PKG-INFO
+failrunner_django.egg-info/SOURCES.txt
+failrunner_django.egg-info/dependency_links.txt
+failrunner_django.egg-info/entry_points.txt
+failrunner_django.egg-info/requires.txt
+failrunner_django.egg-info/top_level.txt
