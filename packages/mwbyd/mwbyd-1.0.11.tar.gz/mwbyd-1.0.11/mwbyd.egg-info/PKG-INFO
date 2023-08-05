@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: mwbyd
+Version: 1.0.11
+Summary: 美味不用等
+Home-page: http://github.com/kts168/mwbyd
+Author: kts168
+Author-email: kts168@163.com
+License: UNKNOWN
+Description: # Example Package
+        
+        This is a simple example package. You can use
+        [Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+        to write your content.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
