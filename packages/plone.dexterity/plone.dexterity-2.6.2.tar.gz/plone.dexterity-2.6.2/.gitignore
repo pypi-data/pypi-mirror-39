@@ -1,0 +1,12 @@
+*.py?
+plone.dexterity.egg-info/
+*.mo
+*.project
+*.pydevproject
+.settings/
+.installed.cfg
+bin/
+lib/
+include/
+parts/
+develop-eggs/
