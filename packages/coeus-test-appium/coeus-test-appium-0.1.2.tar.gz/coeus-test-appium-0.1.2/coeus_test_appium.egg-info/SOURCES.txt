@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+coeus_appium/__init__.py
+coeus_appium/android_keycodes.py
+coeus_appium/appium_driver.py
+coeus_appium/capabilities.py
+coeus_test_appium.egg-info/PKG-INFO
+coeus_test_appium.egg-info/SOURCES.txt
+coeus_test_appium.egg-info/dependency_links.txt
+coeus_test_appium.egg-info/not-zip-safe
+coeus_test_appium.egg-info/requires.txt
+coeus_test_appium.egg-info/top_level.txt
