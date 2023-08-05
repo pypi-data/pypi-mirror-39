@@ -1,0 +1,6 @@
+Django>=1.11
+django-ipware>=1.1.6
+
+[development]
+flake8>=3.2.1
+freezegun>=0.3.10
