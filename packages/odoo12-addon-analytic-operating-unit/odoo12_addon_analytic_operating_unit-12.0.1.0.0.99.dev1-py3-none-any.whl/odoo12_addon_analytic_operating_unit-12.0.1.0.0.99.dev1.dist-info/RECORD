@@ -1,0 +1,12 @@
+odoo/addons/analytic_operating_unit/README.rst,sha256=nM-4BNirG-3Y1b3QHgccpftLT2kNMnEw2I4Lf_C35-w,1900
+odoo/addons/analytic_operating_unit/__init__.py,sha256=oaMRwsiPozUqScdDrgUzyL8UTVKK53IN7lQZrCOBmYw,91
+odoo/addons/analytic_operating_unit/__manifest__.py,sha256=1tI6R-pY1midqxlGaVTv7tgypkpw_Es06fOlxIGcupQ,602
+odoo/addons/analytic_operating_unit/models/__init__.py,sha256=jYOPmnHekg6Bacv3l1dTBuoBVi0hAiNppqSzhSZpwtU,109
+odoo/addons/analytic_operating_unit/models/account_analytic_account.py,sha256=lw98n43Yu9eD9Z6dMq-d1xQ1fUY9n2nxbP8kv1cXOzk,601
+odoo/addons/analytic_operating_unit/security/analytic_account_security.xml,sha256=2HjYkSVHWrPJrk4LJNPaUVSzkpUYIc8QSgc8jx5EzNs,839
+odoo/addons/analytic_operating_unit/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/analytic_operating_unit/views/analytic_account_view.xml,sha256=6g9eMuhLv8gV977e2_qaoBU9Vg9_J3RYzZDpuFfE-U8,777
+odoo12_addon_analytic_operating_unit-12.0.1.0.0.99.dev1.dist-info/METADATA,sha256=y28ynXnUnKS4jVKsmNw1Gk-GHZM8jKt-NgcCK_U4RA8,2466
+odoo12_addon_analytic_operating_unit-12.0.1.0.0.99.dev1.dist-info/RECORD,,
+odoo12_addon_analytic_operating_unit-12.0.1.0.0.99.dev1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+odoo12_addon_analytic_operating_unit-12.0.1.0.0.99.dev1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
