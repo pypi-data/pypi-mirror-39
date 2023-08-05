@@ -1,0 +1,39 @@
+Metadata-Version: 1.1
+Name: cattp
+Version: 0.0.2
+Summary: Django responses with cats from https://http.cat
+Home-page: https://github.com/lotrekagency/cattp
+Author: Lotrek
+Author-email: dimmitutto@lotrek.it
+License: MIT
+Description: Installation
+        ------------
+        
+        .. code-block:: sh
+        
+           pip install cattp
+        
+        Usage
+        -----
+        
+        .. code-block:: python
+        
+           from cattp.http import HttpCatResponse
+        
+           def my_view():
+               return HttpCatResponse(status_code=200)
+        
+        Run tests
+        ---------
+        
+        .. code-block:: sh
+        
+           $ pip install -r requirements-dev.txt
+           $ make test
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
