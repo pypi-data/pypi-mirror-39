@@ -1,0 +1,16 @@
+bio2bel_mirtarbase/__init__.py,sha256=g2ZlZI3qUuNYuxrPZ1vRHsh6_8os2Uih1nJiYkvL9GA,494
+bio2bel_mirtarbase/__main__.py,sha256=PRpJDTpR4y3sPUfLtw562hCSKNjDu06oiZ_7grT_GhY,393
+bio2bel_mirtarbase/cli.py,sha256=wr4aJPhH2v2_A8a58tV1sIUGZtVLMX7hupI4MrssFXQ,173
+bio2bel_mirtarbase/constants.py,sha256=q79Ean32n7q9QJ0prfJEKM1Wqglh4A58BdTU512b9VE,365
+bio2bel_mirtarbase/enrich.py,sha256=Oid-5md9xiILfLWcW5MTn2g-Qfc_lPNyc81AkFyKxlM,749
+bio2bel_mirtarbase/manager.py,sha256=IWBFX8p4LDmus-Qy1f5imLLQXO2KY9cOGwKhzcAvNmg,13023
+bio2bel_mirtarbase/models.py,sha256=FusaWgZyRpkaouP_Ti8DSueFB9f22dCPMEPjvOyaWgQ,7156
+bio2bel_mirtarbase/parser.py,sha256=trZju32h_6NLztaqDPcbQvKKfYNAIQgU3p1UmJqcVPc,1442
+bio2bel_mirtarbase/utils.py,sha256=4JxD-uE7zHBsYBn9fpRRvW98yN2UmJ4ESVm4t9DW6_M,202
+bio2bel_mirtarbase/web.py,sha256=NHh1gBpKi4spR-an9jhr2McVHOp3mIhVHLpbRfWpIeA,450
+bio2bel_mirtarbase-0.2.0.dist-info/LICENSE,sha256=nLR_S42YnGTvz6CTk-x7Mp-bX-37isXj53G2F_rFF30,1102
+bio2bel_mirtarbase-0.2.0.dist-info/METADATA,sha256=t9hH9C5WaEispkDPTaR5pEOcVzf_iaJ5hmtvKU6V6o0,4285
+bio2bel_mirtarbase-0.2.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+bio2bel_mirtarbase-0.2.0.dist-info/entry_points.txt,sha256=zPfa3MSeuq-aelTMKl9k4pJ5iNOB7K1Xqe13LC733P4,111
+bio2bel_mirtarbase-0.2.0.dist-info/top_level.txt,sha256=HcL2iDntt6iboXWiOejY3QWfvmcrKcrzsR1rYpnPhiQ,19
+bio2bel_mirtarbase-0.2.0.dist-info/RECORD,,
