@@ -1,0 +1,299 @@
+CHANGES
+=======
+
+* Add rebuild-baremetal script
+* Allow customizing driver for build-nodes-json
+* Set cloud\_data to be hidden in virtual-baremetal.yaml too
+* Regenerate network templates
+* Instrument ovb-instack
+* Correctly retrieve disk size for boot from volume
+* Quote delimiter to avoid heredoc expansion
+* Use xlarge flavor for undercloud nodes
+* Make quintupleo deploy command more realistic
+* Prevent overwrite of input env file
+* Disallow \_ in role names
+* Add docs about deleting an OVB environment
+* Deprecate bmc\_bm\_pairs
+* Print stack error message if failed to create
+* Add more granular boot-from-volume envs
+* Fix default env file handling
+* Add envup script
+* Update centos image in test script
+* Limit use of tripleo.sh in ovb-instack
+* Add --network\_details to build-nodes-json
+* Change extra-node default node\_count to 1
+* Add missing extra-node template
+* Allow overriding bmc\_flavor in roles
+* Expose undercloud port 3000
+* Include undercloud private IP as a stack output
+* Remove duplicate bmc\_flavor
+* Write split node files for extra roles
+* Move profile logic out of if baremetal.image block
+* Add ability to deploy extra undercloud node role
+* Add baremetal\_image to role sample file
+* Improve network documentation
+* Sane defaults for role resource\_registry
+* Use more sane default for undercloud\_image
+* Add shared network params to base.yaml
+* Fix v1 test-jobs
+* Add bmc\_use\_cache environment
+* Add boot-from-volume support
+* Catch exceptions when polling stack
+* Fix role id logic
+* Deprecate top-level network templates
+* Deprecate env-role.yaml.example
+* Add unit test for old environment
+* Fix bad assumption in build-nodes-json
+* Move v2 os-net-config call to where it is actually available
+* Make cloud\_data hidden
+* Add test-job-v2
+* Update to latest cloud image
+* Add note about explicitly passing env.yaml
+* Don't duplicate external/private\_net param
+* Document standalone option environments
+* Clarify the overcloud net\_cidr parameter descriptions
+* Add configuration parameters to all-networks environments
+* Add index of all available sample environments
+* Support deploying with multiple Heat environments
+* Add v2 versions of net-iso templates
+* Use more os-client-config to handle bmc auth
+* Add canary command to test-job
+* Fix os-client-config package name
+* Clean up dead auth code
+* Always use os-client-config to create openstack clients
+* Work around $OVB bug in tripleo.sh
+* Fix unit tests involving OS\_CLOUD
+* Handle empty parameter\_default section env
+* Remove sleep and have ssh retry the connection
+* Disable telemetry in ovb-instack
+* Fix bond nic-configs for ceph node
+* Quote auth vars in install\_openstackbmc.sh
+* Don't allow trace to print OS\_PASSWORD value to console
+* Add new Nova patch file for Pike
+* Add note about rebuilding vms
+* Document turning off port-security for undercloud
+* Recommend using quintupleo method
+* Document creation of private network
+* Cache OS\_CLOUD on import
+* Update undercloud MTU docs
+* Add sleep to test-job
+* Tweak external\_net sed command
+* Use new centos image
+* Fix undercloud.conf creation in ovb-instack
+* Set nameserver for local private server
+* Skip pingtest cleanup
+* Make it easier to run test-job against other clouds
+* Run introspection too in ovb-instack
+* Include instance status in bmc log message
+* Fix os\_\_\*\_domain names in systemd service file
+* Disable optional services in ovb-instack
+* Document the auth module
+* Update ovb-instack
+* Make bmc caching configurable
+* Re-enable uefi support with glanceclient
+* Temporarily disable uefi support
+* Update network-isolation templates
+* Remove undercloud\_sg param from undercloud-ports.yaml
+* Remove default\_sg parameter
+* Make undercloud\_sg respect id
+* Re-word definition of host cloud
+* Change test-job flavor
+* Use port-security templates in test-job
+* Add resource templates for port-security
+* Fix client checks in install\_openstackbmc.sh
+* Factor out port creation on OVB networks
+* Update test-job script
+* Use relative imports again
+* Add a few more .gitignores
+* Move auth param validation to common auth module
+* Refactor keystone auth into separate module
+* Ignore all env\*.yaml files
+* Use \_create\_auth\_parameters to create heat client too
+* Unit test deploy.\_create\_auth\_parameters
+* Unset v3 env vars when they are empty
+* Eliminate name collisions in install\_openstackbmc.sh
+* Support keystone v3
+* Support novaclient 7
+* Fix deploy unit tests
+* Regenerate templates with latest net-iso-gen
+* Bump baremetal flavor to 8 GB
+* Derive cloud credentials from environment
+* Ignore doc/build directory
+* Add --poll option to deploy
+* Strengthen --id recommendation for quintupleo
+* Add env validation to deploy
+* Add unit test for writing extra\_node data
+* Unit test role handling in build-nodes-json
+* Handle case where role was not appended to baremetal\_prefix
+* Move note about multiple stacks with role deployments
+* Reformat troubleshooting docs
+* Add troubleshooting docs to sphinx docs
+* Actually add api.rst
+* Add API docs
+* Reference ReadTheDocs documentation from readme
+* s/Indices and tables/Search/
+* Revert "Use -'s for second-level headings"
+* Don't use oslosphinx
+* Include usage in index
+* Use -'s for second-level headings
+* Remove non-working links on index.rst
+* index.rst tweaks
+* Document heterogeneous deployments
+* Flesh out quintupleo docs
+* Add placeholder for heterogeneous environments doc
+* Add note to quintupleo env docs
+* Begin migrating docs to sphinx
+* Update setup.py to match current
+* Update default baremetal flavor ram
+* Further tweaks to the introduction
+* Add a proper introduction to the readme
+* Add undercloud to nodes' json file
+* Stop failing on power requests when we're already in a given state
+* Add support for deploying multiple roles
+* Add ability to assign profiles to nodes automatically
+* Fix unit tests
+* Cache used image and flavors
+* Add uefi capabilities to nodes.json
+* Regenerate net-iso templates with latest tool
+* Add templates for testing bonded interfaces
+* Set name for Ironic nodes
+* Re-generate ipv4 net-iso templates
+* Add ipv6 network templates
+* Fix patching instructions for packaged Nova
+* Add compatibility params for virtual-baremetal
+* Add shared network support for quintupleo
+* Restart openstackbmc if it dies
+* Cache server status
+* Add ceph net-iso configuration
+* Add unit test for default address
+* Properly handle both ipv4 and ipv6 addresses
+* Remove epel usage from bmc
+* Add message about node files
+* Update test-job to reflect current status
+* Add unit tests for build-nodes-json
+* Add openstackbmc unit tests
+* Reorganize into package and add tox for testing
+* Import sys in deploy.py
+* Handle Conflicts when powering on/off servers
+* Log name of instance being managed
+* Rename the provision subnet to match the net name
+* Fix test-deploy
+* Make undercloud deploy optional in quintupleo.yaml
+* Document using pre-built bmc image
+* Remove unnecessary nova.conf shutdown timeout
+* Add default value details to argparse help
+* Improve --id behavior
+* Make bmc depend on baremetal instances
+* Remove unnecessary security groups
+* Bold the troubleshooting titles
+* Fix formatting of troubleshooting doc
+* Remove version from patches directory
+* Don't specify admin tenant uuid
+* Typo fix
+* Document useful quota settings
+* Allow use of pre-built bmc images
+* Add an option for the output nodes json file
+* Add initial troubleshooting doc
+* Drop net-iso template mtu to 1350
+* Fix dnsmasq MTU command again
+* Update MTU instructions
+* Fix undercloud MTU command
+* Specify which nodes in the host cloud need modification
+* Remove duplicate keypair doc
+* Add keypair creation to docs
+* Documentation updates/improvements
+* Revert "Pin to pyghmi==0.9.9"
+* Update default port names too
+* Add descriptions to user-facing parameters
+* Drop \_net suffix from isolated network names
+* Set os\_shutdown\_timeout=5 on the ipxe-boot image
+* Set boot\_option:local in nodes.json
+* Pin to pyghmi==0.9.9
+* Update README to use deploy.py
+* Reintroduce compatibility params in virtual-baremetal
+* Deprecate deploy-\* scripts
+* Add timing information to test-job
+* Add deploy.py CLI interface
+* Rename load-test-job to test-job
+* Add copyright to build-nodes-json
+* Update load-test-job to match deploy-quintupleo
+* Make build-nodes-json os-client-config aware
+* Replace empty image & nova patch with ipxe-boot image
+* Add net-iso-gen.py generated network templates
+* Types to create all networks for network-isolation
+* Create types for baremetal networking
+* reorganise env.yaml.example customization comments
+* Depend on provision\_subnet for a clean stack delete
+* Fix default image name in templates
+* Make deploy scripts smart about create/update
+* s/RDO Manager/TripleO/
+* Stop pinning CentOS image to old version
+* Document MTU settings
+* Increase recommended baremetal flavor to 6 GB
+* Set mtu on bmc interface
+* Put the bmc ports in their own resource group
+* Remove unneeded parameters from virtual-baremetal-servers
+* remove unused parameters
+* Add list param for dns instead one string param
+* fix mistake
+* Remove public\_sg and provision\_sg, since both are equal to all\_sg
+* Add dns nameserver param for private net
+* Use a single Neutron port for bmc
+* Add missing passthrough of bmc\_flavor param
+* OS::OVB::PrivateNetwork which creates a network
+* Abstract out the reference to private\_net
+* Allow loading node details from YAML
+* Allow customizing the stack name in deploy-quintupleo
+* Rename user\_data to undercloud\_user\_data
+* Add user data parameter for undercloud and export it as heat parameter
+* Fix the undercloud floating ip output
+* Fix the undercloud floating ip output
+* Add missing property for bmc flavor
+* Document need for allow\_duplicate\_networks=true
+
+0.0.1
+-----
+
+* Switch order of -e in all deploy scripts
+* Give option of using existing or no undercloud floating ip
+* Put undercloud floating ip into own type
+* Remove commented networks line
+* Remove properties for missing controller params
+* Do not assign security groups to bm ports
+* Don't assume name of private subnet
+* Improve BMC documentation
+* Run os-net-config as a systemd service
+* Fix formatting of shutdown\_timeout section
+* Ignore bmc\_bm\_pairs file
+* Documentation tweaks
+* Install pyghmi normally again
+* Write a simple file containing a list of bmc-bm pairs
+* Remove controller config from templates
+* Configure all ips on one interface
+* Allow a single BMC to manage multiple BMs
+* Pin pyghmi to 0.8.0
+* Remove public nic from baremetal nodes
+* Redirect openstack-bmc logging to kmsg+console
+* Flush stdout on every print
+* Enable deploying two types of baremetal nodes
+* Add note on shutdown\_timeout
+* Indent yaml according to the natural laws of the universe
+* Actually add quintupleo files
+* Switch to yaml env files
+* Add public network and quintupleo template
+* Rename resource to OVB
+* flavor oops
+* Use the bmc flavor which has been created
+* Document when to switch to non-admin creds
+* Make sample bmc\_image match instructions
+* Improve overcloud-env docs
+* Fix numbering...again
+* More formatting cleanups
+* Clean up numbering
+* Document adding a keypair
+* Update overcloud instructions
+* Add overcloud deployment environment file
+* Flesh out README.rst
+* Add Nova patch file
+* Update env.json.example
+* Initial import

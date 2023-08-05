@@ -1,0 +1,212 @@
+heat_template_version: 2014-10-16
+
+description: Template for deploying OpenStack BMC nodes.  Can be wrapped in a ResourceGroup for scaling.
+
+# Ensure force_config_drive is _not_ set in nova.conf
+
+parameters:
+  bmc_flavor:
+    type: string
+    default: m1.small
+    description: The Nova flavor to use for the bmc instance
+
+  bmc_image:
+    type: string
+    default: CentOS-7-x86_64-GenericCloud
+    description: |
+      The base image for the bmc instance.  A CentOS 7 image is currently the
+      only one supported.
+
+  bmc_use_cache:
+    type: boolean
+    default: false
+    description: |
+      Enable instance status caching on the BMC.  This can reduce load on the
+      host cloud, but if an instance's status is changed outside the BMC it may
+      become out of sync.
+
+  baremetal_flavor:
+    type: string
+    default: baremetal
+    description: Recommended to be at least 1 vcpu, 4 GB RAM, 50 GB disk
+
+  baremetal_image:
+    type: string
+    default: empty
+    description: The base image to use for baremetal instances
+
+  key_name:
+    type: string
+    default: default
+    description: Nova keypair to inject into the undercloud and bmc
+
+  node_count:
+    type: number
+    default: 1
+    description: Number of baremetal nodes to deploy
+
+  public_net:
+    type: string
+    description: |
+      An additional network that will be attached to the baremetal instances,
+      intended to be used for non-provisioning traffic
+    default: public
+
+  private_net:
+    type: string
+    default: private
+    description: Name of a private network which can have floating ips associated with it
+
+  provision_net:
+    type: string
+    default: provision
+    description: Name of a network that will be used for provisioning traffic
+
+  bmc_prefix:
+    type: string
+    default: bmc
+    description: Prefix for the name of the bmc instance
+
+  baremetal_prefix:
+    type: string
+    default: baremetal
+    description: Prefix for the name of the baremetal instances
+
+  os_user:
+    type: string
+    default: admin
+    description: |
+      The user on the host cloud that will be used to provision the
+      environment
+
+  os_password:
+    type: string
+    default: password
+    hidden: true
+    description: The password for os_user
+
+  os_tenant:
+    type: string
+    default: admin
+    description: The tenant for os_user
+
+  os_auth_url:
+    type: string
+    default: http://127.0.0.1:5000/v2.0
+    description: The Keystone auth_url of the host cloud
+
+  os_project:
+    type: string
+    default: ''
+    description: |
+      The project for os_user.  Required for Keystone v3, should be left
+      blank for Keystone v2.
+
+  os_user_domain:
+    type: string
+    default: ''
+    description: |
+      The user domain for os_user.  Required for Keystone v3, should be left
+      blank for Keystone v2.
+
+  os_project_domain:
+    type: string
+    default: ''
+    description: |
+      The project domain for os_user.  Required for Keystone v3, should be left
+      blank for Keystone v2.
+
+  cloud_data:
+    type: string
+    default: '{}'
+    hidden: true
+
+  # Ignored parameters for compatibility with QuintupleO env files
+  undercloud_image:
+    type: string
+    default: ''
+  undercloud_flavor:
+    type: string
+    default: ''
+  undercloud_name:
+    type: string
+    default: ''
+  external_net:
+    type: string
+    default: ''
+  public_net_shared:
+    type: string
+    default: ''
+  provision_net_shared:
+    type: string
+    default: ''
+
+resources:
+  bmc_port:
+    type: OS::OVB::BMCPort
+    properties:
+      bmc_prefix: {get_param: bmc_prefix}
+      private_net: {get_param: private_net}
+
+  bmc_other_ports:
+    type: OS::Heat::ResourceGroup
+    properties:
+      count: {get_param: node_count}
+      resource_def:
+        type: OS::Neutron::Port
+        properties:
+          name:
+            list_join:
+            - ''
+            - - {get_param: bmc_prefix}
+              - _%index%
+          network: {get_param: private_net}
+
+  bmc_server:
+    type: OS::Nova::Server
+    depends_on: [openstack_baremetal_servers, bmc_other_ports, bmc_port]
+    properties:
+      flavor: {get_param: bmc_flavor}
+      image: {get_param: bmc_image}
+      key_name: {get_param: key_name}
+      networks: {get_attr: [bmc_port, port]}
+      name: {get_param: bmc_prefix}
+      user_data_format: RAW
+      user_data:
+        str_replace:
+          params:
+            $os_user: {get_param: os_user}
+            $os_password: {get_param: os_password}
+            $os_tenant: {get_param: os_tenant}
+            $os_auth_url: {get_param: os_auth_url}
+            $os_project: {get_param: os_project}
+            $os__user_domain: {get_param: os_user_domain}
+            $os__project_domain: {get_param: os_project_domain}
+            $bm_node_count: {get_param: node_count}
+            $bmc_prefix: {get_param: bmc_prefix}
+            $bmc_utility: {get_attr: [bmc_port, ip_address]}
+            $bmc_use_cache: {get_param: bmc_use_cache}
+            $bm_prefix: {get_param: baremetal_prefix}
+            $private_net: {get_param: private_net}
+            $openstackbmc_script: {get_file: ../bin/openstackbmc}
+            $cloud_data: {get_param: cloud_data}
+          template: {get_file: ../bin/install_openstackbmc.sh}
+
+  baremetal_networks:
+    type: OS::OVB::BaremetalNetworks
+
+  openstack_baremetal_servers:
+    type: OS::Heat::ResourceGroup
+    depends_on: baremetal_networks
+    properties:
+      count: {get_param: node_count}
+      resource_def:
+        type: OS::OVB::ServerPair
+        properties:
+          baremetal_flavor: {get_param: baremetal_flavor}
+          baremetal_image: {get_param: baremetal_image}
+          key_name: {get_param: key_name}
+          provision_net: {get_param: provision_net}
+          public_net: {get_param: public_net}
+          suffix: _%index%
+          baremetal_prefix: {get_param: baremetal_prefix}

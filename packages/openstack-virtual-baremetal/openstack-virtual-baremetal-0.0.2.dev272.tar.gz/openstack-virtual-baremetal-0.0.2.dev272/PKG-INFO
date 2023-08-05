@@ -1,0 +1,28 @@
+Metadata-Version: 1.1
+Name: openstack-virtual-baremetal
+Version: 0.0.2.dev272
+Summary: A collection of tools for using OpenStack instances to test baremetal deployment
+Home-page: http://www.redhat.com/
+Author: Ben Nemec
+Author-email: bnemec@redhat.com
+License: UNKNOWN
+Description: OpenStack Virtual Baremetal
+        ===========================
+        
+        OpenStack Virtual Baremetal is a way to use OpenStack instances to do
+        simulated baremetal deployments.  For more details, see the `full
+        documentation
+        <http://openstack-virtual-baremetal.readthedocs.io/en/latest/index.html>`_.
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
