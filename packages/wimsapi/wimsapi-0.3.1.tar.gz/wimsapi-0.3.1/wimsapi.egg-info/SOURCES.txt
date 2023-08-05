@@ -1,0 +1,15 @@
+CHANGES.md
+MANIFEST.in
+README.md
+setup.py
+wimsapi/__init__.py
+wimsapi/api.py
+wimsapi/exceptions.py
+wimsapi/item.py
+wimsapi/user.py
+wimsapi/wclass.py
+wimsapi.egg-info/PKG-INFO
+wimsapi.egg-info/SOURCES.txt
+wimsapi.egg-info/dependency_links.txt
+wimsapi.egg-info/requires.txt
+wimsapi.egg-info/top_level.txt
