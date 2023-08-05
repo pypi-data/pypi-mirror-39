@@ -1,0 +1,13 @@
+README.md
+setup.py
+json2db/ModelFactory.py
+json2db/__init__.py
+json2db/config.py
+json2db/converter.py
+json2db/core.py
+json2db/types.py
+json2db.egg-info/PKG-INFO
+json2db.egg-info/SOURCES.txt
+json2db.egg-info/dependency_links.txt
+json2db.egg-info/requires.txt
+json2db.egg-info/top_level.txt
