@@ -1,0 +1,3 @@
+[console_scripts]
+house_hunter = house_hunter.cli:main
+
