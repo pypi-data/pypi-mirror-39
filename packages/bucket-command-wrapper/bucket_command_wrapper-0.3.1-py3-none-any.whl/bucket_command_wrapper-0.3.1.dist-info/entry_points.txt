@@ -1,0 +1,3 @@
+[console_scripts]
+bucket_command_wrapper = bucket_command_wrapper.bucket_command_wrapper:main
+
