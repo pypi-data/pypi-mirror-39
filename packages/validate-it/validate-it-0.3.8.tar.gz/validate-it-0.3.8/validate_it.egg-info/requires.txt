@@ -1,0 +1,10 @@
+
+[docs]
+aiohttp_theme
+sphinx>=1.4
+
+[tests]
+coverage==4.5
+pytest-cov==2.5.1
+pytest==3.4.0
+python-box==3.2.0
