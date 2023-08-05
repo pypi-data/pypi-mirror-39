@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        cashconverter=cash_converter_cli.main:cli
+    
