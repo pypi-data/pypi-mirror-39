@@ -1,0 +1,12 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "myFbase"
+author = "victor141516"
+description-file = "README.md"
+author-email = "yomellamovictor@gmail.com"
+home-page = "https://github.com/victor141516/myFbase"
+classifiers = ["License :: OSI Approved :: MIT License"]
+
