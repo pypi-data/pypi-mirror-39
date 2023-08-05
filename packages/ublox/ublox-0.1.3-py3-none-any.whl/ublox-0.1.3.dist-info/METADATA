@@ -1,0 +1,182 @@
+Metadata-Version: 2.1
+Name: ublox
+Version: 0.1.3
+Summary: Python library for U-blox cellular modules.
+Home-page: https://github.com/pwitab/ublox
+Author: Henrik Palmlund Wahlgren @ Palmlund Wahlgren Innovative Technology AB
+Author-email: henrik@pwit.se
+License: MIT
+Keywords: NB-IoT,LTE-M
+Platform: UNKNOWN
+Requires-Python: ~=3.6
+Requires-Dist: pyserial
+
+======
+U-blox
+======
+
+Python library for U-blox cellular modules.
+
+Installation
+============
+
+Python version supported: 3.6+
+
+.. code-block::
+
+    pip install ublox
+
+
+About
+=====
+
+The ublox library gives a python interface to AT Commands via serial interface
+to Ublox modules. This can used for testing and profiling of modules and
+technologies or you might want to hook up a small python program on an embedded
+device to send data over, for example, NB-IoT.
+
+Supported Modules
+=================
+
+* SARA-N211
+* SARA-R410
+* SARA-R412
+
+Example Use:
+============
+
+.. code-block::
+
+    module = SaraR4Module(serial_port='/dev/tty.usbmodem14111')
+    module.setup()
+    module.connect(operator=24001)
+    sock = module.create_socket()
+    sock.sendto(b'Message To Echo Server', ('195.34.89.241', 7))
+    sock.close()
+
+Documentation
+=============
+Full documentation can be found at https://ublox.readthedocs.io/
+
+Development
+===========
+
+The library is currently used for testing infrastructure in Sweden. If you find
+problems in your country please open an issue so we can make the library as
+general as possible.
+
+If you have special need there is always the possibility to used the lower
+level API for AT Commands via ._at_action()
+
+If you have use-cases that could be solved with more options on functions, make
+the change yourself and open a pull request or open an issue.
+
+
+
+
+
+
+
+=========
+Changelog
+=========
+
+The format is based on `Keep a Changelog: https://keepachangelog.com/en/1.0.0/`,
+and this project adheres to `Semantic Versioning: https://semver.org/spec/v2.0.0.html`
+
+Unreleased
+----------
+
+Added
+^^^^^
+
+Changed
+^^^^^^^
+
+Deprecated
+^^^^^^^^^^
+
+Removed
+^^^^^^^
+
+Fixed
+^^^^^
+
+Security
+^^^^^^^^
+
+v0.1.3 (2018-12-04)
+-------------------
+
+Added
+^^^^^
+* Timeouts to reads
+* Better logging to find problems in threaded environments.
+* Better exception descriptions.
+
+
+v0.1.2 (2018-11-22)
+-------------------
+
+Changed
+^^^^^^^
+* Callback handling. Apparently it got object referencing problems when running
+  multiple threads using and instance of the module class.
+
+Fixed
+^^^^^
+* Small bug when a UDP message is not received we parsed and empty response.
+
+
+v0.1.1 (2018-11-21)
+-------------------
+
+Added
+^^^^^
+* Added functionality to read data from UDP sockets.
+* Added interface for socket.recvfrom() to socket class.
+* Small wait time on writes not to block interface.
+* Current RAT information
+* Possibility to set socket in listening mode
+
+
+Changed
+^^^^^^^
+* update_radio_statistics is now a public function
+* callback registration process
+
+v0.1.0  (2018-10-24)
+--------------------
+
+Added
+^^^^^
+* Arg to specify if the module is roaming or when connecting specify if roaming so that we know what to expect in the connection status.
+* capture_urc flag to _at_command(). So that it is possible to collect the URCs before the OK response.
+* Added the UbloxSocket and UDPSocket classes to be able to handle sockets independent from module.
+
+Changed
+^^^^^^^
+* Removed operators name and map. Now you need to specify the operator with its MNO_ID. Swedish Telia is for example 24001.
+* Renamed eps_reg_status to registration_status. Even if it does not follow the naming in the ublox manual it is clearer in the code what it is.
+* create_socket now returns a UbloxSocket subclass.
+
+
+v0.0.2
+------
+
+Added
+^^^^^
+* Better support for R412.
+* errors for AT commands and module errors will throw python exceptions.
+* setting bands on r4 modules.
+
+
+Changed
+^^^^^^^
+* Renamed function to set up the module from init to setup to have a clearer API.
+* Improvement of api and made methods common.
+
+v0.0.1
+------
+First version. Support for SARA-N211 and initial support for SARA-R412
+
