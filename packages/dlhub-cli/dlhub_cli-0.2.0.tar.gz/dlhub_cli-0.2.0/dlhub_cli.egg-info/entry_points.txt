@@ -1,0 +1,3 @@
+[console_scripts]
+dlhub = dlhub_cli:cli_root
+

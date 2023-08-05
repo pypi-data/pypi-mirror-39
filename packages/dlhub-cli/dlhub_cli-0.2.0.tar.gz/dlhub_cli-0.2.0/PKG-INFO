@@ -1,0 +1,41 @@
+Metadata-Version: 1.2
+Name: dlhub_cli
+Version: 0.2.0
+Summary: DLHub CLI
+Home-page: https://github.com/DLHub-Argonne/dlhub_cli
+Author: Ryan Chard
+Author-email: rchard@anl.gov
+License: UNKNOWN
+Description: DLHub CLI
+        =========
+        
+        
+        A Command Line Interface for [DLHub](https://dlhub.org)
+        
+        Source Code: https://github.com/DLHub-Argonne/dlhub_cli
+        
+        
+        ## Installation
+        
+        ```
+        pip install dlhub_cli
+        ```
+        
+        ## Development
+        After cloning this repository, run
+        
+        ```
+        pip install -e .
+        ```
+        
+        ## Documentation
+        [Read the Docs](https://dlhub-cli.readthedocs.io/en/latest/genindex.html)
+        
+Keywords: DLHub,Data and Learning Hub for Science,machine learning,data publication,reproducibility
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Requires-Python: >=3.4
