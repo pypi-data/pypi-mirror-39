@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pyCx
+Version: 0.0.7
+Summary: A tiny package for cXense API
+Home-page: https://github.com/kilfu0701/pyCx
+Author: BoRu Su
+Author-email: kilfu0701@gmail.com
+License: UNKNOWN
+Description: # A Tiny package for cXense API
+        
+        [Github](https://github.com/kilfu0701/cx-py)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
