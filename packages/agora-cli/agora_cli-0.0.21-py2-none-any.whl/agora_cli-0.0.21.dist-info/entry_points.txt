@@ -1,0 +1,3 @@
+[console_scripts]
+agora = agora_cli.root:cli
+

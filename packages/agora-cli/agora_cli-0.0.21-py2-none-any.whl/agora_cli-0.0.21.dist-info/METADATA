@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: agora-cli
+Version: 0.0.21
+Summary: A CLI for Agora
+Home-page: https://github.com/fserena/agora-cli
+Author: Fernando Serena
+Author-email: kudhmud@gmail.com
+License: Apache 2
+Download-URL: https://github.com/fserena/agora-cli/tarball/0.0.21
+Keywords: agora,discovery,linked data
+Platform: UNKNOWN
+Requires-Dist: click
+Requires-Dist: rdflib (==4.2.1)
+Requires-Dist: SPARQLWrapper
+Requires-Dist: pyld
+Requires-Dist: rdflib-jsonld
+Requires-Dist: shortuuid
+Requires-Dist: agora-py
+Requires-Dist: agora-wot
+Requires-Dist: agora-gw
+Requires-Dist: agora-graphql
+
+UNKNOWN
+
+
