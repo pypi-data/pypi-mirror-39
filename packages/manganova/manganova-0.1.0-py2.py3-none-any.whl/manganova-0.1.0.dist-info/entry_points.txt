@@ -1,0 +1,3 @@
+[console_scripts]
+manganova = manganova.cli.cli:cli
+

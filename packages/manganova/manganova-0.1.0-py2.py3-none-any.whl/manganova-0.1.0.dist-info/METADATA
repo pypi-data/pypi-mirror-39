@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: manganova
+Version: 0.1.0
+Summary: Manganova: a manga manager
+Home-page: https://github.com/Germione/manganova
+Author: Jerome Pradier
+Author-email: jerome.pradier@gmail.com
+License: MIT
+Keywords: package,cli,setuptools,development
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: click
+
+# Manganova
+
+A manga manager !
+
+## Features
+
+* Search
+* Download
+* Favorite
+* Notification
+
+
+
+
