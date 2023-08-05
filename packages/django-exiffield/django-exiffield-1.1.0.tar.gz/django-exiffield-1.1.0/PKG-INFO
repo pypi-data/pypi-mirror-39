@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: django-exiffield
+Version: 1.1.0
+Summary: django-exiffield extracts exif information by utilizing exiftool.
+Home-page: https://github.com/escaped/django-exiffield
+Author: Alexander Frenzel
+Author-email: alex@relatedworks.com
+Keywords: django,exif
+Requires-Python: >=3.6
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: choicesenum (>=0.2.2)
+Requires-Dist: django (>=1.11)
+Requires-Dist: django-jsonfield (>=1.0,<2.0)
+Requires-Dist: pillow (>=5.0,<6.0)
+Project-URL: Documentation, https://github.com/escaped/django-exiffield/blob/master/README.rst
+Project-URL: Repository, https://github.com/escaped/django-exiffield
