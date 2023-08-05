@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: colabo.flow.audit
+Version: 0.1.4
+Summary: A python puzzle for sending ColaboFlow (CF) audits over gRPC
+Home-page: https://github.com/Cha-OS/colabo
+Author: ChaOS
+Author-email: chaos.ngo@gmail.com
+License: MIT
+Project-URL: website, http://colabo.space
+Project-URL: organization, http://cha-os.org
+Description: # Install
+        
+        ```sh
+        # the latest
+        pip install colabo.flow.audit
+        
+        # a speciffic one
+        pip install colabo.flow.audit==0.0.4
+        ```
+        
+        # Use
+        
+        ```py
+        # import
+        from colabo.flow.audit import audit_pb2
+        from colabo.flow.audit import ColaboFlowAudit
+        
+        # create an ColaboFlowAudit object
+        colaboFlowAudit = ColaboFlowAudit()
+        
+        # create an audit object
+        cfAuditRequest1 = audit_pb2.SubmitAuditRequest(
+            bpmn_type='activity',
+            bpmn_subtype='task',
+            bpmn_subsubtype='sub-task',
+        
+            flowId='searchForSounds',
+            # ...
+        )
+        
+        # send the audit object to the audit service
+        result1 = colaboFlowAudit.audit_submit(cfAuditRequest1)
+        
+        # print the respons from the audit service
+        print("result1 = %s" % (result1))
+        ```
+        
+        
+Keywords: colabo,grpc,flow,colaboflow,audit,process,process mining
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
