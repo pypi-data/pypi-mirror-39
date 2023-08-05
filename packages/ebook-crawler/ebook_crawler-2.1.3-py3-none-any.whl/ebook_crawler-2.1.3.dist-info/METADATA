@@ -1,0 +1,46 @@
+Metadata-Version: 2.0
+Name: ebook-crawler
+Version: 2.1.3
+Summary: This project was moved to https://pypi.org/project/lightnovel-crawler/
+Home-page: https://github.com/dipu-bd/site-to-epub
+Author: Sudipto Chandra
+Author-email: dipu.sudipta@gmail.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/dipu-bd/site-to-epub/
+Project-URL: Bug Reports, https://github.com/dipu-bd/site-to-epub/issues
+Keywords: lightnovel ebook epub mobi kindle crawl convert
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Education
+Classifier: Topic :: Text Processing
+Classifier: License :: Free For Home Use
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Description-Content-Type: text/markdown
+
+This project was moved to https://pypi.org/project/lightnovel-crawler/
+
++=+=+=+===========+=+=+=+=+=+=+=+=+=+===============+=+=+=+
+| * * *           * [ N O T I C E ] *               * * * |
+|-+-+-+-----------=-=-=-=-=-=-=-=-=-=---------------+-+-+-|
+|                                                         |
+| This project was renamed to "lightnovel-crawler"        |
+| You can install the latest using:                       |
+|                                                         |
+| $ python3 -m pip install -U --user lightnovel-crawler   |
+|                                                         |
+| Check out my repository for latest updates:             |
+| > https://github.com/dipu-bd/lightnovel-crawler         |
+|                                                         |
++=+=+=+===========-=-=-=-=-=-=-=-=-=-===============+=+=+=+
+
+
+
