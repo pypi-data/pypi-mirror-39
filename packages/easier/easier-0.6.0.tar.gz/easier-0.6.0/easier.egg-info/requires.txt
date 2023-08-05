@@ -1,0 +1,10 @@
+fleming
+psutil
+cryptography
+
+[dev]
+coverage
+flake8
+mock
+nose
+wheel
