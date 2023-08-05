@@ -1,0 +1,7 @@
+*.csv
+*.png
+*.pcap
+*.init
+*.mptcpanalyzer*
+*.pyc
+*.egg-info/*

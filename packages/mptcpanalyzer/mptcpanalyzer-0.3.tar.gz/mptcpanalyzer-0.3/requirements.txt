@@ -1,0 +1,5 @@
+# used by rtfd.io
+stevedore
+matplotlib
+pandas>=0.17.1
+sphinxcontrib-napoleon
