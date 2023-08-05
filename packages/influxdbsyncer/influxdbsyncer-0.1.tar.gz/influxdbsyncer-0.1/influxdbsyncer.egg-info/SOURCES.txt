@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+bin/influxdbsyncer
+influxdbsyncer/__init__.py
+influxdbsyncer/helper.py
+influxdbsyncer/influxdbsyncer.conf
+influxdbsyncer.egg-info/PKG-INFO
+influxdbsyncer.egg-info/SOURCES.txt
+influxdbsyncer.egg-info/dependency_links.txt
+influxdbsyncer.egg-info/requires.txt
+influxdbsyncer.egg-info/top_level.txt
