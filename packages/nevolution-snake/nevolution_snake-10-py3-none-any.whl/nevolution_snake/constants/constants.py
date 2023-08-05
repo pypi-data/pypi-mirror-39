@@ -1,0 +1,3 @@
+SEED = 1
+SCORE_SEED = 10
+NEW_SEED = 42
