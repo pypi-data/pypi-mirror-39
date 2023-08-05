@@ -1,0 +1,3 @@
+[console_scripts]
+horasCLI = horasCLI.__main__:main
+

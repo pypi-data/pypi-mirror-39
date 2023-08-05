@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: horasCLI
+Version: 1.2.0
+Summary: Simple CLI program to create a project hour schedule in markdown.
+Home-page: https://github.com/djdany01/horasCLI
+Author: Daniel J. Pérez Nieto
+Author-email: djdany.djesus@gmail.com
+License: MIT
+Platform: Windows
+Platform: Linux
+Platform: MacOS
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Spanish
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Documentation
+Classifier: Topic :: Office/Business :: Scheduling
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Terminals
+Classifier: Topic :: Utilities
+Classifier: Topic :: System :: Shells
+Description-Content-Type: text/markdown
+
+# HorasCLI
+
+Simple CLI program to create a project hour schedule in markdown.
+
+## Install
+
+- Pip method [horasCLI](https://pypi.org/project/horasCLI/)
+  - Open your terminal and type: `pip install horasCLI`
+- Clone repository method
+  - Clone this [repository](https://github.com/djdany01/HorasCLI)
+  - Go to the folder through terminal or open the terminal there and type `pip install -e .`
+
+## Use
+
+To get help about use type: `horasCLI -h` or `horasCLI --help`
+
+### TODO
+
+- Test in Linux and MacOS
+
+
