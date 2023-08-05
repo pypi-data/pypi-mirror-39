@@ -1,0 +1,1 @@
+from .services import replace_caracter_especial, generate_pdf_from_template
