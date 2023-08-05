@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+SHORT_DESCRIPTION.txt
+VERSION.txt
+setup.py
+carpi_settings.egg-info/PKG-INFO
+carpi_settings.egg-info/SOURCES.txt
+carpi_settings.egg-info/dependency_links.txt
+carpi_settings.egg-info/not-zip-safe
+carpi_settings.egg-info/requires.txt
+carpi_settings.egg-info/top_level.txt
+carpisettings/__init__.py
