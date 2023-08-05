@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+requirements/requirements.txt
+scrapy_puppeteer/__init__.py
+scrapy_puppeteer/cli.py
+scrapy_puppeteer/http.py
+scrapy_puppeteer/middlewares.py
+scrapy_puppeteer.egg-info/PKG-INFO
+scrapy_puppeteer.egg-info/SOURCES.txt
+scrapy_puppeteer.egg-info/dependency_links.txt
+scrapy_puppeteer.egg-info/entry_points.txt
+scrapy_puppeteer.egg-info/requires.txt
+scrapy_puppeteer.egg-info/top_level.txt
+tests/__init__.py
+tests/test_middlewares.py
