@@ -1,0 +1,31 @@
+language: python
+
+branches:
+  only:
+    - master
+
+sudo: false
+
+addons:
+  apt:
+    packages:
+      - liblzma-dev
+
+matrix:
+  include:
+    - python: 2.7
+    - python: 3.5
+    - python: 3.6
+    - python: 3.7
+      dist: xenial
+      sudo: true
+
+install:
+  - pip install -U tox-travis coveralls pip setuptools wheel
+  - python setup.py build_ext --inplace
+
+script:
+  - tox
+
+after_success:
+  - coveralls
