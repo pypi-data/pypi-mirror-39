@@ -1,0 +1,30 @@
+test package
+============
+
+Submodules
+----------
+
+test.test\_analyze module
+-------------------------
+
+.. automodule:: test.test_analyze
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+test.test\_crawler module
+-------------------------
+
+.. automodule:: test.test_crawler
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: test
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,41 @@
+Metadata-Version: 1.1
+Name: Final-Project
+Version: 1.0
+Summary: Extracting home information from zillow.com
+Home-page: http://dislbenn.github.io
+Author: Disaiah Benentt
+Author-email: dlbennett365@students.ecsu.edu
+License: Creative Commons Attribution-Noncommercial-Share Alike license
+Description: Building Web-Crawler
+        Building a Web-Crawler Software is easy, and helps you take advantage of a data mining software. This document will help guide you through understanding this build process.
+        
+        ## Requirements
+        
+        1. BeautifulSoup4, module is needed and can be installed with pip install BeautifulSoup4.
+        2. re, module is needed and can be installed with pip install re.
+        3. matplotlib, module is needed to plot the graphs for the scatterplot and boxplot.
+        4. pandas, module is needed to load the csv data into a dataframe.
+        
+        2. Web-Crawler, using one of the following configurations:
+        * **macOS** You can either use Web-Crawler for Mac or  See installation instructions.
+        * **Linux**  Install Web-Crawler according to the [instructions] for your OS.
+        
+        ## Overview
+        
+        While it is possible to build a web-crawler using a local python installation, we have a build process that runs on a local environment.  This simplifies initial set up and provides for a very consistent build and test environment.
+        
+        ## Key scripts
+        
+        The following scripts are found in the `build/` directory. Note that all scripts must be run from the Web-Crawler root directory.
+        1. `src/webcrawler/move_csv.sh`
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: X11 Applications :: GTK
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Topic :: Desktop Environment
+Classifier: Topic :: Text Processing :: Fonts

@@ -1,0 +1,38 @@
+webcrawler package
+==================
+
+Submodules
+----------
+
+webcrawler.analyze module
+-------------------------
+
+.. automodule:: webcrawler.analyze
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+webcrawler.crawler module
+-------------------------
+
+.. automodule:: webcrawler.crawler
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+webcrawler.extract module
+-------------------------
+
+.. automodule:: webcrawler.extract
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: webcrawler
+    :members:
+    :undoc-members:
+    :show-inheritance:
