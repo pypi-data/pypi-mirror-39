@@ -1,0 +1,9 @@
+README.md
+setup.py
+perfcounters/__init__.py
+perfcounters.egg-info/PKG-INFO
+perfcounters.egg-info/SOURCES.txt
+perfcounters.egg-info/dependency_links.txt
+perfcounters.egg-info/requires.txt
+perfcounters.egg-info/top_level.txt
+tests/test_main.py
