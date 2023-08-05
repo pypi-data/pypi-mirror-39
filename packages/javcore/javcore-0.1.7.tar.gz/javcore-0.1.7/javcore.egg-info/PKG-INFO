@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: javcore
+Version: 0.1.7
+Summary: Scraping Jav Core
+Home-page: https://github.com/pypa/sampleproject
+Author: Juichi Hirao
+Author-email: hirao@theta-inc.co.jp
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: sample setuptools development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
