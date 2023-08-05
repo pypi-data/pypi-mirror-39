@@ -1,0 +1,23 @@
+---
+layout: null
+---
+\documentclass[12pt]{article}
+\usepackage{authblk}
+\usepackage[utf8]{inputenc}
+\usepackage{blindtext,titlefoot}
+\usepackage{graphicx}
+\DeclareUnicodeCharacter{00A0}{ }
+
+\title{ {{ pub.title }} }
+\author{ {{ pub.author }} }
+\date{ {{ pub.year }} }
+
+\begin{document}
+
+\maketitle\unmarkedfntext{\scriptsize
+Rendered with Pub.
+}
+
+{{ content }}
+
+\end{document}

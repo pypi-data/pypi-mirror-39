@@ -1,0 +1,8 @@
+---
+layout: page
+title: {{ pub.title }}
+permalink: /pub/{{ pub.identifier }}.html
+{% if pub.excerpt %}excerpt: "{{ pub.excerpt }}"{% endif %}
+---
+
+{{ '{' }}% include pub2-view.html identifier='{{ pub.identifier }}' %{{ '}' }}

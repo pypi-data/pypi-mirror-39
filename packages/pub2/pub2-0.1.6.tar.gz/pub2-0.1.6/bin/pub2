@@ -1,0 +1,49 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Pub2 (cc) 2016 Ian Dennis Miller
+
+import click
+from pub2.pub2 import Pub2
+
+
+@click.group()
+def cli():
+    pass
+
+
+@cli.command('init', short_help='create fresh Pub folders')
+def init():
+    pub = Pub2()
+    pub.init_folders()
+
+
+@cli.command('build', short_help='build files')
+def build():
+    pub = Pub2()
+    pub.build(rebuild=False)
+
+
+@cli.command('rebuild', short_help='force rebuild of all files')
+def rebuild():
+    pub = Pub2()
+    pub.build(rebuild=True)
+
+
+@cli.command('new', short_help='create an empty file')
+def new_from_template():
+    title = raw_input("Title: ")
+    author = raw_input("Author(s): ")
+    year = raw_input("Year: ")
+
+    pub = Pub2()
+    pub.create_from_template(title, author, year)
+
+
+@cli.command('version', short_help='show version')
+def version():
+    from pub2.__meta__ import __version__
+    print(__version__)
+
+
+if __name__ == '__main__':
+    cli()
