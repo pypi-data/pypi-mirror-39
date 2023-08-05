@@ -1,0 +1,17 @@
+odoo/addons/account_payment_show_invoice/README.rst,sha256=BgOH29vijMj0v43j9kGUIGmBaCAVwwl5iDzQ_SoxjUc,3195
+odoo/addons/account_payment_show_invoice/__init__.py,sha256=ZGjmXT9q1Wc3A9Eb3pRZjwDcSFijPJcJLFSMyZdyxyU,86
+odoo/addons/account_payment_show_invoice/__manifest__.py,sha256=5S-xLe4OGaouOGy4CPRjLDJBd8v5awHzg5NGmSmWhXg,673
+odoo/addons/account_payment_show_invoice/i18n/account_payment_show_invoice.pot,sha256=K0-7B8DBsRv_0_m1KLsDahgppYXNeT74N3i2tSJAZRk,707
+odoo/addons/account_payment_show_invoice/models/__init__.py,sha256=5WbjsPxTBuzWJNndDZ-2LCi9gTsFKL8qDg4c5TAUT4c,95
+odoo/addons/account_payment_show_invoice/models/account_payment.py,sha256=jMrCw4cswZQngN6YQxX5PEZmf3ejjLnHhR6KkrNOcIU,753
+odoo/addons/account_payment_show_invoice/readme/CONTRIBUTORS.rst,sha256=NHop8GV99_9soXZd78AseyI_Pr0PAzEGKXEeGE0ipfg,36
+odoo/addons/account_payment_show_invoice/readme/DESCRIPTION.rst,sha256=fwaUPAcZFCPVQWLCtx2JIWnEt9rEyDNjqF-VV9MMtms,253
+odoo/addons/account_payment_show_invoice/readme/USAGE.rst,sha256=rr7cE3RDluD3hTVVmC-RCb7Ac08aS5H-vksR5_8Rlwo,164
+odoo/addons/account_payment_show_invoice/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/account_payment_show_invoice/static/description/index.html,sha256=E1SOPXPr0mjn0x5EMilTfUKpNIkNzdGYQODvch-Akmw,12534
+odoo/addons/account_payment_show_invoice/static/description/payments_view.png,sha256=C7j0t5CbRjrrOqxsLXbepepobNvlYOW1iD_4Vy41AhI,31580
+odoo/addons/account_payment_show_invoice/views/account_payment_view.xml,sha256=auGBwlTCScNpI7wF13_fpDDy0CR1XzkJ1XRqmBz8Yck,1124
+odoo11_addon_account_payment_show_invoice-11.0.1.0.0.99.dev3.dist-info/METADATA,sha256=XbrGGrb7ppbQfGD8bffAoNtO49y97L8zeleYW7_ZKN8,3847
+odoo11_addon_account_payment_show_invoice-11.0.1.0.0.99.dev3.dist-info/RECORD,,
+odoo11_addon_account_payment_show_invoice-11.0.1.0.0.99.dev3.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+odoo11_addon_account_payment_show_invoice-11.0.1.0.0.99.dev3.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
