@@ -1,0 +1,14 @@
+jupyterlab_git/README.md,sha256=tJW80uSwP_jA1_MisKl9SSD0-xxkRqPNZtv3kItQYXE,101
+jupyterlab_git/__init__.py,sha256=WJakMt1Fu6BYMBIV5Y_mFtjjid5NZY4yex_me_dTe6E,680
+jupyterlab_git/git.py,sha256=fm8bvNjRPMMlXgfssDG1E4Qy-6AROQhOguFKNGAjwyU,22581
+jupyterlab_git/handlers.py,sha256=VGlv8-97rcAHr5n8hN-wNgaEajGG_Un8PRZpw5-3C0Y,13728
+jupyterlab_git-0.5.0.dist-info/METADATA,sha256=VeI4E-too4tGCWlY3hYPcgnqkY8IzUN-cMLHHd0uopk,2919
+jupyterlab_git-0.5.0.dist-info/RECORD,,
+jupyterlab_git-0.5.0.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+jupyterlab_git-0.5.0.dist-info/top_level.txt,sha256=W6A3OGmfl3ohYoA3BRbeK6_ZlMzwzzkdno-pOFW-25U,21
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/unit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/unit/test_branch.py,sha256=F9wAZg3npqs2JwsjMnHHLB3SzZ2y_Qjl8tlbAzNkg_A,21829
+tests/unit/test_clone.py,sha256=6092RT7x31ArXlAmYOeW9wsg4T3knHB6_-o-G3Gvy-M,1874
+tests/unit/test_handlers.py,sha256=zHqlkv31go1IFkcWuSBo4ibNWfK5d6C981qkQgyvCbI,3681
+tests/unit/test_pushpull.py,sha256=NON-RDEC8MjvgWyoW1hnW4nT-8UeKjvA9us6pEYZqRw,3207
