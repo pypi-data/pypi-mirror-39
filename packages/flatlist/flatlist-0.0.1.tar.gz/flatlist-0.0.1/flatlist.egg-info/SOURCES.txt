@@ -1,0 +1,9 @@
+README.md
+setup.py
+flatlist/__init__.py
+flatlist.egg-info/PKG-INFO
+flatlist.egg-info/SOURCES.txt
+flatlist.egg-info/dependency_links.txt
+flatlist.egg-info/top_level.txt
+tests/__init__.py
+tests/test_flatlist.py
