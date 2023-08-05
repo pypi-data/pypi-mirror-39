@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: pipettewrapper
+Version: 0.0.3
+Summary: Wrapper to allow Opentrons multichannel pipettes to use any number of tips
+Home-page: https://github.com/liamhawkins/PipetteWrapper
+Author: Liam Hawkins
+Author-email: liam.hawkins@carleton.ca
+License: UNKNOWN
+Description: PipetteWrapper
+        -----
+        PipetteWrapper is used to wrap opentrons multichannel Pipette objects to allow multichannels to act as single channels.
+        
+        __CURRENTLY REQUIRES A MODIFICATION TO LINE 67 IN `opentrons/api/calibration.py`:__
+        
+        __CHANGE:__
+        
+        ``inst.pick_up_tip(container._container[0])``
+        
+        __TO:__
+        
+        ``inst.pick_up_tip(location=container._container[0])``
+        
+        Example
+        -----
+        ```
+        from opentrons import labware, instruments
+        tip_rack = labware.load('opentrons-tiprack-300ul', slot='4')
+        pipette = PipetteWrapper(instruments.P50_multi(mount='left', tip_racks=[tip_rack]))
+        plate = labware.load('96-flat')
+        pipette.distribute(50, plate.wells('A1'), plate.wells('A2'), num_tips=4)  # Uses 4 tips
+        pipette.transfer(50, plate.wells('A1'), plate.wells('A2'))  # Defaults behaviour (8 tips)
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
