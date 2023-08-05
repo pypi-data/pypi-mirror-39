@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pypardot4-tronok
+Version: 1.1.5
+Summary: API wrapper for APIv4 of Pardot marketing automation software.
+Home-page: https://github.com/mneedham91/PyPardot4
+Author: Matt Needham
+Author-email: matthew.m.needham@gmail.com
+License: MIT
+Keywords: pardot
+Platform: UNKNOWN
+Requires-Dist: requests
+
+UNKNOWN
+
+
