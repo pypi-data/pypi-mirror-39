@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: epubgrep
+Version: 0.2.0
+Summary: Grep through EPub files
+Home-page: https://gitlab.com/mcepl/epubgrep
+Author: Matěj Cepl
+Author-email: mcepl@cepl.eu
+License: MIT
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: epub-meta
+
+Grep through EPub files
+
+
