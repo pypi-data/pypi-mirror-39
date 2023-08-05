@@ -1,0 +1,12 @@
+README.md
+setup.py
+rename_guru/__init__.py
+rename_guru/__main__.py
+rename_guru/process.py
+rename_guru.egg-info/PKG-INFO
+rename_guru.egg-info/SOURCES.txt
+rename_guru.egg-info/dependency_links.txt
+rename_guru.egg-info/top_level.txt
+tests/BasicTest.py
+tests/__init__.py
+tests/utils.py

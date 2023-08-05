@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: rename_guru
+Version: 0.0.8
+Summary: Tool for duplicating code while substituting specified string inside the folder, respecting camelCase, UPPER_CASE etc.
+Home-page: https://github.com/sitnarf/rename-guru
+Author: sitnarf
+Author-email: sitnarf@gmail.com
+License: UNKNOWN
+Description: # rename-guru
+        Tool for duplicating code while substituting specified string inside the folder, respecting camelCase, UPPER_CASE etc.
+        
+        ## Known issues
+        - Do not run the script with same source and target directory, this will result in unexpected behaviour.
+        
+        ## Install
+        
+        `pip install rename-guru`
+        
+        ## Usage
+        
+        `python3 -m rename_guru source_dir target_dit rename_from rename_to`
+        
+        ## Parameters
+        
+        `python3 -m rename_guru --help`
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
