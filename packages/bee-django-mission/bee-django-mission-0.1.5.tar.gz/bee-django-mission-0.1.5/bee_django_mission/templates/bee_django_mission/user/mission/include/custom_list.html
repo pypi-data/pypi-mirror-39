@@ -1,0 +1,75 @@
+{% load bee_django_mission_filter %}
+{% block styles %}
+    <style>
+        .mission_div {
+            margin: 10px 0;
+            padding: 20px;
+            position: relative;
+            height: 200px;
+        }
+    </style>
+{% endblock %}
+<div class="text-center"><h3>
+    {{ user_stage.get_name|default:'里程碑' }}
+</h3>
+</div>
+<h5>
+    {% if user_stage %}
+        {% if user_stage.stutas == 1 %}
+            {#            已于{{ user_stage.finish_at }}完成#}
+            已于{{ user_stage.finish_at }}完成，获得{{ user_stage.prize_coin }}{{ context_coin_name }}
+        {% elif user_stage.stutas == 2 %}
+            未完成
+        {% elif user_stage.stutas == 3 %}
+            <a href=""></a>
+            <a href="#"
+               data-confirm="{% url "bee_django_mission:user_stage_update_status" user_stage_id=user_stage.id status=1 %}"
+               onclick="click_update(this)">恭喜你，点此完成该阶段任务，领取奖励</a>
+        {% else %}
+            进行中
+        {% endif %}</h5>
+    {% endif %}
+<div class="row">
+    {% for user_mission in user_mission_list %}
+        {% get_mission_progress user_mission as p %}
+        <div class="col-ms-12 col-md-4">
+            <div class=" {% if p.0 %}
+        bg-success
+        {% else %}
+        bg-danger
+        {% endif %}
+        mission_div">
+                <div>{{ user_mission.mission.mission_type.name }}</div>
+                <div><h4>{{ user_mission.get_name }}</h4></div>
+                <div>
+
+                    {% if p.0 %} 已完成
+                    {% else %}
+                        {% include 'bee_django_mission/user/mission/include/custom_progress.html' %}
+                    {% endif %}
+                </div>
+
+                {% if user_mission.mission.mission_type.link_url %}
+                    <div style="margin: 10px 0;">
+                        <a href="{{ user_mission.get_link }}"
+                           class="btn btn-success">{{ user_mission.mission.mission_type.link_name }}</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+{% block scripts %}
+    <script>
+        function click_update(_this) {
+            var url = $(_this).attr('data-confirm');
+            $.post(url).done(function (data) {
+
+                alert(data.msg);
+                location.reload();
+            });
+        }
+    </script>
+{% endblock %}

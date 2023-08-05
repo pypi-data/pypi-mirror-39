@@ -1,0 +1,24 @@
+<style>
+    .nav {
+        background-color: #4B6788;
+        height: 40px;
+        color: #ffffff;
+        line-height: 40px;
+        padding: 0 10px;
+    }
+
+    .nav a {
+        color: #ffffff;
+    }
+</style>
+<div class="nav">
+    <a href="{% url 'bee_django_mission:user_line_unlimited' request.user.id %}">学生1的里程(后台)</a> |
+    <a href="{% url 'bee_django_mission:user_line_week' request.user.id %}">学生1的周任务(后台)</a> |
+    <a href="{% url 'bee_django_mission:custom_user_line_week' request.user.id %}">学生1的周任务(前台)</a> |
+    <a href="{% url 'bee_django_mission:stage_unlimited_list' %}">阶段列表</a> |
+    <a href="{% url 'bee_django_mission:mission_list' %}">任务列表</a> |
+    {#    <a href="{% url 'bee_django_exam:notice_list' %}">须知管理</a> |#}
+    {#    <a href="{% url 'bee_django_exam:grade_list' %}">级别管理</a> |#}
+        <a href="http://note.youdao.com/noteshare?id=ddec4856b3e98b40a8686879c59d263d" target="_blank">使用说明</a> |
+
+</div>
