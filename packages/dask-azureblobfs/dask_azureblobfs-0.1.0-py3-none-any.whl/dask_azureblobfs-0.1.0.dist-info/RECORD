@@ -1,0 +1,9 @@
+azureblobfs/__init__.py,sha256=L2-_-N_3NBSaJK1KXXc5OHAv9X5EBzyyumZ4xY9e9po,619
+azureblobfs/utils.py,sha256=uTjenaVGg8041Dvy5LmPSmPTknhd_XYvbs9eLO6W3E0,1320
+azureblobfs/dask/__init__.py,sha256=SStn5LIOzXZ3OXLt-p9Iq2p5dd0CmGU2F30oGg43RRQ,3737
+azureblobfs/dask/mapping.py,sha256=s5xmjM3D92JZbaVcIQYG2IkgPBcSZgLnLqIfAgo27tc,4421
+azureblobfs/fs/__init__.py,sha256=Z-_BRqJAbeq_GxkSDHu3HgmnWkSXotzu6UItplWvH9A,7452
+dask_azureblobfs-0.1.0.dist-info/METADATA,sha256=v13eFjlmxRvW03CsxqaXSGtaaUoCuVH4jRv-RL3C16s,2861
+dask_azureblobfs-0.1.0.dist-info/RECORD,,
+dask_azureblobfs-0.1.0.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+dask_azureblobfs-0.1.0.dist-info/top_level.txt,sha256=hpRueo2y_aa7gATvRmRJ8G0Q33OKywnQZWwTDSuWSN0,12
