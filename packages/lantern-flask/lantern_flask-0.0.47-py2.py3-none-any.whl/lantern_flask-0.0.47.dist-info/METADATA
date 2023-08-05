@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: lantern-flask
+Version: 0.0.47
+Summary: Lantern Flask Tools
+Home-page: https://gitlab.com/lantern-tech/lantern-flask
+Author: Lantern Technologies
+Author-email: support@lantern.tech
+License: BSD
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: boto3 (==1.7.69)
+Requires-Dist: Flask (==1.0.2)
+Requires-Dist: Flask-Cors (==3.0.4)
+Requires-Dist: flask-restplus (==0.10.1)
+Requires-Dist: Flask-DotEnv (==0.1.1)
+Requires-Dist: python-dotenv (==0.9.0)
+
+
+Lantern CLI tool
+
+
