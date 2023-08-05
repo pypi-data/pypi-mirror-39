@@ -1,0 +1,52 @@
+Metadata-Version: 1.1
+Name: isdc-matrix
+Version: 0.1dev1
+Summary: ISDC usage tracking.
+Home-page: https://www.example.com/
+Author: ASDC Dev
+Author-email: yourname@example.com
+License: BSD License
+Description: =====
+        geodb
+        =====
+        
+        Process base mapping data used by other modules.
+        Mandatory Module for ASDC
+        
+        Quick start
+        -----------
+        
+        1. Add "geodb" to your INSTALLED_APPS setting like this::
+        
+            INSTALLED_APPS = [
+                ...
+                'geodb',
+            ]
+        
+            If necessary add "geodb" in (check comment for description): 
+                DASHBOARD_PAGE_MODULES, 
+                GETRISKEXECUTEEXTERNAL_MODULES, 
+                QUICKOVERVIEW_MODULES, 
+                MAP_APPS_TO_DB_CUSTOM
+        
+            For development in virtualenv add GEODB_PARENT_DIR path to VENV_NAME/bin/activate:
+                export PYTHONPATH=${PYTHONPATH}:\
+                ${HOME}/GEODB_PARENT_DIR
+        
+        2. Include the geodb URLconf in geonode/urls.py like this::
+        
+            url('', include('geodb.urls')),
+        
+        3. Run `python manage.py migrate geodb` to create the geodb models.
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.8
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content

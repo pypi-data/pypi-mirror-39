@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+setup.py
+isdc_matrix.egg-info/PKG-INFO
+isdc_matrix.egg-info/SOURCES.txt
+isdc_matrix.egg-info/dependency_links.txt
+isdc_matrix.egg-info/top_level.txt
+matrix/__init__.py
+matrix/admin.py
+matrix/models.py
+matrix/tests.py
+matrix/views.py
+matrix/migrations/__init__.py
