@@ -1,0 +1,3 @@
+[console_scripts]
+hangman = hangman_game.__main__:main
+
