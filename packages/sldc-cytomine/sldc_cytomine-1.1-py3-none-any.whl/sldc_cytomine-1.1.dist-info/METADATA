@@ -1,0 +1,38 @@
+Metadata-Version: 2.0
+Name: sldc-cytomine
+Version: 1.1
+Summary: Cytomine-SLDC, a SLDC binding to Cytomine
+Home-page: https://github.com/waliens/sldc
+Author: Romain Mormont
+Author-email: romain.mormont@gmail.com
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: sldc
+
+
+# Cytomine-SLDC
+
+This folder contains a binding between Cytomine and SLDC.
+
+Classes:
+
+* `CytomineSlide`
+* `CytomineTile`
+* `CytomineTileBuilder`
+* `TileCache`
+
