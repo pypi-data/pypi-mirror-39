@@ -1,0 +1,12 @@
+<h3 i18n:domain="waeup.kofa" i18n:translate="">
+  Academic Session: <span tal:content="view/academic_session">SESSION</span>
+</h3>
+
+<div tal:repeat="course view/getCourses">
+    <a tal:attributes="href python:view.url(course)">
+      <span tal:content="course/title">ROLE</span>
+      (<span tal:content="course/code">ROLE</span>)
+    </a>
+</div>
+
+

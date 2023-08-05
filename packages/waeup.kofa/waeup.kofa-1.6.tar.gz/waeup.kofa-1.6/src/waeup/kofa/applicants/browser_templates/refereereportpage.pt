@@ -1,0 +1,23 @@
+<p  i18n:domain="waeup.kofa" i18n:translate="referee_welcome">
+  You have been invited to report about
+  <span  i18n:name="applicant_name" tal:replace="context/display_fullname">
+  </span>.
+  After submission the form, will be blocked.
+  You can neither view nor edit your report after submission.
+</p>
+
+<form action="." tal:attributes="action request/URL" method="post"
+      enctype="multipart/form-data">
+  <input type="hidden" name="mandate_id" tal:attributes="value view/mandate_id" />
+  <table class="form-table">
+    <tbody>
+      <tal:widgets content="structure provider:widgets" />
+    </tbody>
+  </table>
+  <br />
+  <div tal:condition="view/availableActions">
+    <input tal:repeat="action view/actions"
+           tal:replace="structure action/render"
+           />
+  </div>
+</form>
