@@ -1,0 +1,8 @@
+pysmb
+
+[dev]
+flake8
+yapf
+
+[test]
+pytest
