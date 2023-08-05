@@ -1,0 +1,11 @@
+class Steps:
+    PRE_INSTALL = 'pre_install'
+    POST_INSTALL = 'post_install'
+    PRE_REMOVE = 'pre_remove'
+    POST_REMOVE = 'post_remove'
+    PRE_UPDATE = 'pre_update'
+    POST_UPDATE = 'post_update'
+    LIST = 'list'
+    DETAILS = 'details'
+    PRE_VERIFY = 'pre_verify'
+    POST_VERIFY = 'post_verify'
