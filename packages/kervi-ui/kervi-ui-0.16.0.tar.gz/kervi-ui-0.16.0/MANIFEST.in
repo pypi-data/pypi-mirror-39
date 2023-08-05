@@ -1,0 +1,10 @@
+include kervi/ui/web/dist/webApp/*.html
+include kervi/ui/web/dist/webApp/*.js
+include kervi/ui/web/dist/webApp/*.css
+include kervi/ui/web/dist/webApp/*.map
+include kervi/ui/web/dist/webApp/*.ico
+include kervi/ui/web/dist/webApp/*.eot
+include kervi/ui/web/dist/webApp/*.svg
+include kervi/ui/web/dist/webApp/*.woff
+include kervi/ui/web/dist/webApp/*.woff2
+include kervi/ui/web/dist/webApp/*.ttf 
