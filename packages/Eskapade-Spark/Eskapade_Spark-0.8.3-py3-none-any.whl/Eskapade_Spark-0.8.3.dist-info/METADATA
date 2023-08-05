@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: Eskapade-Spark
+Version: 0.8.3
+Summary: Spark for Eskapade
+Home-page: http://eskapade.kave.io
+Author: KPMG N.V. The Netherlands
+Author-email: kave@kpmg.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: eskapade (>=0.8.2)
+Requires-Dist: pyspark (>=2.1.2)
+Requires-Dist: pytest (>=3.5.0)
+Requires-Dist: pytest-pylint (>=0.9.0)
+
+UNKNOWN
+
+
