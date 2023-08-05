@@ -1,0 +1,87 @@
+Metadata-Version: 1.1
+Name: cups-printers
+Version: 0.1.1
+Summary: Get the printers from a running CUPS instance.
+Home-page: https://github.com/audiusGmbH/cups_printers
+Author: Fabian Affolter
+Author-email: fabian.affolter@audius.de
+License: MIT
+Download-URL: https://github.com/audiusGmbH/cups_printers/releases
+Description: # cups_printer
+        
+        Retrieve all printer from a CUPS server. It's a simple command-line tool that
+        allows one to output the existing printers or write them to a file.
+        
+        ## Installation
+        
+        It may require that the development package for CUPS is installed, e.g. 
+        `$ sudo dnf -y install cups-devel`.
+        
+        ### PyPI
+        
+        The package is hosted on [PyPI](https://pypi.org/project/cups_printers/).
+        It depends on `click` and `pycups`.
+        
+        ```bash
+        $ pip3 install cups_printer
+        ```
+        
+        ### Manual setup
+        
+        ```bash
+        $ python3 -m venv 
+        $ source bin/activate
+        $ python3 setup.py
+        ```
+        
+        ### Development setup
+        
+        For development, clone the Git repository and create a Python virtual 
+        environment.
+        
+        ```bash
+        $ python3 -m venv 
+        $ source bin/activate
+        $ python3 setup.py develop
+        ```
+        
+        ## Usage
+        
+        The default CUPS instance which is used is `localhost`.
+        
+        ```bash
+        $ cups_printers --help
+        Usage: cups_printers [OPTIONS] COMMAND [ARGS]...
+        
+          A command line interface for CUPS printers.
+        
+        Options:
+          --version          Show the version and exit.
+          -s, --server TEXT  The server URL of CUPS instance.  [default:
+                             localhost:631]
+          --timeout INTEGER  Timeout for network operations.
+          --help             Show this message and exit.
+        
+        Commands:
+          output  Output the retrieved data from a CUPS instance.
+          state   Print the current state of all printers.
+        ```
+        
+        To get the details from a remote CUPS instance, use `--server`.
+        
+        ```bash
+        $ cups_printers --server 192.168.191.1:631 output json
+        ```
+        
+        ## License
+        
+        `cups_printers` ìs license under MIT.
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Topic :: Utilities

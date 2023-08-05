@@ -1,0 +1,3 @@
+[console_scripts]
+cups_printers = cups_printers.cli:cli
+

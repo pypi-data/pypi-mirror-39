@@ -1,0 +1,16 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+cups_printers/__init__.py
+cups_printers/cli.py
+cups_printers/config.py
+cups_printers/const.py
+cups_printers.egg-info/PKG-INFO
+cups_printers.egg-info/SOURCES.txt
+cups_printers.egg-info/dependency_links.txt
+cups_printers.egg-info/entry_points.txt
+cups_printers.egg-info/requires.txt
+cups_printers.egg-info/top_level.txt
+cups_printers.egg-info/zip-safe
