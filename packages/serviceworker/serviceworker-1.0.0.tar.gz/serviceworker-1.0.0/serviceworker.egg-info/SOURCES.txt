@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+api/__init__.py
+serviceworker.egg-info/PKG-INFO
+serviceworker.egg-info/SOURCES.txt
+serviceworker.egg-info/dependency_links.txt
+serviceworker.egg-info/not-zip-safe
+serviceworker.egg-info/top_level.txt
