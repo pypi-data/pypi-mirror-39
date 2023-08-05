@@ -1,0 +1,14 @@
+nevolution_snake/__init__.py,sha256=QnumRLwyCzaO7fIB-C0brzITeblNOYpfynvXHMBN4RI,191
+nevolution_snake/constants/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nevolution_snake/constants/constants.py,sha256=A_JJqp4luiUT96jHJWiJTgZCLgHfW4ARyHoEPCdEbRI,39
+nevolution_snake/env/__init__.py,sha256=3430z3Oiz3nWshx1mJd-jIJKFT2QztPGhqKdAW0NFA4,52
+nevolution_snake/env/snake_env.py,sha256=mBjSlJeJQOw_7Rtu9P7cwBMSnhbjinBJXsWJmJqt-ZI,2646
+nevolution_snake/logic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nevolution_snake/logic/gamelogic.py,sha256=Fos53RM5q-n8gOsKEJFSVxK5PgQgv1u8hEK44bYvLFE,8192
+nevolution_snake/view/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nevolution_snake/view/human.py,sha256=3VwMR0oZrmGZ3jL_MdcrodxHjKgIPJD8C-hP3f1eWsM,1456
+nevolution_snake/view/snake_gui.py,sha256=vkuciOMVXtM6JK3J6tRNzSpWQCBr9p3ZCxxuvhLXN0E,2269
+nevolution_snake-6.dist-info/METADATA,sha256=1WwC9UFcdEKHSJWOEkZeE4f_JFH7PxgOde4nv6S7-wA,526
+nevolution_snake-6.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+nevolution_snake-6.dist-info/top_level.txt,sha256=YU_svvg_ECztIMGe4KGKkN3k0mzCcXVWZZ7ZPgz6WbY,17
+nevolution_snake-6.dist-info/RECORD,,
