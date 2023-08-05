@@ -1,0 +1,8 @@
+keyring
+psutil
+
+[:platform_system == "Darwin"]
+pyobjc
+
+[:platform_system == "Windows"]
+win10toast

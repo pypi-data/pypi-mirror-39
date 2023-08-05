@@ -1,0 +1,3 @@
+[console_scripts]
+nwd = nwd.__main__:main
+
