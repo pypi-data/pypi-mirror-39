@@ -1,0 +1,10 @@
+README.md
+setup.py
+traitlite/__init__.py
+traitlite/debug.py
+traitlite/traits.py
+traitlite/weakref_utilities.py
+traitlite.egg-info/PKG-INFO
+traitlite.egg-info/SOURCES.txt
+traitlite.egg-info/dependency_links.txt
+traitlite.egg-info/top_level.txt
