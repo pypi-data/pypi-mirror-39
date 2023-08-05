@@ -1,0 +1,1066 @@
+{
+    "~DuckietownMap": {
+        "tile_size": 0.585
+    }, 
+    "~PlacedObject": {
+        "spatial_relations": {
+            "0": {
+                "~SpatialRelation": {
+                    "b": [
+                        "tilemap"
+                    ], 
+                    "transform": {
+                        "~Scale2D": {
+                            "scale": 0.585
+                        }
+                    }
+                }, 
+                "~GroundTruth": {}
+            }
+        }, 
+        "children": {
+            "tilemap": {
+                "~TileMap": {
+                    "H": 3, 
+                    "W": 3
+                }, 
+                "~PlacedObject": {
+                    "spatial_relations": {
+                        "0": {
+                            "~SpatialRelation": {
+                                "b": [
+                                    "tile-0-2"
+                                ], 
+                                "transform": {
+                                    "~TileCoords": {
+                                        "i": 0, 
+                                        "j": 2, 
+                                        "orientation": "N"
+                                    }
+                                }
+                            }, 
+                            "~GroundTruth": {}
+                        }, 
+                        "1": {
+                            "~SpatialRelation": {
+                                "b": [
+                                    "tile-1-2"
+                                ], 
+                                "transform": {
+                                    "~TileCoords": {
+                                        "i": 1, 
+                                        "j": 2, 
+                                        "orientation": "E"
+                                    }
+                                }
+                            }, 
+                            "~GroundTruth": {}
+                        }, 
+                        "2": {
+                            "~SpatialRelation": {
+                                "b": [
+                                    "tile-2-2"
+                                ], 
+                                "transform": {
+                                    "~TileCoords": {
+                                        "i": 2, 
+                                        "j": 2, 
+                                        "orientation": "E"
+                                    }
+                                }
+                            }, 
+                            "~GroundTruth": {}
+                        }, 
+                        "3": {
+                            "~SpatialRelation": {
+                                "b": [
+                                    "tile-0-1"
+                                ], 
+                                "transform": {
+                                    "~TileCoords": {
+                                        "i": 0, 
+                                        "j": 1, 
+                                        "orientation": "N"
+                                    }
+                                }
+                            }, 
+                            "~GroundTruth": {}
+                        }, 
+                        "4": {
+                            "~SpatialRelation": {
+                                "b": [
+                                    "tile-1-1"
+                                ], 
+                                "transform": {
+                                    "~TileCoords": {
+                                        "i": 1, 
+                                        "j": 1, 
+                                        "orientation": "E"
+                                    }
+                                }
+                            }, 
+                            "~GroundTruth": {}
+                        }, 
+                        "5": {
+                            "~SpatialRelation": {
+                                "b": [
+                                    "tile-2-1"
+                                ], 
+                                "transform": {
+                                    "~TileCoords": {
+                                        "i": 2, 
+                                        "j": 1, 
+                                        "orientation": "S"
+                                    }
+                                }
+                            }, 
+                            "~GroundTruth": {}
+                        }, 
+                        "6": {
+                            "~SpatialRelation": {
+                                "b": [
+                                    "tile-0-0"
+                                ], 
+                                "transform": {
+                                    "~TileCoords": {
+                                        "i": 0, 
+                                        "j": 0, 
+                                        "orientation": "W"
+                                    }
+                                }
+                            }, 
+                            "~GroundTruth": {}
+                        }, 
+                        "7": {
+                            "~SpatialRelation": {
+                                "b": [
+                                    "tile-1-0"
+                                ], 
+                                "transform": {
+                                    "~TileCoords": {
+                                        "i": 1, 
+                                        "j": 0, 
+                                        "orientation": "W"
+                                    }
+                                }
+                            }, 
+                            "~GroundTruth": {}
+                        }, 
+                        "8": {
+                            "~SpatialRelation": {
+                                "b": [
+                                    "tile-2-0"
+                                ], 
+                                "transform": {
+                                    "~TileCoords": {
+                                        "i": 2, 
+                                        "j": 0, 
+                                        "orientation": "S"
+                                    }
+                                }
+                            }, 
+                            "~GroundTruth": {}
+                        }
+                    }, 
+                    "children": {
+                        "tile-2-2": {
+                            "~PlacedObject": {
+                                "spatial_relations": {
+                                    "1": {
+                                        "~SpatialRelation": {
+                                            "b": [
+                                                "curve_right"
+                                            ], 
+                                            "transform": {
+                                                "~SE2Transform": {}
+                                            }
+                                        }, 
+                                        "~GroundTruth": {}
+                                    }
+                                }, 
+                                "children": {
+                                    "curve_right": {
+                                        "~PlacedObject": {
+                                            "spatial_relations": {
+                                                "lane2": {
+                                                    "~SpatialRelation": {
+                                                        "b": [
+                                                            "lane2"
+                                                        ], 
+                                                        "transform": {
+                                                            "~SE2Transform": {
+                                                                "theta_deg": 90
+                                                            }
+                                                        }
+                                                    }, 
+                                                    "~GroundTruth": {}
+                                                }, 
+                                                "lane1": {
+                                                    "~SpatialRelation": {
+                                                        "b": [
+                                                            "lane1"
+                                                        ], 
+                                                        "transform": {
+                                                            "~SE2Transform": {}
+                                                        }
+                                                    }, 
+                                                    "~GroundTruth": {}
+                                                }
+                                            }, 
+                                            "children": {
+                                                "lane2": {
+                                                    "~PlacedObject": {}, 
+                                                    "~LaneSegment": {
+                                                        "width": 0.376, 
+                                                        "control_points": [
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        -0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "theta_deg": 45
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "theta_deg": 90, 
+                                                                    "p": [
+                                                                        0.22, 
+                                                                        0.5
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }, 
+                                                "lane1": {
+                                                    "~PlacedObject": {}, 
+                                                    "~LaneSegment": {
+                                                        "width": 0.376, 
+                                                        "control_points": [
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        -0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "theta_deg": -45, 
+                                                                    "p": [
+                                                                        -0.3, 
+                                                                        -0.3
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "theta_deg": -90, 
+                                                                    "p": [
+                                                                        -0.22, 
+                                                                        -0.5
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }, 
+                            "~Tile": {
+                                "kind": "curve_right", 
+                                "drivable": true
+                            }
+                        }, 
+                        "tile-2-0": {
+                            "~PlacedObject": {
+                                "spatial_relations": {
+                                    "1": {
+                                        "~SpatialRelation": {
+                                            "b": [
+                                                "curve_right"
+                                            ], 
+                                            "transform": {
+                                                "~SE2Transform": {}
+                                            }
+                                        }, 
+                                        "~GroundTruth": {}
+                                    }
+                                }, 
+                                "children": {
+                                    "curve_right": {
+                                        "~PlacedObject": {
+                                            "spatial_relations": {
+                                                "lane2": {
+                                                    "~SpatialRelation": {
+                                                        "b": [
+                                                            "lane2"
+                                                        ], 
+                                                        "transform": {
+                                                            "~SE2Transform": {
+                                                                "theta_deg": 90
+                                                            }
+                                                        }
+                                                    }, 
+                                                    "~GroundTruth": {}
+                                                }, 
+                                                "lane1": {
+                                                    "~SpatialRelation": {
+                                                        "b": [
+                                                            "lane1"
+                                                        ], 
+                                                        "transform": {
+                                                            "~SE2Transform": {}
+                                                        }
+                                                    }, 
+                                                    "~GroundTruth": {}
+                                                }
+                                            }, 
+                                            "children": {
+                                                "lane2": {
+                                                    "~PlacedObject": {}, 
+                                                    "~LaneSegment": {
+                                                        "width": 0.376, 
+                                                        "control_points": [
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        -0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "theta_deg": 45
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "theta_deg": 90, 
+                                                                    "p": [
+                                                                        0.22, 
+                                                                        0.5
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }, 
+                                                "lane1": {
+                                                    "~PlacedObject": {}, 
+                                                    "~LaneSegment": {
+                                                        "width": 0.376, 
+                                                        "control_points": [
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        -0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "theta_deg": -45, 
+                                                                    "p": [
+                                                                        -0.3, 
+                                                                        -0.3
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "theta_deg": -90, 
+                                                                    "p": [
+                                                                        -0.22, 
+                                                                        -0.5
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }, 
+                            "~Tile": {
+                                "kind": "curve_right", 
+                                "drivable": true
+                            }
+                        }, 
+                        "tile-2-1": {
+                            "~PlacedObject": {
+                                "spatial_relations": {
+                                    "1": {
+                                        "~SpatialRelation": {
+                                            "b": [
+                                                "straight"
+                                            ], 
+                                            "transform": {
+                                                "~SE2Transform": {}
+                                            }
+                                        }, 
+                                        "~GroundTruth": {}
+                                    }
+                                }, 
+                                "children": {
+                                    "straight": {
+                                        "~PlacedObject": {
+                                            "spatial_relations": {
+                                                "lane2": {
+                                                    "~SpatialRelation": {
+                                                        "b": [
+                                                            "lane2"
+                                                        ], 
+                                                        "transform": {
+                                                            "~SE2Transform": {
+                                                                "theta_deg": 180
+                                                            }
+                                                        }
+                                                    }, 
+                                                    "~GroundTruth": {}
+                                                }, 
+                                                "lane1": {
+                                                    "~SpatialRelation": {
+                                                        "b": [
+                                                            "lane1"
+                                                        ], 
+                                                        "transform": {
+                                                            "~SE2Transform": {}
+                                                        }
+                                                    }, 
+                                                    "~GroundTruth": {}
+                                                }
+                                            }, 
+                                            "children": {
+                                                "lane2": {
+                                                    "~PlacedObject": {}, 
+                                                    "~LaneSegment": {
+                                                        "width": 0.376, 
+                                                        "control_points": [
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        -0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }, 
+                                                "lane1": {
+                                                    "~PlacedObject": {}, 
+                                                    "~LaneSegment": {
+                                                        "width": 0.376, 
+                                                        "control_points": [
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        -0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }, 
+                            "~Tile": {
+                                "kind": "straight", 
+                                "drivable": true
+                            }
+                        }, 
+                        "tile-0-0": {
+                            "~PlacedObject": {
+                                "spatial_relations": {
+                                    "1": {
+                                        "~SpatialRelation": {
+                                            "b": [
+                                                "curve_right"
+                                            ], 
+                                            "transform": {
+                                                "~SE2Transform": {}
+                                            }
+                                        }, 
+                                        "~GroundTruth": {}
+                                    }
+                                }, 
+                                "children": {
+                                    "curve_right": {
+                                        "~PlacedObject": {
+                                            "spatial_relations": {
+                                                "lane2": {
+                                                    "~SpatialRelation": {
+                                                        "b": [
+                                                            "lane2"
+                                                        ], 
+                                                        "transform": {
+                                                            "~SE2Transform": {
+                                                                "theta_deg": 90
+                                                            }
+                                                        }
+                                                    }, 
+                                                    "~GroundTruth": {}
+                                                }, 
+                                                "lane1": {
+                                                    "~SpatialRelation": {
+                                                        "b": [
+                                                            "lane1"
+                                                        ], 
+                                                        "transform": {
+                                                            "~SE2Transform": {}
+                                                        }
+                                                    }, 
+                                                    "~GroundTruth": {}
+                                                }
+                                            }, 
+                                            "children": {
+                                                "lane2": {
+                                                    "~PlacedObject": {}, 
+                                                    "~LaneSegment": {
+                                                        "width": 0.376, 
+                                                        "control_points": [
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        -0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "theta_deg": 45
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "theta_deg": 90, 
+                                                                    "p": [
+                                                                        0.22, 
+                                                                        0.5
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }, 
+                                                "lane1": {
+                                                    "~PlacedObject": {}, 
+                                                    "~LaneSegment": {
+                                                        "width": 0.376, 
+                                                        "control_points": [
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        -0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "theta_deg": -45, 
+                                                                    "p": [
+                                                                        -0.3, 
+                                                                        -0.3
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "theta_deg": -90, 
+                                                                    "p": [
+                                                                        -0.22, 
+                                                                        -0.5
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }, 
+                            "~Tile": {
+                                "kind": "curve_right", 
+                                "drivable": true
+                            }
+                        }, 
+                        "tile-0-1": {
+                            "~PlacedObject": {
+                                "spatial_relations": {
+                                    "1": {
+                                        "~SpatialRelation": {
+                                            "b": [
+                                                "straight"
+                                            ], 
+                                            "transform": {
+                                                "~SE2Transform": {}
+                                            }
+                                        }, 
+                                        "~GroundTruth": {}
+                                    }
+                                }, 
+                                "children": {
+                                    "straight": {
+                                        "~PlacedObject": {
+                                            "spatial_relations": {
+                                                "lane2": {
+                                                    "~SpatialRelation": {
+                                                        "b": [
+                                                            "lane2"
+                                                        ], 
+                                                        "transform": {
+                                                            "~SE2Transform": {
+                                                                "theta_deg": 180
+                                                            }
+                                                        }
+                                                    }, 
+                                                    "~GroundTruth": {}
+                                                }, 
+                                                "lane1": {
+                                                    "~SpatialRelation": {
+                                                        "b": [
+                                                            "lane1"
+                                                        ], 
+                                                        "transform": {
+                                                            "~SE2Transform": {}
+                                                        }
+                                                    }, 
+                                                    "~GroundTruth": {}
+                                                }
+                                            }, 
+                                            "children": {
+                                                "lane2": {
+                                                    "~PlacedObject": {}, 
+                                                    "~LaneSegment": {
+                                                        "width": 0.376, 
+                                                        "control_points": [
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        -0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }, 
+                                                "lane1": {
+                                                    "~PlacedObject": {}, 
+                                                    "~LaneSegment": {
+                                                        "width": 0.376, 
+                                                        "control_points": [
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        -0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }, 
+                            "~Tile": {
+                                "kind": "straight", 
+                                "drivable": true
+                            }
+                        }, 
+                        "tile-0-2": {
+                            "~PlacedObject": {
+                                "spatial_relations": {
+                                    "1": {
+                                        "~SpatialRelation": {
+                                            "b": [
+                                                "curve_right"
+                                            ], 
+                                            "transform": {
+                                                "~SE2Transform": {}
+                                            }
+                                        }, 
+                                        "~GroundTruth": {}
+                                    }
+                                }, 
+                                "children": {
+                                    "curve_right": {
+                                        "~PlacedObject": {
+                                            "spatial_relations": {
+                                                "lane2": {
+                                                    "~SpatialRelation": {
+                                                        "b": [
+                                                            "lane2"
+                                                        ], 
+                                                        "transform": {
+                                                            "~SE2Transform": {
+                                                                "theta_deg": 90
+                                                            }
+                                                        }
+                                                    }, 
+                                                    "~GroundTruth": {}
+                                                }, 
+                                                "lane1": {
+                                                    "~SpatialRelation": {
+                                                        "b": [
+                                                            "lane1"
+                                                        ], 
+                                                        "transform": {
+                                                            "~SE2Transform": {}
+                                                        }
+                                                    }, 
+                                                    "~GroundTruth": {}
+                                                }
+                                            }, 
+                                            "children": {
+                                                "lane2": {
+                                                    "~PlacedObject": {}, 
+                                                    "~LaneSegment": {
+                                                        "width": 0.376, 
+                                                        "control_points": [
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        -0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "theta_deg": 45
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "theta_deg": 90, 
+                                                                    "p": [
+                                                                        0.22, 
+                                                                        0.5
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }, 
+                                                "lane1": {
+                                                    "~PlacedObject": {}, 
+                                                    "~LaneSegment": {
+                                                        "width": 0.376, 
+                                                        "control_points": [
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        -0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "theta_deg": -45, 
+                                                                    "p": [
+                                                                        -0.3, 
+                                                                        -0.3
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "theta_deg": -90, 
+                                                                    "p": [
+                                                                        -0.22, 
+                                                                        -0.5
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }, 
+                            "~Tile": {
+                                "kind": "curve_right", 
+                                "drivable": true
+                            }
+                        }, 
+                        "tile-1-1": {
+                            "~PlacedObject": {}, 
+                            "~Tile": {
+                                "kind": "asphalt", 
+                                "drivable": false
+                            }
+                        }, 
+                        "tile-1-0": {
+                            "~PlacedObject": {
+                                "spatial_relations": {
+                                    "1": {
+                                        "~SpatialRelation": {
+                                            "b": [
+                                                "straight"
+                                            ], 
+                                            "transform": {
+                                                "~SE2Transform": {}
+                                            }
+                                        }, 
+                                        "~GroundTruth": {}
+                                    }
+                                }, 
+                                "children": {
+                                    "straight": {
+                                        "~PlacedObject": {
+                                            "spatial_relations": {
+                                                "lane2": {
+                                                    "~SpatialRelation": {
+                                                        "b": [
+                                                            "lane2"
+                                                        ], 
+                                                        "transform": {
+                                                            "~SE2Transform": {
+                                                                "theta_deg": 180
+                                                            }
+                                                        }
+                                                    }, 
+                                                    "~GroundTruth": {}
+                                                }, 
+                                                "lane1": {
+                                                    "~SpatialRelation": {
+                                                        "b": [
+                                                            "lane1"
+                                                        ], 
+                                                        "transform": {
+                                                            "~SE2Transform": {}
+                                                        }
+                                                    }, 
+                                                    "~GroundTruth": {}
+                                                }
+                                            }, 
+                                            "children": {
+                                                "lane2": {
+                                                    "~PlacedObject": {}, 
+                                                    "~LaneSegment": {
+                                                        "width": 0.376, 
+                                                        "control_points": [
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        -0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }, 
+                                                "lane1": {
+                                                    "~PlacedObject": {}, 
+                                                    "~LaneSegment": {
+                                                        "width": 0.376, 
+                                                        "control_points": [
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        -0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }, 
+                            "~Tile": {
+                                "kind": "straight", 
+                                "drivable": true
+                            }
+                        }, 
+                        "tile-1-2": {
+                            "~PlacedObject": {
+                                "spatial_relations": {
+                                    "1": {
+                                        "~SpatialRelation": {
+                                            "b": [
+                                                "straight"
+                                            ], 
+                                            "transform": {
+                                                "~SE2Transform": {}
+                                            }
+                                        }, 
+                                        "~GroundTruth": {}
+                                    }
+                                }, 
+                                "children": {
+                                    "straight": {
+                                        "~PlacedObject": {
+                                            "spatial_relations": {
+                                                "lane2": {
+                                                    "~SpatialRelation": {
+                                                        "b": [
+                                                            "lane2"
+                                                        ], 
+                                                        "transform": {
+                                                            "~SE2Transform": {
+                                                                "theta_deg": 180
+                                                            }
+                                                        }
+                                                    }, 
+                                                    "~GroundTruth": {}
+                                                }, 
+                                                "lane1": {
+                                                    "~SpatialRelation": {
+                                                        "b": [
+                                                            "lane1"
+                                                        ], 
+                                                        "transform": {
+                                                            "~SE2Transform": {}
+                                                        }
+                                                    }, 
+                                                    "~GroundTruth": {}
+                                                }
+                                            }, 
+                                            "children": {
+                                                "lane2": {
+                                                    "~PlacedObject": {}, 
+                                                    "~LaneSegment": {
+                                                        "width": 0.376, 
+                                                        "control_points": [
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        -0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }, 
+                                                "lane1": {
+                                                    "~PlacedObject": {}, 
+                                                    "~LaneSegment": {
+                                                        "width": 0.376, 
+                                                        "control_points": [
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        -0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }, 
+                                                            {
+                                                                "~SE2Transform": {
+                                                                    "p": [
+                                                                        0.5, 
+                                                                        -0.22
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }, 
+                            "~Tile": {
+                                "kind": "straight", 
+                                "drivable": true
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
