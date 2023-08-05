@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: fileutility
+Version: 0.2
+Summary: Helper module for locating and deleting files and folders.
+Home-page: https://github.com/Pixxle/fileutility
+Author: Dennis Hedlund
+Author-email: dennishedlund@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+Helper module to find files by either modification timestamp, path, file suffix and date formated file names
+
+
