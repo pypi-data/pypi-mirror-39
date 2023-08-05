@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: microserver
+Version: 1.0.0
+Summary: MicroServer
+Home-page: https://bitbucket.org/autestsuite/microserver
+Author: : Jesse Zhang
+Author-email: : jesse.zhang8759@gmail.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: trlib
+
+UNKNOWN
+
+
