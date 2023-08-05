@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: devlogs
+Version: 0.0.1
+Summary: Development VM Log Watcher
+Home-page: https://github.com/shearern/devlogs
+Author: Nathan Shearer
+Author-email: shearern@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: System :: Logging
+Requires-Dist: devhttp
+
+Development VM Log Watcher
+==========================
+
+Small web app to help developers quickly see log events while developing
+and testing.
+
+
+Icon made by [Freepik](https://www.flaticon.com/authors/freepik) from
+www.flaticon.com 
+
