@@ -1,0 +1,9 @@
+INTERVAL = 300
+LOCAL_UNIX_SOCKET = 'unix://var/run/docker.sock'
+MONITOR = []
+LOGLEVEL = 'info'
+RUNONCE = False
+CLEANUP = False
+KEEPTAG = False
+METRICS_ADDR = '0.0.0.0'
+METRICS_PORT = 8000
