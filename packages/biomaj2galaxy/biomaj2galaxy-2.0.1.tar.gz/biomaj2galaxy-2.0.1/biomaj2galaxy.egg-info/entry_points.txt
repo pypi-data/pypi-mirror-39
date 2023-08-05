@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        biomaj2galaxy=biomaj2galaxy.cli:biomaj2galaxy
+    
