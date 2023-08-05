@@ -1,0 +1,14 @@
+vocab_builder/__init__.py,sha256=oL2cBwauHkA-6K-KCdHAZBqGQVXnmrOw4IMMMssEbHU,118
+vocab_builder/__main__.py,sha256=Wa3zOQa-2MhGIKrvgvb9BXKEUWDsQJWaERvCPul2Oqk,710
+vocab_builder/base.py,sha256=K1lSLZ6rNU20NUjW9fWhjppOcA4cgMNxNRDAtPPQgNU,3557
+vocab_builder/char.py,sha256=1sb-AL0GiPORzetYel6_iHOGN75xS9FnjB3RA-c_5rQ,230
+vocab_builder/char_word.py,sha256=KJlJszstvPsalyesb1LUZmd8-_lfJHMerYaBGpUzUAM,1127
+vocab_builder/vocab.py,sha256=_gwCMEzjp050ODM60okr4qa_P148dM96xgGDy0LSTuQ,2350
+vocab_builder/word.py,sha256=2pz7SqJwlyDIW4vrpmOmqNUEFmFg_-eUb_s1SHnEYkE,93
+vocab_builder-0.0.1a2.dist-info/DESCRIPTION.rst,sha256=fujZcvHY8HSCsK0703JHoN30oiuTwJqJ6y2DAR7fUyw,22
+vocab_builder-0.0.1a2.dist-info/METADATA,sha256=x9atOtrhYENdhMYsAnCsbw2YN8QI-n38r6PtaTHbCTA,448
+vocab_builder-0.0.1a2.dist-info/RECORD,,
+vocab_builder-0.0.1a2.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+vocab_builder-0.0.1a2.dist-info/entry_points.txt,sha256=rop6vAjUJsxnkL4SvADMmRrgAOm5baUBtpbeiu-ksTE,64
+vocab_builder-0.0.1a2.dist-info/metadata.json,sha256=NUyieb7KG1WkmCa3c6CbpwVSaEBh8ebgGPtSPA5IvtI,794
+vocab_builder-0.0.1a2.dist-info/top_level.txt,sha256=xGydz9c70oHlPNmq_h7XAD8AfpVnB6PLuYbflj9FyXg,14
