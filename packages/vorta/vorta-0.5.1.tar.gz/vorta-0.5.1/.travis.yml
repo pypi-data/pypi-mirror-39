@@ -1,0 +1,102 @@
+language: generic
+
+addons:
+  apt:
+    packages:
+    - xvfb
+    - herbstluftwm
+    - libssl-dev
+    - openssl
+    - libacl1-dev
+    - libacl1
+    - build-essential
+  homebrew:
+    update: false
+    packages:
+    - openssl
+    - readline
+    - xz
+    - pyenv
+    - pyenv-virtualenv
+    casks:
+    - xquartz
+
+cache:
+  directories:
+    - $HOME/.cache/pip
+    - $HOME/.pyenv/versions
+    - $HOME/Library/Caches/Homebrew
+
+sudo: required
+dist: trusty
+
+env:
+  global:
+  - SETUP_XVFB=true
+  - PYTHON=3.6.3
+
+matrix:
+  include:
+  - os: linux
+    dist: trusty
+    env:
+    - RUN_PYINSTALLER=true
+  - os: osx
+    env:
+      - RUN_PYINSTALLER=true
+
+install:
+- |
+  if [ $TRAVIS_OS_NAME = "linux" ]; then
+    #curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+    #git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+    #git clone git://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
+    #export PATH="/home/travis/.pyenv/shims:${PATH}"
+    export DISPLAY=:99.0
+    /sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -screen 0 1920x1200x24 -ac +extension GLX +render -noreset
+    sleep 3
+  elif [ $TRAVIS_OS_NAME = "osx" ]; then
+    brew upgrade pyenv
+  fi
+  pyenv install -s $PYTHON
+  eval "$(pyenv init -)"
+  pyenv shell $PYTHON
+
+- pip install -U setuptools pip
+- pip install .
+- pip install borgbackup
+- pip install -r requirements-dev.txt
+
+before_script:
+- if [ $TRAVIS_OS_NAME = "linux" ]; then (herbstluftwm )& fi
+- if [ $TRAVIS_OS_NAME = "osx" ]; then (sudo Xvfb :99 -ac -screen 0 1024x768x8 )& fi
+- sleep 3
+
+script:
+- pytest --forked
+- if [ $TRAVIS_OS_NAME = "linux" ]; then tox -e flake8; fi
+
+#after_script:
+#- |
+#  if [ $RUN_PYINSTALLER = "true" ]; then
+#    # Cleanup
+#    pip uninstall -y $PIP_DEPENDENCIES
+#
+#    # https://github.com/wkentaro/labelme/issues/183
+#    if [ $TRAVIS_OS_NAME = "osx" ]; then
+#      pip uninstall -y Pillow
+#      conda install -y Pillow
+#    fi
+#
+#    # Build the standalone executable
+#    pip install pyinstaller
+#    pyinstaller labelme.spec
+#    dist/labelme --version
+#  fi
+
+branches:
+  only:
+  - master
+
+notifications:
+  email: false
