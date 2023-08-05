@@ -1,0 +1,5 @@
+#!/usr/bin/env pythonw
+
+from xptools import analyze_front
+
+analyze_front.main()
