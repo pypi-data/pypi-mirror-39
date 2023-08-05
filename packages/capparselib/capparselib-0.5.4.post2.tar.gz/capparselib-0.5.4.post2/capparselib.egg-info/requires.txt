@@ -1,0 +1,9 @@
+lxml
+python-dateutil
+
+[tests]
+chardet
+parameterized
+coverage
+coveralls
+invoke
