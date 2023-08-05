@@ -1,0 +1,8 @@
+include brickbreaker/assets/jingles/*
+include brickbreaker/assets/level_0/*
+include brickbreaker/assets/level_1/*
+include brickbreaker/assets/level_2/*
+include brickbreaker/assets/level_3/*
+include brickbreaker/assets/se/*
+include brickbreaker/assets/sprites/*
+include brickbreaker/scores.sqlite
