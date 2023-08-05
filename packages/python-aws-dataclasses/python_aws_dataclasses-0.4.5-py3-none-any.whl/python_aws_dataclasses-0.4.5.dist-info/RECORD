@@ -1,0 +1,14 @@
+aws_dataclasses/__init__.py,sha256=nQIsEcwxpSHBDSp7HhBI9qqOn9k1K098bxe8WC4FiCc,321
+aws_dataclasses/alexa_skill_event.py,sha256=Z-Tgf41FEvLhXqI5NLeeJFEA1gOX9_ZAF9efeHwxG94,2565
+aws_dataclasses/base.py,sha256=OpxKC4qzoscEYkpPPMCiSbH1blorNezb4YQdajJGlzg,967
+aws_dataclasses/cf_event.py,sha256=Tt-nykvRLL-QSbbcuOG3QQu3Fa14PTa5NiJWSTS-f2I,2630
+aws_dataclasses/cloudwatch_alarm.py,sha256=u56yPS9mvlx3McS3TBlwnhi_Zp1T27BZAOb2-PC_fNw,3841
+aws_dataclasses/cloudwatch_event.py,sha256=Xl3hbw2h12ktIuazKikGJDY2shXNuQH3zwagKb97mbM,456
+aws_dataclasses/http_proxy_event.py,sha256=_8phGJ9nxwp8qiy_NhW70uFzUCJtRhn0tAMRXNpduj8,4183
+aws_dataclasses/lambda_function_configuration.py,sha256=4cWPKA9Dx79tBA7OcOnTfzNdEmP4xr5wTkhp_yRcyRo,4615
+aws_dataclasses/s3_event.py,sha256=tdyAphuF9_-5Ievaf3oSNYgcEih2yzaBcjG9Nf16YaU,3514
+aws_dataclasses/sns_event.py,sha256=0XvBB7tNvcNlpJRGwLx7VuST29eR-Nv1mM_t9xOHXWM,3665
+python_aws_dataclasses-0.4.5.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+python_aws_dataclasses-0.4.5.dist-info/WHEEL,sha256=MP1UiX4AXjPa4mWvCuy-oUiZT3GZDnthv7K0OSicOP0,81
+python_aws_dataclasses-0.4.5.dist-info/METADATA,sha256=F1XPmnQv1oY-Z5HbMMBWdQzKtTbY_fxNFabXGBNsm_s,2426
+python_aws_dataclasses-0.4.5.dist-info/RECORD,,
