@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: sense-core
+Version: 0.0.5
+Summary: sense core
+Home-page: UNKNOWN
+Author: kafka0102
+Author-email: yujianjia@sensedeal.ai
+License: BSD License
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Description-Content-Type: text/markdown
+Requires-Dist: pymongo (>=3.7)
+Requires-Dist: numpy (>=1.15)
+Requires-Dist: python-decouple (>=3.1)
+Requires-Dist: redis (>2.10)
+Requires-Dist: elasticsearch (>=6.3)
+Requires-Dist: elasticsearch-dsl (>=6.2)
+Requires-Dist: pika (>=0.12)
+Requires-Dist: python-dateutil (>=2.7)
+Requires-Dist: sqlalchemy (>=1.2)
+
+========
+handlers
+========
+
+Handlers is a simple Django app to write logs into databases. For each
+question, visitors can choose between a fixed number of answers.
+
+Detailed documentation is in the "docs" directory.
+
+Quick start
+-----------
+
+1. Add "handlers" to your INSTALLED_APPS setting like this::
+
+    INSTALLED_APPS = [
+        ...
+        'SenseCore.handlers',
+    ]
+
+2. Config your handlers under LOGGING settings like this::
+
+	LOGGING = {
+		...
+		'handlers':{
+			'lever':'',
+			'class':'SenseCore.handlers.handlers.DatabaseHandler',
+			...
+		}
+	}
+
+https://www.xncoding.com/2017/05/26/mq/rabbitmq-tutorial08.html
+
+docker run -d --hostname sd-rabbit --name rabbit -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=sense@2018 -p 15672:15672 -p 5672:5672 -p 25672:25672 -p 61613:61613 -p 1883:1883 rabbitmq:management
+
+
