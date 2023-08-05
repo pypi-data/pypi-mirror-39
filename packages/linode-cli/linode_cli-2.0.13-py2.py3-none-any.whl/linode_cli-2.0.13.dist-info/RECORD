@@ -1,0 +1,16 @@
+etc/bash_completion.d/linode-cli.sh,sha256=wbp7aL5cMlWNFMyLIpVa6mcc-tanwFzvrsAqjZC9ItI,4554
+linode_cli-2.0.13.dist-info/METADATA,sha256=R-ZV98TwxKaIW4wt-dBmHqrJCX6RTLa0Qkwh2-I926c,10334
+linode_cli-2.0.13.dist-info/RECORD,,
+linode_cli-2.0.13.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+linode_cli-2.0.13.dist-info/entry_points.txt,sha256=LqcjAXFYXIPFmInq7zzKzBABzUq7IkL84s1SJGzoTW0,47
+linode_cli-2.0.13.dist-info/top_level.txt,sha256=BQr_L5imQHxeISE9GotXUoz0vW1JG1cTrwOmbcu0yCM,10
+linodecli/__init__.py,sha256=fwombJxKe3XrZUIjlVEGhctI200sunL_cWe502cfmBc,9884
+linodecli/__main__.py,sha256=Bawhy_A6LcCjls5BHT817zkmBSHqlcl5vt78ofOnuv0,75
+linodecli/cli.py,sha256=8_11mOQagkD8F5w1w2PGcTPtPMGM4MIoLDYNaW1SHpY,17531
+linodecli/configuration.py,sha256=ZAwrNsWDiz-uQ4w3g300JK87BUqxi1M1zXxKzMLvYFE,7491
+linodecli/data-2,sha256=mroYDBoEkl21TaCpkBTPqk6OStNhsNH1hq4ZaDR_8EI,259655
+linodecli/data-3,sha256=IBXpDDDUMUY1F-osohMJaUcGL9d4vGm5GMgraE2_7PA,152315
+linodecli/operation.py,sha256=0XFCgOpSnb3wq-lF-n4QZzQlv8yFwVj0fDTxr0knQpI,6311
+linodecli/output.py,sha256=XIyJW1EvT4JKEkK5PU-t9ylYnsnev2Fu-MYgEMFaYAg,4690
+linodecli/response.py,sha256=kZ_kvyblZRRWbo6WwvfhaObIrr9dvTXkuayoJLBZ9I4,2325
+linodecli/plugins/__init__.py,sha256=vy3U1I-JwL2HI8Pyx9XZDUyTXeP-BfWYx4eWF21zgv8,938
