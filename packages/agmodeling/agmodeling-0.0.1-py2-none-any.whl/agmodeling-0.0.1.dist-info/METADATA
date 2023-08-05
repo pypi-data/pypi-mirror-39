@@ -1,0 +1,47 @@
+Metadata-Version: 2.0
+Name: agmodeling
+Version: 0.0.1
+Summary: Statistical modeling tools, to unify model creation and scoring based on python
+Home-page: https://github.com/agriscope/agmodeling/
+Author: Agriscope
+Author-email: team@agriscope.fr
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Natural Language :: French
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Database :: Database Engines/Servers
+
+#ag modeling
+
+Statistical modeling tools, to unify model creation and scoring based on python
+
+package agmodeling.setscoring implements a part of the SET method for comparing
+sensor output as described by :
+An Evaluation Tool Kit of Air Quality 1 Micro-Sensing Units 
+(Barak Fishbain1,Uri Lerner, Nuria Castell-Balaguer)
+
+
+
+
+What's New
+===========
+- (2018/02)First version 
+
+
+
+Dependencies
+=============
+
+Agstream is written to be use with python 2.7
+It requires Pandas, numpy and  scipy
+It requires `Pandas`_ (>= 0.12.0)::
+
+    pip install pandas
+    pip install numpy
+    pip install scipy
+
