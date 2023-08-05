@@ -1,0 +1,14 @@
+numpy
+tqdm
+soundfile
+bottleneck
+click
+
+[:python_version < "3.0"]
+pathlib2
+
+[dev]
+check-manifest
+
+[test]
+coverage
