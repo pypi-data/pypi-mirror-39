@@ -1,0 +1,8 @@
+[console_scripts]
+punyverse = punyverse.main:main
+punyverse_make_launcher = punyverse.launcher:main
+punyverse_small_images = punyverse.small_images:main
+
+[gui_scripts]
+punyversew = punyverse.main:main
+
