@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README
+pytest_parawtf.py
+setup.cfg
+setup.py
+pytest_parawtf.egg-info/PKG-INFO
+pytest_parawtf.egg-info/SOURCES.txt
+pytest_parawtf.egg-info/dependency_links.txt
+pytest_parawtf.egg-info/entry_points.txt
+pytest_parawtf.egg-info/requires.txt
+pytest_parawtf.egg-info/top_level.txt
