@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: fets
+Version: 0.0.5
+Summary: Feature Engineering Transformer Set
+Home-page: https://gitlab.com/redsharpbyte/fets
+Author: Red Boumghar
+License: BSD
+Keywords: data,feature-engineering,feature-extraction,machine-learning,transformer,transformation,pipeline
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: >=3
+Requires-Dist: scikit-learn
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+FETS
+=====
+
+[![pipeline status](https://gitlab.com/redsharpbyte/fets/badges/master/pipeline.svg)](https://gitlab.com/redsharpbyte/fets/commits/master)
+[![coverage report](https://gitlab.com/redsharpbyte/fets/badges/master/coverage.svg)](https://gitlab.com/redsharpbyte/fets/commits/master)
+
+
+
+Set of ready-to-use transformers for your feature engineering pipelines in scikit-learn.
+
+Inspired by the number of times I had to rewrite transformers and by the number 
+of times we all did exactly the same.
+
+
+How-To
+======
+
+TODO
+
+
+Main requirements 
+=================
+
+ + [Scikit-learn](http://scikit-learn.org/)
+
+
+Installation
+============
+
+TODO
+```
+red@spaceport# pip install fets
+```
+
+Testing
+=======
+
+```
+red@spaceport# pytest -v tests
+```
+
+
