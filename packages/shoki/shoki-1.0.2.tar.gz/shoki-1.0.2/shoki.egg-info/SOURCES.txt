@@ -1,0 +1,13 @@
+README.md
+setup.py
+shoki/__init__.py
+shoki/cli.py
+shoki/datacore.py
+shoki/formatter.py
+shoki/parsing.py
+shoki/shoki_config.py
+shoki.egg-info/PKG-INFO
+shoki.egg-info/SOURCES.txt
+shoki.egg-info/dependency_links.txt
+shoki.egg-info/entry_points.txt
+shoki.egg-info/top_level.txt
