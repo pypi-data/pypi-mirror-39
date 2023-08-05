@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+html2markdown.py
+setup.cfg
+setup.py
+html2markdown.egg-info/PKG-INFO
+html2markdown.egg-info/SOURCES.txt
+html2markdown.egg-info/dependency_links.txt
+html2markdown.egg-info/requires.txt
+html2markdown.egg-info/top_level.txt
