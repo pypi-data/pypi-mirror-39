@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: eql
+Version: 0.6.1
+Summary: Event Query Language
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: TatSu (~=4.2.6)
+Requires-Dist: PyYAML (~=3.13)
+Provides-Extra: lint
+Requires-Dist: mock (>=1.3.0); extra == 'lint'
+Requires-Dist: pytest (==3.8.2); extra == 'lint'
+Requires-Dist: pytest-cov (~=2.4); extra == 'lint'
+Requires-Dist: flake8 (==2.5.1); extra == 'lint'
+Requires-Dist: pep257 (==0.7.0); extra == 'lint'
+Requires-Dist: flake8-pep257 (==1.0.5); extra == 'lint'
+Provides-Extra: loaders
+Requires-Dist: pyyaml; extra == 'loaders'
+Requires-Dist: toml; extra == 'loaders'
+Provides-Extra: test
+Requires-Dist: mock (>=1.3.0); extra == 'test'
+Requires-Dist: pytest (==3.8.2); extra == 'test'
+Requires-Dist: pytest-cov (~=2.4); extra == 'test'
+Requires-Dist: flake8 (==2.5.1); extra == 'test'
+Requires-Dist: pep257 (==0.7.0); extra == 'test'
+Requires-Dist: flake8-pep257 (==1.0.5); extra == 'test'
+
+UNKNOWN
+
+
