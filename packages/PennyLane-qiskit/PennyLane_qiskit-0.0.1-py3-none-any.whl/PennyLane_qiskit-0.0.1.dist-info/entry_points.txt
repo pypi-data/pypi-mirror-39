@@ -1,0 +1,4 @@
+[pennylane.plugins]
+qiskit.aer = pennylane_qiskit:AerQiskitDevice
+qiskit.ibm = pennylane_qiskit:IbmQQiskitDevice
+
