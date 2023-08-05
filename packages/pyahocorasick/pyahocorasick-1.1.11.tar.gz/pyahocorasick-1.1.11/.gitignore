@@ -1,0 +1,13 @@
+build/
+dist/
+*.pyc
+*.pyd
+*.dot
+*.swp
+*.so
+*.sh
+*.o
+MANIFEST
+memory.dump
+/pyahocorasick.egg-info/
+/tmp/
