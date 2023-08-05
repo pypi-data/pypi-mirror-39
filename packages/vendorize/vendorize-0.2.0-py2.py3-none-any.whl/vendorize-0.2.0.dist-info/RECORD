@@ -1,0 +1,17 @@
+vendorize/__init__.py,sha256=d9u0RSCsMLZ0aEBV_fwt9ktHe-x5kHlHL3e51gQB_Ec,3062
+vendorize/files.py,sha256=u9DpW4KklfR8UrQF1kF2hZ0wW70IpZJUTDJZMDUy7q0,246
+vendorize/import_rewrite.py,sha256=MNQbST8KED_JqgWTbvilV_6umAxwAnoX9da_GLGkZI0,4390
+vendorize/python_source.py,sha256=ATauVfVWnyb8q0_I0b_7nxJvI3NK0qF1dkbPUaMv_Ks,315
+vendorize/setuptools_build.py,sha256=Eyly9NFy7pFHi3eqnzowKGyDdOmsbfhQJWGkfaso7R8,1372
+vendorize/_vendor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vendorize/_vendor/pytoml/__init__.py,sha256=PLFK235q-7F9Mmelsr_7IcAIWebDo3W9Hq_T1Vz54KA,95
+vendorize/_vendor/pytoml/core.py,sha256=W8BqMPwcme5HkPBtxkQz9VJBvhkrELje94Dh1iUfFaI,522
+vendorize/_vendor/pytoml/parser.py,sha256=amNcVofh-diqx9faK7NNwh0w-UB0ANnpuOUCcxFm35s,10641
+vendorize/_vendor/pytoml/writer.py,sha256=hn_s7jBHwPVxggwgWVvv7m5XXTTDAslYChX4x1fT49A,3706
+vendorize-0.2.0.data/scripts/python-vendorize,sha256=4-4OLiINwngwZBVekhuY7gJrZpiPSuRx35vfwqF_jUs,483
+vendorize-0.2.0.dist-info/DESCRIPTION.rst,sha256=oM_8g0Z4aC-rwF2sRbr_yRdfHLRITn-M_KmyDiQOHC4,1659
+vendorize-0.2.0.dist-info/METADATA,sha256=0c5obdvmqX0g3TAmPmNIqdKRyNaO1a0fCI0VLpNqfU4,1934
+vendorize-0.2.0.dist-info/RECORD,,
+vendorize-0.2.0.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+vendorize-0.2.0.dist-info/metadata.json,sha256=WJwlz_iP4IbZa5Er3Jnobg2BCcm1bUdFdgWkqoAAecg,471
+vendorize-0.2.0.dist-info/top_level.txt,sha256=-n48NgEhSgKqTAwxc2IKIo-71jl5BzZ6qHbieETXdxQ,10
