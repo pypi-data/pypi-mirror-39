@@ -1,0 +1,34 @@
+# Locations
+test_files: 'test_files'
+workspace: 'workspace'
+submission: 'submission'
+entry_point: 'instructions.py'
+results: null
+# Suite configuration
+timeout: 300  # seconds
+suite_timeout: 3600  # seconds
+tags: []
+dump_result: false
+dump_log: false
+dump_passed: false
+safe_suffixes: false
+
+# Webhooks config
+webhook_url: null
+webhook_token: None
+# CPP SPECIFIC
+cpp_compiler: 'clang++'
+cpp_compiler_flags: ['-std=c++17', '-Wall', '-Wextra', '-pedantic']
+# C SPECIFIC
+c_compiler: 'clang'
+c_compiler_flags: ['-std=c99', '-Wall', '-Wextra', '-pedantic']
+# Valgrind
+valgrind_penalization: 0.7
+valgrind_args: ['--leak-check=full', '--track-fds=yes']
+# Submission configuration
+submission_config_file: 'submission_config.yml'
+# Clang specific variables
+clang_format_style: 'pb161'
+clang_format_styles_dir: 'codestyles'
+clang_format_avail_styles: ['PB071', 'PB161', 'LLVM', 'Google', 'Chromium', 'Mozilla',
+                            'WebKit', 'Mesos', 'VisualStudio', 'Linux']
