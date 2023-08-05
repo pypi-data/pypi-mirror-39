@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: properimage
+Version: 0.6.0.dev1
+Summary: Proper astronomic image analysis
+Home-page: https://github.com/toros-astro/ProperImage
+Author: Bruno Sanchez
+Author-email: bruno@oac.unc.edu.ar
+License: BSD 3
+Keywords: astronomy image
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: numpy (>=1.13.2)
+Requires-Dist: scipy (>=1.0)
+Requires-Dist: astropy (>=2.0)
+Requires-Dist: photutils (>=0.5)
+Requires-Dist: astroML (>=0.3)
+Requires-Dist: sep (>=1.0)
+Requires-Dist: astroscrappy (>=1.0.5)
+Requires-Dist: astroalign (>=1.0.3)
+Requires-Dist: pytest (>=3.6.2)
+
+UNKNOWN
+
+
