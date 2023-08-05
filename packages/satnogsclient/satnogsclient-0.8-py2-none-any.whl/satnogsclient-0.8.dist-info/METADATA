@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: satnogsclient
+Version: 0.8
+Summary: SatNOGS Client
+Home-page: https://gitlab.com/librespacefoundation/satnogs/satnogs-client
+Author: SatNOGS project
+Author-email: dev@satnogs.org
+License: AGPLv3
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Communications :: Ham Radio
+Requires-Dist: APScheduler
+Requires-Dist: SQLAlchemy
+Requires-Dist: requests
+Requires-Dist: validators
+Requires-Dist: python-dateutil
+Requires-Dist: ephem
+Requires-Dist: pytz
+Requires-Dist: flask
+Requires-Dist: pyopenssl
+Requires-Dist: pyserial
+Requires-Dist: flask-socketio
+Requires-Dist: redis
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Provides-Extra: develop
+Requires-Dist: flake8; extra == 'develop'
+
+UNKNOWN
+
+
