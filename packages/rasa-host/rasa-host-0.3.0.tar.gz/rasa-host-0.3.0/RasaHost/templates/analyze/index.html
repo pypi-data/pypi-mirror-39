@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+{% raw %}
+<div id="app" v-cloak>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 pt-1">
+        <h1 class="h4">core - analyze</h1>
+        <a href="#" v-on:click.stop.prevent="isSettings = !isSettings" class="float-right">settings</a>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <div v-if="model">
+                    <ul>
+                        <li v-for="(item, index) in model.intents_missing_in_domain">
+                            {{item.name}} is missing in domain
+                            <a v-if="!item.isAddedToDomain" v-on:click.stop.prevent="addIntentToDomain(index, item)" href="#" class="icon text-muted ml-3">
+                                Add <div v-if="item.isAddingToDomain" class="loader"></div>
+                            </a>
+                            <span v-if="item.isAddedToDomain" class="text-muted">Added</span>
+                            <div v-if="item.isAddingToDomainError" class="text-error">{{item.isAddingToDomainError}}</div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li v-for="(item, index) in model.intents_missing_in_stories">
+                            {{item.name}} is missing in stories
+                            <a v-if="!item.isAddedStoryWithUtter" v-on:click.stop.prevent="addDefaultStoryWithUtter(index, item)" href="#" class="icon text-muted ml-3">
+                                Add with utter <div v-if="item.isAddingStoryWithUtter" class="loader"></div>
+                            </a>
+                            <a v-if="!item.isAddedStoryWithAction" v-on:click.stop.prevent="addDefaultStoryWithAction(index, item)" href="#" class="icon text-muted ml-3">
+                                Add with action <div v-if="item.isAddingStoryWithAction" class="loader"></div>
+                            </a>
+                            <span v-if="item.isAddedStoryWithUtter || item.isAddedStoryWithAction" class="text-muted">Added</span>
+                            <div v-if="item.isAddingStoryWithUtterError || item.isAddingStoryWithActionError" class="text-error">{{item.isAddingStoryWithUtterError}} {{item.isAddingStoryWithActionError}}</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endraw %}
+
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            model: {{ model_json| safe }},
+            error: null,
+            isAddingToDomain: false,
+            isAddingStoryWithUtter: false
+        },
+        created: function () {
+        },
+        methods: {
+            addIntentToDomain: function (index, item) {
+                item.isAddingToDomain = true;
+                item.isAddingToDomainError = null;
+                this.$set(this.model.intents_missing_in_domain, index, item);
+                fetch(`/api/domain/intent`, {
+                    method: "PUT",
+                    headers: { "Content-Type": "application/json; charset=utf-8" },
+                    body: JSON.stringify({ name: item.name }),
+                })
+                    .then(function (response) {
+                        if (!response.ok)
+                            throw Error(response.status + ': ' + response.statusText);
+                        return response.json();
+                    })
+                    .then(json => {
+                        item.isAddingToDomain = false;
+                        if (json.error) {
+                            item.isAddingToDomainError = json.error;
+                            this.$set(this.model.intents_missing_in_domain, index, item);
+                            return;
+                        }
+                        item.isAddedToDomain = true;
+                        this.$set(this.model.intents_missing_in_domain, index, item);
+                    })
+                    .catch(error => {
+                        item.isAddingToDomain = false;
+                        item.isAddingToDomainError = "Error: " + error.message;
+                        this.$set(this.model.intents_missing_in_domain, index, item);
+                    });
+            },
+            addDefaultStoryWithUtter: function (index, item) {
+                item.isAddingStoryWithUtter = true;
+                item.isAddingStoryWithUtterError = null;
+                this.$set(this.model.intents_missing_in_stories, index, item);
+                fetch(`/api/stories/intentWithUtter`, {
+                    method: "PUT",
+                    headers: { "Content-Type": "application/json; charset=utf-8" },
+                    body: JSON.stringify({ name: item.name }),
+                })
+                    .then(function (response) {
+                        if (!response.ok)
+                            throw Error(response.status + ': ' + response.statusText);
+                        return response.json();
+                    })
+                    .then(json => {
+                        item.isAddingStoryWithUtter = false;
+                        if (json.error) {
+                            item.isAddingStoryWithUtterError = json.error;
+                            this.$set(this.model.intents_missing_in_stories, index, item);
+                            return;
+                        }
+                        item.isAddedStoryWithUtter = true;
+                        this.$set(this.model.intents_missing_in_stories, index, item);
+                    })
+                    .catch(error => {
+                        item.isAddingStoryWithUtter = false;
+                        item.isAddingStoryWithUtterError = "Error: " + error.message;
+                        this.$set(this.model.intents_missing_in_stories, index, item);
+                    });
+            },
+            addDefaultStoryWithAction: function (index, item) {
+                item.isAddingStoryWithAction = true;
+                item.isAddingStoryWithActionError = null;
+                this.$set(this.model.intents_missing_in_stories, index, item);
+                fetch(`/api/stories/intentWithAction`, {
+                    method: "PUT",
+                    headers: { "Content-Type": "application/json; charset=utf-8" },
+                    body: JSON.stringify({ name: item.name }),
+                })
+                    .then(function (response) {
+                        if (!response.ok)
+                            throw Error(response.status + ': ' + response.statusText);
+                        return response.json();
+                    })
+                    .then(json => {
+                        item.isAddingStoryWithAction = false;
+                        if (json.error) {
+                            item.isAddingStoryWithActionError = json.error;
+                            this.$set(this.model.intents_missing_in_stories, index, item);
+                            return;
+                        }
+                        item.isAddedStoryWithAction = true;
+                        this.$set(this.model.intents_missing_in_stories, index, item);
+                    })
+                    .catch(error => {
+                        item.isAddingStoryWithAction = false;
+                        item.isAddingStoryWithActionError = "Error: " + error.message;
+                        this.$set(this.model.intents_missing_in_stories, index, item);
+                    });
+            }
+        }
+    });
+</script>
+
+
+
+{% endblock %}
