@@ -1,0 +1,17 @@
+{% extends 'layouts/two_pane_single.html' %}
+{% load bulma_tags %}
+{% load i18n %}
+
+{% block content_main %}
+  <h1 class="title">{% trans 'Edit profile' %}</h1>
+  <div class="content">
+    <form method="POST">
+      {% csrf_token %}
+      {{ form|bulma }}
+      <div class="field">
+        <button type="submit" class="button is-primary">{% trans 'Submit' %}</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}
+

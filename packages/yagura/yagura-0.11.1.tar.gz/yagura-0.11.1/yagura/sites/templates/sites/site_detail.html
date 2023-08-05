@@ -1,0 +1,69 @@
+{% extends 'layouts/two_pane.html' %}
+{% load i18n %}
+{% load bulma_tags %}
+
+{% block content_main %}
+  <div class="level">
+    <h1 class="title">{% trans 'Site detail' %}</h1>
+    {% if site.created_by == request.user %}
+    <div class="btn-group" role="group">
+      <a class="button is-danger is-small is-pulled-right" href="{% url 'sites:disable' site.id %}">Disable</a>
+      {% if yagura_conf.ENABLE_DELETING_SITES %}
+        <a class="button is-danger is-small is-pulled-right" href="{% url 'sites:delete' site.id %}">Delete</a>
+      {% endif%}
+    </div>
+    {% endif %}
+  </div>
+
+  <h2 class="subtitle">Overview</h2>
+  <div class="content">
+    {# TODO: Refactor struct of site information #}
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>{% trans 'Site URL' %}:</th>
+          <td><a href="{{ site.url }}" target="_blank">{{ site.url }}</a></td>
+        </tr>
+        <tr>
+          <th>{% trans 'Excepted HTTP status code' %}:</th>
+          <td>{{ site.ok_http_status }}</td>
+        </tr>
+        <tr>
+          <th>Email notifications:</th>
+          <td>
+            <span class="buttons has-addons are-small">
+              <a class="button" href="{% url 'notifications:list-email-recipient' site.id %}">Show</a>
+              <a class="button" href="{% url 'notifications:add-recipient' site.id %}">Add</a>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>Slack notifications:</th>
+          <td class="buttons has-addons are-small">
+            <a class="button" href="{% url 'notifications:list-slack-recipient' site.id %}">Show</a>
+            <a class="button" href="{% url 'notifications:add-slack-recipient' site.id %}">Add</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2 class="subtitle">History</h2>
+  <div class="content">
+    <table class="table is-striped is-fullwidth">
+      <thead>
+        <tr>
+          <th>{% trans 'State' %}</th><td>{% trans 'Range' %}</td><td>{% trans 'Reason' %}</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for history in site.states.all reversed %}
+        <tr>
+          <td>{{ history.state }}</td>
+          <td>{{ history.begin_at }} - {{ history.updated_at }} {% if forloop.first %}(now){% endif %}</td>
+          <td>{{ history.reason }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'layouts/two_pane.html' %}
+{% load yagura_notifications %}
+
+{% block content_main %}
+  <h1 class="title">{% trans 'Confirm of deleteing recipient' %}</h1>
+  <div class="content">
+    <p>
+      {% blocktrans with url=site.url %}Deleting notification for <strong>{{ recipient }}</strong>{% endblocktrans %}
+    </p>
+    {% can_delete emailrecipient request.user as can_delete_ %}
+    {% if can_delete_ %}
+    <form method="POST">
+      {% csrf_token %}
+      <button class="button is-danger" type="submit">{% trans 'Confirm' %}</button>
+    </form>
+    {% else %}
+    <p>You do not have permission to delete this recipient</p>
+    {% endif %}
+  </div>
+{% endblock %}
