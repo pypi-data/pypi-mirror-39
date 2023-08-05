@@ -1,0 +1,16 @@
+ibats_huobifeeder/__init__.py,sha256=lAJSl2L2iP26Glik7tTTTl2G4CHHhi0wS2_4gLCMpIM,162
+ibats_huobifeeder/config.py,sha256=S8U8_LDsl0YANkZ_A3jKMPXT1tj00iwZYSkG-zjaztQ,2042
+ibats_huobifeeder/backend/__init__.py,sha256=jKg8CTyvF7b9ptzKawqm00uSO4hIYdZJNdLbAEn7_0k,474
+ibats_huobifeeder/backend/check.py,sha256=BHI_KGmCFbKwjWnbfWE7-wfJ0qK0LYuVw1xiwASqJFw,2767
+ibats_huobifeeder/backend/handler.py,sha256=eIZE_hatedQL6o4XUw8fKsp04EC0FxzPnnJZ55v6aYU,13370
+ibats_huobifeeder/backend/orm.py,sha256=rLsJNYyqAh15LotKQb8-4dAazoA-0VdffVxwpWf6dps,6673
+ibats_huobifeeder/feed/__init__.py,sha256=Z94a7bVjlGWDgrfn34Lio3dZMDphRbcZZlbil92C4go,163
+ibats_huobifeeder/feed/md_feeder.py,sha256=SJT_OGBVGJhvDKPhlInhVxMpAva3DMaGdxC3UbDhq6Q,13589
+ibats_huobifeeder/test/__init__.py,sha256=5kZr42vR6YSmQxWKOKTMoGkIV3_hmeRKR9aKKUnC9hc,163
+ibats_huobifeeder/test/bulk_pattern.py,sha256=diJbIu7-Ibqh4dvNH_qbMzwzPlsEPMGEZlrhcHm5sAA,466
+ibats_huobifeeder/test/md.py,sha256=6-92wxC7bPVDfu2Bjjl3ukW8GGxlSjpu8gGAXGdceBc,1589
+IBATS_Huobi_Feeder-0.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+IBATS_Huobi_Feeder-0.1.1.dist-info/METADATA,sha256=2kd6MpdN1suHSa8KMZGHORp_r-Lo12vEmselrCl26oQ,4848
+IBATS_Huobi_Feeder-0.1.1.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+IBATS_Huobi_Feeder-0.1.1.dist-info/top_level.txt,sha256=exfjtxZoogHDN_8q7064E8wdksk8ZOodNl031-pNLBs,18
+IBATS_Huobi_Feeder-0.1.1.dist-info/RECORD,,
