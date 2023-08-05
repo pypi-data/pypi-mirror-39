@@ -1,0 +1,13 @@
+coreapi
+Django>=2.0
+django-filter
+djangorestframework
+djangorestframework-queryfields
+drf-nested-routers
+drf-yasg
+psycopg2-binary
+PyYAML
+redis<3.0,>=2.7.0
+rq>=0.12.0
+setuptools
+dynaconf>=1.0.4
