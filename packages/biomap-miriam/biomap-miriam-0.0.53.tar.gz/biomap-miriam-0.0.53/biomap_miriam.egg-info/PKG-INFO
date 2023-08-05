@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: biomap-miriam
+Version: 0.0.53
+Summary: BioMap MIRIAM (Identifiers.org) mapper
+Home-page: https://github.com/BioMapOrg/biomap-miriam
+Author: Sebastian Winkler
+Author-email: winkler@informatik.uni-tuebingen.de
+License: UNKNOWN
+Description: # biomap-core
+        -------------
+        
+        Core API interface implementation.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

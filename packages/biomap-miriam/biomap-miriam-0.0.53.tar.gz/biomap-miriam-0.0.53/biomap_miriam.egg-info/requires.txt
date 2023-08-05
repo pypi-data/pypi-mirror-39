@@ -1,0 +1,4 @@
+biomap-utils>=0.0.51
+jsonschema==2.6.0
+PyYAML
+lxml

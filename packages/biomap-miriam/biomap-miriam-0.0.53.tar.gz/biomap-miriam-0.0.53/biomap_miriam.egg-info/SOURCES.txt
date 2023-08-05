@@ -1,0 +1,11 @@
+README.md
+setup.py
+biomap/__init__.py
+biomap/mappers/__init__.py
+biomap/mappers/miriam/__init__.py
+biomap/mappers/miriam/miriam.py
+biomap_miriam.egg-info/PKG-INFO
+biomap_miriam.egg-info/SOURCES.txt
+biomap_miriam.egg-info/dependency_links.txt
+biomap_miriam.egg-info/requires.txt
+biomap_miriam.egg-info/top_level.txt
