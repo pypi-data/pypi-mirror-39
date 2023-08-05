@@ -1,0 +1,9 @@
+Django>=1.11
+sentry-sdk>=0.5.5
+requests>=2.9.1
+simplejson>=3.8.2
+
+[development]
+flake8>=3.2.1
+requests_mock>=0.7.0
+mock>=2.0.0
