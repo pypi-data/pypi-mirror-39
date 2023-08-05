@@ -1,0 +1,17 @@
+{% load i18n %}
+<p>{% trans "The component contains several translation files mapped to single language in Weblate." %}</p>
+
+<p>{% trans "The following occurences were found:" %}</p>
+
+<table class="table table-condensed">
+<thead>
+<tr><th>{% trans "Language" %}</th><th>{% trans "Language codes" %}</th></tr>
+</thead>
+<tbody>
+{% for occurence in occurences %}
+<tr><td>{{ occurence.language }}</td><td>{{ occurence.codes }}</td></tr>
+{% endfor %}
+</tbody>
+</table>
+
+<p>{% trans "Please fix this by removing one of the duplicated strings from the translation files." %}</p>
