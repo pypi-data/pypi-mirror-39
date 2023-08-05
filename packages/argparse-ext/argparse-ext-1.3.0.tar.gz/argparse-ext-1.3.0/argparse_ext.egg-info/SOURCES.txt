@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+argparse_ext/__init__.py
+argparse_ext.egg-info/PKG-INFO
+argparse_ext.egg-info/SOURCES.txt
+argparse_ext.egg-info/dependency_links.txt
+argparse_ext.egg-info/requires.txt
+argparse_ext.egg-info/top_level.txt
