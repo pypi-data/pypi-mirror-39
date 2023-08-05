@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: easier
+Version: 0.6.0
+Summary: UNKNOWN
+Home-page: https://github.com/robdmc/easier
+Author: Rob deCarvalho
+Author-email: unlisted@unlisted.net
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Provides-Extra: dev
+Requires-Dist: fleming
+Requires-Dist: psutil
+Requires-Dist: cryptography
+Provides-Extra: dev
+Requires-Dist: coverage; extra == 'dev'
+Requires-Dist: flake8; extra == 'dev'
+Requires-Dist: mock; extra == 'dev'
+Requires-Dist: nose; extra == 'dev'
+Requires-Dist: wheel; extra == 'dev'
+
+# easier
+Replace this text with your README content
+
+
