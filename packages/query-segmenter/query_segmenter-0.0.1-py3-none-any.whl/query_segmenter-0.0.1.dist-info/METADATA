@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: query-segmenter
+Version: 0.0.1
+Summary: A Query Segmenter Toolkit
+Home-page: https://github.com/kchro/query-segmenter
+Author: kchro
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# query-segmenter
+Query Segmentation for search
+
+
