@@ -1,0 +1,10 @@
+README.rst
+setup.py
+trello_full_backup/__init__.py
+trello_full_backup/backup.py
+trello_full_backup.egg-info/PKG-INFO
+trello_full_backup.egg-info/SOURCES.txt
+trello_full_backup.egg-info/dependency_links.txt
+trello_full_backup.egg-info/entry_points.txt
+trello_full_backup.egg-info/requires.txt
+trello_full_backup.egg-info/top_level.txt
