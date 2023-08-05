@@ -1,0 +1,16 @@
+README.rst
+setup.py
+sphinxcontrib/soliditydomain/Solidity.g4
+sphinxcontrib/soliditydomain/SolidityLexer.py
+sphinxcontrib/soliditydomain/SolidityListener.py
+sphinxcontrib/soliditydomain/SolidityParser.py
+sphinxcontrib/soliditydomain/VERSION
+sphinxcontrib/soliditydomain/__init__.py
+sphinxcontrib/soliditydomain/documenters.py
+sphinxcontrib/soliditydomain/domain.py
+sphinxcontrib/soliditydomain/sourceregistry.py
+sphinxcontrib_soliditydomain.egg-info/PKG-INFO
+sphinxcontrib_soliditydomain.egg-info/SOURCES.txt
+sphinxcontrib_soliditydomain.egg-info/dependency_links.txt
+sphinxcontrib_soliditydomain.egg-info/requires.txt
+sphinxcontrib_soliditydomain.egg-info/top_level.txt
