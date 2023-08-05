@@ -1,0 +1,251 @@
+CHANGES
+=======
+
+1.8.28
+------
+
+* README 1.8.28
+* Update Vendor page for AT products
+* Remove more hardcoded port maps in 8021X tests
+* Remove hard coded port assignments in 802.1x
+* Mount /var/lib/docker on host to avoid docker-in-docker fs problems
+* Upgrade travis VM to xenial
+* port\_labels() needs to be smart enough to remap ports for hardware
+* Always use latest version of docker-ce
+* Move run-travis-test.sh to travis directory
+* pytype issue #133 is now fixed
+* Refresh grafana dashboards
+* pylint
+* Disable mirror port in group test which implicitly disables group mode
+* When flooding to a port that is being mirrored, the mirrored packet must not have a tag if the mirrored port is untagged
+* Require combinatorial flood rules when mirroring VLAN
+* pylint
+* Set flood flow priority consistently for bridge local/bcast
+* Specify flood priorities based on mask
+* Sent flowsadds/mods with priority in priority order
+* pylint
+* Reduce rules sent by stacking/flooding
+* Incremental refactor to condense flooding rule calculation
+* Common VLAN flood actions
+* Sent flowsadds/mods with priority in priority order
+* pylint
+* Reduce rules sent by stacking/flooding
+* Incremental refactor to condense flooding rule calculation
+* Common VLAN flood actions
+* stack ports must use "b" convention
+* Ports always begin with b
+* Use boilerplate config where possible
+* dp.port\_labels()
+* dp.base\_prom\_labels()
+* Missed base\_prom\_labels() in faucet\_dot1x
+* base\_prom\_labels needed in BGP
+* Mock port\_labels()
+* Gauge port\_name references
+* port\_labels()
+* Missed ref to self.\_stat\_port\_name
+* Use common code for Prometheus port labels
+* Revert "Influx diag."
+* Influx diag
+* Use common code for Prometheus port labels
+* Update prometheus rules
+* Upgrade Prometheus client
+* debian/control
+* debian/control
+* Update Prometheus rules for OF counters
+* debian/control
+* Debian control for Prometheus client
+* Var rename
+* Remove diags
+* Var rename
+* Var rename
+* Sample object
+* fctl diags
+* Specify 0.4.2
+* Specify Prometheus version 0.0.42
+* Upgrade Prometheus client
+* Send CONFIG\_CHANGE success message
+* Decode OFERROR type/codes
+* pylint
+* Update installation documentation
+* Add prometheus metric documentation
+* Support pi-gen 2018-11-13-raspbian-stretch
+* Update port stats dashboard for faucet 1.8.27
+* Preversion 1.8.28
+
+1.8.27
+------
+
+* Type check DB parameters for Watchers and check file path is writable
+* Bump README version
+* Remove unnecessary unit test for chewie
+* pytype 2018.11.6
+* Replace netils.build\_byte\_string() with bytes.fromhex()
+* Update ryu from 4.29 to 4.30
+* Require chewie 0.0.10
+* pylint
+* Restrict testing of metadata to OVS (only platform currently supporting it)
+* Don't allow all\_dps and dps to be set together
+* Update sphinx from 1.8.1 to 1.8.2
+* Detect requirement-only changes and ensure docker tests are run
+* FaucetMaxHostsPortTest assert args
+* Fall back to unmapped port if necessary
+* Test docs if anything changed
+* remap port numbers for port labels consistently
+* Use port\_labels()
+* FaucetUntaggedMultiMirrorTest test warm starts
+* Updating pystyle URL
+* Need to handle remapped ports
+* More port\_descriptions
+* More port\_descriptions for stacking
+* Faucet8021XFailureTest needs port\_description
+* Loop test needs port\_description
+* Need to handle port variables with new labels
+* Need port\_description on more tests
+* Gauge should use port not port\_name for consistency with FAUCET
+* Add port\_description to port variables
+* Add port\_description to Gauge variables
+* Preversion 1.8.27
+
+1.8.26
+------
+
+* Bump version for release
+* start\_watchers() test
+* Test of\_port\_curr\_speed is present for all ports
+* Bootstrap port state, state on DP connection
+* Build the 8021X ACL
+* Test should backup config file when it changes for later diagnostics
+* VLAN representation requires ports be sorted consistently and distinguish tagged/untagged
+* undo unneeded changes
+* undo unneeded changes
+* undoing debugging logs
+* pylint & fix display\_packet\_crash
+* revert the default port acl pipeline
+* attempting to get 802.1X tests to run on hardware
+* Add test cases for config parsing errors #2606 & #2607
+* Fix #2609, Get correct attribute when displaying error
+* Fix #2608, Force router \_\_str\_\_ method to return a string
+* Fix #2607, Check ACL rules form dicts
+* Fix #2606, stack priority value check
+* afl restarts properly ontop of the old data if >25mins of fuzzing data is present
+* Fix error with packet fuzzer crashing on startup #2591
+* Test interfaces could be assigned incorrectly out of order when hardware testing
+* Handle YAML ambiguity in "rule" style ACL with no actions
+* check\_faucet\_config should print all DPs
+* Run all tests on Travis on new branch
+* Handle YAML ambiguity in "rule" style ACL with no actions
+* add pydoc. trying to trigger travis-ci.org/bairdo build
+* fix syntax error
+* Correct handling when 802.1X nfv port changes state
+* Revert "Only do travis builds on master and tags."
+* Preversion 1.8.26
+* replace assertion catching with throwing on ping success
+* Only do travis builds on master and tags
+* Fix raspbian builds
+
+1.8.25
+------
+
+* Bump version for release
+* add 8021x diagram
+* Own repo TravisCI recommendation not requirement
+* fix ping fail check
+* actually block unauthenticated traffic
+* added 802.1x documentation
+* Update images in docker-compose.yaml files
+* ValveTableConfig for \*\_acl tables should use sorted tuples
+* Clarify when pre-change issue log is recommended
+* Don't reply to bogon ARP/ND
+* Initial proposal for PR process handling
+* Catch exceptions from BGP events. Check for an unresolved VLAN at runtime (e.g. when we get a route from BGP that we can't find a VLAN for)
+* Extraneous BGP check for connected network
+* Add explicit test for global routing and BGP together. BGP routing should be smart enough to find nexthops in other VLANs in the same router
+* change import path
+* Upgrade to ryu 4.29
+* src\_files.sh should be more helpful expanding pathnames if supplied
+* bash syntax
+* Only run pylint/pytype on changed files
+* diff check sense
+* git diff
+* Log commit range
+* bash syntax
+* Log TRAVIS vars
+* Commit range #2
+* log commit range
+* bash syntax
+* Use TRAVIS\_COMMIT\_RANGE
+* Don't run heavy docker tests if no python changed
+* Update pytype.sh
+* Update pytype.sh
+* Update setup.cfg
+* >2 parallel pytypes still too much
+* Use python3.6, and own temporary directory per file
+* pytype uses python3.6
+* Limit pytype parallel runs to 2
+* Travis parallel doesn't have minfree
+* Per https://github.com/google/pytype/issues/133, pytype needs an importlab upgrade
+* Pre-version 1.8.25
+
+1.8.24
+------
+
+* Revert back to ryu 4.27
+* Revert Ryu from 4.29 to 4.27
+* Update debian/control for ryu 4.29
+* Update ryu from 4.27 to 4.29
+* update chewie library to v0.0.9
+* Revert "Upgrade to Ryu 4.29."
+* Upgrade to Ryu 4.29
+* Update sphinx\_rtd\_theme from 0.4.1 to 0.4.2
+* <0.4.0 style
+* Prometheus 0.4.0 introduces breaking changes to metric naming
+* Switch cisco docs to standarized OpenFlow port number
+* unexpressed VID needs a mask
+* Add of\_unexpected\_packet\_in counter, and don't try to learn from VLANs that are not expressed on a datapath
+* pylint
+* pylint
+* pylint
+* remove print
+* fix
+* Remove outdated deployment map
+* Add note to HPe vendor doc to not configure IPv6 management
+* patch lowlevel network interface calls
+* patch open\_socket
+* update after merge
+* Fix hard coded port assignments in FaucetUntaggedHostPermanentLearnTest test
+* Pre-version 1.8.24
+
+1.8.23
+------
+
+* Revert "Try again to upgrade to pytype 2018.9.26 now using /var/tmp."
+* Some OFAs require minimum idle time so add config check
+* Try again to upgrade to pytype 2018.9.26 now using /var/tmp
+* ND timer config message
+* Implement idle\_eth workaround for broken idle time reset on flow refresh, and test
+* Bail out of pytype early if one fails
+* 2018.9.26 OOMs
+* Avoid /tmp which may be RAM
+* pytype upgrade and use temporary directory
+* Revert "Allow 0-idle on dst rules."
+* Revert "Need idle\_dst in slots."
+* use add\_vlan in valve\_flood when initialising a vlan flood rules
+* initialise VIPs in ValveRouteManagers
+* add add\_vlan function for initialising a vlan in managers
+* tidying and lint
+* Initialise eth\_src table in valve\_host
+* refactor initialise\_tables to use base class
+* create base class for ValveManager objects
+* Need idle\_dst in slots
+* Allow 0-idle on dst rules
+* Initialise flood table in ValveFloodManager
+* Initialise classification table in valve\_pipeline
+* remove unnecessary reference to classification\_table
+* Use valve\_pipeline to manage egress table
+* Pipeline manager manages hosts
+* wait\_for\_route\_as\_flow() needs to be more patient (10s sometimes not enough to wait for unresponsive nexthops while re-resolving during test)
+* Move pytype options to setup.cfg
+* Pipeline manager controls L3 flows
+* FaucetUntaggedHostPermanentLearnTest
+* Revert "delete\_existing always."
+* nd\_neighor\_timeout
