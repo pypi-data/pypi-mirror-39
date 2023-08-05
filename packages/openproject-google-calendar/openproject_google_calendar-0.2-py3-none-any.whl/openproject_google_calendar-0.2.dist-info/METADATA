@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: openproject-google-calendar
+Version: 0.2
+Summary: Export your OpenProject work packages to google calendar
+Home-page: https://github.com/olricson/openproject_google_calendar
+Author: olricson
+Author-email: homermen@hotmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: requests
+Requires-Dist: oauth2client
+
+UNKNOWN
+
+

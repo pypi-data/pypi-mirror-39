@@ -1,0 +1,3 @@
+[console_scripts]
+op2gc = openproject_google_calendar.main:main
+
