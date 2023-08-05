@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: qiq
+Version: 0.3
+Summary: qiq is the thin layer over pip with a few rules.
+Home-page: https://gitlab.com/aptakhin/qiq
+Author: Alexander Ptakhin
+Author-email: me@aptakhin.name
+License: MIT
+Project-URL: Source Code, https://gitlab.com/aptakhin/qiq
+Description: UNKNOWN
+Keywords: pip qiq
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Version Control
+Classifier: Topic :: Utilities
