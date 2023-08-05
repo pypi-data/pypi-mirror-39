@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "incolumepy-clinica",
+  "private_key_id": "95c7132c502892eeef14b8600683487b1f9b545e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDQ6wS2XeCJeqn2\np997uBTc5eqO+J2EGzX3oKKmzD9dMXcdljVu9UIBrGnfky08SIDvbrIRyTw6PE7i\nij68tyKKzZsUc8SUhJAoU9UIOcoZzLCUi2A8G2rm/GKPmu49hPsRb4U/M9X6n7eY\nWtnSTRtGv3y0t80HNzLq9fDoeqktpWM+KCo2VqRHYZOd/mrA5ZpMIzec0Sc5+gpi\nrkjPB5RnAZjtZKHU/NT73ioildQf3VesOO5D6X7mOYiU9DNTT2cLgCzv6jh1lqAM\nV06j0dvAd77TKQvl4/pLIJ1sMwRZVFA8KkNhRLJXPOzZfXvwdpCWfGCgVAF8VMKE\nIqwXlLYpAgMBAAECggEAZXwczGfa6H2lLZPLrII15D5tjCj5/0/mjdVC3aqvBxq9\nxaoPZ8iM2VpDDd+lJDkGJQkNSDWMY6+jFEnagvqlNW7+K9e2wPyKOITModPMuG6l\nwmrYAyrAaddlG2RD4a+E9KnLPPH1umq2mTRcxls9akcfkXwNhTlLqzZwYcYgA3MH\n1BxYV08jW5QTi1OV33TM7XyI+V+xHAVq1e9bi7M0NaVz0PG3QpPrLGW9xiRgH8TF\nfafDCVHdNehwL9pAHvLP4IdE7qM4sDRiDz/iMU+DvL/TE9611h7fXsF4BmHAVot+\nRgLXZV5y+VyFJrtJUpxsmYPaxVtb7Clmhzv+cPibBwKBgQD6lF7IFgjGV/WS0lB6\ntKhzyj7sSU8fddw00IOFHy6iFJ7g68a4JKS3slQgRsEQs5WDSPt0o3xQaSEHXdh1\nJ4OW9GlAhJzc1X2kshbtZ1RVByL+8I2BG3A57VED9dkiMuhIwiYIxiWhEQG9Epvo\nrhD4vbB64qCmYOHUhoqK1M9hlwKBgQDVb/CdBQtQw4hlZcZJBl4HQq3azfO5EVyF\ni3WCQAO6KpVuiI/yij0nX2FS5zRSCfjYdQiZBf5PuKgeRbZB4vdewsl5Q5COhxOO\nS3vpCnWhGPAjQiskh87R1Mmv05N9YbdVcgXC9Qp0a+m3OR/7zjzcsXmGEEB+xTgV\n7DyiWUQePwKBgHsOEd3AtF5zI64Oimc4AOGcGHqBJdIVVya4n13oikYeSke6gcQ8\neoebk6SmGnnRN0NZu+LzxkDW39l2RK6D0SN4s5dziHUKgsE2k/vSGqAG+TCpgVQ9\n3UcVPAvt18vrpBbXAUadyCzo5Sms0dPaZ4s/3EL8uFf8i+qKh87V42HRAoGAYjkx\nshEwM+rISmGb7t9PRmgZOiitkO28dnjHizmKfZI7UrLmC+gyXHw4fb6JBXgxXOv/\nGOz5LBb+x2+tgITC8okRzwyY6f6fsUxrqcN2frzLRm6dDCKzuz0B1Di6F2lwxZHD\ntQSv2wQOepN/dJJkz+uc0WWJSM3aEby16sDJ6GECgYEAmcmK3Vt7rlinoCRgT92m\nA6ftQXj1WfF9YDbWSfFLx0o8kaUC5d/0ObxSLqui6cnHNI/7G31/gDG6a4qhVB1s\n9WNvF62xIlJn/PgXDgNyYISzC0ESyq3RN2EAe4rbCASqq2wNhap2JZcOpp9MFf7/\nmEPUvT5FVA58y4bzwf2zPZw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "incolumepy-clinica@incolumepy-clinica.iam.gserviceaccount.com",
+  "client_id": "106465421849607126719",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/incolumepy-clinica%40incolumepy-clinica.iam.gserviceaccount.com"
+}
