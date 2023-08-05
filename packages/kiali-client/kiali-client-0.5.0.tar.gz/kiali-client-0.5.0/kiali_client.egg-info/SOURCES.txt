@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+kiali/__init__.py
+kiali/api_connector.py
+kiali/client.py
+kiali/swagger.py
+kiali_client.egg-info/PKG-INFO
+kiali_client.egg-info/SOURCES.txt
+kiali_client.egg-info/dependency_links.txt
+kiali_client.egg-info/top_level.txt
+tests/__init__.py
+tests/conftest.py
+tests/test_api_methods.py
+tests/test_api_swagger.py
