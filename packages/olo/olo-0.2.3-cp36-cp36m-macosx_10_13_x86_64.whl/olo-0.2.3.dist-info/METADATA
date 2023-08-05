@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: olo
+Version: 0.2.3
+Summary: ORM with intelligent and elegant cache manager
+Home-page: https://github.com/yetone/olo
+Author: yetone
+Author-email: guanxipeng@douban.com
+License: MIT License
+Keywords: ORM,olo,cache,sqlstore
+Platform: any
+Requires-Dist: blinker (==1.4)
+Requires-Dist: pycryptodomex (==3.6.5)
+Requires-Dist: dill (==0.2.5)
+Requires-Dist: dateparser (==0.3.5)
+Requires-Dist: futures (==3.0.5)
+Requires-Dist: decorator (==4.2.1)
+Requires-Dist: pymysql (==0.9.1)
+
+UNKNOWN
+
+
