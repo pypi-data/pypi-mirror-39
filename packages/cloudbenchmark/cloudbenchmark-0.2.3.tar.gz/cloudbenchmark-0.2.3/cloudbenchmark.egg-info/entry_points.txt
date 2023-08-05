@@ -1,0 +1,4 @@
+[console_scripts]
+cloudbenchmark = cloudbenchmark.main:main
+cloudbenchmark-manager = cloudbenchmark.deploy_manager:main
+
