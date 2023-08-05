@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: exutil
+Version: 0.3.0
+Summary: Utility for managing exercism workflow.
+Home-page: https://github.com/cmccandless/exutil
+Author: Corey McCandless
+Author-email: crm1994@gmail.com
+License: UNKNOWN
+Description: [![Build Status](https://travis-ci.com/cmccandless/exutil.svg?branch=master)](https://travis-ci.com/cmccandless/exutil)[![PyPI version](https://badge.fury.io/py/exutil.svg)](https://badge.fury.io/py/exutil)
+        
+        # exutil
+        
+        Utility for managing exercism workflow.
+        
+        ## Installation
+        
+        `python -m pip install exutil`
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
