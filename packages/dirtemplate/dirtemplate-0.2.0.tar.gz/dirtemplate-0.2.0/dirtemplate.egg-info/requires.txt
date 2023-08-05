@@ -1,0 +1,5 @@
+jinja2
+strictyaml
+hitchbuild>=0.3.3
+pathquery>=0.2.5
+python-slugify
