@@ -1,0 +1,3 @@
+[console_scripts]
+snet = snet_cli:main
+
