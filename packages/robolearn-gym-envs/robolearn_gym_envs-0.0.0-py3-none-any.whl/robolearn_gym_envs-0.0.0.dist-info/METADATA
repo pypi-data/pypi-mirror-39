@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: robolearn-gym-envs
+Version: 0.0.0
+Summary: A python package that contains some OpenAIGym-like robot environments.
+Home-page: UNKNOWN
+Maintainer: Domingo Esteban
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: gym
+Requires-Dist: pybullet
+Requires-Dist: numpy
+Requires-Dist: transforms3d
+Requires-Dist: sympy
+
+UNKNOWN
+
+
