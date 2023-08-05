@@ -1,0 +1,11 @@
+README.md
+setup.py
+prestige_irc/__init__.py
+prestige_irc/commands.py
+prestige_irc/connection.py
+prestige_irc/irc_connection.py
+prestige_irc/message.py
+prestige_irc.egg-info/PKG-INFO
+prestige_irc.egg-info/SOURCES.txt
+prestige_irc.egg-info/dependency_links.txt
+prestige_irc.egg-info/top_level.txt
