@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: todoist-capture
+Version: 1.0.1
+Summary: Capture tasks to your Inbox from command line
+Home-page: https://github.com/egegunes/todoist-capture
+Author: Ege Güneş
+Author-email: egegunes@gmail.com
+License: UNKNOWN
+Description: # Todoist Capture
+        
+        This is a little tool to capture tasks directly from your terminal.
+        
+        ## Installation
+        
+        ```
+        $ pip install --user todoist-capture
+        ```
+        
+        ## Configuration
+        
+        Create a file named ".todoist" in your $HOME.
+        
+        ```
+        [todoist]
+        token=your_todoist_api_access_token
+        ```
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
