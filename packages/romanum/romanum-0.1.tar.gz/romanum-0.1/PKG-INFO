@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: romanum
+Version: 0.1
+Summary: Roman numeral to/from converter scripts
+Home-page: https://github.com/Tulitomaatti/romanum
+Author: Eetu Lampsijärvi
+Author-email: eetu.lampsijarvi@helsinki.fi
+License: UNKNOWN
+Download-URL: https://github.com/Tulitomaatti/romanum
+Description: # Roman numeral conversion tools
+        
+        The scripts (and functions) r2n and n2r will convert roman numerals to integers and natural numbers to roman numerals, respectively. Error handling is nonexistent. 
+        
+        ## Works: 
+        
+        * Conversion to/from integers in standard form with absolute value of 1-4999 or 0, when represented with 'nulla' 
+        * Conversion to/from integers, when the overline in vinculus forms is replaced with parentheses groups. 
+        
+        ## Doesn't work: 
+        
+        * Input validation: **Use -f** and input clean inputs or face errors. 
+        * Decoding some rarer "nonstandard" forms. 
+        
+        ## TODO: 
+        
+        * Decoding vinculus forms to/from LaTeX etc.. 
+        * Nice errors handling / warnings. 
+        * Proper packaging: verify that pip works & register to PyPi 
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Description-Content-Type: text/markdown

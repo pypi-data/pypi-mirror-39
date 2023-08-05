@@ -1,0 +1,12 @@
+README.md
+setup.py
+bin/n2r
+bin/r2n
+romanum/__init__.py
+romanum/num2roman.py
+romanum/roman2num.py
+romanum.egg-info/PKG-INFO
+romanum.egg-info/SOURCES.txt
+romanum.egg-info/dependency_links.txt
+romanum.egg-info/requires.txt
+romanum.egg-info/top_level.txt
