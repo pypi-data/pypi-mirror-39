@@ -1,0 +1,3 @@
+[console_scripts]
+sas2db = sas2db.run:main
+
