@@ -1,0 +1,127 @@
+Metadata-Version: 2.1
+Name: mqtt-codec
+Version: 1.0.1
+Summary: Weapons grade MQTT packet codec.
+Home-page: https://github.com/kcallin/mqtt-codec
+Author: Keegan Callin
+Author-email: kc@kcallin.net
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/kcallin/mqtt-codec/issues
+Project-URL: Documentation, https://mqtt-codec.readthedocs.io/en/latest/
+Project-URL: Source Code, https://github.com/kcallin/mqtt-codec
+Description: ===========
+        mqtt-codec
+        ===========
+        
+        A weapons grade MQTT packet encoder and decoder (codec).
+        
+        
+        Status
+        =======
+        
+        The `mqtt-codec` package is an
+        `MQTT 3.1.1 <http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.pdf>`_
+        packet encoder and decoder (codec).  The library has high test coverage
+        (~94%) and is known to perform well in distributed IoT networks with
+        thousands of nodes.
+        
+        
+        Installation
+        =============
+        
+        The mqtt-codec package can be from `<pypi.org>`_ with
+        `pip <https://pypi.org/project/pip/>`_:
+        
+        .. code-block:: bash
+        
+           pip install mqtt-codec
+        
+        Usage
+        ======
+        
+        An encode/decode cycle looks like this:
+        
+        .. code-block:: python
+        
+           >>> from io import BytesIO
+           >>> from binascii import b2a_hex
+           >>> import mqtt_codec.packet
+           >>> import mqtt_codec.io
+           >>>
+           >>> # Encode a Connect packet
+           >>> will = mqtt_codec.packet.MqttWill(qos=0, topic='hello', message='message', retain=True)
+           >>> connect = mqtt_codec.packet.MqttConnect(client_id='client_id', clean_session=False, keep_alive=0, will=will)
+           >>> with BytesIO() as f:
+           ...   num_bytes_written = connect.encode(f)
+           ...   buf = f.getvalue()
+           ...
+           >>> assert len(buf) == num_bytes_written
+           >>> print('0x{} ({} bytes)'.format(b2a_hex(buf), len(buf)))
+           0x102500044d515454042400000009636c69656e745f6964000568656c6c6f00076d657373616765 (39 bytes)
+           >>>
+           >>> # Decode the connect packet and assert equality.
+           >>> with mqtt_codec.io.BytesReader(buf) as f:
+           ...   num_bytes_read, decoded_connect = connect.decode(f)
+           ...
+           >>> assert len(buf) == num_bytes_written
+           >>> assert connect == decoded_connect
+           >>> print('  Encoded {}'.format(connect))
+             Encoded MqttConnect(client_id='client_id', clean_session=False, keep_alive=0, username=***, password=***, will=MqttWill(topic=hello, payload=0x6d657373616765, retain=True, qos=0))
+           >>> print('= Decoded {}'.format(decoded_connect))
+           = Decoded MqttConnect(client_id=u'client_id', clean_session=False, keep_alive=0, username=***, password=***, will=MqttWill(topic=hello, payload=0x6d657373616765, retain=True, qos=0))
+        
+        
+        Python Requirements
+        ====================
+        
+        The ``mqtt-codec`` project has been tested on Linux against these
+        environments:
+        
+        * Python 2.7
+        * Python 3.4
+        * Python 3.5
+        * Python 3.6
+        * Python 3.7
+        
+        Python versions Python 3.0 - 3.3 may work but are not tested as part of
+        the project continuous integration infrastructure.
+        
+        
+        Library Requirements
+        =====================
+        
+        When running Python versions less than 3.4 the ``enum34`` package is
+        required.  There are no other package requirements.
+        
+        
+        Project Infrastructure
+        =======================
+        
+        The project is coordinated through public infrastructure available at
+        several places:
+        
+        * `Releases (pypi) <https://pypi.org/project/mqtt-codec>`_
+        * `Documentation (readthedocs.io) <https://mqtt-codec.readthedocs.io/en/latest/>`_
+        * `Bug Tracker (github) <https://github.com/kcallin/mqtt-codec/issues>`_
+        * `Code Repository (github) <https://github.com/kcallin/mqtt-codec>`_
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Communications
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=2.7
+Description-Content-Type: text/x-rst
