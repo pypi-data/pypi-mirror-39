@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: mkprofile
+Version: 0.1.0
+Summary: 
+Home-page: https://github.com/macheins/mkprofile
+License: UNKNOWN
+Author: macheins
+Author-email: macheins@users.noreply.github.com
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: MirOS License (MirOS)
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: lxml (>=4.2,<5.0)
+Requires-Dist: pyyaml (>=3.13,<4.0)
+Project-URL: Repository, https://github.com/macheins/mkprofile
+Description-Content-Type: text/markdown
+
+# mkprofile
+
+## Installation
+
+The package is published to the [Python Package Index (PyPI)](https://pypi.org/project/mkprofile/) and may be installed using your favorite installer, e.g.:
+```sh
+pip install mkprofile
+```
+
+## Status & Versioning
+
+Versioning of releases will strictly follow the [Semantic Versioning Specification (SemVer)](https://semver.org).
+
+## Licensing
+
+This project may be licensed under the terms of the [OSI](https://opensource.org/licenses/alphabetical) approved [MirOS License](https://www.mirbsd.org/MirOS-Licence.htm).
+
