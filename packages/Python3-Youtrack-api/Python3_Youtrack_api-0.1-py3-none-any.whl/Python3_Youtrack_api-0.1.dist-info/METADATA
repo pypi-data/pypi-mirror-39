@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: Python3-Youtrack-api
+Version: 0.1
+Summary: Python3 Youtrack api
+Home-page: https://github.com/GranderStark/Python3-Youtrack-api
+Author: Lev Subbotin
+Author-email: grander.stark@yandex.ru
+License: Apache 2.0
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: marshmallow
+
+UNKNOWN
+
+
