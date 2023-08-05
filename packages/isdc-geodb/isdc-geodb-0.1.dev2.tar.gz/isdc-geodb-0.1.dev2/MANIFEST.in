@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+recursive-include geodb/initialdata *
+recursive-include geodb/locale *
+recursive-include geodb/templates *
+recursive-include geodb/migrations *

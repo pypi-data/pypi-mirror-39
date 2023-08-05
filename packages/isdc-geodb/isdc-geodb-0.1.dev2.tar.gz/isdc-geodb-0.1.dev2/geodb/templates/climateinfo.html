@@ -1,0 +1,288 @@
+{% load i18n mathfilters %}
+
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE }}" dir="{{ LANGUAGE_BIDI | yesno:'rtl,ltr' }}">
+<head>
+
+<link href="{{ STATIC_URL }}geonode/css/ext-compatibility.css" rel="stylesheet" />
+<link href="{{ STATIC_URL }}lib/css/custom.css" rel="stylesheet" />
+<style>
+table#info {
+	width:90%;
+	border-top:1px solid #e5eff8;
+	/*border-right:1px solid #e5eff8;*/
+	margin:1em auto;
+	border-collapse:collapse;
+}
+
+table#info td{
+	color:#0D63AD;
+	border-bottom:1px solid #e5eff8;
+	/*border-left:1px solid #e5eff8;*/
+	padding:.3em 1em;
+}
+
+table#info tr.odd td {
+	background:#f7fbff
+}
+
+/*#line_chart1{
+	width: 500 !important;
+	height:250 !important;
+}*/
+
+</style>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+</script>
+
+</head>
+<body>
+
+<table id='info'>
+	<tr>
+		<td>{% trans "Settlement" %}</td>
+		<td><strong>{{name_en}}</strong></td>
+	</tr>
+	<!-- <tr>
+		<td>{% trans "Language" %}</td>
+		<td><strong>{{language_field}}</strong></td>
+	</tr> -->
+	<tr>
+		<td>{% trans "District" %}</td>
+		<td><strong>{{dist_na_en}}</strong></td>
+	</tr>
+	<tr>
+		<td>{% trans "Province" %}</td>
+		<td><strong>{{prov_na_en}}</strong></td>
+	</tr>
+	<tr>
+		<td>{% trans "Elevation" %}</td>
+		<td><strong>{% blocktrans %}{{elevation}} m above sea level{% endblocktrans %}</strong></td>
+	</tr>
+</table>
+
+<div style='width:90%;margin:1em auto;align=left'>
+	{{ temperature_line_chart.as_html }}
+</div>	
+
+<!-- <div style='width:90%;margin:1em auto;align=left'>
+	{{ climatechange_line_chart.as_html }}
+</div> -->
+
+<script type="text/javascript">
+  google.setOnLoadCallback(drawChartline_chart2_default);
+  function drawChartline_chart2_default() {
+  	drawChartline_chart2(1, 'The annual mean temperature');
+  }
+
+  function drawChartline_chart2(tt, text) {
+    var data = google.visualization.arrayToDataTable({{ climatechange_temp_data | safe }});
+    
+    var unit = {
+        'format': '# \u00b0C'
+    };
+
+    if (tt==4 || tt==3) {
+     	unit = {
+	        'format': "#'%'",
+	        // 'minValue': 0,
+	        // 'maxValue': 100,
+	    };
+	} else {
+		unit = {
+	        'format': '# \u00b0C'
+	    };
+	}  
+
+	var options = {
+			// "title": "Climate Change (Temperature)", 
+			"curveType": "function", 
+			"height": 350, 
+			"width": 500, 
+			"legend": "none", 
+			'seriesType': 'bars',
+			'chartArea': {'top':10, 'bottom':90, 'left':50, 'right':25},
+			"bar": {"groupWidth": "95%"},
+			"vAxes": { 
+                0:unit,
+            },
+            'hAxis': {'title': text},
+    }
+	var chart = new google.visualization.ComboChart(document.getElementById('line_chart2'));
+
+	view = new google.visualization.DataView(data);
+	for (var i=1;i<=11;i++){
+		if (i!=tt){
+			view.hideColumns([i]);
+		}
+	}
+    chart.draw(view, options);
+
+    var line = document.createElement("div");
+    line.style.background = "rgb(68, 189, 241)";
+    line.style.width = "2px";
+    line.style.position = "absolute";
+    line.style.left = 110 + "px";
+    line.style.top = 0 + "px";
+    line.style.height = 296 + "px";
+    document.getElementById('line_chart2').childNodes[0].appendChild(line);
+
+    var line = document.createElement("div");
+    line.style.background = "rgb(68, 189, 241)";
+    line.style.width = "2px";
+    line.style.position = "absolute";
+    line.style.left = 292 + "px";
+    line.style.top = 0 + "px";
+    line.style.height = 296 + "px";
+
+    document.getElementById('line_chart2').childNodes[0].appendChild(line);
+
+  }
+
+  function select1(a){
+  	drawChartline_chart2(a.value, a.options[a.selectedIndex].getAttribute("data-text"));
+  }
+
+
+  google.setOnLoadCallback(drawChartline_chart3_default);
+  function drawChartline_chart3_default() {
+  	drawChartline_chart3(1, 'This is the sum of all total monthly precipitation values');
+  }
+
+  function drawChartline_chart3(tt, text) {
+    var data1 = google.visualization.arrayToDataTable({{ climatechange_prec_data | safe }});
+
+    var unit = {
+        'format':"# mm"
+    };
+
+    if (tt==4) {
+     	unit = {
+	        'format': "#'%'",
+	        // 'minValue': 0,
+	        // 'maxValue': 100,
+	    };
+	} else {
+		unit = {
+	        'format':"# mm"
+	    };
+	} 
+
+	var options1 = {
+			// "title": "Climate Change (Precipitation)", 
+			"curveType": "function", 
+			"height": 350, 
+			"width": 500, 
+			"legend": "none", 
+			'seriesType': 'bars',
+			'chartArea': {'top':10, 'bottom':90, 'left':50, 'right':25},
+			"bar": {"groupWidth": "95%"},
+			"vAxes": { 
+                0:unit
+            },
+            'hAxis': {'title': text},
+        }
+	var chart1 = new google.visualization.ComboChart(document.getElementById('line_chart3'));
+
+	view1 = new google.visualization.DataView(data1);
+	for (var i=1;i<=8;i++){
+		if (i!=tt){
+			view1.hideColumns([i]);
+		}
+	}
+    chart1.draw(view1, options1);
+
+    var line = document.createElement("div");
+    line.style.background = "rgb(68, 189, 241)";
+    line.style.width = "2px";
+    line.style.position = "absolute";
+    line.style.left = 110 + "px";
+    line.style.top = 0 + "px";
+    line.style.height = 296 + "px";
+    document.getElementById('line_chart3').childNodes[0].appendChild(line);
+
+    var line = document.createElement("div");
+    line.style.background = "rgb(68, 189, 241)";
+    line.style.width = "2px";
+    line.style.position = "absolute";
+    line.style.left = 292 + "px";
+    line.style.top = 0 + "px";
+    line.style.height = 296 + "px";
+
+    document.getElementById('line_chart3').childNodes[0].appendChild(line);
+
+  }
+
+  function select2(a){
+  	drawChartline_chart3(a.value, a.options[a.selectedIndex].getAttribute("data-text"));
+  } 
+</script>
+
+<div style='width:90%;margin:1em auto;align=left'>
+	<select style='width:90%;margin:1em auto;align=left' onChange="select1(this)">
+		<option value="1" selected="selected" data-text="The annual mean temperature">Annual Mean Temperature</option>
+		<option value="2" data-text="The mean of the monthly temperature ranges (monthly maximum minus monthly minimum). Since the climate data inputs are monthly or averaged months across multiple years, this calculation uses recorded temperature fluctuation within a month to capture diurnal temperature range">Mean Diurnal Range</option>
+		<option value="3" data-text="Isothermality quantifies how large the dayto-night temperatures oscillate relative to the summerto-winter (annual) oscillations">Isothermality</option>
+		<option value="4" data-text="The amount of temperature variation over a given period based on the ratio of the standard deviation of the monthly mean temperatures to the mean monthly temperature">Temperature Seasonality</option>
+		<option value="5" data-text="The maximum monthly temperature occurrence over a given year (time-series) or averaged span of years (normal)">Max Temperature of Warmest Month</option>
+		<option value="6" data-text="The minimum monthly temperature occurrence over a given year (time-series) or averaged span of years (normal)">Min Temperature of Coldest Month</option>
+		<option value="7" data-text="A measure of temperature variation over a given period">Temperature Annual Range</option>
+		<option value="8" data-text="This quarterly index approximates mean temperatures that prevail during the wettest season">Mean Temperature of Wettest Quarter</option>
+		<option value="9" data-text="This quarterly index approximates mean temperatures that prevail during the driest quarter">Mean Temperature of Driest Quarter</option>
+		<option value="10" data-text="This quarterly index approximates mean temperatures that prevail during the warmest quarter">Mean Temperature of Warmest Quarter</option>
+		<option value="11" data-text="This quarterly index approximates mean temperatures that prevail during the coldest quarter">Mean Temperature of Coldest Quarter</option>
+	</select>
+</div>	
+<div id="line_chart2" style='width:90%;margin:1em auto;align=left'></div>
+
+<div style='width:90%;margin:1em auto;align=left'>
+	<select style='width:90%;margin:1em auto;align=left' onChange="select2(this)">
+		<option value="1" selected="selected" data-text="This is the sum of all total monthly precipitation values">Annual Precipitation</option>
+		<option value="2" data-text="This index identifies the total precipitation that prevails during the wettest month">Precipitation of Wettest Month</option>
+		<option value="3" data-text="This index identifies the total precipitation that prevails during the driest month">Precipitation of Driest Month</option>
+		<option value="4" data-text="This is a measure of the variation in monthly precipitation totals over the course of the year. This index is the ratio of the standard deviation of the monthly total precipitation to the mean monthly total precipitation (also known as the coefficient of variation) and is expressed as a percentage">Precipitation Seasonality</option>
+		<option value="5" data-text="This quarterly index approximates total precipitation that prevails during the wettest quarter">Precipitation of Wettest Quarter</option>
+		<option value="6" data-text="This quarterly index approximates total precipitation that prevails during the driest quarter">Precipitation of Driest Quarter</option>
+		<option value="7" data-text="This quarterly index approximates total precipitation that prevails during the warmest quarter">Precipitation of Warmest Quarter</option>
+		<option value="8" data-text="This quarterly index approximates total precipitation that prevails during the coldest quarter">Precipitation of Coldest Quarter</option>
+	</select>
+</div>
+<div id="line_chart3" style='width:90%;margin:1em auto;align=left'></div>
+
+<div class="disc_text">{% blocktrans %}Current Climate data used originates from the CHELSA project, which modeled climate for the period 1979-2013 at a resolution of 1km. CHELSA is using the ERA interim global circulation model from ECMWF.{% endblocktrans %}</div>
+<div class="disc_text">{% blocktrans %}Climate Change data also originates from the CHELSA project, which modelled climate change for the period time periods: 2050 (average for 2041-2060) and 2070 (average for 2061-2080) at a resolution of 1km.It is a downscaled model based upon IPPC5 using the global climate model CM5A-MR (mid resolution version of the IPSL-CM5A Earth system model){% endblocktrans %}</div>
+<div class="disc_text">{% blocktrans %}For each period (2050 and 2070) we provide 3 potential climate change scenarios, using so called RCPs (Representative Concentration Pathways). These predict global average temperature change by 2100 in the range of:{% endblocktrans %}</div>
+<ul class="disc_text">
+  <li>RCP2.6: 0.3 to 1.7 C°</li>
+  <li>RCP4.5  : 1.1 to 2.6 C°</li>
+  <li>RCP8.5: 2.6 to 4.8 C°</li>
+</ul>
+
+<div class="disc_text">{% blocktrans %}The range of variables contain monthly precipitation averages, monthly minimum-maximum and avergage temperature.{% endblocktrans %}</div>
+<div class="disc_text">{% blocktrans %}Furthermore 19 bioclimatic variables are also available, which are for useful for operational planning, agriculture programs and DRR programs focusing on resilience.{% endblocktrans %}</div>
+<ul class="disc_text">
+	<li>Annual Mean Temperature [°C*10]</li>
+	<li>Mean Diurnal Range [°C]</li>
+	<li>Isothermality [°C]</li>
+	<li>Temperature Seasonality [standard deviation]</li>
+  	<li>Max Temperature of Warmest Month [°C]</li>
+	<li>Min Temperature of Coldest Month [°C]</li>
+	<li>Temperature Annual Range [°C]</li>
+	<li>Mean Temperature of Wettest Quarter [°C]</li>
+	<li>Mean Temperature of Driest Quarter [°C]</li>
+	<li>Mean Temperature of Warmest Quarter [°C]</li>
+	<li>Mean Temperature of Coldest Quarter [°C]</li>
+	<li>Annual Precipitation [mm/year]</li>
+	<li>Precipitation of Wettest Month [mm/month]</li>
+	<li>Precipitation of Driest Month [mm/month]</li>
+	<li>Precipitation Seasonality [coefficient of variation]</li>
+	<li>Precipitation of Wettest Quarter [mm/quarter]</li>
+	<li>Precipitation of Driest Quarter [mm/quarter]</li>
+	<li>Precipitation of Warmest Quarter [mm/quarter]</li>
+	<li>Precipitation of Coldest Quarter [mm/quarter]</li>
+</ul>
+</body>
+</html>

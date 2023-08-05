@@ -1,0 +1,1096 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-22 15:05+0700\n"
+"PO-Revision-Date: 2017-02-20 09:24+0430\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa_AF\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+
+#: geo_calc.py:53 geo_calc.py:110
+msgid "Custom Selection"
+msgstr "انتخاب دلخواه"
+
+#: geo_calc.py:54
+msgid "Select provinces"
+msgstr "انتخاب ولایات "
+
+#: geo_calc.py:77 geo_calc.py:78 geo_calc.py:87 geo_calc.py:99
+msgid "Afghanistan"
+msgstr "افغانستان"
+
+#: geo_calc.py:79
+msgid "Select province"
+msgstr "انتخاب ولایت "
+
+#: geo_calc.py:90
+msgid "Select district"
+msgstr "انتخاب ولسوالی "
+
+#: geo_calc.py:206
+msgid "Number of Incident by Incident Type"
+msgstr "تعداد حادثه نظر به نوع حادثه "
+
+#: geo_calc.py:208 geo_calc.py:283
+msgid "Incidents"
+msgstr "حوادث "
+
+#: geo_calc.py:216
+msgid "Number of dead casualties by Incident Type"
+msgstr "تعداد تلفات کشته شده نظر به نوع حادثه "
+
+#: geo_calc.py:218 geo_calc.py:293
+msgid "Dead"
+msgstr "کشته "
+
+#: geo_calc.py:226
+msgid "Number of injured casualties by Incident Type"
+msgstr "تعداد تلفات زخمی شده نظر به نوع حادثه "
+
+#: geo_calc.py:228 templates/earthquakeInfo.html:186
+msgid "Violent"
+msgstr "شدیداً زخمی"
+
+#: geo_calc.py:236
+msgid "Number of affected person by Incident Type"
+msgstr "تعداد افراد آسیب دیده نظر به نوع حادثه "
+
+#: geo_calc.py:238 geo_calc.py:303 geo_calc.py:313
+msgid "Injured"
+msgstr "زخمی  "
+
+#: geo_calc.py:281
+msgid "Number of Incident by Incident Target"
+msgstr "تعداد حادثه نظر به هدف حادثه"
+
+#: geo_calc.py:291
+msgid "Number of dead casualties by Incident Target"
+msgstr "تعداد تلفات کشته شده نظر به هدف حادثه"
+
+#: geo_calc.py:301
+msgid "Number of injured casualties by Incident Target"
+msgstr "تعداد تلفات زخمی شده نظر به هدف حادثه"
+
+#: geo_calc.py:311
+msgid "Number of affected person by Incident Target"
+msgstr "تعداد اشخاص آسیب دیده نظر به هدف حادثه"
+
+#: geo_calc.py:1070
+msgid "Population with GSM coverage"
+msgstr "نفوس تحت پوشش خدمات موبایل(GSM) "
+
+#: geo_calc.py:1071
+msgid "Population without GSM coverage"
+msgstr "نفوس بدون پوشش خدمات موبایل(GSM) "
+
+#: geo_calc.py:1076
+msgid "Area with GSM coverage"
+msgstr "مساحت تحت پوشش خدمات موبایل (GSM) "
+
+#: geo_calc.py:1077
+msgid "Area without GSM coverage"
+msgstr "مساحت بدون پوشش خدمات موبایل (GSM) "
+
+#: geo_calc.py:1082 geo_calc.py:1096 geo_calc.py:1109 geo_calc.py:1122
+#: geo_calc.py:1135 geo_calc.py:1148 geo_calc.py:1161 geo_calc.py:1174
+msgid "< 1 h"
+msgstr "< 1 h"
+
+#: geo_calc.py:1083 geo_calc.py:1097 geo_calc.py:1110 geo_calc.py:1123
+#: geo_calc.py:1136 geo_calc.py:1149 geo_calc.py:1162 geo_calc.py:1175
+msgid "< 2 h"
+msgstr "< 2 h"
+
+#: geo_calc.py:1084 geo_calc.py:1098 geo_calc.py:1111 geo_calc.py:1124
+#: geo_calc.py:1137 geo_calc.py:1150 geo_calc.py:1163 geo_calc.py:1176
+msgid "< 3 h"
+msgstr "< 3 h"
+
+#: geo_calc.py:1085 geo_calc.py:1099 geo_calc.py:1112 geo_calc.py:1125
+#: geo_calc.py:1138 geo_calc.py:1151 geo_calc.py:1164 geo_calc.py:1177
+msgid "< 4 h"
+msgstr "< 4 h"
+
+#: geo_calc.py:1086 geo_calc.py:1100 geo_calc.py:1113 geo_calc.py:1126
+#: geo_calc.py:1139 geo_calc.py:1152 geo_calc.py:1165 geo_calc.py:1178
+msgid "< 5 h"
+msgstr "< 5 h"
+
+#: geo_calc.py:1087 geo_calc.py:1101 geo_calc.py:1114 geo_calc.py:1127
+#: geo_calc.py:1140 geo_calc.py:1153 geo_calc.py:1166 geo_calc.py:1179
+msgid "< 6 h"
+msgstr "< 6 h"
+
+#: geo_calc.py:1088 geo_calc.py:1102 geo_calc.py:1115 geo_calc.py:1128
+#: geo_calc.py:1141 geo_calc.py:1154 geo_calc.py:1167 geo_calc.py:1180
+msgid "< 7 h"
+msgstr "< 7 h"
+
+#: geo_calc.py:1089 geo_calc.py:1103 geo_calc.py:1116 geo_calc.py:1129
+#: geo_calc.py:1142 geo_calc.py:1155 geo_calc.py:1168 geo_calc.py:1181
+msgid "< 8 h"
+msgstr "< 8 h"
+
+#: geo_calc.py:1090 geo_calc.py:1104 geo_calc.py:1117 geo_calc.py:1130
+#: geo_calc.py:1143 geo_calc.py:1156 geo_calc.py:1169 geo_calc.py:1182
+msgid "> 8 h"
+msgstr "> 8 h"
+
+#: geo_calc.py:1757
+msgid "landcover type"
+msgstr "نوع پوشش زمین"
+
+#: geo_calc.py:1757
+msgid "population"
+msgstr "نفوس "
+
+#: geo_calc.py:1757
+msgid "area (km2)"
+msgstr "مساحت (کیلومتر مربع)"
+
+#: geo_calc.py:1758
+msgid "Built-up"
+msgstr "ساختمانی"
+
+#: geo_calc.py:1759
+msgid "Cultivated"
+msgstr "زراعتی "
+
+#: geo_calc.py:1760
+msgid "Barren/Rangeland"
+msgstr "بی ثمر/علف زار "
+
+#: geo_calc.py:1765
+msgid "Landcover Population and area overview"
+msgstr "نفوس پوشش زمین و بررسی اجمالی منطقه"
+
+#: geo_calc.py:1774 geo_calc.py:1807 geo_calc.py:1839
+msgid "Percentage"
+msgstr "فیصدی"
+
+#: geo_calc.py:1780
+msgid "percentages from total population and area"
+msgstr "فیصدی از مجموع نفوس و مساحت "
+
+#: geo_calc.py:1786
+msgid "health facility type"
+msgstr "نوع امکانات صحی "
+
+#: geo_calc.py:1786
+msgid "percent of health facility"
+msgstr "فیصدی امکانات صحی "
+
+#: geo_calc.py:1787
+msgid "H1"
+msgstr "H1"
+
+#: geo_calc.py:1788
+msgid "H2"
+msgstr "H2"
+
+#: geo_calc.py:1789
+msgid "H3"
+msgstr "H3"
+
+#: geo_calc.py:1790
+msgid "CHC"
+msgstr "CHC"
+
+#: geo_calc.py:1791
+msgid "BHC"
+msgstr "BHC"
+
+#: geo_calc.py:1792
+msgid "SHC"
+msgstr "SHC"
+
+#: geo_calc.py:1793
+msgid "Others"
+msgstr "دیگران"
+
+#: geo_calc.py:1798
+msgid "Health facilities overview"
+msgstr "بررسی اجمالی امکانات صحی "
+
+#: geo_calc.py:1813
+msgid "percentages from total health facilities"
+msgstr "فیصدی از مجموع امکانات صحی "
+
+#: geo_calc.py:1817
+msgid "road network type"
+msgstr "نوع شبکه سرک ها"
+
+#: geo_calc.py:1817
+msgid "percent of road network"
+msgstr "فیصدی شبکه سرک ها "
+
+#: geo_calc.py:1818
+msgid "Highway"
+msgstr "شاهراه"
+
+#: geo_calc.py:1819
+msgid "Primary"
+msgstr "اصلی"
+
+#: geo_calc.py:1820
+msgid "Secondary"
+msgstr "فرعی "
+
+#: geo_calc.py:1821
+msgid "Tertiary"
+msgstr "نیمه فرعی"
+
+#: geo_calc.py:1822
+msgid "Residential"
+msgstr "مسکونی"
+
+#: geo_calc.py:1823
+msgid "Track"
+msgstr "جاده"
+
+#: geo_calc.py:1824
+msgid "Path"
+msgstr "مسیر"
+
+#: geo_calc.py:1825
+msgid "River crossing"
+msgstr "عبور از دریا "
+
+#: geo_calc.py:1826
+msgid "Bridge"
+msgstr "پل "
+
+#: geo_calc.py:1830
+msgid "Road network overview"
+msgstr "بررسی اجمالی شبکه سرک ها"
+
+#
+#: geo_calc.py:1845
+msgid "percentages from total length of road network"
+msgstr "فیصدی از مجموع طول شبکه سرک ها"
+
+#: geo_calc.py:2255
+msgid "Water body and marshland"
+msgstr "آب ایستاده و باتلاق"
+
+#: views.py:1150
+msgid "Month"
+msgstr ""
+
+#: views.py:1152
+msgid "Jan"
+msgstr ""
+
+#: views.py:1153
+msgid "Feb"
+msgstr ""
+
+#: views.py:1154
+msgid "Mar"
+msgstr ""
+
+#: views.py:1155
+msgid "Apr"
+msgstr ""
+
+#: views.py:1156
+msgid "May"
+msgstr ""
+
+#: views.py:1157
+msgid "Jun"
+msgstr ""
+
+#: views.py:1158
+msgid "Jul"
+msgstr ""
+
+#: views.py:1159
+msgid "Aug"
+msgstr ""
+
+#: views.py:1160
+msgid "Sep"
+msgstr ""
+
+#: views.py:1161
+msgid "Oct"
+msgstr ""
+
+#: views.py:1162
+msgid "Nov"
+msgstr ""
+
+#: views.py:1163
+msgid "Dec"
+msgstr ""
+
+#: views.py:1165
+msgid "Snow Cover Calendar"
+msgstr ""
+
+#: views.py:1165
+msgid "No Snow"
+msgstr ""
+
+#
+#: views.py:1165
+msgid "Very low"
+msgstr "بسیار قوی"
+
+#: views.py:1165 views.py:1472 views.py:1481 views.py:1503
+msgid "Low"
+msgstr ""
+
+#
+#: views.py:1165
+msgid "Average"
+msgstr " پوشش خدمات موبایل (GSM) "
+
+#
+#: views.py:1165 views.py:1472 views.py:1483 views.py:1505
+msgid "High"
+msgstr "زیاد"
+
+#
+#: views.py:1165
+msgid "Very high"
+msgstr "بسیار زیاد"
+
+#
+#: views.py:1316
+msgid "# of Population"
+msgstr "مجموع نفوس"
+
+#
+#: views.py:1316 views.py:1317 views.py:1484 views.py:1499 views.py:1506
+#: views.py:1521
+msgid "percentage"
+msgstr "فیصدی"
+
+#: views.py:1317
+msgid "# of Area (KM2)"
+msgstr ""
+
+#
+#: views.py:1472
+msgid "Very Low"
+msgstr "بسیار قوی"
+
+#: views.py:1472 views.py:1482 views.py:1504 templates/earthquakeInfo.html:166
+msgid "Moderate"
+msgstr "متوسط"
+
+#
+#: views.py:1472
+msgid "Very High"
+msgstr "بسیار زیاد"
+
+#: views.py:1472 templates/earthquakeInfo.html:191
+msgid "Extreme"
+msgstr "شدید"
+
+#: views.py:1472
+msgid "Population at flood risk"
+msgstr ""
+
+#
+#: views.py:1472
+msgid "Population"
+msgstr "نفوس "
+
+#: views.py:1474
+msgid "River Flood"
+msgstr ""
+
+#: views.py:1475
+msgid "Flash Flood"
+msgstr ""
+
+#
+#: views.py:1477
+msgid "Number of population"
+msgstr "نفوس "
+
+#: views.py:1477
+msgid "Flood Prediction Exposure"
+msgstr ""
+
+#: views.py:1480 views.py:1502
+msgid "Flood Risk"
+msgstr ""
+
+#: views.py:1484
+msgid "Flood Risk Population Exposure"
+msgstr ""
+
+#
+#: views.py:1487 views.py:1509
+msgid "Lancover Type"
+msgstr "نوع پوشش زمین"
+
+#: views.py:1488 views.py:1510
+msgid "water body"
+msgstr ""
+
+#
+#: views.py:1489 views.py:1511
+msgid "barren land"
+msgstr "بی ثمر/علف زار "
+
+#
+#: views.py:1490 views.py:1512
+msgid "built up"
+msgstr "ساختمانی"
+
+#: views.py:1491 views.py:1513
+msgid "fruit trees"
+msgstr ""
+
+#: views.py:1492 views.py:1514
+msgid "irrigated agricultural"
+msgstr ""
+
+#: views.py:1493 views.py:1515
+msgid "permanent snow"
+msgstr ""
+
+#: views.py:1494 views.py:1516
+msgid "rainfeld agricultural"
+msgstr ""
+
+#
+#: views.py:1495 views.py:1517
+msgid "rangeland"
+msgstr "بی ثمر/علف زار "
+
+#
+#: views.py:1496 views.py:1518
+msgid "sandcover"
+msgstr "نوع پوشش زمین"
+
+#: views.py:1497 views.py:1519
+msgid "vineyards"
+msgstr ""
+
+#: views.py:1498 views.py:1520
+msgid "forest"
+msgstr ""
+
+#: views.py:1499
+msgid "Flood Risk Population Exposure by Landcover type"
+msgstr ""
+
+#: views.py:1506
+msgid "Flood Risk Area Exposure"
+msgstr ""
+
+#: views.py:1521
+msgid "Flood Risk Area Exposure by Landcover type"
+msgstr ""
+
+#: templates/accessInfo.html:58 templates/earthquakeInfo.html:47
+#: templates/floodInfo.html:64 templates/generalInfo.html:51
+#: templates/snowInfo.html:46
+msgid "Settlement"
+msgstr "قریه "
+
+#: templates/accessInfo.html:62 templates/earthquakeInfo.html:51
+#: templates/floodInfo.html:68 templates/generalInfo.html:55
+#: templates/snowInfo.html:50
+msgid "Language"
+msgstr "زبان"
+
+#: templates/accessInfo.html:66 templates/earthquakeInfo.html:55
+#: templates/floodInfo.html:72 templates/generalInfo.html:59
+#: templates/snowInfo.html:54
+msgid "District"
+msgstr "ولسوالی "
+
+#: templates/accessInfo.html:70 templates/earthquakeInfo.html:59
+#: templates/floodInfo.html:76 templates/generalInfo.html:63
+#: templates/snowInfo.html:58
+msgid "Province"
+msgstr " ولایت "
+
+#: templates/accessInfo.html:74
+msgid "GSM Coverage"
+msgstr " پوشش خدمات موبایل (GSM) "
+
+#: templates/accessInfo.html:78
+msgid "Closest Road"
+msgstr "نزدیکترین سرک"
+
+#: templates/accessInfo.html:79
+#, python-format
+msgid "Travel time : %(cl_road_time)s"
+msgstr "زمان سفر :%(cl_road_time)s"
+
+#: templates/accessInfo.html:80
+#, python-format
+msgid "Distance : %(cl_road_distance)s"
+msgstr "فاصله :  %(cl_road_distance)s"
+
+#: templates/accessInfo.html:84
+msgid "Closest Airport"
+msgstr "نزدیکترین میدان هوایی"
+
+#: templates/accessInfo.html:85
+#, python-format
+msgid "%(cl_airport_name)s"
+msgstr "%(cl_airport_name)s"
+
+#: templates/accessInfo.html:86
+#, python-format
+msgid "Travel time : %(cl_airport_time)s"
+msgstr "زمان سفر : %(cl_airport_time)s"
+
+#: templates/accessInfo.html:87
+#, python-format
+msgid "Distance : %(cl_airport_distance)s"
+msgstr "فاصله : %(cl_airport_distance)s"
+
+#: templates/accessInfo.html:92
+msgid "Closest Province Capital"
+msgstr "نزدیکترین مرکز ولایتی"
+
+#: templates/accessInfo.html:93
+#, python-format
+msgid "%(cl_prov_cap_name)s"
+msgstr "%(cl_prov_cap_name)s"
+
+#: templates/accessInfo.html:94
+#, python-format
+msgid "Province : %(cl_prov_cap_parent)s "
+msgstr "ولایت :  %(cl_prov_cap_parent)s "
+
+#: templates/accessInfo.html:95
+#, python-format
+msgid "Travel time : %(cl_prov_cap_time)s"
+msgstr "زمان سفر : %(cl_prov_cap_time)s"
+
+#: templates/accessInfo.html:96
+#, python-format
+msgid "Distance : %(cl_prov_cap_distance)s"
+msgstr "فاصله : %(cl_prov_cap_distance)s"
+
+#: templates/accessInfo.html:101
+msgid "Its Province Capital"
+msgstr "مرکز ولایتی"
+
+#: templates/accessInfo.html:102
+#, python-format
+msgid "%(it_prov_cap_name)s"
+msgstr "%(it_prov_cap_name)s"
+
+#: templates/accessInfo.html:103
+#, python-format
+msgid "Travel time : %(it_prov_cap_time)s"
+msgstr "زمان سفر :  %(it_prov_cap_time)s"
+
+#: templates/accessInfo.html:104
+#, python-format
+msgid "Distance : %(it_prov_cap_distance)s"
+msgstr "فاصله : %(it_prov_cap_distance)s"
+
+#: templates/accessInfo.html:109
+msgid "Closest District Capital"
+msgstr "نزدیکترین مرکز ولسوالی"
+
+#: templates/accessInfo.html:110
+#, python-format
+msgid "%(cl_dist_cap_name)s"
+msgstr "%(cl_dist_cap_name)s"
+
+#: templates/accessInfo.html:111
+#, python-format
+msgid "Province : %(cl_dist_cap_parent)s "
+msgstr "ولایت :  %(cl_dist_cap_parent)s "
+
+#: templates/accessInfo.html:112
+#, python-format
+msgid "Travel time     : %(cl_dist_cap_time)s"
+msgstr "زمان سفر : %(cl_dist_cap_time)s"
+
+#: templates/accessInfo.html:113
+#, python-format
+msgid "Distance : %(cl_dist_cap_distance)s"
+msgstr "فاصله : %(cl_dist_cap_distance)s"
+
+#: templates/accessInfo.html:118
+msgid "Its District Capital"
+msgstr "مرکز ولسوالی"
+
+#: templates/accessInfo.html:119
+#, python-format
+msgid "%(it_dist_cap_name)s"
+msgstr "%(it_dist_cap_name)s"
+
+#: templates/accessInfo.html:120
+#, python-format
+msgid "Travel time     : %(it_dist_cap_time)s"
+msgstr "زمان سفر : %(it_dist_cap_time)s"
+
+#: templates/accessInfo.html:121
+#, python-format
+msgid "Distance : %(it_dist_cap_distance)s"
+msgstr "فاصله : %(it_dist_cap_distance)s"
+
+#: templates/accessInfo.html:126
+msgid "Closest Health Facility (Tier 1)"
+msgstr "نزدیکترین امکانات صحی (ردیف اول)"
+
+#: templates/accessInfo.html:127
+msgid "- National (H1)"
+msgstr "- ملی (H1)"
+
+#: templates/accessInfo.html:128
+msgid "- Provincial (H2)"
+msgstr "- ولایتی (H2)"
+
+#: templates/accessInfo.html:129
+msgid "- District (H3)"
+msgstr "-ولسوالی (H3)"
+
+#: templates/accessInfo.html:131
+#, python-format
+msgid "%(t1_hf_name)s"
+msgstr "%(t1_hf_name)s"
+
+#: templates/accessInfo.html:132
+#, python-format
+msgid "Province : %(t1_hf_prov_parent)s"
+msgstr "ولایت : %(t1_hf_prov_parent)s"
+
+#: templates/accessInfo.html:133
+#, python-format
+msgid "District : %(t1_hf_dist_parent)s "
+msgstr "ولسوالی : %(t1_hf_dist_parent)s "
+
+#: templates/accessInfo.html:134
+#, python-format
+msgid "Travel time     : %(t1_hf_time)s"
+msgstr "زمان سفر :  %(t1_hf_time)s"
+
+#: templates/accessInfo.html:135
+#, python-format
+msgid "Distance : %(t1_hf_distance)s"
+msgstr "فاصله : %(t1_hf_distance)s"
+
+#: templates/accessInfo.html:140
+msgid "Closest Health Facility (Tier 2)"
+msgstr "نزدیکترین امکانات صحی (ردیف دوم)"
+
+#: templates/accessInfo.html:141
+msgid "- Comprehensive Health Center (CHC)"
+msgstr "مرکز صحی جامع (CHC)"
+
+#: templates/accessInfo.html:143
+#, python-format
+msgid "%(t2_hf_name)s"
+msgstr "%(t2_hf_name)s"
+
+#: templates/accessInfo.html:144
+#, python-format
+msgid "Province : %(t2_hf_prov_parent)s "
+msgstr "ولایت : %(t2_hf_prov_parent)s "
+
+#: templates/accessInfo.html:145
+#, python-format
+msgid "District : %(t2_hf_dist_parent)s "
+msgstr "ولسوالی : %(t2_hf_dist_parent)s "
+
+#: templates/accessInfo.html:146
+#, python-format
+msgid "Travel time     : %(t2_hf_time)s"
+msgstr "زمان سفر : %(t2_hf_time)s"
+
+#: templates/accessInfo.html:147
+#, python-format
+msgid "Distance : %(t2_hf_distance)s"
+msgstr "فاصله : %(t2_hf_distance)s"
+
+#: templates/accessInfo.html:152
+msgid "Closest Health Facility (Tier 3)"
+msgstr "نزدیکترین امکانات صحی (ردیف سوم)"
+
+#: templates/accessInfo.html:153
+msgid "- Basic Health Center (BHC)"
+msgstr "مرکز صحی عمومی (BHC)"
+
+#: templates/accessInfo.html:154
+msgid "- Sub Health Center (SHC)"
+msgstr "مراکز صحی فرعی (SHC)"
+
+#: templates/accessInfo.html:156
+#, python-format
+msgid "%(t3_hf_name)s"
+msgstr "%(t3_hf_name)s"
+
+#: templates/accessInfo.html:157
+#, python-format
+msgid "Province : %(t3_hf_prov_parent)s "
+msgstr "ولایت : %(t3_hf_prov_parent)s "
+
+#: templates/accessInfo.html:158
+#, python-format
+msgid "District : %(t3_hf_dist_parent)s "
+msgstr "ولسوالی :  %(t3_hf_dist_parent)s "
+
+#: templates/accessInfo.html:159
+#, python-format
+msgid "Travel time     : %(t3_hf_time)s"
+msgstr "زمان سفر : %(t3_hf_time)s"
+
+#: templates/accessInfo.html:160
+#, python-format
+msgid "Distance : %(t3_hf_distance)s"
+msgstr "فاصله : %(t3_hf_distance)s"
+
+#: templates/earthquakeInfo.html:63 templates/floodInfo.html:80
+#: templates/generalInfo.html:67
+msgid "Elevation"
+msgstr "ارتفاع"
+
+#: templates/earthquakeInfo.html:64 templates/floodInfo.html:81
+#: templates/generalInfo.html:68
+#, python-format
+msgid "%(elevation)s m above sea level"
+msgstr "ارتفاع از سطح بحر %(elevation)s متر "
+
+#: templates/earthquakeInfo.html:67 templates/floodInfo.html:84
+#: templates/generalInfo.html:71
+msgid "Area"
+msgstr "مساحت"
+
+#: templates/earthquakeInfo.html:68 templates/floodInfo.html:85
+#: templates/generalInfo.html:71
+msgid "km<sup>2</sup>"
+msgstr "کیلومتر مربع"
+
+#: templates/earthquakeInfo.html:71 templates/floodInfo.html:88
+#: templates/generalInfo.html:74
+msgid "Total Population"
+msgstr "مجموع نفوس"
+
+#: templates/earthquakeInfo.html:72 templates/floodInfo.html:89
+#, python-format
+msgid "%(vuid_population_landscan)s"
+msgstr "%(vuid_population_landscan)s"
+
+#: templates/earthquakeInfo.html:76
+msgid "Earthquake Hazard Risk"
+msgstr "خطر زلزله"
+
+#: templates/earthquakeInfo.html:80 templates/earthquakeInfo.html.py:107
+msgid "II-III Weak"
+msgstr "II-III ضعیف"
+
+#: templates/earthquakeInfo.html:81 templates/earthquakeInfo.html.py:108
+msgid "IV Light"
+msgstr "IV سبک"
+
+#: templates/earthquakeInfo.html:82 templates/earthquakeInfo.html.py:109
+msgid "V Moderate"
+msgstr "V متوسط"
+
+#: templates/earthquakeInfo.html:83 templates/earthquakeInfo.html.py:110
+msgid "VI Strong"
+msgstr "VI قوی"
+
+#: templates/earthquakeInfo.html:84 templates/earthquakeInfo.html.py:111
+msgid "VII Very Strong"
+msgstr "VII بسیار قوی"
+
+#: templates/earthquakeInfo.html:85 templates/earthquakeInfo.html.py:112
+msgid "VIII Severe"
+msgstr "VIII شدید"
+
+#
+#: templates/earthquakeInfo.html:86 templates/earthquakeInfo.html.py:113
+msgid "IX Violent"
+msgstr "IX تند"
+
+#: templates/earthquakeInfo.html:87 templates/earthquakeInfo.html.py:114
+msgid "X+ Extreme"
+msgstr "X + بسیار شدید "
+
+#: templates/earthquakeInfo.html:90
+#, python-format
+msgid "%(sic_1)s"
+msgstr "%(sic_1)s"
+
+#: templates/earthquakeInfo.html:91
+#, python-format
+msgid "%(sic_2)s"
+msgstr "%(sic_2)s"
+
+#: templates/earthquakeInfo.html:92
+#, python-format
+msgid "%(sic_3)s"
+msgstr "%(sic_3)s"
+
+#: templates/earthquakeInfo.html:93
+#, python-format
+msgid "%(sic_4)s"
+msgstr "%(sic_4)s"
+
+#: templates/earthquakeInfo.html:94
+#, python-format
+msgid "%(sic_5)s"
+msgstr "%(sic_5)s"
+
+#: templates/earthquakeInfo.html:95
+#, python-format
+msgid "%(sic_6)s"
+msgstr "%(sic_6)s"
+
+#: templates/earthquakeInfo.html:96
+#, python-format
+msgid "%(sic_7)s"
+msgstr "%(sic_7)s"
+
+#: templates/earthquakeInfo.html:97
+#, python-format
+msgid "%(sic_8)s"
+msgstr "%(sic_8)s"
+
+#: templates/earthquakeInfo.html:100
+msgid ""
+"<sup>*</sup> Seismic intensity and description of potential damage (USGS, "
+"2007)<br/>\n"
+"Peak Horizontal Acceleration with 2 Percent Probability of Exceedance in 50 "
+"years<sup>**</sup>"
+msgstr ""
+"<SUP> * </ SUP> شدت زمین لرزه و شرح آسیب احتمالی (USGS، 2007) از<br/>\n"
+"شتاب افقی قله با احتمال 2 درصد در 50 سال<sup>**</sup>"
+
+#: templates/earthquakeInfo.html:103
+msgid "Latest 20 earthquakes :"
+msgstr "20 آخرین زلزله:"
+
+#: templates/earthquakeInfo.html:117
+msgid "Magnitude"
+msgstr "مگنیتود"
+
+#: templates/earthquakeInfo.html:132
+#, python-format
+msgid "%(item.magnitude)s M"
+msgstr "%(item.magnitude)s M"
+
+#: templates/earthquakeInfo.html:137
+msgid "Description :"
+msgstr "شرح :"
+
+#: templates/earthquakeInfo.html:140
+msgid "Intensity"
+msgstr "شدت"
+
+#: templates/earthquakeInfo.html:141
+msgid "Shaking"
+msgstr "تکان"
+
+#: templates/earthquakeInfo.html:142
+msgid "Description/Damage"
+msgstr "توضیحات / آسیب"
+
+#: templates/earthquakeInfo.html:145
+msgid "I"
+msgstr "I"
+
+#: templates/earthquakeInfo.html:146
+msgid "Not felt"
+msgstr "نا محسوس"
+
+#: templates/earthquakeInfo.html:147
+msgid "Not felt except by a very few under especially favorable conditions."
+msgstr "به جز از یک تعداد مردم در شرایط خاص احساس نمیشود."
+
+#: templates/earthquakeInfo.html:150
+msgid "II"
+msgstr "II"
+
+#: templates/earthquakeInfo.html:151 templates/earthquakeInfo.html.py:156
+msgid "Weak"
+msgstr "ضعیف"
+
+#: templates/earthquakeInfo.html:152
+msgid ""
+"Felt only by a few persons at rest,especially on upper floors of buildings."
+msgstr ""
+" تنها توسط بعضی از افراد در حالت افتیده احساس میشود ،به خصوص در طبقات فوقانی "
+"ساختمان."
+
+#: templates/earthquakeInfo.html:155
+msgid "III"
+msgstr "III"
+
+#: templates/earthquakeInfo.html:157
+msgid ""
+"Felt quite noticeably by persons indoors, especially on upper floors of "
+"buildings. Many people do not recognize it as an earthquake. Standing motor "
+"cars may rock slightly. Vibrations similar to the passing of a truck. "
+"Duration estimated."
+msgstr ""
+"توسط افراد داخل خانه کاملا  احساس میشود، به خصوص در طبقات فوقانی ساختمان. "
+"بسیاری از مردم آن را به عنوان یک زلزله به رسمیت نمی شناسد. مثل ایستاده شدن "
+"موتر بزرگ مملو از سنگ یا لرزش هنگام عبور یک موتر باربری. مدت زمان برآورد شده "
+"است."
+
+#: templates/earthquakeInfo.html:160
+msgid "IV"
+msgstr "IV"
+
+#: templates/earthquakeInfo.html:161
+msgid "Light"
+msgstr "سُبک"
+
+#: templates/earthquakeInfo.html:162
+msgid ""
+"Felt indoors by many, outdoors by few during the day. At night, some "
+"awakened. Dishes, windows, doors disturbed; walls make cracking sound. "
+"Sensation like heavy truck striking building. Standing motor cars rocked "
+"noticeably."
+msgstr ""
+"در داخل خانه توسط زیادی از مردم  و در بیرون از خانه توسط کم از مردم در روز "
+"احساس میشود ، و از طرف شب تعداد از مردم با شنیدن صدای ظروف ،کلکین ها، دروازه "
+"ها و شکستگی دیوار های به صدا در آمده بیدار میشود. احساس آن مانند موترهای "
+"باربری سنگین که با یک آپارتمان تصادم کنند.لرزیدن ماشین موتر هنگام ابستاده "
+"شدن که احساس میشود بیدار میشود و شکستگی صدا دیوال.احساس مانند کامیون های "
+"سنگین در هنگام ضربه زدن به ساختمان ویا ایستاده شدن موتر در بالای سنک بزرگ ."
+
+#: templates/earthquakeInfo.html:165
+msgid "V"
+msgstr "V"
+
+#: templates/earthquakeInfo.html:167
+msgid ""
+"Felt by nearly everyone; many awakened. Some dishes, windows broken. "
+"Unstable objects overturned. Pendulum clocks may stop."
+msgstr ""
+" تقریبا توسط همه احساس میشود ؛بیدار شدن برخی از خواب، بعضی ظروف، پنجره شکسته "
+"شده. اشیاء ناپایدار چپه گردیده و ساعتهای آونگ ممکن است متوقف شود."
+
+#: templates/earthquakeInfo.html:170
+msgid "VI"
+msgstr "VI"
+
+#: templates/earthquakeInfo.html:171
+msgid "Strong"
+msgstr "قوی"
+
+#: templates/earthquakeInfo.html:172
+msgid ""
+"Felt by all, many frightened. Some heavy furniture moved; a few instances of "
+"fallen plaster. Damage slight."
+msgstr ""
+"توسط همه احساس میشود ،برخی وحشت زده میشوند، و فرنیچر های بزرگ جای شان تغییر "
+"خورده ،و برخی از پلستر های روی دیوار پارچه شده ،آسیب جزیی به بار میاورد "
+
+#: templates/earthquakeInfo.html:175
+msgid "VII"
+msgstr "VII"
+
+#: templates/earthquakeInfo.html:176
+msgid "Very strong"
+msgstr "بسیار قوی"
+
+#: templates/earthquakeInfo.html:177
+msgid ""
+"Damage negligible in buildings of good design and construction; slight to "
+"moderate in well-built ordinary structures; considerable damage in poorly "
+"built or badly designed structures; some chimneys broken."
+msgstr ""
+"آسیب ناچیز در ساختمان دارای طراحی و ساخت و ساز خوب؛ اندک تا متوسط در ساختمان "
+"عادی به خوبی ساخته شده؛ خسارت قابل توجهی در ساختمان ضعیف ساخته شده و یا بد "
+"طراحی شده؛ که برخی دودکش ها شکسته شده است."
+
+#: templates/earthquakeInfo.html:180
+msgid "VIII"
+msgstr "VIII"
+
+#: templates/earthquakeInfo.html:181
+msgid "Severe"
+msgstr "شدید"
+
+#: templates/earthquakeInfo.html:182
+msgid ""
+"Damage slight in specially designed structures; considerable damage in "
+"ordinary substantial buildings with partial collapse. Damage great in poorly "
+"built structures. Fall of chimneys, factory stacks, columns, monuments, "
+"walls. Heavy furniture overturned."
+msgstr ""
+"آسیب های جزئی در ساختمان خاص طراحی شده. خسارت قابل توجهی در ساختمان های قابل "
+"توجهی عادی با فروپاشی نسبی. آسیب بزرگ در ساختمان ضعیف ساخته شده. سقوط دودکش "
+"ها، دودکش های کارخانه، ستون ها، بناهای تاریخی، دیوارها. موبل های سنگین "
+"واژگون شدند."
+
+#: templates/earthquakeInfo.html:185
+msgid "IX"
+msgstr "IX"
+
+#: templates/earthquakeInfo.html:187
+msgid ""
+"Damage considerable in specially designed structures; well-designed frame "
+"structures thrown out of plumb. Damage great in substantial buildings, with "
+"partial collapse. Buildings shifted off foundations."
+msgstr ""
+"خسارت قابل توجهی به خصوص در ساختمان های طراحی شده. آسیب های قابل توجه بزرگ "
+"در ساختمان ، با فروپاشی نسبی. تغییرات در بنیاد ساختمان ها."
+
+#: templates/earthquakeInfo.html:190
+msgid "X+"
+msgstr "X+"
+
+#: templates/earthquakeInfo.html:192
+msgid ""
+"Some well-built wooden structures destroyed; most masonry and frame "
+"structures destroyed with foundations. Rails bent."
+msgstr ""
+"برخی از ساختمان های چوبی تخریب شده ؛بسیاری از ساختمان های قالب سنگی همرای "
+"بنیاد آن تخریب گردیده و مسیر ریل نشیب دار و خم میشود "
+
+#: templates/earthquakeInfo.html:195
+#, python-format
+msgid ""
+"<sup>**</sup> A 2 percent probability of exceedance in 50 years corresponds "
+"to a ground-motion return time of approximately 2500 years, or approximately "
+"a 10%% probability of of exceedance in 250 years. . The seismic intensity "
+"data and classes originate from the USGS Earthquake Hazard Map for "
+"Afghanistan (2007), by By Oliver S. Boyd, Charles S. Mueller, and Kenneth S. "
+"Rukstales"
+msgstr ""
+"<sup>**</sup> در 50 سال احتمال 2 درصد زمان بازگشت زمین متناسب است با یک حرکت "
+"تقریبا 2500 سال، ویا در حدود احتمال  10 درصد در 250 سال، ارقام شدت زلزله و "
+"کلاس های آن از نقشه خطر زلزله USGS برای افغانستان (2007) سرچشمه گرفته، توسط "
+"Oliver S. Boyd, Charles S. Mueller, and Kenneth S. Rukstales"
+
+#: templates/snowInfo.html:62
+msgid "Approx. Current Snow Depth"
+msgstr "تقریبا. عمق برف کنونی"
+
+#~ msgid "%(name_en)s"
+#~ msgstr "%(name_en)s"
+
+#~ msgid "%(language_field)s"
+#~ msgstr "%(language_field)s"
+
+#~ msgid "%(dist_na_en)s"
+#~ msgstr "%(dist_na_en)s"
+
+#~ msgid "%(prov_na_en)s"
+#~ msgstr "%(prov_na_en)s"
+
+#~ msgid "%(vuid_area_sqm|div:1000000|floatformat)s km<sup>2</sup>"
+#~ msgstr "%(vuid_area_sqm|div:1000000|floatformat)s km<sup>2</sup"
