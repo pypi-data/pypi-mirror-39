@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: gin-train
+Version: 0.1.4
+Summary: gin-train: model training boilerplate
+Home-page: https://github.com/avsecz/gin-train
+Author: Ziga Avsec
+Author-email: avsec@in.tum.de
+License: MIT license
+Description: gin-train: model training boilerplate
+Keywords: deep learning
+Platform: UNKNOWN
+Provides-Extra: develop
