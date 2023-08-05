@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+urlformat/__init__.py
+urlformat/errors.py
+urlformat/robotparser.py
+urlformat/urlbuilder.py
+urlformat/urlparser.py
+urlformat.egg-info/PKG-INFO
+urlformat.egg-info/SOURCES.txt
+urlformat.egg-info/dependency_links.txt
+urlformat.egg-info/top_level.txt
