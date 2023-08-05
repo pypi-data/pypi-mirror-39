@@ -1,0 +1,90 @@
+Metadata-Version: 2.0
+Name: babysploit
+Version: 1.1.19
+Summary: Beginner Pentesting Toolkit/Framework
+Home-page: https://github.com/M4cs/BabySploit
+Author: Max Bridgland
+Author-email: mabridgland@protonmail.com
+License: GNU General Public License v3 (GPLv3) (GPL)
+Project-URL: Wiki, https://github.com/M4cs/BabySploit/wiki
+Project-URL: Discord Server, https://discordapp.com/invite/7VN9VZe
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python :: Implementation :: IronPython
+Classifier: Programming Language :: Python :: Implementation :: Jython
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: netifaces
+Requires-Dist: urllib3
+Requires-Dist: humanfriendly
+Requires-Dist: terminaltables
+Requires-Dist: pyfiglet
+Requires-Dist: requests
+Requires-Dist: raccoon-scanner
+
+# BabySploit
+
+# Features (Current, In The Works, Planned):
+
+  - Information Gathering
+  - Exploitation
+  - Post Exploitation
+  - Bruteforcing
+  - Phishing
+  - Cryptography/Stenography
+
+###Information Gathering:
+
+  - Nmap
+  - IP Info
+  - Tcpdump (In The Works)
+  - Datasploit (In The Works)
+  - Censys Lookup
+  - DNS Lookup
+
+###Exploitation:
+
+  - Searchsploit
+  - ReverseShell Wizard
+
+###Post Exploitation:
+
+  - In The Works
+
+###Bruteforcing:
+
+  - FTP Bruteforcer
+
+###Phishing:
+
+  - BlackEye Python
+
+###Crypto/Stegano:
+
+  - MetaKiller
+
+#Contributing
+
+Feel free to contribute by making plugins or fixing bugs with a Pull Request. All contributions are helpful and will help make this a great tool.
+
+Licensed Under [MIT](https://github.com/M4cs/BabySploit/master/LICENSE.md).
+
+Copyright (c) 2018 Syndicated Intelligence
+
+
+
+
