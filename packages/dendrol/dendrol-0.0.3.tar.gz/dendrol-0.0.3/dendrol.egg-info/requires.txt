@@ -1,0 +1,12 @@
+antlr4-python3-runtime==4.7
+PyYAML==3.12
+
+[dev]
+dendrol[test]
+click>=7.0
+requests>=2.20.1
+tqdm>=4.28.1
+
+[test]
+icdiff
+pytest<4.0,>=3.8
