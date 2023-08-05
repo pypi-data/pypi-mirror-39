@@ -1,0 +1,17 @@
+cloudvps/__init__.py,sha256=GdHAlWuWkGnV9yzVPm4P9LRvmVPqkPxz_XAQpzKqVzQ,114
+cloudvps/api.py,sha256=xO_ZUIYp1XWUiR3Y_FPeWPh9HtPPqW39d5hDmVzMA6Q,1969
+cloudvps/cloudctl.py,sha256=HeF2d5fE9rrPKbwIWNLUGcdulXP7mna9U7xuzRkyMqk,1359
+cloudvps/objects/__init__.py,sha256=Y_FbrRCP2Cj3AvJMDA8xTgvEMG4OPp0feNa4Rp3Cg9c,196
+cloudvps/objects/actions.py,sha256=nmz_SbG5LwIOCNFEwwEALVQA1ChOhdqKn5VaZTkl08Y,599
+cloudvps/objects/base.py,sha256=zAhlxPOvIcFyjLmT3pbObgjlRijARVjfvMVESCMRzI4,360
+cloudvps/objects/common.py,sha256=gSsuj6rEfFIjshcV3pJJ_JA6nAYdFwPaowODB1H-0f0,810
+cloudvps/objects/history.py,sha256=zXfed3ztQkT8MmRzsajsQt0psZ5MLpM6cKb5KoXngfc,590
+cloudvps/objects/images.py,sha256=eMigeqzvJ5V9zWgqd2G97PzM5VoUEboYoStgZ7Rg3bg,1129
+cloudvps/objects/snapshots.py,sha256=nD5liENMB-iqfdiqAJzj1_rrqmLUuk15_ED0An87UcA,915
+cloudvps/objects/ssh_keys.py,sha256=DcAdngHvEkM77WEqJQlGZDsSwcF3YtCCGNEil6vLi8A,1083
+cloudvps/objects/vps.py,sha256=V2cdXdVNOVl3JUYCEbInEOJutllps1JttijMTKO55Dw,3310
+api_cloudvps_py-0.1.7.dist-info/LICENSE,sha256=UIp30ue1HZit7tMmSK0SS3swJBqOcLLnLJn5LY5YdNE,1036
+api_cloudvps_py-0.1.7.dist-info/METADATA,sha256=lmLtsPHqs3gKq8xu8XL2QX9A2HKhpqx_oiGkwVWpW4I,2886
+api_cloudvps_py-0.1.7.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+api_cloudvps_py-0.1.7.dist-info/top_level.txt,sha256=AN9E8wpsDsotppQgoYgJVJl5D3fZBhoDpA6248xF13s,26
+api_cloudvps_py-0.1.7.dist-info/RECORD,,
