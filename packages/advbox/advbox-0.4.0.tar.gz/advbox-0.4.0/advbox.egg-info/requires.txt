@@ -1,0 +1,13 @@
+numpy
+scipy
+setuptools
+requests
+GitPython
+
+[:python_version == "2.7"]
+future
+futures
+
+[testing]
+pytest
+pytest-cov

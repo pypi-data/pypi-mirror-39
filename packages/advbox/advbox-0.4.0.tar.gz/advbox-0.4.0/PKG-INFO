@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: advbox
+Version: 0.4.0
+Summary: Python toolbox to create adversarial examples that fool neural networks
+Home-page: https://github.com/baidu/advbox
+Author: baidu xlab
+Author-email: liu.yan@baidu.com
+License: Apache License 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Provides-Extra: testing
