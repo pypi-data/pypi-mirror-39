@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: parse-client
+Version: 0.1.2
+Summary: A client library for Parse.com'.s REST API
+Home-page: https://github.com/HaitaoYue/ParsePy
+Maintainer: Haitao Yue
+Maintainer-email: hightallyht@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
