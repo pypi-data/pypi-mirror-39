@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: gud
+Version: 0.0.2
+Summary: branch of greengo
+Home-page: https://github.com/genunity/gud.git
+Author: James Whiteman
+Author-email: james.whiteman@gmail.com
+License: MIT
+Description: # Repo forked from greengo
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
