@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: bode
+Version: 0.0.1
+Summary: Easy build, config and run docker services using multiple docker-compose files
+Home-page: https://github.com/pypa/sampleproject
+Author: Chris Maillefaud
+Author-email: chrismaillefaud@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/chrismaille/bode/issues
+Project-URL: Funding, https://donate.pypi.org
+Description: # Bode
+        Easy build, config and run docker services using multiple docker-compose files
+        
+Keywords: docker compose development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
