@@ -1,0 +1,52 @@
+CHANGES
+=======
+
+2.3.1
+-----
+
+* Sem-Ver: bugfix Fix parse\_text\_info\_score handling of content that includes spacing before score information
+* pep8 fix up
+* Test style changes
+* Sem-Ver: bugfix test in python 3.6 instead of 3.7 (due to issues with travis ci)
+* Sem-Ver: bugfix Test using python 3.7
+* Sem-Ver: bugfix Restore pycodestyle defaults and switch out pep8 for pycodestyle
+* PBR: Update changelog
+
+2.3.0
+-----
+
+* ashley/add support for conversion of cvss vectors to jira comments (#8)
+* Add support for conversion of CVSS vectors to Jira markup strings
+* Bump max line length for pycodestyle
+
+2.2.2
+-----
+
+
+2.2.0
+-----
+
+* Sem-Ver: feature return the exploitability subscore in the parse\_text\_info\_score dictionary
+
+2.1.1
+-----
+
+* Sem-Ver: feature Add a new get\_base\_vector\_string\_dict to the cvss v2 and v3 calculators
+
+2.1.0
+-----
+
+* Sem-Ver: feature Add a new get\_severity\_description\_rating\_dict to cvss v2 and v3 calculators and use it in the get\_severity\_description methods
+* Add a test for the severity description ranges of cvss v2
+* add travis-ci build status for master to the readme file
+* Update the readme file
+* Tweak the readme file slightly
+* Rename the README file
+* Use pbr
+
+2.0.2
+-----
+
+* Update the repository location from bitbucket to github
+* Add a travis-ci configuration file
+* init!
