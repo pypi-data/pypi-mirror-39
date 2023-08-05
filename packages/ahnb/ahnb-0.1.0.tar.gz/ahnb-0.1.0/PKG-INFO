@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: ahnb
+Version: 0.1.0
+Summary: A callback library which submits model and training statistics to AHNB
+Home-page: UNKNOWN
+Author: Andrew McNutt, Will Brackenbury, Ahsan Pervaiz
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: A callback library which submits model and training statistics to AHNB
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
