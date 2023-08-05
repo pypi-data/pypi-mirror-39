@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: odoo8-addons-oca-intrastat-extrastat
+Version: 8.0.20181202.0
+Summary: Meta package for oca-intrastat-extrastat Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-company-eori-number
+Requires-Dist: odoo8-addon-intrastat-base
+Requires-Dist: odoo8-addon-intrastat-product
+Requires-Dist: odoo8-addon-product-harmonized-system
+
+UNKNOWN
+
+
