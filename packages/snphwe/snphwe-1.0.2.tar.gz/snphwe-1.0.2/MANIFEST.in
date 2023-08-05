@@ -1,0 +1,11 @@
+# snphwe code
+include MANIFEST.in
+include snphwe/*.cpp
+include snphwe/*.py
+include snphwe/*.pyx
+include snphwe/*.pxd
+include src/*.h
+include src/*.cpp
+
+# snphwe tests
+include tests/*.py
