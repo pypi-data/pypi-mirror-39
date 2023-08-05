@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+setup.cfg
+setup.py
+arlib/__init__.py
+arlib.egg-info/PKG-INFO
+arlib.egg-info/SOURCES.txt
+arlib.egg-info/dependency_links.txt
+arlib.egg-info/top_level.txt
