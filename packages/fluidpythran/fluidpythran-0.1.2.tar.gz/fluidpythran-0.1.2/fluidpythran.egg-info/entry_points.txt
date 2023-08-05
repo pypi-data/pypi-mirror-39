@@ -1,0 +1,4 @@
+[console_scripts]
+_pythran-fluid = fluidpythran_cl.pythran_fluid:main
+fluidpythran = fluidpythran.run:run
+
