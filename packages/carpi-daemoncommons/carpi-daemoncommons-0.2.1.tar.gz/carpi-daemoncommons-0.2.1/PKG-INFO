@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: carpi-daemoncommons
+Version: 0.2.1
+Summary: A library providing utilities for writing CarPi Python daemons.
+Home-page: https://gitlab.com/rGunti/CarPi-DaemonCommons
+Author: rGunti
+Author-email: raphael@rgunti.ch
+License: MIT
+Description: # CarPi-DaemonCommons
+        A library providing utilities for writing Python daemons.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
