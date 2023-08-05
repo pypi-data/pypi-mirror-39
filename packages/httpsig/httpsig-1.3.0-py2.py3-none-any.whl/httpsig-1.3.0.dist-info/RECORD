@@ -1,0 +1,17 @@
+httpsig/__init__.py,sha256=FHMMNcfQkl9YFWl1Jzo9HCEDVE_VeQYxYxYj2hQvex8,338
+httpsig/requests_auth.py,sha256=XejNQyWq1LbWn6y-Rcd9augmCUxTYk2fJvrnvJTlr0c,1527
+httpsig/sign.py,sha256=LRkyeVSHFYUKNWhQ-8l466s2XBQq-4eiVSRtXL0HxyE,4208
+httpsig/utils.py,sha256=Dns8MbKofTD1BnWibp8HCB3Sjeme1m6Exwft3Xy76fk,6280
+httpsig/verify.py,sha256=r5ch3FYpAy2PnGnYCHMZ8FRcKJKVqB5rKaauX7U4w-c,4032
+httpsig/tests/__init__.py,sha256=DnrI_cfITc-qeksRA-VD5HcTnKBlK53P8mRFaNQ-FA4,83
+httpsig/tests/rsa_private.pem,sha256=8dI2fBNmnIIkbrHp4mXOznzyg3sAa4uFl9GiUS21xOs,891
+httpsig/tests/rsa_public.pem,sha256=Ub2TWqSS3qmE31KpzHL6Cf8pB69ZpfP9MKD_1AcjFGk,272
+httpsig/tests/test_signature.py,sha256=-vyJ7vSlpFUAEVsoFVFOVMBwtGRRlsquRNk_t4dGQkQ,4327
+httpsig/tests/test_utils.py,sha256=d9rxOM29acwFYpNce0OmUAWyQ9xL1znmHHosivbnf0w,520
+httpsig/tests/test_verify.py,sha256=O8bXTOPPRQlhay-amdQzFIfp8_v5_HlJs6WFhutNMnA,7260
+httpsig-1.3.0.dist-info/LICENSE.txt,sha256=xcLNKnd0lt00do0ZHa0FDElnKVZV235Q0iozMF6Vpt8,1108
+httpsig-1.3.0.dist-info/METADATA,sha256=XT4gxLgXYdAAnYYFkGFM483Mq3ijjbMocC5rgdrcMOY,8544
+httpsig-1.3.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+httpsig-1.3.0.dist-info/top_level.txt,sha256=84Uql73hCtHJar_XlwVgTZMegQJWNGNjkybmW4tQr2M,8
+httpsig-1.3.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+httpsig-1.3.0.dist-info/RECORD,,
