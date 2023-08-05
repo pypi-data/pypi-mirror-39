@@ -1,0 +1,10 @@
+README.md
+setup.py
+PyNewHope.egg-info/PKG-INFO
+PyNewHope.egg-info/SOURCES.txt
+PyNewHope.egg-info/dependency_links.txt
+PyNewHope.egg-info/top_level.txt
+pynewhope/newhope.py
+pynewhope/params.py
+pynewhope/poly.py
+pynewhope/precomp.py
