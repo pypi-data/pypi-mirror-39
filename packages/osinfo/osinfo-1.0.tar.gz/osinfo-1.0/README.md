@@ -1,0 +1,2 @@
+# os_update  [![GitHub license](https://img.shields.io/github/license/SuperSystemStudio/os_update.svg)](https://github.com/SuperSystemStudio/os_update/blob/master/LICENSE)   [![GitHub issues](https://img.shields.io/github/issues/SuperSystemStudio/os_update.svg)](https://github.com/SuperSystemStudio/os_update/issues)
+#if you are a chinese.Go to there [gitee](https://gitee.com/SuperSystemStudio/os_update)
