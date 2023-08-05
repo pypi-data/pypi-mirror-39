@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: seabred
+Version: 0.0.1
+Summary: Seaborn-like plots for numpy arrays
+Home-page: https://github.com/jtebert/seabred
+Author: Julia Ebert
+Author-email: julia@juliaebert.com
+License: UNKNOWN
+Description: # Seabred
+        
+        Custom plotting extras meant to go with Seaborn, for numpy arrays instead of dataframes
+        
+        Sea*born* -> Sea*bred* (Get it?)
+        
+        Recommended use: `import seabred as sb`
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
