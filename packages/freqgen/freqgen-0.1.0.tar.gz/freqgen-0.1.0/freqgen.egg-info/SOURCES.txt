@@ -1,0 +1,19 @@
+README.md
+setup.py
+freqgen/__init__.py
+freqgen/__version__.py
+freqgen/cli.py
+freqgen/freqgen.py
+freqgen/generate.py
+freqgen/pyeasyga.py
+freqgen/visualize.py
+freqgen.egg-info/PKG-INFO
+freqgen.egg-info/PKG-INFO 2
+freqgen.egg-info/SOURCES 2.txt
+freqgen.egg-info/SOURCES.txt
+freqgen.egg-info/dependency_links.txt
+freqgen.egg-info/entry_points 2.txt
+freqgen.egg-info/entry_points.txt
+freqgen.egg-info/requires 2.txt
+freqgen.egg-info/requires.txt
+freqgen.egg-info/top_level.txt
