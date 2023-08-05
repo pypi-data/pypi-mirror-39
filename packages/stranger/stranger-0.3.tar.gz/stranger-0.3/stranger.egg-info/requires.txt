@@ -1,0 +1,8 @@
+click
+cyvcf2<0.7
+coloredlogs
+parse
+
+[tests]
+pytest
+pytest-cov
