@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: qiq
+Version: 0.4
+Summary: qiq is the thin layer over pip with a few rules.
+Home-page: https://gitlab.com/aptakhin/qiq
+Author: Alexander Ptakhin
+Author-email: me@aptakhin.name
+License: MIT
+Project-URL: Source Code, https://gitlab.com/aptakhin/qiq
+Description: qiq is the thin layer over pip with some principles.
+        
+        - requirements.txt becomes qiq.txt
+        - virtual environment created in project in `venv`
+        - every package in `qiq.txt` has exact version or links to local directory
+        - can make symlinks for local development
+        
+        No requirements except `Python 3`.
+        
+        ## Usage
+         
+        For example `My-Company-Core` is the Company's core library used almost in all projects. It's development files located relative to current project is `../my_company_core`.
+        Our `qiq.txt` will be:
+        
+            +dev:../my_company_core
+            My-Company-Core==1.2.7
+            Flask==1.0.2
+            flask-cors==3.0.7
+            
+        
+        `+dev` is the flag, which can be given in `qiq` command.
+        This will symlink `my_company_core` to `../my_company_core`:
+            
+            qiq +dev
+            
+        And this will install production use code to venv:
+        
+            qiq
+            
+        By default used library name is last directory in path. It can be overriden with name and `==`:
+        
+            +dev:Company-Core==../my_company_core
+            
+        VCS also supported:
+            
+            +dev:git+ssh://gitlab.com/myteam/mycompanycore.git@2313ceee
+        
+Keywords: pip qiq
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Version Control
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
