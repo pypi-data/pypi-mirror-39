@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nevolution-snake
+Version: 10
+Summary: Python Gym Environment for the popular Snake game
+Home-page: https://gitlab.com/nevolution.developers/slave/games/snake
+Author: nevolution.developers
+Author-email: basti.neubert@gmail.com
+License: UNKNOWN
+Description: # snake
+        
+        the python gym implementation of snake
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
