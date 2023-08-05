@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=LabelPush
+Comment=Lightweight label printing app
+Exec=labelpush.py
+Terminal=false
+Icon=labelpush
+Categories=Office;
+Encoding=UTF-8
+
+
