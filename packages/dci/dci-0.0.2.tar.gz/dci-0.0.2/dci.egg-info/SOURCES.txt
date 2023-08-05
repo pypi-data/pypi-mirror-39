@@ -1,0 +1,12 @@
+README.md
+setup.py
+dci/__init__.py
+dci/client.py
+dci/context.py
+dci/oo.py
+dci/version.py
+dci.egg-info/PKG-INFO
+dci.egg-info/SOURCES.txt
+dci.egg-info/dependency_links.txt
+dci.egg-info/requires.txt
+dci.egg-info/top_level.txt
