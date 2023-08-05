@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: suanpan
+Version: 0.4.7
+Summary: # AiLab
+Requires-Dist: imageio (==2.4.1)
+Requires-Dist: numpy (==1.15.2)
+Requires-Dist: opencv-python (==3.4.3.18)
+Requires-Dist: pandas (==0.23.4)
+Provides-Extra: docker
+Requires-Dist: oss2 (==2.5.0); extra == 'docker'
+Requires-Dist: sasl (==0.2.1); extra == 'docker'
+Requires-Dist: thrift-sasl (==0.3.0); extra == 'docker'
+Requires-Dist: thrift (==0.11.0); extra == 'docker'
+Requires-Dist: pyhive[hive] (==0.6.1); extra == 'docker'
+Provides-Extra: service
+Requires-Dist: googleapis-common-protos (==1.6.0b6); extra == 'service'
+Requires-Dist: grpcio-tools (==1.16.1rc1); extra == 'service'
+Requires-Dist: oss2 (==2.5.0); extra == 'service'
+Requires-Dist: sasl (==0.2.1); extra == 'service'
+Requires-Dist: thrift-sasl (==0.3.0); extra == 'service'
+Requires-Dist: thrift (==0.11.0); extra == 'service'
+Requires-Dist: pyhive[hive] (==0.6.1); extra == 'service'
+
+Home-page: UNKNOWN
+Author: majik
+Author-email: me@yamajik.com
+License: See License
+Description: 
+        suanpan
+        
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: docker
+Provides-Extra: service
