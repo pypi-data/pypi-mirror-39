@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: diogenes8
+Version: 1.0.0
+Summary: A scheduler to remind you to talk to your friends
+Home-page: https://github.com/howonlee/diogenes8
+Author: Howon Lee
+License: MIT
+Project-URL: Documentation, https://github.com/howonlee/diogenes8
+Project-URL: Source, https://github.com/howonlee/diogenes8
+Project-URL: Tracker, https://github.com/howonlee/diogenes8/issues
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Other Audience
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Requires-Python: >3.7
