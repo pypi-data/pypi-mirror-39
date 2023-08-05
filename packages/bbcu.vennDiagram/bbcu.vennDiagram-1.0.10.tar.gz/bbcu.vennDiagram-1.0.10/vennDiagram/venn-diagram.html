@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Intersection Tooltip venn.js example</title>
+<style>
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+.venntooltip {
+  position: absolute;
+  text-align: center;
+  width: 600px;
+  height: 16px;
+  background: #333;
+  color: #ddd;
+  padding: 2px;
+  border: 0px;
+  border-radius: 8px;
+  opacity: 0;
+}
+
+</style>
+</head>
+
+<body>
+    <body onload="runVenn(false)">
+
+    <div id="venn"></div>
+    <div style="float:left;padding:20px">
+        <table>
+        <tr>
+          <td>
+              <input type="checkbox" class="fulllabel" id="fulllabel" onclick="toFullLabels()">Show percents<br>
+          </td>
+        </tr>
+        </table>
+    </div>
+    <div style="clear: both;"></div>
+
+</body>
+
+
+<!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+<script src="./d3.v4.js"></script>
+<script src="./venn.js"></script>
+<script src="./intersections.jsonp"></script>
+
+<script>
+
+
+function toFullLabels() {
+    if (document.getElementById('fulllabel').checked) {
+        runVenn(true);
+    } else {
+        runVenn(false);
+    }
+};
+
+function runVenn(fullLabel) {
+    document.getElementById('fulllabel').checked = fullLabel;
+
+    var chart = venn.VennDiagram()
+                     .width(950)
+                     .height(600);
+
+    var div = d3.select("#venn")
+    div.datum(sets).call(chart);
+
+    var tooltip = d3.select("body").append("div")
+        .attr("class", "venntooltip");
+
+    div.selectAll("path")
+        .style("stroke-opacity", 0)
+        .style("stroke", "#fff")
+        .style("stroke-width", 3)
+
+    div.selectAll("g")
+        .on("mouseover", function(d, i) {
+            // sort all the areas relative to the current item
+            venn.sortAreas(div, d);
+
+            // Display a tooltip with the current size
+            tooltip.transition().duration(400).style("opacity", .9);
+            if (d.percent) {
+                tooltip.text(d.percent + ", size: " + d.size + ", expected:" + d.expected);
+            } else {
+                tooltip.text(d.label + ", size: " + d.size);
+            }
+            // highlight the current path
+            var selection = d3.select(this).transition("tooltip").duration(400);
+            selection.select("path")
+                .style("fill-opacity", d.sets.length == 1 ? .4 : .1)
+                .style("stroke-opacity", 1);
+        })
+
+        .on("mousemove", function() {
+            tooltip.style("left", (d3.event.pageX) + "px")
+                   .style("top", (d3.event.pageY - 28) + "px");
+        })
+
+        .on("mouseout", function(d, i) {
+            tooltip.transition().duration(400).style("opacity", 0);
+            var selection = d3.select(this).transition("tooltip").duration(400);
+            selection.select("path")
+                .style("fill-opacity", d.sets.length == 1 ? .25 : .0)
+                .style("stroke-opacity", 0);
+        });
+}
+</script>
+</html>
