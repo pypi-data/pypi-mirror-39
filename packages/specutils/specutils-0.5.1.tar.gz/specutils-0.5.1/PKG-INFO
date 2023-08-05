@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: specutils
+Version: 0.5.1
+Summary: Package for spectroscopic astronomical data
+Home-page: http://specutils.readthedocs.io/
+Author: Specutils team
+Author-email: coordinators@astropy.org
+License: BSD
+Description: Provides data objects and analysis tools for creating and manipulating spectroscopic astronomical data.
+Platform: UNKNOWN
+Requires-Python: >=3.5
