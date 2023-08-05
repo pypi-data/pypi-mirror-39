@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: myFbase
+Version: 0.0.3
+Summary: Change to/from any base you like
+Home-page: https://github.com/victor141516/myFbase
+License: UNKNOWN
+Author: victor141516
+Author-email: yomellamovictor@gmail.com
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+
+# myFbase
+
+Change to/from any base you like
+
+## How to use
+
+### Installation
+
+    $ pip install myFbase
+
+### Usage
+
+    from myFbase import MyFbase
+
+    mfb = MyFbase('abc')
+    print(mfb.encode(8))  # cc
+    print(mfb.decode('cc'))  # 8
+
