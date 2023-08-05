@@ -1,0 +1,12 @@
+MANIFEST.in
+setup.py
+RiksdagenDataDownloader/__init__.py
+RiksdagenDataDownloader/__version__.py
+RiksdagenDataDownloader/api.py
+RiksdagenDataDownloader/dataset_retriver.py
+RiksdagenDataDownloader/unzip.py
+RiksdagenDataDownloader.egg-info/PKG-INFO
+RiksdagenDataDownloader.egg-info/SOURCES.txt
+RiksdagenDataDownloader.egg-info/dependency_links.txt
+RiksdagenDataDownloader.egg-info/requires.txt
+RiksdagenDataDownloader.egg-info/top_level.txt
