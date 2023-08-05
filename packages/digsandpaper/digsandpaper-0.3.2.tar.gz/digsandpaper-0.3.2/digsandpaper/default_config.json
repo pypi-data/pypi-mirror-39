@@ -1,0 +1,267 @@
+{
+  "fine": {},
+  "coarse": {
+    "log_requests": "/tmp",
+    "preprocess": {
+      "components": [
+        {
+          "type": "ConstraintTypeMapper",
+          "name": "PredicateDictConstraintTypeMapper",
+          "predicate_range_mappings": {
+            "tld": "topleveldomain",
+            "url": "url",
+            "image": "image",
+            "timestamp": "timestamp",
+            "timestamp_crawl": "timestampcrawl"
+          }
+        },
+        {
+          "type": "ConstraintConsistency",
+          "name": "ConstraintTypeTransformations",
+          "constraint_type_transformations": {
+            "title": "' '.join([v for v in value.split(' ') if v not in ['i', 'am', 'the', 'a', 'an', 'in', 'is', 'for']])",
+            "description": "' '.join(v for v in value.split(' ') if v not in ['i', 'am', 'the', 'a', 'an', 'in', 'is', 'for'])",
+            "content": "' '.join(v for v in value.split(' ') if v not in ['i', 'am', 'the', 'a', 'an', 'in', 'is', 'for'])"
+          }
+        },
+        {
+          "type": "ConstraintExpansion",
+          "name": "HeightConstraintExpander"
+        },
+        {
+          "type": "ConstraintExpansion",
+          "name": "PhoneConstraintExpander"
+        },
+        {
+          "type": "ConstraintReMapping",
+          "name": "ConstraintReMapSimilarity",
+          "constraint_remap_config": {
+            "similarity_url": "http://52.53.214.202:5954/search",
+            "k": 1000,
+            "countries_list": ["marshall islands", "holy see", "kiribati", "micronesia", "palau", "christmas island", "nicaragua", "morocco", "niue", "switzerland", "bavaria", "brazil", "sweden", "vatican", "jordan", "slovak republic", "papua new guinea", "portugal", "australia", "andorra", "china", "cote d'ivoire", "trinidad and tobago", "euro area", "guinea bissau", "united states of america", "ukraine", "venezuela", "eswatini", "burkina faso", "viet nam", "new caledonia", "greenland", "canada", "turkmenistan", "russia", "slovakia", "panama", "east timor", "ghana", "madagascar", "moldova, republic of", "maldives", "saint vincent and the grenadines", "kenya", "spain", "bolivia (plurinational state of)", "neutral zone", "angola", "bouvet island", "botswana", "serbia", "aeolian islands", "india", "svalbard and jan mayen", "bahamas", "egypt", "estonia", "mauritania", "samoa", "eritrea", "saint kitts and nevis", "european union", "lebanon", "cuba", "korea", "georgia", "iraq", "myanmar", "u . s . virgin islands", "new zealand", "west bank and gaza strip", "british indian ocean territory", "peru", "rwanda", "saint helena", "argentina", "antigua and barbuda", "taiwan", "nauru", "belize", "cura\u00e7ao", "north korea", "luxembourg", "tuvalu", "turks and caicos islands", "slovenia", "ireland", "pitcairn", "sierra leone", "barbados", "bahrain", "brunei", "tokelau", "serbia and montenegro", "gabon", "french guiana", "bhutan", "kazakhstan", "malawi", "turke", "comoros", "libya", "republic of korea", "belarus", "heard island and mcdonald islands", "saint martin (french part)", "ecuador", "guinea", "mauritius", "pakistan", "the former yugoslav republic of macedonia", "guernsey", "qatar", "cambodia", "poland", "oman", "south georgia and the south sandwich islands", "occupied palestinian territory", "el salvador", "armenia", "afghanistan", "malaysia", "turkey", "djibouti", "thailand", "french polynesia", "niger", "fiji", "mexico", "burundi", "yemen", "indonesia", "montserrat", "iceland", "namibia", "lesotho", "malta", "cayman islands", "honduras", "israel", "chile", "curacao", "cocos islands", "saint lucia", "congo", "iran (islamic republic of)", "guyana", "timor-leste", "azerbaijan", "reunion", "aruba", "martinique", "republic of congo", "belgium", "hungary", "macao", "british virgin islands", "philippines", "france", "cook island", "mozambique", "bolivia", "central african republic", "united kingdom", "tunisia", "sudan", "saudi arabia", "algeria", "united states", "liberia", "cape verde", "chad", "gibraltar", "costa rica", "norfolk island", "macau", "bermuda", "nepal", "guinea - bissau", "western sahara", "denmark", "south sudan", "romania", "croatia", "palestinian territory", "laos", "haiti", "norway", "united arab emirates", "suriname", "uganda", "syria", "palestine", "democratic republic of the congo", "faroe islands", "czechia", "venezuela (bolivarian republic of)", "saint martin", "senegal", "vietnam", "south africa", "south korea", "mayotte", "american samoa", "italy", "northern mariana islands", "puerto rico", "bosnia and herzegovina", "equatorial guinea", "guatemala", "ethiopia", "kyrgyzstan", "albania", "iran", "saint pierre and miquelon", "austria", "united republic of tanzania", "saint barthelemy", "liechtenstein", "guadeloupe", "russian federation", "tajikistan", "anguilla", "former ussr", "kosovo", "republic of the congo", "swaziland", "gambia", "antarctica", "jamaica", "togo", "zambia", "bangladesh", "benin", "republic of moldova", "moldova", "kuwait", "san marino", "aland islands", "japan", "paraguay", "mali", "sao tome and principe", "seychelles", "europe", "germany", "yugoslavia", "guam", "dominican republic", "uzbekistan", "democratic republic of congo", "vanuatu", "singapore", "zimbabwe", "tonga", "dominica", "french southern territories", "hong kong", "czech republic", "somalia", "netherlands antilles", "falkland islands", "monaco", "guinea-bissau", "sint maarten", "latvia", "wallis and futuna", "zaire", "bonaire , saint eustatius and saba", "grenada", "solomon islands", "isle of man", "tanzania", "u.s. virgin islands", "bonaire", "cook islands", "kosovo (in accordance with security council resolution 1244 (1999))", "bulgaria", "greece", "nigeria", "cyprus", "netherlands", "ivory coast", "jersey", "lithuania", "uruguay", "macedonia", "colombia", "sri lanka", "mongolia", "cameroon", "montenegro", "united kingdom of great britain and northern ireland", "null", "finland", "cocos (keeling) islands", "united states minor outlying islands"],
+            "ngrams": 5
+          }
+        }
+      ]
+    },
+    "parameterize": {
+      "components": [
+        {
+          "type": "ClauseCombination",
+          "name": "NoClauseCombination"
+        },
+        {
+          "type": "FieldCombination",
+          "name": "AtLeastOneFieldCombination"
+        }
+      ]
+    },
+    "execute": {
+      "components": [
+        {
+          "host": "localhost",
+          "type": "ExecuteQueryComponent",
+          "name": "ExecuteElasticsearchQuery",
+          "port": 9200
+        }
+      ]
+    },
+    "generate": {
+      "components": [
+        {
+          "type": "TypeFieldMapping",
+          "name": "TypeFieldMapping",
+          "type_field_mappings": {
+            "owl:Thing": [
+              "content_extraction.content_relaxed.text",
+              "content_extraction.content_strict.text",
+              "content_extraction.title.text"
+            ],
+            "Ad": [
+              "doc_id"
+            ],
+            "content": [
+              "content_extraction.content_relaxed.text",
+              "content_extraction.content_strict.text",
+              "content_extraction.title.text"
+            ],
+            "topleveldomain": [
+              "tld.raw",
+              "tld"
+            ],
+            "url": [
+              "url",
+              "url.raw",
+              "tld"
+            ],
+            "image": [
+              "objects.img_sha1"
+            ],
+            "timestamp": [
+              "timestamp"
+            ],
+            "timestampcrawl": [
+              "timestamp_crawl"
+            ]
+          }
+        },
+        {
+          "type": "TypeFieldMapping",
+          "name": "TypeFieldGroupByMapping",
+          "type_field_mappings": {
+            "owl:Thing": [
+              "content_extraction.content_strict.text"
+            ],
+            "topleveldomain": [
+              "tld.raw"
+            ],
+            "url": [
+              "url.raw"
+            ],
+            "image": [
+              "objects.img_sha1"
+            ],
+            "timestamp": [
+              "timestamp"
+            ],
+            "timestampcrawl": [
+              "timestamp_crawl"
+            ]
+          }
+        },
+        {
+          "type": "FieldWeightMapping",
+          "name": "FieldWeightMapping",
+          "field_weight_mappings": {
+            "tld": {
+              "*": 10
+            },
+            "raw_content": 1,
+            "content_extraction": {
+              "content_relaxed": {
+                "*": 1
+              },
+              "content_strict": {
+                "*": 2
+              },
+              "title": {
+                "*": 3
+              }
+            },
+            "indexed": {
+              "website": {
+                "*": {
+                  "*": {
+                    "value": 5.1,
+                    "key": 20.1
+                  }
+                }
+              },
+              "*": {
+                "extract_from_landmark": {
+                  "*": {
+                    "value": 5,
+                    "key": 10.1
+                  },
+                  "other_segment": {
+                    "value": 2.1,
+                    "key": 5.1
+                  }
+                },
+                "*": {
+                  "*": {
+                    "value": 3,
+                    "key": 6.1
+                  },
+                  "other_segment": {
+                    "value": 2.1,
+                    "key": 5.1
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "TypeQueryMapping",
+          "name": "TypeQueryMapping",
+          "type_query_mappings": {
+            "title": "match_phrase",
+            "_id": "ids"
+          }
+        },
+        {
+          "type_doc_type_mappings": {
+            "Ad": "ads"
+          },
+          "type": "TypeDocTypeMapping",
+          "name": "TypeDocTypeMapping"
+        },
+        {
+          "type_index_mappings": {
+            "Ad": "dig-etk-search"
+          },
+          "type": "TypeIndexMapping",
+          "name": "TypeIndexMapping"
+        },
+        {
+          "elasticsearch_compiler_options": {
+            "convert_text_filters_to_shoulds": true,
+            "extra_minimum_should_match": 0,
+            "boost_shoulds": true,
+            "filter_for_fields_of_unbound_variables": false,
+            "terms_minimum_should_match": 1,
+            "default_source_fields": [
+              "doc_id",
+              "tld",
+              "url",
+              "knowledge_graph.*",
+              "content_extraction.content_strict.text",
+              "content_extraction.title.text",
+              "objects.*",
+              "split_sentences"
+            ],
+            "excluded_source_fields": [
+              "content_extraction.content_relaxed.text",
+              "raw_content",
+              "*.provenance.extracted_value",
+              "*.provenance.source.context.end",
+              "*.provenance.source.context.start",
+              "*.provenance.source.context.tokens_left",
+              "*.provenance.source.context.tokens_right",
+              "*.provenance.source.context.input",
+              "objects.response_headers.*"
+            ],
+            "highlight": {
+              "fields": {
+                "indexed.*": {
+                  "number_of_fragments": 0
+                },
+                "content_extraction.content_strict.text": {
+                  "number_of_fragments": 0
+                },
+                "content_extraction.title.text": {
+                  "number_of_fragments": 0
+                }
+              }
+            }
+          },
+          "type": "QueryCompiler",
+          "name": "ElasticsearchQueryCompiler"
+        }
+      ]
+    },
+    "postprocess": {
+      "components": [
+        {
+          "type": "DocumentsRerank",
+          "name": "SimilarityScoreRerank",
+          "sort": "asc"
+        }
+      ]
+    }
+  },
+  "indexing": {
+    "log_responses": "/tmp"
+  }
+}
