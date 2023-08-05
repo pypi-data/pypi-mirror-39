@@ -1,0 +1,16 @@
+websockets
+requests
+
+[dev]
+pysocks
+pytest
+pytest-mock
+pytest-asyncio<=0.5.0
+coverage
+sphinx
+sphinx_rtd_theme
+twine
+wheel
+
+[proxy]
+pysocks
