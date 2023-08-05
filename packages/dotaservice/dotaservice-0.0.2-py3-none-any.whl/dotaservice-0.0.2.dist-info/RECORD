@@ -1,0 +1,17 @@
+dotaservice/__init__.py,sha256=miSsqPy2PFJ18TW9kocQJLcv4HFpkfQhcTzgAO-GTVE,22
+dotaservice/__main__.py,sha256=LsYDD3lvLsLtR_OdVL9w9oieW984e5_pJfaRJXnWQG0,1566
+dotaservice/dotaservice.py,sha256=KT-YU4Z_kPbpUF_fd4Bif09TbcKU8SRowRaYIcYzeU4,16266
+dotaservice/lua/bot_nevermore.lua,sha256=k_kau0P2DnTx32MBLA09G5G2mE4XoRVZymbqtoNlNPM,4328
+dotaservice/lua/bot_wisp.lua,sha256=ag3i8-3zmYE3V-p_k47pif-O5hSE6ahFdvBLYUipdsk,42
+dotaservice/lua/config.lua,sha256=hOruSBCt-25wULOiul5lErv0DTNzsRKbNIMSRGnOAV0,445
+dotaservice/lua/hero_selection.lua,sha256=7RMryIXoxSfh26ujZAACQfEbWTejA8Jd4o31txV8PDM,1513
+dotaservice/lua/uuid.lua,sha256=46X03FpNhV_bO5yc-RSx7s6-AWW4vVPivPjJewM_aBI,8486
+dotaservice/protos/DotaService_grpc.py,sha256=JiLsk0s2mpqojXjuy6qdkD6h3HVm_Xw2xf40zjHFNkE,1643
+dotaservice/protos/DotaService_pb2.py,sha256=P90XptI5QQQLgHn3zYS2YwyIZ2c0GTUB7mtF26cuzBE,6878
+dotaservice/protos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dotaservice/protos/dota_gcmessages_common_bot_script_pb2.py,sha256=GqcoeSTy2IKrXmhz8aPrk8gb9IqBWuXmMw4ZdHFf2Wk,257824
+dotaservice-0.0.2.dist-info/LICENCE,sha256=dHtCwwop895q6xsSxpvWrixv1UmYF80PGkt2rNCo87o,1425
+dotaservice-0.0.2.dist-info/METADATA,sha256=SyIbdxXi4GMgrwSgZqYP33BerIrT46eP_O-Ijt4SNdU,5477
+dotaservice-0.0.2.dist-info/WHEEL,sha256=YO0P_oFqt6DWX0LhbH7jsyzb3BUtoq2kERtqGsXDJHs,92
+dotaservice-0.0.2.dist-info/top_level.txt,sha256=uolN65lJRJA1IpGsv3Jno4NRqJPIgJrEPUd1MqVFz4E,12
+dotaservice-0.0.2.dist-info/RECORD,,
