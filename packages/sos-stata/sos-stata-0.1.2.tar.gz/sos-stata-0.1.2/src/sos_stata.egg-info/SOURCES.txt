@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/sos_stata/__init__.py
+src/sos_stata/_version.py
+src/sos_stata/kernel.py
+src/sos_stata.egg-info/PKG-INFO
+src/sos_stata.egg-info/SOURCES.txt
+src/sos_stata.egg-info/dependency_links.txt
+src/sos_stata.egg-info/entry_points.txt
+src/sos_stata.egg-info/requires.txt
+src/sos_stata.egg-info/top_level.txt
