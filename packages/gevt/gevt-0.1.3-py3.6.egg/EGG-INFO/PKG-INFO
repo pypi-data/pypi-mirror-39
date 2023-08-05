@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: gevt
+Version: 0.1.3
+Summary: Gestionnaire de Volontaires et de Tâches
+Home-page: UNKNOWN
+Author: Sébastien Weber
+Author-email: seba.weber@gmail.com
+License: GNU
+Description: Gevt est un Gestionnaire de Volontaires et de TÃ¢ches Ã©crit en python pour faciliter la gestion d'Ã©vÃ©nements impliquant
+        l'attribution de bÃ©nÃ©voles (les volontaires) Ã  l'Ã©xÃ©cution de tÃ¢ches.
+        
+        GitHub repo: https://github.com/seb5g/gevt
+        
+        Pypi: *pip install gevt*
+        
+            
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: Other Environment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: User Interfaces
