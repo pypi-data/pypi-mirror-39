@@ -1,0 +1,14 @@
+numpy
+scipy
+emcee
+nestle
+future
+nose
+setuptools
+configparser
+
+[:python_version < "3.5"]
+matplotlib<3
+
+[:python_version >= "3.5"]
+matplotlib
