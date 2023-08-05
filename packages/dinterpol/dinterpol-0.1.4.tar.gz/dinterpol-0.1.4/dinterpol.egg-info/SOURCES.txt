@@ -1,0 +1,14 @@
+README.md
+README.rst
+setup.cfg
+setup.py
+dinterpol/__init__.py
+dinterpol/template.py
+dinterpol/test_template.py
+dinterpol/version.py
+dinterpol.egg-info/PKG-INFO
+dinterpol.egg-info/SOURCES.txt
+dinterpol.egg-info/dependency_links.txt
+dinterpol.egg-info/entry_points.txt
+dinterpol.egg-info/requires.txt
+dinterpol.egg-info/top_level.txt
