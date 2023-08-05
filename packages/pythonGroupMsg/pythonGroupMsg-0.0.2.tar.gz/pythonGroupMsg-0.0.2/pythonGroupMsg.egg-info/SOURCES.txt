@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+setup.py
+pythonGroupMsg/__init__.py
+pythonGroupMsg/build.sh
+pythonGroupMsg/lib.c
+pythonGroupMsg/lib.cpython-37m-x86_64-linux-gnu.so
+pythonGroupMsg/lib.py
+pythonGroupMsg/setup.py
+pythonGroupMsg/test.py
+pythonGroupMsg.egg-info/PKG-INFO
+pythonGroupMsg.egg-info/SOURCES.txt
+pythonGroupMsg.egg-info/dependency_links.txt
+pythonGroupMsg.egg-info/not-zip-safe
+pythonGroupMsg.egg-info/top_level.txt
+pythonGroupMsg/__pycache__/__init__.cpython-37.pyc
