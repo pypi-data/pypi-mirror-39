@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+cash_converter_cli.egg-info/PKG-INFO
+cash_converter_cli.egg-info/SOURCES.txt
+cash_converter_cli.egg-info/dependency_links.txt
+cash_converter_cli.egg-info/entry_points.txt
+cash_converter_cli.egg-info/requires.txt
+cash_converter_cli.egg-info/top_level.txt
+scripts/__init__.py
+scripts/exchange_rate.json
+scripts/main.py
