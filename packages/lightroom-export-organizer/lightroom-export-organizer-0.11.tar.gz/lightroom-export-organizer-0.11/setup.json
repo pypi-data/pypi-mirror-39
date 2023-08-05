@@ -1,0 +1,15 @@
+{
+    "package_info": {
+        "friendly_name": "lightroom-export-organizer",
+        "module_name": "lightroom_export_organizer",
+        "description": "TODO",
+        "url": "https://github.com/aagnone3/lightroom-export-organizer",
+        "author": "Anthony Agnone",
+        "author_email": "anthonyagnone@gmail.com"
+    },
+    "entry_points": {
+        "console_scripts": [
+            "org_folders=lightroom_export_organizer.tools.org_folders:main"
+        ]
+    }
+}
