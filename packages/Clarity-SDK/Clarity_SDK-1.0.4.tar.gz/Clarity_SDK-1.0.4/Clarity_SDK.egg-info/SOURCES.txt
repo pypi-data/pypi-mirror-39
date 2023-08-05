@@ -1,0 +1,10 @@
+README.md
+setup.py
+Clarity_SDK.egg-info/PKG-INFO
+Clarity_SDK.egg-info/SOURCES.txt
+Clarity_SDK.egg-info/dependency_links.txt
+Clarity_SDK.egg-info/top_level.txt
+clarity_sdk/NameCleaning.py
+clarity_sdk/StringFunctions.py
+clarity_sdk/__init__.py
+clarity_sdk/version.py
