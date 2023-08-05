@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: dockerbuildtest
+Version: 1.0.1
+Summary: docker build engine provide flaxibilty to build docker images
+Home-page: https://git.stackaero.com/stackengine/dockerbuildagent
+Author: Suresh Thumma
+Author-email: suresh@stackaero.com
+License: MIT
+Download-URL: https://git.stackaero.com/stackengine/dockerbuildagent
+Description: Docker Build Agent project with packaging
+Keywords: python3 -m dockerbuildagent
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5

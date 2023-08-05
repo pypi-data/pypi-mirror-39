@@ -1,0 +1,6 @@
+include dockerbuildagent/appRoutes/*
+include dockerbuildagent/build_logs/*
+include dockerbuildagent/core/*
+include dockerbuildagent/core/utils/*
+include dockerbuildagent/handlers/*
+include README.md
