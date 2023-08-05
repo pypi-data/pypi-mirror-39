@@ -1,0 +1,10 @@
+nassl/__init__.py,sha256=dw6tX0BpulGY2_DIJD0YqbkXKFbK1jC9kIaMCnZ4WN4,51
+nassl/_nassl.cpython-37m-darwin.so,sha256=3Rcaa4_LmYO_hzZcFsdY3-vgC1bea9UjaOruqi8mx2o,2948760
+nassl/_nassl_legacy.cpython-37m-darwin.so,sha256=uYOY2pvfCExqR3Y13uXT3JblhaBNaHktEYoeANt5XlY,2196520
+nassl/legacy_ssl_client.py,sha256=bFZRO5edcoJeiNnq7k0pyEb-ladHmGKud7hDEKY6LJA,7406
+nassl/ocsp_response.py,sha256=nr1m5fs7gJbyIn2tCeUgA7UuyXTKkt84fTRKOeaQKAk,6263
+nassl/ssl_client.py,sha256=9HQDcS29hvMUTcIYA0iMRrYaNe-4Z_YKcgnzP4FNwao,14553
+nassl-2.1.2.dist-info/METADATA,sha256=VfrZ1NEzdKEg8OwxAwHLhxMF2LW3caAB96rFMc8TxBw,287
+nassl-2.1.2.dist-info/RECORD,,
+nassl-2.1.2.dist-info/WHEEL,sha256=_k7-jlcomYi2KWQV8j4dnQP2hhlJPv6RZQa_A7vSCGc,110
+nassl-2.1.2.dist-info/top_level.txt,sha256=MWkk8t7aS_fywXROdRjzLDK022gQYwh_r2hGyU1V6_M,6
