@@ -1,0 +1,33 @@
+from ibm_ai_openscale.base_classes.assets import KnownServiceAsset
+
+
+class CustomMachineLearningAsset(KnownServiceAsset):
+    """
+    Describes Watson Machine Learning asset.
+
+    :param source_uid: asset id
+    :type source_uid: str
+    :param binding_uid: binding_uid of asset (optional)
+    :type binding_uid: str
+    :param input_data_type: type of input data (optional).
+    :type input_data_type: str
+    :param problem_type: type of model (problem) (optional).
+    :type problem_type: str
+    :param label_column: the column/field name containing target/label values (optional).
+    :type label_column: str
+    :param prediction_column: the name of column/field with predicted values (optional).
+    :type prediction_column: str
+    :param probability_column: the name of column/field with prediction probability (optional).
+    :type probability_column: str
+
+    A way you might use me is:
+
+    >>> from ibm_ai_openscale.supporting_classes.enums import InputDataType
+    >>>
+    >>> CustomMachineLearningAsset(source_uid=uid, binding_uid=binding_uid, input_data_type=InputDataType.STRUCTURED)
+    """
+
+    def __init__(self, source_uid, binding_uid=None, input_data_type=None, problem_type=None, label_column=None,
+                 prediction_column=None, probability_column=None):
+        KnownServiceAsset.__init__(self, source_uid, binding_uid, input_data_type, problem_type, label_column,
+                                   prediction_column, probability_column)
