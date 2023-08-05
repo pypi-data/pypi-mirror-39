@@ -1,0 +1,12 @@
+:标题: PyVAT
+
+:作者:
+    刘刚
+
+:概述:
+        用于ZIT的生产自动测试的一些通用方法模块，其中实现了频谱仪,信号源的一些基本控制.
+    需要依赖PyVISA模块,且电脑需要安装KeySight IO驱动。
+        测试中打印使用了Logging模块,需要建立Config文件夹,在其中使用logging.ini对各模块打印
+    控制。
+:更新历史:
+    V1.0.1 完善install_requires 20181203  Liugang

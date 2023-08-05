@@ -1,0 +1,4 @@
+PyVISA>=1.8
+requests>=2.20.1
+pyserial==3.0
+pandas>=0.20.3
