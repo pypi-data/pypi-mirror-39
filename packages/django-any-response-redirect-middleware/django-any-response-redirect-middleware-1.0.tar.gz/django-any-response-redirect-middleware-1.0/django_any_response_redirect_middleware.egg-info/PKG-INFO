@@ -1,0 +1,40 @@
+Metadata-Version: 1.1
+Name: django-any-response-redirect-middleware
+Version: 1.0
+Summary: A subclass of Django's RedirectFallbackMiddleware that will catch any response code, not just 404s.
+Home-page: https://github.com/ryanbagwell/django-any-response-redirect-middleware/
+Author: Ryan Bagwell
+Author-email: ryan@ryanbagwell.com
+License: UNKNOWN
+Description: django-any-response-redirect-middleware
+        ---------------------------------------
+        
+        A subclass of Django's RedirectFallbackMiddleware that will catch any response code, not just 404s.
+        
+        Installation::
+        
+            pip install django-any-response-redirect-middleware
+        
+        Setup::
+        
+            MIDDLEWARE = [
+                ...middleware classes,
+                'any_response_redirect_middleware.AnyResponseCodeRedirectMiddleware',
+            ]
+        
+        Run tests::
+        
+            ./manage.py test any_response_redirect_middleware.tests
+        
+        
+        
+        
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP

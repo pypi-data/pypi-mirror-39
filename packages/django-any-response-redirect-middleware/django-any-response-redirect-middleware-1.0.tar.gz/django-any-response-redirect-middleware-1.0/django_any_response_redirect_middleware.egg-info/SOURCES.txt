@@ -1,0 +1,13 @@
+README.rst
+setup.py
+any_response_redirect_middleware/__init__.py
+any_response_redirect_middleware/models.py
+any_response_redirect_middleware/tests/__init__.py
+any_response_redirect_middleware/tests/basic.py
+any_response_redirect_middleware/tests/django_cms.py
+any_response_redirect_middleware/tests/wagtail_cms.py
+django_any_response_redirect_middleware.egg-info/PKG-INFO
+django_any_response_redirect_middleware.egg-info/SOURCES.txt
+django_any_response_redirect_middleware.egg-info/dependency_links.txt
+django_any_response_redirect_middleware.egg-info/requires.txt
+django_any_response_redirect_middleware.egg-info/top_level.txt

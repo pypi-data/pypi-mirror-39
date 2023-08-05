@@ -1,0 +1,3 @@
+from .basic import BasicRedirectMiddlewareTests
+from .django_cms import RedirectMiddlewareTestsWithDjangoCMS
+from .wagtail_cms import RedirectMiddlewareTestsWithWagtailCMS
