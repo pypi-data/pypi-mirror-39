@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: lhub-integ
+Version: 0.1.4
+Summary: The Logichub Integration SDK
+Home-page: https://logichub.com
+Author: Russell Cohen
+Author-email: russell@logichub.com
+Keywords: security,automation,logichub
+Requires-Python: >=3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: click (>=7.0,<7.1)
+Requires-Dist: dataclasses-json
+Requires-Dist: docstring-parser (>=0.1,<0.2)
+Requires-Dist: wheel (>=0.32.3,<0.33.0)
