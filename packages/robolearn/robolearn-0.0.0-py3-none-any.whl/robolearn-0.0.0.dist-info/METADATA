@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: robolearn
+Version: 0.0.0
+Summary: A Robot-Learning package: Robot reinforcement learning.
+Home-page: UNKNOWN
+Author: domingoesteban
+Author-email: mingo.esteban@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: gym
+Requires-Dist: numpy
+Requires-Dist: robolearn-gym-envs
+Requires-Dist: torch
+Requires-Dist: tqdm
+
+UNKNOWN
+
+
