@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: cpp-coveralls
+Version: 0.4.1
+Summary: Upload gcov to coveralls.io
+Home-page: https://github.com/eddyxu/cpp-coveralls
+Author: Lei Xu
+Author-email: eddyxu@gmail.com
+Maintainer: Lei Xu
+Maintainer-email: eddyxu@gmail.com
+License: Apache License 2.0
+Keywords: coveralls.io
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Utilities
+Requires-Dist: requests
+Requires-Dist: urllib3[secure]
+Requires-Dist: future
+
+Upload gcov to coveralls.io
+
+
