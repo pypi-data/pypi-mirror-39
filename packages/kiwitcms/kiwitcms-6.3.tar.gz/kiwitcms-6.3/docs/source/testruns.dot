@@ -1,0 +1,862 @@
+digraph model_graph {
+	graph [bb="0,0,2594,617",
+		fontname=Helvetica,
+		fontsize=8,
+		splines=true
+	];
+	node [fontname=Helvetica,
+		fontsize=8,
+		label="\N",
+		shape=plaintext
+	];
+	edge [fontname=Helvetica,
+		fontsize=8
+	];
+	subgraph cluster_tcms_testruns {
+		graph [bb="164,8,1556,609",
+			color=olivedrab4,
+			label=<
+          <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+          <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER">
+          <FONT FACE="Helvetica Bold" COLOR="Black" POINT-SIZE="12">
+          tcms.testruns
+          </FONT>
+          </TD></TR>
+          </TABLE>
+          >,
+			style=rounded
+		];
+		tcms_core_models_TCMSActionModel		 [height=0.5,
+			label=<
+      <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+      <FONT FACE="Helvetica Bold" COLOR="white">
+      TCMSActionModel
+      </FONT></TD></TR>
+    
+      </TABLE>
+      >,
+			pos="504,34",
+			width=1.9514];
+		tcms_testruns_HistoricalTestRun		 [height=3.1806,
+			label=<
+      <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+      <FONT FACE="Helvetica Bold" COLOR="white">
+      HistoricalTestRun
+      </FONT></TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">history_id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">AutoField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">build</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (build_id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">default_tester</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">history_user</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">manager</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">plan</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (plan_id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">product_version</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">environment_id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">IntegerField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">estimated_time</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">DurationField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">history_change_reason</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">TextField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">history_date</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">DateTimeField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">history_type</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">CharField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">notes</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">TextField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">run_id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">IntegerField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">start_date</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">DateTimeField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">stop_date</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">DateTimeField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">summary</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">TextField</FONT>
+      </TD></TR>
+    
+      </TABLE>
+      >,
+			pos="1018,451",
+			width=3.5];
+		tcms_testruns_models_TestRun		 [height=2.4583,
+			label=<
+      <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+      <FONT FACE="Helvetica Bold" COLOR="white">
+      TestRun<BR/>&lt;<FONT FACE="Helvetica Italic">TCMSActionModel</FONT>&gt;
+      </FONT></TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">run_id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">AutoField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">build</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (build_id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">default_tester</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">manager</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">plan</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (plan_id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">product_version</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">environment_id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">IntegerField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">estimated_time</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">DurationField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">notes</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">TextField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">start_date</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">DateTimeField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">stop_date</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">DateTimeField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">summary</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">TextField</FONT>
+      </TD></TR>
+    
+      </TABLE>
+      >,
+			pos="784,195",
+			width=3.25];
+		tcms_testruns_models_TestRun -> tcms_core_models_TCMSActionModel		 [arrowhead=empty,
+			arrowtail=none,
+			dir=both,
+			label="abstract\ninheritance",
+			lp="615,79",
+			pos="e,534.11,52.101 666.88,127.49 622.69,102.4 575.37,75.527 543.19,57.252"];
+		tcms_testruns_models_TestCaseRunStatus		 [height=0.79167,
+			label=<
+      <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+      <FONT FACE="Helvetica Bold" COLOR="white">
+      TestCaseRunStatus<BR/>&lt;<FONT FACE="Helvetica Italic">TCMSActionModel</FONT>&gt;
+      </FONT></TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">AutoField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">name</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">CharField</FONT>
+      </TD></TR>
+    
+      </TABLE>
+      >,
+			pos="504,195",
+			width=2.0347];
+		tcms_testruns_models_TestCaseRunStatus -> tcms_core_models_TCMSActionModel		 [arrowhead=empty,
+			arrowtail=none,
+			dir=both,
+			label="abstract\ninheritance",
+			lp="524,79",
+			pos="e,504,52.101 504,166.3 504,137.11 504,91.417 504,62.355"];
+		tcms_testruns_HistoricalTestCaseRun		 [height=3.3472,
+			label=<
+      <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+      <FONT FACE="Helvetica Bold" COLOR="white">
+      HistoricalTestCaseRun
+      </FONT></TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">history_id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">AutoField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">assignee</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">build</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (build_id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">case</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (case_id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">case_run_status</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">history_user</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">run</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (run_id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">tested_by</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">case_run_id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">IntegerField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">case_text_version</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">IntegerField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">close_date</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">DateTimeField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">environment_id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">IntegerField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">history_change_reason</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">TextField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">history_date</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">DateTimeField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">history_type</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">CharField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">notes</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">TextField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">running_date</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">DateTimeField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">sortkey</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">IntegerField</FONT>
+      </TD></TR>
+    
+      </TABLE>
+      >,
+			pos="550,451",
+			width=3.5];
+		tcms_testruns_HistoricalTestCaseRun -> tcms_testruns_models_TestRun		 [arrowhead=none,
+			arrowtail=dot,
+			dir=both,
+			label="run (+)",
+			lp="694.5,307",
+			pos="s,660.15,330.44 665.58,324.55 678.25,310.79 690.94,297.01 703.07,283.85"];
+		tcms_testruns_HistoricalTestCaseRun -> tcms_testruns_models_TestCaseRunStatus		 [arrowhead=none,
+			arrowtail=dot,
+			dir=both,
+			label="case_run_status (+)",
+			lp="571,307",
+			pos="s,537.82,330.21 536.56,322.16 535.45,315.33 534.27,308.57 533,302 527.79,275.02 519.27,244.86 512.81,223.62"];
+		tcms_testruns_models_TestCaseRun		 [height=2.625,
+			label=<
+      <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+      <FONT FACE="Helvetica Bold" COLOR="white">
+      TestCaseRun<BR/>&lt;<FONT FACE="Helvetica Italic">TCMSActionModel</FONT>&gt;
+      </FONT></TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">case_run_id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">AutoField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">assignee</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">build</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (build_id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">case</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (case_id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">case_run_status</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">run</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (run_id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">tested_by</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">case_text_version</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">IntegerField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">close_date</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">DateTimeField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">environment_id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">IntegerField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">notes</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">TextField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">running_date</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">DateTimeField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">sortkey</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">IntegerField</FONT>
+      </TD></TR>
+    
+      </TABLE>
+      >,
+			pos="289,451",
+			width=3.25];
+		tcms_testruns_models_TestCaseRun -> tcms_testruns_models_TestRun		 [arrowhead=none,
+			arrowtail=dot,
+			dir=both,
+			label="run (case_run)",
+			lp="502,307",
+			pos="s,380.19,356.38 386.57,351.1 395.86,343.55 405.4,336.39 415,330 431.57,318.97 438.07,320.64 456,312 464.6,307.86 465.95,305.03 475\
+,302 522.4,286.15 538.1,298.27 586,284 612.77,276.03 640.67,265.28 666.78,254.03"];
+		tcms_testruns_models_TestCaseRun -> tcms_testruns_models_TestCaseRunStatus		 [arrowhead=none,
+			arrowtail=dot,
+			dir=both,
+			label="case_run_status (testcaserun)",
+			lp="401.5,307",
+			pos="s,315.91,356.12 319.25,348.52 326.77,332.02 335.93,315.82 347,302 362.83,282.23 416.43,247.89 456.63,223.66"];
+		tcms_testruns_models_TestCaseRun -> tcms_core_models_TCMSActionModel		 [arrowhead=empty,
+			arrowtail=none,
+			dir=both,
+			label="abstract\ninheritance",
+			lp="401,195",
+			pos="e,455.99,52.125 294.62,356.37 303.34,281.88 325.41,178.48 381,106 397.76,84.152 423.3,67.854 446.78,56.422"];
+		tcms_testruns_models_TestRunTag		 [height=1.0139,
+			label=<
+      <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+      <FONT FACE="Helvetica Bold" COLOR="white">
+      TestRunTag
+      </FONT></TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">AutoField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">run</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (run_id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">tag</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">user</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">IntegerField</FONT>
+      </TD></TR>
+    
+      </TABLE>
+      >,
+			pos="1251,451",
+			width=2.4722];
+		tcms_testruns_models_TestRunTag -> tcms_testruns_models_TestRun		 [arrowhead=none,
+			arrowtail=dot,
+			dir=both,
+			label="run (tags)",
+			lp="1003,307",
+			pos="s,1232.3,414.35 1227.9,407.29 1210.9,380.35 1185.2,347.46 1153,330 1087,294.24 1056.4,335.27 985,312 956.56,302.73 927.7,289.08 \
+901.07,274.37"];
+		tcms_testruns_models_TestRunCC		 [height=0.84722,
+			label=<
+      <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+      <FONT FACE="Helvetica Bold" COLOR="white">
+      TestRunCC
+      </FONT></TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">AutoField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">run</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (run_id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">user</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      </TABLE>
+      >,
+			pos="784,451",
+			width=2.4792];
+		tcms_testruns_models_TestRunCC -> tcms_testruns_models_TestRun		 [arrowhead=none,
+			arrowtail=dot,
+			dir=both,
+			label="run (cc_list)",
+			lp="805,307",
+			pos="s,784,420.37 784,412.15 784,378.33 784,327.49 784,283.62"];
+		tcms_testruns_models_EnvRunValueMap		 [height=0.84722,
+			label=<
+      <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+      <FONT FACE="Helvetica Bold" COLOR="white">
+      EnvRunValueMap
+      </FONT></TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">AutoField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">run</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (run_id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">value</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      </TABLE>
+      >,
+			pos="1453,451",
+			width=2.6181];
+		tcms_testruns_models_EnvRunValueMap -> tcms_testruns_models_TestRun		 [arrowhead=none,
+			arrowtail=dot,
+			dir=both,
+			label="run (envrunvaluemap)",
+			lp="1317,307",
+			pos="s,1435.2,420.37 1430.7,413.68 1412.1,386.56 1383.2,350.74 1349,330 1344.1,327.05 1065.3,261.65 901.17,223.32"];
+	}
+	tcms_management_models_Version	 [height=0.5,
+		label=<
+  <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+  <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+  <FONT FACE="Helvetica Bold" COLOR="white">Version</FONT>
+  </TD></TR>
+  </TABLE>
+  >,
+		pos="122,34",
+		width=0.92361];
+	tcms_testruns_HistoricalTestRun -> tcms_management_models_Version	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="product_version (+)",
+		lp="269,195",
+		pos="s,896.3,336.47 888.75,332.86 886.51,331.85 884.26,330.9 882,330 747.83,276.72 346.89,373.98 234,284 156.89,222.53 160.91,181.64 \
+130,88 126.15,76.336 124.14,62.609 123.1,52.048"];
+	tcms_testplans_models_TestPlan	 [height=0.5,
+		label=<
+  <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+  <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+  <FONT FACE="Helvetica Bold" COLOR="white">TestPlan</FONT>
+  </TD></TR>
+  </TABLE>
+  >,
+		pos="35,34",
+		width=0.97917];
+	tcms_testruns_HistoricalTestRun -> tcms_testplans_models_TestPlan	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="plan (+)",
+		lp="118,195",
+		pos="s,896.31,336.44 888.76,332.85 886.52,331.84 884.27,330.89 882,330 801.46,298.19 168.22,342.09 104,284 35.135,221.71 32.524,97.353\
+ 34.047,52.029"];
+	tcms_management_models_Build	 [height=0.5,
+		label=<
+  <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+  <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+  <FONT FACE="Helvetica Bold" COLOR="white">Build</FONT>
+  </TD></TR>
+  </TABLE>
+  >,
+		pos="1633,34",
+		width=0.78472];
+	tcms_testruns_HistoricalTestRun -> tcms_management_models_Build	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="build (+)",
+		lp="2018,195",
+		pos="s,1138.8,336.43 1146.3,332.84 1148.5,331.84 1150.7,330.89 1153,330 1237.1,296.73 1909.1,354.35 1966,284 2015.8,222.49 2015.8,167.5\
+ 1966,106 1946.6,82.077 1738.4,50.092 1661.4,38.992"];
+	django_contrib_auth_models_User	 [height=0.5,
+		label=<
+  <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+  <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+  <FONT FACE="Helvetica Bold" COLOR="white">User</FONT>
+  </TD></TR>
+  </TABLE>
+  >,
+		pos="1821,34",
+		width=0.75694];
+	tcms_testruns_HistoricalTestRun -> django_contrib_auth_models_User	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="manager (+)",
+		lp="2185,195",
+		pos="s,1138.7,336.41 1146.3,332.83 1148.5,331.83 1150.7,330.89 1153,330 1253.6,290.38 2053.8,365.33 2125,284 2189.2,210.75 2167.9,107.43\
+ 2078,70 1999.4,37.29 1896.8,33.801 1848.5,34.216"];
+	tcms_testruns_HistoricalTestRun -> django_contrib_auth_models_User	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="default_tester (+)",
+		lp="2278,195",
+		pos="s,1138.7,336.38 1146.3,332.82 1148.5,331.82 1150.7,330.88 1153,330 1262.7,287.08 2137.9,375.51 2212,284 2261.8,222.53 2258.1,170.31\
+ 2212,106 2169.5,46.692 1930.3,36.92 1848.5,35.314"];
+	tcms_testruns_HistoricalTestRun -> django_contrib_auth_models_User	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="history_user (+)",
+		lp="2359.5,195",
+		pos="s,1138.7,336.37 1146.3,332.81 1148.5,331.82 1150.7,330.88 1153,330 1206,309.33 2119.5,318.22 2176,312 2237.8,305.2 2273.7,332.14\
+ 2313,284 2338,253.36 2336.9,137.51 2313,106 2277,58.59 2242.5,80.899 2184,70 2060.1,46.931 1909.5,38.578 1848.6,36.002"];
+	tcms_testruns_models_TestRun -> tcms_management_models_Version	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="product_version (version_run)",
+		lp="446,79",
+		pos="s,666.91,134.47 659.53,131.37 635.62,121.45 610.41,112.37 586,106 502.22,84.126 477.94,98.644 392,88 288.45,75.174 260.07,81.568\
+ 160,52 158.48,51.549 156.93,51.051 155.38,50.516"];
+	tcms_testruns_models_TestRun -> tcms_testplans_models_TestPlan	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="plan (run)",
+		lp="213,79",
+		pos="s,666.88,133.41 659.21,130.21 635.44,120.47 610.36,111.76 586,106 416.7,65.983 366.35,118.02 195,88 150.9,80.273 102.36,62.851 70.444\
+,50.082"];
+	tcms_testruns_models_TestRun -> tcms_management_models_Build	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="build (build_run)",
+		lp="832,79",
+		pos="s,781.94,106.48 784.32,98.749 788.21,87.785 794.16,77.77 803,70 834.59,42.221 1518.3,57.298 1560,52 1574.8,50.115 1591.1,46.493 \
+1604.5,43.075"];
+	tcms_testruns_models_TestRun -> django_contrib_auth_models_User	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="manager (manager)",
+		lp="977.5,79",
+		pos="s,875.13,106.45 881.86,101.65 900.31,88.801 920.34,77.461 941,70 1017.2,42.476 1589.2,57.538 1670,52 1713.3,49.034 1763.3,42.86 \
+1793.5,38.826"];
+	tcms_testruns_models_TestRun -> django_contrib_auth_models_User	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="default_tester (default_tester)",
+		lp="1229,79",
+		pos="s,901.16,147.78 908.9,144.98 984.86,117.57 1084.5,85.831 1176,70 1392.5,32.529 1450.9,68.301 1670,52 1713.3,48.78 1763.3,42.679 \
+1793.5,38.729"];
+	tcms_testruns_HistoricalTestCaseRun -> django_contrib_auth_models_User	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="assignee (+)",
+		lp="1776.5,195",
+		pos="s,676.31,333.7 683.91,330.43 684.27,330.29 684.63,330.14 685,330 781.97,292.06 1519.5,330.23 1622,312 1659.5,305.33 1676.8,311.65\
+ 1703,284 1759.6,224.27 1713.3,177.51 1754,106 1765.9,85.088 1785.2,65.53 1800.1,52.258"];
+	tcms_testruns_HistoricalTestCaseRun -> django_contrib_auth_models_User	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="tested_by (+)",
+		lp="1847,195",
+		pos="s,676.31,333.7 683.91,330.43 684.27,330.29 684.63,330.14 685,330 800.39,284.91 1716.6,376.55 1799,284 1829.4,249.8 1824.6,102.82\
+ 1822,52.206"];
+	tcms_testcases_models_TestCase	 [height=0.5,
+		label=<
+  <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+  <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+  <FONT FACE="Helvetica Bold" COLOR="white">TestCase</FONT>
+  </TD></TR>
+  </TABLE>
+  >,
+		pos="1601,195",
+		width=1.0069];
+	tcms_testruns_HistoricalTestCaseRun -> tcms_testcases_models_TestCase	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="case (+)",
+		lp="1570,307",
+		pos="s,676.31,333.71 683.91,330.43 684.27,330.29 684.64,330.14 685,330 729.49,312.55 1504.3,336.98 1545,312 1580.1,290.49 1593.7,239.98\
+ 1598.5,213.26"];
+	tcms_testruns_HistoricalTestCaseRun -> tcms_management_models_Build	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="build (+)",
+		lp="1684,195",
+		pos="s,676.31,333.7 683.91,330.43 684.27,330.29 684.64,330.14 685,330 778.55,293.36 1491.4,335.71 1589,312 1616.4,305.34 1631.1,307.96\
+ 1646,284 1692.8,208.86 1656.5,94.875 1640,52.054"];
+	tcms_testruns_HistoricalTestCaseRun -> django_contrib_auth_models_User	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="history_user (+)",
+		lp="1931.5,195",
+		pos="s,676.3,333.69 683.91,330.43 684.27,330.29 684.63,330.14 685,330 740.6,308.33 1699.8,319.55 1759,312 1811.6,305.29 1842.2,325.67\
+ 1875,284 1923.9,221.84 1900.3,180.97 1875,106 1867.9,85.014 1851.9,65.32 1839.1,52.022"];
+	tcms_testruns_models_TestCaseRun -> django_contrib_auth_models_User	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="assignee (case_run_assignee)",
+		lp="1501.5,195",
+		pos="s,371.27,356.22 377.7,351.36 389.41,342.82 401.92,335.39 415,330 460.99,311.07 1260.9,319.89 1310,312 1351.8,305.29 1371.8,314.6\
+ 1401,284 1457.4,224.92 1387.4,161.86 1447,106 1472.5,82.081 1711.7,49.155 1793.6,38.487"];
+	tcms_testruns_models_TestCaseRun -> django_contrib_auth_models_User	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="tested_by (case_run_tester)",
+		lp="1346.5,195",
+		pos="s,371.29,356.26 377.71,351.4 389.42,342.85 401.93,335.41 415,330 494.7,297.04 1106.1,326.95 1191,312 1229.3,305.25 1249.4,314.17\
+ 1274,284 1324.4,222.23 1241.3,163.97 1296,106 1353.6,44.932 1586.5,60.945 1670,52 1713.3,47.363 1763.5,41.641 1793.7,38.159"];
+	tcms_testruns_models_TestCaseRun -> tcms_testcases_models_TestCase	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="case (case_run)",
+		lp="1512,307",
+		pos="s,370.89,356.47 377.36,351.56 389.17,342.92 401.79,335.42 415,330 468.26,308.16 1394.2,321.18 1451,312 1465.7,309.62 1468.6,305.92\
+ 1483,302 1516.9,292.75 1532.7,306.16 1560,284 1582.2,265.93 1593,233.06 1597.8,213"];
+	tcms_testruns_models_TestCaseRun -> tcms_management_models_Build	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="build (testcaserun)",
+		lp="1240.5,195",
+		pos="s,371.29,356.27 377.72,351.41 389.42,342.86 401.93,335.41 415,330 453.87,313.91 1140.2,339.52 1172,312 1242.2,251.25 1151.1,180.17\
+ 1207,106 1229.3,76.471 1246.2,79.366 1282,70 1401.8,38.638 1437.5,70.102 1560,52 1574.8,49.812 1591,46.159 1604.4,42.799"];
+	tcms_management_models_Tag	 [height=0.5,
+		label=<
+  <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+  <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+  <FONT FACE="Helvetica Bold" COLOR="white">Tag</FONT>
+  </TD></TR>
+  </TABLE>
+  >,
+		pos="2439,195",
+		width=0.75];
+	tcms_testruns_models_TestRunTag -> tcms_management_models_Tag	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="tag (testruntag)",
+		lp="2405,307",
+		pos="s,1269.1,414.37 1273.2,407.51 1290.2,379.94 1316.4,346.23 1350,330 1400.1,305.83 2297.5,327.24 2351,312 2374.4,305.34 2381.7,302.04\
+ 2398,284 2416.8,263.24 2428.4,232.4 2434.3,213.28"];
+	tcms_testruns_models_TestRunCC -> django_contrib_auth_models_User	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="user (testruncc)",
+		lp="2082.5,195",
+		pos="s,798.6,420.49 802.62,413.46 819.37,384.97 846.89,347.41 883,330 998.59,274.28 1957.4,384.67 2037,284 2061.5,252.97 2060.2,138.04\
+ 2037,106 1993.1,45.408 1895.9,35.616 1848.3,34.618"];
+	tcms_management_models_EnvValue	 [height=0.5,
+		label=<
+  <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+  <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+  <FONT FACE="Helvetica Bold" COLOR="white">EnvValue</FONT>
+  </TD></TR>
+  </TABLE>
+  >,
+		pos="2521,195",
+		width=1.0069];
+	tcms_testruns_models_EnvRunValueMap -> tcms_management_models_EnvValue	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="value (envrunvaluemap)",
+		lp="2550.5,307",
+		pos="s,1547.5,443.8 1555.5,443.25 1805.5,425.84 2431,376.26 2499,312 2526.1,286.37 2525.8,238.55 2523.3,213.05"];
+}

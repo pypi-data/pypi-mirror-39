@@ -1,0 +1,583 @@
+digraph model_graph {
+	graph [bb="0,0,1408,721",
+		fontname=Helvetica,
+		fontsize=8,
+		splines=true
+	];
+	node [fontname=Helvetica,
+		fontsize=8,
+		label="\N",
+		shape=plaintext
+	];
+	edge [fontname=Helvetica,
+		fontsize=8
+	];
+	subgraph cluster_tcms_testplans {
+		graph [bb="8,8,984,713",
+			color=olivedrab4,
+			label=<
+          <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+          <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER">
+          <FONT FACE="Helvetica Bold" COLOR="Black" POINT-SIZE="12">
+          tcms.testplans
+          </FONT>
+          </TD></TR>
+          </TABLE>
+          >,
+			style=rounded
+		];
+		tcms_core_models_TCMSActionModel		 [height=0.5,
+			label=<
+      <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+      <FONT FACE="Helvetica Bold" COLOR="white">
+      TCMSActionModel
+      </FONT></TD></TR>
+    
+      </TABLE>
+      >,
+			pos="539,34",
+			width=1.9514];
+		tcms_testplans_models_PlanType		 [height=0.95833,
+			label=<
+      <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+      <FONT FACE="Helvetica Bold" COLOR="white">
+      PlanType<BR/>&lt;<FONT FACE="Helvetica Italic">TCMSActionModel</FONT>&gt;
+      </FONT></TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">AutoField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">description</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">TextField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">name</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">CharField</FONT>
+      </TD></TR>
+    
+      </TABLE>
+      >,
+			pos="452,141",
+			width=2.2222];
+		tcms_testplans_models_PlanType -> tcms_core_models_TCMSActionModel		 [arrowhead=empty,
+			arrowtail=none,
+			dir=both,
+			label="abstract\ninheritance",
+			lp="529,79",
+			pos="e,524.86,52.066 479.77,106.49 492.32,91.337 506.9,73.747 518.45,59.806"];
+		tcms_testplans_HistoricalTestPlan		 [height=3.1806,
+			label=<
+      <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+      <FONT FACE="Helvetica Bold" COLOR="white">
+      HistoricalTestPlan
+      </FONT></TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">history_id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">AutoField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">author</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">history_user</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">owner</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">parent</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (plan_id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">product</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">product_version</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">type</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">create_date</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">DateTimeField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">extra_link</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">CharField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">history_change_reason</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">TextField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">history_date</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">DateTimeField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">history_type</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">CharField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">is_active</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">BooleanField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">name</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">CharField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">plan_id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">IntegerField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">text</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">TextField</FONT>
+      </TD></TR>
+    
+      </TABLE>
+      >,
+			pos="442,561",
+			width=3.4514];
+		tcms_testplans_HistoricalTestPlan -> tcms_testplans_models_PlanType		 [arrowhead=none,
+			arrowtail=dot,
+			dir=both,
+			label="type (+)",
+			lp="464,311",
+			pos="s,444.66,446.18 444.85,438.02 446.36,373.75 448.26,293.61 450,222 450.37,206.86 450.79,190.11 451.14,175.87"];
+		tcms_testplans_models_TestPlan		 [height=2.4583,
+			label=<
+      <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+      <FONT FACE="Helvetica Bold" COLOR="white">
+      TestPlan<BR/>&lt;<FONT FACE="Helvetica Italic">TCMSActionModel</FONT>&gt;
+      </FONT></TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">plan_id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">AutoField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">author</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">owner</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">parent</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica Bold">ForeignKey (plan_id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">product</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">product_version</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">type</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">create_date</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">DateTimeField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">extra_link</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">CharField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">is_active</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">BooleanField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">name</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">CharField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">text</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Helvetica ">TextField</FONT>
+      </TD></TR>
+    
+      </TABLE>
+      >,
+			pos="603,311",
+			width=3.2014];
+		tcms_testplans_HistoricalTestPlan -> tcms_testplans_models_TestPlan		 [arrowhead=none,
+			arrowtail=dot,
+			dir=both,
+			label="parent (+)",
+			lp="551.5,423",
+			pos="s,515.9,446.16 520.44,439.18 529.12,425.8 537.83,412.38 546.18,399.53"];
+		tcms_testplans_models_TestPlan -> tcms_testplans_models_PlanType		 [arrowhead=none,
+			arrowtail=dot,
+			dir=both,
+			label="type (testplan)",
+			lp="532,199",
+			pos="s,523.96,222.06 518.41,215.89 505.49,201.52 492.94,187.55 482.28,175.69"];
+		tcms_testplans_models_TestPlan -> tcms_testplans_models_TestPlan		 [arrowhead=none,
+			arrowtail=dot,
+			dir=both,
+			label="parent (child_set)",
+			lp="767.5,311",
+			pos="s,718.38,327.84 726.09,324.62 732.32,321.24 736,316.7 736,311 736,303.23 729.18,297.62 718.38,294.16"];
+		tcms_testplans_models_TestPlan -> tcms_core_models_TCMSActionModel		 [arrowhead=empty,
+			arrowtail=none,
+			dir=both,
+			label="abstract\ninheritance",
+			lp="595,141",
+			pos="e,546.59,52.233 584.81,222.48 570.63,154.29 553.29,70.961 553,70 552.17,67.239 551.21,64.392 550.19,61.57"];
+		tcms_testplans_models_TestPlanTag		 [height=1.0139,
+			label=<
+      <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+      <FONT FACE="Helvetica Bold" COLOR="white">
+      TestPlanTag
+      </FONT></TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">AutoField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">plan</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (plan_id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">tag</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">user</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">IntegerField</FONT>
+      </TD></TR>
+    
+      </TABLE>
+      >,
+			pos="676,561",
+			width=2.5347];
+		tcms_testplans_models_TestPlanTag -> tcms_testplans_models_TestPlan		 [arrowhead=none,
+			arrowtail=dot,
+			dir=both,
+			label="plan (testplantag)",
+			lp="666.5,423",
+			pos="s,665.54,524.47 663.21,516.56 653.72,484.31 640.46,439.26 628.8,399.63"];
+		tcms_testplans_models_TestPlanEmailSettings		 [height=1.8472,
+			label=<
+      <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+      <FONT FACE="Helvetica Bold" COLOR="white">
+      TestPlanEmailSettings
+      </FONT></TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">AutoField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">plan</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">OneToOneField (plan_id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">auto_to_case_default_tester</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">BooleanField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">auto_to_case_owner</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">BooleanField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">auto_to_plan_author</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">BooleanField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">auto_to_plan_owner</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">BooleanField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">is_active</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">BooleanField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">notify_on_case_update</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">BooleanField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica ">notify_on_plan_update</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica ">BooleanField</FONT>
+      </TD></TR>
+    
+      </TABLE>
+      >,
+			pos="158,561",
+			width=3.9236];
+		tcms_testplans_models_TestPlanEmailSettings -> tcms_testplans_models_TestPlan		 [arrowhead=none,
+			arrowtail=none,
+			dir=both,
+			label="plan (email_settings)",
+			lp="454,423",
+			pos="232.93,494.28 255.85,476.67 281.93,458.95 308,446 376.19,412.14 403.91,431.98 473,400 477.82,397.77 482.67,395.36 487.5,392.83"];
+		tcms_testplans_models_EnvPlanMap		 [height=0.84722,
+			label=<
+      <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+      <FONT FACE="Helvetica Bold" COLOR="white">
+      EnvPlanMap
+      </FONT></TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">id</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">AutoField</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">group</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (id)</FONT>
+      </TD></TR>
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Helvetica Bold">plan</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Helvetica Bold">ForeignKey (plan_id)</FONT>
+      </TD></TR>
+    
+      </TABLE>
+      >,
+			pos="881,561",
+			width=2.6389];
+		tcms_testplans_models_EnvPlanMap -> tcms_testplans_models_TestPlan		 [arrowhead=none,
+			arrowtail=dot,
+			dir=both,
+			label="plan (envplanmap)",
+			lp="786.5,423",
+			pos="s,855.95,530.15 850.45,523.81 830.23,500.64 802.63,470.45 776,446 757.95,429.43 738.01,412.7 718.29,396.95"];
+	}
+	tcms_management_models_Version	 [height=0.5,
+		label=<
+  <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+  <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+  <FONT FACE="Helvetica Bold" COLOR="white">Version</FONT>
+  </TD></TR>
+  </TABLE>
+  >,
+		pos="1026,141",
+		width=0.92361];
+	tcms_testplans_HistoricalTestPlan -> tcms_management_models_Version	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="product_version (+)",
+		lp="885,311",
+		pos="s,566.62,449.72 573.95,446.44 574.3,446.29 574.65,446.14 575,446 625.89,425.04 781.89,465.68 822,428 889.34,364.73 791.86,293.81\
+ 850,222 890.68,171.75 931.6,207.6 988,176 995.88,171.59 1003.5,165.29 1009.8,159.32"];
+	django_contrib_auth_models_User	 [height=0.5,
+		label=<
+  <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+  <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+  <FONT FACE="Helvetica Bold" COLOR="white">User</FONT>
+  </TD></TR>
+  </TABLE>
+  >,
+		pos="1105,141",
+		width=0.75694];
+	tcms_testplans_HistoricalTestPlan -> django_contrib_auth_models_User	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="owner (+)",
+		lp="1132,311",
+		pos="s,566.57,449.59 573.94,446.42 574.29,446.28 574.65,446.14 575,446 679.07,405.14 1015.2,493.81 1076,400 1126.4,322.28 1114.6,203.09\
+ 1107.9,159.08"];
+	tcms_testplans_HistoricalTestPlan -> django_contrib_auth_models_User	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="author (+)",
+		lp="974.5,311",
+		pos="s,566.61,449.7 573.95,446.44 574.3,446.29 574.65,446.14 575,446 646.59,416.72 869.18,458.31 920,400 973.03,339.15 910.31,288.53 \
+956,222 986.47,177.64 1020.8,201.84 1068,176 1076,171.64 1083.6,165.21 1089.8,159.12"];
+	tcms_management_models_Product	 [height=0.5,
+		label=<
+  <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+  <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+  <FONT FACE="Helvetica Bold" COLOR="white">Product</FONT>
+  </TD></TR>
+  </TABLE>
+  >,
+		pos="1184,141",
+		width=0.92361];
+	tcms_testplans_HistoricalTestPlan -> tcms_management_models_Product	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="product (+)",
+		lp="1203,311",
+		pos="s,566.56,449.58 573.94,446.42 574.29,446.28 574.65,446.14 575,446 695.21,399 1071.4,499.21 1154,400 1184.5,363.34 1185.1,211.16 \
+1184.4,159.35"];
+	django_contrib_auth_models_User;
+	tcms_testplans_HistoricalTestPlan -> django_contrib_auth_models_User	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="history_user (+)",
+		lp="1043.5,311",
+		pos="s,566.59,449.66 573.94,446.43 574.3,446.29 574.65,446.14 575,446 661.67,411.06 931.46,470.32 993,400 1045.5,340.01 982.8,294.92 \
+1015,222 1021.6,207.01 1026.6,204.67 1039,194 1050.5,184.13 1055.9,185.17 1068,176 1074.7,170.94 1081.5,164.89 1087.5,159.31"];
+	tcms_testplans_models_TestPlan -> tcms_management_models_Version	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="product_version (plans)",
+		lp="635.5,199",
+		pos="s,580.02,222.34 581.72,214.11 583.81,206.71 587.41,199.85 593,194 623.35,162.23 947.33,192.61 988,176 996.85,172.39 1005,165.77 \
+1011.5,159.33"];
+	tcms_testplans_models_TestPlan -> django_contrib_auth_models_User	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="owner (myplans)",
+		lp="731.5,199",
+		pos="s,662.44,222.46 668.48,216.73 678.38,207.73 689.26,199.81 701,194 774.2,157.81 992.67,207.5 1068,176 1076.7,172.36 1084.6,165.75\
+ 1090.9,159.31"];
+	tcms_testplans_models_TestPlan -> django_contrib_auth_models_User	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="author (testplan)",
+		lp="898,199",
+		pos="s,718.5,249.76 726.02,246.3 769.76,226.32 820.06,206.3 868,194 954.45,171.82 986.38,212.1 1068,176 1076.6,172.19 1084.5,165.54 1090.8\
+,159.13"];
+	tcms_testplans_models_TestPlan -> tcms_management_models_Product	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="product (plan)",
+		lp="1113.5,199",
+		pos="s,718.31,255.68 725.89,252.57 754.34,241.02 784.83,229.99 814,222 955.55,183.22 1006.1,233.75 1141,176 1150.3,172.03 1159.2,165.52\
+ 1166.6,159.25"];
+	tcms_management_models_Tag	 [height=0.5,
+		label=<
+  <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+  <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+  <FONT FACE="Helvetica Bold" COLOR="white">Tag</FONT>
+  </TD></TR>
+  </TABLE>
+  >,
+		pos="1269,311",
+		width=0.75];
+	tcms_testplans_models_TestPlanTag -> tcms_management_models_Tag	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="tag (testplantag)",
+		lp="1242.5,423",
+		pos="s,696.43,524.41 700.96,517.66 718.65,491.97 744.89,461.28 777,446 861.55,405.75 1111.6,464.19 1198,428 1238.7,410.93 1257.8,356.9\
+ 1265.2,329.02"];
+	tcms_management_models_EnvGroup	 [height=0.5,
+		label=<
+  <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+  <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4">
+  <FONT FACE="Helvetica Bold" COLOR="white">EnvGroup</FONT>
+  </TD></TR>
+  </TABLE>
+  >,
+		pos="1352,311",
+		width=1.0347];
+	tcms_testplans_models_EnvPlanMap -> tcms_management_models_EnvGroup	 [arrowhead=none,
+		arrowtail=dot,
+		dir=both,
+		label="group (envplanmap)",
+		lp="1371.5,423",
+		pos="s,976.09,543.98 984.09,542.49 1101.7,520.4 1283.7,479.06 1330,428 1354.8,400.66 1355.6,354.42 1353.9,329.37"];
+}
