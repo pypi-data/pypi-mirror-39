@@ -1,0 +1,52 @@
+Metadata-Version: 2.0
+Name: netharn
+Version: 0.1.1
+Summary: UNKNOWN
+Home-page: https://github.com/Erotemic/netharn
+Author: Jon Crall
+Author-email: erotemic@gmail.com
+License: Apache 2
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: all
+Requires-Dist: Cython
+Requires-Dist: cffi
+Requires-Dist: easydict
+Requires-Dist: psutil
+Requires-Dist: six
+Requires-Dist: xdoctest
+Requires-Dist: pytest
+Requires-Dist: pytest-cov
+Requires-Dist: coverage
+Requires-Dist: torch
+Requires-Dist: numpy
+Requires-Dist: ubelt
+Requires-Dist: progiter
+Requires-Dist: parse
+Requires-Dist: packaging
+Requires-Dist: pyflakes
+Requires-Dist: tqdm
+Requires-Dist: pandas
+Requires-Dist: Pillow
+Requires-Dist: opencv-python
+Requires-Dist: torchvision
+Requires-Dist: matplotlib
+Requires-Dist: h5py
+Requires-Dist: imgaug
+Requires-Dist: pygtrie
+Requires-Dist: protobuf
+Requires-Dist: tensorboard-logger
+Requires-Dist: scikit-learn
+Requires-Dist: pyqt5; python_version > "2.7"
+Provides-Extra: all
+
+UNKNOWN
+
+
