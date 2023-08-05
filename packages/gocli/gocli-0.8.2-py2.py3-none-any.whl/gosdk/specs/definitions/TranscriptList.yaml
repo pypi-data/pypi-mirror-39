@@ -1,0 +1,7 @@
+properties:
+  results:
+    type: array
+    items:
+      $ref: '#/definitions/Transcript'
+title: TranscriptList
+type: object
