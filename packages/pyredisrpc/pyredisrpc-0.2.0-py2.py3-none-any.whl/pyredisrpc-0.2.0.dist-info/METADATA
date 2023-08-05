@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: pyredisrpc
+Version: 0.2.0
+Summary: rpc over redis for python
+Home-page: https://github.com/gowhari/pyredisrpc
+Author: Iman Gowhari
+Author-email: gowhari@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst
+Requires-Dist: redis
+
+pyredisrpc
+==========
+
+rpc over redis for python
+
+install
+=======
+
+::
+
+    pip install pyredisrpc
+
+
+usage
+=====
+
+server:
+
+.. code:: python
+
+    server = pyredisrpc.Server('test-queue')
+
+    @server.method
+    def add(a, b):
+        return a + b
+
+    server.run()
+
+client:
+
+.. code:: python
+
+    client = pyredisrpc.Client('test-queue')
+    print(client.add(1, 2))
+
+
