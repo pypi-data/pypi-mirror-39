@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: fbmmsg
+Version: 0.0.2
+Summary: Simple but yet functional library for building Facebook Messenger bots
+Home-page: https://github.com/AppVelox/fbmsg
+Author: Appvelox LLC
+Author-email: team@appvelox.ru
+License: UNKNOWN
+Description: # fbmsg
+        [![PyPI version](https://badge.fury.io/py/fbmmsg.svg)](https://badge.fury.io/py/fbmmsg)
+        
+        Simple but yet functional library for building Facebook Messenger bots
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
