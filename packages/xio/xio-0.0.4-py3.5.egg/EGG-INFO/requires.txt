@@ -1,0 +1,15 @@
+requests
+pyyaml
+pynacl
+ws4py
+
+[:python_version < "3.0"]
+bitcoin
+
+[:python_version > "3.0"]
+eth-typing<2
+web3
+
+[server]
+gevent
+uswgi
