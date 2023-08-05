@@ -1,0 +1,102 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+
+.TH URLSCAN 1 "July 29, 2018"
+
+.SH NAME
+urlscan \- browse the URLs in an email message from a terminal
+.SH SYNOPSIS
+\fBurlscan\fR [options] <
+.I message
+
+\fBurlscan\fR [options]
+.I message
+
+.SH DESCRIPTION
+\fBurlscan\fR accepts a single email message on standard
+input, then displays a terminal-based list of the URLs in the given
+message.  Selecting a URL uses the Python webbrowser module to 
+determine which browser to open. The \fBBROWSER\fR environment 
+variable will be used if it is set.
+
+\fBurlscan\fR is primarily intended to be used with the
+.B mutt
+(1) mailreader, but it should work well with any terminal-based mail
+program.
+
+\fBurlscan\fR is similar to \fBurlview\fR(1), but has the following
+additional features:
+
+\fB1.\fR Support for more message encodings, such as quoted-printable
+and base64.
+
+\fB2.\fR Extraction and display of the context surrounding each URL. Toggle
+context view on/off with `c`.
+
+\fB3.\fR URLs are shortened by default to fit on one line. Toggle one or all
+shortened URLs with `s` or `S`.
+
+\fB4.\fR Incremental case-insensitive search using `/`. Footer shows current
+search term. `/` again resets search.
+
+\fB5.\fR Cycle through all available palettes (color and black & white available
+by default) using `p`. `P` will generate a ~/.config/urlscan/config.json file
+for editing or adding additional pallettes. See
+
+http://urwid.org/manual/displayattributes.html#display-attributes
+
+for options and allowed values.
+
+\fB5.\fR `u` will unescape the highlighted URL if necessary.
+
+.SH OPTIONS
+.TP
+.B \-c, \-\-compact
+Display a simple list of the extracted URLs, instead of showing the
+context of each URL. Also toggle with `c` from within the viewer.
+.TP
+.B \-d, \-\-dedupe
+Remove duplicated URLs from the list of URLs.
+.TP
+.B \-n, \-\-no-browser
+Disables the selection interface and print the links to standard output.
+Useful for scripting (implies \fB\-\-compact\fR).
+.TP
+.B \-r, \-\-run \<expression\>
+Execute \<expression\> in place of opening URL with a browser. Use {} in
+\<expression\> to substitute in the URL. Example:
+
+    $ urlscan --run 'echo {} | xclip -i' file.txt
+
+.SH MUTT INTEGRATION
+
+To integrate urlscan with mutt, include the following two commands in
+\fB~/.muttrc\fR:
+
+
+.ad l
+macro index,pager \\cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+
+macro attach,compose \\cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+.ad b
+
+
+Once these lines are in your mutt configuration file, pressing
+Control-b will allow you to browse and open the URLs in the currently
+selected message.
+
+Alternately, you can pipe a message into urlscan using the '|' operator. This
+can be useful for applying a different flag (such as the '-d' or '-c' options).
+
+.SH FILES
+
+$HOME/.config/urlscan/config.json
+
+Only required if additional or modified palettes are desired.
+
+.SH SEE ALSO
+\fI/usr/share/doc/urlscan/README\fR,
+\fBurlview\fR(1),
+\fBmutt\fR(1)
+
+.SH AUTHOR
+This manual page was written by Daniel Burrows <dburrows@debian.org> and Scott Hansen <firecat4153@gmail.com>
