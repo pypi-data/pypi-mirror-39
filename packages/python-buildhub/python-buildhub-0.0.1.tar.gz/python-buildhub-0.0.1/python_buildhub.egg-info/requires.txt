@@ -1,0 +1,9 @@
+requests
+
+[dev]
+twine
+therapist
+black
+flake8
+bumpversion
+tox
