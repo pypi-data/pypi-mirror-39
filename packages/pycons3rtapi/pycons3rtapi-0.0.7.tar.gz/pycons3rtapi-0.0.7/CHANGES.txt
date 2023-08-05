@@ -1,0 +1,51 @@
+
+0.0.7
+=====
+
+* Added list_all_users and list_all_teams methods
+
+0.0.6
+=====
+
+* Updated the HmC ReSt API URL to hmc.hpc.iml
+
+0.0.5
+=====
+
+* Added a call to list networks in a virtualization realm, and to
+get the primary network
+* Added a time to the exception log messages for http_multipart
+
+0.0.4
+=====
+
+* Added a common http_multipart method and updated the call to add
+the header "Expect: 100-Continue", which is required by CONS3RT for
+large asset imports starting in v18.12.
+
+0.0.3
+=====
+
+* Added the asset ID returned from importing a software asset
+* Added the cloudspace command to the cons3rt CLI, with options to
+delete all inactive runs from a cloudspace, and to release all active
+runs from a cloudspace like so:
+  * $ cons3rt cloudspace --ids=3,4,5 --delete_inactive_runs --release_active_runs
+* Fixed a bug in create_deployments when passing in a scenario_id
+* Changed the README from rst format to Markdown
+* Updated the sample code on the README
+* Fixed a bug reading JSON files for create_system, create_scenario,
+create_deployment, and run_deployment
+
+0.0.2
+=====
+
+* Added cons3rtconfig set_config method to create a config file from
+config data passed as a dict
+* Added new calls: create_system, create_scenario, and create_deployment
+* Bug fixes and cleanup
+
+0.0.1
+=====
+
+* Initial packagable version installable by pip

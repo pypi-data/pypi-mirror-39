@@ -1,0 +1,3 @@
+[console_scripts]
+cons3rt = pycons3rtapi.cons3rt:main
+
