@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: curio-http-server
+Version: 0.2
+Summary: High performance Curio based HTTP server with Jinja2 templates support.
+Home-page: https://github.com/triflesoft/curio-http-server
+Author: Roman Akopov
+Author-email: adontz@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.7
+Requires-Dist: curio (>=0.9)
+Requires-Dist: httptools (>=0.0.11)
+Requires-Dist: Jinja2 (>=2.10)
+Requires-Dist: multidict (>=4.5.1)
+Requires-Dist: ua-parser (>=0.8.0)
+
+UNKNOWN
+
+
