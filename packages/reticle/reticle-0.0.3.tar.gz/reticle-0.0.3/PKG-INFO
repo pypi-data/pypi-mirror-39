@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: reticle
+Version: 0.0.3
+Summary: Python 3.6+ library for submitting to AWS Batch interactively.
+Home-page: https://github.com/clintval/reticle
+Author: clintval
+Author-email: valentine.clint@gmail.com
+License: MIT
+Download-URL: https://github.com/clintval/reticle/archive/v0.0.3.tar.gz
+Project-URL: Documentation, https://reticle.readthedocs.io
+Project-URL: Issue-Tracker, https://github.com/clintval/reticle/issues
+Description: # reticle
+        
+        [![Testing Status](https://travis-ci.org/clintval/reticle.svg?branch=master)](https://travis-ci.org/clintval/reticle)
+        [![codecov](https://codecov.io/gh/clintval/reticle/branch/master/graph/badge.svg)](https://codecov.io/gh/clintval/reticle)
+        [![Documentation Build Status](https://readthedocs.org/projects/reticle/badge/?version=latest)](https://reticle.readthedocs.io/en/latest/?badge=latest)
+        [![PyPi Release](https://badge.fury.io/py/reticle.svg)](https://badge.fury.io/py/reticle)
+        [![Python Versions](https://img.shields.io/pypi/pyversions/reticle.svg)](https://pypi.python.org/pypi/reticle/)
+        [![MyPy Checked](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
+        [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+        
+        Analysis and plotting library for base substitution spectra and signatures.
+        
+        ```bash
+        ❯ pip install reticle
+        ```
+        
+        Features:
+        
+        - Submit Batch jobs
+        
+        Read the documentation at: [reticle.readthedocs.io](https://reticle.readthedocs.io/en/latest/)
+        
+        
+Keywords: AWS Batch job submission
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
