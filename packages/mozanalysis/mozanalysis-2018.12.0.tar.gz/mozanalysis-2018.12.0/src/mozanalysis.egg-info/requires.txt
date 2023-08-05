@@ -1,0 +1,13 @@
+py4j
+numpy
+pandas
+pyarrow>=0.8.0
+scipy
+statsmodels>=0.9
+
+[testing]
+mock
+pyspark
+pytest
+pytest-cov
+pytest-timeout
