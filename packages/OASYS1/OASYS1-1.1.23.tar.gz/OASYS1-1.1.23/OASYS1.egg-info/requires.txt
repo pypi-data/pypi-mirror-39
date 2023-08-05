@@ -1,0 +1,11 @@
+setuptools
+numpy
+scipy
+matplotlib
+oasys-canvas-core>=0.0.10
+oasys-widget-core>=0.0.5
+silx>=0.7.0
+hdf5plugin
+srxraylib>=1.0.21
+syned>=1.0.11
+wofry>=1.0.17
