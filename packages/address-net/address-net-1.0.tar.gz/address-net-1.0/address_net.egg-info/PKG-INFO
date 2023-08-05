@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: address-net
+Version: 1.0
+Summary: Splits Australian addresses into their components
+Home-page: https://github.com/jasonrig/address-net
+Author: Jason Rigby
+Author-email: hello@jasonrig.by
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: tf
+Provides-Extra: tf_gpu
