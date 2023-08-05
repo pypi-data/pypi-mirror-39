@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+py_smtp/__init__.py
+py_smtp/smtp_send.py
+py_smtp.egg-info/PKG-INFO
+py_smtp.egg-info/SOURCES.txt
+py_smtp.egg-info/dependency_links.txt
+py_smtp.egg-info/requires.txt
+py_smtp.egg-info/top_level.txt
