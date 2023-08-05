@@ -1,0 +1,11 @@
+mailman_rss/__init__.py,sha256=8K7GGZRdwWuXHUjy0SRBJm-a9MWciFv9KQjzlGWxjkQ,211
+mailman_rss/__main__.py,sha256=OlR0Zu1ZSGAnVINh9WfLSgHjGnPOZ1Hr4kI8KACVoJ8,3915
+mailman_rss/mailman.py,sha256=Q3nxyJJLcaII_apOpp5YwDHRcBMA82qtbhkx0TJdWd0,6941
+mailman_rss/rss.py,sha256=2uILnZcjds9WuQ1AIR9jxkBxK3-lA_Wv-yMLy-d7Vy0,3196
+mailman_rss/scraper.py,sha256=s_B-HFaUpLKW4xFa-F17lgoyuA6GNN9POH7UV2KYeqs,3610
+mailman_rss/version.py,sha256=C64B7BwoRc7O6gMdSaUA6Fv5TYZgTX7yOoR61-9VdRc,104
+mailman_rss-0.2.3.dist-info/METADATA,sha256=Dw_3zyVgSYrbQC61lrZIdWjqI3_qGhiqK0z-thcnFtU,3384
+mailman_rss-0.2.3.dist-info/RECORD,,
+mailman_rss-0.2.3.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+mailman_rss-0.2.3.dist-info/entry_points.txt,sha256=dorOx0OIOkS6-hd7D8XqavG-J1A_hrDm1Qi6KiyRqGw,59
+mailman_rss-0.2.3.dist-info/top_level.txt,sha256=i2xBZoxvhVWFsgT4DAU0FO-mca27p7juIIcRGDGf3tc,12
