@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: zencad
+Version: 0.8.1
+Summary: CAD system for righteous zen programmers 
+Home-page: https://mirmik.github.io/zencad/
+Author: Sorokin Nikolay
+Author-email: mirmikns@yandex.ru
+License: MIT
+Keywords: testing,cad
+Platform: UNKNOWN
+Requires-Dist: evalcache
+Requires-Dist: pyservoce
+Requires-Dist: numpy
+Requires-Dist: pillow
+
+UNKNOWN
+
+
