@@ -1,0 +1,3 @@
+[console_scripts]
+multipackage = multipackage.scripts.multipackage:main
+
