@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: look4bas
+Version: 0.2.3
+Summary: Search for Gaussian basis sets
+Home-page: https://github.com/mfherbst/look4bas
+Author: Michael F. Herbst
+Author-email: info@michael-herbst.com
+License: GPL v3
+Description: Command line tool to search for contracted Gaussian-type basis sets in electronic structure theory
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: Unix
+Requires-Python: >=3
