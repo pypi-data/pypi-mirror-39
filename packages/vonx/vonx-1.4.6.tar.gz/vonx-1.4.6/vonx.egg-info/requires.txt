@@ -1,0 +1,5 @@
+aiohttp~=3.3.0
+aiohttp-jinja2~=1.1.0
+didauth==1.2.3
+PyYAML
+networkx<3von-anchor==1.6.41,>=2.2
