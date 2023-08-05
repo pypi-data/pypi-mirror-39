@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: empatican
+Version: 0.0.5
+Summary: Empatica Physio Utilities
+Home-page: http://github.com/kastman/empatican
+Author: Erik Kastman
+Author-email: erik.kastman@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Utilities
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: tqdm
+
+Empatican provides utility methods for handling physio
+archives in zip archive, hdf5 and unzipped directory structures, and has methods
+to efficiently convert sparse physio timestamps and frequency metadata to dense
+datetime indices.
+
+It also provides a ``empatican`` download command-line utility to download and
+organize physio zips from the *Empatica Connect* website. 
+
