@@ -1,0 +1,15 @@
+MANIFEST.in
+README.rst
+setup.py
+drf_crud_proxy/__init__.py
+drf_crud_proxy/apps.py
+drf_crud_proxy/generics.py
+drf_crud_proxy/mixins.py
+drf_crud_proxy/proxy.py
+drf_crud_proxy/viewsets.py
+drf_crud_proxy.egg-info/PKG-INFO
+drf_crud_proxy.egg-info/SOURCES.txt
+drf_crud_proxy.egg-info/dependency_links.txt
+drf_crud_proxy.egg-info/not-zip-safe
+drf_crud_proxy.egg-info/requires.txt
+drf_crud_proxy.egg-info/top_level.txt
