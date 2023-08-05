@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: odoo11-addons-oca-social
+Version: 11.0.20181204.1
+Summary: Meta package for oca-social Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo11-addon-base-search-mail-content
+Requires-Dist: odoo11-addon-email-template-qweb
+Requires-Dist: odoo11-addon-fetchmail-thread-default
+Requires-Dist: odoo11-addon-mail-activity-board
+Requires-Dist: odoo11-addon-mail-attach-existing-attachment
+Requires-Dist: odoo11-addon-mail-browser-view
+Requires-Dist: odoo11-addon-mail-debrand
+Requires-Dist: odoo11-addon-mail-digest
+Requires-Dist: odoo11-addon-mail-optional-autofollow
+Requires-Dist: odoo11-addon-mail-restrict-follower-selection
+Requires-Dist: odoo11-addon-mail-track-diff-only
+Requires-Dist: odoo11-addon-mail-tracking
+Requires-Dist: odoo11-addon-mail-tracking-mailgun
+Requires-Dist: odoo11-addon-mail-tracking-mass-mailing
+Requires-Dist: odoo11-addon-mass-mailing-custom-unsubscribe
+Requires-Dist: odoo11-addon-mass-mailing-partner
+Requires-Dist: odoo11-addon-mass-mailing-resend
+Requires-Dist: odoo11-addon-mass-mailing-unique
+
+UNKNOWN
+
+
