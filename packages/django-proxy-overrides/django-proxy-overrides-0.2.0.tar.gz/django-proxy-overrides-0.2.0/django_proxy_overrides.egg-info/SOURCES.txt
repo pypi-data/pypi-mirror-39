@@ -1,0 +1,10 @@
+README.rst
+setup.py
+django_proxy_overrides.egg-info/PKG-INFO
+django_proxy_overrides.egg-info/SOURCES.txt
+django_proxy_overrides.egg-info/dependency_links.txt
+django_proxy_overrides.egg-info/requires.txt
+django_proxy_overrides.egg-info/top_level.txt
+proxy_overrides/__init__.py
+proxy_overrides/base.py
+proxy_overrides/related.py
