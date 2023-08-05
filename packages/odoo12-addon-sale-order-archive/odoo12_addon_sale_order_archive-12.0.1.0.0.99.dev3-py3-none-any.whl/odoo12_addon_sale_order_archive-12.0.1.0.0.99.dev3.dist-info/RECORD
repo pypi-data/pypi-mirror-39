@@ -1,0 +1,17 @@
+odoo/addons/sale_order_archive/README.rst,sha256=ditQyB2-AGK2KFnAP2E19FexjDbnfURr-zILliMH4mM,3750
+odoo/addons/sale_order_archive/__init__.py,sha256=eShEGRadAlxopoLqIQ4-N42FM7MWPSuBe0h_l1cXTPM,87
+odoo/addons/sale_order_archive/__manifest__.py,sha256=8heFc9mYnRH4DAAt2YIwSYLjxemEGzecF1Q1x59zxfA,513
+odoo/addons/sale_order_archive/i18n/sale_order_archive.pot,sha256=fox9czPgOyJVNmQAW_w4mnVHb2QGqv3_560N6_fDh2E,771
+odoo/addons/sale_order_archive/models/__init__.py,sha256=tTyA2F82s9wy7S2R-q5234xL01aZTvXHfeiBN9LNaGI,91
+odoo/addons/sale_order_archive/models/sale_order.py,sha256=w_aWkgePVltYCO6tzn_0zZ1n65R6g8FQoPyF5LPZjHQ,261
+odoo/addons/sale_order_archive/readme/CONTRIBUTORS.rst,sha256=4BnSW7MC7HMk-XRlFDBntV0sckFWbz921KAFIfch9oA,57
+odoo/addons/sale_order_archive/readme/DESCRIPTION.rst,sha256=CJ20_D2uu4xrGfRj-1v0eBAwS4PK4ulIOecbsp3UIqo,436
+odoo/addons/sale_order_archive/readme/INSTALL.rst,sha256=Vh3dXthCcNLx4kzpNjuYq4AUz4ke9u_3kokLXx7JyWs,77
+odoo/addons/sale_order_archive/readme/USAGE.rst,sha256=dUhlFmEN-JPyDBuY5jlYWK_RggSIYwQDIW2JivrwhQU,584
+odoo/addons/sale_order_archive/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/sale_order_archive/static/description/index.html,sha256=P2RLEnOEJDsIgMw9kMSyoREWVIyqnMIkKkhr780blOw,13344
+odoo/addons/sale_order_archive/views/sale_order.xml,sha256=ZaKz3mpv-vLKoDhNUD8QKur_ye7pT0o8DiJCtK2YI-4,1343
+odoo12_addon_sale_order_archive-12.0.1.0.0.99.dev3.dist-info/METADATA,sha256=COtLZU8uoQAI-VjCD6CE9lcbNixlgKZbM3_IbvTcvmM,4255
+odoo12_addon_sale_order_archive-12.0.1.0.0.99.dev3.dist-info/RECORD,,
+odoo12_addon_sale_order_archive-12.0.1.0.0.99.dev3.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+odoo12_addon_sale_order_archive-12.0.1.0.0.99.dev3.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
