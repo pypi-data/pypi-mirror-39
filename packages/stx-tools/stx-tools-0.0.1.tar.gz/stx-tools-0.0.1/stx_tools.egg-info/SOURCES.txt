@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+stx_tools.egg-info/PKG-INFO
+stx_tools.egg-info/SOURCES.txt
+stx_tools.egg-info/dependency_links.txt
+stx_tools.egg-info/top_level.txt
+stxtools/__init__.py
+stxtools/data.py
+stxtools/filesystem.py
