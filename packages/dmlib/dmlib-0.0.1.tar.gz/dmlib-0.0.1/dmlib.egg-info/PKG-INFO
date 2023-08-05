@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dmlib
+Version: 0.0.1
+Summary: Math and statistics tools for data mining, linear programming etc.
+Home-page: https://github.com/ortymid/dmlib
+Author: Dmytro Brykovets
+Author-email: dmytro.brykovets@gmail.com
+License: UNKNOWN
+Description: # DMLib
+        
+        Math and statistics tools for data mining, linear programming etc.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
