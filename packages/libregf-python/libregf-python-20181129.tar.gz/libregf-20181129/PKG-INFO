@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: libregf-python
+Version: 20181129
+Summary: Python bindings module for libregf
+Home-page: https://github.com/libyal/libregf/
+Author: Joachim Metz
+Author-email: joachim.metz@gmail.com
+License: GNU Lesser General Public License v3 or later (LGPLv3+)
+Description: Python bindings module for libregf
+Platform: UNKNOWN
