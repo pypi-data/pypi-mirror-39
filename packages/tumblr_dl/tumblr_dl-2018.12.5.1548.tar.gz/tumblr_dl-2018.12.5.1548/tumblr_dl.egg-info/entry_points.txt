@@ -1,0 +1,3 @@
+[console_scripts]
+tumblr_dl = tumblr_dl.__init__:main
+

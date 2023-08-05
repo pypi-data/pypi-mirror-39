@@ -1,0 +1,32 @@
+Metadata-Version: 1.0
+Name: tumblr-dl
+Version: 2018.12.5.1548
+Summary: download media of Tumblr subdomains
+Home-page: https://github.com/wdbm/tumblr_dl
+Author: Will Breaden Madden
+Author-email: wbm@protonmail.ch
+License: GPLv3
+Description: .. figure:: https://raw.githubusercontent.com/wdbm/tumblr_dl/master/media/tumblr_dl.png
+           :alt: 
+        
+        You know what it's for. ;)
+        
+        setup
+        =====
+        
+        .. code:: bash
+        
+            pip2 install tumblr_dl
+        
+        usage
+        =====
+        
+        .. code:: bash
+        
+            tumblr_dl --subdomain=actionfigurebody
+        
+        .. code:: bash
+        
+            tumblr_dl --help
+        
+Platform: UNKNOWN
