@@ -1,0 +1,12 @@
+cut=http://nlu.rpc/segmentor
+extract_work=http://nlu.rpc/extract_work
+emotion=http://nlu.rpc/emotion
+entity=http://nlu.rpc/entity
+sentence_spliter=http://nlu.rpc/sentence_spliter
+w2v=http://nlu.rpc/w2v
+w2v_hdfs_dir=/user/liuhuan/data/embedding/
+w2v_hdfs_version_file=/user/liuhuan/data/embedding/lastest_version.txt
+s2v=http://nlu.rpc/s2v
+language_model=http://nlu.rpc/language_model
+sentence_pattern=http://nlu.rpc/sentence_pattern
+
