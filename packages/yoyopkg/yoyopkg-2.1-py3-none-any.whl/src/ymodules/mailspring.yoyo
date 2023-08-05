@@ -1,0 +1,16 @@
+NAME mailspring
+AUTHOR Mailspring
+INFO Boost your productivity and send better email with Mailspring, the best mail client for Mac, Linux, and Windows.
+VERSION 1.3.0
+REQ debian
+
+[INSTALL]
+
+DL https://github.com/Foundry376/Mailspring/releases/download/1.3.0/mailspring-1.3.0-amd64.deb #DLDIR mailspring.deb
+SAVEDIR
+CHDIR #DLDIR
+CMD sudo dpkg -i mailspring.deb
+RESTOREDIR
+
+[VERIFY]
+DEFAULT

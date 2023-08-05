@@ -1,0 +1,18 @@
+NAME ghost
+AUTHOR Ghost
+INFO Meteor is an open source platform for web, mobile, and desktop.
+VERSION 1
+REQ node, mysql
+
+[INSTALL]
+
+CMD sudo npm i -g ghost-cli
+CMD sudo mkdir -p /var/www/ghost
+CMD sudo chown $USER:$USER /var/www/ghost
+CMD sudo chmod 775 /var/www/ghost
+SAVEDIR
+CHDIR /var/www/ghost
+CMD ghost install
+
+[VERIFY]
+DEFAULT
