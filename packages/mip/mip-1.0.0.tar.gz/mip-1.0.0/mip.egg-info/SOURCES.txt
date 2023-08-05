@@ -1,0 +1,12 @@
+README.md
+setup.py
+mip/__init__.py
+mip/cbc.py
+mip/constants.py
+mip/gurobi.py
+mip/model.py
+mip/scip.py
+mip.egg-info/PKG-INFO
+mip.egg-info/SOURCES.txt
+mip.egg-info/dependency_links.txt
+mip.egg-info/top_level.txt
