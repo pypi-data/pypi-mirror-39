@@ -1,0 +1,14 @@
+README.rst
+setup.cfg
+setup.py
+src/buildHistogram.c
+src/computeMean.c
+stsci/__init__.py
+stsci.imagestats.egg-info/PKG-INFO
+stsci.imagestats.egg-info/SOURCES.txt
+stsci.imagestats.egg-info/dependency_links.txt
+stsci.imagestats.egg-info/requires.txt
+stsci.imagestats.egg-info/top_level.txt
+stsci/imagestats/__init__.py
+stsci/imagestats/histogram1d.py
+stsci/imagestats/version.py
