@@ -1,0 +1,7 @@
+numpy
+antlr4-python3-runtime
+requests
+six
+networkx
+rpcq>=2.2.1
+immutables==0.6
