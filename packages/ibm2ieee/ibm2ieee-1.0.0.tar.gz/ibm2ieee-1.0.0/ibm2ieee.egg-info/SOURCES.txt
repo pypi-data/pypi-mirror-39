@@ -1,0 +1,16 @@
+CHANGES
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+ibm2ieee/__init__.py
+ibm2ieee/_ibm2ieee.c
+ibm2ieee/version.py
+ibm2ieee.egg-info/PKG-INFO
+ibm2ieee.egg-info/SOURCES.txt
+ibm2ieee.egg-info/dependency_links.txt
+ibm2ieee.egg-info/requires.txt
+ibm2ieee.egg-info/top_level.txt
+ibm2ieee/test/__init__.py
+ibm2ieee/test/test_ibm2ieee.py
+ibm2ieee/test/test_version.py
