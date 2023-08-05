@@ -1,0 +1,132 @@
+Metadata-Version: 1.2
+Name: algosec
+Version: 1.2.1
+Summary: The AlgoSec SDK for Python
+Home-page: https://github.com/algosec/algosec-python
+Author: Almog Cohen
+Author-email: support@algosec.com
+License: MIT
+Description: ==================
+        AlgoSec Python SDK
+        ==================
+        
+        .. start-badges
+        
+        .. list-table::
+            :stub-columns: 1
+        
+            * - docs
+              - |docs|
+            * - tests
+              - | |travis| |coverage|
+            * - package
+              - | |version| |wheel| |supported-versions|
+        
+        
+        .. |version| image:: https://img.shields.io/pypi/v/algosec.svg
+           :target: https://pypi.python.org/pypi/algosec
+           :alt: Package on PyPi
+        
+        .. |docs| image:: https://readthedocs.org/projects/algosec-python/badge/
+           :target: http://algosec-python.readthedocs.io/en/latest/
+           :alt: Documentation Status
+        
+        .. |coverage| image:: https://coveralls.io/repos/github/algosec/algosec-python/badge.svg
+            :target: https://coveralls.io/github/algosec/algosec-python
+        
+        .. |travis| image:: https://travis-ci.org/algosec/algosec-python.svg?branch=master
+            :target: https://travis-ci.org/algosec/algosec-python
+        
+        .. |supported-versions| image:: https://img.shields.io/pypi/pyversions/algosec.svg
+            :alt: Supported versions
+            :target: https://pypi.python.org/pypi/algosec
+        
+        .. |wheel| image:: https://img.shields.io/pypi/wheel/algosec.svg
+            :alt: PyPI Wheel
+            :target: https://pypi.python.org/pypi/algosec
+        
+        
+        A Python SDK providing simple access to AlgoSec APIs, including handy methods
+        to implement common network security policy management tasks, such as:
+        
+        * Check whether specific traffic is allowed by the firewalls and security devices in the network.
+        * Open a network security change request.
+        * Check status of existing change requests.
+        * Update business application connectivity requirements (and automatically trigger change requests as needed)
+        
+        Useful for automation and orchestration (e.g. DevOps), building custom portals, or exposing specific functionality to Application Owners, IT, Helpdesk, Information Security, Security Operations, etc.
+        
+        Included in this package are clients for AlgoSec Firewall Analyzer, FireFlow and BusinessFlow.
+        
+        Installation
+        ------------
+        
+        Install the latest version from PyPi by running::
+        
+            pip install algosec --upgrade
+        
+        or clone this repo and run::
+        
+            python setup.py install
+        
+        
+        Contribution
+        ------------
+        
+        Contributions are welcome! Please follow the standard pull request process.
+        
+        Documentation
+        -------------
+        
+        .. image:: https://readthedocs.org/projects/algosec-python/badge/
+           :target: https://algosec-python.readthedocs.io/en/latest/
+           :alt: Documentation Status
+        
+        
+        Documentation available online at: https://algosec-python.readthedocs.io/en/latest/
+        
+        How to build doc's locally?
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        
+        Using Spinx::
+        
+            $ cd docs
+            $ make html
+        
+        Then see the ``docs/_build`` folder created for the html files.
+        
+        Developing
+        ----------
+        
+        To install the package for local development just run::
+        
+           pipenv install
+        
+        This will install all the dependencies and set the project up for local usage and development .
+        
+        
+        Testing
+        ^^^^^^^
+        
+        To run the unittests for all supported python versions, simply run::
+        
+            tox
+        
+        
+Keywords: algosec businessflow fireflow firewallanalyzer security policy management network security
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*
