@@ -1,0 +1,3 @@
+[console_scripts]
+spiderkeeper-deploy = spiderkeeper_deploy.cli:main
+

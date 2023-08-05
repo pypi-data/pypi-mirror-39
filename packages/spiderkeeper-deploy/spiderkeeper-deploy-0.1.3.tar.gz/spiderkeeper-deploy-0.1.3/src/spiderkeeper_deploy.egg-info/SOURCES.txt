@@ -1,0 +1,17 @@
+.bumpversion.cfg
+.editorconfig
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+src/spiderkeeper_deploy/__init__.py
+src/spiderkeeper_deploy/__main__.py
+src/spiderkeeper_deploy/cli.py
+src/spiderkeeper_deploy.egg-info/PKG-INFO
+src/spiderkeeper_deploy.egg-info/SOURCES.txt
+src/spiderkeeper_deploy.egg-info/dependency_links.txt
+src/spiderkeeper_deploy.egg-info/entry_points.txt
+src/spiderkeeper_deploy.egg-info/not-zip-safe
+src/spiderkeeper_deploy.egg-info/requires.txt
+src/spiderkeeper_deploy.egg-info/top_level.txt
