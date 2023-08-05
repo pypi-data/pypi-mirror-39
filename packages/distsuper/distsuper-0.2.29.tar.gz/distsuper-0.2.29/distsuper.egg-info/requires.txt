@@ -1,0 +1,7 @@
+pymysql
+requests
+uwsgi
+flask
+peewee>=3
+click
+configparser
