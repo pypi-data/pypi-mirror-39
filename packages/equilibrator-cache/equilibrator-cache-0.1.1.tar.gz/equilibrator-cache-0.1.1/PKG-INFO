@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: equilibrator-cache
+Version: 0.1.1
+Summary: Cache application for compounds, reactions, and enzymes
+Home-page: https://gitlab.com/elad.noor/equilibrator-cache
+Author: Elad Noor
+Author-email: noor@imsb.biol.ethz.ch
+License: MIT License
+Download-URL: https://gitlab.com/elad.noor/equilibrator-cache
+Description: UNKNOWN
+Keywords: component contribution,Gibbs energy,biochemical reaction,eQuilibrator,cache
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
