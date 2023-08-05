@@ -1,0 +1,31 @@
+Metadata-Version: 1.0
+Name: geopathfinder
+Version: 0.0.4
+Summary: Add a short description here!
+Home-page: http://...
+Author: Bernhard Bauer-Marschallinger
+Author-email: bbm@geo.tuwien.ac.at
+License: mit
+Description-Content-Type: UNKNOWN
+Description: =============
+        geopathfinder
+        =============
+        
+        
+        A package for creating, quering, and searching in data structures holding geo data sets
+        
+        
+        Description
+        ===========
+        
+        A longer description of your project goes here...
+        
+        
+        Note
+        ====
+        
+        This project has been set up using PyScaffold 2.5.11. For details and usage
+        information on PyScaffold see http://pyscaffold.readthedocs.org/.
+        
+        
+Platform: UNKNOWN

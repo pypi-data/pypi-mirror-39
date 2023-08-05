@@ -1,0 +1,19 @@
+[
+  "tests/test_dict_tree.py::test_smarttree",
+  "tests/test_file_naming.py::TestSmartFilename::test_build_filename_wihout_ext",
+  "tests/test_file_naming.py::TestSmartFilename::test_build_filename_with_ext",
+  "tests/test_file_naming.py::TestSmartFilename::test_init_undefined_field",
+  "tests/test_file_naming.py::TestSmartFilename::test_init_wrong_field_length",
+  "tests/test_file_naming.py::TestSmartFilename::test_set_and_get_fields",
+  "tests/test_file_naming.py::TestSmartFilename::test_set_nonexisting_fields",
+  "tests/test_file_naming.py::TestSmartFilename::test_set_wrong_fields_len",
+  "tests/test_folder_naming.py::TestSmartPath::test_build_levels",
+  "tests/test_folder_naming.py::TestSmartPath::test_expand_full_path",
+  "tests/test_folder_naming.py::TestSmartPath::test_get_dir",
+  "tests/test_folder_naming.py::TestSmartPath::test_get_level",
+  "tests/test_folder_naming.py::TestSmartPath::test_search_files",
+  "tests/test_folder_naming.py::TestSmartPath::test_search_files_ts",
+  "tests/test_folder_naming.py::TestSmartTree::test_everything",
+  "tests/test_sgrt_naming.py::TestSgrtFilename::test_build_sgrt_filename",
+  "tests/test_sgrt_naming.py::TestSgrtFilename::test_set_and_get_datetime"
+]

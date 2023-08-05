@@ -1,0 +1,50 @@
+image: continuumio/miniconda3:latest
+
+before_script:
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+  - apt-get -y install git
+
+variables:
+  GIT_SSL_NO_VERIFY: "true"
+
+stages:
+  - test
+  - release
+
+test_py27:
+  stage: test
+  script:
+    - wget http://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh
+    - bash miniconda.sh -b -p $HOME/miniconda
+    - export PATH="$HOME/miniconda/bin:$PATH"
+    - hash -r
+    - conda config --set always_yes yes --set changeps1 no
+    - conda update -q conda
+    - conda info -a
+    - conda create -q -n test-environment python=2.7 regex numpy pandas
+    - source activate test-environment
+    - python setup.py test
+    - pip list
+    - which pip
+    - which python
+  except:
+    - tags
+
+test_py36:
+  stage: test
+  script:
+    - wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+    - bash miniconda.sh -b -p $HOME/miniconda
+    - export PATH="$HOME/miniconda/bin:$PATH"
+    - hash -r
+    - conda config --set always_yes yes --set changeps1 no
+    - conda update -q conda
+    - conda info -a
+    - conda create -q -n test-environment python=3.6 regex numpy pandas
+    - source activate test-environment
+    - python setup.py test
+    - pip list
+    - which pip
+    - which python
+  except:
+    - tags
