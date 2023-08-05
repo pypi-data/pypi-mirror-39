@@ -1,0 +1,5 @@
+numpy>=1.7.0
+h5py
+svgwrite
+six
+jsonschema
