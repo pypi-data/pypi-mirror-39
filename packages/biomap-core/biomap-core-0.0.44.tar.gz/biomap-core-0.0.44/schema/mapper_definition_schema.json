@@ -1,0 +1,39 @@
+{
+	"type": "object",
+	"title": "mapper_defintion",
+	"description": "Schema for the BioMapMapper defintion",
+	"properties": {
+			"name" : { "type" : "string" },
+			"mapper_data" : { "type" : "string" },
+			"main_key": { "type" : "string" },
+			"supported_keys" : { 
+				               "type": "array",
+					       "items": { "type": "string" },
+					       "minItems": 2,
+					       "uniqueItems": true
+					   },
+			"list_valued_keys" : { 
+				               "type": "array",
+					       "items": { "type": "string" },
+					       "uniqueItems": true
+					     },
+			"disjoint" : { 
+				       "type": "array",
+				       "items": { "type": "string" },
+				       "uniqueItems": true
+				     },
+		   	"key_synonyms" : { "type" : "object" },
+			"compound_valued_keys" : { 
+				                   "type": "array",
+				                   "items": { "type": "string" },
+						   "unique_items": true
+						 },
+			"scalar_nonunique_keys" : {
+				                    "type": "array",
+		                                    "items": { "type": "string" },
+					            "unique_items": true
+				                  },
+			"miriam_mapping" : { "type" : "object" }
+		      },
+	"required": ["name", "mapper_data", "supported_keys", "main_key"]
+}
