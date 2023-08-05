@@ -1,0 +1,137 @@
+[
+    {
+        "_is_template": true,
+        "_realm": "All",
+        "_sub_realm": true,
+        "_templates_with_services": true,
+        "active_checks_enabled": true,
+        "alias": "Freebsd host",
+        "check_command": "check_nrpe_alive",
+        "check_command_args": "",
+        "check_period": "24x7",
+        "customs": {
+            "_NRPE_TIMEOUT": 10,
+            "_NRPE_SSL": "-n"
+        },
+        "imported_from": "alignak-checks-nrpe",
+        "initial_state": "x",
+        "name": "freebsd-nrpe",
+        "notes": "",
+        "notes_url": "",
+        "tags": [
+            "nrpe-host", "freebsd"
+        ]
+    },
+    {
+        "_is_template": true,
+        "_templates": [
+            "freebsd-nrpe"
+        ],
+        "alias": "Freebsd with Firewall",
+        "name": "freebsd-nrpe-firewall",
+        "tags": [
+            "Firewall"
+        ]
+    },
+    {
+        "_is_template": true,
+        "_templates": [
+            "freebsd-nrpe"
+        ],
+        "alias": "Freebsd with IPMI",
+        "name": "freebsd-nrpe-ipmi",
+        "tags": [
+            "IPMI"
+        ]
+    },
+    {
+        "_is_template": true,
+        "_templates": [
+            "freebsd-nrpe"
+        ],
+        "alias": "Freebsd with local disk",
+        "name": "freebsd-nrpe-disk",
+        "tags": [
+            "Disks"
+        ]
+    },
+    {
+        "_is_template": true,
+        "_templates": [
+            "freebsd-nrpe"
+        ],
+        "alias": "Freebsd with local disk I/O check",
+        "name": "freebsd-nrpe-disk-io",
+        "tags": [
+            "Disks"
+        ]
+    },
+    {
+        "_is_template": true,
+        "_templates": [
+            "freebsd-nrpe"
+        ],
+        "alias": "Freebsd with ZPool disk",
+        "name": "freebsd-nrpe-zpool",
+        "tags": [
+            "zpool"
+        ]
+    },
+    {
+        "_is_template": true,
+        "_templates": [
+            "freebsd-nrpe"
+        ],
+        "alias": "Freebsd with RAID disk",
+        "name": "freebsd-nrpe-raid",
+        "tags": [
+            "RAID"
+        ]
+    },
+    {
+        "_is_template": true,
+        "_realm": "All",
+        "_sub_realm": true,
+        "_templates_with_services": true,
+        "active_checks_enabled": true,
+        "alias": "Linux host",
+        "check_command": "check_nrpe_alive",
+        "check_command_args": "",
+        "check_period": "24x7",
+        "customs": {
+            "_NRPE_TIMEOUT": "10",
+            "_NRPE_SSL": "-n"
+        },
+        "imported_from": "alignak-checks-nrpe",
+        "initial_state": "x",
+        "name": "linux-nrpe",
+        "notes": "",
+        "notes_url": "",
+        "tags": [
+            "nrpe-host", "linux"
+        ]
+    },
+    {
+        "_is_template": true,
+        "_realm": "All",
+        "_sub_realm": true,
+        "_templates_with_services": true,
+        "active_checks_enabled": true,
+        "alias": "Windows host",
+        "check_command": "check_nrpe_alive",
+        "check_command_args": "",
+        "check_period": "24x7",
+        "customs": {
+            "_NRPE_TIMEOUT": 10,
+            "_NRPE_SSL": "-n"
+        },
+        "imported_from": "alignak-checks-nrpe",
+        "initial_state": "x",
+        "name": "windows-nrpe",
+        "notes": "",
+        "notes_url": "",
+        "tags": [
+            "nrpe-host", "windows"
+        ]
+    }
+]
