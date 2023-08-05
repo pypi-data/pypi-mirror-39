@@ -1,0 +1,11 @@
+rope
+ultan
+
+[dev]
+twine
+wheel
+
+[test]
+pytest
+tox
+webtest
