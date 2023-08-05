@@ -1,0 +1,8 @@
+include LICENSE README.md screenshot.png CHANGELOG.rst
+exclude  manage.py
+
+graft mds
+prune front
+prune tests
+
+global-exclude *.py[cod] __pycache__

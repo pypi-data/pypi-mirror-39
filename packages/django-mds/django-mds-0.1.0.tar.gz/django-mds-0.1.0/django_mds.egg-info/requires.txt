@@ -1,0 +1,16 @@
+coreapi
+django
+djangorestframework
+django-cors-headers
+getconf
+psycopg2-binary
+pyyaml
+
+[dev]
+black
+factory-boy
+flake8
+pytest
+pytest-django
+zest.releaser[recommended]
+polydev.github
