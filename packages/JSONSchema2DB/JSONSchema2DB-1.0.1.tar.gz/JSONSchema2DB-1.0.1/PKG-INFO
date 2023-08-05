@@ -1,0 +1,15 @@
+Metadata-Version: 1.0
+Name: JSONSchema2DB
+Version: 1.0.1
+Summary: Generate database tables from JSON schema
+Home-page: https://better.engineering/convoys
+Author: Erik Bernhardsson
+Author-email: erikbern@better.com
+License: MIT
+Description: 
+        For more information, see
+        `the package documentation <https://better.engineering/jsonschema2db>`_
+        or
+        `the Github project page <https://github.com/better/jsonschema2db>`_.
+        
+Platform: UNKNOWN
