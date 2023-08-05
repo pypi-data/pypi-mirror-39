@@ -1,0 +1,6 @@
+[console_scripts]
+clldlucl = clldlucl.__main__:main
+
+[pyramid.scaffold]
+clldlucl_app = clldlucl.scaffolds:ClldAppTemplate
+
