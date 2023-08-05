@@ -1,0 +1,3 @@
+[console_scripts]
+msp2db = msp2db.__main__:main
+
