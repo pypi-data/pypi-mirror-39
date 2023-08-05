@@ -1,0 +1,8 @@
+__version__ = "0.1.1.alpha1"
+__name__ = "recordbin"
+__description__ = "Python API Client for RecordBin"
+__url__ = "https://github.com/gtalarico/recordbin-python"
+__author__ = "Gui Talarico"
+__authoremail__ = "gui.talarico+pip@gmail.com"
+__license__ = "The MIT License (MIT)"
+__copyright__ = "Copyright 2018 Gui Talarico"

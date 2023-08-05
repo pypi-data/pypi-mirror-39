@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: recordbin
+Version: 0.1.1a1
+Summary: Python API Client for RecordBin
+Home-page: https://github.com/gtalarico/recordbin-python
+Author: Gui Talarico
+Author-email: gui.talarico+pip@gmail.com
+License: The MIT License (MIT)
+Description: # RecordBin Python
+        
+        [![PyPi](https://img.shields.io/pypi/v/recordbin.svg)](https://pypi.python.org/pypi/recordbin)
+        [![Build Status](https://travis-ci.org/gtalarico/recordbin-python.svg?branch=master)](https://travis-ci.org/gtalarico/recordbin-python)
+        [![codecov](https://codecov.io/gh/gtalarico/recordbin-python/branch/master/graph/badge.svg)](https://codecov.io/gh/gtalarico/recordbin-python)
+        
+        Python Client for Python [RecordBin](http://www.github.com/gtalarico/recordbin)
+        
+        ---
+        
+        ![project-logo](https://github.com/gtalarico/recordbin-python/blob/master/art/logo.png)
+        
+        ## Installing
+        
+        ```
+        pip install recordbin
+        ```
+        
+        ### Usage Example
+        
+        ```
+        >>> from recordbin import RecordBin
+        >>> recordbin = RecordBin('http://ww-recordbin.herokuapp.com', token='123')
+        >>> recordbin.post({'username': 'gtalarico'})
+        ```
+        
+        #### Getting Posted Record
+        
+        By default records are posted asynchronously and responses
+        are Future objects.
+        To get the post response use the `result()` method
+        
+        ```
+        >>> future = recordbin.post({'username': 'gtalarico'})
+        >>> response = future.result()
+        >>> record = response.json()
+        ```
+        
+        ## License
+        
+        [MIT](https://opensource.org/licenses/MIT)
+        
+        
+        # History
+        
+        ## 0.1.1
+        
+        - Alpha Release
+        
+Keywords: recordbin,api,logger
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Description-Content-Type: text/markdown
