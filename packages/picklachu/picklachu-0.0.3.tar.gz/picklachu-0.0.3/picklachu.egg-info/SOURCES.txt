@@ -1,0 +1,11 @@
+README.md
+setup.py
+picklachu/__init__.py
+picklachu/picklachu.py
+picklachu.egg-info/PKG-INFO
+picklachu.egg-info/SOURCES.txt
+picklachu.egg-info/dependency_links.txt
+picklachu.egg-info/top_level.txt
+test/__init__.py
+test/test_local.py
+test/test_picklachu.py
