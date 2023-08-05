@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+
+from re_name import renamer
+
+renamer.Renamer().update()
