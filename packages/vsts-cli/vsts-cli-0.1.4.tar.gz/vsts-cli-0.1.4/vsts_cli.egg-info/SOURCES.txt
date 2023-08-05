@@ -1,0 +1,16 @@
+setup.cfg
+setup.py
+vsts/__init__.py
+vsts/cli/__init__.py
+vsts/cli/__main__.py
+vsts/cli/vsts_cli.py
+vsts/cli/vsts_cli_help.py
+vsts/cli/vsts_commands_loader.py
+vsts/tests/__init__.py
+vsts/tests/test_vsts_cli.py
+vsts_cli.egg-info/PKG-INFO
+vsts_cli.egg-info/SOURCES.txt
+vsts_cli.egg-info/dependency_links.txt
+vsts_cli.egg-info/entry_points.txt
+vsts_cli.egg-info/requires.txt
+vsts_cli.egg-info/top_level.txt

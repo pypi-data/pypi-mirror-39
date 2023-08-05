@@ -1,0 +1,10 @@
+knack==0.4.1
+setuptools
+vsts-cli-common==0.1.4
+vsts-cli-admin==0.1.4
+vsts-cli-build==0.1.4
+vsts-cli-release==0.1.4
+vsts-cli-code==0.1.4
+vsts-cli-team==0.1.4
+vsts-cli-package==0.1.4
+vsts-cli-work==0.1.4
