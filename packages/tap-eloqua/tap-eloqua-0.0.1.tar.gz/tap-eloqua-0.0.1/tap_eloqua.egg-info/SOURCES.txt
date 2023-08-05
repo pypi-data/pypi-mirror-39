@@ -1,0 +1,13 @@
+README.md
+setup.py
+tap_eloqua/__init__.py
+tap_eloqua/client.py
+tap_eloqua/discover.py
+tap_eloqua/schema.py
+tap_eloqua/sync.py
+tap_eloqua.egg-info/PKG-INFO
+tap_eloqua.egg-info/SOURCES.txt
+tap_eloqua.egg-info/dependency_links.txt
+tap_eloqua.egg-info/entry_points.txt
+tap_eloqua.egg-info/requires.txt
+tap_eloqua.egg-info/top_level.txt
