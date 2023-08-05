@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: tacpho.adapters
+Version: 0.2.0
+Summary: Micro-Manager device adapters for the Raspberry Pi
+Home-page: https://github.com/kmdouglass/RPi-DeviceAdapters
+Author: Kyle M. Douglass
+Author-email: kyle.m.douglass@gmail.com
+License: BSD
+Download-URL: https://github.com/kmdouglass/RPi-DeviceAdapters
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
