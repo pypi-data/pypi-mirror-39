@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: kenfotools
+Version: 1.0.5
+Summary: some tools
+Home-page: https://github.com/xxg3053/learn-python
+Author: Kenfo
+Author-email: xxg3053@qq.com
+License: MIT
+Description: # file & excel
+        
+        Provide simple file & excle operations
+        
+        1. readlines
+        2. readline
+        3. empty
+        4. remove
+        5. excel to list
+        6. read excel by line
+        7. witer excel with list
+        
+        
+        source: https://github.com/xxg3053/learn-python/tree/master/pypi/kenfotools
+        
+Keywords: kenfotools tools setuptools development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Provides-Extra: test
+Provides-Extra: dev
