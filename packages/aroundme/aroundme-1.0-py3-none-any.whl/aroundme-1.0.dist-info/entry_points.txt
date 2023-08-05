@@ -1,0 +1,3 @@
+[console_scripts]
+aroundme = aroundme.__main__:main
+
