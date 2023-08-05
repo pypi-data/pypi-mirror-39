@@ -1,0 +1,62 @@
+# PyConverter
+
+This package allows you to convert type format (binary, decimal, hexadecimal, float, double, utf8, utf16) to an another
+
+You can install this package :
+```
+python3 -m pip install -U PyConverter
+```
+
+### List of functions:
+* `bintodouble(binary)` ==> convert binary to double
+
+* `bintofloat(binary)` ==> convert binary to float
+
+* `bintohex(binary)` ==> convert binary to hexadecimal
+
+* `bintoint(binary)` ==> convert binary to integer
+
+* `bintoutf8(binary)` ==> convert binary to text (utf8 format)
+
+* `bintoutf16(binary)` ==> convert binary to text (utf16 format)
+
+* `doubletobin(db: float)` ==> convert double to binary
+
+* `doubletohex(db: float)` ==> convert double to hexadecimal
+
+* `floattobin(fl: float)` ==> convert float to binary
+
+* `floattohex(fl: float)` ==> convert float to hexadecimal
+
+* `hextobin(hexa: str)` ==> convert hexadecimal to binary
+
+* `hextodouble(hexa: str)` ==> convert hexadecimal to double
+
+* `hextofloat(hexa: str)` ==> convert hexadecimal to float
+
+* `hextoint(hexa: str)` ==> convert hexadecimal to integer
+
+* `hextoutf8(hexa: str)` ==> convert hexadecimal to text (utf8 format)
+
+* `hextoutf16(hexa: str)` ==> convert hexadecimal to text (utf16 format)
+
+* `inttobin(dec: int)` ==> convert integer to binary
+
+* `inttohex(dec: int)` ==> convert integer to hexadecimal
+
+* `is_bin(binary)` ==> check if string is in binary format (example : "101011110" return True)
+
+* `is_hex(hexa: str)` ==> check if string is in hexadecimal format (example : "0x5fe92" or "5FE92" return True)
+
+* `utf8tobin(text: str)`  ==> return the binary of the text (utf8 format)
+
+* `utf8tohex(text: str)`  ==> return the hexadecimal of the text (utf8 format)
+
+* `utf16tobin(text: str)`  ==> return the binary of the text (utf16 format)
+
+* `utf16tohex(text: str)`  ==> return the hexadecimal of the text (utf16 format)
+
+### Links
+
+[Gitlab Project](https://gitlab.com/soyouzpanda/pyconverter)  
+[Issues](https://gitlab.com/soyouzpanda/pyconverter/issues)  
