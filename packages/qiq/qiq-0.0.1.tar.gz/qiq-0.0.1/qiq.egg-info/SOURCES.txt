@@ -1,0 +1,9 @@
+README.md
+setup.py
+qiq.egg-info/PKG-INFO
+qiq.egg-info/SOURCES.txt
+qiq.egg-info/dependency_links.txt
+qiq.egg-info/entry_points.txt
+qiq.egg-info/top_level.txt
+src/qiq/__init__.py
+src/qiq/qiq.py
