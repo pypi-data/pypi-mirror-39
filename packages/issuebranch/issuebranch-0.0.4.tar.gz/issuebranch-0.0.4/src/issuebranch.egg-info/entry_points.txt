@@ -1,0 +1,12 @@
+[console_scripts]
+backlog-milestone = issuebranch.console_scripts:backlog_milestone
+issue-branch = issuebranch.console_scripts:issue_branch
+issue-close-done = issuebranch.console_scripts:issue_close_done
+issue-closed = issuebranch.console_scripts:issue_closed
+issue-column = issuebranch.console_scripts:issue_column
+issue-create = issuebranch.console_scripts:issue_create
+issue-icebox = issuebranch.console_scripts:issue_icebox
+issue-show = issuebranch.console_scripts:issue_show
+milestones = issuebranch.console_scripts:milestones
+projects = issuebranch.console_scripts:projects
+
