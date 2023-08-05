@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pybinaryedge
+Version: 0.1
+Summary: Python 3 Wrapper for the binary edge API https://www.binaryedge.io/
+Home-page: https://github.com/Te-k/pybinaryedge
+Author: Tek
+Author-email: tek@randhome.io
+License: MIT
+Keywords: osint
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: configparser
+
+UNKNOWN
+
+
