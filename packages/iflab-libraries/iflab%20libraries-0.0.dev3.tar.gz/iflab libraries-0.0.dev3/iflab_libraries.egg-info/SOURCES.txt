@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+iflab_libraries.egg-info/PKG-INFO
+iflab_libraries.egg-info/SOURCES.txt
+iflab_libraries.egg-info/dependency_links.txt
+iflab_libraries.egg-info/entry_points.txt
+iflab_libraries.egg-info/top_level.txt
+iflb/__init__.py
+iflb/config.py
+iflb/dependency.py

@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: iflab-libraries
+Version: 0.0.dev3
+Summary: Iflab common libraries
+Home-page: https://github.com/user/iflb
+Author: teppei
+Author-email: teppei@iflab.tokyo
+License: MIT
+Description: ========
+        IFLab Libraries
+        ========
+        
+        Config
+        ============
+        
+        Configuration
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
