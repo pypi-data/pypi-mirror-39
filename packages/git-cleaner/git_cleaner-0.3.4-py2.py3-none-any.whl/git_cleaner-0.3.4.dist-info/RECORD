@@ -1,0 +1,16 @@
+git_cleaner/__init__.py,sha256=hpLPXZNVXv5V5_amjT7LI9bqO0-LtK5_1L7vRr6t4oU,87
+git_cleaner/__main__.py,sha256=SW6JUOC8e_pqFgVKpDJopgr1gghb-foMnRrGYMRVQwo,120
+git_cleaner/__version__.py,sha256=2Z_Kp6PnG7Y3W9bIWMmDjLY8KW92C5Yy-1WVX4tSvvI,110
+git_cleaner/branches.py,sha256=oSyNTrH9iOMYq2ISO0ASWmZOJ3WMn3lTOIX-9t3R-To,1969
+git_cleaner/cli.py,sha256=aiqaFfI-jNP4fWtx2TKNIXaIfl14pNeyyZV6PCexJTQ,2762
+git_cleaner/config.py,sha256=craEdprTKh4Ru_8FymmTf_aXIq9ljqjHjOtGM0e20FM,996
+git_cleaner/filters.py,sha256=QMh7DBblpGJXDxz453R0LfCY_On7ND5kgAMxtkR0Dn4,471
+git_cleaner/formats.py,sha256=ypct-aZpQZnGQhCOrrGWtl7qVLbwWIiX07pgN-hclSg,1388
+git_cleaner/git.py,sha256=K-60y8ggUqnjOnO0NiJTwJulkr7qziP6UXQoe2ClDlY,5869
+git_cleaner/notifications.py,sha256=-dahp_zZrUGFRvC7EzWZG5n_XiSFtWBU5dGL62UQsmo,1099
+git_cleaner/oauth.py,sha256=iuP5RoLoDsn7VeFR3wcFdFF_04U-LFJXNdnlQa8_L5o,682
+git_cleaner-0.3.4.dist-info/METADATA,sha256=pMO9KfNQN2A6MZGo3fJ4V9UfB_2BE8-nh78tT7e848A,2989
+git_cleaner-0.3.4.dist-info/RECORD,,
+git_cleaner-0.3.4.dist-info/WHEEL,sha256=CG516Me1TEyQqkQMqQpnDadrWi7ujPk88poSAu3OliQ,116
+git_cleaner-0.3.4.dist-info/entry_points.txt,sha256=CdlTPyrrefZTnX3XTIDvMmWWTWv8OlBoUtSGukmI7fA,54
+git_cleaner-0.3.4.dist-info/top_level.txt,sha256=NmYbB8Bb8w_km_BU_-al9kvuRvsP3M-yTO0jZrZ-kLU,12
