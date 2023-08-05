@@ -1,0 +1,36 @@
+Metadata-Version: 1.1
+Name: feedforward_closedloop_learning
+Version: 1.2.2
+Summary: Feedforward Closedloop Learning (FCL)
+Home-page: https://github.com/glasgowneuro/feedforward_closedloop_learning
+Author: Bernd Porr, Paul Miller
+Author-email: bernd@glasgowneuro.tech
+License: GPL 3.0
+Description: ============================================
+        Feedforward closed loop learning library/API
+        ============================================
+        
+        The documentation of all functions can be obtained with::
+          
+            import feedforward_closedloop_learning as fcl
+            help(fcl)
+        
+        The API is identical to the C++ API: The header files `fcl.h`,
+        `neuron.h` and `layer.h` contain docstrings for
+        all important calls:
+        https://github.com/glasgowneuro/feedforward_closedloop_learning
+        
+        The detailed documentation can be generated with doxygen.
+        
+        The best way to get started is to look at the script
+        in `tests_py`:
+        https://github.com/glasgowneuro/feedforward_closedloop_learning/tree/master/tests_py
+        
+        A full application using the Python API is our vizdoom
+        agent:
+        https://github.com/glasgowneuro/fcl_demos
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
