@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: asrtt
+Version: 1.1.1
+Summary: An automated time tracker
+Home-page: https://github.com/albertsgrc/asrtt-client
+Author: Albert
+License: UNKNOWN
+Description: # ASRTT Client
+        
+        ASRTT is an automated time tracking script that runs in the background and listens for
+        mouse and keyboard events to detect whether the computer user is working or not.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Description-Content-Type: text/markdown
