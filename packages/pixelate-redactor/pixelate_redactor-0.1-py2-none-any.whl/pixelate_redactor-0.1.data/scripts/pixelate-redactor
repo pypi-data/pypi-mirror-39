@@ -1,0 +1,37 @@
+#!python
+
+import argparse
+from pixelate_redactor.pixelate_redactor import pixelate_redactor
+
+parser = argparse.ArgumentParser(
+    description='Make your photos worse. But it looks like pixel art.'
+)
+parser.add_argument(
+    '--input', type=str, help='path to input image', required=True
+)
+parser.add_argument(
+    '--output', type=str, help='path to output image', required=True
+)
+parser.add_argument(
+    '--pixel-size', type=int, help='pixel size', required=True
+)
+
+parser.add_argument(
+    '--start-x', type=int, help='X position start', required=True
+)
+
+parser.add_argument(
+    '--start-y', type=int, help='Y position start', required=True
+)
+
+parser.add_argument(
+    '--size-x', type=int, help='X size', required=True
+)
+
+parser.add_argument(
+    '--size-y', type=int, help='Y size', required=True
+)
+
+args = parser.parse_args()
+
+pixelate_redactor(args.input, args.output, args.pixel_size, args.start_x, args.start_y, args.size_x, args.size_y)
