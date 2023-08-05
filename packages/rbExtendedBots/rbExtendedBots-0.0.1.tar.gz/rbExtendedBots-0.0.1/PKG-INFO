@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: rbExtendedBots
+Version: 0.0.1
+Summary: Just another Review Bots
+Home-page: https://github.com/misery/ExtendedBots
+Author: Andre Klitzing
+Author-email: aklitzing@gmail.com
+License: MIT
+Description: Additional tools and checker for Review Bot
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Framework :: Review Board
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Quality Assurance

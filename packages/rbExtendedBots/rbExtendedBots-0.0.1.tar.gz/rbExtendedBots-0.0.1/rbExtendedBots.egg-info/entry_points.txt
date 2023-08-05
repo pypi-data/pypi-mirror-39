@@ -1,0 +1,3 @@
+[reviewbot.tools]
+regex = extended_bots.regex:RegexTool
+
