@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: aclpwn
+Version: 1.0.0
+Summary: Active Directory ACL exploitation using BloodHound
+Home-page: https://github.com/fox-it/aclpwn.py
+Author: Dirk-jan Mollema / Fox-IT
+Author-email: dirkjan.mollema@fox-it.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

@@ -1,0 +1,4 @@
+impacket
+ldap3>=2.5
+neo4j-driver
+requests
