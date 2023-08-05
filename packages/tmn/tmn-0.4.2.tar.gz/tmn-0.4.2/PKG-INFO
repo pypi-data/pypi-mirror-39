@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: tmn
+Version: 0.4.2
+Summary: Quickstart your masternode
+Home-page: https://tomochain.com
+Author: Etienne Napoleone
+Author-email: etienne@tomochain.com
+Keywords: tomochain,blockchain,masternode,node
+Requires-Python: >=3.5.3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: clint (>=0.5.1,<0.6.0)
+Requires-Dist: docker (>=3.5.0,<4.0.0)
+Requires-Dist: eth-hash[pycryptodome] (>=0.2.0,<0.3.0)
+Requires-Dist: eth-keys (>=0.2.0b3,<0.3.0)
+Requires-Dist: pastel (>=0.1.0,<0.2.0)
+Requires-Dist: python-slugify (>=1.2,<2.0)
+Project-URL: Documentation, https://docs.tomochain.com/masternode/tmn/
+Project-URL: Repository, https://github.com/tomochain/tmn
