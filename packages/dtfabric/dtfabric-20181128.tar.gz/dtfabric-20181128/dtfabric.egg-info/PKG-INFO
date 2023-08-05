@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: dtfabric
+Version: 20181128
+Summary: Data type fabric (dtfabric)
+Home-page: https://github.com/libyal/dtfabric
+Maintainer: Joachim Metz
+Maintainer-email: joachim.metz@gmail.com
+License: Apache License, Version 2.0
+Description: dtFabric, or data type fabric, is a project to manage data types and structures, as used in the libyal projects.
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
