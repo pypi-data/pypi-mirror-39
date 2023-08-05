@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pulsarpy
+Version: 1.2.0
+Summary: Pulsar ENCODE LIMS client.
+Home-page: https://github.com/nathankw/pulsarpy
+Author: Nathaniel Watson
+Author-email: nathankw@stanford.edu
+License: UNKNOWN
+Project-URL: Read the Docs, https://pulsarpy.readthedocs.io/en/latest
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: elasticsearch-dsl
+Requires-Dist: inflection
+Requires-Dist: requests
+
+© 2018 The Board of Trustees of the Leland Stanford Junior University.
+
+# pulsarpy
+
+Pip dependencies:
+1. inflection
+
+
