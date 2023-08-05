@@ -1,0 +1,14 @@
+README.md
+setup.py
+src/shrub/__init__.py
+src/shrub/base.py
+src/shrub/command.py
+src/shrub/config.py
+src/shrub/operations.py
+src/shrub/task.py
+src/shrub/variant.py
+src/shrub.py.egg-info/PKG-INFO
+src/shrub.py.egg-info/SOURCES.txt
+src/shrub.py.egg-info/dependency_links.txt
+src/shrub.py.egg-info/requires.txt
+src/shrub.py.egg-info/top_level.txt
