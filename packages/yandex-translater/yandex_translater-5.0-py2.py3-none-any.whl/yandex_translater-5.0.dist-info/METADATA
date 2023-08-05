@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: yandex-translater
+Version: 5.0
+Summary: API for Yandex Translate
+Home-page: https://pypi.org/project/yandex-translater/
+Author: James Axl
+Author-email: axlrose112@gmail.com
+License: BSD
+Keywords: yandex-translater translater yandex translate
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: requests
+
+UNKNOWN
+
+
