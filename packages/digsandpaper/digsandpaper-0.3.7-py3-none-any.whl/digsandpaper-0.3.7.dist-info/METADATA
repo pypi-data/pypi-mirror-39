@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: digsandpaper
+Version: 0.3.7
+Summary: digsandpaper
+Home-page: https://github.com/usc-isi-i2/dig-sandpaper
+Author: Jason Slepicka
+Author-email: jasonslepicka@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/usc-isi-i2/dig-sandpaper
+Keywords: ir,search
+Platform: UNKNOWN
+Requires-Dist: elasticsearch (<6.0.0,>=5.0.0)
+Requires-Dist: elasticsearch-dsl (<6.0.0,>=5.0.0)
+Requires-Dist: jsonpath-rw (>=1.4.0)
+Requires-Dist: jsonpath-rw-ext (>=1.0.0)
+Requires-Dist: requests (>=2.19.0)
+Requires-Dist: Flask (>=1.0.2)
+Requires-Dist: Flask-API (>=1.0)
+Requires-Dist: flask-cors (>=3.0.6)
+Requires-Dist: gunicorn (>=19.9.0)
+Requires-Dist: eventlet (==0.20.0)
+Requires-Dist: etk (>=2.1.5)
+
+UNKNOWN
+
+
