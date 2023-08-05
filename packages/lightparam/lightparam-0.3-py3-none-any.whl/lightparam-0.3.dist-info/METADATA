@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: lightparam
+Version: 0.3
+Summary: A light, qt-compatible python parametrization package.
+Home-page: UNKNOWN
+Author: Vilim Stich, Luigi Petrucco
+Author-email: vilim@neuro.mpg.de
+License: UNKNOWN
+Project-URL: Source, https://github.com/portugueslab/lightparam
+Project-URL: Tracker, https://github.com/portugueslab/lightparam/issues
+Keywords: parameters
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+
+UNKNOWN
+
+
