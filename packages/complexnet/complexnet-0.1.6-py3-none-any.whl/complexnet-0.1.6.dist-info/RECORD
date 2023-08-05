@@ -1,0 +1,9 @@
+complexnet/__init__.py,sha256=sCvMLEDRvIMNYaYG-Qx_l56RSVU_E25uJilKz499qkw,42
+complexnet/util.py,sha256=jxwJJtncaUE-7uojW0Vn49BspmLA2-9jVEjpBkGQFbs,1557
+complexnet/layers/__init__.py,sha256=NiM4iDRVaW0fGwTZCGvnkL4NNpsK2IW0CVlEWps_u00,60
+complexnet/layers/complex_core.py,sha256=Hse6vjdDTLcyTnA-dV5Ph3DfyTqOOAkSLAez6GmTlxg,6353
+complexnet/layers/complex_recurrent.py,sha256=HkYqgAVggvkwpRp-YJZp19YrK9yuAoq9YPWOUC0JQOU,58666
+complexnet-0.1.6.dist-info/METADATA,sha256=VdbhPWVeOQkFiSzJiEVClKBLNCdgCUhIXDfnqH1u8UI,538
+complexnet-0.1.6.dist-info/RECORD,,
+complexnet-0.1.6.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+complexnet-0.1.6.dist-info/top_level.txt,sha256=ALqQNWZP3cw3YTiO8nLR6xFXSnxq4f8mDAD-XgbA7M4,11
