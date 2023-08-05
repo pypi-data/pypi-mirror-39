@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: catkin-cppcheck
+Version: 0.0.1
+Summary: Run cppcheck on catkin packages
+Home-page: UNKNOWN
+Author: Natesh Narain
+Author-email: nnaraindev@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: catkin ros cppcheck c++
+Platform: UNKNOWN
