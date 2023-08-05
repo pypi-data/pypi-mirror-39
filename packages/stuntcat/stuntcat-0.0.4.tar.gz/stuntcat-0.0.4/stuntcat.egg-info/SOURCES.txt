@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+stuntcat/__init__.py
+stuntcat/__main__.py
+stuntcat/cli.py
+stuntcat/main.py
+stuntcat.egg-info/PKG-INFO
+stuntcat.egg-info/SOURCES.txt
+stuntcat.egg-info/dependency_links.txt
+stuntcat.egg-info/entry_points.txt
+stuntcat.egg-info/requires.txt
+stuntcat.egg-info/top_level.txt
+stuntcat/data/aneasterchicken.txt
