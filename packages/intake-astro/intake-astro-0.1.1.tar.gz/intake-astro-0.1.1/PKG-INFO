@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: intake-astro
+Version: 0.1.1
+Summary: Astronomy plugins for Intake
+Home-page: https://github.com/ContinuumIO/intake-astro
+Maintainer: Martin Durant
+Maintainer-email: mdurant@anaconda.com
+License: BSD
+Description: # intake-astro
+        
+        [![Build Status](https://travis-ci.org/ContinuumIO/intake-astro.svg?branch=master)](https://travis-ci.org/ContinuumIO/intake-astro)
+        
+        Read the `documentaion <https://intake-astro.readthedocs.io/>`_.
+        
+        Astronomy Plugins for Intake:
+        
+        - fits-array
+        - fits-table
+        
+Platform: UNKNOWN
