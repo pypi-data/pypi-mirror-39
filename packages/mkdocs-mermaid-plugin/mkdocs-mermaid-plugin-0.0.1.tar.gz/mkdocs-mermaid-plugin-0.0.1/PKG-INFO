@@ -1,0 +1,53 @@
+Metadata-Version: 1.2
+Name: mkdocs-mermaid-plugin
+Version: 0.0.1
+Summary: A MkDocs plugin that support mermaid graph
+Home-page: https://github.com/pugong/mkdocs-mermaid-plugin
+Author: pugong
+Author-email: pugong.liu@gmail.com
+License: MIT
+Description: # mkdocs-markdownextradata-plugin
+        
+        *A MkDocs plugin that render meraid graph to mermaid style
+        
+        
+        
+        <br/>
+        
+        ## Installation
+        
+        > **Note:** This package requires MkDocs version 0.17 or higher. 
+        
+        Install the package with pip:
+        
+        ```bash
+        pip install mkdocs-mermaid-plugin
+        ```
+        
+        Enable the plugin in your `mkdocs.yml`:
+        
+        ```yaml
+        plugins:
+            - search
+            - markdownmermaid
+        ```
+        
+        > **Note:** If you have no `plugins` entry in your config file yet, you'll likely also want to add the `search` plugin. MkDocs enables it by default if there is no `plugins` entry set, but now you have to enable it explicitly.
+        
+        More information about plugins in the [MkDocs documentation][mkdocs-plugins]
+        
+        <br/>
+        
+Keywords: mkdocs python markdown mermaid
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=2.7
