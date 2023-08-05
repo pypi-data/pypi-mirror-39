@@ -1,0 +1,150 @@
+body {
+    padding: 2rem;
+    padding-top: 2rem;
+}
+
+* {
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+.page-header {
+    margin: 0 !important;
+    padding-left: 8px;
+    border-bottom: none;
+}
+
+.element-list li {
+    word-wrap: break-word;
+}
+
+.list-group a {
+    mix-blend-mode: multiply;
+}
+
+.time {
+    color: gray;
+    font-size: 0.8em;
+    position: absolute;
+    right: 0px;
+    padding: 3px;
+    top: 0px;
+}
+
+.path {
+    word-wrap: break-word;
+}
+
+.sha1 {
+    text-decoration: underline;
+}
+
+.list-group-item {
+    border-radius: 0 !important;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+.panel {
+    border-radius: 0 !important;
+}
+
+.data {
+    padding: 3px !important;
+}
+
+.data pre {
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin: 0;
+    background-color: rgba(245, 245, 245, 0.55);
+    line-height: 1.7;
+}
+
+.help {
+    float: right;
+}
+
+.help img {
+    width: 20px;
+}
+
+a.active {
+    background-color: black !important;
+    color: white !important;
+    border: 1px solid black !important;
+    text-decoration: none;
+}
+
+pre {
+    overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0;
+    padding-top: 1rem;
+}
+
+.element-list {
+    flex-basis: 341px;
+    flex-grow: 0;
+    margin-right: 2rem;
+}
+
+.viewer {
+    flex-grow: 1
+}
+
+.container-fluid {
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-top: 3rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 200;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+.manual {
+    float: right;
+    background-image: url("help.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 11px;
+}
+
+.manual span {
+    visibility: hidden;
+}
+
+.extra{
+    font-size:1.2rem;
+}
+.extra td{
+    padding-left:2rem;
+}
+
+.expand {
+    display: none;
+}
