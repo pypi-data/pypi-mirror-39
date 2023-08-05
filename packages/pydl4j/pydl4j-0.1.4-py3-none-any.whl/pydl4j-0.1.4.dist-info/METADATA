@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: pydl4j
+Version: 0.1.4
+Summary: Java dependency management for Python projects using DL4J
+Home-page: https://github.com/deeplearning4j/pydl4j
+License: Apache
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: tests
+Requires-Dist: Cython
+Requires-Dist: argcomplete
+Requires-Dist: click
+Requires-Dist: jnius
+Requires-Dist: python-dateutil
+Requires-Dist: requests
+Provides-Extra: tests
+Requires-Dist: pytest; extra == 'tests'
+Requires-Dist: pytest-cov; extra == 'tests'
+Requires-Dist: pytest-pep8; extra == 'tests'
+
+UNKNOWN
+
+
