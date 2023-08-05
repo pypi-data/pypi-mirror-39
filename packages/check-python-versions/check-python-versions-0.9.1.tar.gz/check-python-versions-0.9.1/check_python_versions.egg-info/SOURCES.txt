@@ -1,0 +1,16 @@
+.gitignore
+CHANGES.rst
+LICENSE
+MANIFEST.in
+Makefile
+README.rst
+check-python-versions
+release.mk
+setup.cfg
+setup.py
+check_python_versions.egg-info/PKG-INFO
+check_python_versions.egg-info/SOURCES.txt
+check_python_versions.egg-info/dependency_links.txt
+check_python_versions.egg-info/not-zip-safe
+check_python_versions.egg-info/requires.txt
+check_python_versions.egg-info/top_level.txt
