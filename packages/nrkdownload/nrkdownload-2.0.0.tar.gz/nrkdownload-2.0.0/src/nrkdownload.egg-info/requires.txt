@@ -1,0 +1,10 @@
+requests
+requests_cache
+tqdm
+future
+python-dateutil
+
+[testing]
+pytest
+pytest-cov
+pytest-console-scripts
