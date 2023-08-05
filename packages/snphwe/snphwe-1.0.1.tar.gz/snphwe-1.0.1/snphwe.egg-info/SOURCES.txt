@@ -1,0 +1,10 @@
+README.md
+setup.py
+snphwe/__init__.py
+snphwe/hwe.cpp
+snphwe.egg-info/PKG-INFO
+snphwe.egg-info/SOURCES.txt
+snphwe.egg-info/dependency_links.txt
+snphwe.egg-info/requires.txt
+snphwe.egg-info/top_level.txt
+src/snp_hwe.cpp
