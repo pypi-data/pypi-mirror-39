@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: imbi
+Version: 0.1.0
+Summary: Imbi Service Management System
+Home-page: https://github.aweber.io/PSE/Applications/imbi
+Author: AWeber Communications, Inc.
+Author-email: api@aweber.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: aioredis (==1.2.0)
+Requires-Dist: arrow (==0.10.0)
+Requires-Dist: jsonpatch (==1.14)
+Requires-Dist: jsonschema (==2.5.1)
+Requires-Dist: ietfparse (==1.4.1)
+Requires-Dist: ldap3 (<3,>=2.5)
+Requires-Dist: pycurl (==7.43.0)
+Requires-Dist: raven (<7,>=6.9.0)
+Requires-Dist: tornado (==5.1.1)
+Requires-Dist: u-msgpack-python (==2.1)
+Requires-Dist: sprockets.handlers.status (==0.1.2)
+Requires-Dist: sprockets.http (==2.0.0)
+Requires-Dist: sprockets.mixins.correlation (==2.0.0)
+Requires-Dist: sprockets.mixins.mediatype (==2.2.2)
+
+Imbi
+====
+Imbi is a DevOps Service Management Platform designed to provide an efficient
+way to manage a large environment that contains many services and applications.
+
+Environment Variables
+---------------------
+Imbi runtime configuration is configured by way of environment variables. The following
+
+
+- ``LDAP_HOST``: The hostname of the server to connect to (Default: ``localhost``)
+- ``LDAP_PORT``: The port to connect on (Default: ``389``)
+- ``LDAP_SSL``: Indicates whether SSL is enabled for connecting (Default: ``False``)
+- ``LDAP_GROUP_OT``: The object type to use for groups (Default: ``groupOfNames``)
+- ``LDAP_GROUPS_DN``: The base DN to use for group searching
+- ``LDAP_USER_OT``: The object type to use for users (Default: ``inetOrgPerson``)
+- ``LDAP_USERS_DN``: The base DN to use for user searching
+- ``LDAP_USERNAME``: The username attribute used in user searching (Default: ``uid``)
+- ``LDAP_POOL_SIZE``: The size to allocate for the ThreadPoolExecutor (Default: ``5``)
+- ``REDIS_URL``: The Redis server to use for session storage (Default: ``redis://localhost:6379/0``)
+- ``POSTGRES_URL``: The Postgres server to (Default: ``postgres://imbi@localhost:5432/imbi``)
+
+Building Static Assets
+----------------------
+Imbi uses npm and gulp to build the static assets for the site. Ensure you
+have a current version of nodejs and Python 2.7 available to build the
+JavaScript and CSS.
+
+.. code-block::
+
+    npm config set python `which python2.7`
+    npm install --local
+    gulp
+
+Etymology
+---------
+Imbi is Old High German for "Swarm of Bees"
+
+
