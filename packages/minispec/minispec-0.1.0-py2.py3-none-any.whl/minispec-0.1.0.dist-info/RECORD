@@ -1,0 +1,17 @@
+minispec/__init__.py,sha256=glcwCewwKBl6kb52BTUyip-4vA4QcaKX04pmVKif7eM,704
+minispec/filters.py,sha256=bApxeVMKazVJO4Y7SRcmM38wJt6Ejc4zmHWeQPAMTPg,9248
+minispec/version.py,sha256=wMOVNvbIpkjIkHxeV-GYv06Fw3pwkaWRSwFn1FvZV8M,1320
+minispec/core/__init__.py,sha256=7KcC_NE5vY3YXgiLimktgj85R9zwWU5Yg-nWFBfOEGg,815
+minispec/core/spectrum.py,sha256=8bDluwOkt697BDUIwS-seLUZOWbk7VI6o4IlXq0i5kw,19893
+minispec/core/time_frequency.py,sha256=_gfSOTr46gV3JZzuAB2YYtYzQGYA4KnASyRNV6fLBFU,14747
+minispec/feature/__init__.py,sha256=47T7yB-M74S6pX3aZK8N_Zr0Nnw9VRG5t0jySPTUYkw,306
+minispec/feature/spectral.py,sha256=Gby_GGuY16Cwzy5vpuC6_A3aYwuWrKJAjx3RgRJfjTE,3015
+minispec/util/__init__.py,sha256=JGhcYqaFJRATjl26osh7GNVRSY63iB_Z6EXE3He9p9Y,450
+minispec/util/exceptions.py,sha256=4aQvm7R5KnLGoPk9sqTlHJvhFpWxom27Do_TIsRzabI,268
+minispec/util/utils.py,sha256=3e98mlXDik6NjAoR-PbR-QXKxu8edSJZXTqdtJe6T0s,17127
+minispec/util/example_data/Kevin_MacLeod_-_Vibe_Ace.ogg,sha256=c9ZEPvkKfAIvFk5aqQ5WwikVhZMLObFlbQdlq7wfF3k,1452719
+minispec-0.1.0.dist-info/LICENSE.md,sha256=SbedCV1vYMrbaeStRjrTpXkxDk9aliPfzmyfIftaDCI,1120
+minispec-0.1.0.dist-info/METADATA,sha256=sJs7dbPnaAHjeBvohvpiVgH-j0-IMWtdrx0-dWKMJA4,3469
+minispec-0.1.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+minispec-0.1.0.dist-info/top_level.txt,sha256=l6aFjG2CJOvKonE1uSUKB03Z47JFNKvW6ZoVQaZpkXc,9
+minispec-0.1.0.dist-info/RECORD,,
