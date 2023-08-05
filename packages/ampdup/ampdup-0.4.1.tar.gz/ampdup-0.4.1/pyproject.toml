@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "ampdup"
+version = "0.4.1"
+description = "A type-hinted async python mpd client library."
+authors = ["Tarcisio Eduardo Moreira Crocomo <tarcisio.crocomo+pypi@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://gitlab.com/tarcisioe/ampdup"
+keywords = ["mpd", "type", "async"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.5"
+flake8 = "^3.5"
+mypy = "^0.610.0"
+flake8-per-file-ignores = "^0.6.0"
+pylint-quotes = "^0.1.9"
+pytest-cov = "^2.5"
+wrapt = "^1.10"
+pylint = "^2.2"
