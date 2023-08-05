@@ -1,0 +1,14 @@
+CHANGES.rst
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+navio/__init__.py
+navio/meta_travis.py
+navio/travis/__init__.py
+navio/travis/_travis.py
+navio_travis.egg-info/PKG-INFO
+navio_travis.egg-info/SOURCES.txt
+navio_travis.egg-info/dependency_links.txt
+navio_travis.egg-info/top_level.txt
