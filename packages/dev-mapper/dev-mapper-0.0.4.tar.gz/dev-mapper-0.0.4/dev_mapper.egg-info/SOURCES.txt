@@ -1,0 +1,15 @@
+MANIFEST.in
+Makefile
+README.md
+VERSION
+setup.cfg
+setup.py
+dev_mapper.egg-info/PKG-INFO
+dev_mapper.egg-info/SOURCES.txt
+dev_mapper.egg-info/dependency_links.txt
+dev_mapper.egg-info/top_level.txt
+devmapper/__init__.py
+devmapper/devmap.py
+devmapper/mapper.py
+devmapper/test/__init__.py
+devmapper/test/test_mapper.py
