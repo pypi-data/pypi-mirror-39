@@ -1,0 +1,12 @@
+pylspclient/__init__.py,sha256=L7GbrMXxP9wmPSCEMBDZZqlPEnFRF1BwK6llHV39sII,243
+pylspclient/json_rpc_endpoint.py,sha256=_9MnN4nkn6ALLySAkQA63wlld6ElG9NNZVrE6vwB4Ik,2442
+pylspclient/lsp_client.py,sha256=2LhJCoQSg3WJoiVNsNzZjo6jD5pCB02DSJls_KWCTcQ,8117
+pylspclient/lsp_endpoint.py,sha256=g242oqYjvv69yihNwybURICHn58Fj-gYfHroUg1GJ8Q,2483
+pylspclient/lsp_structs.py,sha256=7P97suEv89FHfCn601iVOYgnNdg4URVCCc85UT2v4wI,10377
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_json_rpc_endpoint.py,sha256=XggSc_gXJVnzWMlPs2H3Z3O9DZhzcAy_bGnKDwW5Hu4,2533
+pylspclient-0.0.1.dist-info/LICENSE,sha256=o8Non27Kk27pmsQBKQ3sbFeyKwk0atzchuMDwrIhmHU,1066
+pylspclient-0.0.1.dist-info/METADATA,sha256=NDEdqw9hQEsp7AvOIt8CTHQv2-8DaMlaxQCidpPSpqg,491
+pylspclient-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pylspclient-0.0.1.dist-info/top_level.txt,sha256=Wtfz17MZY_8f8pFNG7pWckPvVny7C1p0S-zvzKBgR1Q,18
+pylspclient-0.0.1.dist-info/RECORD,,
