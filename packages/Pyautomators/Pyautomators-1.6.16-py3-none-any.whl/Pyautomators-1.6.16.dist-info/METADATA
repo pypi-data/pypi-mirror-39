@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: Pyautomators
+Version: 1.6.16
+Summary: Biblioteca de automação para geracao completa de ambientacao de testes
+Home-page: UNKNOWN
+Author: Kaue_Bonfim
+Author-email: koliveirab@indracompany.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: python-docx
+Requires-Dist: webdriver-manager
+Requires-Dist: pytesseract
+Requires-Dist: pillow
+Requires-Dist: pyyaml
+Requires-Dist: peewee
+Requires-Dist: pyautogui
+Requires-Dist: assertpy
+Requires-Dist: cx-Oracle
+Requires-Dist: selenium
+Requires-Dist: numpy
+Requires-Dist: PyMySQL (==0.7.8)
+Requires-Dist: opencv-python
+Requires-Dist: Appium-Python-Client
+Requires-Dist: behave2cucumber
+Requires-Dist: python-jenkins
+Requires-Dist: django
+Requires-Dist: pandas
+Requires-Dist: pymongo
+Requires-Dist: beautifulsoup4
+Requires-Dist: nltk
+Requires-Dist: TestLink-API-Python-client
+Requires-Dist: sqlalchemy
+Requires-Dist: argparse
+Requires-Dist: docker
+Requires-Dist: parse (>=1.8.2)
+Requires-Dist: parse-type (>=0.4.2)
+Requires-Dist: six (>=1.11)
+Requires-Dist: lackey
+Requires-Dist: argparse; python_version < "2.7"
+Requires-Dist: importlib; python_version < "2.7"
+Requires-Dist: ordereddict; python_version < "2.7"
+Requires-Dist: traceback2; python_version < "3.0"
+Requires-Dist: enum34; python_version < "3.4"
+
+UNKNOWN
+
+
