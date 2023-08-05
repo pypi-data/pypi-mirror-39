@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "sqlite3_backup"
+url = "https://sissource.ethz.ch/schmittu/sqlite3_backup"
+version = "0.2.0"
+description = "implements missing backup functionality in sqlite3 module"
+long_description = """
+sqlite3 from the standard library does not support the backup
+functionality provided by the original sqlite3 c implementation.
+
+This package fixes this by providing a simple backup function.
+
+Typical use case is to write an in-memory sqlite3-db to disk.
+
+This package relies of ctypes module and thus does not require a
+working c compiler setup.
+"""
+authors = ["Uwe Schmitt <uwe.schmitt@id.ethz.ch>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+pdbpp = "^0.9.3"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
