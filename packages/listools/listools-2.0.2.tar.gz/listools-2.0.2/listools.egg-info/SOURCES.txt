@@ -1,0 +1,17 @@
+README.rst
+setup.cfg
+setup.py
+listools/__init__.py
+listools/flatools.py
+listools/iterz.py
+listools/listutils.py
+listools/llogic.py
+listools.egg-info/PKG-INFO
+listools.egg-info/SOURCES.txt
+listools.egg-info/dependency_links.txt
+listools.egg-info/top_level.txt
+tests/__init__.py
+tests/test_flatools.py
+tests/test_iterz.py
+tests/test_listutils.py
+tests/test_llogic.py
