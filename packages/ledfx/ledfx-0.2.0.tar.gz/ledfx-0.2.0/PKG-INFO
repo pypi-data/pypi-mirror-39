@@ -1,0 +1,28 @@
+Metadata-Version: 1.2
+Name: ledfx
+Version: 0.2.0
+Summary: A network based light effect controller
+Home-page: http://github.com/ahodges9/ledfx
+Author: Austin Hodges
+Author-email: austin.b.hodges@gmail.com
+License: The MIT License
+Description: LedFx
+        =================================================================================
+        |Build Status| |License| |Discord|
+        
+        WARNING: This project is in early development, so expect to encounter minor issues along the way.
+        
+        LedFx is a network based LED effect controller with support for advanced real-time audio effects. LedFx works great with cheap ESP8266 nodes allowing for cost effectvice syncronized effects across your entire house!
+        
+        For installation instructions see the `documentation <https://ahodges9.github.io/LedFx/>`__.
+        
+        .. |Build Status| image:: https://travis-ci.org/ahodges9/LedFx.svg?branch=master
+           :target: https://travis-ci.org/ahodges9/LedFx
+        .. |License| image:: https://img.shields.io/badge/license-MIT-blue.svg
+        .. |Discord| image:: https://img.shields.io/badge/chat-on%20discord-7289da.svg
+           :target: https://discord.gg/wJ755dY
+        
+Platform: any
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python
+Requires-Python: >=3.6.0
