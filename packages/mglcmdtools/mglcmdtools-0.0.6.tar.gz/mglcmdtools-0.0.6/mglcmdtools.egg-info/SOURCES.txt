@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+changelog
+setup.py
+mglcmdtools/__init__.py
+mglcmdtools/mglcmdtools.py
+mglcmdtools.egg-info/PKG-INFO
+mglcmdtools.egg-info/SOURCES.txt
+mglcmdtools.egg-info/dependency_links.txt
+mglcmdtools.egg-info/requires.txt
+mglcmdtools.egg-info/top_level.txt
