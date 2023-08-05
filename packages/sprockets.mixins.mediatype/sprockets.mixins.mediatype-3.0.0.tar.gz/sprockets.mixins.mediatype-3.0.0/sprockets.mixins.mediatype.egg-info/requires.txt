@@ -1,0 +1,5 @@
+ietfparse<2,>=1.5.1
+tornado<6,>=5
+
+[msgpack]
+u-msgpack-python<3,>=2.5.0
