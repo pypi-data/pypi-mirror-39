@@ -1,0 +1,41 @@
+#+TITLE: ElCato Static Blogging Platform
+#+DATE: 2017-07-01 12:00:00 UTC
+#+DESCRIPTION: Static blog generator
+#+FILETAGS: elcato:blog:orgmode
+#+CATEGORY: blogging
+#+SLUG: org-mode-header-reference
+
+* Introduction
+El Cato is a static blog generator using org markdown files, you can see a [[https://olymk2.gitlab.io/elcato/][demo on gitlab]] which gets generated from the org files in this project.
+
+* Getting started
+** Creating a brand new Blog
+First of initialize your blog with the command below adjust the path parameter to suit you.
+#+BEGIN_SRC shell :results silent :tangle.env
+elcato init --path=/tmp/myblog
+#+END_SRC
+** Adding a new post
+If you are inside your project root you can omit the path parameter as it will use the one from your yaml config.
+#+BEGIN_SRC shell :results silent :tangle.env
+elcato create --path=/tmp/myblog
+#+END_SRC
+
+** Modifying the defaults
+Edit the elcato.yaml file and modify the defaults to suit you in particular the Author and Blog blocks.
+** Configuration
+You can configure the static values using a yaml file this gets created when you Initialize your blog.
+Common settings are your personal details and your blog details like name and url.
+
+* Advanced usage
+** Change code styles
+If you want to change the colours used in code highlighting generate a new stylesheet like below.
+#+BEGIN_SRC shell
+pygmentize -S monokai -f html -a .highlight -a .code  > output/default.css
+#+END_SRC
+
+** Org Tips
+Limit display size of all images in org buffers set this at the top of your page.
+#+BEGIN_EXAMPLE
+#+ATTR_ORG: :width 400
+#+END_EXAMPLE
+
