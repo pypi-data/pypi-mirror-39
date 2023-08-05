@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: rpc-component
+Version: 0.0.2
+Summary: Tools for managing RPC components.
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.2
+Requires-Dist: GitPython
+Requires-Dist: PyYAML
+Requires-Dist: schema
+
+UNKNOWN
+
+

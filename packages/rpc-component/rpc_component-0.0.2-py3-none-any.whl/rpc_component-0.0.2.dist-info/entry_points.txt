@@ -1,0 +1,3 @@
+[console_scripts]
+component = rpc_component.cli:main
+
