@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+perspective_dash_component/__init__.py
+perspective_dash_component/_imports_.py
+perspective_dash_component/metadata.json
+perspective_dash_component/package.json
+perspective_dash_component/perspective_dash.py
+perspective_dash_component/perspective_dash_component.dev.js
+perspective_dash_component/perspective_dash_component.min.js
+perspective_dash_component.egg-info/PKG-INFO
+perspective_dash_component.egg-info/SOURCES.txt
+perspective_dash_component.egg-info/dependency_links.txt
+perspective_dash_component.egg-info/top_level.txt
