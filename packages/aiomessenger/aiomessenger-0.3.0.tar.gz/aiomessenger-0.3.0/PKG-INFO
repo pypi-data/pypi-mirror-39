@@ -1,0 +1,35 @@
+Metadata-Version: 1.1
+Name: aiomessenger
+Version: 0.3.0
+Summary: # aiomessenger
+
+[![travis-ci][travis-image]][travis-url]    [![pypi-version][pypi-image]][pypi-url]    [![codecov][codecov-image]][codecov-url]
+
+[travis-image]: https://travis-ci.org/stegben/aiomessenger.svg?branch=master
+[travis-url]: https://travis-ci.org/stegben/aiomessenger
+
+[pypi-image]: https://badge.fury.io/py/aiomessenger.svg
+[pypi-url]: https://badge.fury.io/py/aiomessenger
+
+[codecov-image]: https://codecov.io/gh/stegben/aiomessenger/branch/master/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/stegben/aiomessenger
+
+Home-page: https://github.com/stegben/aiomessenger
+Author: cph
+Author-email: stegben.benjamin@gmail.com
+License: UNKNOWN
+Description: # aiomessenger
+        
+        [![travis-ci][travis-image]][travis-url]    [![pypi-version][pypi-image]][pypi-url]    [![codecov][codecov-image]][codecov-url]
+        
+        [travis-image]: https://travis-ci.org/stegben/aiomessenger.svg?branch=master
+        [travis-url]: https://travis-ci.org/stegben/aiomessenger
+        
+        [pypi-image]: https://badge.fury.io/py/aiomessenger.svg
+        [pypi-url]: https://badge.fury.io/py/aiomessenger
+        
+        [codecov-image]: https://codecov.io/gh/stegben/aiomessenger/branch/master/graph/badge.svg
+        [codecov-url]: https://codecov.io/gh/stegben/aiomessenger
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
