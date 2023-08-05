@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: carpi-obddaemon
+Version: 0.3.0
+Summary: OBD II Daemon (developed for CarPi)
+Home-page: https://github.com/rGunti/CarPi-OBDDaemon
+Author: Raphael "rGunti" Guntersweiler
+Author-email: raphael@rgunti.ch
+License: MIT
+Keywords: carpi redis data bus
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: obd
+Requires-Dist: wheel
+
+# OBD Daemon (for CarPi)
+This is a OBD II daemon built for the CarPi project.
+
+## LICENSE
+This project is licensed under the MIT license as described in the
+[LICENSE](LICENSE) file.
+
+
