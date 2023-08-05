@@ -1,0 +1,27 @@
+# Version of the bgdata config file
+version = 2
+
+
+# The default local folder where you want to store the data packages
+local_repository = "~/.bgdata"
+
+# The remote URL from where do you want to download the data packages
+remote_repository = "https://bbglab.irbbarcelona.org/bgdata"
+
+# If you want to force bgdata to work only locally
+# offline = True
+
+# Optional proxy configuration
+# [proxy]
+# host = proxy.someurl.org
+# port = 8080
+
+# If it's an authenticated proxy
+# user = youruser
+# pass = yourpassword
+
+# Cache repositories
+[cache_repositories]
+# Pairs name and path
+# cache1 = /fast/folder1
+# cache2 = /fast/folder2
