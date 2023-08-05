@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: iata-arrivals-cli
+Version: 1.0.1
+Summary: Get airport arrivals, departures, details and METAR weather info from CLI.
+Home-page: https://github.com/e3v3a/iata-arrivals-cli/
+Author: E:V:A
+Author-email: xdae3v3a@gmail.com
+License: LICENSE.txt
+Project-URL: Bug Reports, https://github.com/e3v3a/iata-arrivals-cli/issues
+Keywords: airport flights arrivals departures iata icao metar pip package cli
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet
+Classifier: Topic :: Utilities
+Requires-Python: >=3
+Description-Content-Type: text/plain
+Requires-Dist: lxml
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: jsonpath-rw
+Requires-Dist: metar
+Requires-Dist: pyflightdata
+
+Get various airport information by providing an airport IATA code or country name.
+
+
