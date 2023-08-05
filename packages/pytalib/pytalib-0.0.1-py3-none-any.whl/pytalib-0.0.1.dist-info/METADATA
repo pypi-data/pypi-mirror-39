@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pytalib
+Version: 0.0.1
+Summary: Python Technical Analysis Library
+Home-page: https://github.com/dennis199441/pytalib
+Author: Dennis Cheung
+Author-email: dennis199441@gmail.com
+License: UNKNOWN
+Keywords: pip,dennis,pytalib
+Platform: UNKNOWN
+Requires-Dist: networkx
+Requires-Dist: scipy
+
+UNKNOWN
+
+
