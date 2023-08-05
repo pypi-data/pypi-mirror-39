@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: vishwakarma
+Version: 0.0.2
+Summary: __init__.py
+Home-page: https://github.com/diagram-ai/vishwakarma
+License: UNKNOWN
+Author: Diagram AI
+Author-email: notes@diagram.ai
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+
+# vishwakarma
+Python visualization library for Probabilistic Graphical Models, and a lot more!
+
