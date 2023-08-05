@@ -1,0 +1,8 @@
+ipython
+jsonschema
+
+[all]
+pytest
+
+[tests]
+pytest
