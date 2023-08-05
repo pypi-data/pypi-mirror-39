@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: python-documentcloud
+Version: 1.1.0
+Summary: A simple Python wrapper for the DocumentCloud API
+Home-page: http://datadesk.github.com/python-documentcloud/
+Author: Ben Welsh
+Author-email: ben.welsh@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP
