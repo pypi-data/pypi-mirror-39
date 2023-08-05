@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: pycorrfit
+Version: 1.1.5
+Summary: Scientific tool for fitting correlation curves on a logarithmic plot.
+Home-page: https://github.com/FCS-analysis/PyCorrFit
+Author: Paul Müller
+Author-email: dev@craban.de
+License: GPL v2
+Keywords: fluorescence correlation spectroscopy
+Platform: ALL
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.4, <4
+Provides-Extra: GUI
+Requires-Dist: lmfit (>=0.9.2)
+Requires-Dist: numpy (>=1.14.2)
+Requires-Dist: pyyaml (>=3.12)
+Requires-Dist: scipy (>=1.0.1)
+Provides-Extra: GUI
+Requires-Dist: matplotlib (>=2.2.2); extra == 'GUI'
+Requires-Dist: sympy (>=1.1.1); extra == 'GUI'
+Requires-Dist: simplejson; extra == 'GUI'
+Requires-Dist: wxPython (>=4.0.1); extra == 'GUI'
+
+|PyCorrFit|
+===========
+
+|PyPI Version| |Build Status Win| |Build Status Travis| |Coverage Status| |Docs Status|
+
+
+Documentation
+-------------
+The documentation of PyCorrFit is available at https://pycorrfit.readthedocs.org.
+
+
+Problems
+--------
+If you find a bug or need help with a specific topic, do not hesitate to ask a question
+at the `issues page <https://github.com/FCS-analysis/PyCorrFit/wiki/Creating-a-new-issue>`__.
+
+
+
+.. |PyCorrFit| image:: https://raw.github.com/FCS-analysis/PyCorrFit/master/doc/Images/PyCorrFit_logo_dark.png
+.. |PyPI Version| image:: http://img.shields.io/pypi/v/PyCorrFit.svg
+   :target: https://pypi.python.org/pypi/pycorrfit
+.. |Build Status Win| image:: https://img.shields.io/appveyor/ci/paulmueller/PyCorrFit/master.svg?label=win
+   :target: https://ci.appveyor.com/project/paulmueller/pycorrfit
+.. |Build Status Travis| image:: https://img.shields.io/travis/FCS-analysis/PyCorrFit/master.svg?label=linux_osx
+   :target: https://travis-ci.org/FCS-analysis/PyCorrFit
+.. |Coverage Status| image:: https://img.shields.io/codecov/c/github/FCS-analysis/PyCorrFit/master.svg
+   :target: https://codecov.io/gh/FCS-analysis/PyCorrFit
+.. |Docs Status| image:: https://readthedocs.org/projects/pycorrfit/badge/?version=latest
+   :target: https://readthedocs.org/projects/pycorrfit/builds/
+
+
