@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+
+import sys
+import os
+import morfeus
+import argparse
+
+def format_usage():
+    p = os.path.basename(sys.argv[0])
+    return """
+{p} - Control moRFeus mixer/signal generator
+Usage: {p} [option] <name> [<value>]
+Options:
+  -n <N>: Use N-th device, when multiple devices are connected
+Example:
+  $ {p} mode
+  MIXER
+  $ {p} mode GENERATOR
+  $ {p} mode
+  GENERATOR
+  $ {p} freq 120000000
+  $ {p} bias 1
+  $ {p} current 1
+""".lstrip().format(**locals())
+
+def usage():
+    sys.stderr.write(format_usage())
+    sys.exit(0)
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.format_usage = ap.format_help = format_usage
+    ap.add_argument('-n', default=0, type=int)
+    ap.add_argument('args', nargs='*')
+    opt = ap.parse_args()
+
+    if not opt.args:
+        usage()
+
+    key = opt.args[0]
+    val = opt.args[1] if len(opt.args) >= 2 else None
+
+    mrf = morfeus.MoRFeus(index=opt.n)
+
+    if not hasattr(mrf, key):
+        sys.stderr.write("ERROR: Unknown key: %s\n" % key)
+        usage()
+
+    if val is None:
+        ret = getattr(mrf, key)
+        if key == 'mode':
+            print(ret.name)
+        else:
+            print(ret)
+    else:
+        if key == 'mode':
+            val = morfeus.Mode[val.upper()]
+        else:
+            val = int(eval(val))
+        setattr(mrf, key, val)
+
+if __name__ == '__main__':
+    main()
