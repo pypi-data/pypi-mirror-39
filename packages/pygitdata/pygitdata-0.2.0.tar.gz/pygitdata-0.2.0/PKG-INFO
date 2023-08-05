@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: pygitdata
+Version: 0.2.0
+Summary: Simple module to pull structured data from git
+Home-page: https://github.com/adammhaile/gitdata
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: LGPL v3.0
+Description: # git-data
+        Simple module to pull structured data from git
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 2.7

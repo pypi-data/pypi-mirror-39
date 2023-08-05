@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+gitdata/__init__.py
+gitdata/assertion.py
+gitdata/exectools.py
+gitdata/pushd.py
+pygitdata.egg-info/PKG-INFO
+pygitdata.egg-info/SOURCES.txt
+pygitdata.egg-info/dependency_links.txt
+pygitdata.egg-info/requires.txt
+pygitdata.egg-info/top_level.txt
