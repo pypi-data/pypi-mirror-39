@@ -1,0 +1,10 @@
+README.md
+setup.py
+interface/__init__.py
+interface/__version__.py
+interface/exceptions.py
+interface/interface.py
+python_interfaces.egg-info/PKG-INFO
+python_interfaces.egg-info/SOURCES.txt
+python_interfaces.egg-info/dependency_links.txt
+python_interfaces.egg-info/top_level.txt
