@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: Augmented-Criticism-Lab-Toolkit
+Version: 1.1.1
+Summary: A set of tools for connecting to the Augmented Criticism Lab
+Home-page: https://git.joshharkema.com/jharkema/augemented-criticism-lab-tools
+Author: Josh Harkema
+Author-email: josh@joshharkema.com
+License: https://creativecommons.org/licenses/by/2.0/ca/
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: requests
+Requires-Dist: cmudict
+Requires-Dist: pronouncing
+Requires-Dist: oauth2-client
+
+UNKNOWN
+
+
