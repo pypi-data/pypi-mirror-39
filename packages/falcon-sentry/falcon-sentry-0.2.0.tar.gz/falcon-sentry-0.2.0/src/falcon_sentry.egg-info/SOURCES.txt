@@ -1,0 +1,14 @@
+HISTORY.rst
+MANIFEST.in
+README.rst
+requirements.txt
+setup.cfg
+setup.py
+src/falcon_sentry/__init__.py
+src/falcon_sentry/sentry.py
+src/falcon_sentry.egg-info/PKG-INFO
+src/falcon_sentry.egg-info/SOURCES.txt
+src/falcon_sentry.egg-info/dependency_links.txt
+src/falcon_sentry.egg-info/not-zip-safe
+src/falcon_sentry.egg-info/requires.txt
+src/falcon_sentry.egg-info/top_level.txt
