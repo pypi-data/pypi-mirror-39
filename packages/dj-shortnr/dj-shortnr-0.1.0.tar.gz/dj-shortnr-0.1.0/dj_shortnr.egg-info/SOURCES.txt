@@ -1,0 +1,15 @@
+LICENCE
+MANIFEST.in
+setup.py
+dj_shortnr.egg-info/PKG-INFO
+dj_shortnr.egg-info/SOURCES.txt
+dj_shortnr.egg-info/dependency_links.txt
+dj_shortnr.egg-info/not-zip-safe
+dj_shortnr.egg-info/top_level.txt
+shortnr/__init__.py
+shortnr/admin.py
+shortnr/apps.py
+shortnr/core.py
+shortnr/models.py
+shortnr/tests.py
+shortnr/utils.py

@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: dj-shortnr
+Version: 0.1.0
+Summary: Yet another django app for URL indexing and shortening
+Home-page: http://github.com/dsfx3d/dj-shortnr
+Author: dsfx3d
+Author-email: dsfx3d@gmail.com
+License: MIT
+Description: README in GitHub
+Keywords: django app url shortening indexing
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
