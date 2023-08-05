@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+config/jupyterlab_quickopen.json
+jupyterlab_quickopen/__init__.py
+jupyterlab_quickopen/_version.py
+jupyterlab_quickopen/handler.py
+jupyterlab_quickopen.egg-info/PKG-INFO
+jupyterlab_quickopen.egg-info/SOURCES.txt
+jupyterlab_quickopen.egg-info/dependency_links.txt
+jupyterlab_quickopen.egg-info/requires.txt
+jupyterlab_quickopen.egg-info/top_level.txt
