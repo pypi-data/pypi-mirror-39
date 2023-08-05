@@ -1,0 +1,46 @@
+#+TITLE: Eorg
+#+FILETAGS: :Peter:Boss:Secret:
+#+TAG: test
+#+CATEGORY: test
+
+Simple parser for org documents similar to markdown but far more powerful.
+The current parser was a bit limited so this is an attempt to make something simpler to use and extend.
+
+This is not currently meant for generating org files only for reading data from them for scripts.
+
+* Install
+#+BEGIN_SRC shell :results raw
+pip install eorg
+#+END_SRC
+
+** Developing
+#+BEGIN_SRC shell :results silent
+python setup.py develop
+#+END_SRC
+
+* Examples
+** Generating plain html
+Simple raw html generation
+#+BEGIN_SRC sh :results code
+  import os
+  from eorg.parser import parse
+  from eorg.generate import html
+
+  with open(os.path.abspath('../../tests/fixtures/test.org'), 'r') as fp:
+      doc = parse(fp)
+      print(html(doc).read())
+#+END_SRC
+
+
+Simple raw html generation
+#+BEGIN_SRC sh :results code
+  import os
+  from eorg.parser import parse
+  from eorg.generate import html
+
+  with open(os.path.abspath('../../tests/fixtures/test.org'), 'r') as fp:
+      doc = parse(fp)
+      for row in doc.filter('src'):
+          print(row.token)
+#+END_SRC
+
