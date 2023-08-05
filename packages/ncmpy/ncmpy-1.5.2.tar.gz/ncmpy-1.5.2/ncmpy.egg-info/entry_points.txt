@@ -1,0 +1,3 @@
+[console_scripts]
+ncmpy = ncmpy.__main__:main
+
