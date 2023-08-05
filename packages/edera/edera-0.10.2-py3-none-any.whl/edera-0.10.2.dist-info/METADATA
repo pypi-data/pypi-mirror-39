@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: edera
+Version: 0.10.2
+Summary: A distributed workflow management framework
+Home-page: https://github.com/thoughteer/edera
+Author: Iskander Sitdikov
+Author-email: thoughteer@gmail.com
+License: MIT
+Keywords: workflow task schedule distributed dependency management
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: System :: Distributed Computing
+Requires-Dist: flask (<2.0,>=1.0.2)
+Requires-Dist: iso8601 (<1.0,>=0.1.10)
+Requires-Dist: kazoo (<3.0,>=2.5.0)
+Requires-Dist: pymongo (<4.0,>=3.4)
+Requires-Dist: six (<2.0,>=1.10)
+Requires-Dist: sympy (<2.0,>=1.3)
+
+UNKNOWN
+
+
