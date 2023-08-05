@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: fake-email-identifier
+Version: 0.1.4
+Summary: This will find the email-id is 'True' or 'Flase'
+Home-page: https://github.com/teamtact/fake-email-identifier
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# emailid_finder Package
+
+This will find whether the given email-id is real or fake
+
+##Installation
+
+Run the following to install:
+
+pip install fake-email-identifier
+
+
+##Usage
+
+import emailid_finder as ef
+
+#Generate "False"
+
+ef.check('namubol@veanlo.com') //This id form https://temp-mail.org/en/
+
+#Generate "True"
+
+ef.check('<some real email>')
+
+
