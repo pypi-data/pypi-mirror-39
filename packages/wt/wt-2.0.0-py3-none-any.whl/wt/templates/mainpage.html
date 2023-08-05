@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}{% if config.title %}{{ config.title }}{% else %}Welcome to wt-powered site!{% endif %}{% endblock %}
+
+{% block head %}
+<style>
+    html, body { background-color: beige; margin: 0; font-family: sans-serif; }
+    .header { padding: 2em; background-color: slategray; color: cornsilk; }
+    .header h1 { margin: 0; }
+    .content { padding: 2em; }
+    .content pre { margin: 1em 5em; padding: .5em; background-color: #000; color: #fff; }
+    .content p, .content li { line-height: 24px; }
+    .underline { text-decoration: underline; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1>Welcome to wt-powered site!</h1>
+</div>
+<div class="content">
+    <p>This is the index page of your site generated using default <strong>mainpage</strong> template.</p>
+    <p class="underline">Usage examples:</p>
+    <pre><code>$ wt -h         # cli usage help
+$ wt init .     # bootstrap project in current directory
+$ wt develop    # start development mode web-server
+$ wt build      # build project</code></pre>
+    <p class="underline">Short notes on default values:</p>
+    <ul>
+        <li>your project metadata should live in <strong>wt.yaml</strong> configuration file</li>
+        <li>your pages and posts metadata (url, title, etc.) should be specified using <strong>YAML front matter</strong> within content files</li>
+        <li>your templates should live in <strong>templates/</strong> folder</li>
+        <li>your content should live in <strong>content/pages/</strong> and <strong>content/posts/</strong> folders</li>
+        <li>static files should live in <strong>static/</strong> folder</li>
+        <li>generated project goes to <strong>output/</strong> folder</li>
+    </ul>
+    <p>The project is maintained on <a href="https://github.com/ysegorov/wt">GitHub</a>. Feel free to open <a href="https://github.com/ysegorov/wt/issues">an issue</a> if needed.</p>
+    <hr>
+    <p>Thank you for choosing <strong>wt</strong>!</p>
+</div>
+{% endblock %}
