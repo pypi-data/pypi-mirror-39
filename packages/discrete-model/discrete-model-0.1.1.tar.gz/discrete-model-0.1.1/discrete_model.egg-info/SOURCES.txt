@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+discrete_model/__init__.py
+discrete_model/discrete_model.py
+discrete_model/influence_graph.py
+discrete_model/parser.py
+discrete_model.egg-info/PKG-INFO
+discrete_model.egg-info/SOURCES.txt
+discrete_model.egg-info/dependency_links.txt
+discrete_model.egg-info/top_level.txt
+resources/mucusOperonV3.out
+tests/test.py
