@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: feature-mining
+Version: 0.0.2
+Summary: Mine implicit features using a generative feature language model.
+Home-page: https://github.com/pypa/sampleproject
+Author: H. Wilder, N. Freundlich, Santu Karmaker
+Author-email: hwilder3@illinois.edu, norbert4@illinois.edu, karmake2@illinois.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# GFLM: mine implicit features using a generative feature language model
+
+## Description
+TBD
+
+## Usage
+TBD
+
+## Details
+TBD
+
+## Package created based on the following paper
+S. Karmaker Santu, P. Sondhi and C. Zhai, "Generative Feature Language Models for Mining Implicit Features from Customer Reviews", Proceedings of the 25th ACM International on Conference on Information and Knowledge Management - CIKM '16, 2016.
+
+
