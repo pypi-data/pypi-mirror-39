@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: xqrcode
+Version: 1.0.0
+Summary: A simply QR-code decoder, from URL or a file.
+Home-page: https://github.com/neoctobers/xqrcode
+Author: @neoctobers
+Author-email: neoctobers@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pillow
+Requires-Dist: pyzbar
+
+# xqrcode
+
+A simply QR-code decoder, from URL or a file.
+
+## Installation
+```
+pip3 install xqrcode
+```
+
+## Usage
+```python
+import xqrcode
+
+results = xqrcode.decode_from_url(url='image-url')
+```
+
+or:
+```python
+import xqrcode
+
+results = xqrcode.decode_from_file(path_to_file='/path/to/file')
+```
+
+
+
