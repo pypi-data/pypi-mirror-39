@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ngraph-core
+Version: 0.10.0
+Summary: Python API for nGraph
+Home-page: https://ai.intel.com/
+Author: Intel
+Author-email: intelnervana@intel.com
+License: License :: OSI Approved :: Apache Software License
+Platform: UNKNOWN
+Requires-Dist: six
+Requires-Dist: numpy
+Requires-Dist: typing
+
+UNKNOWN
+
+
