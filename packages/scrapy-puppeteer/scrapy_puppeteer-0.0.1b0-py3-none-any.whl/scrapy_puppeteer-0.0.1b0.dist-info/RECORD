@@ -1,0 +1,11 @@
+scrapy_puppeteer/__init__.py,sha256=7Yo23yBkoSiCWDjh6dxk9OFtCM1Fq9zRSmOPpnKGEBY,80
+scrapy_puppeteer/cli.py,sha256=aOn8UM_mxP-jwRRVcHIoIntqupj3BYori-XWD5Z9IXQ,308
+scrapy_puppeteer/http.py,sha256=GK97oomeMHwZEgshJSRI8WyaHUl-Ot8oPAXZrkyNpM4,969
+scrapy_puppeteer/middlewares.py,sha256=vCK9y8H3vojiY43b6b6ED2vqsDFOXnRKHccHpGH1tp8,3270
+scrapy_puppeteer-0.0.1b0.dist-info/METADATA,sha256=R_IhDoixl2A8aayolpPo9f0XgGyCath_K-fVaC0H8Wk,3951
+scrapy_puppeteer-0.0.1b0.dist-info/RECORD,,
+scrapy_puppeteer-0.0.1b0.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+scrapy_puppeteer-0.0.1b0.dist-info/entry_points.txt,sha256=sXfAtU6rqsTadJAklOiau23boPLAnF5eNoJY1IInhUg,59
+scrapy_puppeteer-0.0.1b0.dist-info/top_level.txt,sha256=bgKrV5W5_Icz4RX4MfdveJCtOQTyIt8xXmajzgshTA8,23
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_middlewares.py,sha256=vc27AHjtkrFo28oI4uTuivnUsr_uoVNa7qsjDJOOBRc,1599

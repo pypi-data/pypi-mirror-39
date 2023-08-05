@@ -1,0 +1,3 @@
+[console_scripts]
+scrapyp = scrapy_puppeteer.cli:__main__
+
