@@ -1,0 +1,12 @@
+*.egg-info
+*.pyc
+.cache
+.coverage
+.DS_Store
+.eggs
+.idea
+.ipynb_checkpoints
+build
+build_debug
+dist
+venv

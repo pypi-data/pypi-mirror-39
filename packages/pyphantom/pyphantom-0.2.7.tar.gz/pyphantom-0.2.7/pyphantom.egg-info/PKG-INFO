@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: pyphantom
+Version: 0.2.7
+Summary: Phantom® highspeed camera control
+Home-page: https://github.com/ottomatic-io/pyphantom
+Author: Ben Hagen
+Author-email: ben@ottomatic.io
+License: UNKNOWN
+Description: # pyphantom
+        
+        [![PyPI version](https://badge.fury.io/py/pycine.svg)](https://pypi.org/project/pyphantom)
+        [![GitHub license](https://img.shields.io/github/license/OTTOMATIC-IO/pycine.svg)](https://github.com/OTTOMATIC-IO/pycine/blob/master/LICENSE)
+        [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+        [![Codacy Badge](https://api.codacy.com/project/badge/Grade/24b61435a9ca4b3ea56d1b02fb80e731)](https://app.codacy.com/app/OTTOMATIC/pyphantom?utm_source=github.com&utm_medium=referral&utm_content=OTTOMATIC-IO/pyphantom&utm_campaign=Badge_Grade_Dashboard)
+        
+        
+        Communicate with Vision Research Phantom® cameras with python
+        
+        
+        ## Installation
+        
+        ### Release Version
+        
+        ```
+        pip install pyphantom
+        ```
+        
+        
+        ### Development version
+        
+        ```
+        pip install git+https://github.com/ottomatic-io/pyphantom.git
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
