@@ -1,0 +1,9 @@
+README.md
+setup.py
+bin/pixelate-redactor
+pixelate_redactor/__init__.py
+pixelate_redactor/pixelate_redactor.py
+pixelate_redactor.egg-info/PKG-INFO
+pixelate_redactor.egg-info/SOURCES.txt
+pixelate_redactor.egg-info/dependency_links.txt
+pixelate_redactor.egg-info/top_level.txt
