@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: freeproxy-cn
+Version: 0.3
+Summary: 抓取免费的中国代理
+Home-page: https://github.com/Hexmagic/freeproxy_cn.git
+Author: Hexmagic
+Author-email: 191440042@qq.com
+License: GNU General Public License v3.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Operating System :: OS Independent
+Requires-Dist: lxml
+Requires-Dist: aiohttp
+Requires-Dist: logzero
+Requires-Dist: aredis
+Requires-Dist: dummy-useragent
+Requires-Dist: python-dateutil
+
+UNKNOWN
+
+
