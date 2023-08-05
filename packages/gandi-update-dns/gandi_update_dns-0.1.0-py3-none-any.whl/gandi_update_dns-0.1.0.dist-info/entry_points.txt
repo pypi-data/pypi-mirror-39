@@ -1,0 +1,3 @@
+[console_scripts]
+gandi-update-dns=gandi_update_dns:main
+
