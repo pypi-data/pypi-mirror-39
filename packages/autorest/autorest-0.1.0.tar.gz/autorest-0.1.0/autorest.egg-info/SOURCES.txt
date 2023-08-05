@@ -1,0 +1,10 @@
+setup.py
+./__init__.py
+./autorest-example.py
+./autorest.py
+./runcommand.py
+./version.py
+autorest.egg-info/PKG-INFO
+autorest.egg-info/SOURCES.txt
+autorest.egg-info/dependency_links.txt
+autorest.egg-info/top_level.txt
