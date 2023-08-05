@@ -1,0 +1,16 @@
+aioamqp/__init__.py,sha256=APNVuPdOe2N5Nzy-4tTzFZEgB-daKCUlMCqmbdY1-ZQ,4305
+aioamqp/channel.py,sha256=rVIPnLciyB3rd9_YBMX0wZ9GUgLZFgDZ30XI0g7-0m0,38509
+aioamqp/compat.py,sha256=KnT4__oQN72TyoXh0TGRabk38QKe7lZhqxIR7s7OePM,219
+aioamqp/constants.py,sha256=YjP_3Jaud5YnXjkyhw48bAEbohu0Zzd-Tderc6N4pnY,2225
+aioamqp/envelope.py,sha256=2ho1n_08ayawMKQ9fYXfljEof2zApPLtREAPEad1HWo,893
+aioamqp/exceptions.py,sha256=I1FeUlDCHXIGzBaxxeM1rq7L3uRrZ4ML97h1lYPy-eg,1212
+aioamqp/frame.py,sha256=S4fDAfBzc7LTdN0i00hfmn3y-dzIbkoi9YveA8-secY,20560
+aioamqp/properties.py,sha256=3YFuvE7sTSdk689abqFxbpJwwZWyRYHMuze4lnjutOE,985
+aioamqp/protocol.py,sha256=tqff6-BatR45DRh_Ghbf-cyjgXk2dS-usNjxo8nzigs,19790
+aioamqp/version.py,sha256=VEPFUToRxaOSyShhOd4FDVG3FJNyz-2bz4icOC7DoCM,51
+aioamqp-0.12.0.dist-info/AUTHORS.rst,sha256=2WFOi1g_o9J3qmh0lgxf73KZj2P5hH54TLfMkybwTJo,536
+aioamqp-0.12.0.dist-info/LICENSE,sha256=bBZWhSAtPW499XH6upDCgo_i2TqUrwcgE9ECq_uuT2g,1479
+aioamqp-0.12.0.dist-info/METADATA,sha256=zOG66tgR5NIUK017ebum_fgigJMDEmfkOVAaYKb017Q,2486
+aioamqp-0.12.0.dist-info/WHEEL,sha256=OZzcWltk24sYjWLl7iQV9eZX3iGJZfGCZgqS5mO3OJw,131
+aioamqp-0.12.0.dist-info/top_level.txt,sha256=jowqHlxckG_zFpppsIlRBon3QEfSZNRVHUXPY7LvGNc,8
+aioamqp-0.12.0.dist-info/RECORD,,
