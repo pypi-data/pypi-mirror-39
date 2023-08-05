@@ -1,0 +1,15 @@
+README.rst
+setup.py
+happytrans/translate_model.py
+happytrans.egg-info/PKG-INFO
+happytrans.egg-info/SOURCES.txt
+happytrans.egg-info/dependency_links.txt
+happytrans.egg-info/top_level.txt
+happytrans/data/c2p.happy
+happytrans/data/datashuffle.py
+happytrans/data/p2c.happy
+happytrans/data/raw_data_1.txt
+happytrans/data/raw_data_2.txt
+happytrans/vanish_model_dir/__init__.py
+happytrans/vanish_model_dir/test.py
+happytrans/vanish_model_dir/van_model.py
