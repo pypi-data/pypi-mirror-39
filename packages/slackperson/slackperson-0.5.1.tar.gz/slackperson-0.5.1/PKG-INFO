@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: slackperson
+Version: 0.5.1
+Summary: Simple class to store slack profile information
+Home-page: None
+Author: Rick Henry
+Author-email: fredericmhenry@gmail.com
+Requires-Python: >=3.4,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: attrs (>=18.2,<19.0)
+Requires-Dist: nameparser (>=1.0,<2.0)
