@@ -1,0 +1,114 @@
+Metadata-Version: 1.2
+Name: postgis-toolkit
+Version: 0.0.1
+Summary: PostGIS Commands
+Home-page: https://github.com/felixink/postgis-toolkit
+Author: Felix Rhett
+Author-email: felix.rhett@gmail.com
+License: MIT
+Description: postgis-toolkit
+        ===============
+        
+        PostGIS commands.
+        
+        Description
+        ~~~~~~~~~~~
+        
+        -  Wraps cli operations into a single interface
+        
+           -  ``psql``, ``shp2pgsql``, ``\copy``, ``ogr2ogr``, etc.
+        
+        -  Import/export to desired format
+        -  Tested on MacOS
+        
+        Usage
+        ~~~~~
+        
+        ::
+        
+            $ pgtk
+            Usage: pgtk [OPTIONS] COMMAND [ARGS]...
+        
+              PostGIS Command Line Tool
+        
+            Options:
+              -h, --host TEXT    hostname
+              -p, --port TEXT    port number
+              -d, --dbname TEXT  database
+              -u, --user TEXT    user
+              -s, --schema TEXT  database schema
+              -c, --crs TEXT     EPSG code
+              --help             Show this message and exit.
+        
+            Commands:
+              export  Export PostGIS data
+              import  Import data to PostgreSQL
+              layers  Layer commands
+        
+        
+        
+        Viewing data:
+        
+        ::
+        
+            $ pgtk -h suffolk.geoserver.org -d boundary_data -s public_works layers list
+            --- public_works.boundary_data ---
+             * zip_codes
+             * suffolk_boundary
+             * fire_districts
+             * landmark_historic_districts
+             * waterfront
+             * zongin_district
+             * boston_neighborhoods
+             * land_use
+             * planning_districts
+             * water
+             * parcels
+             * downtown
+             * airports
+             * harbor_islands
+            $
+            $ pgtk -h suffolk.geoserver.org -d boundary_data -s public_works layers preview boston_neighborhoods
+            --- preview boston_neighborhoods ---
+            gid        name    acres    neighborho    sqmiles    shapestare    shapestlen  geom
+              1  Roslindale  1605.57            15       2.51   6.99383e+07       53563.9  01060000...
+        
+        Export PostGIS data:
+        
+        ::
+        
+            $ pgtk -h suffolk.geoserver.org -d boundary_data -s public_works \
+            > export -o ~/Downloads --driver csv boston_neighborhoods suffolk_boundary
+            --- export csv ---
+            >> boston_neighborhoods
+            COPY 26
+            >> suffolk_boundary
+            COPY 1
+            $
+            $ head -5 ~/Downloads/boston_neighborhoods.csv | column -t -s,
+            gid  name           acres                 neighborho  sqmiles  shapestare                shapestlen             coordinate_y      coordinate_x
+            1    Roslindale     1605.568237499999896  15          2.510    69938272.925570487976074  53563.912597056623781  42.2825239371116  -71.1266625924454
+            2    Jamaica Plain  2519.245393770000192  11          3.940    109737890.75433960556983  56349.937161410227418  42.3077695033488  -71.1150969429541
+            3    Bay Village    26.539839160000000    33          0.040    1156070.765868443064392   4650.635493295902052   42.3491032446921  -71.0690319987556
+            4    Roxbury        2108.469071760000134  16          3.290    91844545.974815726280212  49488.800484731051256  42.3185185721262  -71.0866432257429
+        
+        
+        Install
+        ~~~~~~~
+        
+        ::
+        
+            $ pip install postgis-toolkit
+        
+        -  Python 3.7+
+        -  Requires postgis tools installed on your computer - ``shp2pgsql`` &
+           ``pgsql`` should be on your path.
+        
+           -  easiest way is through `Postgres.app <https://postgresapp.com>`__
+        
+Keywords: postgis,postgres,gis,shapefile,pgsql2shp
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7*
