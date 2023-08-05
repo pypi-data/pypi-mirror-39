@@ -1,0 +1,3 @@
+include README.md LICENSE
+recursive-include payulatam/migrations/ *
+recursive-include docs/ *
