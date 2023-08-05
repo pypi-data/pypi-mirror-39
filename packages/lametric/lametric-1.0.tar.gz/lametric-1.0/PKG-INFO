@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: lametric
+Version: 1.0
+Summary: Library for controlling LaMetric Time using official device API 
+Home-page: https://github.com/ketsu8/python-lametric
+Author: ketsu8
+Author-email: ilya.breytburg@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/ketsu8/python-lametric/issues
+Project-URL: Source, https://github.com/ketsu8/python-lametric
+Description: UNKNOWN
+Keywords: lametric python
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
