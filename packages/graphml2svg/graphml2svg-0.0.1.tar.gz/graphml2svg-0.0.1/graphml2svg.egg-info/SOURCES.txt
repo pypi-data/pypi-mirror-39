@@ -1,0 +1,11 @@
+README.md
+setup.py
+converter/__init__.py
+converter/element.py
+converter/graph.py
+converter/mixins.py
+graphml2svg.egg-info/PKG-INFO
+graphml2svg.egg-info/SOURCES.txt
+graphml2svg.egg-info/dependency_links.txt
+graphml2svg.egg-info/requires.txt
+graphml2svg.egg-info/top_level.txt
