@@ -1,0 +1,18 @@
+README.md
+setup.py
+i2bmi/$dxref 2015.csv
+i2bmi/2018_I10gem.txt
+i2bmi/2018_I9gem.txt
+i2bmi/Elixhauser_Comorbidities.csv
+i2bmi/README.md
+i2bmi/__init__.py
+i2bmi/cci2015.csv
+i2bmi/cci_icd10cm_2019_1.csv
+i2bmi/ccs_dx_icd10cm_2019_1.csv
+i2bmi/dxlabel 2015.csv
+i2bmi/i2bmi_testing.ipynb
+i2bmi/main.py
+i2bmi.egg-info/PKG-INFO
+i2bmi.egg-info/SOURCES.txt
+i2bmi.egg-info/dependency_links.txt
+i2bmi.egg-info/top_level.txt
