@@ -1,0 +1,22 @@
+NAME anaconda
+AUTHOR anaconda team
+INFO Anaconda package manager
+VERSION 3.5.2.0
+REQ python, curl
+
+[INSTALL]
+
+LET url https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
+LET name __anaconda3-5.2.0-Linux-x86_64.sh
+
+PRINT Installing at #DLDIR+#name
+
+SAVEDIR
+
+DL #url #DLDIR #name
+CMD sh #DLDIR+#name
+
+RESTOREDIR
+
+[VERIFY]
+DEFAULT

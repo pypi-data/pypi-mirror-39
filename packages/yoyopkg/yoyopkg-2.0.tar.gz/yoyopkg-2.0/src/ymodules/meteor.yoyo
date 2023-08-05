@@ -1,0 +1,23 @@
+NAME meteor
+AUTHOR Meteor
+INFO Meteor is an open source platform for web, mobile, and desktop.
+VERSION 1.7
+REQ node
+
+[INSTALL]
+
+- Linux
+CMD curl https://install.meteor.com/ | sh
+- END
+
+- MacOS
+CMD curl https://install.meteor.com/ | sh
+- END
+
+- Windows
+// REQ chocolatey
+choco install meteor
+- END
+
+[VERIFY]
+DEFAULT

@@ -1,0 +1,18 @@
+NAME mongodb
+AUTHOR MongoDB INC
+INFO MongoDB is a free and open-source cross-platform document-oriented database program.
+VERSION 4.0
+REQ debian
+
+[INSTALL]
+
+CMD sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4
+
+PRINT Current install for ubuntu 16.04.
+
+CMD echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
+CMD sudo apt-get update
+CMD sudo apt-get install -y mongodb-org
+
+[VERIFY]
+DEFAULT

@@ -1,0 +1,15 @@
+NAME node
+AUTHOR Node Foundation
+INFO fastlane is an open source platform aimed at simplifying Android and iOS deployment. fastlane lets you automate every aspect of your development and release workflow.
+VERSION 10
+REQ debian
+
+[INSTALL]
+
+CMD sudo apt-get install -y build-essential
+CMD curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+CMD sudo apt-get install gcc g++ make
+CMD sudo apt-get install -y nodejs
+
+[VERIFY]
+DEFAULT

@@ -1,0 +1,16 @@
+NAME fastlane
+AUTHOR fastlane
+INFO fastlane is an open source platform aimed at simplifying Android and iOS deployment. fastlane lets you automate every aspect of your development and release workflow.
+VERSION 2.99.1
+REQ gem, gem-dev
+
+[INSTALL]
+
+- MacOS
+PRINT You can also install fastlane using: brew cask install fastlane
+- END
+
+CMD sudo gem install fastlane -NV
+
+[VERIFY]
+DEFAULT
