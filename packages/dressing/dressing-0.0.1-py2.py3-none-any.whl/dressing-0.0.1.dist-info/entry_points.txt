@@ -1,0 +1,3 @@
+[console_scripts]
+dressing = dressing.__main__:main
+
