@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: dojot.module
+Version: 0.0.1a1
+Summary: Library for new dojot modules development
+Home-page: http://github.com/dojot/dojot-module-python
+Author: Matheus Campanha Ferreira
+Author-email: campanha@cpqd.com.br
+Maintainer: dojot team
+License: GPL-3.0
+Project-URL: Code, https://github.com/dojot/dojot-module-python.git
+Project-URL: Issue tracker, https://github.com/dojot/dojot-module-python/issues
+Description: # dojot-module-python
+        Common library to be used within dojot modules. 
+        
+Platform: <built-in function any>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Provides-Extra: dev
