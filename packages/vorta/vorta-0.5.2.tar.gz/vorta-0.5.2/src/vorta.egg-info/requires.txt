@@ -1,0 +1,13 @@
+appdirs
+paramiko
+pyqt5
+peewee
+python-dateutil
+keyring
+apscheduler
+sentry-sdk
+psutil
+
+[:sys_platform == "darwin"]
+pyobjc-core
+pyobjc-framework-Cocoa
