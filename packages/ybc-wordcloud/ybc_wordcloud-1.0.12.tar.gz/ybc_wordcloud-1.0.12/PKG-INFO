@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: ybc_wordcloud
+Version: 1.0.12
+Summary: Generate wordcloud.
+Home-page: http://pip.zhenguanyu.com/
+Author: zhangyun
+Author-email: zhangyun@fenbi.com
+License: MIT
+Description: Generate text wordcloud according word frequency.
+Keywords: python,wordcloud,text wordcloud
+Platform: UNKNOWN
