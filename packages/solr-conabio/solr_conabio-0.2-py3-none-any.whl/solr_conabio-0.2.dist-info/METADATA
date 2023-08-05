@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: solr-conabio
+Version: 0.2
+Summary: Easy Solr quering
+Home-page: http://github.com/mbsantiago/solr-conabio
+Author: Santiago Martínez, CONABIO
+Author-email: santiago.mbal@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: six
+
+# SOLR-CONABIO
+
+Simple python package for easier SOLR quering.
+
+
