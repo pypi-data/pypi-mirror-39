@@ -1,0 +1,14 @@
+# description
+include README.rst
+
+# version
+include unitth/VERSION
+
+# license
+include LICENSE
+
+# requirements
+include requirements.txt
+
+# library
+recursive-include lib *
