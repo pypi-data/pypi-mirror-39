@@ -1,0 +1,4 @@
+include requirements.txt
+recursive-include flask_helloworld/static/ *
+recursive-include flask_helloworld/templates/ *
+global-exclude *.pyc

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>Flask Helloworld</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="all"/>
+
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/main.css') }}">
+    </head>
+
+    <body height="695" class="gumgum">
+        <div class="container-fluid">
+            <div class="row">
+            {% for video in videos %}
+                <div class="col-lg-6">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>
+                                <span class="glyphicon glyphicon-equalizer"></span> {{ video.title }}</h3>
+                        </div>
+                        <script src="https://asciinema.org/a/{{ video.id }}.js" id="asciicast-{{ video.id }}" async data-autoplay="{{ video_autoplay }}" data-size="small"></script>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>

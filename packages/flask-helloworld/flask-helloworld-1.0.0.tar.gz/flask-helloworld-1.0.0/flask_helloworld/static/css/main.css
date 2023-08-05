@@ -1,0 +1,13 @@
+.gumgum {
+    background: #0abdff;
+}
+
+.bubble {
+    color: white;
+    border: 2px solid #333;
+    background: #222;
+    position: relative;
+    -moz-border-radius:    10px;
+    -webkit-border-radius: 10px;
+    border-radius:         10px;
+}
