@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dropblock
+Version: 0.2.1
+Summary: Implementation of DropBlock: A regularization method for convolutional networks in PyTorch. 
+Home-page: https://github.com/miguelvr/dropblock
+Author: Miguel Varela Ramos
+Author-email: miguelvramos92@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: torch (==0.4.1)
+
+UNKNOWN
+
+
