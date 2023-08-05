@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: s3vault
+Version: 0.1.0
+Summary: ...
+Home-page: https://gitlab.com/.../...
+Author: SchoolOrchestration
+Author-email: tech@appointmentguru.co
+License: UNKNOWN
+Description: # s3vault
+        
+        > A library for storing documents in AWS s3
+        
+        ## Before you start
+        
+        For best results, create a bucket with the following settings:
+        
+        * Encryption on
+        * Versioning on
+        
+        ## Installation
+        
+        ```
+        pip install s3vault
+        ```
+        
+        **Environment variables**
+        
+        The following environment variables can optionally be provided:
+        
+        * `AWS_ACCESS_KEY_ID`
+        * `AWS_SECRET_ACCESS_KEY`
+        * `AWS_S3_REGION_NAME`
+        
+        
+        ## Usage
+        
+        ```python
+        from s3vault.vault import Vault
+        vault = Vault(bucket, owner_id, collection)
+        ```
+        
+        You can also provide `aws_access_key_id`, `aws_secret_access_key` and `aws_s3_region_name`, otherwise if will default to the values in the environment variables above.
+        
+        ### Upload a file from a url
+        
+        ```python
+        vault.upload_from_url(url, filename, extension='pdf')
+        ```
+        
+        * **url:** the url to fetch the file to store from
+        * **filename** the Key at which to store the object. Convention: `:collection/:owner_id/:object_id`
+        
+        **TODO:** this method should use the same convention as the below methods to enforce consistency
+        
+        ### Get a file
+        
+        ```
+        vault.get_object(object_id)
+        ```
+        
+        ```
+        vault.get_versions(object_id)
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
