@@ -1,0 +1,11 @@
+LICENSE
+README.rst
+servicecontrol.py
+setup.py
+servicecontrol.egg-info/PKG-INFO
+servicecontrol.egg-info/SOURCES.txt
+servicecontrol.egg-info/dependency_links.txt
+servicecontrol.egg-info/entry_points.txt
+servicecontrol.egg-info/not-zip-safe
+servicecontrol.egg-info/top_level.txt
+test/test_servicecontrol.py
