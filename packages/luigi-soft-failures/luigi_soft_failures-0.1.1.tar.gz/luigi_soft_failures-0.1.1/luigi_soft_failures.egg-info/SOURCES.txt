@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+luigi_soft_failures/__init__.py
+luigi_soft_failures/config.py
+luigi_soft_failures/soft_failure.py
+luigi_soft_failures/utils.py
+luigi_soft_failures.egg-info/PKG-INFO
+luigi_soft_failures.egg-info/SOURCES.txt
+luigi_soft_failures.egg-info/dependency_links.txt
+luigi_soft_failures.egg-info/requires.txt
+luigi_soft_failures.egg-info/top_level.txt
