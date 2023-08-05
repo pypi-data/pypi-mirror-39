@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: interfacelift-cli
+Version: 0.2.2
+Summary: Cli tool to download wallapers from Interface Lift
+Home-page: https://github.com/s23tang/interfacelift-cli-downloader
+Author: Ted Tang
+Author-email: s23tang@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: requests (>=2.20.0)
+Requires-Dist: beautifulsoup4 (==4.5.3)
+Requires-Dist: PyYAML (==3.12)
+
+UNKNOWN
+
+
