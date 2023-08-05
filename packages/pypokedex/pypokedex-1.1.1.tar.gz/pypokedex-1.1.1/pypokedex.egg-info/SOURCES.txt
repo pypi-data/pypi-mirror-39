@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+assets/example-usage.png
+assets/logo.png
+pypokedex/__init__.py
+pypokedex/api.py
+pypokedex/exceptions.py
+pypokedex/pokemon.py
+pypokedex.egg-info/PKG-INFO
+pypokedex.egg-info/SOURCES.txt
+pypokedex.egg-info/dependency_links.txt
+pypokedex.egg-info/requires.txt
+pypokedex.egg-info/top_level.txt
