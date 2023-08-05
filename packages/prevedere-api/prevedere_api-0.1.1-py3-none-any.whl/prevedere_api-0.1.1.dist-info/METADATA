@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: prevedere-api
+Version: 0.1.1
+Summary: API interface for Prevedere Inc. in Python 3.6+
+Home-page: https://github.com/prevedere/prevedere_api
+Author: Prevedere, Inc.
+Author-email: support@prevedere.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: Free To Use But Restricted
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# prevedere-api
+
+prevedere-api provides the ability to access retrieve indicator series data, as well as other information.
+For full documentation, go to the [Prevedere API Metadata](https://api.prevedere.com/metadata/) page.
+
+# Installation
+`pip install prevedere-api`
+
+# Use
+```
+import prevedere
+
+api_key = "xyz123"
+provider = "provider_a"
+provider_id = "a123"
+
+p = prevedere.Api(api_key)
+p.indicator_series(provider, provider_id)
+```
+
+
