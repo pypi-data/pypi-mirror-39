@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+bin/hello-saltine
+saltine/__init__.py
+saltine/saltine.py
+saltine.egg-info/PKG-INFO
+saltine.egg-info/SOURCES.txt
+saltine.egg-info/dependency_links.txt
+saltine.egg-info/entry_points.txt
+saltine.egg-info/requires.txt
+saltine.egg-info/top_level.txt
