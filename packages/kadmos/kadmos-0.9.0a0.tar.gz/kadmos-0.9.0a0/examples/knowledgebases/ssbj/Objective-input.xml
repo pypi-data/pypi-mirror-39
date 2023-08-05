@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dataSchema>
+  <aircraft>
+    <other>
+      <R>528.91363</R>
+    </other>
+  </aircraft>
+  <scaledData>
+    <R>
+      <scaler>528.91363</scaler>
+    </R>
+  </scaledData>
+</dataSchema>
