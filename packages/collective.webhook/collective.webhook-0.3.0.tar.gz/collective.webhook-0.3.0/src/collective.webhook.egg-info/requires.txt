@@ -1,0 +1,14 @@
+plone.api>=1.8.4
+Products.GenericSetup>=1.8.2
+requests
+six
+futures
+setuptools
+
+[test]
+Pillow
+plone.app.imaging
+plone.app.testing
+plone.testing>=5.0.0
+plone.app.contenttypes
+plone.app.robotframework[debug]
