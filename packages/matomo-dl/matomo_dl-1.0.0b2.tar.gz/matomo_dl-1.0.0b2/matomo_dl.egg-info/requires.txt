@@ -1,0 +1,13 @@
+attrs~=18.2
+beautifulsoup4~=4.6
+cattrs==0.9.0
+click~=7.0
+click-log
+colorama==0.4.0
+lxml~=4.2
+packaging~=18.0
+requests~=2.20
+toml==0.10.0
+
+[cache]
+requests_cache==0.4.13
