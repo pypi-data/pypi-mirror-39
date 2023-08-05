@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: cmakelists-parsing
+Version: 0.3.1
+Summary: Parser for CMakeLists.txt files
+Home-page: http://github.com/ijt/cmakelists_parsing
+Author: Issac Trotts
+Author-email: issac.trotts@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pyPEG2
+
+UNKNOWN
+
+

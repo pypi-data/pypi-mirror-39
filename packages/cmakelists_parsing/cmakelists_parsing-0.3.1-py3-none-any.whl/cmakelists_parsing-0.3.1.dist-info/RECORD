@@ -1,0 +1,14 @@
+cmakelists_parsing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cmakelists_parsing/cmake_pprint.py,sha256=Uqc4mcHQ-tM6pFyXklBQUKJAaXZUa8ewcEzu9zSaxfA,1035
+cmakelists_parsing/list_utils.py,sha256=ZP5OvaBYGl7u3FsthsKKmHeJTfX7nznExdBk1RyFAAc,922
+cmakelists_parsing/parsing.py,sha256=yglSuBE6F47eF--xMIahwcMche7s6EcLKXq490TgcfM,6291
+cmakelists_parsing/rand.py,sha256=ADXtqDzbcDKPI0ebEx7kab83eyTc4R0KbeL8bRPcg1I,992
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/example_inputs_test.py,sha256=NpTgW4p1yV54c2hOwMkhnSSnQ1eI5hMLLzQLEPdp0ac,1123
+tests/parsing_test.py,sha256=DqDswKu_9m26j4MqktPwlW7D_roT65Xj4SssL2TrcNI,4938
+cmakelists_parsing-0.3.1.dist-info/LICENSE,sha256=upMmYo8neDEhczRtmT2G5NLEwaMf6ZE9zuW2Trayom0,1078
+cmakelists_parsing-0.3.1.dist-info/METADATA,sha256=eYqQSqIBUCu7c5m-r56tmxCFLRi-vlI60xQx37_8RVE,281
+cmakelists_parsing-0.3.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+cmakelists_parsing-0.3.1.dist-info/entry_points.txt,sha256=iuJX56_u-srRDTBaGiwog36z24Jk-MWRYlV-HQSx8yY,71
+cmakelists_parsing-0.3.1.dist-info/top_level.txt,sha256=k8l3uMMGNbzlR-AW4mHlidhc2RJlQilqZ6XNJ7m6enE,25
+cmakelists_parsing-0.3.1.dist-info/RECORD,,
