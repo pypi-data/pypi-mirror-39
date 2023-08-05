@@ -1,0 +1,12 @@
+twig/__init__.py,sha256=5iCSn4amsrEO13VEihx0aSsmGJ7GNFVAeFrifaFEfd8,106
+twig/compiler.py,sha256=hTL8mhKiniqAXbJ77vSTZ2EU8VCgKsMfd9h8SSJ4HWw,794
+twig/filesystem.py,sha256=7cqFjmk94ucIUhDl8Dd7X64ceTgKPFQXA3yXcfN1g5I,221
+twig/backends/__init__.py,sha256=gN1eXtluhKm1Y79SedLvJxfAn9SyKggZ1ABBFXd2WRY,46
+twig/backends/vyper.py,sha256=EUkcUSXqsltUoUfb3Vid7Cohgk9a0AvybXkpRT_Haik,716
+twig/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+twig/utils/compiler.py,sha256=fbhye4p9oyhcHf8HKLyL5eXyN7dVov1RE_mqwYkkBSw,914
+twig-0.1.0a5.dist-info/LICENSE,sha256=6FjC5vZ8Igy608hi0LHTKzQpsLxcqyNi5b-Q0qSNPus,1079
+twig-0.1.0a5.dist-info/METADATA,sha256=CtXCp8cFPlY0bk0asSkKvis3NKjzDME_1kLFIqxRP2E,5031
+twig-0.1.0a5.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+twig-0.1.0a5.dist-info/top_level.txt,sha256=4d_j5O7we4T-O2Z7RMtAjIebzt7QbTNZGlt9i1_M0yY,5
+twig-0.1.0a5.dist-info/RECORD,,
