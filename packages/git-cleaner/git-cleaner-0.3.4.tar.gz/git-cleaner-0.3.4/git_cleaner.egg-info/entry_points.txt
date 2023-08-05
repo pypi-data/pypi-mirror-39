@@ -1,0 +1,3 @@
+[console_scripts]
+git-cleaner = git_cleaner:cli.main
+
