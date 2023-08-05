@@ -1,0 +1,10 @@
+*.pyc
+*~
+*pycache*
+.tox
+coverage_html_report/
+*.egg-info
+.coverage
+dist/
+.cache/
+.idea/
