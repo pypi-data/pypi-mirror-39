@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: codegenhelper
+Version: 0.0.15.1
+Summary: utilities for code-engine.
+Home-page: https://github.com/cao5zy/codegen_helper
+Author: Zongying Cao
+Author-email: zongying.cao@dxc.com
+License: Apache
+Description: utilities for code-engine and their related projects
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
