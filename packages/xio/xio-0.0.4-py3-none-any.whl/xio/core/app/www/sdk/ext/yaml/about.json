@@ -1,0 +1,9 @@
+{
+    "name": "yaml",
+    "version": "1.0.0", 
+    "requirements": [
+        "lib/js-yaml.min.js",
+        "ext.js"
+    ]
+}
+        

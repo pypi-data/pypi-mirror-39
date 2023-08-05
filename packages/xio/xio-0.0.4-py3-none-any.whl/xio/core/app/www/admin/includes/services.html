@@ -1,0 +1,66 @@
+
+<script>
+
+
+showServices= function() {
+    app.server.get('xio/admin/services').then(function(resp) {
+        console.log(resp.content)
+        var html = $('#services_template').render(resp.content)
+        $('#services_list').html(html)
+    })
+}
+
+requestService = function(servicename,method) {
+    app.server.request(method,servicename).then(function(resp) {
+        app.ui.popup({
+          'title': method+' '+servicename,
+          'content': JSON.stringify(resp.content)
+        })
+    })
+}
+
+showServices()
+
+
+
+</script>
+
+<nav class="navbar navbar-light bg-light sticky-top">
+
+  <xio-button label="services" icon="refresh" action="showServices()"></xio-button>
+
+
+</nav>
+
+<section id="services_list">
+
+</section>
+
+<template id="services_template">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th >id</th>
+          <th >name</th>
+          <th >type</th>
+          <th >status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- {{#.}} -->
+        <tr data-xio-nav="#./{{id}}">
+          <td>{{id}}</td>
+          <td>{{name}}</td>
+          <td>{{type}}</td>
+          <td>{{status}}</td>
+          <td>
+            <xio-button label="ABOUT" action="requestPeer('{{id}}/.about','GET')"></xio-button>
+            <xio-button label="GET" action="requestPeer('{{id}}','GET')"></xio-button>
+          </td>
+        </tr>
+        <!-- {{/.}} -->
+      </tbody>
+    </table>
+</template>
+
