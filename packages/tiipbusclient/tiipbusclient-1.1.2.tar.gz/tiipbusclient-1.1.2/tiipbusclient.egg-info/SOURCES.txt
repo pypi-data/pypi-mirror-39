@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+test/testClient.py
+tiipbusclient/__init__.py
+tiipbusclient/tiipclient.py
+tiipbusclient.egg-info/PKG-INFO
+tiipbusclient.egg-info/SOURCES.txt
+tiipbusclient.egg-info/dependency_links.txt
+tiipbusclient.egg-info/not-zip-safe
+tiipbusclient.egg-info/requires.txt
+tiipbusclient.egg-info/top_level.txt
