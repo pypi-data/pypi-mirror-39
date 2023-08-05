@@ -1,0 +1,14 @@
+---
+# List of repositories owned by the User Committee and subcommittees
+Enterprise Working Group:
+  - repo: openstack/enterprise-wg
+  - repo: openstack/workload-ref-archs
+Ops Tags Team:
+  - repo: openstack/ops-tags-team
+Public Cloud Working Group:
+  - repo: openstack/publiccloud-wg
+Scientific Working Group:
+  - repo: openstack/scientific-wg
+User Committee:
+  - repo: openstack/governance-uc
+  - repo: openstack/uc-recognition

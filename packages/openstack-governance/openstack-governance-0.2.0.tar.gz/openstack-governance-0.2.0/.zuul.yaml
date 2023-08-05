@@ -1,0 +1,20 @@
+- project:
+    templates:
+      - build-openstack-docs-pti
+      - openstack-python36-jobs
+    check:
+      jobs:
+        - openstack-tox-linters:
+            required-projects:
+              - openstack-infra/project-config
+    experimental:
+      jobs:
+        - openstack-tox-validate
+    gate:
+      jobs:
+        - openstack-tox-linters:
+            required-projects:
+              - openstack-infra/project-config
+    post:
+      jobs:
+        - publish-governance-tc

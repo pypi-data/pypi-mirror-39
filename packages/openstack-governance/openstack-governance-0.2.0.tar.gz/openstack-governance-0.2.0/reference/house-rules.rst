@@ -1,0 +1,102 @@
+=============================================
+ House rules for governance changes approval
+=============================================
+
+While most of the governance changes follow the rules described in the
+:ref:`charter-motions-section` section and call for a formal discussion and vote
+by the Technical Committee membership, we also have a number of exceptions to
+that general rule, in order to speed up the processing of smaller changes. This
+document lists those "house rules" for reference.
+
+Typo fixes
+----------
+
+When the change fixes content that is obviously wrong (updates a PTL email
+address, fixes a typo...) then the chair is allowed to directly approve them.
+Typo fixes proposed by the chair should have 2 RollCall+1 votes from TC members.
+
+Code changes
+------------
+
+The `openstack/governance` repository also contains code to build and publish
+pages on the governance.openstack.org website. For those we apply the normal
+code review rules (with RollCall votes being considered +-2): change will be
+approved once 2 `RollCall+1` (other than the change owner) are posted (and no
+`RollCall-1`).
+
+Delegated tags
+--------------
+
+Some tags are delegated to a specific team, like
+:ref:`tag-stable:follows-policy`
+or :ref:`tag-vulnerability:managed`. Those need to get approved by the
+corresponding team PTL, and can be directly approved by the chair once this
+approval is given.
+
+Other project team updates
+--------------------------
+
+For other changes within an existing project team, like addition of a new git
+repository or self-assertion of a tag, we use lazy consensus. If there is no
+objection posted one week after the change is proposed (or a significant new
+revision of the change is posted), then the change can be approved by the
+chair.
+
+One exception to this would be significant team mission statement changes,
+which should be approved by a formal vote after discussion on the mailing list
+or the gerrit change.
+
+In corner cases where the change is time-sensitive (like a deliverable
+reorganization which blocks a release request), the chair may fast-track the
+change, but should report on that exception in the TC update.
+
+Goal Updates from PTLs
+----------------------
+
+PTLs will acknowledge community-wide goals at the start of each cycle
+by providing links to artifacts for tracking the work, or an
+explanation of why work is not going to be done. They will also
+provide references to completion artifacts at the end of each cycle
+for goals where work was needed. These patches should be reviewed by
+TC members for completeness and clarity (is enough information
+provided for interested parties to track the work, or is the
+justification for not doing work clear enough).
+
+The patches to add team acknowledgments, planning artifacts, and
+completion artifacts to the goal document do not need to go through
+the formal vote process, and so lazy consensus rules will be used. If
+there is no objection posted one week after the most recent version of
+a change is proposed, then the change can be approved by the chair.
+
+If a TC member feels that one of these responses needs to be discussed
+by the entire TC, they should bring it up on the mailing list and the change
+should not be approved until after the discussion is completed.
+
+Appointing PTLs
+---------------
+
+In a resolution regarding :ref:`leaderless programs`, the TC was granted
+authority to appoint a Project Team Lead to any official project where the
+`election`_ process failed to produce a leader. When this happens,
+``reference/projects.yaml`` in the ``governance`` repository should be updated
+to indicate the new PTL and their appointment by adding their name and contact
+details and updating an ``appointed`` key with the cycle during which they will
+be the PTL. If the ``appointed`` key is already present, add the cycle to the
+list. If the key is not present, add it and set the cycle as a single member of
+a list. This format is used for two reasons: to track all the cycles for which
+there has been an appointment and to require a comprehensible change for review
+by the TC. The ``appointed`` key should only be changed when the PTL was not
+chosen by the election process.
+
+These changes are subject to the standard review and approval guidelines.
+
+Rolling back fast-tracked changes
+---------------------------------
+
+As a safety net, if any member disagrees with any change that was fast-tracked
+under one of those house rules, that member can propose a revert of the
+change. Such revert should be directly approved by the chair and the change
+be discussed on the mailing list or on the re-proposed change in gerrit.
+
+
+.. _election: http://docs.openstack.org/project-team-guide/open-community.html#technical-committee-and-ptl-elections
