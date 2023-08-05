@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: django-bootstrap-daterangepicker
+Version: 1.0.3
+Summary: A Django form field and widget wrapper for bootstrap-daterangepicker
+Home-page: https://github.com/jckw/django-bootstrap-daterangepicker/
+Author: Yuri Malinov, Jack Weatherilt
+Author-email: yurik.m@gmail.com, jackweatherilt@outlook.com
+License: MIT
+Keywords: django daterange datetime date bootstrap picker
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Requires-Dist: django
+Requires-Dist: python-dateutil
+
+UNKNOWN
+
+
