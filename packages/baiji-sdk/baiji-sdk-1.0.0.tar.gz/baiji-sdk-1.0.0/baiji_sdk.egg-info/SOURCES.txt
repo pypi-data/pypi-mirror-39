@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+baiji/__init__.py
+baiji/sdk.py
+baiji/clients/__init__.py
+baiji/clients/generic.py
+baiji/clients/resource.py
