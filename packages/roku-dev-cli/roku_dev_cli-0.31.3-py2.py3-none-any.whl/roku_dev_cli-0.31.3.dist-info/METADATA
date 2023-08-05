@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: roku-dev-cli
+Version: 0.31.3
+Summary: Roku Command-Line Tool
+Home-page: https://github.com/hulu/roku-dev-cli
+Author: Josh Stratton
+Author-email: josh.stratton@hulu.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: beautifulsoup4
+Requires-Dist: graphviz
+Requires-Dist: ipaddress
+Requires-Dist: requests
+
+UNKNOWN
+
+

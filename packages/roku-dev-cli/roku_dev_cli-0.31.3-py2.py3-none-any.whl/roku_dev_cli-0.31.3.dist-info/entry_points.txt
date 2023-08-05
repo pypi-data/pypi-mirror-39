@@ -1,0 +1,3 @@
+[console_scripts]
+roku = roku_dev_cli.roku_dev_cli:main
+
