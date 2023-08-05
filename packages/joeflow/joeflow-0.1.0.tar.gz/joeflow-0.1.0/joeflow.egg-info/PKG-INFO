@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: joeflow
+Version: 0.1.0
+Summary: The lean workflow automation framework for machines with heart
+Home-page: https://github.com/codingjoe/joeflow
+Author: Johannes Hoppe
+Author-email: info@johanneshoppe.com
+License: BSD
+Description: The lean workflow automation framework for machines with heart
+Keywords: django
+process
+automation
+workflow
+framework
+task
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Internet
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Office/Business :: Financial :: Accounting
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Topic :: Office/Business :: Financial :: Point-Of-Sale
+Classifier: Topic :: Office/Business :: Scheduling
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown; charset=UTF-8
+Provides-Extra: reversion
