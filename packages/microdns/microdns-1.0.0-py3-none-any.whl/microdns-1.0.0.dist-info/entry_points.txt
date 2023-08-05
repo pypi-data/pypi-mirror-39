@@ -1,0 +1,3 @@
+[console_scripts]
+microdns = microdns.__main__:main
+
