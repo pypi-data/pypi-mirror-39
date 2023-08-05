@@ -1,0 +1,10 @@
+README.md
+setup.py
+webdownloader/__init__.py
+webdownloader/downloader.py
+webdownloader.egg-info/PKG-INFO
+webdownloader.egg-info/SOURCES.txt
+webdownloader.egg-info/dependency_links.txt
+webdownloader.egg-info/not-zip-safe
+webdownloader.egg-info/requires.txt
+webdownloader.egg-info/top_level.txt
