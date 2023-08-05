@@ -1,0 +1,12 @@
+README.md
+setup.py
+rpc_component/__init__.py
+rpc_component/cli.py
+rpc_component/component.py
+rpc_component/schemata.py
+rpc_component.egg-info/PKG-INFO
+rpc_component.egg-info/SOURCES.txt
+rpc_component.egg-info/dependency_links.txt
+rpc_component.egg-info/entry_points.txt
+rpc_component.egg-info/requires.txt
+rpc_component.egg-info/top_level.txt
