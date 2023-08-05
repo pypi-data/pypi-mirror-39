@@ -1,0 +1,6 @@
+[dlstbx.wrappers]
+dummy = zocalo.wrapper:DummyWrapper
+
+[workflows.services]
+Schlockmeister = zocalo.service.schlockmeister:Schlockmeister
+
