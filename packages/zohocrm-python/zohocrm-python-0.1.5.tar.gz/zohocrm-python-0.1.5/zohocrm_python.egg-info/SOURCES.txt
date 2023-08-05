@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+zohocrm/__init__.py
+zohocrm/client.py
+zohocrm/exceptions.py
+zohocrm_python.egg-info/PKG-INFO
+zohocrm_python.egg-info/SOURCES.txt
+zohocrm_python.egg-info/dependency_links.txt
+zohocrm_python.egg-info/not-zip-safe
+zohocrm_python.egg-info/requires.txt
+zohocrm_python.egg-info/top_level.txt
