@@ -1,0 +1,15 @@
+README.md
+setup.py
+jaeger_django.egg-info/PKG-INFO
+jaeger_django.egg-info/SOURCES.txt
+jaeger_django.egg-info/dependency_links.txt
+jaeger_django.egg-info/requires.txt
+jaeger_django.egg-info/top_level.txt
+jaegertrace/__init__.py
+jaegertrace/conf.py
+jaegertrace/httpclient.py
+jaegertrace/initial_tracer.py
+jaegertrace/middleware.py
+jaegertrace/request_context.py
+tests/__init__.py
+tests/test_inboud.py
