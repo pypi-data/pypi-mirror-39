@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+spacecutter/__init__.py
+spacecutter/callbacks.py
+spacecutter/losses.py
+spacecutter/models.py
+spacecutter.egg-info/PKG-INFO
+spacecutter.egg-info/SOURCES.txt
+spacecutter.egg-info/dependency_links.txt
+spacecutter.egg-info/requires.txt
+spacecutter.egg-info/top_level.txt
