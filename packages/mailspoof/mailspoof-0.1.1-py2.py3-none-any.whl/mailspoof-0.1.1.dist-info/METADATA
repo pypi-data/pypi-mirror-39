@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mailspoof
+Version: 0.1.1
+Summary: Scans SPF and DMARC records for issues that could allow email spoofing.
+Home-page: https://alex.kaskaso.li/
+License: UNKNOWN
+Author: Alex Kaskasoli
+Author-email: alexkaskasoli@hotmail.com
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: dnspython == 1.15.0
+Requires-Dist: tldextract == 2.2.0
+Requires-Dist: requests == 2.20.1
+Provides-Extra: .none
