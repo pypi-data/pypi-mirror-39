@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: snet-cli
+Version: 0.1.8
+Summary: SingularityNET CLI
+Home-page: https://github.com/singnet/snet-cli
+Author: SingularityNET Foundation
+Author-email: info@singularitynet.io
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: grpcio-tools (==1.14.1)
+Requires-Dist: jsonrpcclient (==2.5.2)
+Requires-Dist: eth-typing (<2)
+Requires-Dist: web3 (==4.2.1)
+Requires-Dist: mnemonic (==0.18)
+Requires-Dist: pycoin (>=0.80)
+Requires-Dist: ecdsa (==0.13)
+Requires-Dist: trezor (==0.9.1)
+Requires-Dist: rlp (==0.6.0)
+Requires-Dist: PyYAML (==3.12)
+Requires-Dist: ipfsapi (==0.4.2.post1)
+Requires-Dist: rfc3986 (==1.1.0)
+Requires-Dist: hidapi (>=0.7.99)
+Requires-Dist: protobuf (>=2.6.1)
+Requires-Dist: pycryptodome (>=3.6.6)
+Requires-Dist: eth-hash (==0.1.4)
+Requires-Dist: future (==0.16.0)
+Requires-Dist: ecpy (>=0.8.1)
+Requires-Dist: pillow (>=3.4.0)
+Requires-Dist: python-u2flib-host (>=3.0.2)
+
+UNKNOWN
+
+
