@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+PyStarter.egg-info/PKG-INFO
+PyStarter.egg-info/SOURCES.txt
+PyStarter.egg-info/dependency_links.txt
+PyStarter.egg-info/entry_points.txt
+PyStarter.egg-info/requires.txt
+PyStarter.egg-info/top_level.txt
+pystarter/__init__.py
+pystarter/command_line.py
+pystarter/pystarter.py
+pystarter/test.py
