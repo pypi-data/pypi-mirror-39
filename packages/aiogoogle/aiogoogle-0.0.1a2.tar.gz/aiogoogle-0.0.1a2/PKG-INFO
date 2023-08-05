@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: aiogoogle
+Version: 0.0.1a2
+Summary: Aiogoogle is an async-framework agnostic async library for Google's Discovery Service
+Home-page: https://github.com/omarryhan/aiogoogle
+Author: Omar Ryhan
+Author-email: omarryhan@gmail.com
+License: GNU
+Description: <p align="center">
+          <img src="https://i2.wp.com/googlediscovery.com/wp-content/uploads/google-developers.png" alt="Logo" title="Aiogoogle" height="150" width="200"/>
+          <p align="center">
+            <a href="https://travis-ci.org/omarryhan/aiogoogle"><img alt="Build Status" src="https://travis-ci.org/omarryhan/aiogoogle.svg?branch=master"></a>
+            <a href="https://github.com/omarryhan/aiogoogle"><img alt="Software License" src="https://img.shields.io/badge/license-GNU-brightgreen.svg?style=flat-square"></a>
+          </p>
+        </p>
+        
+        # Aiogoogle
+        
+        ### Still in alpha, API might break.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Provides-Extra: curio_asks
+Provides-Extra: trio_asks
