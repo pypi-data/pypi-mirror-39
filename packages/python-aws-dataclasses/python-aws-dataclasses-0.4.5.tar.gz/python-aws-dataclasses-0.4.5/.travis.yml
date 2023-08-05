@@ -1,0 +1,27 @@
+sudo: false
+language: python
+
+# command to install dependencies
+install:
+  - make init
+script:
+  - make test-metadata
+  - make ci
+after_success:
+  - if [[ "$RUN_COVERAGE" == 1 ]]; then make coverage && codecov; fi
+
+matrix:
+  fast_finish: true
+
+# command to run tests
+cache: pip
+jobs:
+  include:
+    - name: Python 3.6 Tests
+      python: 3.6
+      env:
+        - RUN_COVERAGE=1
+    - name: Python 3.7 Tests
+      python: 3.7
+      dist: xenial
+      sudo: true
