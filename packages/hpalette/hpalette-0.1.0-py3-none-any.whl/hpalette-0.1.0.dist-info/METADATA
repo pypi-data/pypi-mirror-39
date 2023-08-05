@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: hpalette
+Version: 0.1.0
+Summary: Library of color palettes for Harvard identity guidelines.
+Home-page: https://github.com/saketh/hpalette
+Author: Saketh Rama
+Author-email: rama@seas.harvard.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# hpalette
+Library of color palettes for Harvard identity guidelines.
+
+## Motivation
+
+The Harvard color palette happens to look nice, so I've packaged some associated color codes for the convenience of those who want to use them (currently, just in Python).
+
+For example, consider [the color palette for the Harvard John A. Paulson School of Engineering and Applied Sciences](https://www.seas.harvard.edu/communications/identity-guidelines/color-palettes).
+
+## Concerns
+
+I'm not sure if these palettes happen to meet accessibility requirements and distinguishability when printed in black and white.
+
+
