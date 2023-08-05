@@ -1,0 +1,3 @@
+[console_scripts]
+httphelp = httphelp.statcode:main
+
