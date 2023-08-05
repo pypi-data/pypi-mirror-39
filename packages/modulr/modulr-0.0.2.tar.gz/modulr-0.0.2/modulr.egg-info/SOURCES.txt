@@ -1,0 +1,9 @@
+README.md
+setup.py
+modulr/__init__.py
+modulr/add_docstring.py
+modulr/make_module.py
+modulr.egg-info/PKG-INFO
+modulr.egg-info/SOURCES.txt
+modulr.egg-info/dependency_links.txt
+modulr.egg-info/top_level.txt
