@@ -1,0 +1,15 @@
+polypy/Density.py,sha256=bPC1tCKqxPMRl4yc802p7YF--IPlYz6fckfMDHKY9cA,8478
+polypy/Generic.py,sha256=pxYCBhig8g5pN8yazZm0C_I8uLLi3JWT30yYfHdv4XE,1893
+polypy/MSD.py,sha256=k2MFPQC_zVvG05zqeMEpSuatgfhn-6KWNGIGyplLzO8,14030
+polypy/PolyPy.py,sha256=z470leJNeDwrYNgWjFJ2gmwSCY8DMsQCQXPGxUVuZSY,1353
+polypy/Read.py,sha256=MsZvTHrCi3BtyU97byQ33YryXG3Ln0GiZnrEH3P5HdE,4332
+polypy/Utils.py,sha256=nYgs1i726iavB45dmthbEHrlAzrNcG7JsZS2aLpSXqw,3013
+polypy/Write.py,sha256=NrABKHVdFIfuBTce6YVelTuSAqGS6BGSH41YCIzMxRY,6223
+polypy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_generic.py,sha256=aPKx_vg3GhLIUPsn_n_HKfrgvG9jCBuxqL0oVZdIaPU,575
+tests/test_trajectory_analysis.py,sha256=ojMgZ-kgXRKJOux73prPcQbhn3H6874Xvr10J0G0soU,1731
+polypy-0.2.1.dist-info/LICENSE,sha256=IxtWwUpFMHpqAe9aTac4Per5BlD5Hj7km08ufYPlylo,1083
+polypy-0.2.1.dist-info/METADATA,sha256=_y6nfYJfLo-nlf7eNhXu8vpg-MqF_CFOWe6yGaZza-Q,1287
+polypy-0.2.1.dist-info/WHEEL,sha256=CihQvCnsGZQBGAHLEUMf0IdA4fRduS_NBUTMgCTtvPM,110
+polypy-0.2.1.dist-info/top_level.txt,sha256=fSzoIim1uShuVDsb8XigNouKpHW1MkpmOXxhWzm75u0,13
+polypy-0.2.1.dist-info/RECORD,,
