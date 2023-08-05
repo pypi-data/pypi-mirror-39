@@ -1,0 +1,12 @@
+pbr
+scipy
+xlrd
+pandas
+numpy
+python-dateutil
+
+[openpyxl]
+openpyxl
+
+[xlwings]
+xlwings
