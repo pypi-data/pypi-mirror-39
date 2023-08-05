@@ -1,0 +1,68 @@
+CHANGES
+=======
+
+* Add badge for Jenkins build status
+* setup.cfg: fix classifiers
+* docs: fix document generation on Read the Docs
+* tox: create environment for checking dependencies
+* Include release notes in documentation
+* Add initial documentation using Sphinx
+* Generate configuration file through tox
+* Improve versioning information within package
+* Update README with documentation on DEEPaaS usage
+* Update setup.cfg file
+* Add PYPI delivery
+* Add link to dockerhub image
+* Fix: dockerhub_image_id variable interpolation
+* Fix: image_id to dockerhub_image_id
+* Add correct Dockerfile version
+* Add OWASP dependency check
+* Move Jenkinsfile's tox environments to tox.ini
+* Create JIRA issue on new builds
+* Provider requirements as a list
+* Add a Makefile to quickly run DEEPaaS
+* Add unit testing for new model wrapper and base classes
+* Define a base class for all models
+* Migrate from testr to stest and adjust Python supported versions
+* Start using logging
+* tests: use oslo_config.fixture in the unit tests
+* Computes SLOC data (#9)
+* Switch to shared libraries (#8)
+* Indent fix
+* Move Dockerfile to repository's root path
+* Fix double underscore typo
+* Add credentials for pushing the image to DockerHub
+* Add docker image build step
+* Add Dockerfile to codebase
+* Fix Jenkinsfile indentation
+* Generate Cobertura report
+* Get and publish code coverage
+* Parse flake8 logs
+* Test flake8 from different stage
+* Separate stage for checkout code
+* jenkins: added code style stage
+* Allow uploading files as well as pointing to URLs
+* Rework model loading
+* Allow loading different models
+* Allow configuring IP and port where we should listen
+* tests: add cmd testing
+* testing: fix package name
+* Add some boilerplate README text
+* Add initial unit testing
+* Add initial unit testing plumbing
+* Ignore editor files
+* Separate model loading into its own module
+* Add werkzeug as an explicit dependency
+* Fix pep8 errors
+* Naive model loading
+* Fix data upload and argument parsing
+* Update response model
+* Add initial loading plumbing
+* Return model metatada
+* Allow uploading files and URLs in the POST request
+* Split API and namespaces into separate files
+* add python shebang
+* Add initial code skeleton
+* add tox with initial pep8
+* Add community and informative files
+* Initial commit
