@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+wildqat/__init__.py
+wildqat.egg-info/PKG-INFO
+wildqat.egg-info/SOURCES.txt
+wildqat.egg-info/dependency_links.txt
+wildqat.egg-info/requires.txt
+wildqat.egg-info/top_level.txt
