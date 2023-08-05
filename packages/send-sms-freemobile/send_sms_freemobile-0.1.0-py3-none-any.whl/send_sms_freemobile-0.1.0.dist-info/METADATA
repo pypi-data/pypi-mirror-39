@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: send-sms-freemobile
+Version: 0.1.0
+Summary: Yet another tool to send SMS through French provider FreeMobile
+Home-page: https://gitlab.com/aloha68/send-sms-freemobile
+License: ISC
+Author: Aloha68
+Author-email: dev@aloha.im
+Requires-Python: >=3.4,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Communications :: Telephony
+Requires-Dist: requests (>=2.20,<3.0)
+Requires-Dist: xdg (>=3.0,<4.0)
+Project-URL: Repository, https://gitlab.com/aloha68/send-sms-freemobile
+Description-Content-Type: text/markdown
+
+Yet another tool to send SMS through French provider FreeMobile!
+
+## How to use
+
+Just use the following command:
+
+    send-sms
+    
+If the command is not on your PATH, it will be usually found on `$HOME/.local/bin`.
+
+## Configuration file
+
+Configuration file can be found here:
+
+- Directory: XDG_CONFIG_HOME (default is `$HOME/.config`)
+- File: `send-sms-freemobile.conf`
+
+It should look like:
+
+    user: free-user-here
+    password: free-password-here
+
+
