@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: thoth-solver
+Version: 1.1.0
+Summary: Tool and library for discovering package dependencies in PyPI world
+Home-page: https://github.com/thoth-station/solver
+Author: Fridolin Pokorny
+Author-email: fridolin@redhat.com
+License: GPLv3+
+Description-Content-Type: UNKNOWN
+Keywords: python dependency pypi dependencies tool library
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: autopep8
+Requires-Dist: click
+Requires-Dist: pip-tools
+Requires-Dist: pipdeptree
+Requires-Dist: rainbow-logging-handler
+Requires-Dist: thoth-analyzer
+Requires-Dist: thoth-common
+Requires-Dist: thoth-python
+Requires-Dist: virtualenv
+
+thoth-solver
+============
+
+Dependency solver for the Thoth project.
+
+Project Scope
+=============
+
+The aim of this project is to answer a simple question - what packages will be installed (resolved by pip) for the provided stack?
+
+Imagine you have an application that has one dependency:
+
+.. code-block:: console
+
+  $ cat requirements.txt
+  tensorflow
+
+
+This project will tell you how dependencies could be resolved:
+
+.. code-block:: console
+
+  thoth-solver -vvv pypi -r requirements.txt 
+
+The output can be found at `here <https://pastebin.com/bKLbcXe1>`_.
+
+Installation and Deployment
+===========================
+
+.. code-block:: console
+
+  git clone git@github.com:thoth-station/solver.git
+  cd thoth-solver && export PYTHONPATH='.'
+  ./thoth-solver --help
+
+
+This project is also released on
+`PyPI <https://pypi.org/project/thoth-solver>`_, so the latest release can be
+installed via pip or Pipenv:
+
+.. code-block:: console
+
+  pipenv install thoth-solver
+
+
+Solver is run in Thoth to gather information about package dependencies. You
+can find deployment templates in the `openshift/` directory present in the
+root of this Git repository. The actual deployment is done using Ansible
+playbooks available in the
+`Thoth's core repository <https://github.com/thoth-station/core>`_.
+
+
