@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: ngraph-onnx
+Version: 0.10.0rc5
+Summary: ONNX support for ngraph
+Home-page: http://www.intelnervana.com
+Author: Intel
+Author-email: intelnervana@intel.com
+License: License :: OSI Approved :: Apache Software License
+Platform: UNKNOWN
+Requires-Dist: cachetools
+Requires-Dist: numpy
+Requires-Dist: onnx
+Requires-Dist: setuptools
+
+UNKNOWN
+
+
