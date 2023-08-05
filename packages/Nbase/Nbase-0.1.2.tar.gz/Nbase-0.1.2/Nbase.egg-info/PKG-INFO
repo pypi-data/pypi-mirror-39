@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: Nbase
+Version: 0.1.2
+Summary: A simple toolkit for Nio UDP team.
+Home-page: UNKNOWN
+Author: Ding Weihua
+Author-email: weihua.ding@nio.com
+License: UNKNOWN
+Description: Nbase
+        =====
+        
+        Nbase is a toolkit package which includes lots of basic modules on Datetime, Pandas, Redis, MongoDB, ElasticSearch, Kafka, FTP, S3, Tarfile and so on.
+        We'll upload Nbase to Pypi so that anyone could install and use it.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
