@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: fluentmail
+Version: 1.0.0
+Summary: Tiny library to send email
+Home-page: https://github.com/alexandrevicenzi/fluentmail
+Author: Alexandre Vicenzi
+Author-email: pypi@alxd.me
+Maintainer: Alexandre Vicenzi
+Maintainer-email: pypi@alxd.me
+License: MIT
+Keywords: python,email,mail,smtp,mailgun
+Platform: 
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Topic :: Communications :: Email
+Classifier: Topic :: Utilities
+
+FluentMail |Build Status| |PyPI|
+--------------------------------
+
+Python SMTP client and Email for Humans™
+
+Simple
+------
+
+FluentMail tries to keep it simple as possible.
+
+Install
+-------
+
+``pip install fluentmail``
+
+Compatibility
+-------------
+
+Works with Python 2.6+, Python 3.3+, PyPy and PyPy 3.
+
+Documentation
+-------------
+
+You can find some info on the project wiki.
+
+Features
+--------
+
+-  SMTP
+-  Mailgun
+-  Plain or HTML body
+-  Alternative body
+-  Attachments
+
+Future work
+-----------
+
+-  More test coverage
+-  Dummy backend
+-  FileBased backend
+-  MemoryBased backend
+-  Support template engines (Django, Jinja)
+-  Support custom message headers
+-  Set default backend
+-  Thread-safety
+-  Inline attachment
+-  What more?
+
+.. |Build Status| image:: https://travis-ci.org/alexandrevicenzi/fluentmail.svg
+   :target: https://travis-ci.org/alexandrevicenzi/fluentmail
+.. |PyPI| image:: https://img.shields.io/pypi/v/fluentmail.svg
+   :target: https://pypi.python.org/pypi/fluentmail
+
+

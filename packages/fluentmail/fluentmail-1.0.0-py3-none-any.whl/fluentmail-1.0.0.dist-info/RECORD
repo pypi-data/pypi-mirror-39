@@ -1,0 +1,15 @@
+examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+examples/mailgun.py,sha256=0ITrYyfYoAOWvnQxuqTW4yb6py7wkfiZDMH7-BbERtA,1472
+examples/smtp.py,sha256=9qm7u-J4iLVlamoB-Fo0Fci-mlpNveJkW23OdFhEjw4,3057
+fluentmail/__init__.py,sha256=FGX33MBerwQDCikK_VEzOyw-UROP1Whe3dlh6-48Xbs,93
+fluentmail/message.py,sha256=QHzG3Rkj4Nkc1Oqh4R83ie9tJDy1BqbTRMGz5KXloUM,4749
+fluentmail/utils.py,sha256=q4NGXx_8qKAUEvekQ9npkBpn5OiTx6bKIxjmxXiTIVg,712
+fluentmail/backends/__init__.py,sha256=H_E2nbIyp6SfidEPfPHxa7nBWtE4-TLJcDLw9QjKvlY,68
+fluentmail/backends/base.py,sha256=0krGj6hrsT1xyka-uJmIkB4HHpL4upfY7fH0G-kr1Gs,477
+fluentmail/backends/mailgun.py,sha256=G8r227oF3T1lkuxHPexayXkXbeCdcwzHn-UI62qoWVU,2050
+fluentmail/backends/smtp.py,sha256=9fjieg2VmlUgjAfmBtU1MzIE85wbR6fa32X6w2C9osw,2081
+fluentmail-1.0.0.dist-info/LICENSE,sha256=REtLHDRu0JcDTJiLa1swnMePuahh6d74F9c5tLdekSg,1085
+fluentmail-1.0.0.dist-info/METADATA,sha256=naRIPv4p2x8_ul0UZVK0m9QqUJu2ekGI0IQb9l9MUKM,2100
+fluentmail-1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+fluentmail-1.0.0.dist-info/top_level.txt,sha256=oX0ph6ciiIujGo8SrpYJSfP9NtU7VEYBHWXHPg_F2_0,20
+fluentmail-1.0.0.dist-info/RECORD,,
