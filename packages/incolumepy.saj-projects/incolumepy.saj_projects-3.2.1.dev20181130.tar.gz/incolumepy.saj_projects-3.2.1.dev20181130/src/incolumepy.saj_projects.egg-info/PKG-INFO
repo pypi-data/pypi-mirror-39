@@ -1,0 +1,58 @@
+Metadata-Version: 1.1
+Name: incolumepy.saj-projects
+Version: 3.2.1.dev20181130
+Summary: package incolumepy incolumepy.saj_projects
+Home-page: https://gitlab.com/development-incolume/saj_projects/
+Author: @britodfbr
+Author-email: contato@incolume.com.br
+License: BSD
+Project-URL: Documentation, https://gitlab.com/development-incolume/saj_projects/
+Project-URL: Funding, None
+Project-URL: Say Thanks!, None
+Project-URL: Source, https://gitlab.com/development-incolume/saj_projects
+Project-URL: Git, https://gitlab.com/development-incolume/saj_projects.git
+Project-URL: Tracker, https://gitlab.com/development-incolume/saj_projects/issues
+Project-URL: Oficial, 
+Description: Pacote de utilidades
+        ==========
+        
+        Este pacote foi criado para atender as necessidades 
+        específicas com propósito de aquisição dos textos nos atos 
+        legislativos do Governo Brasileiro. 
+        
+        * Presidência da República
+        * Camara Federal
+        * Senado Federal
+        
+        
+        History
+        ============
+        
+        
+        
+        Examples
+        =============
+        
+        
+        
+        Contributors
+        =============
+        @britodfbr
+        
+        
+        ## CHANGES
+        3.2.1           logger centralizado
+        3.2.0           Acrescentado o modulo atos_web_senado_federal
+        3.1.1.dev20181006 testes para test_clean unitários implementados
+        3.1.0.dev20180928 metodos check_parent e governo_ano acrescentados
+        3.0.1.dev20180926 fix de dependências, README, CONTRIBUTORS
+        3.0.1.dev20180925 configuração para distribuição pypi
+        
+Keywords: python incolumepy incolumepy.saj_projects
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
