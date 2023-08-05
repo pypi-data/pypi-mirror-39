@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+TITLE.txt
+lh-agpl3-LICENSE.txt
+setup.py
+./bin/githubApiAccess.py
+./bin/githubApiReports.py
+unisos/__init__.py
+unisos.githubApi.egg-info/PKG-INFO
+unisos.githubApi.egg-info/SOURCES.txt
+unisos.githubApi.egg-info/dependency_links.txt
+unisos.githubApi.egg-info/namespace_packages.txt
+unisos.githubApi.egg-info/not-zip-safe
+unisos.githubApi.egg-info/requires.txt
+unisos.githubApi.egg-info/top_level.txt
+unisos/utils/__init__.py
+unisos/utils/githubApiLib.py

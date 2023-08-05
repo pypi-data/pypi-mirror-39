@@ -1,0 +1,64 @@
+Metadata-Version: 1.2
+Name: unisos.githubApi
+Version: 0.1
+Summary: unisos.githubApi: scripts and libraries and ICMs that provide command-line access to githubApi.
+Home-page: http://www.by-star.net/PLPC/180047
+Author: Mohsen Banan
+Author-email: libre@mohsen.1.banan.byname.net
+Maintainer: Mohsen Banan
+Maintainer-email: libre@mohsen.1.banan.byname.net
+License: AGPL
+Download-URL: http://www.by-star.net/PLPC/180047
+Description: ================
+        unisos.githubApi
+        ================
+        
+        .. contents::
+           :depth: 3
+        ..
+        
+        Overview
+        ========
+        
+        unisos.githubApi: scripts and libraries and ICMs that provide
+        command-line access to githubApi.
+        
+        Support
+        =======
+        
+        | For support, criticism, comments and questions; please contact the
+          author/maintainer
+        | `Mohsen Banan <http://mohsen.1.banan.byname.net>`__ at:
+          http://mohsen.1.banan.byname.net/contact
+        
+        Documentation
+        =============
+        
+        Part of ByStar Digital Ecosystem http://www.by-star.net.
+        
+        This module’s primary documentation is in
+        http://www.by-star.net/PLPC/180047
+        
+        Installation
+        ============
+        
+        ::
+        
+            sudo pip install unisos.githubApi
+        
+        Usage
+        =====
+        
+        ::
+        
+            ./bin/githubApiAccess.py
+            ./bin/githubApiReports.py
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
