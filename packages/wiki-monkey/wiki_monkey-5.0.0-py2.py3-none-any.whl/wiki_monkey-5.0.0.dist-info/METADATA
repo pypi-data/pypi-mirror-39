@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: wiki-monkey
+Version: 5.0.0
+Summary: Wiki Monkey - MediaWiki bot and editor-assistant user script.
+Home-page: https://github.com/kynikos/wiki-monkey
+Author: Dario Giovannetti
+Author-email: dev@dariogiovannetti.net
+License: GPLv3+
+Keywords: wikimonkey wiki-monkey wiki mediawiki archwiki wikipedia
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Database :: Database Engines/Servers
+Requires-Python: >=3
+Requires-Dist: apispec
+Requires-Dist: configfile
+Requires-Dist: Flask-Cors
+Requires-Dist: flask-marshmallow
+Requires-Dist: Flask-Migrate
+Requires-Dist: flask-restinpeace
+Requires-Dist: Flask-SQLAlchemy
+Requires-Dist: marshmallow-sqlalchemy
+Requires-Dist: pyxdg
+
+Wiki Monkey - MediaWiki (ArchWiki-optimized) bot and editor-assistant user script (server-enabled version).
+
+
