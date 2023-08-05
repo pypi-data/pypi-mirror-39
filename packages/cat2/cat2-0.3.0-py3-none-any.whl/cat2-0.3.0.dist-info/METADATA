@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: cat2
+Version: 0.3.0
+Summary: Print file contents like a boss
+Home-page: https://github.com/arrrlo/cat2
+Author: Ivan Arar
+Author-email: ivan.arar@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/arrrlo/cat2
+Keywords: cat,print,file,contents
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: click (~=6.7)
+Requires-Dist: colorama (~=0.3)
+Requires-Dist: db-transfer (~=0.3.3)
+Requires-Dist: requests (~=2.20.0)
+Requires-Dist: pyfiglet (~=0.7.5)
+Requires-Dist: termcolor (~=1.1.0)
+
+<h1>cat2</h1>
+
+[![PyPI version](https://badge.fury.io/py/cat2.svg)](https://badge.fury.io/py/cat2)
+
+<h2>Print file contents like a boss</h2>
+
+<h3>CLI useage:</h3>
+
+<img src="https://i.ibb.co/28GdxcN/Screen-Shot-2018-12-02-at-00-45-47.png">
+
+<h3>Programmatic usage:</h3>
+
+```python
+
+from cat2 import Cat2, Cat2Exception
+
+# line_from and line_to are optional parameters
+cat2_file = Cat2(file_path, line_from, line_to)
+
+# cat2_file is an iterator object
+for line in cat2_file:
+	print(line)
+	print(cat2_file.line_number)
+	print(cat2_file.is_bytes)
+
+```
+
+
