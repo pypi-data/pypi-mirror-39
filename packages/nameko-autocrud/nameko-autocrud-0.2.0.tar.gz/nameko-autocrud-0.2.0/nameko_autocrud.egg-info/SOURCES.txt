@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+setup.py
+nameko_autocrud/__init__.py
+nameko_autocrud/managers.py
+nameko_autocrud/serializers.py
+nameko_autocrud/storage.py
+nameko_autocrud.egg-info/PKG-INFO
+nameko_autocrud.egg-info/SOURCES.txt
+nameko_autocrud.egg-info/dependency_links.txt
+nameko_autocrud.egg-info/requires.txt
+nameko_autocrud.egg-info/top_level.txt
+nameko_autocrud.egg-info/zip-safe
