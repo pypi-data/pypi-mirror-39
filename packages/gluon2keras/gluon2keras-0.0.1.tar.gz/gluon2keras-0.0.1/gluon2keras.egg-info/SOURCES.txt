@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+gluon2keras/__init__.py
+gluon2keras/gluon2keras.py
+gluon2keras.egg-info/PKG-INFO
+gluon2keras.egg-info/SOURCES.txt
+gluon2keras.egg-info/dependency_links.txt
+gluon2keras.egg-info/not-zip-safe
+gluon2keras.egg-info/requires.txt
+gluon2keras.egg-info/top_level.txt
