@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: spacegraphcats
+Version: 1.0
+Summary: tools for biological assembly graph neighborhood analysis
+Home-page: https://github.com/spacegraphcats/spacegraphcats
+Author: C. Titus Brown, Dominik Moritz, Michael P. O'Brien, Felix Reidl, Taylor Reiter, and Blair D. Sullivan
+Author-email: titus@idyll.org,blair.d.sullivan@gmail.com
+License: BSD 3-clause
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
