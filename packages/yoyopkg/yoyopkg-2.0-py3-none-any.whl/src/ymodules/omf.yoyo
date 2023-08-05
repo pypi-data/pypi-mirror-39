@@ -1,0 +1,28 @@
+NAME omf
+AUTHOR omf
+INFO Oh My Fish
+VERSION 1.2.3
+REQ fish, git, curl
+
+[INSTALL]
+
+SAVEDIR
+
+// - LOCAL
+// PRINT Je suis en local ici #OS
+// - END
+
+// - LOCAL
+// PRINT Je suis en local ici #OS
+// - ELSE
+// PRINT Je suis pas local ici #OS
+// - END
+
+CMD curl -L https://get.oh-my.fish | fish
+// CMD NOCHECK curl -L https://get.oh-my.fish | fish
+// CMD HIDE NOCHECK curl -L https://get.oh-my.fish | fish
+
+RESTOREDIR
+
+[VERIFY]
+CMD HIDE fish -c omf
