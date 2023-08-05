@@ -1,0 +1,3 @@
+[console_scripts]
+database = rspec.cli.database:main
+
