@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: patron-it-opencanary
+Version: 0.7.0.post0
+Summary: OpenCanary daemon
+Home-page: http://www.thinkst.com/
+Author: Thinkst Applied Research
+Author-email: info@thinkst.com
+License: BSD
+Platform: any
+Requires-Dist: Twisted (==18.7.0)
+Requires-Dist: pyasn1 (==0.4.4)
+Requires-Dist: cryptography (==2.3.0)
+Requires-Dist: simplejson (==3.16.0)
+Requires-Dist: zope.interface (==4.5.0)
+Requires-Dist: PyPDF2 (==1.26.0)
+Requires-Dist: fpdf (==1.7.2)
+Requires-Dist: passlib (==1.7.1)
+Requires-Dist: Jinja2 (==2.10.0)
+Requires-Dist: ntlmlib (==0.72)
+Requires-Dist: python-dateutil
+Requires-Dist: click (==6.7)
+Requires-Dist: six
+Requires-Dist: daemonocle
+Requires-Dist: wsgiref (==0.1.2) ; python_version < "3"
+Provides-Extra: dshield
+Requires-Dist: requests ; extra == 'dshield'
+Provides-Extra: rdp
+Requires-Dist: rdpy ; extra == 'rdp'
+Provides-Extra: remote-logging
+Requires-Dist: treq ; extra == 'remote-logging'
+Provides-Extra: snmp
+Requires-Dist: scapy ; extra == 'snmp'
+Requires-Dist: pcapy ; extra == 'snmp'
+
+A low interaction honeypot intended to be run on internal networks.
+
+
