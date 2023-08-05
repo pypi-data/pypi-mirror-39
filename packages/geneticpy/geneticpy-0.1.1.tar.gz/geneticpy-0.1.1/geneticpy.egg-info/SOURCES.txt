@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+geneticpy/__init__.py
+geneticpy/parameter_set.py
+geneticpy/population.py
+geneticpy.egg-info/PKG-INFO
+geneticpy.egg-info/SOURCES.txt
+geneticpy.egg-info/dependency_links.txt
+geneticpy.egg-info/requires.txt
+geneticpy.egg-info/top_level.txt
+geneticpy/distributions/__init__.py
+geneticpy/distributions/distribution_base.py
