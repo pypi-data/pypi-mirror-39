@@ -1,0 +1,8 @@
+fabric2
+invoke
+mo-dots>=2.20.18318
+mo-files>=2.26.18331
+mo-future
+mo-kwargs
+mo-logs
+mo-math
