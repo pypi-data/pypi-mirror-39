@@ -1,0 +1,9 @@
+[tool.poetry]
+name = "jrpyoop"
+version = "0.1.0"
+description = ""
+authors = ["Colin <colin@jumpingrivers.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
