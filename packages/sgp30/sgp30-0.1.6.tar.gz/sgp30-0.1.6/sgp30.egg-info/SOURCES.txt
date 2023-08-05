@@ -1,0 +1,15 @@
+README.rst
+setup.py
+sgp30/__init__.py
+sgp30/crc.py
+sgp30/sgp30.py
+sgp30.egg-info/PKG-INFO
+sgp30.egg-info/SOURCES.txt
+sgp30.egg-info/dependency_links.txt
+sgp30.egg-info/requires.txt
+sgp30.egg-info/top_level.txt
+tests/__init__.py
+tests/context.py
+tests/mock_smbus2.py
+tests/test_crc.py
+tests/test_sgp.py
