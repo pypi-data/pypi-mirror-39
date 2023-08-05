@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: etiqa-eats
+Version: 0.11.2.21
+Summary: Easy Automation Testing Selenium
+Home-page: https://github.com/Etiqa/eats
+Author: Fabio Pulvirenti
+Author-email: fabio@etiqa.it
+License: 2-clause BSD License
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2.7
+Requires-Dist: selenium (~=3.6)
+Requires-Dist: etiqa-pytractor (==0.2.1.1)
+Requires-Dist: etiqa-behave (==1.2.6.0)
+Requires-Dist: pyhamcrest (==1.8.5)
+Requires-Dist: beautifulsoup4
+Requires-Dist: Pillow
+Requires-Dist: Appium-Python-Client (==0.26)
+Requires-Dist: lxml
+Requires-Dist: junit2html
+Provides-Extra: dev
+Requires-Dist: unittest-xml-reporting; extra == 'dev'
+
+EATS is obsolete and no longer maintained: please consider using Bromine (https://github.com/Etiqa/bromine)
+
+
