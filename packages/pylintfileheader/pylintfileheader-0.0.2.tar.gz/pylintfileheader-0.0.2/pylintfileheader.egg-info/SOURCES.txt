@@ -1,0 +1,10 @@
+README.md
+setup.py
+pylintfileheader/ThirdPartyNotices.txt
+pylintfileheader/__init__.py
+pylintfileheader/file_header_checker.py
+pylintfileheader/plugin.py
+pylintfileheader.egg-info/PKG-INFO
+pylintfileheader.egg-info/SOURCES.txt
+pylintfileheader.egg-info/dependency_links.txt
+pylintfileheader.egg-info/top_level.txt
