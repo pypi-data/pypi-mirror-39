@@ -1,0 +1,11 @@
+README.md
+setup.py
+bucket_command_wrapper/__init__.py
+bucket_command_wrapper/bucket_command_wrapper.py
+bucket_command_wrapper.egg-info/PKG-INFO
+bucket_command_wrapper.egg-info/SOURCES.txt
+bucket_command_wrapper.egg-info/dependency_links.txt
+bucket_command_wrapper.egg-info/entry_points.txt
+bucket_command_wrapper.egg-info/not-zip-safe
+bucket_command_wrapper.egg-info/requires.txt
+bucket_command_wrapper.egg-info/top_level.txt

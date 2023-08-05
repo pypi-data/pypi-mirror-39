@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: bucket-command-wrapper
+Version: 0.3.1
+Summary: Wrapper to facilitate downloading / uploading files
+      from buckets (i.e. S3) into containers (i.e. docker) and running an arbitrary command.
+      
+Home-page: https://github.com/jgolob/bucket_command_wrapper
+Author: Jonathan Golob
+Author-email: j-dev@golob.org
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
