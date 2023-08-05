@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: shhh
+Version: 0.0.4
+Summary: Structured HTTP Headers (handily)
+Home-page: http://github.com/mnot/shhh/
+Author: Mark Nottingham
+Author-email: mnot@mnot.net
+License: MIT
+Download-URL: http://github.com/mnot/thor/tarball/shhh-0.0.4
+Description: 
+        # Shhh!
+        
+        ## Structured HTTP Headers (handily)
+        
+        This is a [Python 3](https://python.org/) library implementing parsing and serialisation of [Structured Headers for HTTP](https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html).
+        
+        Shhh's initial purpose is to prove the algorithms in the specification; as a result, it is not at all optimised. It tracks the specification closely, but since it is not yet an RFC, may change at any time.
+        
+        The top-level `parse` and `serialise` functions are the ones your code should call.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Operating System :: POSIX
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides: shhh
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Provides-Extra: dev
