@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+pyEX_studies.egg-info/PKG-INFO
+pyEX_studies.egg-info/SOURCES.txt
+pyEX_studies.egg-info/dependency_links.txt
+pyEX_studies.egg-info/requires.txt
+pyEX_studies.egg-info/top_level.txt
+pyEXstudies/__init__.py
+pyEXstudies/peercorrelation.py

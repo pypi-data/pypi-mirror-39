@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: pyEX-studies
+Version: 0.0.1
+Summary: Calculations using pyEX
+Home-page: https://github.com/timkpaine/pyEX-studies
+Author: Tim Paine
+Author-email: timothy.k.paine@gmail.com
+License: Apache 2.0
+Download-URL: https://github.com/timkpaine/pyEX-studies/archive/v0.0.1.tar.gz
+Description: # pyEX-studies
+        Predefined financial metrics built on pyEX/IEX
+        
+Keywords: finance data
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
