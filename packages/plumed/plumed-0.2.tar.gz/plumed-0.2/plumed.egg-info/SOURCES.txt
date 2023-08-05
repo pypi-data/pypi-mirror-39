@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+VERSION
+plumed.cpp
+setup.py
+plumed.egg-info/PKG-INFO
+plumed.egg-info/SOURCES.txt
+plumed.egg-info/dependency_links.txt
+plumed.egg-info/not-zip-safe
+plumed.egg-info/top_level.txt
+test/test_run.py
