@@ -1,0 +1,3 @@
+[console_scripts]
+ecr = ecr.__main__:outmain
+

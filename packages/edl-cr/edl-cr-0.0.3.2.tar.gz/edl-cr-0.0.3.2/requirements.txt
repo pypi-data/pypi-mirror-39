@@ -1,0 +1,14 @@
+pytest
+coverage
+setuptools
+wheel
+twine
+pytest-html
+prompt_toolkit
+click
+watchdog
+pygments
+pylint
+lxml
+mypy
+PyYAML
