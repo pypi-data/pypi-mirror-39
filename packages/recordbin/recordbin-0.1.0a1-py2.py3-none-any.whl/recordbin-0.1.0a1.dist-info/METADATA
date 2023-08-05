@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: recordbin
+Version: 0.1.0a1
+Summary: Python API Client for RecordBin
+Home-page: https://github.com/gtalarico/recordbin-python
+Author: Gui Talarico
+Author-email: gui.talarico+pip@gmail.com
+License: The MIT License (MIT)
+Keywords: recordbin,api,logger
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.18.3)
+
+# RecordBin Python
+
+[![Build Status](https://travis-ci.org/gtalarico/airtable-python-wrapper.svg?branch=master)](https://travis-ci.org/gtalarico/airtable-python-wrapper)
+[![codecov](https://codecov.io/gh/gtalarico/airtable-python-wrapper/branch/master/graph/badge.svg)](https://codecov.io/gh/gtalarico/airtable-python-wrapper)
+
+Python Client for Python [RecordBin](http://www.github.com/gtalarico/recordbin)
+
+![project-logo](https://github.com/gtalarico/recordbin/blob/master/art/logo.png)
+
+## Installing
+
+```
+pip install recordbin
+```
+
+### Usage Example
+
+```
+>>> from recordbin import RecordBin
+>>> recordbin = RecordBin('http://ww-recordbin.herokuapp.com', token='123')
+>>> recordbin.post({'username': 'gtalarico'})
+```
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
+
+
+=======
+History
+=======
+
+## 0.1.0
+
+- Alpha
+
+
