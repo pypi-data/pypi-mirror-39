@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+setup.py
+aliyun_python_sdk_cloudmarketing.egg-info/PKG-INFO
+aliyun_python_sdk_cloudmarketing.egg-info/SOURCES.txt
+aliyun_python_sdk_cloudmarketing.egg-info/dependency_links.txt
+aliyun_python_sdk_cloudmarketing.egg-info/requires.txt
+aliyun_python_sdk_cloudmarketing.egg-info/top_level.txt
+aliyunsdkcloudmarketing/__init__.py
+aliyunsdkcloudmarketing/request/__init__.py
+aliyunsdkcloudmarketing/request/v20180910/ProcessAfterUploadFileRequest.py
+aliyunsdkcloudmarketing/request/v20180910/RequestUploadFileRequest.py
+aliyunsdkcloudmarketing/request/v20180910/__init__.py
