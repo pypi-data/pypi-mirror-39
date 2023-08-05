@@ -1,0 +1,9 @@
+celery
+dateparser
+django>=2.0
+django-boris
+django-model-utils
+django-taggit
+feedparser
+psycopg2-binary
+requests
