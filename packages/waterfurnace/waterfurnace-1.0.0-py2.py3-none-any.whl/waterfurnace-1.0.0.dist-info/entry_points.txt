@@ -1,0 +1,3 @@
+[console_scripts]
+waterfurnace-debug = waterfurnace.cli:main
+
