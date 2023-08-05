@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: xterm
+Version: 0.6.6
+Summary: Custom keyboard and mouse events for xTerm terminals
+Home-page: https://repl.it/@mat1/Terminal-thing
+Author: mat
+Author-email: fake@email.lol
+License: UNKNOWN
+Description: made by [mat](https://repl.it/@mat1)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
