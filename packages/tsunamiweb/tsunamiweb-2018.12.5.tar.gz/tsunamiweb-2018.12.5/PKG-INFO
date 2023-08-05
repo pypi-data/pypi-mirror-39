@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: tsunamiweb
+Version: 2018.12.5
+Summary: tsunami.
+Home-page: UNKNOWN
+Author: Jerevia
+Author-email: trilliondawn@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: tsunami aiohttp webframework web framework asyncio uvloop
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Provides-Extra: test
+Provides-Extra: dev
