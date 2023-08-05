@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: ledfx
+Version: 0.1.6a0
+Summary: A network based light effect controller
+Home-page: http://github.com/ahodges9/ledfx
+Author: Austin Hodges
+Author-email: austin.b.hodges@gmail.com
+License: The MIT License
+Platform: any
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python
+Requires-Python: >=3.6.0
+Requires-Dist: numpy (>=1.13.3)
+Requires-Dist: voluptuous (==0.11.1)
+Requires-Dist: pyaudio (>=0.2.11)
+Requires-Dist: sacn (==1.3)
+Requires-Dist: aiohttp (==3.3.2)
+Requires-Dist: aiohttp-jinja2 (==1.0.0)
+Requires-Dist: pyyaml (<4,>=3.11)
+Requires-Dist: aubio (>=0.4.8)
+Requires-Dist: pypiwin32 (>=223) ; platform_system == "Windows"
+
+LedFx
+===============
+
+WARNING: This project is in early development, so expect to encounter minor issues along the way.
+
+LedFx is a network based LED effect controller with support for a wide range of effects. Effect range from simple static gradients all the way to audio reactive effects that dance to music!
+
+To get started with LedFx run the following from the project root:
+
+.. code:: bash
+
+    python setup.py install
+    ledfx --open-ui
+
+
+Device Support
+==============
+
+LedFx currently only supports E1.31 capable devices, including the `ESPixelStick firmware <https://github.com/forkineye/ESPixelStick/>`__ for any ESP8266 based controller.
+
+
