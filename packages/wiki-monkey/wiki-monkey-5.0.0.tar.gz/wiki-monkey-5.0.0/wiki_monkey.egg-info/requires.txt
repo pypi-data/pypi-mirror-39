@@ -1,0 +1,9 @@
+apispec
+configfile
+Flask-Cors
+flask-marshmallow
+Flask-Migrate
+flask-restinpeace
+Flask-SQLAlchemy
+marshmallow-sqlalchemy
+pyxdg

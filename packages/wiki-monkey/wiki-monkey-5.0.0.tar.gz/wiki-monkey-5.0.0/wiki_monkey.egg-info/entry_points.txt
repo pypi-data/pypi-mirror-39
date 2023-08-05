@@ -1,0 +1,4 @@
+[console_scripts]
+wiki-monkey = wiki_monkey.main:main
+wiki-monkey-gencert = wiki_monkey.gencert:main
+
