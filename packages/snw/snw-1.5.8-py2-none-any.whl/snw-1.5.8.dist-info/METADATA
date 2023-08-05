@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: snw
+Version: 1.5.8
+Summary: snw client tool
+Home-page: http://www.systransoft.com
+Author: Jean Senellart
+Author-email: jean.senellart@systrangroup.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: prettytable
+Requires-Dist: regex
+Requires-Dist: requests
+Requires-Dist: six
+Requires-Dist: setuptools
+Requires-Dist: jsonschema
+Requires-Dist: packaging (>=17.0)
+
+UNKNOWN
+
+
