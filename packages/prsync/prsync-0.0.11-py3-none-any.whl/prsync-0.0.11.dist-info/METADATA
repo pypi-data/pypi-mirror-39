@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: prsync
+Version: 0.0.11
+Summary: a GUI for rsync (linux servers)
+Home-page: https://github.com/itay-bardugo/prsync/
+Author: Itay Bardugo
+Author-email: itaybardugo91@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: paramiko
+
+**Description**
+
+a simple GUI for rsync usage (between linux servers)
+
+![ScreenShot](https://raw.githubusercontent.com/itay-bardugo/prsync/master/prsync/images/Screenshot.png)
+
+**Install**
+
+`
+pip install prsync
+
+`
+
+**Pull Requests**
+
+1.open a new branch for each issue, branch name convention: #[issue id] description
+
+2.once your done with your changes, ask for a pull requst, name your pull request like  #[issue id] pull request description.
+
+3.please make sure that a single pull request contains changes for one issue.
+
+
+
+
+
