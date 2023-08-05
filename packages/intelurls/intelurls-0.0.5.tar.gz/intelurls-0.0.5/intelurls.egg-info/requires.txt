@@ -1,0 +1,8 @@
+requests
+geocoder
+
+[dev]
+check-manifest
+
+[test]
+coverage

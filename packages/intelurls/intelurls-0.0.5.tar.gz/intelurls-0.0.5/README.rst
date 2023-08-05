@@ -1,0 +1,86 @@
+=================
+Intel URL Parsing
+=================
+
+This module started as a simple parser for Intel URLs for Niantic Lab's
+Ingress game.  It then grew, like an ugly monster, to support most flavors
+of Google Maps and Apple Maps URLs.
+
+When a URL is parsed, we return a structure that contains the latitude and
+longitude of the place, along with a host of other values, such as a name
+for the map, potential zoom levels for the map, and human captions if we
+can decipher them from the map service provider.
+
+See the source code for the exact return values.
+
+Niantic Labs is not responsible for this program, and neither endorses
+nor supports it.  The author is not associated with Niantic Labs and
+makes no representations.
+
+Use
+---
+::
+
+    >>> from intelurls import check_mapurl, parse_mapurl, parse_natural
+    >>> from pprint import pprint
+
+An Ingress Intel URL:
+
+::
+
+    >>> check_mapurl("this is a string with a url in it https://intel.ingress.com/intel?ll=37.821523,-122.377385&z=17 and more test")
+    'https://intel.ingress.com/intel?ll=37.821523,-122.377385&z=17'
+
+A Google Maps URL with a caption:
+
+::
+
+    >>> pprint(parse_mapurl("https://maps.google.com/maps?ll=37.765727,-122.431961&cid=10889150637731333995&q=Beck's%20Motor%20Lodge"))
+    {'caption': "Beck's Motor Lodge",
+     'latlng': [37.765727, -122.431961],
+     'name': 'map_@37.765727,-122.431961'}
+
+A Google Maps ShortURL:
+
+::
+
+    >>> pprint(parse_mapurl("http://goo.gl/maps/r6T6a"))
+    {'caption': '',
+     'latlng': [45.0215057, 14.6293757],
+     'name': 'map_@45.0215057,14.6293757'}
+
+A natural language location:
+
+::
+
+    >>> pprint(parse_natural("San Francisco, CA"))
+    {'caption': 'San Francisco, CA, USA',
+     'latlng': [37.7749295, -122.4194155],
+     'name': 'map_@37.7749295,-122.4194155_z13',
+     'zoom': 13}
+
+For a full list of everything we can parse, look at `tests/gentest.py`,
+this list is fairly extensive.
+
+Testing
+-------
+
+There are so many combinations of URLs, that a regression test jig
+was created.  Most of the code is self-contained, however the natural
+language location and URLs that need expansion or page scraping need
+to interact with a third party service (typically the Google Maps API)
+and that data has been known to change over time.
+
+A failed test isn't a reason to not install the module.
+
+`valid.out` is correct at the time of this publication, but may get
+out of date if the third party services change or move map items. If
+unit test fails, it's best to examine -why- it failed to see if it is
+an actual bug or just a change by a third party.  If you need to, you
+may re-create `valid.out` with `gentest.py`
+
+ChangeLog
+---------
+
+0.0.2:  README.rst formatting
+0.0.1:  Original publication

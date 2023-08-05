@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+intelurls/__init__.py
+intelurls.egg-info/PKG-INFO
+intelurls.egg-info/SOURCES.txt
+intelurls.egg-info/dependency_links.txt
+intelurls.egg-info/requires.txt
+intelurls.egg-info/top_level.txt
