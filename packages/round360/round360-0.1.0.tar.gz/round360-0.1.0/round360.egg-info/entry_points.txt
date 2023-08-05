@@ -1,0 +1,3 @@
+[console_scripts]
+round360 = round360.cli:main
+
