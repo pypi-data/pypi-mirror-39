@@ -1,0 +1,9 @@
+Acquisition
+plone.app.dexterity
+plone.restapi
+Products.CMFPlone
+setuptools
+zope.component
+zope.event
+zope.globalrequest
+zope.lifecycleevent
