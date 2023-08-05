@@ -1,0 +1,3 @@
+[console_scripts]
+selenible = selenible.cli:cli
+
