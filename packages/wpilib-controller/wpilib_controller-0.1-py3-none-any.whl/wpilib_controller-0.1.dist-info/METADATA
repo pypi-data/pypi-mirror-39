@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: wpilib-controller
+Version: 0.1
+Summary: A backport of the upcoming (in 2020) WPILib PIDController.
+Home-page: https://github.com/auscompgeek/robotpy-wpilib-controller
+License: BSD-3-Clause
+Keywords: frc wpilib robotpy
+Author: David Vo
+Author-email: david@thedropbears.org.au
+Requires-Python: >=3.6
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: wpilib >=2018
+Requires-Dist: typing-extensions
+Provides-Extra: .none
