@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: bpqcrypto
+Version: 1.3.3
+Summary: a crypto library for BPQ
+Home-page: https://github.com/bitcoinpostquantum/bpqcrypto
+Author: bitcoinpq
+Author-email: dev@bitcoinpq.org
+License: UNKNOWN
+Project-URL: Source, https://github.com/bitcoinpostquantum/bpqcrypto
+Project-URL: Tracker, https://github.com/bitcoinpostquantum/bpqcrypto/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Information Technology
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: C++
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Topic :: Security
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Software Development
+Requires-Python: >=3
+
+# bpqcrypto
+
+## Test
+```
+python3 -m bpqcrypto.test
+```
+
+## Install
+
+### Windows
+```
+pip3 install bpqcrypto-1.0.2-py3-none-win_amd64.whl
+```
+
+### Linux
+```
+pip3 install bpqcrypto-1.0.2-py3-none-linux_amd64.whl
+```
+
+
