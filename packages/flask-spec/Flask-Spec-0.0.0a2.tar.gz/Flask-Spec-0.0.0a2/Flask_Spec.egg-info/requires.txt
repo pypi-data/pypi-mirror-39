@@ -1,0 +1,4 @@
+Flask>=0.10
+marshmallow>=2.0.0
+apispec>=0.17.0
+markdown2>=2.0.0
