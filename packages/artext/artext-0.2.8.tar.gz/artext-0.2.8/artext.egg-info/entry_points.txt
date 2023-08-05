@@ -1,0 +1,3 @@
+[console_scripts]
+artext = artext.__main__:main
+
