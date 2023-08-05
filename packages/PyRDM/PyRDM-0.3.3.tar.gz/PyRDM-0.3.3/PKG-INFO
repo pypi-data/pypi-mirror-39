@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: PyRDM
+Version: 0.3.3
+Summary: PyRDM is a Python module for research data management (RDM). It facilitates the automated publication of scientific software and associated input and output data.
+Home-page: https://github.com/pyrdm/pyrdm
+Author: Christian T. Jacobs, Alexandros Avdis, Gerard J. Gorman, Matthew D. Piggott
+Author-email: C.T.Jacobs@soton.ac.uk, a.avdis@imperial.ac.uk
+License: GPLv3
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides: pyrdm
