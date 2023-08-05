@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: multipackage
+Version: 0.2.0
+Summary: A CLI tool for managing CI and CD scripts on multi-package repositories
+Home-page: https://github.com/iotile/python_multipackage
+Author: Arch Systems
+Author-email: info@archsys.io
+License: LGPLv3
+Description: Multipackage
+        ------------
+        
+        <TODO>
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
