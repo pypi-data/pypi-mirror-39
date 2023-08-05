@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pysmo
+Version: 0.7.3
+Summary: Python module to read/write/manipulate SAC (Seismic Analysis Code) files
+Home-page: https://github.com/pysmo/pysmo
+Author: Simon Lloyd
+Author-email: smlloyd@gmail.com
+License: GNU General Public License v3.0
+Platform: UNKNOWN
+Requires-Dist: scipy (==1.1)
+Requires-Dist: numpy (~=1.15)
+Requires-Dist: matplotlib (~=2.2)
+Requires-Dist: pyyaml (~=3.13)
+Requires-Dist: pyproj (>=1.9.5)
+Requires-Dist: future (>=0.16.0)
+
+UNKNOWN
+
+
