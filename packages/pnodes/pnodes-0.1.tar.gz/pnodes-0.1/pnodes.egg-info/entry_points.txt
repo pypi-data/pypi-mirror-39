@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        pnodes=pnodes.terminal.client:terminal_client
+    
