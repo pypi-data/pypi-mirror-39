@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+download.py
+setup.cfg
+setup.py
+download_tarball.egg-info/PKG-INFO
+download_tarball.egg-info/SOURCES.txt
+download_tarball.egg-info/dependency_links.txt
+download_tarball.egg-info/entry_points.txt
+download_tarball.egg-info/requires.txt
+download_tarball.egg-info/top_level.txt
