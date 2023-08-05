@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: i2bmi
+Version: 0.1.4
+Summary: Biomedical Informatics toolkit by Institute for Informatics at Washington University School of Medicine in St. Louis
+Home-page: https://github.com/abraxasyu/i2bmi
+Author: Sean C. Yu
+Author-email: Sean.Yu@WUSTL.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Example Package
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.	
+
