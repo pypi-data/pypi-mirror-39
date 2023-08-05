@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: pinda
+Version: 0.0.7
+Summary: Pip-INstallable Dockerized Applications
+Home-page: https://bitbucket.org/claughton/pinda
+Author: Charlie Laughton
+Author-email: charles.laughton@nottingham.ac.uk
+License: UNKNOWN
+Description: # pinda
+        
+        Pip-INstallable Dockerized Applications
+        
+        *pinda* is designed to deliver dockerized versions of software packages that have a user interface that is as identical
+        as possible to what would be available if the package was installed in the conventional way.
+        
+        For example, to install Gromacs version 2018:
+        ```
+        % pinda install gromacs 2018
+        ```
+        Once the installation is complete, you will find the 'gmx' command in your path.
+        
+        ## Installation:
+        
+        Easiest via pip:
+        ```
+        % pip install pinda
+        ```
+        
+        ## Usage:
+        
+        To see a list of packages available via *pinda*:
+        ```
+        % pinda list
+          amber      16         Amber and AmberTools version 16
+          amber      18         Amber and AmberTools version 18
+          ambertools 16         AmberTools version 16
+          ambertools 18         AmberTools version 18
+        * gromacs    2018       Gromacs version 2018
+          gromacs    2018-cuda  Gromacs version 2018 with CUDA support
+        * obabel     2.4.1      Open Babel version 2.4.1
+          vina       1.1.2      AutoDock Vina and selected AutoDock Tools
+        %
+        ```
+        Packages that you have already installed are asterisked.
+        
+        **NOTE**: Because of license restrictions you may find that you can't actually run certain 
+        packages (e.g. Amber) - see [here](https://bitbucket.org/claughton/amber_docker) for some help on this.
+        
+        To install a package:
+        ```
+        % pinda install ambertools 18
+        %
+        ```
+        
+        To uninstall a package:
+        ```
+        % pinda uninstall obabel 2.4.1
+        %
+        ```
+        
+        ## Limitations:
+        
+        You need to have Docker installed on your machine. The containerised versions of the applications can
+        only 'see' files that are in the directory a command in invoked from, or a subdirectory of this, so for example:
+        ```
+        % gmx mdrun -s bpti.tpr # This is fine
+        % gmx mdrun -s ../bpti.tpr # This won't work
+        ```
+        
+        ## Author:
+        
+        Charlie Laughton charles.laughton@nottingham.ac.uk
+        
+        ## License:
+        
+        BSD 3-clause
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Development Status :: 3 - Alpha
+Description-Content-Type: text/markdown
