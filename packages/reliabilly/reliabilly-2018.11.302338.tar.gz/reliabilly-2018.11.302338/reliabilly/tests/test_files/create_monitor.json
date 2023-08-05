@@ -1,0 +1,11 @@
+{
+   "name":"test-monitor",
+   "frequency":1,
+   "uri":"https://.reliabilly.com",
+   "locations":[
+      "1962024-reliabilly_minion-C4E"
+   ],
+   "type":"simple",
+   "status":"enabled",
+   "slaThreshold":"1.0"
+}

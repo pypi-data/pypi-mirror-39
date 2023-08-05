@@ -1,0 +1,391 @@
+{
+   "monitors":[
+      {
+         "id":"2d256310-7d3f-4eaa-b6a1-6d9fe2f1476d",
+         "name":"Checkup ping",
+         "type":"SIMPLE",
+         "frequency":15,
+         "uri":"https://checkup.reliabilly.com/",
+         "locations":[
+            "AWS_AP_SOUTHEAST_2",
+            "AWS_EU_WEST_2",
+            "AWS_US_WEST_1"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-05-08T03:57:23.350+0000",
+         "createdAt":"2018-05-08T03:57:23.350+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"9d7105a4-e648-44a5-be2b-715d4a9408ae",
+         "name":"Checkup simple monitor",
+         "type":"BROWSER",
+         "frequency":10,
+         "uri":"https://checkup.reliabilly.com/",
+         "locations":[
+            "AWS_AP_SOUTHEAST_2"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-05-08T04:00:25.493+0000",
+         "createdAt":"2018-05-08T04:00:25.493+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"699af1d9-ded5-4a92-ba9b-1485c44d3f52",
+         "name":"DevBlog",
+         "type":"SIMPLE",
+         "frequency":1440,
+         "uri":"https://devblog.reliabilly.com",
+         "locations":[
+            "AWS_AP_NORTHEAST_1",
+            "AWS_AP_SOUTHEAST_2",
+            "AWS_EU_CENTRAL_1",
+            "LINODE_US_CENTRAL_1"
+         ],
+         "status":"MUTED",
+         "slaThreshold":7.0,
+         "options":{
+            "verifySSL":true
+         },
+         "modifiedAt":"2018-06-24T22:43:50.109+0000",
+         "createdAt":"2018-06-24T22:30:22.090+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"01e40ee5-89af-4c39-a354-5b35e56d4638",
+         "name":"prod app",
+         "type":"SIMPLE",
+         "frequency":1,
+         "uri":"https://.reliabilly.com/",
+         "locations":[
+            "1962024-reliabilly_minion-C4E"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-07-13T02:26:33.893+0000",
+         "createdAt":"2018-06-25T01:12:33.022+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"3f8b9812-f77e-4c95-a442-6fc24cab4605",
+         "name":"uat root",
+         "type":"SIMPLE",
+         "frequency":1,
+         "uri":"https://reliabilly.com",
+         "locations":[
+            "1962024-reliabilly_minion-C4E"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-07-13T02:21:34.397+0000",
+         "createdAt":"2018-06-25T01:34:11.317+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"4c01e827-13a7-48ba-9562-65d15d1bad25",
+         "name":"uat alerts",
+         "type":"SIMPLE",
+         "frequency":1,
+         "uri":"https://reliabilly.com/alerts/ping/",
+         "locations":[
+            "1962024-reliabilly_minion-C4E"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-07-13T02:21:38.541+0000",
+         "createdAt":"2018-06-25T01:34:53.106+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"3c2ff9da-ab4e-42c5-8acd-75a407a7574b",
+         "name":"uat incidents",
+         "type":"SIMPLE",
+         "frequency":1,
+         "uri":"https://reliabilly.com/incidents/ping/",
+         "locations":[
+            "1962024-reliabilly_minion-C4E"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-07-13T02:21:46.105+0000",
+         "createdAt":"2018-06-25T01:35:17.033+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"98c3366e-1052-4560-b0dc-fd78e3d841b0",
+         "name":"uat infrastructure",
+         "type":"SIMPLE",
+         "frequency":1,
+         "uri":"https://reliabilly.com/infrastructure/ping/",
+         "locations":[
+            "1962024-reliabilly_minion-C4E"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+            "validationString":"",
+            "bypassHEADRequest":false
+         },
+         "modifiedAt":"2018-07-13T02:21:36.211+0000",
+         "createdAt":"2018-06-25T01:35:44.496+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"51d82f35-bf74-4441-bb7a-e7ac21d3d6c7",
+         "name":"uat portfolios",
+         "type":"SIMPLE",
+         "frequency":1,
+         "uri":"https://reliabilly.com/portfolios/ping/",
+         "locations":[
+            "1962024-reliabilly_minion-C4E"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-07-13T02:21:35.646+0000",
+         "createdAt":"2018-06-25T01:36:07.926+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"79c38a4b-13db-4ccb-a5be-78eaea89226f",
+         "name":"uat products",
+         "type":"SIMPLE",
+         "frequency":1,
+         "uri":"https://reliabilly.com/products/ping/",
+         "locations":[
+            "1962024-reliabilly_minion-C4E"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-07-13T02:21:40.370+0000",
+         "createdAt":"2018-06-25T01:37:24.661+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"52fc66d8-b436-4391-94ae-0648568487e3",
+         "name":"uat slos",
+         "type":"SIMPLE",
+         "frequency":1,
+         "uri":"https://reliabilly.com/slos/ping/",
+         "locations":[
+            "1962024-reliabilly_minion-C4E"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-07-13T02:21:48.380+0000",
+         "createdAt":"2018-06-25T01:37:53.877+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"d65eea25-3559-46d6-81d8-41f5aed59051",
+         "name":"uat topiary",
+         "type":"SIMPLE",
+         "frequency":1,
+         "uri":"https://reliabilly.com/topiary/ping/",
+         "locations":[
+            "1962024-reliabilly_minion-C4E"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-07-13T02:21:44.469+0000",
+         "createdAt":"2018-06-25T01:38:18.702+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"25720116-16aa-481c-8018-d6dac8462507",
+         "name":"uat users",
+         "type":"SIMPLE",
+         "frequency":1,
+         "uri":"https://reliabilly.com/users/ping/",
+         "locations":[
+            "1962024-reliabilly_minion-C4E"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-07-13T02:21:50.607+0000",
+         "createdAt":"2018-06-25T01:38:32.618+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"405d9d84-7445-4e16-89f5-0cfe966e1993",
+         "name":"uat sloth",
+         "type":"SIMPLE",
+         "frequency":1,
+         "uri":"https://reliabilly.com/sloth/ping/",
+         "locations":[
+            "1962024-reliabilly_minion-C4E"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-07-13T02:21:39.455+0000",
+         "createdAt":"2018-06-25T01:39:26.371+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"92d9c5bc-6aa2-4e7b-bb37-5a576731c734",
+         "name":"prod sloth",
+         "type":"SIMPLE",
+         "frequency":1,
+         "uri":"https://.reliabilly.com/sloth/ping/",
+         "locations":[
+            "1962024-reliabilly_minion-C4E"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-07-13T02:26:23.432+0000",
+         "createdAt":"2018-07-01T21:05:06.669+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"34022ff6-791f-40f2-bef2-e21290b06bac",
+         "name":"prod topiary",
+         "type":"SIMPLE",
+         "frequency":1,
+         "uri":"https://.reliabilly.com/topiary/ping/",
+         "locations":[
+            "1962024-reliabilly_minion-C4E"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-07-15T18:14:24.565+0000",
+         "createdAt":"2018-07-01T21:08:04.973+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"a40ad0a3-7bf7-4986-9d54-76d5050c3593",
+         "name":"prod products",
+         "type":"SIMPLE",
+         "frequency":1,
+         "uri":"https://.reliabilly.com/products/ping/",
+         "locations":[
+            "1962024-reliabilly_minion-C4E"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-07-13T02:26:24.978+0000",
+         "createdAt":"2018-07-01T21:08:32.929+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"f52a40b1-1bbc-4029-a055-defea25f1b02",
+         "name":"prod incidents",
+         "type":"SIMPLE",
+         "frequency":1,
+         "uri":"https://.reliabilly.com/incidents/ping/",
+         "locations":[
+            "1962024-reliabilly_minion-C4E"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-07-13T02:23:27.227+0000",
+         "createdAt":"2018-07-01T21:10:23.713+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"d4b3b20e-31a8-4423-89e7-8d2ca9d57e75",
+         "name":"prod slos",
+         "type":"SIMPLE",
+         "frequency":1,
+         "uri":"https://.reliabilly.com/slos/ping/",
+         "locations":[
+            "1962024-reliabilly_minion-C4E"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-07-13T02:26:30.875+0000",
+         "createdAt":"2018-07-01T21:12:25.151+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      },
+      {
+         "id":"87b8f454-c976-483f-8b7f-e0aea02cf6f8",
+         "name":"prod users",
+         "type":"SIMPLE",
+         "frequency":1,
+         "uri":"https://.reliabilly.com/users/ping/",
+         "locations":[
+            "1962024-reliabilly_minion-C4E"
+         ],
+         "status":"ENABLED",
+         "slaThreshold":7.0,
+         "options":{
+
+         },
+         "modifiedAt":"2018-07-13T02:26:26.295+0000",
+         "createdAt":"2018-07-01T21:13:07.652+0000",
+         "userId":0,
+         "apiVersion":"0.5.2"
+      }
+   ],
+   "count":20
+}

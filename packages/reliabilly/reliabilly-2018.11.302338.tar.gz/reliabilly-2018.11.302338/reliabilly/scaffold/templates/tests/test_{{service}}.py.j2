@@ -1,0 +1,13 @@
+from unittest import TestCase
+from {{service}}.controllers.{{service}}_controller import {{service|camelcase}}Controller
+from {{service}}.service import RUNNER
+
+
+class {{service|camelcase}}Tests(TestCase):
+    def test_all(self):
+        controller = {{service|camelcase}}Controller()
+        self.assertIsNotNone(controller)
+
+    def test_service(self):
+        self.assertIsNotNone(RUNNER)
+

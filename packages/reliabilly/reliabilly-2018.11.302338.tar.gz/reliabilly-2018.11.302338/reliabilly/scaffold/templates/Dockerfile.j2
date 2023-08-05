@@ -1,0 +1,14 @@
+FROM corpseware/reliabilly:latest
+
+RUN mkdir /src/{{service}}
+ADD requirements.txt /src/{{service}}
+
+RUN pip install -r /src/{{service}}/requirements.txt
+
+COPY . /src/{{service}}
+
+WORKDIR /src
+
+EXPOSE 8000
+HEALTHCHECK --interval=2s CMD curl -f http://localhost:8000/{{service}}/ping/ || exit 1
+ENTRYPOINT nameko run {{service}}.service

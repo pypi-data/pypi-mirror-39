@@ -1,0 +1,11 @@
+[run]
+omit = reliabilly/tests/*,reliabilly/tasks/*,reliabilly/integration/*
+
+source = reliabilly
+
+[xml]
+output = reliabilly/cov.xml
+
+[report]
+show_missing = true
+skip_covered = true

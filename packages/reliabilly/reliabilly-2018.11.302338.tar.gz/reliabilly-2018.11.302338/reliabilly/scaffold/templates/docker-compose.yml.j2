@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  {{service}}:
+    image: reliabilly/{{service}}
+    container_name: {{service}}-api
+    ports:
+      - ${{service|upper}}_PORT:8000
+    environment:
+      - DEBUG=True
+      - MONGO_URL=${MONGO_URL}
+      - MONGO_PORT=${MONGO_PORT}
+      - SERVICE_NAME={{service}}
+    depends_on:
+      - mongodb

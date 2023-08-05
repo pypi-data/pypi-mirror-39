@@ -1,0 +1,8 @@
+from nameko.runners import ServiceRunner
+from {{service}}.controllers.{{service}}_controller import {{service|camelcase}}Controller
+from {{service}}.settings import Constants
+
+
+RUNNER = ServiceRunner(config=Constants.NAMEKO_CONFIG)
+RUNNER.add_service({{service|camelcase}}Controller)
+

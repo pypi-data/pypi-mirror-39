@@ -1,0 +1,179 @@
+# flake8: noqa
+# pylint: disable=trailing-whitespace
+"""
+@api get /{{service}}/
+description: Returns all {{service}}
+summary: Fetch all {{service}}
+tags:
+    - {{service}}
+parameters:
+    - name: limit
+      in: query
+      description: The maximum number of {{service}} to fetch
+      schema:
+        type: integer
+    - name: offset
+      in: query
+      description: The number of {{service}} to offset your query by
+      schema:
+        type: integer
+responses:
+    "200":
+        description: A list of {{service}} items
+    "400":
+        description: The request was badly formed or otherwise invalid
+    "403":
+        description: The auth token was invalid or not provided
+"""
+
+"""
+@api post /{{service}}/
+description: >-
+    Submit a new {{service}} item to the service. Do note that not
+    all services necessarily support the addition of new items. If it doesn't,
+    it shouldn't have this entry but as the documentation is generated,
+    the creator may have forgotten this segment.
+summary: Add a new {{services}} item to the service
+tags:
+    - {{service}}
+responses:
+    "201":
+        description: Successfully submitted the new {{service}} item
+    "400":
+        description: The request was badly formed or otherwise invalid
+    "403":
+        description: The auth token was invalid or not provided
+"""
+
+"""
+@api get /{{service}}/{id}
+description: Fetch a single {{service}} item by ID
+summary: Fetch a single {{service}} item by ID
+tags:
+    - {{service}}
+responses:
+    "200":
+        description: Successfully retrieved item
+    "403":
+        description: The auth token was invalid or not provided
+    "500":
+        description: The ID provided is invalid
+"""
+
+"""
+@api put /{{service}}/{id}
+description: Update a {{service}} item in the service
+summary: Update a {{service}} item in the service
+tags:
+    - {{service}}
+responses:
+    "202":
+        description: A success message
+    "400":
+        description: The request was badly formed or otherwise invalid
+    "403":
+        description: The auth token was invalid or not provided
+    "404":
+        description: The item was not found. It was deleted or never existed.
+"""
+
+"""
+@api delete /{{service}}/{id}
+description: Delete a {{service}} item from the service
+summary: Delete a {{service}} item from the service
+tags:
+    - {{service}}
+responses:
+    "200":
+        description: The item was successfully deleted
+    "403":
+        description: The auth token was invalid or not provided
+    "404":
+        description: The item was not found. It was deleted or never existed.
+"""
+
+"""
+@api get /{{service}}/collect/
+description: >-
+    Performing a GET on the /collect/ endpoint will show any
+    currently running collections that have been manually triggered.
+    You can see which collector is running and when it was started.
+summary: View currently running collections
+tags:
+    - {{service}}
+responses:
+    "200":
+        description: A JSON object containing the status of active collectors
+    "403":
+        description: The auth token was invalid or not provided
+"""
+
+"""
+@api post /{{service}}/collect/
+description: >-
+    Triggers a manual collection for the {{service}} service. You
+    don't need to do this as services will manually run collections at regular
+    intervals but it can be useful if you 100% fresh data.
+summary: Fetch the latest {{service}} data
+tags:
+    - {{service}}
+responses:
+    "202":
+        description: A success message stating "Collection received!"
+    "403":
+        description: The auth token was invalid or not provided
+"""
+
+"""
+@api post /{{service}}/purge/
+description: Purges all {{service}} from the service
+summary: Purge all data from the {{service}} service
+tags:
+    - {{service}}
+responses:
+    "200":
+        description: The purge was successful
+    "403":
+        description: The auth token was invalid or not provided
+"""
+
+"""
+@api get /{{service}}/ping/
+description: Returns a success code if the service is available
+summary: Ping the {{service}} service
+tags:
+    - {{service}}
+responses:
+    "200":
+        description: The string "pong" indicating the request succeeded
+    "403":
+        description: The auth token was invalid or not provided
+"""
+
+
+"""
+@api get /{{service}}/count/
+description: See how many {{service}} are stored in the service
+summary: See how many {{service}} are stored in the service
+tags:
+    - {{service}}
+responses:
+    "200":
+        description: An integer reflecting the total number of {{service}}
+    "403":
+        description: The auth token was invalid or not provided
+"""
+
+"""
+@api get /{{service}}/version/
+description: Check the current version of the {{service}} service
+summary: Check the current version of the {{service}} service
+tags:
+    - {{service}}
+responses:
+    "200":
+        description: A JSON object showing version and build number
+    "403":
+        description: The auth token was invalid or not provided
+"""
+

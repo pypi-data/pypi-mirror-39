@@ -1,0 +1,10 @@
+[run]
+omit = data_mongo/tests/*
+
+source = data_mongo
+
+[xml]
+output = data_mongo/cov.xml
+
+[report]
+show_missing = true

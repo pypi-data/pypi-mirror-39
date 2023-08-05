@@ -1,0 +1,14 @@
+[MESSAGES CONTROL]
+
+disable=
+ignore=examples
+
+[SIMILARITIES]
+
+# Minimum lines number of a similarity.
+min-similarity-lines=4
+
+# Ignore imports when computing similarities.
+ignore-imports=no
+
+max-line-length=120

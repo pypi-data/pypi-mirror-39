@@ -1,0 +1,53 @@
+{
+  "results": [
+    {
+      "result": null
+    }
+  ],
+  "metadata": {
+    "eventTypes": [
+      "reliabillystatsd"
+    ],
+    "eventType": "reliabillystatsd",
+    "openEnded": true,
+    "beginTime": "2018-10-03T23:39:30Z",
+    "endTime": "2018-10-04T00:39:30Z",
+    "beginTimeMillis": 1538609970797,
+    "endTimeMillis": 1538613570797,
+    "rawSince": "60 MINUTES AGO",
+    "rawUntil": "NOW",
+    "rawCompareWith": "",
+    "guid": "48661a5f-edc6-3a81-1f98-1493deef3f79",
+    "routerGuid": "87c14e65-4d76-cd35-6032-e5a80c795172",
+    "messages": [],
+    "contents": [
+      {
+        "function": "binop",
+        "simple": true,
+        "binop": "*",
+        "left": {
+          "function": "binop",
+          "simple": true,
+          "binop": "/",
+          "left": {
+            "function": "filter",
+            "alias": "metric_value > 400",
+            "contents": {
+              "function": "count",
+              "attribute": "metric_value",
+              "simple": true
+            }
+          },
+          "right": {
+            "function": "count",
+            "attribute": "metric_value",
+            "simple": true
+          }
+        },
+        "right": {
+          "constant": 100
+        }
+      }
+    ]
+  }
+}

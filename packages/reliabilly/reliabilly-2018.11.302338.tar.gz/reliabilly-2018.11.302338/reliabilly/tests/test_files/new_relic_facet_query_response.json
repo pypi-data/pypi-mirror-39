@@ -1,0 +1,206 @@
+{
+   "facets":[
+      {
+         "name":[
+            "JJB",
+            "JJB",
+            "JJB",
+            "availability",
+            "JJB Product Test"
+         ],
+         "results":[
+            {
+               "result":100
+            }
+         ]
+      },
+      {
+         "name":[
+            "Platform Services",
+            "site.reliability",
+            "reliabillyecs_cluster",
+            "error_rate",
+            "Reliabilly ALB/ELB Errors"
+         ],
+         "results":[
+            {
+               "result":100
+            }
+         ]
+      },
+      {
+         "name":[
+            "Platform Services",
+            "site.reliability",
+            "reliabillyecs_cluster",
+            "latency",
+            "Reliabilly ELB Latency"
+         ],
+         "results":[
+            {
+               "result":70
+            }
+         ]
+      },
+      {
+         "name":[
+            "Platform Services",
+            "site.reliability",
+            "reliabillyecs_cluster",
+            "latency",
+            "Reliabilly Infrastructure Requests "
+         ],
+         "results":[
+            {
+               "result":100
+            }
+         ]
+      },
+      {
+         "name":[
+            "Platform Services",
+            "site.reliability",
+            "reliabillyecs_cluster",
+            "latency",
+            "Reliabilly alerts requests"
+         ],
+         "results":[
+            {
+               "result":100
+            }
+         ]
+      },
+      {
+         "name":[
+            "Platform Services",
+            "site.reliability",
+            "reliabillyecs_cluster",
+            "latency",
+            "Reliabilly incidents requests"
+         ],
+         "results":[
+            {
+               "result":100
+            }
+         ]
+      },
+      {
+         "name":[
+            "Platform Services",
+            "site.reliability",
+            "reliabillyecs_cluster",
+            "latency",
+            "Reliabilly sloth requests"
+         ],
+         "results":[
+            {
+               "result":17.11110
+            }
+         ]
+      },
+      {
+         "name":[
+            "Platform Services",
+            "site.reliability",
+            "reliabillyecs_cluster",
+            "latency",
+            "Reliabilly topiary requests"
+         ],
+         "results":[
+            {
+               "result":30
+            }
+         ]
+      },
+      {
+         "name":[
+            "Platform Services",
+            "site.reliability",
+            "reliabillyecs_cluster",
+            "latency",
+            "Reliabilly users requests"
+         ],
+         "results":[
+            {
+               "result":50
+            }
+         ]
+      },
+      {
+         "name":[
+            "Platform Services",
+            "test-jjb",
+            "reliabillyecs_cluster",
+            "latency",
+            "Reliabilly sloth requests"
+         ],
+         "results":[
+            {
+               "result":100
+            }
+         ]
+      }
+   ],
+   "totalResult":{
+      "results":[
+         {
+            "result":86.22482131254061
+         }
+      ]
+   },
+   "unknownGroup":{
+      "results":[
+         {
+            "result":22.90909090909091
+         }
+      ]
+   },
+   "metadata":{
+      "eventTypes":[
+         "reliabillystatsd"
+      ],
+      "eventType":"reliabillystatsd",
+      "openEnded":true,
+      "beginTime":"2018-09-24T01:21:27Z",
+      "endTime":"2018-10-24T01:21:27Z",
+      "beginTimeMillis":1537752087715,
+      "endTimeMillis":1540344087715,
+      "rawSince":"30 DAYS AGO",
+      "rawUntil":"NOW",
+      "rawCompareWith":"",
+      "guid":"11e50720-e7e7-4dea-2359-b3403541fbb5",
+      "routerGuid":"2025ac34-79e3-4073-742b-336148d3dcd1",
+      "messages":[
+
+      ],
+      "facet":[
+         "metric_tag_portfolio",
+         "metric_tag_product",
+         "metric_tag_component",
+         "metric_tag_slo_type",
+         "metric_tag_slo_name"
+      ],
+      "offset":0,
+      "limit":10,
+      "contents":{
+         "messages":[
+
+         ],
+         "contents":[
+            {
+               "function":"binop",
+               "simple":true,
+               "binop":"*",
+               "left":{
+                  "function":"average",
+                  "attribute":"metric_value",
+                  "simple":true
+               },
+               "right":{
+                  "constant":100
+               }
+            }
+         ]
+      }
+   }
+}

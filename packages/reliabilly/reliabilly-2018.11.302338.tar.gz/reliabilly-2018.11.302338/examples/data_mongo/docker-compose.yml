@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  data_mongo:
+    image: reliabilly/data_mongo
+    container_name: data_mongo-api
+    ports:
+      - $DATA_MONGO_PORT:8000
+    environment:
+      - DEBUG=True
+      - MONGO_URL=${MONGO_URL}
+      - MONGO_PORT=${MONGO_PORT}
+      - SERVICE_NAME=data_mongo
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo
+    container_name: mongodb_data_example

@@ -1,0 +1,23 @@
+name: {{service|capitalize}} Integration Tests
+tests:
+  - description: Test /{{service}}/ping/ GET
+    endpoint: '/{{service}}/ping/'
+    verb: GET
+    status: 200
+  - description: Test /{{service}}/ GET
+    endpoint: '/{{service}}/'
+    verb: GET
+    status: 200
+    count: 0
+  - description: Test /{{service}}/count GET
+    endpoint: '/{{service}}/count/'
+    verb: GET
+    status: 200
+  - description: Test /{{service}}/ PUT
+    endpoint: '/{{service}}/'
+    verb: PUT
+    status: 400
+  - description: Test /{{service}}/ DELETE
+    endpoint: '/{{service}}/'
+    verb: DELETE
+    status: 400

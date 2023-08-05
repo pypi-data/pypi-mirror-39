@@ -1,0 +1,135 @@
+[
+  {
+    "essential": true,
+    "image": "${registry}/${image}:${image_tag}",
+    "memory": 256,
+    "memoryReservation": 128,
+    "name": "${container_name}",
+    "hostname": "${container_name}",
+    "extraHosts": [
+        {
+          "ipAddress": "172.17.0.1",
+          "hostname": "hostbox"
+        }
+    ],
+    "PortMappings": [
+      {
+        "ContainerPort": ${port},
+        "protocol": "tcp"
+      }
+    ],
+    "logConfiguration": {
+		  "logDriver": "json-file",
+		  "options": {
+			  "max-size": "10m"
+		  }
+	  },
+	  "links": [
+        "${container_name}-mongo:${container_name}-mongo"
+      ],
+    "environment": [
+      {
+        "name": "http_proxy",
+        "value": "http://proxy.tpz.reliabilly.com:8080"
+      },
+      {
+        "name": "https_proxy",
+        "value": "http://proxy.tpz.reliabilly.com:8080"
+      },
+      {
+        "name": "no_proxy",
+        "value": "169.254.170.2,169.254.169.254,127.0.0.1,localhost"
+      },
+      {
+        "name": "HTTP_PROXY",
+        "value": "http://proxy.tpz.reliabilly.com:8080"
+      },
+      {
+        "name": "HTTPS_PROXY",
+        "value": "http://proxy.tpz.reliabilly.com:8080"
+      },
+      {
+        "name": "NO_PROXY",
+        "value": "169.254.170.2,169.254.169.254,127.0.0.1,localhost"
+      },
+      {
+        "name": "DEBUG",
+        "value": "${debug}"
+      },
+      {
+        "name": "MONGO_URL",
+        "value": "mongodb://${container_name}-mongo"
+      },
+      {
+        "name": "MONGO_PORT",
+        "value": "27017"
+      },
+      {
+        "name": "AWS_REGION",
+        "value": "${aws_region}"
+      },
+      {
+        "name": "SERVICE_NAME",
+        "value": "${service_name}"
+      },
+      {
+        "name": "VERSION",
+        "value": "${image_tag}"
+      },
+      {
+        "name": "BUILD_NUMBER",
+        "value": "${build_number}"
+      },
+      {
+        "name": "ENVIRONMENT",
+        "value": "${environment}"
+      },
+      {
+        "name": "STATS_URL",
+        "value": "hostbox"
+      },
+      {
+        "name": "AWS_REGION",
+        "value": "${aws_region}"
+      },
+      {
+        "name": "REMOTE_LOG_URL",
+        "value": "https://endpoint1.collection.us2.sumologic.com/receiver/v1/http/ZaVnC4dhaV0jqKIHw06YM706YR3QgGQhUZYa242dRAJp_T74K6rTYFANIUkLnE167a1WVMkoKOy0oJMNlW84bBUsehJt58Vx_CTVhcMV_RE-fTIv2QUlVw=="
+      }
+    ]
+  },
+  {
+    "essential": true,
+    "image": "mongo:latest",
+    "memory": 256,
+    "memoryReservation": 128,
+    "name": "${container_name}-mongo",
+    "hostname": "${container_name}-mongo",
+    "environment": [
+      {
+        "name": "http_proxy",
+        "value": "http://proxy.tpz.reliabilly.com:8080"
+      },
+      {
+        "name": "https_proxy",
+        "value": "http://proxy.tpz.reliabilly.com:8080"
+      },
+      {
+        "name": "no_proxy",
+        "value": "169.254.170.2,169.254.169.254,127.0.0.1,localhost"
+      },
+      {
+        "name": "HTTP_PROXY",
+        "value": "http://proxy.tpz.reliabilly.com:8080"
+      },
+      {
+        "name": "HTTPS_PROXY",
+        "value": "http://proxy.tpz.reliabilly.com:8080"
+      },
+      {
+        "name": "NO_PROXY",
+        "value": "169.254.170.2,169.254.169.254,127.0.0.1,localhost"
+      }
+    ]
+  }
+]

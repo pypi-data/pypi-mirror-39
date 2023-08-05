@@ -1,0 +1,53 @@
+variable "port_{{service}}" {
+  default = 8000
+}
+
+module "ecs_service_{{service}}" {
+  source = "./ecs_tasks/"
+
+  name                  = "platform-{{service}}"
+  environment           = "${var.environment}"
+  container_definitions = "./container_definitions/svc_{{service}}.json"
+  container_port        = "${var.port_{{service}}}"
+  target_group_arn      = "${aws_lb_target_group.{{service}}.arn}"
+
+  template_variables = {
+    image        = "reliabilly/{{service}}"
+    service_name = "{{service}}"
+    image_tag    = "${var.release_number}"
+    build_number = "${var.build_number}"
+    environment  = "${var.environment}"
+  }
+
+  lb_arn          = "${aws_lb.lb.arn}"             # Used as a replacement for depends_on until module support is added
+  lb_listener_arn = "${aws_lb_listener.https.arn}" # Used as a replacement for depends_on until module support is added
+}
+
+resource "aws_lb_target_group" "{{service}}" {
+  name     = "reliabilly-${var.name}-{{service}}"
+  port     = "${var.port_{{service}}}"
+  protocol = "HTTP"
+  vpc_id   = "${data.aws_vpc.shared_services.id}"
+
+  health_check = {
+    path = "/{{service}}/ping/"
+  }
+
+  depends_on = ["aws_lb.lb"]
+
+  tags = "${var.aws_tags}"
+}
+
+resource "aws_lb_listener_rule" "{{service}}" {
+  listener_arn = "${aws_lb_listener.https.arn}"
+
+  action {
+    type             = "forward"
+    target_group_arn = "${aws_lb_target_group.{{service}}.arn}"
+  }
+
+  condition {
+    field  = "path-pattern"
+    values = ["/{{service}}/*"]
+  }
+}

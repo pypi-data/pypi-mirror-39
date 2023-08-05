@@ -1,0 +1,23 @@
+name: Data_mongo Integration Tests
+tests:
+  - description: Test /data_mongo/ping/ GET
+    endpoint: '/data_mongo/ping/'
+    verb: GET
+    status: 200
+  - description: Test /data_mongo/ GET
+    endpoint: '/data_mongo/'
+    verb: GET
+    status: 200
+    count: 0
+  - description: Test /data_mongo/count GET
+    endpoint: '/data_mongo/count/'
+    verb: GET
+    status: 200
+  - description: Test /data_mongo/ PUT
+    endpoint: '/data_mongo/'
+    verb: PUT
+    status: 400
+  - description: Test /data_mongo/ DELETE
+    endpoint: '/data_mongo/'
+    verb: DELETE
+    status: 400
