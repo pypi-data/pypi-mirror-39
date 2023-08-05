@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: reticle
+Version: 0.0.2
+Summary: Python 3.6+ library for submitting to AWS Batch interactively.
+Home-page: https://github.com/clintval/reticle
+Author: clintval
+Author-email: valentine.clint@gmail.com
+License: MIT
+Download-URL: https://github.com/clintval/reticle/archive/v0.0.2.tar.gz
+Project-URL: Documentation, https://reticle.readthedocs.io
+Project-URL: Issue-Tracker, https://github.com/clintval/reticle/issues
+Description: # reticle
+        
+        [![Testing Status](https://travis-ci.org/clintval/reticle.svg)](https://travis-ci.com/clintval/reticle)
+        [![codecov](https://codecov.io/gh/clintval/reticle/branch/master/graph/badge.svg)](https://codecov.io/gh/clintval/reticle)
+        [![MyPy Checked](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
+        [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+        
+        Python 3.6+ library for submitting to AWS Batch interactively.
+        
+        ```python
+        ❯ pip install reticle
+        ```
+        
+        Features:
+        
+        - Submit Batch jobs
+Keywords: AWS Batch job submission
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
