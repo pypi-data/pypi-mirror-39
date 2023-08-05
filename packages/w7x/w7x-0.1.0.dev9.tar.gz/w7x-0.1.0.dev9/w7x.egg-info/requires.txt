@@ -1,0 +1,7 @@
+pathlib2;python_version<"3.0"
+pathlib;python_version>="3.0"
+tfields
+osa
+symfit
+joblib
+transcoding
