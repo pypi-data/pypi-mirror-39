@@ -1,0 +1,11 @@
+README.md
+setup.py
+companno/__init__.py
+companno/cognames.tsv
+companno/data.py
+companno/parser.py
+companno.egg-info/PKG-INFO
+companno.egg-info/SOURCES.txt
+companno.egg-info/dependency_links.txt
+companno.egg-info/requires.txt
+companno.egg-info/top_level.txt

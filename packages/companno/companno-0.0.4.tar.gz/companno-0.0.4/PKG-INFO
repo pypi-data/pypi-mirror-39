@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: companno
+Version: 0.0.4
+Summary: Comparative analysis of genome annotations.
+Home-page: https://github.com/IC-Induja/companno
+Author: Induja Chandrakumar
+Author-email: ic.induja@gmail.com
+License: MIT
+Description: 
+        Comparitve analysis of genome annotations.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Provides-Extra: tests
