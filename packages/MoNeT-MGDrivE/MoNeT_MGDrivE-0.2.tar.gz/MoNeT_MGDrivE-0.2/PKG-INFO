@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: MoNeT_MGDrivE
+Version: 0.2
+Summary: MoNeT python package
+Home-page: https://github.com/Chipdelmal/MoNeT
+Author: Hector M. Sanchez C.
+Author-email: sanchez.hmsc@berkeley.edu
+License: MIT
+Description: # MoNeT Python Package
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
