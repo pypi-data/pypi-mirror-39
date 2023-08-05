@@ -1,0 +1,32 @@
+{% load dynamicforms %}
+{% if serializer.render_type != 'table rows' %}
+<table id="list-{{ serializer.uuid }}" class="table table-striped">
+  <thead>
+  <tr>
+    {% table_columns_count serializer as columns_count %}
+  {# TODO: Remove "Actions" strings #}
+    {% render_table_commands serializer "rowstart" table_header='Actions' %}
+    {% for column in serializer.fields.values %}
+      {% if column.visible_in_table %}
+      <th>{{ column.label }}</th>{% endif %}{% endfor %}
+    {% render_table_commands serializer "rowend" table_header='Actions' %}
+  </tr>
+  </thead>
+  <tbody>
+{% endif %}
+    {% set_var template_table_body=DF.TEMPLATE|add:'base_table_body.html' %}
+    {% include template_table_body %}
+{% if serializer.render_type != 'table rows' %}
+  </tbody>
+  <tfoot>
+    <tr id="loading-{{ serializer.uuid }}" style="display: none">
+      <td colspan="{{ columns_count }}" align="center">Loading...</td>
+    </tr>
+  </tfoot>
+</table>
+{% render_table_commands serializer "onrowclick" %}
+{#TODO: Unit test: check if on_click & on_right_click declare properly, when table rows dynamically load#}
+<script type="application/javascript">
+  dynamicforms.paginator_init_table("{{ serializer.uuid }}", "{{ link_next }}", "{{ link_prev }}");
+</script>
+{% endif %}
