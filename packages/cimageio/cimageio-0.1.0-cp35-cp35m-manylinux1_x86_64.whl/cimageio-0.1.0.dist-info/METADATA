@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: cimageio
+Version: 0.1.0
+Summary: Fast & robust image IO library with minimal dependencies.
+Home-page: https://github.com/jhlee525/cimageio
+Author: Jaehwan Lee
+Author-email: bmrcreative90@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: six
+Requires-Dist: numpy
+
+UNKNOWN
+
+
