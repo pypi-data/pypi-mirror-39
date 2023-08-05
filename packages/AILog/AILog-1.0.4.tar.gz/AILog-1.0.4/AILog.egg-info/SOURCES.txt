@@ -1,0 +1,9 @@
+setup.py
+AILog.egg-info/PKG-INFO
+AILog.egg-info/SOURCES.txt
+AILog.egg-info/dependency_links.txt
+AILog.egg-info/not-zip-safe
+AILog.egg-info/requires.txt
+AILog.egg-info/top_level.txt
+ailog/__init__.py
+ailog/classes.py
