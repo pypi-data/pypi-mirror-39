@@ -1,0 +1,10 @@
+test:
+	python3.7 -m pytest -s tests
+
+run:
+	python3.7 main.py dummy_arg
+
+clean:
+	find . -name *.pyc -exec rm -f {} \;
+	rm -rf 	.cache \
+			.pytest_cache

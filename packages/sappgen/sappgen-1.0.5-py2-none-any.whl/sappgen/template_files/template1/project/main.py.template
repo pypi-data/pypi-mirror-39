@@ -1,0 +1,30 @@
+"""using $PROJECT_NAME/main
+
+    > python3.7 main.py
+"""
+import logging
+import sys
+from configparser import ConfigParser
+from $APP_NAME.util import set_root_logger
+from $APP_NAME import process_app
+
+# ==================================================================================================
+
+config = ConfigParser()
+config.read("config.ini")
+
+set_root_logger(config["LOGS"]["log_level"], config["LOGS"]["log_file"])
+
+def _is_valid_input(args):
+    return True
+
+# ==================================================================================================
+
+if __name__ == "__main__":
+    logging.info("running $PROJECT_NAME/main")
+
+    if not _is_valid_input(sys.argv[1:]):
+        print(__doc__)
+        sys.exit()
+
+    process_app()
