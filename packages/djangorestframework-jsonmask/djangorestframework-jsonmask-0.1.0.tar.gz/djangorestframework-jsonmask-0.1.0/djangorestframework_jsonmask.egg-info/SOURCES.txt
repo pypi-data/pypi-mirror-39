@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+djangorestframework_jsonmask.egg-info/PKG-INFO
+djangorestframework_jsonmask.egg-info/SOURCES.txt
+djangorestframework_jsonmask.egg-info/dependency_links.txt
+djangorestframework_jsonmask.egg-info/requires.txt
+djangorestframework_jsonmask.egg-info/top_level.txt
+rest_framework_jsonmask/__init__.py
+rest_framework_jsonmask/constants.py
+rest_framework_jsonmask/decorators.py
+rest_framework_jsonmask/serializers.py
+rest_framework_jsonmask/utils.py
+rest_framework_jsonmask/views.py
