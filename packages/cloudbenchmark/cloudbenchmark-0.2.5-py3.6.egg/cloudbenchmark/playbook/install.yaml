@@ -1,0 +1,47 @@
+---
+- hosts: all
+  tasks:
+  - name: install base software
+    become: yes
+    yum:
+      name:
+        - git
+        - python3-pip
+        - perl
+        - perl-Time-HiRes
+        - make
+        - gcc
+        - gcc-c++
+        - gcc-gfortran
+        - libgfortran
+        - python3-devel
+        - https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+      state: latest
+
+  - name: update
+    become: yes
+    yum:
+      name: '*'
+      state: latest
+
+  - name: install unixbench
+    git:
+      repo: https://github.com/kdlucas/byte-unixbench.git
+      dest: /home/ec2-user/byte-unixbench
+
+  - name: install benchmark software
+    become: yes
+    yum:
+      name:
+        - sysbench
+      state: latest
+      enablerepo: epel
+    ignore_errors: yes
+
+  - name: install cloudbenchmark
+    become: yes
+    pip:
+      name:
+        - cloudbenchmark
+      executable: pip3
+
