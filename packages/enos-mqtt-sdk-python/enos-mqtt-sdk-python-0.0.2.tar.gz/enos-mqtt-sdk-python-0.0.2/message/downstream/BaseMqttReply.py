@@ -1,0 +1,4 @@
+
+
+class BaseMqttReply(object):
+    pass
