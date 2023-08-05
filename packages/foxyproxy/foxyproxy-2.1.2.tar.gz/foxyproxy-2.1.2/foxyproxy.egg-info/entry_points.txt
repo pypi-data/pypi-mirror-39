@@ -1,0 +1,3 @@
+[console_scripts]
+foxyproxy = foxyproxy.run_proxy:main
+
