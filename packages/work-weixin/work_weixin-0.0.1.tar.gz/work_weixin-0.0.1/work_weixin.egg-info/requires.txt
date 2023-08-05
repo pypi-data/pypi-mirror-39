@@ -1,0 +1,4 @@
+setuptools==40.2.0
+requests==2.19.1
+requests_toolbelt==0.8.0
+PyYAML==3.13
