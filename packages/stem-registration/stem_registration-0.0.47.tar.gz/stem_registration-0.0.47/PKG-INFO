@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: stem_registration
+Version: 0.0.47
+Summary: A small registration package
+Home-page: https://gitlab.stemsc.com/shevelev/registration
+Author: Dmitry Shevelev
+Author-email: shevelev.dmitriy@stemsc.com
+License: UNKNOWN
+Description: 
+        
+        Default configs:
+        
+        SHOW_LOGIN = True
+        SHOW_LAST_FIRST_NAME = True
+        SHOW_CONTRACTOR_TYPE = True
+        SHOW_ADDRESS = True
+        SHOW_BILLING_ADDRESS = True
+        SHOW_NUMBER = True
+        NUMBER_IS_REQUIRED = True
+        SHOW_TAX_NUMBER = True
+        TAX_NUMBER_IS_REQUIRED = True
+        SHOW_ID_CARD_FIELDS = True
+        SHOW_NAME_LEGAL = True
+        NAME_LEGAL_IS_REQUIRED = False
+        SHOW_ACCOUNTING_NUMBER = True
+        DEFAULT_COUNTRY = UKR
+        ADDRESS_IS_REQUIRED = True
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
