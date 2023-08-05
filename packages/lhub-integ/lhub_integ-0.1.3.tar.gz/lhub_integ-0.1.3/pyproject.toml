@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "lhub_integ"
+version = "0.1.3"
+description = "The Logichub Integration SDK"
+
+license = "MIT"
+
+authors = [
+    "Russell Cohen <russell@logichub.com>",
+    "Conrad Verkler <conrad@logichub.com>"
+]
+
+readme = 'README.md'
+
+homepage = "https://logichub.com"
+
+keywords = ['security', 'automation', 'logichub']
+
+[tool.poetry.dependencies]
+python = ">=3.6"
+dataclasses-json = "*"
+click = "~7.0"
+docstring-parser = "~0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+
+
+[tool.poetry.scripts]
+bundle-requirements = 'lhub_integ.bundle_requirements:main'
