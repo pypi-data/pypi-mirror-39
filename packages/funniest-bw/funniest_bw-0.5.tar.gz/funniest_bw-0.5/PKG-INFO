@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: funniest_bw
+Version: 0.5
+Summary: a simple python project
+Home-page: http://www.sogou.com
+Author: wb
+Author-email: biaowang_88@163.com
+License: MIT
+Description: hehe
+        
+Keywords: sample setuptools development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7

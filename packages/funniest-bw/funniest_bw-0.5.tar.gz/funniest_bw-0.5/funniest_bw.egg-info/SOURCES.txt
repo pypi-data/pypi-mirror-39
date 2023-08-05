@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+funniest_bw/__init__.py
+funniest_bw.egg-info/PKG-INFO
+funniest_bw.egg-info/SOURCES.txt
+funniest_bw.egg-info/dependency_links.txt
+funniest_bw.egg-info/entry_points.txt
+funniest_bw.egg-info/top_level.txt
