@@ -1,0 +1,4 @@
+[console_scripts]
+caom2gen = caom2utils.fits2caom2:caom2gen
+fits2caom2 = caom2utils.legacy:main_app
+
