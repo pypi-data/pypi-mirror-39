@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: tox-auto-env
+Version: 0.0.1a0
+Summary: Keeps your tox virtualenv always up to date with dependencies
+Home-page: UNKNOWN
+Author: Aaron Ramshaw
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: tox
