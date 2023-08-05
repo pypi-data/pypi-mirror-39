@@ -1,0 +1,7 @@
+enum34
+flask-restplus
+oslo.config>=2.3.0
+oslo.log>=1.8.0
+pbr>=1.8
+stevedore
+werkzeug
