@@ -1,0 +1,9 @@
+global-include *.py
+
+include README.md
+include LICENSE
+
+prune deprecated
+prune jsformat
+prune jspcap
+prune sample
