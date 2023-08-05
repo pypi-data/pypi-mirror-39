@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: wpyscan
+Version: 1.0.1
+Summary: Wordpress pentest tool
+Home-page: https://github.com/hmikihth/wpyscan
+Author: ganapati (@G4N4P4T1), Miklos Horvath (hmikihth)
+Maintainer: Miklos Horvath <hmiki@blackpantheros.eu>
+License: BEER-WARE
+Description: Search exploits on exploit-db, wordpressexploit.com and wpvulndb.com according to recon informations (version, modules and theme).
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Utilities
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: POSIX :: BSD :: FreeBSD
+Classifier: Operating System :: POSIX :: BSD :: OpenBSD
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

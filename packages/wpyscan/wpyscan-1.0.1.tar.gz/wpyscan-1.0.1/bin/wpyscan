@@ -1,0 +1,150 @@
+#!/usr/bin/env python3
+"""
+----------------------------------------------------------------------------
+"THE BEER-WARE LICENSE" (Revision 42):
+ganapati (@G4N4P4T1) wrote this file. As long as you retain this notice you
+can do whatever you want with this stuff. If we meet some day, and you think
+this stuff is worth it, you can buy me a beer in return.
+----------------------------------------------------------------------------
+"""
+
+import argparse
+from wpyscan.wprecon import WPRecon
+from wpyscan.exploit_grabber import ExploitGrabber
+import wpyscan.exploit_grabber as exploit_grabber
+from inspect import isclass
+
+
+class Colors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
+def main(url, recon, proxy):
+    """
+    Main method, start scan, and exploit retrieving
+    """
+    wprecon = WPRecon(proxy)
+    wprecon_results = wprecon.scan(url)
+
+    print_recon(wprecon_results)
+    if not recon:
+        # Search sploits
+        grabbers_objects = []
+        for grabber in get_grabbers():
+            grabbers_objects.append(grabber())
+        print_plugins_sploits(grabbers_objects, wprecon_results)
+        print_theme_sploits(grabbers_objects, wprecon_results)
+        print_version_sploits(grabbers_objects, wprecon_results)
+
+
+def print_recon(wprecon_results):
+    # Recon
+    for name, result in wprecon_results['printable_results'].items():
+        if result is not None:
+            print ("{}[*] {}{}".format(Colors.OKBLUE, name, Colors.ENDC))
+            if isinstance(result, list):
+                for result_line in result:
+                    print("  {}[+] {}{}".format(Colors.OKGREEN, result_line, Colors.ENDC))
+            else:
+                print("  {}[+] {}{}".format(Colors.OKGREEN, result, Colors.ENDC))
+
+
+def print_plugins_sploits(grabbers, wprecon_results):
+    # Search for vulnerable plugins
+    print ("{}[*] Modules{}".format(Colors.OKBLUE, Colors.ENDC))
+    for plugin in wprecon_results['plugins']:
+        print ("{}  [+] {}{}".format(Colors.OKGREEN, plugin, Colors.ENDC))
+        for grabber in grabbers:
+            sploits = grabber.search(plugin, 'plugin')
+            for sploit in sploits:
+                print("{}    [!] {}{}".format(Colors.WARNING, sploit, Colors.ENDC))
+
+
+def print_theme_sploits(grabbers, wprecon_results):
+    # Search theme related sploits
+    themes = wprecon_results['printable_results']['Themes']
+    if len(themes) > 0:
+        for theme in themes:
+            theme = theme.split("--")[0].strip()
+            print("{}[*] Searching sploits for theme {}{}".format(Colors.OKBLUE, theme, Colors.ENDC))
+            for grabber in grabbers:
+                sploits = grabber.search(theme, 'theme')
+                for sploit in sploits:
+                    print("{}  [!] {}{}".format(Colors.WARNING, sploit, Colors.ENDC))
+
+
+def print_version_sploits(grabbers, wprecon_results):
+    # Search wordpress version related sploits
+    version = wprecon_results['printable_results']['Version']
+    if version is not None:
+        print("{}[*] Searching sploits for wordpress {}{}".format(Colors.OKBLUE, version, Colors.ENDC))
+        for grabber in grabbers:
+            sploits = grabber.search(version, 'version')
+            for sploit in sploits:
+                print("{}  [!] {}{}".format(Colors.WARNING, sploit, Colors.ENDC))
+
+
+def get_grabbers():
+    """
+    Get all exploit grabber classes
+    """
+    grabbers = []
+    for classname in dir(exploit_grabber):
+        try:
+            custom_class = getattr(exploit_grabber, classname)
+            if isclass(custom_class):
+                if issubclass(custom_class, ExploitGrabber):
+                    if custom_class.__name__ != ExploitGrabber.__name__:
+                        grabbers.append(custom_class)
+        except TypeError:
+            pass
+    return grabbers
+
+
+if __name__ == "__main__":
+    """
+    Entrypoint
+    """
+    print("""{}
+   -----------------------------------------
+   | Imagine a fucking awesome title here  |
+   | (like t-rex shooting lasers and stuff)|
+   -----------------------------------------{}
+    """.format(Colors.HEADER, Colors.ENDC))
+    parser = argparse.ArgumentParser(description='Sploit Wordpress for fun')
+    parser.add_argument('-u', '--url',
+                        action='store',
+                        dest='url',
+                        required=True,
+                        help='victim url')
+    parser.add_argument('-r', '--recon',
+                        action='store_true',
+                        dest='recon_only',
+                        default=False,
+                        help='Just recon')
+    parser.add_argument('-t', '--tor',
+                        action='store_true',
+                        dest='tor',
+                        default=False,
+                        help='Use Tor')
+    parser.add_argument('-p', '--proxy',
+                        action='store',
+                        dest='proxy',
+                        default=None,
+                        help='Use proxy')
+    args = parser.parse_args()
+
+    # Configure proxy
+    proxy = None
+    if args.proxy or args.tor:
+        proxy = {"http": args.proxy or "127.0.0.1:9050",
+                 "https": args.proxy or "127.0.0.1:9050"}
+
+    main(args.url, args.recon_only, proxy)

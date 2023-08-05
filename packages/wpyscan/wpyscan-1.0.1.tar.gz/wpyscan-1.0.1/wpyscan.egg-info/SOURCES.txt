@@ -1,0 +1,10 @@
+README.md
+setup.py
+bin/wpyscan
+wpyscan/__init__.py
+wpyscan/exploit_grabber.py
+wpyscan/wprecon.py
+wpyscan.egg-info/PKG-INFO
+wpyscan.egg-info/SOURCES.txt
+wpyscan.egg-info/dependency_links.txt
+wpyscan.egg-info/top_level.txt
