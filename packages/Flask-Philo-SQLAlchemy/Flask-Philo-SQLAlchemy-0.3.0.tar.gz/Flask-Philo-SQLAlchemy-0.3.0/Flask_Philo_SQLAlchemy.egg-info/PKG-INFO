@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: Flask-Philo-SQLAlchemy
+Version: 0.3.0
+Summary: Flask-Philo plugin that provides support for SQLAlchemy
+Home-page: https://github.com/Riffstation/Flask-Philo-SQLAlchemy
+Author: Manuel Ignacio Franco Galeano
+Author-email: maigfrga@gmail.com
+License: Apache
+Description: UNKNOWN
+Keywords: flask REST framework
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Framework :: Flask
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
