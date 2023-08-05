@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+drivers/linux/chromedriver
+drivers/mac/chromedriver
+drivers/windows/chromedriver.exe
+webbrowserdownloader/__init__.py
+webbrowserdownloader/browser.py
+webbrowserdownloader.egg-info/PKG-INFO
+webbrowserdownloader.egg-info/SOURCES.txt
+webbrowserdownloader.egg-info/dependency_links.txt
+webbrowserdownloader.egg-info/not-zip-safe
+webbrowserdownloader.egg-info/requires.txt
+webbrowserdownloader.egg-info/top_level.txt
