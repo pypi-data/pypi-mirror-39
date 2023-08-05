@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: cvss-util
+Version: 2.4.1
+Summary: This package contains cvss v2 and v3 calculation utilities.
+Home-page: https://github.com/asecurityteam/cvss_util
+Author: Atlassian Security Team
+Author-email: UNKNOWN
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: BSD License
+
+UNKNOWN
+
+
