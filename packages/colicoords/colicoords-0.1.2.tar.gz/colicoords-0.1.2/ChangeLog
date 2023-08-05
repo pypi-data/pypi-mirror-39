@@ -1,0 +1,57 @@
+CHANGES
+=======
+
+v0.1.2
+------
+
+* Update .travis.yml
+* Update README.rst
+* updated paths in test
+* fixed error
+* added try except around version
+* updated imports
+* removed top level imports from tests
+* updated tests
+* minor cleanup
+* version via pkg\_resources
+* moved sigma to \`dist\_kwargs\` for l\_dist plotting, close #53
+* added \_\_array\_wrap\_\_ to numpy subclasses to return base ndarray upon applying ufuncs, fixes #12
+* added angle test
+* added storm rotation tests, fixes #10
+* added test, fixes #9
+* removed inaccurate information on chained optimizer, fixes #74
+* updated email
+* minor formatting
+* minor formatting
+* minor formatting
+* default cmap for itercellplot
+* added filter binaries function
+* new l normalization
+* Added spatial distribution histogramming for storm data
+* fixed bug introduced by previous bugfix
+* fixed negative indices bug by removing values out of bounds by bins
+* fixed lenght index bug
+* fixed plot midline bug
+* added binary filter function and remove poorly fitted cells from data\_to\_cells
+* updated requirements
+* initial implementation of iterplot
+* removed discr == 0 checking
+* added zero to plotting distibutions, fixes #72
+* fixed bug where cell wouldnt rotate propery if orientation was exactly equal to 45 degrees
+* renamed example 4
+* updated docstrings
+* cleanup of examples dir
+* added returns in python code blocks
+* docs and check for subclasses of CellMinimizeFunctionBase
+* initial implementation of optimization docs
+* refactored objective to cell\_function as its not an objective function
+* updated data test to use ds1
+* moved ds5 (storm) to ds3
+* updated tests
+* shuffle in test data sets
+* removed some test data
+* small changes to example notebooks
+* add futile debug binding to done button
+* small bugfix
+* New classes for img standardization and augmentation
+* Update \_\_init\_\_.py
