@@ -1,0 +1,50 @@
+#!/bin/bash
+#$ -S /bin/bash
+#$ -N {{ tasks[0].name }}.sh
+#$ -wd {{ gpipe.work_directory }}
+#$ -j y
+#$ -o {{ gpipe.log_directory }}{% if tasks[0].cpus %}
+#$ -pe def_slot {{ tasks[0].cpus }}{% endif %}{% if tasks[0].memory %}
+#$ -l s_vmem={{ tasks[0].memory|GB }}G,mem_req={{ tasks[0].memory|GB }}G{% endif %}{% for k in tasks[0].resources %}
+#$ {{ k }} {{ tasks[0].resources[k] }}{% endfor %}
+#$ -t 1-{{ tasks|length }}{% for name in tasks|collect_dependency_task_names %}
+#$ -hold_jid {{ name }}.sh{% endfor %}
+
+# ================================================================================
+# meta
+# ================================================================================
+
+gp_script_name={{ tasks[0].name }}.sh
+gp_work_directory={{ gpipe.work_directory }}
+
+
+# ================================================================================
+# error handling & logging
+# ================================================================================
+
+set -eux
+trap 'exit 100' ERR INT TERM SIGXCPU
+
+if [ "$(basename $0)" = "$gp_script_name" ]; then
+    exec > >(tee -a "$0.oMANUAL") 2>&1
+fi
+
+# ================================================================================
+# script
+# ================================================================================
+
+p={{ gpipe.log_directory }}/array
+scripts=(\{% for t in tasks %}
+    [{{ loop.index }}]=$p/{{ t.name }}.{{ '%06d'|format(t.index) }}.sh\{% endfor %}
+)
+
+if [ "${SGE_TASK_ID:-x}" != "x" ]; then
+    script=${scripts[$SGE_TASK_ID]}
+    exec /bin/bash -eux $script
+else
+    for script in ${scripts[@]}; do
+        echo "# ==========> [$(date +'%Y-%m-%d %H:%M:%S')] $script <==========" 2>&1
+        /bin/bash -eux $script 2>&1
+        echo
+    done
+fi

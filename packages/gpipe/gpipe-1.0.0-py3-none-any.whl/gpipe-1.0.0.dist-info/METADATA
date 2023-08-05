@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: gpipe
+Version: 1.0.0
+Summary: GridPipe
+Home-page: https://github.com/east301/gpipe
+Author: east301
+Author-email: me@east301.net
+License: MIT
+Keywords: workflow manager grid engine
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Dist: accessor (==0.1)
+Requires-Dist: click (==7.0)
+Requires-Dist: decorator (==4.3.0)
+Requires-Dist: humanfriendly (==4.17)
+Requires-Dist: jinja2 (==2.10)
+Requires-Dist: logzero (==1.5.0)
+Requires-Dist: lxml (==4.2.5)
+Requires-Dist: markupsafe (==1.1.0)
+Requires-Dist: networkx (==2.2)
+Provides-Extra: dev
+Requires-Dist: backcall (==0.1.0) ; extra == 'dev'
+Requires-Dist: bleach (==3.0.2) ; extra == 'dev'
+Requires-Dist: certifi (==2018.11.29) ; extra == 'dev'
+Requires-Dist: chardet (==3.0.4) ; extra == 'dev'
+Requires-Dist: decorator (==4.3.0) ; extra == 'dev'
+Requires-Dist: docutils (==0.14) ; extra == 'dev'
+Requires-Dist: flake8 (==3.6.0) ; extra == 'dev'
+Requires-Dist: idna (==2.7) ; extra == 'dev'
+Requires-Dist: ipython (==7.2.0) ; extra == 'dev'
+Requires-Dist: ipython-genutils (==0.2.0) ; extra == 'dev'
+Requires-Dist: jedi (==0.13.1) ; extra == 'dev'
+Requires-Dist: mccabe (==0.6.1) ; extra == 'dev'
+Requires-Dist: parso (==0.3.1) ; extra == 'dev'
+Requires-Dist: pexpect (==4.6.0) ; extra == 'dev'
+Requires-Dist: pickleshare (==0.7.5) ; extra == 'dev'
+Requires-Dist: pkginfo (==1.4.2) ; extra == 'dev'
+Requires-Dist: prompt-toolkit (==2.0.7) ; extra == 'dev'
+Requires-Dist: ptyprocess (==0.6.0) ; extra == 'dev'
+Requires-Dist: pycodestyle (==2.4.0) ; extra == 'dev'
+Requires-Dist: pyflakes (==2.0.0) ; extra == 'dev'
+Requires-Dist: pygments (==2.3.0) ; extra == 'dev'
+Requires-Dist: readme-renderer (==24.0) ; extra == 'dev'
+Requires-Dist: requests (==2.20.1) ; extra == 'dev'
+Requires-Dist: requests-toolbelt (==0.8.0) ; extra == 'dev'
+Requires-Dist: setuptools-scm (==3.1.0) ; extra == 'dev'
+Requires-Dist: six (==1.11.0) ; extra == 'dev'
+Requires-Dist: tqdm (==4.28.1) ; extra == 'dev'
+Requires-Dist: traitlets (==4.3.2) ; extra == 'dev'
+Requires-Dist: twine (==1.12.1) ; extra == 'dev'
+Requires-Dist: urllib3 (==1.24.1) ; extra == 'dev'
+Requires-Dist: wcwidth (==0.1.7) ; extra == 'dev'
+Requires-Dist: webencodings (==0.5.1) ; extra == 'dev'
+
+GridPipe
+
+

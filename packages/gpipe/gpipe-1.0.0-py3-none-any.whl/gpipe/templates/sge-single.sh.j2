@@ -1,0 +1,123 @@
+#!/bin/bash
+#$ -S /bin/bash
+#$ -N {{ task.name }}.sh
+#$ -wd {{ gpipe.work_directory }}
+#$ -j y
+#$ -o {{ gpipe.log_directory }}{% if task.cpus %}
+#$ -pe def_slot {{ task.cpus }}{% endif %}{% if task.memory %}
+#$ -l s_vmem={{ task.memory|GB }}G,mem_req={{ task.memory|GB }}G{% endif %}{% for k in task.resources %}
+#$ {{ k }} {{ task.resources[k] }}{% endfor %}{% for name in task.dependency_task_names %}
+#$ -hold_jid {{ name }}.sh{% endfor %}
+
+# ================================================================================
+# meta
+# ================================================================================
+
+gp_script_name={{ task.name }}.sh
+gp_work_directory={{ gpipe.work_directory }}
+gp_temporary_directory={% if task.use_temporary_directory %}{{ gpipe.work_directory }}/{{ task.name }}.{{ '%06d'|format(task.index) }}.temp{% endif %}
+
+gp_num_modules={{ task.modules|length }}
+gp_modules=(\{% for m in task.modules %}
+    {{ m }}\{% endfor %}
+)
+
+gp_num_sources={{ task.iterate_sources()|list|length }}
+gp_sources=(\{% for _, s in task.iterate_sources() %}
+    {{ s }}\{% endfor %}
+)
+gp_num_outputs={{ task.iterate_outputs()|list|length }}
+gp_outputs=(\{% for _, o in task.iterate_outputs() %}
+    {{ o }}\{% endfor %}
+)
+
+# ================================================================================
+# error handling & logging
+# ================================================================================
+
+_on_exit() {
+    if [ $? -ne 0 ]; then
+        if [ "x${gp_temporary_directory}" != "x" -a -e "$gp_temporary_directory" ]; then
+            rm -rf $gp_temporary_directory
+        fi
+        if [ -e "$gp_work_directory" ]; then
+            cd "$gp_work_directory"
+            for o in "${gp_outputs[@]}"; do
+                rm -rf $o || true
+            done
+        fi
+
+        exit 100
+    fi
+}
+
+set -eux
+trap '_on_exit' EXIT
+trap 'exit 100' ERR INT TERM SIGXCPU
+
+if [ "$(basename $0)" = "$gp_script_name" ]; then
+    exec > >(tee -a "$0.oMANUAL") 2>&1
+fi
+
+# ================================================================================
+# environment
+# ================================================================================
+
+export LC_ALL=en_US.UTF-8
+
+# shows envrironment
+date            | awk '{ print "# gp :: date    # " $0 }' >&2
+hostname        | awk '{ print "# gp :: host    # " $0 }' >&2
+ulimit -a       | awk '{ print "# gp :: ulimit  # " $0 }' >&2
+env | sort      | awk '{ print "# gp :: env     # " $0 }' >&2
+
+# loads modules
+if [ $gp_num_modules -ge 1 ]; then
+    for m in "${gp_modules[@]}"; do
+        module load $m
+        module list --terse 2>&1 | fgrep $m >/dev/null || exit 100
+    done
+fi
+
+# ================================================================================
+# before:script
+# ================================================================================
+
+cd $gp_work_directory
+
+# checks existence of source files
+if [ $gp_num_sources -ge 1 ]; then
+    for s in "${gp_sources[@]}"; do
+        test -e $s
+    done
+fi
+
+# creates temporary_directory
+if [ "x${gp_temporary_directory}" != "x" ]; then
+    mkdir -p $gp_temporary_directory
+    export TMPDIR=$gp_temporary_directory
+fi
+
+# ================================================================================
+# script
+# ================================================================================
+
+{{ task.script }}
+
+# ================================================================================
+# after:script
+# ================================================================================
+
+cd $gp_work_directory
+
+# checks existence of output files
+if [ $gp_num_outputs -ge 1 ]; then
+    for e in "${gp_outputs[@]}"; do
+        test -e $e
+    done
+fi
+
+# deletes temporary_directory
+if [ "x${gp_temporary_directory}" != "x" ]; then
+    rm -rf $gp_temporary_directory
+fi
