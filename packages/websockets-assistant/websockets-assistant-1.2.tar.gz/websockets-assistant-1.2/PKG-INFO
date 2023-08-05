@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: websockets-assistant
+Version: 1.2
+Summary: Util for create websocket client(s) quickly
+Home-page: https://github.com/lwzm/websockets-assistant
+Author: lwzm
+Author-email: lwzm@qq.com
+License: UNKNOWN
+Description: # websockets-assistant
+        
+        ### How to use it
+        
+        ```
+        from websockets_assistant import run, start
+        
+        async def hello(ws):
+            await ws.send("hello")
+            await ws.send("websocket")
+        
+        run("wss://echo.websocket.org/", print, hello)
+        
+        start()
+        ```
+        
+Keywords: websockets,websocket,util,ws,wss
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
