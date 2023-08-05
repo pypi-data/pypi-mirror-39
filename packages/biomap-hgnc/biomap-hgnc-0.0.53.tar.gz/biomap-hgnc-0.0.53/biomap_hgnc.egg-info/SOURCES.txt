@@ -1,0 +1,11 @@
+README.md
+setup.py
+biomap/__init__.py
+biomap/mappers/__init__.py
+biomap/mappers/hgnc/__init__.py
+biomap/mappers/hgnc/hgnc.py
+biomap_hgnc.egg-info/PKG-INFO
+biomap_hgnc.egg-info/SOURCES.txt
+biomap_hgnc.egg-info/dependency_links.txt
+biomap_hgnc.egg-info/requires.txt
+biomap_hgnc.egg-info/top_level.txt
