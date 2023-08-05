@@ -1,0 +1,3 @@
+[console_scripts]
+akoteka = akoteka.gui.main_window:main
+
