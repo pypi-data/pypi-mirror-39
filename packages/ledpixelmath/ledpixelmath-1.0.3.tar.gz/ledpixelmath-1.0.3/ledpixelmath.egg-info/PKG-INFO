@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ledpixelmath
+Version: 1.0.3
+Summary: Does heavy LED pixel calculations.
+Home-page: https://github.com/tgreve85/ledpixelmath
+Author: Tim Greve
+Author-email: tgreve@stakotec.de
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: led,pixel,math,calculation
+Platform: UNKNOWN
+Classifier: Programming Language :: C++
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: POSIX
+Description-Content-Type: text/markdown
