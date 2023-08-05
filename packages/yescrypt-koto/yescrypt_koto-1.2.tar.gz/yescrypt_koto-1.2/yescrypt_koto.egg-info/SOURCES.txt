@@ -1,0 +1,16 @@
+MANIFEST.in
+README.txt
+setup.py
+sha256.h
+sha256_c.h
+sysendian.h
+yescrypt-best_c.h
+yescrypt-opt_c.h
+yescrypt-platform_c.h
+yescrypt-simd_c.h
+yescrypt.c
+yescrypt.h
+yescrypt_koto.egg-info/PKG-INFO
+yescrypt_koto.egg-info/SOURCES.txt
+yescrypt_koto.egg-info/dependency_links.txt
+yescrypt_koto.egg-info/top_level.txt
