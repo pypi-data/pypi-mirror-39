@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: json2python-models
+Version: 0.1b2
+Summary: Python models (attrs, dataclasses or custom) generator from JSON data with typing module support
+Home-page: https://github.com/bogdandm/json2python-models
+Author: bogdandm (Bogdan Kalashnikov)
+Author-email: bogdan.dm1995@yandex.ru
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
