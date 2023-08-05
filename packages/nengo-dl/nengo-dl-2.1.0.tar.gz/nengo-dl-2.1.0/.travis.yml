@@ -1,0 +1,102 @@
+language: minimal
+notifications:
+  email:
+    on_success: change
+    on_failure: change
+cache:
+  directories:
+  - $HOME/miniconda
+
+dist: trusty
+
+env:
+  global:
+    - MODE="test"
+    - PYTHON_VERSION="3.6"
+    - NUMPY_VERSION="numpy"
+    - TF_VERSION="tensorflow"
+    - NENGO_VERSION="nengo"
+    - TEST_ARGS=""
+    - PIP_UPGRADE="true"  # always upgrade to latest version
+    - PIP_UPGRADE_STRATEGY="eager"
+
+jobs:
+  include:
+  - stage: test
+    env: MODE="static"
+  - env: MODE="docs"
+  - env: MODE="test"
+    cache: false  # disable the cache for one build to make sure that works
+  - env: MODE="coverage"
+         NENGO_VERSION="git+https://github.com/nengo/nengo.git"
+         TF_VERSION="tensorflow --pre"
+  - env: MODE="coverage"
+         NENGO_VERSION="nengo==2.7.0"
+         TF_VERSION="tensorflow==1.4.0"
+         NUMPY_VERSION="numpy==1.12.1"
+         PYTHON_VERSION="3.4"
+         PIP_UPGRADE_STRATEGY="only-if-needed"
+  - env: TEST_ARGS="--dtype float64 --simulator-only"
+  - env: TEST_ARGS="--unroll_simulation 5 --simulator-only"
+  - env: TEST_ARGS="--inference-only --simulator-only"
+  - env: MODE="examples"
+    language: generic  # needed for xvfb
+  - stage: deploy
+    if: branch =~ ^release-candidate-* OR tag =~ ^v[0-9]*
+    env: MODE="deploy"
+    deploy:
+      - provider: pypi
+        server: https://test.pypi.org/legacy/
+        user: drasmuss
+        password: $PYPI_TOKEN
+        distributions: "sdist bdist_wheel"
+        on:
+          all_branches: true
+          condition: $TRAVIS_BRANCH =~ ^release-candidate-*
+          condition: $TRAVIS_TAG = ""
+      - provider: pypi
+        user: drasmuss
+        password: $PYPI_TOKEN
+        distributions: "sdist bdist_wheel"
+        on:
+          all_branches: true
+          condition: $TRAVIS_TAG =~ ^v[0-9]*
+
+# set up miniconda
+before_install:
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - if ! [[ -d $HOME/miniconda/envs/test ]]; then
+      rm -rf $HOME/miniconda;
+      wget -q http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh;
+      bash miniconda.sh -b -p $HOME/miniconda;
+      conda create -q -y -n test python=$PYTHON_VERSION pip;
+    fi
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update -q conda
+  - conda info -a
+  - chmod +x .ci/*.sh
+
+# install python requirements
+install:
+  - source activate test
+  - pip install pip
+  # note: we install packages in reverse dependency order, so that we can be
+  # sure we end up with the version we specify (and not the version specified
+  # by a downstream dependency)
+  - pip install -e .[tests]
+  - .ci/$MODE.sh install
+  - pip install $TF_VERSION $NENGO_VERSION $NUMPY_VERSION
+  - conda list -e
+  - pip freeze
+
+before_script:
+  - .ci/$MODE.sh before_script
+
+script:
+  - .ci/$MODE.sh script
+
+before_cache:
+  - conda clean --all
+
+after_success:
+  - .ci/$MODE.sh after_success
