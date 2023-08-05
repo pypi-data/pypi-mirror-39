@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+anosql/__init__.py
+anosql/core.py
+anosql/exceptions.py
+anosql/loaders.py
+anosql.egg-info/PKG-INFO
+anosql.egg-info/SOURCES.txt
+anosql.egg-info/dependency_links.txt
+anosql.egg-info/top_level.txt
+docs/Makefile
+docs/conf.py
+docs/index.rst
+docs/make.bat
