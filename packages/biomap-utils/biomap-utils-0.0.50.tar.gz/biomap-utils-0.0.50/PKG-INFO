@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: biomap-utils
+Version: 0.0.50
+Summary: BioMap utilities
+Home-page: https://github.com/BioMapOrg/biomap-utils
+Author: Sebastian Winkler
+Author-email: winkler@informatik.uni-tuebingen.de
+License: UNKNOWN
+Description: # biomap-utils
+        --------------
+        
+        BioMap utilities
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
