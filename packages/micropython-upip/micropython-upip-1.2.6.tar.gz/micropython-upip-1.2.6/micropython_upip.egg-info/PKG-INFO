@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: micropython-upip
+Version: 1.2.6
+Summary: Simple package manager for MicroPython.
+Home-page: https://github.com/pfalcon/micropython-lib
+Author: Paul Sokolovsky
+Author-email: micropython-lib@googlegroups.com
+Maintainer: Paul Sokolovsky
+Maintainer-email: micropython-lib@googlegroups.com
+License: MIT
+Description: Simple self-hosted package manager for MicroPython (requires usocket, ussl, uzlib, uctypes builtin modules). Compatible only with packages without custom setup.py code.
+Platform: UNKNOWN
