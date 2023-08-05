@@ -1,0 +1,10 @@
+global-exclude .DS_Store
+
+global-include *.md
+global-include *.py
+
+include README.md
+include LICENSE
+
+prune pcapkit/protocols/*/NotImplemented
+prune pcapkit/vendor
