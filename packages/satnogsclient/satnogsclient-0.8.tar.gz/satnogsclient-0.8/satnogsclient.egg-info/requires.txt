@@ -1,0 +1,17 @@
+APScheduler
+SQLAlchemy
+requests
+validators
+python-dateutil
+ephem
+pytz
+flask
+pyopenssl
+pyserial
+flask-socketio
+redis
+numpy
+matplotlib
+
+[develop]
+flake8
