@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: swc-registry
+Version: 0.0.5
+Summary: Python library for accessing SWC-registry content.
+Home-page: https://github.com/SmartContractSecurity/SWC-registry-python
+Author: SmartContractSecurity
+Author-email: ersul4ik@gmail.com
+License: UNKNOWN
+Description: # SWC-registry-python
+        
+        [![CircleCI](https://circleci.com/gh/SmartContractSecurity/SWC-registry-python.svg?style=svg)](https://circleci.com/gh/SmartContractSecurity/SWC-registry-python)
+        
+        ## Description
+        Python library for accessing SWC-registry content.
+        
+        ## Installation
+        
+        ```console
+        $ pip install -U swc-registry
+        ```
+        
+        ## Usage
+        ```python
+        from swc_registry import SWC
+        
+        swc = SWC('SWC-100')
+        swc.title
+        ```
+        
+        ## Contribution
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Description-Content-Type: text/markdown
