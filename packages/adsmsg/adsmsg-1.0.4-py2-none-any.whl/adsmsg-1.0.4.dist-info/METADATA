@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: adsmsg
+Version: 1.0.4
+Summary: Interpipeline communication messages
+Home-page: http://github.com/adsabs/flask-discoverer/
+Author: NASA/SAO ADS
+Author-email: UNKNOWN
+License: MIT
+Platform: any
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: protobuf (==3.3.0)
+
+ADSPipelineMsg
+-------------
+Interpipeline communication messages
+
+
