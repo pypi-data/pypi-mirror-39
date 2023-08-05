@@ -1,0 +1,6 @@
+Click>=6.7
+setuptools>=35.0.2
+jinja2>=2.9.6
+colorama>=0.3.7
+yapf==0.22
+pexpect>=4.2.1
