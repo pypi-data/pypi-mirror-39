@@ -1,0 +1,4 @@
+[console_scripts]
+fetch = fetch_new_stock_datasets:fetch_new_stock_datasets
+sa = sa:run_sa_tool
+
