@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+baumkuchen/__init__.py
+baumkuchen/matrix.py
+baumkuchen.egg-info/PKG-INFO
+baumkuchen.egg-info/SOURCES.txt
+baumkuchen.egg-info/dependency_links.txt
+baumkuchen.egg-info/requires.txt
+baumkuchen.egg-info/top_level.txt
+data/data_file
+sample/__init__.py
+sample/package_data.dat
+tests/__init__.py
+tests/test_simple.py
