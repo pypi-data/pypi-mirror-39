@@ -1,0 +1,15 @@
+ratecounter/__init__.py,sha256=aFfMzSIBAbNfe4Aw6maeBp8sv6LQL0bULkS34iz4YLA,95
+ratecounter/cli.py,sha256=6nbLjfcMUiGSLJg5k0jSZk9ZoMAdGpzyIOLIKpMUjT0,1252
+ratecounter/main.py,sha256=WsoPCc420DhwCqMrIk2iSHgdTtWduSlzpnFYSxgbD_4,4845
+ratecounter/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ratecounter/tests/test_cli.py,sha256=S_Xkf9kQTkRqqLJEZaISKtlXVAgxlqUQuk4ip1NL674,1569
+ratecounter/tests/test_data.py,sha256=Vht0rK8k0qWBy6WRgpChdtSRMxtwZSYc_AMGcNKilNI,5305
+ratecounter/tests/test_ratecounter.py,sha256=gPsUxiWJ7b58WfWRmLGL9Gk1_7ZnDG5iGZ9cxGJ4mhk,2425
+ratecounter/tests/test_score.py,sha256=Sbw8-2LFJCGXsPrUACAJRrno5IZ0rBYNrdW8r6G_Rs4,1800
+RateCounter-1.1.dist-info/LICENSE,sha256=CBEoWEzM5DbermeBMZVHZh3d8ESo7Q0ZPyRXcuquios,1486
+RateCounter-1.1.dist-info/METADATA,sha256=w0wl2s4Gi7GV6urcq07hm07jzkjLDVBL63KrZA1-Pzw,2807
+RateCounter-1.1.dist-info/WHEEL,sha256=CihQvCnsGZQBGAHLEUMf0IdA4fRduS_NBUTMgCTtvPM,110
+RateCounter-1.1.dist-info/entry_points.txt,sha256=Vy22N6NcNHi-xvXLqKDjmXxNh05BCcq5cLL9-RH4a_g,54
+RateCounter-1.1.dist-info/top_level.txt,sha256=6W0nWgptj7682Me3QJQYoy6rVJQZ6m__ztfHHdp1f2w,12
+RateCounter-1.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+RateCounter-1.1.dist-info/RECORD,,
