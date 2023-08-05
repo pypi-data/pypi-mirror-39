@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: my-voice-analysis
+Version: 0.1
+Summary: the analysis of voice (simultaneous speech) without the need of a transcription
+Home-page: https://github.com/Shahabks/my-voice-analysis
+Author: Shahab Sabahi
+Author-email: sabahi.s@mysol-gc.jp
+License: MIT
+Description: UNKNOWN
+Keywords: praat speech signal processing phonetics
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
