@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+tox_auto_env.py
+tox_auto_env.egg-info/PKG-INFO
+tox_auto_env.egg-info/SOURCES.txt
+tox_auto_env.egg-info/dependency_links.txt
+tox_auto_env.egg-info/entry_points.txt
+tox_auto_env.egg-info/top_level.txt
