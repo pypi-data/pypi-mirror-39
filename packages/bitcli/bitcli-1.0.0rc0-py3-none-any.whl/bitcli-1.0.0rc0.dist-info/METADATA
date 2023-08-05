@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: bitcli
+Version: 1.0.0rc0
+Summary: Show prices in the console from Bitpanda
+Home-page: https://github.com/jmolinaso/bitcli/
+Author: Julio Molina Soler
+Author-email: julio@molinasoler.xyz
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# Retrieve prices in cli from Bitpanda
+
+## Installation
+
+```
+$ pip install -r requirements.txt
+
+$ pip install setup.py
+```
+
+## Development
+
+This project includes a number of helpers in the `Makefile` to streamline common development tasks.
+
+### Environment Setup
+
+The following demonstrates setting up and working with a development environment:
+
+```
+### create a virtualenv for development
+
+$ make virtualenv
+
+$ source env/bin/activate
+
+
+### run bitcli cli application
+
+$ bitcli --help
+
+
+### run pytest / coverage
+
+$ make test
+```
+
+
+### Releasing to PyPi
+
+Before releasing to PyPi, you must configure your login credentials:
+
+**~/.pypirc**:
+
+```
+[pypi]
+username = YOUR_USERNAME
+password = YOUR_PASSWORD
+```
+
+Then use the included helper function via the `Makefile`:
+
+```
+$ make dist
+
+$ make dist-upload
+```
+
+## Deployments
+
+### Docker
+
+Included is a basic `Dockerfile` for building and distributing `Bitpanda prices CLI`,
+and can be built with the included `make` helper:
+
+```
+$ make docker
+
+$ docker run -it bitcli --help
+```
+
+
