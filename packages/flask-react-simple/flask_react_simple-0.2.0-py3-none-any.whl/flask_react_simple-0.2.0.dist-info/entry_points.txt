@@ -1,0 +1,3 @@
+[console_scripts]
+cra = flask_reactjs:create
+
