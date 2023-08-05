@@ -1,0 +1,40 @@
+python-docx
+webdriver-manager
+pytesseract
+pillow
+pyyaml
+peewee
+pyautogui
+assertpy
+cx_Oracle
+selenium
+numpy
+PyMySQL==0.7.8
+opencv-python
+Appium-Python-Client
+behave2cucumber
+python-jenkins
+django
+pandas
+pymongo
+beautifulsoup4
+nltk
+TestLink-API-Python-client
+sqlalchemy
+argparse
+docker
+parse>=1.8.2
+parse_type>=0.4.2
+six>=1.11
+lackey
+
+[:python_version < "2.7"]
+argparse
+importlib
+ordereddict
+
+[:python_version < "3.0"]
+traceback2
+
+[:python_version < "3.4"]
+enum34
