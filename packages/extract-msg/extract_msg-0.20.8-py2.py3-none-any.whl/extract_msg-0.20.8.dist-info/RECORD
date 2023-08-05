@@ -1,0 +1,16 @@
+extract_msg/__init__.py,sha256=EXTEG5st9izQQVsaKc14VqJS-2L7ekcww_XnjhDoAE8,1453
+extract_msg/__main__.py,sha256=Jm-tV7SMbDSm5CBG7fWldO58RMMrxCQ3LrG__5St59c,1785
+extract_msg/attachment.py,sha256=OqiMB6-eFD8sDo_kQfYTJTgKcieX-WPv-rGWqn9vLCo,5880
+extract_msg/constants.py,sha256=2eNcaDkMo3VTVCisqOZasWfVnqqzPqqbrwKL7jHhwxs,9764
+extract_msg/debug.py,sha256=YRkH5MvFwC0e79nIbMaQsGWzoB4aJRhh85qh3yxsnO0,105
+extract_msg/message.py,sha256=yVfF3QtwfKLjfvwt7hQGiUSP5HJMMkuHoN85O8DtVSQ,20378
+extract_msg/named.py,sha256=DMxPLONEhSdmHpTKlOEu2Giklao3vu6fu2yNJcbdTqA,195
+extract_msg/prop.py,sha256=zR6qobjc2om1MMPPGDPYC48JDAOWQ3SYBzHs336wIBw,5133
+extract_msg/properties.py,sha256=qYHy_ieLQFsQI3DjivOTrzXvnf8Wia_Uc5UToSlYp84,5776
+extract_msg/recipient.py,sha256=EbfvC3hed7UABP1DHGP-ssHH8OAPKNS81t6_aWOZY8g,1612
+extract_msg/utils.py,sha256=F-mish2X0LMh91nnB5PbI_0Noc4hupAppfOYmoNpFks,5746
+extract_msg-0.20.8.dist-info/LICENSE.txt,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+extract_msg-0.20.8.dist-info/METADATA,sha256=zTxpYyahIZbHOPu2sLS6UYUKQFZIE0IYCN6Vu4Nclsw,5646
+extract_msg-0.20.8.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+extract_msg-0.20.8.dist-info/top_level.txt,sha256=9Rbo9I1DZmSiwuWkOH8teEIE2LX0I-6kWlmMGvYYzZU,12
+extract_msg-0.20.8.dist-info/RECORD,,
