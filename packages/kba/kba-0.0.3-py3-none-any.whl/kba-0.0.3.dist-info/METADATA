@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: kba
+Version: 0.0.3
+Summary: Translator Knowledge Beacon Aggregator API
+Home-page: https://github.com/NCATS-Tangerine/beacon-aggregator-client
+Author: UNKNOWN
+Author-email: richard@starinformatics.com
+License: UNKNOWN
+Keywords: Swagger,Translator Knowledge Beacon Aggregator API
+Platform: UNKNOWN
+Requires-Dist: urllib3 (>=1.15)
+Requires-Dist: six (>=1.10)
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+Requires-Dist: click
+Requires-Dist: progress
+
+This is the Translator Knowledge Beacon Aggregator web service application programming interface (API) that provides integrated access to a pool of knowledge sources publishing concepts and relations through the Translator Knowledge Beacon API. This API is similar to that of the latter mentioned API with the addition of some extra informative endpoints plus session identifier and beacon indices. These latter identifiers are locally assigned numeric indices provided to track the use of specific registered beacons within the aggregator API itself.
+
+
