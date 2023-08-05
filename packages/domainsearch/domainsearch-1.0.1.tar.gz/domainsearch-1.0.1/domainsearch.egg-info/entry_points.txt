@@ -1,0 +1,3 @@
+[console_scripts]
+domainsearch = domainsearch.main:main
+
