@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+data/data_file
+iflb/__init__.py
+iflb/config.py
+iflb/package_data.dat
+iflb.egg-info/PKG-INFO
+iflb.egg-info/SOURCES.txt
+iflb.egg-info/dependency_links.txt
+iflb.egg-info/entry_points.txt
+iflb.egg-info/requires.txt
+iflb.egg-info/top_level.txt
