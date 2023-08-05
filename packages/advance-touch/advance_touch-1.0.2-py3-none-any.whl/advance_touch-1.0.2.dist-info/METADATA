@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: advance-touch
+Version: 1.0.2
+Summary: Fast creation of files and directories. Mimics the operation of AdvancedNewFile (Vim plugin)
+Home-page: https://github.com/tanrax/terminal-AdvancedNewFile
+Author: Andros Fenollosa
+Author-email: andros@fenollosa.email
+License: UNKNOWN
+Keywords: touch,mkdir,advance,vim
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >3.6
+Requires-Dist: Click (>=6.7)
+
+UNKNOWN
+
+
