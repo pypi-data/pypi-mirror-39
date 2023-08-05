@@ -1,0 +1,9 @@
+numpy>=1.13.2
+scipy>=1.0
+astropy>=2.0
+photutils
+astroML
+sep
+astroscrappy>=1.0.5
+astroalign>=1.0.3
+pytest>=3.6.2
