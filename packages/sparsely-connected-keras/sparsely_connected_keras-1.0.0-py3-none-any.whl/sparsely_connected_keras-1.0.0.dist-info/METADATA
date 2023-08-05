@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: sparsely-connected-keras
+Version: 1.0.0
+Summary: Sparsely-connected layers for Keras
+Home-page: https://github.com/AmirAlavi/sparsely-connected-keras
+Author: Amir Alavi
+License: GPLv3
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: keras (>=2)
+Requires-Dist: numpy
+
+UNKNOWN
+
+
