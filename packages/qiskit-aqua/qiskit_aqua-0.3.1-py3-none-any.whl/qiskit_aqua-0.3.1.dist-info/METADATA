@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: qiskit-aqua
+Version: 0.3.1
+Summary: Qiskit Aqua: An extensible library of quantum computing algorithms
+Home-page: https://github.com/Qiskit/aqua
+Author: Qiskit Aqua Development Team
+Author-email: qiskit@us.ibm.com
+License: Apache-2.0
+Keywords: qiskit sdk quantum aqua
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: qiskit (<0.7,>=0.6.1)
+Requires-Dist: scipy (!=0.19.1,>=0.19)
+Requires-Dist: numpy (>=1.13)
+Requires-Dist: psutil (>=5)
+Requires-Dist: jsonschema (<2.7,>=2.6)
+Requires-Dist: scikit-learn
+Requires-Dist: cvxopt
+Requires-Dist: pyobjc-core; sys_platform == "darwin"
+Requires-Dist: pyobjc-framework-Cocoa; sys_platform == "darwin"
+
+<a href="https://qiskit.org/aqua" rel=nofollow>Qiskit Aqua</a> is an extensible, 
+modular, open-source library of quantum computing algorithms.
+Researchers can experiment with Aqua algorithms, on near-term quantum devices and simulators, 
+and can also get involved by contributing new algorithms and algorithm-supporting objects, 
+such as optimizers and variational forms. Qiskit Aqua is used by Qiskit Aqua Chemistry, 
+Qiskit Aqua Artificial Intelligence, and Qiskit Aqua Optimization to experiment with real-world applications to quantum computing.
+
