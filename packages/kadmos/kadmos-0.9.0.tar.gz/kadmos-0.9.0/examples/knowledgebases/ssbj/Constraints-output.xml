@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dataSchema>
+  <scaledData>
+    <sigma1>
+      <value>1.12255</value>
+    </sigma1>
+    <sigma2>
+      <value>1.08170213</value>
+    </sigma2>
+    <sigma3>
+      <value>1.0612766</value>
+    </sigma3>
+    <sigma4>
+      <value>1.04902128</value>
+    </sigma4>
+    <sigma5>
+      <value>1.04085106</value>
+    </sigma5>
+    <Theta>
+      <value>0.950978</value>
+    </Theta>
+    <dpdx>
+      <value>1.0</value>
+    </dpdx>
+    <ESF>
+      <value>1.0</value>
+    </ESF>
+    <DT>
+      <value>0.278366</value>
+    </DT>
+    <Temp>
+      <value>1.0</value>
+    </Temp>
+  </scaledData>
+</dataSchema>
