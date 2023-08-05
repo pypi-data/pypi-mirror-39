@@ -1,0 +1,11 @@
+README.md
+setup.py
+acl/__init__.py
+acl/conference.py
+acl/paper.py
+acl/result_set.py
+acl_anthology.egg-info/PKG-INFO
+acl_anthology.egg-info/SOURCES.txt
+acl_anthology.egg-info/dependency_links.txt
+acl_anthology.egg-info/requires.txt
+acl_anthology.egg-info/top_level.txt
