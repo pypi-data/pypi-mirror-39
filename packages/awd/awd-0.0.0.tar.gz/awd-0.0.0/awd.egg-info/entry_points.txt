@@ -1,0 +1,3 @@
+[console_scripts]
+awd = awd.__main__:main
+
