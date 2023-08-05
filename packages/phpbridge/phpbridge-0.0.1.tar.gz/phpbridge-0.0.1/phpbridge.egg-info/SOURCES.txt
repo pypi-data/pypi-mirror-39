@@ -1,0 +1,13 @@
+README.md
+setup.py
+phpbridge/__init__.py
+phpbridge/classes.py
+phpbridge/docblocks.py
+phpbridge/functions.py
+phpbridge/modules.py
+phpbridge/objects.py
+phpbridge/utils.py
+phpbridge.egg-info/PKG-INFO
+phpbridge.egg-info/SOURCES.txt
+phpbridge.egg-info/dependency_links.txt
+phpbridge.egg-info/top_level.txt
