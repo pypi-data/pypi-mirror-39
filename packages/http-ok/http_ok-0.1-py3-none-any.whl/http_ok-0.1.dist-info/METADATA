@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: http-ok
+Version: 0.1
+Summary: The dummy HTTP server always return 200 OK
+Home-page: https://gitlab.com/lambdaTW/http-ok
+Author: lambdaTW
+Author-email: lambda@lambda.tw
+License: MIT
+Keywords: dummy fake mock http ok 200
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: flask
+
+HTTP OK
+===
+The dummy HTTP server always return 200 OK
+
+For the simple test, you can use this like the fake HTTP server to pass your tests without writing the mock
+
