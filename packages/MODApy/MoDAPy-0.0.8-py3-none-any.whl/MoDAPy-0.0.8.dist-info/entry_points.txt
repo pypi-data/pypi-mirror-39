@@ -1,0 +1,3 @@
+[console_scripts]
+MoDAPy = MoDAPy.cmd_line:main
+
