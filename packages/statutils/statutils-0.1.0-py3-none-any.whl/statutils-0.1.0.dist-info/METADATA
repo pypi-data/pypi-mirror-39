@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: statutils
+Version: 0.1.0
+Summary: Utils for statistics, mainly inspired by R packages.
+Home-page: https://github.com/karakatic/stat-utils
+Author: Sašo Karakatič
+Author-email: karakatic@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+# statutils
+
+This package is aselections of various utils for statistics.
+It is inspired by R functions and packages.
+
+## Usage
+
+### Adjust p values for multiple comparisons
+```python
+p = [0.005, 0.04, 0.01, 0.5, 0.01, 0.7]
+p_adjusted = p_adjust(p, method='holm')
+```
+
+Supported methods for multiple comparison:
+- Bonferroni
+- Holm-Bonferroni
+- Hochberg
+- Hommel
+- BH
+- BY
+- none
+
+
+
