@@ -1,0 +1,7 @@
+rm_rspace.py
+setup.py
+rm_rspace.egg-info/PKG-INFO
+rm_rspace.egg-info/SOURCES.txt
+rm_rspace.egg-info/dependency_links.txt
+rm_rspace.egg-info/entry_points.txt
+rm_rspace.egg-info/top_level.txt
