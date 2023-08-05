@@ -1,0 +1,13 @@
+numpy
+negspy
+pysam
+dask
+requests
+h5py
+pandas
+slugid
+sortedcontainers
+nose
+cooler==0.7.11
+pybbi==0.2.0
+Click
