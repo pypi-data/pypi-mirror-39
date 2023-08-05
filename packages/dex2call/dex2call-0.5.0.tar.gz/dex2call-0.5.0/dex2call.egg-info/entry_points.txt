@@ -1,0 +1,3 @@
+[console_scripts]
+dex2call = dex2call.cli:cli
+
