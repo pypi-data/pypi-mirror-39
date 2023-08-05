@@ -1,0 +1,10 @@
+README.md
+setup.py
+bin/re_name
+re_name/__init__.py
+re_name/__main__.py
+re_name/renamer.py
+re_name.egg-info/PKG-INFO
+re_name.egg-info/SOURCES.txt
+re_name.egg-info/dependency_links.txt
+re_name.egg-info/top_level.txt
