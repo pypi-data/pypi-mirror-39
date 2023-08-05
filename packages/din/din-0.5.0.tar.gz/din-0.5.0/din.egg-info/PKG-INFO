@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: din
+Version: 0.5.0
+Summary: Dunder Mixins
+Home-page: https://gitlab.com/toejough/din
+Author: toejough
+Author-email: toejough@gmail.com
+License: MIT
+Description: # Din
+        
+        dunder-mixins
+        
+        The initial intent of this library is for mixins for common dunder functions, such
+        as equality and reprs.
+        
+Keywords: dunder mixin equal equality repr str
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: dev
+Provides-Extra: dist
