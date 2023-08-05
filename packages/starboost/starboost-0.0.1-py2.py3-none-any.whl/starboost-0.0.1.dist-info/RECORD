@@ -1,0 +1,16 @@
+examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+examples/binary_classification.py,sha256=U4E7GaN39h7uJOBL5pVJHyLS2dv6QBgB8wQOCvdDiWU,901
+examples/multi_classification.py,sha256=kJZbax4uOn_61v0_IdnPZ5NAAe08HHDjkjihebRuZv0,883
+examples/regression.py,sha256=39JoGm1h89JjIfah7pxcFkmTqp83qcVKE815eJDBPgU,872
+starboost/__init__.py,sha256=RUjlZNLEUixcgszzAzJSzGu-sKAg8YzC-wD8LQHHII8,137
+starboost/__version__.py,sha256=yHTH8dVBgu29hNekCKmq8TkocpAxvi_a_vKUu65hrq0,63
+starboost/boosting.py,sha256=6BZW2R-2dzkvlPMapTrE0BIpcHxrGryA7U5nLC5-JZw,15839
+starboost/init.py,sha256=ubSFZdHfIkDXhAunvHu0eQEHMv6wFv0FCVdRFNrltF0,864
+starboost/loss.py,sha256=ogXBJLGBi9oXZg9PnEfun7S6DJNuCjFXLWv7XtCteH0,5728
+starboost/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+starboost/tests/test_classification.py,sha256=Ykp-N4XIknH9r8ObivxLyZtT6nBcxWdSZ2EqdjWKVpE,1382
+starboost/tests/test_regression.py,sha256=JCst4HBqSXvp_RbtSDhbwGsBijNMmcuF_ymBZh9-W9w,4367
+starboost-0.0.1.dist-info/METADATA,sha256=MkVFAD2lQiheebiiKknOF0Vx0DOXUjZq2gRTkl3EX-E,4593
+starboost-0.0.1.dist-info/RECORD,,
+starboost-0.0.1.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+starboost-0.0.1.dist-info/top_level.txt,sha256=7SWFRfPLmTQsrYtMbCs0mcxb8iC11JxU37MxzXUMSts,19
