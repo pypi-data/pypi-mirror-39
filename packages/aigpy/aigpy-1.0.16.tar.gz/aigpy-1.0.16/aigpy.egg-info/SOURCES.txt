@@ -1,0 +1,13 @@
+setup.py
+aigpy/__init__.py
+aigpy/cmdHelper.py
+aigpy/configHelper.py
+aigpy/ffmpegHelper.py
+aigpy/netHelper.py
+aigpy/pathHelper.py
+aigpy/threadHelper.py
+aigpy.egg-info/PKG-INFO
+aigpy.egg-info/SOURCES.txt
+aigpy.egg-info/dependency_links.txt
+aigpy.egg-info/requires.txt
+aigpy.egg-info/top_level.txt
