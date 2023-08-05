@@ -1,0 +1,13 @@
+README.md
+setup.py
+Fourmat.egg-info/PKG-INFO
+Fourmat.egg-info/SOURCES.txt
+Fourmat.egg-info/dependency_links.txt
+Fourmat.egg-info/entry_points.txt
+Fourmat.egg-info/requires.txt
+Fourmat.egg-info/top_level.txt
+fourmat/__init__.py
+fourmat/lint.py
+fourmat/assets/.flake8
+fourmat/assets/.isort.cfg
+fourmat/assets/pyproject.toml
