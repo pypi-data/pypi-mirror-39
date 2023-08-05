@@ -1,0 +1,89 @@
+# aiosql
+
+Simple SQL in Python
+
+Based on the wonderful [anosql](https://github.com/honza/anosql) library, which is in turn based on the excellent clojure library [Yesql](https://github.com/krisajenkins/yesql/) by Kris Jenkins.
+
+Exciting features of `aiosql`:
+ 
+ 1. Out of the box support for [`asyncio`](https://docs.python.org/3/library/asyncio.html) based database drivers like [aiosqlite](https://github.com/jreese/aiosqlite) and [asyncpg](https://github.com/MagicStack/asyncpg).
+ 2. Load nested directories `.sql` files.
+ 3. Easy extension to accommodate custom database drivers.
+
+## Install
+
+TODO
+
+## Usage
+
+### Basics
+
+Given a `greetings.sql` file:
+
+```sql
+-- name: get-all-greetings
+-- Get all the greetings in the database
+select * from greetings;
+
+-- name: $get-users-by-username
+-- Get all the users from the database,
+-- and return it as a dict
+select * from users where username = :username;
+```
+
+With the stdlib `sqlite3` driver built into python you can use this sql file:
+
+```python
+import sqlite3
+import aiosql
+
+queries = aiosql.from_path("greetings.sql", db_driver="sqlite3")
+conn = sqlite3.connect("greetings.db")
+
+# greetings = [(1, "Hi"), (2, "Aloha"), (3, "Hola")]
+# users = [{"user_id": 1, "username": "willvaughn", "name": "Will"}]
+greetings = queries.get_greetings(conn)
+users = queries.get_users_by_username(conn, username="willvaughn")
+
+
+name = users[0]["name"]
+for _, greeting in greetings:
+    print(f"{greeting}, {name}!")
+
+# Hi, Will!
+# Aloha, Will!
+# Hola, Will!
+```
+
+To do this in an asyncio environment you can use the [aiosqlite](https://github.com/jreese/aiosqlite) driver.
+
+```python
+import asyncio
+
+import aiosql
+import aiosqlite
+
+
+async def main():
+    queries = aiosql.from_path("greetings.sql", db_driver="aiosqlite")
+
+    # Parallel queries!!!
+    with async aiosqlite.connect("greetings.db") as conn:
+        greetings, users = await asyncio.gather(
+            queries.get_all_greetings(conn),
+            queries.get_users_by_username(conn, username="willvaughn")
+        )
+        
+    # greetings = [(1, "Hi"), (2, "Aloha"), (3, "Hola")]
+    # users = [{"user_id": 1, "username": "willvaughn", "name": "Will"}]
+    name = users[0]["name"]
+    for _, greeting in greetings:
+        print(f"{greeting}, {name}!")
+        
+    # Hi, Will!
+    # Aloha, Will!
+    # Hola, Will!
+    
+
+asyncio.run(main())
+```
