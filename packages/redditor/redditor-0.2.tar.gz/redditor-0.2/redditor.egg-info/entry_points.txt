@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        redditor=redditor.main:cli
+    
