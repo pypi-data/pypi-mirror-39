@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: datalake-ingester
+Version: 0.16.0
+Summary: datalake_ingester ingests datalake metadata records
+Home-page: https://github.com/planetlabs/datalake-ingester
+Author: Brian Cavagnolo
+Author-email: brian@planet.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: test
