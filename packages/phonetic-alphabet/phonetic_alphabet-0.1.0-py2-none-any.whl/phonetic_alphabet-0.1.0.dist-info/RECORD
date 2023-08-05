@@ -1,0 +1,14 @@
+phonetic_alphabet/__init__.py,sha256=tpkr941kA2i1YIVA-03DaWc7GXQybkBQRLO5L6Uwnio,95
+phonetic_alphabet/helpers.py,sha256=W6YNEx3u5GDxgJQbR8X8wbxIpW0gI-Tv92f7YXK2xIg,1288
+phonetic_alphabet/main.py,sha256=QQTtjuNUEALlvII3yfJKxKxfFBkPa9cpcbKlvSMLDt0,994
+phonetic_alphabet/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+phonetic_alphabet/data/icao_alphabet.py,sha256=SdYeUQlrbKv03FBaBiCMkrOWM3SMUs6C9pzQp2BA_Dg,495
+phonetic_alphabet/data/numbers.py,sha256=3SJ5w4WNmNmLI6LgE-ZqZrWfcsk4HYMOGXRWsG2N1Rg,163
+tests/__init__.py,sha256=f3ZNzcXJxJfyUFsJEGR_ddtk_DwoffSmgkwsjJQkwGQ,121
+tests/test_helpers.py,sha256=a2ke4pBh2N-08_BvvrCloSwqP9HLQe5OhUlOJAIPE5I,712
+tests/test_phonetic_alphabet.py,sha256=thtsP39dbvHf2jm5j4vgO89kUpu2yTf0B7puovRRP6k,1049
+phonetic_alphabet-0.1.0.dist-info/LICENSE.md,sha256=0NI_aU0AJAJKyssKW1xdVYtEKYwl5H3tQPpSAMuAKbI,1067
+phonetic_alphabet-0.1.0.dist-info/METADATA,sha256=5eaV2FLxLdkls4mqZ_B6EKrwOcsBPqDP8kuXdQD8Oqo,1196
+phonetic_alphabet-0.1.0.dist-info/WHEEL,sha256=ZvfnntGaZglpRLAKVkx18HrxfMwCXrA0b-ARJVnnMrw,92
+phonetic_alphabet-0.1.0.dist-info/top_level.txt,sha256=l9FS0oKe72yi7CAsJLeYkaNpgqmis24YfBFfu4dEkUY,24
+phonetic_alphabet-0.1.0.dist-info/RECORD,,
