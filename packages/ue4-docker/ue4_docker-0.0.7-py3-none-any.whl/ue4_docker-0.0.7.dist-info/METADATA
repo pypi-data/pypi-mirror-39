@@ -1,0 +1,29 @@
+Metadata-Version: 2.0
+Name: ue4-docker
+Version: 0.0.7
+Summary: Windows and Linux containers for Unreal Engine 4
+Home-page: http://github.com/adamrehn/ue4-docker
+Author: Adam Rehn
+Author-email: adam@adamrehn.com
+License: MIT
+Keywords: epic unreal engine docker
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Environment :: Console
+Requires-Python: >=3.6
+Requires-Dist: colorama
+Requires-Dist: docker (>=3.0.0)
+Requires-Dist: flask
+Requires-Dist: humanfriendly
+Requires-Dist: psutil
+Requires-Dist: semver (>=2.7.9)
+Requires-Dist: setuptools
+Requires-Dist: termcolor
+Requires-Dist: wheel
+
+UNKNOWN
+
+
