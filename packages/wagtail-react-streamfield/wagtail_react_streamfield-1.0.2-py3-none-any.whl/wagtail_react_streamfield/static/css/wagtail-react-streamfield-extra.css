@@ -1,0 +1,64 @@
+.object.stream-field {
+  background-color: #F6F6F6;
+}
+
+.object.stream-field fieldset {
+  padding-bottom: 0;
+}
+
+.children-container .block > .block-container > header {
+  margin-bottom: unset;
+  color: unset;
+}
+
+.children-container .block > .block-container > aside > .actions > button,
+.children-container .block > .block-container > header > aside > .actions > button {
+  margin-left: 6px;
+  padding: 0;
+  font-size: 140%;
+}
+
+.children-container .add-panel button.type .icon, .children-container .add-panel button.type .label {
+  color: unset;
+  font-size: unset;
+  font-weight: normal;
+}
+
+.children-container .add-panel button.type .icon > .icon {
+  background: unset;
+  padding: unset;
+}
+
+.children-container .add-panel button.type .icon > .icon::before {
+  margin: unset;
+}
+
+.children-container .field label {
+  float: unset;
+  width: unset;
+  max-width: unset;
+  padding: 0;
+}
+
+.children-container .field label::after {
+  content: '';
+}
+
+.block > .block-container > header {
+  background: white;
+}
+
+.content-container .content {
+  margin: unset;
+  min-height: unset;
+}
+
+.content-container .field-content {
+  float: unset;
+  display: block;
+  width: unset;
+}
+
+.block .field-content textarea {
+  max-width: 100%;
+}
