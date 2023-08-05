@@ -1,0 +1,11 @@
+# $PROJECT_NAME
+
+## $APP_NAME
+
+- run the application: `make run`
+- run tests via pytest: `make test`
+- cleanup: `make clean`
+
+## Dev dependencies
+
+- `pip install -r requirements-dev.txt`
