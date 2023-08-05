@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: urlformat
+Version: 0.1.0
+Summary: A package for formatting valid URL's.
+Home-page: https://github.com/ChristopherBilg/urlformat
+Author: Christopher Richard Bilger
+Author-email: christopherbigl@gmail.com
+License: GNU General Public License v2 (GPLv2)
+Keywords: url format uri web address website search index
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Web Environment
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Requires-Python: >=3.3
+Description-Content-Type: text/markdown
+
+# urlformat
+URL formatter for web addresses written in Python
+
+This URL parsing/building class can handle any and all correctly formed URL's. Feel free to use any of the code and if you have any improvements please feel free to fork this repo. and push updates to me. Thank you.
+
+It should be noted that I try to maintain a high level of PEP codestyle and linting guidelines. I used the PIP package manager with the pylint, pycodestyle and flake8 packages.
+
+Installation:
+```console
+python3 pip -m install urlformat
+```
+or
+```console
+pip install urlformat
+```
+
+Usage:
+```python
+import urlformat
+
+x = urlformat.UrlParser("https://www.google.com")
+x = x.get_scheme()
+
+print(x)
+
+Output: https
+```
+
+
