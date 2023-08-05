@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: docxmerge-sdk
+Version: 0.0.6
+Summary: Sdk for docxmerge
+Home-page: https://github.com/Docxmerge/docxmerge-sdk
+Author: David viejo pomata
+Author-email: davidviejopomata@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: aiohttp (==3.4.4)
+Requires-Dist: async-timeout (==3.0.1)
+Requires-Dist: attrs (==18.2.0)
+Requires-Dist: bleach (==3.0.2)
+Requires-Dist: certifi (==2018.10.15)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: docutils (==0.14)
+Requires-Dist: idna (==2.7)
+Requires-Dist: idna-ssl (==1.1.0)
+Requires-Dist: multidict (==4.4.2)
+Requires-Dist: pkginfo (==1.4.2)
+Requires-Dist: pprint (==0.1)
+Requires-Dist: Pygments (==2.2.0)
+Requires-Dist: python-dateutil (==2.7.5)
+Requires-Dist: readme-renderer (==24.0)
+Requires-Dist: requests (==2.20.1)
+Requires-Dist: requests-toolbelt (==0.8.0)
+Requires-Dist: six (==1.11.0)
+Requires-Dist: tqdm (==4.28.1)
+Requires-Dist: twine (==1.12.1)
+Requires-Dist: urllib3 (==1.24.1)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: yarl (==1.2.6)
+
+UNKNOWN
+
+
