@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+hybridset/__init__.py
+hybridset.egg-info/PKG-INFO
+hybridset.egg-info/SOURCES.txt
+hybridset.egg-info/dependency_links.txt
+hybridset.egg-info/top_level.txt
+test/doctests.py
+test/hybridset_test.py

@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: hybridset
+Version: 1.0
+Summary: Mutable set storing apart hashables and unhashables values
+Home-page: https://gitlab.com/yahya-abou-imran/hybridset
+Author: Yahya Abou Imran
+Author-email: yahya-abou-imran@pm.me
+License: GPLv3
+Download-URL: https://gitlab.com/yahya-abou-imran/hybridset/-/archive/v1.0/archive.zip/hybridset-v1.0.zip
+Description: # Hybrid Set
+        
+        `HybridSet` is a `MutableSet` that stores apart hashable and unashable values.  
+        It's fully compatible with the builtins `set` and `frozenset`
+        
+        
+        ```python
+        
+        >>> from hybridset import HybridSet
+        >>> hs = HybridSet([3, 'thing', [True], {3, 4}, {1: 'one', 2: 'two'}])
+        >>> s = {3, 4, 5}
+        >>> s | hs
+        HybridSet(hashables={3, 4, 5, 'thing'}, unhashables=[[Ture], {3, 4}, {1: 'one', 2: 'two'}])
+        >>> s & hs
+        HybridSet(hashables={3})
+        
+        ```
+        
+        ## Know Issues
+        
+        Don't pass `HybridSet` instances to explicit methods of builtins, it may cause a `TypeError`
+        because of the unhashable values present in the `HybridSet`.
+        
+        ```python
+        
+        >>> hs = HybridSet([[6], [7]])
+        >>> s.union(hs)
+        Traceback (most recent call last):
+         ...
+        TypeError: unhashable type: 'list'
+        >>> s.isdisjoint(hs)
+        Traceback (most recent call last):
+         ...
+        TypeError: unhashable type: 'list'
+        
+        ```
+        
+        Always use operators instead.  
+        For `isdisjoint()`, test the emptiness of the intersection:
+        
+        ```python
+        
+        >>> if not s & hs:
+        ...     print('disjoint')
+        ... else:
+        ...     print('not disjoint')
+        disjoint
+        
+        ```
+        
+        ### For more information, see the class and methods docstrings.
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
