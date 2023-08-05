@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: iqapy
+Version: 0.0.0
+Summary: A library for image quality assessment experiments.
+Home-page: https://github.com/jtmalarecki/iqapy
+Author: JT Malarecki
+Author-email: jt.malarecki@gmail.com
+License: GPLv3
+Project-URL: Bug Reports, https://github.com/jtmalarecki/iqapy/issues
+Project-URL: Source, https://github.com/jtmalarecki/iqapy
+Keywords: image quality assessment
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+
+# iqapy
+
+
