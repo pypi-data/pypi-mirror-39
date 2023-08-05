@@ -1,0 +1,71 @@
+[build-system]
+requires = [
+    "flit",
+    "gitpython",
+    "radon",
+    "click",
+    "colorlog",
+    "tabulate",
+    "plotly",
+    "sphinx",
+    "sphinx-click",
+    "progress",
+    "dataclasses; python_version == '3.6'",]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "wily"
+author = "Anthony Shaw"
+author-email = "anthonyshaw@apache.org"
+home-page = "https://github.com/tonybaloney/wily"
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+requires = [
+    "gitpython",
+    "radon",
+    "click",
+    "colorlog",
+    "tabulate",
+    "plotly",
+    "progress",
+    "dataclasses; python_version == '3.6'",]
+requires-python = ">=3.6"
+description-file = "README.md"
+
+
+[tool.flit.scripts]
+wily = "wily.__main__:cli"
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+isolated_build = true
+envlist = py36, py37
+[testenv]
+passenv = CI TRAVIS TRAVIS_* HOME
+setenv =
+    PYTHONPATH = {toxinidir}
+deps =
+    pytest
+    pytest-cov
+    codecov
+    mock
+    pydocstyle
+commands =
+    pytest --cov=wily
+    codecov
+    pydocstyle --ignore=D301,D212,D203 wily
+"""
+
+[tool.black]
+line-length = 88
+py36 = true
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
