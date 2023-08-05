@@ -1,0 +1,48 @@
+{#
+    Copyright (c) 2015 Chintalagiri Shashank
+    Released under the MIT license
+#}
+
+{% macro render_error(error, level) -%}
+    <div class="validation-{{level}}">
+    <article class="error">
+        <div class="error-head">
+            {{ error.headline }}
+        </div>
+        <div class="error-detail">
+            {{ error.detail }}
+        </div>
+    </article>
+    </div>
+{% endmacro %}
+
+{% macro render_error_list(errors_by_type, level) -%}
+    <ul class="accordion" data-accordion>
+        {% for etype, errors in errors_by_type.iteritems() %}
+        <li class="accordion-navigation">
+            <a class="validation sectiontitle {{ level }}" href="#panel{{ level }}{{ loop.index }}">
+                {{ etype }} ({{ errors|length }})
+            </a>
+            <div id="panel{{ level }}{{ loop.index }}" class="content">
+            {% for error in errors %}
+                {{ render_error(error, level) }}
+            {% endfor %}
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
+
+{% macro render_validation_errors(validation_errors) -%}
+<div class="small-12 columns validation">
+    {% if validation_errors.nerrors %}
+    <h5>Errors</h5>
+        {{ render_error_list(validation_errors.errors_by_type, 'alert') }}
+    {% endif %}
+    {% if validation_errors.nwarnings %}
+    <h5>Warnings</h5>
+        {{ render_error_list(validation_errors.warnings_by_type, 'warning') }}
+    {% endif %}
+</div>
+{% endmacro %}
+

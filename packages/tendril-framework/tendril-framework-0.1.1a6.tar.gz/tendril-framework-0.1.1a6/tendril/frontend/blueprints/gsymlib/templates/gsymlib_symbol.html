@@ -1,0 +1,212 @@
+{#
+    Copyright (c) 2015 Chintalagiri Shashank
+    Released under the MIT license
+#}
+
+{% extends "base_templates/base.html" %}
+{% import "parts/inventory_ident.html" as inventory_ident %}
+{% import "parts/sourcing_ident_sources.html" as sourcing_ident_sources %}
+
+{% block magellan %}
+<!-- Magellan -->
+<div data-magellan-expedition="sticky">
+    <dl class="sub-nav">
+        <dd data-magellan-arrival="symbol"><a href="#symbol">Symbol</a></dd>
+        <dd data-magellan-arrival="inclusion"><a href="#inclusion">Inclusion</a></dd>
+        <dd data-magellan-arrival="inventory"><a href="#inventory">Inventory</a></dd>
+        <dd data-magellan-arrival="sourcing"><a href="#sourcing">Sourcing</a></dd>
+    </dl>
+</div>
+{% endblock %}
+
+
+{% block main %}
+
+<h3> gEDA Symbol Details </h3>
+
+<!--Symbol Information-->
+<div class="row" data-equalizer="r1" data-magellan-destination="symbol">
+<a name="symbol"></a>
+    <div class="small-12 medium-6 large-4 columns" data-equalizer-watch="r1">
+        <ul class="pricing-table shadow">
+            <li class="price autoscale">{{stage.symbol.value}}</li>
+            <li class="title">{{stage.symbol.ident}}</li>
+            {% if stage.symbol.footprint %}
+            <li class="bullet-item">{{stage.symbol.footprint}}</li>
+            {% endif %}
+            <li class="description">{{stage.symbol.fname}}</li>
+            <li class="description">
+                {% for path in stage.sympaths%}
+                    {% if loop.first %} <b> {% endif %}{{path}}{% if loop.first %} </b> {% endif %}
+                    {% if not loop.last %} <br> {% endif %}
+                {% endfor %}
+            </li>
+            {% if stage.symbol.description %}
+            <li class="description">{{stage.symbol.description|unicode}}</li>
+            {% endif %}
+
+            <li class="bullet-item">
+                {% if stage.symbol.is_virtual %}
+                <a href="/gsymlib/detail/{{ stage.symbol.fname[:-4] }}.gen">
+                    <img src="/static/images/icon_one_to_many.png" height="32">  Generator
+                </a>
+                {% endif %}
+                {% if stage.symbol.datasheet_url %}
+                <a target="_blank" href="{{stage.symbol.datasheet_url}}">
+                    <img src="/static/images/pdf.png">  Datasheet
+                </a>
+                {% endif %}
+            </li>
+
+            {% if not stage.symbol.sym_ok %}
+              <span class="right label radius alert">Bad Symbol</span>
+            {% endif %}
+            {% if stage.symbol.is_generator %}
+              <span class="right label radius warning">Generator</span>
+            {% endif %}
+            {% if stage.symbol.is_virtual %}
+              <span class="right label radius success">Virtual</span>
+            {% endif %}
+            {% if stage.symbol.is_deprecated %}
+              <span class="right label radius alert">Deprecated</span>
+            {% endif %}
+            {% if stage.symbol.is_experimental %}
+              <span class="right label radius warning">Experimental</span>
+            {% endif %}
+            {% if stage.symbol.is_wire %}
+              <span class="right label radius info">Wire</span>
+            {% endif %}
+            {% if stage.symbol.is_modlen %}
+              <span class="right label radius info">Modlen</span>
+            {% endif %}
+        </ul>
+    </div>
+
+    <div class="small-12 medium-6 large-8 columns end" data-equalizer-watch="r1">
+        <ul class="large-block-grid-3 clearing-thumbs" data-clearing>
+            {% for imgpath in stage.imgpaths %}
+            <li>
+                <!-- TODO The hidden images aren't displayed in the lightbox. Fix this. -->
+                <a {% if loop.index > 3 %} class="th hide" {% else %} class="th" {% endif %}
+                    href="/gsymlib/gsymlib/{{ imgpath }}">
+                    <img data-caption="{{ imgpath }}" src="/gsymlib/gsymlib/{{ imgpath }}">
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>
+
+<div class="row" data-magellan-destination="inclusion">
+<a name="inclusion"></a>
+<!--Inclusion Information-->
+    {% if stage.inclusion %}
+    <div class="small-12 columns panel header radius">
+        <div class="sign small-9 medium-6 small-centered columns autoscale">
+            <h6>Inclusion</h6>
+        </div>
+        <div class="small-12 columns">
+            <table id="inclusion_table" class="display" data-paging='false'>
+                <thead>
+                <tr>
+                    <th></th>
+                    <th class="all">Project</th>
+                    <th class="desktop">Description</th>
+                    <th class="all">Status</th>
+                    <th class="all">Quantity</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for k, v in stage.inclusion.iteritems() %}
+                    <tr data-content="
+                    <div class='dtchildslider'>
+                    <table class='childtable'>
+                        {% for card in v.1 %}
+                        <tr>
+                            <td>
+                                <a href='/entityhub/cards/{{card.name}}'>{{ card.name }}</a>
+                            </td>
+                            <td> {{ card.desc }} </td>
+                            <td class='text-center'>
+                                <span class='center label radius {{ card.status.html_class }}'>
+                                    {{ card.status }}
+                                </span>
+                            </td>
+                            <td class='text-center'> {{ card.qty }} </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    </div>
+                    ">
+                        <td class="details-control"></td>
+                        <td> <a href="/entityhub/pcbs/{{k}}">{{ k }}</a> </td>
+                        <td> {{ v.0 }} </td>
+                        <td data-sort={{ v.2 }} class="text-center">
+                            <span class="center label radius {{ v.2.html_class }}">
+                                {{ v.2 }}
+                            </span>
+                        </td>
+                        <td data-sort={% if v.4 %}{{v.4}}{% else %}{{v.3}}{% endif %} class="text-center">
+                            {{ v.3 }}{% if v.4 %}-{{v.4}}{% endif %} </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <script type="text/javascript">
+            $(document).ready( function () {
+                var table = $('#inclusion_table').DataTable({
+                    /* Disable initial sort */
+                    "aaSorting": [],
+                    columnDefs:[
+                        {orderable: false, targets: [0]}
+                    ],
+                    {% include 'parts/datatable_defaults.html' %}
+                });
+                table.buttons().container()
+                    .appendTo( '#inclusion_table_wrapper .small-12.medium-6.columns:eq(0)' );
+                $('#inclusion_table tr').each( function () {
+                    table.row($(this)).child( $(this).attr('data-content'), 'no-padding');
+                });
+                $('#inclusion_table tbody').on('click', 'td.details-control', function () {
+                    var tr = $(this).closest('tr');
+                    var row = table.row( tr );
+                    if ( row.child.isShown() ) {
+                        // This row is already open - close it
+                        $('div.dtchildslider', row.child()).slideUp( function () {
+                            row.child.hide();
+                            tr.removeClass('shown');
+                        });
+                    }
+                    else {
+                        // Open this row
+                        row.child.show();
+                        tr.addClass('shown');
+                        $('div.dtchildslider', row.child()).slideDown();
+                    }
+                });
+            });
+        </script>
+    </div>
+    {% endif %}
+</div>
+<!--Inventory Information-->
+<div class="row" data-magellan-destination="inventory">
+<a name="inventory"></a>
+    {{ inventory_ident.render_status(stage.inv_status) }}
+    {{ inventory_ident.render_transform(stage.inv_transform, stage.ident) }}
+    {{ inventory_ident.render_guideline(stage.inv_guideline) }}
+</div>
+<!--Inventory History-->
+
+<!--Sourcing Information-->
+<div class="row" data-magellan-destination="sourcing">
+<a name="sourcing"></a>
+    {{ sourcing_ident_sources.render_indicative_sources(
+           'Indicative Sourcing Information', stage.symbol.indicative_sourcing_info, stage.ident) }}
+</div>
+
+<!--Sourcing History-->
+
+{% endblock %}

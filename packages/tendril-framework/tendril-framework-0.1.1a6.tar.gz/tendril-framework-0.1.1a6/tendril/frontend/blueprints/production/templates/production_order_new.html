@@ -1,0 +1,291 @@
+{#
+    Copyright (c) 2015 Chintalagiri Shashank
+    Released under the MIT license
+#}
+
+{% extends "base_templates/base.html" %}
+{% import "parts/forms.html" as forms %}
+{% block main %}
+
+<p></p>
+
+<h4>{{ pagetitle }}</h4>
+
+<div class="row">
+    <form action="#" method="POST">
+    {{ form.hidden_tag() }}
+    <div class="row" data-equalizer="fmain">
+        <div class="small-12 large-5 columns" data-equalizer-watch="fmain">
+            <fieldset>
+                <legend>
+                    Metadata
+                </legend>
+                <div class="row">
+                    <div class="small-9 columns">
+                        {{ forms.render_field(form.user, list="json-userlist", autocomplete="off") }}
+                    </div>
+                    <div class="small-3 columns">
+                        {{ forms.render_field(form.rdate) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        {{ forms.render_field(form.prod_order_title, length="50") }}
+                    </div>
+                </div>
+                <div class="row">
+                    {{ form.prod_order_sno.hidden_tag() }}
+                    <div class="small-4 columns text-center">
+                        {{ forms.render_compact_switch(form.prod_order_sno.sno_generate, checked=True) }}
+                    </div>
+                    <div class="small-8 columns">
+                        {{ forms.render_field(form.prod_order_sno.sno, autocomplete="off") }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 large-6 columns">
+                        {{ forms.render_field(form.production_type) }}
+                    </div>
+                    <div class="small-12 large-6 columns">
+                        {{ forms.render_field(form.root_order_sno, autocomplete="off", list="json-rootordlist", placeholder="Top-level order or project code") }}
+                    </div>
+                    {% if stage.auth_not_valid %}
+                    <div {% if stage.auth_not_valid %}class="small-12 columns error"{% endif %}>
+                        <small class="error">Unable to Validate Authorization Chain.</small>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        {{ forms.render_field(form.desc) }}
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Indent Generation
+                </legend>
+                {{ form.indents.hidden_tag() }}
+                <div class="row">
+                    <div class="small-12 columns">
+                        {{ forms.render_switch(form.indents.generate, checked=True) }}
+                    </div>
+                    {% for sopt in form.indents.split %}
+                    <div class="small-12 columns indent-split-opt">
+                        {{ forms.render_switch(sopt) }}
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="row admonition">
+                    <div class="small-12 columns admonition-text">
+                        <i class="fi-alert" style="color:red"></i>
+                        This can't be changed once generated.
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="small-12 large-7 columns" data-equalizer-watch="fmain">
+            <fieldset class="component-rows" id="component-rows">
+                <legend>
+                    Modules
+                </legend>
+
+                {% for module in form.modules %}
+                {{ module.hidden_tag() }}
+                <div class="row component-row">
+                    <div class="small-8 columns">
+                        {{ forms.render_clean_field(module.ident, list="json-moduleidentlist", autocomplete="off") }}
+                    </div>
+                    <div class="small-3 columns">
+                        {{ forms.render_clean_field(module.qty, autocomplete="off") }}
+                    </div>
+                    <div class="small-1 columns">
+                        <a>
+                            <div class="alert delete-row">
+                                <i class='fi-x'></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+                <a>
+                    <div class="button success small expand radius add-row">
+                        Add Row
+                    </div>
+                </a>
+
+            </fieldset>
+            <fieldset class="component-rows" id="delta-rows">
+                <legend>
+                    Deltas
+                </legend>
+
+                {% for delta in form.deltas %}
+                {{ delta.hidden_tag() }}
+                <div class="row component-row">
+                    <div class="small-3 columns">
+                        {{ forms.render_clean_field(delta.sno, list="json-snolist", autocomplete="off") }}
+                    </div>
+                    <div class="small-4 columns">
+                        {{ forms.render_clean_field(delta.orig_cardname, list="json-moduleidentlist", autocomplete="off") }}
+                    </div>
+                    <div class="small-4 columns">
+                        {{ forms.render_clean_field(delta.target_cardname, list="json-moduleidentlist", autocomplete="off") }}
+                    </div>
+                    <div class="small-1 columns">
+                        <a>
+                            <div class="alert delete-row">
+                                <i class='fi-x'></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+                <a>
+                    <div class="button success small expand radius add-row">
+                        Add Row
+                    </div>
+                </a>
+
+            </fieldset>
+        </div>
+    </div>
+    <div class="small-12 large-4 columns">
+        <!--<input type="submit" class="button small expand radius" value="Check Auth Chain" disabled>-->
+    </div>
+    <div class="small-12 large-4 columns">
+        <!--<input type="submit" class="button small expand radius" value="Check Availability">-->
+    </div>
+    <div class="small-12 large-4 columns">
+        <input type="submit" class="button alert small expand radius" value="Create Production Order">
+    </div>
+    </form>
+</div>
+
+<script>
+    $(document).ready( function () {
+        <!-- User List Starts -->
+
+        // Load in the library information
+        var userDataList = document.getElementById('json-userlist');
+        var userRequest = new XMLHttpRequest();
+
+        // Handle state changes for the request.
+        userRequest.onreadystatechange = function(response) {
+          if (userRequest.readyState === 4) {
+            if (userRequest.status === 200) {
+              // Parse the JSON
+              var jsonOptions = JSON.parse(userRequest.responseText);
+
+              // Loop over the JSON array.
+              jsonOptions.users.forEach(function(item) {
+                // Create a new <option> element.
+                var option = document.createElement('option');
+                // Set the value using the item in the JSON array.
+                option.value = item;
+                // Add the <option> element to the <datalist>.
+                userDataList.appendChild(option);
+              });
+            }
+          }
+        };
+
+        userRequest.open('GET', '/user/all.json', true);
+        userRequest.send();
+
+        <!-- User List Ends -->
+
+        <!-- moduleIdent List Starts -->
+
+        // Load in the library information
+        var moduleIdentList = document.getElementById('json-moduleidentlist');
+        var moduleIdentRequest = new XMLHttpRequest();
+
+        // Handle state changes for the request.
+        moduleIdentRequest.onreadystatechange = function(response) {
+          if (moduleIdentRequest.readyState === 4) {
+            if (moduleIdentRequest.status === 200) {
+              // Parse the JSON
+              var jsonOptions = JSON.parse(moduleIdentRequest.responseText);
+
+              // Loop over the JSON array.
+              jsonOptions.modules.forEach(function(item) {
+                // Create a new <option> element.
+                var option = document.createElement('option');
+                // Set the value using the item in the JSON array.
+                option.value = item;
+                // Add the <option> element to the <datalist>.
+                moduleIdentList.appendChild(option);
+              });
+            }
+          }
+        };
+
+        moduleIdentRequest.open('GET', '/entityhub/modules.json', true);
+        moduleIdentRequest.send();
+
+        <!-- moduleIdent List Ends -->
+
+        <!-- COBOM Input Starts -->
+
+        $('.add-row').click(function() {
+            lastrow = $( this ).closest('.component-rows').find('.component-row').last();
+            row = lastrow.clone();
+            elem_id = row.find(":input")[0].id;
+            elem_num = parseInt(elem_id.replace(/.*-(\d{1,4})-.*/m, '$1')) + 1;
+            row.find(":input").each(function() {
+                console.log(this);
+                var id = $(this).attr('id').replace('-' + (elem_num - 1) + '-', '-' + (elem_num) + '-');
+                $(this).attr('name', id).attr('id', id).val('').removeAttr("checked");
+            });
+            lastrow.after(row);
+            $(document).foundation('abide', 'reflow');
+            $(document).foundation('reflow');
+        });
+
+        $(".component-rows").on("click", ".component-row .delete-row", function(){
+            nrows = $( this ).closest('.component-rows').find('.component-row').length;
+            if (nrows > 1){
+                $( this ).closest('.component-row').remove();
+                $(document).foundation('abide', 'reflow');
+                $(document).foundation('reflow');
+            }
+        });
+
+        <!-- COBOM Input Ends -->
+
+        <!-- Serial No Form Elements -->
+        var prod_order_sno = $("#prod_order_sno-sno")[0].value
+        $("#prod_order_sno-sno_generate").change(function(event) {
+            var checkbox = event.target;
+            if (checkbox.checked) {
+                $("#prod_order_sno-sno")[0].value = prod_order_sno;
+                $("#prod_order_sno-sno")[0].readOnly = true;
+            } else {
+                $("#prod_order_sno-sno")[0].readOnly = false;
+            }
+        });
+
+        <!-- Indent Generation Form Elements -->
+        $("#indents-generate").change(function(event) {
+            var checkbox = event.target;
+            if (checkbox.checked) {
+                $('input[name=indents-split]').removeAttr('disabled');
+                $('.indent-split-opt').show();
+            }
+            else{
+                $("input[name=indents-split]").attr('disabled', 'disabled');
+                $('.indent-split-opt').hide();
+            }
+        });
+
+        <!-- Date picker elements -->
+        $('#rdate').fdatepicker({
+            format: 'dd/mm/yyyy',
+        });
+    });
+</script>
+
+<datalist id="json-moduleidentlist"></datalist>
+<datalist id="json-userlist"></datalist>
+{% endblock %}
