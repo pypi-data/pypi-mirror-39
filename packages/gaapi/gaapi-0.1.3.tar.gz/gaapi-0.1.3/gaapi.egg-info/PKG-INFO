@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: gaapi
+Version: 0.1.3
+Summary: A light weight python wrapper for Google’s Analytics Reporting API v4 written upon Google API Python Client.
+Home-page: http://github.com/rakeshgunduka/gaapi/
+Author: Rakesh Gunduka
+Author-email: rakesh.gunduka@gmail.com
+License: http://www.opensource.org/licenses/mit-license.php
+Description: Google analytics python api wrapper for Google’s Analytics Reporting API v4 using Googles API python client. Additionally also enables caching.
+Keywords: google analytics api client
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
