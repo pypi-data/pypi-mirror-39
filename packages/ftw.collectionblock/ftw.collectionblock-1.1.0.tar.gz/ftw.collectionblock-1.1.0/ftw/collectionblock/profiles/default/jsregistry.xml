@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts">
+
+    <javascript
+        id="++resource++ftw.collectionblock/collectionblock.js"
+        enabled="True"
+        authenticated="True"
+        insert-after="++resource++ftw.simplelayout.resources/main.js"
+        />
+
+</object>

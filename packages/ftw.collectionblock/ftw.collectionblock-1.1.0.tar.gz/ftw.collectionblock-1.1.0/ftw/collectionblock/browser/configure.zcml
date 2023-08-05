@@ -1,0 +1,27 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="ftw.collectionblock">
+
+    <browser:resourceDirectory
+        name="ftw.collectionblock"
+        directory="resources"
+        />
+
+    <browser:page
+        for="ftw.collectionblock.contents.interfaces.ICollectionBlock"
+        name="block_view"
+        permission="zope2.View"
+        class=".block_view.CollectionBlockView"
+        />
+
+    <browser:page
+        for="ftw.collectionblock.contents.interfaces.ICollectionBlock"
+        name="listing_view"
+        permission="zope2.View"
+        template="templates/listing.pt"
+        class="plone.app.contenttypes.browser.collection.CollectionView"
+        />
+
+
+</configure>

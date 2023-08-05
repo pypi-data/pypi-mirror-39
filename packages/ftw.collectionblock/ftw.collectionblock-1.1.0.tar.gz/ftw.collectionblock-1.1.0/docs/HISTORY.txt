@@ -1,0 +1,68 @@
+Changelog
+=========
+
+
+1.1.0 (2018-11-30)
+------------------
+
+- Customization support for link target. [jone]
+
+
+1.0.7 (2018-11-05)
+------------------
+
+- Change list layout to table layout. [busykoala]
+
+
+1.0.6 (2018-09-27)
+------------------
+
+- Fix initilize the querywidget for the add/edit form. [busykoala]
+
+
+1.0.5 (2017-06-27)
+------------------
+
+- Improve german translations [raphael-s]
+
+- Add setting to hide "more" button [raphael-s]
+
+
+1.0.4 (2017-03-07)
+------------------
+
+- Make CollectionBlock addable on plone site per default [raphael-s]
+
+
+1.0.3 (2016-09-26)
+------------------
+
+- Block is no longer searchable and will no longer be
+  included in the navigation. [mbaechtold]
+
+- Respect the block amount limit when rendering the items
+  in the block. [mbaechtold]
+
+- Add German translation. [mbaechtold]
+
+
+1.0.2 (2016-08-10)
+------------------
+
+- Remove metadata.xml-dependencie to ftw.simplelayout.
+  This package is an addon of ftw.simplelayout and should not install it.
+  [elioschmutz]
+
+- Remove workflow of collection blocks. [mbaechtold]
+
+
+1.0.1 (2016-07-20)
+------------------
+
+- Publish package on PyPI. [mbaechtold]
+
+
+1.0.0 (2016-07-20)
+------------------
+
+- Initial implementation and first release. [mbaechtold]

@@ -1,0 +1,102 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      tal:omit-tag="python: 1"
+      i18n:domain="ftw.collectionblock"
+      tal:define="block_info view/get_block_info">
+
+    <h2 tal:content="block_info/title"
+        tal:condition="block_info/show_title">
+    </h2>
+
+    <tal:items tal:define="items view/block_results;
+                           normalizeString nocall:context/@@plone/normalizeString">
+
+        <p tal:condition="not: items"
+           i18n:translate="">No content available</p>
+
+        <table class="listing sortable">
+            <thead>
+                <tr>
+                    <td i18n:domain="plone"
+                        i18n:translate=""
+                        tal:repeat="field view/tabular_fields"
+                        tal:content="field" />
+                </tr>
+            </thead>
+            <tbody>
+                <tal:entries tal:repeat="item items">
+                    <tal:block tal:define="item_url item/getURL;
+                                           item_id item/getId;
+                                           item_title item/Title;
+                                           item_title python:item_title or item_id;
+                                           item_description item/Description;
+                                           item_type item/PortalType;
+                                           item_type_class python:'contenttype-' + normalizeString(item_type);
+                                           item_wf_state item/review_state;
+                                           item_wf_state_class python:'state-' + normalizeString(item_wf_state);
+                                           item_creator item/Creator;
+                                           item_has_image python:item.getIcon;
+                                           ">
+                        <tr metal:define-macro="listitem"
+                            tal:define="oddrow repeat/item/odd;"
+                            tal:attributes="class python: oddrow and 'even' or 'odd'">
+
+                            <tal:block tal:repeat="field view/tabular_fields">
+                                <td tal:condition="python:field not in ['Title', 'Creator']"
+                                    tal:define="field_data python:view.tabular_fielddata(item, field)">
+                                    <tal:block tal:replace="field_data/value" />
+                                </td>
+                                <td tal:condition="python:field == 'Title'">
+                                    <a tal:condition="python:item_type == 'File'"
+                                       i18n:attributes="title"
+                                       tal:attributes="href item_url;
+                                                       class string:$item_type_class $item_wf_state_class;
+                                                       title item_type">
+                                        <img class="mime-icon"
+                                             tal:attributes="src item/MimeTypeIcon">
+                                    </a>
+                                    <a tal:attributes="href item_url;
+                                                       class string:$item_type_class $item_wf_state_class;
+                                                       title item_type;
+                                                       target python:view.get_title_link_target(item)"
+                                       tal:content="item_title" />
+                                </td>
+                                <td tal:condition="python:field == 'Creator'"
+                                    i18n:attributes="creator"
+                                    tal:define="author python:view.pas_member.info(item_creator);
+                                                name python:author['fullname'] or author['username']">
+                                    <a tal:condition="author"
+                                       tal:attributes="href string:${view/navigation_root_url}/author/${item_creator}"
+                                       tal:content="name" />
+                                </td>
+                            </tal:block>
+
+                        </tr>
+                    </tal:block>
+                </tal:entries>
+            </tbody>
+        </table>
+
+        <tal:footer tal:define="more_link_url block_info/more_link_url;
+                                more_link_label block_info/more_link_label;
+                                rss_url block_info/rss_link_url;
+                                show_more_link block_info/show_more_link"
+                    tal:condition="items">
+            <div class="collection-footer"
+                 tal:condition="python: more_link_url or rss_url">
+                <a class="collection-more"
+                   tal:condition="python:more_link_url and show_more_link"
+                   title="More"
+                   i18n:attributes="title more_link_label"
+                   tal:attributes="href more_link_url"
+                   tal:content="more_link_label"/>
+                <a class="collection-rss"
+                   tal:condition="rss_url"
+                   tal:attributes="href rss_url"
+                   i18n:translate="">Subscribe to the RSS feed</a>
+            </div>
+        </tal:footer>
+
+    </tal:items>
+
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object name="ftw.collectionblock.CollectionBlock"
+        meta_type="Dexterity FTI"
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        i18n:domain="ftw.collectionblock">
+
+    <property name="description" i18n:translate="">Easily build complex queries inside a simplelayout block.</property>
+
+</object>
