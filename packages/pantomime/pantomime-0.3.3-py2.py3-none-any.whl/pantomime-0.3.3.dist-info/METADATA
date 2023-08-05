@@ -1,0 +1,33 @@
+Metadata-Version: 2.0
+Name: pantomime
+Version: 0.3.3
+Summary: MIME type normalisation and labels.
+Home-page: http://github.com/alephdata/pantomime
+Author: Journalism Development Network, Inc.
+Author-email: data@occrp.org
+License: MIT
+Description-Content-Type: UNKNOWN
+Keywords: mime mimetypes file types
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: six (>=1.11.0)
+Requires-Dist: banal (>=0.3.5)
+Requires-Dist: normality (>=0.5.6)
+
+
+.. figure:: https://api.travis-ci.org/alephdata/pantomime.png
+   :target: https://travis-ci.org/alephdata/pantomime/
+   :alt: Build Status
+
+**pantomime** is a small library that handles the parsing and normalisation
+of internet MIME types in Python.
+
+`Documentation <https://github.com/alephdata/pantomime/blob/master/README.md>`_
+
+
