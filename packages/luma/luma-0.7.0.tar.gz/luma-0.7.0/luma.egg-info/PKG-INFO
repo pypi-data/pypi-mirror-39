@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: luma
+Version: 0.7.0
+Summary: A CLI to interact with the Lumavate platform
+Home-page: https://github.com/LabelNexus/lumavate-cli
+Author: Gunnar Norred
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
