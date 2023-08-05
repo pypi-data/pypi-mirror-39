@@ -1,0 +1,4 @@
+# A Heat environment file that can be used to configure masquerade networks
+
+resource_registry:
+  OS::TripleO::Services::MasqueradeNetworks: ../../puppet/services/masquerade-networks.yaml
