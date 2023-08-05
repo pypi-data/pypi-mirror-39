@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: stem-registration
+Version: 0.0.47
+Summary: A small registration package
+Home-page: https://gitlab.stemsc.com/shevelev/registration
+Author: Dmitry Shevelev
+Author-email: shevelev.dmitriy@stemsc.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: django (<2,>=1.11)
+Requires-Dist: Pillow (>=5.3.0)
+Requires-Dist: django-registration-redux (>=2.4)
+Requires-Dist: django-bootstrap4 (>=0.0.6)
+Requires-Dist: django-cities-light (>=3.5.0)
+Requires-Dist: django-select2 (>=6.3.1)
+
+
+
+Default configs:
+
+SHOW_LOGIN = True
+SHOW_LAST_FIRST_NAME = True
+SHOW_CONTRACTOR_TYPE = True
+SHOW_ADDRESS = True
+SHOW_BILLING_ADDRESS = True
+SHOW_NUMBER = True
+NUMBER_IS_REQUIRED = True
+SHOW_TAX_NUMBER = True
+TAX_NUMBER_IS_REQUIRED = True
+SHOW_ID_CARD_FIELDS = True
+SHOW_NAME_LEGAL = True
+NAME_LEGAL_IS_REQUIRED = False
+SHOW_ACCOUNTING_NUMBER = True
+DEFAULT_COUNTRY = UKR
+ADDRESS_IS_REQUIRED = True
+
+
