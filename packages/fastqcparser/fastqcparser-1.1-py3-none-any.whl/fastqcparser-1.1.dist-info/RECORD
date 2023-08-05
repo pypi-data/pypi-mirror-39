@@ -1,0 +1,11 @@
+fastqcparser/__init__.py,sha256=UxJtVkEkXigVHhL-mRBqtEgTMHz7AgBLJORHpm7Ra78,56
+fastqcparser/fastqcparser.py,sha256=15wjFThUZwylCUgIHg1-PiV3ahFonP5M90cM9IOzZ6Q,5756
+fastqcparser/release.py,sha256=OHhpNrOfZPb0oX_qhnWDTGf4QPiV875j6ttbEjo5mOU,384
+fastqcparser-1.1.dist-info/DESCRIPTION.rst,sha256=DmTSYgDGVFUsA9DIvCpCXrMwyJqT1Wj3bYK3x2sKfmM,2480
+fastqcparser-1.1.dist-info/METADATA,sha256=so4tUeLydA2KJLamuQU9INDuBAt6dAv74ROKKrzALlw,3578
+fastqcparser-1.1.dist-info/RECORD,,
+fastqcparser-1.1.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+fastqcparser-1.1.dist-info/metadata.json,sha256=S-iBDpsONnT7hMwgCQPH9e2uCn8ON6h9Gi-0mT0SjVg,1174
+fastqcparser-1.1.dist-info/top_level.txt,sha256=KNFEPVN2gir0Q-0zMoenntDdTGrjnSGubqW9X0E26-8,19
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_fastqcparser.py,sha256=DclRtOb2Cr7QD1TXpZZ2CMGZIKKrTpksTpdZrhvGldc,3695
