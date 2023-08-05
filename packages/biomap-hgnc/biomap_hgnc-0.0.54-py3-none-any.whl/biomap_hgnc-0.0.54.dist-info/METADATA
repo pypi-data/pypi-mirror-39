@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: biomap-hgnc
+Version: 0.0.54
+Summary: BioMap HGNC (HUGO Gene Nomenclature Committee) mapper
+Home-page: https://github.com/BioMapOrg/biomap-hgnc
+Author: Sebastian Winkler
+Author-email: winkler@informatik.uni-tuebingen.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: biomap-core (>=0.0.50)
+Requires-Dist: biomap-utils (>=0.0.51)
+Requires-Dist: pandas
+
+UNKNOWN
+
+
