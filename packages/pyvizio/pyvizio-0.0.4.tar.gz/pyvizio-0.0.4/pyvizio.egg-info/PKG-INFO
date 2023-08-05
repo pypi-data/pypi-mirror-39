@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: pyvizio
+Version: 0.0.4
+Summary: Python library for interfacing with Vizio SmartCast TV (2016+ models)
+Home-page: https://github.com/vkorn/pyvizio
+Author: Vlad Korniev
+Author-email: vladimir.kornev@gmail.com
+License: GPLv3
+Description: UNKNOWN
+Keywords: vizio smartcast
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
