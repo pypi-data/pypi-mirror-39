@@ -1,0 +1,7 @@
+[console_scripts]
+qiskit_aqua_cmd = qiskit_aqua.command_line:main
+
+[gui_scripts]
+qiskit_aqua_browser = qiskit_aqua.ui.browser.command_line:main
+qiskit_aqua_ui = qiskit_aqua.ui.run.command_line:main
+
