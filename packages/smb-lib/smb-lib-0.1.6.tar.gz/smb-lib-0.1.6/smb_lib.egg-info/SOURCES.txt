@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+smb_lib/__init__.py
+smb_lib/smbLib.py
+smb_lib.egg-info/PKG-INFO
+smb_lib.egg-info/SOURCES.txt
+smb_lib.egg-info/dependency_links.txt
+smb_lib.egg-info/requires.txt
+smb_lib.egg-info/top_level.txt
