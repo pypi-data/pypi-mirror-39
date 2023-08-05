@@ -1,0 +1,9 @@
+setup.py
+mkdocs_abs_rel_plugin/__init__.py
+mkdocs_abs_rel_plugin/plugin.py
+mkdocs_abs_rel_plugin.egg-info/PKG-INFO
+mkdocs_abs_rel_plugin.egg-info/SOURCES.txt
+mkdocs_abs_rel_plugin.egg-info/dependency_links.txt
+mkdocs_abs_rel_plugin.egg-info/entry_points.txt
+mkdocs_abs_rel_plugin.egg-info/top_level.txt
+test/test_plugin.py
