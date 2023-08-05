@@ -1,0 +1,12 @@
+parsedmarc/__init__.py,sha256=reD_ovBpLWSLhFaTJUpsX-ELQSWtbj1Cc5_tnt3gW6w,69749
+parsedmarc/cli.py,sha256=alHXC3Z8z1B86EF0_gRrXiNmv99tkTOfWuYRyh92_7U,18568
+parsedmarc/elastic.py,sha256=XBqm_iHki0rODwHN1MuRGu-EASgmwT6i8vdGrNs3jpg,17526
+parsedmarc/kafkaclient.py,sha256=thLJ3xF-5JZjFZR7dCAP8nI65lAmM_4vBN6NiZK_iVw,6240
+parsedmarc/splunk.py,sha256=7UuGcVelJ-ns3SI08eo8j_IvoC-0XrTWo1FMrqxcqp4,5836
+parsedmarc/utils.py,sha256=owNSqW7UdM9UjpkCLq0tIkTcmbuPQFWI_0hlpuOl8Qc,16182
+parsedmarc-5.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+parsedmarc-5.1.0.dist-info/METADATA,sha256=hhajmSRpO1l3piuNTuSED5MedaJthQkovm6BX1h4XwY,18371
+parsedmarc-5.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+parsedmarc-5.1.0.dist-info/entry_points.txt,sha256=7mqxI1UcNoZNqekarw-oL0cuFCCSmiyfWE2b_Pm-l_8,53
+parsedmarc-5.1.0.dist-info/top_level.txt,sha256=HCKKKBRUZGFOA4OyeDclPpTRQ3GvKt2fg4BWExevCiM,11
+parsedmarc-5.1.0.dist-info/RECORD,,
