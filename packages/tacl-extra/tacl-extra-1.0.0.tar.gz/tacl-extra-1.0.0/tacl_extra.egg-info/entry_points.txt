@@ -1,0 +1,6 @@
+[console_scripts]
+int-all = taclextra.cli.int_all:main
+jitc = taclextra.cli.jitc:main
+lifetime = taclextra.cli.lifetime:main
+paternity = taclextra.cli.paternity:main
+

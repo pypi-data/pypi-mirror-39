@@ -1,0 +1,42 @@
+Metadata-Version: 1.2
+Name: tacl-extra
+Version: 1.0.0
+Summary: Collection of scripts to generate various TACL results and reports
+Home-page: https://github.com/ajenhl/tacl-extra
+Author: Jamie Norrish
+Author-email: jamie@artefact.org.nz
+License: GPLv3+
+Project-URL: Source, https://github.com/ajenhl/tacl-extra
+Project-URL: Tracker, https://github.com/ajenhl/tacl-extra/issues
+Description: tacl-extra
+        ==========
+        
+        tacl-extra provides scripts and libraries that make use of the `TACL`_
+        software.
+        
+        Scripts provided are:
+        
+        * **int-all**: Generates extended and reduced intersect results files
+          for every pair of texts in a supplied corpus.
+        * **jitc**: Generates an HTML report showing the amount of overlap
+          between a set of works, ignoring those parts that overlap with
+          works in a second set of works.
+        * **lifetime**: Generates results data and a report showing the
+          lifetime of n-grams that come into or fall out of use in a group of
+          corpora.
+        * **paternity**: Generates a series of results files giving the
+          n-grams in common between one corpus and each work in a second
+          corpus, that are not present in a third corpus.
+        
+        The actual work of the scripts is done in library code that can be
+        imported and used by other code.
+        
+        
+        .. _TACL: https://github.com/ajenhl/tacl/
+        
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: ~=3.5
