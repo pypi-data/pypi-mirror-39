@@ -1,0 +1,144 @@
+Metadata-Version: 2.1
+Name: arpa
+Version: 0.1.0b3
+Summary: Library for reading ARPA n-gram models.
+Home-page: https://github.com/sfischer13/python-arpa
+Author: Stefan Fischer
+Author-email: sfischer13@ymail.com
+License: MIT
+Keywords: ARPA n-gram ngram language model LM language technology LT computational linguistics CL natural language processing NLP unigram bigram trigram
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: ~=3.4
+Description-Content-Type: text/markdown
+
+Python ARPA Package
+===================
+
+[![PyPI Version](https://img.shields.io/pypi/v/arpa.svg)](https://pypi.python.org/pypi/arpa) [![Documentation Status](https://readthedocs.org/projects/arpa/badge/?version=latest)](https://arpa.readthedocs.io/en/latest/?badge=latest) [![Travis](https://img.shields.io/travis/sfischer13/python-arpa.svg)](https://travis-ci.org/sfischer13/python-arpa) [![Coverage Status](https://coveralls.io/repos/sfischer13/python-arpa/badge.svg?branch=master&service=github)](https://coveralls.io/github/sfischer13/python-arpa?branch=master)
+
+Python library for reading ARPA n-gram models.  
+It was initiated by Stefan Fischer and is developed and maintained by many others.
+
+-   [Documentation](https://readthedocs.org/projects/arpa/badge/?version=latest) is available.
+-   [Changes](https://github.com/sfischer13/python-arpa/blob/master/HISTORY.md) between releases are documented.
+-   [Bugs](https://github.com/sfischer13/python-arpa/issues) can be reported on the issue tracker.
+-   [Questions](mailto:sfischer13@ymail.com) can be asked via e-mail.
+-   [Source code](https://github.com/sfischer13/python-arpa) is tracked on GitHub.
+
+Setup
+-----
+
+[![PyPI Python Versions](https://img.shields.io/pypi/pyversions/arpa.svg)](https://pypi.python.org/pypi/arpa)
+
+The package is available on [PyPI](https://pypi.python.org/pypi/arpa):
+
+    $ pip install arpa
+
+Usage
+-----
+
+The package may be imported directly:
+
+    import arpa
+    models = arpa.loadf("foo.arpa")
+    lm = models[0]  # ARPA files may contain several models.
+
+    # probability p(end|in, the)
+    lm.p("in the end")
+    lm.log_p("in the end")
+
+    # sentence score w/ sentence markers
+    lm.s("This is the end .")
+    lm.log_s("This is the end .")
+
+    # sentence score w/o sentence markers
+    lm.s("This is the end .", sos=False, eos=False)
+    lm.log_s("This is the end .", sos=False, eos=False)
+
+Contribute
+----------
+
+Write a bug report or send a pull request.  
+Other [contributors](https://github.com/sfischer13/python-arpa/graphs/contributors) have done so before.
+
+License
+-------
+
+Copyright (c) 2015-2018 Stefan Fischer  
+The source code is available under the **MIT License**.  
+See [LICENSE](https://github.com/sfischer13/python-arpa/blob/master/LICENSE) for further details.
+
+
+History
+=======
+
+All notable changes to this project will be documented in this file.  
+This project adheres to [Semantic Versioning](https://semver.org/).  
+You should [Keep a CHANGELOG](https://keepachangelog.com/), too!
+
+[Next Release](https://github.com/sfischer13/python-arpa/compare/0.1.0b3...HEAD)
+--------------------------------------------------------------------------------
+
+### Added
+
+### Changed
+
+### Deprecated
+
+### Fixed
+
+### Removed
+
+### Security
+
+[0.1.0b3](https://github.com/sfischer13/python-arpa/compare/0.1.0b2...0.1.0b3) - 2018-12-06
+-------------------------------------------------------------------------------------------
+
+[0.1.0b2](https://github.com/sfischer13/python-arpa/compare/0.1.0b1...0.1.0b2) - 2018-04-28
+-------------------------------------------------------------------------------------------
+
+[0.1.0b1](https://github.com/sfischer13/python-arpa/compare/0.1.0a6...0.1.0b1) - 2015-09-13
+-------------------------------------------------------------------------------------------
+
+[0.1.0a6](https://github.com/sfischer13/python-arpa/compare/0.1.0a5...0.1.0a6) - 2015-07-24
+-------------------------------------------------------------------------------------------
+
+[0.1.0a5](https://github.com/sfischer13/python-arpa/compare/0.1.0a4...0.1.0a5) - 2015-07-19
+-------------------------------------------------------------------------------------------
+
+[0.1.0a4](https://github.com/sfischer13/python-arpa/compare/0.1.0a3...0.1.0a4) - 2015-07-14
+-------------------------------------------------------------------------------------------
+
+[0.1.0a3](https://github.com/sfischer13/python-arpa/compare/0.1.0a2...0.1.0a3) - 2015-07-10
+-------------------------------------------------------------------------------------------
+
+[0.1.0a2](https://github.com/sfischer13/python-arpa/compare/0.1.0a1...0.1.0a2) - 2015-07-05
+-------------------------------------------------------------------------------------------
+
+0.1.0a1 - 2015-07-05
+--------------------
+
+First release on PyPI.
+
+
