@@ -1,0 +1,15 @@
+cassettedeck/__init__.py,sha256=xYcqVqcrC-SW2tDV4n23DKGx7QHdDuW9WDbSd7FDDRs,122
+cassettedeck/cassette.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cassettedeck/deck.py,sha256=koyanPUGWDC3g5IZ52DXSLEQJhhruD2A-3SHPQBOyvA,3772
+cassettedeck/request.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cassettedeck/service.py,sha256=FVj6DlQnqjw6aOh-uZidEezwBi9QBOIF0mofA6F1mo8,2325
+cassettedeck/store.py,sha256=pQ-DpBU772xADAT2D5VwhW-HBzz8Wt7NmbcojeLiIes,6031
+cassettedeck/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cassettedeck/tests/conftest.py,sha256=uZgiyDhIisuT66LMuVhq2opUYVoCzqNMd9FOgvnyG9Q,49
+cassettedeck/tests/fixtures.py,sha256=TLhvSYENrf6OK6dhxg7_RMrmIRSfW6E8rG-AMz4yw1U,1334
+cassettedeck/tests/test_works.py,sha256=kDBOU3wR8Ez-4_5xePSkFguRFUsVucqNtE8IYBTJCSE,5898
+cassettedeck-2.0.0.dist-info/METADATA,sha256=vkO4t_2fs_kThAykVbh1clqZ9pugNNvYxzSKByLhsv0,721
+cassettedeck-2.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+cassettedeck-2.0.0.dist-info/top_level.txt,sha256=atCvVecCYFU8qxSUBUfRp0pzjwqtsqf5pk46r1BVSXk,13
+cassettedeck-2.0.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cassettedeck-2.0.0.dist-info/RECORD,,
