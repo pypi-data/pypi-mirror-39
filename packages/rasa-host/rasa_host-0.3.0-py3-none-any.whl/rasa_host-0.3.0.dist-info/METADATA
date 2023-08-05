@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: rasa-host
+Version: 0.3.0
+Summary: UI for Rasa
+Home-page: https://github.com/danielgolabek/RasaHost
+Author: Daniel Golabek
+Author-email: daniel.golabek@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: Flask
+Requires-Dist: Flask-SocketIO
+Requires-Dist: SQLAlchemy
+Requires-Dist: urllib3
+Requires-Dist: coloredlogs
+
+# Rasa-Host
+
+UI for Rasa
+

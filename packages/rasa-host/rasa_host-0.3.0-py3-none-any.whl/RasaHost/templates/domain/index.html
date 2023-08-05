@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+{% raw %}
+<div id="app" class="row" v-cloak>
+    <div class="col-md-12">
+        <div class="sticky-top-2 bg-white pb-3">
+            <div class="d-flex">
+                <div>
+                    <a v-on:click.stop.prevent="save()" href="#" class="icon text-muted ml-3">
+                        <svg width="10" height="11" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"> <path fill="none" stroke="#000" d="M18.65,1.68 C18.41,1.45 18.109,1.33 17.81,1.33 C17.499,1.33 17.209,1.45 16.98,1.68 L8.92,9.76 L8,12.33 L10.55,11.41 L18.651,3.34 C19.12,2.87 19.12,2.15 18.65,1.68 L18.65,1.68 L18.65,1.68 Z"></path> <polyline fill="none" stroke="#000" points="16.5 8.482 16.5 18.5 3.5 18.5 3.5 1.5 14.211 1.5"></polyline></svg>
+                        Save
+                        <div v-if="isSaving" class="loader"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="text-error">
+                {{error}}
+            </div>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="text">Text</label>
+                <text-editor v-model="model.text"></text-editor>
+            </div>
+        </form>
+    </div>
+ </div>
+{% endraw %}
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            model: {{ model_json| safe }},
+            error: null,
+            isSaving: false
+        },
+        created: function () {
+        },
+        methods: {
+            save: function (event) {
+                app.isSaving = true;
+                app.error = '';
+                this.$fetch(`/api/domain`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json; charset=utf-8" },
+                    body: JSON.stringify(this.model),
+                })
+                    .then(json => {
+                        app.isSaving = false;
+                    })
+                    .catch(error => {
+                        app.isSaving = false;
+                        app.error = "Error: " + error.message;
+                    });
+            }
+        }
+    });
+</script>
+
+{% endblock %}
