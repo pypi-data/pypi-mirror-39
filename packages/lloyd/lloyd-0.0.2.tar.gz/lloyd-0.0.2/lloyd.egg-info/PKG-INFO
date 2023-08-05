@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: lloyd
+Version: 0.0.2
+Summary: Lloyd iteration for distributing points in two-dimensional space.
+Home-page: https://github.com/duhaime/lloyd
+Author: Douglas Duhaime
+Author-email: douglas.duhaime@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: data-visualization,geometry,voronoi,lloyd-iteration
+Platform: UNKNOWN
