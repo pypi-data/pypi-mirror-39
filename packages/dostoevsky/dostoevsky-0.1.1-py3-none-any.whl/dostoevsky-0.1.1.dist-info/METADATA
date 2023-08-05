@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: dostoevsky
+Version: 0.1.1
+Summary: Sentiment analysis library for russian language
+Home-page: https://github.com/bureaucratic-labs/dostoevsky
+Author: Bureaucratic Labs
+Author-email: hello@b-labs.pro
+License: MIT
+Keywords: natural language processing,sentiment analysis
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Text Processing :: Linguistic
+Description-Content-Type: text/markdown
+Requires-Dist: b-labs-models (==2017.8.22)
+Requires-Dist: gensim (==3.6.0)
+Requires-Dist: Keras (==2.2.4)
+Requires-Dist: pymorphy2 (==0.8)
+Requires-Dist: pytest (==4.0.1)
+Requires-Dist: russian-tagsets (==0.6)
+Requires-Dist: scikit-learn (==0.20.1)
+Requires-Dist: tensorflow (==1.12.0)
+
+# Dostoevsky [![Build Status](https://travis-ci.org/bureaucratic-labs/dostoevsky.svg?branch=master)](https://travis-ci.org/bureaucratic-labs/dostoevsky)
+
+<img align="right" src="https://i.imgur.com/uLMWPuL.png">
+
+Library for sentiment analysis of russian language
+
+Currently, contains only one model: for classification of social networks comments / text messengers messages
+
+## Install
+
+Please note that `Dostoevsky` supports only Python 3.6 (3.7+ version'll be supported when tensorflow get it support, sorry)
+
+```bash
+$ pip install dostoevsky
+```
+
+## Social networks comment model
+
+This model was trained on [RuSentiment dataset](https://github.com/text-machine-lab/rusentiment) and achieves up to ~0.70 F1 score  
+![](https://i.imgur.com/bGAEWvg.png)
+
+### Usage
+
+First of all, you'll need to download pretrained word embeddings and model:
+
+```bash
+$ python -m doestoevsky.data download vk-embeddings cnn-social-network-model
+```
+
+Then, we can build our pipeline: `text -> tokenizer -> word embeddings -> CNN`
+
+```python
+from dostoevsky.tokenization import UDBaselineTokenizer
+from dostoevsky.word_vectors import SocialNetworkWordVectores
+from dostoevsky.models import SocialNetworkModel
+
+tokenizer = UDBaselineTokenizer()
+tokens = tokenizer.split('всё очень плохо')  # [('всё', 'ADJ'), ('очень', 'ADV'), ('плохо', 'ADV')]
+
+word_vectors_container = SocialNetworkWordVectores()
+
+vectors = word_vectors_container.get_word_vectors(tokens)
+vectors.shape  # (3, 300) - three words/vectors with dim=300
+
+model = SocialNetworkModel(
+  tokenizer=tokenizer,
+  word_vectors_container=word_vectors_container,
+  lemmatize=False,
+)
+
+model.predict(['наступили на ногу', 'всё суперски'])  # array(['negative', 'positive'], dtype='<U8')
+
+```
+
+
