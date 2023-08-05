@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: pptx2md
+Version: 0.7.2
+Summary: convert pptx to markdown
+Home-page: https://github.com/ssine/pptx2md
+Author: Liu Siyao
+Author-email: liusiyao@bupt.edu.cn
+License: MIT Licence
+Description-Content-Type: UNKNOWN
+Description: keeps the titles, formats including color, bold and italic, extracts the images
+Keywords: pip,pptx2md
+Platform: UNKNOWN

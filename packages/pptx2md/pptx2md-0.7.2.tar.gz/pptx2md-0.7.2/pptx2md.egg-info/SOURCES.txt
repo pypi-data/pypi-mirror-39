@@ -1,0 +1,13 @@
+README.md
+setup.py
+pptx2md/__init__.py
+pptx2md/__main__.py
+pptx2md/global_var.py
+pptx2md/outputter.py
+pptx2md/parser.py
+pptx2md.egg-info/PKG-INFO
+pptx2md.egg-info/SOURCES.txt
+pptx2md.egg-info/dependency_links.txt
+pptx2md.egg-info/entry_points.txt
+pptx2md.egg-info/requires.txt
+pptx2md.egg-info/top_level.txt
