@@ -1,0 +1,17 @@
+.gitignore
+.travis.yml
+LICENSE
+README.md
+requirements.txt
+setup.py
+test_docker_microsync.py
+demo/Dockerfile
+demo/message.txt
+demo/yaml/deployment.yaml
+docker_microsync/__init__.py
+docker_microsync.egg-info/PKG-INFO
+docker_microsync.egg-info/SOURCES.txt
+docker_microsync.egg-info/dependency_links.txt
+docker_microsync.egg-info/entry_points.txt
+docker_microsync.egg-info/requires.txt
+docker_microsync.egg-info/top_level.txt
