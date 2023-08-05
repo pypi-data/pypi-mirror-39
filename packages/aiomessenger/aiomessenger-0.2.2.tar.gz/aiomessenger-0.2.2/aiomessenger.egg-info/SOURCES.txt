@@ -1,0 +1,10 @@
+README.md
+setup.py
+aiomessenger/__init__.py
+aiomessenger/client.py
+aiomessenger.egg-info/PKG-INFO
+aiomessenger.egg-info/SOURCES.txt
+aiomessenger.egg-info/dependency_links.txt
+aiomessenger.egg-info/top_level.txt
+aiomessenger/tests/__init__.py
+aiomessenger/tests/test_client.py
