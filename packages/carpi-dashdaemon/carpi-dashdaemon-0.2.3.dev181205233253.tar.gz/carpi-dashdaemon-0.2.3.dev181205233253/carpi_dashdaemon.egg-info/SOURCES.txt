@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+SHORT_DESCRIPTION.txt
+VERSION.txt
+setup.py
+carpi_dashdaemon.egg-info/PKG-INFO
+carpi_dashdaemon.egg-info/SOURCES.txt
+carpi_dashdaemon.egg-info/dependency_links.txt
+carpi_dashdaemon.egg-info/not-zip-safe
+carpi_dashdaemon.egg-info/requires.txt
+carpi_dashdaemon.egg-info/top_level.txt
+dashdaemon/__init__.py
+dashdaemon/__main__.py
+dashdaemon/daemon.py
+dashdaemon/keys.py
+dashdaemon/work.py
