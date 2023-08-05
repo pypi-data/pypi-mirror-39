@@ -1,0 +1,27 @@
+elasticsearch-dsl<6.3.0,>=6.0.0
+
+[dev]
+pytest
+mock
+pytest-django==3.4.4
+factory-boy==2.11.1
+flake8==3.6.0
+pre-commit==1.12.0
+konch
+tox
+
+[dev:python_version >= "3.5"]
+flake8-bugbear==18.8.0
+
+[lint]
+flake8==3.6.0
+pre-commit==1.12.0
+
+[lint:python_version >= "3.5"]
+flake8-bugbear==18.8.0
+
+[tests]
+pytest
+mock
+pytest-django==3.4.4
+factory-boy==2.11.1
