@@ -1,0 +1,3 @@
+[console_scripts]
+babysploit = babysploit.__main__:main
+
