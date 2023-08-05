@@ -1,0 +1,22 @@
+# Codegen
+
+# Description
+**codegen** is tool for generating code for [microservice accelerator](https://github.houston.entsvcs.net/zongying-cao/micro-service-accelerator).
+It generates code with specified [templates](templates.md).  
+
+# Installation
+```
+pip install md_codegen
+```
+**codegen** is developed and tested on python 3.x. Please make sure python 3.x has already installed on your system prior to install it.
+
+# Usage
+```
+codegen <host_url> --username=<username> --password=<password> --output=<output path> --project=test1 --template-repo=<template_git_repo> --template-tag=<template_git_repo_tag>
+```
+* `host_url`: the url to download the *microservice definitions*. It would follow the pattern `http://<host>:<port>`.   
+* `u`: the username to access the account. If it is omitted, the program will prompt to input `username`.    
+* `p`: the password to access the account. If it is omitted, the program will prompt to input `password`.  
+* `o`: the output path to store the generated code. If it is omitted, the generated code will be stored in the current folder.   
+
+> If you want to update the interface defintion to your code, you should commit the changes in your local and make sure your local git repository is clean or the code generation will abort.
