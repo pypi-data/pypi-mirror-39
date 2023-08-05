@@ -1,0 +1,9 @@
+oauthlib>=2.0.7
+requests
+requests-oauthlib
+validators
+datetime
+matplotlib
+uuid
+numpy
+keyring
