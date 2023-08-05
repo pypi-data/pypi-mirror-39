@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+ppconfig/__init__.py
+ppconfig/__version__.py
+ppconfig/ppconfig.py
+ppconfig.egg-info/PKG-INFO
+ppconfig.egg-info/SOURCES.txt
+ppconfig.egg-info/dependency_links.txt
+ppconfig.egg-info/top_level.txt
