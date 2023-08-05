@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: relatively
+Version: 1.0.5
+Summary: Abundance figure with absolute and relative abundances across a hierarchy
+Home-page: https://github.com/brwnj/relatively
+Author: Joe Brown
+Author-email: brwnjm@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: pandas (>=0.23.1)
+Requires-Dist: plotly (>=3.0.0)
+
+UNKNOWN
+
+
