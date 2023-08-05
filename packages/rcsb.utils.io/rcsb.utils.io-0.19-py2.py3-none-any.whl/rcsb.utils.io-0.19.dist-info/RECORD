@@ -1,0 +1,12 @@
+rcsb/__init__.py,sha256=jv2YF__bseklT3OWEzlqJ5qE24c4aWd5F4r0TTjOrWQ,65
+rcsb/utils/__init__.py,sha256=jv2YF__bseklT3OWEzlqJ5qE24c4aWd5F4r0TTjOrWQ,65
+rcsb/utils/io/FastaUtil.py,sha256=eiwGVyih-sGBAE5JyxmoeL44t0LxDMzrpsW3WCAfJp4,6011
+rcsb/utils/io/FileUtil.py,sha256=EjQNz0WLEAjCdVJRRFG77p4sB56mt3E4QBP7e8AMfhE,2903
+rcsb/utils/io/IoUtil.py,sha256=vc9Fba0vQ_fHAwt2hnB0A1DqbANOKK48hcljv2NGPBE,15880
+rcsb/utils/io/MarshalUtil.py,sha256=WJCTg3Y_OCinW5qjHyMJMUcpJna3pwpCE33kH9q4I-4,4047
+rcsb/utils/io/__init__.py,sha256=HjdCxJjLZJK6TcRdUbvVzkZP9nkljGto5qms_MDtYQs,155
+rcsb.utils.io-0.19.dist-info/METADATA,sha256=hru-2fDjTlj8zwmcuogxxtAB0EG8z2LpRyEDTBGGbEQ,925
+rcsb.utils.io-0.19.dist-info/RECORD,,
+rcsb.utils.io-0.19.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+rcsb.utils.io-0.19.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+rcsb.utils.io-0.19.dist-info/top_level.txt,sha256=o9JzKwjXZKvIt99MG_WvJuOnR1DZn6_CIPtgWgUB0E8,5
