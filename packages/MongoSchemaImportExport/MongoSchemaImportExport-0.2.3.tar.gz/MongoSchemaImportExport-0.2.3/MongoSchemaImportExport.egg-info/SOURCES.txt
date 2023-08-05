@@ -1,0 +1,9 @@
+README.md
+setup.py
+MongoSchemaImportExport.egg-info/PKG-INFO
+MongoSchemaImportExport.egg-info/SOURCES.txt
+MongoSchemaImportExport.egg-info/dependency_links.txt
+MongoSchemaImportExport.egg-info/top_level.txt
+mongo_import_export_schema/__init__.py
+mongo_import_export_schema/mongo-schema-export.py
+mongo_import_export_schema/mongo-schema-import.py
