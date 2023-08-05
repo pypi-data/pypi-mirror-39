@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: OASYS1-APS-Extensions
+Version: 0.0.6
+Summary: ShadowOui/SRW extensions for the APS
+Home-page: https://github.com/oasys-aps-kit/OASYS1-APS-Extensions
+Author: Luca Rebuffi
+Author-email: lrebuffi@anl.gov
+License: GPLv3
+Download-URL: https://github.com/oasys-aps-kit/OASYS1-APS-Extensions
+Description: 
+        This is project contains customized widget of ShadowOui developed at APS-ANL
+        
+Keywords: raytracing,simulator,oasys1
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Environment :: Console
+Classifier: Environment :: Plugins
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Science/Research
