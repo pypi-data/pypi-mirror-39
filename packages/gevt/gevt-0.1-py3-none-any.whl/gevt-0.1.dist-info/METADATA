@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: gevt
+Version: 0.1
+Summary: Gestionnaire de Volontaires et de Tâches
+Home-page: UNKNOWN
+Author: Sébastien Weber
+Author-email: seba.weber@gmail.com
+License: GNU
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: Other Environment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: User Interfaces
+Requires-Dist: numpy
+Requires-Dist: yattag
+Requires-Dist: pyqtgraph (==0.10)
+Requires-Dist: pyqt5 (>5.8)
+
+# gevt
+
+
