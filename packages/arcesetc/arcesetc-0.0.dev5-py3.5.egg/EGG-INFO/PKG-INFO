@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: arcesetc
+Version: 0.0.dev5
+Summary: Exposure time calculator for APO/ARCES
+Home-page: https://github.com/bmorris3/arcesetc
+Author: Brett Morris & Trevor Dorn-Wallenstein
+Author-email: brettmorris21@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: Calculate S/N and exposure times for stellar spectroscopy with the ARC Echelle Spectrograph (ARCES) on the 3.5 m Telescope at Apache Point Observatory
+Platform: UNKNOWN
+Requires-Python: >=3.5
