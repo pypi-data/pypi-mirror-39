@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: ggea
+Version: 0.0.5
+Summary: Asynchronous State Graph Generator
+Home-page: https://github.com/clement-alexandre/TotemBionet
+Author: Alexandre Clement
+Author-email: alexandre.clement@etu.unice.fr
+License: WTFPL
+Description: ============================================================================
+        Générateur de Graphe d'État Asynchrone. 
+        ============================================================================
+        
+        ***************************************
+        (Asynchronous State Graph Generator)
+        ***************************************
+        
+        .. image:: https://travis-matrix-badges.herokuapp.com/repos/clement-alexandre/TotemBionet/branches/master/1
+            :target: https://travis-ci.com/clement-alexandre/TotemBionet
+        
+        
+        Installation
+        ---------------
+        
+        Install with `pip <https://pypi.org/project/ggea/>`_:
+        
+            `pip install ggea`
+        
+        Install with `conda <https://anaconda.org/alexandre-clement/ggea>`_:
+        
+            `conda install -c alexandre-clement ggea`
+        
+        
+        Run tests
+        ---------
+        
+        Execute the following command to run the test suite:
+            
+            `python -m unittest tests.test`
+        
+        
+        Contributors
+        ------------
+        
+        Gabriel Flores-Lipa (gabriel.flores-lipa@etu.unice.fr)
+Keywords: jupyter,computational systems biology
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: ipython
