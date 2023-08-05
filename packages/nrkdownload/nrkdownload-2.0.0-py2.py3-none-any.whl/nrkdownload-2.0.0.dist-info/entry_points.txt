@@ -1,0 +1,3 @@
+[console_scripts]
+nrkdownload = nrkdownload.commandline_script:main
+
