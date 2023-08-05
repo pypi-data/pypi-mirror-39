@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: nevolution-risk
+Version: 8
+Summary: Python Gym Environment for the popular Risk game
+Home-page: https://gitlab.com/nevolution.developers/slave/games/risk
+Author: nevolution.developers
+Author-email: basti.neubert@gmail.com
+License: UNKNOWN
+Description: # risk
+        
+        This project is the python *plug and play* implementation of the game [risk](https://en.wikipedia.org/wiki/Risk_(game)).
+        
+        ## TC1 (due date 05-12-2018)
+        
+        We have reachted TC1 when:
+        - we have created a general structure for the game (folder structure, packages, deployment)
+        - we have defined the observation space
+        - we have defined the action space
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
