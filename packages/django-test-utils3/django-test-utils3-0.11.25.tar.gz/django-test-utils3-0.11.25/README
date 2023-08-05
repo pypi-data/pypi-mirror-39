@@ -1,0 +1,14 @@
+Welcome to django-test-utils. The Documentation for this project is located at https://django-test-utils.readthedocs.org/en/latest/
+
+Decided to update this code for Python 3.6 with Django 1.11.14
+
+`pip install --upgrade django-test-utils3`
+
+Code may be subject to change frequently until fully stable.
+
+I also updated `twill` for Python 3.6
+
+Should be installed automatically with `django-rest-utils3` when you install it.
+
+If you found this useful please feel free to donate:
+
