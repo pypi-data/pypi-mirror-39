@@ -1,0 +1,8 @@
+
+include README.md
+include LICENSE
+
+recursive-include src *.py *.md
+recursive-include src/models *
+global-exclude .DS_Store
+global-exclude *.pyc

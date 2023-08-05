@@ -1,0 +1,194 @@
+{
+  "name": "DrugSelectionModel",
+  "runtimeName": "spark",
+  "runtimeVersion": "2.1",
+  "frameworkName": "mllib",
+  "frameworkVersion": "2.1",
+  "trainingDataSchema": {
+    "type": "struct",
+    "fields": [
+      {
+        "name": "AGE",
+        "type": "integer",
+        "nullable": true,
+        "metadata": {
+          "scale": 0,
+          "name": "AGE"
+        }
+      },
+      {
+        "name": "SEX",
+        "type": "string",
+        "nullable": true,
+        "metadata": {
+          "scale": 0,
+          "name": "SEX"
+        }
+      },
+      {
+        "type": "string",
+        "name": "BP",
+        "nullable": true,
+        "metadata": {
+          "scale": 0,
+          "name": "BP"
+        }
+      },
+      {
+        "name": "CHOLESTEROL",
+        "type": "string",
+        "nullable": true,
+        "metadata": {
+          "scale": 0,
+          "name": "CHOLESTEROL"
+        }
+      },
+      {
+        "name": "NA",
+        "type": "decimal(12,6)",
+        "nullable": true,
+        "metadata": {
+          "scale": 6,
+          "name": "NA"
+        }
+      },
+      {
+        "name": "K",
+        "type": "decimal(13,6)",
+        "nullable": true,
+        "metadata": {
+          "scale": 6,
+          "name": "K"
+        }
+      },
+      {
+        "name": "DRUG",
+        "type": "string",
+        "nullable": true,
+        "metadata": {
+          "scale": 0,
+          "name": "DRUG"
+        }
+      }
+    ]
+  },
+  "outputDataSchema": {
+    "type": "struct",
+    "fields": [
+      {
+        "name": "AGE",
+        "type": "integer",
+        "nullable": true,
+        "metadata": {
+          "scale": 0,
+          "name": "AGE"
+        }
+      },
+      {
+        "name": "SEX",
+        "type": "string",
+        "nullable": true,
+        "metadata": {
+          "scale": 0,
+          "name": "SEX"
+        }
+      },
+      {
+        "type": "string",
+        "name": "BP",
+        "nullable": true,
+        "metadata": {
+          "scale": 0,
+          "name": "BP"
+        }
+      },
+      {
+        "name": "CHOLESTEROL",
+        "type": "string",
+        "nullable": true,
+        "metadata": {
+          "scale": 0,
+          "name": "CHOLESTEROL"
+        }
+      },
+      {
+        "name": "NA",
+        "type": "decimal(12,6)",
+        "nullable": true,
+        "metadata": {
+          "scale": 6,
+          "name": "NA"
+        }
+      },
+      {
+        "name": "K",
+        "type": "decimal(13,6)",
+        "nullable": true,
+        "metadata": {
+          "scale": 6,
+          "name": "K"
+        }
+      },
+      {
+        "metadata": {
+          "modeling_role": "prediction"
+        },
+        "name": "prediction",
+        "nullable": true,
+        "type": "double"
+      },
+      {
+        "metadata": {
+          "modeling_role": "decoded-target"
+        },
+        "name": "predictedLabel",
+        "nullable": true,
+        "type": "string"
+      },
+      {
+        "metadata": {
+          "modeling_role": "probability"
+        },
+        "name": "probability",
+        "nullable": true,
+        "type": {
+          "containsNull": true,
+          "elementType": "double",
+          "type": "array"
+        }
+      },
+      {
+        "name": "DRUG",
+        "type": "string",
+        "nullable": true,
+        "metadata": {
+          "scale": 0,
+          "name": "DRUG"
+        }
+      }
+    ]
+  },
+  "trainingDataReference": {
+      "name": "Drug training data",
+      "connection": {
+        "db": "BLUDB",
+        "host": "dashdb-entry-yp-dal09-09.services.dal.bluemix.net",
+        "username": "dash11348",
+        "password": "G_2jp_K2avMY"
+      },
+      "source": {
+        "tablename": "DRUG_TRAIN_DATA_UPDATED",
+        "type": "dashdb"
+      }
+    },
+  "evaluationMethod": "multiclass",
+  "evaluationMetrics": [
+    {
+      "name": "accuracy",
+      "threshold": 0.8,
+      "value": 0.870968
+    }
+  ],
+  "labelField": "Drug",
+  "trainingDefinitionUrl": "$Location$"
+}
