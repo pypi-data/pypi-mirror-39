@@ -1,0 +1,13 @@
+opencmiss/__init__.py,sha256=C9lKDQC_TMvwYxmCLtCTIUB9dNty9LEsw-HticmoDPA,126
+opencmiss/utils/__init__.py,sha256=Xgs3D55-G8newIiforZS3QybyfnPtzGPxppll4jt37g,25
+opencmiss/utils/image.py,sha256=UPNQh3khpjJQkEloSyDVZ3UKrJphVXN1xktK1lVHMBM,2595
+opencmiss/utils/zinc.py,sha256=msBX1SC8Vj_0ZZikdmtrhgZ3bzNUsrmBXpqxI6dDsEU,23363
+opencmiss/utils/geometry/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opencmiss/utils/geometry/plane.py,sha256=iA3zLxV0QtL48G6HqHCXlhhm7uVJJO6btNM_sC9Unko,3294
+opencmiss/utils/maths/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opencmiss/utils/maths/algorithms.py,sha256=qlLT_1lqOHefLmpPD5acfjhfHLeQpVWV2pLG03C9y1Q,1577
+opencmiss/utils/maths/vectorops.py,sha256=u_MHQcUeh2gcUNkvecS-SP-74pKI6WaqilLj6W7RN20,5861
+opencmiss.utils-0.1.8.dist-info/METADATA,sha256=1WJlkqF5pnvWSY37dxXChtSvOoxqu7ASnxVUEesw0BU,12064
+opencmiss.utils-0.1.8.dist-info/RECORD,,
+opencmiss.utils-0.1.8.dist-info/WHEEL,sha256=cScVKDQXc_cp1jHmxFDq9fIOIg17a2BsmfS6J39H6Eo,97
+opencmiss.utils-0.1.8.dist-info/top_level.txt,sha256=zvFm-pxplop8dM2xjEia2vR53uUZ6N0hxhgRmMZDAvo,10
