@@ -1,0 +1,17 @@
+openbci_interface/VERSION,sha256=pmeA2iMQO-rxJDK0GFCJZrMaKjp4f5RopbbNqoZnwe8,6
+openbci_interface/__init__.py,sha256=bGsv4OzhVz8_Wf5UWgTGIRnf34os1ME1CTPL8NK_lo8,107
+openbci_interface/__main__.py,sha256=4PjahgT3kaB54p_N8L_N8dxX24xnb0pPWwFhlcmWpCw,1469
+openbci_interface/_version.py,sha256=dDETNkZXbrqCOKzuDGefXACbHr7hKZVpVLuoGtFGnyw,284
+openbci_interface/channel_config.py,sha256=lRtw7H8LrQ-gk9ZhzNX_JnYkA-ZENi6sej3o7azpqLc,5220
+openbci_interface/core.py,sha256=2iiphILzZnm1AgWg3VcV9PjrMfDok4D5bpULLhhEcXE,12756
+openbci_interface/cyton.py,sha256=ell9tf9wUs3gySdittGTtIFOcw4pt-2hcTpNh22p2LY,28950
+openbci_interface/exception.py,sha256=-P3ojOccQ7tUzsm0pRbKxsCrlSBAAIwrLnsNdE9PD6o,842
+openbci_interface/util.py,sha256=y73zgxmVa_XDT_rtR8mVwLygBQfGYkL8FvnWLG7MIE0,2196
+openbci_interface/command/__init__.py,sha256=8SDxbxNqhbIYeEiRBIFPRY56lJo5AXiuHsoSDh6g5GI,97
+openbci_interface/command/list_devices.py,sha256=Ga00KwnD6XBn7AeMma3DCNNlDWXa_zqFJ7JVBuvRUIQ,837
+openbci_interface/command/stream.py,sha256=SlCCEv0lSt54On_4hPdfPWQ42JlQfw74Ol0xaXtQTqM,2149
+openbci_interface-0.8.0.dist-info/METADATA,sha256=9jlwRN4DqAp5LrB9jozukTIBzfucv5s1qWtEiuok2no,1706
+openbci_interface-0.8.0.dist-info/RECORD,,
+openbci_interface-0.8.0.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+openbci_interface-0.8.0.dist-info/entry_points.txt,sha256=649rYPPSYSLrln05YlopdDva36uqlDp-uGtaixyDISU,71
+openbci_interface-0.8.0.dist-info/top_level.txt,sha256=Lx14oZKmCX2aQg1_oNCVW3_nR5yQW5yUtIBjJ5BBdc4,18
