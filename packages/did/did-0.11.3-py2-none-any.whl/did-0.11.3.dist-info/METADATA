@@ -1,0 +1,56 @@
+Metadata-Version: 2.0
+Name: did
+Version: 0.11.3
+Summary: did - What did you do last week, month, year?
+Home-page: https://github.com/psss/did
+Author: Petr Šplíchal
+Author-email: psplicha@redhat.com
+License: GPLv3
+Download-URL: https://github.com/psss/did/archive/master.zip
+Keywords: status,report,tasks,work
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Utilities
+Provides: did
+Requires-Dist: python-dateutil
+Requires-Dist: requests
+Provides-Extra: all
+Requires-Dist: requests-gssapi; extra == 'all'
+Requires-Dist: gssapi; extra == 'all'
+Requires-Dist: python-bugzilla; extra == 'all'
+Requires-Dist: google-api-python-client; extra == 'all'
+Requires-Dist: oauth2client; extra == 'all'
+Requires-Dist: feedparser; extra == 'all'
+Requires-Dist: sphinx; extra == 'all'
+Requires-Dist: mock; extra == 'all'
+Requires-Dist: sphinx-rtd-theme; extra == 'all'
+Requires-Dist: bitly-api; extra == 'all'
+Requires-Dist: pytest; extra == 'all'
+Requires-Dist: python-coveralls; extra == 'all'
+Provides-Extra: bitly
+Requires-Dist: bitly-api; extra == 'bitly'
+Provides-Extra: bugzilla
+Requires-Dist: python-bugzilla; extra == 'bugzilla'
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == 'docs'
+Requires-Dist: mock; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme; extra == 'docs'
+Provides-Extra: google
+Requires-Dist: google-api-python-client; extra == 'google'
+Requires-Dist: oauth2client; extra == 'google'
+Provides-Extra: jira
+Requires-Dist: requests-gssapi; extra == 'jira'
+Provides-Extra: redmine
+Requires-Dist: feedparser; extra == 'redmine'
+Provides-Extra: rt
+Requires-Dist: gssapi; extra == 'rt'
+Provides-Extra: tests
+Requires-Dist: pytest; extra == 'tests'
+Requires-Dist: python-coveralls; extra == 'tests'
+
+<closed file 'README.rst', mode 'r' at 0x7fd6526ab420>
+
+
