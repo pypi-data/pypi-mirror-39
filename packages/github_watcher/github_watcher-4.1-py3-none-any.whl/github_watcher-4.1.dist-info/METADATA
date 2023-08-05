@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: github-watcher
+Version: 4.1
+Summary: Monitors files/directories on github and alerts you when someone submits a PR with changes
+Home-page: https://github.com/akellehe/github-watcher
+Author: Andrew Kelleher
+Author-email: keats.kelleher@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: unidiff (==0.5.4)
+Requires-Dist: requests (==2.20.0)
+Requires-Dist: PyYAML (==3.13)
+Requires-Dist: PyGithub (==1.43)
+Requires-Dist: pync (==2.0.3)
+
+
+github_watcher is a package for keeping an eye for pull requests that fulfill certain criteria. If you're overseeing some tricky lines of code, you can get an alert and a link to any pull request that modifies those lines.
+
+You can also specify a list of regular expressions for which to watch each pull request. If you get a match in any file (source or destination) in any PR you'll get an alert and a link to it.
+
+You can find more info on the github page. https://github.com/akellehe/github-watcher
+
+
+
