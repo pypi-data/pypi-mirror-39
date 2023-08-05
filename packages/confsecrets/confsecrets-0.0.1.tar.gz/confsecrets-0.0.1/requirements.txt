@@ -1,0 +1,9 @@
+# for cryptography
+PyCrypto>=2.6.1
+six
+
+# for testing
+pytest
+pytest-cov
+coverage
+flake8
