@@ -1,0 +1,3 @@
+[console_scripts]
+spotish = spotish.__main__:main
+
