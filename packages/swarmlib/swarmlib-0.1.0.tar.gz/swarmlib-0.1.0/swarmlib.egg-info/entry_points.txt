@@ -1,0 +1,3 @@
+[console_scripts]
+swarm = swarmlib.main:run_swarm
+
