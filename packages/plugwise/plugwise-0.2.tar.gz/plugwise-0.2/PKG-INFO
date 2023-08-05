@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: plugwise
+Version: 0.2
+Summary: A library for communicating with Plugwise smartplugs
+Home-page: https://bitbucket.org/hadara/python-plugwise/wiki/Home
+Author: Sven Petai
+Author-email: hadara@bsd.ee
+License: MIT
+Download-URL: https://github.com/cyberjunky/plugwise/archive/0.2.tar.gz
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
