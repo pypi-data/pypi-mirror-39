@@ -1,0 +1,17 @@
+libsprinkle/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libsprinkle/clfile.py,sha256=kgMoycr1QfhbQXjyDO6tMFzBhH07m13-zTGa1_Q4AnE,486
+libsprinkle/clsync.py,sha256=1GHw_zZTpXEnCZzLEDCtVurStVxYxwcMvg9OpotEkoo,25173
+libsprinkle/common.py,sha256=N8s2C6LVfA0tYprcgEgV3WBp89xmwbFhwQu5JjrrGp4,3795
+libsprinkle/config.py,sha256=aLKxtm-PS-spqyrSYUo6wOMeTIL6XysItNhpBDfuOiY,2683
+libsprinkle/exceptions.py,sha256=_mfb1Qv8nh8Hz4Ns23CxEqfPHUcCKEN36lmjEIhE7Ic,396
+libsprinkle/operation.py,sha256=lLw-RuZb2TKE8ecJwILbllenoROBEkp08VypMZXVVCo,699
+libsprinkle/rclone.py,sha256=TaZxlAq_5gtLPJQimyurc1RarmEjRdG3-QOza8wI2GU,16936
+libsprinkle/smtp_email.py,sha256=qAv0pTK3zMOeb3_ykWADr1t9_8Nd5hIlMoPvZvHiewY,2378
+libsprinkle/sprinkle_daemon.py,sha256=pO91zIdcqVR063PYTPlFL74A_qVhqEnQH5fFGPROLuU,1797
+sprinkle_py-1.0.0.data/scripts/sprinkle.py,sha256=2k2XfAjlG_KlNgWJA5jD7Da-h6bx0zToOIMkj7JghM0,35596
+sprinkle_py-1.0.0.dist-info/LICENSE,sha256=pWgb-bBdsU2Gd2kwAXxketnm5W_2u8_fIeWEgojfrxs,7651
+sprinkle_py-1.0.0.dist-info/METADATA,sha256=4n6C_rb42xnrKeI6aervItCVKCxLVfZV0D9TxjrQF_g,3441
+sprinkle_py-1.0.0.dist-info/WHEEL,sha256=NvLheO0f8_uAcwoMijaCN7IVIIaldpzEnN1plXS6P6E,97
+sprinkle_py-1.0.0.dist-info/top_level.txt,sha256=TDmhoGmScKvj3SMmksrr1pHxE-yQtx2TtqXrEoRyxdY,12
+sprinkle_py-1.0.0.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+sprinkle_py-1.0.0.dist-info/RECORD,,
