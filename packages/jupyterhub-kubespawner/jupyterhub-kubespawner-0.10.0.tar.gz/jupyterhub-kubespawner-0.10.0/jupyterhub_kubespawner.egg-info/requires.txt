@@ -1,0 +1,11 @@
+jupyterhub>=0.8
+pyYAML
+kubernetes>=7
+escapism
+jinja2
+async_generator>=1.8
+
+[test]
+pytest>=3.3
+pytest-cov
+pytest-asyncio
