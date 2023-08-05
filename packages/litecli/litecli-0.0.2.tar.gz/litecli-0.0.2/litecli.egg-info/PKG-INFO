@@ -1,0 +1,59 @@
+Metadata-Version: 1.1
+Name: litecli
+Version: 0.0.2
+Summary: CLI for SQLite Databases with auto-completion and syntax highlighting.
+Home-page: https://github.com/dbcli/litecli
+Author: dbcli
+Author-email: litecli-users@googlegroups.com
+License: BSD
+Description: # litecli
+        
+        [![Build Status](https://travis-ci.org/dbcli/litecli.svg?branch=master)](https://travis-ci.org/dbcli/litecli)
+        
+        A command-line client for SQLite databases that has auto-completion and syntax highlighting.
+        
+        ## Installation
+        
+        If you already know how to install python packages, then you can install it via pip:
+        
+        You might need sudo on linux.
+        
+        ```
+        $ pip install -U litecli
+        ```
+        
+        For MacOS users, you can also use Homebrew to install it:
+        
+        ```
+        $ brew tap dbcli/tap
+        $ brew install litecli
+        ```
+        
+        ## Usage
+        
+            $ litecli --help
+            
+            Usage: litecli [OPTIONS] [DATABASE]
+        
+            Examples:
+              - litecli sqlite_db_name
+        
+        A config file is automatically created at `~/.config/litecli/config` at first launch. See the file itself for a description of all available options.
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: SQL
+Classifier: Topic :: Database
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
