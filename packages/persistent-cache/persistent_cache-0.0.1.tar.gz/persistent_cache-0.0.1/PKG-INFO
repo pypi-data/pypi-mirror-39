@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: persistent_cache
+Version: 0.0.1
+Summary: Function cache that uses a JSON file for persistency.
+Home-page: https://github.com/luiscruz/persistent_cache
+Author: Luis Cruz
+Author-email: luismirandacruz@gmail.com
+License: UNKNOWN
+Description: # persistent_cache
+        Function cache that uses a JSON file for persistency.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
