@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: WeightWatcher
+Version: 0.1.1
+Summary: Analyze weight matrices of Deep Neural Networks
+Home-page: https://calculationconsulting.com/
+Author: Calculation Consulting
+Author-email: info@calculationconsulting.com
+Maintainer: Calculation Consulting
+Maintainer-email: info@calculationconsulting.com
+License: Apache License, Version 2.0
+Project-URL: Documentation, https://calculationconsulting.com/
+Project-URL: Code, https://github.com/calculatedcontent/weightwatcher
+Project-URL: Issue tracker, https://github.com/calculatedcontent/weightwatcher/issues
+Keywords: Deep Learning Keras Tensorflow pytorch CNN DNN Neural Networks
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: powerlaw
+Requires-Dist: tensorflow
+Requires-Dist: keras
+Requires-Dist: sklearn
+
+Weight Watcher
+--------------
+
+**Weight Watcher** analyzes weight matrices of Deep Neural Networks.
+
+Installation
+------------
+
+.. code:: sh
+
+   pip install weightwatcher
+
+Usage
+-----
+
+Weight Watcher works with both Keras and pyTorch models.
+
+.. code:: python
+
+   import weightwatcher as ww
+   watcher = ww.WeightWatcher(model=model)
+   results = watcher.analyze()
+
+   watcher.get_summary()
+   watcher.print_results()
+
+Links
+-----
+
+`Weight Watcher homepage <https://calculationconsulting.com>`__
+
+License
+-------
+
+`Apache License 2.0 <LICENSE>`__
+
+
