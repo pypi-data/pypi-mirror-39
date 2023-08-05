@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: wheel-factorize
+Version: 1.0.1
+Summary: Library for finding prime factorizations and primality
+Home-page: https://github.com/mcastorina/wheel-factorization
+Author: miccah
+Author-email: m.castorina93@gmail.com
+License: UNKNOWN
+Description: # wheel_factorize
+        
+        Wheel factorization is an improvement of trial division method for
+        integer factorization. This project is the Python implementation of
+        wheel factorization.
+        
+        [Wikipedia Link](https://en.wikipedia.org/wiki/Wheel_factorization)
+        
+        [Source](https://github.com/mcastorina/wheel-factorization)
+        
+        ## Usage
+        
+        ```python
+        from wheel_factorize import WheelFactor as WF
+        
+        wf = WF(3)                  # basis size
+        print(wf.factors(10))
+        print(wf.factors(31))
+        print(wf.factors(22222222222))
+        print(wf.is_prime(9999991))
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
