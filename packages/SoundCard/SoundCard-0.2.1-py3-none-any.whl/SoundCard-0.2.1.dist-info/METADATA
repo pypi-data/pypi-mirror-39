@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: SoundCard
+Version: 0.2.1
+Summary: Play and record audio without resorting to CPython extensions
+Home-page: https://github.com/bastibe/SoundCard
+Author: Bastian Bechtold
+License: BSD 3-clause
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Multimedia :: Sound/Audio :: Capture/Recording
+Classifier: Topic :: Multimedia :: Sound/Audio :: Players
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: cffi
+
+UNKNOWN
+
+
