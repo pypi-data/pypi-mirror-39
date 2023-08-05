@@ -1,0 +1,15 @@
+nudnik/__init__.py,sha256=LmBnDjTbbJMx7BaJ1C7nqT6vhtpQGH-WO2JAt2jVB8Y,908
+nudnik/cli.py,sha256=sSiFn4ti3cd_XrrUPdjSrtXlS7GVJClQxpj8qMGYTwk,2127
+nudnik/client.py,sha256=F9PxltyPNAk_JFuMM31p4sHOXrNLjAu66Me1NzoaHDI,5325
+nudnik/entity_pb2.py,sha256=bFyl4yABHJY8hWFPzvmR7N6AUL7Fz-gVyYaqd6WcXv4,10863
+nudnik/entity_pb2_grpc.py,sha256=BsXQoNwyZ4-C_MgsDeGz7rF84AfX0kZ1LEolJijhnFo,1364
+nudnik/metrics.py,sha256=HzSRxbOWqHxtK6ug-RcR5qdVR0kNUsxfGY59nSHKr-g,8109
+nudnik/server.py,sha256=y_5UP3hlBVh9i0BbdUUsttqkJHExqAj-lDAor-IZIlY,3057
+nudnik/utils.py,sha256=skAl-_9BVBedsQ1_3DeOqYUbzY-s4TNe60RccZj-CtY,9916
+nudnik/tests/__init__.py,sha256=aPodwAZ7sLzDpxzgXCiki9m4Z6syusxbb2lgdwZqQDs,726
+nudnik-0.0.9.data/scripts/nudnik,sha256=ceWxRe6Gt3h5oxDelYgxlgKaWg_X3YfJk4tSAeZjY54,889
+nudnik-0.0.9.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+nudnik-0.0.9.dist-info/METADATA,sha256=H_zMzj6Jo32bITWCqrSNupO8eehdK9Mrf5SNurdr4uo,7760
+nudnik-0.0.9.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+nudnik-0.0.9.dist-info/top_level.txt,sha256=Q9_h0t2gEUDfM696edWvx88ISkXUQf_NlkRHl2gc72Y,7
+nudnik-0.0.9.dist-info/RECORD,,
