@@ -1,0 +1,8 @@
+  include *.rst
+
+  include tox.ini
+  exclude tox.ini
+
+  recursive-include src *.bat
+  recursive-include src *.in
+  recursive-include src *.txt

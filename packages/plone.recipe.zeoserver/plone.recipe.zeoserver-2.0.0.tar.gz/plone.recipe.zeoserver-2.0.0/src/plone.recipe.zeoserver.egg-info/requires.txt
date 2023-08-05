@@ -1,0 +1,9 @@
+setuptools
+zc.buildout
+zc.recipe.egg
+ZODB>=5
+zope.mkzeoinstance>=4.1
+ZopeUndo
+
+[zrs]
+zc.zrs
