@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: django-pwa
+Version: 1.0.1
+Summary: A Django app to include a manifest.json and Service Worker instance to enable progressive web app behavior 
+Home-page: http://github.com/silviolleite/django-pwa
+Author: Silvio Luis
+Author-email: silviolleite@gmail.com
+License: MIT License
+Requires-Dist: django (>=2)
+
+django-pwa
+
+
