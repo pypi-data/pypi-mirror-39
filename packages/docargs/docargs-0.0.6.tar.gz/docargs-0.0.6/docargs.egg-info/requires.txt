@@ -1,0 +1,8 @@
+numpydoc
+click
+colorama
+pyyaml
+flake8
+
+[tests]
+mypy

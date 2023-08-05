@@ -1,0 +1,15 @@
+README.md
+setup.py
+docargs/__init__.py
+docargs/__main__.py
+docargs/check.py
+docargs/cli.py
+docargs/flake8.py
+docargs/identify.py
+docargs/version.py
+docargs.egg-info/PKG-INFO
+docargs.egg-info/SOURCES.txt
+docargs.egg-info/dependency_links.txt
+docargs.egg-info/entry_points.txt
+docargs.egg-info/requires.txt
+docargs.egg-info/top_level.txt
