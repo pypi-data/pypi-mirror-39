@@ -1,0 +1,3 @@
+[console_scripts]
+noolite-mqtt = noolite_mqtt:cli
+
