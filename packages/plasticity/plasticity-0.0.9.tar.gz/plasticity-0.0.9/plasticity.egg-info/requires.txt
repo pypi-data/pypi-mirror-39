@@ -1,0 +1,10 @@
+six
+
+[:python_version<"3.0"]
+requests[security]>=2.0.0
+
+[:python_version>="3.0"]
+requests>=2.0.0
+
+[test]
+pytest==3.4.1
