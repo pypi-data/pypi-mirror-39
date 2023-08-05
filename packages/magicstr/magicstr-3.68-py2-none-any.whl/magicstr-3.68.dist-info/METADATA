@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: magicstr
+Version: 3.68
+Summary: Do some magic on your strings files.
+Home-page: UNKNOWN
+Author: wombatwen
+Author-email: wombatwen@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: gspread
+Requires-Dist: lxml
+Requires-Dist: oauth2client
+
+UNKNOWN
+
+
