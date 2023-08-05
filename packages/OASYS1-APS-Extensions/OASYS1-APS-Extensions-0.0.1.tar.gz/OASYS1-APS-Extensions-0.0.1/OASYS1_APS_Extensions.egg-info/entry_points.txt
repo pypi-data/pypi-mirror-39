@@ -1,0 +1,10 @@
+[oasys.addons]
+APS OASYS Extension = orangecontrib.aps.oasys
+APS SRW Extension = orangecontrib.aps.srw
+APS Shadow Extension = orangecontrib.aps.shadow
+
+[oasys.widgets]
+APS OASYS Extension = orangecontrib.aps.oasys.widgets.extension
+APS SRW Extension = orangecontrib.aps.srw.widgets.extension
+APS Shadow Extension = orangecontrib.aps.shadow.widgets.extension
+
