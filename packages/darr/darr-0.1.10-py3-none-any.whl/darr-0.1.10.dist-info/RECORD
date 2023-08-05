@@ -1,0 +1,23 @@
+darr/__init__.py,sha256=F9w1ccaViVdIOsSBe26ZlnjskLB6IYm9dR84RcIrTHs,169
+darr/_version (gabriel-XPS-15-9560's conflicted copy 2018-11-27).py,sha256=X4_y0cITSAAY_NZaqeBUzHpTGTgwSPVzWUwuepLTtsI,509
+darr/_version.py,sha256=UyVi6KwT3GN4He2o6lfQXvbEj8nWSoJa2LrgBXzcHig,498
+darr/array.py,sha256=oVqA4UBV912mbAcbobI_0glOAyrFOtXFJbvuCdamNmI,49925
+darr/numtype.py,sha256=SSRB_K4DPoBrr-kuYGg70KSQjwKiRx72jmvRVHzXoNM,3163
+darr/raggedarray.py,sha256=hJKmUY610AOFqy8tzpEoxiJioxX_prhdMrX60fwkjQ0,12525
+darr/readcode.py,sha256=Rwdqa-3pDAe2DUVWjSp0NSAPRpK4_CWC_2TCqypS8WE,10807
+darr/readcodearray.py,sha256=B329jmWQ2RA6J40owbbCfidum2FvRd35OUXnB8O83UI,10833
+darr/readcoderaggedarray.py,sha256=FOiUjvZrQ8BFZsKzZLmt5h85DRlpo3xlNf6v_vZPNGc,2415
+darr/utils.py,sha256=mOk_1NAVOrm1IRr6MHRuK3gEooI1dbhcNn4-BxRoxlk,1467
+darr/tests/__init__.py,sha256=gDhhmeLKKHvInMzQ9ERwGHY6ig0x6rpD4kVMiPE0DSs,403
+darr/tests/test_array.py,sha256=zcFOdXfNlLgjbEwccVf1qU9d6ht9s3VOWDOFDn6eEiI,27665
+darr/tests/test_basedatadir.py,sha256=7UG7AhY0bio0lZb_87O74egQY4aLYVa8Z5jnBJO1Blk,1674
+darr/tests/test_raggedarray.py,sha256=Rbqc4IMeXjQvOT7gxx8pHPcoxKQcqenAvi4aa3TPr1k,3254
+darr/tests/utils.py,sha256=0XVa0ZVNRSdjKELBiWcXg9ozgBM3lw_vsM-rUvtVhb8,570
+darr-0.1.10.data/data/LICENSE,sha256=X1V2tNlEmpJmiQCE25KTYwj2SYkl5n7CpA-kjAdYZBk,1619
+darr-0.1.10.dist-info/LICENSE,sha256=X1V2tNlEmpJmiQCE25KTYwj2SYkl5n7CpA-kjAdYZBk,1619
+darr-0.1.10.dist-info/METADATA,sha256=qOAG_u-c9OAsV2jWZrPymGFfxE_i78dKSF08timi1Ys,2739
+darr-0.1.10.dist-info/PKG-INFO (gabriel-Precision-T3610-SSD's conflicted copy 2018-11-05),sha256=0YKPg4LkPoS4Tf-QU-vNyKfQyzrh9CoOzpDyYo2-MZg,2943
+darr-0.1.10.dist-info/PKG-INFO (gabriel-XPS-15-9560's conflicted copy 2018-11-27),sha256=Kw5fVI8seQnLi-ELa1wbMsSC356f3G1MOUhB6s-fwu8,3039
+darr-0.1.10.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+darr-0.1.10.dist-info/top_level.txt,sha256=O2r07U5y9CZKepzPmuPsM0o6SlNmMcUAxyePHggXvuU,5
+darr-0.1.10.dist-info/RECORD,,
