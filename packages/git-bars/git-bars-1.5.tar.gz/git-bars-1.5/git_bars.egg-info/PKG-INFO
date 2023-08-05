@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: git-bars
+Version: 1.5
+Summary: A utility for visualising git commit activity as bars on the terminal
+Home-page: https://github.com/knadh/git-bars
+Author: Kailash Nadh
+Author-email: kailash@nadh.in
+License: MIT License
+Download-URL: https://github.com/knadh/git-bars
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Topic :: Utilities
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
