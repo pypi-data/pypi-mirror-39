@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+MyResources/__init__.py
+MyResources/__version__.py
+MyResources/core.py
+MyResources.egg-info/PKG-INFO
+MyResources.egg-info/SOURCES.txt
+MyResources.egg-info/dependency_links.txt
+MyResources.egg-info/top_level.txt
