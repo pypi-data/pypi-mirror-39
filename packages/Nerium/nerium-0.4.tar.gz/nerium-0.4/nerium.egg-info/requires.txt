@@ -1,0 +1,12 @@
+munch
+python-dotenv
+python-frontmatter
+pyyaml
+records
+responder
+
+[mysql]
+PyMySQL
+
+[pg]
+psycopg2
