@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: devhttp
+Version: 0.0.1
+Summary: Development HTTP Server Library
+Home-page: https://github.com/shearern/devhttp
+Author: Nathan Shearer
+Author-email: shearern@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
