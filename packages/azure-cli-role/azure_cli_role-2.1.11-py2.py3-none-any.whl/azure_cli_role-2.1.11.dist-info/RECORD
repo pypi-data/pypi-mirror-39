@@ -1,0 +1,16 @@
+azure/__init__.py,sha256=tG80BYyssaQYwPNf5Vrtx2fRzhxqJPy4xLPd7vCXuYE,409
+azure/cli/__init__.py,sha256=tG80BYyssaQYwPNf5Vrtx2fRzhxqJPy4xLPd7vCXuYE,409
+azure/cli/command_modules/__init__.py,sha256=tG80BYyssaQYwPNf5Vrtx2fRzhxqJPy4xLPd7vCXuYE,409
+azure/cli/command_modules/role/__init__.py,sha256=J3jfsp2BPpIzns7dO4mA-Vj8iLGwjR5yCRtheOA086c,1474
+azure/cli/command_modules/role/_client_factory.py,sha256=AuL1y1ANLB2Vr9-9xrC6kZWvBbCmLtAC08wL_3KKqks,1485
+azure/cli/command_modules/role/_completers.py,sha256=gmsL7ktctxIjcLrWKhYaLXsBoxri0llI5jK7hGqiiSQ,703
+azure/cli/command_modules/role/_help.py,sha256=f4LkeP-LPb2qtSi6jaPC3U0ShHsfxguG4HCaXcp9fp8,15731
+azure/cli/command_modules/role/_multi_api_adaptor.py,sha256=rI5jP6w3z2FbE9osZGzK7NqLBHU4rIkmC-5bMWhU10M,4025
+azure/cli/command_modules/role/_params.py,sha256=6tYVTCCgb_Cskfus6ywj88zKmeAE_BaU6INsO0BB64U,12841
+azure/cli/command_modules/role/_validators.py,sha256=o7pZQN732aR_3KOGyZpGt-VsW1KiAAlFHKw5jOo5X2E,3461
+azure/cli/command_modules/role/commands.py,sha256=7rwMc0yjZB3vRMd3JXHNHW2SRCgjUaUdJJgWC2Kmot4,8823
+azure/cli/command_modules/role/custom.py,sha256=LP1gjMR4RU-HGTJNRGQVcc95p2l2L8lMyhiahE6r-To,65799
+azure_cli_role-2.1.11.dist-info/METADATA,sha256=e69mu8gypzXyY2lLHmUQ-dpa-f-lT6dEKSTbmYNZC8Y,6210
+azure_cli_role-2.1.11.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+azure_cli_role-2.1.11.dist-info/top_level.txt,sha256=S7DhWV9m80TBzAhOFjxDUiNbKszzoThbnrSz5MpbHSQ,6
+azure_cli_role-2.1.11.dist-info/RECORD,,
