@@ -1,0 +1,17 @@
+setup.py
+vsts/__init__.py
+vsts/cli/__init__.py
+vsts/cli/team/__init__.py
+vsts/cli/team/common/__init__.py
+vsts/cli/team/common/configure.py
+vsts/cli/team/common/credentials.py
+vsts/cli/team/common/feedback.py
+vsts/cli/team/common/project.py
+vsts/cli/team/tests/__init__.py
+vsts/cli/team/tests/test_configure.py
+vsts/cli/team/tests/test_feedback.py
+vsts_cli_team_common.egg-info/PKG-INFO
+vsts_cli_team_common.egg-info/SOURCES.txt
+vsts_cli_team_common.egg-info/dependency_links.txt
+vsts_cli_team_common.egg-info/requires.txt
+vsts_cli_team_common.egg-info/top_level.txt
