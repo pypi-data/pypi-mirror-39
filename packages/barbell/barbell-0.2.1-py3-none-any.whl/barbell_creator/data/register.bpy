@@ -1,0 +1,4 @@
+register(
+    id='%ENV_ID%-v0',
+    entry_point='%ENV_NAME%.envs:%ENV_ID_PASCALIZED%'
+)

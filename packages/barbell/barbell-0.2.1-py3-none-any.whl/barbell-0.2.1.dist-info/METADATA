@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: barbell
+Version: 0.2.1
+Summary: A tool for creating Gym environments
+Home-page: https://github.com/oprometeumoderno/barbell
+Author: Henrique de Paula
+Author-email: oprometeumoderno@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: gym
+Requires-Dist: stringcase
+
+# barbell
+
+
