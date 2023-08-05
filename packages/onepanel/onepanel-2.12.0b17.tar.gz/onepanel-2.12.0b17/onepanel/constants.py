@@ -1,0 +1,1 @@
+CLI_VERSION = '2.12.0b17'  # type: str
