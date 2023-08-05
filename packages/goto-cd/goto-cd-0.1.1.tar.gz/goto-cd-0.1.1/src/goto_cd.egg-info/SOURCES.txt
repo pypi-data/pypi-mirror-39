@@ -1,0 +1,17 @@
+README.md
+setup.py
+src/goto/__init__.py
+src/goto/cli.py
+src/goto/config.py
+src/goto/install.py
+src/goto/storage.py
+src/goto/util.py
+src/goto/shell/goto
+src/goto/shell/goto-bash.sh
+src/goto/shell/goto-zsh.sh
+src/goto_cd.egg-info/PKG-INFO
+src/goto_cd.egg-info/SOURCES.txt
+src/goto_cd.egg-info/dependency_links.txt
+src/goto_cd.egg-info/entry_points.txt
+src/goto_cd.egg-info/requires.txt
+src/goto_cd.egg-info/top_level.txt
