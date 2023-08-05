@@ -1,0 +1,4 @@
+ansible-runner>=1.0.5
+neutron>=13.0.0.0b1
+neutron-lib>=1.18.0
+pbr>=2.0
