@@ -1,0 +1,13 @@
+README.md
+setup.py
+storm_indicator_pyqt/__init__.py
+storm_indicator_pyqt/__main__.py
+storm_indicator_pyqt/main.py
+storm_indicator_pyqt/storm_ind.py
+storm_indicator_pyqt.egg-info/PKG-INFO
+storm_indicator_pyqt.egg-info/SOURCES.txt
+storm_indicator_pyqt.egg-info/dependency_links.txt
+storm_indicator_pyqt.egg-info/entry_points.txt
+storm_indicator_pyqt.egg-info/requires.txt
+storm_indicator_pyqt.egg-info/top_level.txt
+storm_indicator_pyqt/icons/tray.svg

@@ -1,0 +1,3 @@
+[console_scripts]
+ssh-indicator-pyqt = storm_indicator_pyqt.__main__:main
+
