@@ -1,0 +1,741 @@
+,ICD,ICD Version,Comorbidity,Score
+0,39891,9,Congestive Heart Failure,7
+1,40201,9,Congestive Heart Failure,7
+2,40211,9,Congestive Heart Failure,7
+3,40291,9,Congestive Heart Failure,7
+4,40401,9,Congestive Heart Failure,7
+5,40403,9,Congestive Heart Failure,7
+6,40411,9,Congestive Heart Failure,7
+7,40413,9,Congestive Heart Failure,7
+8,40491,9,Congestive Heart Failure,7
+9,40493,9,Congestive Heart Failure,7
+10,4254,9,Congestive Heart Failure,7
+11,4255,9,Congestive Heart Failure,7
+12,4256,9,Congestive Heart Failure,7
+13,4257,9,Congestive Heart Failure,7
+14,4258,9,Congestive Heart Failure,7
+15,4259,9,Congestive Heart Failure,7
+16,428,9,Congestive Heart Failure,7
+17,I099,10,Congestive Heart Failure,7
+18,I110,10,Congestive Heart Failure,7
+19,I130,10,Congestive Heart Failure,7
+20,I132,10,Congestive Heart Failure,7
+21,I255,10,Congestive Heart Failure,7
+22,I420,10,Congestive Heart Failure,7
+23,I425,10,Congestive Heart Failure,7
+24,I426,10,Congestive Heart Failure,7
+25,I427,10,Congestive Heart Failure,7
+26,I428,10,Congestive Heart Failure,7
+27,I429,10,Congestive Heart Failure,7
+28,I43,10,Congestive Heart Failure,7
+29,I50,10,Congestive Heart Failure,7
+30,P290,10,Congestive Heart Failure,7
+31,4260,9,Cardiac Arrhythmias,5
+32,42613,9,Cardiac Arrhythmias,5
+33,4267,9,Cardiac Arrhythmias,5
+34,4269,9,Cardiac Arrhythmias,5
+35,42610,9,Cardiac Arrhythmias,5
+36,42612,9,Cardiac Arrhythmias,5
+37,4270,9,Cardiac Arrhythmias,5
+38,4271,9,Cardiac Arrhythmias,5
+39,4272,9,Cardiac Arrhythmias,5
+40,4273,9,Cardiac Arrhythmias,5
+41,4274,9,Cardiac Arrhythmias,5
+42,4276,9,Cardiac Arrhythmias,5
+43,4277,9,Cardiac Arrhythmias,5
+44,4278,9,Cardiac Arrhythmias,5
+45,4279,9,Cardiac Arrhythmias,5
+46,7850,9,Cardiac Arrhythmias,5
+47,99601,9,Cardiac Arrhythmias,5
+48,99604,9,Cardiac Arrhythmias,5
+49,V450,9,Cardiac Arrhythmias,5
+50,V533,9,Cardiac Arrhythmias,5
+51,I441,10,Cardiac Arrhythmias,5
+52,I442,10,Cardiac Arrhythmias,5
+53,I443,10,Cardiac Arrhythmias,5
+54,I456,10,Cardiac Arrhythmias,5
+55,I459,10,Cardiac Arrhythmias,5
+56,I47,10,Cardiac Arrhythmias,5
+57,I48,10,Cardiac Arrhythmias,5
+58,I49,10,Cardiac Arrhythmias,5
+59,R000,10,Cardiac Arrhythmias,5
+60,R001,10,Cardiac Arrhythmias,5
+61,R008,10,Cardiac Arrhythmias,5
+62,T821,10,Cardiac Arrhythmias,5
+63,Z450,10,Cardiac Arrhythmias,5
+64,Z950,10,Cardiac Arrhythmias,5
+65,0932,9,Valvular Disease,-1
+66,394,9,Valvular Disease,-1
+67,395,9,Valvular Disease,-1
+68,396,9,Valvular Disease,-1
+69,397,9,Valvular Disease,-1
+70,424,9,Valvular Disease,-1
+71,7463,9,Valvular Disease,-1
+72,7464,9,Valvular Disease,-1
+73,7465,9,Valvular Disease,-1
+74,7466,9,Valvular Disease,-1
+75,V422,9,Valvular Disease,-1
+76,V433,9,Valvular Disease,-1
+77,A520,10,Valvular Disease,-1
+78,I05,10,Valvular Disease,-1
+79,I06,10,Valvular Disease,-1
+80,I07,10,Valvular Disease,-1
+81,I08,10,Valvular Disease,-1
+82,I091,10,Valvular Disease,-1
+83,I098,10,Valvular Disease,-1
+84,I34,10,Valvular Disease,-1
+85,I35,10,Valvular Disease,-1
+86,I36,10,Valvular Disease,-1
+87,I37,10,Valvular Disease,-1
+88,I38,10,Valvular Disease,-1
+89,I39,10,Valvular Disease,-1
+90,Q230,10,Valvular Disease,-1
+91,Q231,10,Valvular Disease,-1
+92,Q232,10,Valvular Disease,-1
+93,Q233,10,Valvular Disease,-1
+94,Z952,10,Valvular Disease,-1
+95,Z953,10,Valvular Disease,-1
+96,Z954,10,Valvular Disease,-1
+97,4150,9,Pulmonary Circulation Disorders,4
+98,4151,9,Pulmonary Circulation Disorders,4
+99,416,9,Pulmonary Circulation Disorders,4
+100,4170,9,Pulmonary Circulation Disorders,4
+101,4178,9,Pulmonary Circulation Disorders,4
+102,4179,9,Pulmonary Circulation Disorders,4
+103,I26,10,Pulmonary Circulation Disorders,4
+104,I27,10,Pulmonary Circulation Disorders,4
+105,I280,10,Pulmonary Circulation Disorders,4
+106,I288,10,Pulmonary Circulation Disorders,4
+107,I289,10,Pulmonary Circulation Disorders,4
+108,0930,9,Peripheral Vascular Disorders,2
+109,4373,9,Peripheral Vascular Disorders,2
+110,440,9,Peripheral Vascular Disorders,2
+111,441,9,Peripheral Vascular Disorders,2
+112,4431,9,Peripheral Vascular Disorders,2
+113,4432,9,Peripheral Vascular Disorders,2
+114,4433,9,Peripheral Vascular Disorders,2
+115,4434,9,Peripheral Vascular Disorders,2
+116,4435,9,Peripheral Vascular Disorders,2
+117,4436,9,Peripheral Vascular Disorders,2
+118,4437,9,Peripheral Vascular Disorders,2
+119,4438,9,Peripheral Vascular Disorders,2
+120,4439,9,Peripheral Vascular Disorders,2
+121,4471,9,Peripheral Vascular Disorders,2
+122,5571,9,Peripheral Vascular Disorders,2
+123,5579,9,Peripheral Vascular Disorders,2
+124,V434,9,Peripheral Vascular Disorders,2
+125,I70,10,Peripheral Vascular Disorders,2
+126,I71,10,Peripheral Vascular Disorders,2
+127,I731,10,Peripheral Vascular Disorders,2
+128,I738,10,Peripheral Vascular Disorders,2
+129,I739,10,Peripheral Vascular Disorders,2
+130,I771,10,Peripheral Vascular Disorders,2
+131,I790,10,Peripheral Vascular Disorders,2
+132,I792,10,Peripheral Vascular Disorders,2
+133,K551,10,Peripheral Vascular Disorders,2
+134,K558,10,Peripheral Vascular Disorders,2
+135,K559,10,Peripheral Vascular Disorders,2
+136,Z958,10,Peripheral Vascular Disorders,2
+137,Z959,10,Peripheral Vascular Disorders,2
+138,401,9,"Hypertension, Uncomplicated",0
+139,I10,10,"Hypertension, Uncomplicated",0
+140,402,9,"Hypertension, Complicated",0
+141,403,9,"Hypertension, Complicated",0
+142,404,9,"Hypertension, Complicated",0
+143,405,9,"Hypertension, Complicated",0
+144,I11,10,"Hypertension, Complicated",0
+145,I12,10,"Hypertension, Complicated",0
+146,I13,10,"Hypertension, Complicated",0
+147,I15,10,"Hypertension, Complicated",0
+148,3341,9,Paralysis,7
+149,342,9,Paralysis,7
+150,343,9,Paralysis,7
+151,3440,9,Paralysis,7
+152,3441,9,Paralysis,7
+153,3442,9,Paralysis,7
+154,3443,9,Paralysis,7
+155,3444,9,Paralysis,7
+156,3445,9,Paralysis,7
+157,3446,9,Paralysis,7
+158,3449,9,Paralysis,7
+159,G041,10,Paralysis,7
+160,G114,10,Paralysis,7
+161,G801,10,Paralysis,7
+162,G802,10,Paralysis,7
+163,G81,10,Paralysis,7
+164,G82,10,Paralysis,7
+165,G830,10,Paralysis,7
+166,G831,10,Paralysis,7
+167,G832,10,Paralysis,7
+168,G833,10,Paralysis,7
+169,G834,10,Paralysis,7
+170,G839,10,Paralysis,7
+171,3319,9,Other Neurological Disorders,6
+172,3320,9,Other Neurological Disorders,6
+173,3321,9,Other Neurological Disorders,6
+174,3334,9,Other Neurological Disorders,6
+175,3335,9,Other Neurological Disorders,6
+176,33392,9,Other Neurological Disorders,6
+177,334,9,Other Neurological Disorders,6
+178,335,9,Other Neurological Disorders,6
+179,3362,9,Other Neurological Disorders,6
+180,340,9,Other Neurological Disorders,6
+181,341,9,Other Neurological Disorders,6
+182,345,9,Other Neurological Disorders,6
+183,3481,9,Other Neurological Disorders,6
+184,3483,9,Other Neurological Disorders,6
+185,7803,9,Other Neurological Disorders,6
+186,7843,9,Other Neurological Disorders,6
+187,G10,10,Other Neurological Disorders,6
+188,G11,10,Other Neurological Disorders,6
+189,G12,10,Other Neurological Disorders,6
+190,G13,10,Other Neurological Disorders,6
+191,G20,10,Other Neurological Disorders,6
+192,G21,10,Other Neurological Disorders,6
+193,G22,10,Other Neurological Disorders,6
+194,G254,10,Other Neurological Disorders,6
+195,G255,10,Other Neurological Disorders,6
+196,G312,10,Other Neurological Disorders,6
+197,G318,10,Other Neurological Disorders,6
+198,G319,10,Other Neurological Disorders,6
+199,G32,10,Other Neurological Disorders,6
+200,G35,10,Other Neurological Disorders,6
+201,G36,10,Other Neurological Disorders,6
+202,G37,10,Other Neurological Disorders,6
+203,G40,10,Other Neurological Disorders,6
+204,G41,10,Other Neurological Disorders,6
+205,G931,10,Other Neurological Disorders,6
+206,G934,10,Other Neurological Disorders,6
+207,R470,10,Other Neurological Disorders,6
+208,R56,10,Other Neurological Disorders,6
+209,4168,9,Chronic Pulmonary Disease,3
+210,4169,9,Chronic Pulmonary Disease,3
+211,490,9,Chronic Pulmonary Disease,3
+212,491,9,Chronic Pulmonary Disease,3
+213,492,9,Chronic Pulmonary Disease,3
+214,493,9,Chronic Pulmonary Disease,3
+215,494,9,Chronic Pulmonary Disease,3
+216,495,9,Chronic Pulmonary Disease,3
+217,496,9,Chronic Pulmonary Disease,3
+218,497,9,Chronic Pulmonary Disease,3
+219,498,9,Chronic Pulmonary Disease,3
+220,499,9,Chronic Pulmonary Disease,3
+221,500,9,Chronic Pulmonary Disease,3
+222,501,9,Chronic Pulmonary Disease,3
+223,502,9,Chronic Pulmonary Disease,3
+224,503,9,Chronic Pulmonary Disease,3
+225,504,9,Chronic Pulmonary Disease,3
+226,505,9,Chronic Pulmonary Disease,3
+227,5064,9,Chronic Pulmonary Disease,3
+228,5081,9,Chronic Pulmonary Disease,3
+229,5088,9,Chronic Pulmonary Disease,3
+230,I278,10,Chronic Pulmonary Disease,3
+231,I279,10,Chronic Pulmonary Disease,3
+232,J40,10,Chronic Pulmonary Disease,3
+233,J41,10,Chronic Pulmonary Disease,3
+234,J42,10,Chronic Pulmonary Disease,3
+235,J43,10,Chronic Pulmonary Disease,3
+236,J44,10,Chronic Pulmonary Disease,3
+237,J45,10,Chronic Pulmonary Disease,3
+238,J46,10,Chronic Pulmonary Disease,3
+239,J47,10,Chronic Pulmonary Disease,3
+240,J60,10,Chronic Pulmonary Disease,3
+241,J61,10,Chronic Pulmonary Disease,3
+242,J62,10,Chronic Pulmonary Disease,3
+243,J63,10,Chronic Pulmonary Disease,3
+244,J64,10,Chronic Pulmonary Disease,3
+245,J65,10,Chronic Pulmonary Disease,3
+246,J66,10,Chronic Pulmonary Disease,3
+247,J67,10,Chronic Pulmonary Disease,3
+248,J684,10,Chronic Pulmonary Disease,3
+249,J701,10,Chronic Pulmonary Disease,3
+250,J703,10,Chronic Pulmonary Disease,3
+251,2500,9,"Diabetes, Uncomplicated",0
+252,2501,9,"Diabetes, Uncomplicated",0
+253,2502,9,"Diabetes, Uncomplicated",0
+254,2503,9,"Diabetes, Uncomplicated",0
+255,E100,10,"Diabetes, Uncomplicated",0
+256,E101,10,"Diabetes, Uncomplicated",0
+257,E109,10,"Diabetes, Uncomplicated",0
+258,E110,10,"Diabetes, Uncomplicated",0
+259,E111,10,"Diabetes, Uncomplicated",0
+260,E119,10,"Diabetes, Uncomplicated",0
+261,E120,10,"Diabetes, Uncomplicated",0
+262,E121,10,"Diabetes, Uncomplicated",0
+263,E129,10,"Diabetes, Uncomplicated",0
+264,E130,10,"Diabetes, Uncomplicated",0
+265,E131,10,"Diabetes, Uncomplicated",0
+266,E139,10,"Diabetes, Uncomplicated",0
+267,E140,10,"Diabetes, Uncomplicated",0
+268,E141,10,"Diabetes, Uncomplicated",0
+269,E149,10,"Diabetes, Uncomplicated",0
+270,2504,9,"Diabetes, Complicated",0
+271,2505,9,"Diabetes, Complicated",0
+272,2506,9,"Diabetes, Complicated",0
+273,2507,9,"Diabetes, Complicated",0
+274,2508,9,"Diabetes, Complicated",0
+275,2509,9,"Diabetes, Complicated",0
+276,E102,10,"Diabetes, Complicated",0
+277,E103,10,"Diabetes, Complicated",0
+278,E104,10,"Diabetes, Complicated",0
+279,E105,10,"Diabetes, Complicated",0
+280,E106,10,"Diabetes, Complicated",0
+281,E107,10,"Diabetes, Complicated",0
+282,E108,10,"Diabetes, Complicated",0
+283,E112,10,"Diabetes, Complicated",0
+284,E113,10,"Diabetes, Complicated",0
+285,E114,10,"Diabetes, Complicated",0
+286,E115,10,"Diabetes, Complicated",0
+287,E116,10,"Diabetes, Complicated",0
+288,E117,10,"Diabetes, Complicated",0
+289,E118,10,"Diabetes, Complicated",0
+290,E122,10,"Diabetes, Complicated",0
+291,E123,10,"Diabetes, Complicated",0
+292,E124,10,"Diabetes, Complicated",0
+293,E125,10,"Diabetes, Complicated",0
+294,E126,10,"Diabetes, Complicated",0
+295,E127,10,"Diabetes, Complicated",0
+296,E128,10,"Diabetes, Complicated",0
+297,E132,10,"Diabetes, Complicated",0
+298,E133,10,"Diabetes, Complicated",0
+299,E134,10,"Diabetes, Complicated",0
+300,E135,10,"Diabetes, Complicated",0
+301,E136,10,"Diabetes, Complicated",0
+302,E137,10,"Diabetes, Complicated",0
+303,E138,10,"Diabetes, Complicated",0
+304,E142,10,"Diabetes, Complicated",0
+305,E143,10,"Diabetes, Complicated",0
+306,E144,10,"Diabetes, Complicated",0
+307,E145,10,"Diabetes, Complicated",0
+308,E146,10,"Diabetes, Complicated",0
+309,E147,10,"Diabetes, Complicated",0
+310,E148,10,"Diabetes, Complicated",0
+311,2409,9,Hypothyroidism,0
+312,243,9,Hypothyroidism,0
+313,244,9,Hypothyroidism,0
+314,2461,9,Hypothyroidism,0
+315,2468,9,Hypothyroidism,0
+316,E00,10,Hypothyroidism,0
+317,E01,10,Hypothyroidism,0
+318,E02,10,Hypothyroidism,0
+319,E03,10,Hypothyroidism,0
+320,E890,10,Hypothyroidism,0
+321,40301,9,Renal Failure,5
+322,40311,9,Renal Failure,5
+323,40391,9,Renal Failure,5
+324,40402,9,Renal Failure,5
+325,40403,9,Renal Failure,5
+326,40412,9,Renal Failure,5
+327,40413,9,Renal Failure,5
+328,40492,9,Renal Failure,5
+329,40493,9,Renal Failure,5
+330,585,9,Renal Failure,5
+331,586,9,Renal Failure,5
+332,588,9,Renal Failure,5
+333,V420,9,Renal Failure,5
+334,V451,9,Renal Failure,5
+335,V56,9,Renal Failure,5
+336,I120,10,Renal Failure,5
+337,I131,10,Renal Failure,5
+338,N18,10,Renal Failure,5
+339,N19,10,Renal Failure,5
+340,N250,10,Renal Failure,5
+341,Z490,10,Renal Failure,5
+342,Z491,10,Renal Failure,5
+343,Z492,10,Renal Failure,5
+344,Z940,10,Renal Failure,5
+345,Z992,10,Renal Failure,5
+346,07022,9,Liver Disease,11
+347,07023,9,Liver Disease,11
+348,07032,9,Liver Disease,11
+349,07033,9,Liver Disease,11
+350,07044,9,Liver Disease,11
+351,07054,9,Liver Disease,11
+352,0706,9,Liver Disease,11
+353,0709,9,Liver Disease,11
+354,4560,9,Liver Disease,11
+355,4561,9,Liver Disease,11
+356,4562,9,Liver Disease,11
+357,570,9,Liver Disease,11
+358,571,9,Liver Disease,11
+359,5722,9,Liver Disease,11
+360,5723,9,Liver Disease,11
+361,5724,9,Liver Disease,11
+362,5725,9,Liver Disease,11
+363,5726,9,Liver Disease,11
+364,5727,9,Liver Disease,11
+365,5728,9,Liver Disease,11
+366,5733,9,Liver Disease,11
+367,5734,9,Liver Disease,11
+368,5738,9,Liver Disease,11
+369,5739,9,Liver Disease,11
+370,V427,9,Liver Disease,11
+371,B18,10,Liver Disease,11
+372,I85,10,Liver Disease,11
+373,I864,10,Liver Disease,11
+374,I982,10,Liver Disease,11
+375,K70,10,Liver Disease,11
+376,K711,10,Liver Disease,11
+377,K713,10,Liver Disease,11
+378,K714,10,Liver Disease,11
+379,K715,10,Liver Disease,11
+380,K717,10,Liver Disease,11
+381,K72,10,Liver Disease,11
+382,K73,10,Liver Disease,11
+383,K74,10,Liver Disease,11
+384,K760,10,Liver Disease,11
+385,K762,10,Liver Disease,11
+386,K763,10,Liver Disease,11
+387,K764,10,Liver Disease,11
+388,K765,10,Liver Disease,11
+389,K766,10,Liver Disease,11
+390,K767,10,Liver Disease,11
+391,K768,10,Liver Disease,11
+392,K769,10,Liver Disease,11
+393,Z944,10,Liver Disease,11
+394,5317,9,Peptic Ulcer Disease Excluding Bleeding,0
+395,5319,9,Peptic Ulcer Disease Excluding Bleeding,0
+396,5327,9,Peptic Ulcer Disease Excluding Bleeding,0
+397,5329,9,Peptic Ulcer Disease Excluding Bleeding,0
+398,5337,9,Peptic Ulcer Disease Excluding Bleeding,0
+399,5339,9,Peptic Ulcer Disease Excluding Bleeding,0
+400,5347,9,Peptic Ulcer Disease Excluding Bleeding,0
+401,5349,9,Peptic Ulcer Disease Excluding Bleeding,0
+402,K257,10,Peptic Ulcer Disease Excluding Bleeding,0
+403,K259,10,Peptic Ulcer Disease Excluding Bleeding,0
+404,K267,10,Peptic Ulcer Disease Excluding Bleeding,0
+405,K269,10,Peptic Ulcer Disease Excluding Bleeding,0
+406,K277,10,Peptic Ulcer Disease Excluding Bleeding,0
+407,K279,10,Peptic Ulcer Disease Excluding Bleeding,0
+408,K287,10,Peptic Ulcer Disease Excluding Bleeding,0
+409,K289,10,Peptic Ulcer Disease Excluding Bleeding,0
+410,042,9,AIDS/HIV,0
+411,043,9,AIDS/HIV,0
+412,044,9,AIDS/HIV,0
+413,B20,10,AIDS/HIV,0
+414,B21,10,AIDS/HIV,0
+415,B22,10,AIDS/HIV,0
+416,B24,10,AIDS/HIV,0
+417,200,9,Lymphoma,9
+418,201,9,Lymphoma,9
+419,202,9,Lymphoma,9
+420,2030,9,Lymphoma,9
+421,2386,9,Lymphoma,9
+422,C81,10,Lymphoma,9
+423,C82,10,Lymphoma,9
+424,C83,10,Lymphoma,9
+425,C84,10,Lymphoma,9
+426,C85,10,Lymphoma,9
+427,C88,10,Lymphoma,9
+428,C96,10,Lymphoma,9
+429,C900,10,Lymphoma,9
+430,C902,10,Lymphoma,9
+431,196,9,Metastatic Cancer,12
+432,197,9,Metastatic Cancer,12
+433,198,9,Metastatic Cancer,12
+434,199,9,Metastatic Cancer,12
+435,C77,10,Metastatic Cancer,12
+436,C78,10,Metastatic Cancer,12
+437,C79,10,Metastatic Cancer,12
+438,C80,10,Metastatic Cancer,12
+439,140,9,Solid Tumor Without Metastasis,4
+440,141,9,Solid Tumor Without Metastasis,4
+441,142,9,Solid Tumor Without Metastasis,4
+442,143,9,Solid Tumor Without Metastasis,4
+443,144,9,Solid Tumor Without Metastasis,4
+444,145,9,Solid Tumor Without Metastasis,4
+445,146,9,Solid Tumor Without Metastasis,4
+446,147,9,Solid Tumor Without Metastasis,4
+447,148,9,Solid Tumor Without Metastasis,4
+448,149,9,Solid Tumor Without Metastasis,4
+449,150,9,Solid Tumor Without Metastasis,4
+450,151,9,Solid Tumor Without Metastasis,4
+451,152,9,Solid Tumor Without Metastasis,4
+452,153,9,Solid Tumor Without Metastasis,4
+453,154,9,Solid Tumor Without Metastasis,4
+454,155,9,Solid Tumor Without Metastasis,4
+455,156,9,Solid Tumor Without Metastasis,4
+456,157,9,Solid Tumor Without Metastasis,4
+457,158,9,Solid Tumor Without Metastasis,4
+458,159,9,Solid Tumor Without Metastasis,4
+459,160,9,Solid Tumor Without Metastasis,4
+460,161,9,Solid Tumor Without Metastasis,4
+461,162,9,Solid Tumor Without Metastasis,4
+462,163,9,Solid Tumor Without Metastasis,4
+463,164,9,Solid Tumor Without Metastasis,4
+464,165,9,Solid Tumor Without Metastasis,4
+465,166,9,Solid Tumor Without Metastasis,4
+466,167,9,Solid Tumor Without Metastasis,4
+467,168,9,Solid Tumor Without Metastasis,4
+468,169,9,Solid Tumor Without Metastasis,4
+469,170,9,Solid Tumor Without Metastasis,4
+470,172,9,Solid Tumor Without Metastasis,4
+471,174,9,Solid Tumor Without Metastasis,4
+472,175,9,Solid Tumor Without Metastasis,4
+473,176,9,Solid Tumor Without Metastasis,4
+474,177,9,Solid Tumor Without Metastasis,4
+475,178,9,Solid Tumor Without Metastasis,4
+476,179,9,Solid Tumor Without Metastasis,4
+477,180,9,Solid Tumor Without Metastasis,4
+478,181,9,Solid Tumor Without Metastasis,4
+479,182,9,Solid Tumor Without Metastasis,4
+480,183,9,Solid Tumor Without Metastasis,4
+481,184,9,Solid Tumor Without Metastasis,4
+482,185,9,Solid Tumor Without Metastasis,4
+483,186,9,Solid Tumor Without Metastasis,4
+484,187,9,Solid Tumor Without Metastasis,4
+485,188,9,Solid Tumor Without Metastasis,4
+486,189,9,Solid Tumor Without Metastasis,4
+487,190,9,Solid Tumor Without Metastasis,4
+488,191,9,Solid Tumor Without Metastasis,4
+489,192,9,Solid Tumor Without Metastasis,4
+490,193,9,Solid Tumor Without Metastasis,4
+491,194,9,Solid Tumor Without Metastasis,4
+492,195,9,Solid Tumor Without Metastasis,4
+493,C00,10,Solid Tumor Without Metastasis,4
+494,C01,10,Solid Tumor Without Metastasis,4
+495,C02,10,Solid Tumor Without Metastasis,4
+496,C03,10,Solid Tumor Without Metastasis,4
+497,C04,10,Solid Tumor Without Metastasis,4
+498,C05,10,Solid Tumor Without Metastasis,4
+499,C06,10,Solid Tumor Without Metastasis,4
+500,C07,10,Solid Tumor Without Metastasis,4
+501,C08,10,Solid Tumor Without Metastasis,4
+502,C09,10,Solid Tumor Without Metastasis,4
+503,C10,10,Solid Tumor Without Metastasis,4
+504,C11,10,Solid Tumor Without Metastasis,4
+505,C12,10,Solid Tumor Without Metastasis,4
+506,C13,10,Solid Tumor Without Metastasis,4
+507,C14,10,Solid Tumor Without Metastasis,4
+508,C15,10,Solid Tumor Without Metastasis,4
+509,C16,10,Solid Tumor Without Metastasis,4
+510,C17,10,Solid Tumor Without Metastasis,4
+511,C18,10,Solid Tumor Without Metastasis,4
+512,C19,10,Solid Tumor Without Metastasis,4
+513,C20,10,Solid Tumor Without Metastasis,4
+514,C21,10,Solid Tumor Without Metastasis,4
+515,C22,10,Solid Tumor Without Metastasis,4
+516,C23,10,Solid Tumor Without Metastasis,4
+517,C24,10,Solid Tumor Without Metastasis,4
+518,C25,10,Solid Tumor Without Metastasis,4
+519,C26,10,Solid Tumor Without Metastasis,4
+520,C30,10,Solid Tumor Without Metastasis,4
+521,C31,10,Solid Tumor Without Metastasis,4
+522,C32,10,Solid Tumor Without Metastasis,4
+523,C33,10,Solid Tumor Without Metastasis,4
+524,C34,10,Solid Tumor Without Metastasis,4
+525,C37,10,Solid Tumor Without Metastasis,4
+526,C38,10,Solid Tumor Without Metastasis,4
+527,C39,10,Solid Tumor Without Metastasis,4
+528,C40,10,Solid Tumor Without Metastasis,4
+529,C41,10,Solid Tumor Without Metastasis,4
+530,C43,10,Solid Tumor Without Metastasis,4
+531,C45,10,Solid Tumor Without Metastasis,4
+532,C46,10,Solid Tumor Without Metastasis,4
+533,C47,10,Solid Tumor Without Metastasis,4
+534,C48,10,Solid Tumor Without Metastasis,4
+535,C49,10,Solid Tumor Without Metastasis,4
+536,C50,10,Solid Tumor Without Metastasis,4
+537,C51,10,Solid Tumor Without Metastasis,4
+538,C52,10,Solid Tumor Without Metastasis,4
+539,C53,10,Solid Tumor Without Metastasis,4
+540,C54,10,Solid Tumor Without Metastasis,4
+541,C55,10,Solid Tumor Without Metastasis,4
+542,C56,10,Solid Tumor Without Metastasis,4
+543,C57,10,Solid Tumor Without Metastasis,4
+544,C58,10,Solid Tumor Without Metastasis,4
+545,C60,10,Solid Tumor Without Metastasis,4
+546,C61,10,Solid Tumor Without Metastasis,4
+547,C62,10,Solid Tumor Without Metastasis,4
+548,C63,10,Solid Tumor Without Metastasis,4
+549,C64,10,Solid Tumor Without Metastasis,4
+550,C65,10,Solid Tumor Without Metastasis,4
+551,C66,10,Solid Tumor Without Metastasis,4
+552,C67,10,Solid Tumor Without Metastasis,4
+553,C68,10,Solid Tumor Without Metastasis,4
+554,C69,10,Solid Tumor Without Metastasis,4
+555,C70,10,Solid Tumor Without Metastasis,4
+556,C71,10,Solid Tumor Without Metastasis,4
+557,C72,10,Solid Tumor Without Metastasis,4
+558,C73,10,Solid Tumor Without Metastasis,4
+559,C74,10,Solid Tumor Without Metastasis,4
+560,C75,10,Solid Tumor Without Metastasis,4
+561,C76,10,Solid Tumor Without Metastasis,4
+562,C97,10,Solid Tumor Without Metastasis,4
+563,446,9,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+564,7010,9,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+565,7100,9,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+566,7101,9,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+567,7102,9,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+568,7103,9,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+569,7104,9,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+570,7108,9,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+571,7109,9,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+572,7112,9,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+573,714,9,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+574,7193,9,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+575,720,9,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+576,725,9,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+577,7285,9,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+578,72889,9,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+579,72930,9,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+580,L940,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+581,L941,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+582,L943,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+583,M05,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+584,M06,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+585,M08,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+586,M120,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+587,M123,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+588,M30,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+589,M310,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+590,M311,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+591,M312,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+592,M313,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+593,M32,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+594,M33,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+595,M34,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+596,M35,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+597,M45,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+598,M461,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+599,M468,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+600,M469,10,Rheumatoid Arthritis/Collagen Vascular Diseases,0
+601,286,9,Coagulopathy,3
+602,2871,9,Coagulopathy,3
+603,2873,9,Coagulopathy,3
+604,2874,9,Coagulopathy,3
+605,2875,9,Coagulopathy,3
+606,D65,10,Coagulopathy,3
+607,D67,10,Coagulopathy,3
+608,D68,10,Coagulopathy,3
+609,D691,10,Coagulopathy,3
+610,D693,10,Coagulopathy,3
+611,D694,10,Coagulopathy,3
+612,D695,10,Coagulopathy,3
+613,D696,10,Coagulopathy,3
+614,2780,9,Obesity,-4
+615,E66,10,Obesity,-4
+616,260,9,Weight Loss,6
+617,261,9,Weight Loss,6
+618,262,9,Weight Loss,6
+619,263,9,Weight Loss,6
+620,7832,9,Weight Loss,6
+621,7994,9,Weight Loss,6
+622,E40,10,Weight Loss,6
+623,E41,10,Weight Loss,6
+624,E42,10,Weight Loss,6
+625,E43,10,Weight Loss,6
+626,E44,10,Weight Loss,6
+627,E45,10,Weight Loss,6
+628,E46,10,Weight Loss,6
+629,R634,10,Weight Loss,6
+630,R64,10,Weight Loss,6
+631,2536,9,Fluid and Electrolyte Disorders,5
+632,276,9,Fluid and Electrolyte Disorders,5
+633,E222,10,Fluid and Electrolyte Disorders,5
+634,E86,10,Fluid and Electrolyte Disorders,5
+635,E87,10,Fluid and Electrolyte Disorders,5
+636,2800,9,Blood Loss Anemia,-2
+637,D500,10,Blood Loss Anemia,-2
+638,2801,9,Deficiency Anemia,-2
+639,2802,9,Deficiency Anemia,-2
+640,2803,9,Deficiency Anemia,-2
+641,2804,9,Deficiency Anemia,-2
+642,2805,9,Deficiency Anemia,-2
+643,2806,9,Deficiency Anemia,-2
+644,2807,9,Deficiency Anemia,-2
+645,2808,9,Deficiency Anemia,-2
+646,2809,9,Deficiency Anemia,-2
+647,281,9,Deficiency Anemia,-2
+648,D508,10,Deficiency Anemia,-2
+649,D509,10,Deficiency Anemia,-2
+650,D51,10,Deficiency Anemia,-2
+651,D52,10,Deficiency Anemia,-2
+652,D53,10,Deficiency Anemia,-2
+653,2652,9,Alcohol Abuse,0
+654,2911,9,Alcohol Abuse,0
+655,2912,9,Alcohol Abuse,0
+656,2913,9,Alcohol Abuse,0
+657,2915,9,Alcohol Abuse,0
+658,2916,9,Alcohol Abuse,0
+659,2917,9,Alcohol Abuse,0
+660,2918,9,Alcohol Abuse,0
+661,2919,9,Alcohol Abuse,0
+662,3030,9,Alcohol Abuse,0
+663,3039,9,Alcohol Abuse,0
+664,3050,9,Alcohol Abuse,0
+665,3575,9,Alcohol Abuse,0
+666,4255,9,Alcohol Abuse,0
+667,5353,9,Alcohol Abuse,0
+668,5710,9,Alcohol Abuse,0
+669,5711,9,Alcohol Abuse,0
+670,5712,9,Alcohol Abuse,0
+671,5713,9,Alcohol Abuse,0
+672,980,9,Alcohol Abuse,0
+673,V113,9,Alcohol Abuse,0
+674,F10,10,Alcohol Abuse,0
+675,E52,10,Alcohol Abuse,0
+676,G621,10,Alcohol Abuse,0
+677,I426,10,Alcohol Abuse,0
+678,K292,10,Alcohol Abuse,0
+679,K700,10,Alcohol Abuse,0
+680,K703,10,Alcohol Abuse,0
+681,K709,10,Alcohol Abuse,0
+682,T51,10,Alcohol Abuse,0
+683,Z502,10,Alcohol Abuse,0
+684,Z714,10,Alcohol Abuse,0
+685,Z721,10,Alcohol Abuse,0
+686,292,9,Drug Abuse,-7
+687,304,9,Drug Abuse,-7
+688,3052,9,Drug Abuse,-7
+689,3053,9,Drug Abuse,-7
+690,3054,9,Drug Abuse,-7
+691,3055,9,Drug Abuse,-7
+692,3056,9,Drug Abuse,-7
+693,3057,9,Drug Abuse,-7
+694,3058,9,Drug Abuse,-7
+695,3059,9,Drug Abuse,-7
+696,V6542,9,Drug Abuse,-7
+697,F11,10,Drug Abuse,-7
+698,F12,10,Drug Abuse,-7
+699,F13,10,Drug Abuse,-7
+700,F14,10,Drug Abuse,-7
+701,F15,10,Drug Abuse,-7
+702,F16,10,Drug Abuse,-7
+703,F18,10,Drug Abuse,-7
+704,F19,10,Drug Abuse,-7
+705,Z715,10,Drug Abuse,-7
+706,Z722,10,Drug Abuse,-7
+707,2938,9,Psychoses,0
+708,295,9,Psychoses,0
+709,29604,9,Psychoses,0
+710,29614,9,Psychoses,0
+711,29644,9,Psychoses,0
+712,29654,9,Psychoses,0
+713,297,9,Psychoses,0
+714,298,9,Psychoses,0
+715,F20,10,Psychoses,0
+716,F22,10,Psychoses,0
+717,F23,10,Psychoses,0
+718,F24,10,Psychoses,0
+719,F25,10,Psychoses,0
+720,F28,10,Psychoses,0
+721,F29,10,Psychoses,0
+722,F302,10,Psychoses,0
+723,F312,10,Psychoses,0
+724,F315,10,Psychoses,0
+725,2962,9,Depression,-3
+726,2963,9,Depression,-3
+727,2965,9,Depression,-3
+728,3004,9,Depression,-3
+729,309,9,Depression,-3
+730,311,9,Depression,-3
+731,F204,10,Depression,-3
+732,F313,10,Depression,-3
+733,F314,10,Depression,-3
+734,F315,10,Depression,-3
+735,F32,10,Depression,-3
+736,F33,10,Depression,-3
+737,F341,10,Depression,-3
+738,F412,10,Depression,-3
+739,F432,10,Depression,-3
