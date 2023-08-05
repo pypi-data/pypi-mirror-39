@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: rest2cmd
+Version: 0.0.3
+Summary: Simple http rest api to cmd line interface.
+Home-page: https://github.com/techstreets/rest2cmd.git
+Author: Bojan Radojevic
+Author-email: bradojevic@gmail.com
+License: MIT License
+Download-URL: https://github.com/techstreets/rest2cmd/tarball/0.0.3
+Description: # rest2cmd
+        Executing cmd tools via HTTP REST interface.
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
