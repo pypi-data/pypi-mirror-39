@@ -1,0 +1,43 @@
+Metadata-Version: 1.1
+Name: light_rest_client
+Version: 1.0.3
+Summary: A very lightweight REST client for Python.
+Home-page: https://github.com/mediascopegroup/light_rest_client/
+Author: Kacper Duras
+Author-email: kacper.duras@mediascope.group
+License: UNKNOWN
+Description: # light_rest_client [![Build Status](https://travis-ci.org/mediascopegroup/light_rest_client.svg?branch=master)](https://travis-ci.org/mediascopegroup/light_rest_client)
+        A very lightweight REST client for Python.
+        
+        ## Example
+        ```python
+        from light_rest_client.client import Client
+        from light_rest_client.parsers import JSONParser
+        from light_rest_client.exceptions import HTTPClientException, HTTPServerException
+        
+        try:
+            client = Client(url="https://jsonplaceholder.typicode.com", parser=JSONParser())
+            print(client.get("todos/1"))
+        except HTTPClientException:
+            # code
+        except HTTPServerException:
+            # code
+        ```
+        
+        ## Installation
+        
+        ```shell
+        pip install -e git://github.com/mediascopegroup/light_rest_client.git@1.0.2
+        ```
+        
+        ## License
+        [CDDL](LICENSE)
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
