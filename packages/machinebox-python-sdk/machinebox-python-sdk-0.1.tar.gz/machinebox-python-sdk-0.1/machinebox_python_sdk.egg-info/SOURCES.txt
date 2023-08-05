@@ -1,0 +1,12 @@
+README.md
+setup.py
+machinebox/__init__.py
+machinebox/classificationbox.py
+machinebox/const.py
+machinebox/core.py
+machinebox/facebox.py
+machinebox_python_sdk.egg-info/PKG-INFO
+machinebox_python_sdk.egg-info/SOURCES.txt
+machinebox_python_sdk.egg-info/dependency_links.txt
+machinebox_python_sdk.egg-info/requires.txt
+machinebox_python_sdk.egg-info/top_level.txt
