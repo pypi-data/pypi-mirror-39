@@ -1,0 +1,21 @@
+dictdumper
+chardet
+aenum
+emoji
+
+[:python_version == "3.4"]
+pathlib2>=2.3.2
+
+[DPKT]
+dpkt
+
+[PyShark]
+pyshark
+
+[Scapy]
+scapy
+
+[all]
+dpkt
+scapy
+pyshark
