@@ -1,0 +1,17 @@
+codecov
+coverage
+notebook
+mock
+pytest>=3.3
+pytest-cov
+pytest-mock
+pytest-env
+moto
+check-manifest
+black; python_version >= '3.6'
+attrs>=17.4.0
+pre-commit
+boto3
+botocore
+ipywidgets
+flake8

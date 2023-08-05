@@ -1,0 +1,17 @@
+ansiwrap
+boto3
+click
+future
+futures ; python_version < "3.0"
+ipython >= 5.0
+pyyaml
+nbformat
+nbconvert >= 5.4
+six
+tqdm
+jupyter_client
+pandas
+requests
+azure-datalake-store >= 0.0.30
+azure-storage-blob
+entrypoints
