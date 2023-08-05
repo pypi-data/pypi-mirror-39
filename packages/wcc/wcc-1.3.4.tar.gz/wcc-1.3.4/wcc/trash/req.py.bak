@@ -1,0 +1,300 @@
+"""
+代码较多的依赖requests
+参考文档：http://docs.python-requests.org/zh_CN/latest/user/quickstart.html
+"""
+import  requests
+import  time
+from    selenium import webdriver
+from    selenium.webdriver.firefox.firefox_profile import FirefoxProfile
+from    .user_agent import get_agent
+from    .proxy import get_proxy
+import  chardet
+import  traceback
+
+def getpage(url, **kwargs):
+    """
+    使用get方式获取url对应的网页源码,如果是访问接口的话，返回是json字符串.
+    :param url: 网页的url 
+    :param headers: 请求头,默认从请求头库中随机选择一个
+    :param timeout: 超时时间，默认是10s
+    :param use_proxy: 是否使用代理，默认为True
+    :param use_browser: 是否使用浏览器，默认为False
+    :param params: GET请求附带的参数，requests会把这个字典的params做成?k1=v1&k2=v2形式发送出去.
+    :param payload: POST请求附带的参数.
+    :param http_method: GET/POST/PUT/DELETE,必须接口
+    :return:经过渲染之后的网页源代码，是一个字符串
+    """
+    DEFAULT_TIMEOUT = 60
+    MAX_TRY_COUNT = 4
+
+    headers     = kwargs['headers']     if 'headers'    in kwargs else {'user-agent':get_agent()}
+    timeout     = kwargs['timeout']     if 'timeout'    in kwargs else DEFAULT_TIMEOUT
+    use_proxy   = kwargs['use_proxy']   if 'use_proxy'  in kwargs else True
+    use_browser = kwargs['use_browser'] if 'use_browser'in kwargs else False
+    params      = kwargs['params']      if 'params'     in kwargs else None
+    payload     = kwargs['payload']     if 'payload'    in kwargs else None
+    http_method = kwargs['http_method'] if 'http_method'in kwargs else "GET"
+    use_ssl     = kwargs['use_ssl']     if 'use_ssl'    in kwargs else False
+    wait        = kwargs['wait']        if 'wait'       in kwargs else 0.5
+
+    resp_status_code, resp_text = getpage_browser("http://stockpage.10jqka.com.cn/000063/")
+
+    resp_text        = ""
+    resp_content     = ""
+    error_text       = "error"
+    resp_status_code = 200
+    try_count        = 0
+
+    for k in range(1,MAX_TRY_COUNT+1):
+        try:
+            requests_params = {}
+            #根据是否使用浏览器制作requests_param           
+            if headers:
+                requests_params['headers'] = headers
+            if cookies:
+                requests_params['cookies'] = cookies
+            if timeout:
+                requests_params['timeout'] = timeout
+
+            if use_browser:
+                requests_params['use_ssl'] = use_ssl
+                requests_params['wait'] = wait
+
+                # 浏览器中需要判断是否使用ssl，比如访问某些https的图片链接等
+                if use_ssl:
+                    requests_params['use_ssl'] = True
+                if use_proxy:
+                    proxy_iport = get_proxy()
+                    requests_params['use_proxy'] = True
+                    requests_params['proxy_ip'] = proxy_iport[0]
+                    requests_params['proxy_port'] = proxy_iport[1]
+                else:
+                    requests_params['use_proxy'] = False
+                    requests_params['proxy_ip'] = ""
+                    requests_params['proxy_port'] = ""
+
+                if params:
+                    requests_params['params'] = params
+                if payload:
+                    requests_params['data'] = payload
+            else:
+                if use_proxy:
+                    proxy_iport = get_proxy()
+                    proxy_http  = 'http://' + proxy_iport[0] + ':' + str(proxy_iport[1])
+                    proxy_https = 'https://' + proxy_iport[0] + ':' + str(proxy_iport[1])
+                    requests_params['proxies'] = { "http": proxy_http, "https": proxy_https}
+                if params:
+                    requests_params['params'] = params
+                if payload:
+                    requests_params['data'] = payload
+           
+            if use_browser:
+                resp_status_code, resp_text = getpage_browser(url, **requests_params)
+            else:
+                print(requests_params)
+                if http_method == "GET":
+                    resp = requests.get(url, **requests_params) 
+                    resp_status_code = resp.status_code
+                    # resp_text = resp.text
+                    resp_content = resp.content
+                elif http_method == "POST":
+                    resp = requests.post(url, **requests_params)
+                    resp_status_code = resp.status_code
+                    # resp_text = resp.text
+                    resp_content = resp.content
+                else:
+                    error_text = "不可预料的HTTP_METHOD"
+                    print("url "+error_text)
+                    break 
+            if resp_status_code != 200:
+                error_text = ""
+                if resp_status_code == 503:
+                    error_text = "503错误,您的IP可能被封"
+                if resp_status_code == 504:
+                    error_text = "504错误,您的IP可能被封"
+                print("url "+status_code+" "+error_text)
+                time.sleep(0.5*k)
+                ontinue
+            else:
+                try_count = k
+                break
+        except requests.exceptions.ConnectTimeout:
+            error_text = "链接超时"
+        except requests.exceptions.Timeout:
+            error_text = "超时"
+        except Exception as err:
+            error_text = str(err)
+        try_count   = k
+     
+    if try_count == MAX_TRY_COUNT:
+        print(url+" error "+"("+str(try_count)+" th) ")
+        return None
+    else:
+        print(url+" ok"+"("+str(try_count)+" th) ")
+        if not use_browser:
+            coding = chardet.detect(resp_content)['encoding'] # 获取编码
+            resp_text = resp_content.decode(coding)
+        return resp_text
+
+
+def getpage_browser2(url, **kwargs):
+    """
+    使用火狐浏览器打开url并获取网页源码
+    :param url:网页的url 
+    :param use_proxy:是否使用代理，默认为True 
+    :param user_agent:请求头的User_Agent，默认从请求头配置库中随机选择一个 
+    :param wait:渲染页面的等待时间，默认是0.5
+    :return:经过渲染之后的网页源代码，是一个字符串
+    """
+    use_proxy = kwargs['use_proxy'] if 'use_proxy' in kwargs else True
+    user_agent = kwargs['user_agent'] if 'user_agent' in kwargs else get_agent()
+    wait = kwargs['wait'] if 'wait' in kwargs else 0.5
+    use_ssl = kwargs['use_ssl'] if 'use_ssl' in kwargs else False
+
+    # 火狐浏览器代理配置
+    profile = FirefoxProfile()
+
+    if use_proxy:
+        # 0表示直接连接，1表示使用代理
+        profile.set_preference('network.proxy.type', 1)
+        profile.set_preference('network.proxy.http', kwargs['proxy_ip'])
+        profile.set_preference('network.proxy.http_port', kwargs['proxy_port'])
+
+        # 有些资源需要ssl验证，比如一些https的图片，这种情况需要配置ssl
+        if use_ssl:
+            if url[0:6] == 'https:':
+                profile.set_preference('network.proxy.ssl', ip)
+                profile.set_preference('network.proxy.ssl_port', port)
+
+        # 所有协议共用一种 ip 及端口，如果单独配置，不必设置该项，因为其默认为 False
+        profile.set_preference("network.proxy.share_proxy_settings", True)
+
+        # 所有项配置完成后需要update_preferences，然后才能正常使用
+        # 如果某些项配置不正确，可以在启动的浏览器中输入about:config来查看具体的配置情况
+        profile.update_preferences()
+
+    # 火狐浏览器其他配置
+    # 可以参考 https://www.cnblogs.com/baoyu7yi/p/7058537.html
+    options = webdriver.FirefoxOptions()
+    options.add_argument('--headless')      # 使用无头模式
+    options.add_argument('--disable-gpu')   # 不使用gpu
+    options.add_argument('user-agent=' + user_agent)    # 更改请求头
+
+    resp_status_code = 0
+    resp_text = ""
+    try:  
+        browser = webdriver.Firefox(profile, options=options)
+        #browser = webdriver.Firefox()
+        # 打开网页，渲染网页需要等待一定的时间，这个时间应该人为指定
+        # selenium默认的等待时间不可靠，需要用time中的方法来指定
+        browser.get(url)
+        time.sleep(wait)
+        # resp_status_code = browser
+        resp_text = browser.page_source
+    except Exception as err:
+        print ("打开浏览器失败:"+ str(err))
+
+    browser.quit()
+    #Quits the driver and closes every associated window. 
+    #退出驱动并关闭所有关联的窗口。
+    #Closes the current window. 
+    #关闭当前窗口。
+    return 200 if resp_text else None, resp_text
+
+
+def getpage_browser(url, **kwargs):
+    """
+    使用谷歌浏览器打开url并获取网页源码
+    :param url:网页的url 
+    :param use_proxy:是否使用代理，默认为True 
+    :param user_agent:请求头的User_Agent，默认从请求头配置库中随机选择一个 
+    :param wait:渲染页面的等待时间，默认是0.5
+    :return:经过渲染之后的网页源代码，是一个字符串
+    """
+    use_proxy = kwargs['use_proxy'] if 'use_proxy' in kwargs else True
+    user_agent = kwargs['user_agent'] if 'user_agent' in kwargs else get_agent()
+    wait = kwargs['wait'] if 'wait' in kwargs else 0.5
+    use_ssl = kwargs['use_ssl'] if 'use_ssl' in kwargs else False
+
+    # 浏览器代理配置
+    # 参考 https://developers.google.com/web/updates/2017/04/headless-chrome
+    chrome_options = webdriver.ChromeOptions()
+
+    if use_proxy:
+        PROXY = kwargs['proxy_ip'] + ':' + str(kwargs['proxy_port'])
+        chrome_options.add_argument('--proxy-server={0}'.format(PROXY))
+
+    # 浏览器其他配置
+    chrome_options.add_argument('--headless')       # 使用无头模式
+    # chrome_options.add_argument('--disable-gpu')  # 不使用gpu
+    chrome_options.add_argument('user-agent=' + user_agent)         # 更改请求头
+
+    resp_text = ""
+    try:  
+        browser = webdriver.Chrome(options=chrome_options)
+        # 打开网页，渲染网页需要等待一定的时间，这个时间应该人为指定
+        # selenium默认的等待时间不可靠，需要用time中的方法来指定
+        browser.get(url)
+        time.sleep(wait)
+        resp_text = browser.page_source
+    except Exception as err:
+        print ("打开浏览器失败:"+ str(err))
+
+    browser.quit()
+    #Quits the driver and closes every associated window. 
+    #退出驱动并关闭所有关联的窗口。
+    #Closes the current window. 
+    #关闭当前窗口。
+    return 200 if resp_text else None, resp_text
+
+
+def getpage_cookie(url, **kwargs):
+    """
+    使用谷歌浏览器打开url并获取网页源码
+    :param url:网页的url 
+    :param use_proxy:是否使用代理，默认为True 
+    :param user_agent:请求头的User_Agent，默认从请求头配置库中随机选择一个 
+    :param wait:渲染页面的等待时间，默认是0.5
+    :return:经过渲染之后的网页源代码，是一个字符串
+    """
+    use_proxy = kwargs['use_proxy'] if 'use_proxy' in kwargs else True
+    user_agent = kwargs['user_agent'] if 'user_agent' in kwargs else get_agent()
+    wait = kwargs['wait'] if 'wait' in kwargs else 0.5
+    use_ssl = kwargs['use_ssl'] if 'use_ssl' in kwargs else False
+
+    # 浏览器代理配置
+    # 参考 https://developers.google.com/web/updates/2017/04/headless-chrome
+    chrome_options = webdriver.ChromeOptions()
+
+    if use_proxy:
+        PROXY = kwargs['proxy_ip'] + ':' + str(kwargs['proxy_port'])
+        chrome_options.add_argument('--proxy-server={0}'.format(PROXY))
+
+    # 浏览器其他配置
+    chrome_options.add_argument('--headless')       # 使用无头模式
+    # chrome_options.add_argument('--disable-gpu')  # 不使用gpu
+    chrome_options.add_argument('user-agent=' + user_agent)         # 更改请求头
+
+    cookie_str = ""
+    try:  
+        browser = webdriver.Chrome(options=chrome_options)
+        # 打开网页，渲染网页需要等待一定的时间，这个时间应该人为指定
+        # selenium默认的等待时间不可靠，需要用time中的方法来指定
+        browser.get(url)
+        #获取cookies
+        cookie_items = driver.get_cookies()
+        post = {}
+        #获取到的cookies是列表形式，将cookies转成json形式并存入本地名为cookie的文本中
+        for cookie_item in cookie_items:
+            post[cookie_item['name']] = cookie_item['value']
+        cookie_str = json.dumps(post)
+    except Exception as err:
+        print ("打开浏览器失败:"+ str(err))
+
+    browser.quit()
+    #Quits the driver and closes every associated window. 
+    #退出驱动并关闭所有关联的窗口。
+    #Closes the current window. 
+    #关闭当前窗口。
+    return  cookie_str
+
