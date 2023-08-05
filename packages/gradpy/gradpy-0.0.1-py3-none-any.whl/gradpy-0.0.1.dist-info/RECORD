@@ -1,0 +1,10 @@
+gradpy/__init__.py,sha256=sO_ZDZXTbiC9Xy-8bfdurN7djjITRWKZ4iHIzRrPe_k,17
+gradpy/autodiff.py,sha256=uA7kj6PsrYIXR3AQjQnz56vGLzXN_VYI1D0sHZduznI,9692
+gradpy/math.py,sha256=biE6JM__jJAgfzbue1682u2-OJ9zajIaDObQhQNru4A,5727
+gradpy/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gradpy/tests/test_autodiff.py,sha256=zAdMpQdqIkPxzywDcLZ7pxc3agUBWyv5PXhaNyF0oSc,8914
+gradpy-0.0.1.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+gradpy-0.0.1.dist-info/METADATA,sha256=Fd2SCJWVQoiI-5NSOTGXjK07dCDsTqEkLFQ1IdmthW8,618
+gradpy-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+gradpy-0.0.1.dist-info/top_level.txt,sha256=98axIT6Ov6x4xlIW6pVniCsUuc5fZrA6VAYVHKNZUiM,7
+gradpy-0.0.1.dist-info/RECORD,,
