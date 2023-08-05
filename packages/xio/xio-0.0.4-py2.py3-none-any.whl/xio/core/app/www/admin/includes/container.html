@@ -1,0 +1,49 @@
+
+<xio-script on="render">
+  var cid = app.nav.current.context[':id']
+  alert(cid)
+
+</xio-script>
+
+<nav class="navbar navbar-light bg-light sticky-top">
+
+  <xio-button label="containers" icon="refresh" action="showContainers()"></xio-button>
+
+
+</nav>
+
+<section id="main">
+ container ?
+</section>
+
+
+
+<template id="containers_template">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th >id</th>
+          <th >uri</th>
+          <th >state</th>
+          <th >port</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- {{#.}} -->
+        <tr data-xio-nav="#./{{_id}}">
+          <td>{{_id}}</td>
+          <td>{{uri}}</td>
+          <td>{{state}}</td>
+          <td><a href="{{endpoint}}/.about" target="_new">{{port}}</a></td>
+          <td>
+            <xio-button label="GET" action="requestContainer('{{_id}}','GET')"></xio-button>
+        
+            <xio-button label="SYNC" action="requestContainer('{{_id}}','SYNC')"></xio-button>
+        
+          </td>
+        </tr>
+        <!-- {{/.}} -->
+      </tbody>
+    </table>
+</template>

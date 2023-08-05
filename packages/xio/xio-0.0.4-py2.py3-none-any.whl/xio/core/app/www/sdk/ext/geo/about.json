@@ -1,0 +1,10 @@
+{
+    "name": "geo",
+    "version": "1.0.0", 
+    "requirements": [
+        "lib/leaflet/leaflet.js",
+        "lib/leaflet/leaflet.css",
+        "ext.js"
+    ]
+}
+        
