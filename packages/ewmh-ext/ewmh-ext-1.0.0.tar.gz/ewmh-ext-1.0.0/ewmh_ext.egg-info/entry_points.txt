@@ -1,0 +1,6 @@
+[console_scripts]
+sample-cli = sample.cli:main
+
+[gui_scripts]
+sample-gui = sample.gui:main
+
