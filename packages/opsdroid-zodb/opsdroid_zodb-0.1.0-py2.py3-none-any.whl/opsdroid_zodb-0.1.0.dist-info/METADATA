@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: opsdroid-zodb
+Version: 0.1.0
+Summary: ZODB support for opsdroid
+Home-page: https://github.com/koodaamo/opsdroid-zodb
+Author: Petri Savolainen
+Author-email: petri@koodaamo.fi
+License: Apache Software License 2.0
+Keywords: opsdroid zodb
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: ZODB
+
+========================
+opsdroid ZODB extension
+========================
+
+
+This extension provides ZODB support for opsdroid. To use, just add 'zodb' to
+the databases section of your opsdroid config, and optionally give a path
+to the database file, if you wish not to use the default which is 'opsdroid.fs'
+stored in current directory.
+
+* Free software: Apache Software License 2.0
+
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2018-11-28)
+------------------
+
+* First release on PyPI.
+
+
