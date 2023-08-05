@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: jsonmask
+Version: 0.1.1
+Summary: Implements the Google Partial Response protocol in Python
+Home-page: https://github.com/zapier/jsonmask
+License: MIT
+Keywords: jsonmask,json,google partial response
+Author: Craig Labenz
+Author-email: craig.labenz@gmail.com
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Project-URL: Documentation, https://github.com/zapier/jsonmask/blob/master/README.md
+Project-URL: Repository, https://github.com/zapier/jsonmask
+Description-Content-Type: text/markdown
+
+[![Build Status](https://img.shields.io/travis/zapier/jsonmask/master.svg)](https://travis-ci.org/zapier/jsonmask) [![Coverage Status](https://img.shields.io/coveralls/zapier/jsonmask/master.svg)](https://coveralls.io/r/zapier/jsonmask) [![PyPI Version](https://img.shields.io/pypi/v/jsonmask.svg)](https://pypi.org/project/jsonmask)
+
+# Overview
+
+Implements [Google Partial Response](https://developers.google.com/discovery/v1/performance#partial-response) / [`json-mask`](https://github.com/nemtsov/json-mask) in Python.
+
+## Requirements
+
+* Python 2.7
+* Python 3.6+
+
+## Installation
+
+Install jsonmask with pip:
+
+```sh
+$ pip install jsonmask
+```
+
+or directly from the source code:
+
+```sh
+$ git clone https://github.com/zapier/jsonmask.git
+$ cd jsonmask
+$ python setup.py install
+```
+
+# Usage
+
+After installation, the package can imported:
+
+```sh
+$ python
+>>> import jsonmask
+>>> jsonmask.__version__
+```
+
+To prune dictionaries:
+
+```py
+>>> import jsonmask
+>>> mask = jsonmask.parse_fields('a,b(c,d)')
+>>> jsonmask.apply_json_mask(
+    {
+        'a': {
+            'nested_within_a': True,
+        },
+        'b' {
+            'c': True,
+            'd': {'Will get included?': 'Yes'},
+            'e': 'Tough luck here',
+        },
+        'c': 'Definitely hopeless',
+    },
+    mask,
+)
+
+{
+    'a': {
+        'nested_within_a': True,
+    },
+    'b' {
+        'c': True,
+        'd': {'Will get included?': 'Yes'},
+    },
+}
+```
+
