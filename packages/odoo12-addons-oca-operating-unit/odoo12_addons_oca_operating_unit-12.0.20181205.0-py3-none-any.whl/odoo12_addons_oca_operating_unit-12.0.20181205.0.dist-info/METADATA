@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: odoo12-addons-oca-operating-unit
+Version: 12.0.20181205.0
+Summary: Meta package for oca-operating-unit Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo12-addon-analytic-operating-unit
+Requires-Dist: odoo12-addon-operating-unit
+Requires-Dist: odoo12-addon-sales-team-operating-unit
+
+UNKNOWN
+
+
