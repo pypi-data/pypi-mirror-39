@@ -1,0 +1,4 @@
+[console_scripts]
+hello52 = hello52.__main__:main
+hello52_run = hello52.run:main
+
