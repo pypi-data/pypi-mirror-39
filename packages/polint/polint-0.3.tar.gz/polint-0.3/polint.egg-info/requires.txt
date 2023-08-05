@@ -1,0 +1,10 @@
+docopt
+polib
+
+[quality]
+flake8
+isort
+pydocstyle
+
+[tests]
+mock
