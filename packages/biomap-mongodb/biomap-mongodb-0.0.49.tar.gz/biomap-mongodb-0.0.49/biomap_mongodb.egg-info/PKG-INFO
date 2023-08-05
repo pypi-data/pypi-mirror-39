@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: biomap-mongodb
+Version: 0.0.49
+Summary: BioMap MongoDB backend
+Home-page: https://github.com/BioMapOrg/biomap-mongodb
+Author: Sebastian Winkler
+Author-email: winkler@informatik.uni-tuebingen.de
+License: UNKNOWN
+Description: # biomap-mongodb
+        ----------------
+        
+        BioMap MongoDB backend
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
