@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: iteda
+Version: 0.8.7
+Summary: This is a menu to control an integrating sphere through a serial interface (rs232)
+Home-page: https://gitlab.com/fabriziodifran/esfera-codigo-verilog
+Author: victor esparza
+Author-email: vicmaresparza@gmail.com
+License: MIT
+Description: To use this properly, just navigate to : ~/.local/lib/python2.7/site-packages/iteda , and execute the iteda.py file, thats all.
+Keywords: MENU,UART,SPHERE
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
