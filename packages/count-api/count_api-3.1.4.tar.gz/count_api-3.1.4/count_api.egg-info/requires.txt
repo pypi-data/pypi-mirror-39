@@ -1,0 +1,4 @@
+requests
+protobuf==3.5.1
+future
+pyhamcrest
