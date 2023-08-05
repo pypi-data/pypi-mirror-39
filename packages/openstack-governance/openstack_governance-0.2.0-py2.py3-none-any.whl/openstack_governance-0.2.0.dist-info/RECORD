@@ -1,0 +1,14 @@
+openstack_governance/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openstack_governance/_wiki.py,sha256=7GHmXbVyjBjFuCwUchWgSKTYodUcOaXSs8lP0vUSKEU,2696
+openstack_governance/_yamlutils.py,sha256=8Ye53kkiZsfSgZH0LnMpUI8xLi2eMzCk1IvZEDD9Krk,1069
+openstack_governance/governance.py,sha256=sMlTDm9F3O8h-bvW2mVVqZVSvvk5XYJtPcm1jS_TxmI,7571
+openstack_governance/members.py,sha256=5nglzYFvnrDtXAKDuIBbggHJILpQH7qXLDZChNDXc6E,1328
+openstack_governance/projects.py,sha256=dDG7KflJkSnXn7Kz2s3xLSFmK5FxCFVRQr9dVpin9mE,835
+openstack_governance/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openstack_governance/tests/test_governance.py,sha256=W4p9ekzYe-ZoXhq6ArM6VGnwpSG2WWF_s9ciuUIGJ88,6744
+openstack_governance-0.2.0.dist-info/AUTHORS,sha256=4UukQlnGZblBnsqMiLuD6iGR4S2W7nEG74xxQK3MKik,16495
+openstack_governance-0.2.0.dist-info/METADATA,sha256=GPuL-ozVlOBWZUn63lNApH7M19QauGwTUeDLCA5IlmE,1452
+openstack_governance-0.2.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+openstack_governance-0.2.0.dist-info/pbr.json,sha256=qkFcb9Esc5sEkZXjXY6YCicVFi99XiHuc-gMww8-cHU,46
+openstack_governance-0.2.0.dist-info/top_level.txt,sha256=vUGfofelIXuR_jEXYvkCmeXSq2FGdKC4kOVwgORRqmo,21
+openstack_governance-0.2.0.dist-info/RECORD,,
