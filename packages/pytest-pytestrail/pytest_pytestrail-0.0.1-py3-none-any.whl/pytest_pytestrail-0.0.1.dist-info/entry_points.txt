@@ -1,0 +1,3 @@
+[pytest11]
+pytest_pytestrail = pytest_pytestrail.conftest
+
