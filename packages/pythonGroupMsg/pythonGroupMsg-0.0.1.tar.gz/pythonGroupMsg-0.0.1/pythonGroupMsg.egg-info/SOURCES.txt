@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+setup.py
+pythonGroupMsg/__init__.py
+pythonGroupMsg/lib.py
+pythonGroupMsg/setup.py
+pythonGroupMsg/test.py
+pythonGroupMsg.egg-info/PKG-INFO
+pythonGroupMsg.egg-info/SOURCES.txt
+pythonGroupMsg.egg-info/dependency_links.txt
+pythonGroupMsg.egg-info/not-zip-safe
+pythonGroupMsg.egg-info/top_level.txt
