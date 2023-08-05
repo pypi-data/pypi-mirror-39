@@ -1,0 +1,876 @@
+{% load i18n %}
+{% load humanize %}
+
+<style type="text/css">
+li#nav_dashaccessibility>a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 0.4em;
+    width: 100%;
+    border-bottom: 2px solid #755467;
+    margin-top: 5px;
+}
+</style>
+
+
+<div class="gridster">
+	<h1 class="dashing-title">{% trans "Accessibility" %}
+		{% include "links_title.html" %}
+		{% include "qlink_span.html" %}
+	</h1>
+  	<ul>
+		<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+			<h1 class='widget-number'>{{Population | intword | intcomma}}</h1>
+			<span class='widget-title'>{% trans "Total Population" %}</span>
+		</li>
+		<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+			<h1 class='widget-number'>{{Area | intword | intcomma}}</h1>
+			<span class='widget-title'>{% trans "Total Area" %} ({% blocktrans %}km<sup>2</sup>{% endblocktrans %})</span>
+		</li>
+		<li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
+			<div>{{ total_pop_coverage_chart.as_html }}</div>
+			<span class='widget-title'>{% trans "GSM Coverage – Population" %}</span>
+			<span class='pie-title1'>{{ pop_coverage_percent }}%</span>
+			<span class='pie-title2'>{{ pop_on_gsm_coverage | intword | intcomma}}</span>
+		</li>
+		<li data-row="1" data-col="6" data-sizex="1" data-sizey="1">
+			<div>{{ total_area_coverage_chart.as_html }}</div>
+			<span class='widget-title'>{% trans "GSM Coverage – Area" %}</span>
+			<span class='pie-title1'>{{ area_coverage_percent }}%</span>
+			<span class='pie-title2'>{{ area_on_gsm_coverage | intword | intcomma}}</span>
+		</li>
+
+		<li data-row="2" data-col="1" data-sizex="2" data-sizey="2">
+			<div>{{ nearest_airport_chart.as_html }}</div>
+			<span class='widget-title'>{% trans "Travel Time to Nearest Airport (pop in &#37;)" %}</span>
+		</li>
+		<li data-row="2" data-col="2" data-sizex="2" data-sizey="2">
+			<div>{{ tier1_chart.as_html }}</div>
+			<span class='widget-title'>{% trans "Travel Time to Nearest Health Facilities Tier 1 (pop in &#37;)" %}</span>
+		</li>
+		<li data-row="2" data-col="3" data-sizex="2" data-sizey="2">
+			<div>{{ tier2_chart.as_html }}</div>
+			<span class='widget-title'>{% trans "Travel Time to Nearest Health Facilities Tier 2 (pop in &#37;)" %}</span>
+		</li>
+		<li data-row="3" data-col="1" data-sizex="2" data-sizey="2">
+			<div>{{ tier3_chart.as_html }}</div>
+			<span class='widget-title'>{% trans "Travel Time to Nearest Health Facilities Tier 3 (pop in &#37;)" %}</span>
+		</li>
+<!-- 		<li data-row="3" data-col="2" data-sizex="2" data-sizey="2">
+			<div>{{ tierall_chart.as_html }}</div>
+			<span class='widget-title'>Nearest Health Facilities Tier All</span>
+		</li> -->
+		<li data-row="3" data-col="3" data-sizex="2" data-sizey="2">
+			<div>{{ itsx_prov_chart.as_html }}</div>
+			<span class='widget-title'>{% trans "Travel Time to Its Province Capital (pop in &#37;)" %}</span>
+		</li>
+		<li data-row="4" data-col="1" data-sizex="2" data-sizey="2">
+			<div>{{ near_prov_chart.as_html }}</div>
+			<span class='widget-title'>{% trans "Travel Time to Nearest Province Capital (pop in &#37;)" %}</span>
+		</li>
+		<li data-row="4" data-col="2" data-sizex="2" data-sizey="2">
+			<div>{{ near_dist_chart.as_html }}</div>
+			<span class='widget-title'>{% trans "Travel Time to Nearest District Capital (pop in &#37;)" %}</span>
+		</li>
+
+
+  	</ul>
+</div>
+
+<div  class="gridster">
+	<table>
+		<thead>
+			<tr class='dataitem'>
+				<td colspan=7 style="padding:3px;font-weight:bolder;">{% trans "Travel Time to Nearest Airport" %}</td>
+				<td colspan=3 style="padding:3px;"><div class='showFlag_airport' onClick='show_hide_airport()'>{% if "detail_airport" in checked %}{% trans "Hide Detail" %}{% else %}{% trans "Show Detail" %}{% endif %}</div></td>
+			</tr>
+			<tr>
+				<th rowspan=2><span>{% trans "Region" %}</span></th>
+				<th colspan=9>{% trans "Population travel time" %}</th>
+				<!-- <th rowspan=2><span>Health Facilities</span></th>
+				<th rowspan=2><span>Length of Roads</span></th> -->
+			</tr>
+			<tr>
+				<th class="acc_l1"><span>&lt; {% trans "1 h" %}</span></th>
+				<th class="acc_l2"><span>&lt; {% trans "2 h" %}</span></th>
+				<th class="acc_l3"><span>&lt; {% trans "3 h" %}</span></th>
+				<th class="acc_l4"><span>&lt; {% trans "4 h" %}</span></th>
+				<th class="acc_l5"><span>&lt; {% trans "5 h" %}</span></th>
+				<th class="acc_l6"><span>&lt; {% trans "6 h" %}</span></th>
+				<th class="acc_l7"><span>&lt; {% trans "7 h" %}</span></th>
+				<th class="acc_l8"><span>&lt; {% trans "8 h" %}</span></th>
+				<th class="acc_g8"><span>&gt; {% trans "8 h" %}</span></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='dataitem'>
+				<td rowspan=2 class="parent_list">{{parent_label}}</td>
+				<td class="parent_value acc_l1">{{l1_h__near_airp | intword | intcomma}}</td>
+				<td class="parent_value acc_l2">{{l2_h__near_airp | intword | intcomma}}</td>
+				<td class="parent_value acc_l3">{{l3_h__near_airp | intword | intcomma}}</td>
+				<td class="parent_value acc_l4">{{l4_h__near_airp | intword | intcomma}}</td>
+				<td class="parent_value acc_l5">{{l5_h__near_airp | intword | intcomma}}</td>
+				<td class="parent_value acc_l6">{{l6_h__near_airp | intword | intcomma}}</td>
+				<td class="parent_value acc_l7">{{l7_h__near_airp | intword | intcomma}}</td>
+				<td class="parent_value acc_l8">{{l8_h__near_airp | intword | intcomma}}</td>
+				<td class="parent_value acc_g8">{{g8_h__near_airp | intword | intcomma}}</td>
+			</tr>
+			<tr>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l1_h__near_airp_percent }}%,#ffffff {{ l1_h__near_airp_percent }}%);">{{ l1_h__near_airp_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l2_h__near_airp_percent }}%,#ffffff {{ l2_h__near_airp_percent }}%);">{{ l2_h__near_airp_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l3_h__near_airp_percent }}%,#ffffff {{ l3_h__near_airp_percent }}%);">{{ l3_h__near_airp_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l4_h__near_airp_percent }}%,#ffffff {{ l4_h__near_airp_percent }}%);">{{ l4_h__near_airp_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l5_h__near_airp_percent }}%,#ffffff {{ l5_h__near_airp_percent }}%);">{{ l5_h__near_airp_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l6_h__near_airp_percent }}%,#ffffff {{ l6_h__near_airp_percent }}%);">{{ l6_h__near_airp_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l7_h__near_airp_percent }}%,#ffffff {{ l7_h__near_airp_percent }}%);">{{ l7_h__near_airp_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l8_h__near_airp_percent }}%,#ffffff {{ l8_h__near_airp_percent }}%);">{{ l8_h__near_airp_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ g8_h__near_airp_percent }}%,#ffffff {{ g8_h__near_airp_percent }}%);">{{ g8_h__near_airp_percent }}%</td>
+			</tr>
+			{% for data in lc_child %}
+			<tr class='dataitem detail_airport {% if "detail_airport" not in checked %} hide {% endif %}' onclick="window.document.location='?page=accessibility&code={{data.code}}';">
+				<td rowspan=2  class="detail_list">{{data.na_en}}</td>
+				<td class="detail_value acc_l1">{{data.l1_h__near_airp | intword | intcomma}}</td>
+				<td class="detail_value acc_l2">{{data.l2_h__near_airp | intword | intcomma}}</td>
+				<td class="detail_value acc_l3">{{data.l3_h__near_airp | intword | intcomma}}</td>
+				<td class="detail_value acc_l4">{{data.l4_h__near_airp | intword | intcomma}}</td>
+				<td class="detail_value acc_l5">{{data.l5_h__near_airp | intword | intcomma}}</td>
+				<td class="detail_value acc_l6">{{data.l6_h__near_airp | intword | intcomma}}</td>
+				<td class="detail_value acc_l7">{{data.l7_h__near_airp | intword | intcomma}}</td>
+				<td class="detail_value acc_l8">{{data.l8_h__near_airp | intword | intcomma}}</td>
+				<td class="detail_value acc_g8">{{data.g8_h__near_airp | intword | intcomma}}</td>
+			</tr>
+			<tr class='dataitem detail_airport {% if "detail_airport" not in checked %} hide {% endif %}'>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l1_h__near_airp_percent }}%,#ffffff {{ data.l1_h__near_airp_percent }}%);">{{ data.l1_h__near_airp_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l2_h__near_airp_percent }}%,#ffffff {{ data.l2_h__near_airp_percent }}%);">{{ data.l2_h__near_airp_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l3_h__near_airp_percent }}%,#ffffff {{ data.l3_h__near_airp_percent }}%);">{{ data.l3_h__near_airp_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l4_h__near_airp_percent }}%,#ffffff {{ data.l4_h__near_airp_percent }}%);">{{ data.l4_h__near_airp_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l5_h__near_airp_percent }}%,#ffffff {{ data.l5_h__near_airp_percent }}%);">{{ data.l5_h__near_airp_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l6_h__near_airp_percent }}%,#ffffff {{ data.l6_h__near_airp_percent }}%);">{{ data.l6_h__near_airp_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l7_h__near_airp_percent }}%,#ffffff {{ data.l7_h__near_airp_percent }}%);">{{ data.l7_h__near_airp_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l8_h__near_airp_percent }}%,#ffffff {{ data.l8_h__near_airp_percent }}%);">{{ data.l8_h__near_airp_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.g8_h__near_airp_percent }}%,#ffffff {{ data.g8_h__near_airp_percent }}%);">{{ data.g8_h__near_airp_percent }}%</td>
+			</tr>
+			{% endfor %}
+			<tr>
+				<td class="separator" colspan=10></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div  class="gridster">
+	<table>
+		<thead>
+			<tr class='dataitem'>
+				<td colspan=7 style="padding:3px;font-weight:bolder;">{% trans "Travel Time to Nearest Health Facilities Tier 1" %}</td>
+				<td colspan=3 style="text-align:rit;padding:3px;"><div class='showFlag_tier1' onClick='show_hide_tier1()'>{% if "detail_tier1" in checked %}{% trans "Hide Detail" %}{% else %}{% trans "Show Detail" %}{% endif %}</div></td>
+			</tr>
+			<tr>
+				<th rowspan=2><span>{% trans "Region" %}</span></th>
+				<th colspan=9>{% trans "Population travel time" %}</th>
+				<!-- <th rowspan=2><span>Health Facilities</span></th>
+				<th rowspan=2><span>Length of Roads</span></th> -->
+			</tr>
+			<tr>
+				<th class="acc_l1"><span>&lt; {% trans "1 h" %}</span></th>
+				<th class="acc_l2"><span>&lt; {% trans "2 h" %}</span></th>
+				<th class="acc_l3"><span>&lt; {% trans "3 h" %}</span></th>
+				<th class="acc_l4"><span>&lt; {% trans "4 h" %}</span></th>
+				<th class="acc_l5"><span>&lt; {% trans "5 h" %}</span></th>
+				<th class="acc_l6"><span>&lt; {% trans "6 h" %}</span></th>
+				<th class="acc_l7"><span>&lt; {% trans "7 h" %}</span></th>
+				<th class="acc_l8"><span>&lt; {% trans "8 h" %}</span></th>
+				<th class="acc_g8"><span>&gt; {% trans "8 h" %}</span></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='dataitem'>
+				<td rowspan=2 class="parent_list">{{parent_label}}</td>
+				<td class="parent_value acc_l1">{{l1_h__near_hlt1 | intword | intcomma}}</td>
+				<td class="parent_value acc_l2">{{l2_h__near_hlt1 | intword | intcomma}}</td>
+				<td class="parent_value acc_l3">{{l3_h__near_hlt1 | intword | intcomma}}</td>
+				<td class="parent_value acc_l4">{{l4_h__near_hlt1 | intword | intcomma}}</td>
+				<td class="parent_value acc_l5">{{l5_h__near_hlt1 | intword | intcomma}}</td>
+				<td class="parent_value acc_l6">{{l6_h__near_hlt1 | intword | intcomma}}</td>
+				<td class="parent_value acc_l7">{{l7_h__near_hlt1 | intword | intcomma}}</td>
+				<td class="parent_value acc_l8">{{l8_h__near_hlt1 | intword | intcomma}}</td>
+				<td class="parent_value acc_g8">{{g8_h__near_hlt1 | intword | intcomma}}</td>
+			</tr>
+			<tr>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l1_h__near_hlt1_percent }}%,#ffffff {{ l1_h__near_hlt1_percent }}%);">{{ l1_h__near_hlt1_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l2_h__near_hlt1_percent }}%,#ffffff {{ l2_h__near_hlt1_percent }}%);">{{ l2_h__near_hlt1_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l3_h__near_hlt1_percent }}%,#ffffff {{ l3_h__near_hlt1_percent }}%);">{{ l3_h__near_hlt1_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l4_h__near_hlt1_percent }}%,#ffffff {{ l4_h__near_hlt1_percent }}%);">{{ l4_h__near_hlt1_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l5_h__near_hlt1_percent }}%,#ffffff {{ l5_h__near_hlt1_percent }}%);">{{ l5_h__near_hlt1_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l6_h__near_hlt1_percent }}%,#ffffff {{ l6_h__near_hlt1_percent }}%);">{{ l6_h__near_hlt1_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l7_h__near_hlt1_percent }}%,#ffffff {{ l7_h__near_hlt1_percent }}%);">{{ l7_h__near_hlt1_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l8_h__near_hlt1_percent }}%,#ffffff {{ l8_h__near_hlt1_percent }}%);">{{ l8_h__near_hlt1_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ g8_h__near_hlt1_percent }}%,#ffffff {{ g8_h__near_hlt1_percent }}%);">{{ g8_h__near_hlt1_percent }}%</td>
+			</tr>
+			{% for data in lc_child %}
+			<tr class='dataitem detail_tier1 {% if "detail_tier1" not in checked %} hide {% endif %}' onclick="window.document.location='?page=accessibility&code={{data.code}}';">
+				<td rowspan=2  class="detail_list">{{data.na_en}}</td>
+				<td class="detail_value acc_l1">{{data.l1_h__near_hlt1 | intword | intcomma}}</td>
+				<td class="detail_value acc_l2">{{data.l2_h__near_hlt1 | intword | intcomma}}</td>
+				<td class="detail_value acc_l3">{{data.l3_h__near_hlt1 | intword | intcomma}}</td>
+				<td class="detail_value acc_l4">{{data.l4_h__near_hlt1 | intword | intcomma}}</td>
+				<td class="detail_value acc_l5">{{data.l5_h__near_hlt1 | intword | intcomma}}</td>
+				<td class="detail_value acc_l6">{{data.l6_h__near_hlt1 | intword | intcomma}}</td>
+				<td class="detail_value acc_l7">{{data.l7_h__near_hlt1 | intword | intcomma}}</td>
+				<td class="detail_value acc_l8">{{data.l8_h__near_hlt1 | intword | intcomma}}</td>
+				<td class="detail_value acc_g8">{{data.g8_h__near_hlt1 | intword | intcomma}}</td>
+			</tr>
+			<tr class='dataitem detail_tier1 {% if "detail_tier1" not in checked %} hide {% endif %}'>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l1_h__near_hlt1_percent }}%,#ffffff {{ data.l1_h__near_hlt1_percent }}%);">{{ data.l1_h__near_hlt1_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l2_h__near_hlt1_percent }}%,#ffffff {{ data.l2_h__near_hlt1_percent }}%);">{{ data.l2_h__near_hlt1_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l3_h__near_hlt1_percent }}%,#ffffff {{ data.l3_h__near_hlt1_percent }}%);">{{ data.l3_h__near_hlt1_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l4_h__near_hlt1_percent }}%,#ffffff {{ data.l4_h__near_hlt1_percent }}%);">{{ data.l4_h__near_hlt1_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l5_h__near_hlt1_percent }}%,#ffffff {{ data.l5_h__near_hlt1_percent }}%);">{{ data.l5_h__near_hlt1_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l6_h__near_hlt1_percent }}%,#ffffff {{ data.l6_h__near_hlt1_percent }}%);">{{ data.l6_h__near_hlt1_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l7_h__near_hlt1_percent }}%,#ffffff {{ data.l7_h__near_hlt1_percent }}%);">{{ data.l7_h__near_hlt1_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l8_h__near_hlt1_percent }}%,#ffffff {{ data.l8_h__near_hlt1_percent }}%);">{{ data.l8_h__near_hlt1_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.g8_h__near_hlt1_percent }}%,#ffffff {{ data.g8_h__near_hlt1_percent }}%);">{{ data.g8_h__near_hlt1_percent }}%</td>
+			</tr>
+			{% endfor %}
+			<tr>
+				<td class="separator" colspan=10></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div  class="gridster">
+	<table>
+		<thead>
+			<tr class='dataitem'>
+				<td colspan=7 style="padding:3px;font-weight:bolder;">{% trans "Travel Time to Nearest Health Facilities Tier 2" %}</td>
+				<td colspan=3 style="padding:3px;"><div class='showFlag_tier2' onClick='show_hide_tier2()'>{% if "detail_tier2" in checked %}{% trans "Hide Detail" %}{% else %}{% trans "Show Detail" %}{% endif %}</div></td>
+			</tr>
+			<tr>
+				<th rowspan=2><span>{% trans "Region" %}</span></th>
+				<th colspan=9>{% trans "Population travel time" %}</th>
+				<!-- <th rowspan=2><span>Health Facilities</span></th>
+				<th rowspan=2><span>Length of Roads</span></th> -->
+			</tr>
+			<tr>
+				<th class="acc_l1"><span>&lt; {% trans "1 h" %}</span></th>
+				<th class="acc_l2"><span>&lt; {% trans "2 h" %}</span></th>
+				<th class="acc_l3"><span>&lt; {% trans "3 h" %}</span></th>
+				<th class="acc_l4"><span>&lt; {% trans "4 h" %}</span></th>
+				<th class="acc_l5"><span>&lt; {% trans "5 h" %}</span></th>
+				<th class="acc_l6"><span>&lt; {% trans "6 h" %}</span></th>
+				<th class="acc_l7"><span>&lt; {% trans "7 h" %}</span></th>
+				<th class="acc_l8"><span>&lt; {% trans "8 h" %}</span></th>
+				<th class="acc_g8"><span>&gt; {% trans "8 h" %}</span></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='dataitem'>
+				<td rowspan=2 class="parent_list">{{parent_label}}</td>
+				<td class="parent_value acc_l1">{{l1_h__near_hlt2 | intword | intcomma}}</td>
+				<td class="parent_value acc_l2">{{l2_h__near_hlt2 | intword | intcomma}}</td>
+				<td class="parent_value acc_l3">{{l3_h__near_hlt2 | intword | intcomma}}</td>
+				<td class="parent_value acc_l4">{{l4_h__near_hlt2 | intword | intcomma}}</td>
+				<td class="parent_value acc_l5">{{l5_h__near_hlt2 | intword | intcomma}}</td>
+				<td class="parent_value acc_l6">{{l6_h__near_hlt2 | intword | intcomma}}</td>
+				<td class="parent_value acc_l7">{{l7_h__near_hlt2 | intword | intcomma}}</td>
+				<td class="parent_value acc_l8">{{l8_h__near_hlt2 | intword | intcomma}}</td>
+				<td class="parent_value acc_g8">{{g8_h__near_hlt2 | intword | intcomma}}</td>
+			</tr>
+			<tr>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l1_h__near_hlt2_percent }}%,#ffffff {{ l1_h__near_hlt2_percent }}%);">{{ l1_h__near_hlt2_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l2_h__near_hlt2_percent }}%,#ffffff {{ l2_h__near_hlt2_percent }}%);">{{ l2_h__near_hlt2_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l3_h__near_hlt2_percent }}%,#ffffff {{ l3_h__near_hlt2_percent }}%);">{{ l3_h__near_hlt2_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l4_h__near_hlt2_percent }}%,#ffffff {{ l4_h__near_hlt2_percent }}%);">{{ l4_h__near_hlt2_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l5_h__near_hlt2_percent }}%,#ffffff {{ l5_h__near_hlt2_percent }}%);">{{ l5_h__near_hlt2_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l6_h__near_hlt2_percent }}%,#ffffff {{ l6_h__near_hlt2_percent }}%);">{{ l6_h__near_hlt2_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l7_h__near_hlt2_percent }}%,#ffffff {{ l7_h__near_hlt2_percent }}%);">{{ l7_h__near_hlt2_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l8_h__near_hlt2_percent }}%,#ffffff {{ l8_h__near_hlt2_percent }}%);">{{ l8_h__near_hlt2_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ g8_h__near_hlt2_percent }}%,#ffffff {{ g8_h__near_hlt2_percent }}%);">{{ g8_h__near_hlt2_percent }}%</td>
+			</tr>
+			{% for data in lc_child %}
+			<tr class='dataitem detail_tier2 {% if "detail_tier2" not in checked %} hide {% endif %}' onclick="window.document.location='?page=accessibility&code={{data.code}}';">
+				<td rowspan=2  class="detail_list">{{data.na_en}}</td>
+				<td class="detail_value acc_l1">{{data.l1_h__near_hlt2 | intword | intcomma}}</td>
+				<td class="detail_value acc_l2">{{data.l2_h__near_hlt2 | intword | intcomma}}</td>
+				<td class="detail_value acc_l3">{{data.l3_h__near_hlt2 | intword | intcomma}}</td>
+				<td class="detail_value acc_l4">{{data.l4_h__near_hlt2 | intword | intcomma}}</td>
+				<td class="detail_value acc_l5">{{data.l5_h__near_hlt2 | intword | intcomma}}</td>
+				<td class="detail_value acc_l6">{{data.l6_h__near_hlt2 | intword | intcomma}}</td>
+				<td class="detail_value acc_l7">{{data.l7_h__near_hlt2 | intword | intcomma}}</td>
+				<td class="detail_value acc_l8">{{data.l8_h__near_hlt2 | intword | intcomma}}</td>
+				<td class="detail_value acc_g8">{{data.g8_h__near_hlt2 | intword | intcomma}}</td>
+			</tr>
+			<tr class='dataitem detail_tier2 {% if "detail_tier2" not in checked %} hide {% endif %}'>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l1_h__near_hlt2_percent }}%,#ffffff {{ data.l1_h__near_hlt2_percent }}%);">{{ data.l1_h__near_hlt2_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l2_h__near_hlt2_percent }}%,#ffffff {{ data.l2_h__near_hlt2_percent }}%);">{{ data.l2_h__near_hlt2_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l3_h__near_hlt2_percent }}%,#ffffff {{ data.l3_h__near_hlt2_percent }}%);">{{ data.l3_h__near_hlt2_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l4_h__near_hlt2_percent }}%,#ffffff {{ data.l4_h__near_hlt2_percent }}%);">{{ data.l4_h__near_hlt2_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l5_h__near_hlt2_percent }}%,#ffffff {{ data.l5_h__near_hlt2_percent }}%);">{{ data.l5_h__near_hlt2_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l6_h__near_hlt2_percent }}%,#ffffff {{ data.l6_h__near_hlt2_percent }}%);">{{ data.l6_h__near_hlt2_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l7_h__near_hlt2_percent }}%,#ffffff {{ data.l7_h__near_hlt2_percent }}%);">{{ data.l7_h__near_hlt2_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l8_h__near_hlt2_percent }}%,#ffffff {{ data.l8_h__near_hlt2_percent }}%);">{{ data.l8_h__near_hlt2_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.g8_h__near_hlt2_percent }}%,#ffffff {{ data.g8_h__near_hlt2_percent }}%);">{{ data.g8_h__near_hlt2_percent }}%</td>
+			</tr>
+			{% endfor %}
+			<tr>
+				<td class="separator" colspan=10></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div  class="gridster">
+	<table>
+		<thead>
+			<tr class='dataitem'>
+				<td colspan=7 style="padding:3px;font-weight:bolder;">{% trans "Travel Time to Nearest Health Facilities Tier 3" %}</td>
+				<td colspan=3 style="padding:3px;"><div class='showFlag_tier3' onClick='show_hide_tier3()'>{% if "detail_tier3" in checked %}{% trans "Hide Detail" %}{% else %}{% trans "Show Detail" %}{% endif %}</div></td>
+			</tr>
+			<tr>
+				<th rowspan=2><span>{% trans "Region" %}</span></th>
+				<th colspan=9>{% trans "Population travel time" %}</th>
+				<!-- <th rowspan=2><span>Health Facilities</span></th>
+				<th rowspan=2><span>Length of Roads</span></th> -->
+			</tr>
+			<tr>
+				<th class="acc_l1"><span>&lt; {% trans "1 h" %}</span></th>
+				<th class="acc_l2"><span>&lt; {% trans "2 h" %}</span></th>
+				<th class="acc_l3"><span>&lt; {% trans "3 h" %}</span></th>
+				<th class="acc_l4"><span>&lt; {% trans "4 h" %}</span></th>
+				<th class="acc_l5"><span>&lt; {% trans "5 h" %}</span></th>
+				<th class="acc_l6"><span>&lt; {% trans "6 h" %}</span></th>
+				<th class="acc_l7"><span>&lt; {% trans "7 h" %}</span></th>
+				<th class="acc_l8"><span>&lt; {% trans "8 h" %}</span></th>
+				<th class="acc_g8"><span>&gt; {% trans "8 h" %}</span></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='dataitem'>
+				<td rowspan=2 class="parent_list">{{parent_label}}</td>
+				<td class="parent_value acc_l1">{{l1_h__near_hlt3 | intword | intcomma}}</td>
+				<td class="parent_value acc_l2">{{l2_h__near_hlt3 | intword | intcomma}}</td>
+				<td class="parent_value acc_l3">{{l3_h__near_hlt3 | intword | intcomma}}</td>
+				<td class="parent_value acc_l4">{{l4_h__near_hlt3 | intword | intcomma}}</td>
+				<td class="parent_value acc_l5">{{l5_h__near_hlt3 | intword | intcomma}}</td>
+				<td class="parent_value acc_l6">{{l6_h__near_hlt3 | intword | intcomma}}</td>
+				<td class="parent_value acc_l7">{{l7_h__near_hlt3 | intword | intcomma}}</td>
+				<td class="parent_value acc_l8">{{l8_h__near_hlt3 | intword | intcomma}}</td>
+				<td class="parent_value acc_g8">{{g8_h__near_hlt3 | intword | intcomma}}</td>
+			</tr>
+			<tr>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l1_h__near_hlt3_percent }}%,#ffffff {{ l1_h__near_hlt3_percent }}%);">{{ l1_h__near_hlt3_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l2_h__near_hlt3_percent }}%,#ffffff {{ l2_h__near_hlt3_percent }}%);">{{ l2_h__near_hlt3_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l3_h__near_hlt3_percent }}%,#ffffff {{ l3_h__near_hlt3_percent }}%);">{{ l3_h__near_hlt3_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l4_h__near_hlt3_percent }}%,#ffffff {{ l4_h__near_hlt3_percent }}%);">{{ l4_h__near_hlt3_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l5_h__near_hlt3_percent }}%,#ffffff {{ l5_h__near_hlt3_percent }}%);">{{ l5_h__near_hlt3_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l6_h__near_hlt3_percent }}%,#ffffff {{ l6_h__near_hlt3_percent }}%);">{{ l6_h__near_hlt3_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l7_h__near_hlt3_percent }}%,#ffffff {{ l7_h__near_hlt3_percent }}%);">{{ l7_h__near_hlt3_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l8_h__near_hlt3_percent }}%,#ffffff {{ l8_h__near_hlt3_percent }}%);">{{ l8_h__near_hlt3_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ g8_h__near_hlt3_percent }}%,#ffffff {{ g8_h__near_hlt3_percent }}%);">{{ g8_h__near_hlt3_percent }}%</td>
+			</tr>
+			{% for data in lc_child %}
+			<tr class='dataitem detail_tier3 {% if "detail_tier3" not in checked %} hide {% endif %}' onclick="window.document.location='?page=accessibility&code={{data.code}}';">
+				<td rowspan=2  class="detail_list">{{data.na_en}}</td>
+				<td class="detail_value acc_l1">{{data.l1_h__near_hlt3 | intword | intcomma}}</td>
+				<td class="detail_value acc_l2">{{data.l2_h__near_hlt3 | intword | intcomma}}</td>
+				<td class="detail_value acc_l3">{{data.l3_h__near_hlt3 | intword | intcomma}}</td>
+				<td class="detail_value acc_l4">{{data.l4_h__near_hlt3 | intword | intcomma}}</td>
+				<td class="detail_value acc_l5">{{data.l5_h__near_hlt3 | intword | intcomma}}</td>
+				<td class="detail_value acc_l6">{{data.l6_h__near_hlt3 | intword | intcomma}}</td>
+				<td class="detail_value acc_l7">{{data.l7_h__near_hlt3 | intword | intcomma}}</td>
+				<td class="detail_value acc_l8">{{data.l8_h__near_hlt3 | intword | intcomma}}</td>
+				<td class="detail_value acc_g8">{{data.g8_h__near_hlt3 | intword | intcomma}}</td>
+			</tr>
+			<tr class='dataitem detail_tier3 {% if "detail_tier3" not in checked %} hide {% endif %}'>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l1_h__near_hlt3_percent }}%,#ffffff {{ data.l1_h__near_hlt3_percent }}%);">{{ data.l1_h__near_hlt3_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l2_h__near_hlt3_percent }}%,#ffffff {{ data.l2_h__near_hlt3_percent }}%);">{{ data.l2_h__near_hlt3_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l3_h__near_hlt3_percent }}%,#ffffff {{ data.l3_h__near_hlt3_percent }}%);">{{ data.l3_h__near_hlt3_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l4_h__near_hlt3_percent }}%,#ffffff {{ data.l4_h__near_hlt3_percent }}%);">{{ data.l4_h__near_hlt3_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l5_h__near_hlt3_percent }}%,#ffffff {{ data.l5_h__near_hlt3_percent }}%);">{{ data.l5_h__near_hlt3_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l6_h__near_hlt3_percent }}%,#ffffff {{ data.l6_h__near_hlt3_percent }}%);">{{ data.l6_h__near_hlt3_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l7_h__near_hlt3_percent }}%,#ffffff {{ data.l7_h__near_hlt3_percent }}%);">{{ data.l7_h__near_hlt3_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l8_h__near_hlt3_percent }}%,#ffffff {{ data.l8_h__near_hlt3_percent }}%);">{{ data.l8_h__near_hlt3_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.g8_h__near_hlt3_percent }}%,#ffffff {{ data.g8_h__near_hlt3_percent }}%);">{{ data.g8_h__near_hlt3_percent }}%</td>
+			</tr>
+			{% endfor %}
+			<tr>
+				<td class="separator" colspan=10></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div  class="gridster">
+	<table>
+		<thead>
+			<tr class='dataitem'>
+				<td colspan=7 style="padding:3px;font-weight:bolder;">{% trans "Travel Time to Nearest Health Facilities Tier All" %}</td>
+				<td colspan=3 style="padding:3px;"><div class='showFlag_tierall' onClick='show_hide_tierall()'>{% if "detail_tierall" in checked %}{% trans "Hide Detail" %}{% else %}{% trans "Show Detail" %}{% endif %}</div></td>
+			</tr>
+			<tr>
+				<th rowspan=2><span>{% trans "Region" %}</span></th>
+				<th colspan=9>{% trans "Population travel time" %}</th>
+				<!-- <th rowspan=2><span>Health Facilities</span></th>
+				<th rowspan=2><span>Length of Roads</span></th> -->
+			</tr>
+			<tr>
+				<th class="acc_l1"><span>&lt; {% trans "1 h" %}</span></th>
+				<th class="acc_l2"><span>&lt; {% trans "2 h" %}</span></th>
+				<th class="acc_l3"><span>&lt; {% trans "3 h" %}</span></th>
+				<th class="acc_l4"><span>&lt; {% trans "4 h" %}</span></th>
+				<th class="acc_l5"><span>&lt; {% trans "5 h" %}</span></th>
+				<th class="acc_l6"><span>&lt; {% trans "6 h" %}</span></th>
+				<th class="acc_l7"><span>&lt; {% trans "7 h" %}</span></th>
+				<th class="acc_l8"><span>&lt; {% trans "8 h" %}</span></th>
+				<th class="acc_g8"><span>&gt; {% trans "8 h" %}</span></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='dataitem'>
+				<td rowspan=2 class="parent_list">{{parent_label}}</td>
+				<td class="parent_value acc_l1">{{l1_h__near_hltall | intword | intcomma}}</td>
+				<td class="parent_value acc_l2">{{l2_h__near_hltall | intword | intcomma}}</td>
+				<td class="parent_value acc_l3">{{l3_h__near_hltall | intword | intcomma}}</td>
+				<td class="parent_value acc_l4">{{l4_h__near_hltall | intword | intcomma}}</td>
+				<td class="parent_value acc_l5">{{l5_h__near_hltall | intword | intcomma}}</td>
+				<td class="parent_value acc_l6">{{l6_h__near_hltall | intword | intcomma}}</td>
+				<td class="parent_value acc_l7">{{l7_h__near_hltall | intword | intcomma}}</td>
+				<td class="parent_value acc_l8">{{l8_h__near_hltall | intword | intcomma}}</td>
+				<td class="parent_value acc_g8">{{g8_h__near_hltall | intword | intcomma}}</td>
+			</tr>
+			<tr>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l1_h__near_hltall_percent }}%,#ffffff {{ l1_h__near_hltall_percent }}%);">{{ l1_h__near_hltall_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l2_h__near_hltall_percent }}%,#ffffff {{ l2_h__near_hltall_percent }}%);">{{ l2_h__near_hltall_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l3_h__near_hltall_percent }}%,#ffffff {{ l3_h__near_hltall_percent }}%);">{{ l3_h__near_hltall_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l4_h__near_hltall_percent }}%,#ffffff {{ l4_h__near_hltall_percent }}%);">{{ l4_h__near_hltall_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l5_h__near_hltall_percent }}%,#ffffff {{ l5_h__near_hltall_percent }}%);">{{ l5_h__near_hltall_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l6_h__near_hltall_percent }}%,#ffffff {{ l6_h__near_hltall_percent }}%);">{{ l6_h__near_hltall_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l7_h__near_hltall_percent }}%,#ffffff {{ l7_h__near_hltall_percent }}%);">{{ l7_h__near_hltall_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l8_h__near_hltall_percent }}%,#ffffff {{ l8_h__near_hltall_percent }}%);">{{ l8_h__near_hltall_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ g8_h__near_hltall_percent }}%,#ffffff {{ g8_h__near_hltall_percent }}%);">{{ g8_h__near_hltall_percent }}%</td>
+			</tr>
+			{% for data in lc_child %}
+			<tr class='dataitem detail_tierall {% if "detail_tierall" not in checked %} hide {% endif %}' onclick="window.document.location='?page=accessibility&code={{data.code}}';">
+				<td rowspan=2  class="detail_list">{{data.na_en}}</td>
+				<td class="detail_value acc_l1">{{data.l1_h__near_hltall | intword | intcomma}}</td>
+				<td class="detail_value acc_l2">{{data.l2_h__near_hltall | intword | intcomma}}</td>
+				<td class="detail_value acc_l3">{{data.l3_h__near_hltall | intword | intcomma}}</td>
+				<td class="detail_value acc_l4">{{data.l4_h__near_hltall | intword | intcomma}}</td>
+				<td class="detail_value acc_l5">{{data.l5_h__near_hltall | intword | intcomma}}</td>
+				<td class="detail_value acc_l6">{{data.l6_h__near_hltall | intword | intcomma}}</td>
+				<td class="detail_value acc_l7">{{data.l7_h__near_hltall | intword | intcomma}}</td>
+				<td class="detail_value acc_l8">{{data.l8_h__near_hltall | intword | intcomma}}</td>
+				<td class="detail_value acc_g8">{{data.g8_h__near_hltall | intword | intcomma}}</td>
+			</tr>
+			<tr class='dataitem detail_tierall {% if "detail_tierall" not in checked %} hide {% endif %}'>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l1_h__near_hltall_percent }}%,#ffffff {{ data.l1_h__near_hltall_percent }}%);">{{ data.l1_h__near_hltall_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l2_h__near_hltall_percent }}%,#ffffff {{ data.l2_h__near_hltall_percent }}%);">{{ data.l2_h__near_hltall_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l3_h__near_hltall_percent }}%,#ffffff {{ data.l3_h__near_hltall_percent }}%);">{{ data.l3_h__near_hltall_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l4_h__near_hltall_percent }}%,#ffffff {{ data.l4_h__near_hltall_percent }}%);">{{ data.l4_h__near_hltall_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l5_h__near_hltall_percent }}%,#ffffff {{ data.l5_h__near_hltall_percent }}%);">{{ data.l5_h__near_hltall_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l6_h__near_hltall_percent }}%,#ffffff {{ data.l6_h__near_hltall_percent }}%);">{{ data.l6_h__near_hltall_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l7_h__near_hltall_percent }}%,#ffffff {{ data.l7_h__near_hltall_percent }}%);">{{ data.l7_h__near_hltall_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l8_h__near_hltall_percent }}%,#ffffff {{ data.l8_h__near_hltall_percent }}%);">{{ data.l8_h__near_hltall_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.g8_h__near_hltall_percent }}%,#ffffff {{ data.g8_h__near_hltall_percent }}%);">{{ data.g8_h__near_hltall_percent }}%</td>
+			</tr>
+			{% endfor %}
+			<tr>
+				<td class="separator" colspan=10></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div  class="gridster">
+	<table>
+		<thead>
+			<tr class='dataitem'>
+				<td colspan=7 style="padding:3px;font-weight:bolder;">{% trans "Travel Time to Its Province Capital" %}</td>
+				<td colspan=3 style="padding:3px;"><div class='showFlag_itsprov' onClick='show_hide_itsprov()'>{% if "detail_itsprov" in checked %}{% trans "Hide Detail" %}{% else %}{% trans "Show Detail" %}{% endif %}</div></td>
+			</tr>
+			<tr>
+				<th rowspan=2><span>{% trans "Region" %}</span></th>
+				<th colspan=9>{% trans "Population travel time" %}</th>
+				<!-- <th rowspan=2><span>Health Facilities</span></th>
+				<th rowspan=2><span>Length of Roads</span></th> -->
+			</tr>
+			<tr>
+				<th class="acc_l1"><span>&lt; {% trans "1 h" %}</span></th>
+				<th class="acc_l2"><span>&lt; {% trans "2 h" %}</span></th>
+				<th class="acc_l3"><span>&lt; {% trans "3 h" %}</span></th>
+				<th class="acc_l4"><span>&lt; {% trans "4 h" %}</span></th>
+				<th class="acc_l5"><span>&lt; {% trans "5 h" %}</span></th>
+				<th class="acc_l6"><span>&lt; {% trans "6 h" %}</span></th>
+				<th class="acc_l7"><span>&lt; {% trans "7 h" %}</span></th>
+				<th class="acc_l8"><span>&lt; {% trans "8 h" %}</span></th>
+				<th class="acc_g8"><span>&gt; {% trans "8 h" %}</span></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='dataitem'>
+				<td rowspan=2 class="parent_list">{{parent_label}}</td>
+				<td class="parent_value acc_l1">{{l1_h__itsx_prov | intword | intcomma}}</td>
+				<td class="parent_value acc_l1">{{l2_h__itsx_prov | intword | intcomma}}</td>
+				<td class="parent_value acc_l2">{{l3_h__itsx_prov | intword | intcomma}}</td>
+				<td class="parent_value acc_l3">{{l4_h__itsx_prov | intword | intcomma}}</td>
+				<td class="parent_value acc_l4">{{l5_h__itsx_prov | intword | intcomma}}</td>
+				<td class="parent_value acc_l5">{{l6_h__itsx_prov | intword | intcomma}}</td>
+				<td class="parent_value acc_l6">{{l7_h__itsx_prov | intword | intcomma}}</td>
+				<td class="parent_value acc_l7">{{l8_h__itsx_prov | intword | intcomma}}</td>
+				<td class="parent_value acc_g8">{{g8_h__itsx_prov | intword | intcomma}}</td>
+			</tr>
+			<tr>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l1_h__itsx_prov_percent }}%,#ffffff {{ l1_h__itsx_prov_percent }}%);">{{ l1_h__itsx_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l2_h__itsx_prov_percent }}%,#ffffff {{ l2_h__itsx_prov_percent }}%);">{{ l2_h__itsx_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l3_h__itsx_prov_percent }}%,#ffffff {{ l3_h__itsx_prov_percent }}%);">{{ l3_h__itsx_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l4_h__itsx_prov_percent }}%,#ffffff {{ l4_h__itsx_prov_percent }}%);">{{ l4_h__itsx_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l5_h__itsx_prov_percent }}%,#ffffff {{ l5_h__itsx_prov_percent }}%);">{{ l5_h__itsx_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l6_h__itsx_prov_percent }}%,#ffffff {{ l6_h__itsx_prov_percent }}%);">{{ l6_h__itsx_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l7_h__itsx_prov_percent }}%,#ffffff {{ l7_h__itsx_prov_percent }}%);">{{ l7_h__itsx_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l8_h__itsx_prov_percent }}%,#ffffff {{ l8_h__itsx_prov_percent }}%);">{{ l8_h__itsx_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ g8_h__itsx_prov_percent }}%,#ffffff {{ g8_h__itsx_prov_percent }}%);">{{ g8_h__itsx_prov_percent }}%</td>
+			</tr>
+			{% for data in lc_child %}
+			<tr class='dataitem detail_itsprov {% if "detail_itsprov" not in checked %} hide {% endif %}' onclick="window.document.location='?page=accessibility&code={{data.code}}';">
+				<td rowspan=2  class="detail_list">{{data.na_en}}</td>
+				<td class="detail_value acc_l1">{{data.l1_h__itsx_prov | intword | intcomma}}</td>
+				<td class="detail_value acc_l2">{{data.l2_h__itsx_prov | intword | intcomma}}</td>
+				<td class="detail_value acc_l3">{{data.l3_h__itsx_prov | intword | intcomma}}</td>
+				<td class="detail_value acc_l4">{{data.l4_h__itsx_prov | intword | intcomma}}</td>
+				<td class="detail_value acc_l5">{{data.l5_h__itsx_prov | intword | intcomma}}</td>
+				<td class="detail_value acc_l6">{{data.l6_h__itsx_prov | intword | intcomma}}</td>
+				<td class="detail_value acc_l7">{{data.l7_h__itsx_prov | intword | intcomma}}</td>
+				<td class="detail_value acc_l8">{{data.l8_h__itsx_prov | intword | intcomma}}</td>
+				<td class="detail_value acc_g8">{{data.g8_h__itsx_prov | intword | intcomma}}</td>
+			</tr>
+			<tr class='dataitem detail_itsprov {% if "detail_itsprov" not in checked %} hide {% endif %}'>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l1_h__itsx_prov_percent }}%,#ffffff {{ data.l1_h__itsx_prov_percent }}%);">{{ data.l1_h__itsx_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l2_h__itsx_prov_percent }}%,#ffffff {{ data.l2_h__itsx_prov_percent }}%);">{{ data.l2_h__itsx_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l3_h__itsx_prov_percent }}%,#ffffff {{ data.l3_h__itsx_prov_percent }}%);">{{ data.l3_h__itsx_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l4_h__itsx_prov_percent }}%,#ffffff {{ data.l4_h__itsx_prov_percent }}%);">{{ data.l4_h__itsx_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l5_h__itsx_prov_percent }}%,#ffffff {{ data.l5_h__itsx_prov_percent }}%);">{{ data.l5_h__itsx_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l6_h__itsx_prov_percent }}%,#ffffff {{ data.l6_h__itsx_prov_percent }}%);">{{ data.l6_h__itsx_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l7_h__itsx_prov_percent }}%,#ffffff {{ data.l7_h__itsx_prov_percent }}%);">{{ data.l7_h__itsx_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l8_h__itsx_prov_percent }}%,#ffffff {{ data.l8_h__itsx_prov_percent }}%);">{{ data.l8_h__itsx_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.g8_h__itsx_prov_percent }}%,#ffffff {{ data.g8_h__itsx_prov_percent }}%);">{{ data.g8_h__itsx_prov_percent }}%</td>
+			</tr>
+			{% endfor %}
+			<tr>
+				<td class="separator" colspan=10></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div  class="gridster">
+	<table>
+		<thead>
+			<tr class='dataitem'>
+				<td colspan=7 style="padding:3px;font-weight:bolder;">{% trans "Travel Time to Nearest Province Capital" %}</td>
+				<td colspan=3 style="padding:3px;"><div class='showFlag_nearprov' onClick='show_hide_nearprov()'>{% if "detail_nearprov" in checked %}{% trans "Hide Detail" %}{% else %}{% trans "Show Detail" %}{% endif %}</div></td>
+			</tr>
+			<tr>
+				<th rowspan=2><span>{% trans "Region" %}</span></th>
+				<th colspan=9>{% trans "Population travel time" %}</th>
+				<!-- <th rowspan=2><span>Health Facilities</span></th>
+				<th rowspan=2><span>Length of Roads</span></th> -->
+			</tr>
+			<tr>
+				<th class="acc_l1"><span>&lt; {% trans "1 h" %}</span></th>
+				<th class="acc_l2"><span>&lt; {% trans "2 h" %}</span></th>
+				<th class="acc_l3"><span>&lt; {% trans "3 h" %}</span></th>
+				<th class="acc_l4"><span>&lt; {% trans "4 h" %}</span></th>
+				<th class="acc_l5"><span>&lt; {% trans "5 h" %}</span></th>
+				<th class="acc_l6"><span>&lt; {% trans "6 h" %}</span></th>
+				<th class="acc_l7"><span>&lt; {% trans "7 h" %}</span></th>
+				<th class="acc_l8"><span>&lt; {% trans "8 h" %}</span></th>
+				<th class="acc_g8"><span>&gt; {% trans "8 h" %}</span></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='dataitem'>
+				<td rowspan=2 class="parent_list">{{parent_label}}</td>
+				<td class="parent_value acc_l1">{{l1_h__near_prov | intword | intcomma}}</td>
+				<td class="parent_value acc_l2">{{l2_h__near_prov | intword | intcomma}}</td>
+				<td class="parent_value acc_l3">{{l3_h__near_prov | intword | intcomma}}</td>
+				<td class="parent_value acc_l4">{{l4_h__near_prov | intword | intcomma}}</td>
+				<td class="parent_value acc_l5">{{l5_h__near_prov | intword | intcomma}}</td>
+				<td class="parent_value acc_l6">{{l6_h__near_prov | intword | intcomma}}</td>
+				<td class="parent_value acc_l7">{{l7_h__near_prov | intword | intcomma}}</td>
+				<td class="parent_value acc_l8">{{l8_h__near_prov | intword | intcomma}}</td>
+				<td class="parent_value acc_g8">{{g8_h__near_prov | intword | intcomma}}</td>
+			</tr>
+			<tr>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l1_h__near_prov_percent }}%,#ffffff {{ l1_h__near_prov_percent }}%);">{{ l1_h__near_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l2_h__near_prov_percent }}%,#ffffff {{ l2_h__near_prov_percent }}%);">{{ l2_h__near_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l3_h__near_prov_percent }}%,#ffffff {{ l3_h__near_prov_percent }}%);">{{ l3_h__near_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l4_h__near_prov_percent }}%,#ffffff {{ l4_h__near_prov_percent }}%);">{{ l4_h__near_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l5_h__near_prov_percent }}%,#ffffff {{ l5_h__near_prov_percent }}%);">{{ l5_h__near_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l6_h__near_prov_percent }}%,#ffffff {{ l6_h__near_prov_percent }}%);">{{ l6_h__near_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l7_h__near_prov_percent }}%,#ffffff {{ l7_h__near_prov_percent }}%);">{{ l7_h__near_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l8_h__near_prov_percent }}%,#ffffff {{ l8_h__near_prov_percent }}%);">{{ l8_h__near_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ g8_h__near_prov_percent }}%,#ffffff {{ g8_h__near_prov_percent }}%);">{{ g8_h__near_prov_percent }}%</td>
+			</tr>
+			{% for data in lc_child %}
+			<tr class='dataitem detail_nearprov {% if "detail_nearprov" not in checked %} hide {% endif %}' onclick="window.document.location='?page=accessibility&code={{data.code}}';">
+				<td rowspan=2  class="detail_list">{{data.na_en}}</td>
+				<td class="detail_value acc_l1">{{data.l1_h__near_prov | intword | intcomma}}</td>
+				<td class="detail_value acc_l2">{{data.l2_h__near_prov | intword | intcomma}}</td>
+				<td class="detail_value acc_l3">{{data.l3_h__near_prov | intword | intcomma}}</td>
+				<td class="detail_value acc_l4">{{data.l4_h__near_prov | intword | intcomma}}</td>
+				<td class="detail_value acc_l5">{{data.l5_h__near_prov | intword | intcomma}}</td>
+				<td class="detail_value acc_l6">{{data.l6_h__near_prov | intword | intcomma}}</td>
+				<td class="detail_value acc_l7">{{data.l7_h__near_prov | intword | intcomma}}</td>
+				<td class="detail_value acc_l8">{{data.l8_h__near_prov | intword | intcomma}}</td>
+				<td class="detail_value acc_g8">{{data.g8_h__near_prov | intword | intcomma}}</td>
+			</tr>
+			<tr class='dataitem detail_nearprov {% if "detail_nearprov" not in checked %} hide {% endif %}'>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l1_h__near_prov_percent }}%,#ffffff {{ data.l1_h__near_prov_percent }}%);">{{ data.l1_h__near_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l2_h__near_prov_percent }}%,#ffffff {{ data.l2_h__near_prov_percent }}%);">{{ data.l2_h__near_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l3_h__near_prov_percent }}%,#ffffff {{ data.l3_h__near_prov_percent }}%);">{{ data.l3_h__near_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l4_h__near_prov_percent }}%,#ffffff {{ data.l4_h__near_prov_percent }}%);">{{ data.l4_h__near_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l5_h__near_prov_percent }}%,#ffffff {{ data.l5_h__near_prov_percent }}%);">{{ data.l5_h__near_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l6_h__near_prov_percent }}%,#ffffff {{ data.l6_h__near_prov_percent }}%);">{{ data.l6_h__near_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l7_h__near_prov_percent }}%,#ffffff {{ data.l7_h__near_prov_percent }}%);">{{ data.l7_h__near_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l8_h__near_prov_percent }}%,#ffffff {{ data.l8_h__near_prov_percent }}%);">{{ data.l8_h__near_prov_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.g8_h__near_prov_percent }}%,#ffffff {{ data.g8_h__near_prov_percent }}%);">{{ data.g8_h__near_prov_percent }}%</td>
+			</tr>
+			{% endfor %}
+			<tr>
+				<td class="separator" colspan=10></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div  class="gridster">
+	<table>
+		<thead>
+			<tr class='dataitem'>
+				<td colspan=7 style="padding:3px;font-weight:bolder;">{% trans "Travel Time to Nearest District Capital" %}</td>
+				<td colspan=3 style="padding:3px;"><div class='showFlag_neardist' onClick='show_hide_neardist()'>{% if "detail_neardist" in checked %}{% trans "Hide Detail" %}{% else %}{% trans "Show Detail" %}{% endif %}</div></td>
+			</tr>
+			<tr>
+				<th rowspan=2><span>{% trans "Region" %}</span></th>
+				<th colspan=9>{% trans "Population travel time" %}</th>
+				<!-- <th rowspan=2><span>Health Facilities</span></th>
+				<th rowspan=2><span>Length of Roads</span></th> -->
+			</tr>
+			<tr>
+				<th class="acc_l1"><span>&lt; {% trans "1 h" %}</span></th>
+				<th class="acc_l2"><span>&lt; {% trans "2 h" %}</span></th>
+				<th class="acc_l3"><span>&lt; {% trans "3 h" %}</span></th>
+				<th class="acc_l4"><span>&lt; {% trans "4 h" %}</span></th>
+				<th class="acc_l5"><span>&lt; {% trans "5 h" %}</span></th>
+				<th class="acc_l6"><span>&lt; {% trans "6 h" %}</span></th>
+				<th class="acc_l7"><span>&lt; {% trans "7 h" %}</span></th>
+				<th class="acc_l8"><span>&lt; {% trans "8 h" %}</span></th>
+				<th class="acc_g8"><span>&gt; {% trans "8 h" %}</span></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='dataitem'>
+				<td rowspan=2 class="parent_list">{{parent_label}}</td>
+				<td class="parent_value acc_l1">{{l1_h__near_dist | intword | intcomma}}</td>
+				<td class="parent_value acc_l2">{{l2_h__near_dist | intword | intcomma}}</td>
+				<td class="parent_value acc_l3">{{l3_h__near_dist | intword | intcomma}}</td>
+				<td class="parent_value acc_l4">{{l4_h__near_dist | intword | intcomma}}</td>
+				<td class="parent_value acc_l5">{{l5_h__near_dist | intword | intcomma}}</td>
+				<td class="parent_value acc_l6">{{l6_h__near_dist | intword | intcomma}}</td>
+				<td class="parent_value acc_l7">{{l7_h__near_dist | intword | intcomma}}</td>
+				<td class="parent_value acc_l8">{{l8_h__near_dist | intword | intcomma}}</td>
+				<td class="parent_value acc_g8">{{g8_h__near_dist | intword | intcomma}}</td>
+			</tr>
+			<tr>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l1_h__near_dist_percent }}%,#ffffff {{ l1_h__near_dist_percent }}%);">{{ l1_h__near_dist_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l2_h__near_dist_percent }}%,#ffffff {{ l2_h__near_dist_percent }}%);">{{ l2_h__near_dist_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l3_h__near_dist_percent }}%,#ffffff {{ l3_h__near_dist_percent }}%);">{{ l3_h__near_dist_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l4_h__near_dist_percent }}%,#ffffff {{ l4_h__near_dist_percent }}%);">{{ l4_h__near_dist_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l5_h__near_dist_percent }}%,#ffffff {{ l5_h__near_dist_percent }}%);">{{ l5_h__near_dist_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l6_h__near_dist_percent }}%,#ffffff {{ l6_h__near_dist_percent }}%);">{{ l6_h__near_dist_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l7_h__near_dist_percent }}%,#ffffff {{ l7_h__near_dist_percent }}%);">{{ l7_h__near_dist_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ l8_h__near_dist_percent }}%,#ffffff {{ l8_h__near_dist_percent }}%);">{{ l8_h__near_dist_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ g8_h__near_dist_percent }}%,#ffffff {{ g8_h__near_dist_percent }}%);">{{ g8_h__near_dist_percent }}%</td>
+			</tr>
+			{% for data in lc_child %}
+			<tr class='dataitem detail_neardist {% if "detail_neardist" not in checked %} hide {% endif %}' onclick="window.document.location='?page=accessibility&code={{data.code}}';">
+				<td rowspan=2  class="detail_list">{{data.na_en}}</td>
+				<td class="detail_value acc_l1">{{data.l1_h__near_dist | intword | intcomma}}</td>
+				<td class="detail_value acc_l2">{{data.l2_h__near_dist | intword | intcomma}}</td>
+				<td class="detail_value acc_l3">{{data.l3_h__near_dist | intword | intcomma}}</td>
+				<td class="detail_value acc_l4">{{data.l4_h__near_dist | intword | intcomma}}</td>
+				<td class="detail_value acc_l5">{{data.l5_h__near_dist | intword | intcomma}}</td>
+				<td class="detail_value acc_l6">{{data.l6_h__near_dist | intword | intcomma}}</td>
+				<td class="detail_value acc_l7">{{data.l7_h__near_dist | intword | intcomma}}</td>
+				<td class="detail_value acc_l8">{{data.l8_h__near_dist | intword | intcomma}}</td>
+				<td class="detail_value acc_g8">{{data.g8_h__near_dist | intword | intcomma}}</td>
+			</tr>
+			<tr class='dataitem detail_neardist {% if "detail_neardist" not in checked %} hide {% endif %}'>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l1_h__near_dist_percent }}%,#ffffff {{ data.l1_h__near_dist_percent }}%);">{{ data.l1_h__near_dist_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l2_h__near_dist_percent }}%,#ffffff {{ data.l2_h__near_dist_percent }}%);">{{ data.l2_h__near_dist_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l3_h__near_dist_percent }}%,#ffffff {{ data.l3_h__near_dist_percent }}%);">{{ data.l3_h__near_dist_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l4_h__near_dist_percent }}%,#ffffff {{ data.l4_h__near_dist_percent }}%);">{{ data.l4_h__near_dist_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l5_h__near_dist_percent }}%,#ffffff {{ data.l5_h__near_dist_percent }}%);">{{ data.l5_h__near_dist_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l6_h__near_dist_percent }}%,#ffffff {{ data.l6_h__near_dist_percent }}%);">{{ data.l6_h__near_dist_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l7_h__near_dist_percent }}%,#ffffff {{ data.l7_h__near_dist_percent }}%);">{{ data.l7_h__near_dist_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.l8_h__near_dist_percent }}%,#ffffff {{ data.l8_h__near_dist_percent }}%);">{{ data.l8_h__near_dist_percent }}%</td>
+				<td class="rowChartIndicator" style="background: linear-gradient(to right, #efe3af {{ data.g8_h__near_dist_percent }}%,#ffffff {{ data.g8_h__near_dist_percent }}%);">{{ data.g8_h__near_dist_percent }}%</td>
+			</tr>
+			{% endfor %}
+			<tr>
+				<td class="separator" colspan=10></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<SCRIPT TYPE="text/javascript">
+function show_hide_airport(){
+	if ($("div.showFlag_airport").text() == "{% trans "Show Detail" %}") {
+		$("div.showFlag_airport").text('{% trans "Hide Detail" %}');
+		_checked.push('detail_airport');
+	} else {
+		$("div.showFlag_airport").text('{% trans "Show Detail" %}');
+		removeA(_checked, 'detail_airport');
+	}
+	$( ".detail_airport" ).toggleClass(function(){
+		if ( $( this ).parent().is( ".hide" ) ) {
+		    return "show";
+		} else {
+			// $("div.showFlag").text("<p>Show Detail</p>");
+		    return "hide";
+		}
+	});
+}
+
+function show_hide_tier1(){
+	if ($("div.showFlag_tier1").text() == "{% trans "Show Detail" %}") {
+		$("div.showFlag_tier1").text('{% trans "Hide Detail" %}');
+		_checked.push('detail_tier1');
+	} else {
+		$("div.showFlag_tier1").text('{% trans "Show Detail" %}');
+		removeA(_checked, 'detail_tier1');
+	}
+	$( ".detail_tier1" ).toggleClass(function(){
+		if ( $( this ).parent().is( ".hide" ) ) {
+		    return "show";
+		} else {
+			// $("div.showFlag").text("<p>Show Detail</p>");
+		    return "hide";
+		}
+	});
+}
+
+function show_hide_tier2(){
+	if ($("div.showFlag_tier2").text() == "{% trans "Show Detail" %}") {
+		$("div.showFlag_tier2").text('{% trans "Hide Detail" %}');
+		_checked.push('detail_tier2');
+	} else {
+		$("div.showFlag_tier2").text('{% trans "Show Detail" %}');
+		removeA(_checked, 'detail_tier2');
+	}
+	$( ".detail_tier2" ).toggleClass(function(){
+		if ( $( this ).parent().is( ".hide" ) ) {
+		    return "show";
+		} else {
+			// $("div.showFlag").text("<p>Show Detail</p>");
+		    return "hide";
+		}
+	});
+}
+
+function show_hide_tier3(){
+	if ($("div.showFlag_tier3").text() == "{% trans "Show Detail" %}") {
+		$("div.showFlag_tier3").text('{% trans "Hide Detail" %}');
+		_checked.push('detail_tier3');
+	} else {
+		$("div.showFlag_tier3").text('{% trans "Show Detail" %}');
+		removeA(_checked, 'detail_tier3');
+	}
+	$( ".detail_tier3" ).toggleClass(function(){
+		if ( $( this ).parent().is( ".hide" ) ) {
+		    return "show";
+		} else {
+			// $("div.showFlag").text("<p>Show Detail</p>");
+		    return "hide";
+		}
+	});
+}
+
+function show_hide_tierall(){
+	if ($("div.showFlag_tierall").text() == "{% trans "Show Detail" %}") {
+		$("div.showFlag_tierall").text('{% trans "Hide Detail" %}');
+		_checked.push('detail_tierall');
+	} else {
+		$("div.showFlag_tierall").text('{% trans "Show Detail" %}');
+		removeA(_checked, 'detail_tierall');
+	}
+	$( ".detail_tierall" ).toggleClass(function(){
+		if ( $( this ).parent().is( ".hide" ) ) {
+		    return "show";
+		} else {
+			// $("div.showFlag").text("<p>Show Detail</p>");
+		    return "hide";
+		}
+	});
+}
+
+function show_hide_itsprov(){
+	if ($("div.showFlag_itsprov").text() == "{% trans "Show Detail" %}") {
+		$("div.showFlag_itsprov").text('{% trans "Hide Detail" %}');
+		_checked.push('detail_itsprov');
+	} else {
+		$("div.showFlag_itsprov").text('{% trans "Show Detail" %}');
+		removeA(_checked, 'detail_itsprov');
+	}
+	$( ".detail_itsprov" ).toggleClass(function(){
+		if ( $( this ).parent().is( ".hide" ) ) {
+		    return "show";
+		} else {
+			// $("div.showFlag").text("<p>Show Detail</p>");
+		    return "hide";
+		}
+	});
+}
+
+function show_hide_nearprov(){
+	if ($("div.showFlag_nearprov").text() == "{% trans "Show Detail" %}") {
+		$("div.showFlag_nearprov").text('{% trans "Hide Detail" %}');
+		_checked.push('detail_nearprov');
+	} else {
+		$("div.showFlag_nearprov").text('{% trans "Show Detail" %}');
+		removeA(_checked, 'detail_nearprov');
+	}
+	$( ".detail_nearprov" ).toggleClass(function(){
+		if ( $( this ).parent().is( ".hide" ) ) {
+		    return "show";
+		} else {
+			// $("div.showFlag").text("<p>Show Detail</p>");
+		    return "hide";
+		}
+	});
+}
+
+function show_hide_neardist(){
+	if ($("div.showFlag_neardist").text() == "{% trans "Show Detail" %}") {
+		$("div.showFlag_neardist").text('{% trans "Hide Detail" %}');
+		_checked.push('detail_neardist');
+	} else {
+		$("div.showFlag_neardist").text('{% trans "Show Detail" %}');
+		removeA(_checked, 'detail_neardist');
+	}
+	$( ".detail_neardist" ).toggleClass(function(){
+		if ( $( this ).parent().is( ".hide" ) ) {
+		    return "show";
+		} else {
+			// $("div.showFlag").text("<p>Show Detail</p>");
+		    return "hide";
+		}
+	});
+}
+
+
+</SCRIPT>
