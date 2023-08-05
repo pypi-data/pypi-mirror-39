@@ -1,0 +1,12 @@
+cnftools/__init__.py,sha256=aXLrgXrlY7HLE8KV-jX_LcTZ_WWrQgJpwHa6K1G8uRc,168
+cnftools/coloring.py,sha256=87U2KP0zmj0tS4Aaok8n7hCDQZogTVfDZpKzPZ-1pfg,454
+cnftools/io.py,sha256=CL9U4SSfZjB6RGOUojgWzxDMKGvyuwPp4G6mpzKKwJU,1580
+cnftools/tseytin.py,sha256=t-bgbSe8853Hwdth0sJlf_ZMeKEekfotIm-tUFBWK1Q,515
+cnftools/cmdline/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cnftools/cmdline/kcoloring.py,sha256=n2EX6KQlRGGd9ZHIDQPZo3Ls_7kGTLKzHYfNj13AJd4,1943
+cnftools/cmdline/to3cnf.py,sha256=auGkBZto93uR4Wr7lrRAtsP1fSGURikhmEJIdXq8NBM,830
+cnftools-0.0.1.dist-info/METADATA,sha256=jFrulQps1fKMLpxrCayTedwADvswoUkX5ZTH13p7S0M,1049
+cnftools-0.0.1.dist-info/RECORD,,
+cnftools-0.0.1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+cnftools-0.0.1.dist-info/entry_points.txt,sha256=qWmN285N4fJQ4DPEgA-mFEtjiKTZiaqfomhvQvlUq-0,101
+cnftools-0.0.1.dist-info/top_level.txt,sha256=x57NFmV4mR1L1lLi5KdtfSOV90FrunS0GxDh9y5eIVc,9
