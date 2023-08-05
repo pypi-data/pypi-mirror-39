@@ -1,0 +1,84 @@
+Metadata-Version: 2.0
+Name: jaynes
+Version: 0.5.5
+Summary: A tool for running python code with runner on aws
+Home-page: https://github.com/episodeyang/jaynes
+Author: Ge Yang
+Author-email: yangge1987@gmail.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Keywords: jaynes,logging,DEBUG,debugging,timer,timeit,decorator,stopwatch,tic,toc
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: cloudpickle
+Requires-Dist: params-proto
+Requires-Dist: moleskin
+Requires-Dist: boto3
+
+Jaynes, A Utility for training ML models on AWS, GCE, SLURM, with or without docker 
+====================================================================================
+
+Todo
+----
+
+-  [x] get the initial template to work
+
+Done
+~~~~
+
+Installation
+------------
+
+.. code-block:: bash
+
+    pip install jaynes
+
+Usage (**Show me the Mo-NAY!! :moneybag::money\_with\_wings:**)
+---------------------------------------------------------------
+
+Check out the `test\_projects <https://github.com/episodeyang/jaynes/blob/master/test_projects>`__ folder for projects
+that you can run. I just recenlty implemented a hugely improved API that
+uses a static ``yaml`` configuration file, so the documentations are
+still comming.
+
+To try to get things to work via ssh/slurm/aws, see
+`test\_projects <https://github.com/episodeyang/jaynes/blob/master/test_projects>`__.
+
+To Develop
+----------
+
+.. code-block:: bash
+
+    git clone https://github.com/episodeyang/jaynes.git
+    cd jaynes
+    make dev
+
+To test, run
+
+.. code-block:: bash
+
+    make test
+
+This ``make dev`` command should build the wheel and install it in your
+current python environment. Take a look at the
+`https://github.com/episodeyang/jaynes/blob/master/Makefile <https://github.com/episodeyang/jaynes/blob/master/Makefile>`__ for details.
+
+**To publish**, first update the version number, then do:
+
+.. code-block:: bash
+
+    make publish
+
+Acknowledgements
+----------------
+
+This code-block is inspired by @justinfu's
+`doodad <https://github.com/justinjfu/doodad>`__, which is in turn built
+on top of Peter Chen's script.
+
+This code-block is written from scratch to allow a more permissible
+open-source license (BSD). Go bears :bear: !!
+
+
