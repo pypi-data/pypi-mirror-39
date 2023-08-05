@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: Validation-Coding
+Version: 0.1.2
+Summary: Validating things that can be validated since 2018
+Home-page: https://harens.github.io
+Author: harens
+Author-email: harensdeveloper@gmail.com
+License: UNKNOWN
+Description: # Validation-Coding
+        [![PyPI version](https://badge.fury.io/py/Validation-Coding.svg)](https://badge.fury.io/py/Validation-Coding) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Validation-Coding.svg) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+        
+        __Validating things that can be validated since 2018__
+        
+        ## Installation
+        ```shell
+        pip install Validation-Coding
+        ```
+        
+        ## License
+        This project is licensed under the [GNU General Public License v3.0](https://github.com/harens/Validation-Coding/blob/master/LICENSE)
+Keywords: Validation,Homework,Verification
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
