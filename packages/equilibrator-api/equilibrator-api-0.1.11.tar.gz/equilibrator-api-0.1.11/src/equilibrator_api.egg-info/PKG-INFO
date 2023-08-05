@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: equilibrator-api
+Version: 0.1.11
+Summary: Standard reaction Gibbs energy estimation for biochemical reactions.
+Home-page: https://gitlab.com/elad.noor/equilibrator-api
+Author: Elad Noor
+Author-email: noor@imsb.biol.ethz.ch
+Maintainer: Elad Noor
+Maintainer-email: noor@imsb.biol.ethz.ch
+License: MIT License
+Description: UNKNOWN
+Keywords: Gibbs energy,biochemical reaction,equilibrator
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
