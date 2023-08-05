@@ -1,0 +1,13 @@
+setup.py
+vsts/__init__.py
+vsts/cli/__init__.py
+vsts/cli/team/__init__.py
+vsts/cli/team/_format.py
+vsts/cli/team/_help.py
+vsts/cli/team/arguments.py
+vsts/cli/team/commands.py
+vsts_cli_team.egg-info/PKG-INFO
+vsts_cli_team.egg-info/SOURCES.txt
+vsts_cli_team.egg-info/dependency_links.txt
+vsts_cli_team.egg-info/requires.txt
+vsts_cli_team.egg-info/top_level.txt
