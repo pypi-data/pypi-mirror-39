@@ -1,0 +1,4 @@
+include pwbmcomponents/bundle.js
+include pwbmcomponents/metadata.json
+include pwbmcomponents/package.json
+include README.md
