@@ -1,0 +1,14 @@
+<h1 id="mainContentTitle">Error in OVERWATCH</h1>
+<hr />
+
+<div class="errors">
+    {% for errorKey in errors %}
+    <p>Error type: {{ errorKey }}</p>
+    <ul>
+        {% for error in errors[errorKey] %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+    <p>Please go back to the previous page or return to the run list</p>
+</div>
