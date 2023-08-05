@@ -1,0 +1,65 @@
+Metadata-Version: 2.0
+Name: lightnovel-crawler
+Version: 2.5.6
+Summary: Crawls light novels and make html, text, epub and mobi
+Home-page: https://github.com/dipu-bd/lightnovel-crawler
+Author: Sudipto Chandra
+Author-email: dipu.sudipta@gmail.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/dipu-bd/lightnovel-crawler/
+Project-URL: Bug Reports, https://github.com/dipu-bd/lightnovel-crawler/issues
+Project-URL: Say Thanks!, https://saythanks.io/to/dipu-bd
+Keywords: lightnovel ebook epub mobi kindle crawl convert
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Education
+Classifier: Topic :: Text Processing
+Classifier: License :: Free For Home Use
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Description-Content-Type: text/markdown
+Requires-Dist: EbookLib (==0.17)
+Requires-Dist: Js2Py (==0.59)
+Requires-Dist: PyInquirer (==1.0.3)
+Requires-Dist: beautifulsoup4 (==4.6.3)
+Requires-Dist: colorama (==0.4.1)
+Requires-Dist: lightnovel-crawler
+Requires-Dist: progress (==1.4)
+Requires-Dist: requests (==2.20.1)
+
+Lightnovel Crawler
+-----------------------
+
+Crawls lightnovels from various websites and converts into epub, mobi, html and text.
+
+List of supported sites are given below.
+
+- https://lnmtl.com
+- https://www.webnovel.com
+- https://wuxiaworld.online
+- https://www.wuxiaworld.com
+- https://m.wuxiaworld.com
+- https://www.wuxiaworld.co
+- https://m.wuxiaworld.co
+- https://boxnovel.com
+- https://www.readlightnovel.org
+- https://novelplanet.com
+- https://lnindo.org
+- https://www.idqidian.us
+- https://m.romanticlovebooks.com
+- https://www.romanticlovebooks.com
+- https://webnovel.online
+
+To request new site create an issue here: https://github.com/dipu-bd/site-to-epub/issues.
+
+For usage instructions visit: https://github.com/dipu-bd/lightnovel-crawler
+
+
