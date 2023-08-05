@@ -1,0 +1,6 @@
+include *.txt
+include tox.ini
+recursive-include vennDiagram *
+graft vennDiagram/venn-diagram-exmple
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
