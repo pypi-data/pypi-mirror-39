@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Distribution / packaging
+dist/
+*.egg-info/
+*.pyc
+
+# Environments
+env/
+
+# Pycharm
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Files
+#*.png
+*.mp3
+*.wav
+
+#Documentation
+docs/.doctrees/
+docs/_sources/
+
+# Config files
+*.ini
+
+# Folders
+genre/
+presentation/
+cluster/
+distance/
+fourier_series_json/
+more_songs/
+
+# Developper test
+.coverage
+.cache/
+image/
+*.zip
+
+# Output files
+*.json
+*.csv
+docs/build

@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: foucluster
+Version: 1.2
+Summary: Clustering of songs using Fourier Transform
+Home-page: https://github.com/cperales/foucluster
+Author: Carlos Perales
+Author-email: sir.perales@gmail.com
+License: UNKNOWN
+Description: Similarities among songs are computed using Fast Fourier Transform. With this information, unsupervised machine learning is applied.
+Keywords: cluster,Fourier,music,song,machine learning,kmeans
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Artistic Software
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Multimedia :: Sound/Audio :: Analysis
+Provides-Extra: docs
