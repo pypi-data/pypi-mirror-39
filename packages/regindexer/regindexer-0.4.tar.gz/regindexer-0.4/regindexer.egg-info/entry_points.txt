@@ -1,0 +1,4 @@
+[console_scripts]
+regindexer = regindexer.cli:cli
+regindexer-daemon = regindexer.daemon:main
+

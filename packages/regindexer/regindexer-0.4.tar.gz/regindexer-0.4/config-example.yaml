@@ -1,0 +1,29 @@
+icons_dir: /var/lib/regindexer/icons
+icons_uri: /app-icons/
+indexes:
+#    flatpak:
+#        output: /var/lib/regindexer/index/flatpak.json
+#        registry: https://registry.fedoraproject.org
+#        tags: ['latest', 'latest-*']
+#        required_annotations: ['org.flatpak.body']
+#        extract_icons: True
+#    flatpak_amd64:
+#        output: /var/lib/regindexer/index/flatpak-amd64.json
+#        registry: https://registry.fedoraproject.org
+#        tags: ['latest', 'latest-*']
+#        required_annotations: ['org.flatpak.body']
+#        extract_icons: True
+#        architectures: ['amd64']
+#    all:
+#        output: /var/lib/regindexer/index/all.json
+#        registry: https://registry.fedoraproject.org
+#        tags: ['latest']
+#    all_amd64:
+#        output: /var/lib/regindexer/index/all.json
+#        registry: https://registry.fedoraproject.org
+#        tags: ['latest']
+#        architectures: ['amd64']
+daemon:
+    # Listen for messages of <topic_prefix>.<environment>.bodhi...
+    topic_prefix: org.fedoraproject
+    environment: dev
