@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+coconut/__init__.py
+coconut/proofs.py
+coconut/scheme.py
+coconut/utils.py
+coconut_lib.egg-info/PKG-INFO
+coconut_lib.egg-info/SOURCES.txt
+coconut_lib.egg-info/dependency_links.txt
+coconut_lib.egg-info/requires.txt
+coconut_lib.egg-info/top_level.txt
