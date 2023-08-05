@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ArgDoc
+Version: 0.1.3b2
+Summary: A package for reducing copy/paste of argument descriptions in docstrings
+Home-page: https://github.com/jsolbrig/argdoc
+Author: Jeremy Solbrig
+Author-email: jeremy.solbrig@colostate.edu
+License: UNKNOWN
+Description: # argdoc
+        A decorator for reducing copy/paste in docstrings with common arguments and keywords
+        
+        # Documentation
+        https://argdoc.readthedocs.io/en/latest/
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
