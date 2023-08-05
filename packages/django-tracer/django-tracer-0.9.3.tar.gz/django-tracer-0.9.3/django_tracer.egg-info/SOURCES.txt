@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+django_tracer.egg-info/PKG-INFO
+django_tracer.egg-info/SOURCES.txt
+django_tracer.egg-info/dependency_links.txt
+django_tracer.egg-info/not-zip-safe
+django_tracer.egg-info/top_level.txt
+tracer/__init__.py
+tracer/apps.py
+tracer/middleware.py
+tracer/tests.py
