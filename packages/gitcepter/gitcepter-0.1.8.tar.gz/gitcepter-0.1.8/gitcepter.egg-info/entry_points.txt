@@ -1,0 +1,5 @@
+[console_scripts]
+gitcepter = gitcepter.client.gitcepter:main
+gitcepter-install = gitcepter.install:main
+gitcepter-server = gitcepter.server.gitcepter:main
+
