@@ -1,0 +1,7 @@
+descr: liblightnvm testplan for Open-Channel 2.0 devices
+descr_long: |
+  bla bla bla
+hooks: [ sysinf, dmesg ]
+testsuites:
+  - name: OCSSD
+  - name: OCSSD_S20
