@@ -1,0 +1,2 @@
+include gistory/test.tpl
+recursive-include gistory/views *
