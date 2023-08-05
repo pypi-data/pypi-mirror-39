@@ -1,0 +1,132 @@
+========================
+  transistor: CHANGES
+========================
+
+12/3/18
+- Fixed a bug in BaseWorker.load_items() method which previously resulted
+in losing scrape data when the number of workers did not equal number of
+tasks. Now, using any number of workers or pool size will result in
+consistent export/save results. While, scrape time will change proportional
+to the number of workers assigned. Wrote tests to ensure the same.
+
+11/30/18
+- BaseGroup.hired_worker() method name has been changed to `get_worker()`
+
+- transistor/books folder is now moved to transistor/schedulers/books
+
+- Added AMPQ support through Kombu
+
+- modified WorkGroupManager to act as a Consumer, accepting tasks from a
+Producer, working with RabbitMQ broker. It will probably also work with
+Redis as long as the appropriate connection string is applied.
+
+- added transistor/schedulers/brokers queues.py which contains a class
+ExchangQueue, which an instance can be passed to WorkGroupManager task parameter,
+enabling it to work with RabbitMQ (and maybe Redis).
+
+
+11/29/18
+- pypi 0.2.1 release
+
+- added `url` parameter to the WorkGroup which is a bit more attractive
+API, instead of including the url in a kwarg.  The reason why the url was
+originally included as a kwarg is because depending on how the custom
+Spider is setup, the url may already be specified, and it is redundant to
+specify it again.  But for API clarity sake, now we just insist the url is
+specified in the WorkGroup. At least, it is easier to read at a quick glance.
+
+11/28/18
+
+- pypi 0.2.0 release
+
+More API breaking changes:
+
+- previously, the Worker needed to be explicitly defined in the
+BaseGroup.hired_worker() method, and the Scraper needed to be defined
+inside the Worker. Now, you can set the Worker and Scraper at
+the top level in the WorkGroup parameters named `worker` and `spider`.
+Explicitly subclassing BaseGroup to override hired_worker is no longer
+required. But, it can still be done. Then, you can just set the WorkGroup
+parameter `group` to the custom BaseGroup class.
+
+- previously, exporters were initialized with an Item and Scraper class
+set as a parameter. That created problems spinning up multiple workers with
+asynchronous I/O, for example requiring blocking file locking for CsvExport
+along with global variables to avoid rewriting header lines. Now, set classes
+for Item and ItemLoaders at the top level in the WorkGroup parameters
+named `items`, `loader` and set a parameterized Exporter instance in the
+WorkGroup `exporter` parameter. The API is a lot closer to Scrapy's Item,
+ItemLoader and Exporters, which should be more familiar and has some benefits.
+
+- references to `scraper` have generally been changed to `spider`.  The
+intent is `spider` is a generalization for both `scraper` and `crawler`.
+This is in advance of implementing some more specific crawler functionality.
+
+
+11/25/18
+- `BaseWorker.save_to_db` has been changed to `BaseWorker.process_exports`
+
+11/24/18
+- added a few attributes to SplashBrowser in anticipation of needing them
+to support a more robust crawling class.
+
+- SplashScraper now accepts a kwarg 'js_source' which forwards javascript to
+the Lua script where it is executed with splash:runjs(splash.args.js_source).
+
+11/20/2018
+Made several API breaking changes:
+- changed transistor.persistence.extractor.py ScrapedDataExtractor to
+transistor.persistence.exporter.py BaseItemExporter and eliminated
+the `.extract` method on that class as it is no longer needed.
+- changed transistor.persistence.container SplashScraperContainer to
+transistor.persistence.containers SplashScraperItems
+- SplashScraperItems now inherits from class::Item() and defines Fields()
+just like the Scrapy API. All the previous class attributes and properties
+should now be accessed like a dictionary. For example, here is the old way:
+    >>> result = get_job_results('books_scrape')
+    >>> for r in result:
+    >>>    book_titles.append(r.book_title)
+Now, the new class::Item() API requires accessing `book_title` like below:
+    >>>    book_titles.append(r['book_title'])
+- changed transistor.workers.baseworker.py Baseworker.get_scraper_extractor()
+method name to Baseworker.get_scraper_exporter()
+- implemented built-in exporters closely matching Scrapy exporter API.
+Exporters include 'BaseItemExporter', 'PprintItemExporter', 'PickleItemExporter',
+'CsvItemExporter', 'XmlItemExporter', 'JsonLinesItemExporter',
+'JsonItemExporter', 'MarshalItemExporter'
+- it is now possible to use custom serializers on a per field basis. Check
+the examples/books_to_scrape/persistence/serialization.py file for an example.
+
+11/19/2018
+- implemented class::Item(), enabling a similar API to Scrapy for
+Item data containers and Item Exporters.
+
+11/18/2018
+- added 'splash_wait' attribute to SplashScraper. This controls the time
+in seconds Splash will wait after opening a web page, before taking actions.
+This is particularly important for websites which may continue to load from
+ajax after a time delay. Set with `splash_args=<float>` keyword. Default 3.0.
+- changed API away from using the word `shell` to now using `container`.
+- created newt_crud.py file in transistor/persistence/newt_db, removed
+same from examples/books_to_scrape/persistence.
+- moved container.py and extractor.py up a level into the main
+transistor/persistence module
+
+Nov 17, 2018
+- pypi 0.1.1 release
+
+Nov 16, 2018
+- standardized SplashScraper attributes: 'auth', 'baseurl', 'browser', 'cookies',
+'crawlera_user', 'http_session_timeout', 'http_session_valid', 'LUA_SOURCE',
+'max_retries', 'name', 'number', 'referrer', 'searchurl', 'splash_args', 'user_agent'.
+
+- Now, nearly all of the SplashScraper attributes can be set via **kwargs if desired.
+
+Nov 15, 2018
+-  when initializing a StatefulBook instance, use a **kwarg called `keywords` to set
+the name of the spreadsheet column heading which contains the target search terms.
+For example, keywords='titles' or keywords='part_numbers'. Defaults to "item".
+
+Nov 13, 2018:
+- Initial commit of public repo
+- pypi 0.1.0 release.
