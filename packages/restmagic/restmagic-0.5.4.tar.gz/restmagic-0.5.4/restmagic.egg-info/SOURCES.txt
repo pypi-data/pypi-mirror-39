@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+restmagic/__init__.py
+restmagic/display.py
+restmagic/magic.py
+restmagic/parser.py
+restmagic/request.py
+restmagic/sender.py
+restmagic/version.py
+restmagic.egg-info/PKG-INFO
+restmagic.egg-info/SOURCES.txt
+restmagic.egg-info/dependency_links.txt
+restmagic.egg-info/not-zip-safe
+restmagic.egg-info/requires.txt
+restmagic.egg-info/top_level.txt
