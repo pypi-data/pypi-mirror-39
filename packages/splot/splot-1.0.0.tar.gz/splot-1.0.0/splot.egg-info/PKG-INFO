@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: splot
+Version: 1.0.0
+Summary: plotting for PySAL
+Home-page: https://github.com/pysal/splot
+Author: Serge Rey, Stefanie Lumnitz
+Author-email: sjsrey@gmail.com, stefanie.lumnitz@gmail.com
+License: 3-Clause BSD
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: spatial statistics visualization
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
