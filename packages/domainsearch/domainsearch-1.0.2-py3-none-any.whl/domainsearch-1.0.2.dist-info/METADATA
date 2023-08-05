@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: domainsearch
+Version: 1.0.2
+Summary: Search for available domains using wildcards
+Home-page: https://github.com/jeremija/domainsearch
+Author: Jerko Steiner
+Author-email: jerko.steiner@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# domainsearch
+
+[![Build Status](https://travis-ci.com/jeremija/domainsearch.svg?branch=master)](https://travis-ci.com/jeremija/domainsearch) [![PyPI version](https://badge.fury.io/py/domainsearch.svg)](https://badge.fury.io/py/domainsearch)
+
+Search for available domains using wildcards.
+
+<img src="https://raw.githubusercontent.com/jeremija/domainsearch/readme-video/example.gif" width="396px">
+
+# Install
+
+```
+git clone https://github.com/jeremija/domainsearch
+cd domainsearch
+python3 -m domainsearch
+```
+
+or
+
+```
+pip3 install domainsearch
+```
+
+# Usage
+
+```bash
+usage: domainsearch [-h] [--host HOST] [--port PORT] [-n] [-o] [--verbose]
+                    domains [domains ...]
+
+Search for unregistered domains. Wildcards supported are:
+  A: alphabet characters
+  C: consonants
+  V: vowels
+  #: numbers 0-9
+  *: combination of all of the above
+  [chars]: chars in the brackets
+  (word1,word2,word3): custom list of words
+
+positional arguments:
+  domains        Domain(s) to look up. For example redCV.com
+
+optional arguments:
+  -h, --help     show this help message and exit
+  --host HOST    of the Whois lookup server
+  --port PORT    Port of the Whois lookup server
+  -n, --dry-run  Only print the permutations
+  -o, --only     Print only available
+  --verbose      Show whois results
+```
+
+# License
+
+MIT
+
+
