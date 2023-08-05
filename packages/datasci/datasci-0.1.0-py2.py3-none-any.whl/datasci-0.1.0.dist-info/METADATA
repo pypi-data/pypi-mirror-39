@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: datasci
+Version: 0.1.0
+Summary: Data science utilities
+Home-page: https://github.com/chbrown/datasci-python
+Author: Christopher Brown
+Author-email: io@henrian.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: altair (>=2.2)
+Requires-Dist: cytoolz (>=0.8)
+Requires-Dist: ipython (>=6.5)
+Requires-Dist: markdown (>=2.6)
+Requires-Dist: numpy (>=1.15)
+Requires-Dist: pandas (>=0.23)
+Requires-Dist: scipy (>=1.1)
+Requires-Dist: statsmodels (>=0.9)
+
+# `datasci`
+
+[![Latest version on PyPI](https://badge.fury.io/py/datasci.svg)](https://pypi.org/project/datasci/)
+
+Install from PyPI:
+
+```sh
+pip install datasci
+```
+
+Install in development mode:
+
+```sh
+pip install -e .
+```
+
+
+## Features
+
+### Jupyter notebook initialization
+
+```pycon
+%run -m datasci.notebook.init
+```
+
+### Pandas helpers
+
+```python
+import pandas as pd
+df = pd.DataFrame(...)
+
+from datasci.pandas import drop_na_columns, drop_uninformative_columns
+df_without_na = drop_na_columns(df)
+df_informative = drop_uninformative_columns(df)
+```
+
+
+## Testing
+
+```sh
+python setup.py test
+```
+
+
+## License
+
+Copyright 2018 Christopher Brown.
+[MIT Licensed](https://chbrown.github.io/licenses/MIT/#2018).
+
+
