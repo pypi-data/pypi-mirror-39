@@ -1,0 +1,16 @@
+snowplow_tracker/__init__.py,sha256=b1kNU-R518TjdAZKD0zOW05KoNFz5ka72Vs9uhrOmRM,393
+snowplow_tracker/_version.py,sha256=_4CHqOBazNdv4Oe8Cce1WphbtDsxvXH3lM2wj4kTiPg,1024
+snowplow_tracker/emitters.py,sha256=pSj4jdBUfElV7zpsZV6aP_SGpb2oGsNTFV4jNNg0j4c,16333
+snowplow_tracker/payload.py,sha256=ZMUexRQ2fbDIUw9XS2L2sFhKSN27wM8fJyMhKuBbCks,3156
+snowplow_tracker/redis_worker.py,sha256=m4GMKKpN9SdB2cJq51I3h_0-k9a5pXPh02HgDAakjhw,2354
+snowplow_tracker/self_describing_json.py,sha256=z4uMkc-8ooFqR3C2wdaa7AuG-9MYtJDFFhcCh2y-UjM,1225
+snowplow_tracker/subject.py,sha256=SRKyWfF0St_yh7zmIYye9j_9u8XwT9LfPJJe-S2zaNw,5099
+snowplow_tracker/timestamp.py,sha256=FDSeeDYvXdTXIQEAU5wSvgyLvGTwo1mTXZscvRb2DVk,2078
+snowplow_tracker/tracker.py,sha256=akKOgXCSwg70LVepTJ6M1XRbmFKDtH4LGSuy0CIWPJg,27790
+snowplow_tracker/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+snowplow_tracker-0.8.2rc1.dev1.dist-info/DESCRIPTION.rst,sha256=AfTDCiQ6bcv8qu05rYGSxntULBho5WpXvzDsLDQbXxk,3880
+snowplow_tracker-0.8.2rc1.dev1.dist-info/METADATA,sha256=a-nvbCOHrgNq-AZtzvDacmJYT0uTeSiJV7UOeM5_1Xc,5047
+snowplow_tracker-0.8.2rc1.dev1.dist-info/RECORD,,
+snowplow_tracker-0.8.2rc1.dev1.dist-info/WHEEL,sha256=hZvi-8L6mc2COqhOUWREM_h2lvnJbaHycZt8eohtmso,92
+snowplow_tracker-0.8.2rc1.dev1.dist-info/metadata.json,sha256=nHqemoYJo4op0nQqZ3j2biJhrdgibr239A9sK6HbAec,1235
+snowplow_tracker-0.8.2rc1.dev1.dist-info/top_level.txt,sha256=ZEHYnx272RFLLEU1PAuoM0K4FtAV-n_YYxdR2bEbuSs,17
