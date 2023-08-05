@@ -1,0 +1,10 @@
+aiohttp
+certifi
+docopt
+geopy
+hbmqtt
+pyyaml
+setuptools
+
+[console]
+docopt
