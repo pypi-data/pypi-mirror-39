@@ -1,0 +1,9 @@
+README.md
+setup.py
+tkDataCanvas.egg-info/PKG-INFO
+tkDataCanvas.egg-info/SOURCES.txt
+tkDataCanvas.egg-info/dependency_links.txt
+tkDataCanvas.egg-info/top_level.txt
+tkdatacanvas/__init__.py
+tkdatacanvas/__main__.py
+tkdatacanvas/widget.py
