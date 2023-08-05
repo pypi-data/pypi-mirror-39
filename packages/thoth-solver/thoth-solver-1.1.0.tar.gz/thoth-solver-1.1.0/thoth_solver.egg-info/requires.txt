@@ -1,0 +1,9 @@
+autopep8
+click
+pip-tools
+pipdeptree
+rainbow-logging-handler
+thoth-analyzer
+thoth-common
+thoth-python
+virtualenv
