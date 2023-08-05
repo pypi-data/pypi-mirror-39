@@ -1,0 +1,14 @@
+README.rst
+setup.py
+src/mailman_rss/__init__.py
+src/mailman_rss/__main__.py
+src/mailman_rss/mailman.py
+src/mailman_rss/rss.py
+src/mailman_rss/scraper.py
+src/mailman_rss/version.py
+src/mailman_rss.egg-info/PKG-INFO
+src/mailman_rss.egg-info/SOURCES.txt
+src/mailman_rss.egg-info/dependency_links.txt
+src/mailman_rss.egg-info/entry_points.txt
+src/mailman_rss.egg-info/requires.txt
+src/mailman_rss.egg-info/top_level.txt
