@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+yaml2object/__init__.py
+yaml2object/errors.py
+yaml2object/node.py
+yaml2object/node_meta.py
+yaml2object/yaml_loader.py
+yaml2object/yaml_object.py
+yaml2object.egg-info/PKG-INFO
+yaml2object.egg-info/SOURCES.txt
+yaml2object.egg-info/dependency_links.txt
+yaml2object.egg-info/requires.txt
+yaml2object.egg-info/top_level.txt
+yaml2object.egg-info/zip-safe
