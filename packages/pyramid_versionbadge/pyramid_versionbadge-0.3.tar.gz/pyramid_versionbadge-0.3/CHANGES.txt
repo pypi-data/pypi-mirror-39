@@ -1,0 +1,27 @@
+pyramid_versionbadge
+====================
+
+
+0.3 (2018-12-03)
+----------------
+
+- Add support for Python 3. Remove (official) support for Python 2.
+
+
+0.2 (2013-12-04)
+----------------
+
+- add second setting for css class
+
+- enable badge per default
+
+- possibility to set css class
+
+- tests
+
+
+0.1 (2013-12-03)
+----------------
+
+- initial release
+
