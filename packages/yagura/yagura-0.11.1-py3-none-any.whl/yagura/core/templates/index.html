@@ -1,0 +1,20 @@
+{% extends 'layouts/single_page.html' %}
+
+{% block subtitle %}- {% trans 'Simple website monitoring' %}{% endblock %}
+
+{% block content_main %}
+  <h1 class="title">Yagura</h1>
+  <p class="subtitle">{% trans 'Simple website monitoring' %}</p> 
+  {% if ENABLE_PASSWORD_REGISTRATION %}
+  <p>
+    <a href="{% url 'login' %}" class="button is-primary">{% trans 'Log in' %}</a>
+    {% trans 'or' %}
+    <a href="{% url 'registration_register' %}" class="button is-primary">{% trans 'Registration user' %}</a>
+  </p>
+  {% else %}
+  <p>
+    <a href="{% url 'login' %}" class="button is-primary">
+        {% trans 'Log in' %}/{% trans 'Registration user' %}</a>
+  </p>
+  {% endif %}
+{% endblock %}

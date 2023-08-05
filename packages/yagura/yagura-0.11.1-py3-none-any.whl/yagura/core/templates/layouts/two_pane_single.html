@@ -1,0 +1,16 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="columns">
+    <div class="column is-one-fifth">
+      <aside class="menu">
+      </aside>
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+         </nav>
+       </div>
+    <div class="column">
+      {% block content_main %}{% endblock %}
+    </div>
+  </div>
+{% endblock %}
