@@ -1,0 +1,148 @@
+Metadata-Version: 2.1
+Name: webargs
+Version: 4.1.3
+Summary: A friendly library for parsing and validating HTTP request arguments, with built-in support for popular web frameworks, including Flask, Django, Bottle, Tornado, Pyramid, webapp2, Falcon, and aiohttp.
+Home-page: https://github.com/sloria/webargs
+Author: Steven Loria
+Author-email: sloria1@gmail.com
+License: MIT
+Project-URL: Issues, https://github.com/sloria/webargs/issues
+Project-URL: Changelog, https://webargs.readthedocs.io/en/latest/changelog.html
+Keywords: webargs,http,flask,django,bottle,tornado,aiohttp,webapp2,request,arguments,validation,parameters,rest,api,marshmallow
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Requires-Dist: marshmallow (>=2.15.2)
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: mock ; extra == 'dev'
+Requires-Dist: webtest (==2.0.32) ; extra == 'dev'
+Requires-Dist: Flask (>=0.12.2) ; extra == 'dev'
+Requires-Dist: Django (>=1.11.16) ; extra == 'dev'
+Requires-Dist: bottle (>=0.12.13) ; extra == 'dev'
+Requires-Dist: tornado (>=4.5.2) ; extra == 'dev'
+Requires-Dist: pyramid (>=1.8.5) ; extra == 'dev'
+Requires-Dist: webapp2 (>=3.0.0b1) ; extra == 'dev'
+Requires-Dist: falcon (>=1.3.0) ; extra == 'dev'
+Requires-Dist: flake8 (==3.6.0) ; extra == 'dev'
+Requires-Dist: pre-commit (==1.12.0) ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: webtest-aiohttp (==2.0.0) ; (python_version >= "3.5") and extra == 'dev'
+Requires-Dist: pytest-aiohttp (>=0.3.0) ; (python_version >= "3.5") and extra == 'dev'
+Requires-Dist: aiohttp (>=3.0.0) ; (python_version >= "3.5") and extra == 'dev'
+Requires-Dist: flake8-bugbear (==18.8.0) ; (python_version >= "3.5") and extra == 'dev'
+Provides-Extra: frameworks
+Requires-Dist: Flask (>=0.12.2) ; extra == 'frameworks'
+Requires-Dist: Django (>=1.11.16) ; extra == 'frameworks'
+Requires-Dist: bottle (>=0.12.13) ; extra == 'frameworks'
+Requires-Dist: tornado (>=4.5.2) ; extra == 'frameworks'
+Requires-Dist: pyramid (>=1.8.5) ; extra == 'frameworks'
+Requires-Dist: webapp2 (>=3.0.0b1) ; extra == 'frameworks'
+Requires-Dist: falcon (>=1.3.0) ; extra == 'frameworks'
+Requires-Dist: aiohttp (>=3.0.0) ; (python_version >= "3.5") and extra == 'frameworks'
+Provides-Extra: lint
+Requires-Dist: flake8 (==3.6.0) ; extra == 'lint'
+Requires-Dist: pre-commit (==1.12.0) ; extra == 'lint'
+Requires-Dist: flake8-bugbear (==18.8.0) ; (python_version >= "3.5") and extra == 'lint'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: mock ; extra == 'tests'
+Requires-Dist: webtest (==2.0.32) ; extra == 'tests'
+Requires-Dist: Flask (>=0.12.2) ; extra == 'tests'
+Requires-Dist: Django (>=1.11.16) ; extra == 'tests'
+Requires-Dist: bottle (>=0.12.13) ; extra == 'tests'
+Requires-Dist: tornado (>=4.5.2) ; extra == 'tests'
+Requires-Dist: pyramid (>=1.8.5) ; extra == 'tests'
+Requires-Dist: webapp2 (>=3.0.0b1) ; extra == 'tests'
+Requires-Dist: falcon (>=1.3.0) ; extra == 'tests'
+Requires-Dist: webtest-aiohttp (==2.0.0) ; (python_version >= "3.5") and extra == 'tests'
+Requires-Dist: pytest-aiohttp (>=0.3.0) ; (python_version >= "3.5") and extra == 'tests'
+Requires-Dist: aiohttp (>=3.0.0) ; (python_version >= "3.5") and extra == 'tests'
+
+=======
+webargs
+=======
+
+.. image:: https://badge.fury.io/py/webargs.svg
+    :target: http://badge.fury.io/py/webargs
+
+.. image:: https://travis-ci.org/sloria/webargs.svg?branch=pypi
+    :target: https://travis-ci.org/sloria/webargs
+
+.. image:: https://img.shields.io/badge/marshmallow-3-blue.svg
+    :target: https://marshmallow.readthedocs.io/en/latest/upgrading.html
+    :alt: marshmallow 3 compatible
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/ambv/black
+    :alt: code style: black
+
+Homepage: https://webargs.readthedocs.io/
+
+webargs is a Python library for parsing and validating HTTP request arguments, with built-in support for popular web frameworks, including Flask, Django, Bottle, Tornado, Pyramid, webapp2, Falcon, and aiohttp.
+
+.. code-block:: python
+
+    from flask import Flask
+    from webargs import fields
+    from webargs.flaskparser import use_args
+
+    app = Flask(__name__)
+
+    hello_args = {"name": fields.Str(required=True)}
+
+
+    @app.route("/")
+    @use_args(hello_args)
+    def index(args):
+        return "Hello " + args["name"]
+
+
+    if __name__ == "__main__":
+        app.run()
+
+    # curl http://localhost:5000/\?name\='World'
+    # Hello World
+
+Install
+-------
+
+::
+
+    pip install -U webargs
+
+webargs supports Python >= 2.7 or >= 3.5.
+
+
+Documentation
+-------------
+
+Full documentation is available at https://webargs.readthedocs.io/.
+
+Project Links
+-------------
+
+- Docs: http://webargs.readthedocs.io/
+- Changelog: http://webargs.readthedocs.io/en/latest/changelog.html
+- PyPI: https://pypi.python.org/pypi/webargs
+- Issues: https://github.com/sloria/webargs/issues
+
+
+License
+-------
+
+MIT licensed. See the `LICENSE <https://github.com/sloria/webargs/blob/dev/LICENSE>`_ file for more details.
+
+
