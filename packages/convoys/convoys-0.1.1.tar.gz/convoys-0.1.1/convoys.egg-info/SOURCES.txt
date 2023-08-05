@@ -1,0 +1,17 @@
+README.md
+setup.py
+convoys/__init__.py
+convoys/gamma.py
+convoys/multi.py
+convoys/plotting.py
+convoys/regression.py
+convoys/single.py
+convoys/utils.py
+convoys.egg-info/PKG-INFO
+convoys.egg-info/SOURCES.txt
+convoys.egg-info/dependency_links.txt
+convoys.egg-info/requires.txt
+convoys.egg-info/top_level.txt
+examples/__init__.py
+examples/dob_violations.py
+examples/marriage.py
