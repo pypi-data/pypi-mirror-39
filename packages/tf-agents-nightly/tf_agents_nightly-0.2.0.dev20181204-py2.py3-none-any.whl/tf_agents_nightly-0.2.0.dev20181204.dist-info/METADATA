@@ -1,0 +1,161 @@
+Metadata-Version: 2.1
+Name: tf-agents-nightly
+Version: 0.2.0.dev20181204
+Summary: TF-Agents: A Reinforcement Learning Library for TensorFlow
+Home-page: http://github.com/tensorflow/agents
+Author: Google LLC
+Author-email: no-reply@google.com
+License: Apache 2.0
+Keywords: tensorflow agents reinforcement learning machine learning
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: absl-py (>=0.6.1)
+Requires-Dist: gin-config (>=0.1.2)
+Requires-Dist: numpy (>=1.13.3)
+Requires-Dist: six (>=1.10.0)
+Requires-Dist: tfp-nightly
+
+# TF-Agents: A library for Reinforcement Learning in TensorFlow
+
+*NOTE:* Current TF-Agents pre-release is under active development and
+interfaces may change at any time. Feel free to provide feedback and comments.
+
+The documentation, examples and tutorials will grow over the next few weeks.
+
+## Table of contents
+
+<a href="#Agents">Agents</a><br>
+<a href="#Tutorials">Tutorials</a><br>
+<a href='#Examples'>Examples</a><br>
+<a href="#Installation">Installation</a><br>
+<a href='#Contributing'>Contributing</a><br>
+<a href='#Principles'>Principles</a><br>
+<a href='#Citation'>Citation</a><br>
+<a href='#Disclaimer'>Disclaimer</a><br>
+
+
+<a id='Agents'></a>
+## Agents
+
+
+In TF-Agents, the core elements of RL algorithms are implemented as `Agents`.
+An agent encompasses two main responsibilities: defining a Policy to interact
+with the Environment, and how to learn/train that Policy from collected
+experience.
+
+Currently the following algorithms are available under TF-Agents:
+
+* DQN: __Human level control through deep reinforcement learning__ Mnih et al., 2015 https://deepmind.com/research/dqn/
+* DDQN: __Deep Reinforcement Learning with Double Q-learning__ Hasselt et al., 2015 https://arxiv.org/abs/1509.06461
+* DDPG: __Continuous control with deep reinforcement learning__ Lilicrap et al.  https://arxiv.org/abs/1509.02971
+* TD3: __Addressing Function Approximation Error in Actor-Critic Methods__ Fujimoto et al. https://arxiv.org/abs/1802.09477.
+* REINFORCE: __Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning__ Williams http://www-anw.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf
+* PPO: __Proximal Policy Optimization Algorithms__ Schulman et al.  http://arxiv.org/abs/1707.06347
+
+<a id='Tutorials'></a>
+## Tutorials
+
+See [`tf_agents/colabs/`](https://github.com/tensorflow/agents/tree/master/tf_agents/colabs/)
+for tutorials on the major components provided.
+
+<a id='Examples'></a>
+## Examples
+End-to-end examples training agents can be found under each agent directory.
+e.g.:
+
+* DQN: [`tf_agents/agents/dqn/examples/train_eval_gym.py`](https://github.com/tensorflow/agents/tree/master/tf_agents/agents/dqn/examples/train_eval_gym.py)
+
+<a id='Installation'></a>
+## Installation
+
+### Stable Builds
+
+To install the latest version, run the following:
+
+```shell
+# Installing with the `--upgrade` flag ensures you'll get the latest version.
+pip install --user --upgrade tf-agents  # depends on TensorFlow
+```
+
+TF-Agents depends on a recent stable release of
+[TensorFlow](https://www.tensorflow.org/install) (pip package `tensorflow`).
+
+Note: Since TensorFlow is *not* included as a dependency of the TF-Agents
+package (in `setup.py`), you must explicitly install the TensorFlow
+package (`tensorflow` or `tensorflow-gpu`). This allows us to maintain one
+package instead of separate packages for CPU and GPU-enabled TensorFlow.
+
+To force a Python 3-specific install, replace `pip` with `pip3` in the above
+commands. For additional installation help, guidance installing prerequisites,
+and (optionally) setting up virtual environments, see the [TensorFlow
+installation guide](https://www.tensorflow.org/install).
+
+### Nightly Builds
+
+There are also nightly builds of TF-Agents under the pip package
+`tf-agents-nightly`, which requires you install on one of `tf-nightly` and
+`tf-nightly-gpu`. Nightly builds include newer features, but may be less stable
+than the versioned releases.
+
+To install the nightly build version, run the following:
+
+```shell
+# Installing with the `--upgrade` flag ensures you'll get the latest version.
+pip install --user --upgrade tf-agents-nightly  # depends on TensorFlow
+```
+
+<a id='Contributing'></a>
+## Contributing
+
+We're eager to collaborate with you! See [`CONTRIBUTING.md`](CONTRIBUTING.md)
+for a guide on how to contribute. This project adheres to TensorFlow's
+[code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to
+uphold this code.
+
+<a id='Principles'></a>
+## Principles
+
+This project adheres to [Google's AI principles](PRINCIPLES.md).
+By participating, using or contributing to this project you are expected to
+adhere to these principles.
+
+<a id='Citation'></a>
+## Citation
+
+If you use this code please cite it as:
+
+```
+@misc{TFAgents,
+  title = {{TF-Agents}: A library for Reinforcement Learning in TensorFlow},
+  author = "{Sergio Guadarrama, Anoop Korattikara, Oscar Ramirez,
+    Pablo Castro, Ethan Holly, Sam Fishman, Ke Wang, Katya Gonina,
+    Chris Harris, Vincent Vanhoucke, Eugene Brevdo}",
+  howpublished = {\url{https://github.com/tensorflow/agents}},
+  url = "https://github.com/tensorflow/agents",
+  year = 2018,
+  note = "[Online; accessed 30-November-2018]"
+}
+```
+
+<a id='Disclaimer'></a>
+## Disclaimer
+
+This is not an official Google product.
+
+
