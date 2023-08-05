@@ -1,0 +1,17 @@
+cindy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cindy/admin.py,sha256=nTegCYbKpX5ZI8atTjCJTpqpNEcKaXE7gvyc7Swp084,130
+cindy/forms.py,sha256=DDzIUb1lrYcCcG_yy22nydaFsdzZHrZu2wj9_RJq5bg,101
+cindy/models.py,sha256=EFm2P-Bp8CH4maYu0AjJy5AHmnuDd1gjk1PEDu_79Qo,5001
+cindy/serializers.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cindy/tasks.py,sha256=Nz5GHUkTC40fAqh8gNki99W0t5l2WK1azcKLgsPEwMA,655
+cindy/urls.py,sha256=Ik6hkvAENljE3WTO_r8kCenqIu580MVY304pHFRde9w,141
+cindy/views.py,sha256=Nlmg-YDxFqC_5_nnXmGMGRND1pImrSTWRL41zJMHzV4,1509
+cindy/migrations/0001_initial.py,sha256=_RsGKJraf9OWR5Y5Q_Y9panPaBrdE6pNYXI3ao4MZgg,5497
+cindy/migrations/0002_auto_20181119_2210.py,sha256=DzzP3egkyf6IwfZh9_4XLQGnTcRHlXg2PsHNdEeoEcs,605
+cindy/migrations/0003_auto_20181202_2347.py,sha256=fTJcXSIZe00R5gVu4cbGts46Ltf1JRPMNipXFbwLVOQ,423
+cindy/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_cindy-0.0.2.dist-info/LICENSE.txt,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+django_cindy-0.0.2.dist-info/METADATA,sha256=-Ct8WD_IRTovmNpi6EdruHFlRAK0NQGEemiUQvLENrw,882
+django_cindy-0.0.2.dist-info/WHEEL,sha256=-ZFxwj8mZJPIVcZGLrsQ8UGRcxVAOExzPLVBGR7u7bE,92
+django_cindy-0.0.2.dist-info/top_level.txt,sha256=RLK6-Ku_vrYNmL4O85rrYo4NA2XGx7BWrrHojyNLSoA,6
+django_cindy-0.0.2.dist-info/RECORD,,
