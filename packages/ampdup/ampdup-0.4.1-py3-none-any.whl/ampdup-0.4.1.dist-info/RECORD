@@ -1,0 +1,14 @@
+ampdup/__init__.py,sha256=_UnM8fNXZ5ttndyVh86Gw960kYJuYGEfRRUblf-6xPM,232
+ampdup/base_client.py,sha256=rV-TCBW5cQPOif_4Mh2qnn2r7DcO-KFlIfViCDuzxiU,3108
+ampdup/connection.py,sha256=Eus18hB96uvwz8l3VG6narOOAoMZRPVtx8sApJHIl7c,1591
+ampdup/errors.py,sha256=wxTlysfajhP6DcQolNo8cqlJQADt0Ng80T3tNCaKeN8,2678
+ampdup/idle_client.py,sha256=yoAMQBpi18qccfAQcxx3J2TYsDYS96HK6kOWCq7-oQE,1504
+ampdup/mpd_client.py,sha256=7Do8Py2lUMtebKs2iLZY7_APE-8W-0jo-fYV3fKJYPE,14677
+ampdup/parsing.py,sha256=Ubz42XIXo_d0A64uBFkvb8pDBgHYhfjt-EPwn1qJ03k,3596
+ampdup/types.py,sha256=2jQWI0bEwC1HQf9TKC92Xs_tI1jqgNBDR2p3ULUqLe4,3457
+ampdup/typing_inspect.py,sha256=YTFpXQwiAaQhZ6bKUwGQXi8um4uZTLgZKm4bSnsNK9Y,4781
+ampdup/util.py,sha256=A37Ov_USK3Iosizc8SJupAKw8_6xfz12q7d47Go1j7M,5712
+ampdup-0.4.1.dist-info/LICENSE.md,sha256=C6gBfMsCd2c1lhH5bCxQDfROqVFUx-Ekpjao1qVClVQ,1168
+ampdup-0.4.1.dist-info/WHEEL,sha256=dd3oetF5SWHyp4ZLF1taac1jjPzDM-VxrofXDYxGP0E,84
+ampdup-0.4.1.dist-info/METADATA,sha256=3BIAFisFDH-YFnCCSulQP8DUDlen5_nopTdOrZnEC2U,1593
+ampdup-0.4.1.dist-info/RECORD,,
