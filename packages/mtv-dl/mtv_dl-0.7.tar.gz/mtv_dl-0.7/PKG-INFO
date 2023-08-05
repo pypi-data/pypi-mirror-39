@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: mtv_dl
+Version: 0.7
+Summary: MediathekView Downloader
+Home-page: https://github.com/efenka/mtv_dl
+Author: Frank Epperlein
+Author-email: frank+mtv_dl@epperle.in
+License: UNKNOWN
+Description: Command line tool to download videos from sources available through MediathekView.
+Platform: UNKNOWN
+Classifier: Topic :: Multimedia :: Video
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: License :: Public Domain
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6

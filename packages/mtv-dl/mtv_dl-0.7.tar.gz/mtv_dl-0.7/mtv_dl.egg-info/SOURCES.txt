@@ -1,0 +1,11 @@
+MANIFEST.in
+README
+mtv_dl.py
+requirements.txt
+setup.py
+mtv_dl.egg-info/PKG-INFO
+mtv_dl.egg-info/SOURCES.txt
+mtv_dl.egg-info/dependency_links.txt
+mtv_dl.egg-info/entry_points.txt
+mtv_dl.egg-info/requires.txt
+mtv_dl.egg-info/top_level.txt
