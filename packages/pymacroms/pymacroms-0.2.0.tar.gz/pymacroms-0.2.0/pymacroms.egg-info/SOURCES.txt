@@ -1,0 +1,13 @@
+README.md
+setup.py
+pymacroms/__init__.py
+pymacroms/database.py
+pymacroms/helper_functions.py
+pymacroms/polymer.py
+pymacroms/single_molecule.py
+pymacroms/spectrum_processing.py
+pymacroms.egg-info/PKG-INFO
+pymacroms.egg-info/SOURCES.txt
+pymacroms.egg-info/dependency_links.txt
+pymacroms.egg-info/requires.txt
+pymacroms.egg-info/top_level.txt
