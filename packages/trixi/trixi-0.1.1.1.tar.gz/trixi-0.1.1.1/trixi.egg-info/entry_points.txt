@@ -1,0 +1,3 @@
+[console_scripts]
+trixi-browser = trixi.experiment_browser.browser:start_browser
+
