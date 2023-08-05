@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+awd/__init__.py
+awd/__main__.py
+awd/api.py
+awd.egg-info/PKG-INFO
+awd.egg-info/SOURCES.txt
+awd.egg-info/dependency_links.txt
+awd.egg-info/entry_points.txt
+awd.egg-info/requires.txt
+awd.egg-info/top_level.txt
