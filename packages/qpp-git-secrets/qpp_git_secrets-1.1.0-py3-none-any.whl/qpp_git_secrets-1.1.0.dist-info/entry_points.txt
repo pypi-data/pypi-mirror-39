@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        git-secrets=git_secrets.cli.main:cli
+    
