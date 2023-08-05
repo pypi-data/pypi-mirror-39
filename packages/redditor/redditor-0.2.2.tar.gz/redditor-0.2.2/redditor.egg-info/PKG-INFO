@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: redditor
+Version: 0.2.2
+Summary: use reddit like a doge
+Home-page: https://github.com/daenylio/redditor
+Author: Tuan Nguyen
+Author-email: tuan.nguyenviet271@gmail.com
+License: UNKNOWN
+Description: # redditor
+        
+        command line interface for reddit
+        or use reddit like a doge
+        
+        ![demo](https://raw.githack.com/daenylio/redditor/master/demo.svg "demo")
+        
+        ## usage
+        
+        ```bash
+        Syntax:
+        redditor [OPTIONS] COMMAND [ARGS]...
+        
+        Options:
+          --version  Show the version and exit.
+          --help     Show this message and exit.
+        
+        Commands:
+          feed       Much wow, such interesting.
+          subreddit  Show the dogy list.
+        ```
+        
+        ## installation
+        
+        ```bash
+        pip install redditor
+        ```
+        
+        ## to do
+        
+        - [x] unlimited query
+        - [x] install-able thru pip like a doge
+        - [x] beautiful .svg
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
