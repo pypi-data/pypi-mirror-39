@@ -1,0 +1,4 @@
+numpy
+keras
+keras-pos-embd==0.6.0
+keras-transformer==0.11.0
