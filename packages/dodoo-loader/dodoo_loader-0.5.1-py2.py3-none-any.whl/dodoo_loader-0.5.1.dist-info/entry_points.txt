@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        dodoo-loader=src.loader:main
+    
