@@ -1,0 +1,3 @@
+[console_scripts]
+pyheat = pyheat.commandline:main
+
