@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements-dev.txt
+requirements.txt
+setup.cfg
+setup.py
+arch_dp/data_preprocessing.py
+data_preprocessing_arch.egg-info/PKG-INFO
+data_preprocessing_arch.egg-info/SOURCES.txt
+data_preprocessing_arch.egg-info/dependency_links.txt
+data_preprocessing_arch.egg-info/requires.txt
+data_preprocessing_arch.egg-info/top_level.txt

@@ -1,0 +1,8 @@
+dill
+pandas
+numpy
+sklearn
+
+[dev]
+python-semantic-release
+pytest
