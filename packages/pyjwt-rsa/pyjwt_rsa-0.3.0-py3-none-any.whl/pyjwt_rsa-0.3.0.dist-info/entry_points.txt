@@ -1,0 +1,5 @@
+[console_scripts]
+jwt-rsa-issue = jwt_rsa.issue:main
+jwt-rsa-keygen = jwt_rsa.keygen:main
+jwt-rsa-verify = jwt_rsa.verify:main
+
