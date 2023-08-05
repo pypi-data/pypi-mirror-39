@@ -1,0 +1,72 @@
+Metadata-Version: 1.2
+Name: serving-utils
+Version: 0.6.0
+Summary: Some utilities for tensorflow serving
+Home-page: https://github.com/Yoctol/serving-utils
+Author: Po-Hsien Chu
+Author-email: cph@yoctol.com
+License: MIT
+Description: serving-utils
+        =============
+        
+        |Build Status| |PyPI version|
+        
+        Some python utilities when using tensorflow-serving.
+        
+        Installation
+        ------------
+        
+        From PYPI: 1. Manually install tensorflow CPU or GPU version. 2.
+        ``pip install serving-utils``
+        
+        From Github repository: 1.
+        ``git clone git@github.com:Yoctol/serving-utils.git`` 2.
+        ``make install``
+        
+        Usage
+        -----
+        
+        1. Saver \`\`\`python import tensorflow as tf
+        
+        from serving\_utils import Saver
+        
+        saver = Saver( session=tf.Session(graph=your\_graph),
+        output\_dir='/path/to/serving', signature\_def\_map={ 'predict':
+        tf.saved\_model.signature\_def\_utils.predict\_signature\_def(
+        inputs={'input': tf.Tensor...}, outputs={'output': tf.Tensor...}, ) }, )
+        saver.save(...) \`\`\`
+        
+        2. Saver \`\`\`python from serving\_utils import Client, PredictInput
+        
+        client = Client(addr="localhost:8500") client.predict(
+        [PredictInput(name='input', value=np.ones(1, 10))],
+        output\_names=['output'], model\_signature\_name='predict', )
+        
+        or async
+        ========
+        
+        await client.async\_predict(...)
+        
+        ::
+        
+        
+            ## Test
+        
+            Run the following commands:
+        
+        make lint make test
+        
+        ::
+        
+        
+            ## Dev
+        
+        make install \`\`\`
+        
+        .. |Build Status| image:: https://travis-ci.org/Yoctol/serving-utils.svg?branch=master
+           :target: https://travis-ci.org/Yoctol/serving-utils
+        .. |PyPI version| image:: https://badge.fury.io/py/serving-utils.svg
+           :target: https://badge.fury.io/py/serving-utils
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
