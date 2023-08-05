@@ -1,0 +1,5 @@
+pytest==4.0.1
+httmock==1.2.5
+freezegun==0.3.11
+pytest-cov==2.6.0
+coveralls==1.5.1
