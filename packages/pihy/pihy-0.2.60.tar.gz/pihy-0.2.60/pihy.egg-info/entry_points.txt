@@ -1,0 +1,3 @@
+[console_scripts]
+pihy = pihy.__main__:main
+
