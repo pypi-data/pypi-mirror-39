@@ -1,0 +1,3 @@
+[console_scripts]
+sptygenre = sptygenre.__main__:main
+
