@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: onc
+Version: 1.25.2
+Summary: Ocean 2.0 API Python Client Library.
+Home-page: https://wiki.oceannetworks.ca/display/O2A/Python+Client+Library
+Author: Ryan Ross, Allan Rempel, Dany Cabrera
+Author-email: dcabrera@uvic.ca
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: python-dateutil
+Requires-Dist: numpy
+Requires-Dist: puremagic
+
+The ONC Python client library contains a number of classes and functions that access Ocean Networks Canada data through the Oceans 2.0 API.
+
+Official documentation:
+https://wiki.oceannetworks.ca/display/O2A/Oceans+2.0+API+Home
+
