@@ -1,0 +1,13 @@
+aws_info_helper/__init__.py,sha256=ulO_kH559FPPkSEXfjZ5qdYVdzU2vRMqUJU2Z2Bs9k4,3222
+aws_info_helper/ec2.py,sha256=MIe9kwJImnSu2N6yldrjuF3Ixe0tymog2UvltNbaBxo,13095
+aws_info_helper/settings.ini,sha256=K2YjZ6bH8TqnnToxYYH9NBWWyZCtXcOPD1nLrHQGY0s,577
+aws_info_helper/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_info_helper/scripts/ec2_info.py,sha256=IzT_Rvs4xtXh1Un5pl7lDTzAq93clWkvUsfEEGt3KD4,599
+aws_info_helper/scripts/ec2_ssh_command.py,sha256=76lKneybnlzU8hfo94QOceSSTP2o3PLlbeXqMQc1UU8,4126
+aws_info_helper/scripts/ec2_update_collection.py,sha256=NQT9ydTqtV5RC7_J9snfXA2RvjAP2dO3zP_aOzcjs-8,928
+aws_info_helper-0.0.8.dist-info/LICENSE.txt,sha256=TEfWL0DMfS6p49n4AeLR5CfiihVzu4DFBXxlJKX6e10,608
+aws_info_helper-0.0.8.dist-info/METADATA,sha256=Kk8iyrclVe7YcCpiVQFawWBtG4-2cOCKPDJ9dz2yUNU,834
+aws_info_helper-0.0.8.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+aws_info_helper-0.0.8.dist-info/entry_points.txt,sha256=YPMr3tFY0JHRAV3bv2OWnvkquIdqaqbJUWt9FV_jSxo,215
+aws_info_helper-0.0.8.dist-info/top_level.txt,sha256=KysgavGW26mmM-DKk-KB5Sga-PqH00p_OlwVMl8PDbU,16
+aws_info_helper-0.0.8.dist-info/RECORD,,
