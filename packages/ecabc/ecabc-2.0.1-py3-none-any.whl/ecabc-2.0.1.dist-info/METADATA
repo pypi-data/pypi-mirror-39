@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ecabc
+Version: 2.0.1
+Summary: Artificial bee colony for parameters tuning based on fitness scores
+Home-page: https://github.com/ECRL/ecabc
+Author: Hernan Gelaf-Romer
+Author-email: Hernan_Gelafromer@student.uml.edu
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: ColorLogging
+
+UNKNOWN
+
+
