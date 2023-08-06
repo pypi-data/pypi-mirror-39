@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: pyswath
+Version: 2.0.1
+Summary: package that provide tools to extract swath profiles from a raster map
+Home-page: https://github.com/robertxa/pyswath
+Author: Xavier Robert
+Author-email: xavier.robert@univ-grenoble-alpes.fr
+License: CCby-nc-sa
+Download-URL: https://github.com/robertxa/pyswath/archive/master.zip
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: GIS
