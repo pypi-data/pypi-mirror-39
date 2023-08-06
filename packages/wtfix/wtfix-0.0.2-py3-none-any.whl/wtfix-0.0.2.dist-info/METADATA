@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: wtfix
+Version: 0.0.2
+Summary: The Pythonic Financial Information eXchange client for humans.
+Home-page: https://github.com/jcass77/WTFIX
+Author: John Cass
+Author-email: john.cass77@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/jcass77/WTFIX/issues
+Project-URL: Source, https://github.com/jcass77/WTFIX/
+Keywords: FIX financial information exchange
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Financial and Insurance Industry
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: python-dotenv (~=0.9)
+Requires-Dist: unsync (~=1.1)
+
+# WTFIX
+
+The Pythonic Financial Information eXchange client for humans.
+
+
