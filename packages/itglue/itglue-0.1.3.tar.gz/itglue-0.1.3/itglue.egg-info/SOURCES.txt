@@ -1,0 +1,12 @@
+README.md
+setup.py
+itglue/__init__.py
+itglue/connection.py
+itglue/path_processor.py
+itglue/resources.py
+itglue.egg-info/PKG-INFO
+itglue.egg-info/SOURCES.txt
+itglue.egg-info/dependency_links.txt
+itglue.egg-info/not-zip-safe
+itglue.egg-info/requires.txt
+itglue.egg-info/top_level.txt
