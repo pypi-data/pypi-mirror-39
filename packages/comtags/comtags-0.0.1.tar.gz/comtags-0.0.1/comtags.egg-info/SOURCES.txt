@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+setup.py
+comtags/ComnameCutter.py
+comtags/__init__.py
+comtags.egg-info/PKG-INFO
+comtags.egg-info/SOURCES.txt
+comtags.egg-info/dependency_links.txt
+comtags.egg-info/requires.txt
+comtags.egg-info/top_level.txt
