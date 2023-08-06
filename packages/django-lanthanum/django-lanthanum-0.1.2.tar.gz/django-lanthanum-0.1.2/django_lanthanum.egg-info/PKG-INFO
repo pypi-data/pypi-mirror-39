@@ -1,0 +1,41 @@
+Metadata-Version: 1.1
+Name: django-lanthanum
+Version: 0.1.2
+Summary: Dynamic JSON Schema Fields for Django Postgres Models
+Home-page: https://github.com/kingstonlabs/lanthanum
+Author: Kingston Labs
+Author-email: tom@kingstonlabs.co.uk
+License: BSD
+Description: Django Lanthanum
+        ================
+        
+        .. image:: https://api.cirrus-ci.com/github/kingstonlabs/django-lanthanum.svg
+            :alt: Test Status
+        
+        Django Lanthanum allows you to add Dynamic `JSON Schema`_ Fields to your models. These allow you to build complex documents according to a set of fixed criteria - since the schema is fixed, it is possible to properly interpret the data.
+        
+        .. _JSON Schema: https://json-schema.org/
+        
+        This could be applied to a wide variety of scenarios, but it is particularly useful for Blogging or CMS tools, where the data structure of a page document can vary significantly.
+        
+        
+        Testing
+        -------
+        
+        To test the package, run `tox` - this will run against each of the supported environments. To run for a specific environment, provide the appropriate flag, for example: `tox -e py36-django21`
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content

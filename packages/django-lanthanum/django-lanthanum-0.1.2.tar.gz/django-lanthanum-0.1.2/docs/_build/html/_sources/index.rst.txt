@@ -1,0 +1,11 @@
+Django Lanthanum Documentation
+==============================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+   :name: Contents
+
+   quick_start
+
