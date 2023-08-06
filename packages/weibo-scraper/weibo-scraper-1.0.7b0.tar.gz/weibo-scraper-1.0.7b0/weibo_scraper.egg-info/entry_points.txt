@@ -1,0 +1,3 @@
+[console_scripts]
+weibo-scraper = weibo_scraper_cli:cli
+
