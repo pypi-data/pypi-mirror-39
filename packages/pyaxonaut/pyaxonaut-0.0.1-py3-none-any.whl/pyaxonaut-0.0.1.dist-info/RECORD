@@ -1,0 +1,14 @@
+pyaxonaut/__init__.py,sha256=Stn6rJ1yqNrWvAfqwcI1pHfXuOOW6NJTvfeMpsuprbQ,52
+pyaxonaut/config.py,sha256=y-YiqNqxcWR7srOx0XVczIt7IsP_oLCxN_Utz968PVY,263
+pyaxonaut/constants.py,sha256=QQ0iyjmaaVG-RMIFkUKmidD66Y-fiYbxGzabxfovcOE,141
+pyaxonaut/customers.py,sha256=s27CTevavMFCRx5NgQbEuj5nFzvsRcldNfzyJSKOMfg,1055
+pyaxonaut/models/__init__.py,sha256=rKen6X9ofq5BtlcN0HsA9kq293enet1pHw_IX3V8Dw0,30
+pyaxonaut/models/customer.py,sha256=BZfhX6DyFVCesF5YO5jrssAhXvI-6kRXrinCUWitwFQ,974
+pyaxonaut/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyaxonaut/tests/test_customer_model.py,sha256=At46HBKAOESaIQj0SdKY8sqErEuB_QTxif3SFXX5Ih8,1457
+pyaxonaut/tests/test_customers.py,sha256=UyRSR9Gd4SfrF3fRpDj1_5a0X5RxxxB0YRn-GA2tUWc,2062
+pyaxonaut-0.0.1.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+pyaxonaut-0.0.1.dist-info/METADATA,sha256=l1AzavMEvAb0o9hFkBkvtu9SZrsLF5qOgDtdVTV2ij4,1177
+pyaxonaut-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pyaxonaut-0.0.1.dist-info/top_level.txt,sha256=toAhxO_wu_wrfEs0wmtlyJsWzi7a1l9Dtn9DI2mNB68,10
+pyaxonaut-0.0.1.dist-info/RECORD,,
