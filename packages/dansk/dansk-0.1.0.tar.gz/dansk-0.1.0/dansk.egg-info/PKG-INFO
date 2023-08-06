@@ -1,0 +1,29 @@
+Metadata-Version: 1.0
+Name: dansk
+Version: 0.1.0
+Summary: Python, but danish.
+Home-page: https://github.com/carlbordum/dansk.py
+Author: Carl Bordum Hansen
+Author-email: carl@bordum.dk
+License: MIT
+Description: dansk.py
+        ========
+        
+        Python, but danish.
+        
+        
+        Installering
+        ------------
+        
+        For at installere ``dansk.py``, skal du køre: ::
+        
+            $ pip install dansk
+        
+        
+        Anvendelse
+        ----------
+        
+        Alt bliver godt, hvis du skriver ``# coding=dansk`` på den første
+        linje i din kode.
+        
+Platform: any
