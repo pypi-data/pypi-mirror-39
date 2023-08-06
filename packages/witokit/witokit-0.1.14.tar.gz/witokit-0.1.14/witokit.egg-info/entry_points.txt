@@ -1,0 +1,3 @@
+[console_scripts]
+witokit = witokit.main:main
+
