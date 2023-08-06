@@ -1,0 +1,14 @@
+partridge/__init__.py,sha256=TPjGhNzfxdv0CImXFo7HG2rbqkCr1ALNWhcwJDZktNs,507
+partridge/__version__.py,sha256=J-j-u0itpEFT6irdmWmixQqYMadNl1X91TxUmoiLHMI,22
+partridge/config.py,sha256=9DcDUkYjPoNvEPHoS8XPXa9d41a3xQklPgGXC7DpW3s,10684
+partridge/gtfs.py,sha256=Pxl4nrVVkbGQNcXdU4-ZHh0jn3j7h9cT1KhMxvTN2QA,5773
+partridge/parsers.py,sha256=EivOMxP9Tz7DB-KU4_kUzX3DoBG0Jqpln4ZdKZf0Iog,645
+partridge/readers.py,sha256=C_JG-YdoUwCMr8Y6B4JkeV2n_qoy9vv9aqpnwiq20yI,7204
+partridge/types.py,sha256=Q4qor5j_ulHJEE5-HVYDx1s9u5AIo-InqCOUcmNzAUM,63
+partridge/utilities.py,sha256=SeEAj52RTsGd6JEN3t8_8QldeiCSICgGKY2Z7rJtwyg,1445
+partridge/writers.py,sha256=81dtJ2Lofyty6gDI2f4CdRtNDpOi3Cq4j2dwmQ1iS14,1600
+partridge-1.0.0.dist-info/LICENSE,sha256=G7CkiOMlPPPAeb0InrNCXm2to6qf23D4bOtNLcO-Jak,1065
+partridge-1.0.0.dist-info/METADATA,sha256=qoK-YSCKuNwlgKoHcwsF2SQhbshUsCh2wkaTib5WKKs,9530
+partridge-1.0.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+partridge-1.0.0.dist-info/top_level.txt,sha256=K-AwGRHAQDjhJLflpl_k-RWCAeyVXPwUkkLbQeYV48g,10
+partridge-1.0.0.dist-info/RECORD,,
