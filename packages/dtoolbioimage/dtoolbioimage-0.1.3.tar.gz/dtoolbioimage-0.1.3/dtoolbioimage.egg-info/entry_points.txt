@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        convert_image_dataset=dtoolbioimage.convert:cli
+      
