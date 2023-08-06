@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: pygatherer
+Version: 0.3.0
+Summary: An API for the gatherer
+Home-page: https://github.com/spapanik/pygatherer
+Author: spapanik
+Author-email: spapanik21@gmail.com
+License: MIT
+Download-URL: https://github.com/spapanik/pygatherer/tarball/0.3.0
+Description: UNKNOWN
+Keywords: magic,MtG
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
