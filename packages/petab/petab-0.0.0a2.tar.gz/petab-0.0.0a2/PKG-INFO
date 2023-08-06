@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: petab
+Version: 0.0.0a2
+Summary: Parameter estimation tabular data
+Home-page: https://github.com/icb-dcm/petab
+Author: The PEtab developers
+Author-email: daniel.weindl@helmholtz-muenchen.de
+License: UNKNOWN
+Description: # PEtab --- a data format for specifying parameter estimation problems in system biology
+        
+        This repository describes *PEtab* --- a data format for specifying parameter estimation problems in system biology, provides a Python library for easy access and validation of *PEtab* files. See [doc/documentation_data_format.md](doc/documentation_data_format.md) for more info.
+        
+        Where PEtab is used:
+        
+        - Systems biology optimization [benchmark problem collection](https://github.com/LoosC/Benchmark-Models/issues)
+        - [pyPESTO](https://github.com/ICB-DCM/pyPESTO/)
+        
+        
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6

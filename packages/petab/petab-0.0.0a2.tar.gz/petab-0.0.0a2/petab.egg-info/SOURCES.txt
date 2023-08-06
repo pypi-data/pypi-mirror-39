@@ -1,0 +1,11 @@
+README.md
+setup.py
+bin/petablint.py
+petab/__init__.py
+petab/core.py
+petab/lint.py
+petab.egg-info/PKG-INFO
+petab.egg-info/SOURCES.txt
+petab.egg-info/dependency_links.txt
+petab.egg-info/requires.txt
+petab.egg-info/top_level.txt
