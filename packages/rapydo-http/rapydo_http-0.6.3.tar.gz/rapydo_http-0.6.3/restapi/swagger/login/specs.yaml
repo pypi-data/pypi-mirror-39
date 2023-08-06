@@ -1,0 +1,13 @@
+
+depends_on:
+  - MAIN_LOGIN_ENABLE
+
+file: endpoints
+class: Login
+baseuri: /auth
+
+mapping:
+  tologin: "/login"
+
+labels:
+  - authentication
