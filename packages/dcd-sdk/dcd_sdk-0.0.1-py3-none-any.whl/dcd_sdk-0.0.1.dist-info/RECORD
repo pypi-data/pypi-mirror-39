@@ -1,0 +1,14 @@
+dcd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dcd/entities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dcd/entities/person.py,sha256=yBnR30b8x3sNaxIkwO4dbMnlcefrTBKmJkDIhwnu4cs,1045
+dcd/entities/property.py,sha256=BAdTSR5Ag-9Qv8IPOzZYaLmFvsjmp_iq7dtFm5n90ys,2698
+dcd/entities/property_type.py,sha256=WrI-BQ49OBPZUASNWmsZXZOmKOf3JGP4rJki8T4nK_8,414
+dcd/entities/thing.py,sha256=sS8zvCfIZOBLq-beu7j1OYJyXk_igqTLt5PhExN24I4,6872
+dcd/examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dcd/examples/notebook_example.py,sha256=vOYTYRCF8Nw_Ael4KbQnbbcaEeU-UilEJOBQoFIO-ec,779
+dcd/examples/thing_example.py,sha256=_8awzxMW7wRXmW3A4_sdXmU5qEL28diUz4WIzOHvk_Y,2200
+dcd_sdk-0.0.1.dist-info/LICENSE,sha256=-4swsJ-6GnYq4UHpDcsTKedhEz6R8ASTadmnbYDTnKc,1080
+dcd_sdk-0.0.1.dist-info/METADATA,sha256=HjU8vqfTGrRA9zempD12K2e7awAT2M1oO0oaGhrPUYY,1829
+dcd_sdk-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+dcd_sdk-0.0.1.dist-info/top_level.txt,sha256=12feW3nqsr2UJ0UYqaPUtMa-WlOsVAi4o_LPwIbbPdg,4
+dcd_sdk-0.0.1.dist-info/RECORD,,
