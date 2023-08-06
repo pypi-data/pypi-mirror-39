@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: rtc
+Version: 0.0.1
+Summary: Retention Time Clustering for LC-IM-MS.
+Home-page: https://github.com/MatteoLacki/rtc
+Author: Mateusz Krzysztof Łącki
+Author-email: matteo.lacki@gmail.com
+License: UNKNOWN
+Description: The project implements advanced algorithms for clustering of aligned retention times in the LC-IM-MS experiments.
+Keywords: Analitical Chemistry,Mass Spectrometry,Retention Time Clustering
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.6
