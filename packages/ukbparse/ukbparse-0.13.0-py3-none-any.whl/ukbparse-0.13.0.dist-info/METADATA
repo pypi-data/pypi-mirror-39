@@ -1,0 +1,208 @@
+Metadata-Version: 2.1
+Name: ukbparse
+Version: 0.13.0
+Summary: UK Biobank data processing library
+Home-page: https://git.fmrib.ox.ac.uk/fsl/ukbparse
+Author: Paul McCarthy
+Author-email: pauldmccarthy@gmail.com
+License: Apache License Version 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: h5py
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pyparsing
+Requires-Dist: six
+Requires-Dist: tables
+Requires-Dist: beautifulsoup4
+Requires-Dist: lxml
+Provides-Extra: demo
+Requires-Dist: jupyter; extra == 'demo'
+Requires-Dist: notebook; extra == 'demo'
+Requires-Dist: bash-kernel; extra == 'demo'
+Requires-Dist: pygments; extra == 'demo'
+Provides-Extra: test
+Requires-Dist: jupyter; extra == 'test'
+Requires-Dist: notebook; extra == 'test'
+Requires-Dist: bash-kernel; extra == 'test'
+Requires-Dist: pygments; extra == 'test'
+
+``ukbparse`` - the UK BioBank data parser
+=========================================
+
+
+.. image:: https://img.shields.io/pypi/v/ukbparse.svg
+   :target: https://pypi.python.org/pypi/ukbparse/
+
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.1997626.svg
+   :target: https://doi.org/10.5281/zenodo.1997626
+
+.. image:: https://git.fmrib.ox.ac.uk/fsl/ukbparse/badges/master/coverage.svg
+   :target: https://git.fmrib.ox.ac.uk/fsl/ukbparse/commits/master/
+
+
+``ukbparse`` is a Python library for pre-processing of UK BioBank data.
+
+
+Installation
+------------
+
+
+Install ``ukbparse`` via pip::
+
+
+    pip install ukbparse
+
+
+Comprehensive documentation does not yet exist.
+
+
+Introductory notebook
+---------------------
+
+
+The ``ukbparse_demo`` command will start a Jupyter Notebook which introduces
+the main features provided by ``ukbparse``. To run it, you need to install a
+few additional dependencies::
+
+
+    pip install ukbparse[demo]
+
+
+You can then start the demo by running ``ukbparse_demo``.
+
+
+.. note:: The introductory notebook uses ``bash``, so is unlikely to work on
+          Windows.
+
+
+Usage
+-----
+
+
+General usage is as follows::
+
+
+    ukbparse [options] output.tsv input1.tsv input2.tsv
+
+
+You can get information on all of the options by typing ``ukbparse --help``.
+
+
+Options can be specified on the command line, and/or stored in a configuration
+file. For example, the options in the following command line::
+
+
+    ukbparse \
+      --overwrite \
+      --import_all \
+      --log_file log.txt \
+      --icd10_map_file icd_codes.tsv \
+      --category 10 \
+      --category 11 \
+      output.tsv input1.tsv input2.tsv
+
+
+Could be stored in a configuration file ``config.txt``::
+
+
+    overwrite
+    import_all
+    log_file       log.txt
+    icd10_map_file icd_codes.tsv
+    category       10
+    category       11
+
+
+And then executed as follows::
+
+
+    ukbparse -cfg config.txt output.tsv input1.tsv input2.tsv
+
+
+Customising
+-----------
+
+
+``ukbparse`` contains a large number of built-in rules which have been
+specifically written to pre-process UK BioBank data variables. These rules are
+stored in the following files:
+
+
+ * ``ukbparse/data/variables.tsv``: Cleaning rules for individual variables
+ * ``ukbparse/data/datacodings.tsv``: Cleaning rules for data codings
+ * ``ukbparse/data/types.tsv``: Cleaning rules for specific types
+ * ``ukbparse/data/processing.tsv``: Processing steps
+
+You can customise or replace these files as you see fit. You can also pass
+your own versions of these files to ``ukbparse`` via the ``--variable_file``,
+``--datacoding_file``, ``--type_file`` and ``--processing_file`` command-line
+options respectively.
+
+The ``variables.tsv`` file defines all of the variables that ``ukbparse`` is
+aware of.  If your UK BioBank data set contains variables which are not listed
+in this file, you may wish to generate your own version - you can do so
+by following these steps:
+
+1. Use the ``ukbconv`` utility (available through the `BioBank Data showcase
+   <http://biobank.ctsu.ox.ac.uk/showcase/>`_) to generate a HTML file
+   describing all of the variables in your data set, and data codings used by
+   them.
+
+2. Use the ``ukbparse_htmlparse`` command to convert this ``html`` file into
+   variable and data coding "base" files, which just contain the meta-data
+   for each variable/data coding.
+
+3. Code up your custom cleaning rules for each variable and data coding, in
+   the same format as can be seen in the ``ukbparse/data/`` directory. For
+   data codings, create these flies:
+
+     * ``datacodings_navalues.tsv``: contains NA value replacement rules
+     * ``datacodings_recoding.tsv``: contains categorical recoding rules
+
+   And for variables, create these files:
+
+     * ``variables_navalues.tsv``: Contains NA value replacement rules
+     * ``variables_recoding.tsv``: Contains categorical recoding rules
+     * ``variables_clean.tsv``: Contains variable-specific cleaning functions
+     * ``variables_parentvalues.tsv``: Contains child value replacement rules.
+
+4. Use the ``ukbparse_join`` command to generate the final variable and data
+   coding tables from your base files, e.g.::
+
+     ukbparse_join final_variables_table.tsv \
+                   variables_base.tsv \
+                   variables_navalues.tsv \
+                   variables_recoding.tsv \
+                   variables_parentvalues.tsv \
+                   variables_clean.tsv
+     ukbparse_join final_datacodings.tsv \
+                   datacodings_base.tsv \
+                   datacodings_navalues.tsv \
+                   datacodings_recoding.tsv
+
+
+Tests
+-----
+
+
+To run the test suite, you need to install some additional dependencies::
+
+
+      pip install ukbparse[test]
+
+
+Then you can run the test suite using ``pytest``::
+
+    pytest
+
+
+Citing
+------
+
+
+If you would like to cite ``ukbparse``, please refer to its `Zenodo page
+<https://zenodo.org/record/2203808#.XBDJ-xP7RE4>`_.
+
+
