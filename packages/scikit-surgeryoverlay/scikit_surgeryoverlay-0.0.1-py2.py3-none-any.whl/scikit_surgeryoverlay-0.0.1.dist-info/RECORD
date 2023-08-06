@@ -1,0 +1,15 @@
+sksurgeryoverlay/__init__.py,sha256=KwKdTfOGe-9a1-cJAWGQPzPCU3x53AO7QVT5Wm5YaJw,142
+sksurgeryoverlay/__main__.py,sha256=qmHz9UF_FQVgNTMQjMZ_hcGnQ6iUFkfAy5Nhb54nMXQ,777
+sksurgeryoverlay/_version.py,sha256=P2rZIkCTKO-0boHitSIgYNzy0yVlKnd6czxqHKLISRg,18992
+sksurgeryoverlay/annotate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sksurgeryoverlay/annotate/polygon.py,sha256=1RU6RrtDkfjQ4jKlu9CdZU0Qsc5vocHhS7IDPVgGmbk,1289
+sksurgeryoverlay/vtk/QVTKRenderWindowInteractor.py,sha256=gMvjBG3BPadHUc69PVSzKW-r8vq5nb6Bm23Wqe0-ZjQ,14772
+sksurgeryoverlay/vtk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sksurgeryoverlay/vtk/vtk_model.py,sha256=J9Ujgsza4QLwvxar6pe2m8ATWe0G16Fh4xcZueL3rk4,5843
+sksurgeryoverlay/vtk/vtk_overlay_window.py,sha256=We9Yjrih1__7TMQoeO9QBp_K44JKVqgSg4803Xmc7yE,10518
+scikit_surgeryoverlay-0.0.1.dist-info/LICENSE,sha256=oIK_0-K3DTBFkJzZNG6bBCeHWDfdFWNtAxLtCqO4jRM,1551
+scikit_surgeryoverlay-0.0.1.dist-info/METADATA,sha256=AT1A2TqTznXdeecCFZynyYFOXS6bFDQziiGHYAYdeJg,4538
+scikit_surgeryoverlay-0.0.1.dist-info/WHEEL,sha256=GP9ACJkAJDyZNf-YPXDAJ8MdtRSNk4H2JK7vR-x05CE,116
+scikit_surgeryoverlay-0.0.1.dist-info/entry_points.txt,sha256=8krDNQ3CTCHgVRiO8CMBrnOdbeloJMdMdvLgP6DQe5w,69
+scikit_surgeryoverlay-0.0.1.dist-info/top_level.txt,sha256=qpdfEEYRmtkBe8k5h-0oDSxgsmoL3R76z4QZW2qOA6U,17
+scikit_surgeryoverlay-0.0.1.dist-info/RECORD,,
