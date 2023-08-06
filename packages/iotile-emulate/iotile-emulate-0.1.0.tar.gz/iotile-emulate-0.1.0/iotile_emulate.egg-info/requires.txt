@@ -1,0 +1,5 @@
+iotile-core>=3.16.7
+iotile-sensorgraph>=0.7.2
+
+[:python_version < "3.4"]
+enum34
