@@ -1,0 +1,3 @@
+[console_scripts]
+github-cards = github_cards.cli:main
+
