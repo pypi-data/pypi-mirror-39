@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: py-flood
+Version: 0.0.0
+Summary: udp port flooding, use a cli or just its modules. Integrates with Bro (Zeek) to flood hosts according to their traffic
+Home-page: https://github.com/deadlift1226/
+Author: Dane Morgan
+Author-email: danemorgan91@gmail.com
+License: UNKNOWN
+Description: ### Usage
+        
+        #### CLI
+        
+        To use threads:
+        
+            python3 main.py <ip_address> <first_port> <last_port> <n_threads>
+        
+        One theads with verbose output
+        
+            python3 flood.py <ip_address> <first_port> <last_port>
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
