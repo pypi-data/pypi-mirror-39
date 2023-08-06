@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: zeronet
+Version: 0.1.3
+Summary: A Build-from-Scratch Example of Neural Network Learning Model based on NumPy.
+Home-page: UNKNOWN
+License: MIT
+Author: ddlee
+Author-email: cnlijiacheng96@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: numpy (>=1.15,<2.0)
