@@ -1,0 +1,3 @@
+[console_scripts]
+ansible-roler = ansibleroler.__main__:main
+
