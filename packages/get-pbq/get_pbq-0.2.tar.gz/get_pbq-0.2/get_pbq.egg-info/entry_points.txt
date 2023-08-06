@@ -1,0 +1,3 @@
+[console_scripts]
+get_pbq = get_pbq.get_pbq:main
+
