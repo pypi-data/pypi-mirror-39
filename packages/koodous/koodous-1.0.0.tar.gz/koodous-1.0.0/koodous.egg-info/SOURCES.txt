@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+koodous/__init__.py
+koodous/cli.py
+koodous/koodous.py
+koodous/utils.py
+koodous.egg-info/PKG-INFO
+koodous.egg-info/SOURCES.txt
+koodous.egg-info/dependency_links.txt
+koodous.egg-info/entry_points.txt
+koodous.egg-info/requires.txt
+koodous.egg-info/top_level.txt
