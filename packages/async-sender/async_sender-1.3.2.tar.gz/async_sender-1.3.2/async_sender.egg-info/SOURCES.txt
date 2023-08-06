@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+async_sender/__init__.py
+async_sender/_version.py
+async_sender/api.py
+async_sender.egg-info/PKG-INFO
+async_sender.egg-info/SOURCES.txt
+async_sender.egg-info/dependency_links.txt
+async_sender.egg-info/not-zip-safe
+async_sender.egg-info/requires.txt
+async_sender.egg-info/top_level.txt
