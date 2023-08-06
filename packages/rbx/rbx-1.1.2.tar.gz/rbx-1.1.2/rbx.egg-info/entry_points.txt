@@ -1,0 +1,4 @@
+[console_scripts]
+geocode = rbx.cli.geo:geocode
+unpack = rbx.cli.geo:unpack
+
