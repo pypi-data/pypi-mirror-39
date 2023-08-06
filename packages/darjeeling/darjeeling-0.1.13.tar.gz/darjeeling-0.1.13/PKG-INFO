@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: darjeeling
+Version: 0.1.13
+Summary: Distributed, language-independent, compositional search-based program repair
+Home-page: https://github.com/squaresLab/Darjeeling
+Author: Chris Timperley
+Author-email: ctimperley@cmu.edu
+License: mit
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
