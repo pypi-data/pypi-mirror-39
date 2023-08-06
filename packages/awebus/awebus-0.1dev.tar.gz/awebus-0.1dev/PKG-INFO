@@ -1,0 +1,285 @@
+Metadata-Version: 1.1
+Name: awebus
+Version: 0.1dev
+Summary: Asynchronous Weak Event Bus
+Home-page: https://gitlab.com/vectoridau/awebus
+Author: Daniel 'Vector' Kerr
+Author-email: admin@vector.id.au
+License: MIT
+Description: # awebus
+        
+        `awebus` (Asynchronous, Weak Event BUS) is an event system for Python which
+        provides (optional) asynchronous execution of handlers, and uses weak
+        references to store event handlers.
+        
+        
+        
+        ## Requirements
+        
+        * Python >= 3.4.0
+        
+        
+        
+        ## Getting Started
+        
+        1. Install awebus with `pip`:
+           ```sh
+           pip install awebus
+           ```
+        
+        1. Start using awebus!
+        
+        
+        
+        ## Examples
+        
+        ### Basic Usage
+        
+        ```python
+        import awebus
+        
+        # Create a bus
+        bus = awebus.Bus()
+        
+        # Create a handler
+        def handleMyEvent():
+          print( "Handling My Event" )
+          return "Event Handled"
+        
+        # Register an event handler
+        bus.on( 'my-event', handleMyEvent )
+        
+        # Invoke `my-event`
+        results = bus.emit( 'my-event' )
+        
+        print( results )
+        # >> [ "Event Handled" ]
+        
+        # Remove the event handler
+        bus.off( 'my-event', handleMyEvent )
+        ```
+        
+        
+        ### Event Arguments
+        
+        Pass arguments to event handlers as an argument list or keyword arguments.
+        
+        ```python
+        import awebus
+        
+        # Create a bus
+        bus = awebus.Bus()
+        
+        # Create a handler
+        def handleArgsEvent( foo, bar, *args, **kwargs ):
+          print( "foo is", str( foo ) )
+          print( "bar is", str( bar ) )
+          print( "*args is", str( args ) )
+          print( "**kwargs is", str( kwargs ) )
+        
+        # Register an event handler
+        bus.on( 'args-event', handleArgsEvent )
+        
+        # Invoke `args-event` with positional, listed, and keyword arguments
+        bus.emit( 'args-event', 3, 7, "hello", "world", age = 30, name = "Vector" )
+        # >> foo is 3
+        # >> bar is 7
+        # >> *args is ( "hello", "world" )
+        # >> **kwargs is { "age": 30, "name": "Vector" }
+        ```
+        
+        ### Synchronous Execution
+        
+        Invoke a synchronous event by using the `bus.emit()` method.
+        If `emit()` encounters an asynchronous handler, it will use an asyncio
+        event loop to run the handler to completion synchronously.
+        
+        ```python
+        import awebus
+        import asyncio
+        
+        # Create a bus
+        bus = awebus.Bus()
+        
+        # Create a regular handler
+        def synchronousHandler():
+          print( "Synchronous Handler" )
+          return "sync"
+        
+        # Create an asynchronous handler
+        async def asynchronousHandler():
+          await asyncio.sleep( 0.2 )
+          return "async"
+        
+        # Register handlers
+        bus.on( 'async-event', synchronousHandler, asynchronousHandler )
+        
+        # Invoke the event synchronously.
+        results = bus.emit( 'async-event' )
+        
+        print( results )
+        # >> [ "sync", "async" ]
+        ```
+        
+        
+        ### Asynchronous Execution
+        
+        Invoke an asynchronous event by using the `bus.emitAsync()` method.
+        
+        If `emitAsync()` encounters a synchronous handler, it will wrap the handler
+        with the asyncio coroutine decorator. `emitAsync()` returns a list of
+        awaitables.
+        
+        
+        ```python
+        import awebus
+        import asyncio
+        
+        # Create a bus
+        bus = awebus.Bus()
+        
+        # Create a regular handler
+        def synchronousHandler():
+          print( "Synchronous Handler" )
+          return "sync"
+        
+        # Create an asynchronous handler
+        async def asynchronousHandler():
+          await asyncio.sleep( 0.2 )
+          return "async"
+        
+        # Register handlers
+        bus.on( 'async-event', synchronousHandler, asynchronousHandler )
+        
+        # (Inside an async method somewhere...) invoke the event asynchronously.
+        results = await bus.emitAsync( 'async-event' )
+        
+        print( results )
+        # >> [ "sync", "async" ]
+        ```
+        
+        
+        ### Weak References
+        
+        Registered event handlers are stored internally using Python's weak reference
+        method (`weakref.ref()`). This allows garbage collection of methods that would
+        otherwise be cleaned up if they did not have a handler registered in the bus.
+        
+        If an event is invoked and a weak reference to an event handler no longer
+        resolves, that handler is skipped and the reference to that handler is
+        unregistered.
+        
+        
+        ```python
+        import awebus
+        import asyncio
+        
+        # Create a bus
+        bus = awebus.Bus()
+        
+        # Create a regular handler
+        def handler():
+          print( "In Handler" )
+          return "handled"
+        
+        # Register the handler
+        bus.on( 'weak-event', handler )
+        
+        # Invoke the event
+        # The handler will run normally at this point.
+        results = bus.emit( 'weak-event' )
+        print( results )
+        # >> [ "handled" ]
+        
+        # Delete the handler
+        del handler
+        
+        # Invoke the event again
+        # The handler was never unregistered, but because weakrefs are
+        # used, the deleted handler will be skipped and cleaned up. Yay!
+        results = bus.emit( 'weak-event' )
+        print( results )
+        # >> []
+        ```
+        
+        #### Disabling Weak References
+        
+        The use of weak references can be disabled by setting the `event_use_weakref`
+        keyword argument to `False` when creating an event bus.
+        
+        ```python
+        
+        import awebus
+        import asyncio
+        
+        # Create a bus
+        bus = awebus.Bus( event_use_weakref = False )
+        
+        # Create a regular handler
+        def handler():
+          print( "In Handler" )
+          return "result from non-weakref handler"
+        
+        # Register the handler
+        bus.on( 'no-weakref-event', handler )
+        
+        # Delete the reference to the handler
+        del handler
+        
+        # Invoke the event
+        results = bus.emit( 'no-weakref-event' )
+        
+        ```
+        
+        ### EventMixin
+        
+        The module also exposes an `EventMixin` class which can be used by your own
+        classes to add the event bus functionality to them with little effort.
+        
+        ```python
+        import awebus
+        
+        # Create a custom class
+        class CustomClass( awebus.EventMixin ):
+          def __init__( self, *args, **kwargs ):
+            awebus.EventMixin.__init__( self, *args, **kwargs )
+        
+          def onBar( self ):
+            print( "Bar Handler" )
+        
+        # Create an instance
+        instance = CustomClass()
+        
+        # Treat the instance like an event bus
+        instance.on( 'bar', instance.onBar )
+        results = instance.emit( 'bar' )
+        print( results )
+        # >> [ "bar" ]
+        ```
+        
+        
+        
+        ## Authors
+        
+        * Daniel 'Vector' Kerr <vector@vector.id.au>
+        
+        
+        
+        ## License
+        
+        See `LICENSE`
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
