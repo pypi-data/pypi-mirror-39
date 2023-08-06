@@ -1,0 +1,6 @@
+Django==1.11.15
+django-mongoengine==0.2.1
+mock==2.0.0
+mongoengine==0.11.0
+core-curate-app==1.0.0-rc2
+core-main-registry-app==1.0.0-rc1
