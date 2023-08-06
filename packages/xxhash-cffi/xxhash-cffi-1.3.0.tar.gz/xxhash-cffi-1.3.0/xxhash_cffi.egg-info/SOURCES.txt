@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+ffibuild.py
+setup.py
+deps/xxhash/LICENSE
+deps/xxhash/xxhash.c
+deps/xxhash/xxhash.h
+tests/test.py
+xxhash_cffi/__init__.py
+xxhash_cffi/cffi.py
+xxhash_cffi.egg-info/PKG-INFO
+xxhash_cffi.egg-info/SOURCES.txt
+xxhash_cffi.egg-info/dependency_links.txt
+xxhash_cffi.egg-info/requires.txt
+xxhash_cffi.egg-info/top_level.txt
