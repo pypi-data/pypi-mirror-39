@@ -1,0 +1,3 @@
+[console_scripts]
+chaosplatform-auth = chaosplt_auth.cli:cli
+
