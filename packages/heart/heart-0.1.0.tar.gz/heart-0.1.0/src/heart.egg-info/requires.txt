@@ -1,0 +1,11 @@
+Click>=6.0
+guillotina>=4.3.5
+
+[test]
+coverage
+docker
+pytest
+pytest-asyncio
+pytest-cov
+pytest-docker-fixtures
+pytest-runner

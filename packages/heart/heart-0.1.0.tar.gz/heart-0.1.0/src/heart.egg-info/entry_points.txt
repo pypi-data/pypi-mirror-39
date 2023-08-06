@@ -1,0 +1,3 @@
+[console_scripts]
+heart = heart.cli:main
+
