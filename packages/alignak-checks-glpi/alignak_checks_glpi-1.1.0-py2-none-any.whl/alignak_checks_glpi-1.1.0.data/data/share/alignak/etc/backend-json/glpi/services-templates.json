@@ -1,0 +1,38 @@
+[
+    {
+        "_is_template": true,
+        "_templates": [
+            "Http"
+        ],
+
+        "check_interval": 15,
+        "check_period": "24x7",
+        "max_check_attempts": 3,
+        "retry_interval": 1,
+
+        "aggregation": "glpi",
+        "check_command": "check_tcp",
+        "check_command_args": "",
+        "customs": {
+            "_CHECK_HTTP_PORT": "80",
+            "_CHECK_HTTP_URI": "/"
+        },
+        "host": "glpi",
+        "name": "Check connection"
+    },
+    {
+        "_is_template": true,
+        "_templates": [
+            "Https"
+        ],
+
+        "aggregation": "glpi",
+        "alias": "Check status (authenticated)",
+        "customs": {
+            "_CHECK_HTTPS_PORT": "443",
+            "_CHECK_HTTPS_URI": "/"
+        },
+        "host": "glpi-auth",
+        "name": "Check authentified connection"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "_realm": "All",
+        "_sub_realm": true,
+        "action_url": "",
+        "alias": "Glpi hosts",
+        "hostgroups": [],
+        "hosts": [],
+        "imported_from": "alignak-checks-glpi",
+        "name": "glpi",
+        "notes": "This group contains all the Glpi hosts.",
+        "notes_url": ""
+    }
+]

@@ -1,0 +1,15 @@
+alignak_checks_glpi/__init__.py,sha256=u6dryxehSGI9nYfFxjbCnOqlmRjT5lAeLTuiLDZ_foI,200
+alignak_checks_glpi-1.1.0.data/data/share/alignak/etc/arbiter/packs/glpi/commands.cfg,sha256=VnHrXL9hb8rrjqWnyN6v0y00y_8eik9tukFJEGbo-U4,570
+alignak_checks_glpi-1.1.0.data/data/share/alignak/etc/arbiter/packs/glpi/groups.cfg,sha256=8VocPcleOY4H9NMFUtoQLyH-q0J7sK5FcIKnhTIgg-M,203
+alignak_checks_glpi-1.1.0.data/data/share/alignak/etc/arbiter/packs/glpi/templates.cfg,sha256=MZe3Ryvt59uNZKjp_BP1EXK-Gb7Ect78Kz_qQt5pkRo,1366
+alignak_checks_glpi-1.1.0.data/data/share/alignak/etc/backend-json/glpi/commands.json,sha256=lK6y0flbBJakM3nkhtmqqPtuJrN4D2n9pM_k0MPDR0c,3
+alignak_checks_glpi-1.1.0.data/data/share/alignak/etc/backend-json/glpi/hostgroups.json,sha256=8smeCb_PEEyaFLhLss5NXtZfPvZF8qderFsv4GLojAg,328
+alignak_checks_glpi-1.1.0.data/data/share/alignak/etc/backend-json/glpi/hosts-templates.json,sha256=Qg2KpoR6kbtpZ_YSZpffzEZ8fkwU8hYCIUjff2apoVw,764
+alignak_checks_glpi-1.1.0.data/data/share/alignak/etc/backend-json/glpi/servicegroups.json,sha256=l3JulqtdN27BdJHGHzLZ8Ku3kxCPjONGwZnmXmzxkSs,340
+alignak_checks_glpi-1.1.0.data/data/share/alignak/etc/backend-json/glpi/services-templates.json,sha256=1aSOEJPbQsUTM9QFKUepShOZX1kpX_8D1jmLJyoLlV0,856
+alignak_checks_glpi-1.1.0.data/data/share/alignak/etc/backend-json/glpi/setup.sh,sha256=gTzcpAbDYhSAFLPiwOOi-dveWe2JrvZ6wfrtQHi5buY,2910
+alignak_checks_glpi-1.1.0.dist-info/LICENSE,sha256=EO3mE8zoHcU4HsnBoI3P3NQl0qGGo--yUjHuO6MIWFo,34521
+alignak_checks_glpi-1.1.0.dist-info/METADATA,sha256=AHPvRr3l3uPD5MPI295tVxRGcldImdyg-Ca1zIypBGM,3837
+alignak_checks_glpi-1.1.0.dist-info/WHEEL,sha256=ZvfnntGaZglpRLAKVkx18HrxfMwCXrA0b-ARJVnnMrw,92
+alignak_checks_glpi-1.1.0.dist-info/top_level.txt,sha256=ZypyQwPAfhtqzskvHSDNW1g0kxIQzvwWM_Uvj9lF_24,20
+alignak_checks_glpi-1.1.0.dist-info/RECORD,,
