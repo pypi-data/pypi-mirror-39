@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: winpy
+Version: 0.1.1
+Summary: The Win32 CPython Functions
+Home-page: http://www.wylib.com/py/lib/
+Author: WYQ
+Author-email: wyqlib@qq.com
+Maintainer: WYQ
+Maintainer-email: wyqlib@qq.com
+License: MIT
+Download-URL: http://www.wyqlib.com/py/lib
+Keywords: tool utils lib
+Platform: win32
+Requires-Python: >=3.6
+Requires-Dist: wyqpy
+
+The Win32 Python Functions
+
+
