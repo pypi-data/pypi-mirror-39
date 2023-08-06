@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: graphstat
+Version: 0.2.1
+Summary: Graph collection in several forms.
+Home-page: https://github.com/vitroid/graphstat/
+Author: Masakazu Matsumoto
+Author-email: vitroid@gmail.com
+License: MIT
+Keywords: graphstat,graph,statistics
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: numpy
+Requires-Dist: networkx (>=2)
+
+UNKNOWN
+
+
