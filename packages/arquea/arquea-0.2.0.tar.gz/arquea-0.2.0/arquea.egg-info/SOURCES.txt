@@ -1,0 +1,15 @@
+README.md
+setup.py
+arquea/__init__.py
+arquea/__main__.py
+arquea/arquea.py
+arquea/checksum.py
+arquea/data.py
+arquea/error.py
+arquea/files.py
+arquea/info.py
+arquea/tools.py
+arquea.egg-info/PKG-INFO
+arquea.egg-info/SOURCES.txt
+arquea.egg-info/dependency_links.txt
+arquea.egg-info/top_level.txt
