@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+PyMongo_OpenTracing.egg-info/PKG-INFO
+PyMongo_OpenTracing.egg-info/SOURCES.txt
+PyMongo_OpenTracing.egg-info/dependency_links.txt
+PyMongo_OpenTracing.egg-info/requires.txt
+PyMongo_OpenTracing.egg-info/top_level.txt
+pymongo_opentracing/__init__.py
+pymongo_opentracing/tracing.py
