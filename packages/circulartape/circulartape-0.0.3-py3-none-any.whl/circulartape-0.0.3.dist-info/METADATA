@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: circulartape
+Version: 0.0.3
+Summary: A circular linked list implementation
+Home-page: UNKNOWN
+Author: Tris Emmy Wilson
+Author-email: anemptystring@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# circulartape
+
+It's a node-oriented circular linked list implementation.
+
+Source: [phab.tris.fyi](https://phab.tris.fyi/source/circulartape/).
+
+## Example
+
+    from circulartape import Tape
+
+    one = Tape("one")  # one.to_list() == ["one"]
+    two = one.insert("two")  # one.to_list() == ["one", "two"]
+    three = two.insert("three")  # one.to_list() == ["one", "two", "three"]
+
+    two.remove()  # one.to_list() == ["one", "three"]
+
+    # You can build a long list and seek through it n nodes at a time:
+    one = Tape(1)
+    current = one
+    for i in range(2, 100):
+        current = current.insert(i)
+
+    one.seek(30).data  # => 31
+
+    # Use negative values to seek backwards.
+
+
