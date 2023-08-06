@@ -1,0 +1,11 @@
+include *.py
+include readme.md
+
+recursive-include klego *
+recursive-include pybluez *
+
+exclude klego/A.py
+exclude klego/test.py
+exclude klego/calibrate.py
+exclude klego/.gitignore
+exclude klego/*.exe
