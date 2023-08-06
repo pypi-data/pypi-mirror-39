@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: chainer-jsonl-report
+Version: 0.0.5
+Summary: JSONL formatted LogReport extention for chainer.
+Home-page: https://github.com/nel215/chainer-jsonl-reporter
+Author: nel215
+Author-email: otomo.yuhei@gmail.com
+License: UNKNOWN
+Keywords: machine learning
+Platform: UNKNOWN
+Requires-Dist: chainer
+
+|Build Status|
+
+About
+=====
+
+JSONL formatted LogReport extention for chainer.
+
+Installation
+============
+
+::
+
+    $ pip install chainer-jsonl-report
+
+Usage
+=====
+
+.. code:: python3
+
+    from chainer_jsonl_report import JsonlReport
+    ...
+    trainer.extend(JsonlReport())
+    trainer.extend(extensions.PrintReport(
+        ['epoch', 'main/loss', 'validation/main/loss'],
+        log_report='JsonlReport',
+    ))
+
+.. |Build Status| image:: https://travis-ci.org/nel215/chainer-jsonl-report.svg?branch=master
+   :target: https://travis-ci.org/nel215/chainer-jsonl-report
+
+
