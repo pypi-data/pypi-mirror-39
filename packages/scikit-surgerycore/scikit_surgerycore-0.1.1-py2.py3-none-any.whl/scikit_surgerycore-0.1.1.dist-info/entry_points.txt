@@ -1,0 +1,3 @@
+[console_scripts]
+sksurgerycore = sksurgerycore.__main__:main
+
