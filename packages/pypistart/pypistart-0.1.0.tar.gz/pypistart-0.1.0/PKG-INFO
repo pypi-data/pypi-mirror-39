@@ -1,0 +1,35 @@
+Metadata-Version: 1.0
+Name: pypistart
+Version: 0.1.0
+Summary: Starter kit for initializing a python package skeleton
+Home-page: http://pypi.python.org/pypi/pypistart/
+Author: Jack Workman
+Author-email: jworkman16@gmail.com
+License: LICENSE
+Description: # PyPiStart
+        
+        Do you ever get tired of creating the same basic python project skeleton every
+        time you have a cool new idea? Or maybe this is your first project and you want
+        to do it the right way but are feeling overwhelmed by all the little details no
+        one ever told you about?
+        
+        Well do I have news for you! Regardless of whether or
+        not this is your 1st, 9th, or 100th python package, PyPiStart, the python package starter,
+        is here to make your life easier! Simply download and use the package as
+        described below and start developing now!
+        
+        Python project layout is modeled on this excellent guide:
+        https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/creation.html
+        
+        ## Python Environment Setup
+        
+        First, make sure you have Python 3.6+ installed.
+        
+        Then, run through the following commands:
+        
+        * `python -m venv .venv_w266_project`
+        * Windows: `.venv_w266_project\Scripts\activate.bat`
+        * Linux: `source .venv_w266_project/bin/activate`
+        * `pip install -r requirements.txt` - this will install all required packages and might take several minutes
+        
+Platform: UNKNOWN
