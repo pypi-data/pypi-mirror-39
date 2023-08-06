@@ -1,0 +1,4 @@
+[console_scripts]
+kubeyard = kubeyard.entrypoints.kubeyard:cli_with_custom_commands
+sw-cli = kubeyard.entrypoints.kubeyard:cli_with_custom_commands
+
