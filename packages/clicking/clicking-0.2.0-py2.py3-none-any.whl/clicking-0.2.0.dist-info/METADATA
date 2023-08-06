@@ -1,0 +1,200 @@
+Metadata-Version: 2.1
+Name: clicking
+Version: 0.2.0
+Summary: Convenience function for Click.
+Home-page: https://gitlab.com/julot/clicking
+Author: Andy Yulius
+Author-email: andy.julot@gmail.com
+License: MIT license
+Keywords: clicking
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: Click (>=6.0)
+Requires-Dist: click-help-colors (>=0.5)
+Requires-Dist: colorama (>=0.4.1)
+Provides-Extra: dev
+Requires-Dist: bumpversion ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: pip-review ; extra == 'dev'
+Requires-Dist: rope ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+
+########
+Clicking
+########
+
+|PyPI version| |PyPI pyversions| |PyPI license| |PyPI status| |PyPI format|
+
+.. |PyPI version| image:: https://img.shields.io/pypi/v/clicking.svg
+   :target: https://pypi.org/project/clicking
+
+.. |PyPI pyversions| image:: https://img.shields.io/pypi/pyversions/clicking.svg
+   :target: https://pypi.org/project/clicking
+
+.. |PyPI license| image:: https://img.shields.io/pypi/l/clicking.svg
+   :target: https://pypi.org/project/clicking
+
+.. |PyPI status| image:: https://img.shields.io/pypi/status/clicking.svg
+   :target: https://pypi.org/project/clicking
+
+.. |PyPI format| image:: https://img.shields.io/pypi/format/clicking.svg
+   :target: https://pypi.org/project/clicking
+
+
+Convenience wrapper for `Click <http://click.pocoo.org>`__.
+
+
+* Free software: MIT license
+
+
+Installation
+============
+
+.. code-block:: bat
+
+  (.venv) > pip install clicking
+
+
+Usage
+=====
+
+Echo
+----
+
+Convenience functions for ``click.echo`` because it's a pain to remember the
+color and naming convention I myself use before.
+
+info
+  Print message in bold white.
+
+progress
+  Print message in bold blue.
+
+working
+  Print message in bold cyan.
+
+success
+  Print message in bold green.
+
+warning
+  Print message in bold yellow.
+
+fail
+  Print message in bold red.
+
+
+.. code-block:: python
+
+   import clicking
+
+   clicking.info('Hello world!')
+
+
+Style
+-----
+
+Convenience functions for ``click.style`` due to the same above reason.
+
+info
+  Text in bold white.
+
+progress
+  Text in bold blue.
+
+working
+  Text in bold cyan.
+
+success
+  Text in bold green.
+
+warning
+  Text in bold yellow.
+
+fail
+  Text in bold red.
+
+.. code-block:: python
+
+   import clicking
+
+   print(clicking.style.info('Hello world!'))
+
+
+Exception
+---------
+
+Error
+  Print message in bold red and exit.
+
+.. code-block:: python
+
+   import clicking
+
+   raise clicking.Error('Something broke!')
+
+
+Group
+-----
+
+Colorized custom class for ``click.group``.
+
+.. code-block:: python
+
+   import click
+   import clicking
+
+
+   @click.group(cls=clicking.Group)
+   def group():
+      pass
+
+
+Command
+-------
+
+Colorized custom class for ``click.command``.
+
+.. code-block:: python
+
+   import click
+   import clicking
+
+
+   @click.command(cls=clicking.Command)
+   def command():
+      pass
+
+
+=======
+History
+=======
+
+
+0.2.0
+-----
+
+* Add style module.
+* Add colorized Group and Command.
+
+
+0.1.1
+-----
+
+* Add exception that print message in bold red when raised.
+
+
+0.1.0
+-----
+
+* First public release.
+
+
