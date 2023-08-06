@@ -1,0 +1,68 @@
+Metadata-Version: 2.0
+Name: parsl
+Version: 0.7.0
+Summary: Simple data dependent workflows in Python
+Home-page: https://github.com/Parsl/parsl
+Author: The Parsl Team
+Author-email: parsl@googlegroups.com
+License: Apache 2.0
+Download-URL: https://github.com/Parsl/parsl/archive/0.7.0.tar.gz
+Keywords: Workflows,Scientific computing
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: google_cloud
+Provides-Extra: visualize
+Provides-Extra: extreme_scale
+Provides-Extra: docs
+Provides-Extra: aws
+Provides-Extra: db_logging
+Provides-Extra: all
+Requires-Dist: dill
+Requires-Dist: globus-sdk
+Requires-Dist: ipykernel
+Requires-Dist: ipyparallel
+Requires-Dist: paramiko
+Requires-Dist: pyzmq (>=17.1.2)
+Requires-Dist: requests
+Requires-Dist: tblib
+Provides-Extra: all
+Requires-Dist: CMRESHandler; extra == 'all'
+Requires-Dist: boto3; extra == 'all'
+Requires-Dist: dash; extra == 'all'
+Requires-Dist: dash-core-components; extra == 'all'
+Requires-Dist: dash-html-components; extra == 'all'
+Requires-Dist: google-api-python-client; extra == 'all'
+Requires-Dist: google-auth; extra == 'all'
+Requires-Dist: mpi4py; extra == 'all'
+Requires-Dist: nbsphinx; extra == 'all'
+Requires-Dist: pandas; extra == 'all'
+Requires-Dist: psutil; extra == 'all'
+Requires-Dist: sphinx-rtd-theme; extra == 'all'
+Requires-Dist: sqlalchemy; extra == 'all'
+Provides-Extra: aws
+Requires-Dist: boto3; extra == 'aws'
+Provides-Extra: db_logging
+Requires-Dist: CMRESHandler; extra == 'db_logging'
+Requires-Dist: psutil; extra == 'db_logging'
+Requires-Dist: sqlalchemy; extra == 'db_logging'
+Provides-Extra: docs
+Requires-Dist: nbsphinx; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme; extra == 'docs'
+Provides-Extra: extreme_scale
+Requires-Dist: mpi4py; extra == 'extreme_scale'
+Provides-Extra: google_cloud
+Requires-Dist: google-api-python-client; extra == 'google_cloud'
+Requires-Dist: google-auth; extra == 'google_cloud'
+Provides-Extra: visualize
+Requires-Dist: dash; extra == 'visualize'
+Requires-Dist: dash-core-components; extra == 'visualize'
+Requires-Dist: dash-html-components; extra == 'visualize'
+Requires-Dist: pandas; extra == 'visualize'
+
+Simple parallel workflows system for Python
+
+
