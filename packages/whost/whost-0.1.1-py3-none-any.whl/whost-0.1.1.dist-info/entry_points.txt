@@ -1,0 +1,10 @@
+[console_scripts]
+whost-config=whost-config
+whost-configurator=whost-configurator
+whost-restart-all=whost-restart-all
+whost-setup=whost-setup
+whost-start-all=whost-start-all
+whost-start-worker=whost-start-worker
+whost-stop-all=whost-stop-all
+whost-update=whost-update
+
