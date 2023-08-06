@@ -1,0 +1,9 @@
+lifetimes
+numba
+scipy
+pandas
+numpy
+pyspark
+
+[test]
+pytest
