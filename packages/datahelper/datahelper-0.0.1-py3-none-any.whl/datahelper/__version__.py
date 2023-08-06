@@ -1,0 +1,8 @@
+__title__ = 'datahelper'
+__description__ = 'JavaScript lodash-style Python data utility library'
+__url__ = 'https://github.com/DoonDoony/datahelper'
+__version__ = '0.0.1'
+__author__ = 'DoonDoony'
+__author_email__ = 'cream.doondoon@gmail.com'
+__license__ = 'MIT'
+__copyright__ = 'Copyright 2018 DoonDoony'
