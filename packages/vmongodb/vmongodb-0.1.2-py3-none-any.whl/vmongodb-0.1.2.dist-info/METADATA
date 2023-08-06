@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: vmongodb
+Version: 0.1.2
+Summary: 
+Home-page: UNKNOWN
+License: UNKNOWN
+Author: Flavio
+Author-email: fvilante1@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pymongo (>=3.7.2,<4.0.0)
