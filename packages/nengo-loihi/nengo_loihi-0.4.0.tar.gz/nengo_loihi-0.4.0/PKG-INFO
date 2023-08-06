@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: nengo_loihi
+Version: 0.4.0
+Summary: Run Nengo models on the Loihi chip
+Home-page: https://github.com/nengo/nengo-loihi
+Author: Applied Brain Research
+Author-email: info@appliedbrainresearch.com
+License: Free for non-commercial use
+Description: ***********
+        Nengo Loihi
+        ***********
+        
+        A backend for running Nengo models on Intel's Loihi architecture.
+        
+        To use the backend, simply replace::
+        
+          nengo.Simulator(model)
+        
+        with::
+        
+          nengo_loihi.Simulator(model)
+        
+        For more details and installation instructions,
+        please `see the documentation <https://www.nengo.ai/nengo-loihi/>`_.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Free for non-commercial use
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.4
+Provides-Extra: docs
