@@ -1,0 +1,3 @@
+[console_scripts]
+rpsl_read = irrd.scripts.rpsl_read:main
+
