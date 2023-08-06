@@ -1,0 +1,12 @@
+skil_client
+requests
+numpy
+
+[tests]
+pytest
+pytest-pep8
+pytest-cov
+mock
+six
+tensorflow
+keras
