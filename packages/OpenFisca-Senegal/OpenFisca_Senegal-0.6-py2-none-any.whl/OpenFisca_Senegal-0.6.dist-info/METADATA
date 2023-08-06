@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: OpenFisca-Senegal
+Version: 0.6
+Summary: Senegalese tax and benefit system for OpenFisca
+Home-page: https://github.com/openfisca/senegal
+Author: OpenFisca Team
+Author-email: contact@openfisca.fr
+License: http://www.fsf.org/licensing/licenses/agpl-3.0.html
+Keywords: benefit microsimulation senegal social tax
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Dist: OpenFisca-Core (<24.0,>=23.1)
+Provides-Extra: dev
+Requires-Dist: flake8 (<3.5.0,>=3.4.0) ; extra == 'dev'
+Requires-Dist: flake8-print ; extra == 'dev'
+Requires-Dist: nose ; extra == 'dev'
+Provides-Extra: notebook
+Requires-Dist: matplotlib ; extra == 'notebook'
+Requires-Dist: notebook ; extra == 'notebook'
+Requires-Dist: OpenFisca-Survey-Manager (>=0.9.5) ; extra == 'notebook'
+Requires-Dist: openpyxl ; extra == 'notebook'
+Requires-Dist: pandas ; extra == 'notebook'
+Requires-Dist: xlrd ; extra == 'notebook'
+Requires-Dist: xlwt ; extra == 'notebook'
+Provides-Extra: survey
+Requires-Dist: OpenFisca-Survey-Manager (>=0.9.5) ; extra == 'survey'
+
+UNKNOWN
+
+
