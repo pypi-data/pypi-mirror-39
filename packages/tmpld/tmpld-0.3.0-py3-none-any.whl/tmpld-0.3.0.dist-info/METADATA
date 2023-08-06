@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: tmpld
+Version: 0.3.0
+Summary: Render templates in docker entrypoint scripts.
+Home-page: https://github.com/joeblackwaslike/tmpld
+Author: Joe Black
+Author-email: me@joeblack.nyc
+License: Apache 2.0
+Download-URL: https://github.com/joeblackwaslike/tmpld/tarball/v0.3.0
+Keywords: kubernetes,clustering,entrypoint,entrypoints,docker,template,templates
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development
+Classifier: Topic :: System
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+Provides-Extra: jpath
+Provides-Extra: caps
+Provides-Extra: xpath
+Provides-Extra: all
+Requires-Dist: cement (==2.10.12)
+Requires-Dist: delegator.py (>=0.0.13)
+Requires-Dist: Jinja2
+Requires-Dist: pyrkube (>=0.2.3)
+Requires-Dist: PyYAML
+Provides-Extra: all
+Requires-Dist: pycaps; extra == 'all'
+Requires-Dist: lxml.etree; extra == 'all'
+Requires-Dist: jsonpath-rw; extra == 'all'
+Provides-Extra: caps
+Requires-Dist: pycaps; extra == 'caps'
+Provides-Extra: jpath
+Requires-Dist: jsonpath-rw; extra == 'jpath'
+Provides-Extra: xpath
+Requires-Dist: lxml.etree; extra == 'xpath'
+
+# tmpld
+[![Build Status](https://travis-ci.org/telephoneorg/debian.svg?branch=master)](https://travis-ci.org/telephoneorg/tmpld) [![Github Repo](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/telephoneorg/tmpld) [![Pypi Version](https://img.shields.io/pypi/v/tmpld.svg)](https://pypi.python.org/pypi/tmpld) [![Pypi License](https://img.shields.io/pypi/l/tmpld.svg)](https://pypi.python.org/pypi/tmpld) [![Pypi Wheel](https://img.shields.io/pypi/wheel/tmpld.svg)](https://pypi.python.org/pypi/tmpld) [![Pypi Versions](https://img.shields.io/pypi/pyversions/tmpld.svg)](https://pypi.python.org/pypi/tmpld) [![Docker Pulls](https://img.shields.io/docker/pulls/telephoneorg/tmpld.svg)](https://hub.docker.com/r/telephoneorg/tmpld/)
+
+
+## Maintainer
+Joe Black | <me@joeblack.nyc> | [github](https://github.com/joeblackwaslike)
+
+
+## Introduction
+CLI tool combining jinja2 with parsers and other objects including Kubernetes
+API objects and linux capabilities objects.
+
+
+## Usage
+```
+usage: tmpld (sub-commands ...) [options ...] {arguments ...}
+
+Base Controller
+
+positional arguments:
+  templates             template files to render
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --debug               toggle debug output
+  --quiet               suppress all output
+  -d DATA, --data DATA  file(s) containing context data
+  -s, --strict          Raise an exception if a variable is not defined
+```
+
+
