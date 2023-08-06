@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: xpi
+Version: 0.0.1
+Summary: For Raspberry Pi3B+
+Home-page: https://github.com/neoctobers/xpi
+Author: @neoctobers
+Author-email: neoctobers@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# xpi
+
+Useful functions for Raspberry Pi3B+
+
+
