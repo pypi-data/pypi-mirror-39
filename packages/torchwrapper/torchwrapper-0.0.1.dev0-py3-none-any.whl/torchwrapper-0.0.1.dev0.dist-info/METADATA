@@ -1,0 +1,116 @@
+Metadata-Version: 2.1
+Name: torchwrapper
+Version: 0.0.1.dev0
+Summary: A Wrapper for PyTorch Models
+Home-page: https://gitlab.com/jaymorgan/torchwrapper/
+Author: Jay Morgan
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: alabaster (==0.7.12)
+Requires-Dist: appnope (==0.1.0)
+Requires-Dist: asn1crypto (==0.24.0)
+Requires-Dist: astroid (==2.1.0)
+Requires-Dist: Babel (==2.6.0)
+Requires-Dist: backcall (==0.1.0)
+Requires-Dist: bleach (==3.0.2)
+Requires-Dist: certifi (==2018.11.29)
+Requires-Dist: cffi (==1.11.5)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: cloudpickle (==0.6.1)
+Requires-Dist: cryptography (==2.4.2)
+Requires-Dist: decorator (==4.3.0)
+Requires-Dist: docutils (==0.14)
+Requires-Dist: entrypoints (==0.2.3)
+Requires-Dist: idna (==2.8)
+Requires-Dist: imagesize (==1.1.0)
+Requires-Dist: ipykernel (==5.1.0)
+Requires-Dist: ipython (==7.2.0)
+Requires-Dist: ipython-genutils (==0.2.0)
+Requires-Dist: isort (==4.3.4)
+Requires-Dist: jedi (==0.13.2)
+Requires-Dist: Jinja2 (==2.10)
+Requires-Dist: jsonschema (==2.6.0)
+Requires-Dist: jupyter-client (==5.2.4)
+Requires-Dist: jupyter-core (==4.4.0)
+Requires-Dist: keyring (==17.0.0)
+Requires-Dist: lazy-object-proxy (==1.3.1)
+Requires-Dist: MarkupSafe (==1.1.0)
+Requires-Dist: mccabe (==0.6.1)
+Requires-Dist: mistune (==0.8.4)
+Requires-Dist: mkl-fft (==1.0.6)
+Requires-Dist: mkl-random (==1.0.2)
+Requires-Dist: nbconvert (==5.3.1)
+Requires-Dist: nbformat (==4.4.0)
+Requires-Dist: numpy (==1.15.4)
+Requires-Dist: numpydoc (==0.8.0)
+Requires-Dist: olefile (==0.46)
+Requires-Dist: packaging (==18.0)
+Requires-Dist: pandocfilters (==1.4.2)
+Requires-Dist: parso (==0.3.1)
+Requires-Dist: pexpect (==4.6.0)
+Requires-Dist: pickleshare (==0.7.5)
+Requires-Dist: Pillow (==5.3.0)
+Requires-Dist: prompt-toolkit (==2.0.7)
+Requires-Dist: psutil (==5.4.8)
+Requires-Dist: ptyprocess (==0.6.0)
+Requires-Dist: pycodestyle (==2.4.0)
+Requires-Dist: pycparser (==2.19)
+Requires-Dist: pyflakes (==2.0.0)
+Requires-Dist: Pygments (==2.3.1)
+Requires-Dist: pylint (==2.2.2)
+Requires-Dist: pyOpenSSL (==18.0.0)
+Requires-Dist: pyparsing (==2.3.0)
+Requires-Dist: PySocks (==1.6.8)
+Requires-Dist: python-dateutil (==2.7.5)
+Requires-Dist: pytz (==2018.7)
+Requires-Dist: pyzmq (==17.1.2)
+Requires-Dist: QtAwesome (==0.5.3)
+Requires-Dist: qtconsole (==4.4.3)
+Requires-Dist: QtPy (==1.5.2)
+Requires-Dist: requests (==2.21.0)
+Requires-Dist: rope (==0.11.0)
+Requires-Dist: six (==1.12.0)
+Requires-Dist: snowballstemmer (==1.2.1)
+Requires-Dist: Sphinx (==1.8.2)
+Requires-Dist: sphinxcontrib-websupport (==1.1.0)
+Requires-Dist: spyder (==3.3.2)
+Requires-Dist: spyder-kernels (==0.3.0)
+Requires-Dist: testpath (==0.4.2)
+Requires-Dist: torch (==1.0.0)
+Requires-Dist: torchvision (==0.2.1)
+Requires-Dist: tornado (==5.1.1)
+Requires-Dist: tqdm (==4.28.1)
+Requires-Dist: traitlets (==4.3.2)
+Requires-Dist: urllib3 (==1.24.1)
+Requires-Dist: wcwidth (==0.1.7)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: wrapt (==1.10.11)
+Requires-Dist: wurlitzer (==1.0.2)
+
+# TorchWrapper
+
+A wrapper class for a PyTorhc Model using fit and predict functions that are
+familiar to those who use Keras and Sklearn.
+
+Reduces the need to write fit and evaluation functions for basic models.
+
+## Quick Start
+
+```python
+# import the module
+from torchwrapper import Wrapper
+
+# create your module, optimizer, and criterion function
+model = Model()
+optimizer = torch.optim.Adam(model.parameters())
+criterion = torch.nn.MSELos()
+
+# wrap the model
+model = Wrapper(model)
+
+# train the network
+model.fit(dataloader, optimizer, criterion, epochs=50)
+
+```
+
