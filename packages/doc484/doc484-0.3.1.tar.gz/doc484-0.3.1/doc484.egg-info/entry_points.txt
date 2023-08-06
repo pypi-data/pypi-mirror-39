@@ -1,0 +1,3 @@
+[console_scripts]
+doc484 = doc484.__main__:main
+
