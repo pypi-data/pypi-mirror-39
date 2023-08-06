@@ -1,0 +1,2 @@
+include *.rst
+include diskbench/tests/data/*
