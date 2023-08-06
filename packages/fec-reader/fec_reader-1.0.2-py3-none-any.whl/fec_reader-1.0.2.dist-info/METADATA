@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: fec-reader
+Version: 1.0.2
+Summary: retrieves data from FEC.gov website
+Home-page: https://github.com/alexus888/fec-reader
+Author: Alexus Wong
+Author-email: alexus888@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: lxml
+Requires-Dist: html5lib
+Requires-Dist: BeautifulSoup4
+
+FEC Data Reader
+==========================
+
+A quick way to retrieve FEC bulk data from https://www.fec.gov:
+
+``` {.sourceCode .python}
+>>> import fec_reader as fec
+>>> reader = fec.DataReader(DATA_DIR='/raw') # pick a target directory
+>>> reader.get_pac_summary()
+```
+
+This package is a demonstration of ETL skills for Alexus Wong. However, it is also important
+that we as a society can efficiently consume the inordinate amount of information available
+today. If we can process it, we can take steps in the right direction.
+
+Features
+---------------
+
+FEC Reader currently retrieves these data files:
+
+-   PAC Summary - https://www.fec.gov/campaign-finance-data/pac-and-party-summary-file-description/ - 'get_pac_summary'
+-   Candidate Master - https://www.fec.gov/campaign-finance-data/candidate-master-file-description/ - 'get_candidate_master'
+
+
+Installation
+------------
+
+To install FEC Reader, simply use pip:
+
+``` {.sourceCode .bash}
+$ pip install fec-reader
+```
+
+
+<!--
+Documentation
+-------------
+
+Fantastic documentation is available at
+<http://docs.python-requests.org/>, for a limited time only. -->
+
+
