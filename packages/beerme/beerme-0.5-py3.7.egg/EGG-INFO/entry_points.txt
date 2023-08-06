@@ -1,0 +1,3 @@
+[console_scripts]
+beerme = beerme.beerme:main
+
