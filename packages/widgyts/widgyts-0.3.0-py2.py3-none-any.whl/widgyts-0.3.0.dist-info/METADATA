@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: widgyts
+Version: 0.3.0
+Summary: A Custom Jupyter Widget Library
+Home-page: https://github.com/data-exp-lab/widgyts
+Author: Data Exploration Lab
+Author-email: mmunk2@illinois.edu
+License: UNKNOWN
+Keywords: ipython,jupyter,widgets
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: IPython
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: ipywidgets (>=7.0.0)
+Requires-Dist: ipydatawidgets (>=3.2.0)
+Requires-Dist: yt
+
+A Custom Jupyter Widget Library for Interactive Visualization with yt
+
+
