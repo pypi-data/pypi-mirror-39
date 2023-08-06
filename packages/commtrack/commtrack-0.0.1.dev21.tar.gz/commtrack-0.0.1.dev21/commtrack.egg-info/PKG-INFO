@@ -1,0 +1,54 @@
+Metadata-Version: 1.1
+Name: commtrack
+Version: 0.0.1.dev21
+Summary: Commit Tracker
+Home-page: UNKNOWN
+Author: Arie Bregman
+Author-email: bregman.arie@gmail.com
+License: Apache License, Version 2.0
+Description: # Commtrack
+        
+        Tracking commits was never easier.
+        
+        <div align="center"><img src="./docs/commtrack_example.png" alt="commtrack example" width="400"></div><hr />
+        
+        ## Installation
+        
+        ```
+        git clone https://github.com/bregman-arie/commtrack.git
+        cd commtrack
+        pipenv install -e .
+        ```
+        
+        ## Usage
+        
+        ```
+        # Search for comit 2142
+        
+        commtrack -c 2142
+        
+        # Search for change ID in OpenStack Gerrit:
+        
+        commtrack --changeid t3gq2 --links openstack_gerrit
+        ```
+        
+        ## User Guide
+        
+        Would like to learn more about Commtrack? Click [here](docs/user_guide.md)
+        
+        ## Developer Guide
+        
+        Would like to assist with Commtrack development? Click [here](docs/developer_guide.md)
+        
+        
+Platform: UNKNOWN
+Classifier: Topic :: Utilities
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7

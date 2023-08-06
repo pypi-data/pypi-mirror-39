@@ -1,0 +1,5 @@
+chain: 'openstack'
+links:
+  gerrit:
+    ds_gerrit:
+      address: 'x.y.z.com'
