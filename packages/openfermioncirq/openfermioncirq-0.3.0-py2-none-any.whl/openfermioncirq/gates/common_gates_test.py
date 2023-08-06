@@ -1,0 +1,304 @@
+# coding=utf-8
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
+
+from __future__ import division
+from __future__ import absolute_import
+import numpy as np
+import pytest
+from scipy.linalg import expm, kron
+
+import cirq
+import openfermioncirq as ofc
+
+
+def test_fswap_interchangeable():
+    a, b = cirq.LineQubit.range(2)
+    assert ofc.FSWAP(a, b) == ofc.FSWAP(b, a)
+
+
+def test_fswap_inverse():
+    assert ofc.FSWAP**-1 == ofc.FSWAP
+
+
+def test_fswap_str():
+    assert unicode(ofc.FSWAP) == u'FSWAP'
+    assert unicode(ofc.FSWAP**0.5) == u'FSWAP**0.5'
+    assert unicode(ofc.FSWAP**-0.25) == u'FSWAP**-0.25'
+
+
+def test_fswap_repr():
+    assert repr(ofc.FSWAP) == u'ofc.FSWAP'
+    assert repr(ofc.FSWAP**0.5) == u'(ofc.FSWAP**0.5)'
+    assert repr(ofc.FSWAP**-0.25) == u'(ofc.FSWAP**-0.25)'
+
+    ofc.testing.assert_equivalent_repr(ofc.FSWAP)
+    ofc.testing.assert_equivalent_repr(ofc.FSWAP**0.5)
+    ofc.testing.assert_equivalent_repr(ofc.FSWAP**-0.25)
+
+
+def test_fswap_matrix():
+    np.testing.assert_allclose(cirq.unitary(ofc.FSWAP),
+                                  np.array([[1, 0, 0, 0],
+                                               [0, 0, 1, 0],
+                                               [0, 1, 0, 0],
+                                               [0, 0, 0, -1]]))
+
+    np.testing.assert_allclose(cirq.unitary(ofc.FSWAP**0.5),
+                                  np.array([[1, 0, 0, 0],
+                                               [0, 0.5+0.5j, 0.5-0.5j, 0],
+                                               [0, 0.5-0.5j, 0.5+0.5j, 0],
+                                               [0, 0, 0, 1j]]))
+
+    cirq.testing.assert_has_consistent_apply_unitary_for_various_exponents(
+        val=ofc.FSWAP,
+        exponents=[1, -0.5, 0.5, 0.25, -0.25, 0.1, cirq.Symbol(u's')])
+
+
+def test_xxyy_init():
+    assert ofc.XXYYPowGate(exponent=0.5).exponent == 0.5
+    assert ofc.XXYYPowGate(exponent=1.5).exponent == 1.5
+    assert ofc.XXYYPowGate(exponent=5).exponent == 5
+
+
+def test_xxyy_eq():
+    eq = cirq.testing.EqualsTester()
+
+    eq.add_equality_group(ofc.XXYYPowGate(exponent=3.5),
+                          ofc.XXYYPowGate(exponent=-0.5))
+
+    eq.add_equality_group(ofc.XXYYPowGate(exponent=1.5),
+                          ofc.XXYYPowGate(exponent=-2.5))
+
+    eq.make_equality_group(lambda: ofc.XXYYPowGate(exponent=0))
+    eq.make_equality_group(lambda: ofc.XXYYPowGate(exponent=0.5))
+
+
+def test_xxyy_interchangeable():
+    a, b = cirq.LineQubit(0), cirq.LineQubit(1)
+    assert ofc.XXYY(a, b) == ofc.XXYY(b, a)
+
+
+def test_xxyy_repr():
+    assert repr(ofc.XXYYPowGate(exponent=1)) == u'XXYY'
+    assert repr(ofc.XXYYPowGate(exponent=0.5)) == u'XXYY**0.5'
+
+
+@pytest.mark.parametrize(u'exponent', [1.0, 0.5, 0.25, 0.1, 0.0, -0.5])
+def test_xxyy_decompose(exponent):
+    cirq.testing.assert_decompose_is_consistent_with_unitary(
+            ofc.XXYY**exponent)
+
+
+def test_xxyy_matrix():
+    cirq.testing.assert_has_consistent_apply_unitary_for_various_exponents(
+        ofc.XXYY,
+        exponents=[1, -0.5, 0.5, 0.25, -0.25, 0.1, cirq.Symbol(u's')])
+
+    np.testing.assert_allclose(cirq.unitary(ofc.XXYYPowGate(exponent=2)),
+                                  np.array([[1, 0, 0, 0],
+                                               [0, -1, 0, 0],
+                                               [0, 0, -1, 0],
+                                               [0, 0, 0, 1]]),
+                                  atol=1e-8)
+
+    np.testing.assert_allclose(cirq.unitary(ofc.XXYYPowGate(exponent=1)),
+                                  np.array([[1, 0, 0, 0],
+                                               [0, 0, -1j, 0],
+                                               [0, -1j, 0, 0],
+                                               [0, 0, 0, 1]]),
+                                  atol=1e-8)
+
+    np.testing.assert_allclose(cirq.unitary(ofc.XXYYPowGate(exponent=0)),
+                                  np.array([[1, 0, 0, 0],
+                                               [0, 1, 0, 0],
+                                               [0, 0, 1, 0],
+                                               [0, 0, 0, 1]]),
+                                  atol=1e-8)
+
+    np.testing.assert_allclose(cirq.unitary(ofc.XXYYPowGate(exponent=-1)),
+                                  np.array([[1, 0, 0, 0],
+                                               [0, 0, 1j, 0],
+                                               [0, 1j, 0, 0],
+                                               [0, 0, 0, 1]]),
+                                  atol=1e-8)
+
+    X = np.array([[0, 1], [1, 0]])
+    Y = np.array([[0, -1j], [1j, 0]])
+    XX = kron(X, X)
+    YY = kron(Y, Y)
+    np.testing.assert_allclose(cirq.unitary(ofc.XXYYPowGate(exponent=0.25)),
+                                  expm(-1j * np.pi * 0.25 * (XX + YY) / 4))
+
+
+def test_yxxy_init():
+    assert ofc.YXXYPowGate(exponent=0.5).exponent == 0.5
+    assert ofc.YXXYPowGate(exponent=1.5).exponent == 1.5
+    assert ofc.YXXYPowGate(exponent=5).exponent == 5
+
+
+def test_yxxy_eq():
+    eq = cirq.testing.EqualsTester()
+
+    eq.add_equality_group(ofc.YXXYPowGate(exponent=3.5),
+                          ofc.YXXYPowGate(exponent=-0.5))
+
+    eq.add_equality_group(ofc.YXXYPowGate(exponent=1.5),
+                          ofc.YXXYPowGate(exponent=-2.5))
+
+    eq.make_equality_group(lambda: ofc.YXXYPowGate(exponent=0))
+    eq.make_equality_group(lambda: ofc.YXXYPowGate(exponent=0.5))
+
+
+def test_yxxy_repr():
+    assert repr(ofc.YXXYPowGate(exponent=1)) == u'YXXY'
+    assert repr(ofc.YXXYPowGate(exponent=0.5)) == u'YXXY**0.5'
+
+
+@pytest.mark.parametrize(u'exponent', [1.0, 0.5, 0.25, 0.1, 0.0, -0.5])
+def test_yxxy_decompose(exponent):
+    cirq.testing.assert_decompose_is_consistent_with_unitary(
+            ofc.YXXY**exponent)
+
+
+def test_yxxy_matrix():
+    cirq.testing.assert_has_consistent_apply_unitary_for_various_exponents(
+        ofc.YXXY,
+        exponents=[1, -0.5, 0.5, 0.25, -0.25, 0.1, cirq.Symbol(u's')])
+
+
+    np.testing.assert_allclose(cirq.unitary(ofc.YXXYPowGate(exponent=2)),
+                                  np.array([[1, 0, 0, 0],
+                                               [0, -1, 0, 0],
+                                               [0, 0, -1, 0],
+                                               [0, 0, 0, 1]]),
+                                  atol=1e-8)
+
+    np.testing.assert_allclose(cirq.unitary(ofc.YXXYPowGate(exponent=1)),
+                                  np.array([[1, 0, 0, 0],
+                                               [0, 0, -1, 0],
+                                               [0, 1, 0, 0],
+                                               [0, 0, 0, 1]]),
+                                  atol=1e-8)
+
+    np.testing.assert_allclose(cirq.unitary(ofc.YXXYPowGate(exponent=0)),
+                                  np.array([[1, 0, 0, 0],
+                                               [0, 1, 0, 0],
+                                               [0, 0, 1, 0],
+                                               [0, 0, 0, 1]]),
+                                  atol=1e-8)
+
+    np.testing.assert_allclose(cirq.unitary(ofc.YXXYPowGate(exponent=-1)),
+                                  np.array([[1, 0, 0, 0],
+                                               [0, 0, 1, 0],
+                                               [0, -1, 0, 0],
+                                               [0, 0, 0, 1]]),
+                                  atol=1e-8)
+
+    X = np.array([[0, 1], [1, 0]])
+    Y = np.array([[0, -1j], [1j, 0]])
+    YX = kron(Y, X)
+    XY = kron(X, Y)
+    np.testing.assert_allclose(cirq.unitary(ofc.YXXYPowGate(exponent=0.25)),
+                                  expm(-1j * np.pi * 0.25 * (YX - XY) / 4))
+
+
+@pytest.mark.parametrize(
+        u'gate, exponent, initial_state, correct_state, atol', [
+            (ofc.XXYY, 1.0, np.array([0, 1, 1, 0]) / np.sqrt(2),
+                  np.array([0, -1j, -1j, 0]) / np.sqrt(2), 1e-7),
+
+            (ofc.XXYY, 0.5, np.array([1, 1, 0, 0]) / np.sqrt(2),
+                  np.array([1 / np.sqrt(2), 0.5, -0.5j, 0]), 1e-7),
+
+            (ofc.XXYY, -0.5, np.array([1, 1, 0, 0]) / np.sqrt(2),
+                   np.array([1 / np.sqrt(2), 0.5, 0.5j, 0]), 1e-7),
+
+            (ofc.YXXY, 1.0, np.array([0, 1, 1, 0]) / np.sqrt(2),
+                  np.array([0, 1, -1, 0]) / np.sqrt(2), 1e-7),
+
+            (ofc.YXXY, 0.5, np.array([0, 1, 1, 0]) / np.sqrt(2),
+                  np.array([0, 0, 1, 0]), 1e-7),
+
+            (ofc.YXXY, -0.5, np.array([0, 1, 1, 0]) / np.sqrt(2),
+                   np.array([0, 1, 0, 0]), 1e-7),
+])
+def test_two_qubit_rotation_gates_on_simulator(
+        gate, exponent, initial_state, correct_state, atol):
+    a, b = cirq.LineQubit.range(2)
+    circuit = cirq.Circuit.from_ops(gate(a, b)**exponent)
+    result = circuit.apply_unitary_effect_to_state(initial_state)
+    cirq.testing.assert_allclose_up_to_global_phase(
+        result, correct_state, atol=atol)
+
+
+@pytest.mark.parametrize(u'rads', [
+    2*np.pi, np.pi, 0.5*np.pi, 0.25*np.pi, 0.1*np.pi, 0.0, -0.5*np.pi])
+def test_rxxyy_unitary(rads):
+    X = np.array([[0, 1], [1, 0]])
+    Y = np.array([[0, -1j], [1j, 0]])
+    XX = kron(X, X)
+    YY = kron(Y, Y)
+    np.testing.assert_allclose(cirq.unitary(ofc.Rxxyy(rads)),
+                               expm(-1j * rads * (XX + YY) / 2),
+                               atol=1e-8)
+
+
+@pytest.mark.parametrize(u'rads', [
+    2*np.pi, np.pi, 0.5*np.pi, 0.25*np.pi, 0.1*np.pi, 0.0, -0.5*np.pi])
+def test_ryxxy_unitary(rads):
+    X = np.array([[0, 1], [1, 0]])
+    Y = np.array([[0, -1j], [1j, 0]])
+    YX = kron(Y, X)
+    XY = kron(X, Y)
+    np.testing.assert_allclose(cirq.unitary(ofc.Ryxxy(rads)),
+                               expm(-1j * rads * (YX - XY) / 2),
+                               atol=1e-8)
+
+
+@pytest.mark.parametrize(u'rads', [
+    2*np.pi, np.pi, 0.5*np.pi, 0.25*np.pi, 0.1*np.pi, 0.0, -0.5*np.pi])
+def test_rzz_unitary(rads):
+    ZZ = np.diag([1, -1, -1, 1])
+    np.testing.assert_allclose(cirq.unitary(ofc.Rzz(rads)),
+                               expm(-1j * ZZ * rads))
+
+
+def test_common_gate_text_diagrams():
+    a = cirq.NamedQubit(u'a')
+    b = cirq.NamedQubit(u'b')
+
+    circuit = cirq.Circuit.from_ops(
+        ofc.FSWAP(a, b),
+        ofc.FSWAP(a, b)**0.5,
+        ofc.XXYY(a, b),
+        ofc.YXXY(a, b))
+    cirq.testing.assert_has_diagram(circuit, u"""
+a: ───×ᶠ───×ᶠ───────XXYY───YXXY───
+      │    │        │      │
+b: ───×ᶠ───×ᶠ^0.5───XXYY───#2─────
+""")
+
+    cirq.testing.assert_has_diagram(circuit, u"""
+a: ---fswap---fswap-------XXYY---YXXY---
+      |       |           |      |
+b: ---fswap---fswap^0.5---XXYY---#2-----
+""", use_unicode_characters=False)
+
+    circuit = cirq.Circuit.from_ops(
+        ofc.XXYY(a, b)**0.5,
+        ofc.YXXY(a, b)**0.5)
+    cirq.testing.assert_has_diagram(circuit, u"""
+a: ───XXYY───────YXXY─────
+      │          │
+b: ───XXYY^0.5───#2^0.5───
+""")
