@@ -1,0 +1,12 @@
+Django>=1.11
+aldryn-boilerplates
+aldryn-common
+aldryn-translation-tools
+django-cms>=3.4.5
+django-parler
+django-filer
+djangocms-text-ckeditor
+easy-thumbnails
+phonenumbers
+six
+django-phonenumber-field<2.0.0,>=0.7.2
