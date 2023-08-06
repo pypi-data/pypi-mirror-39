@@ -1,0 +1,3 @@
+[console_scripts]
+w2re = w2re.command_line_w2re:main
+
