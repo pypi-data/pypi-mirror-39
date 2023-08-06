@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: django-orm-ext
+Version: 1.3.0
+Summary: A Python list extension.
+Home-page: https://github.com/neoctobers/py_django_orm_ext
+Author: @neoctobers
+Author-email: neoctobers@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: dict-ext
+
+# A Django ORM extension
+
+[![PyPi Version](http://img.shields.io/pypi/v/django-orm-ext.svg)](https://pypi.python.org/pypi/django-orm-ext/)
+
+[>> Read the docs <<](https://neoctobers.readthedocs.io/en/latest/repo/py_django_orm_ext.html)
+
+
+
