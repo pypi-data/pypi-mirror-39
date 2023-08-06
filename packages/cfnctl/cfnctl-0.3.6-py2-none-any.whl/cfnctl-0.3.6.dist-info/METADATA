@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: cfnctl
+Version: 0.3.6
+Summary: Command line launch and management tool for AWS CloudFormation
+Home-page: https://github.com/stelligent/cfnctl
+Author: Michael Neil
+Author-email: michael.neil@stelligent.com
+License: Apache License 2.0
+Keywords: aws cfn control cfnctl cloudformation stack stackset
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: boto3 (>=1.9.59)
+
+# CFNCTL
+
+Control Cloudformation stack lifecycle. 
+
+### Features
+
+ - Seemlessly supports templates files over 51,000 bytes
+ - Create/Update with single command
+ - (optional) Processes your template with jinja2 for advanced templating
+ - Always creates a changeset
+
+# Install
+
+> requires boto3
+
+**Pip**
+
+```
+pip install cfnctl
+```
+
+# Usage
+
+```
+usage: cfnctl [-h] [-p AWS_PROFILE] [-r REGION] {deploy} ...
+
+Launch and manage CloudFormation stacks
+
+optional arguments:
+  -h, --help      show this help message and exit
+  -p AWS_PROFILE  AWS Profile
+  -r REGION       Region name
+
+subcommands:
+  command to run
+
+  {deploy}
+    deploy        creates a changeset and executes to create or update stack
+```
+
+
