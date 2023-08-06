@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: xbase64
+Version: 1.0.0
+Summary: Base64 encode and decode, from type `bytes` or `str`, to `str`.
+Home-page: https://github.com/neoctobers/xbase64
+Author: @neoctobers
+Author-email: neoctobers@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# xbase64
+
+Base64 encode and decode, from type `bytes` or `str`, to `str`.
+
+
+
