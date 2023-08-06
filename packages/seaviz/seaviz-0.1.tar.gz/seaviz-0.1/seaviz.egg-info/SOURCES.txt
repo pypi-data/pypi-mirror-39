@@ -1,0 +1,11 @@
+setup.py
+seaviz/__init__.py
+seaviz/__main__.py
+seaviz/__version__.py
+seaviz/cli.py
+seaviz.egg-info/PKG-INFO
+seaviz.egg-info/SOURCES.txt
+seaviz.egg-info/dependency_links.txt
+seaviz.egg-info/entry_points.txt
+seaviz.egg-info/requires.txt
+seaviz.egg-info/top_level.txt
