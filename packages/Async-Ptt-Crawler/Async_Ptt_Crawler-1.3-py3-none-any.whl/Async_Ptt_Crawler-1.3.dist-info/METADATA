@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: Async-Ptt-Crawler
+Version: 1.3
+Summary: Ptt Crawler base on asyncio and use async/await syntax
+Home-page: https://github.com/nekosgr93/Async_Ptt_Cralwer
+Author: nekosgr93
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: beautifulsoup4
+Requires-Dist: aiohttp
+Requires-Dist: lxml
+
+基於Python 3.4後asyncio及Python 3.5後語法async/await語法糖的爬蟲
+
+連線部分使用第三方庫aiohttp進行非同步連線
+
+
