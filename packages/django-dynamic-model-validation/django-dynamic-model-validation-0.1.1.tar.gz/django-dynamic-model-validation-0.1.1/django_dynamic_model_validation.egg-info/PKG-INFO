@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: django-dynamic-model-validation
+Version: 0.1.1
+Summary: Extra django model validation.
+Home-page: https://github.com/jackton1/django-dynamic-model-validation.git
+Author: Tonye Jack
+Author-email: jtonye@ymail.com
+Maintainer: Tonye Jack
+Maintainer-email: jtonye@ymail.com
+License: MIT/Apache-2.0
+Description: UNKNOWN
+Keywords: django,model validation,django models,django object validation,field validation,conditional validation,cross field validation,django validation,django validators,django custom validation
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Requires-Python: >=2.6
+Description-Content-Type: text/markdown
+Provides-Extra: development
+Provides-Extra: test
+Provides-Extra: lint
+Provides-Extra: deploy
