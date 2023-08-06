@@ -1,0 +1,12 @@
+README.md
+setup.py
+examples/basic.py
+examples/dataframes.py
+spark_monitoring.egg-info/PKG-INFO
+spark_monitoring.egg-info/SOURCES.txt
+spark_monitoring.egg-info/dependency_links.txt
+spark_monitoring.egg-info/requires.txt
+spark_monitoring.egg-info/top_level.txt
+sparkmonitoring/__init__.py
+sparkmonitoring/api.py
+sparkmonitoring/dataframes.py
