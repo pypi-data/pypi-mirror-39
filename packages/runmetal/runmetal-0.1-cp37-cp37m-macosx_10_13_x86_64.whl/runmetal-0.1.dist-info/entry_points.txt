@@ -1,0 +1,3 @@
+[console_scripts]
+runmetal = runmetal.main:cli
+
