@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: sql-magic
+Version: 0.0.4
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Chris Rawles
+Author-email: crawles@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: findspark
+Requires-Dist: ipython
+Requires-Dist: jupyter
+Requires-Dist: pandas
+Requires-Dist: sqlparse
+Requires-Dist: traitlets
+
+UNKNOWN
+
+
