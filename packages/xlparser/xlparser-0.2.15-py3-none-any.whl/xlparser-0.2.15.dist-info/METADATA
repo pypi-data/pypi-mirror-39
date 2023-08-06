@@ -1,0 +1,120 @@
+Metadata-Version: 2.1
+Name: xlparser
+Version: 0.2.15
+Summary: Parse excel(xlsx/xls/csv) to other format(csv, json).
+Home-page: http://github.com/ahuigo/xlparser
+Author: ahuigo
+Author-email: ahui132@qq.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6.1
+Description-Content-Type: text/markdown
+Requires-Dist: xlrd
+Requires-Dist: openpyxl (>=2.5.4)
+Requires-Dist: python-dateutil
+Requires-Dist: pillow
+
+# xlparser
+Parse excel(xlsx/xls/csv) to other format(csv, json).
+
+> Warning: some old versions of xls are not supported.
+
+[![](https://img.shields.io/pypi/pyversions/xlparser.svg?longCache=True)](https://pypi.org/pypi/xlparser/)
+[![](https://img.shields.io/pypi/v/xlparser.svg?maxAge=36000)](https://pypi.org/pypi/xlparser/)
+
+## Install
+
+    pip install xlparser
+    pip3 install xlparser
+
+## Usage
+
+    $ xlparser -h
+    Usage:
+
+        # Convert xlsx to csv
+        $ xlparser.py source.xlsx [options] > new.csv
+
+        # Convert csv to csv
+        $ xlparser.py source.csv [options] > new.csv
+
+        # Convert csv to json
+        $ xlparser.py source.csv [options] > new.json
+
+        options:
+           -h       For help.
+           -csv     Export to csv(by default).
+           -json    Export to json.
+
+### CLI Usage
+Convert xlsx to csv
+
+    $ xlparser src.xlsx | tee test.csv
+    foo, bar
+    看,我,变
+
+Convert csv to json
+
+    $ xlparser test.csv -json | tee test.json
+    [["foo", "bar"], ["看", "我", "变"]]
+
+### Module Usage
+
+### Parse any type of file
+The `parse` function supports the following file format:
+
+    def parse(src):
+        if src.endswith('.xls'):
+            return parseXls(src)
+        if src.endswith('.xlsx'):
+            return parseXlsx(src)
+        if src.endswith('.csv'):
+            return parseCsv(src)
+
+`parse` any type of file to rows:
+
+    >>> from xlparser import parse, saveCsv
+    >>> rows = parse('some.xlsx')
+    >>> list(rows)
+    [['foo', 'bar'], ['看', '我', '变']]
+
+Save rows to csv
+
+    >>> saveCsv(rows, 'test.csv')
+
+### Csv operation
+
+    >>> from xlparser import *
+
+    >>> rows = [('foo','bar'), ('看','我','变')]
+    >>> saveCsv(rows, 'test.csv')
+
+    >>> list(parseCsv('test.csv'))
+    [['foo', 'bar'], ['看', '我', '变']]
+
+### Zip operation
+
+    >>> from xlparser import loadZip
+    >>> zf = loadZip('test.xlsx')
+    >>> print(zf.filelist)
+    ......
+    >>> zf.extract('xl/media/image1.png', '/tmp')
+    >>> os.rename('/tmp/'+'xl/media/image1.png', './image1.png')
+
+
+## Required
+1. python>=3.5
+2. xlrd: required by xls
+2. openpyxl>=2.5.4: required by xlsx
+
+
