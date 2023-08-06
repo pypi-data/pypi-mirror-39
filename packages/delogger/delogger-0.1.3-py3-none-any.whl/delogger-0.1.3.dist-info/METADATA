@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: delogger
+Version: 0.1.3
+Summary: delogger is a convenient logging package
+Home-page: UNKNOWN
+Author: deresmos
+Author-email: deresmos@gmail.com
+License: MIT License
+Keywords: logging,Logger
+Platform: UNKNOWN
+Requires-Python: >=3.4
+Requires-Dist: requests
+Requires-Dist: colorlog
+Provides-Extra: develop
+Requires-Dist: twine ; extra == 'develop'
+Requires-Dist: flake8 ; extra == 'develop'
+Requires-Dist: pytest ; extra == 'develop'
+Requires-Dist: pytest-sugar ; extra == 'develop'
+
+UNKNOWN
+
+
