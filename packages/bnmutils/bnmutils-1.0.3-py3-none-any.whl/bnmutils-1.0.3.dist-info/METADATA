@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: bnmutils
+Version: 1.0.3
+Summary: Compilations of various utilities
+Home-page: https://github.com/BNMetrics/bnmetrics-utils
+Author: Luna Chen
+Author-email: luna@bnmetrics.com
+License: Apache 2.0
+Keywords: configparser,.ini,docstring
+Platform: UNKNOWN
+Requires-Python: >=3
+
+============
+COMING SOON!
+============
+
+.. image:: https://travis-ci.org/BNMetrics/bnmetrics-utils.svg?branch=master
+    :target: https://travis-ci.org/BNMetrics/bnmetrics-utils
+
+.. image:: https://codecov.io/gh/BNMetrics/bnmetrics-utils/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/BNMetrics/bnmetrics-utils
+
+.. image:: https://badge.fury.io/py/bnmutils.svg
+    :target: https://badge.fury.io/py/bnmutils
+
