@@ -1,0 +1,3 @@
+[console_scripts]
+ncdiff = xarray_extras.bin.ncdiff:main
+
