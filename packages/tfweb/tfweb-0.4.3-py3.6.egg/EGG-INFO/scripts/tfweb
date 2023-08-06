@@ -1,0 +1,4 @@
+#!/Users/olanymoe/anaconda3/envs/tf/bin/python
+import sys
+from tfweb import tfweb
+tfweb.main(args=sys.argv[1:])
