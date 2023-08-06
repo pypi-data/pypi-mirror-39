@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: riksbank
+Version: 0.0.1
+Summary: Read from riksbankens SOAP API to pandas
+Home-page: https://github.com/thpe/riksbank
+Author: Thomas Petig
+Author-email: thomas@petig.eu
+License: UNKNOWN
+Description: Read from riksbankens SOAP API to pandas
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
