@@ -1,0 +1,5 @@
+setuptools
+requests
+cwltool
+ruamel.yaml
+cwltest==1.0.20180601100346

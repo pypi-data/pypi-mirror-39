@@ -1,0 +1,3 @@
+[console_scripts]
+cwl-airflow-tester = cwl_airflow_tester.main:main
+
