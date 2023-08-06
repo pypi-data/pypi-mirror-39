@@ -1,0 +1,32 @@
+#!/usr/bin/python3
+
+'''
+Interpret .ryf file
+'''
+import sys
+import ryf_pack
+
+try:
+	filepath = sys.argv[1]
+	if not filepath.endswith('.ryf'):
+		ryf_pack.error('Incorrect file extension. must be a .ryf file.')
+except IndexError:
+	'''Maybe go into interperter??'''
+	ryf_pack.error('No file specified.')
+
+def get_cmds(filepath):
+	try:
+		with open(filepath, 'r') as f:
+			contents = f.readlines()
+	except:
+		ryf_pack.error('That is not a real file!')
+	else:
+		contents = [c for c in [line.strip() for line in contents] if len(c) > 0]
+		'''parse data in file'''
+		return ryf_pack.parse(contents)
+
+
+cmds = get_cmds(filepath)
+
+for cmd in cmds:
+	cmd()
