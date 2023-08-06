@@ -1,0 +1,15 @@
+Metadata-Version: 1.0
+Name: PysparkGateway
+Version: 0.0.1
+Summary: Connect Pyspark to remote clusters
+Home-page: https://github.com/abronte/PysparkGateway
+Author: Adam Bronte
+Author-email: adam@bronte.me
+License: Apache 2.0
+Description: ===============
+        Pyspark Gateway
+        ===============
+        
+        Connect to remote Pyspark clusters.
+        
+Platform: UNKNOWN
