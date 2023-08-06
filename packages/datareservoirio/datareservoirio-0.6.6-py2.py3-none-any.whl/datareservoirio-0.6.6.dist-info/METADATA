@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: datareservoirio
+Version: 0.6.6
+Summary: Python client for DataReservoir.io
+Home-page: http://www.4subsea.com/python/datareservoirio
+Author: 4Subsea
+Author-email: support@4subsea.com
+License: MIT
+Keywords: drio datareservoir timeseries storage database saas
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: adal (>=1.0.0)
+Requires-Dist: azure-storage-blob (>=1.1.0)
+Requires-Dist: numpy
+Requires-Dist: pandas (>=0.23.0)
+Requires-Dist: requests
+Requires-Dist: six
+Requires-Dist: futures ; python_version == "2.7"
+Requires-Dist: future ; python_version == "2.7"
+
+datareservoirio
+================
+
+Python client for DataReservoir.io
+
+DataReservoir.io is a timeseries storage service in the cloud.
+
+
