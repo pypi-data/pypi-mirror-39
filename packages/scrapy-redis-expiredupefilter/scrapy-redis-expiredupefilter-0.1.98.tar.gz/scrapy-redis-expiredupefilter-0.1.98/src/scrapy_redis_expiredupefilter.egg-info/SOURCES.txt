@@ -1,0 +1,16 @@
+setup.py
+src/scrapy_redis_expiredupefilter/__init__.py
+src/scrapy_redis_expiredupefilter/connection.py
+src/scrapy_redis_expiredupefilter/defaults.py
+src/scrapy_redis_expiredupefilter/dupefilter.py
+src/scrapy_redis_expiredupefilter/extensions.py
+src/scrapy_redis_expiredupefilter/picklecompat.py
+src/scrapy_redis_expiredupefilter/pipelines.py
+src/scrapy_redis_expiredupefilter/queue.py
+src/scrapy_redis_expiredupefilter/scheduler.py
+src/scrapy_redis_expiredupefilter/spiders.py
+src/scrapy_redis_expiredupefilter/utils.py
+src/scrapy_redis_expiredupefilter.egg-info/PKG-INFO
+src/scrapy_redis_expiredupefilter.egg-info/SOURCES.txt
+src/scrapy_redis_expiredupefilter.egg-info/dependency_links.txt
+src/scrapy_redis_expiredupefilter.egg-info/top_level.txt
