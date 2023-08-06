@@ -1,0 +1,12 @@
+README.md
+setup.py
+Facextractor.egg-info/PKG-INFO
+Facextractor.egg-info/SOURCES.txt
+Facextractor.egg-info/dependency_links.txt
+Facextractor.egg-info/requires.txt
+Facextractor.egg-info/top_level.txt
+facextractor/Friends.py
+facextractor/Messages.py
+facextractor/__base__.py
+facextractor/__init__.py
+scripts/facextractor
