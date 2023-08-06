@@ -1,0 +1,3 @@
+[console_scripts]
+mustache = mustache.main:cli
+

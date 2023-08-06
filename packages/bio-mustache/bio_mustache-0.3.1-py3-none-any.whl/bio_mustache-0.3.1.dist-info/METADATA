@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: bio-mustache
+Version: 0.3.1
+Summary: Tool to identify insertion sequences from whole-genome sequencing data.
+Home-page: https://github.com/durrantmm/mustache
+Author: Matt Durrant
+Author-email: mdurrant@stanford.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: click
+Requires-Dist: pygogo
+Requires-Dist: snakemake
+Requires-Dist: pandas
+Requires-Dist: biopython
+Requires-Dist: pysam (==0.13)
+Requires-Dist: cython
+Requires-Dist: jellyfish
+Requires-Dist: scipy
+
+UNKNOWN
+
+
