@@ -1,0 +1,37 @@
+{% extends 'aristotle_mdr/base.html' %}
+{% load i18n %}
+{% load static from staticfiles %}
+{% load render_bundle from webpack_loader %}
+
+{% block title %}Cloning {{ item.name }}{% endblock %}
+
+{% block webpack_css_bundle %}
+  {% render_bundle 'wizard' 'css' %}
+{% endblock %}
+
+{% block webpack_bundle %}
+  {% render_bundle 'wizard' 'js' %}
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="">{% csrf_token %}
+    <div class="modal-body">
+        <ol class="breadcrumb">
+          <li class="active">{% trans 'Cloning' %}: <a href="{% url 'aristotle:item' item.id %}">{{ item.name }}</a></li>
+        </ol>
+        <div class="alert alert-danger">
+            {% blocktrans %}
+            Reusing existing metadata helps users find and compare similar items. Cloning an item should only be done where a similar but clearly different item exists and can be used as a template for quickly creating a new item in the registry.
+            {% endblocktrans %}
+        </div>
+        <div>
+        {% include "aristotle_mdr/create/concept_editor.html" with form=form %}
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-default" href="{% url 'aristotle:item' item.id %}">Cancel</a>
+        <input type="submit" class="btn btn-primary" value="Create new item" />
+    </div>
+</form>
+{% endblock %}
