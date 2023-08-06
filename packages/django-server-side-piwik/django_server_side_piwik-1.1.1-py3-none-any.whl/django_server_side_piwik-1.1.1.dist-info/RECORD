@@ -1,0 +1,15 @@
+django_server_side_piwik-1.1.1.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+django_server_side_piwik-1.1.1.dist-info/METADATA,sha256=mos8_W8ZcPabzClWsADRHQwXA9HwNpQnGE2T9XyojlU,800
+django_server_side_piwik-1.1.1.dist-info/RECORD,,
+django_server_side_piwik-1.1.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+django_server_side_piwik-1.1.1.dist-info/metadata.json,sha256=OBtTivsZ_CoK1omnDyXl_wJ5xhqN-32FcOXqjzmyG5g,948
+django_server_side_piwik-1.1.1.dist-info/top_level.txt,sha256=x7tsbYeRxC__bHA2r3slRzoM1NnKbTNTJu8vb0waTsE,18
+sandbox/__init__.py,sha256=pEfCMAFQU1BEO1fYt6gUEqfq-xCM_iCapRASed46iTI,64
+sandbox/celery.py,sha256=0RBNv7Iq04m8M2uHBbW3OBtFgSs01o72RIW7NHLgZ58,566
+sandbox/settings.py,sha256=H9xobFbe_8R0t4Irjed1N7adOmrGxp5H8rRo6VcKwbE,3439
+sandbox/urls.py,sha256=fjj1dQRGUhMH36OmYrZEVv6pGXfEQEirhDLCOBiYGBA,774
+sandbox/wsgi.py,sha256=m_dvejHH4XvHkAAiW7FciRh9VDUPkHCgyYzc9iqRwCw,412
+server_side_piwik/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+server_side_piwik/middleware.py,sha256=SlUegEX9uAf1ZF97c_-ieY3lpHBgAvM2coWUYqL8cPc,1205
+server_side_piwik/tasks.py,sha256=2oVBfwlSKeqwZ49U_zZjlU_LVz1lkkYC0QJxKXNOHDs,1220
+server_side_piwik/tests.py,sha256=A52g9tKMKFe5LkwFaMY3x5ilhfowoU-icIigSCl_iJ0,1228
