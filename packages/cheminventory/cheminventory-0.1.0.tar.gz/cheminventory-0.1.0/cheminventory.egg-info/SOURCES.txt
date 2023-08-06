@@ -1,0 +1,11 @@
+README.md
+setup.py
+cheminventory/__init__.py
+cheminventory/api.py
+cheminventory.egg-info/PKG-INFO
+cheminventory.egg-info/SOURCES.txt
+cheminventory.egg-info/dependency_links.txt
+cheminventory.egg-info/requires.txt
+cheminventory.egg-info/top_level.txt
+tests/__init__.py
+tests/test_sample.py
