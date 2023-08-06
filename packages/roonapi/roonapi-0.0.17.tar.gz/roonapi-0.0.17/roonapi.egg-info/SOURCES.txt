@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+roon/.soodmsg
+roon/__init__.py
+roon/constants.py
+roon/discovery.py
+roon/roonapi.py
+roon/roonapisocket.py
+roonapi.egg-info/PKG-INFO
+roonapi.egg-info/SOURCES.txt
+roonapi.egg-info/dependency_links.txt
+roonapi.egg-info/requires.txt
+roonapi.egg-info/top_level.txt
