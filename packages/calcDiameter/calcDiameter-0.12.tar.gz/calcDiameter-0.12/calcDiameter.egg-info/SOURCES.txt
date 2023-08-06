@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+setup.py
+calcDiameter/__init__.py
+calcDiameter.egg-info/PKG-INFO
+calcDiameter.egg-info/SOURCES.txt
+calcDiameter.egg-info/dependency_links.txt
+calcDiameter.egg-info/not-zip-safe
+calcDiameter.egg-info/requires.txt
+calcDiameter.egg-info/top_level.txt
