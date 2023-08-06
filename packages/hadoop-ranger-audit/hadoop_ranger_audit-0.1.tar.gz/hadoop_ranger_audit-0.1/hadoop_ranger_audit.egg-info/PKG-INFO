@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: hadoop-ranger-audit
+Version: 0.1
+Summary: Parses Ranger Policies and matches to Active Directory users
+Home-page: https://github.com/jackscodemonkey/hadoop_ranger_audit
+Author: Marcus Robb
+Author-email: marcus.robb@initworx.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
