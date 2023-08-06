@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+Dotua/__init__.py
+Dotua/autodiff.py
+Dotua/operator.py
+Dotua/rautodiff.py
+Dotua/roperator.py
+Dotua.egg-info/PKG-INFO
+Dotua.egg-info/SOURCES.txt
+Dotua.egg-info/dependency_links.txt
+Dotua.egg-info/requires.txt
+Dotua.egg-info/top_level.txt
