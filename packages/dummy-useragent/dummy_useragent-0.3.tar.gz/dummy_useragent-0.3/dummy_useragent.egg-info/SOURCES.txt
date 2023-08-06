@@ -1,0 +1,12 @@
+README.md
+setup.py
+dummy_useragent/__init__.py
+dummy_useragent/dummy.py
+dummy_useragent/dummy_useragent.py
+dummy_useragent.egg-info/PKG-INFO
+dummy_useragent.egg-info/SOURCES.txt
+dummy_useragent.egg-info/dependency_links.txt
+dummy_useragent.egg-info/requires.txt
+dummy_useragent.egg-info/top_level.txt
+test/__init__.py
+test/test_dummy.py
