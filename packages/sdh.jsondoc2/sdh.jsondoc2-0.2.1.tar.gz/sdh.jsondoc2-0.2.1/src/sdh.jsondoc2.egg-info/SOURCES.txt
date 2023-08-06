@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+setup.py
+src/sdh/__init__.py
+src/sdh.jsondoc2.egg-info/PKG-INFO
+src/sdh.jsondoc2.egg-info/SOURCES.txt
+src/sdh.jsondoc2.egg-info/dependency_links.txt
+src/sdh.jsondoc2.egg-info/eager_resources.txt
+src/sdh.jsondoc2.egg-info/namespace_packages.txt
+src/sdh.jsondoc2.egg-info/not-zip-safe
+src/sdh.jsondoc2.egg-info/top_level.txt
+src/sdh/jsondoc2/__init__.py
+src/sdh/jsondoc2/document.py
+src/sdh/jsondoc2/encoder.py
+src/sdh/jsondoc2/field.py
+src/sdh/jsondoc2/lookups.py
+src/sdh/jsondoc2/manager.py
