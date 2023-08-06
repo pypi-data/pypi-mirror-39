@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+"""
+Wrapper to call in to nhlv.py if not installed via pip
+"""
+
+import sys
+
+import mlbam.nhlv as nhlv
+
+if __name__ == "__main__" or __name__ == "main":
+    sys.exit(nhlv.main())
+
+# vim: set filetype=python

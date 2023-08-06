@@ -1,0 +1,3 @@
+[console_scripts]
+nhlv = mlbam.nhlv:main
+
