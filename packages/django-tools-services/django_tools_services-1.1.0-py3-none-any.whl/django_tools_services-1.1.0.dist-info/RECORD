@@ -1,0 +1,17 @@
+djtools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djtools/services/__init__.py,sha256=Y9fFfoquE960cRMTMDOw7XYoIdFqXzVrjoSEL0Vo_RI,60
+djtools/services/admin.py,sha256=njNicK1cSk2q1XO4XtRhQflBjnKeOEIFVFK0c83OqJY,353
+djtools/services/apps.py,sha256=3A8wLLTKvueZVR5V_VwMf_jv2jAkosVoSO_AzpS5Uyo,160
+djtools/services/models.py,sha256=bHC6J_4r1ldpim3yT-EFfh7vB5zIyGfcl9Vxq0Y7mgc,869
+djtools/services/urls.py,sha256=_oCwp5aUpg7L-GdYaHAkbdEXmeJXQsQdCl9Lv333rJE,224
+djtools/services/views.py,sha256=Ihr3eunWU2h1wVAEzBhV2gFgIveoWV6VcI4H24IEBS0,390
+djtools/services/migrations/0001_initial.py,sha256=7tEtL23_h7bZCMQsz_gSGwYJRAN1H99oRijNb2l5FTE,1276
+djtools/services/migrations/0002_service_icon.py,sha256=qoBU2AsCgktCKtczl0bLmphwbhaxvxmHvbIw8XJVpqs,412
+djtools/services/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djtools/services/templates/djtools/services/service_detail.html,sha256=Zu9cBj0lZlutaKlH2CJnU4naE8PoHsL2Im1QBqyvVfI,451
+djtools/services/templates/djtools/services/service_list.html,sha256=5Y69UYl8ljz6G-zRFuff2_11H67BY7WqE-oYSY__5HY,627
+django_tools_services-1.1.0.dist-info/LICENSE,sha256=PlrPmQZbiOtpyeMgk_jwpjt59wPLykO2jyxGLaV-AZI,1066
+django_tools_services-1.1.0.dist-info/METADATA,sha256=Vr13hK5ssKN4WioOIrPChKh25uSObI3GYO1zxitln8Q,969
+django_tools_services-1.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+django_tools_services-1.1.0.dist-info/top_level.txt,sha256=gD0LB3HJiv4CodvDdyh0ep8HzujNO3MM8RtvANynakU,8
+django_tools_services-1.1.0.dist-info/RECORD,,
