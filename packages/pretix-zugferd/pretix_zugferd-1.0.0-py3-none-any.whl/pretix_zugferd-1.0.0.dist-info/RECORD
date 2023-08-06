@@ -1,0 +1,17 @@
+pretix_zugferd/__init__.py,sha256=eHz_QB5zHwZmw7FMvrPjuf4K7rtTIoZxafvtqmbNbg8,1400
+pretix_zugferd/invoice.py,sha256=QdK9tdQf2VhhOD6RHU2SsazHR21AAljI2nL0opT3xq4,9560
+pretix_zugferd/signals.py,sha256=tlYYXAUNt8d9fyPH7mcLQm94KRTVf7hy1dV2BbgS__I,318
+pretix_zugferd/locale/django.pot,sha256=dNNBTKvMoBmgdzi5cO5nNjrckykVKSuui3B9l-qQvf0,1671
+pretix_zugferd/locale/de/LC_MESSAGES/django.mo,sha256=lv4Ri97Cn9RQGVF-n2ubbZLSEWNZwA27u-I3Oc8L11w,1913
+pretix_zugferd/locale/de/LC_MESSAGES/django.po,sha256=QHAXPXUW94SUpM288c49utHWjoKOffHl6_H_AYRp_r0,2250
+pretix_zugferd/locale/de_Informal/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pretix_zugferd/locale/de_Informal/LC_MESSAGES/django.mo,sha256=DCy1uDfu5tX88v-fVxnQv1GbRZvYJd0vQ7sVgZdLYbg,1904
+pretix_zugferd/locale/de_Informal/LC_MESSAGES/django.po,sha256=ncwg_xKcFG4BZ7REIpGYg__ebYjP7IVKB56dRML6Sl4,2241
+pretix_zugferd/static/pretix_zugferd/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pretix_zugferd/templates/pretix_zugferd/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pretix_zugferd-1.0.0.dist-info/LICENSE,sha256=9ccERKqjA1GLTCRTTpWYpYf14WM6_T2maaeJlSy6Ww4,555
+pretix_zugferd-1.0.0.dist-info/METADATA,sha256=sOaeR5S3mFJjjL4PtzlQheQmo96KqM5baXrFTi4wMQU,1926
+pretix_zugferd-1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pretix_zugferd-1.0.0.dist-info/entry_points.txt,sha256=-zBRNbYA_R7NTg0RcM6TEli9N3JC4U4UQD1gexQsIY8,64
+pretix_zugferd-1.0.0.dist-info/top_level.txt,sha256=6tm63ehFM5a5m-N1afXw0oUBpdNo9d257ES64cTd4cE,15
+pretix_zugferd-1.0.0.dist-info/RECORD,,
