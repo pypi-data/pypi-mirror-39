@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: bitclone
+Version: 0.30
+Summary: Clone all your bitbucket repo
+Home-page: http://github.com/rytsh/bitclone
+Author: Eray Ates
+Author-email: eates23@gmail.com
+License: UNKNOWN
+Description: # bitclone
+        
+        ### Clone All My bitbucket Repo
+        
+        Easly select your repo and clone it in your folder, save time.
+        
+        #### Install:
+        
+            pip install bitclone
+            
+        #### Run:
+            
+            bitclone
+            
+        or
+            
+            python -m bitclone
+        
+        #### And uninstall:
+        
+            pip uninstall bitclone
+        
+        ----
+        
+        ### Help
+        
+        bitclone [-h] [--dir [DIR]]
+        
+        Automatically choice hg or git and clone it your location,
+        
+        You must have __hg__ or __git__ tool.
+        
+        Please check your credential cache, it can store your password
+        
+        UNSET and SET caching passwords:
+        
+        
+            unset:  git config --global --unset credential.helper
+        
+        Set on Linux:
+        
+            git config --global credential.helper 'cache --timeout=3600'
+        
+        Set on Windows:
+        
+            set:    git config --global credential.helper wincred
+            
+        
+        optional arguments:
+        
+          -h, --help   show this help message and exit
+          
+          --dir [DIR]  Clone Location (default: where are you run it)
+        
+        ---
+        
+        ### Usage
+        
+        ![bit_image2](https://image.ibb.co/jqJ4YT/bit2.jpg)
+Keywords: bitbucket clone repo link
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: System :: Software Distribution
+Description-Content-Type: text/markdown
