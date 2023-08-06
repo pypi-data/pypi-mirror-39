@@ -1,0 +1,16 @@
+README.md
+setup.py
+./feature_mining/__init__.py
+./feature_mining/em_base.py
+./feature_mining/em_original.py
+./feature_mining/em_vector.py
+./feature_mining/em_vector_by_feature.py
+./feature_mining/fm.py
+./feature_mining/gflm_tagger.py
+./feature_mining/parse_and_model.py
+./feature_mining/data/iPod.final
+feature_mining.egg-info/PKG-INFO
+feature_mining.egg-info/SOURCES.txt
+feature_mining.egg-info/dependency_links.txt
+feature_mining.egg-info/requires.txt
+feature_mining.egg-info/top_level.txt
