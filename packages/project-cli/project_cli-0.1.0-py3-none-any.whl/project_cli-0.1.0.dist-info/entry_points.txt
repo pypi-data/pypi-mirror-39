@@ -1,0 +1,3 @@
+[console_scripts]
+project_cli = project_cli.__main__:main
+
