@@ -1,0 +1,5 @@
+setuptools>=32.0
+zc.buildout
+semantic_version
+six
+requests

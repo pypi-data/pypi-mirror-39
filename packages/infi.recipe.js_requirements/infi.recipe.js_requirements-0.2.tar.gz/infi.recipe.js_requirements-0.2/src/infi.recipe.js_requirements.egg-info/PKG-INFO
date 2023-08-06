@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: infi.recipe.js-requirements
+Version: 0.2
+Summary: buildout recipe for downloading, extracting and dependency parsing for JavaScript
+Home-page: https://github.com/Infinidat/infi.recipe.js_requirements
+Author: fanchi
+Author-email: rbelio@infinidat.com
+License: BSD
+Description: buildout recipe for downloading, extracting and dependency parsing for JavaScript
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
