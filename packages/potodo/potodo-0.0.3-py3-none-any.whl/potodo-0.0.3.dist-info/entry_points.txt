@@ -1,0 +1,3 @@
+[console_scripts]
+potodo = potodo.potodo:main
+
