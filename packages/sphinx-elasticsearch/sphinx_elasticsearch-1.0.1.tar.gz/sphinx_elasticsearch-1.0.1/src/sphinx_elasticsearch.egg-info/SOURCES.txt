@@ -1,0 +1,16 @@
+CHANGES.txt
+LICENSE
+Pipfile
+Pipfile.lock
+README.rst
+setup.py
+src/sphinx_elasticsearch/__init__.py
+src/sphinx_elasticsearch/index.py
+src/sphinx_elasticsearch/parse_json.py
+src/sphinx_elasticsearch.egg-info/PKG-INFO
+src/sphinx_elasticsearch.egg-info/SOURCES.txt
+src/sphinx_elasticsearch.egg-info/dependency_links.txt
+src/sphinx_elasticsearch.egg-info/entry_points.txt
+src/sphinx_elasticsearch.egg-info/not-zip-safe
+src/sphinx_elasticsearch.egg-info/requires.txt
+src/sphinx_elasticsearch.egg-info/top_level.txt

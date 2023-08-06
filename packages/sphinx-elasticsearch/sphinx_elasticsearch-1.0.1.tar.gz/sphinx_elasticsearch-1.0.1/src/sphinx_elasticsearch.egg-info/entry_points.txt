@@ -1,0 +1,3 @@
+[console_scripts]
+sphinx-elasticsearch = sphinx_elasticsearch.index:cli
+
