@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: imgtool
+Version: 0.1.1
+Summary: MCUboot's image signing and key management
+Home-page: http://github.com/JuulLabs-OSS/mcuboot
+Author: The MCUboot commiters
+Author-email: utzig@apache.org
+License: Apache Software License
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: cryptography (>=2.4.2)
+Requires-Dist: intelhex (>=2.2.1)
+Requires-Dist: click
+
+UNKNOWN
+
+
