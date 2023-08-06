@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.py
+jk_treetaggerwrapper/ObservableEvent.py
+jk_treetaggerwrapper/PoolOfThreadedTreeTaggers.py
+jk_treetaggerwrapper/PoolOfThreadedTreeTaggers2.py
+jk_treetaggerwrapper/ReplaceException.py
+jk_treetaggerwrapper/__init__.py
+jk_treetaggerwrapper.egg-info/PKG-INFO
+jk_treetaggerwrapper.egg-info/SOURCES.txt
+jk_treetaggerwrapper.egg-info/dependency_links.txt
+jk_treetaggerwrapper.egg-info/not-zip-safe
+jk_treetaggerwrapper.egg-info/requires.txt
+jk_treetaggerwrapper.egg-info/top_level.txt
