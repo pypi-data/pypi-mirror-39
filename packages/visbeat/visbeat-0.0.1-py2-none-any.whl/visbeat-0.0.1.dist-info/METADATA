@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: visbeat
+Version: 0.0.1
+Summary: Code for 'Visual Rhythm and Beat' SIGGRAPH 2018
+Home-page: https://github.com/abedavis/visbeat
+Author: Abe Davis
+Author-email: everyonehasadance@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# visbeat
+Code for making anything dance to anything
+By Abe Davis
+
