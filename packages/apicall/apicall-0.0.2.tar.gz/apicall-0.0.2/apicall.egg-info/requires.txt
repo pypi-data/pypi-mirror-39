@@ -1,0 +1,9 @@
+tabulate
+dataclasses-json
+requests
+jsonrpcclient
+
+[dev]
+yapf
+mypy
+pytest
