@@ -1,0 +1,24 @@
+[
+  {
+    "_realm": "All",
+    "_sub_realm": true,
+    "alias": "Check nginx",
+    "command_line": "$LIBEXEC$/check_nginx_status.pl -H $HOSTADDRESS$ -P $HOSTPORT$ -u $_HOSTSTATUS_URL$ -s $_HOSTSERVER_NAME$ -w $_HOSTACTIVE_CONN_WARN$,$_HOSTREQ_PER_SEC_WARN$,$_HOSTCONN_PER_SEC_WARN$ -c $_HOSTACTIVE_CONN_CRIT$,$_HOSTREQ_PER_SEC_CRIT$,$_HOSTCONN_PER_SEC_CRIT$",
+    "enable_environment_macros": false,
+    "imported_from": "alignak-checks-nginx",
+    "name": "check_nginx_status",
+    "poller_tag": "",
+    "timeout": -1
+  },
+  {
+    "_realm": "All",
+    "_sub_realm": true,
+    "alias": "Check nginx (authenticated)",
+    "command_line": "$LIBEXEC$/check_nginx_status.pl -H $HOSTADDRESS$ -P $HOSTPORT$ -u $_HOSTSTATUS_URL$ -s $_HOSTSERVER_NAME$ -w $_HOSTACTIVE_CONN_WARN$,$_HOSTREQ_PER_SEC_WARN$,$_HOSTCONN_PER_SEC_WARN$ -c $_HOSTACTIVE_CONN_CRIT$,$_HOSTREQ_PER_SEC_CRIT$,$_HOSTCONN_PER_SEC_CRIT$ --ssl",
+    "enable_environment_macros": false,
+    "imported_from": "alignak-checks-nginx",
+    "name": "check_nginx_status_auth",
+    "poller_tag": "",
+    "timeout": -1
+  }
+]

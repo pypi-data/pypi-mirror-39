@@ -1,0 +1,35 @@
+[
+    {
+        "_is_template": true,
+        "alias": "Nginx",
+        "customs": {
+            "_ACTIVE_CONN_WARN": "500",
+            "_ACTIVE_CONN_CRIT": "1000",
+            "_REQ_PER_SEC_WARN": "50:",
+            "_REQ_PER_SEC_CRIT": "75:",
+            "_CONN_PER_SEC_WARN": "10",
+            "_CONN_PER_SEC_CRIT": "20",
+            "_PORT": 80,
+            "_STATUS_URL": "/status"
+        },
+        "name": "nginx",
+        "tags": [
+            "Nginx"
+        ]
+    },
+    {
+        "_is_template": true,
+        "_templates": [
+            "nginx"
+        ],
+        "alias": "Nginx",
+        "customs": {
+            "_USERNAME": "admin",
+            "_PASSWORD": "admin"
+        },
+        "name": "nginx-auth",
+        "tags": [
+            "Nginx"
+        ]
+    }
+]

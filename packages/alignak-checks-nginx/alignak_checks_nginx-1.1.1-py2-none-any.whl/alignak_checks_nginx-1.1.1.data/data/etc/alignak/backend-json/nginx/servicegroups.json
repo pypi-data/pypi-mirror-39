@@ -1,0 +1,14 @@
+[
+    {
+        "_realm": "All",
+        "_sub_realm": true,
+        "action_url": "",
+        "alias": "Nginx services",
+        "imported_from": "alignak-checks-nginx",
+        "name": "nginx",
+        "notes": "This group contains all the Nginx services.",
+        "notes_url": "",
+        "servicegroups": [],
+        "services": []
+    }
+]
