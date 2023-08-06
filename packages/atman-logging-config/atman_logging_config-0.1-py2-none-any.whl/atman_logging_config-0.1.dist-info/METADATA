@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: atman-logging-config
+Version: 0.1
+Summary: Logger with request id
+Home-page: UNKNOWN
+Author: Atman Corp
+Author-email: corp@atman360.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: flask-log-request-id (>=0.10.0)
+Requires-Dist: flask (>=0.10.1)
+Requires-Dist: python-json-logger (>=0.1.10)
+
+UNKNOWN
+
+
