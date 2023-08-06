@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+ass2rythmo.py
+setup.cfg
+setup.py
+ass2rythmo.egg-info/PKG-INFO
+ass2rythmo.egg-info/SOURCES.txt
+ass2rythmo.egg-info/dependency_links.txt
+ass2rythmo.egg-info/entry_points.txt
+ass2rythmo.egg-info/requires.txt
+ass2rythmo.egg-info/top_level.txt
+fonts/DejaVuSans.ttf
