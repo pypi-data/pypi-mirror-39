@@ -1,0 +1,7 @@
+[iotile.app]
+tracker_app = iotile_support_prod_pod1m_1.tracker_app
+
+[iotile.recipe_action]
+CalibratePOD1MStep = iotile_support_prod_pod1m_1.calibrate_pod1m_step:CalibratePOD1MStep
+ResetPOD1MStep = iotile_support_prod_pod1m_1.reset_pod1m_step:ResetPOD1MStep
+
