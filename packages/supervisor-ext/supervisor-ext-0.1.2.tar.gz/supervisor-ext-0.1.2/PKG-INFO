@@ -1,0 +1,46 @@
+Metadata-Version: 1.1
+Name: supervisor-ext
+Version: 0.1.2
+Summary: supervisor rpcinterface & ctlplugin extensions to get ext options.
+Home-page: https://github.com/tangr/supervisor-ext
+Author: Shoubin Tang
+Author-email: shoubin.tang@gmail.com
+License: UNKNOWN
+Description: # supervisor-ext
+        supervisor rpcinterface & ctlplugin extensions to get ext options.
+        
+        A simple [supervisord](http://supervisord.org/) rpcinterface to get
+        supervisor ext(environment, directory) options.
+        
+        A simple [supervisord](http://supervisord.org/) ctlplugin to get
+        supervisor ext(listen ports) infos.
+        
+        
+        ## Installation
+        
+        Just install via pip or add to your requirements.txt:
+        
+            pip install supervisor-ext
+        
+        ## Usage
+        
+        An example supervisord.conf:
+        
+            [rpcinterface:supervisor_ext]
+            supervisor.rpcinterface_factory = supervisor_ext.rpcinterface:make_main_rpcinterface
+        
+            [ctlplugin:supervisor_ext]
+            supervisor.ctl_factory = supervisor_ext.controllerplugin:make_main_controllerplugin
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4

@@ -1,0 +1,13 @@
+README.md
+setup.py
+supervisor_ext/__init__.py
+supervisor_ext/command_line.py
+supervisor_ext/controllerplugin.py
+supervisor_ext/rpcinterface.py
+supervisor_ext.egg-info/PKG-INFO
+supervisor_ext.egg-info/SOURCES.txt
+supervisor_ext.egg-info/dependency_links.txt
+supervisor_ext.egg-info/entry_points.txt
+supervisor_ext.egg-info/namespace_packages.txt
+supervisor_ext.egg-info/not-zip-safe
+supervisor_ext.egg-info/top_level.txt
