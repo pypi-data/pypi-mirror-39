@@ -1,0 +1,7 @@
+[console_scripts]
+item5e = DnD4py.lookup_5e:item_lookup
+lookup5e = DnD4py.lookup_5e:main
+monster5e = DnD4py.lookup_5e:monster_lookup
+roll = DnD4py.roll4me:roll
+spell5e = DnD4py.lookup_5e:spell_lookup
+
