@@ -1,0 +1,8 @@
+-e .
+
+isort
+mock
+pre-commit
+pytest
+pytest-cov
+tox
