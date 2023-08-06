@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: serialdaq
+Version: 0.1.0
+Summary: Serial device controller for data acquisition. Currently supports Omega DPG-4000 pressure sensor and GwInstek LCR-821 meter.
+Home-page: None
+Author: Manny Ochoa
+Author-email: dev@manuelochoa.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: datetime (>=4.3,<5.0)
+Requires-Dist: pathlib (>=1.0,<2.0)
+Requires-Dist: pyserial (>=3.4,<4.0)

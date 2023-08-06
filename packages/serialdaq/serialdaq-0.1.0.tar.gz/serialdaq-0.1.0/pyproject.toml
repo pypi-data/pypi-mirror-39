@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "serialdaq"
+version = "0.1.0"
+description = """Serial device controller for data acquisition. \
+Currently supports Omega DPG-4000 pressure sensor and GwInstek LCR-821 meter."""
+authors = ["Manny Ochoa <dev@manuelochoa.com>"]
+license = "LICENSE"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+datetime = "^4.3"
+pathlib = "^1.0"
+pyserial = "^3.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
