@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+r53ddns/__init__.py
+r53ddns/__main__.py
+r53ddns/r53ddns.py
+r53ddns/sns_notify.py
+r53ddns.egg-info/PKG-INFO
+r53ddns.egg-info/SOURCES.txt
+r53ddns.egg-info/dependency_links.txt
+r53ddns.egg-info/entry_points.txt
+r53ddns.egg-info/requires.txt
+r53ddns.egg-info/top_level.txt
