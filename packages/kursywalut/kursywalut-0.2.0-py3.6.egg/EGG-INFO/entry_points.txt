@@ -1,0 +1,3 @@
+[console_scripts]
+kursywalut = kursywalut.__main__:main
+
