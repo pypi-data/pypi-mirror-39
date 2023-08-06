@@ -1,0 +1,15 @@
+mcw/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mcw/cmake.py,sha256=Z5W9Ui9fUHhnn_tKnh-o4S4TmyzWR-7KAjWsWbWi8c8,31570
+mcw/commandtool.py,sha256=1EvbCvag9QFp7xx3SZUEET_zoTN-UC34G14ZeNAfqh0,7227
+mcw/logging.py,sha256=UeGlmWEXIRoTcermaoLvT6oqKgwWNRkPlweycVnvNJU,308
+mcw/main.py,sha256=G6MDQ-iVUfuv8hJ0MnZ1xdUCTq7R2qmdY0855-_D72Y,130
+mcw/meson.py,sha256=S_gvXYxHmFEmvDvxvTpk6miVrKSOWGAHA0HUjeS59og,8118
+mcw/ninja.py,sha256=VkBxtE90IV5k8G1rmm-1El6wZ5WlMf0SU3PlTpZGkJ4,1451
+mcw/server.py,sha256=UsKxRIJI81gxcyzWVCBn-HBd7h8CxCe6A3wjZT1LFoQ,11732
+mcw/util.py,sha256=xY5KiDWi_hD-rzwL-zcmyJgPjnpfd-j9BWtF1X6dVF4,803
+meson_cmake_wrapper-0.3.0.dist-info/LICENSE,sha256=8BJu_1_AwwdFu4apqQFUf2rOHna9R2keZqyB0uizruY,1063
+meson_cmake_wrapper-0.3.0.dist-info/METADATA,sha256=4W-EGElE2Jhw3_OUV_b7dtIE8lLD14jPw1ct0w115n4,2144
+meson_cmake_wrapper-0.3.0.dist-info/WHEEL,sha256=YO0P_oFqt6DWX0LhbH7jsyzb3BUtoq2kERtqGsXDJHs,92
+meson_cmake_wrapper-0.3.0.dist-info/entry_points.txt,sha256=IFSJLS25we4JGYa_Rgpgzy6x-O3e1yRuXMpN2gQT1FM,75
+meson_cmake_wrapper-0.3.0.dist-info/top_level.txt,sha256=MVWPKIBieyp2BwyvERRY5gqUGud2Y8gCrZ0MIyT4Ap8,4
+meson_cmake_wrapper-0.3.0.dist-info/RECORD,,
