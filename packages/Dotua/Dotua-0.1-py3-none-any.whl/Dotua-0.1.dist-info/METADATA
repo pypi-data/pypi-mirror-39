@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: Dotua
+Version: 0.1
+Summary: Package for Forward/Reverse Autodifferentiation
+Home-page: https://github.com/VV-NS-CY-ZW-CS-207-Organization/cs207-FinalProject
+Author: Nick Stern, Vincent Viego, Summer Yuan, Zach Wehrwein
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+# README
+
+## Group Number: 17
+## Group Members: Nick Stern, Vincent Viego, Summer Yuan, Zach Wehrwein
+
+<!-- Badges -->
+
+[![Build Status](https://travis-ci.org/VV-NS-CY-ZW-CS-207-Organization/cs207-FinalProject.svg?branch=master)](https://travis-ci.org/VV-NS-CY-ZW-CS-207-Organization/cs207-FinalProject)
+
+[![CoverageStatus](https://coveralls.io/repos/github/VV-NS-CY-ZW-CS-207-Organization/cs207-FinalProject/badge.svg?branch=master)](https://coveralls.io/github/VV-NS-CY-ZW-CS-207-Organization/cs207-FinalProject?branch=master)
+
+
