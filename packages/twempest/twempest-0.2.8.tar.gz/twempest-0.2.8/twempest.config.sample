@@ -1,0 +1,71 @@
+# Sample Twempest configuration file. See https://github.com/yukondude/Twempest
+# for details. Save this to ~/.twempest/twempest.config as the default
+# configuration whenever twempest is run, or save it somewhere convenient as
+# twempest.config and reference it via the -c/--config-path command-line switch.
+
+[twempest]
+# Most twempest long-form command-line switches may be used here (excluding the
+# leading double-dash). The obvious exceptions would include --config-path,
+# --help, and --version, but go ahead and try them if you like. The commented-
+# out defaults are shown below. See the --help output for details.
+
+# Render the full text of the tweet.
+# abbreviated=false
+
+# Do not append to existing files.
+# append=false
+
+# Retrieve at most 200 tweets.
+# count=200
+
+# Retrieve tweets normally.
+# dry-run=false
+
+# Do not download image files.
+# image-path=
+
+# Do not download image files.
+# image-url=
+
+# Do not serialize the rendered tweets.
+# pickle=false
+
+# Do not suppress warning messages.
+# quiet=false
+
+# Render tweets to STDOUT.
+# render-file=
+# Because template expressions are allowed for this option, you can generate
+# rendered file names using any of the tweet context variable contents. For
+# example: render-file={{tweet.created_at|isodate}}-{{tweet.text|slugify}}.md
+# might render to something like: 2017-02-14-be-my-valentine.md
+# Use the slugify filter to eliminate any non-filesystem-safe characters from
+# the tweet text.
+
+# Write rendered tweets to the current directory.
+# render-path=.
+# Template expressions are also allowed for this option, so the directory path
+# can be made to change based upon a tweet status variable.
+
+# Exclude @replies from the list of retrieved tweets.
+# replies=false
+
+# Exclude retweets from the list of retrieved tweets.
+# retweets=false
+
+# Don't specify a most recent Twitter ID.
+# since-id=
+# Since this isn't specified (and normally wouldn't be in a config file), there
+# must already be an ID recorded in the config path directory after a previous
+# run of Twempest.
+
+# Don't skip any tweets.
+# skip=
+
+[twitter]
+# Visit https://apps.twitter.com/ to generate these keys, secrets, tokens, and
+# token secrets. Secret tokens? Token keys? Secret secrets?
+consumer_key=
+consumer_secret=
+access_token=
+access_token_secret=
