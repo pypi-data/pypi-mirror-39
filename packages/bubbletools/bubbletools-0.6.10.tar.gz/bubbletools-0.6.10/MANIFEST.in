@@ -1,0 +1,6 @@
+include MANIFEST.in README.md
+recursive-include bubbletools *.py
+recursive-include bubbletools/_js_dir_template *
+prune bubbles
+prune output
+exclude Makefile LICENSE
