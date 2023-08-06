@@ -1,0 +1,17 @@
+daterangefilter/__init__.py,sha256=WfAwGYR-kUDwauiVzq5pCiBfXhbfRsbgHi8_TVuTz10,69
+daterangefilter/apps.py,sha256=_c5S081ZkThbJPb3oRkEVMPqBc2Ma00LbiNeoZ37Ogs,206
+daterangefilter/filters.py,sha256=uOn7Yg2f-6hx9fphrFU4R5tr4dXP8WlFk7vGfcBYxsc,2905
+daterangefilter/models.py,sha256=Y0JZOBH7EtxlFINJ67xtj1yU2bLWNff84MkjJRe__2w,90
+daterangefilter/tests.py,sha256=i2XrNzw3854fgTU1s_xumBU0qj5TTFIqHz9g-oQTeWU,3629
+daterangefilter/locale/ru/LC_MESSAGES/django.mo,sha256=RX5K3tT4QkARoll8L9dsUmWaqHFf4UHkcvvoitOpqG4,1300
+daterangefilter/locale/ru/LC_MESSAGES/django.po,sha256=vbIE4kdOYM-EkbVNsnssWzpHQp1_PFCSrGxmGGiQW04,2368
+daterangefilter/templates/daterangefilter/_future_ranges.html,sha256=aFygnxm7pOTTCDa2NfKJHbqAu7sjdWYLLArs2z92yVg,686
+daterangefilter/templates/daterangefilter/_past_ranges.html,sha256=MiQ5Gi5CcGAQyKWoLhw_ZEDWi82ExigDDiNYjVVhGeo,715
+daterangefilter/templates/daterangefilter/daterangefilter.html,sha256=ymL24lFULNvWUZeDet43oILcndGPUhNF_iKTAfn8tQE,3224
+daterangefilter/templates/daterangefilter/ranges.html,sha256=mchIY3xuKOfamp-ATVIJTbPPq9Pe9lix0z6NLFlMoH4,85
+daterangefilter/templates/daterangefilter/suit_daterangefilter.html,sha256=JEhwMJHbO4do7yGC068IJGgPJjtUH0DqXziJrpzOnvc,3092
+django_daterangefilter-0.2.0.dist-info/LICENSE,sha256=Y17r74DL3gljhD-YF8mhb2aOd5F9f9JM4w7PZK4WXeM,1071
+django_daterangefilter-0.2.0.dist-info/METADATA,sha256=klKQh-G3zORUvefMmE_jHs_uLcycA0BOPpdUyvTjSQU,3872
+django_daterangefilter-0.2.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+django_daterangefilter-0.2.0.dist-info/top_level.txt,sha256=61TsowANZ-AXToy-HPG_yjCdQJ7f6vUguw6-r7vaD4E,16
+django_daterangefilter-0.2.0.dist-info/RECORD,,
