@@ -1,0 +1,2 @@
+def printeveything():
+    print("hello")
