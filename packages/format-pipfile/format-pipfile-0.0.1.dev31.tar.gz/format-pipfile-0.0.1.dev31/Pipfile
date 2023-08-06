@@ -1,0 +1,34 @@
+[[source]]
+"name" = "pypi"
+"url" = "https://pypi.org/simple"
+"verify_ssl" = true
+
+[packages]
+"click" = "*"
+"future" = "*"
+"packaging" = "*"
+"path.py" = "*"
+"requirementslib" = "*"
+"tomlkit" = "*"
+"typing" = {markers = "python_version < '3.6'",version = "*"}
+
+[dev-packages]
+"bandit" = "*"
+"black" = "*"
+"bumpversion" = "*"
+"flake8" = "*"
+"flake8-bugbear" = "*"
+"flake8-builtins" = "*"
+"flake8-comprehensions" = "*"
+"format_pipfile" = {editable = true,path = "."}
+"ipdb" = "*"
+"ipython" = "*"
+"isort" = "*"
+"pytest" = "*"
+"pytest-clarity" = "*"
+"pytest-click" = "*"
+"pytest-cov" = "*"
+"sphinx" = "*"
+
+[pipenv]
+allow_prereleases = true
