@@ -1,0 +1,16 @@
+diploshic/__init__.py,sha256=8jkYpZB29y72MA-UMkk8zdrc1YPKNaegU9KB7uzPMfI,431
+diploshic/fvTools.py,sha256=OwY0eFjDv7Dz8p_0N6gnAeIpifV6jgqGrDu7sol_-Yc,44831
+diploshic/generateSimLaunchScript.py,sha256=hTIVCnAgxyLI3wU-zNiRc-JwrVH-JKxL67WHX8yP79E,4340
+diploshic/makeFeatureVecsForChrArmFromVcfDiploid.py,sha256=-K39fxXwxDzhsnD8M4HeOZ1Ef3ABelIs8HAmRFx4URU,7769
+diploshic/makeFeatureVecsForChrArmFromVcf_ogSHIC.py,sha256=ybXKRIi0sj1L7_KxmBnsYURg4nx-Lsd-mIDQ963Ks00,8259
+diploshic/makeFeatureVecsForSingleMsDiploid.py,sha256=VZCxzC6n0gVR2em1UscMBYFK_QrePimtP6R8IZdA5PE,9608
+diploshic/makeFeatureVecsForSingleMs_ogSHIC.py,sha256=hV0f6kZTaTYojEMmV1OyfmVwoDq6u8VfSvYt31MPrX4,9060
+diploshic/makeTrainingSets.py,sha256=H3jKXPk5xA8rK_F8FzyxXzuvD4jpgN3aKJItvqgfZf0,3254
+diploshic/msTools.py,sha256=3C71JxQrwFuoHCJMDYeAAYPZYQblglNOchzP9PJ5vk4,6835
+diploshic/setup.py,sha256=aOmVGTWbP9P3pIBBsJN_Sm917sFT9pB9-epBT1rpcwY,419
+diploshictest-0.1.data/scripts/diploSHIC,sha256=rFsEIbSMcnIhMV1be2t767mdSLAvwCIA2Ij-NFIhn9s,21691
+diploshictest-0.1.dist-info/LICENCE,sha256=TDgce3PTIu4OghJqBZlwpeLdVuYfKFtU4ShbZPvQeI4,1068
+diploshictest-0.1.dist-info/METADATA,sha256=7G5TiQ4SPnyqWHqayojTRc3MQwqP0Xi2Q7zPCg7RwgY,18619
+diploshictest-0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+diploshictest-0.1.dist-info/top_level.txt,sha256=2VpdEWhYiG41LPgIlNlioNbdsPsZe36I7T7b_yw2cfU,10
+diploshictest-0.1.dist-info/RECORD,,
