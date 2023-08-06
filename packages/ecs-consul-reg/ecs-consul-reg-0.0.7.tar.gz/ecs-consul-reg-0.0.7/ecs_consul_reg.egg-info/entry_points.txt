@@ -1,0 +1,3 @@
+[console_scripts]
+ecs-consul-reg = ecs_consul_reg.main:main
+
