@@ -1,0 +1,4 @@
+[console_scripts]
+ecmwf_download = ecmwf_models.download:run
+ecmwf_repurpose = ecmwf_models.reshuffle:run
+
