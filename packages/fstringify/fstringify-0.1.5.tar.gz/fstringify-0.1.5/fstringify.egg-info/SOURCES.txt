@@ -1,0 +1,14 @@
+README.md
+setup.py
+fstringify/__init__.py
+fstringify/api.py
+fstringify/format.py
+fstringify/process.py
+fstringify/transform.py
+fstringify/utils.py
+fstringify.egg-info/PKG-INFO
+fstringify.egg-info/SOURCES.txt
+fstringify.egg-info/dependency_links.txt
+fstringify.egg-info/entry_points.txt
+fstringify.egg-info/requires.txt
+fstringify.egg-info/top_level.txt
