@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pandoc-styles
+Version: 0.7.1
+Summary: A script to convert files with pandoc using styles.
+Home-page: https://github.com/dickloraine/pandoc_styles
+Author: dickloraine
+Author-email: dickloraine@gmx.net
+Keywords: pandoc,writing,text,conversion
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Text Processing
+Requires-Dist: PyYAML (>=3.13,<4.0)
+Requires-Dist: libsass (>=0.16.0,<0.17.0)
+Requires-Dist: panflute (>=1.10,<2.0)
+Project-URL: Repository, https://github.com/dickloraine/pandoc_styles
