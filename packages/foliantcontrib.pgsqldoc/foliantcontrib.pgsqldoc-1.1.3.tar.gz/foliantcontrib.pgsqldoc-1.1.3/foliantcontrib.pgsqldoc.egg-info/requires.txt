@@ -1,0 +1,5 @@
+foliant>=1.0.5
+foliantcontrib.plantuml
+psycopg2-binary
+jinja2
+PyYAML
