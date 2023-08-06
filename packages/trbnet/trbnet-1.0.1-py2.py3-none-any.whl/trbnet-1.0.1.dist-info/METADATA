@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: trbnet
+Version: 1.0.1
+Summary: Interface to TrbNet (wrapping libtrbnet.so with ctypes)
+Home-page: https://github.com/pklaus/pytrbnet
+Author: Philipp Klaus
+Author-email: klaus@physik.uni-frankfurt.de
+License: GPL
+Keywords: TrbNet PyTrbNet FPGA Low-latency network wrapper
+Platform: Linux
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator
+Classifier: Topic :: System :: Hardware :: Hardware Drivers
+Requires-Dist: lxml
+Requires-Dist: enum34
+
+PyTrbNet
+========
+
+This is a Python package wrapping libtrbnet.so. It allows accessing
+trbnet registers from Python.
+
+The package comes with two additional features:
+
+-  XmlDb support. Allows to query registers by their name as specified
+   in the corresponding xml file.
+-  PCASpy-based EPICS IOC providing TrbNet register status information
+   to the EPICS detector control system.
+
+Resources
+~~~~~~~~~
+
+-  `The TRB Website <http://trb.gsi.de>`__
+-  `TrbNet
+   Manual <http://jspc29.x-matter.uni-frankfurt.de/docu/trbnetdocu.pdf>`__
+
+
