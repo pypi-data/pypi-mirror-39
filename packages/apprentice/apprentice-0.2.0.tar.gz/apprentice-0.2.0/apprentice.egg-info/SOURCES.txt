@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+apprentice/__init__.py
+apprentice/__version__.py
+apprentice/commands.py
+apprentice/format.py
+apprentice/helpers.py
+apprentice.egg-info/PKG-INFO
+apprentice.egg-info/SOURCES.txt
+apprentice.egg-info/dependency_links.txt
+apprentice.egg-info/entry_points.txt
+apprentice.egg-info/requires.txt
+apprentice.egg-info/top_level.txt
