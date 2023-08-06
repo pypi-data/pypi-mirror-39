@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+flextable/__init__.py
+flextable/cli.py
+flextable/colors.py
+flextable/config.py
+flextable/style.py
+flextable/table.py
+flextable.egg-info/PKG-INFO
+flextable.egg-info/SOURCES.txt
+flextable.egg-info/dependency_links.txt
+flextable.egg-info/entry_points.txt
+flextable.egg-info/top_level.txt
