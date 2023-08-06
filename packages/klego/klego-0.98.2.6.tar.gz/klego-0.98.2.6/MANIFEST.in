@@ -1,0 +1,14 @@
+include *.py
+include readme.md
+include requirements.txt
+
+recursive-include klego *.py
+
+prune pybluez
+prune rl
+prune dist
+prune .git
+prune .idea
+prune __pycache__
+
+exclude A.py

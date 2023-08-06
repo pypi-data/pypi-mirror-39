@@ -1,0 +1,106 @@
+# in this file, special algorithms are applied to avoid
+# failure detecting obstacle from the edge
+from time import sleep
+from threading import Thread
+import numpy as np
+sleep(1)
+from core import going_back, going_forward, turning
+
+
+_debug = False  # if broadcast debug info
+
+
+def _fix_error(dist):
+    # try to fix the turbulance
+    pass
+
+
+def update_dist(dist):
+    # check if the reading change too rapidly
+    history = dist.history
+    now = history[:dist.IGNORE_MOST_RECENT]
+    prev = history[dist.IGNORE_MOST_RECENT:]
+
+    # algorithm: get the modes
+    now = np.argmax(np.bincount(now))
+    prev = np.argmax(np.bincount(prev))
+    stable = True
+    if abs(now - prev) > dist.EXCEPTION_THRESHOLD:
+        stable = False
+
+    if stable and now > dist.NORMDIST_THRESHOLD:
+        debug('safe', dist.now, dist.history)
+    elif stable and now < dist.NORMDIST_THRESHOLD:
+        dist.danger = True
+        debug("too close to objects", dist.now, dist.history)
+    elif not stable and now < dist.EXCPDIST_THRESHOLD:
+        dist.danger = True
+        debug("not stable", dist.now, dist.history)
+
+
+def _monitor_dist(inst):
+    sonic = inst.sensor
+    print('DIST: initializing, may take 1 more second')
+    sleep(2)
+    _prev_deta = 0
+    print('DIST: ready')
+    while True:
+        sleep_interval = inst.INTERVAL - 0.01  # the sonic.get_distance method takes 0.01s to run
+        if sleep_interval < 0:
+            raise ValueError("the minimum of INTERVAL is 0.01 seconds")
+        sleep(sleep_interval)
+
+        # not responding to going_back because this cannot help
+        if inst._lock:
+            continue
+        elif going_back() or turning():
+            inst.danger = False
+            continue
+        inst.now = sonic.get_distance()
+
+        # update history
+        inst.history.pop()
+        inst.history.insert(0, inst.now)
+        update_dist(inst)
+
+
+
+def debug(*args):
+    if _debug:
+        print "DIST: ", args
+
+
+class Distance:
+    _lock = False
+
+    def activate(self):
+        work = Thread(target=_monitor_dist, args=(self,), name='distance')
+        work.start()
+
+
+    def reset(self):
+        self._lock = True
+        sensor = self.sensor
+        self.now = sensor.get_distance()
+        self.history = [sensor.get_distance() for i in range(self.HISTORY_LEN)]
+        self.states = ['safe' for i in range(self.HISTORY_LEN)]
+        self._lock = False
+        return self.history
+
+    def __init__(self, sensor, obstacle_inbound=False):
+        self.HISTORY_LEN = 10  # keep a history list of this length
+        self.IGNORE_MOST_RECENT = 4  # a integer n. when compare the now to the prev, ignore the n most recent records
+        self.INTERVAL = 0.1  # a float t which MUST BE > 0.01. Refresh distance every t seconds
+        self.EXCEPTION_THRESHOLD = 90
+        self.NORMDIST_THRESHOLD = 10
+        self.EXCPDIST_THRESHOLD = 25
+
+        self.states = ['safe' for i in range(self.HISTORY_LEN)]
+        self.sensor = sensor
+        self.now = sensor.get_distance()
+        self.history = [sensor.get_distance() for i in range(self.HISTORY_LEN)]
+        self.danger = obstacle_inbound
+        self.activate()
+
+    def __call__(self):
+        return self.now
