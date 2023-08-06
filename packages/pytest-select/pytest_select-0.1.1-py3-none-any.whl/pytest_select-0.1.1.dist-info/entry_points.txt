@@ -1,0 +1,3 @@
+[pytest11]
+pytest-select=pytest_select.plugin
+
