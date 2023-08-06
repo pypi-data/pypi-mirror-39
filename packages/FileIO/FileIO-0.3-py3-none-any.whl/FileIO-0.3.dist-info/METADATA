@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: FileIO
+Version: 0.3
+Summary: This package contains File IO functions
+Home-page: https://github.com/Eoin-S/FileIO
+Author: Eoin Bolger
+Author-email: eoin.bolger21@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# FileIO
+Contains core File IO functions
+
+
