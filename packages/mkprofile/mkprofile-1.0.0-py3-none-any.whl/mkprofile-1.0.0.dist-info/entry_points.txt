@@ -1,0 +1,3 @@
+[console_scripts]
+mkprofile=mkprofile.__main__:cli
+
