@@ -1,0 +1,16 @@
+The English and Italian WordNet data included in this package are licensed under a
+Creative Commons Attribution 3.0 Unported License (https://creativecommons.org/licenses/by/3.0/).
+
+The remainder of the package, including the data of the Latin WordNet, is distributed under an
+Attribution-ShareAlike 4.0 International license (https://creativecommons.org/licenses/by-sa/4.0/).
+
+Labium in collaboration with the Cognitive and Communication Technologies (TCC) division of
+Fondazione Bruno Kessler built the semantic network for the Latin WordNet, as part of the
+MultiWordnet project (http://multiwordnet.itc.it/english/home.php).
+
+The database, which contains around 9,000 lemmas, was first developed by Stefano Minozzi
+starting from the words listed in Lessico Fondamentale Latino by E. Riganti (Bologna, 1989).
+
+This distribution contains a revised version of the Latin WordNet that has been
+corrected and expanded by W. M. Short of the University of Exeter. Eventually it will be
+updated to include nearly 40,000 lemmas.
