@@ -1,0 +1,19 @@
+name: pylops
+channels:
+  - defaults
+dependencies:
+  - python>=3.6.4
+  - numpy
+  - scipy
+  - matplotlib
+  - ipython
+  - pytest
+  - Sphinx
+  - numpydoc
+  - pip:
+    - pytest-runner
+    - setuptools_scm
+    - sphinx-rtd-theme
+    - sphinx-gallery
+    - nbsphinx
+    - image

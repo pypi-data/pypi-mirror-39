@@ -1,0 +1,35 @@
+# OS generated files #
+.*.swp
+*.py[cod]
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/*
+static/*
+db.sqlite3
+
+# Build #
+build
+dist
+pylops.egg-info/
+
+# setuptools_scm generated  #
+pylops/version.py
+
+# Development #
+notebooks
+TODO
+
+# Documentation #
+docs/build
+docs/source/api/generated
+docs/source/gallery
+docs/source/tutorials
+
+# Pylint #
+pylint_plot.py
+pylintrc
