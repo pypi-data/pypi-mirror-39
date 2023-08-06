@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: squidward
+Version: 0.0.1
+Summary: Package for implementing Gaussian Process models
+Home-page: https://github.com/looyclark/squidward
+Author: James Montgomery
+Author-email: looyclark@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.15.1)
+Requires-Dist: scipy (>=1.1.0)
+Requires-Dist: matplotlib (>=2.2.3)
+Requires-Dist: seaborn (>=0.9.0)
+Requires-Dist: nose (>=1.3.7)
+
+# Squidward
+
+After working with gaussian processes (GPs) to build out robust reinforcement learning models in production for most of my early career as a machine learning engineer (MLE), I became frustrated with the packages available for building GPs. They often focus using the latest in optimization tools and are far from the elegant, efficient, and simple design that I believe a GP package should embody.
+
+This is my attempt to create the product that I would want to use. Something simple and flexible that gives knowledgable data scientists the tools they need to do the research or production machine learning work that they need.
+
+I'm, open to all feedback, commentary, and suggestions as long as it is constructive and polite.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Installing
+
+This is a step by step guide to installing squidward for your local environment.
+
+First, git clone this repository to your local environment.
+
+```
+git clone https://github.com/looyclark/squidward.git
+```
+
+I recommend installing squidward in a virtual environment for organized dependency control. Personally, I prefer conda environments.
+
+```
+conda create --name squidward_env python=3.6
+```
+
+Gom into your new environment and cd into the root of the squidward repository.
+
+```
+source activate squidward_env
+cd ./squidward
+```
+
+Install squidward using pip.
+
+```
+pip install .
+```
+
+## Running the tests
+
+To run tests cd to `squidward/squidward` so that `/tests` is a subdirectory. Use `nosetests` to run all tests for squidward. If you installed squidward in a virtual environment, please run the tests in that same environment.
+
+## Deployment
+
+For fastest performance, it is recommended to use numpy/scipy with MKL (Math Kernel Library).
+
+## Continuing Improvement
+
+This package started as a fever dream in response to a series of frustrations I had with currently implemented gaussian process (GP) packages. Many GP packages favor using the latest and greatest optimization packages rather than focusing on creating an efficient, simple, flexible tool for data scientists to use.
+
+I hope to grow this package into a robust tool for use in research or production environments. It is far from a finished product.
+
+Next Steps:
+1. Polish core functionality and comment thoroughly
+2. Build out robust unit test and integration tests
+3. Add code quality and style guide checks
+4. Posterior Predictive checks
+5. Optimization and sampling functionality
+6. Embedding optimization for efficient inversion at scale
+7. Multiprocessing for parallelization
+8. Robust examples for reinforcement learning and parameter optimization
+
+## Authors
+
+* **James Montgomery** - *Initial work* - [jamesmontgomery.us](https://jamesmontgomery.us)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* A big thanks to Keegan Hines and Josh Touyz who introduced me to Gaussian Processes
+* Another thanks to Thanos Kintsakis who helped turn me from a data scientist into a machine learning engineer who can produce maintainable and efficient code.
+
+
