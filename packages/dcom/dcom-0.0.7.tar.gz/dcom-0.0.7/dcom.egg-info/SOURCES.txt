@@ -1,0 +1,13 @@
+README.md
+setup.py
+dcom/__init__.py
+dcom/client.py
+dcom/embeds.py
+dcom/main.py
+dcom/utils.py
+dcom.egg-info/PKG-INFO
+dcom.egg-info/SOURCES.txt
+dcom.egg-info/dependency_links.txt
+dcom.egg-info/entry_points.txt
+dcom.egg-info/requires.txt
+dcom.egg-info/top_level.txt
