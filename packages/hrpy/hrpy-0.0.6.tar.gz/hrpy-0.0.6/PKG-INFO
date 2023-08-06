@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: hrpy
+Version: 0.0.6
+Summary: hr but written in python
+Home-page: https://github.com/jonaylor89/hrpy
+Author: John Naylor
+Author-email: jonaylor89@gmail.com
+License: MIT
+Download-URL: https://github.com/jonaylor89/hrpy/archive/v_0.6.tar.gz
+Description: UNKNOWN
+Keywords: hr,terminal,formatting
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
