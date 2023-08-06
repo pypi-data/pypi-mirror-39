@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: utf_remote
+Version: 0.5.0
+Summary: Platform for connected devices
+Home-page: UNKNOWN
+Author: Shayan Ahmed
+Author-email: shayanahmed46@yahoo.com
+License: UNKNOWN
+Description: ## Run
+        python -m utf_remote --m2m-url ws://ec2-35-156-218-14.eu-central-1.compute.amazonaws.com:1337  run
+Platform: any
