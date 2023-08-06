@@ -1,0 +1,13 @@
+README.md
+setup.py
+./puradouga/__init__.py
+./puradouga/core/__init__.py
+./puradouga/core/helper.py
+./puradouga/core/loader.py
+./puradouga/plugins/__init__.py
+./puradouga/plugins/data.py
+./puradouga/plugins/media.py
+puradouga.egg-info/PKG-INFO
+puradouga.egg-info/SOURCES.txt
+puradouga.egg-info/dependency_links.txt
+puradouga.egg-info/top_level.txt
