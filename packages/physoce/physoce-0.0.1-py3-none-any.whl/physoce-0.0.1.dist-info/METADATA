@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: physoce
+Version: 0.0.1
+Summary: Python tools for Physical Oceanography
+Home-page: https://github.com/physoce/physoce-py
+Author: Tom Connolly
+Author-email: tconnolly@mlml.calstate.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# physoce
+
+Python tools for physical oceanography. Includes functions for plotting, time series analysis, statistics and surface wave dynamics.
+
+Documentation can be found at https://physoce.github.io/physoce-py
+
+Feedback and ideas for future work are welcome. Please feel free to submit an issue.
+
+
