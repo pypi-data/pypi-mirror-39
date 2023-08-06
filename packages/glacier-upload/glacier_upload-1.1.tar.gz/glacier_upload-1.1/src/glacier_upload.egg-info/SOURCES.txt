@@ -1,0 +1,15 @@
+README.md
+setup.py
+src/glacier_upload/__init__.py
+src/glacier_upload/delete_archive.py
+src/glacier_upload/get_job_output.py
+src/glacier_upload/initiate_job.py
+src/glacier_upload/list_uploads.py
+src/glacier_upload/manual_abort_upload.py
+src/glacier_upload/upload.py
+src/glacier_upload.egg-info/PKG-INFO
+src/glacier_upload.egg-info/SOURCES.txt
+src/glacier_upload.egg-info/dependency_links.txt
+src/glacier_upload.egg-info/entry_points.txt
+src/glacier_upload.egg-info/requires.txt
+src/glacier_upload.egg-info/top_level.txt
