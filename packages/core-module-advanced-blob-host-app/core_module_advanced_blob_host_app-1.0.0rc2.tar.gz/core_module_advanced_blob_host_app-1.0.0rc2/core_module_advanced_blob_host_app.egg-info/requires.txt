@@ -1,0 +1,5 @@
+Django==1.11.15
+core-main-app==1.0.0-rc2
+core-parser-app==1.0.0-rc2
+core-module-blob-host-app==1.0.0-rc2
+core-module-remote-blob-host-app==1.0.0-rc2
