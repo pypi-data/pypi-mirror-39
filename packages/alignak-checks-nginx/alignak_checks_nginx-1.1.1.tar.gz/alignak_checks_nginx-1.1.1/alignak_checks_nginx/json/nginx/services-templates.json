@@ -1,0 +1,19 @@
+[
+    {
+        "_is_template": true,
+        "aggregation": "nginx",
+        "check_command": "check_nginx_status",
+        "check_command_args": "",
+        "host": "nginx",
+        "name": "Check status"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "nginx",
+        "alias": "Check status (authenticated)",
+        "check_command": "check_nginx_status_auth",
+        "check_command_args": "",
+        "host": "nginx-auth",
+        "name": "Check-status-auth"
+    }
+]
