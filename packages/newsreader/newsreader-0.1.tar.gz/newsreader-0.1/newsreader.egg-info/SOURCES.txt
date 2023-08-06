@@ -1,0 +1,12 @@
+README.rst
+setup.py
+doc/man/nr-config.5
+doc/man/nr.1
+newsreader.egg-info/PKG-INFO
+newsreader.egg-info/SOURCES.txt
+newsreader.egg-info/dependency_links.txt
+newsreader.egg-info/entry_points.txt
+newsreader.egg-info/requires.txt
+newsreader.egg-info/top_level.txt
+nr/__init__.py
+nr/main.py
