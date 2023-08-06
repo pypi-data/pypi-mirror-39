@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: nionswift-experimental
+Version: 0.5.0
+Summary: Experimental tools package for Nion Swift.
+Home-page: UNKNOWN
+Author: Nion Software
+Author-email: swift@nion.com
+License: GPLv3
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.5
+Requires-Python: ~=3.5
