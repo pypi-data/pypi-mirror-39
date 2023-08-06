@@ -1,0 +1,7 @@
+dateparser
+slackclient
+requests
+jsonschema
+
+[test]
+pytest
