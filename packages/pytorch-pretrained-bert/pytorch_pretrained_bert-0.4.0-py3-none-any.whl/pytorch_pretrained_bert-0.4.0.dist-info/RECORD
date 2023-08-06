@@ -1,0 +1,14 @@
+pytorch_pretrained_bert/__init__.py,sha256=KKv_Wm3y7RwKFVv6mjBSkC4QAPtA60OyM6htDjKP-SQ,478
+pytorch_pretrained_bert/__main__.py,sha256=w2r8Nduu-c4-oiVHRfXuXNHj3cmqZte0LLdEB_7Krys,908
+pytorch_pretrained_bert/convert_tf_checkpoint_to_pytorch.py,sha256=gMmI3GI72fXMgZFu8ydmXlDaaEKcyZZ6m3NvYbDFAEc,4463
+pytorch_pretrained_bert/file_utils.py,sha256=m7wHPUrIPCjowX10XarBxrcMXDslgcdUHNZsiIvbVnk,8021
+pytorch_pretrained_bert/modeling.py,sha256=oiU-Du1WlbWVu1Kgeic4bmHK3S4hLG6F5MJufVa607U,55243
+pytorch_pretrained_bert/optimization.py,sha256=PzZg9dhmm1PuE4aw3FqF9FaKzj03RQLWLnGV0IzEIAs,6803
+pytorch_pretrained_bert/tokenization.py,sha256=RE26dCnxyhmv7frVFPEJB60Cr8-alvHDyHjp9Ec8xzQ,12881
+pytorch_pretrained_bert-0.4.0.data/scripts/pytorch_pretrained_bert,sha256=x4Cms2Gox0GPVVZG27k4OTHLVxDGbv8kdncnzIOT13g,48
+pytorch_pretrained_bert-0.4.0.dist-info/DESCRIPTION.rst,sha256=9iIhAefI1qwCzA4lX0IjwmELJfyS39L9OhfVrCsLtvk,35727
+pytorch_pretrained_bert-0.4.0.dist-info/METADATA,sha256=t67uWJ-wnsainGi53EZ_lrU7w0aUC33e9PwVpictKNM,36557
+pytorch_pretrained_bert-0.4.0.dist-info/RECORD,,
+pytorch_pretrained_bert-0.4.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+pytorch_pretrained_bert-0.4.0.dist-info/metadata.json,sha256=fUuwkj-LrpaW-_nXU1ZTEIC2kH_hG_tYh-ZFyv6uAww,1059
+pytorch_pretrained_bert-0.4.0.dist-info/top_level.txt,sha256=TnN_Y8CR3Nacc44mCN4Zpmum3sdwEMzGxUUc4Usj53g,24
