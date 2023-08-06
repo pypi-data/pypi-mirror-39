@@ -1,0 +1,6 @@
+flask
+pylint
+python-dotenv
+ringcentral_bot_framework>=0.0.17
+boto3
+twine
