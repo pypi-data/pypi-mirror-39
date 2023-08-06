@@ -1,0 +1,14 @@
+pymlsql/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymlsql/build_mlsql_server.py,sha256=DWhWrcRtghMi5y94tMX3vnPJbfNAtr-k7clifBEW_ek,1866
+pymlsql/test.py,sha256=vYpop_OqHdLVRpbe171B_DZmTZvVLWKiGCsm1qwT-cM,611
+pymlsql/version.py,sha256=qxDDKDdBVtpTRm4YPioHh6Q3Rrj67rFdEic6lIlrH9E,44
+pymlsql/aliyun/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymlsql/aliyun/build_test_server.py,sha256=oAw903XGdJwiGgSGWrGhAb86zjM9x9q62285JBv4OEY,8616
+pymlsql/aliyun/ecs_builder.py,sha256=8mC1aqf5s5f6xbk3CDr5BxRkISGmQGxmzoO20B1gKjY,11506
+pymlsql/aliyun/shellutils.py,sha256=alGYteXnJk4BuK4TchlBI048IiLWzD96SpaCyMwkjMw,3485
+pymlsql/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymlsql/api/mlsql_context.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymlsql-1.1.6.dist-info/METADATA,sha256=4_DqTHNoHIVa3ucayPiwLz88CDMIW-625MFDyKXv404,1078
+pymlsql-1.1.6.dist-info/RECORD,,
+pymlsql-1.1.6.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+pymlsql-1.1.6.dist-info/top_level.txt,sha256=F2J1cSiqwIztVIuxBITWUt2wbuVc6uDiteLhWAbC_1M,8

@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: pymlsql
+Version: 1.1.6
+Summary: MLSQL Python API
+Home-page: https://github.com/allwefantasy/PyMLSQL
+Author: ZhuWilliam
+Author-email: allwefantasy@gmail.com
+License: http://www.apache.org/licenses/LICENSE-2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: py4j (==0.10.8.1)
+Requires-Dist: numpy (>=1.7)
+Requires-Dist: aliyun-python-sdk-ecs
+Requires-Dist: aliyun-python-sdk-core-v3
+Requires-Dist: pyarrow (>=0.19.2)
+Requires-Dist: pandas (>=0.8.0)
+
+With this lib you can develop Python ML project in MLSQL
+
+
