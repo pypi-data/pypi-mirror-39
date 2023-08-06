@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+bpm/__init__.py
+bpm/conftest.py
+bpm/generate_bpm.py
+bpm/image_processing.py
+bpm/image_utils.py
+bpm/test/__init__.py
+bpm/test/test_image_processing.py
+bpm/test/test_utils.py
+lco_bpm_maker.egg-info/PKG-INFO
+lco_bpm_maker.egg-info/SOURCES.txt
+lco_bpm_maker.egg-info/dependency_links.txt
+lco_bpm_maker.egg-info/entry_points.txt
+lco_bpm_maker.egg-info/requires.txt
+lco_bpm_maker.egg-info/top_level.txt
