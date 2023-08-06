@@ -1,0 +1,249 @@
+Metadata-Version: 1.1
+Name: omegalpes
+Version: 0.0.0
+Summary: OMEGAlpes is a linear energy systems modelling library
+Home-page: UNKNOWN
+Author: B. DELINCHANT, S. HODENCQ, Y. MARECHAL, L. MORRIET, C. PAJOT, V. REINBOLD, F. WURTZ
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: OMEGAlpes Lib for linear energy systems modelling
+        ==================================================
+        
+        **OMEGAlpes** stands for Generation of Optimization Models As Linear Programming for Energy Systems.
+        
+        **OMEGAlpes** aims to be an energy systems modelling tool for linear optimisation (LP, MILP).
+        
+        We are happy that you will use or develop the OMEGAlpes library. 
+        
+        Project Presentation
+        ====================
+        Please have a look to the html presentation of the project : docs\_build\html\index.html
+        
+        You can have access to 
+        
+        **the OMEGAlpes library :**
+            https://gricad-gitlab.univ-grenoble-alpes.fr/omegalpes/omegalpes.git
+        
+        
+        **3 main examples and other case studies :**
+            https://gricad-gitlab.univ-grenoble-alpes.fr/omegalpes/omegalpes-examples.git
+        
+        examples: 
+        - electrical_system_operation.py (to begin)
+        - storage_design.py
+        - waste_heat_recorvery.py
+        
+        OMEGAlpes' Community
+        ====================
+        Please subscribe to our mailing lists :
+        - as an OMEGAlpes' user: omegalpes-users@groupes.renater.fr 
+        - just for our newsletters: omegalpes-news@groupes.renater.fr
+        
+        Please use the git issues system to report an error: https://gricad-gitlab.univ-grenoble-alpes.fr/omegalpes/omegalpes.git  
+        Otherwise you can also contact de developer team using the following email adress:
+        
+        
+        Installation Help
+        =================
+        You can install the library as a user of as a developer. Please follow the installation steps below.
+        
+        Prerequisite
+        ------------
+        Please install Pycharm (or another development environment).
+        https://www.jetbrains.com/pycharm/
+        
+        Please install Python 3.6
+        https://www.python.org/downloads/
+        
+        Installation as a user
+        ----------------------
+        Please install OMEGAlpes Lib with pip using the command prompt.   
+        Write the path to the Python 3.6/Lib/sites-packages directory instead of < dir >.
+        
+            pip install --user git+https://gricad-gitlab.univ-grenoble-alpes.fr/OptimisationQuartier/omegalpes.git
+        
+        In order to download the examples, create a new folder in the suitable path, 
+        name it as you wish for example : OMEGAlpes_examples
+        Clone the OMEGAlpes library repository or download it at 
+        https://gricad-gitlab.univ-grenoble-alpes.fr/omegalpes/omegalpes-examples
+        
+        Command lover:
+        
+                   git clone https://gricad-gitlab.univ-grenoble-alpes.fr/omegalpes/omegalpes-examples.git
+        
+        Pycharm lover:
+        
+        Open Pycharm       
+        On the Pycharm window, click on "Check out from version control" then choose "Git".   
+        A "clone repository" window open.      
+        Copy the following link into the URL corresponding area: 
+        https://gricad-gitlab.univ-grenoble-alpes.fr/omegalpes/omegalpes.git   
+        Copy the path of the new folder created just before.   
+        Test if the connection to the git works and if it works click on "Clone".       
+        Once OMEGAlpes is cloned, you must be able to see the full OMEGAlpes library on Pycharm 
+        or on another development environment.
+        
+        If the connection does not work and if you are working with local protected network,
+        please try again with the wifi.
+        
+        Try the examples to understand how the OMEGAlpes Lib works.
+        
+        Enjoy your time using OMEGAlpes !
+        
+        Installation as a developer and local branch creation
+        -----------------------------------------------------
+        1. Create a new folder in the suitable path, name it as you wish for example : OMEGAlpes
+        
+        2. Clone the OMEGAlpes library repository
+            
+            ---
+            Command lover:
+            
+                   git clone https://gricad-gitlab.univ-grenoble-alpes.fr/omegalpes/omegalpes.git
+            
+            ---
+            Pycharm lover:
+            
+            Open Pycharm       
+            On the Pycharm window, click on "Check out from version control" then choose "Git".   
+            A "clone repository" window open.      
+            Copy the following link into the URL corresponding area: 
+            
+                https://gricad-gitlab.univ-grenoble-alpes.fr/omegalpes/omegalpes.git
+            Copy the path of the new folder created just before.   
+            Test if the connection to the git works and if it works click on "Clone".       
+            Once OMEGAlpes is cloned, you must be able to see the full OMEGAlpes library on Pycharm 
+            or on another development environment.
+            
+            -----
+            If the connection does not work and if you are working with local protected network,
+            please try again with the wifi.
+        
+        4. First, choose or change your project interpreter
+            
+            ---
+            Command lover:
+            
+            Using the "Python 3.6" project interpreter
+                
+                git
+                
+            Using a virtual environment based on the Python 3.6 project interpreter (recommended)
+            
+                git
+            
+            ---
+            Pycharm lover:
+            
+            Click on the yellow warning link or go to "File", "settings...", "Project Interpreter"
+            
+            You can:
+            - either select the "Python 3.6" project interpreter but you may change the version 
+            of some library that you could use for another application
+            - either create a virtual environment in order to avoid this problem (recommended).  
+            Click on the star wheel near the project interpreter box.  Click on "add...".   
+            Select "New environment" if it not selected.    
+            The location is pre-filled, if not fill it with the path of the folder as folder_path/venv   
+            Select "Python 3.6" as your base interpreter   
+            Then click on "Ok"
+                    
+            ---
+            
+        4. Then, install library requirements if it is not already done. 
+            
+            ---
+            Command lover:
+                       
+                    pip install <library_name>
+            If required, the command to upgrade the library is : 
+            
+                    pip install --upgrade <library_name>
+                    
+            ---
+            Pycharm lover:
+            
+            You should still have a yellow warning.   
+            You can:
+            - install automatically the libraries cliking on the yellow bar
+            - install automatically the library using pip with Pycharm on "File", "settings...", "Project Interpreter", "+",
+            and choosing the required library as indicated in the Library Installation Requirements 
+            part
+        
+        5. Finally, you can create your own local development branch.
+            
+            ---
+            Command lover:
+                
+                git branch <branch_name>
+                    
+            ---
+            Pycharm lover:
+            
+            By default you are on a local branch named master.   
+            Click on "Git: master" located on the bottom write of Pycharm    
+            Select "+ New Branch"   
+            Name the branch as you convenience for instance "dev_your_name"
+        
+        6. Do not forget to "pull" regularly to update your version of the library.
+            
+            ---
+            Command lover:
+            
+                git pull origin
+                    
+            ---
+            Pycharm lover:
+            
+            To do so, select "VCS", "Git", "Pull" and select "Origin/master" or the appropriate branch
+            and click on "Pull"
+        
+        If you want to have access to other examples and study cases, 
+        please have a look to the user's installation.
+            
+        Enjoy your time developing OMEGAlpes!
+        
+        
+        Library Installation Requirements
+        ---------------------------------
+        PuLP = 1.6.8
+        
+        Matplotlib >2.2.2, <3.1
+        
+        Numpy > 1.14.2, <1.16
+        
+        Pandas > 0.22.0, <0.24
+        
+        
+        Main Authors: 
+        =============
+        B. DELINCHANT, S. HODENCQ, Y. MARECHAL, L. MORRIET, C. PAJOT, V. REINBOLD,
+        F. WURTZ
+        
+        Partners:
+        =========
+        Univ. Grenoble Alpes, CNRS, Grenoble INP, G2Elab, CEA, UniversitÃ© Paris-Sud
+        
+        Acknowledgments:
+        ================
+        This work has been partially supported by the CDP Eco-SESA receiving fund from the French National Research 
+        Agency in the framework of the "Investissements dâ€™avenir" program (ANR-15-IDEX-02)
+        
+        
+        Licence
+        =======
+        This code is under the licence :
+        
+        
+        Notes
+        -----
+        This library has been tested using
+        - PyCharm 2018.2.4
+        - Python 3.6.0
+        - pip 18.1
+        - setuptools 39.1.0 
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering
