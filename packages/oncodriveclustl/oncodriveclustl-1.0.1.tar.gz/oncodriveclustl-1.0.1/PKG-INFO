@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: oncodriveclustl
+Version: 1.0.1
+Summary: OncodriveCLUSTL is a clustering method to identify cancer drivers
+Home-page: https://bitbucket.org/bbglab/oncodriveclustl
+Author: BBGLab (Barcelona Biomedical Genomics Lab)
+Author-email: bbglab@irbbarcelona.org
+License: AGPLv3
+Download-URL: https://bitbucket.org/bbglab/oncodriveclustl/get/1.0.1.tar.gz
+Description: OncodriveCLUSTL is a sequence-based clustering method to identify significant clustering signals in nucleotide sequence
+Platform: UNKNOWN
+Requires-Python: >=3.5
