@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: stadistic-basic
+Version: 0.1.dev0
+Summary: UNKNOWN
+Home-page: https://github.com/nathramk/stadistic_basic
+Author: Kenyi Simons
+Author-email: kenyilpz@gmail.com
+License: MIT
+Download-URL: https://github.com/nathramk/stadistic_basic/tarball/0.1
+Description-Content-Type: UNKNOWN
+Description: Esta es una libreria para aplicar estadistica basica, como la tabla z o la tabla del t de student, aun esta en desarrollo
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
