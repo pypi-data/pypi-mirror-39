@@ -1,0 +1,3 @@
+[console_scripts]
+kong-incubator = kong.cli:main
+
