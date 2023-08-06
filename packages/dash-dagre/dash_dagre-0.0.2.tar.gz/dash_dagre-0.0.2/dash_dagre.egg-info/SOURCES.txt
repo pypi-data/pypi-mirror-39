@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+dash_dagre/DagreD3.py
+dash_dagre/__init__.py
+dash_dagre/_imports_.py
+dash_dagre/dash_dagre.dev.js
+dash_dagre/dash_dagre.min.js
+dash_dagre/dash_dagre.py
+dash_dagre/dash_dagre_style.css
+dash_dagre/metadata.json
+dash_dagre/package.json
+dash_dagre.egg-info/PKG-INFO
+dash_dagre.egg-info/SOURCES.txt
+dash_dagre.egg-info/dependency_links.txt
+dash_dagre.egg-info/top_level.txt

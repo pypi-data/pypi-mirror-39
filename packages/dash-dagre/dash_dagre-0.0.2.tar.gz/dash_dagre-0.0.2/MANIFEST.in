@@ -1,0 +1,6 @@
+include dash_dagre/dash_dagre.min.js
+include dash_dagre/dash_dagre.dev.js
+include dash_dagre/metadata.json
+include dash_dagre/package.json
+include dash_dagre/dash_dagre_style.css
+include README.md
