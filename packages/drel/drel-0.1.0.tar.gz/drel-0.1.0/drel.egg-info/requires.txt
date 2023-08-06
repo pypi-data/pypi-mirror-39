@@ -1,0 +1,5 @@
+django>=1.11
+requests>=2.18
+elasticsearch<7.0.0,>=6.0.0
+marshmallow<3.0,>=2.16
+attrs>=18.2
