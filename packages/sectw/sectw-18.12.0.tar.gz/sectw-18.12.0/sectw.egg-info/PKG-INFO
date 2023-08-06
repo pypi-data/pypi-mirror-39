@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: sectw
+Version: 18.12.0
+Summary: Find land section code in Taiwan by address fuzzily.
+Home-page: https://github.com/ssivart/sectw
+Author: ssivart
+Author-email: travishen.tw@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

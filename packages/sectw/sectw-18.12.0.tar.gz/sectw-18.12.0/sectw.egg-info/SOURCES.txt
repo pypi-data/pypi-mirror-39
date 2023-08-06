@@ -1,0 +1,16 @@
+setup.cfg
+setup.py
+sectw/2017-11-14.csv
+sectw/2018-08-14.csv
+sectw/__init__.py
+sectw/api.py
+sectw/builder.py
+sectw/util.py
+sectw.egg-info/PKG-INFO
+sectw.egg-info/SOURCES.txt
+sectw.egg-info/dependency_links.txt
+sectw.egg-info/requires.txt
+sectw.egg-info/top_level.txt
+sectw/database/__init__.py
+sectw/database/config.py
+sectw/database/model.py
