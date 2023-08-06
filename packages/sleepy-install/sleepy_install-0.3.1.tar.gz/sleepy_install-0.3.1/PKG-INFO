@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: sleepy_install
+Version: 0.3.1
+Summary: Waits for [minor version number] minutes during package install. No other features; use for testing time-dependent automation.
+Home-page: https://github.com/pypa/sampleproject
+Author: Jon Peck
+Author-email: peckjon@gmail.com
+License: UNKNOWN
+Description: Wait for several minutes during package installation. No other features; use for testing time-dependent automation. Minor version indicates wait time (e.g. for a 2 minute delay, use 0.2.*)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
