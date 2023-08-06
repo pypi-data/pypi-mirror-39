@@ -1,0 +1,16 @@
+biosamples_v4/__init__.py,sha256=J9O5WNvC9cNDaxecveSUvzLGOXOYO-pCHbiGopfYoIc,76
+biosamples_v4/aap.py,sha256=tOkgC9B_CkZ8N5r0aKDb1fZlBFWluadV1hBrofyWu9A,5326
+biosamples_v4/api.py,sha256=Bi_ORHqSmrGo6LidoypuXktf_UwcGIbxr6VMjLCIWpk,9492
+biosamples_v4/convert_functions.py,sha256=LrUzq_kQX0qZCXNY_khhrQ5gjWmGjh2Zq8dS7CJjKk0,818
+biosamples_v4/encoders.py,sha256=9a9jNJDFctmhXUXRCM2RiT3YwP6QSvHXdN6wDumL-5U,5255
+biosamples_v4/exceptions.py,sha256=j3Gtd0g_o5WP0VNBeRV_M8qvLahbXTCl85uM09-78z0,300
+biosamples_v4/filters.py,sha256=EO1KWfDp9diCtTqsxlz5QuwEeglHyPOm9DhJ0JVNlxQ,3128
+biosamples_v4/models.py,sha256=tlefw2XEGEL4HIOpbPWkx3UmWV930ksSWt7QrEJcgso,3559
+biosamples_v4/sampletab.py,sha256=R1L3Zsf8TV-LGQfHmRqJZSUjPRlo1cnO9YjvObeT5JQ,3544
+biosamples_v4/traverson.py,sha256=TCTTUY2yxrzagZjxAw0vunejY4LU21svJizOKvMwxaA,7356
+biosamples_v4/utilities.py,sha256=_jJVd9skm0dc_lNc37wNfuCHGTtVL_swnh-Oy69nBOs,967
+biosamples_v4-0.0.5.dist-info/LICENSE.txt,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+biosamples_v4-0.0.5.dist-info/METADATA,sha256=sTSs0RlsC7_ABN5gGbElqNBrq4PIGbqhJizZTAErZdI,1080
+biosamples_v4-0.0.5.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+biosamples_v4-0.0.5.dist-info/top_level.txt,sha256=F6W8KtrfuuH8cco0-ghkl4VpAWfFoMV-usOFt14V1oc,14
+biosamples_v4-0.0.5.dist-info/RECORD,,
