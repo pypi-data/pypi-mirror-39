@@ -1,0 +1,14 @@
+jsonschema
+requests
+requests-cache
+graphene
+Faker
+
+[test]
+pytest
+pytest-watch
+pytest-cov
+flake8
+flask
+flask_graphql
+flask_restful
