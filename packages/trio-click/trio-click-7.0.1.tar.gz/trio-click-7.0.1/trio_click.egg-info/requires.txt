@@ -1,0 +1,11 @@
+trio>=0.9
+anyio
+
+[dev]
+pytest>=3
+coverage
+tox
+sphinx
+
+[docs]
+sphinx
