@@ -1,0 +1,11 @@
+aioapp_amqp/__init__.py,sha256=y-qXYCO70Omxamar3UGUl0eHzpp10ju8OpBb-cFbEqw,18149
+tests/__init__.py,sha256=tl2hK64aWuMnprPko4Zhuk8zy5JXI-dbeGA9z6CN6C8,61
+tests/conftest.py,sha256=sQSMdbUsDHB8b5MM1EeAjVOBcfokbrat8GKh26RAY4s,4334
+tests/docker-compose.yml,sha256=VO6RIzyR7xoJggp3sCIDxRzaFOwlUv1qKR-A2yYu8gg,96
+tests/test_amqp.py,sha256=O7pxixxNEI5TebuVNgR0Jyu2dlcuwNBzz_H_cT7BrZw,5812
+aioapp_amqp-0.0.1b2.dist-info/AUTHORS.rst,sha256=A_OrxmxEnO_JQMklng2KeYuPLwMwtRP97iWkSS-BYVc,142
+aioapp_amqp-0.0.1b2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+aioapp_amqp-0.0.1b2.dist-info/METADATA,sha256=P9tZQAAtDQmqLUG472BUXskpgZWCJieinZr6tTNzGLc,1368
+aioapp_amqp-0.0.1b2.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+aioapp_amqp-0.0.1b2.dist-info/top_level.txt,sha256=-9EWuDbYhRC53rJIa-KmLq_jhC8YijNQzx3iNnomF-c,18
+aioapp_amqp-0.0.1b2.dist-info/RECORD,,
