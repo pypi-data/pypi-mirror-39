@@ -1,0 +1,20 @@
+[console_scripts]
+tt-config = twtoolbox.cli:tt_config
+tt-streaming-get-filter = twtoolbox.cli:tt_streaming_get_filter
+tt-streaming-get-firehose = twtoolbox.cli:tt_streaming_get_firehose
+tt-streaming-get-sample = twtoolbox.cli:tt_streaming_get_sample
+tt-tweets-bulk-get-retweets = twtoolbox.cli:tt_tweets_bulk_get_retweets
+tt-tweets-bulk-get-timeline = twtoolbox.cli:tt_tweets_bulk_get_timeline
+tt-tweets-bulk-search = twtoolbox.cli:tt_tweets_bulk_search
+tt-tweets-get-hydrated = twtoolbox.cli:tt_tweets_get_hydrated
+tt-tweets-get-retweets = twtoolbox.cli:tt_tweets_get_retweets
+tt-tweets-get-timeline = twtoolbox.cli:tt_tweets_get_timeline
+tt-tweets-search = twtoolbox.cli:tt_tweets_search
+tt-users-bulk-get-followers = twtoolbox.cli:tt_users_bulk_get_followers
+tt-users-bulk-get-friends = twtoolbox.cli:tt_users_bulk_get_friends
+tt-users-bulk-search = twtoolbox.cli:tt_users_bulk_search
+tt-users-get-followers = twtoolbox.cli:tt_users_get_followers
+tt-users-get-friends = twtoolbox.cli:tt_users_get_friends
+tt-users-get-hydrated = twtoolbox.cli:tt_users_get_hydrated
+tt-users-search = twtoolbox.cli:tt_users_search
+
