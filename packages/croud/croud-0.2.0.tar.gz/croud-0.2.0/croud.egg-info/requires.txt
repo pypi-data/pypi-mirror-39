@@ -1,0 +1,13 @@
+aiohttp
+colorama
+appdirs
+pyyaml
+certifi
+tabulate
+schema
+
+[development]
+black
+
+[testing]
+tox
