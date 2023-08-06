@@ -1,0 +1,13 @@
+README.md
+setup.py
+mock_useragent/__init__.py
+mock_useragent/mock.py
+mock_useragent/settings.py
+mock_useragent/utils.py
+mock_useragent.egg-info/PKG-INFO
+mock_useragent.egg-info/SOURCES.txt
+mock_useragent.egg-info/dependency_links.txt
+mock_useragent.egg-info/not-zip-safe
+mock_useragent.egg-info/top_level.txt
+mock_useragent/offline_datas/__init__.py
+mock_useragent/offline_datas/chrome.py
