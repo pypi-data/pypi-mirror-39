@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: turingarena
+Version: 0.0.2.dev841
+Summary: Command Line Interface for TuringArena
+Home-page: http://www.turingarena.org/
+Author: TuringArena Group
+Author-email: contact@turingarena.org
+License: MPL 2.0
+Project-URL: Source Code, https://github.com/turingarena/turingarena
+Project-URL: Documentation, https://turingarena.readthedocs.io/
+Project-URL: Bug Tracker, https://github.com/turingarena/turingarena/issues
+Platform: UNKNOWN
+Requires-Dist: requests
+
+UNKNOWN
+
+

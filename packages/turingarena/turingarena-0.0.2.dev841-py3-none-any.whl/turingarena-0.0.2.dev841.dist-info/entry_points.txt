@@ -1,0 +1,3 @@
+[console_scripts]
+turingarena = turingarena_cli.cli:main
+
