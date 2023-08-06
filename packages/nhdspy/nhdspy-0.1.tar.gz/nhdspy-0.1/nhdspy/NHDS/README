@@ -1,0 +1,26 @@
+This is NHDS - The New Hampshire Dispersion relation Solver
+
+Copyright (C) 2018 - Daniel Verscharen (d.verscharen@ucl.ac.uk)
+Mullard Space Science Laboratory, University College London
+Space Science Center, University of New Hampshire
+
+NHDS solves the linear hot-plasma dispersion relation based on the Vlasov-Maxwell set of
+equations.
+
+NHDS has the following requirements:
+
+    make
+    Fortran 90 compiler
+    HDF5
+
+Compile the code by executing
+
+    mkdir obj bin
+    make
+
+in the main directory. Then run NHDS with
+
+    ./bin/NHDS
+
+The plasma and numerical parameters are set in the file parameters.in.
+The code requires the folders src, bin, and obj in the main directory.
