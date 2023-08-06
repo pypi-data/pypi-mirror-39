@@ -1,0 +1,50 @@
+Metadata-Version: 1.1
+Name: smsit
+Version: 0.1.0
+Summary: A simple wrapper to send SMS through available gateways.
+Home-page: https://github.com/meyt/smsit
+Author: Mahdi Ghanea.g
+Author-email: UNKNOWN
+License: MIT License
+Description: SMSit
+        =====
+        
+        A simple wrapper to send SMS through available gateways.
+        
+        
+        Gateways
+        --------
+        
+        - `SMSMagic <https://sms-magic.com/>`_
+        - `NikSMS <https://niksms.com>`_
+        
+        
+        Install
+        -------
+        
+        .. code-block:: bash
+        
+            pip install smsit
+        
+        Usage
+        -----
+        
+        .. code-block:: python
+        
+            from smsit import SMS
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
