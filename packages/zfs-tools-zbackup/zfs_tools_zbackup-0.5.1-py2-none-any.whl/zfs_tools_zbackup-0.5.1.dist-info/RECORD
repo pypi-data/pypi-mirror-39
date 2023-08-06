@@ -1,0 +1,16 @@
+zfs_tools_zbackup-0.5.1.data/scripts/zbackup,sha256=dkamk2rtdxgmTHSSsDhf62GYZA7kE5v27toHjzGn98k,13346
+zfs_tools_zbackup-0.5.1.data/scripts/zflock,sha256=_GXl50w40Z8q7kIgmHJ5O2mopPof6nK_a0165IpPRF4,5832
+zfs_tools_zbackup-0.5.1.data/scripts/zfs-shell,sha256=_kcReEfSjyS0g9YzjyrCYiNlhhs4ObfGHVVFi28zGIs,513
+zfs_tools_zbackup-0.5.1.data/scripts/zreplicate,sha256=UNSkCSQAIpovKqQamj50nQOcXH67Q3Diq8EX8YEFNfc,12488
+zfs_tools_zbackup-0.5.1.data/scripts/zsnap,sha256=7Q548LzBh6IbORF-6-0R65uckdX9htnR-52puZjhNwE,4598
+zfstools/__init__.py,sha256=-FOCq7oAISf42An6oRfkGef7LVADHzreqgIuCneVzOM,22
+zfstools/connection.py,sha256=X-we5XavCn0CiMSEj-gJphqKlkXUgSv-HRHrpg2YhbY,7918
+zfstools/models.py,sha256=-86cCiI0NClFNXvFSFFJUJ96JLhHO-2vbFxUOO2yofg,7209
+zfstools/sync.py,sha256=ve3pDp6xyJRm6TzBdPDIG5tdHOzwHXigCbiXEAHL67I,9716
+zfstools/test_sync.py,sha256=Vjpq56OM1QZJEsB2mVNY9jFKYo0bpL0cAg1ljs8kl-Q,112524
+zfstools/test_util.py,sha256=ATGNskqxiX9FRWwctHUZg09lofY6Pg_yJ0TY_-VNoE4,1896
+zfstools/util.py,sha256=gyF527dET36QEd6dJ6ok55K5mtMP5YuD1rIPBYX9MOQ,3136
+zfs_tools_zbackup-0.5.1.dist-info/METADATA,sha256=wzqwB-ZPGGOqAOMMw02FNtITz3ODcnTty9m54CIpd_8,5335
+zfs_tools_zbackup-0.5.1.dist-info/WHEEL,sha256=ZvfnntGaZglpRLAKVkx18HrxfMwCXrA0b-ARJVnnMrw,92
+zfs_tools_zbackup-0.5.1.dist-info/top_level.txt,sha256=cyp3C4gWk-g40wieVAZhbja_WYAWd7LE_93iszM7jxQ,9
+zfs_tools_zbackup-0.5.1.dist-info/RECORD,,
