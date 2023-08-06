@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        gnews=gnfetcher.scripts.gnews:cli
+      
