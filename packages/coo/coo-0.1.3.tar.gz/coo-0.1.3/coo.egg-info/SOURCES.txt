@@ -1,0 +1,12 @@
+README.md
+setup.py
+coo/__init__.py
+coo/coo.py
+coo/exceptions.py
+coo/utils.py
+coo.egg-info/PKG-INFO
+coo.egg-info/SOURCES.txt
+coo.egg-info/dependency_links.txt
+coo.egg-info/not-zip-safe
+coo.egg-info/requires.txt
+coo.egg-info/top_level.txt
