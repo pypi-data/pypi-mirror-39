@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="US-ASCII"?>
+<Envelope xmlns="http://example.org/envelope">
+<Body>
+&#x5927;&#x536b;&#x4e2d;&#x56fd;
+</Body><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+<Reference URI="">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+<DigestValue>T/HYRvf6dlmsoW0cHvYZTp6Ov18=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>euvcBrdsUTRzSRdPq0MKKDbDppGGONiMedY6qlD5HiLMNiGjr0ZaLTzJlIDPyyE8RyPsOyoI9XNbihzWgbNe/6UP08BGZ6/i7WnNnMXoPa/UnWqZptp/xLdbzHbaEK/9JFvU5Amy1pwShgBK6+Kc0/dyREBtSXZ6qPHlg+G3yl8=
+</SignatureValue>
+<KeyInfo>
+<KeyValue><RSAKeyValue><Modulus>4IlzOY3Y9fXoh3Y5f06wBbtTg94Pt6vcfcd1KQ0FLm0S36aGJtTSb6pYKfyX7PqCUQ8wgL6xUJ5GRPEsu9gyz8ZobwfZsGCsvu40CWoT9fcFBZPfXro1Vtlh/xl/yYHm+Gzqh0Bw76xtLHSfLfpVOrmZdwKmSFKMTvNXOFd0V18=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue>
+</KeyInfo>
+</Signature></Envelope>

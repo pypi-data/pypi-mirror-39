@@ -1,0 +1,7 @@
+include README.rst
+include tests/*.py
+exclude tests/test_sc14n_t.py
+include tests/*.xml
+include tests/Alice*.*
+include tests/*.zip
+include *.chm
