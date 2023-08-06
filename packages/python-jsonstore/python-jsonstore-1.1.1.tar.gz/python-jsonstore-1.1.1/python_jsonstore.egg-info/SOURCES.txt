@@ -1,0 +1,11 @@
+.travis.yml
+LICENCE.md
+README.rst
+jsonstore.py
+setup.cfg
+setup.py
+test_jsonstore.py
+python_jsonstore.egg-info/PKG-INFO
+python_jsonstore.egg-info/SOURCES.txt
+python_jsonstore.egg-info/dependency_links.txt
+python_jsonstore.egg-info/top_level.txt
