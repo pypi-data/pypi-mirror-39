@@ -1,0 +1,65 @@
+{% extends 'assignment_desk/base.html' %}
+
+
+{% load day_addition dict_itemgetter static %}
+
+
+{% block html_title %}Assignment lists | {{ block.super }}{% endblock %}
+
+
+{% block body_class %}week-detail{% endblock %}
+
+
+{% block back_nav_link %}{% url 'assignment-desk:week-list' %}{% endblock %}
+
+
+{% block nav_header %}{{ week.role_type.name }} assignments <span class="interval-name">Week of {{ week.beginning_date|date:"N j" }}</span>{% endblock %}
+
+
+{% block aside_shown %}shown{% endblock %}
+
+
+{% block content %}
+<div class="fullscreen-card week-primary-card">
+    <div class="table-header">
+        <h3 class="week-title">{{ week.role_type.name }} department assignments</h3>
+        <h5 class="date-range">{{ week.beginning_date|date:'N j, Y' }}&thinsp;&ndash;&thinsp;{{ week.beginning_date|add_days:day_interval|date:'N j, Y' }}</h5>
+        {% if week.extra_information %}<p class="notes"><strong>Notes:</strong> {{ week.extra_information }}</p>{% endif %}
+    </div>
+</div>
+
+<div class="list-header">
+    <h4>Assignments</h4>
+</div>
+
+<div class="fullscreen-card table-card assignment-table-card">
+    {% regroup week.assignments.all by role_id as grouped_assigmnents %}
+
+    <table class="assignments-table">
+        <thead>
+            <tr data-role="days">
+                <th class="spacer"></th>
+                {% for assignment in grouped_assigmnents.0.list %}
+                    {% include "assignment_desk/partials/assignments_table/header_cell.html" with day=assignment.day %}
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for role_id, role_assignments in grouped_assigmnents %}
+            <tr data-role="{{ role_crosswalk|get_item:role_id|get_item:'slug' }}">
+                <td class="role-name">{{ role_crosswalk|get_item:role_id|get_item:'name' }}</td>
+
+                {% for assignment in role_assignments %}
+                {% include "assignment_desk/partials/assignments_table/body_cell.html" with day=assignment.day staffer=assignment.staffer notes=assignment.notes as_form=False %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{% static 'assignment_desk/js/week.detail.js' %}"></script>
+{% endblock %}
