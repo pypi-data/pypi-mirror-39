@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: json-simple-validator
+Version: 1.0.1
+Summary: A simple JSON validator for use in Flask projects. (Built in Python 3)
+Home-page: https://github.com/M69k65y/json-simple-validator
+Author: M69k65y
+Author-email: UNKNOWN
+License: MIT
+Description-Content-Type: text/markdown
+Keywords: flask json validation validator
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Flask
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: phonenumbers
+
+## JSON Simple Validator
+
+### About
+This is a simple JSON validator built for and tested using Flask applications.
+
+
+### Usage
+To install the validator:
+
+    pip install json-simple-validator
+
+Sample usage of the validator:
+
+```python
+from json_simple_validator import field_validation
+
+
+## Example Flask request
+@app.route("/post", methods = ["POST"])
+def post():
+	validation_list = [
+		{"field": "name"},
+        {"field": "pass", "alias": "Password"},
+        {"field": "number", "var_type": [int]}
+	]
+
+# 	validation_list = [
+# 		# Each element is made up of the field that is being validated
+# 		# and the alias of the field that is to be displayed, should there be an error
+
+# 		# Sample dict:
+# 		# {"name": "", e.g "first_name"
+# 		# "alias[optional]": "", eg "First Name" If left out, title case of field name is used
+# 		# "var_type[optional]": "", eg [str, bool, int]
+# 		# "length[optional]": "[min, max(optional)]", eg [2, 10]
+# 		# "special_rules": ""} eg ["email"] Only email is supported for now
+
+	messages = fieldValidation(request.json, validation_list)
+
+	if messages:
+		return jsonify({"messages": messages}), 422
+
+```
+
+Post the following to the above endpoint:
+```json
+{
+	"name": "",
+	"pass": "",
+	"number": "121231"
+}
+```
+
+The following is returned:
+```json
+{
+	"messages": [
+        "Name is empty.",
+        "Password is empty.",
+        "Number data type is not of the expected data type."
+    ]
+}
+```
+
