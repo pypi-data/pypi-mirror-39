@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: ocular
+Version: 0.0.1
+Summary: A tool for observing Kubernetes pods' statuses in real time.
+Home-page: https://github.com/polyaxon/ocular
+Author: Mourad Mourafiq
+Author-email: mourad@polyaxon.com
+Maintainer: Mourad Mourafiq
+Maintainer-email: mourad@polyaxon.com
+License: MIT
+Description: UNKNOWN
+Keywords: polyaxon,aws,azure,google cloud storage,k8s,kubernetes,docker
+Platform: any
+Classifier: Programming Language :: Python
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
