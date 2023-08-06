@@ -1,0 +1,5 @@
+[console_scripts]
+eventio_plot_histograms = eventio.scripts.plot_hists:main
+eventio_print_object_information = eventio.scripts.print_object_information:main
+eventio_print_structure = eventio.scripts.print_structure:main
+
