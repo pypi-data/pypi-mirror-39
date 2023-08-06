@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: fret
+Version: 0.1
+Summary: REProducible Experimental environment.
+Home-page: https://github.com/yxonic/fret
+Author: yxonic
+Author-email: yxonic@gmail.com
+License: MIT
+Platform: any
+Requires-Python: >=3.5
+Requires-Dist: toml
+Provides-Extra: dev
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Requires-Dist: pytest-pep8; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == 'docs'
+
+UNKNOWN
+
+
