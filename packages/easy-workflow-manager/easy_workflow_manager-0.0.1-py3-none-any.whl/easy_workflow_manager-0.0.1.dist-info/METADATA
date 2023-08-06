@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: easy-workflow-manager
+Version: 0.0.1
+Summary: Tools to support a straightforward branch/qa/merge/release process
+Home-page: https://github.com/kenjyco/easy-workflow-manager
+Author: Ken
+Author-email: kenjyco@gmail.com
+License: MIT
+Download-URL: https://github.com/kenjyco/easy-workflow-manager/tarball/v0.0.1
+Keywords: git,workflow,helper,branch,merge,qa,deploy
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Intended Audience :: Developers
+Requires-Dist: input-helper
+Requires-Dist: settings-helper
+Requires-Dist: dt-helper
+Requires-Dist: bg-helper
+Requires-Dist: click (>=6.0)
+
+UNKNOWN
+
+
