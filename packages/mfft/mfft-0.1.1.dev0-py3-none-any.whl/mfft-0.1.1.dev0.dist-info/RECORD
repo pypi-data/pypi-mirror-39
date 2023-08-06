@@ -1,0 +1,14 @@
+mfft/__init__.py,sha256=AJN-Ic19JgQrHisKed-C9GVr5MEE7ivUkWdeQnBjDVY,73
+mfft/basefft.py,sha256=GQWI4DEh7r_JFEGY4LDiyspXABeshm1vlpTTA7xKtA8,5617
+mfft/clfft.py,sha256=Y1BQ2CXnk5fPtHCTTkDLvXa7z9iTCDc5s_w_9degvDc,9474
+mfft/cufft.py,sha256=vPBtfOsj-3AcSF-xg-so7TjYTz-BLKMyKWXZkF84CB0,8847
+mfft/fft.py,sha256=YZJuujRF7WcXGqt56lPkr8p5h0YpgiY8X-IAs8Ow8Qs,3536
+mfft/fftw.py,sha256=wv_7Qalrx9HLKDQDpqI5Fk_GJ6IfRMtRGTmn1gYQQno,6840
+mfft/npfft.py,sha256=28jLk7ddrrbM2Bjrr33mFhuIQ40g4oFYM6S-wN976kc,4280
+mfft/test/__init__.py,sha256=Eavtbz3-3s20hSKAVu85J6wlMrGSjdD9RRMLVnUNdGw,23
+mfft/test/test_fft.py,sha256=-uqTxo0M09S8FqvDL_cGM9_t7YmrLKU64CHLg8IBQWk,11098
+mfft-0.1.1.dev0.dist-info/METADATA,sha256=VjoE4Y8NJNdYjLgNxH6F1_-MgSDFTF1RHx9cSxaKnv8,288
+mfft-0.1.1.dev0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+mfft-0.1.1.dev0.dist-info/top_level.txt,sha256=0_qX5XTrjSpRy7fdvuQtsG0-juc2Ghmz9moGuLDDYas,5
+mfft-0.1.1.dev0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+mfft-0.1.1.dev0.dist-info/RECORD,,
