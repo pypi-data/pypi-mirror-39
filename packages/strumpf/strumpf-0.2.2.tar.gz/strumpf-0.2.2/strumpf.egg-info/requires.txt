@@ -1,0 +1,10 @@
+azure
+requests
+click
+argcomplete
+
+[tests]
+pytest
+pytest-pep8
+pytest-cov
+mock
