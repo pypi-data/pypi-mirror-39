@@ -1,0 +1,40 @@
+Metadata-Version: 1.0
+Name: kjkiss_private
+Version: 2.0.0
+Summary: my private game
+Home-page: http://192.168.1.10:8081/simple
+Author: kjkiss
+Author-email: kjkiss@163.com
+License: LICENSE.txt
+Description: Test package .
+        ==================
+        
+        Introduction
+        -------------
+        This is a command line test pkg. ignore.
+        
+        Documentation
+        --------------
+        Documentation can be found at...
+        
+        Example Usage
+        --------------
+        Here is an example to import the modules from this package.
+        
+        .. code:: python
+        
+            from something import Foo
+            f = Foo()
+        
+        Contributing
+        ------------
+        To contribute...
+        
+        LICENSE
+        -------
+        See LICENSE.txt file.
+        
+        
+        
+        
+Platform: UNKNOWN
