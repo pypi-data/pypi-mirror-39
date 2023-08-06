@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: drsip-common
+Version: 0.3
+Summary: Common DRSIP functions
+Home-page: https://github.com/capslockwizard/drsip-common
+Author: Justin Chan
+Author-email: capslockwizard@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: biopython
+Requires-Dist: numpy
+
+# DRSIP Common
+Common functions used by the DRSIP package
+
