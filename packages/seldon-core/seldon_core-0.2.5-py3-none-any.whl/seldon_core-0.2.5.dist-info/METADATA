@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: seldon-core
+Version: 0.2.5
+Summary: Seldon Core client and microservice wrapper
+Home-page: https://github.com/SeldonIO/seldon-core
+Author: Seldon Technologies Ltd.
+Author-email: hello@seldon.io
+License: Apache 2.0
+Platform: UNKNOWN
+Requires-Dist: flask
+Requires-Dist: flask-cors
+Requires-Dist: redis
+Requires-Dist: tornado
+Requires-Dist: requests
+Requires-Dist: numpy
+Requires-Dist: flatbuffers
+Requires-Dist: protobuf
+Requires-Dist: grpcio
+Requires-Dist: tensorflow
+
+UNKNOWN
+
+
