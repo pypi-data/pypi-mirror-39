@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: tensorspacejs
+Version: 0.0.7
+Summary: TensorSpace.js Python tool package
+Home-page: https://github.com/tensorspace-team/tensorspace-converter
+Author: TensorSpace Team
+Author-email: tensorspaceteam@gmail.com
+License: Apache 2.0
+Description: # tensorspacejs
+        
+        tensorspacejs is a python tool package to provide supports on parsing python models.
+        
+        [GitHub](https://github.com/tensorspace-team/tensorspace-converter)
+Keywords: tensorspace javascript neural network 3d visualization converter
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: JavaScript
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown

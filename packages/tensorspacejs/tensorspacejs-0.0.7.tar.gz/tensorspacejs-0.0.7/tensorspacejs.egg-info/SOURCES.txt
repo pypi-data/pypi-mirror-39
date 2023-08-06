@@ -1,0 +1,14 @@
+README.md
+setup.py
+src/__init__.py
+src/file_utility.py
+src/keras_conversion.py
+src/tfjs_conversion.py
+src/tsp_converters.py
+src/version.py
+tensorspacejs.egg-info/PKG-INFO
+tensorspacejs.egg-info/SOURCES.txt
+tensorspacejs.egg-info/dependency_links.txt
+tensorspacejs.egg-info/entry_points.txt
+tensorspacejs.egg-info/requires.txt
+tensorspacejs.egg-info/top_level.txt
