@@ -1,0 +1,11 @@
+README.md
+setup.py
+acl_iitbbs.egg-info/PKG-INFO
+acl_iitbbs.egg-info/SOURCES.txt
+acl_iitbbs.egg-info/dependency_links.txt
+acl_iitbbs.egg-info/entry_points.txt
+acl_iitbbs.egg-info/requires.txt
+acl_iitbbs.egg-info/top_level.txt
+source/__init__.py
+source/cli.py
+source/scrapper.py
