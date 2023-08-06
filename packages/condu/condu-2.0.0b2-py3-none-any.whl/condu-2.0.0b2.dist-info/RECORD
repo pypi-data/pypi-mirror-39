@@ -1,0 +1,14 @@
+condu/__init__.py,sha256=8vTXsZZG6fVRdyv8t8twj8iSilaIfXaKRUhH4haOXqo,1522
+condu/condu.py,sha256=b7hMAWj03U6Cj81fJzm-1rRxT1MBYyJmFt8og0ENIKM,7810
+condu/conductor.py,sha256=jChfc7WxW0NMRibT7tGDwoomG8PjoYbHm2pHhLNoqHc,9968
+condu/objects.py,sha256=mFAXfjfj40MsQJAV2HZTHQtrp6isX53KBxgqnKzQwnY,11550
+tests/client_termination/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/client_termination/test_client_termination.py,sha256=ofJizRXZY07lUjUtpCqkwSG2nF8KXNWM0cvbvSuXuCM,978
+tests/metadata_testing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/metadata_testing/test_metadata.py,sha256=IrkvLY4VwDXpT5IgV-rxG_Kc1mAc_eM-XmubK5Ax_r4,5716
+tests/metadata_testing/test_utils.py,sha256=l6oqSeZ62QxZszSAzBJVjEy0FqODsCHJVSWsDo-bpZI,18108
+condu-2.0.0b2.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+condu-2.0.0b2.dist-info/METADATA,sha256=iyOYa0tma6dsdh_bfxSJbbE5Q-16ZXAx5I0NmicKF7Q,1251
+condu-2.0.0b2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+condu-2.0.0b2.dist-info/top_level.txt,sha256=6QpHtCWqgmsTM-t3-6Rw5FnQbuZaz8C-TbKAcTCmnxg,12
+condu-2.0.0b2.dist-info/RECORD,,
