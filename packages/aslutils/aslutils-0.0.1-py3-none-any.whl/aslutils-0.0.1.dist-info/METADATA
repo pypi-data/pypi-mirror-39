@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: aslutils
+Version: 0.0.1
+Summary: Code to parse Arm Specification Language (ASL) files
+Home-page: https://code.systems.ethz.ch/diffusion/ASLUTIL/aslutils.git
+Author: Alexander Hedges
+Author-email: ahedges@ethz.ch
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: antlr4-python3-runtime (==4.5.*)
+
+# AslUtils
+
+Utility scripts to parse ASL files and the actual ASL language.
+
+To use the library:
+
+1. Clone this repo somewhere on your system (from now on referred to as `/path/to/aslutils`)
+
+1. Install antlr4 (manually or via the package manager of your choice)
+
+1. (Optional) Setup a virtual environment in the directory of your python script: `cd /script/dir && python3 -m venv env/` and activate it `source env/bin/activate` (activation has to happen every time you want to use it).
+
+1. `pip install -e /path/to/aslutils`
+
+
