@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: aiosql
+Version: 2.0.3
+Summary: Simple SQL in Python.
+Home-page: https://github.com/nackjicholson/aiosql
+Author: William Vaughn
+Author-email: vaughnwilld@gmail.com
+Keywords: SQL,asyncio,PostgreSQL,sqlite,psycopg2
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Project-URL: Repository, https://github.com/nackjicholson/aiosql
