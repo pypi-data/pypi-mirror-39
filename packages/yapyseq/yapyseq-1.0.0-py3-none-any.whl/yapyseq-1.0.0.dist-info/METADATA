@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: yapyseq
+Version: 1.0.0
+Summary: Yet Another Python Sequencer
+Home-page: https://github.com/RomainTT/yapyseq
+Author: Romain TAPREST
+Author-email: romain@taprest.fr
+License: MPL-2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: ruamel.yaml
+Requires-Dist: yamale
+Requires-Dist: click
+
+# yapyseq
+
+(TODO: add shields and autotest using CI)
+
+Yet Another Python Sequencer
+
+## How to use ?
+
+Please read the [user documentation](doc/userdoc.md).
+
+## How to contribute ?
+
+Please read the [developer documentation](doc/devdoc.md).
+
+
