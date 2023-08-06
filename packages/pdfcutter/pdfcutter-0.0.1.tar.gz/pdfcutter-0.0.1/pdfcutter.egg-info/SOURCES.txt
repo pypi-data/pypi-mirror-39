@@ -1,0 +1,11 @@
+README.md
+setup.py
+pdfcutter/__init__.py
+pdfcutter/debug.py
+pdfcutter/pdfcutter.py
+pdfcutter/utils.py
+pdfcutter.egg-info/PKG-INFO
+pdfcutter.egg-info/SOURCES.txt
+pdfcutter.egg-info/dependency_links.txt
+pdfcutter.egg-info/requires.txt
+pdfcutter.egg-info/top_level.txt
