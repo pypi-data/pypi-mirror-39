@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: pySCM
+Version: 0.2.1
+Summary: A basic simple climate model in Python
+Home-page: http://pythonhosted.org/pySCM
+Author: Jared Lewis
+Author-email: jared@bodekerscientific.com
+License: MIT
+Project-URL: Bug Reports, https://github.com/bodekerscientific/pyscm/issues
+Project-URL: Source, https://github.com/bodekerscientific/pyscm/
+Description: pySCM
+        =====
+        
+        +----------------+-----------+--------+
+        | |Build Status| | |Codecov| | |Docs| |
+        +----------------+-----------+--------+
+        
+        .. sec-begin-index
+        
+        
+        pySCM is a simple climate model developed in Python for producing timeseries of
+        annual mean global mean surface temperature from projections of greenhouse gases.
+        pySCM is purposely very simple using only a few couple differential equations.
+        This means that pySCM is very fast and is controlled using only a few parameters.
+        
+        .. sec-end-index
+        
+        Documentation
+        -------------
+        
+        Instructions for using pySCM and a description of the equations used in pySCM are
+        provided in the `Documentation <https://openscm.readthedocs.io/en/latest/>`_.
+        
+        .. sec-begin-development
+        
+        Development
+        -----------
+        
+        .. code:: bash
+        
+            git clone git@github.com:bodekerscientific/pyscm.git
+            pip install -e .
+        
+        Tests can be run locally with
+        
+        ::
+        
+            python setup.py test
+        
+        .. sec-end-development
+        
+        .. |Build Status| image:: https://img.shields.io/travis/bodekerscientific/pyscm.svg
+            :target: https://travis-ci.org/bodekerscientific/pyscm
+        .. |Docs| image:: https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat
+            :target: https://pyscm.readthedocs.io/en/latest/
+        .. |Codecov| image:: https://img.shields.io/codecov/c/github/bodekerscientific/bodekerscientific.svg
+            :target: https://codecov.io/gh/bodekerscientific/pyscm
+        
+Keywords: simple climate model SCM climate science
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: dev
+Provides-Extra: docs

@@ -1,0 +1,15 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+versioneer.py
+pySCM/__init__.py
+pySCM/_version.py
+pySCM/scm.py
+pySCM.egg-info/PKG-INFO
+pySCM.egg-info/SOURCES.txt
+pySCM.egg-info/dependency_links.txt
+pySCM.egg-info/requires.txt
+pySCM.egg-info/top_level.txt
+tests/__init__.py
+tests/test_interface.py
