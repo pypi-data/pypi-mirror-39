@@ -1,0 +1,84 @@
+# wagtailembedpeertube
+
+Embed peertube videos into wagtail.
+
+**Table of content**
+
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Settings](#settings)
+- [Usage](#usage)
+
+## Introduction
+
+Wagtail has a great
+[support of Oembed](http://docs.wagtail.io/en/v2.1.1/advanced_topics/embeds.html),
+for embedding content. Unfortunately the Oembed mecanism is based on services
+domain names and URI; and this is prone to centralization since it limits to a
+short list of selected providers.
+
+By the way, currently there is for now more than 300 instances and it will
+probably grow with years. See e.g. https://instances.joinpeertube.org
+
+This app bring Oembed support for decentralized peertube instances.
+
+To do this we only focus on a string URI filtering, allowing all services from
+any domain name.
+
+## Installation
+
+### Requirements
+
+You will need `wagtail.embeds` which is part of Wagtail's core modules.
+
+### Pip installation
+
+    $ pip install wagtailembedpeertube
+
+## Settings
+
+### Add the app to your project
+
+You have to add `wagtailembedpeertube` anywhere after `wagtail.embeds` in
+your project settings.
+
+### Configure embeds finders
+
+You have to declare the peertube finder in your project settings, so Wagtail
+will make use of it.
+
+```python
+WAGTAILEMBEDS_FINDERS = [
+    {
+        'class': 'wagtail.embeds.finders.oembed',
+    },
+    {
+        'class': 'wagtailembedpeertube.finders',
+    },
+]
+```
+Since the first matching finder will be used, you should declare
+`wagtailembedpeertube` as last because others finders are matching domain names
+and may be more precise.
+
+See [Configuring embed “finders”](http://docs.wagtail.io/en/v2.1.1/advanced_topics/embeds.html#configuring-embed-finders)
+for more informations.
+
+## Usage
+
+That's it! You should now be able to embed any peertube content using the
+`EmbedBlock`:
+
+```python
+from wagtail.embeds.blocks import EmbedBlock
+
+class MyStreamField(blocks.StreamBlock):
+    ...
+
+    embed = EmbedBlock()
+```
+
+## License
+
+wagtailembedpeertube is developed by Cliss XXI and licensed under the
+[AGPLv3+](LICENSE).
