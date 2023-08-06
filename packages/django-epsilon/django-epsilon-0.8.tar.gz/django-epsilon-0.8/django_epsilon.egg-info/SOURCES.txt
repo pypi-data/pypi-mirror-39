@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+django_epsilon.egg-info/PKG-INFO
+django_epsilon.egg-info/SOURCES.txt
+django_epsilon.egg-info/dependency_links.txt
+django_epsilon.egg-info/not-zip-safe
+django_epsilon.egg-info/requires.txt
+django_epsilon.egg-info/top_level.txt
+epsilon/__init__.py
+epsilon/admin.py
+epsilon/apps.py
+epsilon/models.py
+epsilon/schema_profile.py
+epsilon/signals.py
+epsilon/util.py
+epsilon/views.py
