@@ -1,0 +1,15 @@
+README.md
+setup.py
+cowbathybrid/__init__.py
+cowbathybrid/assemble.py
+cowbathybrid/command_runner.py
+cowbathybrid/cowbat-hybrid-assembly.py
+cowbathybrid/dependency_checks.py
+cowbathybrid/parsers.py
+cowbathybrid/quality.py
+cowbathybrid/reports.py
+cowbathybrid.egg-info/PKG-INFO
+cowbathybrid.egg-info/SOURCES.txt
+cowbathybrid.egg-info/dependency_links.txt
+cowbathybrid.egg-info/requires.txt
+cowbathybrid.egg-info/top_level.txt
