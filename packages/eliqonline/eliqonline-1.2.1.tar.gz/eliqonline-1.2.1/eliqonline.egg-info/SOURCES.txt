@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+eliqonline
+eliqonline.py
+requirements.txt
+setup.cfg
+setup.py
+eliqonline.egg-info/PKG-INFO
+eliqonline.egg-info/SOURCES.txt
+eliqonline.egg-info/dependency_links.txt
+eliqonline.egg-info/requires.txt
+eliqonline.egg-info/top_level.txt
