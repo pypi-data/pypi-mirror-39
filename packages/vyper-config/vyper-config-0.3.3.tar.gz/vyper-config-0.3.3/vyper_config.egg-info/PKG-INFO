@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: vyper-config
+Version: 0.3.3
+Summary: Python configuration with more fangs
+Home-page: http://github.com/admiralobvious/vyper
+Author: Alexandre Ferland
+Author-email: aferlandqc@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: any
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
