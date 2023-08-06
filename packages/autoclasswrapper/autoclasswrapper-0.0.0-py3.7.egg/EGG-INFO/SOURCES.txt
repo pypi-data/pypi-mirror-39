@@ -1,0 +1,13 @@
+CHANGELOG.md
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+autoclasswrapper/__init__.py
+autoclasswrapper/input.py
+autoclasswrapper/output.py
+autoclasswrapper/run.py
+autoclasswrapper.egg-info/PKG-INFO
+autoclasswrapper.egg-info/SOURCES.txt
+autoclasswrapper.egg-info/dependency_links.txt
+autoclasswrapper.egg-info/top_level.txt
