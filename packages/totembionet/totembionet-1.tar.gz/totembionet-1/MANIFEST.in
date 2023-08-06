@@ -1,0 +1,4 @@
+include setup.py
+include totembionet.py
+recursive-include docs *
+recursive-include totembionet *
