@@ -1,0 +1,4 @@
+numpy>=1.13.1
+awkward>=0.7.0
+uproot-methods>=0.3.0
+cachetools
