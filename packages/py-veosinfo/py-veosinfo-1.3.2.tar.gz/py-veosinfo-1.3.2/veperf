@@ -1,0 +1,224 @@
+#!/usr/bin/python
+#
+# Copyright (C) 2018 Erich Focht
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+
+import argparse
+from veosinfo import *
+import os, time
+import signal
+import sys
+
+
+def sigint_handler(signum, frame):
+    sys.exit()
+
+
+def calc_metrics(nodeid, old, new):
+    """
+    Calculate metrics from two perf counter values dicts.
+    nodeid needs to be passed in order to have the correct value of the clock.
+    The result is stored in a dict with keys being the metric names.
+
+    MOPS                = (EX-VX+VE+FMAEC) / USRCC*clck
+    MFLOPS              = FPEC/USRCC*clck
+    V.OP RATIO          = VE/(EX-VX+VE)*100
+    AVER. V.LEN     [-] = VE/VX
+    VECTOR TIME         = VECC/1.4GHz
+    L1CACHE MISS        = L1MCC/1.4GHz
+    CPU PORT CONF       = PCCC/1.4GHz
+    VLD LLC HIT E   [%] = (1-VLCME/VLEC)*100
+
+    """
+    r = dict()
+    clck = float(ve_info[nodeid]['mhz'])
+    clck_hz = clck * 1000000
+    for _r in ["EX", "VX", "VE", "FMAEC", "FPEC", "USRCC", "VECC",
+              "L1MCC", "PCCC", "VLCME", "VLEC", "T"]:
+        exec("d%s = float(new.get(\"%s\", 0) - old.get(\"%s\", 0))" % (_r, _r, _r))
+        #exec("print \"d%s=%%r new %s=%%r old %s=%%r\" %% (d%s, new.get(\"%s\", 0), old.get(\"%s\", 0))" %
+        #     (_r, _r, _r, _r, _r, _r))
+
+
+    r["USRSEC"] = new.get("USRCC", 0) / clck_hz
+    r["USRTIME"] = dUSRCC / clck_hz
+    r["ELAPSED"] = dT
+
+    if r["ELAPSED"] > 0:
+        r["EFFTIME"] = r["USRTIME"] / r["ELAPSED"]
+
+    if dUSRCC > 0:
+        r["MOPS"] = (dEX - dVX + dVE + dFMAEC) * clck / dUSRCC
+        r["MFLOPS"] = dFPEC * clck / dUSRCC
+        r["VTIMERATIO"] = dVECC * 100 / dUSRCC
+        r["L1CACHEMISS"] = dL1MCC * 100 / dUSRCC
+        r["CPUPORTCONF"] = dPCCC * 100 / dUSRCC
+
+    if dEX > 0:
+        r["VOPRAT"] = dVE * 100 / (dEX - dVX + dVE)
+
+    if dVX > 0:
+        r["AVGVL"] = dVE / dVX
+
+    if dVLEC > 0:
+        r["VLDLLCHIT"] = (1 - dVLCME / dVLEC) * 100
+
+    return r
+
+
+def get_pid_comm(pid):
+    #COMM=`cat /proc/$pid/cmdline | sed -e 's,^.*--,,'`
+    try:
+        with open("/proc/%d/cmdline" % pid, "r") as f:
+            for line in f:
+                line = line.rstrip(os.linesep)
+                idx = line.find("--")
+                if idx > 0:
+                    return line[idx + 2:]
+    except:
+        pass
+    return "-"
+
+
+def print_metrics():
+    for nodeid in sorted(METR.keys()):
+        s_mops = 0
+        s_mflops = 0
+        print "-> VE%d" % nodeid
+        for pid in sorted(METR[nodeid].keys()):
+            m = METR[nodeid][pid]
+            comm = get_pid_comm(pid)
+            print "%-8d  %8.2fs  %7.3f  %7.0f  %8.0f  %5.0f  %7.1f%%  %9.1f%%  %6.0f%%  %7.0f%%  %7.0f%%  %-10s" % \
+                (pid, m["USRSEC"], m.get("EFFTIME", 0), m.get("MOPS", 0), m.get("MFLOPS", 0),
+                 m.get("AVGVL", 0), m.get("VOPRAT", 0), m.get("VTIMERATIO", 0),
+                 m.get("L1CACHEMISS", 0), m.get("CPUPORTCONF", 0), m.get("VLDLLCHIT", 0), comm)
+            s_mops += m.get("MOPS", 0)
+            s_mflops += m.get("MFLOPS", 0)
+        print "SUM VE%d: MOPS=%-8.0f MFLOPS=%-8.0f" % (nodeid, s_mops, s_mflops)
+
+
+def print_label():
+    print "%-8s  %9s  %7s  %7s  %8s  %5s  %8s  %10s  %7s  %8s  %8s  %-10s" % \
+        ("pid", "USRSEC", "EFFTIME", "MOPS", "MFLOPS", "AVGVL", "VOPRAT",
+         "VTIMERATIO", "L1CMISS", "PORTCONF", "VLLCHIT", "comm")
+
+#
+################################################################################
+#
+
+DESCR = """Show performance metrics of VE tasks.
+
+VEOS allows to read performance counters of own VE processes from the VH
+with no or extremely low overhead for the VE processes. Root can access
+all VE processes' metrics and will see all VE tasks.
+
+The MOPS and MFLOPS metrics are aggregated per node at the end of each
+node output block.
+
+Displayed metrics:
+------------------
+
+USRSEC:      Task's user time on VE
+EFFTIME:     Effective time: ratio between user and elapsed time.
+             A value lower than 1.0 is a sign for syscalls.
+MOPS:        Millions of Operations Per Second
+MFLOPS:      Millions of Floating Point Ops Per Second
+AVGVL:       Average vector length
+VOPRAT:      Vector operation ratio [percent]
+VTIMERATIO:  Vector time ratio (vector time / user time) [percent]
+L1CMISS:     L1 cache miss time [percent]
+PORTCONF:    CPU port conflict time [percent]
+VLLCHIT:     Vector load LLC hits [percent] (counter not active with MPI)
+
+The PMMR register of each VE core is controlling Which performance metrics
+are actually active. Currently there is no easy way to control this register
+from user side, MPI and non-MPI programs might measure slightly different
+metrics.
+"""
+
+signal.signal(signal.SIGINT, sigint_handler)
+parser = argparse.ArgumentParser( description=DESCR,
+                                  formatter_class=argparse.RawTextHelpFormatter )
+parser.add_argument("-d", "--delay", type=int, default=[2], nargs=1, help="Measurement interval [seconds]. Default: 2s.")
+parser.add_argument("-n", "--node", action="append", help="VE Node ID to be included into measurement. Default: all nodes.")
+parser.add_argument("interv", type=int, nargs='?', metavar='INTERVALS', help="number of measurement intervals before exiting")
+args, rest = parser.parse_known_args()
+
+DELAY = args.delay[0]
+INTERV = -1
+if args.interv is not None:
+    try:
+        INTERV = args.interv + 1
+    except:
+        pass
+
+ni = node_info()
+ve_info = dict()
+nodeids = []
+for i in xrange(ni['total_node_count']):
+    nodeid = ni['nodeid'][i]
+    if ni['status'][i] != 0:
+        continue
+    nodeids.append(nodeid)
+    ve_info[nodeid] = cpu_info(nodeid)
+
+if args.node is not None:
+    nodeids = []
+    for n in args.node:
+        nodeids.append(int(n))
+
+DATA = dict()
+PREV = dict()
+METR = dict()
+for nodeid in nodeids:
+    DATA[nodeid] = dict()
+    PREV[nodeid] = dict()
+    METR[nodeid] = dict()
+
+cnt = 0
+while 1:
+    TSTART = time.time()
+    
+    # loop over VE node IDs
+    for nodeid in nodeids:
+        pids = sorted(ve_pids(nodeid))
+
+        for prevpid in PREV[nodeid].keys():
+            if prevpid not in pids:
+                del PREV[nodeid][prevpid]
+                if prevpid in METR[nodeid].keys():
+                    del METR[nodeid][prevpid]
+
+        for pid in pids:
+            try:
+                DATA[nodeid][pid] = ve_pid_perf(nodeid, pid)
+            except:
+                continue
+            if pid in PREV[nodeid].keys():
+                METR[nodeid][pid] = calc_metrics(nodeid, PREV[nodeid][pid], DATA[nodeid][pid])
+            PREV[nodeid][pid] = DATA[nodeid][pid]
+            del DATA[nodeid][pid]
+
+    if cnt > 0:
+        print_label()
+        print_metrics()
+
+    TEND = time.time()
+    cnt += 1
+    if cnt == INTERV:
+        break
+    time.sleep(max(DELAY - (TEND - TSTART), 0.5))
