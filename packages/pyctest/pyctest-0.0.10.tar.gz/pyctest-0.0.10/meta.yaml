@@ -1,0 +1,47 @@
+package:
+  name: pyctest
+  version: '0.0.9'
+
+build:
+  number: 0
+  binary_relocation: False
+  script: "{{ PYTHON }} setup.py install"  # [not win]
+  script_env:
+    - TMPDIR
+    - CC
+    - CXX
+
+source:
+  git_rev: 63f7a92d21304dacd38627afe7c5ae1c1120673c
+  git_url: https://github.com/jrmadsen/pyctest.git
+
+requirements:
+  host:
+    - cmake
+    - git
+    - python={{ python }}
+    - pip
+    - setuptools
+    - openssl
+    - curl
+  run:
+    - python={{ python }}
+    - openssl
+    - curl
+    - libuv
+
+test:
+  imports:
+    - pyctest
+    - pyctest.pyctest
+    - pyctest.pycmake
+    - pyctest.helpers
+
+about:
+  home: https://jrmadsen.github.io/pyctest/
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: 'Python bindings to select portions of CMake/CTest package -- enabling generation of CTests for CDash submission without a CMake build system'
+  doc_url: https://pyctest.readthedocs.io/en/latest/
+  dev_url: http://github.com/jrmadsen/pyctest
