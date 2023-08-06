@@ -1,0 +1,13 @@
+pampy/__init__.py,sha256=IaIQ4nB1S3tTiSJa-ju5ikMTh1-XctKFbWsz1EmqygE,405
+pampy/helpers.py,sha256=5dquaV4j9BCh5Qxhhbh0ZrLKcWR2NDVlPI5Fu7GwQnk,1075
+pampy/pampy.py,sha256=V5tHESmjL5EwLmG_JYnyOR8UF3jfgps8l5C6MG7JymU,5563
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_basic.py,sha256=aA12Gk8hlBXWRnXnTUGeuPp1vFOD2lLWANRwcf2i6j8,5091
+tests/test_dict.py,sha256=5rSP7k_JKw3n4HKGc-gmdJFd8HVagRuCuZMdl40pN2g,2597
+tests/test_elaborate.py,sha256=byzc5HJ1k0XNFUXnUgKXFCFLpIJQ7yVZ-pDCkR4n6Ik,6334
+tests/test_iterable.py,sha256=N4qnz6L7z36y1AaFn2qvRiZc6YLkBXnz0uE9woePCSM,3886
+pampy-0.1.10.dist-info/LICENSE,sha256=k0tNm96Af1OuORUSBGcZyIN1letzvHGq2z808de2cwU,1072
+pampy-0.1.10.dist-info/METADATA,sha256=z9laurPyjD-NqVnECQy-i7ZkCZiPU1XBrJsaA0zF6_8,8403
+pampy-0.1.10.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+pampy-0.1.10.dist-info/top_level.txt,sha256=kzd7XtAddx7mSsJL2rGd39BV0CN4POVyiweohgOFOtQ,12
+pampy-0.1.10.dist-info/RECORD,,
