@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: feature-mining
+Version: 0.0.3
+Summary: Mine implicit features using a generative feature language model.
+Home-page: https://github.com/pypa/sampleproject
+Author: H. Wilder, N. Freundlich, Santu Karmaker
+Author-email: hwilder3@illinois.edu, norbert4@illinois.edu, karmake2@illinois.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: nltk
+Requires-Dist: behave (==1.2.6)
+Requires-Dist: certifi (==2018.10.15)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: cymem (==2.0.2)
+Requires-Dist: cytoolz (==0.9.0.1)
+Requires-Dist: dill (==0.2.8.2)
+Requires-Dist: en-core-web-sm (==2.0.0)
+Requires-Dist: hw-nfr-cs410-pip-test (==0.0.4)
+Requires-Dist: idna (==2.7)
+Requires-Dist: metapy (==0.2.13)
+Requires-Dist: msgpack (==0.5.6)
+Requires-Dist: msgpack-numpy (==0.4.3.2)
+Requires-Dist: murmurhash (==1.0.1)
+Requires-Dist: numpy (==1.15.4)
+Requires-Dist: pandas (==0.23.4)
+Requires-Dist: parse (==1.9.0)
+Requires-Dist: parse-type (==0.4.2)
+Requires-Dist: plac (==0.9.6)
+Requires-Dist: preshed (==2.0.1)
+Requires-Dist: pyreadline (==2.1)
+Requires-Dist: python-dateutil (==2.7.5)
+Requires-Dist: pytz (==2018.7)
+Requires-Dist: regex (==2018.1.10)
+Requires-Dist: requests (==2.20.1)
+Requires-Dist: scipy (==1.1.0)
+Requires-Dist: six (==1.11.0)
+Requires-Dist: spacy (==2.0.16)
+Requires-Dist: thinc (==6.12.0)
+Requires-Dist: toolz (==0.9.0)
+Requires-Dist: tqdm (==4.28.1)
+Requires-Dist: ujson (==1.35)
+Requires-Dist: urllib3 (==1.24.1)
+Requires-Dist: wrapt (==1.10.11)
+
+# GFLM: mine implicit features using a generative feature language model
+
+## Description
+TBD
+
+## Usage
+TBD
+
+## Details
+TBD
+
+## Package created based on the following paper
+S. Karmaker Santu, P. Sondhi and C. Zhai, "Generative Feature Language Models for Mining Implicit Features from Customer Reviews", Proceedings of the 25th ACM International on Conference on Information and Knowledge Management - CIKM '16, 2016.
+
+
