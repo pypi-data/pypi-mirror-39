@@ -1,0 +1,26 @@
+name: test-lex-bot
+description: Regression tests for the Amazon Lex ScheduleAppointment bot
+botName: ScheduleAppointment
+botAlias: test
+waitBetweenRequestsMillis: 0
+sequences:
+- name: book appointment root canal
+  description: book appointment root canal
+  sequence:
+  - utterance: "book a root canal"
+    postConditions:
+      message:
+      - "When should I schedule your root canal"
+  - utterance: "tomorrow"
+    postConditions:
+      message:
+      - "At what time do you want to schedule the root canal\\?"
+      - "At what time should I schedule your appointment\\?"
+      - "At what time on .*\\?"
+  - utterance: "10am"
+    postConditions:
+      message:
+      - ".* is available, should I go ahead and book your .*\\?"
+  - utterance: "yes"
+    postConditions:
+      dialogState: ReadyForFulfillment

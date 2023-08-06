@@ -1,0 +1,41 @@
+#!python
+
+from amazon_lex_bot_test import amazon_lex_bot_test as albt
+import argparse
+import sys
+import logging
+
+logging.basicConfig(stream=sys.stdout)
+logger = logging.getLogger(__name__)
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--alias', required=False,
+                    help='lex alias to deploy to, e.g. test or dev or qa', default='$LATEST')
+parser.add_argument('--region', required=False, help='AWS region to deploy to')
+
+logging_group = parser.add_mutually_exclusive_group(required=False)
+logging_group.add_argument('--verbose', required=False, help='verbose logging (>=DEBUG)', action='store_true')
+logging_group.add_argument('--quiet', required=False, help='quiet (>=WARNING)', action='store_true')
+
+group = parser.add_mutually_exclusive_group(required=True)
+group.add_argument('--test-file', help='test file path')
+group.add_argument('--example', help='use one of the test examples',
+                   choices=["BookTrip", "OrderFlowers", "ScheduleAppointment"])
+
+args = parser.parse_args()
+
+test_file = args.test_file
+
+region = args.region
+lex_alias = args.alias
+log_level = 'INFO'
+if args.verbose:
+    log_level = 'DEBUG'
+elif args.quiet:
+    log_level = 'WARNING'
+
+try:
+    albt.run_test(test_sequence_file_path=test_file, lex_alias=lex_alias, region=region, example=args.example, log_level=log_level)
+except Exception as e:
+    logger.error(e)
+    sys.exit(1)
