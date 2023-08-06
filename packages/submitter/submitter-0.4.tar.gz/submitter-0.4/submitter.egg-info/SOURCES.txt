@@ -1,0 +1,12 @@
+README
+setup.py
+bin/submitter
+submitter/__init__.py
+submitter/submitter.py
+submitter.egg-info/PKG-INFO
+submitter.egg-info/SOURCES.txt
+submitter.egg-info/dependency_links.txt
+submitter.egg-info/not-zip-safe
+submitter.egg-info/requires.txt
+submitter.egg-info/top_level.txt
+submitter/config/config.ini
