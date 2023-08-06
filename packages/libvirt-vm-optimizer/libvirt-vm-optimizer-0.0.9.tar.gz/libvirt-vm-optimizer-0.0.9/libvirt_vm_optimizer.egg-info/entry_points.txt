@@ -1,0 +1,3 @@
+[console_scripts]
+libvirt-vm-optimizer = libvirt_vm_optimizer.__main__:main
+
