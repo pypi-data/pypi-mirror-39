@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: DeriveAlive
+Version: 0.0.7
+Summary: An AutoDifferentiation package
+Home-page: https://github.com/cs207-group19/cs207-FinalProject
+Author: Chen Shi, Stephen Slater, Yue Sun
+Author-email: cshi@hsph.harvard.edu, stephenslater@college.harvard.edu, yuesun@g.harvard.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: nose (>=1.0.0)
+Requires-Dist: numpy (==1.15.2)
+Requires-Dist: packaging (==18.0)
+Requires-Dist: pyparsing (==2.2.2)
+Requires-Dist: scipy (==1.1.0)
+Requires-Dist: six (>=1.11.0)
+Requires-Dist: matplotlib (>=3.0.1)
+
+The software library uses the concept of automatic differentiation to solve differentiation problems in scientific computing. Additional features of an optimization suite and a quadratic spline suite are also listed in this documentation.
+
+

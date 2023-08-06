@@ -1,0 +1,16 @@
+DeriveAlive/DeriveAlive.py,sha256=4n7ALNv0O_H0i7ZwMuz8TskCZy65GhDLTUaKB6g8Gk8,31695
+DeriveAlive/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+DeriveAlive/optimize.py,sha256=Tg06iuWBkNEWSTlJGo1p68VReHbhnhFSrHdwKSBgSAU,12527
+DeriveAlive/rootfinding.py,sha256=jbTDio8dhT0upHqrfEH0aRgSMC4HpWepVZFIgAke2j8,12213
+DeriveAlive/spline.py,sha256=HBBfrIpEf7TaTYIjK7fQCllHfnkXTPmrKvDu8x4kdow,6085
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/gradient_descent_demo.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_DeriveAlive.py,sha256=NlhWkWbFcc4tRw2Vs3DiSPa-4ymGqi_qXe0R5F0mA7k,57163
+tests/test_optimize.py,sha256=5QAQ-Vpb-a7Cth6efHTTVbUxB7rI0wmbtIU8m_qr4GA,7649
+tests/test_rootfinding.py,sha256=snUIXrXM0zgBJZqnc86KtXc6KmrHR8D8LkVjaB9q5mg,9896
+tests/test_spline.py,sha256=GFFFDbOcy3XT9zoTDkJt5WKB5_NAH4EVnd0yAhbq-Q0,803
+DeriveAlive-0.0.7.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+DeriveAlive-0.0.7.dist-info/METADATA,sha256=gV1wehqaarU7rRpdEjAXwzzmICtxYRoP4LgqXgK3vO0,984
+DeriveAlive-0.0.7.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+DeriveAlive-0.0.7.dist-info/top_level.txt,sha256=KxlrKQGqJHKDNW5x0y3OV-fbHRIWXyTMRJI4Fd7xa_Q,18
+DeriveAlive-0.0.7.dist-info/RECORD,,
