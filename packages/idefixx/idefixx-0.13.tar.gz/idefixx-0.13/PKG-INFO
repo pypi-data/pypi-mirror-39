@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: idefixx
+Version: 0.13
+Summary: Identical image crosscheck
+Home-page: https://github.com/rogervdf/idefix-ml/
+Author: Roger van Daalen
+Author-email: roger@vandaalen.eu
+License: MIT
+Download-URL: https://github.com/rogervdf/idefix-ml/archive/0.12.tar.gz
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
