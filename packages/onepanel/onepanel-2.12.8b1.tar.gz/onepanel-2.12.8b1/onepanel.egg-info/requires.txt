@@ -1,0 +1,11 @@
+PyYAML==3.13
+prettytable
+requests
+click
+PTable
+configobj
+websocket-client
+humanize
+configparser
+awscli
+watchdog
