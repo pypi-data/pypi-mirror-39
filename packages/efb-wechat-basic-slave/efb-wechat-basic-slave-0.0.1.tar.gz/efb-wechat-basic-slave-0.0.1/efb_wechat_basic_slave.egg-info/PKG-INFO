@@ -1,0 +1,48 @@
+Metadata-Version: 1.2
+Name: efb-wechat-basic-slave
+Version: 0.0.1
+Summary: WeChat Slave Channel for EH Forwarder Bot, working with WeChat macOS Hook.
+Home-page: https://github.com/JogleLew/efb-wechat-basic-slave
+Author: JogleLew
+Author-email: jogle@jogle.top
+License: GPLv3
+Description-Content-Type: UNKNOWN
+Description: ########################################################################
+        EFB QQ Slave Channel
+        ########################################################################
+        
+        **Channel ID**: ``jogle.wechat``
+        
+        *******************************************
+        Software dependencies
+        *******************************************
+        
+        -  Python >= 3.6
+        -  EH Forwarder Bot >= 2.0.0
+        -  ffmpeg
+        -  libmagic
+        -  pillow
+        
+        ******************
+        Introduction
+        ******************
+        
+        This is a self-use EFB WeChat slave.
+        
+        WeChat slave to master channel is fully supported, but only text mesage can send to WeChat slave.
+        
+        This project is still in Alpha, use at your own risk.
+        
+        
+Keywords: ehforwarderbot,EH Forwarder Bot,EH Forwarder Bot Slave Channel,wechat,chatbot
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
