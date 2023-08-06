@@ -1,0 +1,13 @@
+numpy
+scipy
+matplotlib
+pandas
+
+[HDF5]
+h5py
+
+[MODFLOW]
+flopy
+
+[VTR]
+pyevtk
