@@ -1,0 +1,180 @@
+Metadata-Version: 2.0
+Name: collective.disclaimer
+Version: 1.0b1
+Summary: Show a disclaimer the first time a user visits a site.
+Home-page: https://github.com/collective/disclaimer
+Author: Hector Velarde
+Author-email: hector.velarde@gmail.com
+License: UNKNOWN
+Keywords: plone disclaimer
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 4.3
+Classifier: Framework :: Plone :: 5.1
+Classifier: Intended Audience :: Other Audience
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: test
+Requires-Dist: plone.api
+Requires-Dist: plone.app.layout
+Requires-Dist: plone.app.registry
+Requires-Dist: plone.app.z3cform
+Requires-Dist: plone.autoform
+Requires-Dist: plone.registry
+Requires-Dist: plone.supermodel
+Requires-Dist: Products.CMFPlone (>=4.3)
+Requires-Dist: Products.GenericSetup
+Requires-Dist: setuptools
+Requires-Dist: zope.component
+Requires-Dist: zope.i18nmessageid
+Requires-Dist: zope.interface
+Requires-Dist: zope.schema
+Provides-Extra: test
+Requires-Dist: AccessControl; extra == 'test'
+Requires-Dist: lxml; extra == 'test'
+Requires-Dist: plone.app.contenttypes; extra == 'test'
+Requires-Dist: plone.app.robotframework; extra == 'test'
+Requires-Dist: plone.app.testing[robot]; extra == 'test'
+Requires-Dist: plone.browserlayer; extra == 'test'
+Requires-Dist: plone.registry; extra == 'test'
+Requires-Dist: plone.testing; extra == 'test'
+Requires-Dist: robotsuite; extra == 'test'
+Requires-Dist: zope.viewlet; extra == 'test'
+
+.. image:: https://raw.githubusercontent.com/collective/disclaimer/master/docs/disclaimer.png
+    :align: left
+    :alt: Disclaimer
+    :height: 100px
+    :width: 100px
+
+**********
+Disclaimer
+**********
+
+.. contents:: Table of Contents
+
+Life, the Universe, and Everything
+==================================
+
+Show a disclaimer the first time a user visits a site.
+
+Mostly Harmless
+===============
+
+.. image:: http://img.shields.io/pypi/v/collective.disclaimer.svg
+   :target: https://pypi.python.org/pypi/collective.disclaimer
+
+.. image:: https://img.shields.io/travis/collective/disclaimer/master.svg
+    :target: http://travis-ci.org/collective/disclaimer
+
+.. image:: https://img.shields.io/coveralls/collective/disclaimer/master.svg
+    :target: https://coveralls.io/r/collective/disclaimer
+
+Got an idea? Found a bug? Let us know by `opening a support ticket`_.
+
+.. _`opening a support ticket`: https://github.com/collective/disclaimer/issues
+
+Don't Panic
+===========
+
+Installation
+------------
+
+To enable this package in a buildout-based installation:
+
+Edit your buildout.cfg and add the following to it:
+
+.. code-block:: ini
+
+    [buildout]
+    ...
+    eggs =
+        collective.disclaimer
+
+After updating the configuration you need to run ''bin/buildout'', which will take care of updating your system.
+
+Go to the 'Site Setup' page in a Plone site and click on the 'Add-ons' link.
+
+Check the box next to 'Disclaimer' and click the 'Activate' button.
+
+Usage
+-----
+
+After installing the package,
+go to the 'Disclaimer' configlet on 'Site Setup' and enable the feature.
+
+.. figure:: https://raw.githubusercontent.com/collective/disclaimer/master/docs/configlet.png
+    :align: center
+    :height: 900px
+    :width: 800px
+
+    The Disclaimer control panel configlet.
+
+Now, the first time a user visits the site the disclaimer will be shown at the bottom of the page.
+
+.. figure:: https://raw.githubusercontent.com/collective/disclaimer/master/docs/viewlet.png
+    :align: center
+    :height: 600px
+    :width: 800px
+
+    The Disclaimer viewlet at work.
+
+Users will see the disclaimer again whenever information in the configlet is updated.
+
+How Does It Work?
+-----------------
+
+This package registers a new viewlet on ``plone.portalfooter`` viewlet manager.
+The viewlet is normally hidden and it will only be shown after checking the user hasn't seen it yet.
+The information on last time the viewlet was updated is stored in the user's browser local storage.
+
+Share and Enjoy
+===============
+
+This package would not have been possible without the contribution of the following people:
+
+- Héctor Velarde
+- `Freepik <http://www.freepik.com/>`_ (`warning icon <https://www.flaticon.com/free-icon/warning_95141>`_)
+
+You can find an updated list of package contributors on `GitHub <https://github.com/collective/collective.disclaimer/contributors>`_.
+
+Changelog
+=========
+
+1.0b1 (2018-12-08)
+------------------
+
+- Register the controlpanel for any context.
+  The correct registry is automatically acquired.
+  This way, it's possible to set different disclaimer texts in a Lineage site with lineage.registry installed.
+  [thet]
+
+- Add a ``disclaimer-inner`` wrapper to allow easier styling, e.g. positioning the viewlet centered on the website and darkening the whole background.
+  [thet]
+
+- Move styles and scripts into the viewlet, so that they are included when using Diazo and just using the viewlet selector to copy the viewlet into the theme.
+  [thet]
+
+- Add an "OK" button instead of the close link.
+  When the button is hit, the viewlet is closed and the storage key is set.
+  Previously the storage key was immediately set even without using the "close" link.
+  [thet]
+
+- Fix translation of default values on configlet (HT @fredvd).
+  [hvelarde]
+
+- Fix style of hover and visited links inside disclaimer viewlet.
+  [agnogueira]
+
+
+1.0a1 (2018-05-14)
+------------------
+
+- Initial release.
+
+
