@@ -1,0 +1,3 @@
+[console_scripts]
+solr2es = solr2es.__main__:main
+
