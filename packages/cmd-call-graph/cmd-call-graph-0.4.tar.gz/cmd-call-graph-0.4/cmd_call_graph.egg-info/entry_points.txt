@@ -1,0 +1,3 @@
+[console_scripts]
+cmd-call-graph = callgraph.callgraph:main
+
