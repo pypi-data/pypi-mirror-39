@@ -1,0 +1,16 @@
+odoo10_addon_mrp_production_service-10.0.1.0.1.99.dev1-py2.7-nspkg.pth,sha256=BRP8mvEvEhIFmA57wbSTfAVbaAesjZh6WbtWMKUVv1c,1118
+odoo/addons/mrp_production_service/README.rst,sha256=3-YjcHgBHkXX0jq8pOOX-hC7JYyLZwAZuYtMc8oBpM4,1682
+odoo/addons/mrp_production_service/__init__.py,sha256=n-qXSBLA272v9-j5uHfQiDhnzMQA1i39mQqlxNqjZP8,211
+odoo/addons/mrp_production_service/__manifest__.py,sha256=w_aLnWZlQhMABM3oUkg0o7kUsO6yhyrfmK-ffrIPdhU,661
+odoo/addons/mrp_production_service/i18n/de.po,sha256=aq1OFvyMEAB9MVflOKgMHdn4NYHClRONwVA8LEdDkTI,578
+odoo/addons/mrp_production_service/i18n/mrp_production_service.pot,sha256=e1qRNDw16ZLVNsVOPvq38e0KYkzhyudvP4XvUF2Lk64,511
+odoo/addons/mrp_production_service/models/__init__.py,sha256=stWdGt_yD39l1GTg3Xy-mklW9K7IKncvLvm4Apc01SM,53
+odoo/addons/mrp_production_service/models/mrp_production.py,sha256=h1bUEY3PuodG3LXg3G2NGDjgPXdAUcbt5Tw5H-BJEaw,1790
+odoo/addons/mrp_production_service/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/mrp_production_service/tests/__init__.py,sha256=4Tmqb4Ug6g4DWlT_1xUSB5e5W-KpxifTNIr3v_GKWuE,65
+odoo/addons/mrp_production_service/tests/test_mrp_production_service.py,sha256=LXw6sg8jRURZRjiQHvC0lfWJcamFpj8-a4a_KDHObNo,2248
+odoo10_addon_mrp_production_service-10.0.1.0.1.99.dev1.dist-info/METADATA,sha256=K3fMKOeNUoyWFuDuXFxoSwapVLMsuC1JEy2T52c7AFY,2263
+odoo10_addon_mrp_production_service-10.0.1.0.1.99.dev1.dist-info/RECORD,,
+odoo10_addon_mrp_production_service-10.0.1.0.1.99.dev1.dist-info/WHEEL,sha256=_V8uWu5F_h-lvAz5Mbq4oZqV_uCfL4cHgm4IIlDevzU,92
+odoo10_addon_mrp_production_service-10.0.1.0.1.99.dev1.dist-info/namespace_packages.txt,sha256=igDP6S4ywc6jzcMqzrKZpRtAUXrS-iYaA_Hu1EtlI48,17
+odoo10_addon_mrp_production_service-10.0.1.0.1.99.dev1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
