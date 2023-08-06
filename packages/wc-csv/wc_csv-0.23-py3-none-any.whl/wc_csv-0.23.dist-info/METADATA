@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: wc-csv
+Version: 0.23
+Summary: This tool can be csv to string
+Home-page: https://github.com/Oshita/wc_csv
+Author: NoriakiOshita
+Author-email: oshitanoriaki@gmail.com
+License: MIT
+Keywords: wordcloud csv
+Platform: UNKNOWN
+
+## 使い道
+WordCloudの時に(単語, 頻度数)という2つのカラムで構成されているときに、そのままではWordCloudにかませることができない。  
+それを解消するツールである。  
+
+## 使い方
+
+```sample.py
+from wc_csv import convert_wc_csv
+
+wcsv = convert_wc_csv.Wcsv()
+# どれくらいの頻度の単語を指定するか指定
+df = wcsv.missing_value('sample.csv',8)
+csv_string = wcsv.convert_string(df)
+```
+
+
+## インストール方法
+
+```
+pip install wc_csv
+```
+
