@@ -1,0 +1,13 @@
+six
+
+[known]
+django
+Twisted
+Cython
+pandas
+Pygments
+pylzma
+simplejson
+pp
+line_profiler
+pyzmq
