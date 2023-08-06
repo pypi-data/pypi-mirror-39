@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: conflictify
+Version: 1.0.0
+Summary: A Python module for identifying which files have merge conflicts between two branches in a Git checkout.
+Home-page: https://gitlab.com/chrisgavin/conflictify/
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.5
+Provides-Extra: dev
