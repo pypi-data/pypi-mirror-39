@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: zassist
+Version: 0.9.1
+Summary: 制作游戏辅助常用模块
+Home-page: https://pypi.org/
+Author: zlyuan
+Author-email: 1277260932@qq.com
+License: GNU GENERAL PUBLIC LICENSE
+Platform: all
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: pywin32
+Requires-Dist: psutil
+Requires-Dist: pythonnet
+Requires-Dist: requests
+
+# 制作游戏辅助常用模块
+
+#### 此包专为windows设计
+
+##### 包含以下功能
++ [x] 键盘工具 keyboard
++ [ ] 键盘监控 keyboard_monitor
++ [x] 鼠标工具 mouse
++ [ ] 鼠标监控 mouse_monitor
++ [x] 网络模块 network
++ [x] 加密模块 password
++ [x] 注册表　 regedit
++ [x] 屏幕工具 screen
++ [x] 系统工具 system
++ [x] 窗口工具 window
++ [ ] 文件系统 file_system
+
+##### 已取消以下功能
++ [ ] 脚本工具 script
++ [ ] 驱动管理 drive
++ [ ] 授权管理 jurisdiction
++ [ ] 数学库　 mathf
+
+#### 更新日志
+
+> 18-12-05 0.9.1
+> + 完成网络模块network, 注册表regedit, 上个版本发布的模块额外增加了一些功能
+
+> 18-12-03 0.9.0
+> + 已经实现了大部分功能
+
+> 18-11-29  0.1.0
+> + 本模块所有功能(包含已删除功能)已使用csharp代码实现, 正在重写为python代码, 本次发布并没有任何功能, 只是为了占名字
+
+
