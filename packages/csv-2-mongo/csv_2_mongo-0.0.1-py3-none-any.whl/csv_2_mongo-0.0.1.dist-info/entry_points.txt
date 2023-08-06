@@ -1,0 +1,3 @@
+[console_scripts]
+csv-2-mongo = csv_2_mongo:cli
+
