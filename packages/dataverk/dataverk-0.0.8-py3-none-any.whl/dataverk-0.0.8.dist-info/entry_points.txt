@@ -1,0 +1,3 @@
+[console_scripts]
+dataverk = dataverk_setup_scripts.dataverk:main
+
