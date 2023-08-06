@@ -1,0 +1,28 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "contactList"
+author = "Russell Smiley"
+author-email = "im.russell.smiley@gmail.com"
+
+classifiers = ["License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"]
+keywords = "email contacts yaml"
+
+home-page = "https://gitlab.com/blueskyjunkie/contactlist"
+
+description-file = "README.rst"
+requires-python = ">=3.6"
+
+requires = [ "pyyaml" ]
+
+[tool.flit.metadata.requires-extra]
+dev = [
+  "nose",
+  "nose-cov",
+  "nosehtmloutput-2",
+]
+
+[tool.flit.scripts]
+contact-list = "contactList.entry:entryPoint"
