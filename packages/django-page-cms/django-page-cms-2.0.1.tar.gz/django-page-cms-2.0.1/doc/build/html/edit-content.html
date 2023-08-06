@@ -1,0 +1,162 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Inline page editing &#8212; django-page-cms 2.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/better.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to use the various navigation template tags" href="navigation-template-tags.html" />
+    <link rel="prev" title="Display page’s content in templates" href="display-content.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link rel="stylesheet" href="_static/main.css" type="text/css" />
+  </head><body>
+    <header id="pageheader"><h1><a href="index.html ">
+        django-page-cms 2.0.0 documentation
+    </a></h1></header>
+  <div class="related top">
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="display-content.html" title="Previous document">Display page’s content in templates</a>
+        </li>
+        <li>
+          <a href="navigation-template-tags.html" title="Next document">How to use the various navigation template tags</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+  <nav id="breadcrumbs">
+    <ul>
+      <li><a href="index.html">django-page-cms 2.0.0 documentation</a></li> 
+    </ul>
+  </nav>
+  </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="inline-page-editing">
+<h1>Inline page editing<a class="headerlink" href="#inline-page-editing" title="Permalink to this headline">¶</a></h1>
+<p>Gerbi CMS provide a way to easily edit the placeholder’s content
+on your own frontend when you are authenticated as a staff user.</p>
+<img alt="_images/inline-edit.png" src="_images/inline-edit.png" />
+<p>To activate the feature on your frontend you need to add 2 tags inside your templates. One in your &lt;head&gt; tag and one in the &lt;body&gt; tag:</p>
+<div class="highlight-html+django notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        ...
+        <span class="cp">{%</span> <span class="k">pages_edit_media</span> <span class="cp">%}</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        ...
+        <span class="cp">{%</span> <span class="k">pages_edit_init</span> <span class="cp">%}</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>For placeholder editing to work properly you will need to surround the placeholder with an HTML element like so:</p>
+<div class="highlight-html+django notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="cp">{%</span> <span class="k">placeholder</span> <span class="s2">&quot;title&quot;</span> <span class="cp">%}</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Placeholder editing works automatically by injecting an HTML comment into the placeholder output. So thing
+like this will not work:</p>
+<div class="highlight-html+django notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">MEDIA_URL</span> <span class="cp">}}{%</span> <span class="k">imageplaceholder</span> <span class="s2">&quot;img&quot;</span> <span class="cp">%}</span><span class="s">&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Because the rendered comment will not result into an HTML node:</p>
+<div class="highlight-html+django notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;upload/image.png&lt;!--placeholder:img--&gt;&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>To fix this issue you can use placeholders as rendering blocks like so:</p>
+<div class="highlight-html+django notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="cp">{%</span> <span class="k">imageplaceholder</span> <span class="s1">&#39;img&#39;</span> <span class="nb">block</span> <span class="cp">%}</span>
+        <span class="cp">{%</span> <span class="k">if</span> <span class="nv">content</span> <span class="cp">%}</span>
+            <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">MEDIA_URL</span> <span class="cp">}}{{</span> <span class="nv">content</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;img-responsive&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+        <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">endplaceholder</span> <span class="cp">%}</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/gerbi.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="display-content.html"
+                        title="previous chapter">Display page’s content in templates</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="navigation-template-tags.html"
+                        title="next chapter">How to use the various navigation template tags</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/edit-content.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<form class="search" action="search.html" method="get">
+  <input type="text" name="q"
+   placeholder="type to search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  <div class="related bottom">
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="display-content.html" title="Previous document">Display page’s content in templates</a>
+        </li>
+        <li>
+          <a href="navigation-template-tags.html" title="Next document">How to use the various navigation template tags</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+  <nav id="breadcrumbs">
+    <ul>
+      <li><a href="index.html">django-page-cms 2.0.0 documentation</a></li> 
+    </ul>
+  </nav>
+  </div>
+  <footer id="pagefooter">&copy; 2009, Batiste Bieler.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a>
+      1.8.2
+        with the <a href="http://github.com/irskep/sphinx-better-theme">
+          better</a> theme.
+
+  </footer>
+
+  
+  </body>
+</html>
