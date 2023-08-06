@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+fmga/__init__.py
+fmga/fmga_local.py
+fmga/function_maximize.py
+fmga.egg-info/PKG-INFO
+fmga.egg-info/SOURCES.txt
+fmga.egg-info/dependency_links.txt
+fmga.egg-info/requires.txt
+fmga.egg-info/top_level.txt
