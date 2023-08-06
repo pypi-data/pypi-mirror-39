@@ -1,0 +1,4 @@
+[console_scripts]
+logagg-collector = logagg_collector:main
+logagg-fs = logagg_fs:main
+
