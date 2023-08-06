@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ant-cli
+Version: 0.0.1
+Summary: Scaffolding tool
+Home-page: UNKNOWN
+Author: Orbis Venture S.A.C
+Author-email: oscar.sanchez@orbis.com.pe
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: click (==6.7)
+Requires-Dist: Jinja2 (==2.10)
+Requires-Dist: GitPython (==2.1.11)
+Requires-Dist: PyYAML (==3.12)
+Requires-Dist: terminaltables (==3.1.0)
+
+UNKNOWN
+
+

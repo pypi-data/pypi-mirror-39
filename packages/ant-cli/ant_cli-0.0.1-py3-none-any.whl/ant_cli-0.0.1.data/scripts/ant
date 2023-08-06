@@ -1,0 +1,10 @@
+#!python
+
+if __name__ == '__main__':
+    from ant_pkg.ant import cli, logger
+
+    try:
+        cli()
+    except Exception as e:
+        log = logger.create('ant_bin')
+        log.error(e)
