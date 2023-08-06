@@ -1,0 +1,3 @@
+[console_scripts]
+emdfparse = emdfparse.cli:main
+

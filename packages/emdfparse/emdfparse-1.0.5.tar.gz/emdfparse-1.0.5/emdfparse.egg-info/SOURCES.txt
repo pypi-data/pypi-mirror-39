@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+emdfparse/__init__.py
+emdfparse/cli.py
+emdfparse/datafile.py
+emdfparse/datatype.py
+emdfparse.egg-info/PKG-INFO
+emdfparse.egg-info/SOURCES.txt
+emdfparse.egg-info/dependency_links.txt
+emdfparse.egg-info/entry_points.txt
+emdfparse.egg-info/requires.txt
+emdfparse.egg-info/top_level.txt
