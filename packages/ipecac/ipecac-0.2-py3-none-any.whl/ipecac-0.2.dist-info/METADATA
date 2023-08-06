@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: ipecac
+Version: 0.2
+Summary: Generate Swagger/OAS 3.0 documentation from Python comments
+Home-page: UNKNOWN
+Author: Marcus Crane
+Author-email: marcus@utf9k.net
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: System :: Software Distribution
+Classifier: Topic :: Utilities
+Requires-Dist: click
+Requires-Dist: PyYAML
+
+UNKNOWN
+
+

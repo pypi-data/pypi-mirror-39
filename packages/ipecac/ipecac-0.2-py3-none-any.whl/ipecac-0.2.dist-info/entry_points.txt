@@ -1,0 +1,3 @@
+[console_scripts]
+ipecac = ipecac.cli:create
+
