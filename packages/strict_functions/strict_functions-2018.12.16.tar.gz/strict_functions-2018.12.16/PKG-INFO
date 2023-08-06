@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: strict_functions
+Version: 2018.12.16
+Summary: helpful decorators that change how python functions work such as scope control or overloading.
+Home-page: https://github.com/CodyKochmann/strict_functions
+Author: Cody Kochmann
+Author-email: kochmanncody@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/CodyKochmann/strict_functions/tarball/2018.12.16
+Description: UNKNOWN
+Keywords: strict_functions,scope,overload,overloading,type,enforce,strict,restrict,strict defaults,defaults
+Platform: UNKNOWN
