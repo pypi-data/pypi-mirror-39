@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: skil-client
+Version: 1.2.0
+Summary: Endpoints
+Home-page: https://docs.skymind.ai/
+Author: UNKNOWN
+Author-email: shams@skymind.io
+License: UNKNOWN
+Keywords: Swagger,Endpoints,SKIL,clients
+Platform: UNKNOWN
+Requires-Dist: urllib3 (>=1.15)
+Requires-Dist: six (>=1.10)
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+
+Endpoints API for different services in SKIL
+
+
