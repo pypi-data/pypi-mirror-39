@@ -1,0 +1,8 @@
+Markdown<4,>=3.0.0
+SQLAlchemy<2,>=1.2.3
+aiohttp<4,>=3.0.1
+alembic<2,>=1.0.0
+attrs<19,>=18.1.0
+bcrypt<4,>=3.1.4
+mautrix<0.5,>=0.4.dev1
+ruamel.yaml<0.16,>=0.15.35
