@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: iotile-support-prod-pod1m-0
+Version: 0.4.0rc3
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Arch
+Author-email: info@arch-iot.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: iotile-support-con-nrf52832-3 (==3.*,>=3.1.9rc2)
+Requires-Dist: iotile-support-firm-accelerometer-2 (==2.*,>=2.3.5rc4)
+Requires-Dist: iotile-support-firm-env-1 (==1.*,>=1.1.1)
+Requires-Dist: sortedcontainers (~=2.1)
+Requires-Dist: iotile-core (>=3.23.1)
+Requires-Dist: iotile-ext-cloud (>=0.6.0)
+Requires-Dist: iotile-sensorgraph (>=0.7.2)
+
+UNKNOWN
+
+
