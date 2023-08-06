@@ -1,0 +1,12 @@
+LICENSE.md
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+drf_keyed_list/__init__.py
+drf_keyed_list/serializers.py
+drf_keyed_list.egg-info/PKG-INFO
+drf_keyed_list.egg-info/SOURCES.txt
+drf_keyed_list.egg-info/dependency_links.txt
+drf_keyed_list.egg-info/not-zip-safe
+drf_keyed_list.egg-info/top_level.txt
