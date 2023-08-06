@@ -1,0 +1,271 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mosviz.loaders.deimos_loaders &mdash; mosviz v0.2.0.dev695</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/astropy_logo.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> mosviz
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0.dev695
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gettingstarted.html">Getting Started with MOSViz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functionality.html">Overview of Basic MOSViz Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../readingindata.html">Reading-in Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">mosviz</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>mosviz.loaders.deimos_loaders</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for mosviz.loaders.deimos_loaders</h1><div class="highlight"><pre>
+<span></span>import numpy as np
+from astropy.io import fits
+from astropy.wcs import WCS
+from glue.core import Data
+from glue.core.coordinates import coordinates_from_wcs
+
+from .utils import mosviz_spectrum1d_loader, mosviz_spectrum2d_loader, mosviz_level2_loader
+
+
+__all__ = [&#39;deimos_spectrum1D_reader&#39;, &#39;deimos_spectrum2D_reader&#39;]
+
+
+<div class="viewcode-block" id="deimos_spectrum1D_reader"><a class="viewcode-back" href="../../../api/mosviz.loaders.deimos_spectrum1D_reader.html#mosviz.loaders.deimos_spectrum1D_reader">[docs]</a>@mosviz_spectrum1d_loader(&#39;DEIMOS 1D Spectrum&#39;)
+def deimos_spectrum1D_reader(file_name):
+    &quot;&quot;&quot;
+    Data loader for Keck/DEIMOS 1D spectra.
+
+    This loads the &#39;Bxspf-B&#39; (extension 1)
+    and &#39;Bxspf-R&#39; (extension 2) and appends them
+    together to proudce the combined Red/Blue Spectrum
+    along with their Wavelength and Inverse Variance
+    arrays.
+    &quot;&quot;&quot;
+    with fits.open(file_name) as hdulist:
+        data = Data(label=&#39;1D Spectrum&#39;)
+        hdulist[1].header[&#39;CTYPE1&#39;] = &#39;WAVE&#39;
+        hdulist[1].header[&#39;CUNIT1&#39;] = &#39;Angstrom&#39;
+        data.header = hdulist[1].header
+        wcs = WCS(hdulist[1].header)
+        data.coords = coordinates_from_wcs(wcs)
+
+        full_wl = np.append(hdulist[1].data[&#39;LAMBDA&#39;][0], hdulist[2].data[&#39;LAMBDA&#39;][0])
+        full_spec = np.append(hdulist[1].data[&#39;SPEC&#39;][0], hdulist[2].data[&#39;SPEC&#39;][0])
+        full_ivar = np.append(hdulist[1].data[&#39;IVAR&#39;][0], hdulist[2].data[&#39;IVAR&#39;][0])
+
+        data.add_component(full_wl, &#39;Wavelength&#39;)
+        data.add_component(full_spec, &#39;Flux&#39;)
+        data.add_component(1 / np.sqrt(full_ivar), &#39;Uncertainty&#39;)
+
+    return data</div>
+
+
+<div class="viewcode-block" id="deimos_spectrum2D_reader"><a class="viewcode-back" href="../../../api/mosviz.loaders.deimos_spectrum2D_reader.html#mosviz.loaders.deimos_spectrum2D_reader">[docs]</a>@mosviz_spectrum2d_loader(&#39;DEIMOS 2D Spectrum&#39;)
+def deimos_spectrum2D_reader(file_name):
+    &quot;&quot;&quot;
+    Data loader for Keck/DEIMOS 2D spectra.
+
+    This loads only the Flux and Inverse variance.
+    Wavelength information comes from the WCS.
+    &quot;&quot;&quot;
+
+    with fits.open(file_name) as hdulist:
+        data = Data(label=&#39;2D Spectrum&#39;)
+        hdulist[1].header[&#39;CTYPE1&#39;] = &#39;WAVE&#39;
+        hdulist[1].header[&#39;CUNIT1&#39;] = &#39;Angstrom&#39;
+        hdulist[1].header[&#39;CTYPE2&#39;] = &#39;Spatial Y&#39;
+        wcs = WCS(hdulist[1].header)
+        # original WCS has both axes named &quot;LAMBDA&quot;, glue requires unique component names
+
+        data.coords = coordinates_from_wcs(wcs)
+        data.header = hdulist[1].header
+        data.add_component(hdulist[1].data[&#39;FLUX&#39;][0], &#39;Flux&#39;)
+        data.add_component(1 / np.sqrt(hdulist[1].data[&#39;IVAR&#39;][0]), &#39;Uncertainty&#39;)
+
+    return data</div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JDADF Developers
+      Last updated on 15 Dec 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

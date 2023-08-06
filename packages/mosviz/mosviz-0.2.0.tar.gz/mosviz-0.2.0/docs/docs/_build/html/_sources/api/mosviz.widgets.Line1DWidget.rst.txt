@@ -1,0 +1,31 @@
+Line1DWidget
+============
+
+.. currentmodule:: mosviz.widgets
+
+.. autoclass:: Line1DWidget
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~Line1DWidget.axes
+      ~Line1DWidget.window_closed
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Line1DWidget.set_data
+      ~Line1DWidget.set_status
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: axes
+   .. autoattribute:: window_closed
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: set_data
+   .. automethod:: set_status

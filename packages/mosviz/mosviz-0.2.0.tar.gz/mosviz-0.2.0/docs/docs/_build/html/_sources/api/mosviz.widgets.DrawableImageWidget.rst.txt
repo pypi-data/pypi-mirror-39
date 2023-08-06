@@ -1,0 +1,17 @@
+DrawableImageWidget
+===================
+
+.. currentmodule:: mosviz.widgets
+
+.. autoclass:: DrawableImageWidget
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~DrawableImageWidget.draw_rectangle
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: draw_rectangle

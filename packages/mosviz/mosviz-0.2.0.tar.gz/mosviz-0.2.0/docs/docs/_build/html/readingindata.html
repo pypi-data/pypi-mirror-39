@@ -1,0 +1,871 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Reading-in Data &mdash; mosviz v0.2.0.dev695</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/astropy_logo.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API" href="api.html" />
+    <link rel="prev" title="Overview of Basic MOSViz Functionality" href="functionality.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> mosviz
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0.dev695
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started with MOSViz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functionality.html">Overview of Basic MOSViz Functionality</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Reading-in Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#defining-custom-readers-for-spectra-and-cutouts">Defining custom readers for spectra and cutouts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#d-spectrum-reader">1D Spectrum Reader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2D Spectrum Reader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cutout-image-reader">Cutout Image Reader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#writing-the-data-table">Writing the Data Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">mosviz</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Reading-in Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/readingindata.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="reading-in-data">
+<span id="doc-sec-reading-data"></span><h1>Reading-in Data<a class="headerlink" href="#reading-in-data" title="Permalink to this headline">¶</a></h1>
+<p>MOSViz will be able to read in NIRSpec MSA data straight from the pipeline or
+archive. This will include 1D and 2D spectra, images, data tables, and
+associated images. This page documents how to read in MOS data from another
+observatory. An example is shown at the bottom (<a class="reference internal" href="#id1"><span class="std std-ref">Defining custom readers for spectra and cutouts</span></a>).</p>
+<p>The general workflow can be summarized as follows:</p>
+<ol class="arabic simple">
+<li>Start Glue by typing <code class="docutils literal notranslate"><span class="pre">glue</span></code> in the command line</li>
+<li>In Glue, click on the folder icon and open the file containing the Data Table for your data set.</li>
+<li>Drag the file from the Data Collection window into the main canvas.</li>
+<li>Select ‘MOSViz Viewer’ from the pop-up menu.</li>
+<li>Use the green arrow buttons at the top of the viewer to switch between objects.</li>
+</ol>
+<div class="section" id="overview">
+<span id="readingoverview"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>MOSViz requires at minimum the following input:</p>
+<ul class="simple">
+<li>A catalog of targets in tabular form</li>
+<li>A 1D and 2D spectrum for each target</li>
+<li>A cutout image for each target</li>
+</ul>
+<p>The main data file that will be read in and used by the MOSViz viewer is the
+catalog. The catalog can be in any format that Glue understands (such as a FITS
+table, VO table, ASCII table, and so on). The main constraint is that the table
+should include columns with the following information for each target:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="69%" />
+<col width="17%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Column</th>
+<th class="head">Default name</th>
+<th class="head">Units</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>File path to the 1D spectrum</td>
+<td><code class="docutils literal notranslate"><span class="pre">spectrum1d</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>File path to the 2D spectrum</td>
+<td><code class="docutils literal notranslate"><span class="pre">spectrum2d</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>File path to the image cutout</td>
+<td><code class="docutils literal notranslate"><span class="pre">cutout</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Right ascension of the slit center (FK5 J2000)</td>
+<td><code class="docutils literal notranslate"><span class="pre">ra</span></code></td>
+<td>degrees</td>
+</tr>
+<tr class="row-even"><td>Declination of the slit center (FK5 J2000)</td>
+<td><code class="docutils literal notranslate"><span class="pre">dec</span></code></td>
+<td>degrees</td>
+</tr>
+<tr class="row-odd"><td>Width of the slit</td>
+<td><code class="docutils literal notranslate"><span class="pre">slit_width</span></code></td>
+<td>arcseconds</td>
+</tr>
+<tr class="row-even"><td>Length of the slit</td>
+<td><code class="docutils literal notranslate"><span class="pre">slit_length</span></code></td>
+<td>arcseconds</td>
+</tr>
+</tbody>
+</table>
+<p>The columns can have any name, but if they are given the name in the <strong>Default
+name</strong> column above, they will be automatically recognized. In addition, the
+catalog can contain any other useful information such as source names,
+magnitudes, stellar masses, star-formation rates, etc. These are not required,
+but including them will allow selections to be done on those parameters.</p>
+<p>When adding a dataset to the MOSViz viewer for the first time in glue, the
+following dialog will appear:</p>
+<a class="reference internal image-reference" href="_images/MOSViz_wizard.png"><img alt="_images/MOSViz_wizard.png" class="align-center" src="_images/MOSViz_wizard.png" style="width: 600px;" /></a>
+<p>This dialog asks to confirm the column names and also asks to select the
+appropriate readers for the 1D and 2D spectra as well as the cutouts. In
+<a class="reference internal" href="#id1"><span class="std std-ref">Defining custom readers for spectra and cutouts</span></a> we show how to define custom readers for spectra and
+cutouts in case there isn’t an appropriate built-in reader available, and in
+<a class="reference internal" href="#writing-data-table"><span class="std std-ref">Writing the Data Table</span></a> we show how to tell MOSViz which readers/columns to use
+by default.</p>
+</div>
+<div class="section" id="defining-custom-readers-for-spectra-and-cutouts">
+<span id="id1"></span><h2>Defining custom readers for spectra and cutouts<a class="headerlink" href="#defining-custom-readers-for-spectra-and-cutouts" title="Permalink to this headline">¶</a></h2>
+<p>This example uses spectra and cutout images of galaxies at 0.2&lt;z&lt;1.2 which have
+spectra from the DEIMOS multi-object spectrograph on Keck and color cut-out
+images already created from Hubble/ACS.  These galaxies are from the <a class="reference external" href="http://adsabs.harvard.edu/abs/2013ApJS..208....5N">DEEP2
+Survey</a>. The spectra can
+be obtained from the <a class="reference external" href="http://deep.ps.uci.edu/DR4/spectra.html">DEEP2 Data Release</a> page.</p>
+<p>MOSViz is a Glue plugin so we’ll write our own <a class="reference external" href="http://glueviz.org/en/stable/customizing_guide/customization.html#custom-data-loaders">Custom Data Loaders</a>
+to read data. All we need to do is write a function which takes a filename as
+input and returns a glue <a class="reference external" href="https://glueviz.readthedocs.io/en/stable/api/glue.core.data.Data.html#glue.core.data.Data" title="(in Glue v0.14.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Data</span></code></a> object. For this example, we have three
+different types of data: a 1D Spectrum, a 2D spectrum, and a cutout image.</p>
+<div class="section" id="d-spectrum-reader">
+<h3>1D Spectrum Reader<a class="headerlink" href="#d-spectrum-reader" title="Permalink to this headline">¶</a></h3>
+<p>MOSViz expects the 1D Spectrum Data object to have three components: Wavelength,
+Flux, and Uncertainty. The final reader we are going to write is as follows:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from astropy.io import fits
+from glue.core import Data
+from mosviz.loaders.mos_loaders import mosviz_spectrum1d_loader
+
+@mosviz_spectrum1d_loader(&#39;DEIMOS 1D Spectrum&#39;)
+def deimos_spectrum1D_reader(filename):
+    &quot;&quot;&quot;
+    Data loader for Keck/DEIMOS 1D spectra.
+
+    This loads the &#39;Bxspf-B&#39; (extension 1) and &#39;Bxspf-R&#39; (extension 2) and
+    appends them together to proudce the combined Red/Blue Spectrum along
+    with their Wavelength and Inverse Variance arrays.
+    &quot;&quot;&quot;
+
+    hdulist = fits.open(filename)
+    data = Data(label=&#39;1D Spectrum&#39;)
+    data.header = hdulist[1].header
+
+    full_wl = np.append(hdulist[1].data[&#39;LAMBDA&#39;][0], hdulist[2].data[&#39;LAMBDA&#39;][0])
+    full_spec = np.append(hdulist[1].data[&#39;SPEC&#39;][0], hdulist[2].data[&#39;SPEC&#39;][0])
+    full_ivar = np.append(hdulist[1].data[&#39;IVAR&#39;][0], hdulist[2].data[&#39;IVAR&#39;][0])
+
+    data.add_component(full_wl, &#39;Wavelength&#39;)
+    data.add_component(full_spec, &#39;Flux&#39;)
+    data.add_component(1/np.sqrt(full_ivar), &#39;Uncertainty&#39;)
+
+    return data
+</pre></div>
+</div>
+<p>Let’s take a look at how to write this step by step. We first take a look at the
+contents of our example FITS file to see which parts we need to pass to MOSViz:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; from astropy.io import fits
+&gt;&gt;&gt; hdulist = fits.open(&#39;spec1d.1355.134.13040873.fits&#39;)
+&gt;&gt;&gt; hdulist.info()
+Filename: spec1d.1355.134.13040873.fits
+No.    Name         Type      Cards   Dimensions   Format
+  0  PRIMARY     PrimaryHDU       4   ()
+  1  Bxspf-B     BinTableHDU    131   1R x 15C   [4096E, 4096E, 4096E, 4096I, 4096I, 4096I, 4096I, 4096I, E, E, E, J, J, 4096E, E]
+  2  Bxspf-R     BinTableHDU    131   1R x 15C   [4096E, 4096E, 4096E, 4096I, 4096I, 4096I, 4096I, 4096I, E, E, E, J, J, 4096E, E]
+  3  Horne-B     BinTableHDU    140   1R x 15C   [4096E, 4096E, 4096E, 4096I, 4096I, 4096I, 4096I, 4096I, E, E, E, J, J, 4096E, E]
+  4  Horne-R     BinTableHDU    140   1R x 15C   [4096E, 4096E, 4096E, 4096I, 4096I, 4096I, 4096I, 4096I, E, E, E, J, J, 4096E, E]
+  5  Bxspf-NL-B  BinTableHDU    131   1R x 15C   [4096E, 4096E, 4096E, 4096I, 4096I, 4096I, 4096I, 4096I, E, E, E, J, J, 4096E, E]
+  6  Bxspf-NL-R  BinTableHDU    131   1R x 15C   [4096E, 4096E, 4096E, 4096I, 4096I, 4096I, 4096I, 4096I, E, E, E, J, J, 4096E, E]
+  7  Horne-NL-B  BinTableHDU    140   1R x 15C   [4096E, 4096E, 4096E, 4096I, 4096I, 4096I, 4096I, 4096I, E, E, E, J, J, 4096E, E]
+  8  Horne-NL-R  BinTableHDU    140   1R x 15C   [4096E, 4096E, 4096E, 4096I, 4096I, 4096I, 4096I, 4096I, E, E, E, J, J, 4096E, E]
+</pre></div>
+</div>
+<p>The file contains pairs of red and blue spectra which have been filtered in
+various ways. For the sake of this example we’ll choose the <code class="docutils literal notranslate"><span class="pre">Bxspf</span></code> spectra.
+Let’s take a closer look at the relevant extension:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; hdulist[&#39;Bxspf-R&#39;].columns
+ColDefs(
+    name = &#39;SPEC&#39;; format = &#39;4096E&#39;
+    name = &#39;LAMBDA&#39;; format = &#39;4096E&#39;
+    name = &#39;IVAR&#39;; format = &#39;4096E&#39;
+    name = &#39;CRMASK&#39;; format = &#39;4096I&#39;
+    name = &#39;BITMASK&#39;; format = &#39;4096I&#39;
+    name = &#39;ORMASK&#39;; format = &#39;4096I&#39;
+    name = &#39;NBADPIX&#39;; format = &#39;4096I&#39;
+    name = &#39;INFOMASK&#39;; format = &#39;4096I&#39;
+    name = &#39;OBJPOS&#39;; format = &#39;E&#39;
+    name = &#39;FWHM&#39;; format = &#39;E&#39;
+    name = &#39;NSIGMA&#39;; format = &#39;E&#39;
+    name = &#39;R1&#39;; format = &#39;J&#39;
+    name = &#39;R2&#39;; format = &#39;J&#39;
+    name = &#39;SKYSPEC&#39;; format = &#39;4096E&#39;
+    name = &#39;IVARFUDGE&#39;; format = &#39;E&#39;
+)
+&gt;&gt;&gt; hdulist[&#39;Bxspf-B&#39;].columns
+ColDefs(
+    name = &#39;SPEC&#39;; format = &#39;4096E&#39;
+    name = &#39;LAMBDA&#39;; format = &#39;4096E&#39;
+    name = &#39;IVAR&#39;; format = &#39;4096E&#39;
+    name = &#39;CRMASK&#39;; format = &#39;4096I&#39;
+    name = &#39;BITMASK&#39;; format = &#39;4096I&#39;
+    name = &#39;ORMASK&#39;; format = &#39;4096I&#39;
+    name = &#39;NBADPIX&#39;; format = &#39;4096I&#39;
+    name = &#39;INFOMASK&#39;; format = &#39;4096I&#39;
+    name = &#39;OBJPOS&#39;; format = &#39;E&#39;
+    name = &#39;FWHM&#39;; format = &#39;E&#39;
+    name = &#39;NSIGMA&#39;; format = &#39;E&#39;
+    name = &#39;R1&#39;; format = &#39;J&#39;
+    name = &#39;R2&#39;; format = &#39;J&#39;
+    name = &#39;SKYSPEC&#39;; format = &#39;4096E&#39;
+    name = &#39;IVARFUDGE&#39;; format = &#39;E&#39;
+)
+</pre></div>
+</div>
+<p>Again, there are a lot of options but for MOSViz we’re only interested in three
+columns: <code class="docutils literal notranslate"><span class="pre">SPEC</span></code>, <code class="docutils literal notranslate"><span class="pre">LAMBDA</span></code>, <code class="docutils literal notranslate"><span class="pre">IVAR</span></code>. Further, MOSViz expects each of the
+arrays to be 1 dimensional and of the same size:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; hdulist[&#39;Bxspf-R&#39;].data[&#39;SPEC&#39;].shape
+(1, 4096)
+&gt;&gt;&gt; hdulist[&#39;Bxspf-R&#39;].data[&#39;LAMBDA&#39;].shape
+(1, 4096)
+&gt;&gt;&gt; hdulist[&#39;Bxspf-R&#39;].data[&#39;IVAR&#39;].shape
+(1, 4096)
+</pre></div>
+</div>
+<p>All of our arrays are the same size but they are stored in 2 dimensional arrays
+(with the first axis of size 1). So we’ll just take the first (and only)
+element.</p>
+<p>Now that we know what data we want from our FITS files let’s look at how to
+write the data loader function. The basic structure for a data loader for a 1D
+spectrum is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from glue.core import Data
+from mosviz.loaders.mos_loaders import mosviz_spectrum1d_loader
+
+@mosviz_spectrum1d_loader(&#39;DEIMOS 1D Spectrum&#39;)
+def deimos_spectrum1D_reader(filename):
+    # code to read in data here
+    return data
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">'DEIMOS</span> <span class="pre">1D</span> <span class="pre">Spectrum'</span></code> is the label which is how we will identify this loader.
+For users familiar with defining glue data factories,
+<code class="docutils literal notranslate"><span class="pre">&#64;mosviz_spectrum1d_loader</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">&#64;data_factory</span></code> but additionaly
+tells MOSViz that the loader is specifically for a 1D spectrum.</p>
+<p>Let’s now focus on what is needed inside the function.
+The function itself takes a filename to open as its only argument, so we open
+the file and instantiate a Glue <a class="reference external" href="https://glueviz.readthedocs.io/en/stable/api/glue.core.data.Data.html#glue.core.data.Data" title="(in Glue v0.14.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></a> object:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>hdulist = fits.open(filename)
+data = Data(label=&#39;1D Spectrum&#39;)
+</pre></div>
+</div>
+<p>Now as above we’re going to open the FITS file. We add the header from the
+FITS file to the data object:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>data.header = hdulist[1].header
+</pre></div>
+</div>
+<p>As stated above, MOSViz expects the Wavelength, Flux, and Uncertainty to be each
+be a single 1D array. We saw that the red and blue ends of the spectrum are
+stored in different extensions and that there are stored as 2D arrays. We take
+the first component of the each of the red and blue ends of the spectrum and
+combine them together. Then we take the full 1D array for each component and
+pass them to the <code class="docutils literal notranslate"><span class="pre">~glue.core.data.Data</span></code> object using the
+<a class="reference external" href="https://glueviz.readthedocs.io/en/stable/api/glue.core.data.Data.html#glue.core.data.Data.add_component" title="(in Glue v0.14.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_component()</span></code></a> method:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>full_wl = np.append(hdulist[1].data[&#39;LAMBDA&#39;][0], hdulist[2].data[&#39;LAMBDA&#39;][0])
+full_spec = np.append(hdulist[1].data[&#39;SPEC&#39;][0], hdulist[2].data[&#39;SPEC&#39;][0])
+full_ivar = np.append(hdulist[1].data[&#39;IVAR&#39;][0], hdulist[2].data[&#39;IVAR&#39;][0])
+
+data.add_component(full_wl, &#39;Wavelength&#39;)
+data.add_component(full_spec, &#39;Flux&#39;)
+data.add_component(1/np.sqrt(full_ivar), &#39;Uncertainty&#39;)
+
+return data
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>2D Spectrum Reader<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>The basic structure for the 2D spectrum reader is similar to that for the 1D
+spectrum reader:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from astropy.io import fits
+from glue.core import Data
+from mosviz.loaders.mos_loaders import mosviz_spectrum1d_loader
+
+@mosviz_spectrum2d_loader(&#39;DEIMOS 2D Spectrum&#39;)
+def deimos_spectrum2D_reader(filename):
+    &quot;&quot;&quot;
+    Data loader for Keck/DEIMOS 2D spectra.
+
+    This loads only the Flux and Inverse variance. Wavelength information
+    comes from the WCS.
+    &quot;&quot;&quot;
+
+    hdulist = fits.open(filename)
+    data = Data(label=&#39;2D Spectrum&#39;)
+    data.coords = coordinates_from_header(hdulist[1].header)
+    data.header = hdulist[1].header
+    data.add_component(hdulist[1].data[&#39;FLUX&#39;][0], &#39;Flux&#39;)
+    data.add_component(1/np.sqrt(hdulist[1].data[&#39;IVAR&#39;][0]), &#39;Uncertainty&#39;)
+    return data
+</pre></div>
+</div>
+<p>MOSViz expects the 2D Spectrum Data object to have two components: Flux and
+Uncertainty. Since a 2D spectrum is an image it also expects a World Coordinate
+System (WCS) which tells it how to transform from pixels to Wavelength. Let’s
+take a look at the contents of our example FITS file to see which parts we need
+to pass to MOSViz:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; from astropy.io import fits
+&gt;&gt;&gt; hdulist = fits.open(&#39;slit.1355.134B.fits.gz&#39;)
+&gt;&gt;&gt; hdulist.info()
+Filename: slit.1153.147B.fits.gz
+No.    Name         Type      Cards   Dimensions   Format
+0    PRIMARY     PrimaryHDU       4   ()
+1    slit        BinTableHDU    106   1R x 11C     [241664E, 241664E, 241664B, 241664B, 4096E, 241664E, 6D, 3D, 59E, 177E, 241664J]
+2    slit        BinTableHDU     98   531R x 5C    [E, E, E, E, B]
+&gt;&gt;&gt; hdulist[1].data.columns
+ColDefs(
+    name = &#39;FLUX&#39;; format = &#39;241664E&#39;; dim = &#39;( 4096, 59)&#39;
+    name = &#39;IVAR&#39;; format = &#39;241664E&#39;; dim = &#39;( 4096, 59)&#39;
+    name = &#39;MASK&#39;; format = &#39;241664B&#39;; dim = &#39;( 4096, 59)&#39;
+    name = &#39;CRMASK&#39;; format = &#39;241664B&#39;; dim = &#39;( 4096, 59)&#39;
+    name = &#39;LAMBDA0&#39;; format = &#39;4096E&#39;
+    name = &#39;DLAMBDA&#39;; format = &#39;241664E&#39;; dim = &#39;( 4096, 59)&#39;
+    name = &#39;LAMBDAX&#39;; format = &#39;6D&#39;
+    name = &#39;TILTX&#39;; format = &#39;3D&#39;
+    name = &#39;SLITFN&#39;; format = &#39;59E&#39;
+    name = &#39;DLAM&#39;; format = &#39;177E&#39;; dim = &#39;( 59, 3)&#39;
+    name = &#39;INFOMASK&#39;; format = &#39;241664J&#39;; dim = &#39;( 4096, 59)&#39;
+)
+&gt;&gt;&gt; hdulist[2].data.columns
+ColDefs(
+    name = &#39;AMP&#39;; format = &#39;E&#39;
+    name = &#39;CEN&#39;; format = &#39;E&#39;
+    name = &#39;SIG&#39;; format = &#39;E&#39;
+    name = &#39;BASE&#39;; format = &#39;E&#39;
+    name = &#39;MASK&#39;; format = &#39;B&#39;
+)
+</pre></div>
+</div>
+<p>MOSViz needs Flux and Uncertainty so the relevant columns are <code class="docutils literal notranslate"><span class="pre">FLUX</span></code> and
+<code class="docutils literal notranslate"><span class="pre">IVAR</span></code> in the the first <code class="docutils literal notranslate"><span class="pre">slit</span></code> extension:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; hdulist[1].data[&#39;FLUX&#39;].shape
+(1, 59, 4096)
+&gt;&gt;&gt; hdulist[1].data[&#39;IVAR&#39;].shape
+(1, 59, 4096)
+&gt;&gt;&gt;
+</pre></div>
+</div>
+<p>All of our arrays are the same size but they are stored in 3 dimensional arrays
+(with the first axis of size 1). So we’ll just take the first (and only) element
+which will give a 2D array.</p>
+<p>We also need a WCS which should be in the header of the same extension as the
+data:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; from astropy.wcs import WCS
+&gt;&gt;&gt; WCS(hdulist[1].header)
+
+Number of WCS axes: 2
+CTYPE : &#39;LAMBDA&#39;  &#39;LAMBDA&#39;
+CRVAL : 6450.6538154  0.0
+CRPIX : 0.0  0.0
+CD1_1 CD1_2  : 0.32103118300400002  0.0
+CD2_1 CD2_2  : 0.0  1.0
+NAXIS    : 4367352 1
+</pre></div>
+</div>
+<p>The WCS is here; however, the two axes both have name ‘LAMBDA’ and if we look at
+look at the second coordinate we can see that it isn’t actually transformed.
+Glue expects that all of a <a class="reference external" href="https://glueviz.readthedocs.io/en/stable/api/glue.core.data.Data.html#glue.core.data.Data" title="(in Glue v0.14.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Data</span></code></a> object’s components (including WCS axes) have
+unique names. We can take care of this easily in the data loader function.</p>
+<p>Now that we know what data we want from our FITS files let’s look at how to
+write the data loader function. As before, we use the following decorator
+to tell glue that this is a data loader, and MOSViz that it can read in 2D
+spectra:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>@mosviz_spectrum2d_loader(&#39;DEIMOS 2D Spectrum&#39;)
+def deimos_spectrum2D_reader(filename):
+</pre></div>
+</div>
+<p>The function itself takes a filename to open as its only argument. We open the
+data file and instantiate a <a class="reference external" href="https://glueviz.readthedocs.io/en/stable/api/glue.core.data.Data.html#glue.core.data.Data" title="(in Glue v0.14.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></a> object:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>hdulist = fits.open(filename)
+data = Data(label=&#39;2D Spectrum&#39;)
+</pre></div>
+</div>
+<p>As we noted above, the WCS axes should have different names. Since the second
+axis is not transformed we’ll just change the header keyword which specifies its
+name to ‘Spatial Y’ Then we set the <code class="docutils literal notranslate"><span class="pre">coords</span></code> attribute of the <a class="reference external" href="https://glueviz.readthedocs.io/en/stable/api/glue.core.data.Data.html#glue.core.data.Data" title="(in Glue v0.14.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Data</span></code></a> object with
+<a class="reference external" href="https://glueviz.readthedocs.io/en/stable/api/glue.core.coordinates.coordinates_from_wcs.html#glue.core.coordinates.coordinates_from_wcs" title="(in Glue v0.14.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">glue.core.coordinates.coordinates_from_wcs()</span></code></a>. We also pass the FITS header to the data so that useful
+information can be displayed in the MOSViz:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>hdulist[1].header[&#39;CTYPE2&#39;] = &#39;Spatial Y&#39;
+data.coords = coordinates_from_wcs(WCS(hdulist[1].header))
+data.header = hdulist[1].header
+</pre></div>
+</div>
+<p>As stated above, MOSViz expects the Flux and Uncertainty to be each be a single
+2D array. We take the first component of each array (a 2D array) pass them to
+the <code class="docutils literal notranslate"><span class="pre">~glue.core.data.Data</span></code> object using the <a class="reference external" href="https://glueviz.readthedocs.io/en/stable/api/glue.core.data.Data.html#glue.core.data.Data.add_component" title="(in Glue v0.14.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_component()</span></code></a> method:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>data.add_component(hdulist[1].data[&#39;FLUX&#39;][0], &#39;Flux&#39;)
+data.add_component(1/np.sqrt(hdulist[1].data[&#39;IVAR&#39;][0]), &#39;Uncertainty&#39;)
+
+return data
+</pre></div>
+</div>
+</div>
+<div class="section" id="cutout-image-reader">
+<h3>Cutout Image Reader<a class="headerlink" href="#cutout-image-reader" title="Permalink to this headline">¶</a></h3>
+<p>Finally, the custom reader for the image cutouts looks like:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from astropy.io import fits
+from glue.core import Data
+from mosviz.loaders.mos_loaders import mosviz_cutout_loader
+
+@mosviz_cutout_loader(&#39;ACS Cutout Image&#39;)
+def acs_cutout_image_reader(filename):
+    &quot;&quot;&quot;
+    Data loader for the ACS cut-outs for the DEIMOS spectra.
+
+    The cutouts contain only the image.
+    &quot;&quot;&quot;
+
+    hdulist = fits.open(filename)
+    data = Data(label=&#39;ACS Cutout Image&#39;)
+    data.coords = coordinates_from_header(hdulist[0].header)
+    data.header = hdulist[0].header
+    data.add_component(hdulist[0].data, &#39;Flux&#39;)
+
+    return data
+</pre></div>
+</div>
+<p>MOSViz expects the Cutout Image Data object to have one component: Flux. Since
+it is an image it also expects a World Coordinate System (WCS) which tells it
+how to transform from pixels to sky coordinates. Let’s take a look at the
+contents of our example FITS file to see which parts we need to pass to MOSViz.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; from astropy.io import fits
+&gt;&gt;&gt; hdulist = fits.open(&#39;12020821.acs.i_6ac_.fits&#39;)
+&gt;&gt;&gt; hdulist.info()
+Filename: 12020821.acs.i_6ac_.fits
+No.    Name         Type      Cards   Dimensions   Format
+0    PRIMARY     PrimaryHDU      71   (201, 201)   float32
+&gt;&gt;&gt; hdulist[0].data.shape
+(201, 201)
+</pre></div>
+</div>
+<p>There is only one extensions and the data in it is the cutout image (a 2D
+array). We also need a WCS which should be in the header of the same extension
+as the data:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; from astropy.wcs import WCS
+&gt;&gt;&gt; WCS(hdulist[0].header)
+WCS Keywords
+
+Number of WCS axes: 2
+CTYPE : &#39;RA---TAN&#39;  &#39;DEC--TAN&#39;
+CRVAL : 214.40388488799999  52.630077362100003
+CRPIX : 101.70472905800101  100.94206076200101
+CD1_1 CD1_2  : -8.3333331279300006e-06  -4.5781947460699999e-14
+CD2_1 CD2_2  : -4.5781947460699999e-14  8.3333331279300006e-06
+NAXIS    : 201 201
+</pre></div>
+</div>
+<p>The WCS looks as we would expect. Now that we know what data we want from our
+FITS files let’s look at how to write the data loader function. We use the
+following decorator on the function to tell glue that this is a data factory and
+to tell MOSViz that it can handle cutout images:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>@mosviz_cutout_loader(&#39;ACS Cutout Image&#39;)
+def acs_cutout_image(filename):
+</pre></div>
+</div>
+<p>The function itself takes a filename to open as its only argument. We open the
+data file and instantiate a <a class="reference external" href="https://glueviz.readthedocs.io/en/stable/api/glue.core.data.Data.html#glue.core.data.Data" title="(in Glue v0.14.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></a> object:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>hdulist = fits.open(filename)
+data = Data(label=&#39;Cutout Image&#39;)
+</pre></div>
+</div>
+<p>We set the <code class="docutils literal notranslate"><span class="pre">coords</span></code> attribute of the <a class="reference external" href="https://glueviz.readthedocs.io/en/stable/api/glue.core.data.Data.html#glue.core.data.Data" title="(in Glue v0.14.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Data</span></code></a> object with <a class="reference external" href="https://glueviz.readthedocs.io/en/stable/api/glue.core.coordinates.coordinates_from_wcs.html#glue.core.coordinates.coordinates_from_wcs" title="(in Glue v0.14.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">glue.core.coordinates.coordinates_from_wcs()</span></code></a>.
+We also pass the FITS header to the data so that useful information can be
+displayed in the MOSViz:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>data.coords = coordinates_from_wcs(WCS(hdulist[0].header))
+data.header = hdulist[0].header
+</pre></div>
+</div>
+<p>We take the data in first extension data array (a 2D array) and pass it to the
+<code class="docutils literal notranslate"><span class="pre">~glue.core.data.Data</span></code> object using the <a class="reference external" href="https://glueviz.readthedocs.io/en/stable/api/glue.core.data.Data.html#glue.core.data.Data.add_component" title="(in Glue v0.14.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_component()</span></code></a> method:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>data.add_component(hdulist[0].data, &#39;Flux&#39;)
+
+return data
+</pre></div>
+</div>
+</div>
+<div class="section" id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<p>The full contents of the ~/.glue/config.py is shown below:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import numpy as np
+
+from astropy.io import fits
+from astropy.wcs import WCS
+
+from glue.core import Data
+from glue.core.coordinates import coordinates_from_header, coordinates_from_wcs
+
+from mosviz.loaders.mos_loaders import (mosviz_spectrum1d_loader,
+                                        mosviz_spectrum2d_loader,
+                                        mosviz_cutout_loader)
+
+
+@mosviz_spectrum1d_loader(&#39;DEIMOS 1D Spectrum&#39;)
+def deimos_spectrum1D_reader(filename):
+    &quot;&quot;&quot;
+    Data loader for Keck/DEIMOS 1D spectra.
+
+    This loads the &#39;Bxspf-B&#39; (extension 1)
+    and &#39;Bxspf-R&#39; (extension 2) and appends them
+    together to proudce the combined Red/Blue Spectrum
+    along with their Wavelength and Inverse Variance
+    arrays.
+    &quot;&quot;&quot;
+
+    hdulist = fits.open(filename)
+    data = Data(label=&#39;1D Spectrum&#39;)
+    data.header = hdulist[1].header
+
+    full_wl = np.append(hdulist[1].data[&#39;LAMBDA&#39;][0], hdulist[2].data[&#39;LAMBDA&#39;][0])
+    full_spec = np.append(hdulist[1].data[&#39;SPEC&#39;][0], hdulist[2].data[&#39;SPEC&#39;][0])
+    full_ivar = np.append(hdulist[1].data[&#39;IVAR&#39;][0], hdulist[2].data[&#39;IVAR&#39;][0])
+
+    data.add_component(full_wl, &#39;Wavelength&#39;)
+    data.add_component(full_spec, &#39;Flux&#39;)
+    data.add_component(1/np.sqrt(full_ivar), &#39;Uncertainty&#39;)
+
+    return data
+
+@mosviz_spectrum2d_loader(&#39;DEIMOS 2D Spectrum&#39;)
+def deimos_spectrum2D_reader(filename):
+    &quot;&quot;&quot;
+    Data loader for Keck/DEIMOS 2D spectra.
+
+    This loads only the Flux and Inverse variance.
+    Wavelength information comes from the WCS.
+    &quot;&quot;&quot;
+
+    hdulist = fits.open(filename)
+    data = Data(label=&#39;2D Spectrum&#39;)
+    data.coords = coordinates_from_header(hdulist[1].header)
+    data.header = hdulist[1].header
+    data.add_component(hdulist[1].data[&#39;FLUX&#39;][0], &#39;Flux&#39;)
+    data.add_component(1/np.sqrt(hdulist[1].data[&#39;IVAR&#39;][0]), &#39;Uncertainty&#39;)
+    return data
+
+@mosviz_cutout_loader(&#39;ACS Cutout Image&#39;)
+def acs_cutout_image_reader(filename):
+    &quot;&quot;&quot;
+    Data loader for the ACS cut-outs for the DEIMOS spectra.
+
+    The cutouts contain only the image.
+    &quot;&quot;&quot;
+
+    hdulist = fits.open(filename)
+    data = Data(label=&#39;ACS Cutout Image&#39;)
+    data.coords = coordinates_from_header(hdulist[0].header)
+    data.header = hdulist[0].header
+    data.add_component(hdulist[0].data, &#39;Flux&#39;)
+
+    return data
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="writing-the-data-table">
+<span id="writing-data-table"></span><h2>Writing the Data Table<a class="headerlink" href="#writing-the-data-table" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned above, when adding a dataset to the MOSViz viewer, you will be
+prompted to select column names and data loaders, but you can optionally
+encode these into the catalog metadata to save time. Note that not all file
+formats will support this kind of meta-data, so if you want to do this you will
+be restricted to certain formats for the catalog.</p>
+<p>The main requirement is that when read in with the <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.table.Table.html#astropy.table.Table" title="(in Astropy v3.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a>
+<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.table.Table.html#astropy.table.Table.read" title="(in Astropy v3.1)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code></a> method, the <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.table.Table.html#astropy.table.Table" title="(in Astropy v3.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a>
+<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.table.Table.html#astropy.table.Table.meta" title="(in Astropy v3.1)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">meta</span></code></a> attribute should be a dictionary that contains
+a <code class="docutils literal notranslate"><span class="pre">loaders</span></code> key and a <code class="docutils literal notranslate"><span class="pre">special_columns</span></code> key:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">Table.meta['loaders']</span></code> should then be a dictionary that contains three keys -
+<code class="docutils literal notranslate"><span class="pre">spectrum1d</span></code>, <code class="docutils literal notranslate"><span class="pre">spectrum2d</span></code>, and <code class="docutils literal notranslate"><span class="pre">cutout</span></code>, and for each of these gives,
+as a string, the label of the reader to use.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Table.meta['special_columns']</span></code> should be a dictionary that contains one
+key/value pair for each special column listed in the table in
+<a class="reference internal" href="#readingoverview"><span class="std std-ref">Overview</span></a>, where the key is the <strong>Default name</strong> given in the
+table and the value is the name of the actual column in the table.</li>
+</ul>
+<p>Note that any metadata where the defaults are fine can be omitted. For example,
+for the special columns, if the actual name is the same as the default name, the
+key and value will be the same and can be ommitted from the metadata.</p>
+<p>As an example, the following ECSV table header indicates the loaders to use,
+but does not list the special columns explicitly since they already have the
+expected names:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># %ECSV 0.9
+# ---
+# meta:
+#   loaders:
+#       spectrum1d: &quot;DEIMOS 1D Spectrum&quot;
+#       spectrum2d: &quot;DEIMOS 2D Spectrum&quot;
+#       cutout: &quot;ACS Cutout Image&quot;
+# datatype:
+# - {name: id, datatype: string}
+# - {name: ra, unit: deg, datatype: float64}
+# - {name: dec, unit: deg, datatype: float64}
+# - {name: spectrum2d, datatype: string}
+# - {name: spectrum1d, datatype: string}
+# - {name: cutout, datatype: string}
+# - {name: slit_width, unit: arcsec, datatype: float64}
+# - {name: slit_length, unit: arcsec, datatype: float64}
+# - {name: pix_scale, datatype: float64}
+id ra dec spectrum2d spectrum1d cutout slit_width slit_length pix_scale
+deimos_12004808 214.21968 52.410386 Spectra/slit.1153.151R.fits.gz Spectra/spec1d.1153.151.12004808.fits Cutouts/12004808.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_12008179 214.33785 52.454369 Spectra/slit.1203.063R.fits.gz Spectra/spec1d.1203.063.12008179.fits Cutouts/12008179.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_12012573 214.34313 52.53112  Spectra/slit.1205.091R.fits.gz Spectra/spec1d.1205.091.12012573.fits Cutouts/12012573.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_12016058 214.52242 52.580972 Spectra/slit.1208.055R.fits.gz Spectra/spec1d.1208.055.12016058.fits Cutouts/12016058.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_12020734 214.49056 52.632246 Spectra/slit.1209.080R.fits.gz Spectra/spec1d.1209.080.12020734.fits Cutouts/12020734.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_12020387 214.57266 52.642585 Spectra/slit.1210.072R.fits.gz Spectra/spec1d.1210.072.12020387.fits Cutouts/12020387.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_12020049 214.62085 52.646039 Spectra/slit.1211.061R.fits.gz Spectra/spec1d.1211.061.12020049.fits Cutouts/12020049.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_12019995 214.69602 52.631649 Spectra/slit.1212.038R.fits.gz Spectra/spec1d.1212.038.12019995.fits Cutouts/12019995.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_12019653 214.77361 52.662353 Spectra/slit.1214.026R.fits.gz Spectra/spec1d.1214.026.12019653.fits Cutouts/12019653.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_12008349 214.249   52.460424 Spectra/slit.1243.030R.fits.gz Spectra/spec1d.1243.030.12008349.fits Cutouts/12008349.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_12012586 214.37004 52.52134  Spectra/slit.1243.079R.fits.gz Spectra/spec1d.1243.079.12012586.fits Cutouts/12012586.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_12004455 214.27608 52.408039 Spectra/slit.1244.010R.fits.gz Spectra/spec1d.1244.010.12004455.fits Cutouts/12004455.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_11051203 214.33513 52.381078 Spectra/slit.1246.011R.fits.gz Spectra/spec1d.1246.011.11051203.fits Cutouts/11051203.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_12011504 214.61256 52.551567 Spectra/slit.1246.152R.fits.gz Spectra/spec1d.1246.152.12011504.fits Cutouts/12011504.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_12024856 214.5929  52.718354 Spectra/slit.1252.066R.fits.gz Spectra/spec1d.1252.066.12024856.fits Cutouts/12024856.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13004306 214.77715 52.814133 Spectra/slit.1253.152R.fits.gz Spectra/spec1d.1253.152.13004306.fits Cutouts/13004306.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_12024118 214.73955 52.697049 Spectra/slit.1254.094R.fits.gz Spectra/spec1d.1254.094.12024118.fits Cutouts/12024118.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_12020067 214.64333 52.632145 Spectra/slit.1255.041R.fits.gz Spectra/spec1d.1255.041.12020067.fits Cutouts/12020067.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13019968 214.77751 52.910775 Spectra/slit.1302.115R.fits.gz Spectra/spec1d.1302.115.13019968.fits Cutouts/13019968.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13026888 215.01438 52.949334 Spectra/slit.1306.072R.fits.gz Spectra/spec1d.1306.072.13026888.fits Cutouts/13026888.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13026873 215.0064  52.95921  Spectra/slit.1306.077R.fits.gz Spectra/spec1d.1306.077.13026873.fits Cutouts/13026873.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13026857 214.95442 52.969926 Spectra/slit.1306.094R.fits.gz Spectra/spec1d.1306.094.13026857.fits Cutouts/13026857.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13026107 215.10585 53.003483 Spectra/slit.1308.070R.fits.gz Spectra/spec1d.1308.070.13026107.fits Cutouts/13026107.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13025290 215.19495 52.963721 Spectra/slit.1309.034R.fits.gz Spectra/spec1d.1309.034.13025290.fits Cutouts/13025290.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13043017 215.10605 53.116245 Spectra/slit.1311.114R.fits.gz Spectra/spec1d.1311.114.13043017.fits Cutouts/13043017.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13051276 215.10065 53.128093 Spectra/slit.1311.121R.fits.gz Spectra/spec1d.1311.121.13051276.fits Cutouts/13051276.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13041627 215.31852 53.104803 Spectra/slit.1313.048R.fits.gz Spectra/spec1d.1313.048.13041627.fits Cutouts/13041627.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13050572 215.17647 53.154515 Spectra/slit.1313.104R.fits.gz Spectra/spec1d.1313.104.13050572.fits Cutouts/13050572.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13050507 215.14259 53.169163 Spectra/slit.1313.120R.fits.gz Spectra/spec1d.1313.120.13050507.fits Cutouts/13050507.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13058235 215.23847 53.184374 Spectra/slit.1314.098R.fits.gz Spectra/spec1d.1314.098.13058235.fits Cutouts/13058235.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13049212 215.38783 53.136419 Spectra/slit.1315.047R.fits.gz Spectra/spec1d.1315.047.13049212.fits Cutouts/13049212.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13049133 215.3953  53.156244 Spectra/slit.1315.052R.fits.gz Spectra/spec1d.1315.052.13049133.fits Cutouts/13049133.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13058203 215.27553 53.210001 Spectra/slit.1315.105R.fits.gz Spectra/spec1d.1315.105.13058203.fits Cutouts/13058203.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13018671 214.95738 52.921481 Spectra/slit.1343.084R.fits.gz Spectra/spec1d.1343.084.13018671.fits Cutouts/13018671.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13026879 215.00536 52.95371  Spectra/slit.1343.108R.fits.gz Spectra/spec1d.1343.108.13026879.fits Cutouts/13026879.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13034580 215.08674 53.055397 Spectra/slit.1352.022R.fits.gz Spectra/spec1d.1352.022.13034580.fits Cutouts/13034580.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13058164 215.26445 53.18501  Spectra/slit.1352.117R.fits.gz Spectra/spec1d.1352.117.13058164.fits Cutouts/13058164.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13040952 215.32582 53.068148 Spectra/slit.1355.091R.fits.gz Spectra/spec1d.1355.091.13040952.fits Cutouts/13040952.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+deimos_13040873 215.40401 53.11767  Spectra/slit.1355.134R.fits.gz Spectra/spec1d.1355.134.13040873.fits Cutouts/13040873.acs.v_6ac_.fits 0.2 3.3 0.0 0.66
+</pre></div>
+</div>
+<p>If the ra/dec columns had a different name in the table, the header should
+instead look like e.g:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># %ECSV 0.9
+# ---
+# meta:
+#   loaders:
+#       spectrum1d: &quot;DEIMOS 1D Spectrum&quot;
+#       spectrum2d: &quot;DEIMOS 2D Spectrum&quot;
+#       cutout: &quot;ACS Cutout Image&quot;
+#   special_columns:
+#       ra: ra_j2000
+#       dec: dec_j2000
+# datatype:
+# - {name: id, datatype: string}
+# - {name: ra_j2000, unit: deg, datatype: float64}
+# - {name: dec_j2000, unit: deg, datatype: float64}
+...
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api.html" class="btn btn-neutral float-right" title="API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="functionality.html" class="btn btn-neutral" title="Overview of Basic MOSViz Functionality" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JDADF Developers
+      Last updated on 15 Dec 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation &mdash; mosviz v0.2.0.dev695</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/astropy_logo.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting Started with MOSViz" href="gettingstarted.html" />
+    <link rel="prev" title="MOSViz: Visualization Tool for Multi-object Spectroscopy" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> mosviz
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0.dev695
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install-via-conda">Install via Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-via-pypi">Install via PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-via-source">Install via source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#specviz-functionality">SpecViz functionality</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started with MOSViz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functionality.html">Overview of Basic MOSViz Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readingindata.html">Reading-in Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">mosviz</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>MOSViz is packaged and distributed through both Anaconda via the GlueViz
+channel, as well as through the Python Package Index (PyPI). It is also
+available from source.</p>
+<div class="section" id="install-via-conda">
+<h2>Install via Conda<a class="headerlink" href="#install-via-conda" title="Permalink to this headline">¶</a></h2>
+<p>In order to use the Anaconda package, you must first install an
+Anaconda distribution. If you do not have Anaconda, please follow the
+<a class="reference external" href="https://www.anaconda.com/download">instructions here</a> to install it.</p>
+<p>Once you have Anaconda installed, all you have to do to install MOSViz is
+simply type the following at any Bash terminal prompt:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ conda create -n &lt;environment_name&gt; -c glueviz mosviz
+</pre></div>
+</div>
+<p>Next activate your MOSViz conda environment:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ conda activate &lt;environment_name&gt;
+</pre></div>
+</div>
+<p>To launch MOSViz now you enter:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ mosviz
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-via-pypi">
+<h2>Install via PyPI<a class="headerlink" href="#install-via-pypi" title="Permalink to this headline">¶</a></h2>
+<p>To install MOSViz using PyPI type the following at any terminal prompt:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip install mosviz
+</pre></div>
+</div>
+<p>You will also need to install the PyQt package as well by typing the following:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip install pyqt5
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-via-source">
+<h2>Install via source<a class="headerlink" href="#install-via-source" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Using the Conda install is the preferred method for installing MOSViz to ensure
+that all dependencies are met. If you install via source/pip be aware that
+some dependencies will need to be installed manually!</p>
+</div>
+<p>MosViz can also be installed manually using the source code and requires the
+following dependencies to be installed on your system. Most of these will be
+handled automatically by the setup functions.</p>
+<ul class="simple">
+<li>Python 3</li>
+<li>Astropy</li>
+<li>Numpy</li>
+<li>Scipy</li>
+<li>Matplotlib</li>
+<li>Specutils</li>
+<li>Glue</li>
+</ul>
+<p>At your terminal, you may either clone the repository directly and then
+install:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/spacetelescope/mosviz.git
+$ cd mosviz
+$ python setup.py install
+</pre></div>
+</div>
+<p>Or, have the <a class="reference external" href="http://pip.pypa.org">pip</a> package manager do everything for you:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip install git+https://github.com/spacetelescope/mosviz.git
+</pre></div>
+</div>
+<p>Either way, the MosView Viewer should show up in the list of available Glue
+viewers.</p>
+</div>
+<div class="section" id="specviz-functionality">
+<h2>SpecViz functionality<a class="headerlink" href="#specviz-functionality" title="Permalink to this headline">¶</a></h2>
+<p>MOSViz comes with the ability to open 1D spectra inside a SpecViz instance
+within Glue. However, this functionality will only be enabled if you also have
+SpecViz installed on your system.</p>
+<p>If you are interested in this functionality, please follow the <a class="reference external" href="http://specviz.readthedocs.io/en/latest/">SpecViz
+installation instructions</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="gettingstarted.html" class="btn btn-neutral float-right" title="Getting Started with MOSViz" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="MOSViz: Visualization Tool for Multi-object Spectroscopy" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JDADF Developers
+      Last updated on 15 Dec 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

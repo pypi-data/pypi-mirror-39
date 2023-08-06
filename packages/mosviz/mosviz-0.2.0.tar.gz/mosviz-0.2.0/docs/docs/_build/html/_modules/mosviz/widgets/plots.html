@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mosviz.widgets.plots &mdash; mosviz v0.2.0.dev695</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/astropy_logo.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> mosviz
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0.dev695
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gettingstarted.html">Getting Started with MOSViz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functionality.html">Overview of Basic MOSViz Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../readingindata.html">Reading-in Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">mosviz</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>mosviz.widgets.plots</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for mosviz.widgets.plots</h1><div class="highlight"><pre>
+<span></span>import os
+
+from qtpy.QtCore import Signal
+from qtpy.QtWidgets import QMainWindow
+
+from matplotlib.patches import Rectangle
+
+from glue.viewers.common.qt.toolbar import BasicToolbar
+from glue.viewers.matplotlib.qt.widget import MplWidget
+from glue.viewers.common.qt.tool import Tool
+from glue.config import viewer_tool
+from glue.utils import defer_draw
+
+
+try:
+    from glue.viewers.matplotlib.mpl_axes import init_mpl
+except ImportError:  # glue &lt; 0.14
+    from glue.viewers.common.viz_client import init_mpl
+
+from glue.viewers.image.qt.standalone_image_viewer import StandaloneImageViewer
+
+__all__ = [&#39;Line1DWidget&#39;, &#39;DrawableImageWidget&#39;, &#39;MOSImageWidget&#39;]
+
+ICON_PATH = os.path.abspath(
+    os.path.join(
+        os.path.abspath(__file__),
+        &quot;..&quot;,
+        &quot;..&quot;,
+        &quot;data&quot;,
+        &quot;resources&quot;,
+        &quot;slit_icon.png&quot;
+    )
+)
+@viewer_tool
+class SlitButton(Tool):
+    &quot;&quot;&quot;
+    Image viewer tool to launch slit editor.
+    &quot;&quot;&quot;
+    icon = ICON_PATH
+    tool_id = &#39;mosviz:slit&#39;
+    action_text = &#39;&#39;
+    tool_tip = &#39;Slit options&#39;
+    status_tip = &#39;&#39;
+    shortcut = None
+
+    def __init__(self, viewer):
+        super(SlitButton, self).__init__(viewer)
+        self.function = viewer.launch_slit_ui
+
+    def activate(self):
+        self.function()
+
+
+<div class="viewcode-block" id="Line1DWidget"><a class="viewcode-back" href="../../../api/mosviz.widgets.Line1DWidget.html#mosviz.widgets.Line1DWidget">[docs]</a>class Line1DWidget(QMainWindow):
+
+    window_closed = Signal()
+
+    _toolbar_cls = BasicToolbar
+    tools = [&#39;mpl:home&#39;, &#39;mpl:save&#39;, &#39;mpl:pan&#39;, &#39;mpl:zoom&#39;]
+
+    def __init__(self, parent=None):
+
+        super(Line1DWidget, self).__init__(parent)
+
+        self.central_widget = MplWidget()
+        self.setCentralWidget(self.central_widget)
+        _, self._axes = init_mpl(figure=self.central_widget.canvas.fig)
+
+        self.initialize_toolbar()
+
+        self._artists = []
+
+    def initialize_toolbar(self):
+
+        from glue.config import viewer_tool
+
+        self.toolbar = self._toolbar_cls(self)
+
+        for tool_id in self.tools:
+            mode_cls = viewer_tool.members[tool_id]
+            mode = mode_cls(self)
+            self.toolbar.add_tool(mode)
+
+        self.addToolBar(self.toolbar)
+
+    @property
+    def axes(self):
+        return self._axes
+
+    def _clear_artists(self):
+        # Note: we can&#39;t use self._axes.cla() here since that removes events
+        # which will cause the locked axes to not work.
+        for artist in self._artists:
+            try:
+                artist.remove()
+            except ValueError:  # some artists may already not be in plot
+                pass
+
+        for t in self.axes.texts:
+            t.remove()
+
+<div class="viewcode-block" id="Line1DWidget.set_data"><a class="viewcode-back" href="../../../api/mosviz.widgets.Line1DWidget.html#mosviz.widgets.Line1DWidget.set_data">[docs]</a>    def set_data(self, x, y, yerr=None):
+        self._clear_artists()
+        self.axes.set_axis_on()
+
+        # Plot data
+        if yerr is None:
+            self._artists = self._axes.plot(x, y, color=&#39;k&#39;)
+        else:
+            self._artists = [self._axes.errorbar(x, y, yerr=yerr, color=&#39;k&#39;)]
+
+        # Refresh canvas
+        self._redraw()</div>
+
+    def no_data(self):
+        self._clear_artists()
+        self.axes.set_axis_off()
+
+        xbounds = self.axes.get_xlim()
+        if xbounds is None:
+            return
+        x = sum(xbounds) / 2.
+
+        ybounds = self.axes.get_ylim()
+        if ybounds is None:
+            return
+        y = sum(ybounds) / 2.
+
+        fontdict = {&quot;fontsize&quot;: 30,
+                    &quot;color&quot;: &quot;black&quot;,
+                    &quot;ha&quot;: &quot;center&quot;,
+                    &quot;va&quot;: &quot;center&quot;}
+
+        self.axes.text(x, y, &quot;No 1D Spectrum&quot;, fontdict=fontdict)
+        # Refresh canvas
+        self._redraw()
+
+
+    def _redraw(self):
+        self.central_widget.canvas.draw()
+
+<div class="viewcode-block" id="Line1DWidget.set_status"><a class="viewcode-back" href="../../../api/mosviz.widgets.Line1DWidget.html#mosviz.widgets.Line1DWidget.set_status">[docs]</a>    def set_status(self, message):
+        pass</div></div>
+
+
+<div class="viewcode-block" id="MOSImageWidget"><a class="viewcode-back" href="../../../api/mosviz.widgets.MOSImageWidget.html#mosviz.widgets.MOSImageWidget">[docs]</a>class MOSImageWidget(StandaloneImageViewer):
+
+    def __init__(self, *args, **kwargs):
+        super(MOSImageWidget, self).__init__(*args, **kwargs)
+
+<div class="viewcode-block" id="MOSImageWidget.set_status"><a class="viewcode-back" href="../../../api/mosviz.widgets.MOSImageWidget.html#mosviz.widgets.MOSImageWidget.set_status">[docs]</a>    def set_status(self, status):
+        pass</div></div>
+
+
+class Spectrum2DWidget(MOSImageWidget):
+
+    def __init__(self, *args, **kwargs):
+        super(MOSImageWidget, self).__init__(*args, **kwargs)
+
+    def _clear_image(self):
+        if self._im is not None:
+            self._im.remove()
+            self._im = None
+
+    @defer_draw
+    def set_image(self, image=None, wcs=None, **kwargs):
+        #self.axes.set_axis_on()
+
+        for c in self.axes.coords:
+            c.set_ticks_visible(True)
+            c.set_ticklabel_visible(True)
+
+        for t in self.axes.texts:
+            t.remove()
+        super(MOSImageWidget, self).set_image(image, wcs, **kwargs)
+
+    def no_data(self):
+        self._clear_image()
+        #self.axes.set_axis_off()
+
+        for c in self.axes.coords:
+            c.set_ticks_visible(False)
+            c.set_ticklabel_visible(False)
+
+        xbounds = self.axes.get_xlim()
+        if xbounds is None:
+            return
+        x = sum(xbounds) / 2.
+
+        ybounds = self.axes.get_ylim()
+        if ybounds is None:
+            return
+        y = sum(ybounds) / 2.
+
+        fontdict = {&quot;fontsize&quot;: 30,
+                    &quot;color&quot;: &quot;black&quot;,
+                    &quot;ha&quot;: &quot;center&quot;,
+                    &quot;va&quot;: &quot;center&quot;}
+
+        self.axes.text(x, y, &quot;No 2D Spectrum&quot;, fontdict=fontdict)
+        # Refresh canvas
+        self._redraw()
+
+
+<div class="viewcode-block" id="DrawableImageWidget"><a class="viewcode-back" href="../../../api/mosviz.widgets.DrawableImageWidget.html#mosviz.widgets.DrawableImageWidget">[docs]</a>class DrawableImageWidget(MOSImageWidget):
+    tools = [&#39;mpl:home&#39;, &#39;mpl:save&#39;, &#39;mpl:pan&#39;, &#39;mpl:zoom&#39;,
+             &#39;image:contrast&#39;, &#39;image:colormap&#39;, &#39;mosviz:slit&#39;]
+
+    slit_controller = None
+
+    def __init__(self, *args, slit_controller=None, **kwargs):
+        super(DrawableImageWidget, self).__init__(*args, **kwargs)
+        self._slit_patch = None
+        self.slit_controller = slit_controller
+
+<div class="viewcode-block" id="DrawableImageWidget.draw_rectangle"><a class="viewcode-back" href="../../../api/mosviz.widgets.DrawableImageWidget.html#mosviz.widgets.DrawableImageWidget.draw_rectangle">[docs]</a>    def draw_rectangle(self, x=None, y=None, width=None, height=None):
+        if self._slit_patch is not None:
+            self._slit_patch.remove()
+        self._slit_patch = Rectangle((x - width / 2, y - height / 2),
+                                     width=width, height=height,
+                                     edgecolor=&#39;red&#39;, facecolor=&#39;none&#39;)
+        self._axes.add_patch(self._slit_patch)</div>
+
+    def draw_slit(self):
+        &quot;&quot;&quot;
+        Draw the slit patch stored in the slit controller.
+        &quot;&quot;&quot;
+        if self.slit_controller.has_slits:
+            self.slit_controller.draw_slits(self._axes)
+
+    def set_limits(self, x_min=None, x_max=None, y_min=None, y_max=None):
+        &quot;&quot;&quot;Manually set the limits of the axes.&quot;&quot;&quot;
+        self._axes.set_xlim(x_min, x_max)
+        self._axes.set_ylim(y_min, y_max)
+
+    def set_slit_limits(self):
+        &quot;&quot;&quot;Set y limits of plot according to slit length&quot;&quot;&quot;
+        if self.slit_controller.has_slits:
+            # We want the image dimensions to be dy x dy
+            limits = self.slit_controller.get_cutout_limit()
+            if limits is not None:
+                self.set_limits(*limits)
+
+    def reset_limits(self):
+        &quot;&quot;&quot;Auto set the limits of the axes.&quot;&quot;&quot;
+        self._axes.relim()
+
+    def launch_slit_ui(self):
+        self.slit_controller.launch_slit_ui()</div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JDADF Developers
+      Last updated on 15 Dec 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

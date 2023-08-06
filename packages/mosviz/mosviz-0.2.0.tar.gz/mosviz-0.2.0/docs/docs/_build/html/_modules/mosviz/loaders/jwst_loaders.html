@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mosviz.loaders.jwst_loaders &mdash; mosviz v0.2.0.dev695</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/astropy_logo.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> mosviz
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0.dev695
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gettingstarted.html">Getting Started with MOSViz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functionality.html">Overview of Basic MOSViz Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../readingindata.html">Reading-in Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">mosviz</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>mosviz.loaders.jwst_loaders</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for mosviz.loaders.jwst_loaders</h1><div class="highlight"><pre>
+<span></span>import numpy as np
+from astropy.io import fits
+from astropy.wcs import WCS
+from astropy.table import Table
+from glue.core import Data
+from glue.core.coordinates import coordinates_from_header, coordinates_from_wcs
+
+from .utils import mosviz_spectrum1d_loader, mosviz_spectrum2d_loader, mosviz_cutout_loader, mosviz_level2_loader
+
+
+__all__ = [&#39;pre_nirspec_spectrum1d_reader&#39;, &#39;pre_nirspec_spectrum2d_reader&#39;,
+           &#39;pre_nircam_image_reader&#39;, &#39;pre_nirspec_level2_reader&#39;]
+
+
+@mosviz_spectrum1d_loader(&quot;NIRSpec 1D Spectrum&quot;)
+def nirspec_spectrum1d_reader(file_name):
+    with fits.open(file_name) as hdulist:
+        header = hdulist[&#39;PRIMARY&#39;].header
+
+    tab = Table.read(file_name)
+
+    data = Data(label=&quot;1D Spectrum&quot;)
+    data.header = header
+    data.add_component(tab[&#39;WAVELENGTH&#39;], &quot;Wavelength&quot;)
+    data.add_component(tab[&#39;FLUX&#39;], &quot;Flux&quot;)
+    data.add_component(tab[&#39;ERROR&#39;], &quot;Uncertainty&quot;)
+
+    return data
+
+
+@mosviz_spectrum2d_loader(&#39;NIRSpec 2D Spectrum&#39;)
+def nirspec_spectrum2d_reader(file_name):
+    &quot;&quot;&quot;
+    Data loader for simulated NIRSpec 2D spectrum.
+
+    This function extracts the DATA, QUALITY, and VAR
+    extensions and returns them as a glue Data object.
+
+    It then uses the header keywords of the DATA extension
+    to detemine the wavelengths.
+    &quot;&quot;&quot;
+
+    hdulist = fits.open(file_name)
+
+    data = Data(label=&quot;2D Spectrum&quot;)
+    data.header = hdulist[&#39;PRIMARY&#39;].header
+    data.coords = coordinates_from_header(hdulist[1].header)
+    data.add_component(hdulist[&#39;SCI&#39;].data, &#39;Flux&#39;)
+    data.add_component(np.sqrt(hdulist[&#39;CON&#39;].data), &#39;Uncertainty&#39;)
+
+    hdulist.close()
+
+    return data
+
+
+<div class="viewcode-block" id="pre_nirspec_spectrum1d_reader"><a class="viewcode-back" href="../../../api/mosviz.loaders.pre_nirspec_spectrum1d_reader.html#mosviz.loaders.pre_nirspec_spectrum1d_reader">[docs]</a>@mosviz_spectrum1d_loader(&#39;Pre NIRSpec 1D Spectrum&#39;)
+def pre_nirspec_spectrum1d_reader(file_name):
+    &quot;&quot;&quot;
+    Data loader for MOSViz 1D spectrum.
+
+    This function extracts the DATA, QUALITY, and VAR
+    extensions and returns them as a glue Data object.
+
+    It then uses the header keywords of the DATA extension
+    to detemine the wavelengths.
+    &quot;&quot;&quot;
+
+    hdulist = fits.open(file_name)
+
+    # make wavelength a seperate component in addition to coordinate
+    # so you can plot it on the x axis
+    wavelength = np.linspace(hdulist[&#39;DATA&#39;].header[&#39;CRVAL1&#39;],
+                             hdulist[&#39;DATA&#39;].header[&#39;CRVAL1&#39;] * hdulist[&#39;DATA&#39;].header[&#39;CDELT1&#39;],
+                             hdulist[&#39;DATA&#39;].header[&#39;NAXIS1&#39;])[::-1]
+
+    data = Data(label=&#39;1D Spectrum&#39;)
+    data.header = hdulist[&#39;DATA&#39;].header
+    data.add_component(wavelength, &#39;Wavelength&#39;)
+    data.add_component(hdulist[&#39;DATA&#39;].data, &#39;Flux&#39;)
+    data.add_component(np.sqrt(hdulist[&#39;VAR&#39;].data), &#39;Uncertainty&#39;)
+
+    hdulist.close()
+
+    return data</div>
+
+
+<div class="viewcode-block" id="pre_nirspec_spectrum2d_reader"><a class="viewcode-back" href="../../../api/mosviz.loaders.pre_nirspec_spectrum2d_reader.html#mosviz.loaders.pre_nirspec_spectrum2d_reader">[docs]</a>@mosviz_spectrum2d_loader(&#39;Pre NIRSpec 2D Spectrum&#39;)
+def pre_nirspec_spectrum2d_reader(file_name):
+    &quot;&quot;&quot;
+    Data loader for simulated NIRSpec 2D spectrum.
+
+    This function extracts the DATA, QUALITY, and VAR
+    extensions and returns them as a glue Data object.
+
+    It then uses the header keywords of the DATA extension
+    to detemine the wavelengths.
+    &quot;&quot;&quot;
+
+    hdulist = fits.open(file_name)
+
+    data = Data(label=&#39;2D Spectrum&#39;)
+    data.header = hdulist[&#39;DATA&#39;].header
+    data.coords = coordinates_from_header(hdulist[1].header)
+    data.add_component(hdulist[&#39;DATA&#39;].data, &#39;Flux&#39;)
+    data.add_component(np.sqrt(hdulist[&#39;VAR&#39;].data), &#39;Uncertainty&#39;)
+
+    hdulist.close()
+
+    return data</div>
+
+
+<div class="viewcode-block" id="pre_nircam_image_reader"><a class="viewcode-back" href="../../../api/mosviz.loaders.pre_nircam_image_reader.html#mosviz.loaders.pre_nircam_image_reader">[docs]</a>@mosviz_cutout_loader(&#39;NIRCam Image&#39;)
+def pre_nircam_image_reader(file_name):
+    &quot;&quot;&quot;
+    Data loader for simulated NIRCam image. This is for the
+    full image, where cut-outs will be created on the fly.
+
+    From the header:
+    If ISWFS is T, structure is:
+
+            -  Plane 1: Signal [frame3 - frame1] in ADU
+            -  Plane 2: Signal uncertainty [sqrt(2*RN/g + \|frame3\|)]
+
+    If ISWFS is F, structure is:
+
+            -  Plane 1: Signal from linear fit to ramp [ADU/sec]
+            -  Plane 2: Signal uncertainty [ADU/sec]
+
+    Note that in the later case, the uncertainty is simply the formal
+    uncertainty in the fit parameter (eg. uncorrelated, WRONG!). Noise
+    model to be implemented at a later date.
+    In the case of WFS, error is computed as SQRT(2*sigma_read + \|frame3\|)
+    which should be a bit more correct - ~Fowler sampling.
+
+    The FITS file has a single extension with a data cube.
+    The data is the first slice of the cube and the uncertainty
+    is the second slice.
+
+    &quot;&quot;&quot;
+
+    hdulist = fits.open(file_name)
+    data = Data(label=&#39;NIRCam Image&#39;)
+    data.header = hdulist[0].header
+    wcs = WCS(hdulist[0].header)
+
+    # drop the last axis since the cube will be split
+    data.coords = coordinates_from_wcs(wcs)
+    data.add_component(hdulist[0].data, &#39;Flux&#39;)
+    data.add_component(hdulist[0].data / 100, &#39;Uncertainty&#39;)
+
+    hdulist.close()
+
+    return data</div>
+
+
+<div class="viewcode-block" id="pre_nirspec_level2_reader"><a class="viewcode-back" href="../../../api/mosviz.loaders.pre_nirspec_level2_reader.html#mosviz.loaders.pre_nirspec_level2_reader">[docs]</a>@mosviz_level2_loader(&#39;Pre NIRSpec 2D Level 2 Spectra&#39;)
+def pre_nirspec_level2_reader(file_name):
+    &quot;&quot;&quot;
+    THIS IS A TEST!
+
+    &quot;&quot;&quot;
+
+    #TODO The level 2 file has multiple exposures.
+    #TODO the level 2 test file has SCI extensions with different shapes.
+    #TODO
+
+    hdulist = fits.open(file_name)
+    data = Data(label=&#39;2D Spectra&#39;)
+
+    hdulist[1].header[&#39;CTYPE2&#39;] = &#39;Spatial Y&#39;
+    data.header = hdulist[1].header
+
+    # This is a stop gap fix to let fake data be ingested as
+    # level 2 apectra. The level 2 file we have for testing
+    # right now has SCI extensions with different sized arrays
+    # among them. It remains to be seen if this is a expected
+    # feature of level 2 spectra, or just a temporary glitch.
+    # In case it&#39;s actually what lvel 2 spectral files look
+    # like, proper handling must be put in place to allow
+    # glue Data objects with different sized components. Or,
+    # if that is not feasible, to properly cut the arrays so
+    # as to make them all of the same size. The solution below
+    # is a naive interpretation of this concept.
+    x_min = 10000
+    y_min = 10000
+    for k in range(1, len(hdulist)):
+        if &#39;SCI&#39; in hdulist[k].header[&#39;EXTNAME&#39;]:
+            x_min = min(x_min, hdulist[k].data.shape[0])
+            y_min = min(y_min, hdulist[k].data.shape[1])
+
+    # hdulist[k].header[&#39;CTYPE2&#39;] = &#39;Spatial Y&#39;
+    # wcs = WCS(hdulist[1].header)
+    # original WCS has both axes named &quot;LAMBDA&quot;, glue requires unique component names
+
+    # data.coords = coordinates_from_wcs(wcs)
+    # data.header = hdulist[k].header
+    # data.add_component(hdulist[1].data[&#39;FLUX&#39;][0], &#39;Flux&#39;)
+
+    count = 1
+    for k in range(1, len(hdulist)):
+        if &#39;SCI&#39; in hdulist[k].header[&#39;EXTNAME&#39;]:
+            data.add_component(hdulist[k].data[0:x_min, 0:y_min], &#39;Flux_&#39; + &#39;{:03d}&#39;.format(count))
+            count += 1
+            # data.add_component(1 / np.sqrt(hdulist[1].data[&#39;IVAR&#39;][0]), &#39;Uncertainty&#39;)
+
+    return data</div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JDADF Developers
+      Last updated on 15 Dec 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

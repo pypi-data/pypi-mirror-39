@@ -1,0 +1,489 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>MOSVizViewer &mdash; mosviz v0.2.0.dev695</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/astropy_logo.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CycleForwardTool" href="mosviz.widgets.CycleForwardTool.html" />
+    <link rel="prev" title="pre_nirspec_spectrum2d_reader" href="mosviz.loaders.pre_nirspec_spectrum2d_reader.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> mosviz
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0.dev695
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gettingstarted.html">Getting Started with MOSViz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../functionality.html">Overview of Basic MOSViz Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readingindata.html">Reading-in Data</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../api.html#module-mosviz.loaders">mosviz.loaders Package</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#module-mosviz.viewers">mosviz.viewers Package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../api.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">MOSVizViewer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../api.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#module-mosviz.widgets">mosviz.widgets Package</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">mosviz</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">API</a> &raquo;</li>
+        
+      <li>MOSVizViewer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/mosviz.viewers.MOSVizViewer.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mosvizviewer">
+<h1>MOSVizViewer<a class="headerlink" href="#mosvizviewer" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="mosviz.viewers.MOSVizViewer">
+<em class="property">class </em><code class="descclassname">mosviz.viewers.</code><code class="descname">MOSVizViewer</code><span class="sig-paren">(</span><em>session</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://glueviz.readthedocs.io/en/stable/api/glue.viewers.common.qt.data_viewer.DataViewer.html#glue.viewers.common.qt.data_viewer.DataViewer" title="(in Glue v0.14.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">glue.viewers.common.qt.data_viewer.DataViewer</span></code></a></p>
+<p class="rubric">Attributes Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.LABEL" title="mosviz.viewers.MOSVizViewer.LABEL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LABEL</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.window_closed" title="mosviz.viewers.MOSVizViewer.window_closed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window_closed</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.add_data" title="mosviz.viewers.MOSVizViewer.add_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_data</span></code></a>(data)</td>
+<td>Processes data message from the central communication hub.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.add_subset" title="mosviz.viewers.MOSVizViewer.add_subset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_subset</span></code></a>(subset)</td>
+<td>Processes subset messages from the central communication hub.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.closeEvent" title="mosviz.viewers.MOSVizViewer.closeEvent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">closeEvent</span></code></a>(event)</td>
+<td>Clean up the extraneous data components created when opening the MOSViz viewer by overriding the parent class’s close event.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.get_comment" title="mosviz.viewers.MOSVizViewer.get_comment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_comment</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.get_flag" title="mosviz.viewers.MOSVizViewer.get_flag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_flag</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.initialize_toolbar" title="mosviz.viewers.MOSVizViewer.initialize_toolbar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initialize_toolbar</span></code></a>()</td>
+<td>Initialize the custom toolbar for the MOSViz viewer.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.layer_view" title="mosviz.viewers.MOSVizViewer.layer_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">layer_view</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.load_selection" title="mosviz.viewers.MOSVizViewer.load_selection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_selection</span></code></a>(row)</td>
+<td>Processes a row in the MOS catalog by first loading the data set, updating the stored data components, and then rendering the data on the visible MOSViz viewer plots.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.load_ui" title="mosviz.viewers.MOSVizViewer.load_ui"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_ui</span></code></a>()</td>
+<td>Setup the MOSView viewer interface.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.options_widget" title="mosviz.viewers.MOSVizViewer.options_widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">options_widget</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.refresh_comments" title="mosviz.viewers.MOSVizViewer.refresh_comments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">refresh_comments</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.register_to_hub" title="mosviz.viewers.MOSVizViewer.register_to_hub"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_to_hub</span></code></a>(hub)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.render_data" title="mosviz.viewers.MOSVizViewer.render_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">render_data</span></code></a>(row[,&nbsp;spec1d_data,&nbsp;spec2d_data,&nbsp;…])</td>
+<td>Render the updated data sets in the individual plot widgets within the MOSViz viewer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.send_NumericalDataChangedMessage" title="mosviz.viewers.MOSVizViewer.send_NumericalDataChangedMessage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">send_NumericalDataChangedMessage</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.set_locked_axes" title="mosviz.viewers.MOSVizViewer.set_locked_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_locked_axes</span></code></a>([x,&nbsp;y])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.setup_connections" title="mosviz.viewers.MOSVizViewer.setup_connections"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup_connections</span></code></a>()</td>
+<td>Connects gui elements to event calls.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.update_comments" title="mosviz.viewers.MOSVizViewer.update_comments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_comments</span></code></a>([pastSelection])</td>
+<td>Process comment and flag changes and save to file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#mosviz.viewers.MOSVizViewer.write_comments" title="mosviz.viewers.MOSVizViewer.write_comments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_comments</span></code></a>()</td>
+<td>Setup save file.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="attribute">
+<dt id="mosviz.viewers.MOSVizViewer.LABEL">
+<code class="descname">LABEL</code><em class="property"> = 'MOSViz Viewer'</em><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mosviz.viewers.MOSVizViewer.window_closed">
+<code class="descname">window_closed</code><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.window_closed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.add_data">
+<code class="descname">add_data</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.add_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.add_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes data message from the central communication hub.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>data</strong> <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference external" href="https://glueviz.readthedocs.io/en/stable/api/glue.core.data.Data.html#glue.core.data.Data" title="(in Glue v0.14.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">glue.core.data.Data</span></code></a></span></dt>
+<dd><p class="first last">Data object.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.add_subset">
+<code class="descname">add_subset</code><span class="sig-paren">(</span><em>subset</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.add_subset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.add_subset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes subset messages from the central communication hub.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>subset :</strong></dt>
+<dd><p class="first last">Subset object.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.closeEvent">
+<code class="descname">closeEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.closeEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.closeEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clean up the extraneous data components created when opening the
+MOSViz viewer by overriding the parent class’s close event.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.get_comment">
+<code class="descname">get_comment</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.get_comment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.get_comment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.get_flag">
+<code class="descname">get_flag</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.get_flag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.get_flag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.initialize_toolbar">
+<code class="descname">initialize_toolbar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.initialize_toolbar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.initialize_toolbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the custom toolbar for the MOSViz viewer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.layer_view">
+<code class="descname">layer_view</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.layer_view"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.layer_view" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.load_selection">
+<code class="descname">load_selection</code><span class="sig-paren">(</span><em>row</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.load_selection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.load_selection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes a row in the MOS catalog by first loading the data set,
+updating the stored data components, and then rendering the data on
+the visible MOSViz viewer plots.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>row</strong> <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.table.Row.html#astropy.table.Row" title="(in Astropy v3.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.table.Row</span></code></a></span></dt>
+<dd><p class="first last">A row object representing a row in the MOS catalog. Each key
+should be a column name.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.load_ui">
+<code class="descname">load_ui</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.load_ui"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.load_ui" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup the MOSView viewer interface.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.options_widget">
+<code class="descname">options_widget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.options_widget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.options_widget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.refresh_comments">
+<code class="descname">refresh_comments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.refresh_comments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.refresh_comments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.register_to_hub">
+<code class="descname">register_to_hub</code><span class="sig-paren">(</span><em>hub</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.register_to_hub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.register_to_hub" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.render_data">
+<code class="descname">render_data</code><span class="sig-paren">(</span><em>row</em>, <em>spec1d_data=None</em>, <em>spec2d_data=None</em>, <em>image_data=None</em>, <em>level2_data=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.render_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.render_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Render the updated data sets in the individual plot widgets within the
+MOSViz viewer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.send_NumericalDataChangedMessage">
+<code class="descname">send_NumericalDataChangedMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.send_NumericalDataChangedMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.send_NumericalDataChangedMessage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.set_locked_axes">
+<code class="descname">set_locked_axes</code><span class="sig-paren">(</span><em>x=None</em>, <em>y=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.set_locked_axes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.set_locked_axes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.setup_connections">
+<code class="descname">setup_connections</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.setup_connections"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.setup_connections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects gui elements to event calls.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.update_comments">
+<code class="descname">update_comments</code><span class="sig-paren">(</span><em>pastSelection=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.update_comments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.update_comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process comment and flag changes and save to file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>pastSelection</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">True when updating past selections. Used when
+user forgets to save.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mosviz.viewers.MOSVizViewer.write_comments">
+<code class="descname">write_comments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mosviz/viewers/mos_viewer.html#MOSVizViewer.write_comments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mosviz.viewers.MOSVizViewer.write_comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup save file. Write comments and flags to file</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mosviz.widgets.CycleForwardTool.html" class="btn btn-neutral float-right" title="CycleForwardTool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mosviz.loaders.pre_nirspec_spectrum2d_reader.html" class="btn btn-neutral" title="pre_nirspec_spectrum2d_reader" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JDADF Developers
+      Last updated on 15 Dec 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mosviz.widgets.toolbars &mdash; mosviz v0.2.0.dev695</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/astropy_logo.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> mosviz
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0.dev695
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gettingstarted.html">Getting Started with MOSViz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functionality.html">Overview of Basic MOSViz Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../readingindata.html">Reading-in Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">mosviz</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>mosviz.widgets.toolbars</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for mosviz.widgets.toolbars</h1><div class="highlight"><pre>
+<span></span>import os
+
+from glue.viewers.common.qt.toolbar import BasicToolbar
+from glue.viewers.common.qt.tool import Tool
+
+from qtpy.QtWidgets import QAction, QComboBox, QMenu, QToolButton, QWidgetAction
+from qtpy.QtGui import QIcon
+from qtpy.QtCore import Qt
+
+from .. import ICON_DIR
+
+__all__ = [&#39;CyclePreviousTool&#39;, &#39;CycleForwardTool&#39;, &#39;MOSViewerToolbar&#39;]
+
+
+<div class="viewcode-block" id="CyclePreviousTool"><a class="viewcode-back" href="../../../api/mosviz.widgets.CyclePreviousTool.html#mosviz.widgets.CyclePreviousTool">[docs]</a>class CyclePreviousTool(Tool):
+
+    def __init__(self, viewer, toolbar=None):
+        super(CyclePreviousTool, self).__init__(viewer=viewer)
+        self.tool_id = &#39;mv:previous&#39;
+        self.action_text = &quot;Previous&quot;
+        self.tool_tip = &quot;Previous source in selection&quot;
+        self.shortcut = &quot;P&quot;
+        self.checkable = False
+        self.toolbar = toolbar
+
+<div class="viewcode-block" id="CyclePreviousTool.activate"><a class="viewcode-back" href="../../../api/mosviz.widgets.CyclePreviousTool.html#mosviz.widgets.CyclePreviousTool.activate">[docs]</a>    def activate(self):
+        pass</div></div>
+
+
+<div class="viewcode-block" id="CycleForwardTool"><a class="viewcode-back" href="../../../api/mosviz.widgets.CycleForwardTool.html#mosviz.widgets.CycleForwardTool">[docs]</a>class CycleForwardTool(Tool):
+
+    def __init__(self, viewer, toolbar=None):
+        super(CycleForwardTool, self).__init__(viewer=viewer)
+        self.tool_id = &#39;mv:next&#39;
+        self.action_text = &quot;Next&quot;
+        self.tool_tip = &quot;Next source in selection&quot;
+        self.shortcut = &quot;N&quot;
+        self.checkable = False
+        self.toolbar = toolbar
+
+<div class="viewcode-block" id="CycleForwardTool.activate"><a class="viewcode-back" href="../../../api/mosviz.widgets.CycleForwardTool.html#mosviz.widgets.CycleForwardTool.activate">[docs]</a>    def activate(self):
+        pass</div></div>
+
+
+<div class="viewcode-block" id="MOSViewerToolbar"><a class="viewcode-back" href="../../../api/mosviz.widgets.MOSViewerToolbar.html#mosviz.widgets.MOSViewerToolbar">[docs]</a>class MOSViewerToolbar(BasicToolbar):
+    def __init__(self, *args, **kwargs):
+        super(MOSViewerToolbar, self).__init__(*args, **kwargs)
+        self.setToolButtonStyle(Qt.ToolButtonTextUnderIcon)
+
+        # Define the toolbar actions
+        self.cycle_previous_action = QAction(
+            QIcon(os.path.join(ICON_DIR, &quot;Previous-96.png&quot;)),
+            &quot;Previous&quot;, self)
+        self.cycle_next_action = QAction(
+            QIcon(os.path.join(ICON_DIR, &quot;Next-96.png&quot;)),
+            &quot;Next&quot;, self)
+
+        self.exposure_previous_action = QAction(
+            QIcon(os.path.join(ICON_DIR, &quot;Previous-96.png&quot;)),
+            &quot;Previous exp.&quot;, self)
+        self.exposure_next_action = QAction(
+            QIcon(os.path.join(ICON_DIR, &quot;Next-96.png&quot;)),
+            &quot;Next exp.&quot;, self)
+
+        # Include the dropdown widgets
+        self.source_select = QComboBox()
+        self.exposure_select = QComboBox()
+
+        # Add the items to the toolbar
+        self.addAction(self.cycle_previous_action)
+        self.addAction(self.cycle_next_action)
+        self.addWidget(self.source_select)
+        self.addAction(self.exposure_previous_action)
+        self.addAction(self.exposure_next_action)
+        self.addWidget(self.exposure_select)
+
+        # Include a button to open spectrum in specviz
+        self.open_specviz = QAction(
+            QIcon(os.path.join(ICON_DIR, &quot;External-96.png&quot;)),
+            &quot;Open in SpecViz&quot;, self)
+
+        # Create a tool button to hold the lock axes menu object
+        tool_button = QToolButton(self)
+        tool_button.setText(&quot;Axes Settings&quot;)
+        tool_button.setIcon(QIcon(os.path.join(ICON_DIR, &quot;Settings-96.png&quot;)))
+        tool_button.setPopupMode(QToolButton.InstantPopup)
+        tool_button.setToolButtonStyle(Qt.ToolButtonTextUnderIcon)
+
+        # Create a menu for the axes settings drop down
+        self.settings_menu = QMenu(self)
+
+        # Add lock x axis action
+        self.lock_x_action = QAction(&quot;Lock spectral axis&quot;,
+                                     self.settings_menu)
+        self.lock_x_action.setCheckable(True)
+
+        # Add lock y axis action
+        self.lock_y_action = QAction(&quot;Lock vertical displacement axis&quot;,
+                                     self.settings_menu)
+        self.lock_y_action.setCheckable(True)
+
+        # Add the actions to the menu
+        self.settings_menu.addAction(self.lock_x_action)
+        self.settings_menu.addAction(self.lock_y_action)
+
+        # Set the menu object on the tool button
+        tool_button.setMenu(self.settings_menu)
+
+        # Create a widget action object to hold the tool button, this way the
+        # toolbar behaves the way it&#39;s expected to
+        tool_button_action = QWidgetAction(self)
+        tool_button_action.setDefaultWidget(tool_button)
+
+        self.addAction(tool_button_action)
+        self.addSeparator()
+        self.addAction(self.open_specviz)</div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JDADF Developers
+      Last updated on 15 Dec 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

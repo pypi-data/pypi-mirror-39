@@ -1,0 +1,17 @@
+CyclePreviousTool
+=================
+
+.. currentmodule:: mosviz.widgets
+
+.. autoclass:: CyclePreviousTool
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~CyclePreviousTool.activate
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: activate

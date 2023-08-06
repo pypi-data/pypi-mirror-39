@@ -1,0 +1,17 @@
+CycleForwardTool
+================
+
+.. currentmodule:: mosviz.widgets
+
+.. autoclass:: CycleForwardTool
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~CycleForwardTool.activate
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: activate

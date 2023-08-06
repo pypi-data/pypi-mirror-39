@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: mosviz
+Version: 0.2.0
+Summary: MOS visualization tool
+Home-page: https://github.com/spacetelescope/mosviz
+Author: JDADF Developers
+Author-email: nearl@stsci.edu
+License: BSD 3-Clause
+Description: MOSViz is a quick-look analysis and visualization tool for multi-object spectroscopy (MOS).
+Platform: UNKNOWN
+Requires-Python: >=3.5

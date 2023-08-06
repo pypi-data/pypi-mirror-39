@@ -1,0 +1,17 @@
+MOSImageWidget
+==============
+
+.. currentmodule:: mosviz.widgets
+
+.. autoclass:: MOSImageWidget
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~MOSImageWidget.set_status
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: set_status

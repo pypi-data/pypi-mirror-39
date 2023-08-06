@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Overview of Basic MOSViz Functionality &mdash; mosviz v0.2.0.dev695</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/astropy_logo.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Reading-in Data" href="readingindata.html" />
+    <link rel="prev" title="Getting Started with MOSViz" href="gettingstarted.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> mosviz
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0.dev695
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started with MOSViz</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview of Basic MOSViz Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readingindata.html">Reading-in Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">mosviz</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Overview of Basic MOSViz Functionality</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/functionality.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview-of-basic-mosviz-functionality">
+<h1>Overview of Basic MOSViz Functionality<a class="headerlink" href="#overview-of-basic-mosviz-functionality" title="Permalink to this headline">¶</a></h1>
+<p>MOSViz is composed of separate components that interact via “linked views.”
+As described below, and as shown in Figures 1, MOSViz includes a:</p>
+<ul class="simple">
+<li>1D spectral viewer</li>
+<li>2D spectral viewer</li>
+<li>Image cutout viewer</li>
+<li>Data table</li>
+<li>2D scatter plot</li>
+<li>3D scatter plot, and a</li>
+<li>mosaic viewer where the targets are indicated.</li>
+</ul>
+<div class="figure align-center" id="id1">
+<img alt="_images/MOSViz_screenshot_labeled_flt_crp.png" src="_images/MOSViz_screenshot_labeled_flt_crp.png" />
+<p class="caption"><span class="caption-text">Figure 1: A screen shot of MOSViz with its components labeled is shown.  MOSViz is embedded in the Glue visualization tool.
+In the use case shown, the user has selected targets in the scatter plot on the upper right.  The corresponding rows in the
+table are highlighted, and the first object’s 1D and 2D spectra are shown.  The cutout image has the spectral aperture
+indicated on it in red.  The user advances to the next target in the spectra/image viewers by hitting the arrow key in the
+upper right.  Shown in the MOS viewer is a simulated NIRCam image and an “engineering” NIRSpec MSA spectrum with faked
+errors.</span></p>
+</div>
+<p>Each of these components is described in more detail below.
+Once a MOS data set is read in, users can use any combination of these tools.
+A typical use case/workflow is the following:</p>
+<ul class="simple">
+<li>Read in a table of: target identifications, coordinates (RA, DEC), paths and file names of cutout images, paths and file names of 2D spectra, paths and file names of 1D spectra, and optional quantities (such as star-formation rate magnitudes, stellar masses, sizes, etc.) for 1000 galaxies at a redshift of 2</li>
+<li>Sort galaxies in table according to star-formation rate</li>
+<li>Highlight the 3 galaxies with the highest star-formation rates</li>
+<li>This causes the 1D and 2D spectra and cut-out image of the first galaxy of these three galaxies to display</li>
+<li>Measure the equivalent width of an emission line</li>
+<li>Hit the arrow button to move to the next galaxy</li>
+<li>Do the same for the second and third objects</li>
+</ul>
+<p>MOSViz’s main purpose is to help users to visually inspect and perform a “first-look” analysis of multiple spectra.  To this
+end, MOSViz’s main component is its 1D and 2D spectral viewers. The user can choose to use both 1D and 2D viewers, or either one.
+Users can interact further with the 1D spectra by opening the SpecViz 1D spectral analysis tool. SpecViz allows users to make
+measurements of e.g, emission and absorption line strengths and sky continuum levels.  For the 2D spectra, a basic set of view adjustments will is available: zoom, pan, colormap, and intensity scaling.</p>
+<p>MOSViz also includes an optional cutout viewer to show an image of each target
+alongside their 1D and 2D spectra.   The cutout is aligned so that the
+cross-dispersion direction has the same vertical orientation as for the
+2D spectrum. We provide <a class="reference external" href="http://astroimtools.readthedocs.io/en/latest/astroimtools/cutouts.html">documentation</a> on
+how to create such cutouts for single-waveband images and multi-band color images.
+For the single-waveband cutouts, a basic set of view adjustments will be available
+in future versions of MOSViz: zoom, pan, colormap, and intensity scaling.
+The UI will read back the row, column and flux under in the pixel under the cursor.
+In addition, we provide documentation on how to show overlayed spectral apertures
+on each cutout image (at above link).  For most MOS’s, the spectral
+aperture is a thin slit.  For the NIRSpec MSA, it is a single or multi-shutter
+<a class="reference external" href="http://www.stsci.edu/jwst/instruments/nirspec/instrumentdesign/msa">“slitlet”</a>.</p>
+<p>MOSViz’s default is to lock the wavelength axis of the 1D and 2D spectra so that they are aligned spatially and zoom and pan together.  It also defaults to have the cross-dispersion spatial axis locked to the cutout vertical axis so that they zoom and pan together. All of the data must have valid WCSs for this to work.</p>
+<p>The data table allows users to select targets to display in the spectral and/or cutout viewers.  Optionally, they can also display the selected targets in the 2D and/or 3D scatter plots and/or on the large image viewer (the latter available in future versionsof MOSViz).  Columns in the data table must include at minimum target identification (id), right ascension (RA), and declination (DEC).  The table can include any other quantities the user wishes to include.  Its columns can be sorted.  The user can select as many or as few objects as they wish to view.</p>
+<p>The optional 2D and 3D scatter plots can be used to plot the quantities in the tables.   The user can click on each point/target in the plots to display the selected target’s spectra and images.  The user can select multiple contiguous points/targets at once.</p>
+<p>Finally, the information box displays the information from the table on the specific target displayed.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="readingindata.html" class="btn btn-neutral float-right" title="Reading-in Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="gettingstarted.html" class="btn btn-neutral" title="Getting Started with MOSViz" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JDADF Developers
+      Last updated on 15 Dec 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

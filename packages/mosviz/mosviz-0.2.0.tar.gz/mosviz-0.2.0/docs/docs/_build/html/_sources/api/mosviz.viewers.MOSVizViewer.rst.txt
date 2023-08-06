@@ -1,0 +1,63 @@
+MOSVizViewer
+============
+
+.. currentmodule:: mosviz.viewers
+
+.. autoclass:: MOSVizViewer
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~MOSVizViewer.LABEL
+      ~MOSVizViewer.window_closed
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~MOSVizViewer.add_data
+      ~MOSVizViewer.add_subset
+      ~MOSVizViewer.closeEvent
+      ~MOSVizViewer.get_comment
+      ~MOSVizViewer.get_flag
+      ~MOSVizViewer.initialize_toolbar
+      ~MOSVizViewer.layer_view
+      ~MOSVizViewer.load_selection
+      ~MOSVizViewer.load_ui
+      ~MOSVizViewer.options_widget
+      ~MOSVizViewer.refresh_comments
+      ~MOSVizViewer.register_to_hub
+      ~MOSVizViewer.render_data
+      ~MOSVizViewer.send_NumericalDataChangedMessage
+      ~MOSVizViewer.set_locked_axes
+      ~MOSVizViewer.setup_connections
+      ~MOSVizViewer.update_comments
+      ~MOSVizViewer.write_comments
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: LABEL
+   .. autoattribute:: window_closed
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: add_data
+   .. automethod:: add_subset
+   .. automethod:: closeEvent
+   .. automethod:: get_comment
+   .. automethod:: get_flag
+   .. automethod:: initialize_toolbar
+   .. automethod:: layer_view
+   .. automethod:: load_selection
+   .. automethod:: load_ui
+   .. automethod:: options_widget
+   .. automethod:: refresh_comments
+   .. automethod:: register_to_hub
+   .. automethod:: render_data
+   .. automethod:: send_NumericalDataChangedMessage
+   .. automethod:: set_locked_axes
+   .. automethod:: setup_connections
+   .. automethod:: update_comments
+   .. automethod:: write_comments
