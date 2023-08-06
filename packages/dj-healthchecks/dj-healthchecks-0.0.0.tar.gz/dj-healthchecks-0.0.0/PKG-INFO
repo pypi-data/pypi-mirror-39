@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: dj-healthchecks
+Version: 0.0.0
+Summary: UNKNOWN
+Home-page: https://gitlab.com/schoolorchestration/libs/dj-healthchecks
+Author: Christo Crampton
+Author-email: info@38.co.za
+License: UNKNOWN
+Description: # 
+        
+        
+        
+        ## Installation
+        
+        ```
+        pip install 
+        ```
+        
+        ## Usage
+        
+        Run project:
+        
+        ```
+        docker-compose up
+        ```
+        
+        Run tests:
+        
+        ```
+        docker-compose run --rm web python manage.py test
+        ```
+        
+        Profit.
+        
+        ## Updating
+        
+        Bump the version:
+        
+        ```
+        bumpversion manjor|minor|patch
+        ```
+        
+        Push to master
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
