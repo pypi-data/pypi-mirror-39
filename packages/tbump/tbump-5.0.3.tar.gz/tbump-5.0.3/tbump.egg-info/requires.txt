@@ -1,0 +1,16 @@
+attrs
+cli-ui>=0.9.0
+docopt
+path.py
+schema
+toml
+
+[dev]
+flake8==3.5.0
+mypy==0.641
+pytest-cov
+pytest-mock
+pytest-sugar
+pytest==3.8.1
+twine
+wheel
