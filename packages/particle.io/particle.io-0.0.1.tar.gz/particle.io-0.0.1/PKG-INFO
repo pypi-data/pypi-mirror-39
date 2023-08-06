@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: particle.io
+Version: 0.0.1
+Summary: SDK for the Particle.io API 
+Home-page: https://github.com/drankinn/particle.io
+Author: Weblabz LLC
+Author-email: lance@weblabz.io
+License: UNKNOWN
+Description: # particle.io
+        Python SDK for the Particle.io API
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
