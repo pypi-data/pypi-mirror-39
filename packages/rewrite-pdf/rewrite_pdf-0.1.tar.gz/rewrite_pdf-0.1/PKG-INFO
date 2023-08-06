@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: rewrite_pdf
+Version: 0.1
+Summary: A wrapper around ghostscript to rewrite pdf
+Home-page: UNKNOWN
+Author: Jean-Benoist Leger
+Author-email: jb@leger.tf
+License: BSD-2
+Description: 
+        Rewrite_pdf
+        ~~~~~~~~~~~
+        
+        A simple wrapper around Ghostscript for compressing pdf. The wrapper can also
+        convert fonts to paths or rasterize the pdf e.g. for broken printers which not
+        support some fonts or vector graphics.
+        
+        The module provide also a command line interface name `rewrite_pdf`.
+        
+Keywords: pdf ghostscript
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3
+Provides-Extra: test
