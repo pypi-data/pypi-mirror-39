@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: py-slack
+Version: 0.0.0
+Summary: Basic webhook messaging, want to add bot interactivy next
+Home-page: https://github.com/deadlift1226/py_slack
+Author: Dane Morgan
+Author-email: danemorgan91@gmail.com
+License: UNKNOWN
+Description: # py_slack
+        basic webhook messages, want interactivity next
+        
+        ### CLI
+        
+            python3 send_hook.py https://hook_url/xxxxx/xxxx string_of_txt
+          
+          
+        ### In Code
+          
+        In practice, I use this to send JSONs of Python objects. Here's how to use it in code:
+          
+            from send_hook import send_msg_hook
+          
+            send_hook_msg(hook_url, msg, format_type)
+            #hook_url expects a string url with the appropriate protocol at the beginning, for example http:// or https://
+            #msg expects either a dictionary or a string
+            #format_type defaults to 'snippet', but can be set to 'plain'
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
