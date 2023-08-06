@@ -1,0 +1,5 @@
+[rework.subcommands]
+generate-tasks-table = rework_ui.cli:generate_tasks_table
+init-db = rework_ui.cli:init_db
+view = rework_ui.cli:view
+
