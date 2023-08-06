@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: dzl2018
+Version: 0.1.0
+Summary: An feature extraction algorithm
+Home-page: https://github.com/LiangjunFeng/SICA
+Author: LiangjunFeng
+Author-email: zhumavip@163.com
+License: MIT Licence
+Description: An feature extraction algorithm, improve the FastICA
+Keywords: pip,SICA,featureextraction
+Platform: any
