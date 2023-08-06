@@ -1,0 +1,9 @@
+bytestring-splitter
+
+[docs]
+sphinx
+sphinx-autobuild
+
+[testing]
+pytest
+bumpversion
