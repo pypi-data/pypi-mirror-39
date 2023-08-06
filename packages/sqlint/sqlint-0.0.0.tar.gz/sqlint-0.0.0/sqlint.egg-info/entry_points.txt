@@ -1,0 +1,3 @@
+[console_scripts]
+sqlint = sqlint.__main__:main
+
