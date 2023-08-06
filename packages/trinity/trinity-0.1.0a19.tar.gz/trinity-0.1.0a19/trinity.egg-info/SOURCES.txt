@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup_trinity.py
+trinity.egg-info/PKG-INFO
+trinity.egg-info/SOURCES.txt
+trinity.egg-info/dependency_links.txt
+trinity.egg-info/entry_points.txt
+trinity.egg-info/not-zip-safe
+trinity.egg-info/requires.txt
+trinity.egg-info/top_level.txt
+trinity/assets/eip1085.schema.json
+trinity/assets/eip1085/mainnet.json
+trinity/assets/eip1085/ropsten.json
