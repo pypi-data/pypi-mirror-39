@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+pymod_init/__init__.py
+pymod_init/cli.py
+pymod_init.egg-info/PKG-INFO
+pymod_init.egg-info/SOURCES.txt
+pymod_init.egg-info/dependency_links.txt
+pymod_init.egg-info/entry_points.txt
+pymod_init.egg-info/top_level.txt
+pymod_init/templates/.gitignore.j2
+pymod_init/templates/MANIFEST.in.j2
+pymod_init/templates/README.md.j2
+pymod_init/templates/requirements.txt.j2
+pymod_init/templates/setup.py.j2
