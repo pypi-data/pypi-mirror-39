@@ -1,0 +1,22 @@
+import setuptools
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="iduoliao_ml",
+    version="1.0.6",
+    author="legend",
+    author_email="huangzhen@gzecy.com",
+    description="iduoliao machine learning",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    #url="https://github.com/pypa/sampleproject",
+    packages=setuptools.find_packages(),
+    #packages=['iduoliao_ml', 'iduoliao_ml.data', 'iduoliao_ml.es', 'iduoliao_ml.ilog',  'iduoliao_ml.imatrix',  'iduoliao_ml.recommend'],
+    classifiers=[
+        "Programming Language :: Python :: 2.7",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+)
