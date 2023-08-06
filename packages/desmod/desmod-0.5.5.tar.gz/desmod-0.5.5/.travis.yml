@@ -1,0 +1,35 @@
+dist: xenial
+language: python
+cache: pip
+
+matrix:
+  include:
+    - python: '2.7'
+      env:
+        - COVERAGE=--cov
+        - FLAKE8=--flake8
+    - python: 'pypy2.7-6.0'
+    - python: '3.4'
+    - python: '3.5'
+    - python: '3.6'
+    - python: '3.7'
+      env:
+        - COVERAGE=--cov
+        - FLAKE8=--flake8
+    - python: 'pypy3.5-6.0'
+    - python: '3.8-dev'
+    - python: 'nightly'
+  allow_failures:
+    - python: '3.8-dev'
+    - python: 'nightly'
+
+install:
+  - pip install -r requirements-dev.txt
+  - if [ -n "$COVERAGE" ]; then pip install coveralls; fi
+  - pip install -e .
+
+script:
+  - py.test $FLAKE8 $COVERAGE
+
+after_success:
+  - if [ -n "$COVERAGE" ]; then coveralls; fi
