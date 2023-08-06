@@ -1,0 +1,5 @@
+wraptor
+simplejson
+python-dateutil<3.0
+six
+mysqlclient==1.3.6
