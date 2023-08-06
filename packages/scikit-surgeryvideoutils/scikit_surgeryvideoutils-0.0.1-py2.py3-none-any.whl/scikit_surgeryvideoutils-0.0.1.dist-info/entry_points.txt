@@ -1,0 +1,3 @@
+[console_scripts]
+sksurgervideoutils = sksurgervideoutils.__main__:main
+
