@@ -1,0 +1,11 @@
+*.pyc
+.eggs
+__pycache__
+*.egg-info
+bin
+.cache
+lib
+include
+pip-selfcheck.json
+g.db
+g.db.blobs
