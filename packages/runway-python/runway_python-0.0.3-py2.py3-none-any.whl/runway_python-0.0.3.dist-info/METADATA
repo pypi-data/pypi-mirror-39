@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: runway-python
+Version: 0.0.3
+Summary: Helper library for creating Runway models
+Home-page: https://github.com/runwayml/python-sdk
+Author: Anastasis Germanidis
+Author-email: anastasis@runwayml.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Flask (>=0.12.2)
+Requires-Dist: Flask-Cors (>=3.0.2)
+Requires-Dist: numpy (>=1.15.1)
+Requires-Dist: Pillow (>=4.3.0)
+
+UNKNOWN
+
+
