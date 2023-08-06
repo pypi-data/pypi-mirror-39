@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pydif
+Version: 0.0.7
+Summary: A work in progress package to implement automatic differentiation for numeric functions in python
+Home-page: https://github.com/pydif/cs207-FinalProject
+Author: Hamish Nicholson, Nicholas Pagel, Manish Reddy Vuyyuru, Victor Sheng
+Author-email: hamish_nicholson@college.harvard.edu, pagel@g.harvard.edu, mvuyyuru@g.harvard.edu, victorsheng@g.harvard.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+Full documentation available at https://github.com/pydif/cs207-FinalProject/tree/master/docs
+
+
