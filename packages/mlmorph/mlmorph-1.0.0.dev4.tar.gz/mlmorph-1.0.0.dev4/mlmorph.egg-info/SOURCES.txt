@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+mlmorph/__init__.py
+mlmorph/__main__.py
+mlmorph/mlmorph.py
+mlmorph.egg-info/PKG-INFO
+mlmorph.egg-info/SOURCES.txt
+mlmorph.egg-info/dependency_links.txt
+mlmorph.egg-info/entry_points.txt
+mlmorph.egg-info/not-zip-safe
+mlmorph.egg-info/requires.txt
+mlmorph.egg-info/top_level.txt
+mlmorph/data/malayalam.a
