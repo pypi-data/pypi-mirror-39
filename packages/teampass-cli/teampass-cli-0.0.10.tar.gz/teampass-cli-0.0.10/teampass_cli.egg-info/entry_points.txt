@@ -1,0 +1,3 @@
+[console_scripts]
+tpcli = tpcli.cli:cli
+
