@@ -1,0 +1,6 @@
+[console_scripts]
+pip-plugin-compile = pip_plugin_collection:compile
+pip-plugin-sync = pip_plugin_collection:sync
+pip-plugin-tree = pip_plugin_collection:tree
+pip-plugin-upgrade = pip_plugin_collection:upgrade
+
