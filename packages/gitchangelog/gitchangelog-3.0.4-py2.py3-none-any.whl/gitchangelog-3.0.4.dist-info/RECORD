@@ -1,0 +1,17 @@
+gitchangelog/__init__.py,sha256=MsSFjiLMLJZ7QhUPpVBWKiyDnCzryquRyr329NoCACI,2
+gitchangelog/gitchangelog.py,sha256=LH-tS1cFRqbbhJmlijMvQrWTfR80nIijO9MQ02maIXY,62115
+gitchangelog/gitchangelog.rc.reference,sha256=8li5ey9u-om5y_I2TmoNDBrytwe-fco6HYwhg-I2d5w,9991
+gitchangelog/gitchangelog.rc.reference.v2.1.3,sha256=oFFwjG4C6xiB9rSfNwX_zaXqkkPaOxPdAuorO3Ej_BE,5178
+gitchangelog/templates/mako/ChangeLog.tpl,sha256=gIz-aTyP48D-TqUi0cDOnnh4RxPwTvoT8i4DzYK_zuM,927
+gitchangelog/templates/mako/octobercms-plugin.tpl,sha256=zrFhl0JfSHH8NFmyOnoFGmYw9e3LyLTwXDzVliAXlF0,365
+gitchangelog/templates/mako/restructuredtext.tpl,sha256=KV-A5pGx0BjK-agzQvKiBwFms3TERZmN8e9YwKyfGjo,752
+gitchangelog/templates/mustache/markdown.tpl,sha256=DE3-hLFQj2my9Sy3BWHLzTiX5QbpaUAzmD_EWtLvsCM,243
+gitchangelog/templates/mustache/restructuredtext.tpl,sha256=p7rn-TgyCmT1aAZjXB5VoCy0lNjFP3FL75-X-Esr4ac,385
+gitchangelog-3.0.4.dist-info/DESCRIPTION.rst,sha256=CJoffMfP6W1V83QpwL9yKqJ3VqPqDY5SmvQKCglVe0s,37821
+gitchangelog-3.0.4.dist-info/LICENSE.txt,sha256=YIxYCL4wHckPYIGfare4_HETFxGyI7pSl0m0sR-fRJE,1490
+gitchangelog-3.0.4.dist-info/METADATA,sha256=zBnPBf0LETNI6avYPJxEeQPlh3MQ7kYpvwmDAfc_jlU,39079
+gitchangelog-3.0.4.dist-info/RECORD,,
+gitchangelog-3.0.4.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+gitchangelog-3.0.4.dist-info/entry_points.txt,sha256=vhS7gscJrXI61-RMClrG8V0YNfS5WX10XN79kr3PW8U,65
+gitchangelog-3.0.4.dist-info/metadata.json,sha256=r6rx24r_p3v1J1tkssQpnetxHg_5nguyyG27VS5bzwg,1457
+gitchangelog-3.0.4.dist-info/top_level.txt,sha256=GKcQ3SIxD5lexUNfLBQCalIGarF1TN47v51DfhGnW3A,13
