@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: pythoneon
+Version: 1.0.0
+Summary: compose electronic music
+Home-page: http://www.pythoneon.org
+Author: René Bastian
+Author-email: rbastian@free.fr
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+) 
+Classifier: Operating System :: OS Independent
+
+===========
+ pythoneon 
+===========
+
+'pythoneon' is a Python library for:
+
+- producing sounds,
+- organizing sounds in time and space.
+
+With 'pythoneon' one can write (compose) electronic music in a
+traditional western manner.
+
+Please, read the files:
+LIS_MOI.txt
+COPYING.txt
+UTILISATION.txt
+LICENSE.txt
+REMERCIEMENTS.txt
+
+René Bastian, 2018
+
+
+
