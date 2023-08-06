@@ -1,0 +1,4 @@
+
+[console_scripts]
+carto_report=carto_report.cli:main
+      
