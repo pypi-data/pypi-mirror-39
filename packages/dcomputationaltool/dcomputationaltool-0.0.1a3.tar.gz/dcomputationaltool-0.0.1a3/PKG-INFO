@@ -1,0 +1,40 @@
+Metadata-Version: 1.2
+Name: dcomputationaltool
+Version: 0.0.1a3
+Summary: UNKNOWN
+Home-page: https://gitlab.com/r78v10a07/dcomputationaltool
+Maintainer: Vera Alvarez, Roberto
+Maintainer-email: veraalva@ncbi.nlm.nih.gov
+License: Public Domain
+Description: 
+        # dcomputationaltool
+        
+        Dcomputationaltool is a Django app which handle the genome coordinates 
+        
+        Quick start
+        -----------
+        
+        1. Add "dcomputationaltool" to your INSTALLED_APPS setting like this::
+        
+            INSTALLED_APPS = [
+                ...
+                'dcomputationaltool',
+            ]
+        
+        2. Include the dcomputationaltool URLconf in your project urls.py like this::
+        
+            url(r'^dcomputationaltool/', include((dcomputationaltool.urls, 'dcomputationaltool'), namespace='dcomputationaltool')),
+        
+        3. Run `python manage.py migrate` to create the dcomputationaltool models.
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django :: 2.1
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Public Domain
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
