@@ -1,0 +1,11 @@
+docker_volume_watcher/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docker_volume_watcher/call_debouncer.py,sha256=NElVJphiFSgUC-7jyS1yzeyJDkB_eITcwRfV7qAkdcg,2310
+docker_volume_watcher/cli.py,sha256=l5Wxnctoao_YE7Ub878tfUFZKYx-TCKbeS3k5L7J4X0,2070
+docker_volume_watcher/container_monitor.py,sha256=40Tllic75fjw391vkgIpa4-iOq19ZIj5l4Z_NSskG5E,5564
+docker_volume_watcher/container_notifier.py,sha256=WBrAVtwk4Ua-dWFityneVLz7hcXz_vpPFcp31HYSHxs,4477
+docker_windows_volume_watcher-1.2.0.dist-info/LICENSE,sha256=VL0CTh55Mlgf3FCfG7cDw_HOvEJAie1PS7GCitISLR0,1055
+docker_windows_volume_watcher-1.2.0.dist-info/METADATA,sha256=IMjhXvpyXkrl9dGcBEGFBsbuMUb62NVxFDVRkPprlgA,3992
+docker_windows_volume_watcher-1.2.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+docker_windows_volume_watcher-1.2.0.dist-info/entry_points.txt,sha256=TIKhA4LRBrQcb4RuG2cU5zSRqrIJgbKny9XB696olJU,74
+docker_windows_volume_watcher-1.2.0.dist-info/top_level.txt,sha256=lcF-QfWxTsCngyopCuX_XNWI-BkIYnYokDRruwgB068,22
+docker_windows_volume_watcher-1.2.0.dist-info/RECORD,,
