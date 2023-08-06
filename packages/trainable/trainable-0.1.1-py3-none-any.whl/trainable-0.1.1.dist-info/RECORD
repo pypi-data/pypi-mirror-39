@@ -1,0 +1,14 @@
+trainable/__init__.py,sha256=zKm7NfD8TnuM_NFuXF7BcMj9SxmreRrwYRZ43NkGYnI,301
+trainable/algorithm.py,sha256=rAEGCp6aRaR4ETMK08KK2RzSICvv939Bd48bJD6Hqh4,629
+trainable/epoch.py,sha256=7lzmxdQF-EfmNlt7EBjk0I-tfeFtU7FGzXiqUm9psUU,1315
+trainable/progress.py,sha256=yF9som_FfkJBEP4We9CnZifH_OnEIAzvDafXSz2RdAs,3820
+trainable/session.py,sha256=hA1Y6dZKnpCqubZI9WwJFUlnSCHyhBCU-Du_FblDYC8,9978
+trainable/test.py,sha256=d--HiYFzHoR6AEIVNMfa9sPff6bY2yYd8MDCqe5pYUg,1138
+trainable/trainer.py,sha256=6fnrlsOlgxRMYTv6Hn3Vyay87s_YBrKcMaMfApnJWt8,11674
+trainable/validate.py,sha256=9tKmRniml8cQi9-aixcwu-pr3apfM4mU8nCfT-ufsXE,1459
+trainable/visualize.py,sha256=c2TCYIIPHp-ix6rV1tfUgH9QEej40Z2x_fcLlvTsbrM,6967
+trainable-0.1.1.dist-info/LICENSE,sha256=Kotx0LDDX5NpbZqsQ38PQ5tEIIgyNDVR5-a47A--5P4,1057
+trainable-0.1.1.dist-info/METADATA,sha256=sXjxgVyjgpafjiPpFYj18-z1mBqC0J_EL-Wx1LkkgnE,717
+trainable-0.1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+trainable-0.1.1.dist-info/top_level.txt,sha256=V5GQEHtjtUCbpgjJrxxHSYKn4zAVatX9Qwbzjh97ddw,10
+trainable-0.1.1.dist-info/RECORD,,
