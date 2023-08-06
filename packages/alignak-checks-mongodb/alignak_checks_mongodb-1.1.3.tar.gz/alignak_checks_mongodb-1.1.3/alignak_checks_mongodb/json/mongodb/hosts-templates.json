@@ -1,0 +1,63 @@
+[
+    {
+        "_is_template": true,
+        "alias": "MongoDB",
+        "customs": {
+            "_MONGO_PORT": "27017",
+            "_CONNECTION_TIME_WARN": "2",
+            "_CONNECTION_TIME_CRIT": "4",
+            "_FREE_CONNECTIONS_WARN": "80",
+            "_FREE_CONNECTIONS_CRIT": "90",
+            "_MEMORY_USAGE_WARN": "20",
+            "_MEMORY_USAGE_CRIT": "30",
+            "_MEMORY_MAPPED_WARN": "20",
+            "_MEMORY_MAPPED_CRIT": "30",
+            "_LOCK_TIME_WARN": "5",
+            "_LOCK_TIME_CRIT": "10",
+            "_AVERAGE_FLUSH_TIME_WARN": "100",
+            "_AVERAGE_FLUSH_TIME_CRIT": "200",
+            "_INDEX_MISS_RATIO_WARN": ".005",
+            "_INDEX_MISS_RATIO_CRIT": ".01"
+        },
+        "name": "mongodb",
+        "tags": [
+            "MongoDB"
+        ]
+    },
+    {
+        "_is_template": true,
+        "alias": "MongoDB replicaset",
+        "customs": {
+            "_REPLICATION_LAG_WARN": "15",
+            "_REPLICATION_LAG_CRIT": "30",
+            "_REPLICATION_LAG_PERCENTAGE_WARN": "15",
+            "_REPLICATION_LAG_PERCENTAGE_CRIT": "30"
+        },
+        "name": "mongodb-replicaset",
+        "tags": [
+            "Replication"
+        ]
+    },
+    {
+        "_is_template": true,
+        "alias": "MongoDB replicaset primary",
+        "customs": {
+            "_MONGO_REPLICASET": "replicaset-name"
+        },
+        "name": "mongodb-replicaset-primary",
+        "tags": [
+            "Primary"
+        ]
+    },
+    {
+        "_is_template": true,
+        "alias": "MongoDB replicaset slave",
+        "customs": {
+            "_MONGO_REPLICASET": "replicaset-name"
+        },
+        "name": "mongodb-replicaset-slave",
+        "tags": [
+            "Slave"
+        ]
+    }
+]

@@ -1,0 +1,110 @@
+[
+    {
+        "_is_template": true,
+        "aggregation": "mongodb",
+        "alias": "Check MongoDB connection",
+        "check_command": "check_mongodb",
+        "check_command_args": "connect!$_HOSTMONGO_PORT$!$_HOSTCONNECTION_TIME_WARN$!$_HOSTCONNECTION_TIME_CRIT$",
+        "host": "mongodb",
+        "name": "check-connection"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "mongodb",
+        "alias": "Check MongoDB free connections percentage",
+        "check_command": "check_mongodb",
+        "check_command_args": "connections!$_HOSTMONGO_PORT$!$_HOSTFREE_CONNECTIONS_WARN$!$_HOSTFREE_CONNECTIONS_CRIT$",
+        "host": "mongodb",
+        "name": "check-free-connections"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "mongodb",
+        "alias": "Check MongoDB memory usage",
+        "check_command": "check_mongodb",
+        "check_command_args": "memory!$_HOSTMONGO_PORT$!$_HOSTMEMORY_USAGE_WARN$!$_HOSTMEMORY_USAGE_CRIT$",
+        "host": "mongodb",
+        "name": "check-memory-usage"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "mongodb",
+        "alias": "Check MongoDB memory mapped",
+        "check_command": "check_mongodb",
+        "check_command_args": "memory_mapped!$_HOSTMONGO_PORT$!$_HOSTMEMORY_MAPPED_WARN$!$_HOSTMEMORY_MAPPED_CRIT$",
+        "host": "mongodb",
+        "name": "check-memory-mapped"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "mongodb",
+        "alias": "Check MongoDB lock time percentage",
+        "check_command": "check_mongodb",
+        "check_command_args": "lock!$_HOSTMONGO_PORT$!$_HOSTMEMORY_MAPPED_WARN$!$_HOSTMEMORY_MAPPED_CRIT$",
+        "host": "mongodb",
+        "name": "check-lock-time"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "mongodb",
+        "alias": "Check MongoDB average flush time",
+        "check_command": "check_mongodb",
+        "check_command_args": "flushing!$_HOSTMONGO_PORT$!$_HOSTAVERAGE_FLUSH_TIME_WARN$!$_HOSTAVERAGE_FLUSH_TIME_CRIT$",
+        "host": "mongodb",
+        "name": "check-average-flush-time"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "mongodb",
+        "alias": "Check MongoDB index miss ratio",
+        "check_command": "check_mongodb",
+        "check_command_args": "index_miss_ratio!$_HOSTMONGO_PORT$!$_HOSTINDEX_MISS_RATIO_WARN$!$_HOSTINDEX_MISS_RATIO_CRIT$",
+        "host": "mongodb",
+        "name": "check-index-miss-ratio"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "mongodb",
+        "alias": "Check MongoDB replicaset state",
+        "check_command": "check_mongodb",
+        "check_command_args": "replset_state!$_HOSTMONGO_PORT$!0!0",
+        "host": "mongodb-replicaset",
+        "name": "check-replicaset-status"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "mongodb/replicaset",
+        "alias": "Check MongoDB replication lag",
+        "check_command": "check_mongodb",
+        "check_command_args": "replication_lag!$_HOSTMONGO_PORT$!$_HOSTREPLICATION_LAG_WARN$!$_HOSTREPLICATION_LAG_CRIT$",
+        "host": "mongodb-replicaset",
+        "name": "check-replication-lag"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "mongodb/replicaset",
+        "alias": "Check MongoDB replication lag percentage",
+        "check_command": "check_mongodb",
+        "check_command_args": "replication_lag!$_HOSTMONGO_PORT$!$_HOSTREPLICATION_LAG_PERCENTAGE_WARN$!$_HOSTREPLICATION_LAG_PERCENTAGE_CRIT$",
+        "host": "mongodb-replicaset",
+        "name": "check-replication-lag-percentage"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "mongodb/replicaset",
+        "alias": "Check MongoDB replicaset primary",
+        "check_command": "check_mongodb_replicaset",
+        "check_command_args": "replica_primary!$_HOSTMONGO_PORT$!0!1!$_HOSTMONGO_REPLICASET$",
+        "host": "mongodb-replicaset-primary",
+        "name": "check-replication-primary"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "mongodb/replicaset",
+        "alias": "Check MongoDB replicaset primary connection",
+        "check_command": "check_mongodb",
+        "check_command_args": "connect_primary!$_HOSTMONGO_PORT$!2!4",
+        "host": "mongodb-replicaset-slave",
+        "name": "check-connection-primary"
+    }
+]
