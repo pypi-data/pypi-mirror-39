@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: wavefront-opentracing-sdk-python
+Version: 1.0.0
+Summary: Wavefront Opentracing Python SDK
+Home-page: https://github.com/wavefrontHQ/wavefront-opentracing-sdk-python
+Author: UNKNOWN
+Author-email: songhao@vmware.com
+License: UNKNOWN
+Description: 
+Keywords: Wavefront SDK,Wavefront,OpenTracing
+Platform: UNKNOWN
+Requires-Dist: opentracing (>=2)
+Requires-Dist: wavefront-sdk-python (>=1)
+
