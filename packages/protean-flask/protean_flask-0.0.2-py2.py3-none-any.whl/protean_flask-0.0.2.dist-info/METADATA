@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: protean-flask
+Version: 0.0.2
+Summary: Protean Flask Extension
+Home-page: https://github.com/proteanhq/protean-flask
+Author: Subhash Bhushan C
+Author-email: subhash@team8solutions.com
+License: BSD 3-Clause License
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: OS/2
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: click (==7.0)
+Requires-Dist: werkzeug (==0.14.1)
+Requires-Dist: flask (==1.0.2)
+Requires-Dist: inflect (==1.0.1)
+Requires-Dist: protean (==0.0.6)
+Requires-Dist: marshmallow (==2.16.1)
+
+========
+Overview
+========
+
+
+
+Protean Flask Extension
+
+* Free software: BSD 3-Clause License
+
+Installation
+============
+
+::
+
+    pip install protean-flask
+
+Documentation
+=============
+
+https://protean-flask.readthedocs.io/
+
+Development
+===========
+
+::
+
+    pyenv virtualenv -p python3.6 3.6.5 protean-flask-dev
+
+To run the all tests run::
+
+    tox
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
+
+Changelog
+=========
+
+0.0.1 (2018-07-20)
+------------------
+
+* First release on PyPI.
+
+
