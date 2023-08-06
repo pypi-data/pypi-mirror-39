@@ -1,0 +1,29 @@
+#!python
+import sys
+import urllib.request
+import click
+from readability import Document
+from bs4 import BeautifulSoup
+
+
+def main():
+    http_response = urllib.request.urlopen(sys.argv[1]).read()
+    http_text = http_response.decode("utf8")
+    readable_document = Document(http_text)
+    soup = BeautifulSoup(readable_document.summary(), "lxml")
+    # remove scripts
+    for script in soup(["script", "style"]):
+        script.extract()    # rip it out
+    # get text
+    plain_text = soup.get_text()
+
+    # break into lines and remove leading and trailing space on each
+    lines = (line.strip() for line in plain_text.splitlines())
+    # break multi-headlines into a line each
+    chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+
+    click.echo_via_pager('\n' + readable_document.title() + '\n' + plain_text)
+
+
+if __name__ == '__main__':
+    main()
