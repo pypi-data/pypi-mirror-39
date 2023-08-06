@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: t_log
+Version: 0.2
+Summary: A small log package
+Home-page: https://github.com/Tinywan/log
+Author: Tinywan
+Author-email: 756684177@qq.com
+License: UNKNOWN
+Description: # Example Package
+        
+        This is a simple log package. You can use
+        [Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+        to write your content.
+        
+        
+        官方文档 ：https://packaging.python.org/tutorials/packaging-projects/#uploading-your-project-to-pypi
+        ```
+        twine : 无法将“twine”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。
+        ```
+        > 配置环境变量 `C:\Users\tinyw\AppData\Roaming\Python\Python37\Scripts`
+        
+        https://pypi.org/manage/account/
+        ```
+        HTTPError: 403 Client Error: Invalid or non-existent authentication information. for url: https://test.pypi.org/legacy/
+        ```
+        
+        ```
+        UnicodeDecodeError: 'gbk' codec can't decode byte 0x80 in position 197: illegal multibyte sequence
+        ```
+        * 解决办法1：`FILE_OBJECT= open('order.log','r', encoding='UTF-8')`
+        * 解决办法2：`FILE_OBJECT= open('order.log','rb')`
+        
+        上传并完成发布
+        使用 twine
+        ```
+        twine upload  dist/*
+        ```
+        
+        包发布完成后，其他人只需要使用pip就可以安装你的包文件。比如
+        ```
+        pip install package-name
+        ```
+        
+        包发布完成后，其他人只需要使用pip就可以安装你的包文件。比如
+        ```
+        pip install package-name --update
+        ```
+        
+        可能遇到的错误
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
