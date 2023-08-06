@@ -1,0 +1,35 @@
+notify_audit: false
+locked: false
+name: "[${environment}] Node is not Ready"
+tags: ['${environment}', reactiveops]
+include_tags: false
+no_data_timeframe: 2
+silenced: {}
+new_host_delay: 900
+notify_no_data: false
+renotify_interval: 0
+query: "\"kubernetes_state.node.ready\".over(\"kubernetescluster:${cluster}\").by(\"host\").last(9).count_by_status()"
+message: |
+  {{#is_warning}}
+  A Node is not ready!
+  Cluster: {{kubernetescluster.name}}
+  Host: {{host.name}}
+  IP: {{host.ip}}
+  {{check_message}}
+  {{/is_warning}}
+  {{#is_alert}}
+  A Node is not ready!
+  Cluster: {{kubernetescluster.name}}
+  Host: {{host.name}}
+  IP: {{host.ip}}
+  {{check_message}}
+  ${notifications}
+  {{/is_alert}}
+  {{#is_recovery}}
+  Node is now ready.
+  Cluster: {{kubernetescluster.name}}
+  Host: {{host.name}}
+  IP: {{host.ip}}
+  {{/is_recovery}}
+type: service check
+thresholds: {critical: 8, warning: 3, ok: 2}
