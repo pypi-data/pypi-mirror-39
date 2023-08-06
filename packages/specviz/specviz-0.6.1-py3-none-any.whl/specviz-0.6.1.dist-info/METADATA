@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: specviz
+Version: 0.6.1
+Summary: An interactive astronomical 1D spectra analysis tool
+Home-page: https://specviz.rtfd.io
+Author: JDADF Developers
+Author-email: nearl@stsci.edu
+License: BSD 3-Clause
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: astropy (>=3.0)
+Requires-Dist: pyqtgraph
+Requires-Dist: qtawesome
+Requires-Dist: qtpy
+Requires-Dist: specutils (>=0.5.1)
+Requires-Dist: click
+Requires-Dist: pytest
+Requires-Dist: asteval
+
+A gui-based interactive analysis tool for one dimensional astronomical data using Python.
+
+
