@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: django-admitad
+Version: 1.1.1
+Summary: Django application that integrates Admitad CPA using postback requests
+Home-page: https://github.com/Picasel/django-admitad
+Author: k0t3n
+Author-email: k0t3n.mail@gmail.com
+License: MIT License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
