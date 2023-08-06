@@ -1,0 +1,11 @@
+README.rst
+setup.py
+flask_autoapi/__init__.py
+flask_autoapi/command.py
+flask_autoapi/endpoint.py
+flask_autoapi/model.py
+flask_autoapi.egg-info/PKG-INFO
+flask_autoapi.egg-info/SOURCES.txt
+flask_autoapi.egg-info/dependency_links.txt
+flask_autoapi.egg-info/top_level.txt
+flask_autoapi.egg-info/zip-safe
