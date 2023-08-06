@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: toy-auto-diff
+Version: 0.1.0
+Summary: Toy demonstrations of auto differentiations.
+Home-page: https://github.com/CyberZHG/toy-auto-diff
+Author: CyberZHG
+Author-email: CyberZHG@gmail.com
+License: MIT
+Description: 
+        Automatic Differentiation
+        =========================
+        
+        
+        .. image:: https://travis-ci.org/CyberZHG/toy-auto-diff.svg
+           :target: https://travis-ci.org/CyberZHG/toy-auto-diff
+           :alt: Travis
+        
+        
+        .. image:: https://coveralls.io/repos/github/CyberZHG/keras-toy-auto-diff/badge.svg?branch=master
+           :target: https://coveralls.io/github/CyberZHG/keras-toy-auto-diff
+           :alt: Coverage
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
