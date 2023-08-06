@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: additional-data
+Version: 0.3.0.2
+Summary: Simple library for reading and writing additional data files
+Home-page: http://4s4u.de/additional_data/
+Author: Andreas Starke
+Author-email: andreas@4s4u.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
+Requires-Dist: argparse
+Requires-Dist: lxml
+Requires-Dist: PyPDF2
+Requires-Dist: reportlab
+
+additional data
+===============
+
+introduction
+------------
+The additional data library offers a means to extend metadata structures via an external xml file referencing additional information for referenced elements. It is made available under the [MIT license](https://choosealicense.com/licenses/mit/ "private and commercial use").
+
+installation
+------------
+Getting to use the additional data package is as simple as::
+
+     pip install additional_data
+
+how to
+------
+Visit the projects homepage to learn how to use the package properly.
+
+
+
