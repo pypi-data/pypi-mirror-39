@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: mu-environment
+Version: 0.3.1
+Summary: Project Mu distributed dependency management, build, test, and tool environments.
+Home-page: https://github.com/microsoft/mu_pip_environment
+Author: Project Mu Team
+Author-email: maknutse@microsoft.com
+License: BSD2
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Requires-Dist: pyyaml
+Requires-Dist: mu-python-library (>=0.3.0)
+
+
+==============
+MU Environment
+==============
+
+About
+=====
+
+Entry point into Self Describing Environment (SDE). Sets up and parses state of workspace before calling into build.
+Please see Project Mu for details https://microsoft.github.io/mu
+
+Version History
+===============
+
+0.3.0
+-----
+
+Updated documentation and release process.  Transition to Beta.
+
+< 0.3.0
+-------
+
+Alpha development
+
