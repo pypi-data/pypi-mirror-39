@@ -1,0 +1,3 @@
+[helga_plugins]
+koji = helga_koji:HelgaKoji
+
