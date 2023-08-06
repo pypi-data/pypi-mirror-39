@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: DockerBuildManagement
+Version: 0.0.7
+Summary: A library for managing a build system with Docker.
+Home-page: https://github.com/DIPSAS/DockerBuildManagement
+Author: DIPS AS
+Author-email: heh@dips.no
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: DockerBuildSystem
+Requires-Dist: SwarmManagement
+Requires-Dist: pyyaml
+Provides-Extra: dev
+Requires-Dist: check-manifest; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage; extra == 'test'
+
+# Docker Build Management
+
+
