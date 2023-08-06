@@ -1,0 +1,17 @@
+setup.py
+vin_ml/__init__.py
+vin_ml/kernals.py
+vin_ml/utils.py
+vin_ml.egg-info/PKG-INFO
+vin_ml.egg-info/SOURCES.txt
+vin_ml.egg-info/dependency_links.txt
+vin_ml.egg-info/top_level.txt
+vin_ml/models/NN.py
+vin_ml/models/__init__.py
+vin_ml/models/c4_5.py
+vin_ml/models/id3.py
+vin_ml/models/linear_regression.py
+vin_ml/models/logistic_regression.py
+vin_ml/models/perceptron.py
+vin_ml/models/random_forest.py
+vin_ml/models/svm.py
