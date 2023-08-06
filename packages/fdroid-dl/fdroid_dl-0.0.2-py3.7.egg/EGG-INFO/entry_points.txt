@@ -1,0 +1,3 @@
+[console_scripts]
+fdroid-dl = fdroid_dl.__main__:main
+
