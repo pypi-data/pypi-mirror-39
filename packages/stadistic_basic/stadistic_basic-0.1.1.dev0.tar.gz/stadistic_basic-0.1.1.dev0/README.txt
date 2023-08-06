@@ -1,0 +1,1 @@
+Esta es una libreria para aplicar estadistica basica, como la tabla z o la tabla del t de student, aun esta en desarrollo
