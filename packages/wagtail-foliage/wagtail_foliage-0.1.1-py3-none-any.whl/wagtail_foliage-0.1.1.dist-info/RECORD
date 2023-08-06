@@ -1,0 +1,17 @@
+foliage/__init__.py,sha256=vAjKkaWDTTxm3qA9xhvTAjAIXwkh9ukwLcfZ06ZI4os,70
+foliage/contextmanagers.py,sha256=Ob4oA6Htgr4PkQqWt5Tk6tGAFQuOs4FvUQ0ZGIHLn2M,1439
+foliage/utils.py,sha256=i_pdfKgqimvKSzH6zpXAALNeAYRjO9_b7t7ODqEFxz4,1923
+foliage/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+foliage/tests/settings.py,sha256=ahDngxH5gwV3j1dPspxCw2UHwnakUnpGlignCNgggbw,1526
+foliage/tests/test_contextmanagers.py,sha256=ZugrIViMQxel4NEmMLbCSAAFMt887RQ2RPb3pPez8T0,1599
+foliage/tests/test_utils.py,sha256=rTVEPNWRlv_fTJbq3sBt7Hxmhzvo0gzMO-BGFf_y2sI,4209
+foliage/tests/testapp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+foliage/tests/testapp/models.py,sha256=Fq28VYTYaRPM9KMDKLX9VHLhkD5eKqw4vhY6clK10As,213
+foliage/tests/testapp/urls.py,sha256=mSx8wBRsQvYmXhuIWfQceIZoH9ES4MT2QO5qypFpzwg,263
+foliage/tests/testapp/migrations/0001_initial.py,sha256=jB4akgPfe2cVXFRjKBMnfomVFdbN3_WepEx9lkzfSjk,1116
+foliage/tests/testapp/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wagtail_foliage-0.1.1.dist-info/LICENSE,sha256=DsfNIJvIzCxuE-sKvF1TQ7SnPehdpp14Exb8S0C9Q3U,1460
+wagtail_foliage-0.1.1.dist-info/METADATA,sha256=oa1oE8YwRsET8JKWruc_TnEekbALXF7xisoWUjTVMlE,3985
+wagtail_foliage-0.1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+wagtail_foliage-0.1.1.dist-info/top_level.txt,sha256=mKOKJ4kt8rnM-3nieddwkSLHEJO8T1dSfrbplwSaYZQ,8
+wagtail_foliage-0.1.1.dist-info/RECORD,,
