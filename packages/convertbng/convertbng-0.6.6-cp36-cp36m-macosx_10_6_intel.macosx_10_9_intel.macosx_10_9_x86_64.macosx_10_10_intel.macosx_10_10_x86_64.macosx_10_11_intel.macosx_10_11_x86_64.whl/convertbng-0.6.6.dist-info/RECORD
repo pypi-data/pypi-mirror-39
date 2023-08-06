@@ -1,0 +1,14 @@
+convertbng/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+convertbng/convertbng_p.pxd,sha256=5BicyVaDHF8xnrYhj1oQ68bJPnuDcB9lLsQoeGf7UGY,938
+convertbng/cutil.c,sha256=g_DhVLvW-qX6G1-RGZg8_2a8FtBpoIu2DKKx7YM1mes,825211
+convertbng/cutil.cpython-36m-darwin.so,sha256=Cfjq2K6yM-gfMLiN8E5ur7uG0IlCeeZgAzS5XBe0_9o,388036
+convertbng/cutil.pyx,sha256=WU4ixTmbdxZFTMAPs4qyGQRVhyMwyYDYDXx3lE_hrts,3919
+convertbng/liblonlat_bng.dylib,sha256=RaAyMEze7CD6_oWIOEF7D9MksxvYputuMoEdjRVDNgg,29748288
+convertbng/rlib.h,sha256=JIINp3hDko36KFD7QiFoV4OefJA6ITGeiRTfIkWdX3A,877
+convertbng/util.py,sha256=v8u2kUjG-N2JSTcTeAvl67J03irzol6IQ1ho_8H_Puc,8034
+convertbng/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+convertbng/test/test_convertbng.py,sha256=7zWJf3sCAvBIUun7bWmZpdUlpAI53e9FRDUOg28tqnE,8297
+convertbng-0.6.6.dist-info/METADATA,sha256=QfqbMAiX95Ltbz8g2Ih0oEQ2_jfSRhNrkQzNMDUsqeY,12582
+convertbng-0.6.6.dist-info/RECORD,,
+convertbng-0.6.6.dist-info/top_level.txt,sha256=ZA5wNCZX43S7PiOcF-VmQARqcr4mshDaAE8Xcbfc5Ug,11
+convertbng-0.6.6.dist-info/WHEEL,sha256=DkQJXhEfVzt2tuVS9YYLsHBl1sYRaHNmDW8gi-AXrVg,320
