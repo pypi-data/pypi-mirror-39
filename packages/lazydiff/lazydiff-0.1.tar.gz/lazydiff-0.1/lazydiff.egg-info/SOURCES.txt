@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+lazydiff/__init__.py
+lazydiff/ops.py
+lazydiff/regression.py
+lazydiff/vars.py
+lazydiff.egg-info/PKG-INFO
+lazydiff.egg-info/SOURCES.txt
+lazydiff.egg-info/dependency_links.txt
+lazydiff.egg-info/requires.txt
+lazydiff.egg-info/top_level.txt
