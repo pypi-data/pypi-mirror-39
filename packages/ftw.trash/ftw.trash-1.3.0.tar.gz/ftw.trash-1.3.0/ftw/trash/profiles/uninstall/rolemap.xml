@@ -1,0 +1,11 @@
+<rolemap>
+  <permissions>
+
+    <permission name="Restore trashed content" acquire="True">
+    </permission>
+
+    <permission name="Clean trash" acquire="True">
+    </permission>
+
+  </permissions>
+</rolemap>

@@ -1,0 +1,43 @@
+Changelog
+=========
+
+
+1.3.0 (2018-12-17)
+------------------
+
+- Add Plone 5.1 support. [jone]
+
+
+1.2.1 (2018-11-13)
+------------------
+
+- Patch `Products.PloneFormGen` to make it aware of trashed objects [Nachtalb]
+
+
+1.2.0 (2018-08-16)
+------------------
+
+- When restoring a file, redirect to /view so that the file is not downloaded. [jone]
+- Provide a manage_immediatelyDeleteObjects method. [jone]
+- Fix cleaning trash when there is a parent and a child in the trash at once. [jone]
+- Fix and translate error message when trying to restore child of trashed parent. [jone]
+
+1.1.1 (2018-08-03)
+------------------
+
+- Show changelog on pypi. [jone]
+
+1.1.0 (2018-08-03)
+------------------
+
+- Do not restore earlier trashed children when restoring parent. [jone]
+- Allow deleting content from ZMI. [jone]
+- Fire events when trashing and restoring object. [jone]
+- Do not intercept link integrity checker. [jone]
+- Add "clean trash" functionality to trash view. [jone]
+
+
+1.0.0 (2018-07-05)
+------------------
+
+- Initial implementation [jone]
