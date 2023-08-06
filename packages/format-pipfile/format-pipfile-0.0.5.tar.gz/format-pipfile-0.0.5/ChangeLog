@@ -1,0 +1,84 @@
+CHANGES
+=======
+
+v0.0.5
+------
+
+* Bump version: 0.0.4 → 0.0.5
+* bootstrap .scrutinizer.yml
+* uncomment coverage\_flag
+* skip the reporting bits on appveyor
+* add bootstrap to makefile
+* update ci scripts
+* install six
+* template appveyor.yml
+* remove unused specifier
+* bootstrap tox.ini
+* add pypy classifier
+* move pypy code up front
+* comment out separate coverage flags for now
+* bootstrap travis-ci config
+* set strict pbr version
+
+v0.0.4
+------
+
+* Bump version: 0.0.3 → 0.0.4
+* stub itertools.accumulate
+* resolve AttribueError on py27
+* test setup.py
+* set python\_version for development dependencies
+
+v0.0.3
+------
+
+* Bump version: 0.0.2 → 0.0.3
+* tox -v
+* build wheel after test
+* prettier --write appveyor.yml
+* use proper PYTHON\_HOME for x64 builds
+* config appveyor
+* update travis deploy config
+
+v0.0.2
+------
+
+* Bump version: 0.0.1 → 0.0.2
+* ignore .bumpversion.cfg in pre-commit
+* skip tox tests on scrutinizer alltogether... that's what travis is for
+* move project\_setup override
+* scrutinizer doesnt support py37
+* reconfigure scrutinizer again
+* reconfigure scrutinizer again
+* set scrutinizer python
+* fix scrutinizer?
+* ignore dep warning
+* install future aliases
+* futurize
+* use path.py instead of os.pathlike
+* Don't error out if cc-test-reporter fails
+* remove docs all the way
+* move tests to root
+* omit docs from travis for now
+* switch to type comments
+* add typing requirement
+* add a test
+* remove need for modified pbr
+* add travis deploy
+* move pbr again
+* move forked pbr
+* try to resolve some build errors
+* tox.ini
+* bumpversion config
+
+v0.0.1
+------
+
+* travis config
+* fill in remaining badges
+* remove erroneous hyphen
+* ignore AUTHORS
+* ignore changelog
+* add code!
+* start up some readme badges
+* initial commit
