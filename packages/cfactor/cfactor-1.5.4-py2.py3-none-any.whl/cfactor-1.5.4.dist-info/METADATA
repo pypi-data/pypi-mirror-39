@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: cfactor
+Version: 1.5.4
+Summary: Program to calculate earthquake factor acording to 2800 v4
+Home-page: https://github.com/ebrahimraeyat/civiltools
+Author: Raeyat Ebrahim
+Author-email: ebe79442114@yahoo.com
+License: GPL-3.0
+Keywords: cfactor
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Natural Language :: Persian
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: matplotlib (==3.0.2)
+Requires-Dist: PyQt5 (==5.11.3)
+Requires-Dist: pyqtgraph (==0.10.0)
+Requires-Dist: python-docx (==0.8.7)
+
+UNKNOWN
+
+
