@@ -1,0 +1,17 @@
+README.md
+setup.py
+emmaa/__init__.py
+emmaa/model.py
+emmaa/statements.py
+emmaa.egg-info/PKG-INFO
+emmaa.egg-info/SOURCES.txt
+emmaa.egg-info/dependency_links.txt
+emmaa.egg-info/requires.txt
+emmaa.egg-info/top_level.txt
+emmaa/priors/__init__.py
+emmaa/priors/cancer_prior.py
+emmaa/priors/prior_stmts.py
+emmaa/readers/__init__.py
+emmaa/readers/aws_reader.py
+emmaa/tests/__init__.py
+emmaa/tests/test_model.py
