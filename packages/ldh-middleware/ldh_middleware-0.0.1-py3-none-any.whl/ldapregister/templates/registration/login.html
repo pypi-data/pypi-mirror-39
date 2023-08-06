@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% load i18n %} {% load crispy_forms_tags %}
+
+{% block title %}{% trans 'Log in' %}{% endblock %}
+{% block header %}{% trans 'Log in' %}{% endblock %}
+{% block byline %}{% trans 'Please fill in your credentials' %}{% endblock %}
+
+{% block content %}
+
+<!-- Main Content -->
+<section class="row">
+    <section class="form">
+        <form method="post" action=".">
+            {% csrf_token %} {{ form|crispy}}
+
+            <div class="submit-group">
+                <input type="submit" value="{% trans 'Log in' %}"/>
+                <input type="hidden" name="next" value="{{ next }}"/>
+            </div>
+        </form>
+    </section>
+</section>
+
+{% endblock %}
+

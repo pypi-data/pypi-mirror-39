@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load i18n %} {% load static %}
+
+<!--
+Copyright 2017-2018 Purism SPC
+https://source.puri.sm/liberty/ldh_middleware
+SPDX-License-Identifier: AGPL-3.0
+-->
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'layout.css' %}"/>
+    <link rel="stylesheet" href="{% static 'theme.css' %}"/>
+    <title>{% block title %}Base{% endblock %}</title>
+    <link rel="icon" sizes="960x960" href="{% static 'favicon.png' %}"/>
+    <meta name="application-name" content="Purist"/>
+    <meta charset="UTF-8"/>
+</head>
+
+<body>
+
+<header>
+    <div id="title_box">
+        <a href="{% url 'home' %}"><img class="logo" src="{% static 'logo.png' %}" alt="Purist"/></a>
+        <div id="title_text">
+            <h1>{% block header %}Base{% endblock %}</h1>
+            <p>{% block byline %}Byline{% endblock %}</p>
+        </div>
+    </div>
+    <div id="log_state">
+        {% if user.is_authenticated %}
+        {% trans "Logged in as" %} {{ user.username }}<br/>
+        <a href="{% url 'profile' %}">{% trans "Profile" %}</a> |
+        {% if user.is_superuser %}
+        <a href="{% url 'admin:index' %}">{% trans "Admin" %}</a> |
+        {% endif %}
+        <a href="{% url 'auth_logout' %}">{% trans "Log out" %}</a>
+        {% else %}
+        {% trans "You are not logged in." %}<br/>
+        <a href="{% url 'auth_login' %}">{% trans "Log in" %}</a> {% trans "or" %}
+        <a href="{% url 'registration_register' %}">{% trans "register" %}</a>
+        {% endif %}
+    </div>
+
+</header>
+
+<hr/>
+
+<main>
+    <article>
+
+        {% block content %}{% endblock %}
+
+    </article>
+</main>
+
+<footer>
+    <div id="footer_block">
+
+        <p>
+            <em>Purist services</em> provided by <a href="https://puri.sm">Purism SPC</a><br/>
+            <em>Keel (LDH middleware)</em> copyright 2017-2018 Purism SPC; shared under AGPL-3.0-or-later
+            (<a href="https://source.puri.sm/liberty/ldh_middleware">project</a>,
+            <a href="{% url 'download-zip' %}">source</a>,
+            <a href="{% url 'jslicense' %}" rel="jslicense">javascript</a>)
+        </p>
+
+    </div>
+</footer>
+
+</body>
+</html>
