@@ -1,0 +1,10 @@
+include files/corpus.txt MANIFEST.in
+include setup.py
+include files/RUstopwords.txt
+include files/countries.txt
+include files/organizations.txt
+include Analysis.ipynb
+include Leviathan.jpg
+include tests/test.py
+include tests/testdoc.docx
+include tests/testdoc.txt
