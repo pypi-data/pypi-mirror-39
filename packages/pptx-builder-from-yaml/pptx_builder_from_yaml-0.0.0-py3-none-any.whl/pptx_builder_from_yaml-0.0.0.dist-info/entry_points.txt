@@ -1,0 +1,3 @@
+[console_scripts]
+pptx-builder = pptx_builder:cli
+
