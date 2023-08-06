@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: dimond
+Version: 0.1
+Summary: Python implementation of Telink Bluetooth mesh network
+Home-page: http://github.com/google/python-dimond
+Author: Matthew Garrett
+Author-email: mjg59@google.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
