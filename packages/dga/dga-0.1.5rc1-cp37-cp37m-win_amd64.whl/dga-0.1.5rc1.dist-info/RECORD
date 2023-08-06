@@ -1,0 +1,12 @@
+dga/__init__.py,sha256=RRJ85jItTcykND7mOPnyBruF__XvcZkCIHw_dnXV0cs,182
+dga/_gene.cp37-win_amd64.pyd,sha256=gLYol98u-xDMU6gvQdWo7m54pE18RNAjKXE9PRdHLEk,36352
+dga/_gene.pyx,sha256=O69osY679SA40jd90uvf9i6hlC8eoavIGMjHjzT2d-A,440
+dga/dga.py,sha256=-1JWhgi3mDsrzH3c0VP1osrEZWU_YL6Nvei0gUGpfz0,8219
+dga/gene.py,sha256=RcGMaIv-ZY78GfVWud1NNAT96Qs_hYwwKdZuxxLesAU,1851
+dga/release.py,sha256=co8lfc3myvcbu88S0hT36uuVgBPpSwDr3j9TJViGZBo,26
+dga/tests/test_gene.py,sha256=7JNAqH1m-Pw6sswhMBch9f_bL7SX2i06cAjgVKK8E8k,1360
+dga-0.1.5rc1.dist-info/LICENSE.txt,sha256=vZl8VwRMZpKqRHThminRclmEhM1wxjeocSXoWVLAfx0,1093
+dga-0.1.5rc1.dist-info/METADATA,sha256=FfBpAHP6BqsrDzeRLIzmTGMMlhUGstbcYmnDrZWyyp8,415
+dga-0.1.5rc1.dist-info/WHEEL,sha256=qpJVJz3f_oih5sb10CVod9jCddHwxilziZPn0B8tgFQ,106
+dga-0.1.5rc1.dist-info/top_level.txt,sha256=RbriNATBqvCPUwti4RxHc-297DLabKR0BPdUjbNJM40,4
+dga-0.1.5rc1.dist-info/RECORD,,
