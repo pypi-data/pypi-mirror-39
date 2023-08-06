@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: django2-semantic-ui
+Version: 1.0.0b0
+Summary: Library to easy install, configure and use Semantic UI framework with Django project (Python 3.x)
+Home-page: https://github.com/franklintiel/django2-semantic-ui/wiki
+Author: Franklin Sarmiento
+Author-email: franklinitiel@gmail.com
+License: MIT
+Description: # django2-semantic-ui
+        Package to use Django 2.x Project  with Semantic UI
+        
+Keywords: semantic-ui semanticui semantic ui django-semantic-ui django-semanticui django-semantic-ui
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.*
