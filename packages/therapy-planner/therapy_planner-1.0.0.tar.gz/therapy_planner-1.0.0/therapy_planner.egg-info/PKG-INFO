@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: therapy-planner
+Version: 1.0.0
+Summary: A tool for dose optimization for Intensity Modulated Radiation Therapy (IMRT)
+Home-page: https://github.com/DualSapiens/cs207-FinalProject
+Author: DualSapiens
+Author-email: 
+License: UNKNOWN
+Description: # therapy planner
+        
+        This package solves dose optimization problems relevant for Intensity Modulated Radiation Therapy using the `gradpy` package.
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
