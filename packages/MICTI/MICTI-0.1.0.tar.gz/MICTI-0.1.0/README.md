@@ -1,0 +1,63 @@
+MICTI- Marker gene Identification for Cell Type Identity
+========================================================
+
+Recent advances in single-cell gene expression profiling technology have revolutionized the understanding of molecular processes underlying developmental cell and tissue differentiation, enabling the discovery of novel cell types and molecular markers that characterize developmental trajectories.  Common approaches for identifying marker genes are based on pairwise statistical testing for differential gene expression between cell types in heterogeneous cell populations, which is challenging due to unequal sample sizes and variance between groups resulting in little statistical power and inflated type I errors. 
+
+Overview
+--------
+
+We developed an alternative feature extraction method, *Marker gene Identification for Cell Type Identity* (**MICTI**), that encodes the cell-type specific expression information to each gene in every single cell. This approach identifies features (genes) that are cell-type specific for a given cell-type in heterogeneous cell population.
+
+
+Installation
+------------
+
+To install the current release:
+
+	pip install micti
+	
+How to use MICTI
+----------------
+
+Import MICTI:
+
+	from MICTI import *
+
+Creating MICTI object for known cell type cluster label:
+
+	mictiObject=MICTI(datamatrix, geneName, cellName, cluster_assignment=cell_type, k=None, th=0, ensembel=False, organisum="hsapiens")
+
+2D visualisation with T-SNE:
+
+	mictiObject.get_Visualization(method="tsne")
+
+Get MICTI marker genes:
+
+	mictiObject.get_markers_by_Pvalues_and_Zscore(1, threshold_pvalue=.01,threshold_z_score=0)
+
+Gene Ontology enrichment analysis for cell-type marker genes in each of cell-type clusters
+
+	enrechment_table=mictiObject.get_sig_gene_over_representation()
+	enrechment_table[1] #gene list enrichment analysis result for the cell-type marker genes ub cluster-1
+
+Creating MICTI object for clustering cells into pre-defined k clusters:
+
+	mictiObject_1=MICTI(datamatrix.T, geneName, cellName, cluster_assignment=None, th=0, ensembel=False, organisum="hsapiens")
+
+Cluster cells into k=6 clusters using Gaussian mixture model- method="GM", and k-means - method="kmeans"
+
+	mictiObject_1.cluster_cells(6, method="GM", maxiter=1000)
+
+Get marker genes for cluster-2:
+	
+	mictiObject_1.get_markers_by_Pvalues_and_Zscore(2, threshold_pvalue=.01, threshold_z_score=0)
+
+Perform gene list enrichment analysis:
+
+	enrechment_table=mictiObject_1.get_sig_gene_over_representation()
+	enrechment_table[0]
+
+Licence
+-------
+
+[MICTI LICENCE](./LICENSE)
