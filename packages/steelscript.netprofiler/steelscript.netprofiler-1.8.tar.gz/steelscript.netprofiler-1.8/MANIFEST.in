@@ -1,0 +1,7 @@
+include RELEASE-VERSION
+include AUTHORS
+include LICENSE
+include README.rst
+include examples/*.py
+include notebooks/*.ipynb
+include gitpy_versioning/__init__.py
