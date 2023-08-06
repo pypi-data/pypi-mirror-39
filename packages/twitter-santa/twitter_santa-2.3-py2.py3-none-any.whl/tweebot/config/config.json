@@ -1,0 +1,24 @@
+{
+    "searchers": [{
+        "count": 1,
+        "search-queries": ["ML", "SpaceX", "Artificial Intelligence", "AI"],
+        "scan-time": 50,
+        "month-diff": 1,
+        "request-delay": 2,
+        "error-delay": 5,
+        "empty-request-delay": 20,
+        "error-tries": 5,
+        "empty-tries": 5
+    }],
+
+    "handlers": [{
+        "count": 5,
+        "keywords": [" ", ""],
+        "avoid-usernames": ["bot", "bot spotter", "bot spotting"]
+    }],
+
+    "executors": [{
+      "count": 3,
+      "request-delay": 1
+    }]
+}
