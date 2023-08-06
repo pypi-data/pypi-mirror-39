@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: tidal-dl
+Version: 2018.12.19.1
+Summary: Tidal Music Download.
+Home-page: UNKNOWN
+Author: YaronH
+Author-email: yaronhuang@qq.com
+License: MIT Licence
+Platform: any
+Requires-Dist: aigpy (>=1.0.23)
+Requires-Dist: requests
+Requires-Dist: ffmpeg
+Requires-Dist: futures
+
+UNKNOWN
+
+
