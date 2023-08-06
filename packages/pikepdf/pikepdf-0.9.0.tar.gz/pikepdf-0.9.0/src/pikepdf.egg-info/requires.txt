@@ -1,0 +1,9 @@
+defusedxml>=0.5.0
+
+[docs]
+ipython
+matplotlib
+pybind11
+setuptools_scm
+sphinx>=1.4
+sphinx-rtd-theme
