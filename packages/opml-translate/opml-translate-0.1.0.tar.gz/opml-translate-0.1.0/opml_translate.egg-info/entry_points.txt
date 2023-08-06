@@ -1,0 +1,3 @@
+[console_scripts]
+opml-trans = opml_translate.command_line:translate_command
+

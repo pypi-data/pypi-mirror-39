@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+opml_translate/__init__.py
+opml_translate/command_line.py
+opml_translate/translate.py
+opml_translate.egg-info/PKG-INFO
+opml_translate.egg-info/SOURCES.txt
+opml_translate.egg-info/dependency_links.txt
+opml_translate.egg-info/entry_points.txt
+opml_translate.egg-info/requires.txt
+opml_translate.egg-info/top_level.txt

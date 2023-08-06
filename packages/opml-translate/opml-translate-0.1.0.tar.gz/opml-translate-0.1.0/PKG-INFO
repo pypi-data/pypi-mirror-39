@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: opml-translate
+Version: 0.1.0
+Summary: Translates OPML files
+Home-page: https://github.com/DanielPechersky/opml-translate
+Author: Daniel Pechersky
+Author-email: danny.pechersky@gmail.com
+License: UNKNOWN
+Description: # OPML-TRANSLATE
+        
+        Translates the content of OPML files.
+        Use: `opml-trans -o trans.opml -i dynalist-2018-12-6.opml -lo zh-s -li en`
+        Currently uses a translation library that has limited free uses
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
