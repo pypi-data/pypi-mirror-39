@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: apiaccessor
+Version: 0.0.1.2
+Summary: A module to access API's using OAuth2 or Header-Key authentication.
+Home-page: https://github.com/MrTrainCow/API-Accessor
+Author: Daniel Cai
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+# API Accessor
+A module to access API's using OAuth2 or Header-Key authentication.
+
+## TODO
+* More request types
+
+# Funtions
+* GET data from an API using X-Auth-Key and OAuth2 given credienials
+
+
+
