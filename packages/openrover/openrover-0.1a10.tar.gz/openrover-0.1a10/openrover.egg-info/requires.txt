@@ -1,0 +1,6 @@
+pyserial
+pyserial-asyncio
+pytest
+
+[:python_version < "3.7"]
+dataclasses

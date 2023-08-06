@@ -1,0 +1,3 @@
+[console_scripts]
+openrover-test = openrover.test:main
+
