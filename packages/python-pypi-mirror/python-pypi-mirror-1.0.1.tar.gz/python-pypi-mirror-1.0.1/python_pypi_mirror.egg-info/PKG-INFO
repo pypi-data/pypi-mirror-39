@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: python-pypi-mirror
+Version: 1.0.1
+Summary: A script to create a partial PyPI mirror
+Home-page: https://github.com/montag451/pypi_mirror
+Author: montag451
+Author-email: montag451@laposte.net
+Maintainer: montag451
+Maintainer-email: montag451@laposte.net
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
