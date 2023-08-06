@@ -1,0 +1,3 @@
+[console_scripts]
+wrk2img = wrk2img.main:cli
+
