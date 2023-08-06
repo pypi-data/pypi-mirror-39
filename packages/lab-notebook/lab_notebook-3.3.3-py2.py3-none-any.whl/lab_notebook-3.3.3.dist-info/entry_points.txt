@@ -1,0 +1,4 @@
+[console_scripts]
+convert-to-db = runs.convert_to_db:main
+runs = runs.main:main
+
