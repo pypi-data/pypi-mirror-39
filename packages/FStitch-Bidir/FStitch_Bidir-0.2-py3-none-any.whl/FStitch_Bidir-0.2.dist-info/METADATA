@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: FStitch-Bidir
+Version: 0.2
+Summary: Annotates bidirections using FStitch segment data.
+Home-page: https://github.com/Dowell-Lab/FStitch
+Author: Margaret Gruca
+Author-email: margaret.gruca@colorado.edu
+License: MIT
+Project-URL: Bug Reports, https://github.com/Dowell-Lab/FStitch
+Project-URL: Source, https://github.com/Dowell-Lab/FStitch
+Project-URL: Human RefSeq, http://genome.ucsc.edu/cgi-bin/hgTables
+Keywords: bioinformatics genomics eRNA enhancers regulation binding RNAPII polymerase GRO-seq PRO-seq motif transcription_factor
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Requires-Dist: argparse
+Requires-Dist: datetime
+Requires-Dist: numpy
+Requires-Dist: pybedtools
+Requires-Dist: chartify
+Requires-Dist: pandas
+
+UNKNOWN
+
+
