@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/ZeepLibrary/ZeepKeywords.py
+src/ZeepLibrary/__init__.py
+src/ZeepLibrary/version.py
+src/robotframework_zeep.egg-info/PKG-INFO
+src/robotframework_zeep.egg-info/SOURCES.txt
+src/robotframework_zeep.egg-info/dependency_links.txt
+src/robotframework_zeep.egg-info/requires.txt
+src/robotframework_zeep.egg-info/top_level.txt
