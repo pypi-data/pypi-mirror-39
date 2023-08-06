@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: lintlens
+Version: 0.0.6
+Summary: Filters lint report and keep only defects on changed lines
+Home-page: https://github.com/draganHR/lintlens
+Author: Dragan Bosnjak
+License: UNKNOWN
+Description: 
+        # lintlens
+        
+        Filters lint report and keep only defects on changed lines
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: tests
