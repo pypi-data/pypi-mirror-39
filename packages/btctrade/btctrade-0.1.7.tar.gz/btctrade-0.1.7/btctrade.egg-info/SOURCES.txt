@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+btctrade/__init__.py
+btctrade.egg-info/PKG-INFO
+btctrade.egg-info/SOURCES.txt
+btctrade.egg-info/dependency_links.txt
+btctrade.egg-info/not-zip-safe
+btctrade.egg-info/requires.txt
+btctrade.egg-info/top_level.txt
