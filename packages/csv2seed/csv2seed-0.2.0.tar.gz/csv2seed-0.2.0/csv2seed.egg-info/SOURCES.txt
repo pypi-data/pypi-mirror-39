@@ -1,0 +1,10 @@
+README.rst
+setup.py
+csv2seed/__init__.py
+csv2seed/cli.py
+csv2seed/converter.py
+csv2seed.egg-info/PKG-INFO
+csv2seed.egg-info/SOURCES.txt
+csv2seed.egg-info/dependency_links.txt
+csv2seed.egg-info/entry_points.txt
+csv2seed.egg-info/top_level.txt

@@ -1,0 +1,57 @@
+Metadata-Version: 1.0
+Name: csv2seed
+Version: 0.2.0
+Summary: CSV file converter to Laravel Seeders
+Home-page: https://github.com/ErickTucto/csv2seed
+Author: Erick Tucto
+Author-email: erick.tucto@outlook.com
+License: MIT
+Description: ********
+        CSV2SEED
+        ********
+        
+        Version number: 0.2.0
+        
+        Author: `Erick Tucto`_
+        
+        Overview
+        ########
+        
+        CSV file converter to Laravel Seeders.
+        
+        |Terminal|
+        
+        Installation / Usage
+        ####################
+        
+        1. To install use pip
+        
+        .. code-block:: bash
+        
+            pip install csv2seed
+        
+        Example
+        #######
+        
+        .. code-block:: bash
+        
+            csv2seed --model User /home/erick/Escritorio/data-users.csv
+        
+        |Result|
+        
+        Contributing
+        ############
+        
+        1. `Erick Tucto`_
+        
+        .. |Terminal| image:: https://raw.githubusercontent.com/ErickTucto/csv2seed/master/docs/terminal.png
+            :width: 600px
+            :alt: terminal.png
+        
+        .. |Result| image:: https://raw.githubusercontent.com/ErickTucto/csv2seed/master/docs/result.png
+            :width: 600px
+            :alt: result.png
+        
+        .. _`Erick Tucto`: https://github.com/ErickTucto
+Keywords: csv,laravel,seeders,seed,converter,generator
+Platform: UNKNOWN
