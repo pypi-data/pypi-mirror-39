@@ -1,0 +1,9 @@
+numpy
+scipy
+gym
+shapely
+beamngpy
+
+[testing]
+pytest
+pytest-cov
