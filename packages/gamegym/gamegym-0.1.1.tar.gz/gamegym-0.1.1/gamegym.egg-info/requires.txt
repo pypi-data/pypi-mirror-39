@@ -1,0 +1,11 @@
+numpy>=1.15
+attrs>=18.0
+tqdm>=4.28
+
+[dev]
+coverage
+pylint
+pytest-benchmark
+pytest
+flake8
+yapf
