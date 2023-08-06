@@ -1,0 +1,17 @@
+statsfiles/__init__.py,sha256=XAGDsmetrx_fFisedWkxsPUlf2jW2OlXlrtMgaNevxY,20
+statsfiles/__main__.py,sha256=S84ELOvW7kQ1TWkLCzTTXmJguR1cFCcMwp4yTweElTE,415
+statsfiles/copy_essential.py,sha256=H01JGvjAkn_7Tm2nOls_evTiRqUu3zSa_2BGq17wktk,1978
+statsfiles/statsarrays.py,sha256=cqFmQFuCsPWcW6B9Nrn1q4CkypnkfhjVmNicFMGyi-g,7735
+statsfiles/statsfiles.py,sha256=DoLD3ncbcApzZBPUHx28IifTl6F7USaXMcShlc2gcdc,2372
+statsfiles/statsfiles_cdh.py,sha256=CAjno0oORbtJSr8z1JRX6aJgn-TdcvZEvTtuOhHwwwY,1529
+statsfiles/statsobs.py,sha256=rCSl7I0F-PPzWtGpnTFgf7TcwrJsItg-txoPeLlc9SQ,5788
+statsfiles/statsparams.py,sha256=MNqK0O8C416ddHlEpLfI0N7CB5x7Vz69-YoHkuvGNms,10208
+statsfiles/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+statsfiles/tests/test_statsarrays.py,sha256=6D3ggZPSw7H2GA_LbCTrLVscrSFLuRhsnUJR56wmv74,8292
+statsfiles/tests/test_statsobs.py,sha256=S2a_d9ybxpzcEy8PPQv9xpfK3c4nSgs4QfFVGtwiRSc,7177
+statsfiles/tests/test_statsparams.py,sha256=e3xqK816bIwQ5j8gqjoxITxA5YdTtkNfwKiSbGHgUQ0,8449
+statsfiles-1.0.0.dist-info/LICENSE,sha256=H8vMKnBS-cRaBSNH5zW8nAqBpWcfDkfNkbXanMkXniQ,1078
+statsfiles-1.0.0.dist-info/METADATA,sha256=MmyMtWu6q_UYaMNC8NLCnzlInYGkkwvTz9c_L6mYZ1U,1099
+statsfiles-1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+statsfiles-1.0.0.dist-info/top_level.txt,sha256=ezD8-DfSqU3XaJDCg5KSFMSuHpxsO-elcXQD6cYiPBg,11
+statsfiles-1.0.0.dist-info/RECORD,,
