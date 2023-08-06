@@ -1,0 +1,16 @@
+zimfarm/__init__.py,sha256=bF71joTI_ylSFuu4zE5hEt9lk2mn_Nk9L7GnSYXlBD0,43
+zimfarm/client.py,sha256=thgerDXA63K87MVnpQwJ99lrm1ayvSew206Mn5ek9b0,1165
+zimfarm/utils.py,sha256=DtyHNyldM0n_JhpxPvg13QvRVhrpPVqnQLDj_aYQlsw,192
+zimfarm/commands/__init__.py,sha256=d9azGZg9mrNU7cPcF1byPrJ4N0f9AMte06_bv4GlKUg,413
+zimfarm/commands/login.py,sha256=nZ_I7HdIcZjBwqT26nYXrTLbuaqjLnFKeLRh5BQMR5A,435
+zimfarm/commands/zimfarm.py,sha256=S4vXlRIOQ9W_QuOVjiL2X5TnSYGtSiSQ3DRwunpx2jY,43
+zimfarm/errors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zimfarm/models/__init__.py,sha256=6auiT8DOhlJxnpO1PLKFyIJpH-lXWkBxHxIsJgCzofs,26
+zimfarm/models/base.py,sha256=CtC8HGqpJ3otb_Pw26IlmA8LhYexM8rUhtN5nKhPu9A,64
+zimfarm/models/worker.py,sha256=nQe1l6mGO09bKJBXS1TOiPfiUKSjMXNRdeQEfmwIFSI,1118
+zimfarm-0.0.8.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+zimfarm-0.0.8.dist-info/METADATA,sha256=zyBmPefwhbK1CYAbxaQsP9-JEnez3IOVxk8E0QKxmrk,1134
+zimfarm-0.0.8.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+zimfarm-0.0.8.dist-info/entry_points.txt,sha256=3N6aChoymez3mv7_cVONlMXnVNYuGDHNd8grnqdYwpk,51
+zimfarm-0.0.8.dist-info/top_level.txt,sha256=G0u4RHpaDz8PGpykdAwHdoynb81e-8ucuuinM335PaA,8
+zimfarm-0.0.8.dist-info/RECORD,,
