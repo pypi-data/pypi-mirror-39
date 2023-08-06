@@ -1,0 +1,3 @@
+[console_scripts]
+dxlbootstrap = dxlbootstrap._cli:run
+

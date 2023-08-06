@@ -1,0 +1,56 @@
+from __future__ import absolute_import
+import os
+import distutils.command.sdist
+from setuptools import setup
+import setuptools.command.sdist
+
+# Patch setuptools' sdist behaviour with distutils' sdist behaviour
+setuptools.command.sdist.sdist.run = distutils.command.sdist.sdist.run
+
+VERSION_INFO = {}
+CWD = os.path.abspath(os.path.dirname(__file__))
+with open(os.path.join(CWD, "${name}", "_version.py")) as f:
+    exec(f.read(), VERSION_INFO)
+
+setup(
+    # Package name:
+    name="${name}",
+
+    # Version number:
+    version=VERSION_INFO["__version__"],
+
+    # Package requirements
+    install_requires=[${installRequires}
+    ],
+
+    # Python version requirements
+    python_requires="${pythonRequires}",
+
+    # Package author details:
+    author="",
+
+    # License
+    license="",
+
+    # Keywords
+    keywords=[],
+
+    # Packages
+    packages=[
+        "${name}",
+        "${name}._config",
+        "${name}._config.sample"${packages}],
+
+    package_data={
+        "${name}._config.sample" : ['*']${package_data}},
+
+    # Details
+    url="",
+
+    description="",
+
+    long_description=open('README').read(),
+
+    classifiers=[${classifiers}
+    ],
+)

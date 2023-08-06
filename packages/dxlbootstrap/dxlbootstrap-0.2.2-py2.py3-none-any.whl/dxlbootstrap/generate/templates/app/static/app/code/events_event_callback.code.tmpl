@@ -1,0 +1,23 @@
+class ${className}(EventCallback):
+    """
+    '${name}' event handler registered with topic '${topic}'
+    """
+
+    def __init__(self, app):
+        """
+        Constructor parameters:
+
+        :param app: The application this handler is associated with
+        """
+        super(${className}, self).__init__()
+        self._app = app
+
+    def on_event(self, event):
+        """
+        Invoked when an event message is received.
+
+        :param event: The event message
+        """
+        # Handle event
+        logger.info("Event received on topic: '%s' with payload: '%s'",
+                    event.destination_topic, MessageUtils.decode_payload(event))
