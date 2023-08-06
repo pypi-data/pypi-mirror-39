@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: waverunner
+Version: 0.1b4
+Summary: Package for sending (hardware) experiment requests across the network and receiving the results
+Home-page: http://gitlab.com/bjmuld/waverunner/
+Author: Barry Muldrey
+Author-email: barry@muldrey.net
+License: GPLv3
+Project-URL: Bug Tracker, https://gitlab.com/bjmuld/waverunner/issues
+Project-URL: Documentation, https://gitlab.com/bjmuld/waverunner
+Keywords: scientific experiements analysis data management
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: netifaces
+Requires-Dist: numpy
+Requires-Dist: futures
+
+# Waverunner is a client/server tool for sending lists of waveforms to be run through a tester and return the results
+
+### client-side code:
+
+```python
+
+from waverunner import Client, Request
+
+waver = waverunner.Client('192.168.2.1',12345)
+
+request = waverunner.Request(
+    list_of_waveforms = np.array([
+        [np.random.randn(100) for i in range(100)]
+    ]),
+    other_stuff='unsure',
+    more_stuff='more other stuff',
+)
+
+result = waver.request(request)
+```
+
+### server-side code:
+create a script (let's call it `batch-script.py`) that looks like this:
+```python
+import numpy
+import fancyInstrumentControl
+
+def main(stimulus):
+    return fancyInstrumentControl.pass(stimulus)
+```
+then run waverunner:
+`python -m waverunner /path/to/batch-script.py`
+
+
