@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: arxivtorm
+Version: 0.1.2
+Summary: Gets papers from ArXiv and puts them on your remarkable
+Home-page: https://github.com/narendasan/ArXivToRm
+Author: Naren Dasan
+Author-email: naren@narendasan.com
+License: NCSA
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: arxiv
+
+# ArXiv to Remarkable 
+
+Just a little script to upload files to my [Remarkable](https://remarkable.com/) from ArXiv 
+
+## Prerequisites 
+
+Install the `rmapi` go package: https://github.com/juruen/rmapi
+
+```
+pip3 install requirements.txt 
+```
+
+## Usage
+
+```
+./main.py [ ArXiv Code | Path on machine ]
+```
+
+
