@@ -1,0 +1,474 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Modules &mdash; Startup Name Generator (sng) 0.3 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Discussion" href="discussion.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Startup Name Generator (sng)
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/01_quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discussion.html">Discussion</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-sng.Config">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sng.Generator">Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sng.wordlists.wordlists">Wordlists</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Startup Name Generator (sng)</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Modules</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+/* nice headers on first paragraph of info/warning boxes */
+.admonition .first {
+    margin: -12px;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    color: #fff;
+    line-height: 1;
+    display: block;
+}
+.admonition.warning .first {
+    background: #f0b37e;
+}
+.admonition.note .first {
+    background: #6ab0de;
+}
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<div class="section" id="modules">
+<h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-sng.Config">
+<span id="config"></span><h2>Config<a class="headerlink" href="#module-sng.Config" title="Permalink to this headline">¶</a></h2>
+<p>The Config module. It defines the Config class.</p>
+<dl class="class">
+<dt id="sng.Config.Config">
+<em class="property">class </em><code class="descclassname">sng.Config.</code><code class="descname">Config</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sng/Config.html#Config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sng.Config.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration options for model training and name generation</p>
+<dl class="docutils">
+<dt>**kwargs:</dt>
+<dd>Keyword arguments that will overwrite the default config options.</dd>
+</dl>
+<p>To create a Config object that results in simulating names between
+6 and 10 letters:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cfg</span> <span class="o">=</span> <span class="n">sng</span><span class="o">.</span><span class="n">Config</span><span class="p">(</span>
+    <span class="n">min_word_len</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+    <span class="n">max_word_len</span><span class="o">=</span><span class="mi">10</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>To quickly inspect all values:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cfg</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="attribute">
+<dt id="sng.Config.Config.batch_size">
+<code class="descname">batch_size</code><em class="property"> = None</em><a class="headerlink" href="#sng.Config.Config.batch_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>int: The batch size for training the RNN</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sng.Config.Config.debug">
+<code class="descname">debug</code><em class="property"> = None</em><a class="headerlink" href="#sng.Config.Config.debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>bool: If true, methods will add some additional attributes
+to a Generator object’s <code class="docutils literal notranslate"><span class="pre">debug</span></code> dict.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sng.Config.Config.epochs">
+<code class="descname">epochs</code><em class="property"> = None</em><a class="headerlink" href="#sng.Config.Config.epochs" title="Permalink to this definition">¶</a></dt>
+<dd><p>int: How many epochs to train the RNN for?</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sng.Config.Config.hidden_dim">
+<code class="descname">hidden_dim</code><em class="property"> = None</em><a class="headerlink" href="#sng.Config.Config.hidden_dim" title="Permalink to this definition">¶</a></dt>
+<dd><p>int: Number of hidden units per LSTM layer</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sng.Config.Config.max_word_len">
+<code class="descname">max_word_len</code><em class="property"> = None</em><a class="headerlink" href="#sng.Config.Config.max_word_len" title="Permalink to this definition">¶</a></dt>
+<dd><p>int: How long should simulated words be maximum?</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sng.Config.Config.min_word_len">
+<code class="descname">min_word_len</code><em class="property"> = None</em><a class="headerlink" href="#sng.Config.Config.min_word_len" title="Permalink to this definition">¶</a></dt>
+<dd><p>int: How long should simulated words be at least?</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sng.Config.Config.n_layers">
+<code class="descname">n_layers</code><em class="property"> = None</em><a class="headerlink" href="#sng.Config.Config.n_layers" title="Permalink to this definition">¶</a></dt>
+<dd><p>int: How many LSTM layers in the model?</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sng.Config.Config.suffix">
+<code class="descname">suffix</code><em class="property"> = None</em><a class="headerlink" href="#sng.Config.Config.suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>str: A suffix to append to the suggested names.</p>
+<p>Choose e.g. ” Software” (with a leading space!) to see how your
+company name would look with the word Software at the end.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sng.Config.Config.temperature">
+<code class="descname">temperature</code><em class="property"> = None</em><a class="headerlink" href="#sng.Config.Config.temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>float: Sampling temperature. Lower values are “colder”, i.e.
+sampling probabilities will be more conservative.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sng.Config.Config.to_dict">
+<code class="descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sng/Config.html#Config.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sng.Config.Config.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert Config object to dictionary.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sng.Config.Config.verbose">
+<code class="descname">verbose</code><em class="property"> = None</em><a class="headerlink" href="#sng.Config.Config.verbose" title="Permalink to this definition">¶</a></dt>
+<dd><p>bool: If true, prints helpful messages on what is happening.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-sng.Generator">
+<span id="generator"></span><h2>Generator<a class="headerlink" href="#module-sng.Generator" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="sng.Generator.Generator">
+<em class="property">class </em><code class="descclassname">sng.Generator.</code><code class="descname">Generator</code><span class="sig-paren">(</span><em>config=&lt;sng.Config.Config object&gt;</em>, <em>wordlist_file=None</em>, <em>wordlist=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sng/Generator.html#Generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sng.Generator.Generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main class that holds the config, wordlist, and the trained model.</p>
+<dl class="docutils">
+<dt>config <span class="classifier-delimiter">:</span> <span class="classifier">sng.Config, optional</span></dt>
+<dd>A Config instance specifying training and simulation parameters.
+If not supplied, a default configuration will be created.</dd>
+<dt>wordlist_file <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Path to a textfile holding the text corpus you want to use.</dd>
+<dt>wordlist <span class="classifier-delimiter">:</span> <span class="classifier">list of strings</span></dt>
+<dd>Alternatively to <code class="docutils literal notranslate"><span class="pre">wordlist_file</span></code>, you can provide the already
+processed wordlist, a list of (ideally unique) strings.</dd>
+</dl>
+<dl class="docutils">
+<dt>config <span class="classifier-delimiter">:</span> <span class="classifier">sng.Config</span></dt>
+<dd>The Config object supplied, or a default object if none was supplied
+at initialization.</dd>
+<dt>wordlist <span class="classifier-delimiter">:</span> <span class="classifier">list of strings</span></dt>
+<dd>A processed list of unique words, each ending in a newline.
+This is the input to the neural network.</dd>
+</dl>
+<p>You can create a word generator like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sng</span>
+<span class="n">cfg</span> <span class="o">=</span> <span class="n">sng</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+
+<span class="c1"># Folder for pre-installed wordlists:</span>
+<span class="n">wordlist_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">sng</span><span class="o">.</span><span class="vm">__file__</span><span class="p">)),</span> <span class="s1">&#39;wordlists&#39;</span><span class="p">)</span>
+<span class="n">sample_wordlist</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">wordlist_folder</span><span class="p">,</span> <span class="s1">&#39;latin.txt&#39;</span><span class="p">)</span>
+
+<span class="c1"># Create a Generator object with some wordlist:</span>
+<span class="n">gen</span> <span class="o">=</span> <span class="n">sng</span><span class="o">.</span><span class="n">Generator</span><span class="p">(</span><span class="n">wordlist_file</span><span class="o">=</span><span class="n">sample_wordlist</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">cfg</span><span class="p">)</span>
+
+<span class="c1"># Train the model:</span>
+<span class="n">gen</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1"># Get a few name suggestions:</span>
+<span class="n">gen</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="sng.Generator.Generator.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sng/Generator.html#Generator.fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sng.Generator.Generator.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit the model. Adds the ‘model’ attribute to itself.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="sng.Generator.Generator.load">
+<em class="property">classmethod </em><code class="descname">load</code><span class="sig-paren">(</span><em>directory</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sng/Generator.html#Generator.load"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sng.Generator.Generator.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Generator object from a stored folder.</p>
+<dl class="docutils">
+<dt>directory <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Folder where you used Generator.save() to store the contents in.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sng.Generator.Generator.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>directory</em>, <em>overwrite=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sng/Generator.html#Generator.save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sng.Generator.Generator.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the model into a folder.</p>
+<dl class="docutils">
+<dt>directory <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>The folder to store the generator in. Should be non-existing.</dd>
+<dt>overwrite <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>If True, the folder contents will be overwritten if it already
+exists. Not recommended, though.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sng.Generator.Generator.simulate">
+<code class="descname">simulate</code><span class="sig-paren">(</span><em>n=10</em>, <em>temperature=None</em>, <em>min_word_len=None</em>, <em>max_word_len=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sng/Generator.html#Generator.simulate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sng.Generator.Generator.simulate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the trained model to simulate a few name suggestions.</p>
+<dl class="docutils">
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>The number of name suggestions to simulate</dd>
+<dt>temperature <span class="classifier-delimiter">:</span> <span class="classifier">float or None</span></dt>
+<dd>Sampling temperature. Lower values are “colder”, i.e.
+sampling probabilities will be more conservative.
+If None, will use the value specified in self.config.</dd>
+<dt>min_word_len <span class="classifier-delimiter">:</span> <span class="classifier">int or None</span></dt>
+<dd>Minimum word length of the simulated names.
+If None, will use the value specified in self.config.</dd>
+<dt>max_word_len <span class="classifier-delimiter">:</span> <span class="classifier">int or None</span></dt>
+<dd>Maximum word length of the simulated names.
+If None, will use the value specified in self.config.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-sng.wordlists.wordlists">
+<span id="wordlists"></span><h2>Wordlists<a class="headerlink" href="#module-sng.wordlists.wordlists" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="sng.wordlists.wordlists.load_builtin_wordlist">
+<code class="descclassname">sng.wordlists.wordlists.</code><code class="descname">load_builtin_wordlist</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sng/wordlists/wordlists.html#load_builtin_wordlist"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sng.wordlists.wordlists.load_builtin_wordlist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load and process one of the wordlists that ship with the sng package.</p>
+<dl class="docutils">
+<dt>name <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>A file name of one of the files in the wordlists/ directory.
+Call <a class="reference internal" href="#sng.wordlists.wordlists.show_builtin_wordlists" title="sng.wordlists.wordlists.show_builtin_wordlists"><code class="xref py py-func docutils literal notranslate"><span class="pre">show_builtin_wordlists()</span></code></a> to see a list of available
+names. Choose one of these.</dd>
+</dl>
+<dl class="docutils">
+<dt>list <span class="classifier-delimiter">:</span> <span class="classifier">a list of strings</span></dt>
+<dd>A wordlist. Literally, a list of words in the text corpus.
+It’s not yet preprocessed, so there are still duplicates etc. in there.
+This is taken care of by <a class="reference internal" href="#module-sng.Generator" title="sng.Generator"><code class="xref py py-class docutils literal notranslate"><span class="pre">sng.Generator</span></code></a>’s <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="sng.wordlists.wordlists.show_builtin_wordlists">
+<code class="descclassname">sng.wordlists.wordlists.</code><code class="descname">show_builtin_wordlists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sng/wordlists/wordlists.html#show_builtin_wordlists"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sng.wordlists.wordlists.show_builtin_wordlists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all builtin wordlists’ filenames.</p>
+<p>Use one of them as an argument to <a class="reference internal" href="#sng.wordlists.wordlists.load_builtin_wordlist" title="sng.wordlists.wordlists.load_builtin_wordlist"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_builtin_wordlist()</span></code></a>
+and get back a ready-to-go wordlist.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="discussion.html" class="btn btn-neutral" title="Discussion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Alexander Engelhardt
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
