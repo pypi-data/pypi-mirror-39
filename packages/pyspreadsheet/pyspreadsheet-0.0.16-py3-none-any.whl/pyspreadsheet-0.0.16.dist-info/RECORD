@@ -1,0 +1,14 @@
+pyspreadsheet/__init__.py,sha256=R4pqVlmDxNBbADBWTb4j488Jv8oq-oGhKa2RbtfyzAM,55
+pyspreadsheet/core.py,sha256=vNuDgOf29ZHidslf2Gk841pl08LBhf2316GoKZL6YsI,930
+pyspreadsheet/init_connection.py,sha256=Vzh27IakAz4GKu-4q_vaADPsgRsx5MA4TybazBuio20,1470
+pyspreadsheet/manage_sheet.py,sha256=G0Ny5Fo_Stpg7sDY00ww5S2PmKR6LEIVf7M77gs6aWY,1468
+pyspreadsheet/path.py,sha256=nxwCBQ5A0UwXq__Gaq2xBEp5qptoRylV9KqOperHRFQ,737
+pyspreadsheet/read.py,sha256=Gpnix9tKIGH9ZAhtmApcqAbl2hbduv7hMhcWOpWRMKg,2184
+pyspreadsheet/redshift.py,sha256=ANPs8Bujr0jUpHSEsn14DoEfB7tlm8TmlDm-_noJl3A,742
+pyspreadsheet/tool.py,sha256=qaOuNmjN7nVp9Y5YIzqpLCXHx1_3StNMhpdRfL_Vz-o,509
+pyspreadsheet/write.py,sha256=ElPsZTMNtL72g3coz71FLueKwyt-DGhpCRemQTYgYZg,1488
+pyspreadsheet-0.0.16.dist-info/LICENSE,sha256=p8lTsJoXtU3WuqeHqBzp53cWj_xdtBAo8REF6nxrYNw,1278
+pyspreadsheet-0.0.16.dist-info/METADATA,sha256=8jMcu8VWameJBaxoBeG_zVnIu1I1gJn9RfX7wiZ_tio,4464
+pyspreadsheet-0.0.16.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pyspreadsheet-0.0.16.dist-info/top_level.txt,sha256=TMIbLNtwzAEe36a_I3KOcFP14AHodklPR63XunIMrOs,14
+pyspreadsheet-0.0.16.dist-info/RECORD,,
