@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: aiohttp-toolbox
+Version: 0.0.8
+Summary: Tools for aiohttp I want to reuse.
+Home-page: https://github.com/samuelcolvin/aiohttp-tools
+Author: Samuel Colvin
+Author-email: s@muelcolvin.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Environment :: MacOS X
+Classifier: Topic :: Internet
+Requires-Python: >=3.6
+Requires-Dist: aiodns (>=1.1.1)
+Requires-Dist: aiohttp (>=3.4.4)
+Requires-Dist: aiohttp-session (>=2.6.0)
+Requires-Dist: arq (>=0.14)
+Requires-Dist: asyncpg (>=0.17.0)
+Requires-Dist: buildpg (>=0.0.2)
+Requires-Dist: cchardet (>=2.1.4)
+Requires-Dist: cryptography (>=2.4.1)
+Requires-Dist: pydantic[email] (>=0.15)
+Requires-Dist: raven (>=6.9.0)
+Requires-Dist: raven-aiohttp (>=0.7.0)
+Requires-Dist: uvloop (>=0.11.2)
+
+aiohttp toolbox
+===============
+
+|BuildStatus| |Coverage| |pypi|
+
+Tools for aiohttp I want to reuse.
+
+Installation
+------------
+
+Requires **python 3.6** or **python 3.7**.
+
+.. code:: shell
+
+    pip install aiohttp-toolbox
+
+.. |BuildStatus| image:: https://travis-ci.org/samuelcolvin/aiohttp-toolbox.svg?branch=master
+   :target: https://travis-ci.org/samuelcolvin/aiohttp-toolbox
+.. |Coverage| image:: https://codecov.io/gh/samuelcolvin/aiohttp-toolbox/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/samuelcolvin/aiohttp-toolbox
+.. |pypi| image:: https://img.shields.io/pypi/v/aiohttp-toolbox.svg
+   :target: https://pypi.python.org/pypi/aiohttp-toolbox
+
+
+.. :changelog:
+
+History
+-------
+
+v0.0.8 (2018-12-12)
+...................
+* optional ``conn`` on ``View``
+* improve ``raw_json_response``
+* add ``JsonErrors.HTTPAccepted``
+* rename ``parse_request -> parse_request_json``
+* add ``parse_request_query``
+
+v0.0.7 (2018-11-28)
+...................
+* improved CSRF
+
+v0.0.6 (2018-11-22)
+...................
+* allow for requests without a ``conn``
+
+v0.0.5 (2018-11-22)
+...................
+* improve bread, use ``handle`` not ``check_permissions``
+
+v0.0.4 (2018-11-21)
+...................
+* add ``check_grecaptcha``
+* improve middleware
+
+v0.0.3 (2018-11-20)
+...................
+* tweak cli and how worker is run
+
+v0.0.2 (2018-11-19)
+...................
+* change module name
+
+v0.0.1 (2018-11-19)
+...................
+* first release
+
+
