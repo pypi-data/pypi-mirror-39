@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: odoo12-addons-oca-hr
+Version: 12.0.20181207.0
+Summary: Meta package for oca-hr Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo12-addon-hr-attendance-rfid
+Requires-Dist: odoo12-addon-hr-employee-document
+Requires-Dist: odoo12-addon-hr-employee-health
+Requires-Dist: odoo12-addon-hr-employee-id
+Requires-Dist: odoo12-addon-hr-employee-relative
+Requires-Dist: odoo12-addon-hr-employee-service
+Requires-Dist: odoo12-addon-hr-employee-service-contract
+Requires-Dist: odoo12-addon-hr-employee-social-media
+Requires-Dist: odoo12-addon-hr-employee-ssn
+
+UNKNOWN
+
+
