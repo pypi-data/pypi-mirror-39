@@ -1,0 +1,8 @@
+.module caption, .inline-group h2 {
+  margin-top: 25px;
+}
+
+.inline-group .inline-group h2 {
+    background-color: white;
+    color: black;
+}
