@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: circuitgym
+Version: 0.1b1
+Summary: OpenAI-gym -like environments for spice circuits
+Home-page: https://github.gatech.edu/lars/circuitgym
+Author: Barry Muldrey
+Author-email: bmuldrey3@gatech.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: gym
+Requires-Dist: numpy
+Requires-Dist: pyspectre
+Requires-Dist: pandas
+
++# openai-gym-circuits
++A Spectre circuit simulator based implementation of an OpenAI Gym environment
+
+
