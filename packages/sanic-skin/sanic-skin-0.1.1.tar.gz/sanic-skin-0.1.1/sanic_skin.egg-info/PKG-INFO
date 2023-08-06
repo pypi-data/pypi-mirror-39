@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: sanic-skin
+Version: 0.1.1
+Summary: a wrapper for sanic in order to code in a tornado-like way
+Home-page: https://github.com/beforeicer/sanic_skin
+Author: hoo
+Author-email: beforeicer@126.com
+License: MIT License
+Description: a wrapper for sanic in order to code in a tornado-like way
+Keywords: sanic like tornado style
+Platform: any

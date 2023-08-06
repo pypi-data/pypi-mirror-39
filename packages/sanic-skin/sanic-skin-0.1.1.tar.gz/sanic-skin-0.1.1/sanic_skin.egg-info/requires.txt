@@ -1,0 +1,3 @@
+sanic>=0.8.3
+asyncpg>=0.18.2
+aioredis>=1.2.0
