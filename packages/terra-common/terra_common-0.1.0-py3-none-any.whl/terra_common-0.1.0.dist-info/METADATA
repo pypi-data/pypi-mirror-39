@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: terra-common
+Version: 0.1.0
+Summary: The Terra API
+Home-page: https://gitlab.makina-corpus.net/Terralego/Core/terra-back/
+Author: Terralego
+Author-email: terralego-pypi@makina-corpus.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Requires-Dist: psycopg2 (<2.8,>=2.7)
+Requires-Dist: Django (<2.1.0,>=2.0)
+Requires-Dist: djangorestframework (<3.8,>=3.7)
+Requires-Dist: djangorestframework-gis (==0.12)
+Requires-Dist: djangorestframework-jwt (<1.12,>=1.11)
+Requires-Dist: drf-yasg (<2.0,>=1.9)
+Requires-Dist: django-cors-headers (<2.3,>=2.2)
+Requires-Dist: simpleeval (<1.0,>=0.9)
+Requires-Dist: requests (<2.20,>=2.19)
+Requires-Dist: mercantile (<1.1,>=1.0)
+Requires-Dist: django-url-filter (<0.4,>=0.3)
+Requires-Dist: Fiona (<1.8,>=1.7)
+Requires-Dist: python-magic (<0.5,>=0.4)
+Requires-Dist: docxtpl (<0.6,>=0.5)
+Requires-Dist: Pillow (<6.0.0,>=5.3.0)
+Requires-Dist: django-storages (<1.8,>=1.7)
+Requires-Dist: django-versatileimagefield (<2.0,>=1.10)
+Requires-Dist: boto3 (<=1.10,>=1.9)
+Requires-Dist: deepmerge (<=1.0)
+
+This is the Terra API.
+
+## Requirements
+
+On Ubuntu, do not use the system packages, which are too old.
+* **docker-ce**: https://docs.docker.com/install/linux/docker-ce/ubuntu/
+* **docker-compose**: `sudo pip3 install docker-compose`
+
+
+## Usage
+
+### First launch
+Create a docker.env file:
+* `mv docker.env.dist docker.env`
+* Edit the settings
+
+### Running the project
+`docker-compose up`
+
+### Applying Django migrations
+`docker-compose run --rm django /code/venv/bin/python3.6 ./manage.py migrate`
+
+
