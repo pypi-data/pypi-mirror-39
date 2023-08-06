@@ -1,0 +1,2 @@
+class ProcessingFunctionReturnError(Exception):
+    pass
