@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: proxychains-conf-generator
+Version: 2.0.3
+Summary: A proxychains config file generator.
+Home-page: https://github.com/neoctobers/py_proxychains_conf_generator
+Author: @neoctobers
+Author-email: neoctobers@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: xprint
+
+# A proxychains config file generator
+
+[![PyPi Version](http://img.shields.io/pypi/v/proxychains-conf-generator.svg)](https://pypi.python.org/pypi/proxychains-conf-generator/)
+
+[>> Read the docs <<](https://neoctobers.readthedocs.io/en/latest/repo/py_proxychains_conf_generator.html)
+
+
+
