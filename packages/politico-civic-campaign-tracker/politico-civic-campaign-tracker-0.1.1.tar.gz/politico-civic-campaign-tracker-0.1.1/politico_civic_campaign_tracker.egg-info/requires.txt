@@ -1,0 +1,17 @@
+celery
+django-cors-headers
+django
+djangorestframework
+dj-database-url
+politico-civic-entity
+politico-civic-geography
+politico-civic-government
+politico-civic-election
+politico-civic-biography
+politico-civic-campaign
+psycopg2
+requests
+python-twitter
+
+[test]
+pytest
