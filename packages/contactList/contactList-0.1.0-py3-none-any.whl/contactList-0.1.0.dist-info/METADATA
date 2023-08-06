@@ -1,0 +1,134 @@
+Metadata-Version: 2.1
+Name: contactList
+Version: 0.1.0
+Summary: A Python 3 framework for constructing, managing and organising email addresses in YAML format.
+Home-page: https://gitlab.com/blueskyjunkie/contactlist
+License: UNKNOWN
+Keywords: email contacts yaml
+Author: Russell Smiley
+Author-email: im.russell.smiley@gmail.com
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Dist: pyyaml
+Requires-Dist: nose; extra == "dev"
+Requires-Dist: nose-cov; extra == "dev"
+Requires-Dist: nosehtmloutput-2; extra == "dev"
+Provides-Extra: .none
+Provides-Extra: dev
+
+contactList
+===========
+
+|pipeline| |coverage|
+
+.. |pipeline| image:: https://gitlab.com/blueskyjunkie/contactlist/badges/master/pipeline.svg
+   :target: https://gitlab.com/blueskyjunkie/contactlist/commits/master
+   :alt: pipeline status
+
+.. |coverage| image:: https://gitlab.com/blueskyjunkie/contactlist/badges/master/coverage.svg
+   :target: https://gitlab.com/blueskyjunkie/contactlist/commits/master
+   :alt: coverage analysis
+
+|pypiVersion|
+
+.. |pypiVersion| image:: https://badge.fury.io/py/contactList.svg
+   :target: https://badge.fury.io/py/contactList
+   :alt: PyPI Version
+
+
+A Python 3 utility for constructing, managing and organising email addresses in YAML format.
+
+.. contents::
+
+.. section-numbering::
+
+
+Installation
+------------
+
+The simplest way to install is using pip
+
+.. code-block:: bash
+
+   pip install contactList
+
+
+Getting Started
+---------------
+
+The structure of YAML file is very simple. Organise email addresses into arbitrarily named groups and then organise
+those groups into arbitrarily named "clusters".
+
+.. code-block:: yaml
+
+   groups:
+     g1:
+       - 'u1@some.domain'
+
+     g2:
+       - 'u3@some.other.domain'
+
+     g3:
+       - 'u4@this.domain'
+       - 'u2@some.domain'
+
+   clusters:
+     c1: [ 'g1' ]
+
+     c2: [ 'g1', 'g2' ]
+
+     c3: [ 'g2', 'g3' ]
+
+
+There is no requirement restricting an email address to only one group.
+
+
+``contact-list`` utility
+------------------------
+
+Once the wheel package is installed the command line utility ``contact-list`` is available. This utility can be used to
+manage contact list data in a YAML file from the command line.
+
+.. code-block:: bash
+
+   > contact-list --help
+   usage: contact-list [-h] [--file CONTACTSFILE] {cluster,email,group} ...
+
+   positional arguments:
+     {cluster,email,group}
+
+   optional arguments:
+     -h, --help            show this help message and exit
+     --file CONTACTSFILE, -f CONTACTSFILE
+                           Contacts file to manage (default contacts.yml)
+
+Subcommands enable the modification of the respective entities in the file, ``cluster``, ``email``, ``group``.
+
+
+Using the framework
+-------------------
+
+Using the contactList framework, your application can then use the clusters to build a list of the necessary emails. By
+default, the ``from_yamlFile`` classmethod tries to load YAML from ``contacts.yml`` in the current directory, otherwise
+the user specifies the file name to use.
+
+.. code-block:: python
+
+   from contactList import Contacts
+
+   myContacts = Contacts.from_yamlFile()
+
+   # A list of the groups loaded from YAML
+   assert isinstance( myContacts.groups, list )
+   # A list of the clusters loaded from YAML
+   assert isinstance( myContacts.clusters, list )
+
+   # Check that the groups and clusters are correctly specified.
+   myContacts.validate()
+
+   # Generate a Python set of email addresses for the chosen cluster.
+   emailList = myContacts.emails( 'c2' )
+
+   assert isinstance( emailList, set )
+
