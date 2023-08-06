@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: py3seq
+Version: 1.1.3
+Summary: Python class providing an interface to the 3seq recombination detection program.
+Home-page: https://github.com/acorg/py3seq
+Author: Terry Jones
+Author-email: tcj25@cam.ac.uk
+License: MIT
+Download-URL: https://github.com/acorg/py3seq
+Description: UNKNOWN
+Keywords: Python 3seq recombination detection
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

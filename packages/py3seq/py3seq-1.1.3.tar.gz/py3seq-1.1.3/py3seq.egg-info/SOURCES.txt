@@ -1,0 +1,9 @@
+setup.py
+py3seq/__init__.py
+py3seq/analysis.py
+py3seq.egg-info/PKG-INFO
+py3seq.egg-info/SOURCES.txt
+py3seq.egg-info/dependency_links.txt
+py3seq.egg-info/requires.txt
+py3seq.egg-info/top_level.txt
+test/test_analysis.py
