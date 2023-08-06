@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+func_analysis/__init__.py
+func_analysis/_analysis_classes.py
+func_analysis/_decorators.py
+func_analysis/_util.py
+func_analysis.egg-info/PKG-INFO
+func_analysis.egg-info/SOURCES.txt
+func_analysis.egg-info/dependency_links.txt
+func_analysis.egg-info/not-zip-safe
+func_analysis.egg-info/requires.txt
+func_analysis.egg-info/top_level.txt
