@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: vremoteapi
+Version: 0.1.11
+Summary: Mecanismo para permitir chamada de funcao do backend remotamente
+Home-page: UNKNOWN
+License: UNKNOWN
+Author: Flavio
+Author-email: fvilante1@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
