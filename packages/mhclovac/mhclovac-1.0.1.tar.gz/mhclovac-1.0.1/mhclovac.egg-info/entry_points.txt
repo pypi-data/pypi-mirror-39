@@ -1,0 +1,4 @@
+[console_scripts]
+mhclovac = mhclovac.mhclovac_run:main
+mhclovac-build = mhclovac.build_profile:main
+
