@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: Django-EMS_WhenIWork
+Version: 0.2
+Summary: Django app generate WhenIWork shifts from EMS service orders
+Home-page: https://github.com/uw-it-cte/django-ems-wheniwork
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: Apache License, Version 2.0
+Description: [![Build Status](https://travis-ci.org/uw-it-cte/django-ems-wheniwork.svg?branch=master)](https://travis-ci.org/uw-it-cte/django-ems-wheniwork)
+        [![Coverage Status](https://coveralls.io/repos/github/uw-it-cte/django-ems-wheniwork/badge.svg?branch=master)](https://coveralls.io/github/uw-it-cte/django-ems-wheniwork?branch=master)
+        
+        # django-ems-wheniwork
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
