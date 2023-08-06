@@ -1,0 +1,15 @@
+CHANGELOG.md
+MANIFEST.in
+README.md
+VERSION
+setup.cfg
+setup.py
+invars/__init__.py
+invars/invars.py
+invars.egg-info/PKG-INFO
+invars.egg-info/SOURCES.txt
+invars.egg-info/dependency_links.txt
+invars.egg-info/entry_points.txt
+invars.egg-info/requires.txt
+invars.egg-info/top_level.txt
+invars.egg-info/zip-safe
