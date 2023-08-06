@@ -1,0 +1,6 @@
+M2Crypto ; sys_platform != 'win32'
+construct>=2.9.29
+pyasn1
+future
+six
+biplist
