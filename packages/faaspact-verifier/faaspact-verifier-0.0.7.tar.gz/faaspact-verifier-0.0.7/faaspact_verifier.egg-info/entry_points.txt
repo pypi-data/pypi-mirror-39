@@ -1,0 +1,3 @@
+[console_scripts]
+faaspact-verifier = faaspact_verifier.delivery.cli:cli
+
