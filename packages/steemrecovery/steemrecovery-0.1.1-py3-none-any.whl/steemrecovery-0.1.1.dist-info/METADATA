@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: steemrecovery
+Version: 0.1.1
+Summary: A Python Steem Account Recovery CLI
+Home-page: https://github.com/crokkon/steemrecovery
+Author: crokkon
+Author-email: crokkon@protonmail.com
+Maintainer: crokkon
+Maintainer-email: crokkon@protonmail.com
+License: UNKNOWN
+Keywords: steem,recovery
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Topic :: Office/Business :: Financial
+Requires-Dist: beem (>=0.20.14)
+
+A Python Steem Account Recovery CLI
+
+
