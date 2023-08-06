@@ -1,0 +1,15 @@
+README.md
+setup.py
+pystq/constants.py
+pystq/detector.py
+pystq/materials.py
+pystq/noise.py
+pystq/score.py
+pystq/sites.py
+pystq/utils.py
+pystq/widget.py
+pystq.egg-info/PKG-INFO
+pystq.egg-info/SOURCES.txt
+pystq.egg-info/dependency_links.txt
+pystq.egg-info/requires.txt
+pystq.egg-info/top_level.txt
