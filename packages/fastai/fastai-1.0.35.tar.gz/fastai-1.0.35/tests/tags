@@ -1,0 +1,219 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CheckDependencyImporter	test_mod_independency.py	/^class CheckDependencyImporter(object):$/;"	c
+_check_data	test_vision_data_block.py	/^def _check_data(data, t, v):$/;"	f
+_final	test_vision_cpu.py	/^    def _final(): defaults.device = d$/;"	f	function:path
+_print_data	test_vision_data_block.py	/^def _print_data(data): print(len(data.train_ds),len(data.valid_ds))$/;"	f
+_run_batch_size_test	test_batchnom_issue_minimal.py	/^def _run_batch_size_test(bs):$/;"	f
+a	test_torch_core.py	/^a=[1,2,3]$/;"	v
+a3b3b3	test_callback_fp16.py	/^a3b3b3 =torch.ones([1,3,3,3])$/;"	v
+assert_link	test_links.py	/^def assert_link(docstr, expected, nb_cells=None, modules=None, msg=''):$/;"	f
+b	test_torch_core.py	/^b=[3,6,6]$/;"	v
+bbox2pic	test_vision_transform.py	/^def bbox2pic(corners, size):$/;"	f
+build_nb_cells	test_links.py	/^def build_nb_cells(mod_names):$/;"	f
+check_image	test_vision_transform.py	/^def check_image(x, cs):$/;"	f
+check_tfms	test_vision_transform.py	/^def check_tfms(img, tfms, targets, **kwargs):$/;"	f
+chk	test_category.py	/^def chk(a,b): assert np.array_equal(a,b)$/;"	f
+clean_destroy_block	test_text_train.py	/^def clean_destroy_block():$/;"	f
+clean_path	test_datasets.py	/^def clean_path(path):$/;"	f
+conftest.py	conftest.py	1;"	F
+convert_into_dataframe	test_vision_train.py	/^def convert_into_dataframe(buffer):$/;"	f
+create_data	test_vision_transform.py	/^def create_data(img, target, size, **kwargs):$/;"	f
+create_metrics_dataframe	test_vision_train.py	/^def create_metrics_dataframe(learn):$/;"	f
+cuda_required	test_callback_fp16.py	/^cuda_required = pytest.mark.skipif(not torch.cuda.is_available(),$/;"	v
+data	test_mod_independency.py	/^data = load_setup_py_data_basic("setup.py", work_dir)$/;"	v
+data	test_widgets_image_cleaner.py	/^def data():$/;"	f
+df_test_collate	test_text_data.py	/^def df_test_collate(data):$/;"	f
+exceptions	test_mod_independency.py	/^exceptions = ['pytest'] # see the top for the reason for exceptions$/;"	v
+exp	test_torch_core.py	/^exp=torch.tensor(a)$/;"	v
+extras_require	test_mod_independency.py	/^extras_require = [(re.split(r'[>=<]+',x))[0] for x in data['extras_require']['dev']]$/;"	v
+find_spec	test_mod_independency.py	/^    def find_spec(self, fullname, path, target=None):$/;"	m	class:CheckDependencyImporter
+get_ip	test_vision_data_block.py	/^def get_ip(img,pts): return ImagePoints(FlowField(img.size, pts), scale=True)$/;"	f
+get_train_losses	test_vision_train.py	/^def get_train_losses(learn):$/;"	f
+git_repo_path	conftest.py	/^git_repo_path = abspath(dirname(dirname(__file__)))$/;"	v
+img_test	test_vision_transform.py	/^def img_test(cs):$/;"	f
+itemize	test_vision_train.py	/^def itemize(metrics):$/;"	f
+learn	test_collab_train.py	/^def learn():$/;"	f
+learn	test_tabular_train.py	/^def learn():$/;"	f
+learn	test_text_train.py	/^def learn():$/;"	f
+learn	test_vision_train.py	/^def learn():$/;"	f
+load_setup_py_data_basic	test_mod_independency.py	/^def load_setup_py_data_basic(setup_file, work_dir=None):$/;"	f
+manual_seed	test_text_train.py	/^def manual_seed(seed=42):$/;"	f
+mnist_tiny_sanity_test	test_vision_data.py	/^def mnist_tiny_sanity_test(data):$/;"	f
+no_bar	test_vision_train.py	/^def no_bar():$/;"	f
+path	test_tabular_train.py	/^path = untar_data(URLs.ADULT_SAMPLE)$/;"	v
+path	test_vision.py	/^def path():$/;"	f
+path	test_vision_cpu.py	/^def path(request):$/;"	f
+path	test_vision_data.py	/^def path():$/;"	f
+points2pic	test_vision_transform.py	/^def points2pic(points, size):$/;"	f
+prep_human_numbers	test_text_train.py	/^def prep_human_numbers():$/;"	f
+pytestmark	test_tabular_train.py	/^pytestmark = pytest.mark.integration$/;"	v
+pytestmark	test_text_train.py	/^pytestmark = pytest.mark.integration$/;"	v
+pytestmark	test_vision_train.py	/^pytestmark = pytest.mark.integration$/;"	v
+read_file	test_text_train.py	/^def read_file(fname):$/;"	f
+reason	test_callback_fp16.py	/^                                reason="cuda enabled gpu is not available")$/;"	v
+setup	test_mod_independency.py	/^    def setup(**kw):$/;"	f	function:load_setup_py_data_basic
+test_1cycle_lrs	test_vision_train.py	/^def test_1cycle_lrs(learn):$/;"	f
+test_1cycle_moms	test_vision_train.py	/^def test_1cycle_moms(learn):$/;"	f
+test_accuracy	test_tabular_train.py	/^def test_accuracy(learn): assert learn.validate()[1] > 0.7$/;"	f
+test_accuracy	test_vision_train.py	/^def test_accuracy(learn):$/;"	f
+test_all_dihedral	test_vision_transform.py	/^def test_all_dihedral():$/;"	f
+test_all_warps	test_vision_transform.py	/^def test_all_warps():$/;"	f
+test_application_links_top_level_modules	test_links.py	/^def test_application_links_top_level_modules():$/;"	f
+test_apply_init	test_torch_core.py	/^def test_apply_init():$/;"	f
+test_arrays_split	test_core.py	/^def test_arrays_split():$/;"	f
+test_batch_size_3	test_batchnom_issue_minimal.py	/^def test_batch_size_3():$/;"	f
+test_batch_size_4	test_batchnom_issue_minimal.py	/^def test_batch_size_4():$/;"	f
+test_batchnom_issue_minimal.py	test_batchnom_issue_minimal.py	1;"	F
+test_bbox_data_aug	test_vision_transform.py	/^def test_bbox_data_aug():$/;"	f
+test_calc_loss	test_torch_core.py	/^def test_calc_loss():$/;"	f
+test_callback_fp16.py	test_callback_fp16.py	1;"	F
+test_camel2snake	test_core.py	/^def test_camel2snake():$/;"	f
+test_camvid	test_vision_data_block.py	/^def test_camvid():$/;"	f
+test_categorify	test_tabular_transform.py	/^def test_categorify():$/;"	f
+test_category	test_category.py	/^def test_category():$/;"	f
+test_category.py	test_category.py	1;"	F
+test_class_anchor	test_links.py	/^def test_class_anchor():$/;"	f
+test_classifier	test_text_train.py	/^def test_classifier():$/;"	f
+test_classifier	test_text_train.py	/^def test_classifier(learn):$/;"	f
+test_clean_tear_down	test_vision_cpu.py	/^def test_clean_tear_down(path):$/;"	f
+test_coco	test_vision_data_block.py	/^def test_coco():$/;"	f
+test_collab_train.py	test_collab_train.py	1;"	F
+test_core.py	test_core.py	1;"	F
+test_cpus	test_core.py	/^def test_cpus(): assert num_cpus() >= 1$/;"	f
+test_creates_config	test_datasets.py	/^def test_creates_config():$/;"	f
+test_crop_without_size	test_vision_transform.py	/^def test_crop_without_size():$/;"	f
+test_data_block.py	test_data_block.py	1;"	F
+test_datasets.py	test_datasets.py	1;"	F
+test_default_fill_strategy_is_median	test_tabular_transform.py	/^def test_default_fill_strategy_is_median():$/;"	f
+test_denormalize	test_vision_cpu.py	/^def test_denormalize(path):$/;"	f
+test_deterministic_transforms	test_vision_transform.py	/^def test_deterministic_transforms():$/;"	f
+test_df_names_to_idx	test_core.py	/^def test_df_names_to_idx():$/;"	f
+test_download_images	test_vision_data.py	/^def test_download_images():$/;"	f
+test_download_url	test_core.py	/^def test_download_url():$/;"	f
+test_empty_cont	test_tabular_train.py	/^def test_empty_cont():$/;"	f
+test_error_rate	test_vision_train.py	/^def test_error_rate(learn):$/;"	f
+test_even_mults	test_core.py	/^def test_even_mults():$/;"	f
+test_fastai.py	test_fastai.py	1;"	F
+test_fastai_prefix	test_links.py	/^def test_fastai_prefix():$/;"	f
+test_fill_missing_leaves_no_na_values	test_tabular_transform.py	/^def test_fill_missing_leaves_no_na_values():$/;"	f
+test_fill_missing_returns_correct_medians	test_tabular_transform.py	/^def test_fill_missing_returns_correct_medians():$/;"	f
+test_find_classes	test_core.py	/^def test_find_classes():$/;"	f
+test_from_csv_and_from_df	test_text_data.py	/^def test_from_csv_and_from_df():$/;"	f
+test_from_csv_and_from_df	test_vision_data.py	/^def test_from_csv_and_from_df(path):$/;"	f
+test_from_folder	test_text_data.py	/^def test_from_folder():$/;"	f
+test_from_folder	test_vision_data.py	/^def test_from_folder(path):$/;"	f
+test_from_name_re	test_vision_data.py	/^def test_from_name_re(path):$/;"	f
+test_has_version	test_fastai.py	/^def test_has_version(): assert fastai.__version__$/;"	f
+test_idx_dict	test_core.py	/^def test_idx_dict():$/;"	f
+test_ifnone	test_core.py	/^def test_ifnone():$/;"	f
+test_image_cleaner_index_length_mismatch	test_widgets_image_cleaner.py	/^def test_image_cleaner_index_length_mismatch(data):$/;"	f
+test_image_cleaner_length_correct	test_widgets_image_cleaner.py	/^def test_image_cleaner_length_correct(data):$/;"	f
+test_image_cleaner_wrong_input_type	test_widgets_image_cleaner.py	/^def test_image_cleaner_wrong_input_type(data):$/;"	f
+test_image_to_image_different_tfms	test_vision_data_block.py	/^def test_image_to_image_different_tfms():$/;"	f
+test_image_to_image_different_y_size	test_vision_data_block.py	/^def test_image_to_image_different_y_size():$/;"	f
+test_in_channels	test_torch_core.py	/^def test_in_channels():$/;"	f
+test_in_channels_no_weights	test_torch_core.py	/^def test_in_channels_no_weights():$/;"	f
+test_join_paths	test_core.py	/^def test_join_paths():$/;"	f
+test_link_class_methods	test_links.py	/^def test_link_class_methods():$/;"	f
+test_link_inner_class_functions	test_links.py	/^def test_link_inner_class_functions():$/;"	f
+test_link_typedef	test_links.py	/^def test_link_typedef():$/;"	f
+test_link_typedef_double_bt	test_links.py	/^def test_link_typedef_double_bt():$/;"	f
+test_link_vision_learner_priority	test_links.py	/^def test_link_vision_learner_priority():$/;"	f
+test_links.py	test_links.py	1;"	F
+test_listify	test_core.py	/^def test_listify(p, q, expected):$/;"	f
+test_listy	test_core.py	/^def test_listy():$/;"	f
+test_load_and_save_test	test_text_data.py	/^def test_load_and_save_test():$/;"	f
+test_lrfind	test_vision_train.py	/^def test_lrfind(learn):$/;"	f
+test_mask_data_aug	test_vision_transform.py	/^def test_mask_data_aug():$/;"	f
+test_mem_leak	test_text_train.py	/^def test_mem_leak():$/;"	f
+test_mod_independency.py	test_mod_independency.py	1;"	F
+test_model2half	test_callback_fp16.py	/^def test_model2half():$/;"	f
+test_model2half_forward	test_callback_fp16.py	/^def test_model2half_forward():$/;"	f
+test_multi	test_vision_data_block.py	/^def test_multi():$/;"	f
+test_multi_category	test_category.py	/^def test_multi_category():$/;"	f
+test_multi_iter	test_vision_cpu.py	/^def test_multi_iter(path):$/;"	f
+test_multi_iter_broken	test_vision_cpu.py	/^def test_multi_iter_broken(path):$/;"	f
+test_nb_module_name_has_highest_priority	test_links.py	/^def test_nb_module_name_has_highest_priority():$/;"	f
+test_noop	test_core.py	/^def test_noop():$/;"	f
+test_normalize	test_tabular_train.py	/^def test_normalize(learn):$/;"	f
+test_normalize	test_vision_cpu.py	/^def test_normalize(path):$/;"	f
+test_np2model_tensor	test_torch_core.py	/^def test_np2model_tensor():$/;"	f
+test_one_hot	test_core.py	/^def test_one_hot():$/;"	f
+test_order_preds	test_text_order_preds.py	/^def test_order_preds():$/;"	f
+test_partition	test_core.py	/^    def test_partition(a, sz, ex):$/;"	f	function:test_partition_functionality
+test_partition_functionality	test_core.py	/^def test_partition_functionality():$/;"	f
+test_path_can_be_str_type	test_vision.py	/^def test_path_can_be_str_type(path):$/;"	f
+test_points	test_vision_data_block.py	/^def test_points():$/;"	f
+test_points_data_aug	test_vision_transform.py	/^def test_points_data_aug():$/;"	f
+test_preds	test_vision_train.py	/^def test_preds(learn):$/;"	f
+test_qrnn_works_if_split_fn_provided	test_text_train.py	/^def test_qrnn_works_if_split_fn_provided():$/;"	f
+test_qrnn_works_with_no_split	test_text_train.py	/^def test_qrnn_works_with_no_split():$/;"	f
+test_random_split	test_core.py	/^def test_random_split():$/;"	f
+test_range_children	test_torch_core.py	/^def test_range_children():$/;"	f
+test_regression	test_data_block.py	/^def test_regression():$/;"	f
+test_requires_grad	test_torch_core.py	/^def test_requires_grad():$/;"	f
+test_requires_grad_set	test_torch_core.py	/^def test_requires_grad_set():$/;"	f
+test_respects_import_order	test_links.py	/^def test_respects_import_order():$/;"	f
+test_rle_decode_empty_str	test_vision_image.py	/^def test_rle_decode_empty_str():$/;"	f
+test_rle_decode_with_str	test_vision_image.py	/^def test_rle_decode_with_str():$/;"	f
+test_rle_encode_all_zero_array	test_vision_image.py	/^def test_rle_encode_all_zero_array():$/;"	f
+test_rle_encode_with_array	test_vision_image.py	/^def test_rle_encode_with_array():$/;"	f
+test_rules	test_text.py	/^def test_rules():$/;"	f
+test_same_categories	test_tabular_train.py	/^def test_same_categories(learn):$/;"	f
+test_same_fill_nan	test_tabular_train.py	/^def test_same_fill_nan(learn):$/;"	f
+test_series2cat	test_core.py	/^def test_series2cat():$/;"	f
+test_set_bn_eval	test_torch_core.py	/^def test_set_bn_eval():$/;"	f
+test_setup_parser	test_mod_independency.py	/^def test_setup_parser():$/;"	f
+test_should_load_backwards_lm	test_text_data.py	/^def test_should_load_backwards_lm():$/;"	f
+test_show_install	test_utils.py	/^def test_show_install(capsys):$/;"	f
+test_split_bn_bias	test_torch_core.py	/^def test_split_bn_bias():$/;"	f
+test_split_model	test_torch_core.py	/^def test_split_model():$/;"	f
+test_splitdata_datasets	test_data_block.py	/^def test_splitdata_datasets():$/;"	f
+test_tabular_train.py	test_tabular_train.py	1;"	F
+test_tabular_transform.py	test_tabular_transform.py	1;"	F
+test_tensor_array_monkey_patch	test_torch_core.py	/^def test_tensor_array_monkey_patch():$/;"	f
+test_tensor_with_list	test_torch_core.py	/^def test_tensor_with_list():$/;"	f
+test_tensor_with_ndarray	test_torch_core.py	/^def test_tensor_with_ndarray():$/;"	f
+test_tensor_with_tensor	test_torch_core.py	/^def test_tensor_with_tensor():$/;"	f
+test_text.py	test_text.py	1;"	F
+test_text_data.py	test_text_data.py	1;"	F
+test_text_order_preds.py	test_text_order_preds.py	1;"	F
+test_text_train.py	test_text_train.py	1;"	F
+test_to_half	test_callback_fp16.py	/^def test_to_half():$/;"	f
+test_to_int	test_core.py	/^def test_to_int():$/;"	f
+test_tokenize	test_text.py	/^def test_tokenize():$/;"	f
+test_torch_core.py	test_torch_core.py	1;"	F
+test_torchvision	test_links.py	/^def test_torchvision():$/;"	f
+test_tuple	test_core.py	/^def test_tuple():$/;"	f
+test_uniqueify	test_core.py	/^def test_uniqueify():$/;"	f
+test_unwanted_mod_dependencies	test_mod_independency.py	/^def test_unwanted_mod_dependencies():$/;"	f
+test_utils.py	test_utils.py	1;"	F
+test_val_loss	test_collab_train.py	/^def test_val_loss(learn): assert learn.validate()[0] < 0.8$/;"	f
+test_val_loss	test_text_train.py	/^def test_val_loss(learn): assert learn.validate()[1] > 0.3$/;"	f
+test_verify_image	test_vision_data.py	/^def test_verify_image(path):$/;"	f
+test_verify_images	test_vision_data.py	/^def test_verify_images(path):$/;"	f
+test_vision.py	test_vision.py	1;"	F
+test_vision_cpu.py	test_vision_cpu.py	1;"	F
+test_vision_data.py	test_vision_data.py	1;"	F
+test_vision_data_block.py	test_vision_data_block.py	1;"	F
+test_vision_datasets	test_vision_data_block.py	/^def test_vision_datasets():$/;"	f
+test_vision_image.py	test_vision_image.py	1;"	F
+test_vision_pil2tensor	test_vision_pil2tensor.py	/^def test_vision_pil2tensor():$/;"	f
+test_vision_pil2tensor.py	test_vision_pil2tensor.py	1;"	F
+test_vision_pil2tensor_16bit	test_vision_pil2tensor.py	/^def test_vision_pil2tensor_16bit():$/;"	f
+test_vision_pil2tensor_numpy	test_vision_pil2tensor.py	/^def test_vision_pil2tensor_numpy():$/;"	f
+test_vision_train.py	test_vision_train.py	1;"	F
+test_vision_transform.py	test_vision_transform.py	1;"	F
+test_vocabs	test_text_train.py	/^def test_vocabs(learn):$/;"	f
+test_widgets_image_cleaner.py	test_widgets_image_cleaner.py	1;"	F
+text_csv_file	test_text_data.py	/^def text_csv_file(filepath, labels):$/;"	f
+text_df	test_text_data.py	/^def text_df(labels):$/;"	f
+text_df	test_text_train.py	/^def text_df(n_labels):$/;"	f
+text_files	test_text_data.py	/^def text_files(path, labels):$/;"	f
+unwanted_deps	test_mod_independency.py	/^unwanted_deps = [x for x in extras_require if x not in exceptions]$/;"	v
+work_dir	test_mod_independency.py	/^work_dir = Path(__file__).parent.parent$/;"	v
