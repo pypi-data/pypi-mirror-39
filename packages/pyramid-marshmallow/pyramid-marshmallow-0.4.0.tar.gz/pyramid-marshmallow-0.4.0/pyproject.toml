@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "pyramid-marshmallow"
+version = "0.4.0"
+description = "Validate request and response data with Marshmallow and optionally generate an OpenAPI spec."
+readme = "README.md"
+homepage = "https://github.com/luhn/pyramid-marshmallow"
+repository = "https://github.com/luhn/pyramid-marshmallow"
+authors = ["Theron Luhn <theron@luhn.com>"]
+license = "MIT"
+classifiers = [
+	"Development Status :: 3 - Alpha",
+	"Framework :: Pyramid",
+]
+
+[tool.poetry.dependencies]
+python = "^3.4"
+marshmallow = "^2.16"
+pyramid = "^1.7"
+
+# [apispec] extras
+apispec = {version = "^0.37", optional = true}
+PyYAML = {version = "^3.10", optional = true}
+
+[tool.poetry.dev-dependencies]
+"flake8" = "^3.5"
+pytest = "^3.6"
+webtest = "^2.0"
+
+[tool.poetry.extras]
+openapi = ["apispec", "PyYAML"]
+
+[tool.poetry.scripts]
+generate-spec = "pyramid_marshmallow.generatespec:generate"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

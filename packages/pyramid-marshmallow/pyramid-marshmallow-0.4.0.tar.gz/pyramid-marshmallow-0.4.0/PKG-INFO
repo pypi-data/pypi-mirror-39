@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pyramid-marshmallow
+Version: 0.4.0
+Summary: Validate request and response data with Marshmallow and optionally generate an OpenAPI spec.
+Home-page: https://github.com/luhn/pyramid-marshmallow
+Author: Theron Luhn
+Author-email: theron@luhn.com
+Requires-Python: >=3.4,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Pyramid
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: openapi
+Requires-Dist: PyYAML (>=3.10,<4.0); extra == "openapi"
+Requires-Dist: apispec (>=0.37,<0.38); extra == "openapi"
+Requires-Dist: marshmallow (>=2.16,<3.0)
+Requires-Dist: pyramid (>=1.7,<2.0)
+Project-URL: Repository, https://github.com/luhn/pyramid-marshmallow
