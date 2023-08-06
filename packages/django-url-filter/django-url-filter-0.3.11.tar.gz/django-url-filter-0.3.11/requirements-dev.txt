@@ -1,0 +1,23 @@
+-r requirements.txt
+alchemy-mock
+coreapi
+coverage
+django-debug-toolbar
+django-debug-toolbar-alchemy
+django-extensions
+djangorestframework
+flake8
+importanize
+mock
+pdbpp
+ptpython
+pytest
+pytest-cov
+pytest-django
+sphinx
+sphinx-autobuild
+sphinx-rtd-theme
+sqlalchemy
+tox
+watchdog
+werkzeug
