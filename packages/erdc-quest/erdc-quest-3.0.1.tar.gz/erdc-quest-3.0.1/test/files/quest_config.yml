@@ -1,0 +1,6 @@
+BASE_DIR: Quest
+CACHE_DIR: .cache/test_cache
+PROJECTS_DIR: projects
+USER_SERVICES:
+    usgs-ned1: http://localhost/data
+    iraq-vitd: file:///tmp/data
