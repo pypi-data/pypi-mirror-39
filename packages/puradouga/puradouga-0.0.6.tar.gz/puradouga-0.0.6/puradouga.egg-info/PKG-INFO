@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: puradouga
+Version: 0.0.6
+Summary: Uradouga Plugin System
+Home-page: https://git.widmer.me/project/multimedia/puradouga
+Author: Joel Widmer
+Author-email: joel@widmer.me
+License: UNKNOWN
+Description: # Puradouga
+        
+        Puradouga is the plugin system for uradouga.
+Keywords: plugins,anidouga
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
