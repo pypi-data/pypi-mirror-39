@@ -1,0 +1,3 @@
+[pytest11]
+camel_collect = pytest_camel_collect.plugin
+

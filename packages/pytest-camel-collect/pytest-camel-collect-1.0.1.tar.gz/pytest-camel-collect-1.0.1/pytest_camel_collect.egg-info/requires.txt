@@ -1,0 +1,9 @@
+pytest>=2.9
+inflection<0.4,>=0.3.1
+
+[dev]
+pytest-camel-collect[test]
+twine~=1.12.1
+
+[test]
+pytest-lambda==0.0.2
