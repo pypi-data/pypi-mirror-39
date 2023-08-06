@@ -1,0 +1,348 @@
+#!/usr/bin/env python
+#
+#    Copyright (C) 2018 Alexandros Avdis and others.
+#    See the AUTHORS.md file for a full list of copyright holders.
+#
+#    This file is part of qmesh-containers.
+#
+#    qmesh-containers is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    qmesh-containers is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with qmesh-containers.  If not, see <http://www.gnu.org/licenses/>.
+'''Functions for creating qmesh Docker containers
+
+The functions aim to tailor basic qmesh images by adding a user and enabling access of files
+on the host system. Thus the functions in this module enable seamless work on meshing
+projects (users) or work on qmesh code (developers).
+'''
+
+def parse_arguments():
+    '''Parse the command-line arguments.
+
+    Parameters
+    ----------
+
+    Returns
+    -------
+    arguments : Name-space
+        A python name-space containing all the command-line arguments
+    '''
+    import argparse
+    parser = argparse.ArgumentParser(prog="qmeshcontainer",
+                                     description="Run a Linux container for qmesh:"+
+                                     " Create meshes from GIS data")
+    parser.add_argument("-v", "--verbose",
+                        action="store_true",
+                        default=False,
+                        help="Verbose output")
+    parser.add_argument("-c", "--cache-images",
+                        action="store_true",
+                        default=False,
+                        help="Retain docker images built for user-specific container.")
+    #Add a group to handle conflicting specifications of docker images.
+    docker_image_group = parser.add_mutually_exclusive_group()
+    docker_image_group.add_argument("-i", "--image",
+                                    action="store",
+                                    type=str,
+                                    dest='docker_base_image_tag',
+                                    default='qmesh1.0.2_ubuntu16.04_qgisltr_gmsh3.0.4',
+                                    help="Use specified docker image."+\
+                                    " Defaults to the qmesh Python API image.")
+    docker_image_group.add_argument("-idev", "--developer-image",
+                                    action="store_const",
+                                    dest='docker_base_image_tag',
+                                    const='ubuntu16.04_qgisltr_gmsh3.0.4',
+                                    help="Use the qmesh developer docker image.")
+    #Add a group to handle conflicting specifications of host-container mount volumes.
+    mount_volumes_group = parser.add_mutually_exclusive_group()
+    mount_volumes_group.add_argument('-m', '--mount-volume',
+                                     action="store",
+                                     dest='mount_volumes',
+                                     default=None,
+                                     help="Mount given host volume at given mount point."+\
+                                          " Specified as host_path:container_path."+\
+                                          " container_path can be 'home',"+\
+                                          " if mounting at the container user home dir.")
+    mount_volumes_group.add_argument('-mwd', '--mount-working-dir',
+                                     action="store_const",
+                                     dest='mount_volumes',
+                                     const='wd:home/wd',
+                                     help="Mount working directory, at similarly named"+\
+                                     " directory inside the container home directory")
+    mount_volumes_group.add_argument('-mhome', '--mount-home',
+                                     action="store_const",
+                                     dest='mount_volumes',
+                                     const='home:home',
+                                     help="Mount user home directory, at image home directory")
+
+    arguments = parser.parse_args()
+    return arguments
+
+def mount_volumes_list(option_string, user_details, verbose, log):
+    '''Process the list of volumes to mount in the user container.
+    '''
+    import os
+    user_name = user_details['user_name']
+    user_home_dir = user_details['home_dir']
+    #If the input argument is of type None, then no mounting  information is given and
+    # the container will mount no host volumes. Return none to signify this condition
+    if option_string is None:
+        return option_string
+    #Separate host and container volume paths
+    volumes = option_string.split(':')
+    #If mounting working or home directory, extract correct path on host
+    if volumes[0] == 'wd':
+        host_volume = os.getcwd()
+    elif volumes[0] == 'home':
+        host_volume = os.path.join(user_home_dir, user_name)
+    else:
+        host_volume = os.path.dirname(os.path.realpath(volumes[0]))
+    #If the mount-point in the container is the home directory, get user
+    # details and construct correct path
+    if volumes[1] == 'home':
+        container_volume = os.path.join('/home', user_name)
+    elif volumes[1] == 'home/wd':
+        container_volume = os.path.join('/home', user_name, os.path.split(os.getcwd())[1])
+    #Check given host volume exists
+    if not os.path.exists(host_volume):
+        raise Exception('Path '+host_volume+ ' does not exist on host.')
+    #Output to log the volume mapping
+    if verbose:
+        log.info('Mounting host volumes as follows:')
+        log.info('Host volume '+host_volume+' to container mount-point '+container_volume)
+    #Return list with volume paths
+    return [host_volume, container_volume]
+
+def get_user_host_setup(verbose, log):
+    '''Extract user and host-system details.
+
+    Probe system for user name, user ID, group ID, home directory and X11 window system.
+    '''
+    import platform
+    import os
+    user_details = {}
+    host_system_details = {}
+    #Obtain user and system details
+    if platform.system() == 'Linux' or platform.system() == 'Darwin': #Mac
+        import pwd
+        import grp
+        user_details['user_name'] = pwd.getpwuid(os.getuid()).pw_name
+        user_details['user_id'] = pwd.getpwuid(os.getuid()).pw_uid
+        user_details['group_id'] = pwd.getpwuid(os.getuid()).pw_gid
+        user_details['group_name'] = grp.getgrgid(user_details['group_id']).gr_name
+        user_details['home_dir'] = pwd.getpwuid(os.getuid()).pw_dir
+        #A few details for displaying GUIs
+        if platform.system() == 'Linux' and os.path.isdir('/tmp/.X11-unix'):
+            host_system_details['display'] = os.environ.get('DISPLAY')
+            host_system_details['x11_unix_path'] = '/tmp/.X11-unix'
+        else:
+            host_system_details['display'] = None
+            host_system_details['x11_unix_path'] = None
+    if platform.system() == 'Windows':
+        import getpass
+        user_details['user_name'] = getpass.getuser()
+        user_details['user_id'] = 2000
+        user_details['group_id'] = 2200
+        user_details['group_name'] = getpass.getuser()
+        user_details['home_dir'] = os.path.expanduser('~')
+        host_system_details['display'] = None
+        host_system_details['x11_unix_path'] = None
+    #Output some info to log
+    if verbose:
+        #Output host type.
+        if platform.system() == 'Linux':
+            log.info('Host is a GNU/Linux distribution')
+        elif platform.system() == 'Darwin':
+            log.info('Host is Apple Darwin')
+        elif platform.system() == 'Windows':
+            log.info('Host is Windows')
+        #Output user info.
+        log.info('Tailored container will have user:')
+        log.info('\tUser name: '+user_details['user_name'])
+        log.info('\tUser ID: '+str(user_details['user_id']))
+        log.info('\tGroup name: '+user_details['group_name'])
+        log.info('\tGroup ID: '+str(user_details['group_id']))
+    return user_details, host_system_details
+
+def build_docker_context(verbose, log):
+    '''Construct context directory for user-tailored Docker image.
+    '''
+    import tempfile
+    import os
+    from shutil import copyfile
+    from pkg_resources import resource_filename
+    import qmeshcontainers
+    #Create temporary directory where container context will be collected.
+    try:
+        docker_context_dir = tempfile.TemporaryDirectory()
+        docker_context_dir_path = docker_context_dir.name
+    except AttributeError:
+        docker_context_dir_path = tempfile.mkdtemp()
+    if verbose:
+        log.info('Constructing Docker context at ' + docker_context_dir_path)
+    #Copy container bashrc into context directory
+    bashrc_filename = resource_filename(qmeshcontainers.__name__, 'container_bashrc')
+    copyfile(bashrc_filename, os.path.join(docker_context_dir_path, 'container_bashrc'))
+    #Copy message-of-the-day script inside context directory
+    motd_filename = resource_filename(qmeshcontainers.__name__, '05-qmesh-container-welcome')
+    copyfile(motd_filename, os.path.join(docker_context_dir_path, '05-qmesh-container-welcome'))
+    return docker_context_dir_path
+
+def construct_dockerfile(docker_base_image_tag, docker_context_dir_path, user_details,
+                         verbose, log):
+    '''Construct dockerfile for user-tailored Docker image.
+    '''
+    import os
+    #Create dockerfile inside context directory
+    docker_filename = os.path.join(docker_context_dir_path, 'Dockerfile')
+    #Extract user details
+    user_name = user_details['user_name']
+    user_id = user_details['user_id']
+    group_name = user_details['group_name']
+    group_id = user_details['group_id']
+    #Open dockerfile in temporary context directory
+    docker_file = open(docker_filename, 'w')
+    #Add instructions to build the user container from the requested qmesh image
+    docker_file.write('FROM qmesh/qmesh-containers:' + docker_base_image_tag + '\n')
+    docker_file.write('ENV QMESH_BASE_IMAGE_TAG ' + docker_base_image_tag + '\n')
+    #Add user group and user ID
+    docker_file.write('RUN addgroup --gid ' + str(group_id) + ' ' + group_name + '\n')
+    docker_file.write('RUN adduser --disabled-password --gecos "" -uid ' + str(user_id) +\
+                      ' -gid ' + str(group_id) + ' ' + user_name + '\n')
+    #Add user to root group
+    docker_file.write('RUN usermod -aG root '+user_name+'\n')
+    #Let the user do sudo without password
+    docker_file.write('RUN echo "# User privilege specification" >> etc/sudoers\n')
+    docker_file.write('RUN echo "'+user_name+'\tALL = (ALL) NOPASSWD: ALL" >> etc/sudoers\n')
+    #Add motd file
+    docker_file.write('ADD 05-qmesh-container-welcome /etc/update-motd.d/\n')
+    docker_file.write('RUN chmod +x /etc/update-motd.d/05-qmesh-container-welcome\n')
+    #Add custom bashrc to user container
+    docker_file.write('ADD container_bashrc /home/'+user_name+'/.bashrc\n')
+    #Add instructions to sign in as user
+    docker_file.write('USER '+user_name+'\n')
+    docker_file.write('WORKDIR /home/'+user_name+'\n')
+    docker_file.write('ENTRYPOINT /bin/bash\n')
+    #Close file and return
+    docker_file.close()
+    if verbose:
+        log.info('Constructed Dockerfile ' + docker_filename)
+
+def build_docker_image(user_details, docker_base_image_tag, docker_context_dir, verbose, log):
+    '''Build user-tailored Docker image.
+    '''
+    import subprocess
+    import tempfile
+    #Extract user name
+    user_name = user_details['user_name']
+    #Start composing docker build command
+    docker_command = ['docker', 'build', '--rm']
+    docker_stdout = None
+    #Set verbosity of docker build command
+    if not verbose:
+        docker_command.append('-q')
+        docker_stdout = tempfile.TemporaryFile()
+    #Compose the image tag
+    image_tag = user_name + '_' + docker_base_image_tag
+    docker_command.extend(['-t', image_tag])
+    #Add context directory to command
+    docker_command.extend([docker_context_dir])
+    if verbose:
+        log.info('Building Docker image ' + image_tag + ' with ' + ' '.join(docker_command))
+    #Build image and return its tag
+    subprocess.call(docker_command, stdout=docker_stdout)
+    return image_tag
+
+def run_docker_container(image_tag, mount_volumes, host_system_details, verbose, log):
+    '''Run user-tailored Docker container.
+    '''
+    import subprocess
+    docker_command = ['docker', 'run', '--rm']
+    display = host_system_details['display']
+    host_x11_unix_path = host_system_details['x11_unix_path']
+    if display and host_x11_unix_path:
+        docker_command.extend(['-e', 'DISPLAY='+display,
+                               '-v', host_x11_unix_path+':/tmp/.X11-unix'])
+    if mount_volumes:
+        host_volume = mount_volumes[0]
+        container_volume = mount_volumes[1]
+        docker_command.extend(['-v', host_volume+':'+container_volume])
+    #Finish-off command composition
+    docker_command.extend(['-it', image_tag])
+    if verbose:
+        log.info('Creating Docker container with ' + ' '.join(docker_command))
+    #Run container
+    subprocess.call(docker_command)
+
+def clean_up(docker_context_dir, image_tag, cache_images, verbose, log):
+    '''Remove Docker context directory and Docker images.
+    '''
+    import os
+    import glob
+    import subprocess
+    import tempfile
+    try:
+        docker_context_dir.cleanup()
+    except AttributeError:
+        for tmp_file in glob.glob(os.path.join(docker_context_dir, '*')):
+            os.remove(tmp_file)
+        os.rmdir(docker_context_dir)
+    if verbose:
+        log.info('Deleted Docker context at ' + docker_context_dir)
+    #If user selected to cache images, do not remove them.
+    if not cache_images:
+        #Start composing docker command to remove images
+        docker_command = ['docker', 'rmi', '-f', image_tag]
+        docker_stdout = None
+        #Capture output of docker command
+        if not verbose:
+            docker_stdout = tempfile.TemporaryFile()
+        else:
+            log.info('Deleting Docker images built for exiting container')
+        subprocess.call(docker_command, stdout=docker_stdout)
+
+def qmesh_container():
+    '''Build and run Docker container based on qmesh images.
+    '''
+    import logging
+    #Create a logging object, for verbose command output
+    log = logging.getLogger('qmeshcontainer')
+    log.setLevel(logging.DEBUG)
+    console_handler = logging.StreamHandler()
+    log.addHandler(console_handler)
+    #Parse command-line arguments
+    cmdl_arguments = parse_arguments()
+    #Get user and host set-up.
+    user_details, host_system_details = get_user_host_setup(cmdl_arguments.verbose, log)
+    #Process the mount volumes specification
+    cmdl_arguments.mount_volumes = mount_volumes_list(cmdl_arguments.mount_volumes,
+                                                      user_details,
+                                                      cmdl_arguments.verbose, log)
+    #Construct user-dockerfile
+    docker_context_dir = build_docker_context(cmdl_arguments.verbose, log)
+    #Construct user-dockerfile, inside context directory
+    construct_dockerfile(cmdl_arguments.docker_base_image_tag, docker_context_dir,
+                         user_details, cmdl_arguments.verbose, log)
+    #Build docker image from docker context directory
+    docker_user_image_tag = build_docker_image(user_details,
+                                               cmdl_arguments.docker_base_image_tag,
+                                               docker_context_dir,
+                                               cmdl_arguments.verbose, log)
+    #Run container
+    run_docker_container(docker_user_image_tag,
+                         cmdl_arguments.mount_volumes,
+                         host_system_details, cmdl_arguments.verbose, log)
+    #Clean-up temporary files
+    clean_up(docker_context_dir, docker_user_image_tag,
+             cmdl_arguments.cache_images, cmdl_arguments.verbose, log)
+
+if __name__ == '__main__':
+    qmesh_container()

@@ -1,0 +1,14 @@
+AUTHORS.md
+LICENSE
+MANIFEST.in
+README.rst
+VERSION
+setup.py
+qmeshcontainers/05-qmesh-container-welcome
+qmeshcontainers/__init__.py
+qmeshcontainers/container_bashrc
+qmeshcontainers/qmeshcontainer
+qmeshcontainers.egg-info/PKG-INFO
+qmeshcontainers.egg-info/SOURCES.txt
+qmeshcontainers.egg-info/dependency_links.txt
+qmeshcontainers.egg-info/top_level.txt
