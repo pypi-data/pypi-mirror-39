@@ -1,0 +1,3 @@
+[console_scripts]
+iatisplit = iatisplit.__main__:exec
+
