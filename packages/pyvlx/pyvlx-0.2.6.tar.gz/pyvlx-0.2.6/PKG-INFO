@@ -1,0 +1,95 @@
+Metadata-Version: 1.1
+Name: pyvlx
+Version: 0.2.6
+Summary: PyVLX is a wrapper for the Velux KLF 200 API.
+
+PyVLX enables you to run scenes and or open and close velux windows.
+Home-page: https://github.com/Julius2342/pyvlx
+Author: Julius Mittenzwei
+Author-email: julius@mittenzwei.com
+License: LGPL
+Download-URL: https://github.com/Julius2342/pyvlx/archive/0.2.6.zip
+Description: PyVLX - controling VELUX windows with Python
+        ============================================
+        
+        [![Build Status](https://travis-ci.org/Julius2342/pyvlx.svg?branch=master)](https://travis-ci.org/Julius2342/pyvlx)
+        
+        PyVLX uses the Velux KLF 200 interface to control io-Homecontrol devices, e.g. Velux Windows.
+        
+        NEW API!!!
+        ----------
+        
+        Velux published a new API. Connecting to the new API is still work in progress.
+        
+        The [current state can be found here](https://github.com/Julius2342/pyvlx/blob/master/examples/demo.py).
+        
+        This wrapper can already:
+        
+        * Login to KLF 200 with password.
+        * Retrieve scene list.
+        * Run/activate scene.
+        * Retrieve object list.
+        * Set position of specific window (50%)
+        
+        Stay tuned!
+        
+        **Note:** To use version 0.2.\* you have to install the [new Firmware](https://www.velux.com/api/klf200) on your KLF device. If you dont want to use the new firmware install pyvlx==0.1.6.
+        
+        Installation
+        ------------
+        
+        PyVLX can be installed via:
+        
+        ```bash
+        pip3 install pyvlx
+        ```
+        
+        Basic Operations
+        ----------------
+        
+        ```python
+        """Just a demo of the new PyVLX module."""
+        import asyncio
+        from pyvlx import PyVLX, Position
+        
+        
+        async def main(loop):
+            """Demonstrate functionality of PyVLX."""
+            pyvlx = PyVLX('pyvlx.yaml', log_frames=True, loop=loop)
+            # Alternative:
+            # pyvlx = PyVLX(host="192.168.2.127", password="velux123", loop=loop)
+        
+            # Runing scenes:
+            await pyvlx.load_scenes()
+            await pyvlx.scenes["All Windows Closed"].run()
+        
+            # Changing position of windows:
+            await pyvlx.load_nodes()
+            await pyvlx.nodes['Bath'].open()
+            await pyvlx.nodes['Bath'].close()
+            await pyvlx.nodes['Bath'].set_position(Position(position_percent=45))
+        
+            # You can easily rename nodes:
+            # await pyvlx.nodes["Window 10"].rename("Window 11")
+        
+            await pyvlx.disconnect()
+        
+        if __name__ == '__main__':
+            # pylint: disable=invalid-name
+            LOOP = asyncio.get_event_loop()
+            LOOP.run_until_complete(main(LOOP))
+            # LOOP.run_forever()
+            LOOP.close()
+        ```
+        
+        
+        
+Keywords: velux KLF 200 home automation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: System :: Hardware :: Hardware Drivers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
