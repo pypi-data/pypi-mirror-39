@@ -1,0 +1,31 @@
+{% extends "registration/registration_base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Activation Failure" %}{% endblock %}
+
+{% block content %}
+    <p>{% trans "Account activation failed." %}</p>
+    <div class="card form-container">
+        <div class="card-header py-1">
+            <h1 class="d-inline h2">{% trans "Не удалось активировать учетную запись" %}</h1>
+        </div>
+        <div class="card-body p-3 pt-3 pb-3">
+            <div class="registration_form_group registration_message">
+                <div class="send_reqest_form">
+                    <span>{% trans "Попробуйте пройти регистрацию повторно" %}</span>
+                    <p>{% trans "Если проблемы с активацией останутся, обратитесь в службу поддержки клиентов по любому из контактных номеров." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% comment %}
+**registration/activate.html**
+
+Used if account activation fails. With the default setup, has the following context:
+
+``activation_key``
+    The activation key used during the activation attempt.
+{% endcomment %}
