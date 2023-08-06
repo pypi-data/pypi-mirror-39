@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: dedis-cluster
+Version: 1.0.2
+Summary: Redis-cluster plugin for Django
+Home-page: https://github.com/feiwencaho/dedis-cluster.git
+Author: feivincent
+Author-email: hi@feiwenchao.me
+License: UNKNOWN
+Description: # dedis-cluster
+        redis-cluster plugin for django
+        
+        基于redis-py-cluster,实现了使用redis集群作为django缓存的backend
+        
+        ### 安装
+        
+        - 源码安装
+        
+        ```
+        git clone https://github.com/feiwencaho/dedis-cluster.git
+        cd dedis-cluster
+        python setup.py install
+        ```
+        
+        - pip安装
+        
+        ```
+        pip install dedis-cluster
+        ```
+        
+        ### 使用
+        在settings.py中作如下配置
+        ```python
+        CACHES = {
+            'default': {
+                'BACKEND': 'dedis_cluster.cache.RedisClusterCache',
+                # your redis-cluster nodes
+                "LOCATION": [
+                    "redis://192.168.1.4:7000/0",
+                    "redis://192.168.1.4:7001/0",
+                    "redis://192.168.1.4:7002/0",
+                    "redis://192.168.1.4:7003/0",
+                ],
+                'OPTIONS': {
+                    "CLIENT_CLASS": "dedis_cluster.client.DefaultClient",
+                }
+            }
+        }
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
