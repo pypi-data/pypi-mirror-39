@@ -1,0 +1,17 @@
+README.md
+setup.py
+pydif/__init__.py
+pydif/pydif.py
+pydif/test_pydif.py
+pydif.egg-info/PKG-INFO
+pydif.egg-info/SOURCES.txt
+pydif.egg-info/dependency_links.txt
+pydif.egg-info/top_level.txt
+pydif/dual/__init__.py
+pydif/dual/dual.py
+pydif/dual/test_dual.py
+pydif/elementary/__init__.py
+pydif/elementary/elementary.py
+pydif/elementary/test_elementary.py
+pydif/optimize/__init__.py
+pydif/optimize/optimize.py
