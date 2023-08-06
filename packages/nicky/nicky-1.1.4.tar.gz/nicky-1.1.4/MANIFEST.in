@@ -1,0 +1,2 @@
+recursive-include nicky *.txt .gitkeep
+exclude nicky-cli.py
