@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pytracks
+Version: 0.0.1a1
+Summary: pytracks: Acquiring fission-tracks using image processing
+Home-page: https://github.com/pytracks/pytracks
+Author: Alexandre Fioravante de Siqueira
+Author-email: afdesiqueira@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: dtcwt
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: skimage
+
+# pytracks
+
+Procedures for measuring and counting fission tracks in minerals are time-consuming and involve practical problems.
+This is pytracks, a package based on numpy, scipy, scikit-image and other packages, that is capable of counting these tracks automatically.
+This is an alpha version, and it is under heavy development. Thank you for pointing suggestions and reporting bugs.
+
+
