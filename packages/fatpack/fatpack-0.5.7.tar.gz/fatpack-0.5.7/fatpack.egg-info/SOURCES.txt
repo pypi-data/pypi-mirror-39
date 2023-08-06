@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+fatpack/__init__.py
+fatpack/endurance.py
+fatpack/rainflow.py
+fatpack/test.py
+fatpack.egg-info/PKG-INFO
+fatpack.egg-info/SOURCES.txt
+fatpack.egg-info/dependency_links.txt
+fatpack.egg-info/requires.txt
+fatpack.egg-info/top_level.txt
