@@ -1,0 +1,10 @@
+[iotile.device_adapter]
+emulated = iotile.emulate.transport:EmulatedDeviceAdapter
+
+[iotile.virtual_device]
+emulation_demo = iotile.emulate.demo:DemoEmulatedDevice
+reference_1_0 = iotile.emulate.reference:ReferenceDevice
+
+[iotile.virtual_tile]
+refcon_1 = iotile.emulate.reference:ReferenceController
+
