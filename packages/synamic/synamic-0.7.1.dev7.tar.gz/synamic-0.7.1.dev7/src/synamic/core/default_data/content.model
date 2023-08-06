@@ -1,0 +1,29 @@
+title: text|required
+
+created_on: datetime
+
+updated_on: datetime
+
+tags: marker#tags
+
+categories: marker#categories
+
+type: marker#type
+
+path: string
+
+slug: string
+
+id: string
+
+meta_tags: text
+
+meta_description: text
+
+language: string
+
+author: user
+
+__body__: markdown
+# TODO: make marked content take converter from here - make it changeable from markdown to other
+# TODO: so make it swappable at runtime without the real model being changed or database type being changed?
