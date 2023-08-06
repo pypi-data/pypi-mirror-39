@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: expremigen
+Version: 0.0.2
+Summary: Expressive Midi Generation
+Home-page: https://github.com/shimpe/expremigen
+Author: stefaan himpe
+Author-email: stefaan.himpe@gmail.com
+License: GPLv3+
+Description: Expressive Midi Generation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Other Audience
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Artistic Software
+Classifier: Topic :: Multimedia :: Sound/Audio :: MIDI
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3
