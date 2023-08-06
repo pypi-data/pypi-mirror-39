@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: url-normalize
+Version: 1.4.1
+Summary: URL normalization for Python
+Home-page: https://github.com/niksite/url-normalize
+Author: Nikolay Panov
+Author-email: github@npanov.com
+Keywords: url,normalization,normalize
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: six (>=1.11,<2.0)
+Project-URL: Repository, https://github.com/niksite/url-normalize
