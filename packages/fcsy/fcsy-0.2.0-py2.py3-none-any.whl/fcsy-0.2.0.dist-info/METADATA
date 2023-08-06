@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: fcsy
+Version: 0.2.0
+Summary: A package for processing FCS files
+Home-page: https://github.com/nehcgnay/fcsy
+Author: yc
+Author-email: yang.chen@scilifelab.se
+License: MIT license
+Keywords: fcsy
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: numpy (==1.15.4)
+Requires-Dist: pandas (==0.23.4)
+
+====
+fcsy
+====
+
+
+.. image:: https://img.shields.io/pypi/v/fcsy.svg
+        :target: https://pypi.python.org/pypi/fcsy
+
+.. image:: https://img.shields.io/travis/nehcgnay/fcsy.svg
+        :target: https://travis-ci.org/nehcgnay/fcsy
+
+
+
+A package for processing FCS files.
+
+
+* Free software: MIT license
+
+Installation
+------------
+.. code:: python
+
+    pip install fcsy
+
+
+Usage
+-----
+
+Read a fcs file to pandas DataFrame.
+
+.. code:: python
+
+    import fcsy
+
+    df = fcsy.read_fcs('input_file')
+
+Read a fcs file with "long name"
+
+.. code:: python
+
+    df = fcsy.read_fcs('input_file', name_type='long')
+
+    # or only read the names
+
+    long_names = fcsy.read_fcs_names('input_file', name_type='long')
+
+
+Write a data frame to fcs. df.columns is written to both short and long names of the fcs.
+
+.. code:: python
+
+    fcsy.write_fcs(df, 'output_file')
+
+
+Write to fcs with "long name". df.columns and long_names are written to short and long names of the fcs.
+
+.. code:: python
+
+    fcsy.write_fcs(df, 'output_file', long_names=['a','b','c'])
+
+
+
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2018-12-18)
+------------------
+
+* First release on PyPI.
+
+
