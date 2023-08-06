@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+periodicity/__init__.py
+periodicity/acf.py
+periodicity/gp.py
+periodicity/periodogram.py
+periodicity/phase.py
+periodicity.egg-info/PKG-INFO
+periodicity.egg-info/SOURCES.txt
+periodicity.egg-info/dependency_links.txt
+periodicity.egg-info/requires.txt
+periodicity.egg-info/top_level.txt
+periodicity/tests/__init__.py
+periodicity/tests/test_gp.py
