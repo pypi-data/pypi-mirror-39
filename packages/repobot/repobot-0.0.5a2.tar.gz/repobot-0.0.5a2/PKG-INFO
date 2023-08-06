@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: repobot
+Version: 0.0.5a2
+Summary: Programatic github repo automation
+Home-page: https://github.com/nickpalenchar/repobot
+Author: Nick Palenchar
+Author-email: 
+License: MIT
+Description: UNKNOWN
+Keywords: cli
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Provides-Extra: test
