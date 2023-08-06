@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: proknow
+Version: 0.0.1
+Summary: Python library for the ProKnow API.
+Home-page: https://github.com/proknow/proknow-python
+Author: ProKnow
+Author-email: support@proknow.com
+License: UNKNOWN
+Description: # ProKnow Python Library
+        
+        The ProKnow Python library provides convenient access to the ProKnow API from applications written in the Python language. It includes a pre-defined set of classes for API resources that initialize themselves dynamically from API responses.
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
