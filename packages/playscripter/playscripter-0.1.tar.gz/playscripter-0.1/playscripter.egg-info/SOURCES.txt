@@ -1,0 +1,11 @@
+README.md
+setup.py
+playscripter.egg-info/PKG-INFO
+playscripter.egg-info/SOURCES.txt
+playscripter.egg-info/dependency_links.txt
+playscripter.egg-info/requires.txt
+playscripter.egg-info/top_level.txt
+scripter/__init__.py
+scripter/dialogue.py
+scripter/scene.py
+scripter/script.py
