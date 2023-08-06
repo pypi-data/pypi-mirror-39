@@ -1,0 +1,14 @@
+core/__init__.py,sha256=ihXXTscHQPMKq_6EZjgL2NsxlMmxZVOtJtOdBDMDncM,102
+core/database.py,sha256=abZBI79tq510OtimiCMi5OxQ2pwck_hZkb669nm7okE,17382
+core/proxies.py,sha256=UqH2P_m7fVd1E22oh1kSFZEmjDrP_koN_FUpMI42Nzs,2426
+core/request.py,sha256=EqzDI8NorJR4QDdjF_Pr2wBm3GjxpJymzICIS2DXwsM,3777
+core/settings.py,sha256=vVohBx_zy6AYm36jzAq3NmrsGKypdqEKkRk3byYA-JA,3677
+core/thread_pool.py,sha256=Jsf_cJoS8U-NXK74_v4PMJez2JuM-gf9aqlLAG6tn7g,1716
+core/tor_network.py,sha256=5oP32Kc6f5ENdNbEbOT7zjGhpuVqmxt6kBz5S7XPLT8,15111
+core/torrc.py,sha256=87p6uV1m3EYS7CdvvgXYvD4I-ZFUumaLmATl6h7VwKM,655
+core/user_agent.py,sha256=TxQBlqyn66iAoMzR6JjDGVYv_y_gMbuKoaomwiNXyio,1804
+core/winservice.py,sha256=ds3mYd3-yVKhbZgNyYAkbiMkGfNRLj0bXCxjMBA3TT0,1704
+crawler_core-1.0.dist-info/METADATA,sha256=rR9SKJZsdWSeQ2K3offt33VSExzTinMK3odAf3zgRck,429
+crawler_core-1.0.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+crawler_core-1.0.dist-info/top_level.txt,sha256=0ebp8k35dOTHVwbY3UcokRsjC7cWLN_iaJ70tIcmODU,5
+crawler_core-1.0.dist-info/RECORD,,
