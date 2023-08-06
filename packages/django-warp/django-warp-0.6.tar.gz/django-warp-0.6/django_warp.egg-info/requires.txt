@@ -1,0 +1,9 @@
+Django>=1.11
+GDAL>=2.1.0
+django-cors-headers
+django-http-proxy
+django-imagekit
+django-raster>=0.6
+psycopg2
+python-slugify
+requests
