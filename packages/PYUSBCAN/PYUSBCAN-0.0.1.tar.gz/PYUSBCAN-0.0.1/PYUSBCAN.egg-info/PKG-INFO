@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: PYUSBCAN
+Version: 0.0.1
+Summary: A Python tool to control zlg-usbcan
+Home-page: https://github.com/fa1247/PYCAN
+Author: XY Fan
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: pip,USBCAN,ZLG
+Platform: win
+Requires-Python: >=3

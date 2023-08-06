@@ -1,0 +1,12 @@
+setup.py
+PYUSBCAN/CANstruct.py
+PYUSBCAN/ControlCAN.dll
+PYUSBCAN/ControlCAN.h
+PYUSBCAN/ControlCAN.lib
+PYUSBCAN/ControlCAN.py
+PYUSBCAN/__init__.py
+PYUSBCAN.egg-info/PKG-INFO
+PYUSBCAN.egg-info/SOURCES.txt
+PYUSBCAN.egg-info/dependency_links.txt
+PYUSBCAN.egg-info/requires.txt
+PYUSBCAN.egg-info/top_level.txt
