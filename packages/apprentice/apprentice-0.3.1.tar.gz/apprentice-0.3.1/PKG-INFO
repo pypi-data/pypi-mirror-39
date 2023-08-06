@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: apprentice
+Version: 0.3.1
+Summary: Apprentice is a library for deploying and developing actions via Dialogflow and Google Cloud Functions.
+Home-page: https://github.com/andrewgy8/apprentice
+Author: Andrew Graham-Yooll
+Author-email: andrewgy8@gmail.com
+License: GNU
+Description: 
+        # Apprentice
+        [![Build Status](https://travis-ci.com/andrewgy8/apprentice.svg?branch=master)](https://travis-ci.com/andrewgy8/apprentice)
+        [![PyPI version](https://badge.fury.io/py/apprentice.svg)](https://badge.fury.io/py/apprentice)
+        
+        Apprentice is a framework built for developing Google Actions 
+        via [Dialogflow](https://dialogflow.com) and 
+        [Google Cloud (serverless) Functions](https://cloud.google.com/functions/).
+        
+        Includes:
+        - plug-and-play feel to get going quickly
+        - basic Dialogflow API 2.0 response handling
+        - local setup for quick iteration
+        
+        ## Installation
+        
+        ```bash
+        pip install apprentice
+        ```
+        
+        ## Quickstart
+        
+        We recommend you read the full tutorial [here](https://medium.com/@andrew_32881/hey-google-talk-to-24dfd336acd).  
+        
+        A Google Action project will consist of two things:
+        1. [Dialogflow Intent](https://dialogflow.com/docs/intents)
+        1. A webhook to satisfy your users intent
+        
+        To generate a "Hello World" webhook, run:
+        
+        ```bash
+        $ apprentice init
+        ```
+        
+        This will create a file structure:
+        
+        ```bash
+        src/
+            main.py
+            requirements.txt
+        ```
+        
+        Run a local server with 
+        ```bash
+        $ apprentice run
+        ```
+        
+        and expose to localhost port via an https tunnel. Then add the url to the fulfillment
+        webhook in Dialogflow.  
+        
+        For a more indepth example please see the tutorial I wrote 
+        [here](https://medium.com/@andrew_32881/hey-google-talk-to-24dfd336acd).
+        
+        ## Deployment
+        
+        ### Note
+        [`gcloud` cli](https://cloud.google.com/sdk/docs/quickstarts) must be installed and authorized for the following command 
+        to work. If you wish to not have `gcloud` cli installed, you can copy the file contents via the gcloud 
+        function dashboard.   
+        
+        ```bash
+        $ apprentice -f hello_world -s hello_world_agent -e hello_world
+        ```
+        
+        This will generate the command to execute a `gcloud function deploy` via the cli.  
+        
+        ## Contributing
+        Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+        
+        Please make sure to update tests as appropriate.
+        
+        ## License
+        [GNU 3.0](https://choosealicense.com/licenses/gpl-3.0/)
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
