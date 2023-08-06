@@ -1,0 +1,16 @@
+django_slack_oauth/__init__.py,sha256=vqO97AuYAqmogEGU_-SqPYcdX4zOsqNUTPT_OA-SMHc,1017
+django_slack_oauth/admin.py,sha256=xED0L-Dwh6mfn9no6AYvArXquXhkLm6C6ynm-ol5SSA,184
+django_slack_oauth/models.py,sha256=ExmWZKgHCOVRrmfgHshlL0t3q0CxFS5qqg7NEuUiGxA,1269
+django_slack_oauth/pipelines.py,sha256=xYBtU0qED0QS5IAavq9CglduDy9xNOO5gqMgaW_50fM,1266
+django_slack_oauth/urls.py,sha256=dIIa84BMeWN7nnOjeE2O0uZ3FWDXSWxYvf2Mgpn5V2Q,267
+django_slack_oauth/views.py,sha256=emNP9fy5CMNOslQbCbyUEJ-gI05nIwmjmNDpGHPrEr8,3614
+django_slack_oauth/migrations/0001_initial.py,sha256=JKBkf4bbVFE-m4xdDHB9Z2Et249KEQG47sxRGlluRVQ,734
+django_slack_oauth/migrations/0002_slackuser_extras.py,sha256=0KTWwHRYqPom8eiJsv7w9MizNwM-tyyHFb_Uu8xyrOg,433
+django_slack_oauth/migrations/0003_slackuser_accesstoken_length.py,sha256=cmm88YN982O_UbyqwbahpNQLzS5WePkVxVRpPPjajjU,432
+django_slack_oauth/migrations/0004_auto_20161226_1937.py,sha256=fDPsRulKGjRmRJklvfzzRUH7pOgR-bi2oRaZ96BBIW0,1252
+django_slack_oauth/migrations/0005_auto_20161228_2055.py,sha256=1gBIxRINT_lAXnhN9S99M5mIS7vP4znXDENhui-Rhes,496
+django_slack_oauth/migrations/__init__.py,sha256=5FQ0s_2rPa2Vpj_dOhp6usXXAHPT9X-MBVVZLP2Uoqo,23
+django_slack_oauth-1.5.0.dist-info/METADATA,sha256=JbPS2QoP3zPm5YftHMJBVIX1xeEU9PIUy2wxFBzTzdU,5093
+django_slack_oauth-1.5.0.dist-info/RECORD,,
+django_slack_oauth-1.5.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+django_slack_oauth-1.5.0.dist-info/top_level.txt,sha256=sp-_gFr2-N1u39V7rR5UH7l4gvaka_PnQlK8qQX6P4U,19
