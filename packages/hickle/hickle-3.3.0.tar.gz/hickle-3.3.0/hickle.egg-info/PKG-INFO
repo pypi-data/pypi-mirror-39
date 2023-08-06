@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: hickle
+Version: 3.3.0
+Summary: Hickle - a HDF5 based version of pickle
+Home-page: http://github.com/telegraphic/hickle
+Author: Danny Price
+Author-email: dan@thetelegraphic.com
+License: UNKNOWN
+Download-URL: https://github.com/telegraphic/hickle/archive/3.3.0.tar.gz
+Description: UNKNOWN
+Keywords: pickle,hdf5,data storage,data export
+Platform: Cross platform (Linux
+Platform: Mac OSX
+Platform: Windows)
+Requires-Python: >=2.7
+Provides-Extra: scipy
+Provides-Extra: pandas
+Provides-Extra: astropy
