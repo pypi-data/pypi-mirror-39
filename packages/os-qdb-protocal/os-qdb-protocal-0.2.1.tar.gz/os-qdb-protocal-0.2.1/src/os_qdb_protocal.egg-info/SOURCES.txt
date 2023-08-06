@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+src/os_qdb_protocal/VERSION
+src/os_qdb_protocal/__init__.py
+src/os_qdb_protocal/protocal.py
+src/os_qdb_protocal.egg-info/PKG-INFO
+src/os_qdb_protocal.egg-info/SOURCES.txt
+src/os_qdb_protocal.egg-info/dependency_links.txt
+src/os_qdb_protocal.egg-info/not-zip-safe
+src/os_qdb_protocal.egg-info/requires.txt
+src/os_qdb_protocal.egg-info/top_level.txt
+tests/test_protocal.py

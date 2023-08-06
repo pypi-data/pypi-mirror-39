@@ -1,0 +1,11 @@
+include LICENSE
+include README.md
+include MANIFEST.in
+include requirements.txt
+include src/os_qdb_protocal/VERSION
+graft src
+graft tests
+global-exclude __pycache__
+global-exclude *.py[co]
+
+
