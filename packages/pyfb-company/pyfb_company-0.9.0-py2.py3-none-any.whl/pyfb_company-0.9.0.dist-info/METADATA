@@ -1,0 +1,111 @@
+Metadata-Version: 2.0
+Name: pyfb-company
+Version: 0.9.0
+Summary: Company package for pyfreebilling application
+Home-page: https://github.com/mwolff44/pyfb-company
+Author: Mathias WOLFF
+Author-email: mathias@celea.org
+License: MIT
+Keywords: pyfb-company
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django :: 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: django-model-utils (>=2.0)
+Requires-Dist: django-extensions (>=2.1.3)
+Requires-Dist: djangorestframework (>=3.7.7)
+Requires-Dist: django-crispy-forms (>=1.7.0)
+
+=============================
+pyfb-company
+=============================
+
+.. image:: https://badge.fury.io/py/pyfb-company.svg
+    :target: https://badge.fury.io/py/pyfb-company
+
+.. image:: https://travis-ci.org/mwolff44/pyfb-company.svg?branch=master
+    :target: https://travis-ci.org/mwolff44/pyfb-company
+
+.. image:: https://codecov.io/gh/mwolff44/pyfb-company/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/mwolff44/pyfb-company
+
+Company package for pyfreebilling application
+
+Documentation
+-------------
+
+The full documentation is at https://pyfb-company.readthedocs.io.
+
+Quickstart
+----------
+
+Install pyfb-company::
+
+    pip install pyfb-company
+
+Add it to your `INSTALLED_APPS`:
+
+.. code-block:: python
+
+    INSTALLED_APPS = (
+        ...
+        'pyfb_company.apps.PyfbCompanyConfig',
+        ...
+    )
+
+Add pyfb-company's URL patterns:
+
+.. code-block:: python
+
+    from pyfb_company import urls as pyfb_company_urls
+
+
+    urlpatterns = [
+        ...
+        url(r'^', include(pyfb_company_urls)),
+        ...
+    ]
+
+Features
+--------
+
+* TODO
+
+Running Tests
+-------------
+
+Does the code actually work?
+
+::
+
+    source <YOURVIRTUALENV>/bin/activate
+    (myenv) $ pip install tox
+    (myenv) $ tox
+
+Credits
+-------
+
+Tools used in rendering this package:
+
+*  Cookiecutter_
+*  `cookiecutter-djangopackage`_
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`cookiecutter-djangopackage`: https://github.com/pydanny/cookiecutter-djangopackage
+
+
+
+
+History
+-------
+
+0.9.0 (2018-12-10)
+++++++++++++++++++
+
+* First release on PyPI.
+
+
