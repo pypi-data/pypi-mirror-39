@@ -1,0 +1,143 @@
+Metadata-Version: 2.1
+Name: feedsubs
+Version: 0.0.2
+Summary: RSS feed reader for Python 3
+Home-page: https://github.com/NicolasLM/feedsubs
+Author: Nicolas Le Manchet
+Author-email: nicolas@lemanchet.fr
+License: MIT
+Keywords: rss atom json feed feeds reader
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Web Environment
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content :: News/Diary
+Classifier: Framework :: Django
+Requires-Dist: django
+Requires-Dist: django-allauth
+Requires-Dist: django-bulma
+Requires-Dist: atoma
+Requires-Dist: bleach
+Requires-Dist: beautifulsoup4
+Requires-Dist: psycopg2
+Requires-Dist: requests
+Requires-Dist: spinach
+Requires-Dist: Pillow
+Requires-Dist: python-decouple
+Provides-Extra: dev
+Requires-Dist: django-debug-toolbar ; extra == 'dev'
+Requires-Dist: pycodestyle ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest-django ; extra == 'dev'
+Provides-Extra: prod
+Requires-Dist: boto3 ; extra == 'prod'
+Requires-Dist: ddtrace ; extra == 'prod'
+Requires-Dist: django-redis ; extra == 'prod'
+Requires-Dist: django-storages ; extra == 'prod'
+Requires-Dist: django-xff ; extra == 'prod'
+Requires-Dist: waitress ; extra == 'prod'
+Requires-Dist: whitenoise ; extra == 'prod'
+Requires-Dist: raven ; extra == 'prod'
+
+Feedsubs
+========
+
+.. image:: https://travis-ci.org/NicolasLM/feedsubs.svg?branch=master
+    :target: https://travis-ci.org/NicolasLM/feedsubs
+.. image:: https://coveralls.io/repos/github/NicolasLM/feedsubs/badge.svg?branch=master
+    :target: https://coveralls.io/github/NicolasLM/feedsubs?branch=master
+
+RSS feed reader for Python 3.
+
+.. image:: https://raw.githubusercontent.com/NicolasLM/feedsubs/master/misc/screenshot.png
+    :target: https://feedsubs.com
+
+Features:
+
+* Support for RSS, Atom and JSON feeds
+* Background synchronization
+* Caching and resizing of image embedded in feeds
+* Removal of tracking pixels
+* Grouping of feeds with tags
+* Multi-users
+* MIT licensed
+
+Hosted service
+--------------
+
+A free hosted version runs Feedsubs at `feedsubs.com <https://feedsubs.com>`_,
+it is the easiest way to start using the software without installing anything.
+
+Development guide
+-----------------
+
+Feedsubs is a typical Django project, anyone familiar with Django will feel
+right at home. It requires:
+
+* Python 3.6+
+* Postgresql database
+* Redis server for background tasks
+
+Quickstart::
+
+    git clone git@github.com:NicolasLM/feedsubs.git
+    cd feedsubs/
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install -e .[dev]
+    touch .env  # Put SECRET_KEY=foo and DB_PASSWORD=foo there
+    manage.py migrate
+    manage.py runserver
+
+Background task workers can be started with::
+
+    manage.py spinach
+
+
+Self-hosting
+------------
+
+Feedsubs is a feed reader primarily focused toward large multi-users
+installations, it may not be the easiest choice to host as a personal reader.
+That being said, Docker makes it simple to deploy:
+
+* Make your own settings module based on `feedsubs/settings/prod.py`
+* ``docker run -d -v path/to/my_settings.py:/my_settings.py -e DJANGO_SETTINGS_MODULE=my_settings -p 8000:8000 nicolaslm/feedsubs waitress``
+* Serve the port 8000 through a reverse proxy like nginx or caddy
+
+Users can also deploy Feedsubs with pip instead of Docker::
+
+   pip install feedsubs[prod]
+   manage.py waitress
+
+Copyright (c) 2018 Nicolas Le Manchet
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+

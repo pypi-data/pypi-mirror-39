@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="2.0">
+
+    <head>
+        <title>Feedsubs Subscriptions</title>
+        <dateCreated>{% now "r" %}</dateCreated>
+    </head>
+
+    <body>
+    {% for subscription in object_list %}
+        <outline text="{{ subscription.feed.name }}"
+                 title="{{ subscription.feed.name }}"
+                 type="rss"
+                 xmlUrl="{{ subscription.feed.uri }}"/>
+    {% endfor %}
+    </body>
+
+</opml>
