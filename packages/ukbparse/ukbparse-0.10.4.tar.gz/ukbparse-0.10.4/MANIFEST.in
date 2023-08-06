@@ -1,0 +1,9 @@
+include           LICENSE
+include           COPYRIGHT
+include           CHANGELOG.rst
+include           README.rst
+include           setup.cfg
+include           requirements.txt
+include           requirements-dev.txt
+recursive-include ukbparse/data *
+recursive-include scripts       *
