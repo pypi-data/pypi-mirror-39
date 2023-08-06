@@ -1,0 +1,15 @@
+MANIFEST.in
+README.rst
+setup.py
+Kittens/__init__.py
+Kittens/config.py
+Kittens/pixmaps.py
+Kittens/utils.py
+Kittens/widgets.py
+astro_kittens.egg-info/PKG-INFO
+astro_kittens.egg-info/SOURCES.txt
+astro_kittens.egg-info/dependency_links.txt
+astro_kittens.egg-info/requires.txt
+astro_kittens.egg-info/top_level.txt
+tests/__init__.py
+tests/test_utils.py
