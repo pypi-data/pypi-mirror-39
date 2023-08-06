@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: django-distributed-users
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://gitlab.com/Spazzy757/django-distributed-users
+Author: Brendan Kamp
+Author-email: brendankamp757@gmail.com
+License: UNKNOWN
+Description: # django-distributed-users
+        
+        A library to help handle a user in a different database to the default
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
