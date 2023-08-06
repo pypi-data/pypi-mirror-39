@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: stepist
+Version: 0.0.6.1
+Summary: Data process utils
+Home-page: https://github.com/electronick1/stepist
+Author: Aleh Shydlouski
+Author-email: oleg.ivye@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/electronick1/stepist/archive/0.0.6.tar.gz
+Keywords: data,ai,distribute
+Platform: UNKNOWN
+Requires-Dist: tqdm (==4.25.0)
+Requires-Dist: redis (==3.0.1)
+Requires-Dist: blinker (==1.4)
+Requires-Dist: click (==7.0)
+Requires-Dist: ujson (==1.35)
+
+UNKNOWN
+
+
