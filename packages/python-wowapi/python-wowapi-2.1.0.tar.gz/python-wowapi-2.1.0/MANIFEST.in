@@ -1,0 +1,12 @@
+include setup.py
+include README.md
+include CHANGELOG.md
+include Makefile
+include MANIFEST.in
+include LICENSE.txt
+include Makefile
+include pytest.ini
+recursive-include docs *
+recursive-exclude * *.py[co]
+recursive-exclude * *.DS_Store
+recursive-exclude * __pycache__
