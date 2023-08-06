@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+VERSION
+pkg_utils.py
+setup.py
+requirements/setup.pip
+requirements/tests.pip
+tensorflow_auto_detect.egg-info/PKG-INFO
+tensorflow_auto_detect.egg-info/SOURCES.txt
+tensorflow_auto_detect.egg-info/dependency_links.txt
+tensorflow_auto_detect.egg-info/requires.txt
+tensorflow_auto_detect.egg-info/top_level.txt
+tfdetect/__init__.py
+tfdetect/cuda.py
+tfdetect/pkg.py
+tfdetect/test_pkg.py
+tfdetect/utils.py
