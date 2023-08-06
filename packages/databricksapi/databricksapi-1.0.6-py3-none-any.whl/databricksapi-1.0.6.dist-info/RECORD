@@ -1,0 +1,17 @@
+databricksapi/Clusters.py,sha256=pyx4pxGS44xlIUjCi9jS8gdcL0o2FKP2WudS9axqk2E,6551
+databricksapi/DBFS.py,sha256=CYbdieRnvSxN-wXRX4GXqkKgZDP0wZ_3ap1WBLJXC24,2386
+databricksapi/Databricks.py,sha256=oP4b_8ZOGg6q5TJl8WSIrcIrBfky9zau3rPNGvVU7LM,1603
+databricksapi/Groups.py,sha256=uDopm353WD-tpddOzvG4gQnJGYGpalqQ_frdY9X86k8,2825
+databricksapi/InstanceProfile.py,sha256=R2PiFkDNvGv5u7ctL9iwXN0t4TYN049VnQqeSu05aJw,764
+databricksapi/Jobs.py,sha256=yT-8oe91b3zrDB-YzB9XDc5rdrmoC5WLrwDd2bBQbj4,6341
+databricksapi/Libraries.py,sha256=tsz5MF8Jgm4tXaq5B7cd29zXtsmxWr5PlfDMrHFVO5k,1071
+databricksapi/SCIM.py,sha256=7Tv_madDx71n5uSj49Xc_2RJ2GvXWcjD3D9JL6cqssE,4321
+databricksapi/Secrets.py,sha256=UlyL5fV4ub03tqNqLPgSboOyioTEWYbz3ZfzFmDghXc,2700
+databricksapi/Token.py,sha256=ZYw4y76CzASOPrs2bQ-rqRUWXFZtKPgikGc0MjTU5N0,727
+databricksapi/Workspace.py,sha256=j5X-6cxwCx-d_4o5RPTGVzYUFVsfAymX3_1DKM6YL7A,1570
+databricksapi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+databricksapi-1.0.6.dist-info/LICENSE,sha256=7d-0ZTmmRXWjJKu-PjUWGVYgFbOKoMD52rp4kyKHNpE,1072
+databricksapi-1.0.6.dist-info/METADATA,sha256=0l6nszJbWsqJAWrkijE8EWI1ZhIivhINMrNfc9gqQhQ,13720
+databricksapi-1.0.6.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+databricksapi-1.0.6.dist-info/top_level.txt,sha256=xpUZddORq3naiAhRc-8I-dSnRN9IDnN22hhvVdRnjJQ,14
+databricksapi-1.0.6.dist-info/RECORD,,
