@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: gwcs
+Version: 0.10.0
+Summary: Generalized World Coordinate System
+Home-page: https://gwcs.readthedocs.io/en/latest/
+Author: gwcs developers
+Author-email: help@stsci.edu
+License: BSD
+Description: 
+        This is an Astropy affiliated package.
+        
+Platform: UNKNOWN
+Requires: astropy
+Requires: asdf
+Provides: gwcs
+Requires-Python: >=3.5
