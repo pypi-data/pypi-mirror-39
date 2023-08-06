@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: stytra
+Version: 0.7
+Summary: A modular package to control stimulation and track behavior in zebrafish experiments.
+Home-page: UNKNOWN
+Author: Vilim Stih, Luigi Petrucco @portugueslab
+Author-email: vilim@neuro.mpg.de
+License: GPLv3+
+Project-URL: Source, https://github.com/portugueslab/stytra
+Project-URL: Tracker, https://github.com/portugueslab/stytra/issues
+Keywords: tracking behavior experiments
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: pyqtgraph (>=0.10.0)
+Requires-Dist: numpy
+Requires-Dist: numba
+Requires-Dist: pandas
+Requires-Dist: qdarkstyle
+Requires-Dist: qimage2ndarray
+Requires-Dist: deepdish
+Requires-Dist: pims
+Requires-Dist: GitPython
+Requires-Dist: colorspacious
+Requires-Dist: arrayqueues (>=1.1.0b0)
+Requires-Dist: pillow
+Requires-Dist: scikit-image
+Requires-Dist: imageio
+Requires-Dist: lightparam (>=0.35)
+
+UNKNOWN
+
+
