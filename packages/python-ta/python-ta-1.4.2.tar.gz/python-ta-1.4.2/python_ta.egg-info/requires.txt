@@ -1,0 +1,13 @@
+astroid<2.1,>=2.0
+funcparserlib
+hypothesis
+pycodestyle
+pylint<2.2,>=2.1
+nose
+colorama
+six
+jinja2
+pygments
+
+[dev]
+graphviz

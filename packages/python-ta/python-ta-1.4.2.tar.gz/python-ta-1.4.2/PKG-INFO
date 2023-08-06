@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: python-ta
+Version: 1.4.2
+Summary: Code checking tool for teaching Python
+Home-page: http://github.com/pyta-uoft/pyta
+Author: David Liu
+Author-email: david@cs.toronto.edu
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: ~=3.7
+Provides-Extra: dev
