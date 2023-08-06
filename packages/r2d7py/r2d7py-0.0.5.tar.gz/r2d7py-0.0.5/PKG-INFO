@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: r2d7py
+Version: 0.0.5
+Summary: R2D7 shade controller over Ethernet
+Home-page: https://github.com/dubnom/r2d7py
+Author: Michael Dubno
+Author-email: michael@dubno.com
+License: UNKNOWN
+Description: # R2D7 Shade Controller Package
+        
+        Package to control R2D7 shades through an Ethernet adaptor
+        using Python.
+        
+        # Example:
+        
+            from time import sleep
+            from r2d7py import *
+            
+            hub = R2D7Hub( 'host.test.com', 4008 )
+        
+            # Address=1, Unit=2, shade traversal time=14.2
+            shade = hub.shade( 1, 2, 14.2 )
+        
+            # Open the shade
+            shade.open()
+            sleep(15.)
+        
+            # Position the shade half way
+            shade.position = 50.
+            sleep(15.)
+        
+            # Close the interface
+            hub.close()
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
