@@ -1,0 +1,15 @@
+seco/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+seco/range/__init__.py,sha256=Oc1A0c1pCb3mjiWeUwjX-8wTVjGX0eggQbarV_weBFo,4614
+seco/range/sync/__init__.py,sha256=C-oCgwMiNgwXF8p0VF9ViK1yIDTio6XaOS53WGiQ1I8,7088
+seco/range/sync/constants.py,sha256=oyDoxgr9n-pCJrbCK9TBLT79rb8Vu78WDqlPB4hId_o,175
+seco/range/sync/git_sync.py,sha256=t8qurWtSE4Jv3AMxl65tvLsTKXs4DXGnYV4vUHGbNb4,843
+seco/range/sync/http.py,sha256=Z0LQ5JsaRN4A7Okoz8wAu6e-ZlA-P8XjKHY8DEVUeDw,1550
+seco/range/sync/index.py,sha256=Sml6KCs4EuPOvssBVuVPvOW6qalFyPmdnQoIOR3qimo,739
+seco/range/sync/local.py,sha256=UyNiRIaAloyohayF9fpAAKEXqaZgs1UyoFC4IHvmRUg,839
+seco/range/sync/svn.py,sha256=K_wSJ3ox9IKmKnTQUy7zO5Tm_8ugLsYXqXQX45bdyak,838
+seco/range/sync/version.py,sha256=VooVZZGk-UritJZrOIcgacxY0Unl2q9BwjxiOi9x0zU,356
+seco_range-1.0.dist-info/LICENSE.txt,sha256=iZMaSGdZK0dYYXhf4lyy5eNtiN9QDKTeHb8XIUjgquI,1530
+seco_range-1.0.dist-info/METADATA,sha256=rYyHjW2l3f9sDJtIBcLHj_FRVSvOgkLVMG0r6b1Jo9M,172
+seco_range-1.0.dist-info/WHEEL,sha256=ZvfnntGaZglpRLAKVkx18HrxfMwCXrA0b-ARJVnnMrw,92
+seco_range-1.0.dist-info/top_level.txt,sha256=o8-VK8fy0fcXjseNTH8iRL7QT1L1m1mcygWSF0G1Q9c,5
+seco_range-1.0.dist-info/RECORD,,
