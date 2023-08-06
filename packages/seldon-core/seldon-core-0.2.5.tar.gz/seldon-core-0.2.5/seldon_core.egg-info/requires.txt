@@ -1,0 +1,10 @@
+flask
+flask-cors
+redis
+tornado
+requests
+numpy
+flatbuffers
+protobuf
+grpcio
+tensorflow
