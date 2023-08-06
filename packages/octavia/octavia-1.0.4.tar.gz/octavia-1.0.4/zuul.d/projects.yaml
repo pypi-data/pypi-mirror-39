@@ -1,0 +1,127 @@
+# Note: Some official OpenStack wide jobs are still defined in the
+#       project-config repository
+- project:
+    templates:
+      - check-requirements
+      - periodic-stable-jobs-neutron
+      - openstack-python-jobs
+      - openstack-python35-jobs
+      - publish-openstack-docs-pti
+      - release-notes-jobs
+    check:
+      jobs:
+        - neutron-lbaasv2-dsvm-api
+        - neutron-lbaasv2-dsvm-py3x-api
+        - neutron-lbaasv2-dsvm-scenario:
+            voting: false
+            irrelevant-files:
+              - ^.*\.rst$
+              - ^api-ref/.*$
+              - ^doc/.*$
+              - ^etc/.*$
+              - ^releasenotes/.*$
+              - ^tempest/hacking/.*$
+              - ^tempest/tests/.*$
+        - neutron-lbaasv2-dsvm-py3x-scenario:
+            voting: false
+            irrelevant-files:
+              - ^.*\.rst$
+              - ^api-ref/.*$
+              - ^doc/.*$
+              - ^etc/.*$
+              - ^releasenotes/.*$
+              - ^tempest/hacking/.*$
+              - ^tempest/tests/.*$
+        - octavia-tox-functional
+        - octavia-tox-functional-py35
+        - octavia-v1-dsvm-scenario:
+            irrelevant-files:
+              - ^.*\.rst$
+              - ^api-ref/.*$
+              - ^doc/.*$
+              - ^etc/.*$
+              - ^releasenotes/.*$
+              - ^tempest/hacking/.*$
+              - ^tempest/tests/.*$
+        - octavia-v1-dsvm-py3x-scenario:
+            irrelevant-files:
+              - ^.*\.rst$
+              - ^api-ref/.*$
+              - ^doc/.*$
+              - ^etc/.*$
+              - ^releasenotes/.*$
+              - ^tempest/hacking/.*$
+              - ^tempest/tests/.*$
+        - octavia-v1-dsvm-scenario-multinode:
+            irrelevant-files:
+              - ^.*\.rst$
+              - ^api-ref/.*$
+              - ^doc/.*$
+              - ^etc/.*$
+              - ^releasenotes/.*$
+              - ^tempest/hacking/.*$
+              - ^tempest/tests/.*$
+        - octavia-v1-dsvm-py3x-scenario-multinode:
+            irrelevant-files:
+              - ^.*\.rst$
+              - ^api-ref/.*$
+              - ^doc/.*$
+              - ^etc/.*$
+              - ^releasenotes/.*$
+              - ^tempest/hacking/.*$
+              - ^tempest/tests/.*$
+        - octavia-v1-dsvm-scenario-kvm-centos.7:
+            voting: false
+            irrelevant-files:
+              - ^.*\.rst$
+              - ^api-ref/.*$
+              - ^doc/.*$
+              - ^etc/.*$
+              - ^releasenotes/.*$
+              - ^tempest/hacking/.*$
+              - ^tempest/tests/.*$
+        - openstack-tox-cover
+    gate:
+      queue: octavia
+      jobs:
+        - octavia-tox-functional
+        - octavia-tox-functional-py35
+        - octavia-v1-dsvm-scenario:
+            irrelevant-files:
+              - ^.*\.rst$
+              - ^api-ref/.*$
+              - ^doc/.*$
+              - ^etc/.*$
+              - ^releasenotes/.*$
+              - ^tempest/hacking/.*$
+              - ^tempest/tests/.*$
+        - octavia-v1-dsvm-py3x-scenario:
+            irrelevant-files:
+              - ^.*\.rst$
+              - ^api-ref/.*$
+              - ^doc/.*$
+              - ^etc/.*$
+              - ^releasenotes/.*$
+              - ^tempest/hacking/.*$
+              - ^tempest/tests/.*$
+        - octavia-v1-dsvm-scenario-multinode:
+            irrelevant-files:
+              - ^.*\.rst$
+              - ^api-ref/.*$
+              - ^doc/.*$
+              - ^etc/.*$
+              - ^releasenotes/.*$
+              - ^tempest/hacking/.*$
+              - ^tempest/tests/.*$
+        - octavia-v1-dsvm-py3x-scenario-multinode:
+            irrelevant-files:
+              - ^.*\.rst$
+              - ^api-ref/.*$
+              - ^doc/.*$
+              - ^etc/.*$
+              - ^releasenotes/.*$
+              - ^tempest/hacking/.*$
+              - ^tempest/tests/.*$
+        - neutron-lbaasv2-dsvm-api
+        - neutron-lbaasv2-dsvm-py3x-api
+        - openstack-tox-cover
