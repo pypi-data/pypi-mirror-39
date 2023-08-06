@@ -1,0 +1,15 @@
+README.md
+setup.py
+src/__init__.py
+src/formaters.py
+src/w2re.py
+src/prefix_tree/__init__.py
+src/prefix_tree/letter_range_utils.py
+src/prefix_tree/primitives.py
+src/prefix_tree/tree.py
+tests/__init__.py
+w2re.egg-info/PKG-INFO
+w2re.egg-info/SOURCES.txt
+w2re.egg-info/dependency_links.txt
+w2re.egg-info/entry_points.txt
+w2re.egg-info/top_level.txt

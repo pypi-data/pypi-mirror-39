@@ -1,0 +1,3 @@
+[console_scripts]
+w2re = src.w2re:main
+
