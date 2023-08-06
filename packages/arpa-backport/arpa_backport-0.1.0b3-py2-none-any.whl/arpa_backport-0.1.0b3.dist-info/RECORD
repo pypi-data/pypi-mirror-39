@@ -1,0 +1,15 @@
+arpa_backport/__init__.py,sha256=eifoFJ6-NEKQ_2ni7sSzyafFy6yFdXoPEVbTF47rzps,2226
+arpa_backport/api.py,sha256=MGJ8_wDUSwomVQgGXX7CFoAPnV-Ah7i5lt6V0cwjG_I,1565
+arpa_backport/exceptions.py,sha256=Ldj-dpI1J-YZeQxXGlu8p-VgKID2xvgXrXvjHucSQpw,466
+arpa_backport/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arpa_backport/models/base.py,sha256=1QheN_Tt9vCcQ1Nwd7V5eXsp_2MZEY3Drb2SlC3dOQw,3768
+arpa_backport/models/simple.py,sha256=KA-WoMYohy-cHcJVsd5LgjCKTVFkNED0LRrNYnDJznw,1956
+arpa_backport/parsers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arpa_backport/parsers/base.py,sha256=O5ogqx0slNRGJk2ilWrSfeqlRVHbp-xV3Q_a1Qu3DWU,410
+arpa_backport/parsers/quick.py,sha256=yw_0qKNCdvfX1xsmJqIOHDu_8xMYdK_pneNSzvQafAI,3167
+arpa_backport-0.1.0b3.dist-info/AUTHORS.md,sha256=7jxBXs3Id3Rx0gZ0eEWgfZpxVA8_9FxmWELUWLtdwB0,190
+arpa_backport-0.1.0b3.dist-info/LICENSE,sha256=I2uZDKqT1TBDUStuEBeJaAK0j2kOtm2-v9DRj_XFFsk,1076
+arpa_backport-0.1.0b3.dist-info/METADATA,sha256=Sr7p-9yiODXDjrQHXO5d_0ozJ52m2UZ6XYPeAtOESqg,4741
+arpa_backport-0.1.0b3.dist-info/WHEEL,sha256=ZvfnntGaZglpRLAKVkx18HrxfMwCXrA0b-ARJVnnMrw,92
+arpa_backport-0.1.0b3.dist-info/top_level.txt,sha256=EpTg1cPQruVrdXnJJ9Mwzs9RpvjYJSy4KOyYgRtyuVw,14
+arpa_backport-0.1.0b3.dist-info/RECORD,,
