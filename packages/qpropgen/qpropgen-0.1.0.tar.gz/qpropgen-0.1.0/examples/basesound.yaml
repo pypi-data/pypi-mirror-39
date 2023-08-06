@@ -1,0 +1,8 @@
+class: BaseSound
+properties:
+    - name: baseFrequency
+      type: qreal
+    - name: waveType
+      type: int
+    - name: name
+      type: QString
