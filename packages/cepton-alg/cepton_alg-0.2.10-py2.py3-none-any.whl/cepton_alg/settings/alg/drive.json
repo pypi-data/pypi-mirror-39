@@ -1,0 +1,13 @@
+{
+    "tasks": [
+        {
+            "name": "RemoveMotion"
+        },
+        {
+            "name": "FilterGround"
+        },
+        {
+            "name": "FilterStray"
+        }
+    ]
+}

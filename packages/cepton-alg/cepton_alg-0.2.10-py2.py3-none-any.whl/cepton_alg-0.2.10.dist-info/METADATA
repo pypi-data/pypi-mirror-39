@@ -1,0 +1,47 @@
+Metadata-Version: 2.0
+Name: cepton-alg
+Version: 0.2.10
+Summary: Cepton Python
+Home-page: https://github.com/ceptontech/cepton_alg_redist
+Author: Cepton Technologies
+Author-email: support@cepton.com
+License: UNKNOWN
+Keywords: cepton
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.3
+Provides-Extra: mask
+Provides-Extra: capture
+Requires-Dist: cepton-sdk (>=1.10.1)
+Requires-Dist: imageio
+Requires-Dist: laspy
+Requires-Dist: matplotlib
+Requires-Dist: numpy-stl
+Requires-Dist: numpy
+Requires-Dist: parse
+Requires-Dist: pillow
+Requires-Dist: plyfile
+Requires-Dist: pynmea2
+Requires-Dist: pyqt5
+Requires-Dist: pyserial
+Requires-Dist: scipy
+Requires-Dist: seaborn
+Requires-Dist: transforms3d
+Requires-Dist: uuid
+Requires-Dist: vispy
+Provides-Extra: capture
+Requires-Dist: netifaces; extra == 'capture'
+Provides-Extra: mask
+Requires-Dist: pillow; extra == 'mask'
+Requires-Dist: pykdtree; extra == 'mask'
+
+Cepton Python Alg
+=================
+
+## Installation
+
+```sh
+pip install cepton_alg
+```
+
