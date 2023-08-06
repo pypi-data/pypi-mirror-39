@@ -1,0 +1,5 @@
+Django==1.11.15
+djangorestframework==3.7.3
+core-explore-common-app==1.0.0-rc2
+core-federated-search-app==1.0.0-rc2
+core-main-app==1.0.0-rc2
