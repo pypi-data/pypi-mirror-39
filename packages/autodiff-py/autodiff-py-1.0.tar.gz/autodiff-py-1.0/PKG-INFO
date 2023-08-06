@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: autodiff-py
+Version: 1.0
+Summary: Automatic Differentiation package
+Home-page: https://github.com/cs207FinalProjectGroup/cs207-FinalProject
+Author: Ellie Han, Julien Laasri, Brian Lin, Bhaven Patel
+License: MIT
+Description: Sondak's Disciples
+        
+        CS207 Group #14
+        
+        Team Members: Ellie Han, Julien Laasri, Brian Lin, Bhaven Patel
+        
+        [![Build Status](https://travis-ci.org/cs207FinalProjectGroup/cs207-FinalProject.svg?branch=master)](https://travis-ci.org/cs207FinalProjectGroup/cs207-FinalProject)
+        
+        [![Coverage Status](https://coveralls.io/repos/github/cs207FinalProjectGroup/cs207-FinalProject/badge.svg?branch=master&service=github)](https://coveralls.io/github/cs207FinalProjectGroup/cs207-FinalProject?branch=master&service=github)
+        
+        Coverall's badge may take some time to update, click on it for updated information.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
