@@ -1,0 +1,16 @@
+README.md
+setup.py
+DeepTCR/DeepTCR_S.py
+DeepTCR/DeepTCR_U.py
+DeepTCR/__init__.py
+DeepTCR.egg-info/PKG-INFO
+DeepTCR.egg-info/SOURCES.txt
+DeepTCR.egg-info/dependency_links.txt
+DeepTCR.egg-info/top_level.txt
+DeepTCR/supervised_functions/Layers.py
+DeepTCR/supervised_functions/__init__.py
+DeepTCR/supervised_functions/data_processing.py
+DeepTCR/supervised_functions/utils.py
+DeepTCR/unsupervised_functions/Layers.py
+DeepTCR/unsupervised_functions/__init__.py
+DeepTCR/unsupervised_functions/utils.py
