@@ -1,0 +1,10 @@
+README.md
+setup.py
+readonlystorage/__init__.py
+readonlystorage.egg-info/PKG-INFO
+readonlystorage.egg-info/SOURCES.txt
+readonlystorage.egg-info/dependency_links.txt
+readonlystorage.egg-info/requires.txt
+readonlystorage.egg-info/top_level.txt
+tests/__init__.py
+tests/test_readonly_storage.py
