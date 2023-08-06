@@ -1,0 +1,14 @@
+
+[dev]
+pytest===3.2.2
+pytest-xdist
+flake8==3.4.1
+mypy==0.641
+
+[lint]
+flake8==3.4.1
+mypy==0.641
+
+[test]
+pytest===3.2.2
+pytest-xdist
