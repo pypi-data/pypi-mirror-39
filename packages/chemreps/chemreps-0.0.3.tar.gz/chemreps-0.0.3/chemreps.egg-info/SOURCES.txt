@@ -1,0 +1,16 @@
+README.md
+setup.py
+chemreps/__init__.py
+chemreps/bag_of_bonds.py
+chemreps/bat.py
+chemreps/coulomb_matrix.py
+chemreps/just_bonds.py
+chemreps.egg-info/PKG-INFO
+chemreps.egg-info/SOURCES.txt
+chemreps.egg-info/dependency_links.txt
+chemreps.egg-info/requires.txt
+chemreps.egg-info/top_level.txt
+chemreps/utils/__init__.py
+chemreps/utils/bag_handler.py
+chemreps/utils/calcs.py
+chemreps/utils/molecule.py
