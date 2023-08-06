@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+soucevi1_dist_chat/CMessage.py
+soucevi1_dist_chat/CNode.py
+soucevi1_dist_chat/__init__.py
+soucevi1_dist_chat/__main__.py
+soucevi1_dist_chat/cli.py
+soucevi1_dist_chat/colors.py
+soucevi1_dist_chat.egg-info/PKG-INFO
+soucevi1_dist_chat.egg-info/SOURCES.txt
+soucevi1_dist_chat.egg-info/dependency_links.txt
+soucevi1_dist_chat.egg-info/entry_points.txt
+soucevi1_dist_chat.egg-info/not-zip-safe
+soucevi1_dist_chat.egg-info/requires.txt
+soucevi1_dist_chat.egg-info/top_level.txt
