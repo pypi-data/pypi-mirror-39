@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "vremoteapi"
+version = "0.1.12"
+description = "Mecanismo para permitir chamada de funcao do backend remotamente"
+authors = ["Flavio <fvilante1@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
