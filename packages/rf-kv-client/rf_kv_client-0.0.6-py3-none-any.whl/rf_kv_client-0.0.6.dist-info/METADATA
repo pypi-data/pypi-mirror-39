@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: rf-kv-client
+Version: 0.0.6
+Summary: RedForester bindings for Astorage KV
+Home-page: https://redforester.com
+Author: Red Forester
+Author-email: tech@redforester.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: python-dateutil (==2.6.1)
+Requires-Dist: urllib3 (==1.24.1)
+Requires-Dist: acapelladb (==0.3.5)
+
+UNKNOWN
+
+
