@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: example-pkg4
+Version: 0.0.1
+Summary: A small example package
+Home-page: https://github.com/pj9039/example_pkg4
+Author: kms
+Author-email: kms_14@naver.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: python-telegram-bot (>=11.1)
+
+# Example Package
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
