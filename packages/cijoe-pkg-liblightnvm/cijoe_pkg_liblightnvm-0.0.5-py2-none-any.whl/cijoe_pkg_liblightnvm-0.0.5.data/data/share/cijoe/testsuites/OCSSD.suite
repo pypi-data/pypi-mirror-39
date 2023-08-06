@@ -1,0 +1,6 @@
+liblightnvm_dev.sh
+liblightnvm_buf.sh
+liblightnvm_addr_conv.sh
+liblightnvm_cmd_erase.sh
+liblightnvm_cmd_wre_vector.sh
+liblightnvm_vblk_wre.sh
