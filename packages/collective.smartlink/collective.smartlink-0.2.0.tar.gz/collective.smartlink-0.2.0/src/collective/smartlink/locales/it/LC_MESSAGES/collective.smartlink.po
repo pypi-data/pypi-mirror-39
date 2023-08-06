@@ -1,0 +1,64 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2018-09-27 14:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ../behaviors/configure.zcml:12
+msgid "Additional fields for a link object"
+msgstr ""
+
+#: ../configure.zcml:23
+msgid "Installs the collective.smartlink add-on."
+msgstr ""
+
+#: ../configure.zcml:38
+msgid "Uninstalls the collective.smartlink add-on."
+msgstr ""
+
+#: ../browser/configure.zcml:16
+msgid "View Link"
+msgstr ""
+
+#: ../behaviors/configure.zcml:12
+msgid "We want to add some fields for links objects."
+msgstr ""
+
+#: ../configure.zcml:23
+msgid "collective.smartlink"
+msgstr ""
+
+#. Default: "You must select an internal link or enter an external link. You cannot have both."
+#: ../browser/form.py:23
+msgid "error_internallink_externallink_doubled"
+msgstr "Devi selezionare un link interno o uno esterno. Non e' posssibile avere entrambi."
+
+#. Default: "Browse to find the internal page to which you wish to link. If this field is used, then any entry in the external link field will be ignored. You cannot have both an internal and external link."
+#: ../behaviors/interfaces.py:24
+msgid "help_smartlink_internallink"
+msgstr "Sfoglia per trovare la pagina interna che si desidera linkare. Se questo campo e' usato, il campo del link esterno verra' ignorato. Non e' possibile avere sia un collegamento interno che uno esterno"
+
+#. Default: "The link is used almost verbatim, relative links become absolute and the strings \"${navigation_root_url}\" and \"${portal_url}\" get replaced with the real navigation_root_url or portal_url. If in doubt which one to use, please use navigation_root_url."
+#: ../schema/link.xml
+msgid "label_remoteurl_description"
+msgstr "Il collegamento viene utilizzato come e' scritto, i link relativi diventano assoluti e le stringhe \"${navigation_root_url}\" e \"${portal_url}\" vengono sotituite con i valori delle variabili navigation_root_url oppure portal_url. Nel dubbio su quale usare, per favore usa navigation_root_url."
+
+#. Default: "Internal link"
+#: ../behaviors/interfaces.py:23
+msgid "label_smartlink_internallink"
+msgstr "Link interno"
+
+#. Default: "Il collegamento richiesto non e' piu' disponibile."
+#: ../browser/templates/link.pt:30
+msgid "link_not_found"
+msgstr "Il collegamento richiesto non e' piu' disponibile."

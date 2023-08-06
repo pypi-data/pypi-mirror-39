@@ -1,0 +1,58 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="collective.smartlink">
+
+  <i18n:registerTranslations directory="locales" />
+
+  <includeDependencies package="." />
+
+  <include package=".behaviors" />
+  <include package=".browser" />
+  <include package=".transform" />
+  <include package=".upgrades" />
+
+
+  <genericsetup:registerProfile
+      name="default"
+      title="collective.smartlink"
+      directory="profiles/default"
+      description="Installs the collective.smartlink add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:importStep
+      name="collective.smartlink-postInstall"
+      title="collective.smartlink post_install import step"
+      description="Post install import step from collective.smartlink"
+      handler=".setuphandlers.post_install">
+  </genericsetup:importStep>
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="collective.smartlink"
+      directory="profiles/uninstall"
+      description="Uninstalls the collective.smartlink add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:importStep
+      name="collective.smartlink-uninstall"
+      title="collective.smartlink uninstall import step"
+      description="Import step run during ininstalling collective.smartlink"
+      handler=".setuphandlers.uninstall">
+  </genericsetup:importStep>
+
+  <!-- <z3c:widgetTemplate
+      mode="input"
+      layer=".interfaces.IPloneFormLayer"
+      template="templates/link_input.pt"
+      /> -->
+
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="collective.smartlink-hiddenprofiles" />
+
+</configure>
