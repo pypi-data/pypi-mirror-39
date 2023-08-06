@@ -1,0 +1,12 @@
+[console_scripts]
+
+
+[gui_scripts]
+
+
+[zc.buildout]
+deb = infi.recipe.application_packager.deb:Recipe
+default = infi.recipe.application_packager.auto:Recipe
+msi = infi.recipe.application_packager.msi:Recipe
+rpm = infi.recipe.application_packager.rpm:Recipe
+
