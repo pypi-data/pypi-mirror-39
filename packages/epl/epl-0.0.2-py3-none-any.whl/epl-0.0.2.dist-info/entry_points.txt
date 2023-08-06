@@ -1,0 +1,5 @@
+[console_scripts]
+epl = epl:main
+epl3 = epl:main
+epl3.7 = epl:main
+

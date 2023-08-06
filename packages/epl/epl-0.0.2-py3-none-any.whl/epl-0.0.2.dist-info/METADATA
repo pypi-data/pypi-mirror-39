@@ -1,0 +1,116 @@
+Metadata-Version: 2.1
+Name: epl
+Version: 0.0.2
+Summary: A modern environment/dependency manager for Python.
+Home-page: https://pypi.org/project/epl/
+Author: Brian Farrell
+Author-email: one.chillindude@me.com
+License: AGPLv3
+Keywords: modern development environment dependencies package manager venv
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6.0
+Description-Content-Type: text/x-rst
+
+============
+Introduction
+============
+
+``epl`` (pronounced 'epple') provides enhanced package logistics
+
+``epl`` strives to be a *new* type of manager for virtual environments and
+packages. It will also attempt to incorporate several recent additions to the
+Python Standard Library in order to take advantage of all the wonder that is
+Python 3.
+
+.. note::
+   epl will only run on ``Python >= 3.6``
+
+
+Background
+----------
+
+When I first started developing with Python, the latest version was 3.4, which
+is what I used. I've never had any reason to to go back and learn much about
+Python2. Over the years now, my Python skills have (I hope) improved, as has
+the Python language itself.
+
+One of the most *difficult* things I've had to master as a Python developer is
+dealing with Packaging and Dependency Management. In addition, although I've
+been a big fan of `virtualenv <https://virtualenv.pypa.io/en/latest/>`_ and
+`virtualenvwrapper <https://virtualenvwrapper.readthedocs.io/en/latest/>`_,
+as of Python 3.3, the Standard Library includes its own `venv` module and I 
+would like to explore the possibilities with that.
+
+``epl`` is an exploration for me at this point. If things go 
+**really, really well**, it could be the *next big thing* 😜.
+On the other hand, it could die a horrible death next month, as
+I throw up my hands and run screaming for the exits...🤯
+
+.. note::
+   This project is in its embryonic stage and I am uploading it
+   to PyPi more as a formality at this point. I have not yet granted access
+   to the source code repo - I would like to get a few ideas down more
+   concretely before I open this project to the world.
+   I have every intention of doing so - stay tuned...
+
+
+Objectives
+----------
+
+``epl`` is inspired by `pip <https://github.com/pypa/pip>`_
+and `Pipenv <https://pipenv.readthedocs.io/en/latest/>`_
+but yearns to be somehthing a little bit more - and also a little bit less.
+
++ No backwwards compatibility with Python 2
++ Avoid as many external dependencies as possible
++ Explore the possibility of a 'core' install capability that can be used to
+  bootstrap the initial install of ``epl``
++ Subclass the ``venv.EnvBuilder`` class in the Standard Library
+  to implement virtual environments
++ Implement *TDD* and *BDD* right from the start
++ Implement type hints, using the new ``typing`` module, introduced in Python 3.5
++ Implement Pipfile and Pipfile.lock, rather than requirements.txt.
+  `See the Pipfile project on GitHub <https://github.com/pypa/pipfile>`_
++ Implement checks of signed code using ``GPG``
++ Provide the ability to completely package and deploy the recursive set of
+  dependencies in addition to the target package, for installation of packages
+  when there is no network availability
++ Specify Build System dependencies using ``pyproject.toml``, as described in
+  `PEP 518 <https://www.python.org/dev/peps/pep-0518/>`_
+
+
+Installing
+----------
+
+Install and update using ``pip``:
+
+.. code-block:: bash
+
+   pip install -U epl
+
+
+Links
+-----
+
+* Website:
+* Documentation:
+* License: https://www.gnu.org/licenses/agpl.html
+* Releases: https://pypi.org/project/epl/
+* Code: 
+* Issue tracker:
+* Test status:
+* Test coverage:
+
+
