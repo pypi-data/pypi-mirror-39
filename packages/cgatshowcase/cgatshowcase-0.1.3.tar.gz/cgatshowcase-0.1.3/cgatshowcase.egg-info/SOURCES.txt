@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+cgatshowcase/__init__.py
+cgatshowcase/entry.py
+cgatshowcase/pipeline_transdiffexprs.py
+cgatshowcase/version.py
+cgatshowcase.egg-info/PKG-INFO
+cgatshowcase.egg-info/SOURCES.txt
+cgatshowcase.egg-info/dependency_links.txt
+cgatshowcase.egg-info/entry_points.txt
+cgatshowcase.egg-info/not-zip-safe
+cgatshowcase.egg-info/top_level.txt
+cgatshowcase/R/DESeq2_lrt.R
+cgatshowcase/R/DESeq2_wald.R
