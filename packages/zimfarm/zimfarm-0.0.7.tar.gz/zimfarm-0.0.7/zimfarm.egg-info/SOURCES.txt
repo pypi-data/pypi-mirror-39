@@ -1,0 +1,17 @@
+README.md
+setup.py
+zimfarm/__init__.py
+zimfarm/client.py
+zimfarm/utils.py
+zimfarm.egg-info/PKG-INFO
+zimfarm.egg-info/SOURCES.txt
+zimfarm.egg-info/dependency_links.txt
+zimfarm.egg-info/entry_points.txt
+zimfarm.egg-info/requires.txt
+zimfarm.egg-info/top_level.txt
+zimfarm/commands/__init__.py
+zimfarm/commands/login.py
+zimfarm/errors/__init__.py
+zimfarm/models/__init__.py
+zimfarm/models/base.py
+zimfarm/models/worker.py
