@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: lightnovelapi
+Version: 0.1
+Summary: Client sided API to light novel hosters
+Home-page: https://github.com/raember/lightnovelapi
+Author: Raphael Emberger
+License: MIT
+Keywords: light-novel novel lightnovel wuxiaworld
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: Topic :: Other/Nonlisted Topic
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+
+# LightNovelApi
+Client sided API to light novel hosters.
+
+
