@@ -1,0 +1,16 @@
+Changelog
+=========
+
+
+1.1.0 (2018-12-21)
+------------------
+
+- Fix bug causing crash when not in a git repository. [jone]
+
+- Provide "deploy ssh" command. [jone]
+
+
+1.0.0 (2018-12-21)
+------------------
+
+- Initial implementation. [jone]
