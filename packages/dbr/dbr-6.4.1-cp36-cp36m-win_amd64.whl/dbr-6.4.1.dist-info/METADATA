@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: dbr
+Version: 6.4.1
+Summary: Dynamsoft Barcode Reader Python project
+Home-page: https://www.dynamsoft.com/Products/Dynamic-Barcode-Reader.aspx
+Author: Dynamsoft
+Author-email: support@dynamsoft.com
+License: https://www.dynamsoft.com/Products/barcode-reader-license-agreement.aspx
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+
+# Dynamsoft Barcode Reader 
+
+
