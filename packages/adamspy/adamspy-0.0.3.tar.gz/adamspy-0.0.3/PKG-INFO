@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: adamspy
+Version: 0.0.3
+Summary: Python tools for working with Adams data
+Home-page: https://github.com/bthornton191/Adams_Modules
+Author: Ben Thornton
+Author-email: ben.thornton@mscsoftware.com
+License: UNKNOWN
+Description: # adamspy
+        
+        Python tools for working with Adams data
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
