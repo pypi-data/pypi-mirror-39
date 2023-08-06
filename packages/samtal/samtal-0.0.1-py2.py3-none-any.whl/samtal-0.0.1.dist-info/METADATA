@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: samtal
+Version: 0.0.1
+Summary: Simple assessment bot
+Home-page: https://gitlab.com/azae/outils/samtal/
+Author: Alexis Benoist, Thomas Clavier, Benoit Maurice
+Author-email: UNKNOWN
+License: GPL 3
+Keywords: bot
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: PyYAML
+Requires-Dist: mattermostdriver
+Requires-Dist: textblob
+Requires-Dist: pony
+
+Simple assessment bot
+
+
