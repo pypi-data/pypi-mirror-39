@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+soscleaner.spec
+doc/soscleaner.8.gz
+scripts/soscleaner
+soscleaner/soscleaner.py
+soscleaner/soscleaner.egg-info/PKG-INFO
+soscleaner/soscleaner.egg-info/SOURCES.txt
+soscleaner/soscleaner.egg-info/dependency_links.txt
+soscleaner/soscleaner.egg-info/requires.txt
+soscleaner/soscleaner.egg-info/top_level.txt
