@@ -1,0 +1,6 @@
+[console_scripts]
+specviz = specviz.app:start
+
+[glue.plugins]
+specviz = specviz.third_party.glue:setup
+
