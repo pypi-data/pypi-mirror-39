@@ -1,0 +1,3 @@
+[console_scripts]
+badx12 = badx12.__main__:cli
+
