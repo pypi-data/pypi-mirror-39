@@ -1,0 +1,11 @@
+h11
+h2
+pytoml
+typing_extensions
+wsproto>=0.12.0
+
+[trio]
+trio>=0.9.0
+
+[uvloop]
+uvloop

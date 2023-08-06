@@ -1,0 +1,127 @@
+0.4.3 2018-12-16
+----------------
+
+* Bugfix ensure task cancellation works on Python 3.6
+* Bugfix task cancellation warnings
+
+0.4.2 2018-11-13
+----------------
+
+* Bugfix allow SSL setting to be configured in a file
+
+0.4.1 2018-11-12
+----------------
+
+* Bugfix uvloop argument usage
+* Bugfix lifespan not supported error
+* Bugfix downgrade logging to warning for no lifespan support
+
+0.4.0 2018-11-11
+----------------
+
+* Introduce a worker-class configuration option. Note that the ``-k``
+  cli option is now mapped to ``-w`` to match Gunicorn. ``-k`` for the
+  worker class and ``-w`` for the number of workers. Note also that
+  ``--uvloop`` is deprecated and replaced with ``-k uvloop``.
+* Add a trio worker, ``-k trio`` to run trio or neutral ASGI
+  applications. This worker supports HTTP/1, HTTP/2 and
+  websockets. Note trio must be installed, ideally via the Hypercorn
+  ``trio`` extra requires.
+* Handle application failures with a 500 response if no (partial)
+  response has been sent.
+* Handle application failures with a 500 HTTP or 1006 websocket
+  response depending on upgrade acceptance.
+* Bugfix a race condition establishing the client/server address.
+* Bugfix don't create an unpickleable (on windows) ssl context in the
+  master worker, rather do so in each worker. This should support
+  multiple workers on windows.
+* Support the ASGI lifespan protocol (with backwards compatibility to
+  the provisional protocol for asyncio & uvloop workers).
+* Bugfix cleanup all tasks on asyncio & uvloop workers.
+* Adopt Black for code formatting.
+* Bugfix h2 don't try to send negative or zero bytes.
+* Bugfix h2 don't send nothing.
+* Bugfix restore the single worker behaviour of being a single
+  process.
+* Bugfix Ensure sending doesn't error when the connection is closed.
+* Allow configuration of h2 max concurrent streams and max header list
+  size.
+* Introduce a backlog configuration option.
+
+0.3.2 2018-10-04
+----------------
+
+* Bugfix cope with a None loop argument to run_single.
+* Add a new logo.
+
+0.3.1 2018-09-25
+----------------
+
+* Bugfix ensure the event-loop is configured before the app is
+  created.
+* Bugfix import error on windows systems.
+
+0.3.0 2018-09-23
+----------------
+
+* Add ability to specify a file logging target.
+* Support serving on a unix domain socket or a file descriptor.
+* Alter keep alive timeout to require a request to be considered
+  active (rather than just data). This mitigates a HTTP/2 DOS attack.
+* Improve the SSL configuration, including NPN protocols, compression
+  suppression, and disallowed SSL versions for HTTP/2.
+* Allow the h2 max inbound frame size to be configured.
+* Add a PID file to be specified and used.
+* Upgrade to the latest wsproto and h11 libraries.
+* Bugfix propagate TERM signal to workers.
+* Bugfix ensure hosting information is printed when running from the
+  command line.
+
+0.2.4 2018-08-05
+----------------
+
+* Bugfix don't force the ALPN protocols
+* Bugfix shutdown on reload
+* Bugfix set the default log level if std(out/err) is used
+* Bugfix HTTP/1.1 -> HTTP/2 Upgrade requests
+* Bugfix correctly handle TERM and INT signals
+* Bugix loop usage and creation for multiple workers
+
+0.2.3 2018-07-08
+----------------
+
+* Bugfix setting ssl from config files
+* Bugfix ensure modules aren't set as config values
+* Bugfix use the wsgiref datetime formatter (accurate Date headers).
+* Bugfix query_string value ASGI conformance
+
+0.2.2 2018-06-27
+----------------
+
+* Bugfix ensure that hypercorn as a command line (entry point) works.
+
+0.2.1 2018-06-26
+----------------
+
+* Bugfix ensure CLI defaults don't override configuration settings.
+
+0.2.0 2018-06-24
+----------------
+
+* Bugfix correct ASGI extension names & definitions
+* Bugfix don't log without a target to log to.
+* Bugfix allow SSL values to be loaded from command line args.
+* Bugfix avoid error when logging with IPv6 bind.
+* Don't send b'', rather no-op for performance.
+* Support IPv6 binding.
+* Add the ability to load configuration from python or TOML files.
+* Unblock on connection close (send becomes a no-op).
+* Bugfix send the close message only once.
+* Bugfix correct scope client and server values.
+* Implement root_path scope via config variable.
+* Stop creating event-loops, rather use the default/existing.
+
+0.1.0 2018-06-02
+----------------
+
+* Released initial alpha version.
