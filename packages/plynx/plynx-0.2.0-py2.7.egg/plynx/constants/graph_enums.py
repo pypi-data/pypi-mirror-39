@@ -1,0 +1,22 @@
+class GraphRunningStatus:
+    CREATED = 'CREATED'
+    READY = 'READY'
+    RUNNING = 'RUNNING'
+    SUCCESS = 'SUCCESS'
+    FAILED = 'FAILED'
+    CANCELED = 'CANCELED'
+
+
+class GraphPostAction:
+    SAVE = 'SAVE'
+    APPROVE = 'APPROVE'
+    VALIDATE = 'VALIDATE'
+    AUTO_LAYOUT = 'AUTO_LAYOUT'
+    UPGRADE_NODES = 'UPGRADE_NODES'
+    CANCEL = 'CANCEL'
+
+
+class GraphPostStatus:
+    SUCCESS = 'SUCCESS'
+    FAILED = 'FAILED'
+    VALIDATION_FAILED = 'VALIDATION_FAILED'
