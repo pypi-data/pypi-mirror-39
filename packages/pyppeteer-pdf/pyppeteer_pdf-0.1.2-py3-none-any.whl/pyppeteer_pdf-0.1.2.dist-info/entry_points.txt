@@ -1,0 +1,3 @@
+[console_scripts]
+pyppeteer-pdf=pyppeteer_pdf.cli:html2pdf_command
+
