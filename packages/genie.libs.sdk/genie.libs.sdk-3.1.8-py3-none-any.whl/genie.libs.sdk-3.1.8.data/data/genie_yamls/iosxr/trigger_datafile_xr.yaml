@@ -1,0 +1,236 @@
+extends: '%ENV{VIRTUAL_ENV}/genie_yamls/trigger_datafile.yaml'
+
+global_processors:
+  pre:
+    clear_traffic_stats:
+      method: genie.harness.libs.prepostprocessor.clear_traffic_stats
+  post:
+    verify_traffic:
+      method: genie.harness.libs.prepostprocessor.verify_traffic
+    test_case_genie_telemetry:
+      method: genie.telemetry.processors.genie_telemetry_processor
+
+TriggerSleep:
+    groups: []
+    sleep_time: 5
+    message_time: 10
+    devices: ['uut']
+
+TriggerClearBgpAll:
+    groups: ['clear', 'bgp', 'L3']
+    timeout:
+       max_time:  180
+       interval: 10
+    tgn_timeout: 600
+    tgn_delay: 10
+    devices: ['uut']
+
+TriggerModifyBgpNeighborAsn:
+    groups: ['modify', 'bgp', 'L3']
+    method: 'checkpoint'
+    timeout:
+       max_time: 180
+       interval: 10
+    tgn_timeout: 600
+    tgn_delay: 10
+    devices: ['uut']
+
+TriggerModifyBgpNeighborCluster:
+    groups: ['modify', 'bgp', 'L3']
+    method: 'checkpoint'
+    timeout:
+       max_time: 180
+       interval: 10
+    tgn_timeout: 600
+    tgn_delay: 10
+    devices: ['uut']
+
+TriggerModifyBgpNeighborRoutemapIn:
+    groups: ['modify', 'bgp', 'L3']
+    method: 'checkpoint'
+    timeout:
+       max_time: 180
+       interval: 10
+    tgn_timeout: 600
+    tgn_delay: 10
+    devices: ['uut']
+
+TriggerModifyBgpNeighborRoutemapOut:
+    groups: ['modify', 'bgp', 'L3']
+    method: 'checkpoint'
+    timeout:
+       max_time: 180
+       interval: 10
+    tgn_timeout: 600
+    tgn_delay: 10
+    devices: ['uut']
+
+TriggerUnconfigConfigBgp:
+    groups: ['unconfig-config', 'bgp', 'L3']
+    method: 'checkpoint'
+    timeout:
+       max_time: 180
+       interval: 10
+    tgn_timeout: 600
+    tgn_delay: 10
+    devices: ['uut']
+
+TriggerUnconfigConfigBgpNeighbor:
+    groups: ['unconfig-config', 'bgp', 'L3']
+    method: 'checkpoint'
+    timeout:
+       max_time: 400
+       interval: 10
+    tgn_timeout: 600
+    tgn_delay: 10
+    devices: ['uut']
+
+# CSCtr26693 
+TriggerShutNoShutBgp:
+    groups: ['shut-noshut','bgp', 'L3']
+    method: 'checkpoint'
+    timeout:
+       max_time: 180
+       interval: 10
+    tgn_timeout: 600
+    tgn_delay: 10
+
+TriggerAddRemoveBgpNeighborRoutemapPrefixlist:
+    groups: ['add-remove', 'bgp','L3']
+    method: 'checkpoint'
+    timeout:
+       max_time: 180
+       interval: 10
+    tgn_timeout: 600
+    tgn_delay: 10
+    devices: ['uut']
+
+TriggerAddRemoveBgpNeighborRoutemapWeight:
+    groups: ['add-remove', 'bgp','L3']
+    method: 'checkpoint'
+    timeout:
+       max_time: 180
+       interval: 10
+    tgn_timeout: 600
+    tgn_delay: 10
+    devices: ['uut']
+
+TriggerUnconfigConfigEthernetInterface:
+    groups: ['unconfig-config', 'interface', 'L2']
+    method: 'checkpoint'
+    timeout:
+       max_time: 180
+       interval: 10
+    tgn_timeout: 600
+    tgn_delay: 10
+    devices: ['uut']
+
+TriggerUnconfigConfigEthernetInterfaceSub:
+    groups: ['unconfig-config', 'interface', 'L2']
+    method: 'checkpoint'
+    timeout:
+       max_time: 180
+       interval: 10
+    tgn_timeout: 600
+    tgn_delay: 10
+    devices: ['uut']
+
+TriggerModifyEthernetMtu:
+    groups: ['modify', 'interface', 'L3']
+    method: 'checkpoint'
+    timeout:
+       max_time: 180
+       interval: 10
+    tgn_timeout: 600
+    tgn_delay: 10
+    devices: ['uut']
+
+TriggerSwitchover:
+    groups: ['ha', 'switchover', 'L3']
+    update_verifications: ['Verify_AdminDiagChassis',
+                           'Verify_Dir',
+                           'Verify_InstallActiveSummary',
+                           'Verify_Inventory',
+                           'Verify_Platform',
+                           'Verify_PlatformVm',
+                           'Verify_Redundancy',
+                           'Verify_RedundancySummary',
+                           'Verify_PlacementProgramAll',
+                           'Verify_SdrDetail',
+                           'Verify_Version']
+    update_pts_features: ['platform']
+    timeout:
+       max_time: 900
+       interval: 60
+    tgn_timeout: 600
+    tgn_delay: 10
+    devices: ['uut']
+
+TriggerReload:
+    groups: ['ha', 'reload', 'L3']
+    update_verifications: ['Verify_AdminDiagChassis',
+                           'Verify_Dir',
+                           'Verify_InstallActiveSummary',
+                           'Verify_Inventory',
+                           'Verify_Platform',
+                           'Verify_PlatformVm',
+                           'Verify_Redundancy',
+                           'Verify_RedundancySummary',
+                           'Verify_PlacementProgramAll',
+                           'Verify_SdrDetail',
+                           'Verify_Version']
+    update_pts_features: ['platform']
+    timeout:
+       max_time: 900
+       interval: 60
+    tgn_timeout: 600
+    tgn_delay: 10
+    devices: ['uut']
+
+TriggerReloadActiveRP:
+    groups: ['ha', 'reload', 'L3']
+    update_verifications: ['Verify_AdminDiagChassis',
+                           'Verify_Dir',
+                           'Verify_InstallActiveSummary',
+                           'Verify_Inventory',
+                           'Verify_Platform',
+                           'Verify_PlatformVm',
+                           'Verify_Redundancy',
+                           'Verify_RedundancySummary',
+                           'Verify_PlacementProgramAll',
+                           'Verify_SdrDetail',
+                           'Verify_Version']
+    update_pts_features: ['platform']
+    lcRole: 'active_device'
+    timeout:
+       max_time: 900
+       interval: 60
+    devices: ['uut']
+
+TriggerReloadStandbyRP:
+    groups: ['ha', 'reload', 'L3']
+    update_verifications: ['Verify_AdminDiagChassis',
+                           'Verify_Dir',
+                           'Verify_InstallActiveSummary',
+                           'Verify_Inventory',
+                           'Verify_Platform',
+                           'Verify_PlatformVm',
+                           'Verify_Redundancy',
+                           'Verify_RedundancySummary',
+                           'Verify_PlacementProgramAll',
+                           'Verify_SdrDetail',
+                           'Verify_Version']
+    update_pts_features: ['platform']
+    lcRole: 'standby'
+    timeout:
+       max_time: 900
+       interval: 60
+    devices: ['uut']
+
+TriggerReloadOirEdge:
+    groups: ['ha', 'reload', 'L3']
+    lcRole: 'lc'
+    timeout:
+       max_time: 600
+       interval: 60
+    devices: ['uut']
