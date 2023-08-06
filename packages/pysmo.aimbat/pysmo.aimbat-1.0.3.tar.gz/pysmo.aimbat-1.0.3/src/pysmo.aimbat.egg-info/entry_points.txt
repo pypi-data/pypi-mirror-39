@@ -1,0 +1,14 @@
+[console_scripts]
+aimbat-iccs = pysmo.aimbat.algiccs:main
+aimbat-mccc = pysmo.aimbat.algmccc:main
+aimbat-qtpick = pysmo.aimbat.ttgui:main
+aimbat-sac2pkl = pysmo.aimbat.sacpickle:main
+aimbat-sacp1 = pysmo.aimbat.plotphase:sacp1_standalone
+aimbat-sacp2 = pysmo.aimbat.plotphase:sacp2_standalone
+aimbat-sacpaz = pysmo.aimbat.plotphase:sacpaz_standalone
+aimbat-sacpbaz = pysmo.aimbat.plotphase:sacpbaz_standalone
+aimbat-sacplot = pysmo.aimbat.plotphase:sacplot_standalone
+aimbat-sacppk = pysmo.aimbat.pickphase:sacppk_standalone
+aimbat-sacprs = pysmo.aimbat.plotphase:sacprs_standalone
+aimbat-ttpick = pysmo.aimbat.qualctrl:main
+
