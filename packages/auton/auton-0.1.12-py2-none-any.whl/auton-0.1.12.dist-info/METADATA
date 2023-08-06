@@ -1,0 +1,31 @@
+Metadata-Version: 2.0
+Name: auton
+Version: 0.1.12
+Summary: auton
+Home-page: https://github.com/decryptus/auton
+Author: Adrien Delle Cave
+Author-email: pypi@doowan.net
+License: License GPL-2
+Description-Content-Type: text/markdown
+Platform: UNKNOWN
+Requires-Dist: dwho (>=0.2.67)
+Requires-Dist: httpdis (>=0.5.6)
+Requires-Dist: pycurl
+Requires-Dist: python-dotenv
+Requires-Dist: pyyaml (>=3.10)
+Requires-Dist: sonicprobe (>=0.2.59)
+Requires-Dist: requests (>=2.0)
+
+## Installation
+
+pip install auton
+
+### Running daemon
+
+`auton -c <conffile> -p <pidfile> --logfile <logfile>`
+
+### Running foreground
+
+`auton -f -c <conffile> -p <pidfile> --logfile <logfile>`
+
+
