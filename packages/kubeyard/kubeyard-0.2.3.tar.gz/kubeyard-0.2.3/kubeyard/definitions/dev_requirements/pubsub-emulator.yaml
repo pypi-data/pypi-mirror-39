@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-pubsub
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: dev-pubsub
+  template:
+    metadata:
+      labels:
+        app: dev-pubsub
+    spec:
+      containers:
+      - name: pubsub
+        image: socialwifi/pubsub-emulator-helper:0.1.0
+        ports:
+        - containerPort: 8042
+          name: pubsub
