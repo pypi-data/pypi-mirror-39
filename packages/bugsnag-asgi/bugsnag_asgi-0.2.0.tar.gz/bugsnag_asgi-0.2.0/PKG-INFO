@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: bugsnag_asgi
+Version: 0.2.0
+Summary: Bugsnag integration for asgi frameworks
+Home-page: https://github.com/steinnes/bugsnag-asgi
+Author: Steinn Eldjarn Sigurdarson
+Author-email: steinnes@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: bugsnag,asgi,exceptions
+Platform: UNKNOWN

@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+bugsnag_asgi/__init__.py
+bugsnag_asgi/_version.py
+bugsnag_asgi/middleware.py
+bugsnag_asgi.egg-info/PKG-INFO
+bugsnag_asgi.egg-info/SOURCES.txt
+bugsnag_asgi.egg-info/dependency_links.txt
+bugsnag_asgi.egg-info/requires.txt
+bugsnag_asgi.egg-info/top_level.txt
