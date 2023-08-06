@@ -1,0 +1,3 @@
+[console_scripts]
+bos-incidents = bos_incidents.cli:main
+
