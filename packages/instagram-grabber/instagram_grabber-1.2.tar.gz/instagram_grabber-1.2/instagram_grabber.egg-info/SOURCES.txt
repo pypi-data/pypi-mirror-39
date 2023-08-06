@@ -1,0 +1,12 @@
+README.md
+setup.py
+instagram_grabber/__init__.py
+instagram_grabber/account_dat_creator.py
+instagram_grabber/get_id.py
+instagram_grabber/instagram_grabber.py
+instagram_grabber.egg-info/PKG-INFO
+instagram_grabber.egg-info/SOURCES.txt
+instagram_grabber.egg-info/dependency_links.txt
+instagram_grabber.egg-info/not-zip-safe
+instagram_grabber.egg-info/requires.txt
+instagram_grabber.egg-info/top_level.txt
