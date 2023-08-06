@@ -1,0 +1,8 @@
+Cython
+numpy
+six
+scipy
+astropy
+PyYaml
+matplotlib
+mock;python_version<"3.3"
