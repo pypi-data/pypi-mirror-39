@@ -1,0 +1,11 @@
+README.rst
+setup.py
+npzviewer/__init__.py
+npzviewer/__main__.py
+npzviewer/npzviewer.py
+npzviewer.egg-info/PKG-INFO
+npzviewer.egg-info/SOURCES.txt
+npzviewer.egg-info/dependency_links.txt
+npzviewer.egg-info/entry_points.txt
+npzviewer.egg-info/requires.txt
+npzviewer.egg-info/top_level.txt
