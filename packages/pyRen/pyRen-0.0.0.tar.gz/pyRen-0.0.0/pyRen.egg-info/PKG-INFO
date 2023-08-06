@@ -1,0 +1,27 @@
+Metadata-Version: 1.2
+Name: pyRen
+Version: 0.0.0
+Summary: A Python implementation of the Ren data serialization format.
+Home-page: https://github.com/ocket8888/pyRen
+Author: ocket8888
+Author-email: ocket8888@gmail.com
+License: UNKNOWN
+Description: A Python implementation of the Ren data serialization format.
+Keywords: Ren data serialization
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: REBOL
+Classifier: Topic :: Communications
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Text Processing
+Requires-Python: ~=3.6
