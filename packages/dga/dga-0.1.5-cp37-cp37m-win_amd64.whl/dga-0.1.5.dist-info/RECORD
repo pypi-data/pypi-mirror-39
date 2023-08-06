@@ -1,0 +1,12 @@
+dga/__init__.py,sha256=RRJ85jItTcykND7mOPnyBruF__XvcZkCIHw_dnXV0cs,182
+dga/_dga.cp37-win_amd64.pyd,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dga/_gene.cp37-win_amd64.pyd,sha256=zxgDOTmiJR_Myt44jekAjEtRNUJkFTqdYvvIpkfgl24,34304
+dga/_gene.pyx,sha256=bZ_PuRbeuqT7FjDq-Pb7Ku_lxbgKk9VPxyAHw7x7D-k,423
+dga/dga.py,sha256=-1JWhgi3mDsrzH3c0VP1osrEZWU_YL6Nvei0gUGpfz0,8219
+dga/gene.py,sha256=RcGMaIv-ZY78GfVWud1NNAT96Qs_hYwwKdZuxxLesAU,1851
+dga/release.py,sha256=bwvWpUk0EyEUuvD53CeliZB1Kg0oNPGd4LQm5A7KRo0,23
+dga/tests/test_gene.py,sha256=7JNAqH1m-Pw6sswhMBch9f_bL7SX2i06cAjgVKK8E8k,1360
+dga-0.1.5.dist-info/METADATA,sha256=U48QpxsrQA79OXbBZ1ftcuerBw808OSXGobYEZ2QZsU,412
+dga-0.1.5.dist-info/RECORD,,
+dga-0.1.5.dist-info/WHEEL,sha256=jmFYSwR2oi5DgMGgmnuB-EJxqLMkUojGGdmJ0wz35aI,106
+dga-0.1.5.dist-info/top_level.txt,sha256=RbriNATBqvCPUwti4RxHc-297DLabKR0BPdUjbNJM40,4
