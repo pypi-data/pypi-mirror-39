@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+vdv2pg/__init__.py
+vdv2pg/apply_constraints.sql
+vdv2pg/parser.py
+vdv2pg.egg-info/PKG-INFO
+vdv2pg.egg-info/SOURCES.txt
+vdv2pg.egg-info/dependency_links.txt
+vdv2pg.egg-info/entry_points.txt
+vdv2pg.egg-info/requires.txt
+vdv2pg.egg-info/top_level.txt

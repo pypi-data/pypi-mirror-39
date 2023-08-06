@@ -1,0 +1,3 @@
+        [console_scripts]
+        vdv2pg = vdv2pg:main
+    
