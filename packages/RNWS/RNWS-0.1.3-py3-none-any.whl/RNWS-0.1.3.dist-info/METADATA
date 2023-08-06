@@ -1,0 +1,91 @@
+Metadata-Version: 2.0
+Name: RNWS
+Version: 0.1.3
+Summary: read and write daily stock data
+Home-page: UNKNOWN
+Author: Yili Peng
+Author-email: yili_peng@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+
+This is for reading and writing stock data
+
+Data storage
+~~~~~~~~~~~~
+
+-path --files filename_20180102.csv filename_20180103.csv . . .
+filename_20181231.csv
+
+Read csv with different structures
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  sample1
+
+.. code:: bash
+
+   ticker1,value1
+   ticker2,value2
+   ticker3,value3
+   ticker4,value4
+
+to read this type of csv file, use
+
+.. code:: bash
+
+   read_df(path='path',file_pattern='filename')
+
+-  sample2
+
+.. code:: bash
+
+   stkid,open,high,low,close
+   ticker1,o1,h1,l1,c1
+   ticker2,o2,h2,l2,c2
+   ticker3,o3,h3,l3,c3
+
+to read ``open``, use
+
+.. code:: bash
+
+   Open=read_df(path='path',file_pattern='filename',dat_col='open')
+
+to read ``open`` and ``close``, use
+
+.. code:: bash
+
+   Open,Close=read_df(path='path',file_pattern='filename',dat_col=['open','close'])
+
+to return a multi index dataframe, use
+
+.. code:: bash
+
+   Price=read_mdf(path='path',file_pattern='filename',dat_col=['open','close'])
+
+Write
+~~~~~
+
+-  dataframe sample
+
+.. code:: bash
+
+               ticker1     ticker2     ticker3
+   20180101     10.32       20.22        12.35
+   20180102      NaN        20.10        13.31
+   20180105      NaN        20.10        12.12
+
+use ``write_df`` to write data of each date to one csv file
+
+-  dictionary sample each value in the dictionary should be a dataframe
+   and be like the sample showed above
+
+.. code:: bash
+
+   write_factors(path='path',file_pattern='filename',**dictionary)
+
+Notice
+~~~~~~
+
+Default reading trading calendar is Chinese market trading calendar, to
+change the calendar use ``dt_range`` option to input all dates.
+
+
