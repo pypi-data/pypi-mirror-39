@@ -1,0 +1,3 @@
+[console_scripts]
+boorunaut = booru.setup.start_project:main
+

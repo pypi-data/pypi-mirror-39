@@ -1,0 +1,22 @@
+{% extends 'booru/base.html' %}
+
+{% block css %}
+    {% load staticfiles %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block body %}
+{% load crispy_forms_tags %}
+<div class="container">
+    <div class="row">
+        <h1>Tag: {{tag.name}}</h1>
+    </div>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form |crispy }}
+        <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}
