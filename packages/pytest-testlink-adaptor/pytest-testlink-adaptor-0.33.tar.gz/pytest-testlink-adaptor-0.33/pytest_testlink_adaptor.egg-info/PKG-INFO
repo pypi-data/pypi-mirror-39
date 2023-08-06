@@ -1,0 +1,30 @@
+Metadata-Version: 1.1
+Name: pytest-testlink-adaptor
+Version: 0.33
+Summary: pytest reporting plugin for testlink
+Home-page: https://github.com/Blackwoodseller/pytest-testlink-adaptor/
+Author: Blackwoodseller
+Author-email: alpapot@gmail.com
+License: MIT
+Download-URL: https://github.com/Blackwoodseller/pytest-testlink-adaptor/tarball/0.33
+Description: pytest-testlink-adaptor is a plugin for pytest that reports to testlink.It is improved fork of pytest_testlink alpha.
+Platform: any
+Classifier: Environment :: Plugins
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
