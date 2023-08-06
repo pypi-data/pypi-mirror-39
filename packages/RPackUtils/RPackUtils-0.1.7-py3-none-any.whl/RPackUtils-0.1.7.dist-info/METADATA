@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: RPackUtils
+Version: 0.1.7
+Summary: R Package Manager
+Home-page: https://github.com/pmpsa-hpc/RPackUtils.git
+Author: Sylvain Gubian, Stephane Cano, PMP SA
+Author-email: DevelopmentSupport.HPC@pmi.com
+License: UNKNOWN
+Keywords: R,CRAN,MRAN,Bioconductor,Artifactorydependency,manager,graph,network
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: requests
+Requires-Dist: pytest
+Requires-Dist: pytest-sugar
+Requires-Dist: python-magic
+Requires-Dist: bs4
+Requires-Dist: configparser
+Requires-Dist: networkx
+Requires-Dist: wheel
+
+R Package Dependencies Manager and Bioconductor & CRAN Mirroring Tool
+
+
