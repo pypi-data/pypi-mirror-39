@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: flake8-assign-and-return
+Version: 0.0.1
+Summary: Extension for flake8 which checks for assignment then return
+Home-page: https://github.com/sbdchd/flake8-assign-and-return
+Author: Steve Dignam
+Author-email: steve@dignam.xyz
+Maintainer: Steve Dignam
+Maintainer-email: steve@dignam.xyz
+License: BSD2 License
+Description: hmmm
+Keywords: flake8,lint
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Provides: flake8_assign_and_return
