@@ -1,0 +1,199 @@
+Metadata-Version: 1.1
+Name: django-system-maintenance
+Version: 0.4.3
+Summary: A Django app to document and track the administration and maintenance of computer systems
+Home-page: https://github.com/mfcovington/django-system-maintenance
+Author: Michael F. Covington
+Author-email: mfcovington@gmail.com
+License: BSD License
+Description: *************************
+        django-system-maintenance
+        *************************
+        
+        ``django-system-maintenance`` is a Django app to document and track the administration and maintenance of computer systems.
+        
+        Source code is available on GitHub at `mfcovington/django-system-maintenance <https://github.com/mfcovington/django-system-maintenance>`_.
+        
+        .. contents:: :local:
+        
+        
+        Installation
+        ============
+        
+        **PyPI**
+        
+        .. code-block:: sh
+        
+            pip install django-system-maintenance
+        
+        
+        **GitHub (development branch)**
+        
+        .. code-block:: sh
+        
+            pip install git+http://github.com/mfcovington/django-system-maintenance.git@develop
+        
+        
+        Configuration
+        =============
+        
+        Add ``system_maintenance`` and its dependencies to ``INSTALLED_APPS`` in ``settings.py``:
+        
+        .. code-block:: python
+        
+            INSTALLED_APPS = (
+                ...
+                'django.contrib.humanize',
+                'project_home_tags',
+                'system_maintenance',
+            )
+        
+        Add the ``system_maintenance`` URLs to the site's ``urls.py``:
+        
+        .. code-block:: python
+        
+            from django.urls import include, path
+        
+        
+            urlpatterns = [
+                ...
+                path('system_maintenance/', include('system_maintenance.urls', namespace='system_maintenance')),
+            ]
+        
+        
+        By default, lists of maintenance records, etc. are paginated with 30 records per page. This value can be customized in ``settings.py``:
+        
+        .. code-block:: python
+        
+            SYSTEM_MAINTENANCE_PAGINATE_BY = 50
+        
+        This app is compatible with ``django-project-home-templatetags``. Check out its `Configuration Documentation <https://github.com/mfcovington/django-project-home-templatetags#configuration>`_ if you want this app's top-level breadcrumb to link to your project's homepage. To activate ``project_home_tags`` functionality, you must define ``PROJECT_HOME_NAMESPACE`` and, optionally, ``PROJECT_HOME_LABEL`` in ``settings.py``:
+        
+        .. code-block:: python
+        
+            PROJECT_HOME_NAMESPACE = 'project_name:index_view'    # Namespace of homepage
+            PROJECT_HOME_LABEL = 'Homepage'    # Optional; Default is 'Home'
+        
+        
+        Migrations
+        ==========
+        
+        Create migrations for ``system_maintenance``, if necessary:
+        
+        .. code-block:: sh
+        
+            python manage.py makemigrations system_maintenance
+        
+        
+        Perform migrations for ``system_maintenance``:
+        
+        .. code-block:: sh
+        
+            python manage.py migrate
+        
+        
+        Usage
+        =====
+        
+        - Start the development server:
+        
+        .. code-block:: sh
+        
+            python manage.py runserver
+        
+        
+        - Login and add yourself as a system administrator: ``http://localhost:8000/admin/system_maintenance/sysadmin/add/``
+        - Visit: ``http://127.0.0.1:8000/system_maintenance/``
+        
+        
+        *Version 0.4.3*
+        
+        
+        Revision History
+        ================
+        
+        0.4.3 2018-12-06
+        
+        - Include migrations when packaging for distribution
+        
+        
+        0.4.2 2018-11-26
+        
+        - Add ``django-project-home-templatetags`` compatibility for breadcrumbs
+        - Include tests in distribution
+        
+        
+        0.4.1 2018-11-05
+        
+        - Make compatible with Django 2.1
+        - Python>=3.4; Django>=2.0,<3.0
+        
+        
+        0.4.0 2018-11-05
+        
+        - Make compatible with Django 2.0
+        - Drop Python 3.2 and 3.3 compatibility
+        - Python>=3.4; Django>=2.0,<=2.0.9
+        
+        
+        0.3.2 2018-11-05
+        
+        - Set upper bound of <2.0 for Django version
+        - Python>=3.2,<3.8; Django>=1.7,<2.0
+        - Final version that will be compatible with Django 1.11.16
+        
+        
+        0.3.1 2018-11-05
+        
+        - Prepare for upgrade to Django 2+
+        - Update dependency version requirements
+        
+        
+        0.3.0 2018-11-04
+        
+        - Add unit tests and functional tests
+        - Add links to view raw markdown
+        - Update configuration instructions in README
+        - Set next page to System Maintenance home page if accessing authentication page directly
+        - Fix maintenance record status so it defaults to 'In Progress'
+        - Resolve Django 1.10 deprecation warnings
+        - DRY and simplify
+        
+        
+        0.2.0 2015-12-12
+        
+        - Redirect to sysadmin authentication page instead of 404 if current user is not a sysadmin
+        - Make pagination customizable via ``settings.SYSTEM_MAINTENANCE_PAGINATE_BY``
+        - Open System Maintenance admin page in a new tab
+        - Add missing imports for plain text markup fields
+        - Add installation instructions to README
+        - Add default app configuration
+        
+        
+        0.1.0 2015-11-02
+        
+        - A Django app to document and track the administration and maintenance of computer systems
+        
+Keywords: sysadmin system administration documentation maintenance
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Documentation
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: System :: Systems Administration
