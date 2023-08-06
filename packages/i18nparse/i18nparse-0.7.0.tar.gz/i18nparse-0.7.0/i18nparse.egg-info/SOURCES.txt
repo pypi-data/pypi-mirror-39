@@ -1,0 +1,14 @@
+CHANGES.txt
+CONTRIBUTING
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+i18nparse/__init__.py
+i18nparse/i18nparse.py
+i18nparse/version.py
+i18nparse.egg-info/PKG-INFO
+i18nparse.egg-info/SOURCES.txt
+i18nparse.egg-info/dependency_links.txt
+i18nparse.egg-info/top_level.txt
+src/argparse-fr.po

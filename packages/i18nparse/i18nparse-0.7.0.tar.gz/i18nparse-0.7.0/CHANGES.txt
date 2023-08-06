@@ -1,0 +1,13 @@
+Release 0.7.0: Use mo_installer to compile po file
+LICENSE file has been moved to top level folder
+
+Release 0.6.0:
+Uses getlocale instead of getdefaultlocale
+Fixes a pip uninstall problem when installing from a source distribution
+
+Release 0.5.0: First published version
+Add this CHANGES.txt file
+Fixes on the README file.
+
+Release 0.1.0: First useable version (not published on PyPI)
+Contains only a French translation for the argparse module
