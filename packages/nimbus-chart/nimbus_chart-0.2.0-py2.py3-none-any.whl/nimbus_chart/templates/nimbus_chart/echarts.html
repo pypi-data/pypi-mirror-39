@@ -1,0 +1,64 @@
+{% extends 'nimbus_chart/base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block title %}{{ chart_title }}{% endblock %}
+
+{% block extrastyle %}
+    {{ block.super }}
+{% endblock %}
+
+{% block extrajs %}
+    {{ block.super }}
+    <script src="{% static "nimbus_chart/js/echarts.min.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div id="container" class="echarts" style="height: {{ chart_height|default:'400px' }};width: {{ chart_width|default:'100%' }};" data-chart-url="{{ chart_url }}"></div>
+{% endblock %}
+
+{% block extrabody %}
+    {{ block.super }}
+    <script type="text/javascript">
+        var echart_objs = new Array();
+        var echart = null;
+        var resizeAllEcharts = function () {
+            for (var key in echart_objs) {
+                echart_objs[key].resize();
+            }
+        };
+
+        var resizeECharts = function(obj, refresh) {
+            if (refresh && obj) {
+                obj.resize();
+            }
+        };
+
+        $(document).ready(function(){
+            $('.echarts').each(function(){
+                var $chart = $(this);
+                var obj = $chart.data('chart-obj');
+                var o = obj ? obj.getOption() : null;
+                if (obj && o) {
+                    echart = obj;
+                    resizeECharts(echart, true);
+                    return;
+                }
+                var echarts_o = echarts.init(this, 'vintage', {width: "auto", height: "auto"});
+                echarts_o.showLoading();
+                $.getJSON($chart.data('chart-url'), function(data){
+                    echarts_o.hideLoading();
+                    echarts_o.setOption(data);
+                    $chart.data('chart-obj', echarts_o);
+                });
+                echart = echarts_o;
+                echart_objs.push(echarts_o);
+            });
+
+            window.onresize = function () {
+                resizeAllEcharts();
+            };
+        });
+    </script>
+{% endblock %}
+
