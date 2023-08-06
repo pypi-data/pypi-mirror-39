@@ -1,0 +1,7 @@
+setuptools
+geopy>=1.14.0
+docopt
+pyyaml
+certifi
+hbmqtt
+aiohttp
