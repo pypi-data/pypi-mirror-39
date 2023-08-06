@@ -1,0 +1,8 @@
+README.md
+setup.py
+easy_parse.egg-info/PKG-INFO
+easy_parse.egg-info/SOURCES.txt
+easy_parse.egg-info/dependency_links.txt
+easy_parse.egg-info/top_level.txt
+easyparse/__init__.py
+easyparse/_xml.py
