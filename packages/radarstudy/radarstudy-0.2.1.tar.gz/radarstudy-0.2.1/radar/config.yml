@@ -1,0 +1,6 @@
+schema:
+    key_cols: ['projectId', 'userId', 'sourceId']
+    read_csvs: True
+
+protocol:
+    url: 'https://raw.githubusercontent.com/RADAR-base/RADAR-aRMT-protocols/master/RADAR-MDD-KCL-s1/protocol.json'
