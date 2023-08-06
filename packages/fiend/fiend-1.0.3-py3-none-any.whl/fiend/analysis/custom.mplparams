@@ -1,0 +1,13 @@
+text.usetex : True
+text.latex.preamble : \usepackage{physics}\usepackage{mathtools}\usepackage{nicefrac}
+
+axes.labelsize : 10
+axes.labelpad : 2
+legend.fontsize : 10
+xtick.labelsize : 10
+ytick.labelsize : 10
+
+xtick.major.pad : 2
+ytick.major.pad : 2
+
+savefig.dpi : 600
