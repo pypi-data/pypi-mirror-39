@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+py_rockyou.egg-info/PKG-INFO
+py_rockyou.egg-info/SOURCES.txt
+py_rockyou.egg-info/dependency_links.txt
+py_rockyou.egg-info/top_level.txt
+rockyou/__init__.py
+rockyou/rockyou.py
+rockyou/rockyou.zip
