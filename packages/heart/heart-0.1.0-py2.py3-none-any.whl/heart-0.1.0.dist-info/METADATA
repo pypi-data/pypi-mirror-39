@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: heart
+Version: 0.1.0
+Summary: HEART (Health Relationship Trust) Python implementation.
+Home-page: https://github.com/nazrulworld/heart
+Author: Md Nazrul Islam
+Author-email: email2nazrul@gmail.com
+License: GNU General Public License v3
+Keywords: heart
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: Click (>=6.0)
+Requires-Dist: guillotina (>=4.3.5)
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: docker ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-asyncio ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest-docker-fixtures ; extra == 'test'
+Requires-Dist: pytest-runner ; extra == 'test'
+
+=====
+HEART
+=====
+
+
+.. image:: https://img.shields.io/pypi/v/heart.svg
+        :target: https://pypi.python.org/pypi/heart
+
+.. image:: https://img.shields.io/travis/nazrulworld/heart.svg
+        :target: https://travis-ci.org/nazrulworld/heart
+
+.. image:: https://readthedocs.org/projects/heart/badge/?version=latest
+        :target: https://heart.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+.. image:: https://pyup.io/repos/github/nazrulworld/heart/shield.svg
+     :target: https://pyup.io/repos/github/nazrulworld/heart/
+     :alt: Updates
+
+
+
+HEART (Health Relationship Trust) Python implementation.
+
+
+* Free software: GNU General Public License v3
+* Documentation: https://heart.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2018-12-15)
+------------------
+
+* First release on PyPI. (Just package structure! on register purpose. Not usable at all!)
+
+
