@@ -1,0 +1,11 @@
+zeep
+pyopenssl
+clabe
+
+[dev]
+pytest>=3
+ipython
+ipdb
+pycodestyle
+pytest
+vcrpy
