@@ -1,0 +1,10 @@
+flake8
+# https://github.com/spulec/moto/issues/532
+moto==0.4.19
+pytest
+pytest-cache
+pytest-cov
+pytest-sugar
+mock
+tox
+webtest
