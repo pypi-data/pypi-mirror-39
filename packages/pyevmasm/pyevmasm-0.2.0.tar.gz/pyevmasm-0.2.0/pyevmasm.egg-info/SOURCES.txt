@@ -1,0 +1,11 @@
+README.md
+setup.py
+pyevmasm/__init__.py
+pyevmasm/__main__.py
+pyevmasm/evmasm.py
+pyevmasm.egg-info/PKG-INFO
+pyevmasm.egg-info/SOURCES.txt
+pyevmasm.egg-info/dependency_links.txt
+pyevmasm.egg-info/entry_points.txt
+pyevmasm.egg-info/requires.txt
+pyevmasm.egg-info/top_level.txt
