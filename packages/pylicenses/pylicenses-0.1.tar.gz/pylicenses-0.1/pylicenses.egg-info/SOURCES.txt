@@ -1,0 +1,17 @@
+README.md
+setup.py
+pylicenses/__init__.py
+pylicenses/__main__.py
+pylicenses.egg-info/PKG-INFO
+pylicenses.egg-info/SOURCES.txt
+pylicenses.egg-info/dependency_links.txt
+pylicenses.egg-info/requires.txt
+pylicenses.egg-info/top_level.txt
+pylicenses/providers/__init__.py
+pylicenses/providers/condachannel.py
+pylicenses/providers/condalocal.py
+pylicenses/providers/piplocal.py
+pylicenses/providers/pypi.py
+pylicenses/providers/static.py
+pylicenses/tests/__init__.py
+pylicenses/tests/test_pylicense.py
