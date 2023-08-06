@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: pydaikin
+Version: 0.9
+Summary: Python Daikin HVAC appliances interface
+Home-page: https://bitbucket.org/mustang51/pydaikin
+Author: Yari Adan
+Author-email: mustang@yadan.org
+License: GPL
+Keywords: homeautomation,daikin
+Platform: UNKNOWN
+Requires-Python: >3.5
+Requires-Dist: netifaces
+Requires-Dist: requests
+
+UNKNOWN
+
+
