@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: brewblox-datastore
+Version: 0.2.1.dev6
+Summary: REST endpoints for editing a JSON file
+Home-page: https://github.com/BrewBlox/brewblox-datastore
+Author: BrewPi
+Author-email: development@brewpi.com
+License: UNKNOWN
+Description: # BrewBlox Datastore
+        
+        Flexible REST API for CRUD operations on a JSON file.
+        
+        **Archived: BrewBlox is now using CouchDB as datastore**
+        
+Keywords: brewing brewpi brewblox embedded plugin service
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: System :: Hardware
+Requires-Python: >=3.7
