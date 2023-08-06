@@ -1,0 +1,20 @@
+-r requirements.txt
+celery
+codeclimate-test-reporter
+coverage>=4.0,<4.4
+pacifica-archiveinterface
+pacifica-cartd
+pacifica-ingest
+pacifica-metadata
+pacifica-policy
+pacifica-uniqueid
+pager
+pep257
+pre-commit
+pylint<2.0
+pytest
+radon
+recommonmark
+redis
+requests
+six
