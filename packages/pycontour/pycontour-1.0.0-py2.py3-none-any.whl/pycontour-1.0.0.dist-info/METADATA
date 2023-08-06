@@ -1,0 +1,26 @@
+Metadata-Version: 2.0
+Name: pycontour
+Version: 1.0.0
+Summary: Contour operation utilities.
+Home-page: https://github.com/PingjunChen/pycontour
+Author: Pingjun Chen
+Author-email: chenpingjun@gmx.com
+License: Apache
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: numpy (>=1.11.0)
+Requires-Dist: opencv-python (>=3.4.2.16)
+
+UNKNOWN
+
+
