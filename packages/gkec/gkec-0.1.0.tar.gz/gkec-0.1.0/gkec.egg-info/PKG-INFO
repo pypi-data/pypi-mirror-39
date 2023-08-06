@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: gkec
+Version: 0.1.0
+Summary: A simple client to operate with GKE
+Home-page: https://gitlab.com/cattlelizers.io/gkec
+Author: Sergio Perez
+Author-email: sergiopr89@gmail.com
+License: UNKNOWN
+Description: # Google Kubernetes Engine client
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
