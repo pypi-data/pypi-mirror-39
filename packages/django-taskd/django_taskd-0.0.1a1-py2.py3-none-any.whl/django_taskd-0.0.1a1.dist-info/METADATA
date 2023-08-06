@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: django-taskd
+Version: 0.0.1a1
+Summary: A taskd implementation for the Django web framework. Enables django applications to easily integrate
+        tasks with Taskwarrior.
+Home-page: https://github.com/Colorless-Green-Ideas/django-taskd
+Author: amelia sabine
+Author-email: amelia.sabine@getpizza.cat
+License: AGPLv3
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: django
+Requires-Dist: taskc
+Requires-Dist: requests
+
+# django-taskd: A taskd implementation for the Django web framework
+
+[![Build Status](https://travis-ci.com/Colorless-Green-Ideas/django-taskd.svg?branch=master)](https://travis-ci.com/Colorless-Green-Ideas/django-taskd)
+
+Requirements
+------------
+- Django
+- A working [redshirt](https://github.com/jrabbit/taskd-redshirt) instance
+
+Installation
+------------
+**(soon):**
+
+1. `pip install django-taskd`
+2. Add `taskdj` to your INSTALLED\_APPS in settings.py
+
+**From source:**
+
+1. `git clone https://github.com/asabine/django-taskd.git`
+2. `python setup.py install`
+3. Add `taskdj` to your INSTALLED\_APPS in settings.py
+
+
