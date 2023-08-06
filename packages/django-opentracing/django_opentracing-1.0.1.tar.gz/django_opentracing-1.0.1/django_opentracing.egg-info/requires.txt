@@ -1,0 +1,9 @@
+django
+opentracing<2.1,>=2.0
+six
+
+[tests]
+coverage
+flake8<3
+flake8-quotes
+mock
