@@ -1,0 +1,3 @@
+[console_scripts]
+goutte=goutte.main:entrypoint
+
