@@ -1,0 +1,5 @@
+[console_scripts]
+cekit = cekit.cli:run
+cekit-cache = cekit.cache.cli:run
+concreate = cekit.cli:run
+
