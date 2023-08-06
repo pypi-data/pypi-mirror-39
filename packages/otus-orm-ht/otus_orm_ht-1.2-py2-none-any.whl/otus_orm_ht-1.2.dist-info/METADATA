@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: otus-orm-ht
+Version: 1.2
+Summary: ORM with basic functions
+Home-page: https://github.com/MyHardWay/Otus_Homework/tree/master/homework_5
+Author: MyHardWay
+Author-email: UNKNOWN
+License: UNKNOWN
+Keywords: ORM OTUS
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: markdown
+Requires-Dist: pysqlite3
+
+ORM with basic functions like INSERT, UPDATE, etc.
+
+
