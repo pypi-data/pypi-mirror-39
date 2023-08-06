@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: the_metrix
+Version: 0.0.0
+Summary: A set of functions for performing metrics analysis.
+Home-page: https://github.com/Ffisegydd/the_metrix
+Author: K J P
+Author-email: ffisegydd@ffisegydd.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering
