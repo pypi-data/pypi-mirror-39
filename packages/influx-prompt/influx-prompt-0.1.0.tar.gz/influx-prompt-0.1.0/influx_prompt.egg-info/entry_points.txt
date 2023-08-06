@@ -1,0 +1,3 @@
+[console_scripts]
+influx-prompt = influx_prompt.main:cli
+
