@@ -1,0 +1,2 @@
+recursive-include comtags/json *
+recursive-include comtags/user_dict *
