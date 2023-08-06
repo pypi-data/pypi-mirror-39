@@ -1,0 +1,47 @@
+Metadata-Version: 1.1
+Name: mds-mdslibvirt
+Version: 0.1.1
+Summary: get access to libvirtd using Python
+Home-page: https://www.m-ds.de/
+Author: martin-data services
+Author-email: service@m-ds.de
+License: GPL-3
+Description-Content-Type: UNKNOWN
+Description: mdslibvirt
+        ==========
+        get access to libvirtd using Python
+        
+        Install
+        =======
+        Ubuntu & Python3:
+            sudo apt-get install python3-libvirt
+        
+        Ubuntu & Python2:
+            sudo apt-get install python-libvirt
+            
+        
+        pip install mds-mdslibvirt
+        
+        Changes
+        =======
+        
+        *0.1.1 - 21.12.2018*
+        
+         - fix: bug in stopVm()
+        
+        *0.1.0 - 19.12.2018*
+        
+         - public version
+        
+Keywords: libvirt qemu kvm python
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
