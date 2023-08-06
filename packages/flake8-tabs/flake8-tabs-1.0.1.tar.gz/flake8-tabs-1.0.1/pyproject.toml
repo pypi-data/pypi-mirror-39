@@ -1,0 +1,39 @@
+[build-system]
+requires = ["flit>=1.1"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "flake8_tabs"
+author = "Alexander Schlarb"
+author-email = "alexander@ninetailed.ninja"
+description-file = "README.md"
+dist-name = "flake8-tabs"
+home-page = "https://gitlab.com/ntninja/flake8-tabs"
+requires = ["flake8 > 3.0.0"]
+requires-python = "~=3.4"
+
+classifiers = [
+	"Framework :: Flake8",
+	"Intended Audience :: Developers",
+	"Development Status :: 4 - Beta",
+	"License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+	"Topic :: Software Development :: Quality Assurance",
+	"Operating System :: OS Independent"
+]
+
+[tool.flit.metadata.urls]
+"Issue Tracker" = "https://gitlab.com/ntninja/flake8-tabs/issues"
+
+[tool.flit.metadata.requires-extra]
+test = [
+	"pytest",
+	"pytest-cov",
+]
+doc = ["sphinx"]
+
+[tool.flit.entrypoints."flake8.extension"]
+"tabs.blank-lines" = "flake8_tabs:BlankLinesChecker"
+"tabs.indentation" = "flake8_tabs:IndentationChecker"
