@@ -1,0 +1,7 @@
+numpy>=1.11.1
+scipy
+opencv-python
+imgaug>=0.2.5
+
+[tests]
+pytest
