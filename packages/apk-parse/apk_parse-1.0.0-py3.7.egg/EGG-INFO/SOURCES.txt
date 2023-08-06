@@ -1,0 +1,14 @@
+README.md
+setup.py
+apk_parse.egg-info/PKG-INFO
+apk_parse.egg-info/SOURCES.txt
+apk_parse.egg-info/dependency_links.txt
+apk_parse.egg-info/top_level.txt
+main/__init__.py
+main/androconf.py
+main/apk.py
+main/bytecode.py
+main/dvm_permissions.py
+main/test.py
+main/util.py
+main/zipfile.py
