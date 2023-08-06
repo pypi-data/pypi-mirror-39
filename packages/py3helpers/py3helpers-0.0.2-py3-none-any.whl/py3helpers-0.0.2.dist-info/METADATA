@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: py3helpers
+Version: 0.0.2
+Summary: Python utility functions
+Home-page: https://github.com/adbailey4/python_utils
+Author: Andrew Bailey
+Author-email: andbaile@ucsc.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: mappy (>=2.14)
+Requires-Dist: biopython (>=1.68)
+Requires-Dist: pysam (>=0.15)
+Requires-Dist: numpy (>=1.14.2)
+
+UNKNOWN
+
+
