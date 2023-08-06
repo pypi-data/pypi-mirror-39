@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+surelink/__init__.py
+surelink/helpers.py
+surelink/tests.py
+surelink.egg-info/PKG-INFO
+surelink.egg-info/SOURCES.txt
+surelink.egg-info/dependency_links.txt
+surelink.egg-info/not-zip-safe
+surelink.egg-info/top_level.txt
