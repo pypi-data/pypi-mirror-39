@@ -1,0 +1,8 @@
+aiofiles
+blinker
+click
+hypercorn>=0.4
+itsdangerous
+jinja2
+multidict
+sortedcontainers
