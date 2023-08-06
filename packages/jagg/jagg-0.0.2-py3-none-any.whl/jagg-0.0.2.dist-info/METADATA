@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: jagg
+Version: 0.0.2
+Summary: Judgment Aggregation
+Home-page: http://github.com/rdehaan/jagg
+Author: Ronald de Haan
+Author-email: me@ronalddehaan.eu
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+# Jagg (Judgment Aggregation)
+Python package for carrying out Judgment Aggregation methods
+
+
