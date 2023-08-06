@@ -1,0 +1,3 @@
+[console_scripts]
+PyQuantum = lib.PyQuantum.__main__:main
+
