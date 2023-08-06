@@ -1,0 +1,16 @@
+avocado_framework_plugin_result_html-67.0.dist-info/METADATA,sha256=Epwwvizf9b9BOssiSt-rQaMG83_zSm5YwDW5DGtGenM,331
+avocado_framework_plugin_result_html-67.0.dist-info/RECORD,,
+avocado_framework_plugin_result_html-67.0.dist-info/WHEEL,sha256=_V8uWu5F_h-lvAz5Mbq4oZqV_uCfL4cHgm4IIlDevzU,92
+avocado_framework_plugin_result_html-67.0.dist-info/entry_points.txt,sha256=P3Uzys2H8vpGZaUIZPKYrkW6vRnOP_LTVLiOJB71nnY,119
+avocado_framework_plugin_result_html-67.0.dist-info/top_level.txt,sha256=c3FB7iraI7u7sU_q_gYjJyxCuBGsFLV3BsVnCh0YRYI,26
+avocado_result_html/__init__.py,sha256=x6Oj0cNDYBxS0H4TeklJgl3YqR4_QTh-A3-y3zcf9SM,10524
+avocado_result_html/templates/avocado_html.js,sha256=wkHnqLolmu6bLvZ8R1ZxmH1VnJfq3azCkpGRItimFOw,224
+avocado_result_html/templates/bootstrap.min.css,sha256=9lM30B-AT-Q2oL0XyE9L20MZGvzEKgFDRpxEOykginE,49657
+avocado_result_html/templates/bootstrap.min.js,sha256=TvLnhBZ6T2oH3ywyrbDE6xS6I38ThrDYljXrL9TQLo8,16595
+avocado_result_html/templates/datatables.bootstrap.js,sha256=JVT3QEz2gjOUnjYzNWPFn-uJJeoFOfO2eibJoN405ps,5245
+avocado_result_html/templates/datatables.css,sha256=uqmi-CfOPlctLmXqqyNZz3um1ulFNxAvhe_ksCfZ7Lk,12525
+avocado_result_html/templates/datatables.min.js,sha256=F8S572IcDhnclKxBn-mxLLtNWobbz8DUNi7uXRmAT9k,79972
+avocado_result_html/templates/jquery.min.js,sha256=folHkO0QKaqhhTRVVlDnGqR6p3RbDiwc0ja7hByPU2A,93196
+avocado_result_html/templates/results.html,sha256=au1PBUeRjmXD4t31sSLNyv2sckznGdX4b6Ka_pqhGvE,8456
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_html_result.py,sha256=mJi5rqrDqJjI1ZLVyaFHQizn_nTtbJkVrj58fpVeVeE,3457
