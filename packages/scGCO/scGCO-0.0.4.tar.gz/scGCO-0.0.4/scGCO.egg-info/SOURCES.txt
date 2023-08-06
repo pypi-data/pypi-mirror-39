@@ -1,0 +1,14 @@
+README.md
+setup.py
+gco_python/__init__.py
+gco_python/example.py
+gco_python/example_middlebury.py
+gco_python/setup.py
+gco_python/test.py
+scGCO/__init__.py
+scGCO/scgco.py
+scGCO.egg-info/PKG-INFO
+scGCO.egg-info/SOURCES.txt
+scGCO.egg-info/dependency_links.txt
+scGCO.egg-info/requires.txt
+scGCO.egg-info/top_level.txt

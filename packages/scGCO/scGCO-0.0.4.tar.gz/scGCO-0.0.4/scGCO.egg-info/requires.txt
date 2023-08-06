@@ -1,0 +1,12 @@
+pandas
+numpy
+matplotlib<3.0.0,>=2.2.0
+scipy
+sklearn
+parmap
+Cython
+pygco
+tqdm
+networkx
+shapely
+statsmodels
