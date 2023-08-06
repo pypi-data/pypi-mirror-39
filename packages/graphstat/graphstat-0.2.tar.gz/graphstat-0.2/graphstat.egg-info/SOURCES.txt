@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+graphstat/__init__.py
+graphstat/__main__.py
+graphstat/graphstat_sqlite3.py
+graphstat.egg-info/PKG-INFO
+graphstat.egg-info/SOURCES.txt
+graphstat.egg-info/dependency_links.txt
+graphstat.egg-info/requires.txt
+graphstat.egg-info/top_level.txt
