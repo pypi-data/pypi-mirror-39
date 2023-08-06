@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+pydaisy/Daisy.py
+pydaisy/DaisyTools.py
+pydaisy/__init__.py
+pydaisy.egg-info/PKG-INFO
+pydaisy.egg-info/SOURCES.txt
+pydaisy.egg-info/dependency_links.txt
+pydaisy.egg-info/requires.txt
+pydaisy.egg-info/top_level.txt
