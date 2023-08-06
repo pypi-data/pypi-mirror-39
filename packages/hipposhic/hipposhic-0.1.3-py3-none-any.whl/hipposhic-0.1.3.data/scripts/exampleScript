@@ -1,0 +1,5 @@
+#!python
+import sys
+
+
+print("args:",[i for i in sys.argv])
