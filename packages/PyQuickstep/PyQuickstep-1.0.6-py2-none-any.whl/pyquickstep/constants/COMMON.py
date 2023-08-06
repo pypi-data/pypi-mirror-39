@@ -1,0 +1,4 @@
+
+
+NEWLINE = "\n"
+RESULTSPLIT  = "|"
