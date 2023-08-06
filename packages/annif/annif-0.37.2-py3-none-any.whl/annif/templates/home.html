@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="mb-4 mt-0">
+  <div class="container">
+    <h1 class="py-3">Annif</h1>
+  </div>
+</header>
+
+<div class="container">
+
+  <p>Welcome!</p>
+
+  <h2>REST API</h2>
+
+  <p>See the <a href="v1/ui/">Swagger documentation</a> for API specification.</p>
+  
+  <div class="row mb-5">
+    <div class="col-md-8">
+      <div class="form-group">
+        <label for="text">Text to analyze:</label><br>
+        <textarea class="form-control" rows="15" name="text" id="text"></textarea>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="project">Project (vocabulary and language):</label>
+        <select class="form-control" id="project">
+          <option></option>
+        </select>
+      </div>
+      <button type="button" class="btn btn-primary" id="analyze">Analyze</button>
+
+      <h2 class="mt-4">Results</h2>
+      <ul class="list-group list-group-flush" id="results">
+      </ul>
+    </div>
+  </div>
+
+
+</div> <!-- container -->
+
+{% endblock %}
