@@ -1,0 +1,13 @@
+scrapenewsapi/__init__.py,sha256=JTvVrY01nn7Wjjx1Q2dRyyT0V62PHtap-i1TJSfF4HM,39
+scrapenewsapi/config/__init__.py,sha256=080vfzRjSBkuvX1j2yWXLTfUa4nYolXMz98A08FJSUw,104
+scrapenewsapi/config/auth.py,sha256=4GuE0WQbHkKCyfVkAPEc32pA0v4-M__KNIl_8mVE03I,410
+scrapenewsapi/config/constants.py,sha256=qfWq9jKyjoUNue5qDN96lplKdq_gP2gpeqEKbjbnGqQ,791
+scrapenewsapi/config/setup.py,sha256=vBkcp15feRgTJBENiRy9bVJjZ7SvWPQeKCA_a33HpQo,1005
+scrapenewsapi/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scrapenewsapi/src/main.py,sha256=Tooys-E-O_JRHYPnNcif7-6uR-nM3-5jRo9SQiHvTqk,1794
+scrapenewsapi/src/queries.py,sha256=oSjKhSY58uc_yDjvvuICo-sODEx3GPXWDKnWbKbBkno,3897
+newsapi_scraper-0.0.1.dist-info/LICENSE.txt,sha256=Wbl0T0Z_cCW_cW8MjQ2Tr2jSgu7mEiAqpTmXoE3Oc3Y,1089
+newsapi_scraper-0.0.1.dist-info/METADATA,sha256=cmdvwczCRgbTIpTXQELdr4uicqyh6jR9H3EQYSQy5Nw,481
+newsapi_scraper-0.0.1.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+newsapi_scraper-0.0.1.dist-info/top_level.txt,sha256=fHSKwSigBAI_IMS0_Yqk0Gu1cXlYjShdvbHDUO-u8pY,14
+newsapi_scraper-0.0.1.dist-info/RECORD,,
