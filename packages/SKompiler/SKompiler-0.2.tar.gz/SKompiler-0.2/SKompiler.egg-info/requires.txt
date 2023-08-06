@@ -1,0 +1,16 @@
+scikit-learn
+singledispatch
+
+[dev]
+sympy
+sqlalchemy
+pylint
+pytest
+jupyter
+twine
+pandas
+
+[full]
+sympy
+sqlalchemy
+astor>=0.6
