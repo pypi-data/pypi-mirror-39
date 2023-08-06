@@ -1,0 +1,12 @@
+README.md
+setup.py
+py2gc/__init__.py
+py2gc/api_call.py
+py2gc/parsers.py
+py2gc/py2gc.py
+py2gc.egg-info/PKG-INFO
+py2gc.egg-info/SOURCES.txt
+py2gc.egg-info/dependency_links.txt
+py2gc.egg-info/entry_points.txt
+py2gc.egg-info/requires.txt
+py2gc.egg-info/top_level.txt
