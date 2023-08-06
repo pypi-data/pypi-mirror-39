@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: Flock-SSG
+Version: 0.1.0
+Summary: A static site generator
+Home-page: https://github.com/rdall96/Flock_SSG
+Author: Derek Connelly, Ricky Dall‘Armellina, Dan Levy, Lukas Mallory
+Author-email: conneld@sunyit.edu
+License: UNKNOWN
+Description: A simple website generation tool in Python should be able to gather information on how the website should look like from the user. This information includes, theme, colors, data/text to display. The user inputs one or more markdown files (file.md) to the website generator.The program then takes these files, indexes them and converts them to working HTML. A folder with the whole website/converted files is then created with the correct hierarchy.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
