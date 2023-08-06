@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: rofetta
+Version: 1.1.3
+Summary: converter between the main FCA formats of formal contexts
+Home-page: https://github.com/aluriak/rofetta
+Author: Lucas Bourneuf
+Author-email: lucas.bourneuf@laposte.net
+License: GPL
+Description: # Rofetta
+        The rosetta stone for FCA
+        
+        
+        
+        ## Steps to manage this project
+        
+            crenv
+            srenv
+            g init
+            pip install zest.releaser[recommended]
+            # write the setup.{cfg,py}
+        
+Keywords: formal concept analysis,file format,convertion
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
