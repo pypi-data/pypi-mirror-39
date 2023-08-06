@@ -1,0 +1,14 @@
+migro/__init__.py,sha256=ewp-GcEJmDAd4byH6a5yw-Cyh3Q_yx5NoAnNldUM1ME,105
+migro/cli.py,sha256=w1E93DGNLhLLNRLuOkEx1RY6N4NA-F2GgarnOeOEd0k,6063
+migro/settings.py,sha256=vkJ5UhRG5k41y_LxXEUXbE5QC6BHFMdY8ObAEOGOKzc,471
+migro/filestack/__init__.py,sha256=cEgX821YM05PoqO9GdA0M4WZ7zYK0corgymBGkHa16s,96
+migro/filestack/utils.py,sha256=TyDXZdHTQdXGe3u-h7qIPLf5NvLyirpZpEn7Fc8Jf5g,452
+migro/uploader/__init__.py,sha256=ry62TvInGqBguQ_mQtURoquz6kf9W4wqhhEywHOQxMI,83
+migro/uploader/utils.py,sha256=MDxgxv7CPHW74KZGgqgxPI14voF11fdZbQT8gA8IJ0M,853
+migro/uploader/worker.py,sha256=2CfdQjEG1cnck7F-QPkcuuwnGn_KLXO_SFcMyv3a0SU,8002
+uploadcare_migro-1.4.0.dist-info/LICENSE,sha256=MSslomQa_96PmzwCH-oLg3cYqsC4DfgWzE9cJ6VpgTA,1081
+uploadcare_migro-1.4.0.dist-info/METADATA,sha256=tqQyQBCuJ2QBKpdHol9erQqaHLYCQ7l4I4-rL3zbAJ8,5628
+uploadcare_migro-1.4.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+uploadcare_migro-1.4.0.dist-info/entry_points.txt,sha256=VPYgoSrGk4YB6WzFu63tzyzwY92nMoeVGFEdShfPlAo,41
+uploadcare_migro-1.4.0.dist-info/top_level.txt,sha256=gjmDQbTqIVVKnoFtYYL1y__piqezva29gTnYLE9LFPQ,6
+uploadcare_migro-1.4.0.dist-info/RECORD,,
