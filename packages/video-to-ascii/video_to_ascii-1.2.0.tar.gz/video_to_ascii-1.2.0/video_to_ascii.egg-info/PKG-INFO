@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: video-to-ascii
+Version: 1.2.0
+Summary: It is a simple python package to play videos in the terminal
+Home-page: https://github.com/joelibaceta/video-to-ascii
+Author: Joel Ibaceta
+Author-email: mail@joelibaceta.com
+License: MIT
+Project-URL: Source, https://github.com/joelibaceta/video-to-ascii
+Project-URL: Tracker, https://github.com/joelibaceta/video-to-ascii/issues
+Description: A simple tool to play a video using ascii characters using colored characters as pixels or other usefull outputs
+Keywords: video ascii terminal opencv
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
