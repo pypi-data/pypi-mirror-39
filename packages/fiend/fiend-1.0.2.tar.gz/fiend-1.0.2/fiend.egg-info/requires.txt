@@ -1,0 +1,12 @@
+numpy
+scipy
+matplotlib
+h5py
+mpi4py
+petsc4py
+slepc4py
+fenics_dolfin
+mshr
+psutil
+progressbar2
+mypy
