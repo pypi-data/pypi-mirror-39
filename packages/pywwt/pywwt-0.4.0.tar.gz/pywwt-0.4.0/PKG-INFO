@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pywwt
+Version: 0.4.0
+Summary: WorldWide Telescope from Python
+Home-page: https://github.com/WorldWideTelescope/pywwt
+Author: Thomas P. Robitaille, O. Justin Otor, and John ZuHone
+Author-email: thomas.robitaille@gmail.com
+License: BSD
+Description: UNKNOWN
+Keywords: Jupyter,Widgets,IPython
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Framework :: Jupyter
+Provides-Extra: test
+Provides-Extra: qt
+Provides-Extra: docs
