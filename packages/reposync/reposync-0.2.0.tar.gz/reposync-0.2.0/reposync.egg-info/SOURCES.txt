@@ -1,0 +1,13 @@
+README.md
+setup.py
+reposync/__init__.py
+reposync/git.py
+reposync/parser.py
+reposync/reposync.py
+reposync/tree.py
+reposync.egg-info/PKG-INFO
+reposync.egg-info/SOURCES.txt
+reposync.egg-info/dependency_links.txt
+reposync.egg-info/requires.txt
+reposync.egg-info/top_level.txt
+reposync/scripts/reposync
