@@ -1,0 +1,5 @@
+requests
+pandas==0.22.0
+websocket-client==0.47.0
+sseclient-py==1.7
+kerberos
