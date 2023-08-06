@@ -1,0 +1,8 @@
+README.md
+setup.py
+pilosa_roaring.egg-info/PKG-INFO
+pilosa_roaring.egg-info/SOURCES.txt
+pilosa_roaring.egg-info/dependency_links.txt
+pilosa_roaring.egg-info/top_level.txt
+roaring/__init__.py
+roaring/roaring.py
