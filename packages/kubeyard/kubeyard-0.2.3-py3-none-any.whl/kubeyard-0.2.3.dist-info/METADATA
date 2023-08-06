@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: kubeyard
+Version: 0.2.3
+Summary: A utility to develop, test and deploy Kubernetes microservices.
+Home-page: https://github.com/socialwifi/kubeyard
+Author: Social WiFi
+Author-email: it@socialwifi.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: colorlog
+Requires-Dist: jinja2
+Requires-Dist: kubepy (>=1.11.1)
+Requires-Dist: pyYAML
+Requires-Dist: GitPython
+Requires-Dist: cached-property
+Requires-Dist: sh
+Requires-Dist: pyfiglet
+Requires-Dist: termcolor
+
+# kubeyard
+[![Latest Version](https://img.shields.io/pypi/v/kubeyard.svg)](https://pypi.python.org/pypi/kubeyard/)
+[![Supported Python versions](https://img.shields.io/pypi/pyversions/kubeyard.svg)](https://pypi.python.org/pypi/kubeyard/)
+[![Wheel Status](https://img.shields.io/pypi/wheel/kubeyard.svg)](https://pypi.python.org/pypi/kubeyard/)
+[![License](https://img.shields.io/pypi/l/kubeyard.svg)](https://github.com/socialwifi/kubeyard/blob/master/LICENSE)
+
+
+A utility to develop, test and deploy Kubernetes microservices.
+
+## Requirements
+
+- bash
+- minikube == v0.25.2
+- kubectl == 1.9.4
+- docker
+- git
+    - initialized repository with configured remote origin
+
+## Installation
+
+```bash
+rm -rf $HOME/kubeyard-venv
+virtualenv -p python3 $HOME/kubeyard-venv
+. $HOME/kubeyard-venv/bin/activate
+pip install kubeyard
+echo '. $HOME/kubeyard-venv/bin/activate' >> $HOME/.bashrc
+```
+
+
