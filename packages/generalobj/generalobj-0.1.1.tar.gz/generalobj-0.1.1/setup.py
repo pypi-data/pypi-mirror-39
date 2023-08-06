@@ -1,0 +1,11 @@
+from setuptools import setup
+
+setup(name='generalobj',
+    version='0.1.1',
+    description='Initial',
+    url='',
+    author='Csaba Saranszky',
+    author_email='alt@256.hu',
+    license='GPL',
+    packages=['generalobj'],
+    zip_safe=False)
