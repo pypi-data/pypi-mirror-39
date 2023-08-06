@@ -1,0 +1,10 @@
+README.md
+setup.py
+cryptor/__init__.py
+cryptor/crypt_file.py
+cryptor/cryptorshell.py
+cryptor/test_crypt_file.py
+cryptor.egg-info/PKG-INFO
+cryptor.egg-info/SOURCES.txt
+cryptor.egg-info/dependency_links.txt
+cryptor.egg-info/top_level.txt
