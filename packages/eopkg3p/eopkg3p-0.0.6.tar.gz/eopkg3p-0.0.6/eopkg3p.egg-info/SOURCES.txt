@@ -1,0 +1,13 @@
+README.md
+setup.py
+eopkg3p/__init__.py
+eopkg3p/__version__.py
+eopkg3p/cli.py
+eopkg3p/consts.py
+eopkg3p/core.py
+eopkg3p.egg-info/PKG-INFO
+eopkg3p.egg-info/SOURCES.txt
+eopkg3p.egg-info/dependency_links.txt
+eopkg3p.egg-info/entry_points.txt
+eopkg3p.egg-info/requires.txt
+eopkg3p.egg-info/top_level.txt
