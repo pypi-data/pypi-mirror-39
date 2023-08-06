@@ -1,0 +1,4 @@
+[console_scripts]
+zimfarm = zimfarm.commands.zimfarm:main
+zimfarm login = zimfarm.commands.login:main
+
