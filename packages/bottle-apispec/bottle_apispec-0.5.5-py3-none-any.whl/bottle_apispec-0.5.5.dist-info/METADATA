@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: bottle-apispec
+Version: 0.5.5
+Summary: Bottle + APISpec + Marshmallow integration
+Home-page: https://github.com/truckpad/bottle-apispec
+Author: Marcos Araujo Sobrinho
+Author-email: marcos.sobrinho@truckpad.com.br
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP
+Description-Content-Type: text/markdown
+Requires-Dist: apispec (==0.39.0)
+Requires-Dist: bottle (>=0.12.0)
+Requires-Dist: marshmallow (>=2.10.0)
+
+# bottle-apispec
+
+Simple plugin to easily enable integrate Bottle, APISpec and Marshmallow.
+
+### Example
+```python
+from bottle import Bottle, run
+from truckpad.bottle.apispec import APISpecPlugin
+from marshmallow import Schema
+from marshmallow.fields import String
+
+app = Bottle()
+
+
+class MySchema(Schema):
+    id = String()
+    value = String()
+
+
+@app.get('/')
+def index():
+    """API endpoint that return MySchema
+    ---
+    get:
+        description: API endpoint that return MySchema
+        responses:
+            200:
+                description: It works!!!!
+                schema: MySchema
+    """
+    data, error = MySchema.load('id', 'value')
+    return data
+
+
+app.install(APISpecPlugin(
+    title='Example API',
+    version='1.0.0',
+    openapi_version='2.0',
+    scan_package='.')
+)
+
+run(app)
+
+```
+
