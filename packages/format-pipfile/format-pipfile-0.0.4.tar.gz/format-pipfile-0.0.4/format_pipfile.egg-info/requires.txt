@@ -1,0 +1,10 @@
+click
+delegator-py
+future
+packaging
+path.py
+requirementslib
+tomlkit
+
+[:(python_version < '3.6')]
+typing
