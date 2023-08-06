@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: pyeddystoneurl
+Version: 1.0.1
+Summary: Python C Extension To Scan Eddystone-URL Beacons
+Home-page: https://github.com/six519/pyeddystoneurl
+Author: Ferdinand Silva
+Author-email: ferdinandsilva@ferdinandsilva.com
+License: UNKNOWN
+Download-URL: https://github.com/six519/pyeddystoneurl
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: C
+Classifier: License :: Freeware
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
