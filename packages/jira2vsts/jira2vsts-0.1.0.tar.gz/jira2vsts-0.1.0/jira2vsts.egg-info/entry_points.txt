@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        jira2vsts=jira2vsts:main
+    
