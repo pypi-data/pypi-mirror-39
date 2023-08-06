@@ -1,0 +1,12 @@
+README.rst
+setup.py
+emojis/__init__.py
+emojis/emojis.py
+emojis.egg-info/PKG-INFO
+emojis.egg-info/SOURCES.txt
+emojis.egg-info/dependency_links.txt
+emojis.egg-info/top_level.txt
+emojis/db/__init__.py
+emojis/db/db.py
+emojis/db/generator.py
+emojis/db/utils.py
