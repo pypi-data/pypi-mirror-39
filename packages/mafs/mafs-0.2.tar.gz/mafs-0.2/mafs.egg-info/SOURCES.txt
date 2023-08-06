@@ -1,0 +1,12 @@
+README.md
+setup.py
+mafs/__init__.py
+mafs/file.py
+mafs/filesystem.py
+mafs/mafs.py
+mafs/router.py
+mafs.egg-info/PKG-INFO
+mafs.egg-info/SOURCES.txt
+mafs.egg-info/dependency_links.txt
+mafs.egg-info/requires.txt
+mafs.egg-info/top_level.txt
