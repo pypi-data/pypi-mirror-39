@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+unimi_unsubscribe/__init__.py
+unimi_unsubscribe/__version__.py
+unimi_unsubscribe/spam_list.json
+unimi_unsubscribe/unimi_unsubscribe.py
+unimi_unsubscribe.egg-info/PKG-INFO
+unimi_unsubscribe.egg-info/SOURCES.txt
+unimi_unsubscribe.egg-info/dependency_links.txt
+unimi_unsubscribe.egg-info/top_level.txt
