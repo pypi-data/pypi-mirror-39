@@ -1,0 +1,3 @@
+[console_scripts]
+apprentice = apprentice.commands:main
+
