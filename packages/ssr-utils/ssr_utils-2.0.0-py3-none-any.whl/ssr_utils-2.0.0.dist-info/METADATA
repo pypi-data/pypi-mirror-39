@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: ssr-utils
+Version: 2.0.0
+Summary: Shadowsocks(R) utils.
+Home-page: https://github.com/neoctobers/ssr_utils
+Author: @neoctobers
+Author-email: neoctobers@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: xbase64
+Requires-Dist: requests[socks]
+Requires-Dist: xprint
+
+# Shadowsocks(R) utils
+
+Only for linux.
+
+
