@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+WebNMS.egg-info/PKG-INFO
+WebNMS.egg-info/SOURCES.txt
+WebNMS.egg-info/dependency_links.txt
+WebNMS.egg-info/requires.txt
+WebNMS.egg-info/top_level.txt
+webnms/__init__.py
+webnms/edge.py

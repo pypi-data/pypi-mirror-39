@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: WebNMS
+Version: 1b1
+Summary: A package providing provisions for connecting with a WebNMS IoT platform
+Home-page: https://www.webnms.com/
+Author: WebNMS
+Author-email: webnms-edge@zohocorp.com
+License: UNKNOWN
+Description: # WebNMS EdgeX SDK - Python 
+        
+        This package helps you to start your IoT journey with WebNMS IoT platform by onboarding any Device that supports python.
+        
+Keywords: IoT sensors
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
