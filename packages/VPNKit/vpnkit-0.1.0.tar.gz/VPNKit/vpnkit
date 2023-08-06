@@ -1,0 +1,10 @@
+#!/bin/bash
+path=$VIRTUAL_ENV
+if [ -z "$VIRTUAL_ENV" ]; then  
+ path="/usr/local"
+fi
+if [ ! -d "/usr/share/vpnkit" ]; then
+  sudo mkdir /usr/share/vpnkit
+fi
+trap 'sudo $path/bin/exit.py' EXIT
+sudo $path/bin/vpnkit.py
