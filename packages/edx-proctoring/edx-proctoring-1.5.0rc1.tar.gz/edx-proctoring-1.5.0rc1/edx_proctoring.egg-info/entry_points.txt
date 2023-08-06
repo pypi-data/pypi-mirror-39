@@ -1,0 +1,5 @@
+[openedx.proctoring]
+mock = edx_proctoring.backends.mock:MockProctoringBackendProvider
+null = edx_proctoring.backends.null:NullBackendProvider
+software_secure = edx_proctoring.backends.software_secure:SoftwareSecureBackendProvider
+
