@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: koverse
+Version: 2.9.0.1
+Summary: Koverse Python Client
+Home-page: http://www.koverse.com/support/developers/
+Author: Koverse Inc.
+Author-email: support@koverse.com
+License: Apache Software License
+Keywords: koverse python
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: thrift
+
+Koverse Python client
+=====================
+
+A package that allows Python scripts to communicate with the Koverse server.
+
+When you are ready to publish the updated version of this package:
+
+ 1. Build package source: `python setup.py build`
+ 2. Build distributable artifacts - `python setup.py bdist_wheel && python setup.py sdist` - and delete old tarballs and `whl` files
+
