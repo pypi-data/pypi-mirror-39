@@ -1,0 +1,17 @@
+pymfy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymfy/__version__.py,sha256=Hz9hqlnehve1l3B0uhkko4gq3haSC1MwFHMRBO6BJhE,63
+pymfy/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymfy/api/model.py,sha256=B8XVmvIh8cNd1Jj3ag0zpEyh8fSGsweVFGShNDp1WyM,2537
+pymfy/api/somfy_api.py,sha256=uDyJBXgYnLp35FfF0UJcEn8u0VLLV3lMzy13J8jEDSQ,3532
+pymfy/api/devices/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymfy/api/devices/base.py,sha256=JBsek1otbDgZX0dHzxAh_gq1YzZ3z3AzMXzpUl_xGsA,1302
+pymfy/api/devices/blind.py,sha256=EFZisXi8C2hbPWUAwVyIMiaQxeseCRw-FyP1vv_ytqo,520
+pymfy/api/devices/camera_protect.py,sha256=qsE6l3WqsXxxlZNOR0rHAMnEsiK8MxnY4cZ6bA4C8-4,503
+pymfy/api/devices/category.py,sha256=ZIxjIAr2ykoXmGmNO41LkWmtNqaxBVzg-wluoR-fexI,192
+pymfy/api/devices/roller_shutter.py,sha256=1QU4Pc01FKEXb9Hop8P5k4Fmn1quxET-m74BIE_yWfo,945
+pymfy/api/devices/thermostat.py,sha256=00vkwLDVkaa8TB_gSy_gpDARH2O5w9ORJUh-eUydcjk,3408
+pymfy-0.4.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pymfy-0.4.0.dist-info/METADATA,sha256=TKdsLfucPKaVqxRJNW_36kMGMXHzioMDHlJ8-cQnQcA,3291
+pymfy-0.4.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pymfy-0.4.0.dist-info/top_level.txt,sha256=yRtjestFLwSrflwgvUmFtZR4pVn9zDeAcf3llroBL38,6
+pymfy-0.4.0.dist-info/RECORD,,
