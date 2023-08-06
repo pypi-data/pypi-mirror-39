@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: quantaxis-pubsub
+Version: 1.4
+Summary: QUANTAXIS PUBSUB:QUANTAXIS PUB/SUB MODEL
+Home-page: https://github.com/yutiansut/QAPUBSUB
+Author: yutiansut
+Author-email: yutiansut@qq.com
+License: MIT
+Keywords: quantaxis,quant,finance,Backtest,Framework
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Requires-Dist: pika
+Requires-Dist: quantaxis (>=1.1.10.dev2)
+
+publisher and subscriber
+
+
