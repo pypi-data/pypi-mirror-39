@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+opensensemap_api/__init__.py
+opensensemap_api/exceptions.py
+opensensemap_api.egg-info/PKG-INFO
+opensensemap_api.egg-info/SOURCES.txt
+opensensemap_api.egg-info/dependency_links.txt
+opensensemap_api.egg-info/requires.txt
+opensensemap_api.egg-info/top_level.txt
+opensensemap_api.egg-info/zip-safe
