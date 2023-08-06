@@ -1,0 +1,5 @@
+
+        [console_scripts]
+        workers=workers:start_workers
+        deletetasks=workers:delete_workers_from_queue
+    
