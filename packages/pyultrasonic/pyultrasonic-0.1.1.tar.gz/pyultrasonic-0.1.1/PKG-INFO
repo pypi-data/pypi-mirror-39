@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: pyultrasonic
+Version: 0.1.1
+Summary: Retrieve distances using a Raspberry Pi with ultrasonic sensor HC-SR04
+Home-page: https://github.com/richie256/pyultrasonic
+Author: Richard Dubois
+Author-email: dubois.richard@gmail.com
+License: Apache 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
