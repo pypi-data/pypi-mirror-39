@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: dikicli
+Version: 0.3
+Summary: Commandline interface to diki.pl polish-english dictionary.
+Home-page: https://github.com/silenc3r/dikicli
+License: MIT
+Author: Dawid Zych
+Author-email: dawid.zych@yandex.com
+Requires-Python: >=3.4,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: beautifulsoup4
+Project-URL: Repository, https://github.com/silenc3r/dikicli
+Description-Content-Type: text/markdown
+
+# dikicli
+
+Commandline interface to diki.pl polish-english dictionary.
+
+Dikicli allows you to use diki.pl from comfort of your terminal.
+All results are cached for faster retrieval in the future.
+
+## Usage:
+
+Translate english to polish:
+
+    diki word
+
+Translate polish to engish:
+
+    diki -p word
+
+Display html file of all words translated so far:
+
+    diki -i
+

@@ -1,0 +1,3 @@
+[console_scripts]
+diki=diki.cli:main
+
