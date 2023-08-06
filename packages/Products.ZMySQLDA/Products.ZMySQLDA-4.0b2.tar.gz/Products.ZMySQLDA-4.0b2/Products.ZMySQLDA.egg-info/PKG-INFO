@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: Products.ZMySQLDA
+Version: 4.0b2
+Summary: MySQL Zope adapter.
+Home-page: https://github.com/zms-publishing/Products.ZMySQLDA
+Author: HOFFMANN+LIEBENBERG in association with SNTL Publishing, Andy Dustman, John Eikenberry
+Author-email: zms@sntl-publishing.com
+License: ZPL 2.1
+Description: MySQL Database Adapter for Zope.
+Platform: UNKNOWN
+Classifier: Development Status :: 6 - Mature
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Zope :: 4
+Classifier: License :: OSI Approved :: Zope Public License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Database
+Classifier: Topic :: Database :: Front-Ends

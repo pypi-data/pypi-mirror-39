@@ -1,0 +1,4 @@
+setuptools>=36.2
+six
+mysqlclient
+Products.ZSQLMethods
