@@ -1,0 +1,9 @@
+
+[docs]
+sphinx
+sphinx_rtd_theme
+pbr
+appdirs
+
+[tests]
+pytest

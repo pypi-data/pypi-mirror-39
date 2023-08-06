@@ -1,0 +1,68 @@
+# conda environment file for python 3, includes packages needed for testing
+# create a conda virtual env using:
+#   conda env create -n myenv --file py3_conda_environment.yml
+#   source activate myenv (use 'activate myenv' on windows)
+#   python setup.py develop
+#
+# optionally run tests:
+#   python setup.py test
+
+name: quest
+
+channels:
+    - pyviz/label/dev
+    - conda-forge
+
+dependencies:
+    - python=3
+
+    # core dependencies
+    - click
+    - distributed>=1.18
+    - fiona
+    - gdal
+    - geojson
+    - libgdal  # to ensure it comes from conda-forge
+    - peewee
+    - pandas<=0.22.0
+    - geopandas
+    - jinja2
+    - matplotlib
+    - numpy
+    - param>=1.8.1
+    - pint
+    - pony
+    - psutil
+    - pyyaml
+    - rasterio
+    - sortedcollections
+    - tornado
+    - ulmo>=0.8.3.2
+    - werkzeug
+
+    # test dependencies
+    - pytest=3.7.4
+    - pytest-runner
+    - pytest-cov
+    - coveralls
+    - nbval
+
+    # docs dependencies
+    - sphinx
+    - sphinx_rtd_theme
+
+    # plugin dependencies
+    - girder-client
+    - hs_restclient
+    - pillow
+    - requests
+    - whitebox_tools
+
+    # notebook examples dependencies
+    - jupyter
+    - holoviews
+    - geoviews
+    - hvplot
+    - paramnb
+    - parambokeh
+    - cartopy

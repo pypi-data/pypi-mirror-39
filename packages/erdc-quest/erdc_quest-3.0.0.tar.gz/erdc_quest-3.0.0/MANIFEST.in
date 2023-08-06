@@ -1,0 +1,6 @@
+include *.rst
+include *.txt
+include *.yml
+
+recursive-include quest/data *
+recursive-include quest *.py
