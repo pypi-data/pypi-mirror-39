@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: django-dynamic-decimal
+Version: 0.3.0
+Summary: Django Dynamic Decimal field
+Home-page: https://git.pispalanit.fi/pit/django-dynamic-decimal
+Author: Harry Karvonen
+Author-email: harry.karvonen@pispalanit.fi
+License: MIT
+Platform: any
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: POSIX :: Linux
+Requires-Dist: Django
+
+UNKNOWN
+
+
