@@ -1,0 +1,14 @@
+vogel/__init__.py,sha256=RQFd2DSNvUZoZsATv6JoTZqBa0VwXtgZ-Ahp1Q9Otz8,49
+vogel/preprocessing/__init__.py,sha256=Wk570Ipr34_LHrvZetXC1IhW49HM2C-rgWgVTImJjAk,29
+vogel/preprocessing/preprocessing.py,sha256=JHwhyo0PlNy4jthx52SyX3M-aQVcvnc4n00-5IT1VZw,35905
+vogel/train/__init__.py,sha256=jUAA37ZYWbejqdGVohj3Wk6MHG8x3K3CUN2rHFLeAjM,21
+vogel/train/train.py,sha256=4SKiLu29HFaUxOlbqBFgR--dFBNXUA6pZA67kqGH-AQ,14543
+vogel/utils/__init__.py,sha256=alIDGBnxWH4JvP-UW-7N99seBBi0r1GV1h8f1ERFBec,21
+vogel/utils/utils.py,sha256=vDvgEvrp2n0E3Fi_FZcpDZNKTTV2D7VVdwBjAndezLc,1791
+vogel/utils/stats/__init__.py,sha256=CVsUGVsjfAL9UFGvNblGJfbF5-SzBxeCJJRQ3Cabwxk,21
+vogel/utils/stats/stats.py,sha256=urEJkfIiRbxaTAr2MuL7mvJrn9CGE73OcVMZUUErHsU,24719
+vogel-0.2.4.dist-info/LICENSE,sha256=yhKOEJLmJznm7vlOj_S0NJ-9_bnnvNC7uYG3zcQrhfo,11334
+vogel-0.2.4.dist-info/METADATA,sha256=56nP2siE4DDmsm1mF_M5sNgg-Ntf2gLWTal18N5mEpA,1176
+vogel-0.2.4.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+vogel-0.2.4.dist-info/top_level.txt,sha256=8XoVr3B6CxJplbsOs4OosSxpr8D2JWQzDFGlSX-mPTU,6
+vogel-0.2.4.dist-info/RECORD,,

@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: vogel
+Version: 0.2.4
+Summary: vogel Python Package
+Home-page: https://github.com/usaa/
+Author: Michael Waldmeier, Robert Dohner, Chris Manhave
+Author-email: michael.waldmeier@usaa.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: scikit-learn (>=0.20)
+Requires-Dist: statsmodels (>=0.9.0)
+Requires-Dist: matplotlib (>=2.0.2)
+Requires-Dist: pandas (>=0.20.3)
+Requires-Dist: xgboost (>=0.80)
+Requires-Dist: catboost (>=0.9.1)
+
+Vogel is a ML project flow tool, with the primary objective of simplifying actuarial ML processes. It tracks and manages model development from data preparation to results analysis and visualization.
+
+
