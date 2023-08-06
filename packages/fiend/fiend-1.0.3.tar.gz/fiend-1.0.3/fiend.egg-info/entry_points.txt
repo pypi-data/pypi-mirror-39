@@ -1,0 +1,14 @@
+[console_scripts]
+fiend_animate_density = fiend.analysis.animate_density:animate_density
+fiend_draw_acceleration = fiend.analysis.draw_acceleration:draw_dipole_acceleration
+fiend_draw_laser = fiend.analysis.draw_laser:draw_laser
+fiend_draw_mesh = fiend.analysis.draw_mesh:draw_mesh
+fiend_draw_norm = fiend.analysis.draw_norm:draw_norm
+fiend_draw_pes = fiend.analysis.draw_pes:compute_pes_main
+fiend_draw_shapshot = fiend.analysis.draw_snapshot:draw_snapshot
+fiend_draw_stationary_states = fiend.analysis.draw_stationary_states:draw_stationary_states
+fiend_draw_velocity = field.analysis.draw_velocity:draw_dipole_velocity
+fiend_linpol_prepare_tdse = fiend.lin_pol.prepare_tdse:prepare_tdse_main
+fiend_linpol_propagate = fiend.lin_pol.propagate:linpol_propagate_main
+fiend_linpol_tise = fiend.lin_pol.solve_tise:tirun_main
+
