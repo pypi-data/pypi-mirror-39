@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: RTOC
+Version: 1.8.3
+Summary: RealTime OpenControl
+Home-page: https://github.com/Haschtl/RealTimeOpenControl
+Author: Sebastian Keller
+Author-email: sebastiankeller@online.de
+License: GNU
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: User Interfaces
+Requires-Python: >=3
+Requires-Dist: numpy
+Requires-Dist: pyqt5
+Requires-Dist: pyqtgraph
+Requires-Dist: markdown2
+Requires-Dist: xlsxwriter
+Requires-Dist: scipy
+Requires-Dist: qtmodern
+Requires-Dist: python-telegram-bot
+Requires-Dist: matplotlib
+Requires-Dist: requests
+Requires-Dist: python-nmap
+Requires-Dist: bokeh
+Requires-Dist: pycryptodomex
+
+UNKNOWN
+
+
