@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+jupyterlab_gitlab.py
+setup.cfg
+setup.py
+jupyter-config/jupyter_notebook_config.d/jupyterlab_gitlab.json
+jupyterlab_gitlab.egg-info/PKG-INFO
+jupyterlab_gitlab.egg-info/SOURCES.txt
+jupyterlab_gitlab.egg-info/dependency_links.txt
+jupyterlab_gitlab.egg-info/requires.txt
+jupyterlab_gitlab.egg-info/top_level.txt
