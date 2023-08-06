@@ -1,0 +1,12 @@
+README.md
+setup.py
+potodo/__init__.py
+potodo/__main__.py
+potodo/potodo.py
+potodo.egg-info/PKG-INFO
+potodo.egg-info/SOURCES.txt
+potodo.egg-info/dependency_links.txt
+potodo.egg-info/entry_points.txt
+potodo.egg-info/not-zip-safe
+potodo.egg-info/requires.txt
+potodo.egg-info/top_level.txt
