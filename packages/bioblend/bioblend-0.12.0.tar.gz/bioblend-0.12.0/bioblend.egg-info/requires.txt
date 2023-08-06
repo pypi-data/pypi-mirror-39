@@ -1,0 +1,8 @@
+boto>=2.9.7
+pyyaml
+requests>=2.20.0
+requests-toolbelt
+six
+
+[testing]
+pytest
