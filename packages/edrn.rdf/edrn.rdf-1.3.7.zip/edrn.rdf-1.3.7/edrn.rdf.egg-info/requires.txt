@@ -1,0 +1,15 @@
+collective.autopermission
+mysolr
+Pillow
+plone.app.dexterity[grok,relations]
+plone.app.relationfield
+plone.behavior
+Products.CMFPlone
+rdflib
+setuptools
+z3c.relationfield
+z3c.suds
+
+[test]
+plone.app.testing
+rdfextras
