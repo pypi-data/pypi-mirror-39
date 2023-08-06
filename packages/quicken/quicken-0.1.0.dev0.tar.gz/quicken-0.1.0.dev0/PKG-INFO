@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: quicken
+Version: 0.1.0.dev0
+Summary: Make Python apps fast.
+Home-page: None
+Author: Chris Hunt
+Author-email: chrahunt@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: python-daemon (>=2.2,<3.0)
