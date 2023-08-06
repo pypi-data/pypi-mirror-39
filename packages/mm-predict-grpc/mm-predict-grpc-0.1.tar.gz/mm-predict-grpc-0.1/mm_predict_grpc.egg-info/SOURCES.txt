@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+mm_predict_grpc.egg-info/PKG-INFO
+mm_predict_grpc.egg-info/SOURCES.txt
+mm_predict_grpc.egg-info/dependency_links.txt
+mm_predict_grpc.egg-info/not-zip-safe
+mm_predict_grpc.egg-info/requires.txt
+mm_predict_grpc.egg-info/top_level.txt
+mmpredict_grpc/__init__.py
+mmpredict_grpc/mmpredict_pb2.py
+mmpredict_grpc/mmpredict_pb2_grpc.py
