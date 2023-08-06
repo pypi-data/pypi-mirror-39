@@ -1,0 +1,3 @@
+[console_scripts]
+shecan = shecan.cli:shecan_cli
+
