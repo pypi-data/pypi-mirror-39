@@ -1,0 +1,5 @@
+
+	# -*- Entry points: -*-
+	[console_scripts]
+	selfext = selfext.__init__.py:gen
+	
