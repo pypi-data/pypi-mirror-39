@@ -1,0 +1,3 @@
+[console_scripts]
+filepursuit = filepursuer.filepursuer:main
+
