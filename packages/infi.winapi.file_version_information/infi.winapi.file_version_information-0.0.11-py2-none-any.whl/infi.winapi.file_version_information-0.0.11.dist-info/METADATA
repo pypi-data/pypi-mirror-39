@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: infi.winapi.file-version-information
+Version: 0.0.11
+Summary: Simple API to retreive a Windows file version
+Home-page: https://github.com/Infinidat/infi.winapi.file_version_information
+Author: Arnon Yaari
+Author-email: arnony@infinidat.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: infi.cwrap
+Requires-Dist: infi.instruct
+Requires-Dist: setuptools
+
+Simple API to retreive a Windows file version
+
+
