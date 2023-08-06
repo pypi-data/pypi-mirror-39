@@ -1,0 +1,5 @@
+celery==4.1.1
+Django==1.11.15
+mongoengine==0.11.0
+redis==2.10.6
+core-main-app==1.0.0-rc2
