@@ -1,0 +1,11 @@
+README.rst
+setup.py
+conf/__init__.py
+conf/parsers.py
+conf/reader.py
+conf.egg-info/PKG-INFO
+conf.egg-info/SOURCES.txt
+conf.egg-info/dependency_links.txt
+conf.egg-info/not-zip-safe
+conf.egg-info/requires.txt
+conf.egg-info/top_level.txt
