@@ -1,0 +1,14 @@
+hkibg_qcloud_cos_keeper/__init__.py,sha256=QofzXVSCNdqf0FBx7RBZZ3RG3acLzfbBCt9lZKho5T4,195
+hkibg_qcloud_cos_keeper/args_util.py,sha256=S7KDRF0wnQdsPaCmy3ts3WL5G9hmCNeHMYEoa_oR1zI,997
+hkibg_qcloud_cos_keeper/config_util.py,sha256=CIDF02a3RE9nJhw0kBkiCyNZI30lKq-dxngE1Oickgo,1886
+hkibg_qcloud_cos_keeper/cos_util.py,sha256=oKKbozPj4yjLeJAp64GCNB0mxYJyryyIxFAHgG6LDHo,1321
+hkibg_qcloud_cos_keeper/date_util.py,sha256=oGrneuoN7HwA0ASNPCLYm76YoD8_X4is7-wSROMOfSs,3413
+hkibg_qcloud_cos_keeper/decorator.py,sha256=_b9VxJHx-98R-qvrZhoFvspE7rO2c0LmtuyVsl4vdEk,401
+hkibg_qcloud_cos_keeper/generic_util.py,sha256=vbywSHOPJD7cx-WtQOlLtp6zP7Lla9U2iQroPj9W1vs,118
+hkibg_qcloud_cos_keeper-0.0.3.data/scripts/qcloud_cos_keeper_file_cleaner.py,sha256=MYuoFyc9z6K_Y8MDd77qkljQuLb_VFmDEbnW-aW1LL8,1303
+hkibg_qcloud_cos_keeper-0.0.3.data/scripts/qcloud_cos_keeper_file_rotator.py,sha256=6HFrzXaoojT_HzUbqCHC_LFvtiYNw9wLsLTGgNck58w,2345
+hkibg_qcloud_cos_keeper-0.0.3.data/scripts/qcloud_cos_keeper_file_uploader.py,sha256=PUhyj4s9KzDFs2REm8IfL-vfI6EKWIpO0UxUDzvwmX0,4357
+hkibg_qcloud_cos_keeper-0.0.3.dist-info/METADATA,sha256=Ai1oENYz78AXvcUxk6CDJXr5KACG4WXxthUIL3-bJf0,1001
+hkibg_qcloud_cos_keeper-0.0.3.dist-info/RECORD,,
+hkibg_qcloud_cos_keeper-0.0.3.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+hkibg_qcloud_cos_keeper-0.0.3.dist-info/top_level.txt,sha256=GtwXLlv9kALd5fN5PNJvs4THmvjDVQZRHWH4Ng9yoXk,24

@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: hkibg-qcloud-cos-keeper
+Version: 0.0.3
+Summary: a qcloud cos file/log keeper for hkibg
+Home-page: https://bitbucket.org/pongpersonal/hkibg_qcloud_cos_keeper/src/master/
+Author: Luk Chun Pong
+Author-email: pongluk@tencent.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: cos-python-sdk-v5 (==1.5.5)
+Requires-Dist: pytz
+Requires-Dist: tzlocal
+
+#hkibg qlcoud cos keeper
+
+The purpose of this package is to provide scripts for handling log and
+data files, it can upload the scripts to tencent cloud cos automatically
+
+three scripts are included in this package:
+- qcloud_cos_keeper_file_cleaner.py (clean up files older than a user defined time)
+- qcloud_cos_keeper_file_rotator.py (move file with a date extension)
+- qcloud_cos_keeper_file_uploader.py (upload the file to qcloud cos)
+
+
