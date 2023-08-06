@@ -1,0 +1,14 @@
+azuretestcli/__init__.py,sha256=hHOkeS08SPcPZJOaF-QHe3T6V3DwyjFs51aHVNMQHkk,175
+azuretestcli/cli.py,sha256=cP3eLK5G7m2ajeEphrjXHfhjNlxhWuWvYANrfnL7nFM,10058
+azuretestcli/lib/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+azuretestcli/lib/blobstorage.py,sha256=I8EQNfnKc34Mwv_m8ZLHXa8S0CgjZau199S5tqqMqOE,5027
+azuretestcli/lib/eventhub.py,sha256=8RCKV1Lo54kZQj3AaWZ-Jhc-WxTgP93gjkWpXbMGGN4,2453
+azuretestcli/lib/queuestorage.py,sha256=aSTu4X32j9MbqQqKmojU71K-JT-Jj25CGePgw3e0jRs,112
+azuretestcli/lib/servicebus.py,sha256=8eWVkBUci1uxoYSoRLI2APDuo4UkWuh6gGaGjcjAgWA,2722
+azuretestcli/lib/tablestorage.py,sha256=pampeREj0nePXm0tGm_bUH-X5llX6FG2c8-vhHbSPvs,111
+azure_test_cli-0.4.1.dist-info/LICENSE,sha256=AuW87JHmAdXsyk0f3bY8eq4j14o-tByIpNe5llDob8k,1071
+azure_test_cli-0.4.1.dist-info/METADATA,sha256=6kzKQ7fCi0HVoqCevIJltYW1iBvSnWGgZjjbaA7X8Aw,9010
+azure_test_cli-0.4.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+azure_test_cli-0.4.1.dist-info/entry_points.txt,sha256=KKSeqGLJ66WaRDd9vn6ZSDeoClLapYz4dJcm5djxcpc,67
+azure_test_cli-0.4.1.dist-info/top_level.txt,sha256=c-jY-yO_10bH0xdcod-OtrxhF29wOnR1NS9amLVpryE,13
+azure_test_cli-0.4.1.dist-info/RECORD,,
