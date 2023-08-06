@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: dpytest
+Version: 0.0.1
+Summary: A package that assists in writing tests for discord.py
+Home-page: https://github.com/CraftSpider/dpytest
+Author: Rune Tynan
+Author-email: runetynan@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 1 - Planning
+Classifier: Topic :: Software Development :: Testing
+Description-Content-Type: text/markdown
+
+# dpytest
+
+This is a package to allow testing of discord.py.
+It is only compatible with the rewrite version, and is still in early alpha.
+
