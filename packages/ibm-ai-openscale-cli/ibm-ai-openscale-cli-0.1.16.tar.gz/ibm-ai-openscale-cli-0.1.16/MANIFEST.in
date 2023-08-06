@@ -1,0 +1,8 @@
+
+include README.md
+include LICENSE
+
+recursive-include ibm_ai_openscale_cli *.py *.md
+recursive-include ibm_ai_openscale_cli/ml_engines/watson_machine_learning/models *
+global-exclude .DS_Store
+global-exclude *.pyc
