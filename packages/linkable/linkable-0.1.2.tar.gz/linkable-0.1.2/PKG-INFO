@@ -1,0 +1,80 @@
+Metadata-Version: 1.1
+Name: linkable
+Version: 0.1.2
+Summary: Detect URL, Email, Hashtag and Mention from plain-text and convert into HTML hyperlink.
+Home-page: https://github.com/meyt/linkable-py
+Author: Mahdi Ghane.g
+Author-email: UNKNOWN
+License: MIT License
+Description: linkable-py
+        ===========
+        
+        .. image:: https://travis-ci.org/meyt/linkable-py.svg?branch=master
+            :target: https://travis-ci.org/meyt/linkable-py
+        
+        .. image:: https://coveralls.io/repos/github/meyt/linkable-py/badge.svg?branch=master
+            :target: https://coveralls.io/github/meyt/linkable-py?branch=master
+        
+        Detect URL, Email, Hashtag and Mention from plain-text and convert into HTML hyperlink.
+        
+        
+        Install
+        -------
+        
+        .. code-block:: bash
+        
+            $ pip install linkable
+        
+        
+        Usage
+        =====
+        
+        Basic:
+        
+        .. code-block:: python
+        
+              from linkable import Linkable
+        
+              text = 'This is test with a #hashtag from @linkable on github.com'
+              print(Linkable(text))
+        
+        
+        Output:
+        
+        .. code-block:: html
+        
+            This is test with <a href="/hashtag/#hashtag">#hashtag</a> from <a href="/@linkable">@linkable</a> on <a href="http://github.com">github.com</a>
+        
+        
+        
+        Links list:
+        
+        .. code-block:: python
+        
+              from linkable import LinkableList
+        
+              text = 'This is test with a #hashtag from @linkable on github.com'
+              print(LinkableList(text).links)
+        
+        Output:
+        
+        .. code-block::
+        
+            ['#hashtag', '@linkable', 'github.com']
+        
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Markup :: HTML
