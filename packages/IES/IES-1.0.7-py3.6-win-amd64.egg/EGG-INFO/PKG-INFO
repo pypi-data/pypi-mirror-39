@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: IES
+Version: 1.0.7
+Summary: iPIPA
+Home-page: http://www.gopipa.com/home
+Author: GoPIPA Inc.
+Author-email: info@gopipa.com
+License: GoPIPA
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: Free for non-commercial use
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: System :: Distributed Computing
+Requires-Python: >=3.6
