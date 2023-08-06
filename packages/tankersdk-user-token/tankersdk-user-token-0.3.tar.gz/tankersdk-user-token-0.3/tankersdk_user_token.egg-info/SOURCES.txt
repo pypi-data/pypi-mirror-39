@@ -1,0 +1,16 @@
+README.rst
+setup.cfg
+setup.py
+tankersdk/__init__.py
+tankersdk/crypto/__init__.py
+tankersdk/test/__init__.py
+tankersdk/test/conftest.py
+tankersdk/test/helpers.py
+tankersdk/test/test_crypto.py
+tankersdk/test/test_user_token.py
+tankersdk/usertoken/__init__.py
+tankersdk_user_token.egg-info/PKG-INFO
+tankersdk_user_token.egg-info/SOURCES.txt
+tankersdk_user_token.egg-info/dependency_links.txt
+tankersdk_user_token.egg-info/requires.txt
+tankersdk_user_token.egg-info/top_level.txt
