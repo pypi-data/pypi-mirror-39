@@ -1,0 +1,55 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="pt_BR"
+      tal:omit-tag=""
+      i18n:domain="plone">
+
+<dl class="portlet portletLexML"
+    tal:define="navigation_root_url context/@@plone_portal_state/navigation_root_url">
+
+  <dt class="portletHeader">
+    <span class="portletTopLeft"></span>
+    <a class="tile" tal:attributes="href string:${navigation_root_url}/lexml"}>Pesquisar no LexML</a>
+    <span class="portletTopRight"></span>
+  </dt>
+
+  <dd class="portletItem">
+    <a title="Pesquisa por informação legislativa e jurídica nos 3 poderes das 3 esferas"
+        href="https://www.lexml.gov.br/">
+      <img tal:attributes="src string:${context/portal_url}/++resource++portalmodelo.buscadores/images/lexml-mini.png"
+           alt="Logotipo do LexML - Rede de informação legislativa e jurídica" />
+    </a>
+  </dd>
+
+  <dd class="portletItem">
+    <form action="/lexml" method="post"
+        id="portlet_lexml_search"
+        tal:attributes="action string:${navigation_root_url}/lexml">
+      <input class="searchField" type="text" size="15" value=""
+          placeholder="Buscar no LexML" id="portlet_lexml_keyword"
+          title="Busca por palavra-chave" name="keyword" />
+      <input class="searchButton" type="submit" value="Search"
+          id="portlet_lexml_submit" onclick="submit_lexml()"
+          i18n:attributes="value label_search" />
+    </form>
+  </dd>
+
+  <dd class="portletFooter">
+    <span class="portletBottomLeft"></span>
+    <span class="portletBottomRight"></span>
+  </dd>
+  <script>
+    function submit_lexml(){
+      var form = document.getElementById("portlet_lexml_search");
+      var kw = document.getElementById("portlet_lexml_keyword");
+      form.setAttribute('action', form.action + '/' + kw.value);
+    }
+  </script>
+  <noscript>
+      <div class="error">
+          Seu navegador de internet está sem suporte à JavaScript, por esse motivo algumas funcionalidades do site podem não estar acessíveis.
+      </div>
+  </noscript>
+</dl>
+
+</html>

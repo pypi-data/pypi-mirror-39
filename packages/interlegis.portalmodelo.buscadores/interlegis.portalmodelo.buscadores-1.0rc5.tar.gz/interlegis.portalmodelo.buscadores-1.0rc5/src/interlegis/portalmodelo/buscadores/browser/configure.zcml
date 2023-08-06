@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser">
+
+  <browser:page
+      name="lexml"
+      class=".lexml.LexMLResults"
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      permission="zope2.Public"
+      template="lexml.pt"
+      />
+
+  <browser:page
+      name="buscaleg"
+      class=".buscaleg.BuscaLegResults"
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      permission="zope2.Public"
+      template="buscaleg.pt"
+      />
+
+</configure>

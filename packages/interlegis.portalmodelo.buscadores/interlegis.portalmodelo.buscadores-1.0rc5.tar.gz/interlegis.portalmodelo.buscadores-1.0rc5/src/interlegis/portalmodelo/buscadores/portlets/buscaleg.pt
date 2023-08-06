@@ -1,0 +1,55 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="pt_BR"
+      tal:omit-tag=""
+      i18n:domain="plone">
+
+<dl class="portlet portletBuscaLeg"
+    tal:define="navigation_root_url context/@@plone_portal_state/navigation_root_url">
+
+  <dt class="portletHeader">
+    <span class="portletTopLeft"></span>
+    <a class="tile" tal:attributes="href string:${navigation_root_url}/buscaleg"}>Pesquisar no BuscaLeg</a>
+    <span class="portletTopRight"></span>
+  </dt>
+
+  <dd class="portletItem">
+    <a title="Pesquisa nos conteúdos dos portais legislativos"
+        href="http://busca.interlegis.leg.br/">
+      <img tal:attributes="src string:${context/portal_url}/++resource++portalmodelo.buscadores/images/buscaleg-mini.png"
+          alt="Logotipo do BuscaLeg - Buscador Legislativo" />
+    </a>
+  </dd>
+
+  <dd class="portletItem">
+    <form action="/buscaleg" method="post"
+        id="portlet_buscaleg_search"
+        tal:attributes="action string:${navigation_root_url}/buscaleg">
+      <input class="searchField" type="text" size="15" value=""
+          placeholder="Buscar no BuscaLeg" id="portlet_buscaleg_keyword"
+          title="Busca por palavra-chave" name="keywords" />
+      <input class="searchButton" type="submit" value="Search"
+          id="portlet_buscaleg_submit" onclick="submit_buscaleg()"
+          i18n:attributes="value label_search" />
+    </form>
+  </dd>
+
+  <dd class="portletFooter">
+    <span class="portletBottomLeft"></span>
+    <span class="portletBottomRight"></span>
+  </dd>
+  <script>
+    function submit_buscaleg(){
+      var form = document.getElementById("portlet_buscaleg_search");
+      var kw = document.getElementById("portlet_buscaleg_keyword");
+      form.setAttribute('action', form.action + '/' + kw.value);
+    }
+  </script>
+  <noscript>
+      <div class="error">
+          Seu navegador de internet está sem suporte à JavaScript, por esse motivo algumas funcionalidades do site podem não estar acessíveis.
+      </div>
+  </noscript>
+</dl>
+
+</html>

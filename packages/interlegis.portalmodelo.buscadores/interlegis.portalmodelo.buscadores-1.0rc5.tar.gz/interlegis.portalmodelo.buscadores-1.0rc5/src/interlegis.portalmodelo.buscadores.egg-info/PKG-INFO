@@ -1,0 +1,138 @@
+Metadata-Version: 2.1
+Name: interlegis.portalmodelo.buscadores
+Version: 1.0rc5
+Summary: Integração do Portal Modelo com buscadores externos.
+Home-page: https://github.com/interlegis/interlegis.portalmodelo.buscadores
+Author: Programa Interlegis
+Author-email: ti@interlegis.leg.br
+License: UNKNOWN
+Description: **********************************
+        interlegis.portalmodelo.buscadores
+        **********************************
+        
+        .. contents:: Conteúdo
+           :depth: 2
+        
+        Introdução
+        ==========
+        
+        Este pacote define portlets e browser pages especiais para integrar buscas,
+        dentro do Portal Modelo, dos seguintes sites externos:
+        
+        * `LexML Brasil`_ (Rede de Informação Legislativa e Jurídica)
+        * `Buscador Legislativo`_ do Interlegis
+        
+        As buscas são integradas através de ``iframes``.
+        
+        .. _`LexML Brasil`: https://www.lexml.gov.br/
+        .. _`Buscador Legislativo`: http://busca.interlegis.leg.br/
+        
+        Implementação
+        =============
+        
+        A implementação das buscas é feita em duas partes: um portlet fornece um
+        formulário para realizar a busca e chama um browser page que inclui um iframe
+        com o link de resultados da busca no buscador especificado.
+        
+        Portlets
+        --------
+        
+        Os seguintes portles são registrados:
+        
+        * ``interlegis.portalmodelo.buscadores.portlets.lexml`` para o `LexML Brasil`_
+        * ``interlegis.portalmodelo.buscadores.portlets.buscaleg`` para o
+          `Buscador Legislativo`_
+        
+        Browser pages
+        -------------
+        
+        As seguintes browser pages de resultados são registradas:
+        
+        * ``/lexml`` para o `LexML Brasil`_
+        * ``/buscaleg`` para o `Buscador Legislativo`_
+        
+        Contributors
+        ============
+        
+        * Érico Andrei
+        * Héctor Velarde
+        * Jean Ferri
+        * Karyn Nassif
+        * Marcio Mazza
+        
+        
+        Changelog
+        =========
+        
+        1.0rc5 (2018-12-17)
+        -------------------
+        
+        - Changed URLs http to https in LexML
+          [IolaneAndrade]
+        
+        
+        1.0rc4 (2015-08-26)
+        -------------------
+        
+        - Fix product description on Plone installer
+          [jeanferri]
+        
+        
+        1.0rc3 (2015-06-17)
+        -------------------
+        
+        - Fix test test_setup.py
+          [marciomazza]
+        
+        
+        1.0rc2 (2014-10-24)
+        -------------------
+        
+        - Change IPloneSiteRoot to INavigationRoot to avoid intranet error
+          [jeanferri]
+        
+        
+        1.0rc1 (2014-10-24)
+        -------------------
+        
+        - Change portlet name translation
+          [jeanferri]
+        
+        - Refactoring portlets and insert its logo
+          [jeanferri]
+        
+        - Hide UpgradeStep from quickinstaller tool
+          [ericof]
+        
+        
+        1.0b2 (2014-08-25)
+        ------------------
+        
+        - Ajustes na distribuição do pacote
+          [ericof]
+        
+        
+        1.0b1 (2014-07-02)
+        ------------------
+        
+        - Primeiro release público.
+        
+        
+        1.0a1 (2014-03-17)
+        ------------------
+        
+        - Initial release.
+        
+Keywords: interlegis portalmodelo lexml search plone
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 4.3
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: test
