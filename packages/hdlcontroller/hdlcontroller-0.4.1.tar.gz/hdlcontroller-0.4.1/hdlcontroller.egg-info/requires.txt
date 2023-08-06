@@ -1,0 +1,8 @@
+python4yahdlc>=1.1.0
+pyserial>=3.0
+
+[docs]
+sphinx>=1.4.0
+sphinxcontrib-seqdiag>=0.8.5
+sphinx-argparse>=0.2.2
+sphinx_rtd_theme
