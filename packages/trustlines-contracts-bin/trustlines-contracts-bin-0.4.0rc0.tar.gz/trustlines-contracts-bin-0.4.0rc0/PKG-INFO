@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: trustlines-contracts-bin
+Version: 0.4.0rc0
+Summary: Smart Contracts for Trustlines-Network
+Home-page: https://github.com/trustlines-network/contracts
+Author: Trustlines-Network
+Author-email: contact@brainbot.com
+License: MIT
+Description: UNKNOWN
+Keywords: trustlines
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
