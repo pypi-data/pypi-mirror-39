@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: isle
+Version: 0.1.1
+Summary: A clear and distinct wrapper of The Movie Database API.
+Home-page: https://github.com/dmkskn/isle/
+Author: Dima Koskin
+Author-email: dmksknn@gmail.com
+Keywords: themoviedb,the movie database,movie,tv,tmdb,imdb,tvdb,wrapper,api
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Project-URL: Repository, https://github.com/dmkskn/isle/
