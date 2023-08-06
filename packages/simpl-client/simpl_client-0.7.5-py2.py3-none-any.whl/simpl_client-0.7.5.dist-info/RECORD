@@ -1,0 +1,16 @@
+simpl_client/__init__.py,sha256=Tgocqiruv4wrMhBTZLGEQjmncq6Ho_NEczptGenoe3Q,174
+simpl_client/games_client.py,sha256=17qEYqEFd23FnRLHixIhutzKzQ2DJQKEzNGm_9fsDFY,5179
+simpl_client/async/__init__.py,sha256=EeKw1BCTGK9kVouKQ2b3k77dWgsEu2MrLc3NYiwbArQ,67
+simpl_client/async/games_client.py,sha256=iFBhcQgBzQLEs7xOgHf6IHylFqaZUHv4AmKMyE3O6cY,5271
+simpl_client/sync/__init__.py,sha256=goT-rBbNj5DdbpDheNu4I3OCiwkzn3IVRWdJ3JUpQo0,66
+simpl_client/sync/games_client.py,sha256=_PQuPpPoXm7ma3Yz1QpYeQKzfcOeS5741i5VEvx4EX0,5058
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=WgSIpC0eXr_oDM3VKwGuA02wZsY4ochwYDknjG5PQt8,1084
+tests/test_async_games_client.py,sha256=ff-MaIN1QcM_n-0YQR4PuH9J7MsZqXj5xysbKDcjNi0,5526
+tests/test_games_client.py,sha256=7Lh99FCapmVZddpTN-wcjG0btQQ2AeXOINxZGTBIyd4,5358
+tests/test_sync_games_client.py,sha256=_8kll9qEaLO3NXWLWfxUUH--VOxcMa8WUFG7W7QCJUY,5298
+simpl_client-0.7.5.dist-info/LICENSE,sha256=-cN1ob5KQfe3AwHdg8kcuJ5BVnR4hZt37vN1pS14JQU,18091
+simpl_client-0.7.5.dist-info/METADATA,sha256=vTBYl7-fwJps1hjWmi88RifJ79JXbTUZWcpTSmlSmCg,5590
+simpl_client-0.7.5.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+simpl_client-0.7.5.dist-info/top_level.txt,sha256=g9KLJZTG1WHiwEsI8AnIBS5u_9KllyFWBFNaCW1YGIU,19
+simpl_client-0.7.5.dist-info/RECORD,,
