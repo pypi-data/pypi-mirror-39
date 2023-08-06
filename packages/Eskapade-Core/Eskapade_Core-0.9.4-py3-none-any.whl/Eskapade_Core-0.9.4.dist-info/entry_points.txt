@@ -1,0 +1,8 @@
+[console_scripts]
+eskapade_bootstrap = escore.entry_points:eskapade_bootstrap
+eskapade_generate_link = escore.entry_points:eskapade_generate_link
+eskapade_generate_macro = escore.entry_points:eskapade_generate_macro
+eskapade_generate_notebook = escore.entry_points:eskapade_generate_notebook
+eskapade_run = escore.entry_points:eskapade_run
+eskapade_trial = escore.entry_points:eskapade_trial
+
