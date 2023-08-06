@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: einindex
+Version: 0.0.3
+Summary: UNKNOWN
+Home-page: https://github.com/malmaud/einindex
+Author: Jon Malmaud
+Author-email: malmaud@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: lark-parser
+Requires-Dist: torch
+Requires-Dist: dataclasses
+
+UNKNOWN
+
+
