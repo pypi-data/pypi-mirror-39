@@ -1,0 +1,48 @@
+[
+    {
+        "_is_template": true,
+
+        "check_interval": 5,
+        "check_period": "24x7",
+        "max_check_attempts": 3,
+        "retry_interval": 1,
+
+        "aggregation": "elasticsearch",
+        "check_command": "check_tcp",
+        "check_command_args": "",
+        "customs": {
+            "_CHECKED_PORT": "9200"
+        },
+        "host": "elasticsearch",
+        "name": "Check alive"
+    },
+    {
+        "_is_template": true,
+
+        "check_interval": 15,
+        "check_period": "24x7",
+        "max_check_attempts": 3,
+        "retry_interval": 1,
+
+        "aggregation": "elasticsearch",
+        "check_command": "check_elasticsearch",
+        "check_command_args": "",
+        "host": "elasticsearch",
+        "name": "Check status"
+    },
+    {
+        "_is_template": true,
+
+        "check_interval": 15,
+        "check_period": "24x7",
+        "max_check_attempts": 3,
+        "retry_interval": 1,
+
+        "aggregation": "elasticsearch",
+        "alias": "Check status (authenticated)",
+        "check_command": "check_elasticsearch_auth",
+        "check_command_args": "",
+        "host": "elasticsearch-auth",
+        "name": "Check-status-auth"
+    }
+]
