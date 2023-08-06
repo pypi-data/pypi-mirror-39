@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+README.rst
+setup.py
+djld/__init__.py
+djld/errors.py
+djld.egg-info/PKG-INFO
+djld.egg-info/SOURCES.txt
+djld.egg-info/dependency_links.txt
+djld.egg-info/top_level.txt
+djld/templatetags/__init__.py
+djld/templatetags/djld.py
+tests/__init__.py
+tests/test_djld.py
