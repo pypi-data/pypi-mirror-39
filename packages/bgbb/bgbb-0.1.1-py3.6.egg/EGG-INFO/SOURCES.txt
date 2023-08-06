@@ -1,0 +1,11 @@
+setup.py
+bgbb/__init__.py
+bgbb/bgbb_likelihood.py
+bgbb/core.py
+bgbb/numba_special.py
+bgbb/tests.py
+bgbb/wrappers.py
+bgbb.egg-info/PKG-INFO
+bgbb.egg-info/SOURCES.txt
+bgbb.egg-info/dependency_links.txt
+bgbb.egg-info/top_level.txt
