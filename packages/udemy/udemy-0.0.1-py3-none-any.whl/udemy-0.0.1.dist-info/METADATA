@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: udemy
+Version: 0.0.1
+Summary: Python library for interacting with the udemy API 2.0!
+Home-page: https://github.com/pypa/sampleproject
+Author: Szabó Dániel Ernő
+Author-email: r3ap3rpy@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: requests
+
+UNKNOWN
+
+
