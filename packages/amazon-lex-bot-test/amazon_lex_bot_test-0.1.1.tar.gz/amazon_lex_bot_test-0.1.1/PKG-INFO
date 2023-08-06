@@ -1,0 +1,112 @@
+Metadata-Version: 1.1
+Name: amazon_lex_bot_test
+Version: 0.1.1
+Summary: Test Amazon Lex bots easily by defining business requirements through conversations.
+Home-page: https://github.com/aws-samples/amazon_lex_bot_test
+Author: Martin Schade
+Author-email: amazon-lex-bot-test@amazon.com
+License: MIT license
+Description: ===================
+        amazon_lex_bot_test
+        ===================
+        
+        
+        .. image:: https://img.shields.io/pypi/v/amazon_lex_bot_test.svg
+                :target: https://pypi.python.org/pypi/amazon_lex_bot_test
+        
+        .. image:: https://img.shields.io/travis/schadem/amazon_lex_bot_test.svg
+                :target: https://travis-ci.org/schadem/amazon_lex_bot_test
+        
+        .. image:: https://readthedocs.org/projects/amazon-lex-bot-test/badge/?version=latest
+                :target: https://amazon-lex-bot-test.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        
+        
+        Test Amazon Lex bots easily by defining business requirements through conversations:
+        
+        .. code-block:: bash
+        
+            lex-bot-test --example BookTrip
+        
+            lex-bot-test --test-file <your-test-file> --alias test --region us-west-2 --verbose
+        
+        
+        Sample Test Definitions:
+        ------------------------
+        
+        This should give you an idea how to define your test cases.
+        Essentially you can test the response attributes and use Python patterns in the test condition.
+        Not an examples from the samples as they don't have session attributes.
+        
+        .. code-block:: yaml
+        
+            name: test-lex-bot
+            description: Regression tests for the Amazon Lex bot
+            botName: your-bot-name
+            botAlias: test
+            waitBetweenRequestsMillis: 0
+            sequences:
+            - name: book a car with all defaults
+              description: book a car with all defaults
+              sequence:
+              - utterance: "book a car with all my defaults"
+                postConditions:
+                  message:
+                  - "Ok, Pickup of economy class car tomorrow and drop off in 2 days in new york?"
+              - utterance: "yes"
+                postConditions:
+                  dialogState: ReadyForFulfillment
+                  slots:
+                    CarType: economy
+                    DriverAge: "38"
+                    PickUpCity: new york
+                    PickUpDate: ".*"
+                    ReturnDate: ".*"
+                  sessionAttributes:
+                  - name: cart
+                    pattern: ".*total: $33.35.*"
+        
+        
+        
+        
+        * Free software: MIT-0 license
+        * Documentation: https://amazon-lex-bot-test.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2018-12-12)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: amazon_lex_bot_test
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

@@ -1,0 +1,44 @@
+name: test-lex-bot
+description: Regression tests for the Amazon Lex ScheduleAppointment bot
+botName: BookTrip
+botAlias: test
+waitBetweenRequestsMillis: 0
+sequences:
+- name: book a car
+  description: book a car
+  sequence:
+  - utterance: "book a car"
+    postConditions:
+      message:
+      - "In what city do you need to rent a car?"
+  - utterance: "new york"
+    postConditions:
+      message:
+      - "What day do you want to start your rental?"
+      - "At what time should I schedule your appointment\\?"
+      - "At what time on .*\\?"
+  - utterance: "tomorrow"
+    postConditions:
+      message:
+      - "What day do you want to return the car?"
+  - utterance: "the day after tomorrow"
+    postConditions:
+      message:
+      - "How old is the driver for this rental?"
+  - utterance: "38"
+    postConditions:
+      message:
+      - "What type of car would you like to rent? Our most popular options are economy, midsize, and luxury"
+  - utterance: "economy"
+    postConditions:
+      message:
+      - "Okay, I have you down for a economy rental in new york from .* to .*. Should I book the reservation?"
+  - utterance: "yes"
+    postConditions:
+      dialogState: ReadyForFulfillment
+      slots: 
+        CarType: economy
+        DriverAge: "38"
+        PickUpCity: new york
+        PickUpDate: ".*"
+        ReturnDate: ".*"

@@ -1,0 +1,34 @@
+name: test-lex-bot
+description: Regression tests for the Amazon Lex OrderFlowers bot
+botName: OrderFlowers
+botAlias: test
+waitBetweenRequestsMillis: 0
+sequences:
+- name: order tulips
+  description: order tulips
+  sequence:
+  - utterance: "I would like to order some flowers"
+    postConditions:
+      message:
+      - "What type of flowers would you like to order?"
+  - utterance: "tulips"
+    postConditions:
+      message:
+      - "What day do you want the tulips to be picked up\\?"
+      - "Pick up the tulips at .* on what day?"
+  - utterance: "tomorrow"
+    postConditions:
+      message:
+      - "Pick up the tulips at what time on .*\\?"
+      - "At what time do you want the tulips to be picked up\\?"
+  - utterance: "10am"
+    postConditions:
+      message:
+      - "Okay, your tulips will be ready for pickup by .* on .*.  Does this sound okay\\?"
+  - utterance: "yes"
+    postConditions:
+      dialogState: ReadyForFulfillment
+      slots:
+          FlowerType: tulips
+          PickupDate: ".*"
+          PickupTime: "10:00"
