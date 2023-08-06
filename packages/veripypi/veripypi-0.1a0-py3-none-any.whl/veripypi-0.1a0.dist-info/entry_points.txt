@@ -1,0 +1,3 @@
+[console_scripts]
+veripypi=veripypi.__main__:cli
+
