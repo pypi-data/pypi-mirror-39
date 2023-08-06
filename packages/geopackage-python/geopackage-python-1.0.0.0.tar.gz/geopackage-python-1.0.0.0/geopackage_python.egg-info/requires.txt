@@ -1,0 +1,10 @@
+defusedxml
+Pillow
+pytest
+gdal
+pytest-cov
+mapbox_vector_tile
+typing
+
+[:python_version < "3"]
+enum34
