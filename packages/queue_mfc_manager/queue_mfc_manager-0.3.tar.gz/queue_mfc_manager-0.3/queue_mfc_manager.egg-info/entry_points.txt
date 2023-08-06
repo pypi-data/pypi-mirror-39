@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        workers=workers.workers:start_workers
+    
