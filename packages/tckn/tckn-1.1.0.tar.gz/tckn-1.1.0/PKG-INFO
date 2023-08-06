@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: tckn
+Version: 1.1.0
+Summary: A library for generating and validating Republic of Turkey identity numbers
+Home-page: https://github.com/sdispater/poetry
+Author: Ekin Dursun
+Author-email: ekindursun@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Project-URL: Repository, https://github.com/sdispater/poetry
