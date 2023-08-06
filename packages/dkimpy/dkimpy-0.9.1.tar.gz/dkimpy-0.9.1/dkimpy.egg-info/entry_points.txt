@@ -1,0 +1,7 @@
+[console_scripts]
+dkimsign = dkim.dkimsign:main
+arcsign = dkim.arcsign:main
+dknewkey = dkim.dknewkey:main
+dkimverify = dkim.dkimverify:main
+arcverify = dkim.arcverify:main
+
