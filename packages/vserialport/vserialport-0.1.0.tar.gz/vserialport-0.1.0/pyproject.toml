@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "vserialport"
+version = "0.1.0"
+description = "Uma livraria de controle das portas seriais"
+authors = ["Flavio Vilante <fvilante1@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
