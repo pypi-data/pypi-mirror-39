@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: bradocs4py
+Version: 1.1.1
+Summary: biblioteca Python que visa fornecer componentes para trabalhar com tipos de dados específicos da realidade brasileira.
+Home-page: https://github.com/namio/BRADocs4Py.git
+Author: Nâmio Evangelista Cavalcante de Sousa
+Author-email: namio.sousa@gmail.com
+License: MIT
+Description: biblioteca Python que visa fornecer componentes para trabalhar com tipos de dados específicos da realidade brasileira.
+Keywords: cpf cnpj documentos brasileiros receita federal
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Portuguese
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
