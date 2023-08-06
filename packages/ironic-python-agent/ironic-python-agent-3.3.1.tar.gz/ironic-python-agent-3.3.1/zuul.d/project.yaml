@@ -1,0 +1,44 @@
+- project:
+    templates:
+      - openstack-python-jobs
+      - openstack-python35-jobs
+      - publish-openstack-sphinx-docs
+      - check-requirements
+      - release-notes-jobs
+    check:
+      jobs:
+        - ipa-tempest-dsvm-partition-bios-ipmi-direct-coreos-src
+        - ipa-tempest-dsvm-partition-bios-ipmi-direct-tinyipa-src
+        - ipa-tempest-dsvm-partition-bios-ipmi-iscsi-coreos-src
+        - ipa-tempest-dsvm-partition-bios-ipmi-iscsi-tinyipa-src
+        - ipa-tempest-dsvm-wholedisk-bios-ipmi-direct-coreos-src
+        - ipa-tempest-dsvm-wholedisk-bios-ipmi-direct-tinyipa-src
+        - ipa-tempest-dsvm-wholedisk-bios-ipmi-iscsi-coreos-src
+        - ipa-tempest-dsvm-wholedisk-bios-ipmi-iscsi-tinyipa-src
+        # Non-voting jobs
+        - ipa-tempest-dsvm-ironic-inspector-src:
+            voting: false
+        - openstack-tox-functional:
+            voting: false
+        - openstack-tox-lower-constraints
+    gate:
+      queue: ironic
+      jobs:
+        - ipa-tempest-dsvm-partition-bios-ipmi-direct-coreos-src
+        - ipa-tempest-dsvm-partition-bios-ipmi-direct-tinyipa-src
+        - ipa-tempest-dsvm-partition-bios-ipmi-iscsi-coreos-src
+        - ipa-tempest-dsvm-partition-bios-ipmi-iscsi-tinyipa-src
+        - ipa-tempest-dsvm-wholedisk-bios-ipmi-direct-coreos-src
+        - ipa-tempest-dsvm-wholedisk-bios-ipmi-direct-tinyipa-src
+        - ipa-tempest-dsvm-wholedisk-bios-ipmi-iscsi-coreos-src
+        - ipa-tempest-dsvm-wholedisk-bios-ipmi-iscsi-tinyipa-src
+        - openstack-tox-lower-constraints
+    experimental:
+      jobs:
+        - ipa-tempest-dsvm-partition-bios-ipmi-iscsi-tinyipa256-src
+        - ipa-tempest-dsvm-partition-ipmi-iscsi-tinyipa-python3
+    post:
+      jobs:
+        - ironic-python-agent-buildimage-coreos
+        - ironic-python-agent-buildimage-tinyipa
+
