@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+VERSION
+setup.cfg
+setup.py
+clausewitz/__init__.py
+pypdx_clausewitz.egg-info/PKG-INFO
+pypdx_clausewitz.egg-info/SOURCES.txt
+pypdx_clausewitz.egg-info/dependency_links.txt
+pypdx_clausewitz.egg-info/top_level.txt
