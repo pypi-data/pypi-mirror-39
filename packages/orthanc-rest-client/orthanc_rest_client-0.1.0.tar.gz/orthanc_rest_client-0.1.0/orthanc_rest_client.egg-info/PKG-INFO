@@ -1,0 +1,39 @@
+Metadata-Version: 1.1
+Name: orthanc-rest-client
+Version: 0.1.0
+Summary: REST client for Orthanc DICOM servers
+Home-page: https://github.com/teffalump/orthanc-rest-client
+Author: teffalump
+Author-email: chris@teffalump.com
+License: UNKNOWN
+Description: Orthanc REST client
+        ===================
+        
+        Provides a REST client, based on
+        `apiron <https://github.com/ithaka/apiron>`__, targeted at
+        `Orthanc <https://www.orthanc-server.com>`__ REST endpoints.
+        
+        How to use
+        ~~~~~~~~~~
+        
+        Import the pre-defined client and pass the server details
+        
+        ::
+        
+           from orthanc_rest_client import Orthanc
+           orthanc = Orthanc(scheme='http', domain='localhost', port=8042)
+        
+           # Get list of patients
+           orthanc.patients()
+        
+        There are other preconfigured endpoints.
+        
+        For further help: - `apiron <https://github.com/ithaka/apiron>`__ -
+        `Orthanc <https://www.orthanc-server.com>`__
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
