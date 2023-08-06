@@ -1,0 +1,10 @@
+descr: liblightnvm testplan for Open-Channel 2.0 devices
+descr_long: |
+  Run the liblightnvm test-suites using only the IOCTL backend
+hooks: [ sysinf, dmesg ]
+evars: { NVM_CLI_BE_ID: 1 }
+testsuites:
+  - name: OCSSD
+    alias: "OCSSD via IOCTL"
+  - name: OCSSD_S20
+    alias: "OCSSD 2.0 via IOCTL"
