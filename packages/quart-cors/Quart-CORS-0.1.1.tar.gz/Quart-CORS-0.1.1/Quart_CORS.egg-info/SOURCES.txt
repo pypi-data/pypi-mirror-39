@@ -1,0 +1,16 @@
+CHANGELOG.rst
+LICENSE
+MANIFEST.in
+README.rst
+quart_cors.py
+setup.cfg
+setup.py
+Quart_CORS.egg-info/PKG-INFO
+Quart_CORS.egg-info/SOURCES.txt
+Quart_CORS.egg-info/dependency_links.txt
+Quart_CORS.egg-info/requires.txt
+Quart_CORS.egg-info/top_level.txt
+tests/test_basic.py
+tests/test_overrides.py
+tests/test_preflight_request.py
+tests/test_simple_request.py
