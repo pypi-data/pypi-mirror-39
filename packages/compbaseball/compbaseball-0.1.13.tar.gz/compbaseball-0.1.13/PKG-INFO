@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: compbaseball
+Version: 0.1.13
+Summary: Documents COMP via baseball data examples.
+Home-page: https://github.com/hdoupe/compbaseball
+Author: Hank Doupe
+Author-email: henrymdoupe@gmail.com
+License: UNKNOWN
+Description: # COMP Baseball package
+        
+        An entertaining way to document COMP and demonstrate its abilities
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
