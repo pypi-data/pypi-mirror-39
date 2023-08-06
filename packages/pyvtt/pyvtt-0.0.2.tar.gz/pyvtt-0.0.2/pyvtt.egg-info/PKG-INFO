@@ -1,0 +1,30 @@
+Metadata-Version: 1.1
+Name: pyvtt
+Version: 0.0.2
+Summary: WebVTT (.vtt) subtitle parser and writer
+Home-page: https://github.com/guillemcabrera/pyvtt
+Author: Guillem Cabrera
+Author-email: "Guillem Cabrera" <guillemcabrera@gmail.com>
+License: GPLv3
+Description: pyvtt
+        =============
+        
+        pyvtt is a Python library used to edit or create WebVTT files.
+        
+        It is basically a port of pysrt <https://github.com/byroot/pysrt>, another
+        Python library to manage SubRip files written by Jean Boussier <https://github.com/byroot>.
+        
+        .. image:: https://travis-ci.org/guillemcabrera/pyvtt.svg?branch=master
+          :target: http://travis-ci.org/guillemcabrera/pyvtt
+        .. image:: https://coveralls.io/repos/github/guillemcabrera/pyvtt/badge.svg?branch=master
+          :target: https://coveralls.io/github/guillemcabrera/pyvtt?branch=master
+Keywords: WebVTT subtitle
+Platform: Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Text Processing :: Markup
