@@ -1,0 +1,16 @@
+README.md
+setup.py
+tests/__init__.py
+tests/test_whodis.py
+whodis/__init__.py
+whodis/common_filters.py
+whodis/go_filters.py
+whodis/java_filters.py
+whodis/javascript_filters.py
+whodis/python_filters.py
+whodis/ruby_filters.py
+whodis/whodis.py
+whodis.egg-info/PKG-INFO
+whodis.egg-info/SOURCES.txt
+whodis.egg-info/dependency_links.txt
+whodis.egg-info/top_level.txt
