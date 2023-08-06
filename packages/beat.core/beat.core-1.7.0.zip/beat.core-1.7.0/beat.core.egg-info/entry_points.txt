@@ -1,0 +1,3 @@
+[console_scripts]
+worker = beat.core.scripts.worker:main
+

@@ -1,0 +1,30 @@
+{
+    "schema_version": 3,
+    "language": "python",
+    "api_version": 2,
+    "type": "loop",
+    "groups": [
+        {
+            "inputs": {
+                "in": {
+                    "type": "user/single_integer/1"
+                }
+            },
+            "loop": {
+                "request": {
+                    "type": "user/single_integer/1"
+                },
+                "answer": {
+                    "type": "user/single_integer/1"
+                }
+            }
+        }
+    ],
+    "parameters": {
+        "threshold": {
+            "default": "9",
+            "type": "int8",
+            "description": "Value that will change loop result"
+        }
+    }
+}

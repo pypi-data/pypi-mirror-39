@@ -1,0 +1,29 @@
+{
+    "blocks": {
+        "echo": {
+            "algorithm": "integers_echo",
+            "parameters": {
+            },
+            "inputs": {
+                "in_data": "in"
+            },
+            "outputs": {
+                "out_data": "out"
+            }
+        }
+    },
+    "datasets": {
+        "integers": {
+            "database": "integers_db/1",
+            "protocol": "double",
+            "set": "default"
+        }
+    },
+    "globals": {
+      "environment": {
+        "name": "Python 2.7",
+        "version": "1.3.0"
+      },
+      "queue": "queue"
+    }
+}

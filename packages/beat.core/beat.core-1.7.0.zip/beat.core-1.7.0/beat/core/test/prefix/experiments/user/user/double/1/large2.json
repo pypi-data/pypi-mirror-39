@@ -1,0 +1,44 @@
+{
+  "analyzers": {
+    "analysis": {
+      "algorithm": "user/integers_echo_analyzer/1",
+      "inputs": {
+        "in_data": "in"
+      }
+    }
+  },
+  "blocks": {
+    "echo1": {
+      "algorithm": "user/integers_array_generator/1",
+      "inputs": {
+        "in_data": "in"
+      },
+      "outputs": {
+        "out_data": "out"
+      }
+    },
+    "echo2": {
+      "algorithm": "user/integers_array_sum/1",
+      "inputs": {
+        "in_data": "in"
+      },
+      "outputs": {
+        "out_data": "out"
+      }
+    }
+  },
+  "datasets": {
+    "set": {
+      "database": "large/1",
+      "protocol": "small",
+      "set": "data"
+    }
+  },
+  "globals": {
+    "queue": "queue",
+    "environment": {
+      "name": "Python 2.7",
+      "version": "1.3.0"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+    "schema_version": 2,
+    "connections": [
+        {
+            "from": "integers.a",
+            "to": "loop_user.in",
+            "channel": "integers"
+        },
+        {
+            "from": "integers2.out",
+            "to": "loop.in",
+            "channel": "integers"
+        },
+        {
+            "from": "loop_user.out",
+            "to": "analysis.input",
+            "channel": "integers"
+        }
+    ],
+    "loop_connections": [
+        {
+            "from": "loop_user.request",
+            "to": "loop.request"
+        },
+        {
+            "from": "loop.answer",
+            "to": "loop_user.answer"
+        }
+    ],
+    "datasets": [
+        {
+            "outputs": [
+                "a",
+                "b"
+            ],
+            "name": "integers"
+        },
+        {
+            "outputs": [
+                "out"
+            ],
+            "name": "integers2"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "loop_user",
+            "synchronized_channel": "integers",
+            "inputs": [
+                "in"
+            ],
+            "outputs": [
+                "out"
+            ]
+        }
+    ],
+    "loops": [
+        {
+            "name": "loop",
+            "synchronized_channel": "integers",
+            "inputs": [
+                "in"
+            ]
+        }
+    ],
+    "analyzers": [
+        {
+            "inputs": [
+                "input"
+            ],
+            "synchronized_channel": "integers",
+            "name": "analysis"
+        }
+    ],
+    "representation": {
+      "connections": {
+      },
+      "loop_connections": {
+      },
+      "blocks": {
+      },
+      "channel_colors": {
+        "integers": "#5555ff"
+      }
+    }
+}

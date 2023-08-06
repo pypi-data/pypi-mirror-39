@@ -1,0 +1,56 @@
+{
+    "schema_version": 2,
+    "blocks": {
+        "loop_user": {
+            "algorithm": "user/db_input_loop_user/1",
+            "parameters": {
+            },
+            "inputs": {
+                "in": "in"
+            },
+            "outputs": {
+                "out": "out"
+            }
+        }
+    },
+    "loops": {
+        "loop": {
+            "algorithm": "user/db_input_loop/1",
+            "parameters": {
+                "threshold": 1
+            },
+            "inputs": {
+                "in": "in"
+            }
+        }
+    },
+    "analyzers": {
+        "analysis": {
+            "algorithm": "user/integers_analysis/1",
+            "parameters": {
+            },
+            "inputs": {
+                "input": "input"
+            }
+        }
+    },
+    "datasets": {
+        "integers": {
+            "database": "integers_db/1",
+            "protocol": "double",
+            "set": "double"
+        },
+        "integers2": {
+            "database": "simple/1",
+            "protocol": "protocol2",
+            "set": "set"
+        }
+    },
+    "globals": {
+      "environment": {
+        "name": "Python 2.7",
+        "version": "1.3.0"
+      },
+      "queue": "queue"
+    }
+}
