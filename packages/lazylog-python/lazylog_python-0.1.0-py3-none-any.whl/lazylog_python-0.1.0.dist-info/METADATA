@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: lazylog-python
+Version: 0.1.0
+Summary: Lazylog Python Client
+Home-page: https://github.com/gduverger/lazylog-python
+Author: Georges Duverger
+Author-email: georges.duverger@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+
+lazylog-python
+==============
+
+Lazylog Python Client
+
+Installation:
+```bash
+$ pipenv install lazylog-python
+```
+
+Usage:
+```python
+>>> import lazylog
+>>> lazy = lazylog.Lazylog(channel='public/lazylog-python')
+>>> lazy.log('As easy as rolling off a log')
+```
+
+
