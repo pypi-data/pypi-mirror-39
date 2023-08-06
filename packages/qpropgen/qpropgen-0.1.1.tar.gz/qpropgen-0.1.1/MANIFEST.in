@@ -1,0 +1,5 @@
+include qpropgen/templates/template.*
+include cmake/qpropgen.cmake
+include tests.sh
+include examples/*
+include *.md
