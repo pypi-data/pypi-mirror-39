@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: acl-iitbbs
+Version: 0.1
+Summary: Fetch attendance from ERP and Pretty Print it on Terminal.
+Home-page: https://github.com/apsknight/acl
+Author: Aman Pratap Singh
+Author-email: amanprtpsingh@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Click
+Requires-Dist: robobrowser
+Requires-Dist: bs4
+Requires-Dist: tabulate
+
+UNKNOWN
+
+
