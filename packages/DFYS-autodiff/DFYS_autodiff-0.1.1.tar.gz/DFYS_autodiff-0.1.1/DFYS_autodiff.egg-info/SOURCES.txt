@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+DFYS_autodiff.egg-info/PKG-INFO
+DFYS_autodiff.egg-info/SOURCES.txt
+DFYS_autodiff.egg-info/dependency_links.txt
+DFYS_autodiff.egg-info/top_level.txt
+autodiff/__init__.py
+autodiff/backprop.py
+autodiff/forward.py
+autodiff/optimize.py
+autodiff/plot.py
+autodiff/rootfinding.py
