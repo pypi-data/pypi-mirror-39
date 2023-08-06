@@ -1,0 +1,3 @@
+[console_scripts]
+wmt = wmt.wmt:main
+
