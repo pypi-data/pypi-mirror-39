@@ -1,0 +1,13 @@
+tfweb/__init__.py,sha256=dEMmU_NCbj9Ya8fXyS08WB0mWHOIpj13ev95OKqCdmo,82
+tfweb/batcher.py,sha256=t7OWibdZWQPKItFmIRWIQHbjBeAvUFYvFsWroMv2rps,3913
+tfweb/grpc_handler.py,sha256=8f2hwwf3rBwSIvjohLwbYQcTuCO3WaWQdZkOmCheDc8,1701
+tfweb/json_handler.py,sha256=2GVkDv0fYKU65XnMuB71d8apJxOQpPOzKVPIgmI23O8,3859
+tfweb/model.py,sha256=DeKjH0CR4Ls-i9zWnyCVF_gVeJVnTph07D7bDvYg5BY,3868
+tfweb/service_grpc.py,sha256=MIqDseUSlIegRJ8azElhOzSFIWg8ksj66hrtANSnuEI,1021
+tfweb/service_pb2.py,sha256=-V3Jj1zq5vtjNiLCT_81BXZ2i9XfPiAOEex8kfLUNqo,16565
+tfweb/tfweb.py,sha256=B0JKYEj4yrJXbPqRsjMDOPNYs9b9KEaG9tmSHtyKE0A,3748
+tfweb-0.4.4.data/scripts/tfweb,sha256=oU13rNn6PNMSxNNHVlm0wtR2Jj-RHV5fFVe5H3d6vok,74
+tfweb-0.4.4.dist-info/METADATA,sha256=lXJKxcxsjiO_CUvTBSaQvavBQwo8EYD8PnQRDIAHNq0,5952
+tfweb-0.4.4.dist-info/WHEEL,sha256=CihQvCnsGZQBGAHLEUMf0IdA4fRduS_NBUTMgCTtvPM,110
+tfweb-0.4.4.dist-info/top_level.txt,sha256=SBLpReDgUU8atJTOXvdD34WwCbcEkJT706FM7a1EJu4,6
+tfweb-0.4.4.dist-info/RECORD,,
