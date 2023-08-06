@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: prombzex
+Version: 0.1
+Summary: Prometheus Bugzilla Exporter
+Home-page: https://github.com/cmsj/prombzex
+Author: Chris Jones
+Author-email: cmsj@tenshu.net
+License: UNKNOWN
+Description: [![Build Status](https://dev.azure.com/cmsj/cmsj/_apis/build/status/cmsj.prometheus-bugzilla-exporter)](https://dev.azure.com/cmsj/cmsj/_build/latest?definitionId=2)
+        
+        # prometheus-bugzilla-exporter
+        
+        This exports data from Bugzilla 5 in a format Prometheus can ingest.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
