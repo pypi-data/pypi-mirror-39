@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: aqualink
+Version: 1.0.0
+Summary: A better Python lavalink client
+Home-page: https://github.com/nanipy/aqualink
+Author: Gelbpunkt & F4stZ4p
+Author-email: aqualink@is-the.best
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: websockets
+Requires-Dist: aiohttp
+Requires-Dist: ujson
+
+# aqualink
+A better Python lavalink library made for use in discord.py rewrite or discord.jspy bots.
+
+It has an easy to use and very fast interface that is very dynamic.
+
+# Installation
+`pip3 install aqualink`
+
+# Basic Usage
+```py
+import aqualink
+
+aqualink.Connection(bot)
+await bot.waterlink.connect(password="youshallnotpass", ws_url="ws://localhost:2333", rest_url="http://localhost:2333")
+
+# later
+p = bot.waterlink.get_player(ctx.guild.id) # get the player object
+await p.connect(ctx.voice_client.channel.id) # connect to the author's VC 
+tracks = await p.query("ytsearch: hello Adele") # get a list of Track objects
+await p.play(tracks[0]) # play the first match
+await p.set_eq(waterlink.Equalizer.bassboost().ultra) # equalizer support! Ultimate bassboost preset
+print(p.track.title, p.track.thumbnail) # print the currently playing track title and thumbnail
+# and so on
+```
+
+
