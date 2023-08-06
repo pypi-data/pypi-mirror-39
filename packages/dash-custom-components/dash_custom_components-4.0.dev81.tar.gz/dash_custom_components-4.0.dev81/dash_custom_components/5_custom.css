@@ -1,0 +1,80 @@
+/* your styles go here */
+._dash-undo-redo {
+    display: none;
+  }
+
+.logout {
+  text-align: right;
+}
+
+.statistic-block .statistic-block-arrow.height {
+  color: #28a745;
+}
+
+.statistic-block .statistic-block-arrow.low {
+  color: #dc3545;
+}
+
+.dashtext-1 {
+  color: #ed1f7a !important;
+}
+
+.dashbg-1 {
+  background: #ed1f7a;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+._dash-loading-callback {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #DB6574;
+  width: 120px;
+  height: 120px;
+  margin-top: -60px;
+  margin-bottom: -60px;
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  background-color: #ffffff;
+  -webkit-animation: fadein 1s linear forwards, spin 2s infinite linear; /* Safari and Chrome */
+  animation: fadein 1s linear forwards, spin 2s infinite linear;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
