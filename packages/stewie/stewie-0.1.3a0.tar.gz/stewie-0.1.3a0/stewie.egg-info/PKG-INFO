@@ -1,0 +1,25 @@
+Metadata-Version: 1.0
+Name: stewie
+Version: 0.1.3a0
+Summary: Simple Terminal Widget Engine
+Home-page: https://github.com/henrykrumb/stewie
+Author: Henry Krumb
+Author-email: henry.krumb@computerwerk.org
+License: UNKNOWN
+Description: # Stewie
+        Simple Terminal Widget Engine
+        
+        Stewie is going to be yet another python3 module that provides
+        widgets for simple terminal user interfaces.
+        This project is merely a prototype and it should not
+        be used for serious software projects in its current state.
+        
+        ## Installation
+        TBD
+        
+        ## Usage
+        TBD
+        
+        ## Documentation
+        TBD
+Platform: UNKNOWN
