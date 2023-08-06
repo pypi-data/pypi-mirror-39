@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: flake8-assign-and-return
+Version: 0.0.3
+Summary: A flake8 extension that checks for assignment and return in Python
+Home-page: https://github.com/sbdchd/flake8-assign-and-return
+Author: Steve Dignam
+Author-email: steve@dignam.xyz
+Maintainer: Steve Dignam
+Maintainer-email: steve@dignam.xyz
+License: BSD2 License
+Description: # no-assignment-and-return [![CircleCI](https://circleci.com/gh/sbdchd/flake8-assign-and-return.svg?style=svg)](https://circleci.com/gh/sbdchd/flake8-assign-and-return) [![pypi](https://img.shields.io/pypi/v/flake8-assign-and-return.svg)](https://pypi.org/project/flake8-assign-and-return/)
+        
+        > A flake8 extension that checks for assignment and return in Python
+        
+        
+        A Flake8 lint based on Clippy's
+        [`let_and_return`](https://rust-lang.github.io/rust-clippy/master/index.html#let_and_return)
+        and Microsoft's TSLint lint
+        [`no-unnecessary-local-variable`](https://github.com/Microsoft/tslint-microsoft-contrib).
+        
+        ## examples
+        
+        
+        ```python
+        # error
+        def foo():
+           x = bar()
+           return x
+        
+        # allowed
+        def foo():
+           x, _ = bar()
+           return x
+        ```
+        
+        see: `flake8_assign_and_return.py` for all the test cases
+        
+        
+        ## dev
+        
+        ```shell
+        # install dependencies
+        poetry install
+        
+        # install plugin to work with flake8
+        poetry run python setup.py install
+        
+        # test
+        poetry run pytest *.py
+        # or with watch
+        poetry run ptw *.py
+        
+        # typecheck
+        poetry run mypy .
+        
+        # format
+        poetry run black .
+        
+        # lint
+        poetry run flake8 .
+        ```
+        
+        ## uploading a new version to [PyPi](https://pypi.org)
+        
+        ```shell
+        # build new distribution files
+        rm -rf dist && poetry run python setup.py sdist bdist_wheel
+        
+        # upload to pypi (Note: this will ask for login credentials)
+        poetry run twine upload dist/*
+        ```
+        
+Keywords: flake8,lint
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Quality Assurance
+Provides: flake8_assign_and_return
+Description-Content-Type: text/markdown
