@@ -1,0 +1,5 @@
+#!/Users/weiyu/Code/WEIYU/tron-cli/venv/bin/python3
+
+import troncli.cli
+
+troncli.cli.main()
