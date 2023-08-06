@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+lambda_typing/__init__.py
+lambda_typing/types.py
+lambda_typing.egg-info/PKG-INFO
+lambda_typing.egg-info/SOURCES.txt
+lambda_typing.egg-info/dependency_links.txt
+lambda_typing.egg-info/top_level.txt
+lambda_typing.egg-info/zip-safe
