@@ -1,0 +1,65 @@
+Metadata-Version: 1.1
+Name: graphene-django-framework
+Version: 0.5.0
+Summary: A framework for using GraphQL with Django.
+Home-page: https://gitlab.com/hybridlogic/graphene-django-framework/
+Author: Kevin Clark
+Author-email: UNKNOWN
+License: Apache Software License
+Description: graphene-django-framework
+        =========================
+        
+        Don't want to use Relay with Graphene? Me either. All other packages for
+        django implement the Relay interface :(
+        
+        graphene-django (todo: add link) adds the ability to filter and page but
+        you must follow the Relay specs and that requires the use of Nodes,
+        Edges, Connections, and Global ID's.
+        
+        Apollo is a great GraphQL client and can still be used with Relay but
+        has it's down sides.
+        
+        Install
+        -------
+        
+        ::
+        
+            pip install graphene-django-framework
+        
+        Hacking
+        -------
+        
+        You must have docker and docker-compose
+        
+        ::
+        
+            # setup the docker env with your uid and gid
+            echo -e "UID=$(id -u)\nGID=$(id -g)" > .env
+        
+            # first migrate the database
+            docker-compose run web python manage.py migrate
+        
+            # create a superuser to login with
+            docker-compose run web python manage.py createsuperuser
+        
+            # run the server
+            docker-compose run web python manage.py runserver
+            # or tests
+            docker-compose run web python manage.py test
+        
+Keywords: django,graphene,graphql,relay
+Platform: OS Independent
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
