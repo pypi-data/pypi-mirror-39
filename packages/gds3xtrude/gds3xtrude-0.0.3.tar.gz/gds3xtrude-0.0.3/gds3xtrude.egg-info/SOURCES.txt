@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+bin/gds3xtrude
+examples/freepdk45.layerstack
+examples/xsection_sample.layerstack
+gds3xtrude/__init__.py
+gds3xtrude/gds3xtrude.py
+gds3xtrude/include.py
+gds3xtrude/layer_operations.py
+gds3xtrude/polygon_approx.py
+gds3xtrude.egg-info/PKG-INFO
+gds3xtrude.egg-info/SOURCES.txt
+gds3xtrude.egg-info/dependency_links.txt
+gds3xtrude.egg-info/not-zip-safe
+gds3xtrude.egg-info/requires.txt
+gds3xtrude.egg-info/top_level.txt

@@ -1,0 +1,20 @@
+from gds3xtrude.include import layer
+
+lpoly = layer("3/0")
+lactive = layer("2/0")
+#lfox = lactive.inverted
+lwn = layer("1/0")
+lcg = layer("4/0")
+lcp = layer("5/0")
+m1 = layer("6/0")
+v1 = layer("7/0")
+m2 = layer("8/0")
+
+layerstack = [
+	(100, lactive),
+	(10, [lpoly, lcg]),
+	(400, [lcg, lcp]),
+	(50, m1),
+	(800, v1),
+	(50, m2)
+]
