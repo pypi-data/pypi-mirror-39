@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: dedis-cluster
+Version: 1.0.0
+Summary: Redis-cluster plugin for Django
+Home-page: https://github.com/feiwencaho/dedis-cluster.git
+Author: feivincent
+Author-email: hi@feiwenchao.me
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Dist: Django (>=1.9.6)
+Requires-Dist: redis (>=2.10.5)
+Requires-Dist: redis-py-cluster (>=1.2.0)
+Requires-Dist: msgpack-python (>=0.4.7)
+
+UNKNOWN
+
+
