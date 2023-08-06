@@ -1,0 +1,117 @@
+CHANGES
+=======
+
+1.3.5
+-----
+
+* Timeline now()/utcnow() - defer to default behavior if timeline is not modified
+* Handle time drifts when time factor hasn't been changed (closes #11)
+* Add time drift tests
+* Improve test code
+* Ignore .eggs
+* fixup! Move to pbr
+* Move to pbr
+* Fix Travis tests
+* Update Travis deployment
+
+1.3.4
+-----
+
+* bump version
+* Patch utcnow in timeline
+
+1.3.3
+-----
+
+* bump version
+* Fix typo
+* Add Python 3.5 to Travis/Tox/setup.py
+* Ensure gevent switch on sleep
+
+1.3.2
+-----
+
+* bump version
+* Fix Travis config
+* Add python 2.6 support again
+
+1.3.1
+-----
+
+* bump version
+* Deployment on Travis
+* Travis
+* Fix sleep behavior for short time factors
+* Update README
+
+1.3.0
+-----
+
+* bump version
+* Add "allow\_backwards" argument to set\_time, to allow setting the time to the past
+*  document sleep\_wait\_all\_scheduled (#6)
+* PEP8
+* Document sleep\_wait\_all\_scheduled (#6)
+
+1.2.4
+-----
+
+* bump version
+* Fix Python 3 compatibility (#5)
+* Add py.test dependency to tox
+* Add Python 3.4 to tox and travis
+
+1.2.3
+-----
+
+* bump version
+* Set time backwards might happen in threaded environments. Don't raise error, just ignore
+
+1.2.2
+-----
+
+* bump version
+* fail properly for non-number seconds
+* Add timeline.sleep\_stop\_first\_scheduled
+
+1.2.1
+-----
+
+* bump version
+* Sequences: immediately trigger the beginning of the sequence generator upon registration
+* Move to py.test
+
+1.2.0
+-----
+
+* bump version
+* rename param
+* Factor 0 requires an implicit gevent switch
+* Attemp to ignore pypy
+* gevent for python2.x
+* Add gevent requirement, and allow gracegful fail if gevent is not installed
+* add cleanup
+* Add gevent supported timeline
+* #1: datetime mocking
+* Make current\_timeline a module
+* bump version
+
+1.1.0
+-----
+
+* bump version
+* Documentation, Added Timeline.freeze()
+* Perform sleeps according to the currently configured factor
+* Documentation
+* Documentation
+* Version bump
+
+1.0.0
+-----
+
+* Version bump
+* Fix tox, travis support, restore python 2.6 support
+* Add current\_timeline wrapper
+* Docs
+* Documentation
+* Fix sleep behavior
