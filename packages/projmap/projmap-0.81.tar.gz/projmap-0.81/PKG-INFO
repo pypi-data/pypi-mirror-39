@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: projmap
+Version: 0.81
+Summary: High level wrapper of matplotlibs mapping package
+Home-page: https://github.com/brorfred/projmap
+Author: Bror Jonsson
+Author-email: brorfred@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires: numpy(>=1.5)
+Requires: matplotlib(>=2.0)
+Requires: six
+Requires: cartopy(>=0.16)
