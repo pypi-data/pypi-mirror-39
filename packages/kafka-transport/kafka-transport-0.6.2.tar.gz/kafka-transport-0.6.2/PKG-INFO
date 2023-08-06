@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: kafka-transport
+Version: 0.6.2
+Summary: UNKNOWN
+Home-page: https://github.com/Karma-blockchain/kafka-transport
+Author: Nozdrin-Plotnitsky Nikolay
+Author-email: nozdrin.plotnitsky@karma.red
+License: MIT
+Description: kafka-transport
+        ===============
+        
+        Install
+        -------
+        
+        ```
+        $ pip install kafka-transport
+        ```
+        
+        Use
+        ---
+        
+        Package contain `init`, `push`, `subscribe`, `fetch` async functions:
+        
+        ```
+        async init(kafka_host)
+        async push(topic, value, key)
+        async subscribe(topic, callback)
+        async fetch(to, _from, value)
+        ```
+        
+        Todo
+        Requester: start, group_id
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
