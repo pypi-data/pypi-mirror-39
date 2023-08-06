@@ -1,0 +1,17 @@
+floatview/__init__.py,sha256=vqiqzDaSpROz7SKGxQHX7A5kU51spbDsSh9Eqd6__ys,343
+floatview/_version.py,sha256=yorTnJDDY5SA027xAJOUwrBFAnSKCXarPqBwuEO6Tas,500
+floatview/floatview.py,sha256=4qWCpIzFV0EgtUGfZC4cbuAg1fX2txyNs9S1l2qFmuU,854
+floatview/gluemanager.py,sha256=L64go-_OC_cXhfXM8BsLKpF6REuaGu2UCXaT8V67r5Y,13757
+floatview/glueplotly.py,sha256=cVrRfPaKeTz3aAu8TF2cwlixTR5kwnt8ABRBx6iMCso,32095
+floatview/labextension/jupyterlab-floatview-0.1.3.tgz,sha256=uxht9HBXHJcAfD8FOG6yC3b1ZefpEooCfXVk6nLL3dY,322971
+floatview/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+floatview/tests/conftest.py,sha256=PRpbbdAHUXZ3TnGKvr3TwpH6LMNuq6sjHdVDK8eFq0s,1467
+floatview/tests/test_example.py,sha256=iFbXh11-nBAo-TP2H63WlEyJUCfyBHklSqB5cSqH_FY,294
+floatview-0.1.3.data/data/share/jupyter/lab/extensions/jupyterlab-floatview-0.1.3.tgz,sha256=uxht9HBXHJcAfD8FOG6yC3b1ZefpEooCfXVk6nLL3dY,322971
+floatview-0.1.3.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+floatview-0.1.3.dist-info/LICENSE.txt,sha256=BsSK29Fk-9fMr25xaozOFCYoMAPnEdCQ3rYWH5ox4Tw,1557
+floatview-0.1.3.dist-info/METADATA,sha256=pek0H3gLc54eMI25NVLuD603zl8ygnlUMyq8Yog4FUs,1494
+floatview-0.1.3.dist-info/RECORD,,
+floatview-0.1.3.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+floatview-0.1.3.dist-info/metadata.json,sha256=Lcx6pFihSFRNgzDEHrhSKHvMpqzVtykvUgV0bfvVrwQ,1245
+floatview-0.1.3.dist-info/top_level.txt,sha256=4cuZ-OV1rOpputKM0Bvm4PLwT6ptdyOQQbBfvVECaZQ,10
