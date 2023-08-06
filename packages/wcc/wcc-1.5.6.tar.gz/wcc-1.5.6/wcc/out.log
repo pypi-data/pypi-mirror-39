@@ -1,0 +1,1166 @@
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1038, in _get_socket_no_auth
+    sock_info = self.sockets.pop()
+KeyError: 'pop from an empty set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 968, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 843, in _configured_socket
+    sock = _create_connection(address, options)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 824, in _create_connection
+    raise err
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 817, in _create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1104, in _refresh
+    self.__send_message(q)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 931, in __send_message
+    operation, exhaust=self.__exhaust, address=self.__address)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1145, in _send_message_with_response
+    exhaust)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1156, in _reset_on_error
+    return func(*args, **kwargs)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/server.py", line 85, in send_message_with_response
+    with self.get_socket(all_credentials, exhaust) as sock_info:
+  File "/usr/local/anaconda3/lib/python3.7/contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1004, in get_socket
+    sock_info = self._get_socket_no_auth()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1041, in _get_socket_no_auth
+    sock_info = self.connect()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 972, in connect
+    _raise_connection_failure(self.address, error)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 273, in _raise_connection_failure
+    raise NetworkTimeout(msg)
+pymongo.errors.NetworkTimeout: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1038, in _get_socket_no_auth
+    sock_info = self.sockets.pop()
+KeyError: 'pop from an empty set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 968, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 843, in _configured_socket
+    sock = _create_connection(address, options)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 824, in _create_connection
+    raise err
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 817, in _create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1104, in _refresh
+    self.__send_message(q)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 931, in __send_message
+    operation, exhaust=self.__exhaust, address=self.__address)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1145, in _send_message_with_response
+    exhaust)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1156, in _reset_on_error
+    return func(*args, **kwargs)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/server.py", line 85, in send_message_with_response
+    with self.get_socket(all_credentials, exhaust) as sock_info:
+  File "/usr/local/anaconda3/lib/python3.7/contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1004, in get_socket
+    sock_info = self._get_socket_no_auth()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1041, in _get_socket_no_auth
+    sock_info = self.connect()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 972, in connect
+    _raise_connection_failure(self.address, error)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 273, in _raise_connection_failure
+    raise NetworkTimeout(msg)
+pymongo.errors.NetworkTimeout: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1087, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1563, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1516, in __start_session
+    server_session = self._get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1549, in _get_server_session
+    return self._topology.get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 427, in get_server_session
+    None)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 199, in _select_servers_loop
+    self._error_message(selector))
+pymongo.errors.ServerSelectionTimeoutError: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1087, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1563, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1516, in __start_session
+    server_session = self._get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1549, in _get_server_session
+    return self._topology.get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 427, in get_server_session
+    None)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 199, in _select_servers_loop
+    self._error_message(selector))
+pymongo.errors.ServerSelectionTimeoutError: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1038, in _get_socket_no_auth
+    sock_info = self.sockets.pop()
+KeyError: 'pop from an empty set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 968, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 843, in _configured_socket
+    sock = _create_connection(address, options)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 824, in _create_connection
+    raise err
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 817, in _create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1104, in _refresh
+    self.__send_message(q)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 931, in __send_message
+    operation, exhaust=self.__exhaust, address=self.__address)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1145, in _send_message_with_response
+    exhaust)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1156, in _reset_on_error
+    return func(*args, **kwargs)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/server.py", line 85, in send_message_with_response
+    with self.get_socket(all_credentials, exhaust) as sock_info:
+  File "/usr/local/anaconda3/lib/python3.7/contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1004, in get_socket
+    sock_info = self._get_socket_no_auth()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1041, in _get_socket_no_auth
+    sock_info = self.connect()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 972, in connect
+    _raise_connection_failure(self.address, error)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 273, in _raise_connection_failure
+    raise NetworkTimeout(msg)
+pymongo.errors.NetworkTimeout: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1087, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1563, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1516, in __start_session
+    server_session = self._get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1549, in _get_server_session
+    return self._topology.get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 427, in get_server_session
+    None)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 199, in _select_servers_loop
+    self._error_message(selector))
+pymongo.errors.ServerSelectionTimeoutError: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1038, in _get_socket_no_auth
+    sock_info = self.sockets.pop()
+KeyError: 'pop from an empty set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 968, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 843, in _configured_socket
+    sock = _create_connection(address, options)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 824, in _create_connection
+    raise err
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 817, in _create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1104, in _refresh
+    self.__send_message(q)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 931, in __send_message
+    operation, exhaust=self.__exhaust, address=self.__address)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1145, in _send_message_with_response
+    exhaust)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1156, in _reset_on_error
+    return func(*args, **kwargs)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/server.py", line 85, in send_message_with_response
+    with self.get_socket(all_credentials, exhaust) as sock_info:
+  File "/usr/local/anaconda3/lib/python3.7/contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1004, in get_socket
+    sock_info = self._get_socket_no_auth()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1041, in _get_socket_no_auth
+    sock_info = self.connect()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 972, in connect
+    _raise_connection_failure(self.address, error)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 273, in _raise_connection_failure
+    raise NetworkTimeout(msg)
+pymongo.errors.NetworkTimeout: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1087, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1563, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1516, in __start_session
+    server_session = self._get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1549, in _get_server_session
+    return self._topology.get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 427, in get_server_session
+    None)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 199, in _select_servers_loop
+    self._error_message(selector))
+pymongo.errors.ServerSelectionTimeoutError: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1087, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1563, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1516, in __start_session
+    server_session = self._get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1549, in _get_server_session
+    return self._topology.get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 427, in get_server_session
+    None)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 199, in _select_servers_loop
+    self._error_message(selector))
+pymongo.errors.ServerSelectionTimeoutError: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1087, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1563, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1516, in __start_session
+    server_session = self._get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1549, in _get_server_session
+    return self._topology.get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 427, in get_server_session
+    None)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 199, in _select_servers_loop
+    self._error_message(selector))
+pymongo.errors.ServerSelectionTimeoutError: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1038, in _get_socket_no_auth
+    sock_info = self.sockets.pop()
+KeyError: 'pop from an empty set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 968, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 843, in _configured_socket
+    sock = _create_connection(address, options)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 824, in _create_connection
+    raise err
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 817, in _create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1104, in _refresh
+    self.__send_message(q)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 931, in __send_message
+    operation, exhaust=self.__exhaust, address=self.__address)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1145, in _send_message_with_response
+    exhaust)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1156, in _reset_on_error
+    return func(*args, **kwargs)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/server.py", line 85, in send_message_with_response
+    with self.get_socket(all_credentials, exhaust) as sock_info:
+  File "/usr/local/anaconda3/lib/python3.7/contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1004, in get_socket
+    sock_info = self._get_socket_no_auth()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1041, in _get_socket_no_auth
+    sock_info = self.connect()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 972, in connect
+    _raise_connection_failure(self.address, error)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 273, in _raise_connection_failure
+    raise NetworkTimeout(msg)
+pymongo.errors.NetworkTimeout: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1087, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1563, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1516, in __start_session
+    server_session = self._get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1549, in _get_server_session
+    return self._topology.get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 427, in get_server_session
+    None)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 199, in _select_servers_loop
+    self._error_message(selector))
+pymongo.errors.ServerSelectionTimeoutError: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1038, in _get_socket_no_auth
+    sock_info = self.sockets.pop()
+KeyError: 'pop from an empty set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 968, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 843, in _configured_socket
+    sock = _create_connection(address, options)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 824, in _create_connection
+    raise err
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 817, in _create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1104, in _refresh
+    self.__send_message(q)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 931, in __send_message
+    operation, exhaust=self.__exhaust, address=self.__address)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1145, in _send_message_with_response
+    exhaust)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1156, in _reset_on_error
+    return func(*args, **kwargs)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/server.py", line 85, in send_message_with_response
+    with self.get_socket(all_credentials, exhaust) as sock_info:
+  File "/usr/local/anaconda3/lib/python3.7/contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1004, in get_socket
+    sock_info = self._get_socket_no_auth()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1041, in _get_socket_no_auth
+    sock_info = self.connect()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 972, in connect
+    _raise_connection_failure(self.address, error)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 273, in _raise_connection_failure
+    raise NetworkTimeout(msg)
+pymongo.errors.NetworkTimeout: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+2018-12-06 10:11:34 no proxy found
+Traceback (most recent call last):
+  File "proxy.py", line 140, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+Traceback (most recent call last):
+  File "proxy.py", line 140, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+Traceback (most recent call last):
+  File "proxy.py", line 140, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+Traceback (most recent call last):
+  File "proxy.py", line 140, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+Traceback (most recent call last):
+  File "proxy.py", line 140, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+Traceback (most recent call last):
+  File "proxy.py", line 140, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+Traceback (most recent call last):
+  File "proxy.py", line 140, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+2018-12-06 10:12:14 no proxy found
+2018-12-06 10:12:14 no proxy found
+Traceback (most recent call last):
+  File "proxy.py", line 140, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+Traceback (most recent call last):
+  File "proxy.py", line 140, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+2018-12-06 10:12:38 no proxy found
+Traceback (most recent call last):
+  File "proxy.py", line 140, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+{'incr': 1544062376169784, 'cthr': '2018-12-06 10:12:56', 'cost': 10, 'born': 3, 'cnt': 2, 'std': 560, 'avg': 657, 'max': 1054, 'min': 261}
+{'incr': 1544062384764185, 'cthr': '2018-12-06 10:13:04', 'cost': 11, 'born': 1002, 'cnt': 3, 'std': 276, 'avg': 573, 'max': 782, 'min': 260}
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1038, in _get_socket_no_auth
+    sock_info = self.sockets.pop()
+KeyError: 'pop from an empty set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 968, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 843, in _configured_socket
+    sock = _create_connection(address, options)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 824, in _create_connection
+    raise err
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 817, in _create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1104, in _refresh
+    self.__send_message(q)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 931, in __send_message
+    operation, exhaust=self.__exhaust, address=self.__address)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1145, in _send_message_with_response
+    exhaust)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1156, in _reset_on_error
+    return func(*args, **kwargs)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/server.py", line 85, in send_message_with_response
+    with self.get_socket(all_credentials, exhaust) as sock_info:
+  File "/usr/local/anaconda3/lib/python3.7/contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1004, in get_socket
+    sock_info = self._get_socket_no_auth()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1041, in _get_socket_no_auth
+    sock_info = self.connect()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 972, in connect
+    _raise_connection_failure(self.address, error)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 273, in _raise_connection_failure
+    raise NetworkTimeout(msg)
+pymongo.errors.NetworkTimeout: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1087, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1563, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1516, in __start_session
+    server_session = self._get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1549, in _get_server_session
+    return self._topology.get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 427, in get_server_session
+    None)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 199, in _select_servers_loop
+    self._error_message(selector))
+pymongo.errors.ServerSelectionTimeoutError: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1038, in _get_socket_no_auth
+    sock_info = self.sockets.pop()
+KeyError: 'pop from an empty set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 968, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 843, in _configured_socket
+    sock = _create_connection(address, options)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 824, in _create_connection
+    raise err
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 817, in _create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1104, in _refresh
+    self.__send_message(q)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 931, in __send_message
+    operation, exhaust=self.__exhaust, address=self.__address)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1145, in _send_message_with_response
+    exhaust)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1156, in _reset_on_error
+    return func(*args, **kwargs)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/server.py", line 85, in send_message_with_response
+    with self.get_socket(all_credentials, exhaust) as sock_info:
+  File "/usr/local/anaconda3/lib/python3.7/contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1004, in get_socket
+    sock_info = self._get_socket_no_auth()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1041, in _get_socket_no_auth
+    sock_info = self.connect()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 972, in connect
+    _raise_connection_failure(self.address, error)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 273, in _raise_connection_failure
+    raise NetworkTimeout(msg)
+pymongo.errors.NetworkTimeout: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1087, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1563, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1516, in __start_session
+    server_session = self._get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1549, in _get_server_session
+    return self._topology.get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 427, in get_server_session
+    None)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 199, in _select_servers_loop
+    self._error_message(selector))
+pymongo.errors.ServerSelectionTimeoutError: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1087, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1563, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1516, in __start_session
+    server_session = self._get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1549, in _get_server_session
+    return self._topology.get_server_session()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 427, in get_server_session
+    None)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 199, in _select_servers_loop
+    self._error_message(selector))
+pymongo.errors.ServerSelectionTimeoutError: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1038, in _get_socket_no_auth
+    sock_info = self.sockets.pop()
+KeyError: 'pop from an empty set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 968, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 843, in _configured_socket
+    sock = _create_connection(address, options)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 824, in _create_connection
+    raise err
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 817, in _create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "proxy.py", line 88, in verify_proxydb
+    for dbitem in dblist:
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 1104, in _refresh
+    self.__send_message(q)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 931, in __send_message
+    operation, exhaust=self.__exhaust, address=self.__address)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1145, in _send_message_with_response
+    exhaust)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1156, in _reset_on_error
+    return func(*args, **kwargs)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/server.py", line 85, in send_message_with_response
+    with self.get_socket(all_credentials, exhaust) as sock_info:
+  File "/usr/local/anaconda3/lib/python3.7/contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1004, in get_socket
+    sock_info = self._get_socket_no_auth()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 1041, in _get_socket_no_auth
+    sock_info = self.connect()
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 972, in connect
+    _raise_connection_failure(self.address, error)
+  File "/usr/local/anaconda3/lib/python3.7/site-packages/pymongo/pool.py", line 273, in _raise_connection_failure
+    raise NetworkTimeout(msg)
+pymongo.errors.NetworkTimeout: dds-2zeabb0862781c64-pub.mongodb.rds.aliyuncs.com:3717: timed out
+
+{'incr': 1544065170649709, 'cthr': '2018-12-06 10:59:30', 'cost': 1977, 'born': 6026, 'cnt': 22, 'std': 3607, 'avg': 5379, 'max': 15772, 'min': 1980}
+{'incr': 1544065243267165, 'cthr': '2018-12-06 11:00:43', 'cost': 2051, 'born': 6012, 'cnt': 14, 'std': 4599, 'avg': 6257, 'max': 16012, 'min': 530}
+('176.118.49.54', '53281')
+thread 1000 start
+thread 1001 start
+thread 1002 start
+thread 1003 start
+thread 1004 start
+thread 1005 start
+thread 1006 start
+thread 1007 start
+thread 1008 start
+thread 1009 start
+thread 1010 start
+thread 1011 start
+thread 1012 start
+thread 1013 start
+thread 1014 start
+thread 1015 start
+thread 1016 start
+thread 1017 start
+thread 1018 start
+thread 1019 start
+thread 1020 start
+thread 1021 start
+thread 1022 start
+thread 1023 start
+thread 1024 start
+thread 1025 start
+thread 1026 start
+thread 1027 start
+thread 1028 start
+thread 1029 start
+thread 1030 start
+thread 1031 start
+thread 1032 start
+thread 1033 start
+thread 1034 start
+thread 1035 start
+thread 1036 start
+thread 1037 start
+thread 1038 start
+thread 1039 start
+thread 1040 start
+thread 1041 start
+thread 1042 start
+thread 1043 start
+thread 1044 start
+thread 1045 start
+thread 1046 start
+thread 1047 start
+thread 1048 start
+thread 1049 start
+thread 1013 finish
+thread 1027 finish
+thread 1039 finish
+thread 1042 finish
+thread 1021 finish
+thread 1041 finish
+thread 1016 finish
+thread 1038 finish
+thread 1008 finish
+thread 1043 finish
+thread 1045 finish
+thread 1012 finish
+thread 1028 finish
+thread 1034 finish
+thread 1019 finish
+thread 1032 finish
+thread 1049 finish
+thread 1046 finish
+thread 1035 finish
+thread 1001 finish
+thread 1005 finish
+thread 1003 finish
+thread 1022 finish
+thread 1000 finish
+thread 1026 finish
+thread 1047 finish
+thread 1006 finish
+thread 1048 finish
+thread 1002 finish
+thread 1007 finish
+thread 1037 finish
+thread 1011 finish
+thread 1033 finish
+thread 1036 finish
+thread 1023 finish
+thread 1015 finish
+thread 1018 finish
+thread 1009 finish
+thread 1017 finish
+thread 1014 finish
+thread 1010 finish
+thread 1040 finish
+thread 1030 finish
+thread 1044 finish
+thread 1029 finish
+thread 1004 finish
+thread 1025 finish
+thread 1020 finish
+thread 1024 finish
+thread 1031 finish
+{'incr': 1544071061817133, 'cthr': '2018-12-06 12:37:41', 'cost': 761, 'born': 10016, 'cnt': 62, 'std': 3211, 'avg': 4919, 'max': 15212, 'min': 274}
+('180.250.16.34', '8080')
+thread 1000 start
+thread 1001 start
+thread 1002 start
+thread 1003 start
+thread 1004 start
+thread 1005 start
+thread 1006 start
+thread 1007 start
+thread 1008 start
+thread 1009 start
+thread 1010 start
+thread 1011 start
+thread 1012 start
+thread 1013 start
+thread 1014 start
+thread 1015 start
+thread 1016 start
+thread 1017 start
+thread 1018 start
+thread 1019 start
+thread 1020 start
+thread 1021 start
+thread 1022 start
+thread 1023 start
+thread 1024 start
+thread 1025 start
+thread 1026 start
+thread 1027 start
+thread 1028 start
+thread 1029 start
+thread 1030 start
+thread 1031 start
+thread 1032 start
+thread 1033 start
+thread 1034 start
+thread 1035 start
+thread 1036 start
+thread 1037 start
+thread 1038 start
+thread 1039 start
+thread 1040 start
+thread 1041 start
+thread 1042 start
+thread 1043 start
+thread 1044 start
+thread 1045 start
+thread 1046 start
+thread 1047 start
+thread 1048 start
+thread 1049 start
+('130.255.137.53', '45128')
+{'incr': 1544076152081028, 'cthr': '2018-12-06 14:02:32', 'cost': 139, 'yield': 1.0, 'born': 511, 'cnt': 4, 'std': 8443, 'avg': 6928, 'max': 18513, 'min': 385}
+('185.12.20.233', '57370')
+{'incr': 1544076302344666, 'cthr': '2018-12-06 14:05:02', 'cost': 131, 'yield': 1.0, 'born': 1014, 'cnt': 17, 'std': 4231, 'avg': 5818, 'max': 14106, 'min': 385}
+('58.47.34.51', '29148')
+{'incr': 1544076442155535, 'cthr': '2018-12-06 14:07:22', 'cost': 125, 'yield': 1.0, 'born': 1508, 'cnt': 9, 'std': 3633, 'avg': 4746, 'max': 10897, 'min': 270}
+('210.186.129.81', '53388')
+{'incr': 1544076570702896, 'cthr': '2018-12-06 14:09:30', 'cost': 118, 'yield': 1.0, 'born': 505, 'cnt': 11, 'std': 4061, 'avg': 4964, 'max': 13750, 'min': 270}
+('103.91.84.45', '8080')
+{'incr': 1544076717698047, 'cthr': '2018-12-06 14:11:57', 'cost': 136, 'yield': 1.0, 'born': 996, 'cnt': 11, 'std': 3773, 'avg': 4816, 'max': 10897, 'min': 270}
+('118.174.232.218', '45788')
+{'incr': 1544076862458753, 'cthr': '2018-12-06 14:14:22', 'cost': 125, 'yield': 1.0, 'born': 1001, 'cnt': 4, 'std': 2391, 'avg': 3444, 'max': 6184, 'min': 396}
+('123.162.197.13', '21595')
+{'incr': 1544077020553506, 'cthr': '2018-12-06 14:17:00', 'cost': 136, 'yield': 1.0, 'born': 998, 'cnt': 7, 'std': 2944, 'avg': 6187, 'max': 11564, 'min': 3206}
+('123.162.197.13', '21595')
+{'incr': 1544077144764661, 'cthr': '2018-12-06 14:19:04', 'cost': 117, 'yield': 1.0, 'born': 1534, 'cnt': 39, 'std': 4086, 'avg': 5302, 'max': 20043, 'min': 375}
+('123.162.202.60', '41982')
+{'incr': 1544077277716573, 'cthr': '2018-12-06 14:21:17', 'cost': 125, 'yield': 1.0, 'born': 1003, 'cnt': 7, 'std': 3046, 'avg': 4536, 'max': 7630, 'min': 375}
+('123.162.202.60', '41982')
+{'incr': 1544077413663875, 'cthr': '2018-12-06 14:23:33', 'cost': 128, 'yield': 1.0, 'born': 1005, 'cnt': 6, 'std': 6242, 'avg': 5620, 'max': 15879, 'min': 380}
+('49.64.35.84', '46274')
+{'incr': 1544077551455342, 'cthr': '2018-12-06 14:25:51', 'cost': 131, 'yield': 1.0, 'born': 1004, 'cnt': 16, 'std': 5459, 'avg': 6094, 'max': 15879, 'min': 380}
+('109.163.195.226', '34725')
+('202.93.229.2', '8080')
+{'incr': 1544077803337575, 'cthr': '2018-12-06 14:30:03', 'cost': 128, 'yield': 1.0, 'born': 1007, 'cnt': 16, 'std': 3580, 'avg': 5478, 'max': 13322, 'min': 397}
+('123.53.118.197', '41225')
+{'incr': 1544077959407957, 'cthr': '2018-12-06 14:32:39', 'cost': 143, 'yield': 1.0, 'born': 496, 'cnt': 5, 'std': 1840, 'avg': 2095, 'max': 4708, 'min': 388}
+('123.53.118.197', '41225')
+{'incr': 1544078125071132, 'cthr': '2018-12-06 14:35:25', 'cost': 150, 'yield': 1.0, 'born': 1013, 'cnt': 8, 'std': 11869, 'avg': 8482, 'max': 34991, 'min': 379}
+('125.123.123.188', '24399')
+{'incr': 1544078263462978, 'cthr': '2018-12-06 14:37:43', 'cost': 130, 'yield': 1.0, 'born': 516, 'cnt': 12, 'std': 5624, 'avg': 5972, 'max': 16449, 'min': 379}
+('186.148.167.134', '8181')
+{'incr': 1544078400691015, 'cthr': '2018-12-06 14:40:00', 'cost': 120, 'yield': 1.0, 'born': 999, 'cnt': 10, 'std': 4626, 'avg': 4275, 'max': 12630, 'min': 194}
+('58.212.41.13', '24962')
+{'incr': 1544078563444506, 'cthr': '2018-12-06 14:42:43', 'cost': 155, 'yield': 1.0, 'born': 5, 'cnt': 5, 'std': 2919, 'avg': 2474, 'max': 7429, 'min': 349}
+('117.26.188.203', '40503')
+{'incr': 1544078704068786, 'cthr': '2018-12-06 14:45:04', 'cost': 125, 'yield': 1.0, 'born': 1499, 'cnt': 13, 'std': 3141, 'avg': 4244, 'max': 11786, 'min': 441}
+('117.26.188.203', '40503')
+{'incr': 1544078824049757, 'cthr': '2018-12-06 14:47:04', 'cost': 112, 'yield': 1.0, 'born': 1500, 'cnt': 11, 'std': 2213, 'avg': 3938, 'max': 9115, 'min': 441}
+('196.27.105.156', '53281')
+{'incr': 1544078983106953, 'cthr': '2018-12-06 14:49:43', 'cost': 147, 'yield': 1.0, 'born': 504, 'cnt': 3, 'std': 6212, 'avg': 3985, 'max': 11158, 'min': 356}
+('183.166.6.42', '25599')
+{'incr': 1544079139812569, 'cthr': '2018-12-06 14:52:19', 'cost': 149, 'yield': 1.0, 'born': 506, 'cnt': 5, 'std': 2403, 'avg': 2692, 'max': 5420, 'min': 261}
+('89.22.255.82', '36693')
+{'incr': 1544079318097516, 'cthr': '2018-12-06 14:55:18', 'cost': 169, 'yield': 1.0, 'born': 32, 'cnt': 31, 'std': 3378, 'avg': 4751, 'max': 13218, 'min': 285}
+('202.146.0.219', '47217')
+{'incr': 1544079348904350, 'cthr': '2018-12-06 14:55:48', 'cost': 16, 'yield': 1.0, 'born': 10, 'cnt': 9, 'std': 2414, 'avg': 4480, 'max': 7361, 'min': 344}
+('114.231.155.157', '25395')
+{'incr': 1544079373933329, 'cthr': '2018-12-06 14:56:13', 'cost': 18, 'yield': 1.0, 'born': 5, 'cnt': 4, 'std': 1535, 'avg': 1435, 'max': 3591, 'min': 290}
+('114.231.155.157', '25395')
+{'incr': 1544079397631076, 'cthr': '2018-12-06 14:56:37', 'cost': 16, 'yield': 1.0, 'born': 10, 'cnt': 9, 'std': 6960, 'avg': 4606, 'max': 22706, 'min': 286}
+('201.30.158.210', '36327')
+{'incr': 1544079437977040, 'cthr': '2018-12-06 14:57:17', 'cost': 32, 'yield': 1.0, 'born': 3, 'cnt': 2, 'std': 1783, 'avg': 1672, 'max': 2933, 'min': 411}
+('81.19.2.59', '52055')
+{'incr': 1544079465074989, 'cthr': '2018-12-06 14:57:45', 'cost': 17, 'yield': 1.0, 'born': 11, 'cnt': 10, 'std': 3174, 'avg': 5813, 'max': 9765, 'min': 880}
+('117.186.214.74', '9999')
+Traceback (most recent call last):
+  File "proxy.py", line 156, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+('117.186.214.74', '9999')
+{'incr': 1544079515699726, 'cthr': '2018-12-06 14:58:35', 'cost': 16, 'yield': 1.0, 'born': 6, 'cnt': 5, 'std': 6587, 'avg': 5813, 'max': 17502, 'min': 2111}
+('111.91.76.210', '31089')
+{'incr': 1544079543302869, 'cthr': '2018-12-06 14:59:03', 'cost': 19, 'yield': 1.0, 'born': 10, 'cnt': 9, 'std': 4738, 'avg': 7165, 'max': 14932, 'min': 3251}
+('103.245.19.69', '56737')
+{'incr': 1544079573394394, 'cthr': '2018-12-06 14:59:33', 'cost': 16, 'yield': 1.0, 'born': 6, 'cnt': 5, 'std': 1490, 'avg': 3245, 'max': 5454, 'min': 1452}
+('185.90.210.146', '61468')
+{'incr': 1544079597784338, 'cthr': '2018-12-06 14:59:57', 'cost': 11, 'yield': 1.0, 'born': 5, 'cnt': 4, 'std': 7006, 'avg': 9407, 'max': 19659, 'min': 4611}
+('91.135.205.154', '43166')
+{'incr': 1544079649860820, 'cthr': '2018-12-06 15:00:49', 'cost': 18, 'yield': 1.0, 'born': 7, 'cnt': 7, 'std': 1866, 'avg': 3318, 'max': 6861, 'min': 1334}
+('37.143.223.17', '57797')
+Traceback (most recent call last):
+  File "proxy.py", line 156, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+('45.227.115.181', '53281')
+{'incr': 1544079716284475, 'cthr': '2018-12-06 15:01:56', 'cost': 15, 'yield': 1.0, 'born': 6, 'cnt': 6, 'std': 2192, 'avg': 3316, 'max': 6568, 'min': 669}
+('88.255.101.240', '8080')
+{'incr': 1544079727781368, 'cthr': '2018-12-06 15:02:07', 'cost': 1, 'yield': 1.0, 'born': 2, 'cnt': 2, 'std': 2912, 'avg': 3185, 'max': 5245, 'min': 1126}
+('60.191.201.38', '45461')
+{'incr': 1544079750645981, 'cthr': '2018-12-06 15:02:30', 'cost': 15, 'yield': 1.0, 'born': 5, 'cnt': 5, 'std': 2896, 'avg': 6107, 'max': 9511, 'min': 1498}
+('60.191.201.38', '45461')
+{'incr': 1544079769053914, 'cthr': '2018-12-06 15:02:49', 'cost': 10, 'yield': 1.0, 'born': 4, 'cnt': 4, 'std': 3589, 'avg': 5635, 'max': 10615, 'min': 2144}
+('60.191.201.38', '45461')
+Traceback (most recent call last):
+  File "proxy.py", line 156, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+('203.170.69.234', '8080')
+Traceback (most recent call last):
+  File "proxy.py", line 156, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+('185.12.20.233', '57370')
+{'incr': 1544079854461294, 'cthr': '2018-12-06 15:04:14', 'cost': 16, 'yield': 1.0, 'born': 4, 'cnt': 4, 'std': 3542, 'avg': 5649, 'max': 7979, 'min': 475}
+('185.12.20.233', '57370')
+Traceback (most recent call last):
+  File "proxy.py", line 156, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+('118.175.176.135', '48106')
+{'incr': 1544079896060890, 'cthr': '2018-12-06 15:04:56', 'cost': 9, 'yield': 1.0, 'born': 4, 'cnt': 4, 'std': 2156, 'avg': 4228, 'max': 7014, 'min': 2249}
+('62.80.191.90', '8080')
+{'incr': 1544079918921609, 'cthr': '2018-12-06 15:05:18', 'cost': 10, 'yield': 1.0, 'born': 2, 'cnt': 2, 'std': 3075, 'avg': 3032, 'max': 5207, 'min': 858}
+('79.111.13.155', '50625')
+{'incr': 1544079937756968, 'cthr': '2018-12-06 15:05:37', 'cost': 10, 'yield': 1.0, 'born': 4, 'cnt': 4, 'std': 1507, 'avg': 3028, 'max': 4134, 'min': 875}
+('94.26.59.151', '53544')
+{'incr': 1544079968339553, 'cthr': '2018-12-06 15:06:08', 'cost': 18, 'yield': 1.0, 'born': 2, 'cnt': 2, 'std': 5382, 'avg': 8852, 'max': 12658, 'min': 5046}
+('95.6.79.2', '44438')
+{'incr': 1544080190377187, 'cthr': '2018-12-06 15:09:50', 'cost': 203, 'yield': 1.0, 'born': 514, 'cnt': 32, 'std': 3636, 'avg': 5474, 'max': 18041, 'min': 853}
+('115.42.33.79', '8888')
+2018-12-06 15:10:08 no proxy found
+('173.212.219.151', '3128')
+Traceback (most recent call last):
+  File "proxy.py", line 156, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+('45.250.226.53', '8080')
+{'incr': 1544080266246110, 'cthr': '2018-12-06 15:11:06', 'cost': 18, 'yield': 1.0, 'born': 7, 'cnt': 7, 'std': 3847, 'avg': 6679, 'max': 12878, 'min': 2358}
+('217.107.197.39', '33628')
+{'incr': 1544080305083215, 'cthr': '2018-12-06 15:11:45', 'cost': 16, 'yield': 1.0, 'born': 5, 'cnt': 5, 'std': 3037, 'avg': 4892, 'max': 9965, 'min': 2445}
+('112.198.21.117', '80')
+{'incr': 1544080412271203, 'cthr': '2018-12-06 15:13:32', 'cost': 25, 'yield': 1.0, 'born': 11, 'cnt': 11, 'std': 2181, 'avg': 5267, 'max': 10029, 'min': 2667}
+('150.107.143.1', '9797')
+2018-12-06 15:13:49 no proxy found
+('181.113.35.38', '32075')
+{'incr': 1544080460146870, 'cthr': '2018-12-06 15:14:20', 'cost': 19, 'yield': 1.0, 'born': 7, 'cnt': 7, 'std': 2636, 'avg': 4529, 'max': 8499, 'min': 1957}
+('14.102.50.28', '52667')
+{'incr': 1544080486482328, 'cthr': '2018-12-06 15:14:46', 'cost': 14, 'yield': 1.0, 'born': 3, 'cnt': 3, 'std': 2791, 'avg': 4555, 'max': 7525, 'min': 1985}
+('92.82.150.62', '41258')
+{'incr': 1544080510815372, 'cthr': '2018-12-06 15:15:10', 'cost': 13, 'yield': 1.0, 'born': 6, 'cnt': 6, 'std': 1981, 'avg': 4283, 'max': 7103, 'min': 2480}
+('162.155.179.211', '58065')
+{'incr': 1544080574333212, 'cthr': '2018-12-06 15:16:14', 'cost': 53, 'yield': 1.0, 'born': 8, 'cnt': 8, 'std': 4450, 'avg': 8029, 'max': 14210, 'min': 2394}
+('85.192.179.70', '59802')
+{'incr': 1544080686696861, 'cthr': '2018-12-06 15:18:06', 'cost': 100, 'yield': 1.0, 'born': 3, 'cnt': 3, 'std': 920, 'avg': 3751, 'max': 4429, 'min': 2703}
+('190.61.41.10', '8181')
+{'incr': 1544080735043494, 'cthr': '2018-12-06 15:18:55', 'cost': 39, 'yield': 1.0, 'born': 2, 'cnt': 2, 'std': 178, 'avg': 4906, 'max': 5032, 'min': 4780}
+('160.218.187.46', '52809')
+Traceback (most recent call last):
+  File "proxy.py", line 156, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+('195.9.149.6', '61619')
+{'incr': 1544080846901923, 'cthr': '2018-12-06 15:20:46', 'cost': 43, 'yield': 1.0, 'born': 506, 'cnt': 6, 'std': 2064, 'avg': 4325, 'max': 7222, 'min': 1196}
+('200.9.221.244', '3128')
+{'incr': 1544081000735618, 'cthr': '2018-12-06 15:23:20', 'cost': 136, 'yield': 1.0, 'born': 506, 'cnt': 8, 'std': 1911, 'avg': 3937, 'max': 7024, 'min': 752}
+('103.75.161.38', '21776')
+{'incr': 1544081083422814, 'cthr': '2018-12-06 15:24:43', 'cost': 71, 'yield': 1.0, 'born': 15, 'cnt': 15, 'std': 4592, 'avg': 4323, 'max': 19591, 'min': 430}
+('218.73.132.241', '27883')
+{'incr': 1544081103744795, 'cthr': '2018-12-06 15:25:03', 'cost': 12, 'yield': 1.0, 'born': 5, 'cnt': 5, 'std': 3229, 'avg': 4054, 'max': 8760, 'min': 441}
+('218.73.132.241', '27883')
+{'incr': 1544081146395574, 'cthr': '2018-12-06 15:25:46', 'cost': 36, 'yield': 1.0, 'born': 13, 'cnt': 13, 'std': 5678, 'avg': 5166, 'max': 20512, 'min': 347}
+('185.141.175.237', '43953')
+{'incr': 1544081196608277, 'cthr': '2018-12-06 15:26:36', 'cost': 30, 'yield': 1.0, 'born': 9, 'cnt': 9, 'std': 2783, 'avg': 4907, 'max': 11667, 'min': 2451}
+('168.0.173.51', '44908')
+Traceback (most recent call last):
+  File "proxy.py", line 156, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+('212.160.180.110', '46975')
+{'incr': 1544081310371667, 'cthr': '2018-12-06 15:28:30', 'cost': 27, 'yield': 1.0, 'born': 10, 'cnt': 10, 'std': 1066, 'avg': 3640, 'max': 5616, 'min': 1808}
+('70.35.213.229', '36127')
+{'incr': 1544081336798297, 'cthr': '2018-12-06 15:28:56', 'cost': 17, 'yield': 1.0, 'born': 3, 'cnt': 3, 'std': 3970, 'avg': 5913, 'max': 10413, 'min': 2901}
+('85.9.217.48', '3355')
+{'incr': 1544081378531286, 'cthr': '2018-12-06 15:29:38', 'cost': 31, 'yield': 1.0, 'born': 4, 'cnt': 4, 'std': 3251, 'avg': 6054, 'max': 9914, 'min': 2965}
+('79.121.37.202', '55969')
+{'incr': 1544081404727843, 'cthr': '2018-12-06 15:30:04', 'cost': 9, 'yield': 1.0, 'born': 4, 'cnt': 4, 'std': 709, 'avg': 2945, 'max': 3515, 'min': 2035}
+('88.200.225.32', '38583')
+{'incr': 1544081446485382, 'cthr': '2018-12-06 15:30:46', 'cost': 32, 'yield': 1.0, 'born': 3, 'cnt': 3, 'std': 1374, 'avg': 3478, 'max': 4706, 'min': 1993}
+('95.140.20.94', '33994')
+{'incr': 1544081490403374, 'cthr': '2018-12-06 15:31:30', 'cost': 26, 'yield': 1.0, 'born': 9, 'cnt': 9, 'std': 3006, 'avg': 5437, 'max': 9726, 'min': 1769}
+('222.124.215.187', '38913')
+{'incr': 1544081526399272, 'cthr': '2018-12-06 15:32:06', 'cost': 28, 'yield': 1.0, 'born': 4, 'cnt': 4, 'std': 4895, 'avg': 6268, 'max': 13391, 'min': 2469}
+('178.237.180.34', '57307')
+{'incr': 1544081627856090, 'cthr': '2018-12-06 15:33:47', 'cost': 77, 'yield': 1.0, 'born': 2, 'cnt': 2, 'std': 492, 'avg': 2897, 'max': 3245, 'min': 2549}
+45.113.66.34:8080
+{'incr': 1544081643916714, 'cthr': '2018-12-06 15:34:03', 'cost': 9, 'yield': 1.0, 'born': 3, 'cnt': 3, 'std': 1941, 'avg': 3888, 'max': 6089, 'min': 2419}
+65.152.237.149:53281
+{'incr': 1544081669486647, 'cthr': '2018-12-06 15:34:29', 'cost': 19, 'yield': 1.0, 'born': 6, 'cnt': 6, 'std': 690, 'avg': 3307, 'max': 4443, 'min': 2500}
+78.156.225.170:41258
+{'incr': 1544081697465886, 'cthr': '2018-12-06 15:34:57', 'cost': 21, 'yield': 1.0, 'born': 3, 'cnt': 3, 'std': 1410, 'avg': 4503, 'max': 6047, 'min': 3282}
+178.248.206.215:61610
+{'incr': 1544081741877647, 'cthr': '2018-12-06 15:35:41', 'cost': 37, 'yield': 1.0, 'born': 15, 'cnt': 15, 'std': 1812, 'avg': 3867, 'max': 7242, 'min': 769}
+24.237.235.245:8080
+{'incr': 1544081757069779, 'cthr': '2018-12-06 15:35:57', 'cost': 9, 'yield': 1.0, 'born': 5, 'cnt': 5, 'std': 2704, 'avg': 3287, 'max': 8093, 'min': 1652}
+191.241.228.74:20183
+{'incr': 1544081788943721, 'cthr': '2018-12-06 15:36:28', 'cost': 24, 'yield': 1.0, 'born': 13, 'cnt': 13, 'std': 1706, 'avg': 3530, 'max': 7276, 'min': 968}
+94.242.57.136:10010
+Traceback (most recent call last):
+  File "proxy.py", line 152, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+103.111.219.141:53281
+{'incr': 1544081890800888, 'cthr': '2018-12-06 15:38:10', 'cost': 10, 'yield': 1.0, 'born': 4, 'cnt': 4, 'std': 4982, 'avg': 6662, 'max': 13355, 'min': 1306}
+103.111.219.141:53281
+
+2018-12-06 15:38:47 no proxy found
+158.58.133.106:41258
+{'incr': 1544081943547928, 'cthr': '2018-12-06 15:39:03', 'cost': 9, 'yield': 1.0, 'born': 4, 'cnt': 4, 'std': 441, 'avg': 4259, 'max': 4701, 'min': 3678}
+158.58.133.106:41258
+{'incr': 1544081982806028, 'cthr': '2018-12-06 15:39:42', 'cost': 32, 'yield': 1.0, 'born': 4, 'cnt': 4, 'std': 3692, 'avg': 5511, 'max': 10825, 'min': 2438}
+103.218.101.230:8080
+Traceback (most recent call last):
+  File "proxy.py", line 152, in verify_proxydb
+    "std":int(proxy_std),
+ValueError: cannot convert float NaN to integer
+
+
+2018-12-06 15:40:27 no proxy found
+
+2018-12-06 15:40:34 no proxy found
+
+2018-12-06 15:40:41 no proxy found
+43.240.5.41:31777
+{'incr': 1544082061303141, 'cthr': '2018-12-06 15:41:01', 'cost': 13, 'yield': 1.0, 'born': 3, 'cnt': 3, 'std': 3120, 'avg': 5802, 'max': 9300, 'min': 3304}
+77.70.115.103:8080
+{'incr': 1544082082915017, 'cthr': '2018-12-06 15:41:22', 'cost': 14, 'yield': 1.0, 'born': 502, 'cnt': 2, 'std': 1561, 'avg': 3849, 'max': 4953, 'min': 2745}
+
+{'incr': 1544082207413748, 'cthr': '2018-12-06 15:43:27', 'cost': 118, 'yield': 1.0, 'born': 502, 'cnt': 2, 'std': 1489, 'avg': 1399, 'max': 2453, 'min': 346}
+
+{'incr': 1544082307283297, 'cthr': '2018-12-06 15:45:07', 'cost': 93, 'yield': 1.0, 'born': 1003, 'cnt': 2, 'std': 462, 'avg': 7251, 'max': 7578, 'min': 6924}
+91.190.116.194:38783
+{'incr': 1544082397894109, 'cthr': '2018-12-06 15:46:37', 'cost': 83, 'yield': 1.0, 'born': 3005, 'cnt': 6, 'std': 2928, 'avg': 5463, 'max': 11224, 'min': 3115}
+46.162.197.248:80
+{'incr': 1544082479476572, 'cthr': '2018-12-06 15:47:59', 'cost': 75, 'yield': 1.0, 'born': 2541, 'cnt': 39, 'std': 3852, 'avg': 4991, 'max': 18484, 'min': 982}
+31.131.67.14:8080
+{'incr': 1544082556551585, 'cthr': '2018-12-06 15:49:16', 'cost': 70, 'yield': 1.0, 'born': 2026, 'cnt': 21, 'std': 4121, 'avg': 5605, 'max': 14023, 'min': 1499}
+159.203.46.243:8080
+{'incr': 1544082664562165, 'cthr': '2018-12-06 15:51:04', 'cost': 101, 'yield': 1.0, 'born': 2029, 'cnt': 24, 'std': 6220, 'avg': 5938, 'max': 31005, 'min': 802}
+176.31.141.20:21231
+{'incr': 1544082752728721, 'cthr': '2018-12-06 15:52:32', 'cost': 81, 'yield': 1.0, 'born': 1518, 'cnt': 9, 'std': 2917, 'avg': 4726, 'max': 10421, 'min': 1126}
+104.248.61.63:8080
+{'incr': 1544082817707831, 'cthr': '2018-12-06 15:53:37', 'cost': 58, 'yield': 1.0, 'born': 1533, 'cnt': 23, 'std': 4286, 'avg': 5624, 'max': 14685, 'min': 1607}
+103.16.62.126:52615
+{'incr': 1544082901882789, 'cthr': '2018-12-06 15:55:01', 'cost': 77, 'yield': 1.0, 'born': 1531, 'cnt': 22, 'std': 4534, 'avg': 6042, 'max': 17991, 'min': 2289}
+1.10.187.43:38715
+{'incr': 1544082997997104, 'cthr': '2018-12-06 15:56:37', 'cost': 89, 'yield': 1.0, 'born': 1527, 'cnt': 17, 'std': 4370, 'avg': 5577, 'max': 15160, 'min': 856}
+222.165.234.148:31510
+{'incr': 1544083073445594, 'cthr': '2018-12-06 15:57:53', 'cost': 69, 'yield': 1.0, 'born': 1524, 'cnt': 16, 'std': 2850, 'avg': 5053, 'max': 10866, 'min': 1143}
+195.222.106.184:36140
+{'incr': 1544083134908019, 'cthr': '2018-12-06 15:58:54', 'cost': 54, 'yield': 1.0, 'born': 2034, 'cnt': 26, 'std': 3131, 'avg': 4474, 'max': 13198, 'min': 489}
+37.32.40.178:8080
+{'incr': 1544083194941951, 'cthr': '2018-12-06 15:59:54', 'cost': 53, 'yield': 1.0, 'born': 2055, 'cnt': 46, 'std': 2767, 'avg': 3986, 'max': 17400, 'min': 364}
+114.6.16.118:8080
+{'incr': 1544083269161788, 'cthr': '2018-12-06 16:01:09', 'cost': 66, 'yield': 1.0, 'born': 1512, 'cnt': 3, 'std': 3295, 'avg': 4213, 'max': 7670, 'min': 1107}
+210.186.129.81:53388
+{'incr': 1544083359415568, 'cthr': '2018-12-06 16:02:39', 'cost': 83, 'yield': 1.0, 'born': 1526, 'cnt': 17, 'std': 4290, 'avg': 5191, 'max': 19352, 'min': 1067}
+186.96.105.118:23500
+{'incr': 1544083436792707, 'cthr': '2018-12-06 16:03:56', 'cost': 70, 'yield': 1.0, 'born': 2511, 'cnt': 8, 'std': 2990, 'avg': 5803, 'max': 10708, 'min': 1830}
+183.82.32.56:49551
+{'incr': 1544083496337744, 'cthr': '2018-12-06 16:04:56', 'cost': 53, 'yield': 1.0, 'born': 3029, 'cnt': 33, 'std': 3085, 'avg': 4471, 'max': 14553, 'min': 497}
+180.149.96.134:8080
+{'incr': 1544083568563292, 'cthr': '2018-12-06 16:06:08', 'cost': 65, 'yield': 1.0, 'born': 3036, 'cnt': 46, 'std': 2506, 'avg': 4155, 'max': 11798, 'min': 497}
+125.24.131.56:8080
+{'incr': 1544083648248757, 'cthr': '2018-12-06 16:07:28', 'cost': 73, 'yield': 1.0, 'born': 1521, 'cnt': 26, 'std': 5906, 'avg': 5255, 'max': 30135, 'min': 497}
+122.201.23.122:35451
+{'incr': 1544083710611372, 'cthr': '2018-12-06 16:08:30', 'cost': 55, 'yield': 1.0, 'born': 1522, 'cnt': 26, 'std': 3827, 'avg': 4606, 'max': 13650, 'min': 373}
+95.165.160.18:40255
+{'incr': 1544083773129714, 'cthr': '2018-12-06 16:09:33', 'cost': 56, 'yield': 1.0, 'born': 1530, 'cnt': 31, 'std': 3737, 'avg': 4387, 'max': 19950, 'min': 373}
+110.235.249.54:55795
+{'incr': 1544083846157668, 'cthr': '2018-12-06 16:10:46', 'cost': 66, 'yield': 1.0, 'born': 1533, 'cnt': 33, 'std': 2729, 'avg': 3860, 'max': 11311, 'min': 373}
+62.122.97.66:59143
+{'incr': 1544083907746471, 'cthr': '2018-12-06 16:11:47', 'cost': 54, 'yield': 1.0, 'born': 1546, 'cnt': 49, 'std': 2712, 'avg': 4187, 'max': 11339, 'min': 327}
+14.102.65.50:8080
+{'incr': 1544083999052032, 'cthr': '2018-12-06 16:13:19', 'cost': 85, 'yield': 1.0, 'born': 1514, 'cnt': 15, 'std': 3698, 'avg': 2981, 'max': 12961, 'min': 327}
+82.222.50.205:9090
+{'incr': 1544084077706405, 'cthr': '2018-12-06 16:14:37', 'cost': 72, 'yield': 1.0, 'born': 1512, 'cnt': 17, 'std': 5691, 'avg': 4971, 'max': 21329, 'min': 327}
+182.99.41.12:31986
+{'incr': 1544084168883439, 'cthr': '2018-12-06 16:16:08', 'cost': 84, 'yield': 1.0, 'born': 1009, 'cnt': 7, 'std': 1187, 'avg': 880, 'max': 3566, 'min': 327}
+222.190.166.111:49940
+{'incr': 1544084268165979, 'cthr': '2018-12-06 16:17:48', 'cost': 92, 'yield': 1.0, 'born': 1516, 'cnt': 24, 'std': 3859, 'avg': 3484, 'max': 16126, 'min': 327}
+122.49.114.2:34982
+{'incr': 1544084361163182, 'cthr': '2018-12-06 16:19:21', 'cost': 86, 'yield': 1.0, 'born': 1510, 'cnt': 16, 'std': 5419, 'avg': 5414, 'max': 19378, 'min': 327}
+115.124.75.226:53990
+{'incr': 1544084422696359, 'cthr': '2018-12-06 16:20:22', 'cost': 55, 'yield': 1.0, 'born': 1517, 'cnt': 21, 'std': 3571, 'avg': 4081, 'max': 16641, 'min': 308}
+('222.190.166.111', '49940')
+{'incr': 1544084481985512, 'cthr': '2018-12-06 16:21:21', 'cost': 52, 'yield': 1.0, 'born': 1514, 'cnt': 26, 'std': 3161, 'avg': 4383, 'max': 12603, 'min': 298}
+('178.189.11.134', '37529')
+{'incr': 1544084558830267, 'cthr': '2018-12-06 16:22:38', 'cost': 69, 'yield': 1.0, 'born': 1518, 'cnt': 30, 'std': 3166, 'avg': 4121, 'max': 12666, 'min': 298}
+('122.4.44.180', '33588')
+{'incr': 1544084628437397, 'cthr': '2018-12-06 16:23:48', 'cost': 63, 'yield': 1.0, 'born': 1530, 'cnt': 37, 'std': 2300, 'avg': 3511, 'max': 9584, 'min': 298}
+('114.230.107.253', '29057')
+{'incr': 1544084686160016, 'cthr': '2018-12-06 16:24:46', 'cost': 51, 'yield': 1.0, 'born': 1531, 'cnt': 38, 'std': 2638, 'avg': 3826, 'max': 12002, 'min': 154}
+('78.186.110.136', '56783')
+{'incr': 1544084749373924, 'cthr': '2018-12-06 16:25:49', 'cost': 56, 'yield': 1.0, 'born': 1533, 'cnt': 39, 'std': 2648, 'avg': 4004, 'max': 10440, 'min': 298}
+('43.250.124.98', '9001')
+{'incr': 1544084816300510, 'cthr': '2018-12-06 16:26:56', 'cost': 60, 'yield': 1.0, 'born': 1537, 'cnt': 44, 'std': 3391, 'avg': 4780, 'max': 14862, 'min': 273}
+('96.87.188.193', '61748')
+{'incr': 1544084889007095, 'cthr': '2018-12-06 16:28:09', 'cost': 66, 'yield': 1.0, 'born': 1507, 'cnt': 9, 'std': 5252, 'avg': 3536, 'max': 14862, 'min': 273}
+('122.241.28.205', '25909')
+{'incr': 1544084960401359, 'cthr': '2018-12-06 16:29:20', 'cost': 65, 'yield': 1.0, 'born': 1518, 'cnt': 22, 'std': 3098, 'avg': 3297, 'max': 12165, 'min': 273}
+('176.120.37.67', '53682')
+{'incr': 1544085038939819, 'cthr': '2018-12-06 16:30:38', 'cost': 71, 'yield': 1.0, 'born': 1016, 'cnt': 20, 'std': 1582, 'avg': 3052, 'max': 6537, 'min': 273}
+('89.122.148.121', '8888')
+{'incr': 1544085151082486, 'cthr': '2018-12-06 16:32:31', 'cost': 106, 'yield': 1.0, 'born': 1504, 'cnt': 11, 'std': 4025, 'avg': 3456, 'max': 14372, 'min': 273}
+('117.95.99.250', '35981')
+{'incr': 1544085235964256, 'cthr': '2018-12-06 16:33:55', 'cost': 77, 'yield': 1.0, 'born': 1528, 'cnt': 33, 'std': 4283, 'avg': 4843, 'max': 18596, 'min': 228}
+('117.93.181.180', '24169')
+{'incr': 1544085348744123, 'cthr': '2018-12-06 16:35:48', 'cost': 106, 'yield': 1.0, 'born': 1018, 'cnt': 24, 'std': 3843, 'avg': 5319, 'max': 13263, 'min': 201}
+('195.175.63.118', '53281')
+{'incr': 1544085443821553, 'cthr': '2018-12-06 16:37:23', 'cost': 88, 'yield': 1.0, 'born': 1515, 'cnt': 20, 'std': 3681, 'avg': 4580, 'max': 13768, 'min': 228}
+('186.0.93.68', '32641')
+{'incr': 1544085531112198, 'cthr': '2018-12-06 16:38:51', 'cost': 81, 'yield': 1.0, 'born': 1523, 'cnt': 30, 'std': 3686, 'avg': 4670, 'max': 15331, 'min': 228}
+('103.108.128.1', '8080')
+{'incr': 1544085627265530, 'cthr': '2018-12-06 16:40:27', 'cost': 90, 'yield': 1.0, 'born': 1514, 'cnt': 20, 'std': 4179, 'avg': 4326, 'max': 18164, 'min': 228}
+('49.85.5.126', '32097')
+{'incr': 1544085685335472, 'cthr': '2018-12-06 16:41:25', 'cost': 51, 'yield': 1.0, 'born': 1514, 'cnt': 18, 'std': 2745, 'avg': 3340, 'max': 10152, 'min': 228}
+('113.200.56.13', '8010')
+{'incr': 1544085745552527, 'cthr': '2018-12-06 16:42:25', 'cost': 53, 'yield': 1.0, 'born': 1023, 'cnt': 23, 'std': 2980, 'avg': 3504, 'max': 12636, 'min': 228}
+('91.205.131.27', '59420')
+{'incr': 1544085824629867, 'cthr': '2018-12-06 16:43:44', 'cost': 72, 'yield': 1.0, 'born': 1024, 'cnt': 29, 'std': 2717, 'avg': 3441, 'max': 9401, 'min': 253}
+('212.170.59.132', '3128')
+{'incr': 1544085898581869, 'cthr': '2018-12-06 16:44:58', 'cost': 66, 'yield': 1.0, 'born': 1544, 'cnt': 57, 'std': 3051, 'avg': 4353, 'max': 12560, 'min': 253}
+('41.221.97.190', '39251')
+{'incr': 1544085995844548, 'cthr': '2018-12-06 16:46:35', 'cost': 90, 'yield': 1.0, 'born': 1016, 'cnt': 20, 'std': 3110, 'avg': 3424, 'max': 12326, 'min': 253}
+('193.242.178.90', '8080')
+{'incr': 1544086079649560, 'cthr': '2018-12-06 16:47:59', 'cost': 77, 'yield': 1.0, 'born': 1534, 'cnt': 41, 'std': 3705, 'avg': 4800, 'max': 15747, 'min': 253}
+('110.232.83.55', '30528')
+{'incr': 1544086147403048, 'cthr': '2018-12-06 16:49:07', 'cost': 61, 'yield': 1.0, 'born': 1509, 'cnt': 13, 'std': 2982, 'avg': 2573, 'max': 10198, 'min': 253}
+('180.104.74.49', '23810')
+{'incr': 1544086222242568, 'cthr': '2018-12-06 16:50:22', 'cost': 68, 'yield': 1.0, 'born': 1511, 'cnt': 22, 'std': 2903, 'avg': 3206, 'max': 10938, 'min': 253}
+('192.99.160.45', '8080')
+{'incr': 1544086291761430, 'cthr': '2018-12-06 16:51:31', 'cost': 62, 'yield': 1.0, 'born': 1515, 'cnt': 25, 'std': 2751, 'avg': 3680, 'max': 10938, 'min': 253}
+('124.41.240.56', '50526')
+{'incr': 1544086357488152, 'cthr': '2018-12-06 16:52:37', 'cost': 59, 'yield': 1.0, 'born': 1527, 'cnt': 37, 'std': 2253, 'avg': 3426, 'max': 7200, 'min': 214}
+('185.75.36.194', '58398')
+{'incr': 1544086424144033, 'cthr': '2018-12-06 16:53:44', 'cost': 60, 'yield': 1.0, 'born': 1515, 'cnt': 21, 'std': 3571, 'avg': 3343, 'max': 11667, 'min': 214}
+('37.32.40.178', '8080')
+{'incr': 1544086500153650, 'cthr': '2018-12-06 16:55:00', 'cost': 69, 'yield': 1.0, 'born': 1528, 'cnt': 36, 'std': 2835, 'avg': 3274, 'max': 15472, 'min': 214}
+('124.41.240.207', '49623')
+{'incr': 1544086567655768, 'cthr': '2018-12-06 16:56:07', 'cost': 61, 'yield': 1.0, 'born': 1508, 'cnt': 12, 'std': 3778, 'avg': 2644, 'max': 11619, 'min': 214}
+('180.126.56.149', '47908')
+{'incr': 1544086642823678, 'cthr': '2018-12-06 16:57:22', 'cost': 68, 'yield': 1.0, 'born': 1514, 'cnt': 24, 'std': 3703, 'avg': 4216, 'max': 12961, 'min': 214}
