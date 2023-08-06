@@ -1,0 +1,51 @@
+Metadata-Version: 1.1
+Name: commandparse
+Version: 1.0.3
+Summary: CLI application commands parser
+Home-page: https://github.com/flgy/commandparse
+Author: flgy
+Author-email: florian.guilbert@synacktiv.com
+License: MIT
+Description: # commandparse
+        
+        Module to parse command based CLI application.
+        
+        Usage:
+        
+        * Subclass the Command class
+        * Add a method with a name such as `prefix_commandname` with kwargs as required argument
+        * Create a an ArgumentParser and declare a subparser per command
+        * Register the commands in a dictionary
+        * Use the `dispatch_command` function with the commands and args returned by `parser.parse_args()`
+        
+        ```
+        parser = ArgumentParser(...)
+        [...]
+        sub = parser.add_subparsers(title="commands", dest="command", description="available commands")
+        
+        # Registering commands
+        commands = {}
+        for command, method in Subclass.get_commands(prefix="prefix_"):
+        	Subclass.set_subparser_for(command, method, sub)
+        	commands[command] = method
+        [...]
+        args = parser.parse_args()
+        
+        if args.command:
+        	cmd = Subclass(...)
+        	cmd.dispatch_command(commands, args)
+        else:
+        	parser.print_usage()
+        ```
+        
+        See example.py for a more complete example. For a real world application using this lib, see: https://github.com/franc-pentest/ldeep
+        
+Keywords: CLI,command,argparse,parser
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Classifier: Operating System :: OS Independent
