@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/proto_inspect/__init__.py
+src/proto_inspect.egg-info/PKG-INFO
+src/proto_inspect.egg-info/SOURCES.txt
+src/proto_inspect.egg-info/dependency_links.txt
+src/proto_inspect.egg-info/requires.txt
+src/proto_inspect.egg-info/top_level.txt
+test/test_proto_inspect.py
