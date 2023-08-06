@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+gdrive_deploy/__init__.py
+gdrive_deploy/gdrive_deploy.py
+gdrive_deploy/utilities.py
+gdrive_deploy.egg-info/PKG-INFO
+gdrive_deploy.egg-info/SOURCES.txt
+gdrive_deploy.egg-info/dependency_links.txt
+gdrive_deploy.egg-info/requires.txt
+gdrive_deploy.egg-info/top_level.txt
