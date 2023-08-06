@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: py-cgrates
+Version: 0.0.2
+Summary: Py CGRrateS
+Home-page: https://github.com/hampsterx/py-cgrates
+Author: Tim van der Hulst
+Author-email: tim.vdh@gmail.com
+License: GNU General Public License v3.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: marshmallow (==3.0.0rc1)
+
+# Python CGRateS Api Client
+
+WIP
+
+See: https://github.com/cgrates/cgrates
+
+
+
+## Install
+
+    pip install py-cgrates
+
+## Usage
+
+    from cgrates import Client
+    from cgrates import models
+
+    api = Client(tenant="1")
+
+    api.add_account(name="AcmeWidgets")
+
+    => <Account(AcmeWidgets)>
+
+    api.add_destination("DST_45", prefixes=["45"])
+
+    => <Destination(DST_64, [64])>
+
+    api.add_rates(rate_id="RT_STANDARD", rates=[models.Rate(rate=0.25, rate_unit=60, rate_increment=60)])
+
+    => [<Rate(rate=0.25, rate_unit=60s,...)>]
+
+    api.add_destination_rates(dest_rate_id="DR_64", 
+            dest_rates=[models.DestinationRate(rate_id="RT_STANDARD", dest_id="DST_64")])
+
+    => [<DestinationRate(rate_id=RT_STANDARD, dest_id=DST_64,...)>]
+
+
+
