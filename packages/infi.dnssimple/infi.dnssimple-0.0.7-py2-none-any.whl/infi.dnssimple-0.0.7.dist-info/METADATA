@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: infi.dnssimple
+Version: 0.0.7
+Summary: dnssimple utils
+Home-page: https://git.infinidat.com/host-opensource/infi.dnssimple
+Author: Itai Shirav
+Author-email: itais@infinidat.com
+License: PSF
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: docopt
+Requires-Dist: infi.traceback
+Requires-Dist: requests[security]
+Requires-Dist: setuptools
+
+dnssimple utils
+
+
