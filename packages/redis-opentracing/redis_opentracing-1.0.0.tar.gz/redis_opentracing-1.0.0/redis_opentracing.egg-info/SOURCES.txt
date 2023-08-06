@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+VERSION
+setup.cfg
+setup.py
+redis_opentracing/__init__.py
+redis_opentracing/constants.py
+redis_opentracing/tracing.py
+redis_opentracing.egg-info/PKG-INFO
+redis_opentracing.egg-info/SOURCES.txt
+redis_opentracing.egg-info/dependency_links.txt
+redis_opentracing.egg-info/requires.txt
+redis_opentracing.egg-info/top_level.txt
