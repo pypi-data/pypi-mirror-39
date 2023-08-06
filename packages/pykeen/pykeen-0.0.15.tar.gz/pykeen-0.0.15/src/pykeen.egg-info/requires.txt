@@ -1,0 +1,18 @@
+numpy
+scipy
+click
+torchvision==0.2.1
+prompt_toolkit
+tqdm
+pandas
+
+[:python_version < "3.7"]
+dataclasses
+
+[:python_version == "3.6"]
+scikit-learn==0.19.1
+torch==0.4.0
+
+[:python_version == "3.7"]
+scikit-learn
+torch==0.4.1
