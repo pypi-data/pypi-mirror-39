@@ -1,0 +1,3 @@
+[console_scripts]
+donjon-painter = donjon_painter.painter:main
+
