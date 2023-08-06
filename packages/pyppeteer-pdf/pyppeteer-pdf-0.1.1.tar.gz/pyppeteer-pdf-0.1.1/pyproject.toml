@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "pyppeteer-pdf"
+version = "0.1.1"
+description = ""
+authors = ["Tim Kamanin <tim@timonweb.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+Click = "^7.0"
+pyppeteer = "^0.0.25"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry.scripts]
+pyppeteer-pdf = "pyppeteer_pdf.cli:html2pdf_command"

@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pyppeteer-pdf
+Version: 0.1.1
+Summary: 
+Home-page: None
+Author: Tim Kamanin
+Author-email: tim@timonweb.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: Click (>=7.0,<8.0)
+Requires-Dist: pyppeteer (>=0.0.25,<0.0.26)
