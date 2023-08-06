@@ -1,0 +1,66 @@
+#cloud-config
+
+users:
+- name: clash
+  groups: docker
+
+write_files:
+- path: "/var/clash-runner.sh"
+  owner: clash
+  permissions: 0755
+  content: |
+    {{ clash_runner_script | indent(4, false) }}
+- path: "/var/script.sh"
+  owner: clash
+  permissions: 0755
+  content: |
+    {% for bucket in gcs_mounts %}
+    if ! [ -x "$(command -v gcsfuse)" ]; then
+      echo 'Error: Could not mount bucket. gcsfuse is not installed.' >&2
+    else
+      mkdir -p {{ gcs_mounts[bucket] }}
+      gcsfuse --implicit-dirs {{ bucket }} {{ gcs_mounts[bucket] }}
+    fi
+    {% endfor %}
+
+    {% for directory in gcs_target %}
+    mkdir -p {{ directory }}
+    {% endfor %}
+
+    {{ script | indent(4, False) }}
+
+    {% for directory in gcs_target %}
+    if [ -z "$(ls {{ directory }})" ]; then
+      echo "No artifacts found in {{ directory }}"
+    else
+      gsutil cp -r {{ directory }}/* gs://{{ gcs_target[directory] }}
+    fi
+    {% endfor %}
+
+- path: "/var/clash.env"
+  owner: clash
+  permissions: 0755
+  content: |
+    {{ env_var_file | indent(4, false) }}
+- path: /etc/systemd/system/clash.service
+  permissions: 0644
+  owner: root
+  content: |
+    [Unit]
+    Description=Start Clash-Runner
+    After=gcr-wait-online.service
+
+    [Service]
+    ExecStart=/usr/bin/sudo -u clash bash /var/clash-runner.sh
+- path: "/var/utils.sh"
+  owner: clash
+  permissions: 0755
+  content: |
+    function gcloud {
+      docker run google/cloud-sdk:228.0.0-alpine gcloud "$@"
+    }
+
+runcmd:
+- sudo -u clash docker-credential-gcr configure-docker
+- systemctl daemon-reload
+- systemctl start clash.service
