@@ -1,0 +1,13 @@
+README.md
+setup.py
+general_utilities.egg-info/PKG-INFO
+general_utilities.egg-info/SOURCES.txt
+general_utilities.egg-info/dependency_links.txt
+general_utilities.egg-info/top_level.txt
+utilities/__init__.py
+utilities/common/__init__.py
+utilities/common/logger.py
+utilities/communication/__init__.py
+utilities/communication/mail.py
+utilities/error/__init__.py
+utilities/error/exceptions.py
