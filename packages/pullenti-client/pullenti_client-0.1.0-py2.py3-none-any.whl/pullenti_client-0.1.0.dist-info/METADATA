@@ -1,0 +1,29 @@
+Metadata-Version: 2.0
+Name: pullenti-client
+Version: 0.1.0
+Summary: Client for PullentiServer
+Home-page: https://github.com/pullenti/pullenti-client
+Author: Alexander Kukushkin
+Author-email: alex@alexkuk.ru
+License: MIT
+Description-Content-Type: UNKNOWN
+Keywords: natural language processing,named entity recognition
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Dist: requests
+
+UNKNOWN
+
+
