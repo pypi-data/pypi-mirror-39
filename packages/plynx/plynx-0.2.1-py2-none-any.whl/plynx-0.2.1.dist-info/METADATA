@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: plynx
+Version: 0.2.1
+Summary: ML platform
+Home-page: https://plynx.com
+Author: Ivan Khomyakov
+Author-email: ivan@plynx.com
+License: UNKNOWN
+Project-URL: Demo, https://plynx.com
+Project-URL: Source, https://github.com/khaxis/plynx
+Keywords: data science,machine learning,pipeline,workflow,experiments
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Dist: boto (>=2.48.0)
+Requires-Dist: pymongo (>=3.5.1)
+Requires-Dist: pyyaml (>=3.11)
+Requires-Dist: passlib (>=1.7.1)
+Requires-Dist: itsdangerous (>=0.24)
+Requires-Dist: Flask (>=0.12.2)
+Requires-Dist: Flask-Cors (>=3.0.3)
+Requires-Dist: Flask-HTTPAuth (>=3.2.3)
+Requires-Dist: gevent (>=1.3.7)
+Requires-Dist: requests (>=2.18.4)
+Requires-Dist: future (>=0.17.1)
+Requires-Dist: docker (>=3.5.1)
+
+Interactive, Scalable, Shareable and Reproducible ML experiments
+
+
