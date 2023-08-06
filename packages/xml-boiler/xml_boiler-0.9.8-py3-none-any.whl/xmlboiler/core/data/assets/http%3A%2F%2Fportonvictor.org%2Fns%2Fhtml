@@ -1,0 +1,19 @@
+@prefix : <http://portonvictor.org/ns/trans/> .
+@prefix lang: <http://portonvictor.org/ns/trans/scripts/#> .
+@prefix prec: <http://portonvictor.org/ns/prec/> .
+
+<http://portonvictor.org/ns/html#tidy>
+  a :Transformer ;
+  :sourceNamespace <http://www.w3.org/1999/xhtml> ;
+  :inward false ;
+  :script <http://portonvictor.org/ns/html#tidy-script> .
+
+# It is of a limited usefulness, as we don't provide any arguments to Tidy
+<http://portonvictor.org/ns/html#tidy-script>
+  a :Command ;
+  a prec:formatting ;
+  :language lang:HTMLTidy ;
+  :transformerKind :subdocumentSequential ;
+  :preservance 1.0 ;
+  :stability 1.0 ;
+  :preference 1.0 .
