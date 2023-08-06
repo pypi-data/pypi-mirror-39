@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0a199c57-befb-4d51-ac08-c2fa74b73e0a" name="Default" comment="Getting used to PyCharm">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sunto/lino_sunto/products/models.py" afterPath="$PROJECT_DIR$/../sunto/lino_sunto/products/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sunto/lino_sunto/settingsBU.py" afterPath="$PROJECT_DIR$/../sunto/lino_sunto/settingsBU.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sunto/lino_sunto/support/models.py" afterPath="$PROJECT_DIR$/../sunto/lino_sunto/support/models.py" />
+    </list>
+    <ignored path="lino.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="lino" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lino/modlib/users/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ad.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lino/ad.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <element signature="e#61#116#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="actors.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lino/core/actors.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding>
+                <marker date="1534337332916" expanded="true" signature="0:102" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="47807:47819" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <marker date="1534337332916" expanded="true" signature="47807:48093" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="47807:54444" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="47857:47990" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="48007:48092" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="48146:48277" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="48155:48243" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <marker date="1534337332916" expanded="true" signature="48331:48367" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="48424:48563" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="48618:48775" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="48831:49248" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="48840:49174" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <marker date="1534337332916" expanded="true" signature="49301:50986" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="49310:49366" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <marker date="1534337332916" expanded="true" signature="49586:49682" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="50019:50363" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="50102:50197" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="50251:50363" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="50389:50886" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="50462:50845" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="50479:50817" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="51044:52011" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="51053:51848" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <marker date="1534337332916" expanded="true" signature="51900:51993" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="52065:52252" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="52074:52180" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <marker date="1534337332916" expanded="true" signature="52315:52401" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="52448:52565" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="52632:52838" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="52641:52820" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <marker date="1534337332916" expanded="true" signature="52890:53525" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="52899:53001" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <marker date="1534337332916" expanded="true" signature="53031:53505" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="53044:53146" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="53440:53505" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="53609:54364" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="53618:53948" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <marker date="1534337332916" expanded="true" signature="54127:54347" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="54216:54347" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="54410:54444" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="54490:54777" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <marker date="1534337332916" expanded="true" signature="54864:55006" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="55132:55204" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="55264:55656" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="55283:55493" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="55386:55493" ph="..." />
+                <marker date="1534337332916" expanded="true" signature="55507:55639" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/lino/core/frames.py" />
+      </list>
+    </option>
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="All my projects" pattern="file[atelier]:*/||file[cosi]:*/||file[faggio]:*/||file[lino]:*/||file[logos]:*/||file[noi]:*/||file[patrols]:*/||file[welfare]:*/" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="43" />
+    <option name="y" value="25" />
+    <option name="width" value="1557" />
+    <option name="height" value="875" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyPackageRequirementsInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="All my projects" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tickets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="All my projects">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="appearance" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../xl" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="Python.lino test">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lino" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Docutils task">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lino" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Sphinx task">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lino" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lino" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lino" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lino" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lino" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lino" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="cosi test" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../cosi" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cosi" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../cosi/setup.py" />
+      <option name="PARAMETERS" value="test" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="lino test" type="PythonConfigurationType" factoryName="Python" editBeforeRun="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PYTHONPATH" value="/home/luc/mypy" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lino" />
+      <option name="SCRIPT_NAME" value="setup.py" />
+      <option name="PARAMETERS" value="test -s tests.DocsTests" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="lino sphinx-build docs" type="docs" factoryName="Sphinx task">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="$USER_HOME$/pythonenvs/py27/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/docs" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lino" />
+      <option name="docutils_input_file" value="$PROJECT_DIR$/docs" />
+      <option name="docutils_output_file" value="$PROJECT_DIR$/docs/.build" />
+      <option name="docutils_params" value="-w warnings_html.txt" />
+      <option name="docutils_task" value="html" />
+      <option name="docutils_open_in_browser" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Python.cosi test" />
+      <item index="1" class="java.lang.String" itemvalue="Python.lino test" />
+      <item index="2" class="java.lang.String" itemvalue="Python docs.lino sphinx-build docs" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration" myUseAcceleration="nothing">
+    <configuration />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0a199c57-befb-4d51-ac08-c2fa74b73e0a" name="Default" comment="" />
+      <created>1413879052105</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1413879052105</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Wrote more in docstring of lino.YesNo">
+      <created>1413884246277</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1413884246277</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added links page to fr4et">
+      <created>1413884306376</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1413884306376</updated>
+    </task>
+    <task id="LOCAL-00003" summary="miscellaneous changes in docs">
+      <created>1413886612348</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1413886612348</updated>
+    </task>
+    <task id="LOCAL-00004" summary="miscellaneous changes in docs">
+      <created>1413905892275</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1413905892275</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Getting used to PyCharm">
+      <created>1413907101277</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1413907101277</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Getting used to PyCharm">
+      <created>1413909070133</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1413909070133</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="43" y="25" width="1557" height="875" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28387925" sideWeight="0.40301004" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4831169" sideWeight="0.5003785" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.4996215" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277592" sideWeight="0.4996215" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33383802" sideWeight="0.2857143" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38043478" sideWeight="0.4996215" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59699" sideWeight="0.4996215" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Wrote more in docstring of lino.YesNo" />
+    <MESSAGE value="Added links page to fr4et" />
+    <MESSAGE value="miscellaneous changes in docs" />
+    <MESSAGE value="Getting used to PyCharm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Getting used to PyCharm" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lino/modlib/users/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lino/ad.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#61#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lino/core/actors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1534337332916" expanded="true" signature="0:102" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="47807:47819" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="47807:48093" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="47807:54444" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="47857:47990" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48007:48092" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48146:48277" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48155:48243" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="48331:48367" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48424:48563" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48618:48775" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48831:49248" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48840:49174" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="49301:50986" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="49310:49366" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="49586:49682" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50019:50363" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50102:50197" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50251:50363" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50389:50886" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50462:50845" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50479:50817" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="51044:52011" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="51053:51848" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="51900:51993" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52065:52252" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52074:52180" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="52315:52401" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52448:52565" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52632:52838" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52641:52820" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="52890:53525" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52899:53001" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="53031:53505" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="53044:53146" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="53440:53505" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="53609:54364" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="53618:53948" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="54127:54347" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="54216:54347" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="54410:54444" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="54490:54777" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="54864:55006" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="55132:55204" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="55264:55656" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="55283:55493" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="55386:55493" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="55507:55639" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lino/modlib/users/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lino/ad.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#61#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lino/core/frames.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lino/core/actors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1534337332916" expanded="true" signature="0:102" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="47807:47819" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="47807:48093" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="47807:54444" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="47857:47990" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48007:48092" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48146:48277" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48155:48243" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="48331:48367" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48424:48563" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48618:48775" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48831:49248" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48840:49174" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="49301:50986" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="49310:49366" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="49586:49682" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50019:50363" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50102:50197" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50251:50363" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50389:50886" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50462:50845" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50479:50817" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="51044:52011" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="51053:51848" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="51900:51993" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52065:52252" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52074:52180" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="52315:52401" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52448:52565" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52632:52838" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52641:52820" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="52890:53525" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52899:53001" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="53031:53505" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="53044:53146" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="53440:53505" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="53609:54364" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="53618:53948" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="54127:54347" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="54216:54347" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="54410:54444" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="54490:54777" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="54864:55006" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="55132:55204" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="55264:55656" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="55283:55493" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="55386:55493" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="55507:55639" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lino/modlib/users/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lino/ad.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#61#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lino/ad.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="5" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#61#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/tutorials/matrix_tutorial/settings.py" />
+    <entry file="file://$PROJECT_DIR$/docs/tutorials/watch_tutorial/settings.py" />
+    <entry file="file://$PROJECT_DIR$/docs/tutorials/workflows_tutorial/settings.py" />
+    <entry file="file://$PROJECT_DIR$/lino/projects/cms/settings.py" />
+    <entry file="file://$PROJECT_DIR$/lino/test_apps/20100212/settings.py" />
+    <entry file="file://$PROJECT_DIR$/lino/sandbox/contacts/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="4" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lino/projects/presto/settings/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/lino/projects/polly/settings/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/lino/projects/min2/settings/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/lino/projects/min1/settings/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/lino/projects/igen/settings.py" />
+    <entry file="file://$PROJECT_DIR$/lino/projects/homeworkschool/settings/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/lino/projects/docs/settings/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/lino/modlib/users/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lino/core/actors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <marker date="1534337332916" expanded="true" signature="0:102" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="47807:47819" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="47807:48093" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="47807:54444" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="47857:47990" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48007:48092" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48146:48277" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48155:48243" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="48331:48367" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48424:48563" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48618:48775" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48831:49248" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="48840:49174" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="49301:50986" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="49310:49366" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="49586:49682" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50019:50363" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50102:50197" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50251:50363" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50389:50886" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50462:50845" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="50479:50817" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="51044:52011" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="51053:51848" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="51900:51993" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52065:52252" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52074:52180" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="52315:52401" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52448:52565" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52632:52838" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52641:52820" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="52890:53525" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="52899:53001" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="53031:53505" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="53044:53146" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="53440:53505" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="53609:54364" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="53618:53948" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="54127:54347" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="54216:54347" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="54410:54444" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="54490:54777" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1534337332916" expanded="true" signature="54864:55006" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="55132:55204" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="55264:55656" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="55283:55493" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="55386:55493" ph="..." />
+            <marker date="1534337332916" expanded="true" signature="55507:55639" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lino/core/frames.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lino/ad.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#61#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <last-edited>All my projects</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+          <order>
+            <scope name="All my projects" />
+          </order>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
