@@ -1,0 +1,13 @@
+README.md
+setup.py
+backgroundchanger/__init__.py
+backgroundchanger/__main__.py
+backgroundchanger/api.py
+backgroundchanger/config.py
+backgroundchanger/utils.py
+backgroundchanger.egg-info/PKG-INFO
+backgroundchanger.egg-info/SOURCES.txt
+backgroundchanger.egg-info/dependency_links.txt
+backgroundchanger.egg-info/entry_points.txt
+backgroundchanger.egg-info/not-zip-safe
+backgroundchanger.egg-info/top_level.txt
