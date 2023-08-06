@@ -1,0 +1,36 @@
+.search_button {
+    height:2em;
+    line-height: 0em;
+    min-width: 0em;
+    width: 100%;
+}
+
+.selectAllGlobalTemplateButton {
+    font-size: 0.6em;
+}
+
+.selectAllUserTemplateButton {
+    font-size: 0.6em;
+}
+
+ul.tagit {
+    margin: 0;
+}
+
+ul.tagit li.tagit-choice-editable {
+    height:1.65em;
+    padding: .0em 18px .0em .0em;
+}
+
+li.tagit-new{
+    width: 40em;
+}
+
+.tagit-close{
+    text-decoration: none;
+    border: 0;
+}
+
+.tagit-label {
+    margin-left: 0.2em;
+}

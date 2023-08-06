@@ -1,0 +1,30 @@
+{% if data.search_form.global_templates|length > 0 or data.search_form.user_templates|length > 0 %}
+<div class="panel panel-default">
+    {% if data.search_form.global_templates|length > 0 %}
+    <div class="panel-heading">
+        Filter by Template
+        <div class="pull-right">
+            <a class="selectAllGlobalTemplateButton" href="javascript:void(0)">
+                Select All
+            </a>
+        </div>
+    </div>
+    <div class="panel-body">
+        {{ data.search_form.global_templates }}
+    </div>
+    {% endif %}
+    {% if data.search_form.user_templates|length > 0 %}
+    <div class="panel-heading">
+        Filter by User Template
+        <div class="pull-right">
+            <a class="selectAllUserTemplateButton" href="javascript:void(0)">
+                Select All
+            </a>
+        </div>
+    </div>
+    <div class="panel-body">
+        {{ data.search_form.user_templates }}
+    </div>
+    {% endif %}
+</div>
+{% endif %}
