@@ -1,0 +1,49 @@
+Metadata-Version: 1.1
+Name: prediction-evaluation
+Version: 0.0.0
+Summary: evaluation of prediction of binary, multiclass and regression
+Home-page: https://github.com/MandyZhangxy/DATS6450-final-project.git
+Author: Xinyu Zhang, Yijia Chen, Xiaochi Ge
+Author-email: mandy_zhang512@gwu.edu
+License: GNU
+Description-Content-Type: UNKNOWN
+Description: # DATS6450-final-project
+        ---
+        
+        This package is visualization for evaluation of prediction and performances of machine learning models based on the target variables and models' prediction.
+        There are three types of model prediction:
+        
+        * Binary classification Evaluation
+        * Multiclass classification Evaluation
+        * Regression Evaluation
+        
+        ## Installation
+        
+        You can install `prediction_evaluation` with `pip`:
+        
+        `# pip install prediction_evaluation `
+        
+        ## The models:
+        ---
+        
+        ### 1. Binary classification
+        * Confusion matrix plot
+        * ROC score and AUC plot
+        * Precision, recall and f1-score score table
+        
+        ### 2. Multi-class classification
+        * Confusion Matrix
+        * ROC score and AUC plot
+        * Precision, recall and f1-score score table
+        
+        ### 3. Regression
+        * Mean absolute error (MAE)
+        * Mean Squared error (MSE)
+        * R^2 score
+        * Residual plot
+        
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+        
+Keywords: binary classification,regression,multiclass,evaluation
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
