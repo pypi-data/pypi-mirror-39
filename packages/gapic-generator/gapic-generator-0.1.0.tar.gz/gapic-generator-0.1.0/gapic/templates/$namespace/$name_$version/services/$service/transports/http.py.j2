@@ -1,0 +1,114 @@
+{% extends '_base.py.j2' %}
+
+{% block content %}
+from typing import Sequence, Tuple
+{% if service.has_lro %}
+from google.api_core import operations_v1
+{%- endif %}
+from google.auth import credentials
+from google.auth.transport.requests import AuthorizedSession
+
+{% for import_ in service.python_modules -%}
+{{ import_ }}
+{% endfor %}
+from .base import {{ service.name }}Transport
+
+
+class {{ service.name }}HttpTransport({{ service.name }}Transport):
+    """HTTP backend transport for {{ service.name }}.
+
+    {{ service.meta.doc|rst(width=72, indent=4) }}
+
+    This class defines the same methods as the primary client, so the
+    primary client can load the underlying transport implementation
+    and call it.
+
+    It sends protocol buffers over the wire, but uses HTTP/1.1.
+    """
+    def __init__(self, *,
+        credentials: credentials.Credentials = None,
+        ) -> None:
+        """Instantiate the transport.
+
+        Args:
+            credentials (Optional[google.auth.credentials.Credentials]): The
+                authorization credentials to attach to requests. These
+                credentials identify the application to the service; if none
+                are specified, the client will attempt to ascertain the
+                credentials from the environment.
+        """
+        super().__init__(credentials=credentials)
+        self._session = AuthorizedSession(self._credentials)
+    {%- if service.has_lro %}
+
+    @property
+    def operations_client(self) -> operations_v1.OperationsClient:
+        """Create the client designed to process long-running operations.
+
+        This property caches on the instance; repeated calls return the same
+        client.
+        """
+        # Sanity check: Only create a new client if we do not already have one.
+        if 'operations_client' not in self.__dict__:
+            from google.api_core import grpc_helpers
+            self.__dict__['operations_client'] = operations_v1.OperationsClient(
+                grpc_helpers.create_channel(
+                    '{0}:443'.format(self.SERVICE_ADDRESS),
+                    credentials=self._credentials,
+                    scopes=self.AUTH_SCOPES,
+                )
+            )
+
+        # Return the client from cache.
+        return self.__dict__['operations_client']
+    {%- endif %}
+    {%- for method in service.methods.values() %}
+
+    def {{ method.name|snake_case }}(self,
+            request: {{ method.input.ident }}, *,
+            metadata: Sequence[Tuple[str, str]] = (),
+            ) -> {{ method.output.ident }}:
+        """Call the {{- ' ' -}}
+        {{ (method.name|snake_case).replace('_',' ')|wrap(
+                width=70, offset=45, indent=8) }}
+        {{- ' ' -}} method over HTTP.
+
+        Args:
+            request (~.{{ method.input.ident }}):
+                The request object.
+                {{ method.input.meta.doc|rst(width=72, indent=16) }}
+            metadata (Sequence[Tuple[str, str]]): Strings which should be
+                sent alont with the request as metadata.
+
+        Returns:
+            ~.{{ method.output.ident }}:
+                {{ method.output.meta.doc|rst(width=72, indent=16) }}
+        """
+        # Serialize the input.
+        data = request.SerializeToString()
+
+        # Send the request.
+        response = self._session.post(
+            'https://{host}/$rpc/{package}.{service}/{method}'.format(
+                host=self.SERVICE_ADDRESS,
+                method='{{ method.name }}',
+                package='{{ '.'.join(method.meta.address.package) }}',
+                service='{{ service.name }}',
+            ),
+            data=data,
+            headers={
+                'content-type': 'application/x-protobuf',
+            },
+        )
+
+        # Return the response.
+        return {{ method.output.ident }}.FromString(
+            response.content,
+        )
+    {%- endfor %}
+
+
+__all__ = (
+    '{{ service.name }}HttpTransport',
+)
+{% endblock %}
