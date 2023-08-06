@@ -1,0 +1,53 @@
+{
+    "$id": "http://dial.uclouvain.be/schemas/dial-author.json",
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Author",
+    "description": "Description for an author into DIAL",
+
+    "properties": {
+        "name": {
+            "type": "string",
+            "title": "Author name",
+            "description": "The author lastname and firstname. Lastname should be first, firstname second separate by ', '"
+        },
+        "email": {
+            "type": "string",
+            "title": "Author email",
+            "description": "The author main email where it could be contacted if needed",
+            "format": "email"
+        },
+        "institution": {
+            "type": "string",
+            "title": "Institution",
+            "description": "THe institution name of this author"
+        },
+        "institution_id":{
+            "type": "string",
+            "description": "the ID of this author for the specified institution",
+            "title": "Institution ID"
+        },
+        "orcid-id": {
+            "type": "string",
+            "title": "ORCID-ID",
+            "description": "the ORCID ID of this author",
+            "pattern": "^https://orcid.org/[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$"
+        },
+        "role": {
+            "type": "string",
+            "title": "Role",
+            "description": "the role of this author in the publication",
+            "enum": [
+                "author",
+                "translator",
+                "collaborator",
+                "preface writer",
+                "scientific publisher",
+                "inventor"
+            ]
+        }
+    },
+    "required": [ "name" ],
+    "dependencies": {
+        "institution_id": ["institution"]
+    }
+}

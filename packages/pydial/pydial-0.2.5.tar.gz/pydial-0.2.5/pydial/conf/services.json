@@ -1,0 +1,18 @@
+{
+    "fedora": {
+        "url": "https://test.dial.uclouvain.be/fedora",
+        "username": "fedoraAdmin",
+        "password": "xtg854"
+    },
+    "handle": {
+        "authority" : "2078",
+        "institutions":[
+            { "name": ["UCL", "UCLouvain"], "authority": "2018.1" },
+            { "name": ["FUSL", "USL-B"], "authority": "2018.3" },
+            { "name": ["FUNDP", "UNamur"], "authority": "2018.1" }
+        ]
+    },
+    "solr": {
+        "base_url": "https://test.dial.uclouvain.be/solr6"
+    }
+}

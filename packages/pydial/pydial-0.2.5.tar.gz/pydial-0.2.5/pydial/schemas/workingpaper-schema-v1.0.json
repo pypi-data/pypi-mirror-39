@@ -1,0 +1,66 @@
+{
+  "$id": "http://dial.uclouvain.be/schemas/dial-workingpaper.json",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "JSON schema describing a working paper into DIAL",
+  "type": "object",
+
+  "allOf": [
+        { "$ref": "http://dial.uclouvain.be/schemas/basics-publications.json" },
+        { "properties": {
+            "type":{
+                "properties": {
+                    "document_type": {
+                        "$comment": "limit main type to 'book' type",
+                        "enum": [
+                            "workingpaper"
+                        ]
+                    },
+                    "document_subtype": {
+                        "$comment": "limit subtype to some defined values for a workingpaper. A working paper doens't have any defined subtype",
+                        "enum": [""]
+                    }
+                }
+            },
+            "authors":{
+                "items":{
+                    "properties": {
+                        "role": {
+                            "$comment": "Limit role of authors to a subset of possible roles defined for authors",
+                            "enum": [
+                                "author",
+                                "collaborator",
+                                "translator"
+                            ]
+                        }
+                    }
+                }
+            },
+            "series": {
+                "title": "Serie(s)",
+                "description": "Series to which belongs the resource.",
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                    "type": "object",
+                    "required": ["name"],
+                    "additionalProperties": false,
+                    "properties": {
+                        "name": {
+                            "title": "Title",
+                            "description": "Title of the series.",
+                            "type": "string",
+                            "minLength": 2
+                        },
+                        "number": {
+                            "title": "Numbering",
+                            "description": "Numbering of the resource within the series.",
+                            "type": "string",
+                            "minLength": 1
+                        }
+                    }
+                }
+            }
+        }}
+    ]
+
+}

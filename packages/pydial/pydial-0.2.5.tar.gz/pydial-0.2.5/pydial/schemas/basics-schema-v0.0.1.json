@@ -1,0 +1,174 @@
+{
+    "$id": "http://dial.uclouvain.be/schemas/basics-publications.json",
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "properties": {
+        "type": {
+            "title": "Document type",
+            "description": "The document type",
+            "type": "object",
+            "properties": {
+                "document_type": {
+                    "type": "string",
+                    "title": "Document type"
+                },
+                "document_subtype":{
+                    "type": "string",
+                    "title": "Document subtype"
+                }
+            },
+            "required": ["document_type"]
+        },
+        "authors": {
+            "title": "Authors",
+            "type": "array",
+            "items": {
+                "$ref": "http://dial.uclouvain.be/schemas/dial-author.json"
+            }
+        },
+        "title_info": {
+            "title": "Title informations",
+            "type": "object",
+            "properties": {
+                "title": {
+                    "title": "Title",
+                    "description": "The main title of the book",
+                    "type": "string",
+                    "minLength": 1
+                },
+                "subtitle": {
+                    "title": "Subtitle",
+                    "description": "The subtitle of the book (if needed)"
+                }
+            },
+            "required": ["title"]
+        },
+        "abstracts":{
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "content": {
+                        "type": "string",
+                        "minLength": 20
+                    },
+                    "language": {
+                        "$ref": "http://dial.uclouvain.be/schemas/language.json"
+                    }
+                },
+                "required": ["content"]
+            }
+        },
+        "year": {
+            "title": "Publication year",
+            "description": "The book publication year",
+            "anyOf": [
+                { "type": "integer", "minimum": 1800, "maximum": 2100 },
+                { "type": "string", "enum": ["na"] }
+            ]
+        },
+        "language": {
+            "$ref": "http://dial.uclouvain.be/schemas/language.json",
+            "title": "language",
+            "description": "The language used to write the document"
+        },
+        "keywords": {
+            "title": "Keywords",
+            "description": "Generic keywords describing the book",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "string",
+                "minLength": 1
+            }
+        },
+        "internal_keywords": {
+            "title": "Internal keywords",
+            "description": "Specific keywords used to categorized the book in DIAL context",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "string",
+                "minLength": 1
+            }
+        },
+        "mesh_keywords": {
+            "title": "MESH keywords",
+            "description": "Specific keywords used to categorized medecine publication (Medical Subject Heading)",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "string",
+                "minLength": 1
+            }
+        },
+        "urls": {
+            "title": "Localisations",
+            "description": "URL(s) where found the same document on the web",
+            "type": "array",
+            "minItems": 1,
+            "items":{
+                "type": "string",
+                "format": "uri"
+            }
+        },
+        "entities": {
+            "title": "Affiliations",
+            "description": "All related entities for this publication inside ans outside DIAL consortium",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "institution": {
+                        "title": "Institution name",
+                        "description": "The name or common acronym of the institution",
+                        "type": "string",
+                        "minLength": 2
+                    },
+                    "entity": {
+                        "title": "Entity name",
+                        "description": "The entity full name or/and common acronym",
+                        "type": "string",
+                        "minLength": 1
+                    }
+                },
+                "required": ["institution", "entity"]
+            }
+        },
+        "fundings": {
+            "title": "Funding(s)",
+            "description": "All the funds used by project referencing this publication",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "organisation" : {
+                        "title": "Organisation name",
+                        "type": "string"
+                    },
+                    "program": {
+                        "title": "Program name",
+                        "type": "string"
+                    },
+                    "project": {
+                        "title": "Project",
+                        "description": "Project name or project code",
+                        "type": "string"
+                    },
+                    "subvention": {
+                        "title": "Subvention",
+                        "description": "The subvention statement or reference in the funding program",
+                        "type": "string"
+                    }
+                },
+                "required": ["organisation", "program", "project"]
+            }
+        }
+    },
+    "required": [
+        "type",
+        "title_info",
+        "year",
+        "language"
+    ]
+}
