@@ -1,0 +1,33 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    >
+
+    <browser:page
+        name="pp-client-plone-settings"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".controlpanel.PPClientPloneSettingsControlPanel"
+        layer="pp.client.plone.interfaces.IPloneClientConnectorLayer"
+        permission="cmf.ManagePortal"
+    />
+
+    <browser:page
+        name="pp-client-plone-connection-test"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".controlpanel.ConnectionTest"
+        attribute="connection_test"
+        permission="cmf.ManagePortal"
+        layer="pp.client.plone.interfaces.IPloneClientConnectorLayer"
+    />
+
+    <browser:page
+        name="pp-demo"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".demo.Demo"
+        attribute="demo"
+        permission="cmf.ManagePortal"
+        layer="pp.client.plone.interfaces.IPloneClientConnectorLayer"
+    />
+
+</configure>
