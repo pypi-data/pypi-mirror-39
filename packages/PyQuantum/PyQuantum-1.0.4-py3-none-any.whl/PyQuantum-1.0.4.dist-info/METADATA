@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: PyQuantum
+Version: 1.0.4
+Summary: Python3 module for Quantum Mechanics
+Home-page: https://github.com/alexfmsu/PyQuantum
+Author: alexfmsu
+Author-email: alexfmsu@mail.ru
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: feedparser
+Requires-Dist: html2text
+
+UNKNOWN
+
+
