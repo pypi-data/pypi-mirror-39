@@ -1,0 +1,71 @@
+#!python
+
+from facextractor import *
+import click
+
+
+CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
+
+
+@click.group(context_settings=CONTEXT_SETTINGS)
+def cli():
+    """ CLI for Facextractor package. """
+    pass
+
+
+@click.command()
+@click.argument("fbdump", type=click.Path(True, False, True, False, True))
+@click.option("-v", "--verbose", count=True, help="Set verbosity")
+def friends(fbdump, verbose):
+    """ Returns numbers of friends and graph of new friends by years. """
+    f = Friends(fbdump, verbose)
+    click.echo(f.describe())
+    pass
+
+
+@click.command()
+@click.argument("fbdump", type=click.Path(True, False, True, False, True))
+@click.option("-f", "--find", type=click.STRING, help="Find and describe thread by name")
+@click.option("-p", "--participant", is_flag=True, help="Instead of one insertion, it searches for"
+                                                        " all where the specified name is a participant")
+@click.option("-v", "--verbose", count=True, help="Set verbosity")
+def threads(fbdump, find, participant, verbose):
+    """ Return numbers of threads or specified thread. """
+    t = Threads(fbdump, verbose)
+    if find:
+        if participant:
+            threads = t.find_threads_by_participant(find)
+
+            if not threads:
+                click.secho(click.style(" No match ", "red", bold=True))
+                return
+
+            click.secho(click.style(f"{len(threads)} threads found", fg="green", bold=True))
+            click.echo('')
+            for thread in threads:
+                click.secho(click.style(f"=== {thread.title} ===", bold=True))
+                click.secho(thread.describe())
+            pass
+        else:
+            thread = t.find_thread_by_name(find)
+
+            if not thread:
+                click.secho(click.style(" No match ", "red", bold=True))
+                return
+
+            click.secho(click.style(f"=== {find} ===", bold=True))
+            click.secho(thread.describe())
+            pass
+        pass
+    else:
+        click.secho(click.style("=== Chat analysis ===", bold=True))
+        click.echo(t.describe())
+        pass
+    pass
+
+
+if __name__ == '__main__':
+    cli.add_command(friends)
+    cli.add_command(threads)
+    cli()
+    pass
