@@ -1,0 +1,13 @@
+lz4/__init__.py,sha256=hIvOuoGzQpA7LdzgyfP6-byehTRVA_vFXImPS90uB40,628
+lz4/_version.cpython-35m-darwin.so,sha256=v8fe2GFCs_rToNNc-PVjImkp701W0HKLlExdTogShng,132008
+lz4/version.py,sha256=EOMXzYy0KKku0ztKbdop0KzuHAKCl4lYwXws3KOgWx0,116
+lz4/block/__init__.py,sha256=KsSQGgaPpJtVPJ5QfMadVGFduMy0hSetJHWGNmOvpso,70
+lz4/block/_block.cpython-35m-darwin.so,sha256=2S6B1MUcPGvty-_c7YVObb10_eKmKcsQK-n0mBuHorA,258020
+lz4/frame/__init__.py,sha256=6VnfprVaLn36amVtC0EdUB6b5s26JIRky2yR-9uO6-0,29444
+lz4/frame/_compression.py,sha256=M9oO74zf0Prsy2YItT742gEU_xg7-wevlEgmKc77tR0,5864
+lz4/frame/_frame.cpython-35m-darwin.so,sha256=rP_n6orgCnlA_-w_d2Yk66FwiII0bBn_Jps7ffWsNtY,346208
+lz4-2.1.6.dist-info/LICENSE,sha256=4qxD1uuA605SFBgXyBJDfguYGx17LcfMhsfvVSQETG8,1495
+lz4-2.1.6.dist-info/METADATA,sha256=brfAuBphnhl4ZRmhkctybmRVWWx-p1BYVH2WapefX_k,3608
+lz4-2.1.6.dist-info/WHEEL,sha256=7tTRuDz6e4JNp58MBKOqUbiiZda-Ttisi5nCqkhJdHo,109
+lz4-2.1.6.dist-info/top_level.txt,sha256=cX6_gxFUdNSo40TfxrGpTCgu7epGm3yW3m2k7irTDzI,4
+lz4-2.1.6.dist-info/RECORD,,
