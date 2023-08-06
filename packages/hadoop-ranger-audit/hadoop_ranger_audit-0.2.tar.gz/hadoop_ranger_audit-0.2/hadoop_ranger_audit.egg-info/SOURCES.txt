@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+docs/source/conf.py
+docs/source/index.rst
+hadoop_ranger_audit/__init__.py
+hadoop_ranger_audit/hadoop_ranger_audit.py
+hadoop_ranger_audit/report_template.html
+hadoop_ranger_audit.egg-info/PKG-INFO
+hadoop_ranger_audit.egg-info/SOURCES.txt
+hadoop_ranger_audit.egg-info/dependency_links.txt
+hadoop_ranger_audit.egg-info/requires.txt
+hadoop_ranger_audit.egg-info/top_level.txt
