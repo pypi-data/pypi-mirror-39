@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pyramid-ssm-settings
+Version: 0.2.0
+Summary: Pull settings into Pyramid from Amazon EC2 Parameter Store.
+Home-page: https://github.com/luhn/pyramid-ssm-settings
+License: MIT
+Author: Theron Luhn
+Author-email: theron@luhn.com
+Requires-Python: >=3.4,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: boto3 (>=1.9,<2.0)
+Project-URL: Repository, https://github.com/luhn/pyramid-ssm-settings
+Description-Content-Type: text/markdown
+
+# pyramid-ssm-settings
+
+Pull settings into Pyramid from Amazon EC2 Parameter Store.
+
