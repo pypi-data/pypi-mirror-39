@@ -1,0 +1,93 @@
+#!python
+
+# Adapted from https://gist.github.com/bannsec/43cf0f1b05ec37eb7e92a2922967bc46
+
+import argparse
+import re
+import os
+import subprocess
+import shlex
+import os
+import pwn
+import psutil
+import sys
+import fcntl
+import termios
+import r2pipe
+
+r2_python_template = """#!/usr/bin/env python
+import os, r2pipe
+r2 = r2pipe.open()
+def load_modules():
+    modules = r2.cmdj("dmmj")
+    for module in modules:
+        if '{mod_name:s}' == os.path.basename(module['file']):
+            command = "oba {{addr:d}} {{file_name:s}}".format(file_name=module['file'], addr=module['address'])
+            r2.cmd(command)
+load_modules()
+r2.cmd('ib') # Reload the buffer info
+{user_commands:s}
+"""
+
+
+def get_r2_proc():
+    proc_iter = psutil.process_iter(attrs=["pid", "name", "cmdline"])
+    r2  = [p for p in proc_iter if "r2" in p.info["cmdline"]]
+    return None if len(r2) < 1 else r2[0]
+
+def setting_key(s):
+    return s.split('=')[0]
+def setting_value(s):
+    return s.split('=')[1]
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-x", nargs=1)
+    parser.add_argument("-q", action="store_true")
+    parser.add_argument("file", nargs=1)
+    args = parser.parse_args()
+
+    file_name = args.file[0]
+
+    gdb_script = args.x[0]
+
+    with open(gdb_script, "r") as f:
+        gdb_script = f.read()
+
+    ip, port = re.findall("target remote (.+):([0-9]+)", gdb_script)[0]
+
+    # Find the user commands that start with "#"
+    user_settings = {setting_key(line[2:]): setting_value(line[2:]) for line in gdb_script.split("\n") if line.startswith("#>")}
+    user_commands = '\n'.join([line[1:] for line in gdb_script.split("\n") if line.startswith("#") and line[1] != ">"])
+
+    script_file = args.x[0] + ".py"
+    with open(script_file,"w") as f:
+        f.write(r2_python_template.format(mod_name=os.path.basename(file_name), user_commands=user_commands))
+
+    # TODO
+    # start r2 in another terminal, then run new-session, which does this: https://reverseengineering.stackexchange.com/questions/18342/is-there-a-way-to-explicitly-connect-r2pipe-to-an-existing-radare2-session-that
+    # (read comments!). this script will connect to that. user might need to specify port n there
+
+    # open another window as sometimes the up/down keys wont work
+    command = ["x-terminal-emulator", "-e", ' '.join(["r2", "-d","-i",script_file, "gdb://{ip:s}:{port:s}".format(ip=ip, port=port)])]
+
+    try:
+        if 'port' in user_settings:
+            r2port = user_settings['port']
+            r2 = r2pipe.open('http://localhost:'+r2port)
+            r2.cmd("o gdb://{ip:s}:{port:s}".format(ip=ip, port=port))
+            r2.cmd("dL gdb")
+            r2.cmd("e cfg.debug=true")
+        else:
+            env = os.environ.copy()
+            env['PATH'] = env['PATH'] + ":"+os.path.dirname(env['_'])
+            os.execvpe(command[0], command, env)
+        #subprocess.call(["echo", str(user_settings)+str(user_commands) ])
+        #subprocess.call(["sleep", "9999999999"])
+    except Exception as e:
+        print(e)
+        subprocess.call(["sleep", "9999999999"])
+
+
+if __name__ == '__main__':
+    main()
