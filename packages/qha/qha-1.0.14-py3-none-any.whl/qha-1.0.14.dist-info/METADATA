@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: qha
+Version: 1.0.14
+Summary: A powerful tool for quasi-harmonic approximation
+Home-page: https://github.com/MineralsCloud/qha
+Author: Tian Qin, Qi Zhang
+Author-email: qinxx197@umn.edu, qz2280@columbia.edu
+Maintainer: Tian Qin, Qi Zhang
+Maintainer-email: qinxx197@umn.edu, qz2280@columbia.edu
+License: GNU General Public License 3
+Keywords: thermodynamic-properties quasi-harmonic-approximation scientific-computation
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6, <3.7
+Requires-Dist: lazy-property
+Requires-Dist: numba
+Requires-Dist: numpy
+Requires-Dist: bigfloat
+Requires-Dist: pandas
+Requires-Dist: scientific-string
+Requires-Dist: scipy
+Requires-Dist: text-stream
+Requires-Dist: pyyaml
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+
+UNKNOWN
+
+
