@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+stape/__init__.py
+stape/version.py
+stape.egg-info/PKG-INFO
+stape.egg-info/SOURCES.txt
+stape.egg-info/dependency_links.txt
+stape.egg-info/not-zip-safe
+stape.egg-info/top_level.txt
