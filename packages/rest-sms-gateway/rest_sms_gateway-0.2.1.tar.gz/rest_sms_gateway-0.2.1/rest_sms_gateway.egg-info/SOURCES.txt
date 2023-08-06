@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+examples/example_get_sms_by_phone.py
+examples/example_send_message.py
+rest_sms_gateway/__init__.py
+rest_sms_gateway.egg-info/PKG-INFO
+rest_sms_gateway.egg-info/SOURCES.txt
+rest_sms_gateway.egg-info/dependency_links.txt
+rest_sms_gateway.egg-info/requires.txt
+rest_sms_gateway.egg-info/top_level.txt
