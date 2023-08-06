@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: opulent-pandas
+Version: 0.0.1
+Summary: A package to validate the schema of a pandas dataframe
+Home-page: UNKNOWN
+Author: Daniel van der Ende
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: lint
+Requires-Dist: pandas (==0.23.4)
+Provides-Extra: lint
+Requires-Dist: flake8 (==3.5.0); extra == 'lint'
+Provides-Extra: test
+Requires-Dist: pytest (==4.0.2); extra == 'test'
+
+[![Build Status](https://travis-ci.com/danielvdende/opulent-pandas.svg?token=km81qsbsLrgZWGfcfi7a&branch=master)](https://travis-ci.com/danielvdende/opulent-pandas)
+# opulent-pandas
+
