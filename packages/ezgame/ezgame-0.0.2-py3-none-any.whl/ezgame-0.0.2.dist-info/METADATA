@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: ezgame
+Version: 0.0.2
+Summary: Small layer over pygame to make its usage more transparent.
+Home-page: https://github.com/SplinterDev/ezgame
+Author: Fabricio J.C. Montenegro
+Author-email: fabriciojcmontenegro@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Multimedia :: Graphics :: Viewers
+Description-Content-Type: text/markdown
+Requires-Dist: pygame
+Requires-Dist: point2d
+
+# ezgame
+ezgame is a framework that creates a small layer over pygame to make its usage more transparent. It's great for simple mathematical 2D graphics.
+
+## Installation
+`pip install ezgame`
+
+## Dependencies
+The ezgame module depends only on `pygame` and `point2d`. Both can be installed via `pip install` and should be automatically installed when you install `ezgame`.
+
+
