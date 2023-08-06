@@ -1,0 +1,432 @@
+#!python
+# (C) 2018-2019, Aalok S., all rights reserved
+# License: GNU GPL 3+
+
+import yaml
+import sys
+import vlc
+
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
+gi.require_version('GdkX11', '3.0')
+from gi.repository import GdkX11
+# import tkinter as tk
+# from tkinter.filedialog import askopenfilename
+
+class AnnotatorWindow(Gtk.Window):
+
+    def __init__(self, mediapath=None, task='laughter', mode='a'):
+        """
+        AnnotatorWindow object constructor
+
+        Keyword arguments:
+        mediapath -- path to media file to annotate (required)
+        task -- the attribute to annotate (default 'laughter')
+        mode -- 'a' for append to existing file; 'w' for new (default 'a')
+        """
+        super().__init__(title="pyAnnotator (gtk+, vlc-based)\t %s"%mediapath)
+        self.mediapath = mediapath
+        self.task = task
+        self.player_paused = False
+        self.player_active = False
+        self.annotate_active = False
+        self.images = dict()
+        self.liststore = Gtk.ListStore(int, int, str)
+        self.connect("destroy", Gtk.main_quit)
+
+        if mode == 'a':
+            self.load_annot_data()
+
+        # self.setup_objects_and_events()
+
+    def load_annot_data(self):
+        """
+        Attempt to load preexisting data if mode=='a', else fail gracefully
+        """
+        try:
+            with open("{}_annot_{}.yml".format(self.mediapath, self.task),
+                      'r') as yamld:
+                liststore = yaml.load(yamld)
+                for entry in liststore:
+                    self.liststore.append(entry)
+                print("loaded previously annotated data", file=sys.stderr)
+        except IOError:
+            self.liststore = Gtk.ListStore(int, int, str)
+
+    def show(self):
+        """
+        Show all gtk+ windows and layout
+        """
+        self.show_all()
+
+    def stop_player(self, widget, data=None):
+        """
+        Stop vlc MediaPlayer instance if running. called on stop button
+        """
+        self.player.stop()
+        self.player_active = False
+        self.playback_button.set_image(self.images["play"])
+
+    def toggle_player_playback(self, widget, data=None):
+        """
+        Handler for Player's Playback Button (Play/Pause).
+        """
+        if not self.player_active and not self.player_paused:
+            self.player.play()
+            self.playback_button.set_image(self.images["pause"])
+            self.player_active = True
+
+        elif self.player_active and self.player_paused:
+            self.player.play()
+            self.playback_button.set_image(self.images["pause"])
+            self.player_paused = False
+
+        elif self.player_active and not self.player_paused:
+            self.player.pause()
+            self.playback_button.set_image(self.images["play"])
+            self.player_paused = True
+
+    def annotate(self, widget, data=None):
+        """
+        Method called on 'annotate' buttonpress; records media playtime and
+        marks begin or end depending on state
+        """
+        # if annotation is already active
+        if self.annotate_active:
+            self.liststore.append([self.annotate_active,
+                                  self.player.get_time(),
+                                  self.task])
+            self.annotate_active = 0
+            self.annotate_button.set_image(self.images["record"])
+        else: # if no annotation active
+            self.annotate_active = self.player.get_time()
+            self.annotate_button.set_image(self.images["end_record"])
+
+    def undo(self, widget, data=None):
+        """
+        Remove the last known entry from annotations
+        """
+        try:
+            del self.liststore[-1]
+            return 1
+        except IndexError:
+            print("no annotations remaining; unable to undo", file=sys.stderr)
+            return 0
+
+    def jump_to_time(self, widget, data=None):
+        """
+        Function called on 'jump' buttonpress; jumps to the start_time of
+        selected annotation entry
+        """
+        _, treeiter = self.treeview.get_selection().get_selected()
+        if treeiter is not None:
+            print("INFO: jumping to time: %d-100"%self.liststore[treeiter][0],
+                  file=sys.stderr)
+            if not self.player_paused:
+                self.toggle_player_playback(widget=None)
+            self.current_time = self.player.get_time()
+            self.player.set_time(self.liststore[treeiter][0] - 100)
+        else:
+            print("ERR: no valid selection to jump to", file=sys.stderr)
+
+    def delete_entry(self, widget, data=None):
+        """
+        Deletes selected annotation entry
+        """
+        _, treeiter = self.treeview.get_selection().get_selected()
+        if treeiter is not None:
+            print("INFO: deleting entry", self.liststore[treeiter],
+                  file=sys.stderr)
+            del self.liststore[treeiter]
+        else:
+            print("ERR: delete called without selection", file=sys.stderr)
+
+    def save_data(self, widget, data=None):
+        """
+        Output all annotation data to yaml (human readable hierarchical) file
+        """
+        try:
+            liststore = []
+            ptr = self.liststore.get_iter_first()
+            while ptr is not None:
+                liststore.append([self.liststore.get_value(ptr, i)
+                                  for i in range(3)])
+                ptr = self.liststore.iter_next(ptr)
+
+            with open("{}_annot_{}.yml".format(self.mediapath, self.task),
+                      'w') as yamlo:
+                yamlo.write(yaml.dump(liststore))
+                print("saved data", file=sys.stderr)
+
+        except IOError as ioe:
+            print("error saving data", ioe, file=sys.stderr)
+
+    def reset_data(self, widget, data=None):
+        """
+        Discard current annotations and reset liststore data
+        """
+        self.bak = self.liststore
+        while self.undo(widget=None):
+            pass
+        print("data was reset", file=sys.stderr)
+
+    def on_scroll(self, widget, data=None):
+        """
+        Callback for when the scrollbar underneath
+        the vlc MediaPlayer instance is scrolled
+        """
+        tot = self.player.get_length()
+        pos = self.mediaadjust.get_value()
+        target = int(pos/100*tot)
+        if not self.player_paused:
+            self.toggle_player_playback(widget=None)
+        self.player.set_time(target)
+
+    def set_attrib(self, widget, data=None):
+        """
+        Changes the annotation attribute based on
+        what the user entered in the textentry box
+        """
+        entered = self.attrib_entry.get_text()
+        if not entered:
+            return
+        self.task = entered
+        self.attrib_label.set_text("current task: %s"%self.task)
+        self.attrib_entry.set_text("")
+
+    def _realized(self, widget, data=None):
+        self.vlcInstance = vlc.Instance("--no-xlib --no-sub-autodetect-file")
+        self.player = self.vlcInstance.media_player_new()
+        win_id = widget.get_window().get_xid()
+        self.player.set_xwindow(win_id)
+        try:
+            self.player.set_mrl(self.mediapath)
+        except TypeError:
+            print("ERR: could not open supplied mediapath", file=sys.stderr)
+            raise SystemExit
+        self.player.play()
+        self.playback_button.set_image(self.images["pause"])
+        self.player_active = True
+
+    def setup_objects_and_events(self):
+        """
+        Sets up necessary elements of the gui layout and assigns event-related
+        callbacks to member functions of 'self'
+        """
+        # declare area to spawn vlc instance
+        self.draw_area = Gtk.DrawingArea()
+        self.draw_area.set_size_request(512, 512)
+        self.draw_area.connect("realize", self._realized)
+
+        # declare media control buttons
+        self.playback_button = Gtk.Button()
+        self.stop_button = Gtk.Button()
+        self.annotate_button = Gtk.Button()
+        self.undo_button = Gtk.Button()
+
+        # define and set images for media control buttons
+        self.images["play"], self.images["pause"], self.images["stop"] = [
+         Gtk.Image.new_from_icon_name("media-playback-start",Gtk.IconSize.MENU),
+         Gtk.Image.new_from_icon_name("media-playback-pause",Gtk.IconSize.MENU),
+         Gtk.Image.new_from_icon_name("media-playback-stop",Gtk.IconSize.MENU)]
+        self.images["record"], self.images["end_record"] = [
+            Gtk.Image.new_from_icon_name("media-record", Gtk.IconSize.MENU),
+            Gtk.Image.new_from_icon_name("process-stop", Gtk.IconSize.MENU)]
+        self.images["undo"], = [
+            Gtk.Image.new_from_icon_name("edit-undo", Gtk.IconSize.MENU)]
+
+        self.playback_button.set_image(self.images["play"])
+        self.playback_button.set_label("Play/Pause")
+        self.stop_button.set_image(self.images["stop"])
+        self.stop_button.set_label("Stop")
+        self.annotate_button.set_image(self.images["record"])
+        self.annotate_button.set_label("Annotate")
+        self.undo_button.set_image(self.images["undo"])
+        self.undo_button.set_label("Undo")
+
+        # set buttonpress bindings
+        self.playback_button.connect("clicked", self.toggle_player_playback)
+        self.stop_button.connect("clicked", self.stop_player)
+        self.annotate_button.connect("clicked", self.annotate)
+        self.undo_button.connect("clicked", self.undo)
+
+        # slider
+        self.mediaadjust = Gtk.Adjustment(0.0, 0.0, 101.0, 0.1, 1.0, 1.0)
+        self.mediaslider = Gtk.HScrollbar(self.mediaadjust)
+        # self.mediaslider.set_update_policy()
+        self.mediaadjust.connect("value_changed", self.on_scroll)
+
+        # media pick button
+        # self.pickmediabutton = Gtk.Button()
+        # self.pickmediabutton.set_label("Open media")
+        # self.pickmediabutton.connect("clicked", self.pick_media)
+
+        # define layout for media control buttons
+        self.mediabuttonsbox = Gtk.Box(spacing=6)
+        self.mediabuttonsbox.pack_start(self.playback_button, True, True, 0)
+        self.mediabuttonsbox.pack_start(self.stop_button, True, True, 0)
+        self.mediabuttonsbox.pack_start(self.annotate_button, 1, 1, 0)
+        self.mediabuttonsbox.pack_start(self.undo_button, 1, 1, 0)
+
+        self.vbox1 = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        # self.add(self.vbox)
+        self.vbox1.pack_start(self.draw_area, True, True, 0)
+        self.vbox1.pack_start(self.mediaslider, 0, 0, 0)
+        # self.vbox1.pack_start(self.pickmediabutton, 0, 0, 0)
+        self.vbox1.pack_start(self.mediabuttonsbox, False, False, 0)
+
+        self.scrwindw = Gtk.ScrolledWindow()
+        self.scrwindw.set_policy(Gtk.PolicyType.NEVER,
+                                 Gtk.PolicyType.AUTOMATIC)
+        # declare treeview to display annotation data
+        self.treeview = Gtk.TreeView(self.liststore)
+        # self.treeview.set_size_request(512, 512)
+        renderer = Gtk.CellRendererText(editable=True)
+        for i, column_title in enumerate(["start_time (ms)", "end_time (ms)",
+                                          "attribute"]):
+            column = Gtk.TreeViewColumn(column_title, renderer, text=i)
+            self.treeview.append_column(column)
+        column = self.treeview.get_columns()[0]
+        column.set_sort_column_id(0)
+        self.scrwindw.add(self.treeview)
+
+        # define a textentry widget
+        self.attrib_entry = Gtk.Entry()
+        self.attrib_entry.set_placeholder_text("type task name and press ENTER")
+        self.attrib_entry.connect("activate", self.set_attrib)
+        self.attrib_label = Gtk.Label("current task: %s"%self.task)
+
+        # declare data control buttons
+        self.jump_button = Gtk.Button()
+        self.delete_button = Gtk.Button()
+        self.save_button = Gtk.Button()
+        self.reset_button = Gtk.Button()
+
+        # define and set images for the data control buttons
+        self.images["jump"], = [
+         Gtk.Image.new_from_icon_name("go-jump", Gtk.IconSize.MENU)]
+        self.images["del"], self.images["save"], self.images["reset"] = [
+         Gtk.Image.new_from_icon_name("list-remove", Gtk.IconSize.MENU),
+         Gtk.Image.new_from_icon_name("document-save", Gtk.IconSize.MENU),
+         Gtk.Image.new_from_icon_name("edit-delete", Gtk.IconSize.MENU)]
+
+        self.jump_button.set_image(self.images["jump"])
+        self.jump_button.set_label("Jump")
+        self.delete_button.set_image(self.images["del"])
+        self.delete_button.set_label("Delete entry")
+        self.save_button.set_image(self.images["save"])
+        self.save_button.set_label("Save")
+        self.reset_button.set_image(self.images["reset"])
+        self.reset_button.set_label("Reset")
+
+        # set buttonpress bindings
+        self.jump_button.connect("clicked", self.jump_to_time)
+        self.delete_button.connect("clicked", self.delete_entry)
+        self.save_button.connect("clicked", self.save_data)
+        self.reset_button.connect("clicked", self.reset_data)
+
+        # define layout for data control buttons
+        self.databuttonsbox = Gtk.Box(spacing=6)
+        self.databuttonsbox.pack_start(self.jump_button, 1, 1, 0)
+        self.databuttonsbox.pack_start(self.delete_button, 1, 1, 0)
+        self.databuttonsbox.pack_start(self.save_button, 1, 1, 0)
+        self.databuttonsbox.pack_start(self.reset_button, 1, 1, 0)
+
+        self.vbox2 = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        self.vbox2.pack_start(self.scrwindw, 1, 1, 0)
+        self.vbox2.pack_start(self.attrib_entry, 0, 0, 0)
+        self.vbox2.pack_start(self.attrib_label, 0, 0, 0)
+        self.vbox2.pack_start(self.databuttonsbox, 0, 0, 0)
+
+        # define global hbox and arrange media and data elements side-by-side
+        self.hbigbox = Gtk.Box(spacing=6)
+        self.add(self.hbigbox)
+        self.hbigbox.pack_start(self.vbox1, 1, 1, 0)
+        self.hbigbox.pack_start(self.vbox2, 1, 1, 0)
+
+        self.show_help()
+        self.pick_media()
+
+    def pick_media(self, widget=None, data=None):
+        dlg = Gtk.FileChooserDialog("Open a media file", None,
+                                    Gtk.FileChooserAction.OPEN,
+                                    ("Cancel", Gtk.ResponseType.CANCEL,
+                                     "Open", Gtk.ResponseType.ACCEPT))
+        dlg.connect("destroy", Gtk.main_quit)
+        response = dlg.run()
+        if response == Gtk.ResponseType.ACCEPT:
+            self.mediapath = dlg.get_filename()
+            if len(self.mediapath) <= 2: raise SystemExit
+            print(self.mediapath, file=sys.stderr)
+        elif response == Gtk.ResponseType.CANCEL:
+            print("cancelled", response, file=sys.stderr)
+            raise SystemExit
+        dlg.destroy()
+
+        super().set_title("pyAnnotator (gtk+, vlc-based)\t %s"%self.mediapath)
+
+        # if widget is not None:
+        #     self._realized(widget=self.draw_area)
+
+    def show_help(self, widget=None, data=None):
+        about = Gtk.AboutDialog()#self, 0, Gtk.MessageType.INFO,
+            # Gtk.ButtonsType.OK, "This is an INFO MessageDialog")
+        about.set_program_name("pyAnnotator")
+        # about.set_logo(Gtk.Image.new_from_icon_name("list-remove",
+                                                     # Gtk.IconSize.MENU))
+        about.set_version("0.1")
+        about.set_authors(["Aalok Sathe"])
+        about.set_copyright("(C) 2018, Aalok S.")
+        about.set_license("""
+            This program is free software: you can redistribute it and/or modify
+            it under the terms of the GNU General Public License as published by
+            the Free Software Foundation, either version 3 of the License, or
+            (at your option) any later version.
+
+            This program is distributed in the hope that it will be useful,
+            but WITHOUT ANY WARRANTY; without even the implied warranty of
+            MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+            GNU General Public License for more details.
+
+            To obtain a copy of the GNU General Public License, please visit
+            <https://www.gnu.org/licenses/>.
+            """)
+        about.set_comments("Gtk+ and libvlc based annotator "
+                           "for timedistributed media files."
+                           "\n\n"
+                           "To begin, please choose a media file "
+                           "to annotate. Media format must be supported "
+                           "by your native vlc installation. "
+                           "\n\n"
+                           "Set annotation task using textbox. Press the "
+                           "'record' button to begin recording an annotation "
+                           "segment at the current time. Press the record "
+                           "button again to end annotation patch. Select a "
+                           "patch and press 'jump' to re-visit the patch time "
+                           "for verification. Use the 'delete' button to "
+                           "delete a selected entry from the annotations. "
+                           "\n\n"
+                           "Use the 'save' button to save "
+                           "annotations as a YAML-formatted file. "
+                           "Use the 'reset' button to erase all annotations.")
+
+        # about.format_secondary_text(
+        #     "And this is the secondary text that explains things.")
+        about.run()
+        about.destroy()
+
+# main method
+if __name__ == '__main__':
+
+    # tk.Tk().withdraw() # we don't want full GUI: stop root window appearing
+    # filename = askopenfilename() # show an "Open" dialog box and return path
+    # if filename:
+    #     print(filename, file=sys.stderr)
+    # else:
+    #     raise SystemExit
+
+    window = AnnotatorWindow(mediapath=None, mode='w')
+    window.setup_objects_and_events()
+    window.show()
+    Gtk.main()
