@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: mlcore
+Version: 0.1.0.dev7
+Summary: machine learning data pipeline
+Home-page: http://10.0.1.31/ML/ml-storage/ml-etl/
+Author: henrychi
+Author-email: shyuusaku@gmail.com
+License: Gogoro Inc.
+Keywords: ml
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: boto3 (>=1.9.57)
+Requires-Dist: configparser (>=3.5.0)
+Requires-Dist: ordereddict (>=1.1)
+Requires-Dist: pymongo (>=3.7.2)
+
+UNKNOWN
+
+
