@@ -1,0 +1,10 @@
+validate-it==0.3.8
+
+[docs]
+
+[tests]
+coverage==4.5
+django==2.1.4
+pytest-cov==2.5.1
+pytest-django==3.2.0
+pytest==3.6.0
