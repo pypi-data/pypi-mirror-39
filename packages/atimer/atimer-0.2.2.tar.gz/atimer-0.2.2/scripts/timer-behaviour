@@ -1,0 +1,79 @@
+#!/usr/bin/env python3
+#
+# atimer - timer library for asyncio
+#
+# Copyright (C) 2016-2018 by Artur Wroblewski <wrobell@riseup.net>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+"""
+Script to demonstrate behaviour of timer.
+"""
+
+import asyncio
+import time
+
+import atimer
+
+def print_time():
+    fmt = '{:.4f} {} {:.2f}'.format
+    start = time.monotonic()
+    print(fmt(start, 's', 0))
+    while True:
+        expired = yield
+        now = time.monotonic()
+        print(fmt(now, expired, now - start))
+        start = now
+    
+def header(title):
+    print('\n' + title)
+
+async def start(timer):
+    timer.start()
+    ptime = print_time()
+    next(ptime)
+    ptime = ptime.send
+    
+    for i in range(5):
+        k = await timer
+        ptime(k)
+
+    header('wobble on loop')
+    await asyncio.sleep(0.7)
+    k = await timer
+    ptime(k)
+    k = await timer
+    ptime(k)
+
+    header('wobble outside loop')
+    time.sleep(0.7)
+    k = await timer
+    ptime(k)
+    k = await timer
+    ptime(k)
+
+    header('missed expirations')
+    await asyncio.sleep(1.2)
+    k = await timer
+    ptime(k)
+    k = await timer
+    ptime(k)
+
+loop = asyncio.get_event_loop()
+timer = atimer.Timer(0.5)
+loop.run_until_complete(start(timer))
+timer.close()
+
+# vim: sw=4:et:ai

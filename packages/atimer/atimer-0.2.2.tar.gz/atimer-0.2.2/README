@@ -1,0 +1,10 @@
+The `atimer` library implements asynchronous timer Python coroutine, which
+can be used with Python `asyncio <https://docs.python.org/3/library/asyncio.html>`_
+module API.
+
+The timer allows to schedule tasks at regular intervals and is implemented
+on top of `timerfd <http://man7.org/linux/man-pages/man2/timerfd_create.2.html>`_
+Linux kernel interface.
+
+The `atimer` library is licensed under terms of GPL license, version 3, see
+`COPYING <https://www.gnu.org/licenses/gpl-3.0.en.html>`_ file for details.
