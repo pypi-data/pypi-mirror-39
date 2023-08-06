@@ -1,0 +1,27 @@
+Metadata-Version: 2.0
+Name: pullenti
+Version: 3.14
+Summary: Named entity recognition for russian language
+Home-page: http://pullenti.ru/
+Author: Konstantin Kuznetsov
+Author-email: k.smith@mail.ru
+License: Free for non-commercial use
+Description-Content-Type: UNKNOWN
+Keywords: natural language processing,russian morphology,named entity recognition
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Text Processing :: Linguistic
+
+UNKNOWN
+
+
