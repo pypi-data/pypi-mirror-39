@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: molib
+Version: 0.1.0
+Summary: 
+Home-page: None
+Author: Manny Ochoa
+Author-email: manny@manuelochoa.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: matplotlib (>=3.0,<4.0)
