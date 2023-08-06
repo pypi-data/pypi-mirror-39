@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+djangorestframework_include_mixin.egg-info/PKG-INFO
+djangorestframework_include_mixin.egg-info/SOURCES.txt
+djangorestframework_include_mixin.egg-info/dependency_links.txt
+djangorestframework_include_mixin.egg-info/requires.txt
+djangorestframework_include_mixin.egg-info/top_level.txt
+djangorestframework_include_mixin.egg-info/zip-safe
+rest_framework_include_mixin/__init__.py
+rest_framework_include_mixin/mixins.py
