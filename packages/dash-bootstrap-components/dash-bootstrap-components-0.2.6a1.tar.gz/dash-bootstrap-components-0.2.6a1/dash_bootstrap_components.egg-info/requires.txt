@@ -1,0 +1,6 @@
+dash>=0.32.1
+dash-html-components
+
+[pandas]
+numpy
+pandas
