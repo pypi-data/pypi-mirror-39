@@ -1,0 +1,5 @@
+celery
+django>=2.0
+django-model-utils
+django_ipfs_storage
+psycopg2-binary
