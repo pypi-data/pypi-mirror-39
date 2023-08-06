@@ -1,0 +1,4 @@
+[console_scripts]
+nashi-delete = nashi.import_from_pagexml:bookdelete
+nashi-import = nashi.import_from_pagexml:main
+
