@@ -1,0 +1,11 @@
+README.md
+setup.py
+pywg.egg-info/PKG-INFO
+pywg.egg-info/SOURCES.txt
+pywg.egg-info/dependency_links.txt
+pywg.egg-info/requires.txt
+pywg.egg-info/top_level.txt
+wg_main/__init__.py
+wg_main/least_square.py
+wg_main/linear_regression.py
+wg_main/pca.py
