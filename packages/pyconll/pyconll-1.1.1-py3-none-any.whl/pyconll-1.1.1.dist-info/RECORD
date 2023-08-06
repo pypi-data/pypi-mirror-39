@@ -1,0 +1,17 @@
+pyconll/__init__.py,sha256=xWpqCtLCE60u5gSY_gZ2FYHnnnDpuFzLTZJni7v_lfw,285
+pyconll/_parser.py,sha256=_MpAnLWcgrX5SxGDQnAVmCxZB3ZoL9Z5rnY41x5eTLI,3868
+pyconll/conllable.py,sha256=ST4NA7WI8-kF5BieLhPBEwCB9Bq31cMDOoo6ORaE-PE,756
+pyconll/exception.py,sha256=jgygygIwOktiCDF8O54DnUGix2MBcxWkK8NiSlR6bVk,397
+pyconll/load.py,sha256=QN43nlsiz5qBfzyeyIq1Wdo0aag3ojavPGflH9Om4Fg,3400
+pyconll/util.py,sha256=8efTRWQFrpb941h0DaZtO3c2JciWD232pxH7N-yosQo,2418
+pyconll/tree/__init__.py,sha256=gJSQ0rQYgoA5yGjvWtvOzA5OJZUP4miT4TpPoY6hpZQ,323
+pyconll/tree/sentencetree.py,sha256=0frkROlA2c50f1qeC_wxS-XYlDRiDj7OgDMZbdXwmR0,2702
+pyconll/tree/tree.py,sha256=oLW2PAX7GsWyEQ3tC1F3c6Isb_EbD4HgBfWUVAPCJnk,2038
+pyconll/unit/__init__.py,sha256=PoKQXCWcDd7IdJ1XtAIDV7waPJfuSEITw0ZLZcFUoIk,302
+pyconll/unit/conll.py,sha256=r0EoOfsQZEGJ4bqqKalPCQ_56xF52OD_15DfOVe0Tbs,4785
+pyconll/unit/sentence.py,sha256=sdTSDG6YOMqWbVXs7tr9hQZDgrtTFmptLTAL2seWZGY,10224
+pyconll/unit/token.py,sha256=l8j4DLl7oRRMijCS7mahl85Lqcz15W46xKnVKP-mqH8,23711
+pyconll-1.1.1.dist-info/METADATA,sha256=IPjUCe6a9T9I0zfNleqoFiYOv9vXTgEV8hMiRgEPLS0,5312
+pyconll-1.1.1.dist-info/RECORD,,
+pyconll-1.1.1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+pyconll-1.1.1.dist-info/top_level.txt,sha256=Yj72yFVZDD-h6TDshInBBV_XPrt_N5h_LhAsgavr-1w,8
