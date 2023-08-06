@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: PyQuickstep
+Version: 1.0.2
+Summary: Pure Python MySQL Driver
+Home-page: https://github.com/raghu1994/PyQuickstep
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: # PyQuickstep
+        Python Interface for Quickstep Database
+        
+Keywords: Quickstep
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Database
