@@ -1,0 +1,12 @@
+odoo/addons/ddmrp_production_equivalent/README.rst,sha256=FwSmvw9wivMW_JSV7LOkXSlod7D19dFQuW466fzh0qE,2332
+odoo/addons/ddmrp_production_equivalent/__init__.py,sha256=S6YG0_2BYDTAuBewBiDXsyCH3nRRZe5fEQo_UTRFb1s,140
+odoo/addons/ddmrp_production_equivalent/__manifest__.py,sha256=1E8_a4tThchHuog9S0cBXfJTiX7GiPMPNAvGijApbW0,613
+odoo/addons/ddmrp_production_equivalent/i18n/ddmrp_production_equivalent.pot,sha256=xrK9Ao5i0ssQELlzQbk2_6YlDZsSRTaanYrJw_Sg__g,700
+odoo/addons/ddmrp_production_equivalent/i18n/fr.po,sha256=cj6G6avHZzB4ONsWzOc6zOp1FT2EfEdFpMggsVAvBqM,766
+odoo/addons/ddmrp_production_equivalent/models/__init__.py,sha256=noFtZmcGGYmou55UOyG8b4zm2D0hUPmAi6MBNkGW1hs,148
+odoo/addons/ddmrp_production_equivalent/models/mrp_production.py,sha256=rAA_ByV9gNEoK1EG-g5Q2gMcc687OT4qNLsjM4O6GSY,2109
+odoo/addons/ddmrp_production_equivalent/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo11_addon_ddmrp_production_equivalent-11.0.1.0.2.99.dev3.dist-info/METADATA,sha256=ikTYUFv1aZbVMMwI0qOLgKMrxKwYzchqO4QY-YbYiBA,3048
+odoo11_addon_ddmrp_production_equivalent-11.0.1.0.2.99.dev3.dist-info/RECORD,,
+odoo11_addon_ddmrp_production_equivalent-11.0.1.0.2.99.dev3.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+odoo11_addon_ddmrp_production_equivalent-11.0.1.0.2.99.dev3.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
