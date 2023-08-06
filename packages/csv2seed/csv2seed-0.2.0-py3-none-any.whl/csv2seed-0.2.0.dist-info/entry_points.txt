@@ -1,0 +1,3 @@
+[console_scripts]
+csv2seed = csv2seed.cli:main
+
