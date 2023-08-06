@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: prestige-irc
+Version: 0.0.4
+Summary: A simple API for IRC networks
+Home-page: https://github.com/avahe-kellenberger/prestige_irc
+Author: Avahe Kellenberger
+Author-email: avahe@protonmail.ch
+License: UNKNOWN
+Description: # prestige_irc
+        
+        This module is a simple API for IRC networks.
+        
+        # Installation
+        
+        ## pip
+        
+        `pip install prestige_irc`
+        
+        or
+        
+        `python -m pip install prestige_irc`
+        
+        ## Manually
+        
+        Clone this repository into your repo, and install `setup.py`:
+        
+        ```python
+        git clone https://github.com/avahe-kellenberger/prestige_irc.git
+        cd prestige_irc
+        python setup.py install
+        ```
+        You should now be able to import modules, e.g. `from prestige_irc.commands import Commands`
+        
+        # Documentation
+        
+        [View the documentation.](https://github.com/avahe-kellenberger/prestige_irc/wiki/Documentation-Home)
+          
+        # Speculative Updates:
+        In the future, this module may support every RFC specified IRC command, if it becomes widely requested.
+         
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
