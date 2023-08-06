@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: BAAlgorithmUtils
+Version: 1.0.9
+Summary: Algorithm utils for python
+Home-page: https://github.com/BenArvin/BAAlgorithmUtils
+Author: BenArvin
+Author-email: niedongsen@yeah.net
+License: UNKNOWN
+Description: # BAAlgorithmUtils
+        
+        [![PyPI version](https://badge.fury.io/py/BAAlgorithmUtils.svg)](https://badge.fury.io/py/BAAlgorithmUtils)
+        [![Build Status](https://travis-ci.org/BenArvin/BAAlgorithmUtils.svg?branch=master)](https://travis-ci.org/BenArvin/BAAlgorithmUtils)
+        
+        Algorithm utils for python
+        
+        | Algorithm | Code file | Example |
+        | :--- | :--- | :--- |
+        | Tire tree | `BATireTreeUtil.py` | `BATireTreeUtilTest.py` |
+        | Aho-Corasick | `BAAhoCorasickUtil.py` | `BAAhoCorasickUtilTest.py` |
+        | KMP | `BAKMPUtil.py` | `BAKMPUtilTest.py` |
+        | Boyer-Moore | `BABMUtil.py` | `BABMUtilTest.py` |
+        
+        Other utils:
+        
+        - `BAClassUtil.py`
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
