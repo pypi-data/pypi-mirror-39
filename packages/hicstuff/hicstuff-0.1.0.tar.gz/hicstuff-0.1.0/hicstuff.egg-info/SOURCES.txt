@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+hicstuff.egg-info/PKG-INFO
+hicstuff.egg-info/SOURCES.txt
+hicstuff.egg-info/dependency_links.txt
+hicstuff.egg-info/entry_points.txt
+hicstuff.egg-info/requires.txt
+hicstuff.egg-info/top_level.txt
+scripts/pcr_duplicates
+scripts/yahcp
