@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: icinga2telegram
+Version: 0.2.0
+Summary: Send your Icinga2 alerts to Telegram
+Home-page: https://github.com/ekeih/icinga2telegram
+Author: Max Rosin
+Author-email: git@hackrid.de
+License: LICENSE
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: Click
+Requires-Dist: emoji
+Requires-Dist: Jinja2
+Requires-Dist: python-telegram-bot
+
+# icinga2telegram
+
+
