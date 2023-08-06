@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: antenna-intensity-modeler
+Version: 0.1.0
+Summary: Create near-field plots of parabolic dish antennas.
+Home-page: https://wboxx1.github.io/antenna-intensity-modeler
+Author: Will Boxx
+Author-email: wboxx1@gmail.com
+Requires-Python: >=3.5,<4.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: matplotlib (>=3.0,<4.0)
+Requires-Dist: numpy (>=1.15,<2.0)
+Requires-Dist: pandas (>=0.23,<0.24)
+Requires-Dist: scipy (>=1.1,<2.0)
+Project-URL: Repository, https://github.com/wboxx1/antenna-intensity-modeler
