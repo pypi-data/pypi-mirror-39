@@ -1,0 +1,16 @@
+recordclass/__init__.py,sha256=qSjrglwg0enWtDfpUnm4H1qu7QPjZaSVrO82w2M3FJs,1445
+recordclass/arrayclass.cp36-win32.pyd,sha256=Mp_QT-FOOz9cYy6eLUjWZFAvdkrGKubDy_BElYc7hnc,94208
+recordclass/memoryslots.cp36-win32.pyd,sha256=C7yL4tf3pE5Vk8I3RS_GC43STrBAnBenJ9pp_4g9b3Y,16896
+recordclass/record.py,sha256=Xuqez_UkG3J_J025ZXQq-U0sHTUgm9CO6nuv2ncbjJU,15517
+recordclass/test/__init__.py,sha256=Gl4WFMI7gNmjUFYxJl9XuUJcbMPevxpHwDulzwYQgAw,334
+recordclass/test/test_memoryslots.py,sha256=1JP6dE1KCvPOF2N7Fth7lMnU0xBUWyx7E4ygJXmPdG4,3912
+recordclass/test/test_record.py,sha256=e9WZAJyI21kofGX7FkaywgQociB4DrTyIUjo0t5Txi8,13379
+recordclass/test/test_struct.py,sha256=ayETvFsrLGXw5CW2EFATztel8aXp-3DOX8c1gD-Bjhs,13435
+recordclass/test/typing/__init__.py,sha256=4nZwk9yd8BjkwJzYEY5d9bQar6ugszXJonE_4g_3KBk,140
+recordclass/test/typing/test_typing.py,sha256=NwDy-svBdBwpFelyvy24Nn3UAp1FL_wnTmTPi4qvNi4,5562
+recordclass/typing/__init__.py,sha256=yigMvLkNXYjrFwt8IMuSuujLzbW_zSIzIjPThXuIQvU,2724
+recordclass-0.8.dist-info/LICENSE.txt,sha256=BN-NgAOIiEI5ABCSGfpqUNKvOl4kukuoUGSGW-EpxEY,1111
+recordclass-0.8.dist-info/METADATA,sha256=0njQsFo_P-uqzp6vQdkA-S_TVRiMNJCnv8zUo3OolsE,10132
+recordclass-0.8.dist-info/WHEEL,sha256=25mKKGB1dKNtGpu-tcNwna84t79j4VoKRg-yfwe_z7M,102
+recordclass-0.8.dist-info/top_level.txt,sha256=LLBSTvco6TmQyOSQVUXy2wILr2AI1_I_v8HNWfqInDo,12
+recordclass-0.8.dist-info/RECORD,,
