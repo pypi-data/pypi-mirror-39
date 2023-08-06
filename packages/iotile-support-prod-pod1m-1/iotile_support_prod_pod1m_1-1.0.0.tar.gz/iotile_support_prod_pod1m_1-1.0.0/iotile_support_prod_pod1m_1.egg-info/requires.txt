@@ -1,0 +1,7 @@
+iotile_support_firm_env_1==1.*,>=1.1.1
+iotile_support_con_nrf52832_3==3.*,>=3.1.12
+iotile_support_firm_accelerometer_2==2.*,>=2.3.5
+sortedcontainers~=2.1
+iotile-core>=3.24.1
+iotile-ext-cloud>=0.6.0
+iotile-sensorgraph>=0.8.0
