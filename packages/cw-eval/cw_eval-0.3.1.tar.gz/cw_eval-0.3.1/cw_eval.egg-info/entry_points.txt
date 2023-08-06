@@ -1,0 +1,3 @@
+[console_scripts]
+spacenet_eval = cw_eval.challenge_eval.spacenet_eval:main
+
