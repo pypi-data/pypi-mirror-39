@@ -1,0 +1,81 @@
+Tom's dictionary
+================
+Look up words in bilingual dictionaries.
+
+Usage
+-----
+
+Install from PyPI. ::
+
+    pip3 install vortaro
+
+Command line
+~~~~~~~~~~~~
+Follow these directions to download a dictionary. ::
+
+    python3 -m vortaro download dict.cc
+
+Run this to confirm that you have saved the dictionary properly. ::
+
+    python3 -m vortaro languages
+
+Then you can look up stuff like this. ::
+
+    python3 -m vortaro search elephant
+
+The default is to look for the phrase in all dictionaries.
+Restrict to particular languages like this. ::
+
+    python3 -m vortaro search -to hr -to sv -from en elephant
+
+It is possible to search with multiple alphabets or transliterations.
+For example, these return the same thing.
+
+    python3 -m vortaro search -from eo ĉu
+    python3 -m vortaro search -from eo cxu
+
+Run these to see help. ::
+
+    python3 -m vortaro
+    python3 -m vortaro download -help
+    python3 -m vortaro languages -help
+    python3 -m vortaro index -help
+    python3 -m vortaro search -help
+
+Python
+~~~~~~
+The above commands are also available as Python functions.
+See ``vortaro.download``, ``vortaro.languages``, ``vortaro.index``,
+and ``vortaro.search``.
+
+Shell integration
+-----------------
+Consider setting up an alias and tab completion. Here is what I use in tcsh. ::
+
+    alias vortaro python3 -m vortaro search
+    complete vortaro 'C%*%`cut -f 1 ~/.vortaro/history`%'
+
+Here an alias for sh. ::
+
+    alias vortaro='python3 -m vortaro search'
+
+Implementation
+--------------
+This is a Python module.
+Source code is at https://thomaslevine.com/scm/vortaro/.
+The command line interface uses `horetu <https://pypi.python.org/pypi/horetu/>`_.
+
+I have tested it only on Python 3.6.
+
+History
+-------
+The idea of underlining the search term comes from
+Matthias Bloch's `woerterbuch.pl <https://www1.dict.cc/download/woerterbuch.pl>`_.
+
+woerterbuch.pl scans the whole dictionary each time a phrase is requested.
+I wanted lower-latency responses, so I decided to index the dictionaries
+in a special way and to cache them in memory. Version 0 used Redis as the
+in-memory store.
+
+Remarking that the queries were sort of complicated, I rewrote it in version 1
+to use a relational database. It is tested in PostgreSQL and SQLite.

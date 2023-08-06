@@ -1,0 +1,3 @@
+[console_scripts]
+vortaro = vortaro.ui:ui
+
