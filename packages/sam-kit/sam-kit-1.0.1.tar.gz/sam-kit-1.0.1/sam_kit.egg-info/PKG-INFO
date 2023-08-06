@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: sam-kit
+Version: 1.0.1
+Summary: sam-kit Saman memoir in python
+Home-page: https://github.com/5amrun/sam-kit
+Author: Saman Sadeghyan
+Author-email: s.sadeghy325@gmail.com
+License: MIT
+Description: Saman Sadeghyan's memoir in Python!
+Keywords: machine learning data science feature selection
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
