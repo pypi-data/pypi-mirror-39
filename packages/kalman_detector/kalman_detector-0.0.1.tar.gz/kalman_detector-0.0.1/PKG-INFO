@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: kalman_detector
+Version: 0.0.1
+Summary: Detect radio bursts with variying intensity
+Home-page: https://bitbucket.org/bzackay/kalman_detector
+Author: Barak Zackay
+Author-email: bzackay@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires: numpy
+Requires: scipy
+Requires: numba
+Requires: matplotlib
