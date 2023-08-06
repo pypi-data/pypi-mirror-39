@@ -1,0 +1,10 @@
+toml
+
+[dev]
+pytest
+pytest-cov
+pytest-pep8
+
+[docs]
+sphinx
+sphinx-rtd-theme
