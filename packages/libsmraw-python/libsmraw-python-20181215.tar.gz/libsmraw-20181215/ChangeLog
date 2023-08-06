@@ -1,0 +1,43 @@
+TODO
+* fix libsmraw_handle_get_filename_size for empty file
+* refactor:
+  - libsmraw_handle_get_bytes_per_sector
+  - equiv?
+* add thread-safety in
+  - handle get/read functions
+  - handle set/write functions
+* libsmraw_handle_get_bytes_per_sector change to return 0 if value
+  is not available?
+* remove io_handle from fdata stream callback functions?
+* TODO: libfvalue_value_write_to_file_stream
+* update smraw.net bindings
+* why is empty information value section written in info file
+
+* complete libfvalue and test information file read/write
+* configure validate libuna and libbfio check
+* close segment file handle on writing when full?
+* check if information file is handled correctly on close/free
+
+Features
+* allow set of segment filename during write (as alternative writing locations)
+* implement write resume
+* glob of .1ofN for PREFIX (without the initial extension to help the glob function)
+
+Tooling
+* detect maximum possible segment size on file system (e.g. FAT)
+* smrawinfo
+  - create
+  - print info from info file
+* smrawverify
+  - get hashes from info file
+
+Tests:
+* retrieve data from the information file on open
+* make sure certain values cannot be changed if writing/reading from raw files
+* add tests for Python-bindings
+* information file
+
+20100108
+* see `git log' for more recent change log
+* Created initial version based on earlier media input/output code
+
