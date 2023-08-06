@@ -1,0 +1,14 @@
+influ/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+influ/finder/__init__.py,sha256=YQonW5ugG2-ANGHTZAACYPbRn8e62V7Pia03x7DTOxU,59
+influ/finder/influence.py,sha256=I9vQBeNbKv65SpC_zckTAxJCc9eSpZ4lpG9RURaMIPs,13705
+influ/finder/model.py,sha256=H-3qFSX_H87SG_ICB6W96q1b-aPrG_zNJD9z0mRpJ90,3674
+influ/reader/__init__.py,sha256=oMqO0LsDvnk2AnGIcLH7rVq4in-P3lFR0Prt-6VNRpo,79
+influ/reader/datasets.yaml,sha256=LUuahrXoajlbr1apfKX1yH56y9MFDc7cZ4nxvI7x5LQ,949
+influ/reader/direct.py,sha256=oiqx6MebXqHAPc6ZIFyVfzDVcvChsh1Kaeso76MuH88,1798
+influ/reader/konect.py,sha256=bOrHIIbV8TPc9r3chC7j4ns4kRlJcJGh_nFOhYmHhDU,4898
+influ/reader/merge.py,sha256=8vV7SsRd9__umWC3ffva_WIyZY1Gd1F0IbXqcRY4z_I,2968
+influ-0.2.0.dist-info/LICENSE.txt,sha256=z7uAoKjz8IV-hZTk2Xk4TdQEkzzZ4RYY6ctOWZ7XbUc,1061
+influ-0.2.0.dist-info/METADATA,sha256=f94QQNiJRPjutTu4MwyzgmNGCnGcLNW5B3xJg9ftsfU,5033
+influ-0.2.0.dist-info/WHEEL,sha256=-ZFxwj8mZJPIVcZGLrsQ8UGRcxVAOExzPLVBGR7u7bE,92
+influ-0.2.0.dist-info/top_level.txt,sha256=d4pGrmDhalnT4VfGV-LkxnU3gR9FuloCI-3r4OUuNcw,6
+influ-0.2.0.dist-info/RECORD,,
