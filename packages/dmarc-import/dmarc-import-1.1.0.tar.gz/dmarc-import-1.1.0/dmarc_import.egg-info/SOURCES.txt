@@ -1,0 +1,15 @@
+LICENSE.md
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+dmarc/__init__.py
+dmarc/rua.xsd
+dmarc/rua_mod.xsd
+dmarc/s3.py
+dmarc_import.egg-info/PKG-INFO
+dmarc_import.egg-info/SOURCES.txt
+dmarc_import.egg-info/dependency_links.txt
+dmarc_import.egg-info/entry_points.txt
+dmarc_import.egg-info/requires.txt
+dmarc_import.egg-info/top_level.txt

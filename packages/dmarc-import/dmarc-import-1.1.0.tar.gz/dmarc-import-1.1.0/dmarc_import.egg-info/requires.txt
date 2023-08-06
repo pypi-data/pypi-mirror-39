@@ -1,0 +1,13 @@
+boto3>=1.4.7
+docopt>=0.6.2
+lxml==4.1.1
+requests>=2.18.4
+requests-aws4auth>=0.9
+xmljson>=0.1.9
+
+[dev]
+check-manifest>=0.36
+pytest>=3.5.0
+semver>=2.7.9
+tox>=3.0.0
+wheel>=0.31.0

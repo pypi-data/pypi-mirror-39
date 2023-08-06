@@ -1,0 +1,3 @@
+[console_scripts]
+dmarc-s3-import = dmarc.s3:main
+
