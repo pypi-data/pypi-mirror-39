@@ -1,0 +1,17 @@
+=============
+Release Notes
+=============
+
+This section documents the changes that have been made in various versions
+of Diofant.  Users should consult these pages to learn about new features,
+bug fixes and backwards incompatibilities.  Developers should summarize the
+development work they do here in a user friendly format.
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :reversed:
+
+   sympy
+   notes-0.[89]*
+   Diofant 0.10 (Not Released Yet) <notes-0.10>

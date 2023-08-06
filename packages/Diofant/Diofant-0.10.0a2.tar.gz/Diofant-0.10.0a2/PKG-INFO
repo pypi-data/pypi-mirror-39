@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: Diofant
+Version: 0.10.0a2
+Summary: Computer algebra system (CAS) in Python
+Home-page: https://diofant.readthedocs.io/
+Maintainer: Sergey B Kirpichev
+Maintainer-email: skirpichev@gmail.com
+License: BSD
+Project-URL: Source Code, https://github.com/diofant/diofant/
+Project-URL: Bug Tracker, https://github.com/diofant/diofant/issues/
+Project-URL: Documentation, https://diofant.readthedocs.io/
+Description: Diofant
+        =======
+        
+        A Python library for symbolic mathematics.
+        
+        For `installation instructions`_ and usage information,
+        see the `online documentation`_.
+        
+        `New BSD License`_ covers all files in this repository unless stated otherwise.
+        
+        .. _online documentation: https://diofant.readthedocs.io/en/latest/
+        .. _installation instructions: https://diofant.readthedocs.io/en/latest/install.html#installation
+        .. _New BSD License: https://github.com/diofant/diofant/blob/master/LICENSE
+        
+Keywords: Math,CAS
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.5
+Provides-Extra: exports
+Provides-Extra: interactive
+Provides-Extra: plot
+Provides-Extra: develop
+Provides-Extra: tests
+Provides-Extra: gmpy
+Provides-Extra: docs
