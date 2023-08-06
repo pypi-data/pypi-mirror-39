@@ -1,0 +1,14 @@
+[
+    {
+        "_realm": "All",
+        "_sub_realm": true,
+        "action_url": "",
+        "alias": "Elasticsearch services",
+        "imported_from": "alignak-checks-elasticsearch",
+        "name": "elasticsearch",
+        "notes": "This group contains all the Elasticsearch services.",
+        "notes_url": "",
+        "servicegroups": [],
+        "services": []
+    }
+]

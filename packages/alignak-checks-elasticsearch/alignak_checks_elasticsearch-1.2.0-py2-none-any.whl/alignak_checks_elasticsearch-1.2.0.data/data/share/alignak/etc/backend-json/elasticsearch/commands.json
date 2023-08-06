@@ -1,0 +1,24 @@
+[
+  {
+    "_realm": "All",
+    "_sub_realm": true,
+    "alias": "Check elasticsearch",
+    "command_line": "$LIBEXEC$/check_elasticsearch -H $HOSTADDRESS$ -P $_HOSTES_PORT$",
+    "enable_environment_macros": false,
+    "imported_from": "alignak-checks-elasticsearch",
+    "name": "check_elasticsearch",
+    "poller_tag": "",
+    "timeout": -1
+  },
+  {
+    "_realm": "All",
+    "_sub_realm": true,
+    "alias": "Check elasticsearch (authenticated)",
+    "command_line": "$LIBEXEC$/check_elasticsearch -H $HOSTADDRESS$ -P $_HOSTES_PORT$ -s -u $_HOSTES_USERNAME$ -p $_HOSTES_PASSWORD$",
+    "enable_environment_macros": false,
+    "imported_from": "alignak-checks-elasticsearch",
+    "name": "check_elasticsearch_auth",
+    "poller_tag": "",
+    "timeout": -1
+  }
+]
