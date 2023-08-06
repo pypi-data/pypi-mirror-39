@@ -1,0 +1,10 @@
+pytest
+scikit-learn>=0.17
+networkx
+pandas
+
+[dev]
+check-manifest
+
+[test]
+coverage
