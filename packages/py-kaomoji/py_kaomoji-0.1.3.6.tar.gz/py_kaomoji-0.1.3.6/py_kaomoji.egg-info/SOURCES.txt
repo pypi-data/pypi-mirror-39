@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+data/__init__.py
+data/kaomojis.yml
+data/load_kaomojis.py
+kaomoji/__init__.py
+kaomoji/__main__.py
+kaomoji/kaomoji.py
+py_kaomoji.egg-info/PKG-INFO
+py_kaomoji.egg-info/SOURCES.txt
+py_kaomoji.egg-info/dependency_links.txt
+py_kaomoji.egg-info/entry_points.txt
+py_kaomoji.egg-info/top_level.txt
+test/__init__.py
+test/test_kaomoji.py
