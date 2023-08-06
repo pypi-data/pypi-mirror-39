@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        icinga2telegram=icinga2telegram:cli
+    
