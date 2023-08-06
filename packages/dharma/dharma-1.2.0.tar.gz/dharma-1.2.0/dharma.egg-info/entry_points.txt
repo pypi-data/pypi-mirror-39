@@ -1,0 +1,3 @@
+[console_scripts]
+dharma = dharma:DharmaCommandLine.main
+
