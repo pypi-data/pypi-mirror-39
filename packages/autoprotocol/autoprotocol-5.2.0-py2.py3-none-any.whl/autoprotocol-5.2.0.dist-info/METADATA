@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: autoprotocol
+Version: 5.2.0
+Summary: Python library for generating Autoprotocol
+Home-page: http://github.com/autoprotocol/autoprotocol-python
+Maintainer: The Autoprotocol Development Team
+Maintainer-email: autoprotocol-curators@transcriptic.com
+License: BSD
+Platform: UNKNOWN
+Requires-Dist: Pint (==0.8.1)
+Requires-Dist: future (==0.16.0)
+Provides-Extra: docs
+Requires-Dist: Sphinx (<2,>=1.7) ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: releases ; extra == 'docs'
+
+UNKNOWN
+
+
