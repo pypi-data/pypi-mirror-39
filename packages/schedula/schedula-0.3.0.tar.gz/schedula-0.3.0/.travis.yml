@@ -1,0 +1,58 @@
+language: python
+
+python:
+  - "3.5"
+  - "3.6"
+
+env:
+  - EXTRAS=base
+  - EXTRAS=web
+  - EXTRAS=plot
+  - EXTRAS=sphinx
+  - EXTRAS=parallel
+  - EXTRAS=all
+
+matrix:
+  include:
+    - python: 3.7
+      dist: xenial
+      sudo: true
+      env: EXTRAS=base
+    - python: 3.7
+      dist: xenial
+      sudo: true
+      env: EXTRAS=web
+    - python: 3.7
+      dist: xenial
+      sudo: true
+      env: EXTRAS=plot
+    - python: 3.7
+      dist: xenial
+      sudo: true
+      env: EXTRAS=sphinx
+    - python: 3.7
+      dist: xenial
+      sudo: true
+      env: EXTRAS=parallel
+    - python: 3.7
+      dist: xenial
+      sudo: true
+      env: EXTRAS=all
+
+addons:
+  apt:
+    packages:
+      - graphviz
+
+# command to install dependencies
+install:
+  - pip install -r requirements/test.pip
+  - if [[ $EXTRAS == 'base' ]]; then pip install -e .; fi
+  - if [[ $EXTRAS != 'base' ]]; then pip install -e .[$EXTRAS]; fi
+
+# command to run tests
+script:
+  - coverage run --source=schedula setup.py nosetests -w test
+
+after_success:
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' && $EXTRAS == 'all' ]]; then coveralls; fi
