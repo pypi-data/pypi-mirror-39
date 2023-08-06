@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+gename/__init__.py
+gename/main.py
+gename/names.db
+gename.egg-info/PKG-INFO
+gename.egg-info/SOURCES.txt
+gename.egg-info/dependency_links.txt
+gename.egg-info/not-zip-safe
+gename.egg-info/top_level.txt

@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: gename
+Version: 0.0.7
+Summary: Guess gender from first name.
+Home-page: http://github.com/sorl/gename
+Author: Mikko Hellsing
+Author-email: mikko@sumsum.se
+License: ICS
+Description: ## Summary
+        This package is for anyone who wants to speculate the gender given a first
+        name. There is no magic involved, the speculate method simply does a local
+        database lookup.
+        
+        
+        ## Usage
+        ~~~
+        >>> from gename import Gender
+        >>> gender = Gender()
+        >>> gender.speculate('Bertrand')
+        'M'
+        >>> gender.speculate('Simone')
+        'F'
+        >>> gender.speculate('Unicorn')
+        'U'
+        ~~~
+        
+        U is for Unknown.
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
