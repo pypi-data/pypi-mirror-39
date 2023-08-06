@@ -1,0 +1,3 @@
+[console_scripts]
+fastatools = fastatools.cli:main
+

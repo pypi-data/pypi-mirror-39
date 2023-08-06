@@ -1,0 +1,101 @@
+Metadata-Version: 1.1
+Name: fastatools
+Version: 1.2.0
+Summary: Tools for working with fasta files.
+Home-page: https://github.com/CFSAN-Biostatistics/fastatools
+Author: Steve Davis
+Author-email: steven.davis@fda.hhs.gov
+License: BSD
+Description: ===============================
+        fastatools
+        ===============================
+        
+        
+        .. Image showing the PyPI version badge - links to PyPI
+        .. image:: https://img.shields.io/pypi/v/fastatools.svg
+                :target: https://pypi.python.org/pypi/fastatools
+        
+        .. Image showing the Travis Continuous Integration test status, commented out for now
+        .. .. image:: https://img.shields.io/travis/CFSAN-Biostatistics/fastatools.svg
+        ..        :target: https://travis-ci.org/CFSAN-Biostatistics/fastatools
+        
+        
+        
+        Tools for working with fasta files.
+        
+        The fastatools package was developed by the United States Food
+        and Drug Administration, Center for Food Safety and Applied Nutrition.
+        
+        * Free software
+        * Documentation: https://fastatools.readthedocs.io
+        * Source Code: https://github.com/CFSAN-Biostatistics/fastatools
+        * PyPI Distribution: https://pypi.python.org/pypi/fastatools
+        
+        
+        Features
+        --------
+        
+        * Print the lengths of sequences.
+        * Determine if two fasta files are equivalent.
+        * Fix inconsistent line lengths and inconsistent lowercase.
+        * Generate a reverse complement of a fasta file.
+        * Extract a slice from a fasta file delimited by primers.
+        * Extract a range of positions from a fasta file.
+        
+        
+        
+        Citing fastatools
+        --------------------------------------
+        
+        To cite fastatools, please reference the fastatools GitHub repository:
+        
+            https://github.com/CFSAN-Biostatistics/fastatools
+        
+        
+        License
+        -------
+        
+        See the LICENSE file included in the fastatools distribution.
+        
+        
+        
+        
+        
+        History
+        -------
+        
+        1.2.0 (2018-12-10)
+        ---------------------
+        
+        * First public release with docs and automated tests.
+        
+        1.1.0 (2018-10-25)
+        ---------------------
+        
+        * Add range command to extract a range of positions from a fasta file.
+        * Add equiv command to check for equivalent fasta files.
+        * Add rewrite command to fix line length and uppercase/lowercase inconsistencies.
+        
+        1.0.0 (2018-09-21)
+        ---------------------
+        
+        * Add length command to print the length of all the sequences in fasta files.
+        
+        
+        0.1.0 (2017-11-30)
+        ---------------------
+        
+        * Project started.
+        
+Keywords: bioinformatics,NGS,fastatools
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
