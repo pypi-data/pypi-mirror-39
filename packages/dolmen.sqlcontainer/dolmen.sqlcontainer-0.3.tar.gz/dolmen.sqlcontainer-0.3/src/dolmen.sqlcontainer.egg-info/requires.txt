@@ -1,0 +1,6 @@
+sqlalchemy
+zope.interface
+zope.location
+
+[test]
+pytest

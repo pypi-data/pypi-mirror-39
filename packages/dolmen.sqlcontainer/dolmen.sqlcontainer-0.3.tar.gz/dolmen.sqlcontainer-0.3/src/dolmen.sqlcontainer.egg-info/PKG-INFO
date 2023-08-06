@@ -1,0 +1,41 @@
+Metadata-Version: 1.1
+Name: dolmen.sqlcontainer
+Version: 0.3
+Summary: Container abstraction for SQLAlchemy
+Home-page: http://gitweb.dolmen-project.org
+Author: The Dolmen team
+Author-email: dolmen@list.dolmen-project.org
+License: ZPL 2.1
+Description: dolmen.sqlcontainer
+        *******************
+        
+        ``dolmen.sqlcontainer`` is an addon for cromlech and sqlalchemy. It provides
+        a "containership" abstraction, to work transparently with a hierarchy of 
+        objects coming from an SQL database.
+        
+        
+        Changelog
+        =========
+        
+        0.3 (2018-12-20)
+        ----------------
+        
+        - Added slicing on the container
+        - Changed the Container init to take a session_getter.
+        
+        0.2 (2014-03-14)
+        ----------------
+        
+        - Add a MANIFEST.INI 
+        
+        0.1 (2014-03-13)
+        ----------------
+        
+        - Initial release
+        
+        
+Keywords: Dolmen Container SQLAlchemy
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: Zope Public License
+Classifier: Programming Language :: Python
