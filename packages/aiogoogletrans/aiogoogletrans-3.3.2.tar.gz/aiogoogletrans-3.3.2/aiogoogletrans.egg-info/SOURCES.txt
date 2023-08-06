@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+translate
+aiogoogletrans/__init__.py
+aiogoogletrans/client.py
+aiogoogletrans/constants.py
+aiogoogletrans/gtoken.py
+aiogoogletrans/models.py
+aiogoogletrans/urls.py
+aiogoogletrans/utils.py
+aiogoogletrans.egg-info/PKG-INFO
+aiogoogletrans.egg-info/SOURCES.txt
+aiogoogletrans.egg-info/dependency_links.txt
+aiogoogletrans.egg-info/requires.txt
+aiogoogletrans.egg-info/top_level.txt
