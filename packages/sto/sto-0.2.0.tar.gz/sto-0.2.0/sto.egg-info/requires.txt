@@ -1,0 +1,16 @@
+eth-typing<2
+web3[tester]
+coloredlogs
+colorama
+tabulate
+sqlalchemy>=1.3.0b1
+tqdm
+configobj
+click
+
+[dev]
+bumpversion<1,>=0.5.3
+wheel
+
+[test]
+pytest
