@@ -1,0 +1,15 @@
+README.md
+setup.py
+zip_shotgun/__init__.py
+zip_shotgun/zip_shotgun_main.py
+zip_shotgun.egg-info/PKG-INFO
+zip_shotgun.egg-info/SOURCES.txt
+zip_shotgun.egg-info/dependency_links.txt
+zip_shotgun.egg-info/entry_points.txt
+zip_shotgun.egg-info/not-zip-safe
+zip_shotgun.egg-info/requires.txt
+zip_shotgun.egg-info/top_level.txt
+zip_shotgun/shells/__init__.py
+zip_shotgun/shells/wwwolf_php_webshell.py
+zip_shotgun/zip_shotugn_utils/__init__.py
+zip_shotgun/zip_shotugn_utils/utils.py
