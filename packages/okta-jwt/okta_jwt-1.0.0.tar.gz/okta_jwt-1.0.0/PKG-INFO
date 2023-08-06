@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: okta_jwt
+Version: 1.0.0
+Summary: Okta JWT Access Token verifier
+Home-page: https://github.com/adithyasampatoor/okta_jwt
+Author: Adithya Sampatoor
+Author-email: adithya.sampatoor@gmail.com
+License: UNKNOWN
+Description: # okta_jwt
+        
+        Okta JWT Access Token verifier for Python using cached JWKs.
+        
+        ## Installation
+        
+        ::
+        
+            $ pip install okta_jwt
+        
+        ## Usage
+        
+        ## Development
+        
+        ## Contributing
+        
+        Bug reports and pull requests are welcome on GitHub at https://github.com/adithyasampatoor/okta_jwt. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+        
+        ## License
+        
+        The Library is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT)
+        
+        ## Thanks
+        
+        This library was originally based heavily on the work of the folks over at 'python-jose'.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
