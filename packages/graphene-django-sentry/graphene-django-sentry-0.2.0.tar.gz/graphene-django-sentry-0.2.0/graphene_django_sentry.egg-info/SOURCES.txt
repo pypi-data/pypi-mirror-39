@@ -1,0 +1,11 @@
+README.rst
+setup.cfg
+setup.py
+graphene_django_sentry/__init__.py
+graphene_django_sentry/views.py
+graphene_django_sentry.egg-info/PKG-INFO
+graphene_django_sentry.egg-info/SOURCES.txt
+graphene_django_sentry.egg-info/dependency_links.txt
+graphene_django_sentry.egg-info/not-zip-safe
+graphene_django_sentry.egg-info/requires.txt
+graphene_django_sentry.egg-info/top_level.txt
