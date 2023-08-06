@@ -1,0 +1,3 @@
+[nengo.backends]
+loihi = nengo_loihi:Simulator
+
