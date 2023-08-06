@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: mrequests
+Version: 0.1.2
+Summary: UNKNOWN
+Home-page: https://github.com/dannybritto96/mrequests
+Author: Danie Britto
+Author-email: dannybritto96@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# mrequests
+Using multiprocessing and requests to send requests using threads to fasten sending large number of requests.
+
+## Usage
+<pre>
+from mrequests import PoolRequests
+m = PoolRequests(method="GET")
+urls = ["https://www.google.com","https://www.yahoo.com"]
+resp = m.send(urls)
+for r in resp:
+  print(r.status_code)
+</pre>
+
+## Installation
+<pre>
+pip install mrequests
+</pre>
+
+
+## Future Work
+<ul>
+  <li>Parameterized requests</li>
+  <li>Authenticated Sessions</li>
+ </ul>
+
+
