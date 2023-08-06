@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: astromartini
+Version: 1.0.1
+Summary: Synthetic datacube creation from simulations.
+Home-page: UNKNOWN
+Author: Kyle Oman
+Author-email: koman@astro.rug.nl
+License: GNU GPL v3
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: astropy
+Requires-Dist: scipy
+
+UNKNOWN
+
+
