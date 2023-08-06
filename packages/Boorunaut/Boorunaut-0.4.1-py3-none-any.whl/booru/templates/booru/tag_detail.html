@@ -1,0 +1,125 @@
+{% extends 'booru/base.html' %}
+
+{% block css %}
+    {% load staticfiles %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block body %}
+    {% load markdown_deux_tags %}
+    {% load permission_tags %}
+    <div class="container">
+        <div class="row">
+            <h1>Tag: <a href="{{ tag.get_search_url }}">{{tag}}</a></h1>
+        </div>
+        <div class="row">
+            <span class="col">
+                <a class="btn btn-sm btn-primary" href="{% url 'booru:tag_edit' tag.id %}">
+                    <i class="fas fa-edit"></i> Edit
+                </a>
+                <a class="btn btn-sm btn-primary" href="{% url 'booru:tag_history' tag.id %}">
+                    <i class="fas fa-history"></i> History
+                </a>
+                {% if user|can:'manage_tags' %}
+                <a class="btn btn-sm btn-danger" href="{% url 'booru:tag-delete' tag.id %}">
+                    <i class="fas fa-trash"></i> Delete
+                </a>
+                {% endif %}
+            </span>
+        </div>
+        <div class="row">
+            <div id="table" class="col mt-3">
+                <table class="table table-sm">
+                    <tbody>
+                        {% if tag.description %}
+                        <tr>
+                            <td><strong>Description:</strong></td>
+                            <td>{{tag.description|markdown}}</td>
+                        </tr>
+                        {% endif %}
+                        <tr>
+                            <td><strong>Category:</strong></td>
+                            <td>{{tag.category}}</td>
+                        </tr>
+                        {% if tag.associated_link %}
+                        <tr>
+                            <td><strong>Associated links:</strong></td>
+                            <td>{{tag.associated_link}}</td>
+                        </tr>
+                        {% endif %}
+                        {% if tag.associated_user %}
+                        <tr>
+                            <td><strong>Associated user:</strong></td>
+                            <td><a href="{% url 'booru:profile' tag.associated_user %}">
+                                    {{tag.associated_user}}
+                                </a>
+                            </td>
+                        </tr>
+                        {% endif %}
+                        {% if tag.timestamp %}
+                        <tr>
+                            <td><strong>Date:</strong></td>
+                            <td>{{tag.timestamp}}</td>
+                        </tr>
+                        {% endif %}
+                        {% if tag.author %}
+                        <tr>
+                            <td><strong>Author:</strong></td>
+                            <td><a href="{{tag.author.get_absolute_url}}">{{tag.author}}</a></td>
+                        </tr>
+                        {% endif %}
+                        {% if tag.aliases %}
+                        <tr>
+                            <td><strong>Aliases:</strong></td>
+                            <td>
+                                {% for tag in tag.aliases.all %}
+                                {{tag}}{% if not forloop.last %},{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        {% endif %}
+                        {% if tag.from_implications.count > 0 %}
+                        <tr>
+                            <td><strong>Implies:</strong></td>
+                            <td>
+                                {% for implication in tag.from_implications.all %}
+                                {% with color='#'|add:implication.to_tag.category.color %}
+                                <a style="color: {{color}};" class="font-weight-bold" href="{% url 'booru:tag_detail' implication.to_tag.id %}">
+                                    ?
+                                </a>
+                                <a style="color: {{color}};" href="{{ implication.to_tag.get_search_url }}">{{implication.to_tag}}</a>
+                                {% endwith %}
+                                {% if not forloop.last %},{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        {% endif %}
+                        {% if tag.to_implications.count > 0 %}
+                        <tr>
+                            <td><strong>Is implied in:</strong></td>
+                            <td>
+                                {% for implication in tag.to_implications.all %}
+                                {% with color='#'|add:implication.from_tag.category.color %}
+                                <a style="color:{{color}};" class="font-weight-bold" href="{% url 'booru:tag_detail' implication.from_tag.id %}">
+                                    ?
+                                </a>
+                                <a style="color:{{color}};" href="{{ implication.from_tag.get_search_url }}">{{implication.from_tag}}</a>
+                                {% endwith %}
+                                {% if not forloop.last %},{% endif %} 
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            {% for post in last_post %}
+            <a href="{{post.get_absolute_url}}"><img src="{{post.preview.url}}" alt=""></a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
