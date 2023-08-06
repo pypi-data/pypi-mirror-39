@@ -1,0 +1,13 @@
+README.md
+setup.py
+meshparty/__init__.py
+meshparty/example.py
+meshparty/iterator.py
+meshparty/mesh_io.py
+meshparty/meshlabserver.py
+meshparty/trimesh_io.py
+meshparty.egg-info/PKG-INFO
+meshparty.egg-info/SOURCES.txt
+meshparty.egg-info/dependency_links.txt
+meshparty.egg-info/requires.txt
+meshparty.egg-info/top_level.txt
