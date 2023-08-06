@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: fuchur
+Version: 0.0.0
+Summary: An optimizaton model for Europe based on oemof.
+Home-page: https://github.com/znes/fuchur
+Author: Simon Hilpert
+Author-email: simon.hilpert@uni-flensburg.de
+License: BSD 3-Clause License
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+Requires-Dist: click
+
+========
+Overview
+========
+
+
+
+An optimizaton model for Europe based on oemof.
+
+* Free software: BSD 3-Clause License
+
+Installation
+============
+
+::
+
+    pip install fuchur
+
+Documentation
+=============
+
+
+https://fuchur.readthedocs.io/
+
+
+Development
+===========
+
+To run the all tests run::
+
+    tox
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
+
+Changelog
+=========
+
+0.0.0 (2018-12-13)
+------------------
+
+* First release on PyPI. Just skeleton - no functionality yet.
+
+
