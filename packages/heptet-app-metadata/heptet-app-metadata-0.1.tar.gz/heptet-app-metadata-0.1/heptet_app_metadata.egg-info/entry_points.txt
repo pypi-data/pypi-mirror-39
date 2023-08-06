@@ -1,0 +1,3 @@
+[console_scripts]
+heptet_db_dump = heptet_app_metadata.main:main
+
