@@ -1,0 +1,24 @@
+Metadata-Version: 1.2
+Name: tfields
+Version: 0.1.1
+Summary: numpy + sympy implementation of tensor fields with attached coordinate systems
+Home-page: https://gitlab.mpcdf.mpg.de/dboe/tfields
+Author: Daniel Boeckenhoff
+Author-email: daniel.boeckenhoff@ipp.mpg.de
+License: Apache Software License
+Description: UNKNOWN
+Keywords: tensors coordinate system trafo sympy numpy
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=2.7
