@@ -1,0 +1,13 @@
+README.md
+setup.py
+game_of_life/__init__.py
+game_of_life/__main__.py
+game_of_life/cli.py
+game_of_life/model.py
+game_of_life/presenter.py
+game_of_life/view.py
+game_of_life_nodeps.egg-info/PKG-INFO
+game_of_life_nodeps.egg-info/SOURCES.txt
+game_of_life_nodeps.egg-info/dependency_links.txt
+game_of_life_nodeps.egg-info/entry_points.txt
+game_of_life_nodeps.egg-info/top_level.txt
