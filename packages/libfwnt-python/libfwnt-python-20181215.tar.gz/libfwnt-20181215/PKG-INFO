@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: libfwnt-python
+Version: 20181215
+Summary: Python bindings module for libfwnt
+Home-page: https://github.com/libyal/libfwnt/
+Author: Joachim Metz
+Author-email: joachim.metz@gmail.com
+License: GNU Lesser General Public License v3 or later (LGPLv3+)
+Description: Python bindings module for libfwnt
+Platform: UNKNOWN
