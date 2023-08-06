@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: primefactors
+Version: 1.0.0
+Summary: A library to find prime factors of integers
+Home-page: https://github.com/WillCoates/primefactors
+Author: William Coates
+Author-email: me@willtc.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Prime Factors
+
+A simple library to find the prime factors of a number.
+
