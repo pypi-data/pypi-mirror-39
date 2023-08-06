@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pyocfl
+Version: 0.1
+Summary: Python 3.x client for the Oxford Common Filesystem Layout (OCFL) specification
+Home-page: http://github.com/wsulib/pyocfl
+Author: Graham Hukill
+Author-email: ghukill@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Requires-Dist: PyInstaller (==3.4)
+Requires-Dist: pypairtree (==1.1.0)
+Requires-Dist: pytest (==4.0.1)
+
+UNKNOWN
+
+
