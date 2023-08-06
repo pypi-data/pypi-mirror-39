@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: advoservice-integration
+Version: 1.0.0
+Summary: AdvoService Integration API
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: r.starenkiy@kf.ua
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,AdvoService Integration API
+Platform: UNKNOWN
+Requires-Dist: urllib3 (>=1.15)
+Requires-Dist: six (>=1.10)
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+
+External API for AdvoService  # noqa: E501
+
+
