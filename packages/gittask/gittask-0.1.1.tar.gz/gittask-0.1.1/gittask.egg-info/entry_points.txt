@@ -1,0 +1,4 @@
+[console_scripts]
+gittask = gittask.GitTask:main
+gt = gittask.GitTask:main
+
