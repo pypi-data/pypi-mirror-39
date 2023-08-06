@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: AIJIdevtools
+Version: 1.4.2
+Summary: Some useful helper-funcs for devpers
+Home-page: https://github.com/AIJIJI/devtools
+Author: AIJI
+Author-email: thecrazyaiji@gmail.com
+License: UNKNOWN
+Description: Some useful helper-funcs for devpers.
+        Sub-package is the extension of corresponding package with the same name.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Development Status :: 1 - Planning
