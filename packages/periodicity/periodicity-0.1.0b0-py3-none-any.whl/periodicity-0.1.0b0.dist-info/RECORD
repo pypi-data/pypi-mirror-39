@@ -1,0 +1,12 @@
+periodicity/__init__.py,sha256=HyVTanDjRwiLVrKBHZwQ67dfKdx9Yk3pKH9NtHSeGn0,21
+periodicity/acf.py,sha256=3hiTULhdz8QXO-14qsAaW_daQBiLxti18UbsBsIjuW0,6403
+periodicity/gp.py,sha256=5Mnsw4HT6jWwNDrnVsYak0qArvim-YKSol_jewxPiQI,9670
+periodicity/periodogram.py,sha256=jDe9HpImY4VcyPdO4ilD38sCl2kOge34OJOf4y8hbUo,2445
+periodicity/phase.py,sha256=pE0IWG3H85gXecP97FvKsvKfX1VDvIyHV689CEypVj8,1527
+periodicity/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+periodicity/tests/test_gp.py,sha256=6SuuhMjpe3gkJgL_Kbj6mb2ITr7g6g5DKIkoIzQ6NMs,1223
+periodicity-0.1.0b0.dist-info/LICENSE,sha256=bllgBmlTpGVdF7VuVXp36_eqFRwDPvBAK33-9XhY-Mw,1069
+periodicity-0.1.0b0.dist-info/METADATA,sha256=3YYL0pgcRVOJeh9WjMYjRm-0QI-nJYQ_QILiWY_ffHU,2166
+periodicity-0.1.0b0.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+periodicity-0.1.0b0.dist-info/top_level.txt,sha256=7s_6eB_hrUXAvFt600CboHTuhRIff7W5qVZ4JyBNmJA,12
+periodicity-0.1.0b0.dist-info/RECORD,,
