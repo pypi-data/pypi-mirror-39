@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: ssr-utils
+Version: 4.3.7
+Summary: Shadowsocks(R) utils.
+Home-page: https://github.com/neoctobers/py_ssr_utils
+Author: @neoctobers
+Author-email: neoctobers@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: xbase64
+Requires-Dist: requests[socks]
+Requires-Dist: xprint
+Requires-Dist: list-ext
+Requires-Dist: common-patterns
+
+# Shadowsocks(R) utils
+
+[![PyPi Version](http://img.shields.io/pypi/v/ssr-utils.svg)](https://pypi.python.org/pypi/ssr-utils/)
+
+[>> Read the docs <<](https://neoctobers.readthedocs.io/en/latest/repo/py_ssr_utils.html)
+
+
+
