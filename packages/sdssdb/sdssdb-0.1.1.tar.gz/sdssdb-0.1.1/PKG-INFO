@@ -1,0 +1,33 @@
+Metadata-Version: 1.2
+Name: sdssdb
+Version: 0.1.1
+Summary: Description of your project.
+Home-page: https://github.com/sdss/sdssdb
+Author: Jose Sanchez-Gallego
+Author-email: gallegoj@uw.edu
+License: BSD3
+Description: sdssdb
+        ======
+        
+        SDSS product for database management.
+        
+        |docs|
+        
+        
+        .. |docs| image:: https://readthedocs.org/projects/sdssdb/badge/?version=latest
+            :alt: Documentation Status
+            :scale: 100%
+            :target: https://sdssdb.readthedocs.io/en/latest/?badge=latest
+        
+Keywords: astronomy software
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
