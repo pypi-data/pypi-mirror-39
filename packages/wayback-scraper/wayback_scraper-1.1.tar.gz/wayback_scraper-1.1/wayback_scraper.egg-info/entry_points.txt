@@ -1,0 +1,3 @@
+[console_scripts]
+wayback-scraper = wayback_scraper.wayback_scraper:main
+
