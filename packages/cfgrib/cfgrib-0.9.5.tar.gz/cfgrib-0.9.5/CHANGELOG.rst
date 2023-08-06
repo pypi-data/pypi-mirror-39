@@ -1,0 +1,85 @@
+
+Changelog for cfgrib
+====================
+
+0.9.5 (2018-12-20)
+------------------
+
+- Drop support for *xarray* versions prior to *v0.11* to reduce complexity.
+  (This is really only v0.10.9).
+  See: `#32 <https://github.com/ecmwf/cfgrib/issues/32>`_.
+- Declare the data as ``CF-1.7`` compliant via the  ``Conventions`` global attribute.
+  See: `#36 <https://github.com/ecmwf/cfgrib/issues/36>`_.
+- Tested larger-than-memory and distributed processing via *dask* and *dask.distributed*.
+  See: `#33 <https://github.com/ecmwf/cfgrib/issues/33>`_.
+- Promote write support via ``cfgrib.to_grib`` to **Alpha**.
+  See: `#18 <https://github.com/ecmwf/cfgrib/issues/18>`_.
+- Provide the ``cf2cdm.translate_coords`` utility function to translate the coordinates
+  between CF-compliant data models, defined by ``out_name``, ``units`` and ``store_direction``.
+  See: `#24 <https://github.com/ecmwf/cfgrib/issues/24>`_.
+- Provide ``cfgrib.__version__``.
+  See: `#31 <https://github.com/ecmwf/cfgrib/issues/31>`_.
+- Raise with a better error message when users attempt to open a file that is not a GRIB.
+  See: `#34 <https://github.com/ecmwf/cfgrib/issues/34>`_.
+- Make 2D grids for ``rotated_ll`` and ``rotated_gg`` ``gridType``'s.
+  See: `#35 <https://github.com/ecmwf/cfgrib/issues/35>`_.
+
+
+0.9.4.1 (2018-11-08)
+--------------------
+
+- Fix formatting for PyPI page.
+
+
+0.9.4 (2018-11-08)
+------------------
+
+- Saves one index file per set of ``index_keys`` in a much more robust way.
+- Refactor CF-encoding and add the new ``encode_cf`` option to ``backend_kwargs``.
+  See: `#23 <https://github.com/ecmwf/cfgrib/issues/23>`_.
+- Refactor error handling and the option to ignore errors (not well documented yet).
+  See: `#13 <https://github.com/ecmwf/cfgrib/issues/13>`_.
+- Do not crash on ``gridType`` not fully supported by the installed *ecCodes*
+  See: `#27 <https://github.com/ecmwf/cfgrib/issues/27>`_.
+- Several smaller bug fixes and performance improvements.
+
+
+0.9.3.1 (2018-10-28)
+--------------------
+
+- Assorted README fixes, in particular advertise index file support as alpha.
+
+
+0.9.3 (2018-10-28)
+------------------
+
+- Big performance improvement: add alpha support to save to and read from disk
+  the GRIB index produced by the full-file scan at the first open.
+  See: `#20 <https://github.com/ecmwf/cfgrib/issues/20>`_.
+
+
+0.9.2 (2018-10-22)
+------------------
+
+- Rename coordinate ``air_pressure`` to ``isobaricInhPa`` for consistency
+  with all other vertical ``level`` coordinates.
+  See: `#25 <https://github.com/ecmwf/cfgrib/issues/25>`_.
+
+
+0.9.1.post1 (2018-10-19)
+------------------------
+
+- Fix PyPI description.
+
+
+0.9.1 (2018-10-19)
+------------------
+
+- Change the usage of ``cfgrib.open_dataset`` to allign it with ``xarray.open_dataset``,
+  in particular ``filter_by_key`` must be added into the ``backend_kwargs`` dictionary.
+  See: `#21 <https://github.com/ecmwf/cfgrib/issues/21>`_.
+
+0.9.0 (2018-10-14)
+------------------
+
+- Beta release with read support.

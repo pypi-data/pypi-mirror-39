@@ -1,0 +1,18 @@
+name: test_env
+channels:
+  - conda-forge
+dependencies:
+  - cffi
+  - eccodes
+  - nomkl
+  - numpy
+  - pytest
+  - python=3.5
+  - typing
+  - xarray>=0.11.0
+  - pip:
+    - attrs
+    - coveralls
+    - future
+    - pytest-cov
+    - pytest-flakes
