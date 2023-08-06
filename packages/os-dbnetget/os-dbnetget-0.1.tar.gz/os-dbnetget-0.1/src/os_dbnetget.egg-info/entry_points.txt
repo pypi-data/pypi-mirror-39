@@ -1,0 +1,3 @@
+[console_scripts]
+os-dbnetget = os_dbnetget.cmdline:execute
+
