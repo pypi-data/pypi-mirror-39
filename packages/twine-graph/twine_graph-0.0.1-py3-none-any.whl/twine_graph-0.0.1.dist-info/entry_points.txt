@@ -1,0 +1,3 @@
+[console_scripts]
+twine_graph = twine_graph.__main__:main
+
