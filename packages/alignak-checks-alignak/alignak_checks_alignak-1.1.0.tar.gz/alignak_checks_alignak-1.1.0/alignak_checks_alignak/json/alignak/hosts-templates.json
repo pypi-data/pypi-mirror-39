@@ -1,0 +1,21 @@
+[
+    {
+        "_is_template": true,
+        "alias": "Alignak",
+        "name": "alignak",
+        "tags": [
+            "Alignak"
+        ]
+    },
+    {
+        "_is_template": true,
+        "_templates": [
+            "alignak"
+        ],
+        "alias": "Alignak master",
+        "name": "alignak-main",
+        "tags": [
+            "Alignak main"
+        ]
+    }
+]

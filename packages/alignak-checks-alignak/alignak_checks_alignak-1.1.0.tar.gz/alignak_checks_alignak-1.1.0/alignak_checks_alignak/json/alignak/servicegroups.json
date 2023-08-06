@@ -1,0 +1,14 @@
+[
+    {
+        "_realm": "All",
+        "_sub_realm": true,
+        "action_url": "",
+        "alias": "Alignak daemons",
+        "imported_from": "alignak-checks-alignak",
+        "name": "alignak-daemons",
+        "notes": "This group contains all the Alignak daemons services.",
+        "notes_url": "",
+        "servicegroups": [],
+        "services": []
+    }
+]
