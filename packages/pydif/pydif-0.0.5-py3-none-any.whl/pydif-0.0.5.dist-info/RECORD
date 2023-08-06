@@ -1,0 +1,16 @@
+pydif/__init__.py,sha256=sLepnSr9H3uzM3lvFwAE5KaSaWrKM3uq92sgCYiAw-Q,14
+pydif/pydif.py,sha256=hRIaV1SINCOYZCvNL6TNzG_7R-guSd5L8tt3F7Jnjs4,6815
+pydif/test_pydif.py,sha256=Q7-uO9ivlL5pHje_GPxSAszDwe5JYKv3cRDbl8GSnkE,8593
+pydif/dual/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydif/dual/dual.py,sha256=9N1DwFzbsqyk7gsJEbcvmiLu5L6cpYVb7FqB3p12Jiw,4358
+pydif/dual/test_dual.py,sha256=ToCTY0PKv_nJEewPL8PHquuBXK-rV0yl9DteceWFBXk,2866
+pydif/elementary/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydif/elementary/elementary.py,sha256=56uDFb3Kvy2psiQ1oQQmu5hK_Woe1kFbj9QtSB3iBak,4181
+pydif/elementary/test_elementary.py,sha256=S-4JgM6JRLx09HXuvhknjcMcgrajDJeZ-SaIAdwCJPM,5850
+pydif/optimize/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydif/optimize/optimize.py,sha256=ArUsvOgY3137QgjtRI20r0kzseRZ4WmutqvlWKTh4sE,6901
+pydif-0.0.5.dist-info/LICENSE.txt,sha256=SNOqEMEnrmzuf656knfA4_v3Q1zMijkVx5G91Czfcfk,1044
+pydif-0.0.5.dist-info/METADATA,sha256=R94_sleAdW5zwd2oy4c2lhkYmCjGLIqbdZAzbUAqcPg,728
+pydif-0.0.5.dist-info/WHEEL,sha256=-ZFxwj8mZJPIVcZGLrsQ8UGRcxVAOExzPLVBGR7u7bE,92
+pydif-0.0.5.dist-info/top_level.txt,sha256=Pl7oYi8VLr20A6giY_ofbI2J7zVoHLhw5PA7FzPs1ZE,6
+pydif-0.0.5.dist-info/RECORD,,
