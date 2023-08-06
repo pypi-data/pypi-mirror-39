@@ -1,0 +1,9 @@
+rio-tiler
+shapely
+geopandas
+
+[test]
+mock
+pytest
+pytest-cov
+codecov

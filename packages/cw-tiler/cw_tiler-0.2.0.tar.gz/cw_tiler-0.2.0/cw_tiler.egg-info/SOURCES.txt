@@ -1,0 +1,17 @@
+AUTHORS.txt
+CHANGES.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+cw_tiler/__init__.py
+cw_tiler/main.py
+cw_tiler/utils.py
+cw_tiler/vector_utils.py
+cw_tiler.egg-info/PKG-INFO
+cw_tiler.egg-info/SOURCES.txt
+cw_tiler.egg-info/dependency_links.txt
+cw_tiler.egg-info/not-zip-safe
+cw_tiler.egg-info/requires.txt
+cw_tiler.egg-info/top_level.txt
