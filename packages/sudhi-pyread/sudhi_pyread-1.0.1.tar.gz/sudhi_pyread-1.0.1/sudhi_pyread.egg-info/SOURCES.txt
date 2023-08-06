@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+reader/__init__.py
+reader/__main__.py
+reader/config.cfg
+reader/feed.py
+reader/viewer.py
+sudhi_pyread.egg-info/PKG-INFO
+sudhi_pyread.egg-info/SOURCES.txt
+sudhi_pyread.egg-info/dependency_links.txt
+sudhi_pyread.egg-info/entry_points.txt
+sudhi_pyread.egg-info/requires.txt
+sudhi_pyread.egg-info/top_level.txt
