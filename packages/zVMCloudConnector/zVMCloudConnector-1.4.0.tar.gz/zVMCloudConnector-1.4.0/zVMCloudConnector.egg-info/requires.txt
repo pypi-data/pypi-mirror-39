@@ -1,0 +1,7 @@
+jsonschema>=2.3.0
+netaddr>=0.7.5
+PyJWT>=1.0.1
+requests>=2.6.0
+Routes>=2.2
+six>=1.9.0
+WebOb>=1.2.3
