@@ -1,0 +1,4 @@
+
+[build-docs]
+sphinx_autodoc_typehints
+sphinxcontrib-trio
