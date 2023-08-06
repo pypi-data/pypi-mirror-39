@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+classcli/__init__.py
+classcli/clibuilder.py
+classcli.egg-info/PKG-INFO
+classcli.egg-info/SOURCES.txt
+classcli.egg-info/dependency_links.txt
+classcli.egg-info/top_level.txt
