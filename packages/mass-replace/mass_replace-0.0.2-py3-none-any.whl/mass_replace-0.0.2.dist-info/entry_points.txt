@@ -1,0 +1,3 @@
+[console_scripts]
+replace = mass_replace.__main__:main
+
