@@ -1,0 +1,138 @@
+Knighted
+========
+
+
+Knighted, is heavily inspired by jeni_ and works only with asyncio_.
+It allows to described dependencies, and inject them later.
+
+For example::
+
+    from knighted import annotation, Injector
+
+    class MyInjector(Injector):
+        pass
+
+    services = MyInjector()
+
+    @services.factory('foo')
+    def foo_factory():
+        return 'I am foo'
+
+    @services.factory('bar')
+    def bar_factory():
+        return 'I am bar'
+
+    @services.factory('all')
+    def together_factory():
+        foo = yield from services.get('foo')
+        bar = yield from services.get('bar')
+        return [foo, bar]
+
+    @annotate('foo', 'bar')
+    def fun(foo, bar):
+        return {'foo': foo,
+                'bar': bar}
+
+    assert (yield from services.apply(fun)) == {'foo': 'I am foo',
+                                                'bar': 'I am bar'}
+
+
+The :func:`func` can be a function or an awaitable. These 2 examples works the same::
+
+
+    @annotate('foo', 'bar')
+    def sync_fun(foo, bar):
+        return {'foo': foo,
+                'bar': bar}
+
+    assert (yield from services.apply(sync_fun)) == {'foo': 'I am foo',
+                                                     'bar': 'I am bar'}
+
+
+    @annotate('foo', 'bar')
+    async def awaitable_fun(foo, bar):
+        return {'foo': foo,
+                'bar': bar}
+
+    assert (yield from services.apply(awaitable_fun)) == {'foo': 'I am foo',
+                                                          'bar': 'I am bar'}
+
+
+When applied with some arguments, placeholders just fills the gaps::
+
+
+    @annotate('foo', 'bar')
+    def fun(foo, bar):
+        return {'foo': foo,
+                'bar': bar}
+
+    assert (yield from services.apply(fun, foo="yes")) == {'foo': 'yes',
+                                                           'bar': 'I am bar'}
+
+
+    @annotate('foo', 'bar')
+    async def awaitable_fun(foo, bar):
+        return {'foo': foo,
+                'bar': bar}
+
+    assert (yield from services.apply(awaitable_fun)) == {'foo': 'I am foo',
+                                                          'bar': 'I am bar'}
+
+
+
+Factories also can be either sync or awaitable::
+
+    @services.factory('bar:sync')
+    def bar_factory():
+        return 'I am bar'
+
+    @services.factory('bar:awaitable')
+    async def bar_factory():
+        return 'I am bar'
+
+
+
+Implementation
+--------------
+
+``annotate(*args, **kwargs)`` annotate a func with service names.
+
+``coroutine Injector.factory(name)`` declare a service factory
+
+``coroutine Injector.get(name)`` return the service instance
+
+``coroutine Injector.apply(func, *args, **kwargs)`` call the annoted callable
+with the mounted service.
+
+``coroutine Injector.partial(func)`` prepare an annoted func with later services.
+
+``coroutine Injector.close()`` clear all cached services., and call all deferred
+close().
+
+``coroutine Injector.close.register(obj)`` defers ``yield from obj.close()`` when
+``Injector.close()`` is called.
+
+
+Factories don't need to be fully qualified. For example::
+
+    @services.factory('prefix')
+    def foo_factory(bar):
+        return 'I am foo and ' + bar
+
+    assert (yield from services.get('prefix:baz')) == 'I am foo and baz'
+    assert (yield from services.get('prefix:qux')) == 'I am foo and qux'
+
+
+Closing callback can be registered::
+
+    class Foo:
+        def close(self):
+            self.closed = True
+    foo = Foo()
+    services.close.register(foo)
+    services.close()
+    assert foo.closed == True
+
+
+.. _asyncio: https://pypi.python.org/pypi/asyncio
+.. _jeni: https://pypi.python.org/pypi/jeni

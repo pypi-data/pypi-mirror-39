@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+versioneer.py
+knighted/__init__.py
+knighted/_version.py
+knighted/bases.py
+knighted.egg-info/PKG-INFO
+knighted.egg-info/SOURCES.txt
+knighted.egg-info/dependency_links.txt
+knighted.egg-info/requires.txt
+knighted.egg-info/top_level.txt

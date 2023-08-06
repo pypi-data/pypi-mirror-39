@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: knighted
+Version: 0.3b1
+Summary: inject dependencies
+Home-page: http://lab.errorist.xyz/abc/knighted
+Author: Xavier Barbosa
+Author-email: clint.northwood@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: dependency injection,composing
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
