@@ -1,0 +1,23 @@
+CHANGES
+=======
+
+* move tests to root
+* omit docs from travis for now
+* switch to type comments
+* add typing requirement
+* add a test
+* remove need for modified pbr
+* add travis deploy
+* move pbr again
+* move forked pbr
+* try to resolve some build errors
+* tox.ini
+* bumpversion config
+* travis config
+* fill in remaining badges
+* remove erroneous hyphen
+* ignore AUTHORS
+* ignore changelog
+* add code!
+* start up some readme badges
+* initial commit
