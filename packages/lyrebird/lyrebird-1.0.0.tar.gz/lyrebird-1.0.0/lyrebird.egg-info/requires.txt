@@ -1,0 +1,13 @@
+mitmproxy==4.0.4
+flask
+requests
+fire
+colorama
+genson
+flask-socketio
+flask-restful
+beautifulsoup4
+portpicker
+colorama
+packaging
+Flask-SQLAlchemy
