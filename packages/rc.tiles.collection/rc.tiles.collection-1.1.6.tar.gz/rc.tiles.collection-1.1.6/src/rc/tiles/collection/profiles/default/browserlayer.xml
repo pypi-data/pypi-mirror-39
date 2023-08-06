@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layers>
+  <layer
+      name="rc.tiles.collection"
+      interface="rc.tiles.collection.interfaces.IRcTilesCollectionLayer"
+      
+      />
+</layers>
