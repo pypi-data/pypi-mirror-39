@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: twitter-santa
+Version: 1.0
+Summary: Twitter bot
+Home-page: https://github.com/thevpaliy/twitter-santa
+Author: Vasyl Paliy
+Author-email: vpaliy97@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.0
