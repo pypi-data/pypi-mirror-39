@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: inscribe
+Version: 0.2.0
+Summary: API to detect fraudulent documents
+Home-page: https://docs.inscribe.ai
+Maintainer: inscribe.ai
+Maintainer-email: team@inscribe.ai
+License: GPL
+Description: Inscribe.ai
+        ===========
+        
+        - API wrapper for Inscribe (https://inscribe.ai)
+        
+        Installation
+        ------------
+        
+        - `pip install inscribe`
+        
+        Usage
+        -----
+        
+        ```python
+        import inscribe
+        import json
+        
+        # API Authentication
+        api = inscribe.Client(api_key="YOUR_API_KEY")
+        
+        # Create customer folder
+        customer = api.create_customer(customer_name="new")
+        customer_id = customer['data']['id']
+        
+        # Upload document
+        doc_obj = open("YOUR_FILE.pdf", "rb")
+        document = api.upload_document(customer_id=customer_id, document=doc_obj)
+        document_id = document['result_urls'][0]['document_id']
+        
+        # Check document
+        result = api.check_document(customer_id=customer_id, document_id=document_id)
+        print(json.dumps(result, indent=2))
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
