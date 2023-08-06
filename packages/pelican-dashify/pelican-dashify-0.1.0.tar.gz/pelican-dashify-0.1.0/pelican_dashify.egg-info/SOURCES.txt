@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+pelican_dashify/__init__.py
+pelican_dashify/dashify.py
+pelican_dashify/exceptions.py
+pelican_dashify/filters.py
+pelican_dashify/settings.py
+pelican_dashify.egg-info/PKG-INFO
+pelican_dashify.egg-info/SOURCES.txt
+pelican_dashify.egg-info/dependency_links.txt
+pelican_dashify.egg-info/requires.txt
+pelican_dashify.egg-info/top_level.txt
