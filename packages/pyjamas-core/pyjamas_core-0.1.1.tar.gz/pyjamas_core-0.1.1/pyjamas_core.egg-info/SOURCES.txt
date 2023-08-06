@@ -1,0 +1,11 @@
+README.md
+setup.py
+pyjamas_core/__init__.py
+pyjamas_core/agent.py
+pyjamas_core/controller.py
+pyjamas_core/supermodel.py
+pyjamas_core/util.py
+pyjamas_core.egg-info/PKG-INFO
+pyjamas_core.egg-info/SOURCES.txt
+pyjamas_core.egg-info/dependency_links.txt
+pyjamas_core.egg-info/top_level.txt

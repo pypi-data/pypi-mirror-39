@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pyjamas-core
+Version: 0.1.1
+Summary: Pyjamas Core Package
+Home-page: https://github.com/pypa/sampleproject
+Author: agittarius
+Author-email: info@agittarius.ch
+License: UNKNOWN
+Description: # Pyjamas Core Package
+        
+        ## Installation
+        Install the Pyjamas Core:
+        ```
+        pip install pyjamas-core
+        ```
+        
+        ## Get Started
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
