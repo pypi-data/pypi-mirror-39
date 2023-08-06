@@ -1,0 +1,6 @@
+#!python
+
+import troncli.cli
+
+troncli.cli.main()
+
