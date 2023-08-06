@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: odoo10-addons-oca-server-auth
+Version: 10.0.20181211.0
+Summary: Meta package for oca-server-auth Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-auth-api-key
+Requires-Dist: odoo10-addon-auth-keycloak
+
+UNKNOWN
+
+
