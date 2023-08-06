@@ -1,0 +1,3 @@
+def tst():
+    return 'TESTED'
+    
