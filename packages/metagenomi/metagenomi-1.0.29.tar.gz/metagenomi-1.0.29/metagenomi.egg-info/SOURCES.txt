@@ -1,0 +1,11 @@
+README.md
+setup.py
+metagenomi/__init__.py
+metagenomi/dynamo.py
+metagenomi/helpers.py
+metagenomi/metadata.py
+metagenomi.egg-info/PKG-INFO
+metagenomi.egg-info/SOURCES.txt
+metagenomi.egg-info/dependency_links.txt
+metagenomi.egg-info/requires.txt
+metagenomi.egg-info/top_level.txt
