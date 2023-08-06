@@ -1,0 +1,15 @@
+apigateway/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apigateway/base.py,sha256=FjDIG2m4i6kwX6egV3mjzjo9TdYUC2-8hB8k13Vq5sM,2383
+apigateway/default.py,sha256=Hfk1-tt6lPrZNDN2slKhLIotQVe99TrbnZ47uH4fYmQ,605
+apigateway/event.py,sha256=uUbUvYC9Y1NFbLnfh5TiMkGjGDIGUgzA1-Y4iFeKb9o,744
+apigateway/format.py,sha256=GGjdeRWKFxFIxdkJCkViyPV3NEQ1SZPjxTMkTRUAmKs,135
+apigateway/request.py,sha256=eVa5w5VWxYRo4gcka0nPbw6yJ-IfyqdHMJFIlymZ0pQ,1402
+apigateway/response.py,sha256=CEOYOMi1THPvKj48WAf5MvD4aZAwEFbJWnlKsdfj-t4,960
+apigateway/settings.py,sha256=t5q-PEfKSJkmT15HWjwH5VBlgMwyHmWDo6vb6y50Q-4,89
+apigateway/startup.py,sha256=eY6x8H7DDGDo_rei6Am0Rgk3O6GUXDfkvXNEJL-JZwg,996
+apigateway/utils.py,sha256=goPOj8EyWxbmeKRqjOvAAw3K0eFNS6MlwAMQHQ44pHs,131
+apigateway/views.py,sha256=7UkRUSetuKt_3ak6nrIIBz-R8_Jz0_xXa2FAyeuvAlM,2286
+flask_turn_apigateway-0.1.2.dist-info/METADATA,sha256=HnBVEr4cLkTn-rtVteF217hv1lBnfSG5i9JseBTC2k0,325
+flask_turn_apigateway-0.1.2.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+flask_turn_apigateway-0.1.2.dist-info/top_level.txt,sha256=eafHRZ9bYBbOy5OME3zFRjethUTL1Ia8QcZ7TCRlVs4,11
+flask_turn_apigateway-0.1.2.dist-info/RECORD,,

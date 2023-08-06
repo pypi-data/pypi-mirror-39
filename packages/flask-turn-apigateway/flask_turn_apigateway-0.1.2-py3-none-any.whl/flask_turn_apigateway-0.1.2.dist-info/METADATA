@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: flask-turn-apigateway
+Version: 0.1.2
+Summary: for develop apigateway
+Home-page: https://github.com/StevenLianaL/turnflaskrestfulapigateway
+Author: wz
+Author-email: wangzhou8284@163.cm
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: pyjwt
+Requires-Dist: PyMySQL
+
+UNKNOWN
+
+
