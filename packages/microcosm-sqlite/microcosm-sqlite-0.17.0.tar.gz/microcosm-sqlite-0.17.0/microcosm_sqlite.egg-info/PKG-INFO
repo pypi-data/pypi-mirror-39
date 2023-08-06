@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: microcosm-sqlite
+Version: 0.17.0
+Summary: Opinionated persistence with SQLite
+Home-page: https://github.com/globality-corp/microcosm-sqlite
+Author: Globality Engineering
+Author-email: engineering@globality.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: microcosm
+Platform: UNKNOWN
+Requires-Python: >=3.6
