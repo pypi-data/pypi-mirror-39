@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: goutte
+Version: 1.0.0
+Summary: DigitalOcean snapshot automation service
+Home-page: https://github.com/tomochain/goutte
+Author: etienne-napoleone
+Author-email: etienne@tomochain.com
+Keywords: digitalocean,do,snapshot,snapshots,backup
+Requires-Python: >=3.5,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: colorlog (>=3.1,<4.0)
+Requires-Dist: python-digitalocean (>=1.14,<2.0)
+Requires-Dist: toml (>=0.10.0,<0.11.0)
+Project-URL: Repository, https://github.com/tomochain/goutte
