@@ -1,0 +1,4 @@
+google-api-core[grpc]<2.0.0dev,>=1.6.0
+
+[pandas]
+pandas>=0.17.1
