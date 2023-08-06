@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: webbpsf
+Version: 0.8.0
+Summary: 'Creates simulated point spread functions for the James Webb Space Telescope'
+Home-page: http://webbpsf.readthedocs.io/
+Author: Association of Universities for Research in Astronomy
+Author-email: help@stsci.edu
+License: BSD
+Description: WebbPSF: Simulated Point Spread Functions for the James Webb Space Telescope
+        ----------------------------------------------------------------------------
+        
+        WebbPSF produces simulated PSFs for the James Webb Space Telescope, NASA's next
+        flagship infrared space telescope. WebbPSF can simulate images for any of the
+        four science instruments plus the fine guidance sensor, including both direct
+        imaging and coronagraphic modes.
+        
+        Developed by Marshall Perrin and collaborators at STScI, 2010-2018.
+        
+        Documentation can be found online at https://webbpsf.readthedocs.io/
+Platform: UNKNOWN
+Provides: webbpsf
+Requires-Python: >=3.5
