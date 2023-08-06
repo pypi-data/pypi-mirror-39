@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: dikicli
+Version: 0.3
+Summary: Commandline interface to diki.pl polish-english dictionary.
+Home-page: https://github.com/silenc3r/dikicli
+Author: Dawid Zych
+Author-email: dawid.zych@yandex.com
+Requires-Python: >=3.4,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: beautifulsoup4
+Project-URL: Repository, https://github.com/silenc3r/dikicli
