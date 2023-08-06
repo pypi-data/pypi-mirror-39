@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: vagquery
+Version: 1.1
+Summary: Queries for VAG public transportation time schedules
+Home-page: https://github.com/derphilipp/vagquery
+Author: Philipp Weißmann
+Author-email: mail@philipp-weissmann.de
+Keywords: vag,public,transport
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pytz (>=2018.07,<2019.0)
+Requires-Dist: requests (>=2.18.4,<3.0.0)
+Requires-Dist: responses (>=0.10.5,<0.11.0)
+Project-URL: Repository, https://github.com/derphilipp/vagquery
