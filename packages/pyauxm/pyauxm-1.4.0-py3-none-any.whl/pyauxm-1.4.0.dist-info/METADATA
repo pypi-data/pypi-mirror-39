@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: pyauxm
+Version: 1.4.0
+Summary: Collection of helpers and useful things for Python: library-specific pieces
+Home-page: https://github.com/HoverHell/pyauxm
+Author: HoverHell
+Author-email: hoverhell@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/HoverHell/pyauxm/tarball/1.4.0
+Platform: UNKNOWN
+Requires-Dist: six
+Provides-Extra: known
+Requires-Dist: django; extra == 'known'
+Requires-Dist: Twisted; extra == 'known'
+Requires-Dist: Cython; extra == 'known'
+Requires-Dist: pandas; extra == 'known'
+Requires-Dist: Pygments; extra == 'known'
+Requires-Dist: pylzma; extra == 'known'
+Requires-Dist: simplejson; extra == 'known'
+Requires-Dist: pp; extra == 'known'
+Requires-Dist: line-profiler; extra == 'known'
+Requires-Dist: pyzmq; extra == 'known'
+
+
+pyauxm
+======
+
+...
+
+
