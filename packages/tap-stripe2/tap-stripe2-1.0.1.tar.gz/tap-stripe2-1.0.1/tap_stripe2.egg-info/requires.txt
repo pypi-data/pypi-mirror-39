@@ -1,0 +1,6 @@
+singer-python==5.3.3
+stripe==2.10.1
+
+[dev]
+ipdb
+pylint==2.1.1
