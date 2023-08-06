@@ -1,0 +1,1 @@
+from scrapenewsapi.src.main import News

@@ -1,0 +1,14 @@
+setup.py
+newsapi_scraper.egg-info/PKG-INFO
+newsapi_scraper.egg-info/SOURCES.txt
+newsapi_scraper.egg-info/dependency_links.txt
+newsapi_scraper.egg-info/requires.txt
+newsapi_scraper.egg-info/top_level.txt
+scrapenewsapi/__init__.py
+scrapenewsapi/config/__init__.py
+scrapenewsapi/config/auth.py
+scrapenewsapi/config/constants.py
+scrapenewsapi/config/setup.py
+scrapenewsapi/src/__init__.py
+scrapenewsapi/src/main.py
+scrapenewsapi/src/queries.py
