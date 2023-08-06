@@ -1,0 +1,17 @@
+isypy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+isypy/__main__.py,sha256=NLqV3fk8nhA188KkWLEVL4oN7X1zoJnWSxkA_NHZQls,381
+isypy/abc_markovchain.py,sha256=qf8lnA7h3Uu-HZl27UzaE3OBIn2lYI6-eOXcoPQVhMM,829
+isypy/ising.py,sha256=woX4L23JC7m-LilKxMTO7cA5rW0GqBMBRxn1qi4VPfU,7794
+isypy/isypy.py,sha256=dTftQOeSWo5XOfnnWtCvswPDmdY5XKc8A-dFyYOYLiE,337
+isypy/monte_carlo.py,sha256=USkEWJu8heir6Rdy0fiie5DJQglusLwZeU_M7Rml9lM,2343
+isypy/timerpy.py,sha256=9vKDr6LTyQsOqw2qbnlIiQJ6MheHEDOuCs65vIVATjU,798
+isypy/tools.py,sha256=NGwOsWFWo8M68MHXWdvTlfcgjGGA4DocNBMW_IfPWBg,435
+isypy/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+isypy/tests/test_ising.py,sha256=g896D8n1Fwk_DmWOTvCIdbgK_ydlWnt6bffgLArlIiY,7668
+isypy/tests/test_monte_carlo.py,sha256=zjIphOS12oQNQJofSVlqN5On_mWMYk2p6k2wk01bS8k,321
+isypy/tests/test_timerpy.py,sha256=_lVWr45VWIGrl_95pt8K3N4UUXC05yFfFa9FghmYCKA,333
+isypy-1.0.0.dist-info/LICENSE,sha256=kmJHmxEcn7b0dLyszwhzpGI8xbkvIdpH3RCngKKDDWY,1099
+isypy-1.0.0.dist-info/METADATA,sha256=o1oc3x-rVRakX4RdW68takxVBW5a-E2n84iuHF7MIqs,1221
+isypy-1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+isypy-1.0.0.dist-info/top_level.txt,sha256=C7TeJiDkVR5xY3HMBeXXdcPZrtXMwVuBIX3SQO84ASs,6
+isypy-1.0.0.dist-info/RECORD,,
