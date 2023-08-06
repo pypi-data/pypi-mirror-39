@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: remotepixel
+Version: 2.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/remotepixel/remotepixel-py
+Author: RemotePixel
+Author-email: contact@remotepixel.ca
+License: BSD-2
+Description: UNKNOWN
+Keywords: remotepixel AWS lambda Landsat Sentinel SRTM
+Platform: UNKNOWN
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: ~=3.6
+Provides-Extra: dev
+Provides-Extra: test
