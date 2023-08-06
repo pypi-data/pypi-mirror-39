@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: dga
+Version: 0.1.4
+Summary: A simple discrete genetic algorithm.
+Home-page: https://github.com/msparapa/dga
+Author: Michael Sparapany
+Author-email: msparapa@purdue.edu
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: bitarray (>=0.8.1)
+Requires-Dist: numpy (>=1.14.3)
+Requires-Dist: pathos (>=0.2.2.1)
+Requires-Dist: pytest
+
+A simple discrete genetic algorithm.
+
+
