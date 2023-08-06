@@ -1,0 +1,15 @@
+README.md
+setup.py
+dicomsorter/__init__.py
+dicomsorter/cli.py
+dicomsorter/config.py
+dicomsorter/dicom_utils.py
+dicomsorter/dicomsorter.py
+dicomsorter/errors.py
+dicomsorter/utils.py
+dicomsorter.egg-info/PKG-INFO
+dicomsorter.egg-info/SOURCES.txt
+dicomsorter.egg-info/dependency_links.txt
+dicomsorter.egg-info/entry_points.txt
+dicomsorter.egg-info/requires.txt
+dicomsorter.egg-info/top_level.txt
