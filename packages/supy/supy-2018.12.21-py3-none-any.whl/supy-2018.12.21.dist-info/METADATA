@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: supy
+Version: 2018.12.21
+Summary: the SUEWS model that speaks python
+Home-page: https://github.com/sunt05/SuPy
+Author: Ting Sun
+Author-email: ting.sun@reading.ac.uk
+License: GPL-V3.0
+Platform: UNKNOWN
+Requires-Dist: numpy (>=1.15.2)
+Requires-Dist: pandas (>=0.23.4)
+Requires-Dist: scipy
+Requires-Dist: f90nml
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: supy-driver (>=2018b16)
+
+# SuPy
+
+[**SU**EWS](https://suews-docs.readthedocs.io) that speaks **Py**thon
+
+
