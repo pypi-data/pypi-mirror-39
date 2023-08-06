@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<object name="portal_catalog" meta_type="Plone Catalog Tool">
+  <column value="release" remove="True" />
+  <column value="area" remove="True" />
+  <column value="issue_type" remove="True" />
+  <column value="severity" remove="True" />
+  <column value="target_release" remove="True" />
+  <column value="assignee" remove="True" />
+  <index name="release" remove="True" />
+  <index name="area" remove="True" />
+  <index name="issue_type" remove="True" />
+  <index name="severity" remove="True" />
+  <index name="target_release" remove="True" />
+  <index name="assignee" remove="True" />
+</object>
