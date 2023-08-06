@@ -1,0 +1,8 @@
+setuptools>=38.5
+six>=1.11.0
+packaging>=17.1
+lxml>=4.1.1
+requests[security]>=2.18
+ruamel.yaml<=0.15.72
+deepdiff>=3.3.0
+docker>=2.5.1
