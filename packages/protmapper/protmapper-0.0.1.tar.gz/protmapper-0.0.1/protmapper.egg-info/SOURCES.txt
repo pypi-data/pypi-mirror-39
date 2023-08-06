@@ -1,0 +1,12 @@
+MANIFEST.in
+setup.py
+protmapper/__init__.py
+protmapper/api.py
+protmapper/phosphosite_client.py
+protmapper/resources.py
+protmapper.egg-info/PKG-INFO
+protmapper.egg-info/SOURCES.txt
+protmapper.egg-info/dependency_links.txt
+protmapper.egg-info/requires.txt
+protmapper.egg-info/top_level.txt
+protmapper/tests/test_cache_read.pkl
