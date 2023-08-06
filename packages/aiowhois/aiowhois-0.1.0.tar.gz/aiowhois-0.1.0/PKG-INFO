@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: aiowhois
+Version: 0.1.0
+Summary: Python Asyncio WHOIS Protocol Client
+Home-page: https://github.com/brunoalano/aiowhois
+Author: Bruno Alano Medina
+Author-email: bruno@std.sh
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: aiodns (>=1.1,<2.0)
+Requires-Dist: aiohttp (>=3.4,<4.0)
+Requires-Dist: tldextract (>=2.2,<3.0)
+Project-URL: Repository, https://github.com/brunoalano/aiowhois
