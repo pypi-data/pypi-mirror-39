@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: corautil
+Version: 1.0.2.dev1
+Summary: Utility to allow the use of Campbell Scientific Cora script in Python
+Home-page: https://github.com/eastmanjoe/corautil
+Author: Joe Eastman
+Author-email: ridgerunner81@gmail.com
+License: GNU GPLv3
+Requires-Dist: argparse
+
+# coraUtil
+
+
