@@ -1,0 +1,282 @@
+Metadata-Version: 2.1
+Name: cronably
+Version: 1.3.1
+Summary: Cronably allows you run python scripts with configured repetitions easily
+Home-page: https://gitlab.com/Kotlirevsky/cronably
+Author: David Kotlirevsky
+Author-email: david.kotlirevsky@gmail.com
+License: MIT
+Keywords: cronably,cron
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Description-Content-Type: text/markdown
+
+# CRONABLY
+
+## Introduction
+
+Cronably allowsrun python scripts with configured repetitions easily.
+Every executed task under a job will let a register into an internal memory sqllite db
+. With simple changes in the configuration ( into the code or using an external file) you can change 
+the way the cron interact with your code, including let the db as concrete db.
+
+Let me show you some features
+
+## About How it Running
+Cronably can run just configuring using annotations like this:
+```
+from cronably import Cronably
+
+@Cronably(name="HOLA_MUNDO")
+def my_process():
+    print "Hola Mundo"
+
+```
+
+Or using an external file, it should be named "cronably.txt" , it should be allocated in the same path as the process:
+
+```
+from cronably.implementation import Cronably
+
+
+@Cronably(ext_config=True)
+def my_process_from_file():
+    print "Hola Mundo"
+
+
+if __name__ == '__main__':
+    my_process_from_file()
+```
+
+And file should contains this:
+
+```
+name=HOLA_MUNDO
+```
+If you want to run from file, is mandatory to add always the param ext_config. If you add it all
+parameters will be taken from file. If you add here and also into the file, it will be overwritten by file's config values.
+
+With this simple step you are telling to cronably that the method should run once. It's because 
+the default parameter loop, by default is 1. The field "name" is mandatory.
+
+## About Loops
+You can tell to cronably the times you want to repeat, (like a loop), with nothing, it will run only once
+If you configure: 
+
+```
+@Cronably(name="HOLA_MUNDO", loops = 10)
+def my_process():
+    print "Hola Mundo"
+
+```
+It will run 10 times
+
+But if you change it: 
+
+```
+@Cronably(name="HOLA_MUNDO", loops = -1)
+def my_process():
+    print "Hola Mundo"
+
+```
+It will not stop running, until you kill the process
+
+### Loops and repetitions
+
+Loops live together with repetitions, it means you can repeat the process every lapse of time, but if you configure an amount of times to do it,
+it will stop once you accomplish the quantity you configure there. 
+
+## About Repetitions
+
+### Concrete elapse of times
+
+#### Within the code:
+```
+@Cronably(name="HOLA_MUNDO", loops=10, repetition_frame= VALUE, repetition_period=15)
+def my_process():
+    print "Hola Mundo"
+```
+repetition_frame can be: 
+* HOURS
+* MINUTES
+* SECONDS
+* DAYS
+
+it will run 10 times every 15 MINUTES, from the moment you start the script
+
+
+#### Within the file:
+```
+name=HOLA_MUNDO
+loops=10
+repetition.frame=HOURS
+repetition.period=2
+
+```
+
+it will run 10 times the process every 2 HOURS
+
+The repetitions will start from the moment you run the script.
+
+
+### Every Day, several times in specific hours 
+
+You should put as frame the value: DAILY
+
+### Within the code:
+```
+@Cronably( 
+    name="HOLA_MUNDO", 
+    loops=10, 
+    repetition_frame= DAILY, 
+    repetition_period='10:00,14:00,20:00' )
+def my_process():
+    print "Hola Mundo"
+```
+
+it will run 10 times every Day at 10:00, 14:00 and 20:00.
+Attention:
+* It must be ordered from minus to Minor 
+* I'm using 0:00 to 23:59 style time. 
+
+#### Within the file:
+```
+name=HOLA_MUNDO
+loops=10
+repetition.frame=DAILY
+repetition.period=10:00,14:00,20:00
+```
+
+
+### Specific Days 
+
+You should put as frame the value: WEEKLY
+
+### Within the code:
+```
+@Cronably(name="HOLA_MUNDO", loops=10, repetition_frame= WEEKLY, repetition_period_day='Monday',repetition_period_time='10:00' )
+def my_process():
+    print "Hola Mundo"
+```
+
+It will run 10 times the process every Monday at 10:00 (AM)
+Attention: I'm using 0:00 to 23:59 style time.
+
+#### Within the file:
+```
+name=HOLA_MUNDO
+loops=10
+repetition.frame=WEEKLY
+repetition.period.day=Monday
+repetition.period.time=10:00
+```
+
+It will run 10 times the process every Monday at 10:00 (AM)
+
+The repetitions will start from the moment you run the script.
+
+
+### Specific Dates
+**TODO**
+
+## About Reporting
+when you setup reporting with Y ( default is N)
+
+```
+report='Y'
+```
+
+It will create, at the end of all loops some important information about your process, 
+If you add some "print" commands to your process, it will also print those outputs, for your analysis if it where necessary.
+
+
+## Example of generated report
+````
+Job
+job_id: 1
+job_name: A_JOB
+loops_setted: $job_loops
+-------------------------------------------
+Params
+name:A_JOB
+db_kind::memory:
+repetition.period:1
+repetition.frame:seconds
+report:Y
+ext_config:True
+-------------------------------------------
+TASKS
+-------------------------------------------
+task: 1
+start: 2018/11/26T08:25:15
+end: 2018/11/26T08:27:15
+status: 1
+output:
+some_report_0101
+some_report_0102
+some_report_0103
+-------------------------------------------
+task: 2
+start: 2018/11/26T08:27:15
+end: 2018/11/26T08:28:15
+status: 1
+output:
+some_report_0201
+some_report_0202
+some_report_0203
+-------------------------------------------
+````
+
+## About Internal configure internal db for register
+
+Cronably use for configuration and let some register SQLlite DB . By default it's a memory db, but you can configure 
+to let it as concrete SQLlite DB so you can ask later about the process runned and their status.
+
+### Within the code:
+```
+@Cronably(name="HOLA_MUNDO", loops=10, db_kind='cronably', other configs... )
+def my_process():
+    print "Hola Mundo"
+```
+
+it will create a concrete sqllite into your folder script named cronably
+
+#### Within the file:
+```
+name=HOLA_MUNDO
+loops=10
+db_kind=cronably
+...
+```
+
+If you want to know how to access or read sqllite please read [sqlLite Documentation](https://www.sqlite.org/index.html)
+
+
+## Clone and install locally
+
+### Build from sources
+
+Steps once you clone it from https://gitlab.com/Kotlirevsky/cronably:
+
+1.- build : run _python setup.py sdist bdist_wheel_.
+
+It will create the lib cronably.X.X.X.tar.gz in dist folder.
+
+2.- In your proyect , if you have pipenv run:
+
+_pipenv install <your path where is cronably>cronably-1.0.0.tar.gz_
+
+3.- You can check this [example](https://github.com/davidgk/example_cronably/) running
+
+
+### From From Pypi
+
+
+2.- In your proyect , if you have pipenv run:
+
+_pip install cronably_
+
+3.- You can check this [example](https://github.com/davidgk/example_cronably/) running
+
+
