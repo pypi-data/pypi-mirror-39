@@ -1,0 +1,33 @@
+{
+    "author_role_mapping": {
+        "author": "Auteur",
+        "translator" : "Traducteur",
+        "collaborator": "Collaborateur",
+        "preface writer": "Préfacier",
+        "scientific publisher": "Directeur/Éditeur scientifique",
+        "inventor": "Inventeur"
+    },
+    "document_type_mapping": {
+        "article": "Article de périodique (Journal article)",
+        "speech": "Communication à un colloque (Conference Paper)",
+        "book": "Monographie (Book)",
+        "book_chapter": "Contribution à ouvrage collectif (Book Chapter)",
+        "report": "Rapport (Report)",
+        "working_paper": "Document de travail (Working Paper)",
+        "patent": "Brevet (Patent)"
+    },
+    "language_label_mapping": {
+        "fre": "Français",
+        "eng": "Anglais",
+        "ita": "Italien",
+        "por": "Portugais",
+        "dut": "Néerlandais",
+        "ger": "Allemand",
+        "spa": "Espagnol",
+        "gre": "Grec",
+        "grc": "Grec ancien",
+        "mul": "Multilingue",
+        "und": "Autre",
+        "lat": "Latin"
+    }
+}

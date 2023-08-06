@@ -1,0 +1,7 @@
+recursive-include pydial/conf *.json
+recursive-include pydial/rules *.json
+recursive-include pydial/schemas *.json
+exclude test/*.py
+include *LICENSE*
+include CHANGELOG
+include README*

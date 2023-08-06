@@ -1,0 +1,160 @@
+[
+    {
+        "name": "Basic validation rule",
+        "description": "All Fedora object need to have a DC datastream",
+        "level": "CRITICAL",
+        "class": "pydial.checker.DatastreamValidationRule",
+        "params":{
+            "datastreams": ["DC"]
+        }
+    },
+    {
+        "name": "No MARCXML",
+        "description": "Chaque publication doit contenir un datastream MARCXML",
+        "level": "CRITICAL",
+        "class": "pydial.checker.DatastreamValidationRule",
+        "params":{
+            "datastreams": ["MARCXML"]
+        },
+        "conditions":[
+            {
+                "class": "pydial.checker.ContentModelConditionRule",
+                "values": ["info:fedora/boreal-system:ResearchPublicationCM"]
+            }
+        ]
+    },
+    {
+        "name": "No title",
+        "description": "Chaque publication doit renseigner un titre",
+        "level": "ERROR",
+        "class": "pydial.checker.XPathValidationRule",
+        "params":{
+            "datastream": "MARCXML",
+            "xpath": "//marc:datafield[@tag='245']/marc:subfield[@code='a']/text()",
+            "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"}
+        },
+        "conditions":[
+            {
+                "class": "pydial.checker.ContentModelConditionRule",
+                "values": ["info:fedora/boreal-system:ResearchPublicationCM"]
+            }
+        ]
+    },
+    {
+        "name": "At least one author",
+        "description": "Chaque publication doit renseigner au moins un auteur",
+        "level": "ERROR",
+        "class": "pydial.checker.XPathValidationRule",
+        "params":{
+            "datastream": "MARCXML",
+            "xpath": "//marc:datafield[@tag='100' or @tag='700']/marc:subfield[@code='a']/text()",
+            "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"}
+        },
+        "conditions":[
+            {
+                "class": "pydial.checker.ContentModelConditionRule",
+                "values": ["info:fedora/boreal-system:ResearchPublicationCM"]
+            }
+        ]
+    },
+    {
+        "name": "No affiliation",
+        "description": "Chaque publication doit renseigner au moins une affiliations",
+        "level": "ERROR",
+        "class": "pydial.checker.XPathValidationRule",
+        "params":{
+            "datastream": "MARCXML",
+            "xpath": "//marc:datafield[@tag='988']",
+            "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"}
+        },
+        "conditions":[
+            {
+                "class": "pydial.checker.ContentModelConditionRule",
+                "values": ["info:fedora/boreal-system:ResearchPublicationCM"]
+            }
+        ]
+    },
+    {
+        "name": "Check DOI",
+        "description": "Le DOI de cette publication n'est pas valide. Soit la structure du DOI n'est pas correct (soit commencé par la chaîne de caractère \"10.\"), soit l'url du DOI renvoie une erreur",
+        "level": "ERROR",
+        "class": "pydial.checker.XPathValidationRule",
+        "params":{
+            "datastream": "MARCXML",
+            "xpath": "//marc:datafield[@tag='856'][marc:subfield[@code='z']='DOI']/marc:subfield[@code='u']/text()",
+            "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"},
+            "regexp": "^10\\.[0-9]{4,}"
+        },
+        "conditions":[
+            {
+                "class": "pydial.checker.ContentModelConditionRule",
+                "values": ["info:fedora/boreal-system:ResearchPublicationCM"]
+            },
+            {
+                "class": "pydial.checker.XPathConditionRule",
+                "datastream": "MARCXML",
+                "xpath": "//marc:datafield[@tag='856'][marc:subfield[@code='z']='DOI']/text()",
+                "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"}
+            }
+        ]
+    },
+    {
+        "name": "At least one author for UCL/USL-B/UNamur",
+        "description": "Chaque publication devrait renseigner au moins un auteur UCL|USL-B|UNamur",
+        "level": "INFO",
+        "class": "pydial.checker.XPathValidationRule",
+        "params":{
+            "datastream": "MARCXML",
+            "xpath": "//marc:datafield[@tag='100' or @tag='700']/marc:subfield[@code='5']/text()",
+            "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"},
+            "regexp": "UCL|USL-B|UNamur|FUSL|FUNDP|FUCAM",
+            "any": true
+        },
+        "conditions":[
+            {
+                "class": "pydial.checker.ContentModelConditionRule",
+                "values": ["info:fedora/boreal-system:ResearchPublicationCM"]
+            }
+        ]
+    },
+    {
+        "name": "No fulltext",
+        "description": "Le fulltext devrait être associé à toute publication post 2013",
+        "level": "WARNING",
+        "class": "pydial.checker.XPathValidationRule",
+        "params":{
+            "datastream": "MARCXML",
+            "xpath": "//marc:datafield[@tag='506']/text()",
+            "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"}
+        },
+        "conditions":[
+            {
+                "class": "pydial.checker.ContentModelConditionRule",
+                "values": ["info:fedora/boreal-system:ResearchPublicationCM"]
+            },
+            {
+                "class": "pydial.checker.XPathConditionRule",
+                "datastream": "MARCXML",
+                "xpath": "//marc:datafield[@tag='260'][marc:subfield[@code='c']>=2013]/text()",
+                "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"}
+            }
+        ]
+    },
+    {
+        "name": "No abstract",
+        "description": "Une publication sans résumé à moins de chance d'être correctement référencée par les moteurs de recherche (Google, Bing, Yahoo, ...)",
+        "level": "INFO",
+        "class": "pydial.checker.XPathValidationRule",
+        "params":{
+            "datastream": "MARCXML",
+            "xpath": "//marc:datafield[@tag='520']/marc:subfield[@code='a']/text()",
+            "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"}
+        },
+        "conditions":[
+            {
+                "class": "pydial.checker.ContentModelConditionRule",
+                "values": ["info:fedora/boreal-system:ResearchPublicationCM"]
+            }
+        ]
+    }
+]

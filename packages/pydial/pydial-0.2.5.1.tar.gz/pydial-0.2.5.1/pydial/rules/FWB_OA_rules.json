@@ -1,0 +1,19 @@
+[
+    {
+        "name": "FWB OA decree",
+        "description": "Un fichier en accès libre|embargo doit être associé à une publication concernée par le decret OpenAccess de la Fédération Wallonie Bruxelles",
+        "level": "ERROR",
+        "class": "pydial.checker.FWBOAValidationRule",
+        "conditions":[
+            {
+                "class": "pydial.checker.IsScientificArticleConditionRule"
+            },{
+                "class": "pydial.checker.XPathConditionRule",
+                "datastream": "MARCXML",
+                "xpath": "//marc:datafield[@tag='260'][marc:subfield[@code='c']>2018]/text()",
+                "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"}
+            }
+
+        ]
+    }
+]

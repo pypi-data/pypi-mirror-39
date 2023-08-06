@@ -1,0 +1,54 @@
+[
+    {
+        "name": "No host document information",
+        "description": "Aucune mention du titre du document hôte",
+        "level": "ERROR",
+        "class": "pydial.checker.XPathValidationRule",
+        "params":{
+            "datastream": "MARCXML",
+            "xpath": "//marc:datafield[@tag='779']/marc:subfield[@code='t']/text()",
+            "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"}
+        },
+        "conditions":[
+            {
+                "class": "pydial.checker.ContentModelConditionRule",
+                "values": ["info:fedora/boreal-system:BookChapterCM"]
+            }
+        ]
+    },
+    {
+        "name": "No host document information",
+        "description": "Les auteurs du document hôte doivent être spécifiés",
+        "level": "ERROR",
+        "class": "pydial.checker.XPathValidationRule",
+        "params":{
+            "datastream": "MARCXML",
+            "xpath": "//marc:datafield[@tag='779']/marc:subfield[@code='a']/text()",
+            "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"}
+        },
+        "conditions":[
+            {
+                "class": "pydial.checker.ContentModelConditionRule",
+                "values": ["info:fedora/boreal-system:BookChapterCM"]
+            }
+        ]
+    },
+    {
+        "name": "ISBN failed",
+        "description": "Aucune mention d'un ISBN valide",
+        "level": "WARNING",
+        "class": "pydial.checker.XPathValidationRule",
+        "params":{
+            "datastream": "MARCXML",
+            "xpath": "//marc:datafield[@tag='020']/marc:subfield[@code='a']/text()",
+            "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"},
+            "regexp": "^97[8|9][0-9]{10}$"
+        },
+        "conditions":[
+            {
+                "class": "pydial.checker.ContentModelConditionRule",
+                "values": ["info:fedora/boreal-system:BookChapterCM"]
+            }
+        ]
+    }
+]

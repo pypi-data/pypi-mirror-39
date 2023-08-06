@@ -1,0 +1,88 @@
+[
+    {
+        "name": "Article subtype",
+        "description": "Le sous-type de document n'est pas valide pour un article de périodique",
+        "level": "ERROR",
+        "class": "pydial.checker.XPathValidationRule",
+        "params":{
+            "datastream": "MARCXML",
+            "xpath": "//marc:datafield[@tag='955']/marc:subfield[@code='b']/text()",
+            "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"},
+            "regexp": "Article de recherche|Article de vulgarisation|Compte-rendu|Éditorial|Essai clinique|Lettre à l'éditeur|Note ou chronique de jurisprudence|Numéro entier|Synthèse de littérature"
+        },
+        "conditions":[
+            {
+                "class": "pydial.checker.ContentModelConditionRule",
+                "values": ["info:fedora/boreal-system:ArticleCM"]
+            }
+        ]
+    },{
+        "name": "Book subtype",
+        "description": "Le sous-type de document n'est pas valide pour un article de périodique",
+        "level": "ERROR",
+        "class": "pydial.checker.XPathValidationRule",
+        "params":{
+            "datastream": "MARCXML",
+            "xpath": "//marc:datafield[@tag='955']/marc:subfield[@code='b']/text()",
+            "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"},
+            "regexp": "Actes de colloque|Dictionnaire /encyclopédie|Monographie|Manuel / précis / textbook|Mélanges|Autre"
+        },
+        "conditions":[
+            {
+                "class": "pydial.checker.ContentModelConditionRule",
+                "values": ["info:fedora/boreal-system:BookCM"]
+            }
+        ]
+    },{
+        "name": "BookChapter subtype",
+        "description": "Le sous-type de document n'est pas valide pour un chapitre d'ouvrage",
+        "level": "ERROR",
+        "class": "pydial.checker.XPathValidationRule",
+        "params":{
+            "datastream": "MARCXML",
+            "xpath": "//marc:datafield[@tag='955']/marc:subfield[@code='b']/text()",
+            "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"},
+            "regexp": "Chapitre|Avant-propos / préface / postface|Autre"
+        },
+        "conditions":[
+            {
+                "class": "pydial.checker.ContentModelConditionRule",
+                "values": ["info:fedora/boreal-system:BookChapterCM"]
+            }
+        ]
+    },{
+        "name": "Speech subtype",
+        "description": "Le sous-type de document n'est pas valide pour une communication à colloque",
+        "level": "ERROR",
+        "class": "pydial.checker.XPathValidationRule",
+        "params":{
+            "datastream": "MARCXML",
+            "xpath": "//marc:datafield[@tag='955']/marc:subfield[@code='b']/text()",
+            "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"},
+            "regexp": "Poster|Conférence invitée / Keynote|Présentation orale sans comité de sélection|Présentation orale avec comité de sélection|Abstract|abstract"
+        },
+        "conditions":[
+            {
+                "class": "pydial.checker.ContentModelConditionRule",
+                "values": ["info:fedora/boreal-system:SpeechCM"]
+            }
+        ]
+    },{
+        "name": "Report subtype",
+        "description": "Le sous-type de document n'est pas valide pour un rapport",
+        "level": "ERROR",
+        "class": "pydial.checker.XPathValidationRule",
+        "params":{
+            "datastream": "MARCXML",
+            "xpath": "//marc:datafield[@tag='955']/marc:subfield[@code='b']/text()",
+            "namespaces": {"marc": "http://www.loc.gov/MARC21/slim"},
+            "regexp": "Interne|Externe"
+        },
+        "conditions":[
+            {
+                "class": "pydial.checker.ContentModelConditionRule",
+                "values": ["info:fedora/boreal-system:ReportCM"]
+            }
+        ]
+    }
+]

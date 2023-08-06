@@ -1,0 +1,154 @@
+{
+    "$id": "http://dial.uclouvain.be/schemas/dial-article.json",
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "JSON schema describing a journal article into DIAL",
+    "type": "object",
+
+    "allOf": [
+        { "$ref": "http://dial.uclouvain.be/schemas/basics-publications.json" },
+        { "properties": {
+            "type":{
+                "properties": {
+                    "document_type": {
+                        "$comment": "limit main type to 'book' type",
+                        "enum": [
+                            "article"
+                        ]
+                    },
+                    "document_subtype": {
+                        "$comment": "limit subtype to some defined values for an article",
+                        "enum": [
+                            "Article de recherche",
+                            "Article de vulgarisation",
+                            "Compte-rendu",
+                            "Éditorial",
+                            "Essai clinique",
+                            "Lettre à l'éditeur",
+                            "Note ou chronique de jurisprudence",
+                            "Numéro entier",
+                            "Synthèse de littérature"
+                        ]
+                    }
+                }
+            },
+            "authors":{
+                "items":{
+                    "properties": {
+                        "role": {
+                            "$comment": "Limit role of authors to a subset of possible roles defined for authors",
+                            "enum": [
+                                "author",
+                                "collaborator",
+                                "translator",
+                                "scientific publisher"
+                            ]
+                        }
+                    }
+                }
+            },
+            "publication_status":{
+                "title": "Publication status",
+                "type": "string",
+                "enum": [
+                    "submitted",
+                    "accepted",
+                    "published"
+                ]
+            },
+            "doi": {
+                "title": "DOI",
+                "description": "The Digital Object Identifier (DOI) of the publication (starting with '10.')",
+                "type": "string",
+                "pattern": "^10\\.[0-9]{4,}\/"
+            },
+            "joural_issue":{
+                "title": "Journal informations",
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "title": {
+                        "title": "Journal title",
+                        "description": "The complete name of the journal",
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "volume": {
+                        "title": "Volume",
+                        "type": "string"
+                    },
+                    "issue": {
+                        "title": "Issue",
+                        "description": "The issue number where this article was published",
+                        "type": "string"
+                    },
+                    "page": {
+                        "title": "Pages",
+                        "description": "The start page and the endpage for this article in this issue",
+                        "type": "string"
+                    },
+                    "year":{
+                        "title": "Year",
+                        "description": "The publication year of this issue",
+                        "anyOf": [
+                            { "type": "integer", "minimum": 1800, "maximum": 2100 },
+                            { "type": "string", "enum": ["na"] }
+                        ]
+                    },
+                    "issn-type": {
+                        "title": "ISSN(s)",
+                        "type": "array",
+                        "additionalProperties": false,
+                        "items": {
+                            "properties": {
+                                "value": {
+                                    "type": "string",
+                                    "pattern": "^[0-9]{4}-?[0-9]{3}[0-9|X]$"
+                                },
+                                "type": {
+                                    "type": "string",
+                                    "enum": ["issn", "eissn", "lissn"]
+                                }
+                            }
+                        },
+                        "required": ["value", "type"]
+                    },
+                    "peer-reviewed": {
+                        "title": "Peer-reviewed",
+                        "description": "Is this journal is peer-reviewed",
+                        "type": "boolean"
+                    }
+                },
+                "required": ["title", "volume", "issue", "page", "year", "issn-type"]
+            },
+            "publishers": {
+                "title": "Publisher(s)",
+                "description": "Publisher(s) of the resource",
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "name": {
+                            "title": "name",
+                            "description": "Publisher's name",
+                            "type": "string",
+                            "minLength": 2
+                        },
+                        "place": {
+                            "title": "Place of publication",
+                            "description": "Publisher's place of publication",
+                            "type": "string",
+                            "minLength": 2
+                        }
+                    },
+                    "anyOf": [
+                        {"required": ["name"]},
+                        {"required": ["place"]}
+                    ]
+                }
+            }
+        }},
+        { "required": ["journal_issue"]}
+    ]
+}

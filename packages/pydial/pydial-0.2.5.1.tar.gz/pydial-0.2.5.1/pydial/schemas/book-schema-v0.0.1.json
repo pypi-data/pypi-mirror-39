@@ -1,0 +1,137 @@
+{
+  "$id": "http://dial.uclouvain.be/schemas/dial-book.json",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "JSON schema describing a book into DIAL",
+  "type": "object",
+
+  "allOf": [
+        { "$ref": "http://dial.uclouvain.be/schemas/basics-publications.json" },
+        { "properties": {
+            "type":{
+                "properties": {
+                    "document_type": {
+                        "$comment": "limit main type to 'book' type",
+                        "enum": [
+                            "book"
+                        ]
+                    },
+                    "document_subtype": {
+                        "$comment": "limit subtype to some defined values for a book",
+                        "enum": [
+                            "Actes de colloque",
+                            "Dictionnaire /encyclopédie",
+                            "Monographie",
+                            "Manuel / précis / textbook",
+                            "Mélanges",
+                            "Autre"
+                        ]
+                    }
+                }
+            },
+            "authors":{
+                "items":{
+                    "properties": {
+                        "role": {
+                            "$comment": "Limit role of authors to a subset of possible roles defined for authors",
+                            "enum": [
+                                "author",
+                                "collaborator",
+                                "translator",
+                                "scientific publisher",
+                                "preface writer"
+                            ]
+                        }
+                    }
+                }
+            },
+            "publication_status":{
+                "title": "Publication status",
+                "type": "string",
+                "enum": [
+                    "submitted",
+                    "accepted",
+                    "published"
+                ]
+            },
+            "doi": {
+                "title": "DOI",
+                "description": "The Digital Object Identifier (DOI) of the publication (starting with '10.')",
+                "type": "string",
+                "pattern": "^10\\.[0-9]{4,}\/"
+            },
+            "number_of_pages": {
+                "title": "Number of pages",
+                "description": "the number of pages of the book",
+                "type": "number",
+                "minimum": 1
+            },
+            "edition_statement": {
+                "title": "Editor statement",
+                "description": "Description of the editor statement. Ex: '2nd edition', 'sample', ...",
+                "type": "string"
+            },
+            "isbn": {
+                "title": "ISBN",
+                "description": "The ISBN of the book ; typically the book barcode. Without the dashes",
+                "type": "string",
+                "pattern": "^97[8|9][0-9]{10}$"
+            },
+            "publishers": {
+                "title": "Publisher(s)",
+                "description": "Publisher(s) of the resource",
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "name": {
+                            "title": "name",
+                            "description": "Publisher's name",
+                            "type": "string",
+                            "minLength": 2
+                        },
+                        "place": {
+                            "title": "Place of publication",
+                            "description": "Publisher's place of publication",
+                            "type": "string",
+                            "minLength": 2
+                        }
+                    }
+                }
+            },
+            "series": {
+                "title": "Serie(s)",
+                "description": "Series to which belongs the resource.",
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                    "type": "object",
+                    "required": ["name"],
+                    "additionalProperties": false,
+                    "properties": {
+                        "name": {
+                            "title": "Title",
+                            "description": "Title of the series.",
+                            "type": "string",
+                            "minLength": 2
+                        },
+                        "number": {
+                            "title": "Numbering",
+                            "description": "Numbering of the resource within the series.",
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "issn": {
+                            "title": "ISSN",
+                            "type": "string",
+                            "pattern": "^[0-9]{4}-?[0-9]{3}[0-9|X]$"
+                        }
+                    }
+                }
+            }
+        }},
+        { "required": ["isbn" ]}
+    ]
+
+}
