@@ -1,0 +1,42 @@
+Metadata-Version: 2.0
+Name: mds-mdslogger
+Version: 0.5.2
+Summary: A configurable logger
+Home-page: https://www.m-ds.de/
+Author: martin-data services
+Author-email: service@m-ds.de
+License: GPL-3
+Description-Content-Type: UNKNOWN
+Keywords: logging
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+
+mdslogger
+=========
+A configurable logger.
+
+Install
+=======
+pip install mds-mdslogger
+
+Changes
+=======
+
+*0.5.1 - 13.12.2018*
+
+- fix: import
+
+*0.5.0 - 13.12.2018*
+
+- public version
+
+
