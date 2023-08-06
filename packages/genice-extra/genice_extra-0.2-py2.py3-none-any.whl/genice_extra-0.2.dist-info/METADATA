@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: genice-extra
+Version: 0.2
+Summary: Installs all extra plugins for GenIce.
+Home-page: https://github.com/vitroid/genice-extra/
+Author: Masakazu Matsumoto
+Author-email: vitroid@gmail.com
+License: MIT
+Keywords: genice
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Description-Content-Type: text/markdown
+Requires-Dist: genice-vpython
+Requires-Dist: genice-rdf
+Requires-Dist: genice-svg
+
+# genice-extra
+
+Installs all extra-plugins for [GenIce](https://github.com/vitroid/GenIce).
+
+## Requirements
+
+* [GenIce](https://github.com/vitroid/GenIce) >=0.23.
+
+## Installation
+
+### System-wide installation
+
+    % make install
+
+
