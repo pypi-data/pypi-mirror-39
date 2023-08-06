@@ -1,0 +1,21 @@
+2018-12-18 15:17:37,027 - qtpyvcp - INFO - Logging to /media/data/dev/cnc/qtpyvcp/sim/sim.log
+2018-12-18 15:17:37,028 - qtpyvcp.vcp_launcher - DEBUG - Time: 0.000 (+0.000) - in script
+2018-12-18 15:17:37,078 - qtpyvcp.utilities.config_loader - DEBUG - Loading config files: ['/media/data/dev/cnc/JauriaCNC/jcnc/jcnc.yml', '/media/data/dev/cnc/qtpyvcp/qtpyvcp/yaml_lib/default_config.yml']
+2018-12-18 15:17:37,177 - qtpyvcp.plugins - DEBUG - Loading plugin 'status' from 'qtpyvcp.plugins.status:Status'
+2018-12-18 15:17:37,179 - qtpyvcp.utilities.info - INFO - The machine has 3 axes and 3 joints
+2018-12-18 15:17:37,179 - qtpyvcp.utilities.info - INFO - The Axis/Joint mapping is:
+2018-12-18 15:17:37,179 - qtpyvcp.utilities.info - INFO - Axis X --> Joint 0
+2018-12-18 15:17:37,180 - qtpyvcp.utilities.info - INFO - Axis Y --> Joint 1
+2018-12-18 15:17:37,180 - qtpyvcp.utilities.info - INFO - Axis Z --> Joint 2
+2018-12-18 15:17:37,180 - qtpyvcp.utilities.info - WARNING - No [TRAJ] SPINDLES entry in INI, using 1
+2018-12-18 15:17:37,184 - qtpyvcp.plugins - DEBUG - Loading plugin 'position' from 'qtpyvcp.plugins.positions:Position'
+2018-12-18 15:17:37,184 - qtpyvcp.plugins - DEBUG - Loading plugin 'tooltable' from 'qtpyvcp.plugins.tool_table:ToolTable'
+2018-12-18 15:17:37,185 - qtpyvcp.vcp_launcher - DEBUG - Time: 0.158 (+0.158) - done loading data plugins
+2018-12-18 15:17:37,188 - qtpyvcp.utilities.info - WARNING - No [TRAJ] SPINDLES entry in INI, using 1
+2018-12-18 15:17:37,188 - qtpyvcp.utilities.info - WARNING - No [DISPLAY] DEFAULT_SPINDLE_SPEED entry found in INI, using 300rpm
+2018-12-18 15:17:37,196 - qtpyvcp.plugins.status - DEBUG - Starting periodic updates with 75ms cycle time.
+2018-12-18 15:17:37,196 - qtpyvcp - INFO - Loading QSS stylesheet file: /media/data/dev/cnc/JauriaCNC/jcnc/style.qss
+2018-12-18 15:17:37,197 - qtpyvcp.vcp_launcher - DEBUG - Time: 0.169 (+0.012) - done initializing app
+2018-12-18 15:17:37,491 - qtpyvcp.vcp_launcher - DEBUG - Time: 0.464 (+0.295) - done loading dialogs
+2018-12-18 15:17:37,951 - qtpyvcp.vcp_launcher - DEBUG - Time: 0.923 (+0.460) - done loading windows
+2018-12-18 15:17:38,321 - qtpyvcp.widgets.display_widgets.gcode_backplot - DEBUG - load the display: /media/data/dev/cnc/qtpyvcp/sim/example_gcode/qtpyvcp.ngc
