@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: the-refinery-toolkit
+Version: 0.6.35
+Summary: The Refinery Toolkit (RFTK)
+Home-page: https://github.com/jmwoloso/rftk
+Author: Jason Wolosonovich
+Author-email: jason@avaland.io
+License: BSD 3 Clause
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Other Audience
+Classifier: Intended Audience :: Information Technology
+Requires-Dist: beautifulsoup4 (==4.6.3)
+Requires-Dist: cachetools (==2.1.0)
+Requires-Dist: certifi (==2018.10.15)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: clearbit (==0.1.7)
+Requires-Dist: Click (==7.0)
+Requires-Dist: decorator (==4.3.0)
+Requires-Dist: dnspython (==1.15.0)
+Requires-Dist: gcsfs (==0.2.0)
+Requires-Dist: google-auth-oauthlib (==0.2.0)
+Requires-Dist: google-api-core (==1.6.0a1)
+Requires-Dist: google-api-python-client (==1.7.4)
+Requires-Dist: google-auth (==1.5.1)
+Requires-Dist: google-auth-httplib2 (==0.0.3)
+Requires-Dist: google-cloud-bigquery (==1.6.0)
+Requires-Dist: google-cloud-bigquery-datatransfer (==0.1.1)
+Requires-Dist: google-cloud-core (==0.28.1)
+Requires-Dist: google-cloud-language (==1.1.0)
+Requires-Dist: google-cloud-pubsub (==0.38.0)
+Requires-Dist: google-cloud-storage (==1.13.0)
+Requires-Dist: google-resumable-media (==0.3.1)
+Requires-Dist: googleapis-common-protos (==1.5.5)
+Requires-Dist: grpc-google-iam-v1 (==0.11.4)
+Requires-Dist: grpcio (==1.16.0)
+Requires-Dist: httplib2 (==0.11.3)
+Requires-Dist: idna (==2.7)
+Requires-Dist: oauthlib (==2.1.0)
+Requires-Dist: protobuf (==3.6.1)
+Requires-Dist: psutil (==5.4.7)
+Requires-Dist: pyasn1 (==0.4.4)
+Requires-Dist: pyasn1-modules (==0.2.2)
+Requires-Dist: pytz (==2018.6)
+Requires-Dist: requests (==2.20.0)
+Requires-Dist: requests-oauthlib (==1.0.0)
+Requires-Dist: rsa (==4.0)
+Requires-Dist: six (==1.11.0)
+Requires-Dist: typed-ast (==1.1.0)
+Requires-Dist: uritemplate (==3.0.0)
+Requires-Dist: urllib3 (==1.24)
+Requires-Dist: validators (==0.12.2)
+
+The Refinery Toolkit - A Collection of Utilities for use with The Refinery on GCP
+
+
