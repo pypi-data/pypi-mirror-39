@@ -1,0 +1,32 @@
+- project:
+    templates:
+      - openstack-python-jobs-neutron
+      - openstack-python35-jobs-neutron
+      - check-requirements
+      - publish-openstack-docs-pti
+      - release-notes-jobs-python3
+    check:
+      jobs:
+        - networking-generic-switch-tempest-dsvm-dlm
+        - ironic-tempest-dsvm-ipa-wholedisk-agent_ipmitool-tinyipa-multinode:
+            irrelevant-files:
+              - ^(test-|)requirements.txt$
+              - ^setup.cfg$
+        # Temporary mark multinode job as NV.
+        # see https://bugs.launchpad.net/ironic/+bug/1744139
+        - ironic-grenade-dsvm-multinode-multitenant:
+            voting: false
+        - openstack-tox-lower-constraints
+    gate:
+      queue: networking-generic-switch
+      jobs:
+        - networking-generic-switch-tempest-dsvm-dlm
+        - ironic-tempest-dsvm-ipa-wholedisk-agent_ipmitool-tinyipa-multinode:
+            irrelevant-files:
+              - ^(test-|)requirements.txt$
+              - ^setup.cfg$
+        # Temporary mark multinode job as NV.
+        # see https://bugs.launchpad.net/ironic/+bug/1744139
+        - ironic-grenade-dsvm-multinode-multitenant:
+            voting: false
+        - openstack-tox-lower-constraints
