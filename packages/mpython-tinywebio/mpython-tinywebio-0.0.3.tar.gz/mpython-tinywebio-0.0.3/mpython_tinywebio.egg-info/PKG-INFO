@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: mpython-tinywebio
+Version: 0.0.3
+Summary: App Inventor TinyWebDB server port to mPython
+Home-page: https://gitee.com/roadlabs/TinyWebIO
+Author: roadlabs
+Author-email: roadlabs@gmail.com
+License: Public Domain
+Description: This is a module ported from CPython standard library to be compatible with
+        mPython interpreter. 
+Platform: UNKNOWN
