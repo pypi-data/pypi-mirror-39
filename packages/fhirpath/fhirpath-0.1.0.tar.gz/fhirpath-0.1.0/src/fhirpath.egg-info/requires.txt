@@ -1,0 +1,6 @@
+Click>=6.0
+
+[test]
+pytest
+fhirclient
+pytest-runner
