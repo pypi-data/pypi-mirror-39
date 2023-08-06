@@ -1,0 +1,12 @@
+tankersdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tankersdk/crypto/__init__.py,sha256=9eEf0TtWBNZCvwZnp91adyeWySWpgTDyERRP93RQNHM,1179
+tankersdk/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tankersdk/test/conftest.py,sha256=uJ6IWLUMRHSEMR03XMkNciCunr2fruGaufA_H0f7oFg,460
+tankersdk/test/helpers.py,sha256=SHyF31BDSmWd3FGD15SeaW7pUxtxmrIXHVsGg5CVy78,176
+tankersdk/test/test_crypto.py,sha256=CN45YN105UEZC7CPY8eu97R8SZgd1weTNOLj1YyRv9I,1816
+tankersdk/test/test_user_token.py,sha256=1Dn7u3RsWgktQbEQdC6YKSRDpdRff_kQtYYoKXgr4nQ,2074
+tankersdk/usertoken/__init__.py,sha256=1sk9Eo4C4YAacPUFDe_-xwX2JSdRxNCLJR4QEQTroWk,1395
+tankersdk_user_token-0.3.dist-info/METADATA,sha256=Nepk8N3rk33OHmkvyFOJdMGp9Tv8ICNOMyNbzKhPI0k,2237
+tankersdk_user_token-0.3.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+tankersdk_user_token-0.3.dist-info/top_level.txt,sha256=y7RTQIBKtFC_babBXu0p3ZZPb14N0RR4RzIuOOryTFg,10
+tankersdk_user_token-0.3.dist-info/RECORD,,
