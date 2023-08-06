@@ -1,0 +1,3 @@
+[console_scripts]
+stuntcat = stuntcat.cli:main
+
