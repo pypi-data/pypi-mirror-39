@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: confect
+Version: 0.3.2
+Summary: a Python configuration library loads Python configuration files
+Home-page: https://github.com/d2207197/confect
+Author: 顏孜羲
+Author-email: joseph.yen@gmail.com
+Keywords: setting,configuration,config
+Requires-Python: >=3.6
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: click
+Requires-Dist: click (>=2.0); extra == "click"
+Requires-Dist: pendulum (>=1.4.0)
+Project-URL: Documentation, https://github.com/d2207197/confect
+Project-URL: Repository, https://github.com/d2207197/confect
