@@ -1,0 +1,4 @@
+include *.txt
+recursive-include rpi2caster *.conf *.db *.json *.txt
+recursive-include data *.conf *.db .json *.txt
+recursive-include docs *.txt
