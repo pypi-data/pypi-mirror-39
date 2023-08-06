@@ -1,0 +1,31 @@
+Metadata-Version: 2.0
+Name: side-kick
+Version: 0.0.3
+Summary: A lightweight task runner
+Home-page: https://github.com/CurrieBen/sidekick
+Author: Ben Currie
+Author-email: benjamin.w.currie@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+# SIDE KICK
+
+Side Kick is a simple, lightweight scheduler for Python. Assign a task to run by adding the ```@sidekick``` decorator 
+and passing in the schedule for the task eg. 
+
+```@sidekick(seconds=30)```
+
+```@sidekick(minutes=45)```
+
+```@sidekick(hours=6)```
+
+```@sidekick(days=7)```
+
+```@sidekick(minutes=45, hours=12)```
+
+
+
+
