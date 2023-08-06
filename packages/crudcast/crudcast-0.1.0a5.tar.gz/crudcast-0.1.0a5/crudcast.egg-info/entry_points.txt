@@ -1,0 +1,3 @@
+[console_scripts]
+crudcast = crudcast.entrypoint:main
+
