@@ -1,0 +1,14 @@
+MANIFEST.in
+setup.py
+spesdebris/__init__.py
+spesdebris/__main__.py
+spesdebris/dbxhandler.py
+spesdebris/extrq.py
+spesdebris/fcmhandler.py
+spesdebris/scheduling.py
+spesdebris/server.py
+spesdebris/settings-sample.ini
+spesdebris.egg-info/PKG-INFO
+spesdebris.egg-info/SOURCES.txt
+spesdebris.egg-info/dependency_links.txt
+spesdebris.egg-info/top_level.txt
