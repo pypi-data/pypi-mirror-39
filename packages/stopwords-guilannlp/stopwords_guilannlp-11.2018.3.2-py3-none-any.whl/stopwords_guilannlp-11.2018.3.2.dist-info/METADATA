@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: stopwords-guilannlp
+Version: 11.2018.3.2
+Summary: A comprehensive package for stopwords in NLP and text mining
+Home-page: https://github.com/joyebright/stopwords_guilannlp
+Author: Javad PourMostafa
+Author-email: javad.pourmostafa@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+
+## Stopwords Guilan NLP
+
+This is  a comprehensive stopwords for natural language processing and text mining.
+
+## Installation
+
+[Now stopwords_guilannlp is on PyPI!](https://pypi.org/project/stopwords-guilannlp)
+<br>
+   * Download via PyPI: 
+   ```
+   $ pip3 install stopwords_guilannlp
+   ```
+   * Or clone the repo: 
+   ```
+   $ git clone --recursive git://github.com/JoyeBright/Sstopwords_guilannlp.git
+   ```
+   * Then install it: 
+   ```
+   $ python3 setup.py install
+   ```
+
+## Usage
+ ```
+ tokens = word_tokenize(s)
+          filtered_tokens = []
+          stopwords = stopwords_output("Persian", "nar")
+          for w in tokens:
+              if w not in stopwords:
+                  filtered_tokens.append(w)
+          return filtered_tokens
+ ```
+ * Note: Package does not support tokenizing process.
+## Supported Languages
+   * Persian
+
+
+
