@@ -1,0 +1,3 @@
+[console_scripts]
+tweebot = tweebot.__main__:main
+
