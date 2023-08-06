@@ -1,0 +1,36 @@
+Metadata-Version: 2.0
+Name: stick
+Version: 0.4.0
+Summary: Collection of utilities for publishing Python packages to PyPI-compatible indexes hosted on S3.
+Home-page: https://github.com/brandond/stick
+Author: Brandon Davidson
+Author-email: brad@oatmail.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Topic :: System :: Archiving :: Packaging
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*
+Provides-Extra: dev
+Requires-Dist: backports.tempfile
+Requires-Dist: boto3
+Requires-Dist: click
+Requires-Dist: jinja2
+Requires-Dist: packaging (>=18.0)
+Requires-Dist: twine (>=1.12.1)
+Provides-Extra: dev
+Requires-Dist: setuptools-version-command; extra == 'dev'
+
+stick
+=====
+
+Stick is a utility for publishing Python packages to PyPI-compatible indexes hosted on S3.
+Its syntax and functionality are inspired by `twine <https://pypi.org/project/twine/>`__.
+
+*Stick your package in a bucket!*
+
+Consult `README.md on GitHub <https://github.com/brandond/stick/blob/master/README.md>`__ for usage instructions.
+
+
