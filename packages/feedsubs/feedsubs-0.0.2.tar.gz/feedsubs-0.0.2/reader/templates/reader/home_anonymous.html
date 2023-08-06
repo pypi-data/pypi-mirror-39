@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+{% block hero %}
+
+  <section class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Feedsubs
+        </h1>
+        <h2 class="subtitle">
+          Open Source RSS feed reader
+        </h2>
+        <p>
+          Start using it straight away by <a href="{% url 'account_signup' %}">creating an account</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

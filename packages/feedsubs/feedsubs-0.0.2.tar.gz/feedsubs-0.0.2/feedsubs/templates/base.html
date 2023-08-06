@@ -1,0 +1,122 @@
+{% extends 'bulma/base.html' %}
+{% load static bulma_tags um %}
+
+{% block title %}FeedSubs{% endblock %}
+
+{% block css %}
+  <link rel="shortcut icon" href="{% static 'feedsubs/favicon.ico' %}" type="image/x-icon">
+
+  <link rel="stylesheet" href="{% static 'feedsubs/vendor/fontawesome/css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'feedsubs/vendor/lato/lato.css' %}">
+  <link rel="stylesheet" href="{% static 'feedsubs/vendor/bulmaswatch/superhero.min.css' %}">
+
+  <script type="text/javascript" src="{% static 'feedsubs/vendor/jquery-3.3.1.min.js' %}" defer></script>
+  <script type="text/javascript" src="{% static 'feedsubs/feedsubs.js' %}" defer></script>
+  {% block extra_css %}{% endblock extra_css %}
+{% endblock %}
+
+{% block header %}
+  <div class="container">
+    <nav class="navbar is-transparent">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="{% url 'reader:home' %}">
+          <img src="{% static 'feedsubs/logo.svg' %}" height="28">
+        </a>
+
+        <div class="navbar-burger burger" data-target="navMenuExample">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+
+      <div id="navMenuExample" class="navbar-menu">
+        <div class="navbar-end">
+
+          <a class="navbar-item is-hidden-touch" href="https://github.com/NicolasLM/feedsubs">
+            <span class="icon" style="color: #BBB;">
+              <i class="fab fa-lg fa-github"></i>
+            </span>
+          </a>
+
+          <a class="navbar-item" href="{% url 'django.contrib.flatpages.views.flatpage' url='/about' %}">
+            About
+          </a>
+
+          {% if user.is_authenticated %}
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link is-active" href="#">
+                {{ user.username | title }}
+              </a>
+              <div class="navbar-dropdown ">
+                <a class="navbar-item" href="{% url 'reader:feed-list' %}">
+                  <span class="icon is-medium">
+                    <i class="fas fa-lg fa-rss"></i>
+                  </span>
+                  Feeds
+                </a>
+                <a class="navbar-item" href="{% url 'reader:board-list' %}">
+                  <span class="icon is-medium">
+                    <i class="far fa-lg fa-clipboard"></i>
+                  </span>
+                  Boards
+                </a>
+                <a class="navbar-item" href="{% url 'um:settings-account' %}">
+                  <span class="icon is-medium">
+                    <i class="fas fa-lg fa-cog"></i>
+                  </span>
+                  Settings
+                </a>
+                {% if user.is_staff %}
+                  <a class="navbar-item" href="{% url 'admin:index' %}">
+                    <span class="icon is-medium">
+                      <i class="fas fa-lg fa-unlock"></i>
+                    </span>
+                    Admin panel
+                  </a>
+                {% endif %}
+                <a class="navbar-item" href="{% url 'account_logout' %}">
+                  <span class="icon is-medium">
+                    <i class="fas fa-lg fa-sign-out-alt"></i>
+                  </span>
+                  Sign Out
+                </a>
+              </div>
+            </div>
+
+          {% else %}
+
+            <a class="navbar-item is-active" href="{% url 'account_login' %}">
+              Sign In
+            </a>
+
+          {% endif %}
+
+        </div>
+      </div>
+    </nav>
+  </div>
+{% endblock header %}
+
+{% block messages %}
+  {% fetch_background_messages %}
+  {% if messages %}
+    <div class="messages columns is-desktop">
+      <div class="column is-4 is-offset-4">
+        {% for message in messages %}
+
+          <div class="notification{% if message.tags %} is-{{ message.tags|bulma_message_tag }}{% endif %}">
+            <button class="delete"></button>
+            {{ message }}
+          </div>
+
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+{% endblock messages %}
+
+{% block footer %}
+{% endblock footer %}
