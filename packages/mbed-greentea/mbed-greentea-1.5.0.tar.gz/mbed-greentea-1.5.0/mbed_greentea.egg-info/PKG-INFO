@@ -1,0 +1,400 @@
+Metadata-Version: 1.2
+Name: mbed-greentea
+Version: 1.5.0
+Summary: mbed 3.0 onwards test suite, codename Greentea. The test suite is a collection of tools that enable automated testing on mbed-enabled platforms
+Home-page: https://github.com/ARMmbed/greentea
+Author: Anna Bridge, Azim Khan
+Author-email: Anna.Bridge@arm.com, Azim.Khan@arm.com
+Maintainer: Anna Bridge, Azim Khan
+Maintainer-email: Anna.Bridge@arm.com, Azim.Khan@arm.com
+License: Apache License
+Version 2.0, January 2004
+http://www.apache.org/licenses/
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+1. Definitions.
+
+"License" shall mean the terms and conditions for use, reproduction, and
+distribution as defined by Sections 1 through 9 of this document.
+
+"Licensor" shall mean the copyright owner or entity authorized by the copyright
+owner that is granting the License.
+
+"Legal Entity" shall mean the union of the acting entity and all other entities
+that control, are controlled by, or are under common control with that entity.
+For the purposes of this definition, "control" means (i) the power, direct or
+indirect, to cause the direction or management of such entity, whether by
+contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the
+outstanding shares, or (iii) beneficial ownership of such entity.
+
+"You" (or "Your") shall mean an individual or Legal Entity exercising
+permissions granted by this License.
+
+"Source" form shall mean the preferred form for making modifications, including
+but not limited to software source code, documentation source, and configuration
+files.
+
+"Object" form shall mean any form resulting from mechanical transformation or
+translation of a Source form, including but not limited to compiled object code,
+generated documentation, and conversions to other media types.
+
+"Work" shall mean the work of authorship, whether in Source or Object form, made
+available under the License, as indicated by a copyright notice that is included
+in or attached to the work (an example is provided in the Appendix below).
+
+"Derivative Works" shall mean any work, whether in Source or Object form, that
+is based on (or derived from) the Work and for which the editorial revisions,
+annotations, elaborations, or other modifications represent, as a whole, an
+original work of authorship. For the purposes of this License, Derivative Works
+shall not include works that remain separable from, or merely link (or bind by
+name) to the interfaces of, the Work and Derivative Works thereof.
+
+"Contribution" shall mean any work of authorship, including the original version
+of the Work and any modifications or additions to that Work or Derivative Works
+thereof, that is intentionally submitted to Licensor for inclusion in the Work
+by the copyright owner or by an individual or Legal Entity authorized to submit
+on behalf of the copyright owner. For the purposes of this definition,
+"submitted" means any form of electronic, verbal, or written communication sent
+to the Licensor or its representatives, including but not limited to
+communication on electronic mailing lists, source code control systems, and
+issue tracking systems that are managed by, or on behalf of, the Licensor for
+the purpose of discussing and improving the Work, but excluding communication
+that is conspicuously marked or otherwise designated in writing by the copyright
+owner as "Not a Contribution."
+
+"Contributor" shall mean Licensor and any individual or Legal Entity on behalf
+of whom a Contribution has been received by Licensor and subsequently
+incorporated within the Work.
+
+2. Grant of Copyright License.
+
+Subject to the terms and conditions of this License, each Contributor hereby
+grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free,
+irrevocable copyright license to reproduce, prepare Derivative Works of,
+publicly display, publicly perform, sublicense, and distribute the Work and such
+Derivative Works in Source or Object form.
+
+3. Grant of Patent License.
+
+Subject to the terms and conditions of this License, each Contributor hereby
+grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free,
+irrevocable (except as stated in this section) patent license to make, have
+made, use, offer to sell, sell, import, and otherwise transfer the Work, where
+such license applies only to those patent claims licensable by such Contributor
+that are necessarily infringed by their Contribution(s) alone or by combination
+of their Contribution(s) with the Work to which such Contribution(s) was
+submitted. If You institute patent litigation against any entity (including a
+cross-claim or counterclaim in a lawsuit) alleging that the Work or a
+Contribution incorporated within the Work constitutes direct or contributory
+patent infringement, then any patent licenses granted to You under this License
+for that Work shall terminate as of the date such litigation is filed.
+
+4. Redistribution.
+
+You may reproduce and distribute copies of the Work or Derivative Works thereof
+in any medium, with or without modifications, and in Source or Object form,
+provided that You meet the following conditions:
+
+You must give any other recipients of the Work or Derivative Works a copy of
+this License; and
+You must cause any modified files to carry prominent notices stating that You
+changed the files; and
+You must retain, in the Source form of any Derivative Works that You distribute,
+all copyright, patent, trademark, and attribution notices from the Source form
+of the Work, excluding those notices that do not pertain to any part of the
+Derivative Works; and
+If the Work includes a "NOTICE" text file as part of its distribution, then any
+Derivative Works that You distribute must include a readable copy of the
+attribution notices contained within such NOTICE file, excluding those notices
+that do not pertain to any part of the Derivative Works, in at least one of the
+following places: within a NOTICE text file distributed as part of the
+Derivative Works; within the Source form or documentation, if provided along
+with the Derivative Works; or, within a display generated by the Derivative
+Works, if and wherever such third-party notices normally appear. The contents of
+the NOTICE file are for informational purposes only and do not modify the
+License. You may add Your own attribution notices within Derivative Works that
+You distribute, alongside or as an addendum to the NOTICE text from the Work,
+provided that such additional attribution notices cannot be construed as
+modifying the License.
+You may add Your own copyright statement to Your modifications and may provide
+additional or different license terms and conditions for use, reproduction, or
+distribution of Your modifications, or for any such Derivative Works as a whole,
+provided Your use, reproduction, and distribution of the Work otherwise complies
+with the conditions stated in this License.
+
+5. Submission of Contributions.
+
+Unless You explicitly state otherwise, any Contribution intentionally submitted
+for inclusion in the Work by You to the Licensor shall be under the terms and
+conditions of this License, without any additional terms or conditions.
+Notwithstanding the above, nothing herein shall supersede or modify the terms of
+any separate license agreement you may have executed with Licensor regarding
+such Contributions.
+
+6. Trademarks.
+
+This License does not grant permission to use the trade names, trademarks,
+service marks, or product names of the Licensor, except as required for
+reasonable and customary use in describing the origin of the Work and
+reproducing the content of the NOTICE file.
+
+7. Disclaimer of Warranty.
+
+Unless required by applicable law or agreed to in writing, Licensor provides the
+Work (and each Contributor provides its Contributions) on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied,
+including, without limitation, any warranties or conditions of TITLE,
+NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are
+solely responsible for determining the appropriateness of using or
+redistributing the Work and assume any risks associated with Your exercise of
+permissions under this License.
+
+8. Limitation of Liability.
+
+In no event and under no legal theory, whether in tort (including negligence),
+contract, or otherwise, unless required by applicable law (such as deliberate
+and grossly negligent acts) or agreed to in writing, shall any Contributor be
+liable to You for damages, including any direct, indirect, special, incidental,
+or consequential damages of any character arising as a result of this License or
+out of the use or inability to use the Work (including but not limited to
+damages for loss of goodwill, work stoppage, computer failure or malfunction, or
+any and all other commercial damages or losses), even if such Contributor has
+been advised of the possibility of such damages.
+
+9. Accepting Warranty or Additional Liability.
+
+While redistributing the Work or Derivative Works thereof, You may choose to
+offer, and charge a fee for, acceptance of support, warranty, indemnity, or
+other liability obligations and/or rights consistent with this License. However,
+in accepting such obligations, You may act only on Your own behalf and on Your
+sole responsibility, not on behalf of any other Contributor, and only if You
+agree to indemnify, defend, and hold each Contributor harmless for any liability
+incurred by, or claims asserted against, such Contributor by reason of your
+accepting any such warranty or additional liability.
+
+Description: [![Circle CI](https://circleci.com/gh/ARMmbed/greentea.svg?style=svg)](https://circleci.com/gh/ARMmbed/greentea)
+        [![Coverage Status](https://coveralls.io/repos/github/ARMmbed/greentea/badge.svg?branch=master)](https://coveralls.io/github/ARMmbed/greentea?branch=master)
+        [![PyPI version](https://badge.fury.io/py/mbed-greentea.svg)](https://badge.fury.io/py/mbed-greentea)
+        
+        # Greentea - test automation for mbed
+        _**G**eneric **re**gression **en**vironment for **te**st **a**utomation_
+        
+        ## Introduction
+        
+        Greentea is the automated testing tool for mbed OS development. It automates the process of flashing mbed boards, driving the test and accumulating test results into test reports. Developers use it for local development as well as for automation in a Continuous Integration environment.
+        
+        This document should help you start using Greentea. Please see the [htrun documentation](https://github.com/ARMmbed/htrun), the tool Greentea uses to drive tests, for the technical details of the interactions between the platform and the host machine.
+        
+        Because Greentea is an open source project, we accept contributions! Please see our [contributing document](CONTRIBUTING.md) for more information.
+        
+        ### Prerequistes
+        
+        Greentea requires [Python version 2.7](https://www.python.org/downloads/). It supports the following OSes:
+        
+        - Windows
+        - Linux (Ubuntu preferred)
+        - OS X (experimental)
+        
+        ### Installing
+        
+        Tools that depend on Greentea usually install it. Determine if Greentea is already installed by running:
+        ```
+        $ mbedgt --version
+        1.2.5
+        ```
+        
+        You can also install it manually via pip.
+        
+        ```
+        pip install mbed-greentea
+        ```
+        
+        ## Test specification JSON format
+        
+        The Greentea test specification format decouples the tool from your build system. It provides important data, such as test names, paths to test binaries and the platform on which the binaries should run.
+        
+        Greentea automatically looks for files called `test_spec.json` in your working directory. You can also use the `--test-spec` argument to direct Greentea to a specific test specification file.
+        
+        When you use the `-t` / `--target` argument with the `--test-spec` argument, you can select which "build" should be used. In the example below, you could provide the arguments `--test-spec test_spec.json -t K64F-ARM` to only run that build's tests.
+        
+        ### Example of test specification file
+        
+        In the below example, there are two defined builds:
+        * Build `K64F-ARM` for NXP `K64F` platform compiled with `ARMCC` compiler.
+        * Build `K64F-GCC` for NXP `K64F` platform compiled with `GCC ARM` compiler.
+        
+        ```json
+        {
+            "builds": {
+                "K64F-ARM": {
+                    "platform": "K64F",
+                    "toolchain": "ARM",
+                    "base_path": "./BUILD/K64F/ARM",
+                    "baud_rate": 9600,
+                    "tests": {
+                        "tests-mbedmicro-rtos-mbed-mail": {
+                            "binaries": [
+                                {
+                                    "binary_type": "bootable",
+                                    "path": "./BUILD/K64F/ARM/tests-mbedmicro-rtos-mbed-mail.bin"
+                                }
+                            ]
+                        },
+                        "tests-mbed_drivers-c_strings": {
+                            "binaries": [
+                                {
+                                    "binary_type": "bootable",
+                                    "path": "./BUILD/K64F/ARM/tests-mbed_drivers-c_strings.bin"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "K64F-GCC": {
+                    "platform": "K64F",
+                    "toolchain": "GCC_ARM",
+                    "base_path": "./BUILD/K64F/GCC_ARM",
+                    "baud_rate": 9600,
+                    "tests": {
+                        "tests-mbedmicro-rtos-mbed-mail": {
+                            "binaries": [
+                                {
+                                    "binary_type": "bootable",
+                                    "path": "./BUILD/K64F/GCC_ARM/tests-mbedmicro-rtos-mbed-mail.bin"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+        ```
+        
+        The examples below use the above test specification file.
+        
+        ## Command-line usage
+        This section highlights a few of the capabilities of the Greentea command-line interface. For a full list of the available options, please run `mbedgt --help`.
+        
+        Assume for the examples below that the above `test_spec.json` file is in the current directory.
+        
+        ### Listing all tests
+        You can use the `-l` argument to list all available tests:
+        
+        ```
+        $ mbedgt -l
+        mbedgt: greentea test automation tool ver. 1.2.5
+        mbedgt: using multiple test specifications from current directory!
+                using 'BUILD\tests\K64F\ARM\test_spec.json'
+                using 'BUILD\tests\K64F\GCC_ARM\test_spec.json'
+        mbedgt: available tests for built 'K64F-GCC_ARM', location 'BUILD/tests/K64F/GCC_ARM'
+                test 'tests-mbedmicro-rtos-mbed-mail'
+        mbedgt: available tests for built 'K64F-ARM', location 'BUILD/tests/K64F/ARM'
+                test 'tests-mbed_drivers-c_strings'
+                test 'tests-mbedmicro-rtos-mbed-mail'
+        ```
+        
+        ### Executing all tests
+        The default action of Greentea using `mbedgt` is to execute all tests that are found in `test_spec.json` files. You can also add `-V` to make the output more verbose.
+        
+        
+        ### Limiting tests
+        You can select test cases by name using the `-n` argument. This command executes all tests named `tests-mbedmicro-rtos-mbed-mail` from all builds in the test specification:
+        ```
+        $ mbedgt -n tests-mbedmicro-rtos-mbed-mail
+        ```
+        
+        When using the `-n` argument, you can use the `*` character at the end of a test name to match all tests that share a prefix. This command executes all tests that start with `tests*`:
+        
+        ```
+        $ mbedgt -n tests*
+        ```
+        
+        You can use the `-t` argument to select which build to use when finding tests. This command executes the test `tests-mbedmicro-rtos-mbed-mail` for the `K64F-ARM` build in the test specification:
+        ```
+        $ mbedgt -n tests-mbedmicro-rtos-mbed-mail -t K64F-ARM
+        ```
+        
+        You can use a comma (`,`) to separate test names (argument `-n`) and build names (argument `-t`). This command executes the tests `tests-mbedmicro-rtos-mbed-mail` and `tests-mbed_drivers-c_strings` for the `K64F-ARM` and `K64F-GCC_ARM` builds in the test specification:
+        ```
+        $ mbedgt -n tests-mbedmicro-rtos-mbed-mail,tests-mbed_drivers-c_strings -t K64F-ARM,K64F-GCC_ARM
+        ```
+        
+        ### Selecting platforms
+        You can limit which boards Greentea uses for testing by using the `--use-tids` argument.
+        
+        ```
+        $ mbedgt --use-tids 02400203C3423E603EBEC3D8,024002031E031E6AE3FFE3D2
+        ```
+        
+        Where ```02400203C3423E603EBEC3D8``` and ```024002031E031E6AE3FFE3D2``` are the target IDs of platforms attached to your system.
+        
+        You can view target IDs using the [mbed-ls](https://github.com/ARMmbed/mbed-ls) tool (installed with Greentea).
+        
+        ```
+        $ mbedls
+        +--------------+---------------------+------------+------------+-------------------------+
+        |platform_name |platform_name_unique |mount_point |serial_port |target_id                |
+        +--------------+---------------------+------------+------------+-------------------------+
+        |K64F          |K64F[0]              |E:          |COM160      |024002031E031E6AE3FFE3D2 |
+        |K64F          |K64F[1]              |F:          |COM162      |02400203C3423E603EBEC3D8 |
+        |LPC1768       |LPC1768[0]           |G:          |COM5        |1010ac87cfc4f23c4c57438d |
+        +--------------+---------------------+------------+------------+-------------------------+
+        ```
+        In this case, you won't test one target, the LPC1768.
+        
+        ### Testing on Fast Model FVPs
+        
+        Fast Models FVPs are software models for Arm reference design platfrom
+        
+        Greentea supports running test on Fast Models. And [mbed-fastmodel-agent](https://github.com/ARMmbed/mbed-fastmodel-agent) module is required for this purpose.
+        
+        The "--fm" option only available when the `mbed-fastmodel-agent` module is installed :  
+        
+        You can run tests for FVP_MPS2_Cortex-M3 models, by '--fm' option:
+        ```
+        $ mbedgt --fm FVP_MPS2_M3:DEFAULT
+        ```
+        
+        Where ```FVP_MPS2_M3``` is the platfrom name for the ```FVP_MPS2_Cortex-M3``` models in mbed OS.
+        
+        And ```DEFAULT``` is the config to the Fast Model, you can find out using ```mbedfm``` command
+        
+        ### Creating reports
+        Greentea supports a number of report formats.
+        
+        #### HTML
+        This creates an interactive HTML page with test results and logs.
+        ```
+        mbedgt --report-html html_report.html
+        ```
+        
+        #### JUnit
+        This creates an XML JUnit report, which you can use with popular Continuous Integration software, such as [Jenkins](https://jenkins.io/index.html).
+        ```
+        mbedgt --report-junit junit_report.xml
+        ```
+        
+        #### JSON
+        This creates a general JSON report.
+        ```
+        mbedgt --report-json json_report.json
+        ```
+        
+        #### Plain text
+        This creates a human-friendly text summary of the test run.
+        ```
+        mbedgt --report-text text_report.text
+        ```
+        
+        ## Host test detection
+        When developing with mbed OS, Greentea detects host tests automatically if you place them in the correct location. All tests in mbed OS are placed under a `TESTS` directory. You may place custom host test scripts in a folder named `host_tests` in this folder. For more information about the mbed OS test directory structure, please see the [mbed CLI documentation](https://docs.mbed.com/docs/mbed-os-handbook/en/latest/dev_tools/cli/#test-directory-structure).
+        
+        ## Common issues
+        
+        ### `IOERR_SERIAL` errors
+        Possible causes:
+        - Another program is using the serial port. Be sure all terminals and other instances of Greentea are closed before trying again.
+        - The mbed interface firmware is out of date. Please see the platform's page on [developer.mbed.org](https://developer.mbed.org/) for details about how to update it.
+        
+Platform: UNKNOWN
