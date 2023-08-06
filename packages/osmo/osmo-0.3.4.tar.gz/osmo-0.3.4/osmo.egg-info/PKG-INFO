@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: osmo
+Version: 0.3.4
+Summary: python tools library for daemon or web application
+Home-page: https://github.com/yyjinlong/osmo
+Author: jinlong.yang
+Author-email: 1990yangjinlong@163.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Plugins
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
