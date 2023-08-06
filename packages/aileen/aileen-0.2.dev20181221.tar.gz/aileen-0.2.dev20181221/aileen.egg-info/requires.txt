@@ -1,0 +1,15 @@
+black
+Click
+django==1.11.16
+django-bootstrap3
+django-geojson
+django-leaflet
+django-pandas
+humanize
+libtmux
+netifaces
+numpy
+pandas
+pexpect
+pytz
+requests
