@@ -1,0 +1,9 @@
+-r pip-requirements-doc
+bintrees
+bleach
+
+# below here are used only for tests
+coverage
+skyfield
+pytest-xdist
+pytest-mpl
