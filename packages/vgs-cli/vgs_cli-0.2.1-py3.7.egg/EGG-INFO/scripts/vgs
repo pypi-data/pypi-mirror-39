@@ -1,0 +1,6 @@
+#!/usr/local/opt/python/bin/python3.7
+from vgscli import main, parser
+
+if __name__ == '__main__':
+    parser = parser.get_args_parser()
+    main(parser.parse_args())
