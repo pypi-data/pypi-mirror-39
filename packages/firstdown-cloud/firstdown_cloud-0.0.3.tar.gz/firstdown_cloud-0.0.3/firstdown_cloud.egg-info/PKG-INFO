@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: firstdown-cloud
+Version: 0.0.3
+Summary: Python library for securely publishing JPL ops summary data to Govcloud.
+Home-page: https://github.com/OpsLabJPL/firstdown_cloud
+Author: Mark Powell
+Author-email: Mark.W.Powell@jpl.nasa.gov
+License: Apache 2.0
+Description: Python library for securely publishing JPL ops summary data to Govcloud.
+Platform: UNKNOWN

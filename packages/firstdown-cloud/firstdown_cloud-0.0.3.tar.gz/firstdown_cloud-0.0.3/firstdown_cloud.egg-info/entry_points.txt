@@ -1,0 +1,3 @@
+[console_scripts]
+fds3 = firstdown_cloud.s3:main
+
