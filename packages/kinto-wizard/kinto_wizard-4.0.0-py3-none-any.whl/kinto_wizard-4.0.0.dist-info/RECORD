@@ -1,0 +1,17 @@
+kinto_wizard/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kinto_wizard/__main__.py,sha256=rkeqM3MGGlICXyARnVIDk7N-XCri7aH4UsPzEtCkP6s,4728
+kinto_wizard/async_kinto.py,sha256=CcHR6gUO3ylg15dsPuJKHsco9tZZdwm_VnFUVWPeNVw,1467
+kinto_wizard/kinto2yaml.py,sha256=2aAbC4Ul-LKTgwCFNByyVw2TBz0IR-ZKapzLRYE2svc,4664
+kinto_wizard/logger.py,sha256=qEsRKgYC_YzndG-7KoMlgrwJfo1Q8qNlhKtPzbMUuC8,58
+kinto_wizard/validate.py,sha256=i-mTw9En37dVJqkaqbyoCwyHYCAHI-zwkhLWWlQ0z2E,2617
+kinto_wizard/yaml2kinto.py,sha256=Zilz71AaHq-KW1OUnkRsXqjoN_YdEDCvFI5qQ0zsYFk,9108
+kinto_wizard-4.0.0.dist-info/DESCRIPTION.rst,sha256=WxLNaRpn2_H9hot1UroJ63QENUl_vUl7i0EIW4mF15U,4738
+kinto_wizard-4.0.0.dist-info/METADATA,sha256=drblt9NiW5R0sdFlKp9Cx48GOLMp-nkpPhOaLVdPMUc,5730
+kinto_wizard-4.0.0.dist-info/RECORD,,
+kinto_wizard-4.0.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+kinto_wizard-4.0.0.dist-info/entry_points.txt,sha256=zOCTGAH2KOynTsp-gXy7XOX9iuQi1iEl9IrnDclV3wg,61
+kinto_wizard-4.0.0.dist-info/metadata.json,sha256=VMEmGkhuhU5bS0IQhSJQ4wnS7822l8g9dQTWl0uGVaQ,1358
+kinto_wizard-4.0.0.dist-info/top_level.txt,sha256=HX4YR_Vjw3H7_gVvVg8g3qg9GdW3w9t1FDribOOouL4,19
+kinto_wizard-4.0.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_functional.py,sha256=jOMwubh8pLeapZNmX8GlssEkzyNTjia2JAi6QCY00qE,14133
