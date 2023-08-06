@@ -1,0 +1,150 @@
+Metadata-Version: 2.1
+Name: reana-commons
+Version: 0.5.0.dev20181210
+Summary: REANA-Commons.
+Home-page: https://github.com/reanahub/reana-commons
+Author: REANA
+Author-email: info@reana.io
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: docs
+Provides-Extra: tests
+Provides-Extra: all
+Requires-Dist: bravado (<10.2,>=9.0.6)
+Requires-Dist: celery (<4.3,>=4.1.0)
+Requires-Dist: checksumdir (<1.2,>=1.1.4)
+Requires-Dist: click (<8.0,>=7.0)
+Requires-Dist: jsonschema[format] (<2.7,>=2.6.0)
+Requires-Dist: kombu (<5.0,>=4.2.0)
+Provides-Extra: all
+Requires-Dist: Sphinx (>=1.4.4); extra == 'all'
+Requires-Dist: sphinx-rtd-theme (>=0.1.9); extra == 'all'
+Requires-Dist: check-manifest (>=0.25); extra == 'all'
+Requires-Dist: coverage (>=4.0); extra == 'all'
+Requires-Dist: httpretty (>=0.8); extra == 'all'
+Requires-Dist: isort (>=4.2.2); extra == 'all'
+Requires-Dist: pydocstyle (>=1.0.0); extra == 'all'
+Requires-Dist: pytest-cache (>=1.0); extra == 'all'
+Requires-Dist: pytest-cov (>=1.8.0); extra == 'all'
+Requires-Dist: pytest-pep8 (>=1.0.6); extra == 'all'
+Requires-Dist: pytest-reana (>=0.5.0.dev20181203); extra == 'all'
+Requires-Dist: pytest (>=3.8); extra == 'all'
+Requires-Dist: Sphinx (>=1.4.4); extra == 'all'
+Requires-Dist: sphinx-rtd-theme (>=0.1.9); extra == 'all'
+Requires-Dist: check-manifest (>=0.25); extra == 'all'
+Requires-Dist: coverage (>=4.0); extra == 'all'
+Requires-Dist: httpretty (>=0.8); extra == 'all'
+Requires-Dist: isort (>=4.2.2); extra == 'all'
+Requires-Dist: pydocstyle (>=1.0.0); extra == 'all'
+Requires-Dist: pytest-cache (>=1.0); extra == 'all'
+Requires-Dist: pytest-cov (>=1.8.0); extra == 'all'
+Requires-Dist: pytest-pep8 (>=1.0.6); extra == 'all'
+Requires-Dist: pytest-reana (>=0.5.0.dev20181203); extra == 'all'
+Requires-Dist: pytest (>=3.8); extra == 'all'
+Provides-Extra: docs
+Requires-Dist: Sphinx (>=1.4.4); extra == 'docs'
+Requires-Dist: sphinx-rtd-theme (>=0.1.9); extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: check-manifest (>=0.25); extra == 'tests'
+Requires-Dist: coverage (>=4.0); extra == 'tests'
+Requires-Dist: httpretty (>=0.8); extra == 'tests'
+Requires-Dist: isort (>=4.2.2); extra == 'tests'
+Requires-Dist: pydocstyle (>=1.0.0); extra == 'tests'
+Requires-Dist: pytest-cache (>=1.0); extra == 'tests'
+Requires-Dist: pytest-cov (>=1.8.0); extra == 'tests'
+Requires-Dist: pytest-pep8 (>=1.0.6); extra == 'tests'
+Requires-Dist: pytest-reana (>=0.5.0.dev20181203); extra == 'tests'
+Requires-Dist: pytest (>=3.8); extra == 'tests'
+
+==============
+ REANA-Commons
+==============
+
+.. image:: https://img.shields.io/pypi/pyversions/reana-commons.svg
+      :target: https://pypi.org/pypi/reana-commons
+
+.. image:: https://img.shields.io/travis/reanahub/reana-commons.svg
+      :target: https://travis-ci.org/reanahub/reana-commons
+
+.. image:: https://readthedocs.org/projects/docs/badge/?version=latest
+      :target: https://reana-commons.readthedocs.io/en/latest/?badge=latest
+
+.. image:: https://img.shields.io/coveralls/reanahub/reana-commons.svg
+      :target: https://coveralls.io/r/reanahub/reana-commons
+
+.. image:: https://badges.gitter.im/Join%20Chat.svg
+      :target: https://gitter.im/reanahub/reana?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
+
+.. image:: https://img.shields.io/github/license/reanahub/reana-commons.svg
+      :target: https://github.com/reanahub/reana-commons/blob/master/LICENSE
+
+About
+-----
+
+REANA-Commons is a component of the `REANA <http://www.reana.io/>`_ reusable and
+reproducible research data analysis platform. It provides common utilities and
+schemas shared by the REANA cluster components.
+
+Features
+--------
+
+- utility functions for cluster components
+- database models and schemas
+
+Useful links
+------------
+
+- `documentation <https://reana-commons.readthedocs.io/>`_
+- `releases <https://github.com/reanahub/reana-commons/releases>`_
+- `known issues <https://github.com/reanahub/reana-commons/issues>`_
+- `source code <https://github.com/reanahub/reana-commons>`_
+
+For more information about the REANA reusable analysis platform, please see the
+`REANA project <http://www.reana.io>`_ home page and the general `REANA
+documentation <http://reana.readthedocs.io/>`_ pages.
+
+
+Changes
+=======
+
+Version 0.4.0 (2018-11-06)
+--------------------------
+
+- Aggregates OpenAPI specifications of REANA components.
+- Improves AMQP re-connection handling. Switches from ``pika`` to ``kombu``.
+- Enhances test suite and increases code coverage.
+- Changes license to MIT.
+
+Version 0.3.1 (2018-09-04)
+--------------------------
+
+- Adds parameter expansion and validation utilities for parametrised Serial
+  workflows.
+
+Version 0.3.0 (2018-08-10)
+--------------------------
+
+- Initial public release.
+- Provides basic AMQP pub/sub methods for REANA components.
+- Utilities for caching used in different REANA components.
+- Click formatting helpers.
+
+.. admonition:: Please beware
+
+   Please note that REANA is in an early alpha stage of its development. The
+   developer preview releases are meant for early adopters and testers. Please
+   don't rely on released versions for any production purposes yet.
+
+
