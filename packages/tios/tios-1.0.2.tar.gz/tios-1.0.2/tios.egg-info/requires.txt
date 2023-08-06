@@ -1,0 +1,8 @@
+mdtraj==1.9.1
+scipy
+cython
+pandas
+argparse
+pymongo>=3.5
+numpy
+six
