@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: keppy
+Version: 0.0.4
+Summary: A Python parser of Kepware projects
+Home-page: https://github.com/jmbeach/KEP.py
+Author: jmbeach
+Author-email: jaredbeachdesign@gmail.com
+License: UNKNOWN
+Requires-Dist: Enum34
+
+KEP.py
+
+
