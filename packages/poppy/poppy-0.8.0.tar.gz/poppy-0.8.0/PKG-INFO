@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: poppy
+Version: 0.8.0
+Summary: Physical optics propagation (wavefront diffraction) for optical simulations, particularly of telescopes.
+Home-page: https://poppy-optics.readthedocs.io/
+Author: Marshall Perrin
+Author-email: mperrin@stsci.edu
+License: BSD
+Description: Physical Optics Propagation in PYthon (POPPY)
+        
+        POPPY is a Python package that simulates physical optical propagation including diffraction.
+        It implements a flexible framework for modeling Fraunhofer (far-field) diffraction
+        and point spread function formation, particularly in the context of astronomical telescopes.
+        POPPY was developed as part of a simulation package for JWST, but is more broadly applicable to many kinds of
+        imaging simulations.
+        
+        Developed by Marshall Perrin and colleagues at STScI, 2010-2017, for use simulating the James Webb Space Telescope.
+        
+        Documentation can be found online at https://poppy-optics.readthedocs.io/
+Platform: UNKNOWN
+Provides: poppy
+Requires-Python: >=3.5
