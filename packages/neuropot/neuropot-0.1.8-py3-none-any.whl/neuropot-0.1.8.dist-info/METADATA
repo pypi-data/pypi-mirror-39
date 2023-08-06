@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: neuropot
+Version: 0.1.8
+Summary: NeuroPot is a library which provides automated processing of neuroradiological images, data cleaning and manipulation functionality, machine learning algorithms and transfer learning methods.
+Home-page: https://github.com/MEDCOMP/neuropot
+Author: Abhinit Ambastha
+Author-email: abhinit@comp.nus.edu.sg
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: SimpleITK
+Requires-Dist: numpy
+
+UNKNOWN
+
+
