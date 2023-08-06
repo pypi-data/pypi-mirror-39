@@ -1,0 +1,18 @@
+
+[:python_version == "3.4"]
+pathlib2>=2.3.2
+subprocess32>=3.5.3
+
+[all]
+ptyng>=0.2.0.post4
+dictdumper>=0.6.3
+configupdater
+
+[config]
+configupdater
+
+[ptyng]
+ptyng>=0.2.0.post4
+
+[tree]
+dictdumper>=0.6.3
