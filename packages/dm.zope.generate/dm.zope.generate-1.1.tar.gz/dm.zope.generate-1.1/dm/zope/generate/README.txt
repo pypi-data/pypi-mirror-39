@@ -1,0 +1,112 @@
+This package contains code generators to facilitate the development of Zope[2]
+applications.
+
+=======
+Modules
+=======
+
+constructor
+===========
+
+This module contains factories for the generation of add form and
+add action for ``OFS.PropertyManager.PropertyManager`` based classes.
+The generated functions are usually used as constructors in ``registerClass``
+calls during product initialization. The subpackage ``test`` contains an
+example (also used for testing this product).
+
+The class' ``_properties`` attribute and the associated default values
+are used for add form generation.
+
+The module tries hard to avoid encoding problems. Its functions
+need to handle up to 3 encodings: the encoding used for the code,
+the encoding used for non unicode properties and unicode properties.
+The browser can only handle a single encoding per page. Therefore,
+the module must use a single encoding and all other encodings must
+be mapped. The module uses ``utf-8`` as this unified encoding.
+The module does nothing special with strings from code. The page template
+will convert it to unicode in its standard way. Use unicode strings,
+if this gives not the expected result. Unicode based properties
+are passed on unchanged to the template. ``str`` based properties
+are mapped to unicode with a charset that is either explicitely specified,
+looked up in the current acquisition context under the name
+``management_page_charset`` and falls back to ``ZPublisher.default_encoding``.
+The form action converts values for those properties back to ``str``
+using the same charset.
+
+
+add_form_factory
+----------------
+
+This factory generates an add form for an
+``OFS.PropertyManager.PropertyManager`` subclass.
+It has the following parameters.
+
+
+  =============  ===========================             ======================================
+  name           default                                 description
+  =============  ===========================             ======================================
+  *class_*                                               the class to generate the form for
+  *action*       ``add_``\ *classname*                   the forms action
+  *description*  *class_*\ ``.__doc__``                  the documentation shown in the form
+  *charset*      see above                  
+  *template*     package provided                        the template to generate the form
+  =============  ===========================             ======================================
+
+The template it brought into the acquisition context of the
+generated functions argument and then called with the
+keyword parameters ``charset``,
+``meta_type``, ``description``, ``action``, ``properties``
+and ``class_``. The call should return the HTML
+form representation. The package provided template works well
+together with the add action created by the add action factory.
+
+When you plan to customize the template, please take a look
+at the package provided template and the docstring in the source
+as this page does not describe all details.
+
+Due to a bug/weakness, Zope's property management
+page handles unicode properties only correctly
+when it can use the utf-8 charset.
+Therefore, it is highly recommended to use utf-8 consistently.
+Otherwise, it is possible that property values set with functions
+of this module cannot be reliably edited later.
+Note in addition, that Zope's property management spells the
+utf-8 charset (stupidly) as ``UTF-8`` (note the upper case).
+Therefore, use ``UFT-8`` rather than ``utf-8`` when you specify
+the utf-8 charset for your ``management_page_charset``.
+
+
+add_action_factory
+------------------
+
+This factory generates an add action for an
+``OFS.PropertyManager.PropertyManager`` subclass.
+The generated action creates an instance of this class, sets its properties,
+adds it as content object of its first parameter (assumed to be
+an ``OFS.ObjectManager.ObjectManager``) and optionally calls
+a hook. Then, it either returns the created instance or redirects
+to its management interface.
+
+The factory has the parameters *class_* and the optional *hook*.
+
+The generated action has the parameters *id* and the
+optional *props* and *REQUEST*.
+
+*props* specifies property values
+for the created instance. If not specified and *REQUEST* is passed,
+it defaults to ``REQUEST.form``. If specified, it must be a mapping.
+If the property value mapping lacks values for some properties, these
+retain their default values; values for undefined properties are silently
+ignored.
+
+
+=======
+History
+=======
+
+1.1
+  Python3/Zope4 compatibility
+
+1.0
+  for Zope2
+
