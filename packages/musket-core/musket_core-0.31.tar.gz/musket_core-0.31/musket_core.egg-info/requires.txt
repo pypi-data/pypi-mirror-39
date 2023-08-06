@@ -1,0 +1,13 @@
+numpy
+scipy
+Pillow
+cython
+pandas
+matplotlib
+scikit-image
+keras>=2.2.4
+imageio
+opencv-python
+h5py
+tqdm
+segmentation_models
