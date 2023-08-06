@@ -1,0 +1,28 @@
+Metadata-Version: 1.1
+Name: sif
+Version: 0.0.1
+Summary: python handle for reading sif images
+Home-page: http://www.github.com/singularityhub/sif
+Author: Vanessa Sochat
+Author-email: vsochat@stanford.edu
+License: LICENSE
+Description-Content-Type: UNKNOWN
+Description: # SIF (Python)
+        
+        Sif Python (sif) is the Python API for working with the Singularity SIF image
+        format. This library is under development. 
+        
+        ## License
+        
+        This code is licensed under the Affero GPL, version 3.0 or later [LICENSE](LICENSE).
+        
+Keywords: container,singularity,sif
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3

@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+sif/__init__.py
+sif/version.py
+sif.egg-info/PKG-INFO
+sif.egg-info/SOURCES.txt
+sif.egg-info/dependency_links.txt
+sif.egg-info/entry_points.txt
+sif.egg-info/not-zip-safe
+sif.egg-info/top_level.txt
