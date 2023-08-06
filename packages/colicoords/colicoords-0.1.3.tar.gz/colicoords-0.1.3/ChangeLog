@@ -1,0 +1,72 @@
+CHANGES
+=======
+
+0.1.3
+-----
+
+* Update README.rst
+* added exploring data example
+* fixed a warning
+* added progress bar to plotting of storm data with more than 1500 datapoints
+* removed comment
+* updated to autoitercellplot
+* added multiprocess to requirements
+* updated copying and switched multiprocessing to multiprocess
+* added AutoIterCellPlot and align\_data\_element, updated version temporary hack
+* added progress bar and refactored to align\_data\_element
+* Update README.rst
+* added AutoIterCellPlot for when writing 6 lines of code is 4 lines too much
+* fixed binary property assignment
+* padding testing
+* moved synthetic cell tests and fixed setup
+* forgot that binary still needs to be added
+* removed binary and bf from init, updated docstring
+* fixed bug in data\_to\_cells binary image, implemented binary\_img and bf\_img in Data as properties
+* set default parameters to None
+* added filter\_binaries to init
+* added option to specify None to ignore
+* init false on pad and crop cells
+* loading files now without initialize, updated test
+* new defaults for r, xl, xr for hdf5 saving when not initialized
+* updated copying and implemented default values for r, xl, xr if not initialized for Coordinates object
+* fixed error when rotate=None
+* docstrings updates
+* added ItercellPlot and iter\_subplots
+* refactored methods to generate not add, updated copying
+* removed numpydoc and class member options to see if path fixed the problem
+* different path and some options
+* unindented figure caption
+* fixed insert
+* added another path
+* indentation to four spaces
+* added another abspath
+* some fixes in docs
+* replaced arguments with parameters in docstring
+* small fixes in docs
+* removed modulenotfounderror for python 3.5
+* added rtd reqs
+* updated imports, paths and version in configuration
+* fixed missing import
+* updated indexing, removed deletion, added tests
+* Update README.rst
+* added python requires
+
+v0.1.2
+------
+
+* Update .travis.yml
+* Update README.rst
+* updated paths in test
+* fixed error
+* added try except around version
+* updated imports
+* removed top level imports from tests
+* updated tests
+* minor cleanup
+* version via pkg\_resources
+* moved sigma to \`dist\_kwargs\` for l\_dist plotting, close #53
+* added \_\_array\_wrap\_\_ to numpy subclasses to return base ndarray upon applying ufuncs, fixes #12
+* added angle test
+* added storm rotation tests, fixes #10
+* added test, fixes #9
+* removed inaccurate information on chained optimizer, fixes #74
