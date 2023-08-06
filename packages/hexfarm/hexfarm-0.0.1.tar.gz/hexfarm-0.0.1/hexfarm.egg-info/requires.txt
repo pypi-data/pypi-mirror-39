@@ -1,0 +1,17 @@
+pytest
+boltons
+aenum
+scipy
+numpy
+sympy
+pandas
+h5py
+pint
+uncertainties
+pymc3
+ipykernel
+matplotlib
+dask
+
+[condor]
+htcondor

@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: hexfarm
+Version: 0.0.1
+Summary: Rutgers HEX Computing Utility Library
+Home-page: https://github.com/bhgomes/hexfarm
+Author: Brandon Gomes
+Author-email: bhgomes.github@gmail.com
+License: MIT
+Description: 
+        # hexfarm
+        _Rutgers HEX Computing Utility Library_
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+Provides-Extra: condor
