@@ -1,0 +1,11 @@
+.gitignore
+.gitlab-ci.yml
+LICENSE
+README.md
+setup.py
+sbrowser/__init__.py
+sbrowser/test_Browser.py
+scraping_browser.egg-info/PKG-INFO
+scraping_browser.egg-info/SOURCES.txt
+scraping_browser.egg-info/dependency_links.txt
+scraping_browser.egg-info/top_level.txt

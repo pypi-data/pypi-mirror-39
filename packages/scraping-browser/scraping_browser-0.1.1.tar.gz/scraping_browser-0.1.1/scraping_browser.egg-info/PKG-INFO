@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: scraping-browser
+Version: 0.1.1
+Summary: Web-Scraping browser emulator
+Home-page: https://gibraltar.chi.uni-hannover.de/pflug/browser
+Author: Fabian Pflug
+Author-email: pflug@chi.uni-hannover.de
+License: UNKNOWN
+Description: # Python Browser
+        
+        Small browser emulator for web-scraping in python.
+        
+        Using beautiful soup for searching
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
