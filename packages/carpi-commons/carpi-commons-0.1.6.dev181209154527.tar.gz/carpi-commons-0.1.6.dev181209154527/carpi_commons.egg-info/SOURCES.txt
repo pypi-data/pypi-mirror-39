@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+SHORT_DESCRIPTION.txt
+VERSION.autobuild.txt
+VERSION.txt
+setup.py
+carpi_commons.egg-info/PKG-INFO
+carpi_commons.egg-info/SOURCES.txt
+carpi_commons.egg-info/dependency_links.txt
+carpi_commons.egg-info/not-zip-safe
+carpi_commons.egg-info/requires.txt
+carpi_commons.egg-info/top_level.txt
+carpicommons/__init__.py
+carpicommons/errors.py
+carpicommons/log.py
