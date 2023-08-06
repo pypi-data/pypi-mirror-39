@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: jira-helper
+Version: 0.0.2
+Summary: CLI tools and REPL for passing JQL to a JIRA server and filtering results
+Home-page: https://github.com/kenjyco/jira-helper
+Author: Ken
+Author-email: kenjyco@gmail.com
+License: MIT
+Download-URL: https://github.com/kenjyco/jira-helper/tarball/v0.0.2
+Keywords: jira,helper
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Intended Audience :: Developers
+Requires-Dist: requests
+Requires-Dist: chloop
+Requires-Dist: settings-helper
+
+Install
+-------
+
+Install with ``pip``
+
+::
+
+    % pip3 install jira-helper
+
+
