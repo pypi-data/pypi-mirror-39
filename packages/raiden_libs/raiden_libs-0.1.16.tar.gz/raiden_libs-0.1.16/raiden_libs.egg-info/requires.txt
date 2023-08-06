@@ -1,0 +1,9 @@
+raiden-contracts==0.8.0
+jsonschema<3.0,>=2.6.0
+py_ecc!=1.4.5
+matrix_client<4.0,>=0.3.2
+eth-utils<2.0,>=1.2.0
+pycryptodome<4.0,>=3.6.6
+gevent<2.0,>=1.3.6
+web3<5.0,>=4.5.0
+coincurve<9.0,>=8.0.0
