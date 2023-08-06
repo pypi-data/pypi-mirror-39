@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: falcon_jinja2
+Version: 0.0.2
+Summary: Jinja2 support for Falcon
+Home-page: https://github.com/mikeylight/falcon-jinja
+Author: Michael Yusko
+Author-email: mikeiceman1221@gmail.com
+License: MIT
+Description: 
+        falcon-jinja
+        ------------
+        Jinja2 support for Falcon web framework
+        
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
