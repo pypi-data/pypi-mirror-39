@@ -1,0 +1,4 @@
+include LICENSE
+recursive-include multiwordnet/db *.sql
+prune multiwordnet/db/hebrew
+prune *.db
