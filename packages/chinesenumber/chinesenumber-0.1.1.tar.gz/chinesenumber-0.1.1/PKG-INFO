@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: chinesenumber
+Version: 0.1.1
+Summary: Convert Chinese (or Japanese) numbers to numeric digits (21)
+Home-page: https://github.com/patarapolw/chinesenumber
+Author: Pacharapol Withayasakpunt
+Author-email: patarapolw@gmail.com
+Requires-Python: >=3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
