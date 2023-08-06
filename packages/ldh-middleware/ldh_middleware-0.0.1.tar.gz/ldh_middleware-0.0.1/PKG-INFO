@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: ldh_middleware
+Version: 0.0.1
+Summary: A middleware application (with a user-facing web interface) for managing subscription-based accounts on a Liberty Deckplan Host (LDH).
+Home-page: https://source.puri.sm/liberty/ldh_middleware
+Author: Purism SPC
+Author-email: liberty@puri.sm
+License: AGPL-3.0-or-later
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)

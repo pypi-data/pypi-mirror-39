@@ -1,0 +1,46 @@
+# stored as /etc/nginx/sites-available/purist_middleware
+# and symlink /etc/nginx/sites-enabled/purist_middleware
+
+# naive redirect of HTTP to HTTPS
+# deep links are ignored
+server {
+	server_name example.com;  # TODO: change domain
+
+	listen *:80;
+	listen [::]:80;
+
+	return 301 https://example.com;  # TODO: change domain
+}
+
+# the upstream component nginx needs to connect to
+upstream django {
+    server unix:/var/opt/purist/middleware/uwsgi.sock; # for a file socket
+}
+
+# the main server block
+server {
+	server_name example.com;  # TODO: change domain
+
+	# SSL configuration
+	listen 443 ssl;
+	listen [::]:443 ssl;
+        ssl_certificate /path/to/fullchain.pem;  # TODO: update path
+        ssl_certificate_key /path/to/privkey.pem;  # TODO: update path
+
+	charset utf-8;
+	# error_log /var/log/nginx/error.log debug; # optional
+
+	location /static/ {
+		alias /var/opt/purist/middleware/static/;
+	}
+
+	location /favicon.ico {
+		alias /var/opt/purist/brand/favicon.ico;
+	}
+
+	location / {
+		uwsgi_pass django;
+		include /etc/nginx/uwsgi_params;
+	}
+}
+

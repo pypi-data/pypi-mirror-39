@@ -1,0 +1,6 @@
+include *.md
+recursive-include purist *.html
+recursive-include limitmonitor *.html
+recursive-include ldapregister *.html
+graft conf
+graft docs

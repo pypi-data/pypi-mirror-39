@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% load i18n %} {% load crispy_forms_tags %}
+
+{% block title %}{% trans 'Register' %}{% endblock %}
+{% block header %}{% trans 'Register' %}{% endblock %}
+{% block byline %}{% trans 'Please fill in your registration details' %}{% endblock %}
+
+{% block content %}
+
+<!-- Main Content -->
+<section class="row">
+    <section class="form">
+        <form method="post" action=".">
+            {% csrf_token %} {{ form|crispy}}
+
+            <div class="submit-group">
+                <input type="submit" value="{% trans 'Submit' %}"/>
+            </div>
+        </form>
+    </section>
+</section>
+
+{% endblock %}
