@@ -1,0 +1,9 @@
+python-docx
+setuptools
+six
+
+[test]
+pytest
+
+[tests]
+pytest
