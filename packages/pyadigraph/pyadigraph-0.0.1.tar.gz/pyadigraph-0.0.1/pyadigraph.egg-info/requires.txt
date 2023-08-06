@@ -1,0 +1,7 @@
+networkx
+
+[test]
+pytest
+pytest-cov
+coveralls
+numpy

@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+setup.py
+pyadigraph/__init__.py
+pyadigraph/__version__.py
+pyadigraph/pyadigraph.py
+pyadigraph.egg-info/PKG-INFO
+pyadigraph.egg-info/SOURCES.txt
+pyadigraph.egg-info/dependency_links.txt
+pyadigraph.egg-info/requires.txt
+pyadigraph.egg-info/top_level.txt
+pyadigraph/__pycache__/__init__.cpython-36.pyc
+pyadigraph/__pycache__/pyadigraph.cpython-36.pyc
+pyadigraph/placeholders/document.txt
+pyadigraph/placeholders/figure.txt
+pyadigraph/placeholders/subfigure.txt
