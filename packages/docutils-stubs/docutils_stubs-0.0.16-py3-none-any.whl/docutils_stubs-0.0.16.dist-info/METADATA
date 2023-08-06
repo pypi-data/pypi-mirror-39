@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: docutils-stubs
+Version: 0.0.16
+Summary: PEP 561 type stubs for docutils
+Home-page: https://github.com/tk0miya/docutils-stubs
+Author: Takeshi KOMIYA, cocoatomo
+Author-email: i.tkomiya@gmail.com, cocoatomo77@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: docutils (==0.14)
+
+docutils-stubs
+===============
+
+`PEP 561`_ based Type information for docutils_.
+
+.. _PEP 561: https://www.python.org/dev/peps/pep-0561
+.. _docutils: http://docutils.sourceforge.net/
+
+
