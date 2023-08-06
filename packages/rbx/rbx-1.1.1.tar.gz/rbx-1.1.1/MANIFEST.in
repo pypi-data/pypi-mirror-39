@@ -1,0 +1,8 @@
+prune rbx
+prune tests
+
+include LICENSE
+include rbx/ext/__init__.py
+include rbx/ext/maps/*
+include rbx/__init__.py
+include rbx/cli/*
