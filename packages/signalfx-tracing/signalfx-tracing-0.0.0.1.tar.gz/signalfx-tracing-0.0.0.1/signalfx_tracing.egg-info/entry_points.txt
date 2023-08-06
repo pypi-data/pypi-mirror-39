@@ -1,0 +1,4 @@
+[console_scripts]
+sfx-py-trace = scripts.sfx_py_trace:main
+sfx-py-trace-bootstrap = scripts.bootstrap:console_script
+
