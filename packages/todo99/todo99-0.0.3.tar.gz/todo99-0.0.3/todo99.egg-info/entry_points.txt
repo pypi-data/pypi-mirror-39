@@ -1,0 +1,3 @@
+[console_scripts]
+todo99 = todo.__main__:maingl
+
