@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ponddy-api-test-client
+Version: 0.0.1
+Summary: The test client for Ponddy API
+Home-page: https://github.com/ponddy-edu/PonddyAPITestClient
+Author: lambdaTW
+Author-email: lambda@lambda.tw
+License: MIT
+Keywords: django api client ponddy
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >3.6
+Requires-Dist: Django
+
+UNKNOWN
+
+
