@@ -1,0 +1,3 @@
+[console_scripts]
+pyultrasonic = pyultrasonic.__main__:main
+
