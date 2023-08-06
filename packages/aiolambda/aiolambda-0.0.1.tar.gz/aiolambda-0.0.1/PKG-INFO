@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: aiolambda
+Version: 0.0.1
+Summary: Python async microservices fasts!
+Home-page: http://github.com/pando85/aiolambda
+Author: Pando85
+Author-email: pand855@gmail.com
+License: GPLv3+
+Description: # aiolambda [![Build Status](https://travis-ci.org/pando85/aiolambda.svg?branch=master)](https://travis-ci.org/pando85/aiolambda) [![License](https://img.shields.io/github/license/pando85/aiolambda.svg)](https://github.com/pando85/aiolambda/blob/master/LICENSE)
+        Python async microservices fasts!
+        
+Keywords: aiolambda asyncio aiohttp asyncpg aio-pika
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Intended Audience :: Developers
