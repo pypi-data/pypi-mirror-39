@@ -1,0 +1,38 @@
+Metadata-Version: 1.0
+Name: pygments-solarized-style
+Version: 0.1
+Summary: Pygments version of the Solarized theme.
+Home-page: https://github.com/lordjx/pygments-solarized_style
+Author: Jason Xu
+Author-email: hongyi.xu@gmail.com
+License: MIT
+Description: Install
+        =======
+        
+        Using PyPI and pip
+        ------------------
+        ::
+        
+           $ pip install pygments-solarized-style
+        
+        
+        Usage Sample
+        ------------
+        ::
+        
+           >>> from pygments.formatter import HtmlFormatter
+           >>> HtmlFormatter(style='solarizedlight').style
+           <class 'pygments_solarized_style.light.LightStyle'>
+           >>> HtmlFormatter(style='solarizeddark').style
+           <class 'pygments_solarized_style.light.DarkStyle'>
+        
+        
+        Export the style as CSS
+        -----------------------
+        ::
+        
+           pygmentize -S solarizedlight -f html > solarizedlight.css
+        
+        
+Keywords: pygments,style,solarized,syntax highlighting
+Platform: UNKNOWN

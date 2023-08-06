@@ -1,0 +1,5 @@
+
+        [pygments.styles]
+        solarizedlight=pygments_solarized_style.light:LightStyle
+        solarizeddark=pygments_solarized_style.dark:DarkStyle
+    
