@@ -1,0 +1,106 @@
+<h1 tal:replace="structure here/manage_page_header">Header</h1>
+
+<main class="container-fluid">
+
+<h2 tal:define="form_title string:Add ${options/meta_type}"
+	tal:replace="structure here/manage_form_title">Form Title</h2>
+
+<p class="form-help" style="white-space:pre-wrap" tal:content="options/description">
+	Description
+</p>
+
+<form method="post" tal:attributes="
+      action options/action;
+      class string:zmi-${options/class_} zmi-add
+      ">
+  <table class="table">
+    <thead class="thead-light">
+      <tr class="table-sm">
+	<th scope="col">Name</th>
+	<th scope="col">Value</th>
+	<th scope="col">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr title="id">
+	<td><label>id</label></td>
+	<td>
+	  <input type="hidden" name="str_properties_charset_"
+		 tal:attributes="value options/charset;" />
+	  <input type="text" name="id" id="id" />
+	</td>
+	<td>string</td>
+      </tr>
+      <tal:repeat repeat="prop options/properties">
+        <tr tal:define="
+          control_value_type prop/control_value_type;
+          control_type prop/control_type;
+          type prop/type;
+          value prop/converted_value;
+          id prop/id;
+          label prop/label;
+	  description prop/description;
+          "
+	  tal:attributes="title description;"
+	>
+	  <!-- Name column -->
+	  <td><label tal:content="label" /></td>
+	  <!-- Value column -->
+	  <td>
+            <tal:div condition="python: control_type == 'checkbox'">
+	      <input type="hidden" value="" tal:attributes="
+	        name string:${id}${control_value_type}:default;
+		" />
+              <input class="form-control" type="checkbox" tal:attributes="
+                id id;
+                name string:${id}${control_value_type};
+                checked value;
+                " />
+            </tal:div>
+            <tal:div condition="python: control_type == 'input'">
+              <input class="form-control" type="text" tal:attributes="
+                id id;
+                name string:${id}${control_value_type};
+                value value;
+                " />
+            </tal:div>
+            <tal:div condition="python: control_type == 'textarea'">
+              <textarea class="form-control" rows="6" tal:attributes="
+                id id;
+                name string:${id}${control_value_type};
+                " 
+                tal:content="value"
+                />
+            </tal:div>
+            <tal:div condition="python: control_type in ('selection', 'multiple selection')">
+	      <input tal:condition="python: control_type.startswith('multiple')" 
+	        type="hidden" value=''
+		tal:attributes="name string:${id}:tokens:default"
+		/>
+              <select class="form-control" tal:attributes="
+                  multiple python: control_type.startswith('multiple');
+                  id id;
+                  name string:${id}${control_value_type};
+                  "
+                >
+                <option tal:repeat="option prop/options"
+                  tal:attributes="selected python:option in value"
+                  tal:content="option"
+                  />
+              </select>
+            </tal:div>
+          </td>
+	  <!-- Type column -->
+          <td tal:content="type" />
+        </tr>
+      </tal:repeat>
+    </tbody>
+  </table>
+  <div class="zmi-controls">
+    <input type="submit" class="btn btn-primary" value="Add" />
+  </div>
+</form>
+
+</main>
+
+<h1 tal:replace="structure here/manage_page_footer">Footer</h1>

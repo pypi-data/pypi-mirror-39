@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html tal:define="
+    width string:60;
+
+    dummy python:request.response.setHeader('content-type', 'text/html;; charset=utf-8');
+    std modules/Products/PythonScripts/standard;
+    " 
+  >
+  <head>
+    <title>Add <tal:span content="options/meta_type" /></title>
+    <!-- Changed by: dieter, 06-Dec-2018 -->
+    <link rel="stylesheet" type="text/css" href="manage_page_style.css"
+      tal:attributes="href string:${request/BASEPATH1}/manage_page_style.css"
+      />
+  </head>
+  <body>
+    <h1>Add <tal:span content="options/meta_type" /></h1>
+
+    <div tal:content="structure python:std.restructured_text(options['description'])" />
+    <form method="POST" tal:attributes="
+      action options/action;
+      "
+      >
+      <table cellspacing="0" cellpadding="2" border="0">
+      <tr class="list-header">
+        <td align="left" valign="top">
+        <div class="form-label">
+        Name
+        </div>
+        </td>
+        <td align="left" valign="top">
+        <div class="form-label">
+        Value
+        </div>
+        </td>
+        <td align="left" valign="top">
+        <div class="form-label">
+        Type
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td align="left" valign="top">
+          <div class="form-label">
+            <label for="id">Id</label>
+          </div>
+        </td>
+        <td align="left" valign="top">
+          <input type="hidden" name="str_properties_charset_"
+            tal:attributes="value options/charset;" />
+          <input type="text" name="id" id="id"
+            tal:attributes="size width" />
+        </td>
+        <td align="left" valign="top"><div class="list-item">string</div></td>
+      </tr>
+      <tal:repeat repeat="prop options/properties">
+        <tr tal:define="
+          control_value_type prop/control_value_type;
+          control_type prop/control_type;
+          type prop/type;
+          value prop/converted_value;
+          id prop/id;
+          label prop/label;
+	  description prop/description;
+          "
+	  tal:attributes="title description;"
+          >
+          <td align="left" valign="top">
+            <div class="form-label">
+              <label tal:attributes="for id" tal:content="label" />
+            </div>
+          </td>
+          <td align="left" valign="top">
+            <tal:div condition="python: control_type == 'checkbox'">
+	      <input type="hidden" value="" tal:attributes="
+	        name string:${id}${control_value_type}:default;
+		" />
+              <input type="checkbox" tal:attributes="
+                id id;
+                name string:${id}${control_value_type};
+                checked value;
+                " />
+            </tal:div>
+            <tal:div condition="python: control_type == 'input'">
+              <input type="text" tal:attributes="
+                id id;
+                name string:${id}${control_value_type};
+                value value;
+                size width;
+                " />
+            </tal:div>
+            <tal:div condition="python: control_type == 'textarea'">
+              <textarea rows="6" tal:attributes="
+                id id;
+                name string:${id}${control_value_type};
+                cols width;
+                " 
+                tal:content="value"
+                />
+            </tal:div>
+            <tal:div condition="python: control_type in ('selection', 'multiple selection')">
+	      <input tal:condition="python: control_type.startswith('multiple')" 
+	        type="hidden" value=''
+		tal:attributes="name string:${id}:tokens:default"
+		/>
+              <select tal:attributes="
+                  multiple python: control_type.startswith('multiple');
+                  id id;
+                  name string:${id}${control_value_type};
+                  "
+                >
+                <option tal:repeat="option prop/options"
+                  tal:attributes="selected python:option in value"
+                  tal:content="option"
+                  />
+              </select>
+            </tal:div>
+          </td>
+          <td align="left" valign="top"><div class="list-item" tal:content="type" /></td>
+        </tr>
+      </tal:repeat>
+      <tr><td colspan="3"><input type="submit" value="Create" /></td></tr>
+      </table>
+    </form>
+  </body>
+</html>
+    
