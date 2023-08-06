@@ -1,0 +1,12 @@
+README.md
+setup.py
+phylactery/__init__.py
+phylactery/bitset.py
+phylactery/triedict.py
+phylactery/unionfind.py
+phylactery/vptree.py
+phylactery.egg-info/PKG-INFO
+phylactery.egg-info/SOURCES.txt
+phylactery.egg-info/dependency_links.txt
+phylactery.egg-info/top_level.txt
+phylactery.egg-info/zip-safe
