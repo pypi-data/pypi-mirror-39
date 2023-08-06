@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: slack-alerts
+Version: 1.0.0
+Summary: Simple Slack alerting python library
+Home-page: https://github.com/etienne-napoleone/slack-alerts
+Author: Etienne Napoleone
+Author-email: etienne@tomochain.com
+Keywords: slack,webhook,alerts,python3,library
+Requires-Python: >=3.5,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: requests (>=2.20,<3.0)
+Project-URL: Documentation, https://github.com/etienne-napoleone/slack-alerts/blob/develop/README.md
+Project-URL: Repository, https://github.com/etienne-napoleone/slack-alerts

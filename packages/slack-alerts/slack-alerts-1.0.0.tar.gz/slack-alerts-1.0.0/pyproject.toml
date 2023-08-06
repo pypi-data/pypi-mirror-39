@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "slack-alerts"
+version = "1.0.0"
+description = "Simple Slack alerting python library"
+readme = "README.md"
+license = "GPL-3.0+"
+homepage = "https://github.com/etienne-napoleone/slack-alerts"
+repository = "https://github.com/etienne-napoleone/slack-alerts"
+documentation = "https://github.com/etienne-napoleone/slack-alerts/blob/develop/README.md"
+keywords = ["slack", "webhook", "alerts", "python3", "library"]
+authors = [
+  "Etienne Napoleone <etienne@tomochain.com>"
+]
+
+[tool.poetry.dependencies]
+python = "^3.5"
+requests = "^2.20"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+flake8 = "^3.6"
+coveralls = "^1.5"
