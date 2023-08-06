@@ -1,0 +1,7 @@
+click
+pandas
+pymongo
+
+[dev]
+black
+nose2
