@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: zrandomlist
+Version: 0.4
+Summary: Generates a small list of random numbers
+Home-page: https://github.com/aakazemaa/permutation/tree/zmsgq/zrandomlist
+Author: Kazem Ardekanian
+Author-email: kazem.ardekanian@gmail.com
+License: MIT
+Description: This is a simple list of random numbers generator.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
