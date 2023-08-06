@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pillars
+Version: 0.2.2
+Summary: Collection of helpers for building asyncio daemons.
+Home-page: None
+Author: Allocloud
+Author-email: allocloud@ovv.wtf
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: aiodns (>=1.1,<2.0)
+Requires-Dist: aiohttp (>=3.3,<4.0)
+Requires-Dist: aioredis (>=1.1,<2.0)
+Requires-Dist: aiosip
+Requires-Dist: async-timeout (>=3.0,<4.0)
+Requires-Dist: asyncpg (>=0.17.0,<0.18.0)
+Requires-Dist: attrs (>=18.1,<19.0)
+Requires-Dist: cchardet (>=2.1,<3.0)
+Requires-Dist: cerberus (>=1.2,<2.0)
+Requires-Dist: cython (>=0.28.5,<0.29.0)
+Requires-Dist: panoramisk
+Requires-Dist: pyyaml (>=3.13,<4.0)
+Requires-Dist: setproctitle (>=1.1,<2.0)
+Requires-Dist: ujson (>=1.35,<2.0)
+Requires-Dist: uvloop (>=0.11.2,<0.12.0)
