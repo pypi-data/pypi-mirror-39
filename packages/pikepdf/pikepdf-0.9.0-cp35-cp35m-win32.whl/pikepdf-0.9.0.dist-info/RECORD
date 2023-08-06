@@ -1,0 +1,15 @@
+pikepdf/__init__.py,sha256=OUllFsKTtKzqpf0gyCwn4O3HIAGWMw_-VLJ1F_CMdOw,1137
+pikepdf/_cpphelpers.py,sha256=uPF5GxSwU1uzvpKqZRLdB9s0U83kuJhXCRZRmrmo_yg,1545
+pikepdf/_methods.py,sha256=voxw-MxcFUVl-1Ba2mZtIWYBS7XJUNuZqL9sXR9w7CM,8956
+pikepdf/_qpdf.cp35-win32.pyd,sha256=Au-YvLjpydDdiH7BWKkl8ymz89-_mzXixn7UaUwog0Q,626688
+pikepdf/objects.py,sha256=TYgKMLcr4LIU8qlLkowwu7L0l2IEfYdu7vGWRsNuBHY,5161
+pikepdf/qpdf21.dll,sha256=d3XOgiCY8zV0wD4pczzPIQVXFCvUIr7NsSsoYxRdR2A,1337856
+pikepdf/models/__init__.py,sha256=sxkju2LcV0p5DRS9h1gBcdTA-bQ-YNK1TFwvZ_Bgh7g,4088
+pikepdf/models/image.py,sha256=6kizQLsynECCjlFkYDkqIwq-Ob618rdXMNlFr-M9MiU,21446
+pikepdf/models/matrix.py,sha256=x42MDmxiLDD7WJRta060BKIRAeU4Erc4nngKKQ0ikI0,4038
+pikepdf/models/metadata.py,sha256=vNo8Y4SNIM_iiGbENElZ-Mb6VewWRCqTG--Z_tCWa_c,19137
+pikepdf-0.9.0.dist-info/METADATA,sha256=5NFDX0FPDAAhMS2WU9CKWUgtJjHBhh4h02oWBmWhmbI,7811
+pikepdf-0.9.0.dist-info/WHEEL,sha256=zpiGhE7wHpe_WKYzV_azSlPDRA8fzPGhm1wNeBPbEgA,102
+pikepdf-0.9.0.dist-info/license.wheel.txt,sha256=8up_jwKeOHJUkLm54gXhWUrp_WgLQH8HcUX7rHjQkkc,31626
+pikepdf-0.9.0.dist-info/top_level.txt,sha256=I9EqKPMWS0R0KipU78RVfZCHdDzZhMrjM4wxykU9l_o,8
+pikepdf-0.9.0.dist-info/RECORD,,
