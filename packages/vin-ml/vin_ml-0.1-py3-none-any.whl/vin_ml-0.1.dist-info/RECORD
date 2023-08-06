@@ -1,0 +1,16 @@
+vin_ml/__init__.py,sha256=nKhEJWFZ7F2BFEZm1NbOVWks7WEAffsOnahrBMSHxvI,57
+vin_ml/kernals.py,sha256=7a438z2jAA_GyDy7vGRS_ihJncx56uuPCwYJj1xoI-E,245
+vin_ml/utils.py,sha256=oMsuTe0sMx8qqWpZ7sCw44VvJ9hK071D9FyraQpbbDo,241
+vin_ml/models/NN.py,sha256=tNJHe4Fzd3hWSaz77yJyCQjYoOFv665D61pm1IZ5CfQ,4475
+vin_ml/models/__init__.py,sha256=8FNSpcFG_-Z6k21Rbd54gCCMRDnPUVx-oYj4qEU5ESY,131
+vin_ml/models/c4_5.py,sha256=-s_CXkh7zu_XARDwhT9oC_Qh0TIzN8CxO1nOAGvIGD0,8786
+vin_ml/models/id3.py,sha256=OgnqzU04InZr9FjdyQL4ilijae9UTaMutqtvWcwqI48,8555
+vin_ml/models/linear_regression.py,sha256=cDVrWXy-jHOTMDts6cWSXpQa4myubGwGbWTo3SWWClU,648
+vin_ml/models/logistic_regression.py,sha256=fZuBfgwXj5Eo-VyTt7pTX-wJ5NaQxP6MIdHMucNR6mk,1325
+vin_ml/models/perceptron.py,sha256=g9YEtU2l0OzAMv2vLFNXY08o7GjXlvN4a6DgOtKUo2M,882
+vin_ml/models/random_forest.py,sha256=b5NCtaa3jUUa35vRejGD0zN67wN2XzE9p3TGomMBtIM,9386
+vin_ml/models/svm.py,sha256=HZ08Ll1c3M_uCZ0lTEg57p--0bGzpG-ryBqkIedZ2io,3950
+vin_ml-0.1.dist-info/METADATA,sha256=BDmJrf2giwB8V6tL3a7QQbO_URtzo_ccmI7oRFfTOm8,332
+vin_ml-0.1.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+vin_ml-0.1.dist-info/top_level.txt,sha256=k9r-9ky28YTjE5AgvIEml8fBbFtsVVeKCpe0lZcbVj4,7
+vin_ml-0.1.dist-info/RECORD,,
