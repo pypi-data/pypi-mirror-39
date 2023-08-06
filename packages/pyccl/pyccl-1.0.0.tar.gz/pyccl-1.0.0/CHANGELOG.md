@@ -1,0 +1,83 @@
+# v 1.0 API changes :
+
+## C library
+- Deprecated the `native` non-Limber angular power spectrum method (#506).
+- Renamed `ccl_lsst_specs.c` to `ccl_redshifts.c`, deprecated LSST-specific redshift distribution functionality, introduced user-defined true dNdz (changes in call signature of `ccl_dNdz_tomog`). (#528).
+
+## Python library
+- Renamed `lsst_specs.py` to `redshifts.py`, deprecated LSST-specific redshift distribution functionality, introduced user-defined true dNdz (changes in call signature of `dNdz_tomog`). (#528).
+- Deprecated the `native` non-Limber angular power spectrum method (#506).
+- Deprecated the `Parameters` object in favor of only the `Cosmology` object (#493).
+- Renamed the `ClTracer` family of objects (#496).
+- Various function parameter name changes and documentation improvements (#464).
+
+# v 0.4 API changes:
+
+Summary: added halo model matter power spectrum calculation and halo mass-concentration relations. Change to sigma(R) function so that it now has time dependence: it is now sigma(R,a). Added a sigmaV(R,a) function, where sigmaV(R,a) is the variance in the displacement field smoothed on scale R at scale-factor a.
+
+## C library
+In ccl_halomod.c:
+
+Added this source file. Contains functions to compute halo-model matter power spectra and also mass-concentration relations.
+
+In ccl_power.c
+
+Added sigmaV, changed sigma(R) -> sigma(R,a)
+
+In ccl_massfunc.c
+
+Added Sheth & Tormen (1999) mass function.
+
+## Python library
+
+sigmaR(R) defaults to sigmaR(R,a=1) unless a is specified. sigmaV(R) is also added. New functions ccl.halomodel_matter_power and ccl.halo_concentration.
+
+# v 0.3 API changes:
+
+Summary: the user interface for setting up cosmologies with neutrinos has been altered. Users should from now on pass Neff, the effective number of relativistic neutrino species in the early universe, and mnu, either a sum or neutrino masses or a set of 3 neutrinos masses.
+
+## C library
+In ccl_core.c:
+
+In the function, 'ccl\_parameters\_create', the arguements 'double N\_nu\_rel', and 'double N\_nu\_mass' have been removed. The arguments 'double Neff' and 'ccl\_mnu\_convention mnu\_type' have been added. The argument 'mnu' has changed in type from 'double mnu' to 'double* mnu'.
+
+Similar changes apply in 'ccl\_cosmology\_create\_with\_params' and all 'ccl\_parameters\_create...nu' convenience functions.
+
+Additionally, in the function 'ccl\_parameters\_create' and 'ccl\_cosmology\_create\_with\_params', arguments have been added for the parameters of the BCM baryon model; these are 'double bcm\_log10Mc', 'double bcm\_etab', and 'double bcm\_ks'.
+
+In ccl_neutrinos.c:
+
+The function ccl\_Omeganuh2\_to\_Mnu has been renamed ccl\_nu\_masses. The arguments 'double a' and 'gsl\_interp\_accel* accel' have been removed. The argument 'ccl\_neutrino\_mass\_splits mass\_split' has been added.
+
+## Python wrapper
+In core.py:
+
+In the Parameters class, the arguments 'N\_nu\_rel', and 'N\_nu\_mass' have been removed. The optional arguments 'Neff', 'mnu\_type', 'bcm\_log10Mc', 'bcm\_etab', and 'bcm\_ks' have been added. Similar changes occur in the Cosmology class. 
+
+In neutrinos.py:
+
+In the function Omeganuh2, the argument 'Neff' has been removed. It is now fixed to the length of the argument 'mnu'.
+The function 'Omeganuh2\_to\_Mnu' has been renamed 'nu\_masses'. The arguments 'a' and 'Neff' have been removed. The argument 'mass\_split' has been added.
+
+
+## Other changes since release 0.2.1 (September 2017):
+
+CLASS is no longer included as part of CCL; it can instead of easily downloaded via the class_install.py script and this procedure is documented.
+
+Tutorial added for usage with MCMC
+
+Added support for BCM baryon model
+
+cpp compatibility improved
+
+Python 3 support added
+
+Added support for computing the nonlinear matter power spectrum with CosmicEmu
+
+Added support for CMB lensing observables, including splines for cosmological quantities to higher redshift
+
+Added the ability to return useful functions such as dNdz for a tracer Cl object.
+
+Clarified license
+
+Values of the physical constants have changed to CODATA2014/IAU2015
