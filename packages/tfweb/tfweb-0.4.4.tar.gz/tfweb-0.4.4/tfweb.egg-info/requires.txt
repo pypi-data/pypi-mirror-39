@@ -1,0 +1,3 @@
+aiohttp>=2
+aiohttp_cors>=0.7
+grpclib>=0.1
