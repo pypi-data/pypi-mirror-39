@@ -1,0 +1,15 @@
+README.md
+setup.py
+pycatia/__init__.py
+pycatia/catiaapplication.py
+pycatia/document.py
+pycatia/general_functions.py
+pycatia/geometrical_feature_types.py
+pycatia/measurable.py
+pycatia/part.py
+pycatia/workbenches.py
+pycatia.egg-info/PKG-INFO
+pycatia.egg-info/SOURCES.txt
+pycatia.egg-info/dependency_links.txt
+pycatia.egg-info/requires.txt
+pycatia.egg-info/top_level.txt
