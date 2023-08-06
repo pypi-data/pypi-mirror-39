@@ -1,0 +1,50 @@
+{% extends "bee_django_exam/custom_base.html" %}
+{% load bee_django_exam_filter %}
+
+{% block content %}
+    {% include 'bee_django_exam/record/_custom_user_nav.html' %}
+    <div class="text-center"><h3>
+        {{ user }}的考级列表
+    </h3>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>考级级别</th>
+            <th>添加时间</th>
+
+            <th>状态</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for record in record_list %}
+            <tr>
+                <td>{{ record.grade_name }}</td>
+                <td>{{ record.created_at|date:"Y-m-d H:i" }}</td>
+
+                <td>{{ record.get_status_text }}
+                    {% if record.status == 1 %}
+                        {% if record.cert %}
+                            <a href="{{ record.cert }}" target="_blank">证书图片</a>
+
+                        {% endif %}
+                    {% elif record.status == -1 %}
+                        <a href="{% url 'bee_django_exam:user_exam_notice' record.id %}">报名链接</a>
+                    {% endif %}
+                </td>
+
+
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+    {% include 'bee_django_exam/paginator.html' %}
+{% endblock %}
+{% block scripts %}
+    <script>
+
+
+    </script>
+{% endblock %}

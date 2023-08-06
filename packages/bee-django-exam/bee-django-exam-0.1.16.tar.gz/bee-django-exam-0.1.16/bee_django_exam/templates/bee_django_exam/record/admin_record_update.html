@@ -1,0 +1,27 @@
+{% extends "bee_django_exam/base.html" %}
+{% load bee_django_exam_filter %}
+{% load bootstrap3 %}
+{% load static %}
+{% block content %}
+    <div style="font-size: 1.5rem;margin: 10px;">
+    <div>学生姓名：{{ record.user }}</div>
+    <div>考级名称：{{ record.grade_name }}</div>
+    </div>
+    <hr>
+    <form method="post">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% bootstrap_button '提交' %}
+    </form>
+{% endblock %}
+
+
+{% block scripts %}
+    <script>
+
+        $(document).ready(function () {
+
+
+        });
+    </script>
+{% endblock %}
