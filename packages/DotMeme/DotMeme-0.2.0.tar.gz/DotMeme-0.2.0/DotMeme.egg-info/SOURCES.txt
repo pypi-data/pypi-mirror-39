@@ -1,0 +1,8 @@
+MANIFEST.in
+setup.py
+DotMeme/__init__.py
+DotMeme.egg-info/PKG-INFO
+DotMeme.egg-info/SOURCES.txt
+DotMeme.egg-info/dependency_links.txt
+DotMeme.egg-info/requires.txt
+DotMeme.egg-info/top_level.txt
