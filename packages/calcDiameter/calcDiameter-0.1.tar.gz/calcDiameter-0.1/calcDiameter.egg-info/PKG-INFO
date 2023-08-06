@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: calcDiameter
+Version: 0.1
+Summary: The program takes in a pdb as arument, finds the right orientation such that the torus sits on the XY plane projects all atoms onto the XY plane and calculates the max diameter
+Home-page: UNKNOWN
+Author: Jan Zaucha
+Author-email: j.zaucha@tum.de
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
