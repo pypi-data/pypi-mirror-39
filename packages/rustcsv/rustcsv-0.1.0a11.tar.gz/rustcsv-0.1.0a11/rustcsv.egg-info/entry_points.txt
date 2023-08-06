@@ -1,0 +1,3 @@
+[console_scripts]
+rustcsv = rustcsv.__main__:cli
+
