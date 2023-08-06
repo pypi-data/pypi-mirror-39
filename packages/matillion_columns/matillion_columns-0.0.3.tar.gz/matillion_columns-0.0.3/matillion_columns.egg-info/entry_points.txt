@@ -1,0 +1,3 @@
+[console_scripts]
+matillion-columns = matillion_columns.command_line:main
+

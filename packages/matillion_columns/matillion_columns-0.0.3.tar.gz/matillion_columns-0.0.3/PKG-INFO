@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: matillion_columns
+Version: 0.0.3
+Summary: A tool to generate columns in our Matillion grid variables using CSVs on S3
+Home-page: https://github.com/cjdinsmore/matillion_columns
+Author: Caleb Dinsmore
+Author-email: caleb.dinsmore@edusource.us
+License: MIT
+Description: # How to Run
+        
+        **Before you do anything, make sure you've followed [this play](https://edusource.atlassian.net/wiki/spaces/PLAYB/pages/510460716/Create+AWS+Access+Credentials+and+Configure+AWS+CLI).**
+        
+        ### Installation
+        
+        ```bash
+        brew install python2
+        pip install --user matillion-columns
+        ```
+        
+        ### Run
+        
+        Once you've followed these steps, you should be able to run the script, using (it may take a few seconds to run, depending on the size of the file):
+        
+        `matillion-columns [OPTIONS] csv_file.csv`
+        
+        For more help info, run:
+        
+        `matillion-columns -h`
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
