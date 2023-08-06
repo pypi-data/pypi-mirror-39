@@ -1,0 +1,7 @@
+appdirs
+matplotlib>=2.2.0
+numpy>=1.12.0
+scikit-image==0.14.0
+qpformat==0.6.3
+qpimage==0.4.4
+qpsphere==0.4.0
