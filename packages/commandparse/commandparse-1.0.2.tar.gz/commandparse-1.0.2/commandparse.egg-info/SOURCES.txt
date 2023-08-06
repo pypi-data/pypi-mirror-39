@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+VERSION
+setup.py
+commandparse/__init__.py
+commandparse.egg-info/PKG-INFO
+commandparse.egg-info/SOURCES.txt
+commandparse.egg-info/dependency_links.txt
+commandparse.egg-info/top_level.txt
+commandparse.egg-info/zip-safe
