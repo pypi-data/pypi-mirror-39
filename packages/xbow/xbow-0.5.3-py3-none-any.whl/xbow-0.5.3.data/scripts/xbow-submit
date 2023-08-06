@@ -1,0 +1,73 @@
+#!python
+from __future__ import print_function
+
+import uuid
+import glob
+import os, yaml
+import sys
+import time
+import xbow
+from xbow.metering import SpotMeter
+from xbow.instances import get_by_name, ConnectedInstance
+from xbow import pools
+
+def pack_and_run_remote(command):
+    """
+    Stage the contents of the current directory to the xbow cluster, then
+    run the given command, then stage output files back, then clean up.
+    """
+    cfg_file = os.path.join(xbow.XBOW_CONFIGDIR, "settings.yml")
+
+    with open(cfg_file, 'r') as ymlfile:
+        cfg = yaml.load(ymlfile)
+
+    instances = get_by_name(cfg['scheduler_name'])
+    if len(instances) == 0:
+        raise ValueError('Error - no such instance')
+    elif len(instances) > 1:
+        raise ValueError('Error - more than one instance has that name')
+    instance = instances[0]
+    ci = ConnectedInstance(instance)
+    az = instance.placement['AvailabilityZone']
+    meter = SpotMeter(cfg['worker_instance_type'], az, count = cfg['pool_size'])
+    jobid = uuid.uuid4()
+    mount_point=cfg['mount_point']
+
+    ci.exec_command('sudo apt update && sudo apt install task-spooler && tsp -S 80')
+    print('remote directory will be {}/{}'.format(mount_point, jobid))
+    ci.exec_command('mkdir {}/{}'.format(mount_point, jobid))
+    infiles = glob.glob('*')
+    print('uploading files:')
+    for filename in infiles:
+        if os.path.isfile(filename):
+            print('    {}'.format(filename))
+            ci.upload(filename, '{}/{}/{}'.format(mount_point, jobid, filename))
+    ci.exec_command("cd {}/{} && tsp xflow-exec '{}'".format(mount_point, jobid, command)) 
+    tsp_id = ci.output[:-1]
+    print('tsp job {} submitted.'.format(tsp_id))
+
+    HOSTFILE = open(os.path.expanduser('.xbow_ids.yml'), 'w+')
+    HOSTFILE.write('jobid: {}\n'.format(jobid))
+    HOSTFILE.write('tsp_id: {}\n'.format(tsp_id))
+    HOSTFILE.close()
+
+    user_data = 'sudo -H -u ubuntu dask-worker --local-directory /tmp/dask --nthreads 1 --nprocs 1  --scheduler-file {}/.dsf.json --worker-port 45792 &\n'.format(cfg['mount_point'])
+   
+    print("Creating a worker, this may take some time...")
+
+    sip = pools.create_elastic_spot_pool(cfg['worker_pool_name'],
+                            count=1,
+                            price=cfg['price'],
+                            image_id=cfg['image_id'],
+                            instance_type=cfg['worker_instance_type'],
+                            shared_file_system=cfg['shared_file_system'],
+                            mount_point=cfg['mount_point'],
+                            ec2_security_groups=cfg['ec2_security_groups'],
+                            efs_security_groups=cfg['efs_security_groups'],
+                            user_data=user_data
+                          )
+    print("Instance running")
+
+if __name__ == '__main__':
+    command = ' '.join(sys.argv[1:])
+    pack_and_run_remote(command)
