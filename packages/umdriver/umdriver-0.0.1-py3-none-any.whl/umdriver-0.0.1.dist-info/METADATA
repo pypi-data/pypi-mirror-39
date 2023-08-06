@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: umdriver
+Version: 0.0.1
+Summary: An extension of the selenium webdriver bindings for python with U-M weblogin baked in.
+Home-page: https://github.com/jamie-r-davis/umdriver
+Author: Jamie Davis
+Author-email: jamjam@umich.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+# UM Driver
+
+An extension of the selenium webdriver bindings for python with U-M weblogin baked in.
+
+
