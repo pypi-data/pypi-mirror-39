@@ -1,0 +1,25 @@
+Metadata-Version: 2.0
+Name: sitkhi
+Version: 1.0.0
+Summary: Simple high level tools of sitk
+Home-page: https://github.com/WongChen/sitk_tools
+Author: wong
+Author-email: yachenwang4@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.5.0
+Description-Content-Type: text/markdown
+Requires-Dist: SimpleITK
+Requires-Dist: numpy
+
+
+# sitk_tools
+high level tools for medical image processing
+
+
