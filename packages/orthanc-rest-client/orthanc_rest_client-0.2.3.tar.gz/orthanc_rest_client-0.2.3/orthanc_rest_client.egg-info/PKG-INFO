@@ -1,0 +1,67 @@
+Metadata-Version: 1.1
+Name: orthanc-rest-client
+Version: 0.2.3
+Summary: REST client for Orthanc DICOM servers
+Home-page: https://github.com/teffalump/orthanc_rest_client
+Author: teffalump
+Author-email: chris@teffalump.com
+License: UNKNOWN
+Description: Orthanc REST client
+        ===================
+        
+        Provides a REST client, based on
+        `apiron <https://github.com/ithaka/apiron>`__, targeted at
+        `Orthanc <https://www.orthanc-server.com>`__ REST endpoints.
+        
+        Install
+        ~~~~~~~
+        
+        ::
+        
+           pip install orthanc_rest_client
+        
+        How to use
+        ~~~~~~~~~~
+        
+        Import the pre-defined client and pass the server details
+        
+        ::
+        
+           from orthanc_rest_client import Orthanc
+           orthanc = Orthanc('http://localhost:8042')
+        
+           # Get patient(s)
+           orthanc.patients(<id or not>)
+        
+           # Get studies/study
+           orthanc.studies(<id or not>)
+        
+           # Get series/part
+           orthanc.series(<id or not>)
+        
+           # Get instances/instance
+           orthanc.instances(<id or not>)
+        
+           # Get tags
+           orthanc.instance_tag(id)
+        
+           # Get changes
+           orthanc.changes()
+        
+           # Find objects by query
+           orthanc.find(query)
+        
+           # Get previous queries
+           orthanc.queries()
+        
+        There are other preconfigured endpoints.
+        
+        For further help: - `apiron <https://github.com/ithaka/apiron>`__ -
+        `Orthanc documentation <http://book.orthanc-server.com>`__
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
