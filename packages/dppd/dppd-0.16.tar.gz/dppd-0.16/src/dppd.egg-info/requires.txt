@@ -1,0 +1,14 @@
+pandas>=0.22
+numpy
+wrapt
+
+[doc]
+sphinx
+sphinx-bootstrap-theme
+numpydoc
+
+[testing]
+pytest
+pytest-cov
+plotnine
+pandas
