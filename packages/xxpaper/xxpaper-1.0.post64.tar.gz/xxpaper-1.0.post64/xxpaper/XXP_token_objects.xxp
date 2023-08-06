@@ -1,0 +1,242 @@
+CUT_ELEMENT: cutline_circle
+
+TEMPLATE_boxes:
+  - token_interior_box
+  - outer_circle
+  - middle_box
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_boxes_embed:
+  - outer_circle
+  - middle_box
+  - name_stripe_box
+  - short_name_text
+  - outline_circle
+
+TEMPLATE_bullseye:
+  - token_interior_box
+  - outer_circle
+  - middle_circle
+  - inner_circle
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_bullseye_embed:
+  - outer_circle
+  - middle_circle
+  - inner_circle
+  - name_stripe_box
+  - short_name_text
+  - outline_circle
+
+TEMPLATE_chequer:
+  - token_interior_box
+  - ul_quarter_box
+  - ur_quarter_box
+  - ll_quarter_box
+  - lr_quarter_box
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_chequer_embed:
+  - ul_quarter_box
+  - ur_quarter_box
+  - ll_quarter_box
+  - lr_quarter_box
+  - name_stripe_box
+  - short_name_text
+  - outline_circle
+
+TEMPLATE_cross:
+  - token_interior_box
+  - outer_circle
+  - vertical stripe_box
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_cross_embed:
+  - outer_circle
+  - vertical stripe_box
+  - name_stripe_box
+  - short_name_text
+  - outline_circle
+
+TEMPLATE_default:
+  - token_interior_box
+  - top_half_box
+  - bottom_half_box
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_default_embed:
+  - top_half_box
+  - bottom_half_box
+  - name_stripe_box
+  - short_name_text
+  - outline_circle
+
+TEMPLATE_ring:
+  - token_interior_box
+  - outer_circle
+  - middle_circle
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_ring_embed:
+  - outer_circle
+  - middle_circle
+  - name_stripe_box
+  - short_name_text
+  - outline_circle
+
+TEMPLATE_solid:
+  - token_interior_box
+  - outer_circle
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_solid_embed:
+  - outer_circle
+  - name_stripe_box
+  - short_name_text
+  - outline_circle
+
+TEMPLATE_stripey:
+  - token_interior_box
+  - outer_circle
+  - top_line_box
+  - bottom_line_box
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_stripey_embed:
+  - outer_circle
+  - top_line_box
+  - bottom_line_box
+  - name_stripe_box
+  - short_name_text
+  - outline_circle
+
+ul_quarter_box:
+  x: $[${token_interior_box/x} / 2.0]
+  y: $[${token_interior_box/y} / 2]
+  x_inset: 0
+  y_inset: $[${token_interior_box/y} / 2]
+  fill: ${_/_major_fill_1}
+
+ur_quarter_box:
+  x: $[${token_interior_box/x} / 2.0]
+  y: $[${token_interior_box/y} / 2]
+  x_inset: $[${token_interior_box/x} / 2.0]
+  y_inset: $[${token_interior_box/y} / 2]
+  fill: ${_/_major_fill_2}
+
+ll_quarter_box:
+  x: $[${token_interior_box/x} / 2.0]
+  y: $[${token_interior_box/y} / 2]
+  fill: ${_/_minor_fill_1}
+
+lr_quarter_box:
+  x: $[${token_interior_box/x} / 2.0]
+  y: $[${token_interior_box/y} / 2]
+  x_inset: $[${token_interior_box/x} / 2.0]
+  y_inset: 0
+  fill: ${_/_minor_fill_2}
+
+top_half_box:
+  x: ${token_interior_box/x}
+  y: $[${token_interior_box/y} / 2]
+  x_inset: 0
+  y_inset: $[${token_interior_box/y} / 2]
+  fill: ${_/_major_fill}
+
+bottom_half_box:
+  x: ${token_interior_box/x}
+  y: $[${token_interior_box/y} / 2]
+  fill: ${_/_minor_fill}
+
+top_line_box:
+  x: ${token_interior_box/x}
+  y: 4
+  x_inset: 0
+  y_inset: $[${token_interior_box/y} / 2.0 + 8]
+  fill: ${_/_major_fill_2}
+
+bottom_line_box:
+  x: ${token_interior_box/x}
+  y: 4
+  x_inset: 0
+  y_inset: $[${token_interior_box/y} / 2.0 - 12]
+  fill: ${_/_minor_fill_2}
+
+vertical stripe_box:
+  x_inset: $[${token_interior_box/x} / 2 - 4]
+  y_inset: 0
+  x: 8
+  y: ${token_interior_box/y}
+  fill: ${_/_minor_fill}
+
+outer_circle:
+  x: $[${token_interior_box/x} / 2]
+  y: $[${token_interior_box/y} / 2]
+  radius: 24
+  fill: ${_/_major_fill}
+
+middle_circle:
+  x: $[${token_interior_box/x} / 2]
+  y: $[${token_interior_box/y} / 2]
+  radius: 13
+  fill: ${_/_minor_fill}
+
+inner_circle:
+  x: $[${token_interior_box/x} / 2]
+  y: $[${token_interior_box/y} / 2]
+  radius: 8
+  fill: ${_/_related_fill}
+
+middle_box:
+  x: 26
+  y: 26
+  x_inset: $[${token_interior_box/x} / 2 - 13]
+  y_inset: $[${token_interior_box/y} / 2 - 13]
+  fill: ${_/_major_fill}
+
+inner_box:
+  x: 12
+  y: 12
+  x_inset: $[${token_interior_box/x} / 2 - 6]
+  y_inset: $[${token_interior_box/y} / 2 - 6]
+  fill: ${_/_minor_fill}
+
+name_stripe_box:
+  x: ${token_interior_box/x}
+  y: 8
+  x_inset: 0
+  y_inset:  $[(${token_interior_box/y} / 2) - 4]
+  width: 0.5
+  fill: ${colour/xxp/WHITE}
+  stroke: ${colour/xxp/BLACK}
+
+short_name_text:
+  typeface: ${DEFAULT/typeface_bold}
+  x: $[${token_interior_box/x} / 2]
+  y: $[(${token_interior_box/y} / 2) - (${short_name/size} / 2) + 3.9]
+  h_center: 0
+  v_center: 0
+  size: 9
+  fill: $[black_or_white (${name_stripe_box/fill})]
+
+outline_circle:
+  x: $[${token_interior_box/x} / 2]
+  y: $[${token_interior_box/y} / 2]
+  radius: 18
+  width: 0.5
+  stroke: ${colour/xxp/BLACK}
+
+cutline_circle:
+  x: $[${token_interior_box/x} / 2 + ${token_tile/margin}]
+  y: $[${token_interior_box/y} / 2 + ${token_tile/margin}]
+  radius: 18
+  width: ${DEFAULT/cutline_width}
+  stroke: ${colour/xxp/BLACK}
