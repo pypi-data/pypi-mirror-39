@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "frisco_mazi"
+version = "0.2.0"
+description = "An idiosyncratic tool for parsing products list from Frisco confirmation e-mails"
+authors = ["Tadek Teleżyński <tadekte@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+xlsxwriter = "^1.1"
+click = "^7.0"
+
+[tool.poetry.dev-dependencies]
+ipdb = "^0.11.0"
+
+[tool.poetry.scripts]
+frisco-mazi = 'frisco_mazi:main'
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
