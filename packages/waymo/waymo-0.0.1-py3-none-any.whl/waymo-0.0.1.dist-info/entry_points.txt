@@ -1,0 +1,3 @@
+[console_scripts]
+hello_world = waymo.hello_world:print_hello_world
+
