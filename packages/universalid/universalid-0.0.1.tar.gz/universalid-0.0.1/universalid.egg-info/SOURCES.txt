@@ -1,0 +1,12 @@
+README.md
+setup.py
+test/__init__.py
+test/test.py
+universalid/__init__.py
+universalid/encode.py
+universalid/settings.py
+universalid/universalid.py
+universalid.egg-info/PKG-INFO
+universalid.egg-info/SOURCES.txt
+universalid.egg-info/dependency_links.txt
+universalid.egg-info/top_level.txt
