@@ -1,0 +1,11 @@
+README.md
+setup.py
+Django_EMS_WhenIWork.egg-info/PKG-INFO
+Django_EMS_WhenIWork.egg-info/SOURCES.txt
+Django_EMS_WhenIWork.egg-info/dependency_links.txt
+Django_EMS_WhenIWork.egg-info/requires.txt
+Django_EMS_WhenIWork.egg-info/top_level.txt
+ems_wheniwork/__init__.py
+ems_wheniwork/tests.py
+ems_wheniwork/urls.py
+ems_wheniwork/utils.py
