@@ -1,0 +1,15 @@
+CHANGES
+=======
+
+* README update
+* Make SDK compliant with CloudEvents SDK spec
+* Sphinx docs
+* Doc update
+* test requirements update
+* docstrings, marshallers
+* Freeze ujson dep
+* Docs, CI, etc
+* Getter/Setters with some tests
+* Few more tests
+* Initial release: CloudEvents Python SDK 0.0.1a0
+* Initial commit
