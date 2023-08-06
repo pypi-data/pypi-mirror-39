@@ -1,0 +1,14 @@
+README.md
+setup.py
+cgrates/__init__.py
+cgrates/models.py
+cgrates/schema.py
+cgrates/client/__init__.py
+cgrates/client/apier_v1.py
+cgrates/client/apier_v2.py
+cgrates/client/base.py
+py_cgrates.egg-info/PKG-INFO
+py_cgrates.egg-info/SOURCES.txt
+py_cgrates.egg-info/dependency_links.txt
+py_cgrates.egg-info/requires.txt
+py_cgrates.egg-info/top_level.txt
