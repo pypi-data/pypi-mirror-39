@@ -1,0 +1,3 @@
+[console_scripts]
+macdict-lookup = macdict.cli:main
+

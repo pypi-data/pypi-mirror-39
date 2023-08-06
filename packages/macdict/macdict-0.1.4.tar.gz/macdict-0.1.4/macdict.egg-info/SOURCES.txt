@@ -1,0 +1,13 @@
+README.rst
+setup.cfg
+setup.py
+macdict/__init__.py
+macdict/cli.py
+macdict/dictionary.py
+macdict/foundation.py
+macdict.egg-info/PKG-INFO
+macdict.egg-info/SOURCES.txt
+macdict.egg-info/dependency_links.txt
+macdict.egg-info/entry_points.txt
+macdict.egg-info/not-zip-safe
+macdict.egg-info/top_level.txt
