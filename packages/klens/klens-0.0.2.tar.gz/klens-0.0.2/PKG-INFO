@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: klens
+Version: 0.0.2
+Summary: Simple wrapper around kubectl
+Home-page: https://github.com/azohra/klens
+Author: azohra
+Author-email: admin@azohra.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
