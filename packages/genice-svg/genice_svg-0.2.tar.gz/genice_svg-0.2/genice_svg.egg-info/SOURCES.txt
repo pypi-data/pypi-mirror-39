@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+genice_svg/__init__.py
+genice_svg.egg-info/PKG-INFO
+genice_svg.egg-info/SOURCES.txt
+genice_svg.egg-info/dependency_links.txt
+genice_svg.egg-info/entry_points.txt
+genice_svg.egg-info/requires.txt
+genice_svg.egg-info/top_level.txt
+genice_svg/formats/__init__.py
+genice_svg/formats/svg.py
