@@ -1,0 +1,12 @@
+aiohttp~=3.4
+tartiflette~=0.1
+
+[test]
+pytest
+pytest-benchmark
+pytest-cov
+pytest-asyncio
+pytz
+pylint==2.1.1
+xenon
+black==18.9b0
