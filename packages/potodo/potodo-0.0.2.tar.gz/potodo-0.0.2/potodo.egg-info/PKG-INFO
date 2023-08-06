@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: potodo
+Version: 0.0.2
+Summary: Will list all .po files that are to be transated
+Home-page: https://github.com/seluj78/potodo
+Author: Jules Lasne
+Author-email: jules.lasne@gmail.com
+License: MIT license
+Description: # Potodo
+        Potodo, a Flawless TODO/progress listing CLI tool for po files
+        
+        ## Installation
+        
+        ```bash
+        pip install potodo
+        ```
+        
+        ## Usage
+        
+        ```bash
+        potodo -p PATH -r ORG/REPO
+        ```
+        This will run potodo in the given `PATH` and search for open issues on `github.com/ORG/REPO`
+Keywords: potodo
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
