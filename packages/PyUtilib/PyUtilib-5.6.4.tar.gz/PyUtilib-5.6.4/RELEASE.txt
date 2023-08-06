@@ -1,0 +1,19 @@
+We are pleased to announce the release of PyUtilib 5.6.4. The
+PyUtilib project supports the development of an ensemble of Python
+packages that include a wide variety of utilities, including a
+well-developed component architecture.
+
+The following are highlights of the 5.6 release series:
+
+- Added a general visitor pattern in pyutilib.misc
+- Improvements to the ConfigBlock class
+- Improved I/O management
+- Improved test script robustness
+
+PyUtilib can be installed from PyPI using pip or conda-forge using conda.
+
+Enjoy!
+
+ - PyUtilib Developer Team
+ - pyutilib-developers@googlecode.com
+ - https://github.com/PyUtilib/pyutilib.git
