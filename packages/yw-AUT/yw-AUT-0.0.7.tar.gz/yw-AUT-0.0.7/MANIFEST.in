@@ -1,0 +1,4 @@
+include ywAUT/project/*.ini
+include ywAUT/project/steps/*.py
+include ywAUT/project/testsuite/*.feature
+
