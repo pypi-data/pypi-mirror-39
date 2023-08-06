@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+omdb/__init__.py
+omdb/exceptions.py
+omdb/omdb.py
+omdb/utilities.py
+pyomdbapi.egg-info/PKG-INFO
+pyomdbapi.egg-info/SOURCES.txt
+pyomdbapi.egg-info/dependency_links.txt
+pyomdbapi.egg-info/requires.txt
+pyomdbapi.egg-info/top_level.txt
