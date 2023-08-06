@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+squealer/__init__.py
+squealer/sql_table_tools.py
+squealer/sqlite_session.py
+squealer.egg-info/PKG-INFO
+squealer.egg-info/SOURCES.txt
+squealer.egg-info/dependency_links.txt
+squealer.egg-info/top_level.txt
+squealer/utilities/__init__.py
