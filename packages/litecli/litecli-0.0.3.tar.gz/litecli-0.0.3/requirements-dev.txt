@@ -1,0 +1,9 @@
+mock
+pytest
+pytest-cov
+tox
+behave
+pexpect
+coverage
+codecov
+click
