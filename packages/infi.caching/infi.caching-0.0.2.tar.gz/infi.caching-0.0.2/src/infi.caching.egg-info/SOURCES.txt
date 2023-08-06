@@ -1,0 +1,13 @@
+README.md
+setup.py
+src/infi/__init__.py
+src/infi.caching.egg-info/PKG-INFO
+src/infi.caching.egg-info/SOURCES.txt
+src/infi.caching.egg-info/dependency_links.txt
+src/infi.caching.egg-info/entry_points.txt
+src/infi.caching.egg-info/namespace_packages.txt
+src/infi.caching.egg-info/not-zip-safe
+src/infi.caching.egg-info/requires.txt
+src/infi.caching.egg-info/top_level.txt
+src/infi/caching/__init__.py
+src/infi/caching/__version__.py
