@@ -1,0 +1,44 @@
+[
+    {
+        "url": "https://github.com/OpenPDI/data/releases/download/UDPD-DE/uof-16.csv",
+        "type": "csv",
+        "start": 1,
+        "columns": {
+            "date": {
+                "index": 0,
+                "specifier": "%m/%d/%Y"
+            },
+            "time": {
+                "index": 1,
+                "specifier": "%H%M"
+            },
+            "service_type": {
+                "index": 2
+            },
+            "city": {
+                "raw": "Newark"
+            },
+            "state": {
+                "raw": "DE"
+            },
+            "force_type": {
+                "index": 4
+            },
+            "arrested": {
+                "index": 6
+            },
+            "subject_age": {
+                "index": 7
+            },
+            "subject_injured": {
+                "index": 12
+            },
+            "officer_injured": {
+                "index": 11
+            },
+            "officer_age": {
+                "index": 10
+            }
+        }
+    }
+]
