@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: pyq-kernel
+Version: 1.0.1
+Summary: PyQ kernel for Jupyter
+Home-page: http://pyq.enlnt.com
+Author: Enlightenment Research, LLC
+Author-email: pyq@enlnt.com
+License: UNKNOWN
+Description: PyQ kernel for Jupyter
+        ======================
+        
+        Installing the pyq kernel
+        -------------------------
+        
+        .. code-block:: bash
+        
+            pip install pyq-kernel
+            pyq -m pyq.kernel install
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: Web Environment

@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+pyq-kernel.p
+setup.cfg
+setup.py
+./kernel.py
+pyq_kernel.egg-info/PKG-INFO
+pyq_kernel.egg-info/SOURCES.txt
+pyq_kernel.egg-info/dependency_links.txt
+pyq_kernel.egg-info/top_level.txt
