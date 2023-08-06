@@ -1,0 +1,55 @@
+{% extends "bee_django_course/base.html" %}
+{% load bootstrap3 %}
+{% load bee_django_course_filter %}
+{% block styles %}
+    <style>
+        .section_info img {
+            max-width: 100%;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <h4>问题详情</h4>
+{#    <div>-人作答</div>#}
+
+    <table class="table">
+    <tr style="font-weight: 900">
+        <td>问题</td>
+        <td>{{ question.question }}</td>
+    </tr>
+        <tr style="font-weight: 900">
+        <td>所属课件</td>
+        <td><a href="{% url 'bee_django_course:section_detail' question.section.id %}">{{ question.section }}</a></td>
+    </tr>
+        {% for res_dict in res_list %}
+        <tr>
+            <td class="col-xs-3">{{ res_dict.key }}</td>
+            <td>{{ res_dict.value }}人选择</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+
+
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.remove_video_button').click(function (e) {
+                e.preventDefault();
+
+                if (confirm('确定移除此视频吗?')) {
+                    var url = $(this).attr('data-confirm');
+                    $.post(url).done(function (data) {
+                        alert(data['message']);
+                        var id = data['section_video_id'];
+                        $('#' + id).remove();
+                    });
+                }
+            });
+        })
+    </script>
+{% endblock %}
