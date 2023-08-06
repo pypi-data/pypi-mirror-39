@@ -1,0 +1,3 @@
+[console_scripts]
+biowardrobe-init = biowardrobe_airflow_analysis.biowardrobe_init:generate_biowardrobe_workflow
+
