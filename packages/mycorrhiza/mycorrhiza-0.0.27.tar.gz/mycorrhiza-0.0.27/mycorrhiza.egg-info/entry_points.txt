@@ -1,0 +1,4 @@
+[console_scripts]
+crossvalidate = mycorrhiza.scripts:crossvalidate
+supervised = mycorrhiza.scripts:supervised
+
