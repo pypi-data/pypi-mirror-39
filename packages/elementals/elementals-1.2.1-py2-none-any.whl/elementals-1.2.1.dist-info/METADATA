@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: elementals
+Version: 1.2.1
+Summary: Basic utilities for CTF (or exploit) scripts
+Home-page: https://github.com/eyalitki/elementals
+Author: Eyal Itkin
+Author-email: eyal.itkin@gmail.com
+License: GPL
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: colorama
+Requires-Dist: hexdump
+
+# elementals
+Python package with basic utilities for CTF scripts (works well for exploit PoCs too).
+
+## Install
+```pip install elementals```
+
+## Examples
+The 'test' folder contains usage examples for all of the supported features.
+For a detailed real-case scenario, please check out the [Scout Debugger](https://github.com/CheckPointSW/Scout).
+
+## Contact
+Eyal Itkin (eyal dot itkin at gmail dot com)
+
+
