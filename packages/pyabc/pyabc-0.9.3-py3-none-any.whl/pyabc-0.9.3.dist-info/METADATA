@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: pyabc
+Version: 0.9.3
+Summary: Distributed, likelihood-free ABC-SMC inference
+Home-page: http://pyabc.readthedocs.io/en/latest/
+Author: Emmanuel Klinger, Yannik Schälte, Elba Raimundez
+Author-email: yannik.schaelte@gmail.com
+License: BSD
+Keywords: likelihood-free inference abc approximate bayesian computation sge distributed
+Platform: all
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: cloudpickle
+Requires-Dist: flask-bootstrap
+Requires-Dist: flask
+Requires-Dist: bokeh
+Requires-Dist: redis
+Requires-Dist: dill
+Requires-Dist: gitpython
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Requires-Dist: sqlalchemy
+Requires-Dist: click
+Requires-Dist: feather-format
+Requires-Dist: bkcharts
+Requires-Dist: distributed
+Requires-Dist: pygments
+Requires-Dist: IPython
+
+UNKNOWN
+
+
