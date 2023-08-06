@@ -1,0 +1,7 @@
+boto3
+PyYAML
+cfn-lint
+
+[test]
+mock
+pylint
