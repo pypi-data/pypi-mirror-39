@@ -1,0 +1,15 @@
+doc484/__init__.py,sha256=St7y3mYCabKNLgmhtQ5GECVwH0AXPTQT04JP-lnWneU,23
+doc484/__main__.py,sha256=ysQCl8Q60XUcVvIHCuMQ47hHDQOfmW3bEgMPzDKUjq8,9731
+doc484/compat.py,sha256=HTvDL1mAXD_qzfSn8NGGtc9UbRyJQoyVMKCWVyBM5Og,253
+doc484/formats.py,sha256=6co0mFcM2IaCDUENjOjinvOiSGnnxTbgTndjf-jLTto,9601
+doc484/transforms.py,sha256=JfPIGWoJ8Z9Ie7h8JYW2mjjqMm4q10BHQMz5wjxssVc,1705
+doc484/fixes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+doc484/fixes/fix_type_comments.py,sha256=F1vAbmdwWrAQtebSjdzyQhqPnNkDQf3HDouhS0O8UjE,6770
+doc484/parsers/__init__.py,sha256=VRvlZdGRdtH3UG1gl11OpnCtVHcpmkhYrKoqtxl_tno,303
+doc484/parsers/other.py,sha256=ORSjEWJ9D-EJzdNMojwGEzrJFZreTY7qJyBzgQANjUc,22796
+doc484/parsers/rest.py,sha256=J07hp-sRkFoVi2lDN8L318Ws0yY3gWSzOQExQzHPdBY,3917
+doc484-0.3.1.dist-info/METADATA,sha256=ffRUjq1KaIlOzFvwkTZg5GEPTHfPkzoare2zJqezUkk,6249
+doc484-0.3.1.dist-info/RECORD,,
+doc484-0.3.1.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+doc484-0.3.1.dist-info/entry_points.txt,sha256=e4okopoO7_tx1b3SrnVLSTgJUjTJiu9dZfUkuplaXC0,49
+doc484-0.3.1.dist-info/top_level.txt,sha256=kd8KvDrRvt22INK9Rurjlk2RJYfsVf_jIOkfUp9iW_g,7
