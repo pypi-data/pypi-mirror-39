@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: stacore
+Version: 0.1
+Summary: streaming telemetry analytics core library
+Home-page: https://bitbucket.org/pingthings/stape
+Author: PingThings
+Author-email: info@pingthings.io
+License: Apache 2
+Download-URL: https://bitbucket.org/pingthings/stape/tarball/v0.1
+Keywords: power engineering,telemetry,analytics,time series,data science
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Utilities
+
+.. -*- mode: rst -*-
+
+STA Core
+========
+
+**Streaming Telemetry Analytics Core Library**
+
