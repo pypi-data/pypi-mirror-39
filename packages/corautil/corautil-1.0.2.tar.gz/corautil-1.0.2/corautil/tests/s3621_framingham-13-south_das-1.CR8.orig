@@ -1,0 +1,4826 @@
+'################################################
+'Property of Draker, Inc.
+'################################################
+
+
+'## Description #################################
+'Site: 3621 - I90 Interchange 13 South, Framingham - Area 2
+'
+'Components:
+'  panel status
+'  env: ambient temperature sensor
+'  env: wind sensor
+'  env: solar resource sensor
+'  env: cell temperature sensor
+'  ac meter: electro shark 100/electro shark 100S
+'  inverter: solectria SGI-500XTM, SGI-750XTM
+'  modbus slave
+'  utility
+'################################################
+
+
+'## Change Log ##################################
+'2015-11-03 ACD redafted with new solectria dld, kept one min table w/o inverter data
+'2015-10-28 MM Change solectria buffer_lng to 11.
+'2015-10-21 JSB Removed Inverter data from One Minute Data
+'2015-10-19 JSB Added One Minute Data Table
+'2015-01-16 RWC Redaft with correct solectria component
+'2015-01-15 RWC Created on
+'Note: Add changes to the top of the list, using the format:
+'YYYY-MM-DD JQP: Made this change and that change
+'################################################
+
+
+'## Versions ####################################
+Public draker_base_ver As String = "4.03.03"
+Public draker_pnl_status_ver As String = "4.03.01"
+Public draker_amb_ver As String = "4.03.02"
+Public draker_wind_ver As String = "4.03.01"
+Public draker_srs_ver As String = "4.03.02"
+Public draker_cts_ver As String = "4.03.00"
+Public draker_shark_100_ver As String = "4.03.00"
+Public draker_solectria_modbus_level_8_ver As String = "4.03.08"
+Public draker_modbus_slave_ver As String = "4.03.06"
+Public draker_utility_ver As String = "4.03.04"
+'################################################
+
+
+
+
+
+'## Configuration ###############################
+PipeLineMode
+
+'part number macros (do not edit)
+Const PV5000 = "PV5000"
+Const PV2000 = "PV2000"
+Const PV250 = "PV250"
+Const G0 = "G0"
+Const G1 = "G1"
+Const G2 = "G2"
+Const G3 = "G3"
+Const G4 = "G4"
+Const E50 = "E50"
+Const E51 = "E51"
+Const E52 = "E52"
+Const E53 = "E53"
+Const E54 = "E54"
+Const E55 = "E55"
+Const E81 = "E81"
+Const E82 = "E82"
+Const E83 = "E83"
+Const E84 = "E84"
+Const E85 = "E85"
+Const BP0 = "BP0"
+Const BP1 = "BP1"
+Const CR0 = "CR0"
+Const CR1 = "CR1"
+Const KD0 = "KD0"
+Const KD1 = "KD1"
+Const TB1 = "TB1"
+Const TB2 = "TB0"
+Const BB0 = "BB0"
+Const BB1 = "BB1"
+Const DS0 = "DS0"
+Const DS1 = "DS1"
+Const NA = "Not Applicable"
+
+Const NOT_USED = 0
+Const CUSTOM = 1
+Const DL202 = 2
+Const DL208 = 3
+Const DL242 = 4
+Const DL264 = 5
+Const DL274 = 6
+Const DL315 = 7
+Const DL328 = 8
+
+'draker model number for the basestation
+Const DRAKER_BASESTATION_MODEL = PV250
+Const DRAKER_BASESTATION_POWER_SUPPLY = 120
+Const DRAKER_BASESTATION_GATEWAY = G1
+Const DRAKER_BASESTATION_NUM_OF_MODBUS_PORTS = 2
+Const DRAKER_BASESTATION_ETHERNET_SWITCH = E51
+Const DRAKER_BASESTATION_KEYPAD_DISPLAY = KD0
+Const DRAKER_BASESTATION_TB_LAYOUT = TB1
+Const DRAKER_BASESTATION_BATTERY_BACKUP = BB1
+Const DRAKER_BASESTATION_BP_SENSOR = BP0
+Const DRAKER_BASESTATION_CAISO_RIG = CR0
+Const DRAKER_BASESTATION_DATA_STORAGE = DS0
+
+
+'draker base assembly part number for the basestation
+#If DRAKER_BASESTATION_MODEL = PV5000 AND DRAKER_BASESTATION_TB_LAYOUT = TB1
+  Const DRAKER_PN = DL202
+#ElseIf DRAKER_BASESTATION_MODEL = PV5000 AND DRAKER_BASESTATION_TB_LAYOUT = TB2
+  Const DRAKER_PN = DL264
+#ElseIf DRAKER_BASESTATION_MODEL = PV2000
+  Const DRAKER_PN = DL315
+#ElseIf DRAKER_BASESTATION_MODEL = PV250
+  Const DRAKER_PN = DL328
+#EndIf
+
+'name of the configuration file
+Const CFG_FILE = "s3621_framingham-13-south.cfg"
+
+'set the maximum number of devices and ports in the config file
+Const CFG_DEVICE_MAX = 2
+Const CFG_PORT_MAX = 2
+
+'set to true if any serial device communicates over tcp
+Const CFG_TCP_ENABLE = FALSE
+
+'set interval time in seconds for each scan and slow sequence do/while loop
+Const CFG_SCAN_INTERVAL_MAIN = 6
+Const CFG_SCAN_INTERVAL_CLEAN = 30
+Const CFG_SCAN_INTERVAL_DIRTY = 60
+Const CFG_SCAN_INTERVAL_UTIL = 30
+
+'Note: ONLY FOR TCP DEVICES
+'  CFG_TCP_FAIL_MAX should be set to limit the time between refreshing
+'  tcp sockets to no less then 5 minutes. If the util scan interval is
+'  30 seconds, then refresh the socket after 10 failed attempts.
+
+'set the max comm failures before a tcp socket is closed and reopened
+Const CFG_TCP_FAIL_MAX = 10
+
+'os version of the datalogger the program is being deployed on
+Const OS_VERSION = 26
+
+'enable or disable pingkeepalive function
+Const PING_KEEP_ALIVE_ENABLE = FALSE
+
+'set to the number of days to delay between mfg and emailsend
+Const CFG_EMAIL_SEND_DELAY = 3
+
+'################################################
+'ambient temp sensor
+Const AMB_TOTAL = 1
+
+'################################################
+'wind sensor
+Const WIND_TOTAL = 1
+
+'################################################
+'solar resource sensor
+Const SRS_TOTAL = 5
+
+'part number macros (do not edit)
+Const SI02TK = 1
+Const SPN1 = 2
+Const PVEL = 3
+
+'Note: ONLY FOR DL264, DL315 and DL328
+'  If this project uses an IMT Si-02-tk reference cell or a Dynamax SPN1
+'  or a PV Evolution Lab's Refference Cell, then set the following
+'  constant(s) to SI02Tk or SPN1 or PVEL respectively.
+#If DRAKER_PN = DL264 OR DRAKER_PN = DL315 OR DRAKER_PN = DL328
+  Const SRS_CFG_01_SE_TYPE = NOT_USED
+  Const SRS_CFG_02_SE_TYPE = NOT_USED
+  Const SRS_CFG_03_SE_TYPE = NOT_USED
+#EndIf
+
+'################################################
+'cell temp sensor
+Const CTS_TOTAL = 3
+
+Const CTS_SOLYNDRA_ENABLE = FALSE
+
+'set the array index of the srs sensors to use for the solyndra calculation
+Const CTS_CFG_SOLYN_SRS = 1
+
+'################################################
+'electro shark 100
+Const MTR_TOTAL = 1
+Const MTR_SHARK_100_BAUD = 9600
+Const MTR_SHARK_100_TRIES = 1
+Const MTR_SHARK_100_TIMEOUT = 50
+
+'################################################
+'solectria xtm
+Const INV_TOTAL = 1
+Const INV_SOLECTRIA_BAUD = 9600
+Const INV_SOLECTRIA_TRIES = 2
+Const INV_SOLECTRIA_TIMEOUT = 50
+
+'################################################
+'modbus slave
+Const MBS_BAUD = 9600
+
+Const BRM_TOTAL = 1
+Const RAIN_TOTAL = 1
+Const MET_TOTAL = 1
+
+'################################################
+
+
+
+
+
+'## Declarations ################################
+Const FREQ_REJECTION = _60HZ
+Const SP = Chr(32)
+Const TB = Chr(9)
+Const CR = Chr(13)
+Const LF = Chr(10)
+Const CRLF = CR & LF
+Const QN = Chr(34)
+
+Const DRAKER_ID_FILE = ".draker_id"
+
+Public draker_id(5) As String * 44 = {"Not set", "YYYY-MM-DD", "DAS-1", "", "FALSE"}
+Alias draker_id = draker_panel_sn, draker_mfg_date, draker_das_name, _
+  draker_model_number, draker_email_sent
+Public draker_das_name_save As Boolean
+
+Public draker_id_backup As Boolean
+Dim draker_id_updated As Boolean
+
+Public draker_email_resend As Boolean = FALSE
+
+Dim cfg_email_server_addr As String * 20 = "smtp.gmail.com:587"
+Dim cfg_email_to_addr As String * 224 = "support@drakerenergy.com"
+' Dim cfg_email_to_addr As String * 224 = ""
+Dim cfg_email_username As String * 24 = ""
+Dim cfg_email_password As String * 12 = ""
+Public cfg_email_result As Long
+Public cfg_email_server_respone As String * 50
+Dim pnl_current_date As String * 20 = ""
+Dim draker_mfg_date_sec As Long
+Dim pnl_current_date_sec As Long
+
+Public cfg_scan_timer_clean As Float
+Public cfg_scan_timer_dirty As Float
+Public cfg_scan_timer_util As Float
+Dim cfg_scan_delay_clean As Long
+Dim cfg_scan_delay_dirty As Long
+Dim cfg_scan_delay_util As Long
+
+Public cfg_reload As Boolean = TRUE
+Public cfg_reload_error As String * 1024
+Public cfg_device_total As Long
+Public cfg_device_current_clean As String * 32
+Public cfg_device_current_dirty As String * 32
+Dim cfg_counter_clean As Long
+Dim cfg_counter_dirty As Long
+Dim cfg_counter As Long
+
+Public cfg_port_total As Long
+Public cfg_ports(CFG_PORT_MAX) As Long
+Dim cfg_port_busy(CFG_PORT_MAX) As Boolean
+
+#If CFG_TCP_ENABLE
+Public cfg_tcp_open As Long
+Public cfg_tcp_open_override As Long
+
+Public cfg_tcp_addr(CFG_PORT_MAX) As String
+Public cfg_tcp_port(CFG_PORT_MAX) As Long
+#EndIf
+
+Dim cfg_datalogger_last_record As Long
+
+Public cfg_device_prefix(CFG_DEVICE_MAX) As String * 8
+Public cfg_device_index(CFG_DEVICE_MAX) As Long
+Public cfg_device_type(CFG_DEVICE_MAX) As String * 32
+Public cfg_device_port_num(CFG_DEVICE_MAX) As Long
+Public cfg_device_addr(CFG_DEVICE_MAX) As Long
+Dim cfg_device_result(CFG_DEVICE_MAX) As Long
+
+Include "CPU:network_settings.dld"
+
+Public pnl_network_settings_error As String * 1024
+Dim ip_info(8) As String * 32
+Alias ip_info = datalogger_mac, datalogger_ip, datalogger_netmask, _
+  datalogger_gateway, datalogger_dns1, datalogger_dns2, datalogger_dns3, _
+  datalogger_dns4
+
+Dim time_utc(9) As Long
+Alias time_utc(1) = time_utc_year
+Alias time_utc(2) = time_utc_month
+Alias time_utc(3) = time_utc_day
+Alias time_utc(4) = time_utc_hr
+Alias time_utc(5) = time_utc_min
+Alias time_utc(6) = time_utc_sec
+Alias time_utc(7) = time_utc_microsec
+Alias time_utc(8) = time_utc_day_of_week
+Alias time_utc(9) = time_utc_day_of_year
+
+Units cfg_scan_timer_clean = Sec
+Units cfg_scan_timer_dirty = Sec
+Units cfg_scan_timer_util = Sec
+
+'################################################
+'panel status
+#If DRAKER_PN = CUSTOM
+
+'configuration for PV250 gen3 with battery back-up option
+#ElseIf DRAKER_PN = DL328 AND DRAKER_BASESTATION_BATTERY_BACKUP = BB1
+  Const PNL_CFG_SDI_PORT = 1
+
+'configuration for PV2000 gen 3 and PV5000 gen2
+#ElseIf DRAKER_PN = DL315 OR DRAKER_PN = DL202
+  Const PNL_CFG_SDI_PORT = 7
+
+'configuration for PV5000 gen2 RMT/utility and prospector
+#ElseIf DRAKER_PN = DL242 OR DRAKER_PN = DL264 OR DRAKER_PN = DL274
+  Const PNL_CFG_SDI_PORT = 7
+
+#Else
+  Const PNL_CFG_SDI_PORT = 0
+#EndIf
+
+Public pnl_cfg_charge_addr As Long = -1
+Public pnl_logger_voltage As Float
+Public pnl_logger_temp As Float
+Public pnl_logger_fault As Long
+
+Dim pnl_logger_fill_days As Float
+Dim pnl_logger_ip_info As String * 128
+Dim pnl_logger_faulted As Boolean
+
+Dim pnl_trigger_table As Boolean
+
+Units pnl_logger_voltage = Volts
+Units pnl_logger_temp = Deg C
+
+#If PNL_CFG_SDI_PORT <> 0
+Public pnl_input_voltage As Float
+Public pnl_input_current As Float
+Public pnl_battery_voltage As Float
+Public pnl_battery_current As Float
+Public pnl_load_current As Float
+Public pnl_charge_temp As Float
+Public pnl_charge_source As String * 20
+Public pnl_charge_state As String * 20
+Public pnl_charge_error As String * 20
+
+Dim pnl_charge_status_01 As Long
+Dim pnl_charge_status_02 As Long
+Dim pnl_charge_fault As Long
+
+Dim DIS_pnl_charge_sdi As Boolean
+
+Units pnl_input_voltage = Volts
+Units pnl_input_current = Amps
+Units pnl_battery_voltage = Volts
+Units pnl_battery_current = Amps
+Units pnl_load_current = Amps
+Units pnl_charge_temp = Deg C
+#EndIf
+
+'################################################
+'ambient temp sensor
+#If DRAKER_PN = CUSTOM
+
+'configuration for PV250 gen3 with TB1 option
+#ElseIf DRAKER_PN = DL328 AND DRAKER_BASESTATION_TB_LAYOUT = TB1
+  Const AMB_CFG_01_CH = 6
+  Const AMB_CFG_01_VX = VX2
+  Const AMB_CFG_SDI_PORT = 1
+
+'configuration for PV250 gen3 with TB2 option
+#ElseIf DRAKER_PN = DL328 AND DRAKER_BASESTATION_TB_LAYOUT = TB2
+  Const AMB_CFG_01_CH = 0
+  Const AMB_CFG_SDI_PORT = 1
+
+'configuration for PV2000 gen2
+#ElseIf DRAKER_PN = DL208
+  Const AMB_CFG_01_CH = 5
+  Const AMB_CFG_01_VX = VX1
+  Const AMB_CFG_SDI_PORT = 0
+
+'configuration for PV2000 gen3 and PV5000 gen2
+#ElseIf DRAKER_PN = DL315 OR DRAKER_PN = DL202
+  Const AMB_CFG_01_CH = 9
+  Const AMB_CFG_01_VX = VX1
+  Const AMB_CFG_SDI_PORT = 7
+
+'configuration for PV5000 gen2 RMT/utility and prospector
+#ElseIf DRAKER_PN = DL242 OR DRAKER_PN = DL264 OR DRAKER_PN = DL274
+  Const AMB_CFG_01_CH = 0
+  Const AMB_CFG_SDI_PORT = 7
+
+#Else
+  Const AMB_CFG_01_CH = 0
+  Const AMB_CFG_SDI_PORT = 0
+#EndIf
+
+Const AMB_CFG_SETTLING = 3000
+
+Public amb_cfg_type(AMB_TOTAL) As String * 32
+Public amb_temp(AMB_TOTAL) As Float
+Public amb_humidity(AMB_TOTAL) As Float
+Public amb_dew_point(AMB_TOTAL) As Float
+
+Public amb_temp_r(AMB_TOTAL) As Float
+
+Dim DIS_amb_temp(AMB_TOTAL) As Boolean
+Dim DIS_amb_humidity(AMB_TOTAL) As Boolean
+Dim DIS_amb_dew_point(AMB_TOTAL) As Boolean
+
+Dim amb_mv_ratio As Float
+Dim amb_counter As Long
+
+Units amb_temp = Deg C
+Units amb_humidity = %
+Units amb_dew_point = Deg C
+Units amb_temp_r = Ohms
+
+'################################################
+'wind sensor
+#If DRAKER_PN = CUSTOM
+
+'configuration for PV2000 gen2
+#ElseIf DRAKER_PN = DL208
+  Const WIND_CFG_01_PCH = 1
+  Const WIND_CFG_01_CH = 0
+
+'configuration for PV250 gen3 with TB1 option
+#ElseIf DRAKER_PN = DL328 AND DRAKER_BASESTATION_TB_LAYOUT = TB1
+  Const WIND_CFG_01_PCH = 1
+  Const WIND_CFG_01_CH = 0
+
+'configuration for PV250 gen3 with TB2 option
+#ElseIf DRAKER_PN = DL328 AND DRAKER_BASESTATION_TB_LAYOUT = TB2
+  Const WIND_CFG_01_PCH = 1
+  Const WIND_CFG_01_CH = 6
+  Const WIND_CFG_01_VX = VX2
+
+'configuration for PV2000 gen3
+#ElseIf DRAKER_PN = DL315
+  Const WIND_CFG_01_PCH = 1
+  Const WIND_CFG_01_CH = 13
+  Const WIND_CFG_01_VX = VX3
+
+'configuration for PV5000 gen2
+#ElseIf DRAKER_PN = DL202
+  Const WIND_CFG_01_PCH = 1
+  Const WIND_CFG_01_CH = 10
+  Const WIND_CFG_01_VX = VX3
+
+'configuration for PV5000 gen2 RMT
+#ElseIf DRAKER_PN = DL242
+  Const WIND_CFG_01_PCH = 1
+  Const WIND_CFG_01_CH = 15
+  Const WIND_CFG_01_VX = VX3
+
+'configuration for PV5000 gen2 utility
+#ElseIf DRAKER_PN = DL264
+  Const WIND_CFG_01_PCH = 1
+  Const WIND_CFG_01_CH = 13
+  Const WIND_CFG_01_VX = VX3
+
+'configuration for prospector
+#ElseIf DRAKER_PN = DL274
+  Const WIND_CFG_01_PCH = 1
+  Const WIND_CFG_01_CH = 15
+  Const WIND_CFG_01_VX = VX3
+
+#Else
+  Const WIND_CFG_01_PCH = 0
+  Const WIND_CFG_01_CH = 0
+#EndIf
+
+Const WIND_CFG_SETTLING = 0
+
+Public wind_cfg_type(WIND_TOTAL) As String * 32
+Public wind_speed(WIND_TOTAL) As Float
+Public wind_direction(WIND_TOTAL) As Float
+
+Dim DIS_wind_speed(WIND_TOTAL) As Boolean
+Dim DIS_wind_direction(WIND_TOTAL) As Boolean
+
+Dim wind_pulses(WIND_TOTAL) As Float
+Dim wind_mv_ratio(WIND_TOTAL) As Float
+Dim wind_counter As Long
+
+Units wind_speed = m/s
+Units wind_direction = Deg
+
+'################################################
+'solar resource sensor
+#If DRAKER_PN = CUSTOM
+
+'configuration for PV250 gen3 and PV2000 gen2
+#ElseIf DRAKER_PN = DL328 OR DRAKER_PN = DL208
+  Const SRS_CFG_04_SE_TYPE = NOT_USED
+  Const SRS_CFG_05_SE_TYPE = NOT_USED
+
+  #If SRS_CFG_01_SE_TYPE = SI02TK
+    Const SRS_CFG_01_SE_01_CH = 1
+    Const SRS_CFG_01_SE_01_RANGE = mv250
+
+  #ElseIf SRS_CFG_01_SE_TYPE = PVEL
+    Const SRS_CFG_01_SE_01_CH = 1
+    Const SRS_CFG_01_SE_01_RANGE = mV2500
+    Const SRS_CFG_01_SE_02_CH = 2
+    Const SRS_CFG_01_SE_02_RANGE = mV250
+
+  #Else
+    Const SRS_CFG_01_SE_01_CH = 0
+  #EndIf
+
+  #If SRS_CFG_02_SE_TYPE = SI02TK
+    Const SRS_CFG_02_SE_01_CH = 3
+    Const SRS_CFG_02_SE_01_RANGE = mv250
+
+  #ElseIf SRS_CFG_02_SE_TYPE = PVEL
+    Const SRS_CFG_02_SE_01_CH = 3
+    Const SRS_CFG_02_SE_01_RANGE = mV2500
+    Const SRS_CFG_02_SE_02_CH = 4
+    Const SRS_CFG_02_SE_02_RANGE = mV250
+
+  #Else
+    Const SRS_CFG_02_SE_01_CH = 0
+  #EndIf
+
+  Const SRS_CFG_01_DIFF_CH = 1
+  Const SRS_CFG_02_DIFF_CH = 2
+  Const SRS_CFG_03_DIFF_CH = 0
+  Const SRS_CFG_04_DIFF_CH = 0
+  Const SRS_CFG_05_DIFF_CH = 0
+
+  Const SRS_CFG_01_TEMP_CH = 0
+  Const SRS_CFG_02_TEMP_CH = 0
+  Const SRS_CFG_03_TEMP_CH = 0
+  Const SRS_CFG_04_TEMP_CH = 0
+  Const SRS_CFG_05_TEMP_CH = 0
+
+'configuration for PV2000 gen3
+#ElseIf DRAKER_PN = DL315
+  'SE TYPE for 01-03 is set in config section
+  Const SRS_CFG_04_SE_TYPE = NOT_USED
+  Const SRS_CFG_05_SE_TYPE = NOT_USED
+
+  #If SRS_CFG_01_SE_TYPE = SI02TK
+    Const SRS_CFG_01_SE_01_CH = 1
+    Const SRS_CFG_01_SE_01_RANGE = mv250
+    Const SRS_CFG_01_SE_02_CH = 0
+
+  #ElseIf SRS_CFG_01_SE_TYPE = PVEL
+    Const SRS_CFG_01_SE_01_CH = 1
+    Const SRS_CFG_01_SE_01_RANGE = mV2500
+    Const SRS_CFG_01_SE_02_CH = 2
+    Const SRS_CFG_01_SE_02_RANGE = mV250
+
+  #Else
+    Const SRS_CFG_01_SE_01_CH = 0
+    Const SRS_CFG_01_SE_02_CH = 0
+  #EndIf
+
+  #If SRS_CFG_02_SE_TYPE = SI02TK
+    Const SRS_CFG_02_SE_01_CH = 3
+    Const SRS_CFG_02_SE_01_RANGE = mv250
+    Const SRS_CFG_02_SE_02_CH = 0
+
+  #ElseIf SRS_CFG_02_SE_TYPE = PVEL
+    Const SRS_CFG_02_SE_01_CH = 3
+    Const SRS_CFG_02_SE_01_RANGE = mV2500
+    Const SRS_CFG_02_SE_02_CH = 4
+    Const SRS_CFG_02_SE_02_RANGE = mV250
+
+  #Else
+    Const SRS_CFG_02_SE_01_CH = 0
+    Const SRS_CFG_02_SE_02_CH = 0
+  #EndIf
+
+  #If SRS_CFG_03_SE_TYPE = SI02TK
+    Const SRS_CFG_03_SE_01_CH = 5
+    Const SRS_CFG_03_SE_01_RANGE = mv250
+    Const SRS_CFG_03_SE_02_CH = 0
+
+  #ElseIf SRS_CFG_03_SE_TYPE = PVEL
+    Const SRS_CFG_03_SE_01_CH = 5
+    Const SRS_CFG_03_SE_01_RANGE = mV2500
+    Const SRS_CFG_03_SE_02_CH = 6
+    Const SRS_CFG_03_SE_02_RANGE = mV250
+
+  #Else
+    Const SRS_CFG_03_SE_01_CH = 0
+    Const SRS_CFG_03_SE_02_CH = 0
+  #EndIf
+
+  Const SRS_CFG_01_DIFF_CH = 1
+  Const SRS_CFG_02_DIFF_CH = 2
+  Const SRS_CFG_03_DIFF_CH = 3
+  Const SRS_CFG_04_DIFF_CH = 0
+  Const SRS_CFG_05_DIFF_CH = 0
+
+  Const SRS_CFG_01_TEMP_CH = 11
+  Const SRS_CFG_01_TEMP_VX = VX1
+  Const SRS_CFG_02_TEMP_CH = 0
+  Const SRS_CFG_03_TEMP_CH = 12
+  Const SRS_CFG_03_TEMP_VX = VX1
+  Const SRS_CFG_04_TEMP_CH = 0
+  Const SRS_CFG_05_TEMP_CH = 0
+
+'configuration for PV5000 gen2
+#ElseIf DRAKER_PN = DL202
+  Const SRS_CFG_01_SE_TYPE = NOT_USED
+  Const SRS_CFG_02_SE_TYPE = NOT_USED
+  Const SRS_CFG_03_SE_TYPE = NOT_USED
+  Const SRS_CFG_04_SE_TYPE = NOT_USED
+  Const SRS_CFG_05_SE_TYPE = NOT_USED
+
+  Const SRS_CFG_01_DIFF_CH = 2
+  Const SRS_CFG_02_DIFF_CH = 3
+  Const SRS_CFG_03_DIFF_CH = 4
+  Const SRS_CFG_04_DIFF_CH = 1
+  Const SRS_CFG_05_DIFF_CH = 0
+
+  Const SRS_CFG_01_TEMP_CH = 0
+  Const SRS_CFG_02_TEMP_CH = 0
+  Const SRS_CFG_03_TEMP_CH = 0
+  Const SRS_CFG_04_TEMP_CH = 0
+  Const SRS_CFG_05_TEMP_CH = 0
+
+'configuration for PV5000 gen2 RMT
+#ElseIf DRAKER_PN = DL242
+  Const SRS_CFG_01_SE_TYPE = NOT_USED
+  Const SRS_CFG_02_SE_TYPE = NOT_USED
+  Const SRS_CFG_03_SE_TYPE = NOT_USED
+  Const SRS_CFG_04_SE_TYPE = SI02Tk
+  Const SRS_CFG_05_SE_TYPE = SI02TK
+
+  Const SRS_CFG_04_SE_01_CH = 9
+  Const SRS_CFG_04_SE_01_RANGE = mv250
+  Const SRS_CFG_04_SE_02_CH = 0
+
+  Const SRS_CFG_05_SE_01_CH = 11
+  Const SRS_CFG_05_SE_01_RANGE = mv250
+  Const SRS_CFG_05_SE_02_CH = 0
+
+  Const SRS_CFG_01_DIFF_CH = 4
+  Const SRS_CFG_02_DIFF_CH = 1
+  Const SRS_CFG_03_DIFF_CH = 3
+  Const SRS_CFG_04_DIFF_CH = 0
+  Const SRS_CFG_05_DIFF_CH = 0
+
+  Const SRS_CFG_01_TEMP_CH = 0
+  Const SRS_CFG_02_TEMP_CH = 3
+  Const SRS_CFG_02_TEMP_VX = VX1
+  Const SRS_CFG_03_TEMP_CH = 4
+  Const SRS_CFG_03_TEMP_VX = VX1
+  Const SRS_CFG_04_TEMP_CH = 10
+  Const SRS_CFG_04_TEMP_VX = VX1
+  Const SRS_CFG_05_TEMP_CH = 12
+  Const SRS_CFG_05_TEMP_VX = VX1
+
+'configuration for PV5000 gen2 utility
+#ElseIf DRAKER_PN = DL264
+  'SE TYPE for 01-03 is set in config section
+  Const SRS_CFG_04_SE_TYPE = NOT_USED
+  Const SRS_CFG_05_SE_TYPE = NOT_USED
+
+  #If SRS_CFG_01_SE_TYPE = SPN1
+    Const SRS_CFG_01_SE_01_CH = 1
+    Const SRS_CFG_01_SE_01_RANGE = mv2500
+    Const SRS_CFG_01_SE_02_CH = 2
+    Const SRS_CFG_01_SE_02_RANGE = mv2500
+
+  #ElseIf SRS_CFG_01_SE_TYPE = SI02TK
+    Const SRS_CFG_01_SE_01_CH = 1
+    Const SRS_CFG_01_SE_01_RANGE = mv250
+    Const SRS_CFG_01_SE_02_CH = 0
+
+  #Else
+    Const SRS_CFG_01_SE_01_CH = 0
+    Const SRS_CFG_01_SE_02_CH = 0
+  #EndIf
+
+  #If SRS_CFG_02_SE_TYPE = SPN1
+    Const SRS_CFG_02_SE_01_CH = 3
+    Const SRS_CFG_02_SE_01_RANGE = mv2500
+    Const SRS_CFG_02_SE_02_CH = 4
+    Const SRS_CFG_02_SE_02_RANGE = mv2500
+
+  #ElseIf SRS_CFG_02_SE_TYPE = SI02TK
+    Const SRS_CFG_02_SE_01_CH = 3
+    Const SRS_CFG_02_SE_01_RANGE = mv250
+    Const SRS_CFG_02_SE_02_CH = 0
+
+  #Else
+    Const SRS_CFG_02_SE_01_CH = 0
+    Const SRS_CFG_02_SE_02_CH = 0
+  #EndIf
+
+  #If SRS_CFG_03_SE_TYPE = SPN1
+    Const SRS_CFG_03_SE_01_CH = 5
+    Const SRS_CFG_03_SE_01_RANGE = mv2500
+    Const SRS_CFG_03_SE_02_CH = 6
+    Const SRS_CFG_03_SE_02_RANGE = mv2500
+
+  #ElseIf SRS_CFG_03_SE_TYPE = SI02TK
+    Const SRS_CFG_03_SE_01_CH = 5
+    Const SRS_CFG_03_SE_01_RANGE = mv250
+    Const SRS_CFG_03_SE_02_CH = 0
+
+  #Else
+    Const SRS_CFG_03_SE_01_CH = 0
+    Const SRS_CFG_03_SE_02_CH = 0
+  #EndIf
+
+  Const SRS_CFG_01_DIFF_CH = 1
+  Const SRS_CFG_02_DIFF_CH = 2
+  Const SRS_CFG_03_DIFF_CH = 3
+  Const SRS_CFG_04_DIFF_CH = 0
+  Const SRS_CFG_05_DIFF_CH = 0
+
+  Const SRS_CFG_01_TEMP_CH = 9
+  Const SRS_CFG_01_TEMP_VX = VX1
+  Const SRS_CFG_02_TEMP_CH = 10
+  Const SRS_CFG_02_TEMP_VX = VX1
+  Const SRS_CFG_03_TEMP_CH = 11
+  Const SRS_CFG_03_TEMP_VX = VX1
+  Const SRS_CFG_04_TEMP_CH = 0
+  Const SRS_CFG_05_TEMP_CH = 0
+
+'configuration for prospector
+#ElseIf DRAKER_PN = DL274
+  Const SRS_CFG_01_SE_TYPE = NOT_USED
+  Const SRS_CFG_02_SE_TYPE = NOT_USED
+  Const SRS_CFG_03_SE_TYPE = NOT_USED
+  Const SRS_CFG_04_SE_TYPE = NOT_USED
+  Const SRS_CFG_05_SE_TYPE = NOT_USED
+
+  Const SRS_CFG_01_DIFF_CH = 4
+  Const SRS_CFG_02_DIFF_CH = 1
+  Const SRS_CFG_03_DIFF_CH = 3
+  Const SRS_CFG_04_DIFF_CH = 0
+  Const SRS_CFG_05_DIFF_CH = 0
+
+  Const SRS_CFG_01_TEMP_CH = 0
+  Const SRS_CFG_02_TEMP_CH = 3
+  Const SRS_CFG_02_TEMP_VX = VX1
+  Const SRS_CFG_03_TEMP_CH = 4
+  Const SRS_CFG_03_TEMP_VX = VX1
+  Const SRS_CFG_04_TEMP_CH = 0
+  Const SRS_CFG_05_TEMP_CH = 0
+
+#Else
+  Const SRS_CFG_01_SE_TYPE = NOT_USED
+  Const SRS_CFG_02_SE_TYPE = NOT_USED
+  Const SRS_CFG_03_SE_TYPE = NOT_USED
+  Const SRS_CFG_04_SE_TYPE = NOT_USED
+  Const SRS_CFG_05_SE_TYPE = NOT_USED
+
+  Const SRS_CFG_01_DIFF_CH = 0
+  Const SRS_CFG_02_DIFF_CH = 0
+  Const SRS_CFG_03_DIFF_CH = 0
+  Const SRS_CFG_04_DIFF_CH = 0
+  Const SRS_CFG_05_DIFF_CH = 0
+
+  Const SRS_CFG_01_TEMP_CH = 0
+  Const SRS_CFG_02_TEMP_CH = 0
+  Const SRS_CFG_03_TEMP_CH = 0
+  Const SRS_CFG_04_TEMP_CH = 0
+  Const SRS_CFG_05_TEMP_CH = 0
+#EndIf
+
+Const SRS_CFG_SETTLING = 3000
+Const SRS_CFG_FIXED_R = 24900
+
+Public srs_cfg_type(SRS_TOTAL) As String * 32
+Public srs_cfg_mult(SRS_TOTAL) As Float
+
+#If SRS_CFG_01_SE_TYPE = PVEL OR SRS_CFG_02_SE_TYPE = PVEL OR SRS_CFG_03_SE_TYPE = PVEL
+  Public srs_cfg_n(SRS_TOTAL) As Float
+  Public srs_cfg_vsc(SRS_TOTAL) As Float
+  Public srs_cfg_voc(SRS_TOTAL) As Float
+  Public srs_cfg_vsc_coeff(SRS_TOTAL) As Float
+  Public srs_cfg_voc_coeff(SRS_TOTAL) As Float
+#EndIf
+
+Public srs_irrad(SRS_TOTAL) As Float
+Public srs_irrad_dif(SRS_TOTAL) As Float
+Public srs_temp(SRS_TOTAL) As Float
+Public srs_irrad_adj(SRS_TOTAL) As Float
+
+Public srs_temp_r(SRS_TOTAL) As Float
+
+Dim DIS_srs_irrad(SRS_TOTAL) As Boolean
+Dim DIS_srs_irrad_dif(SRS_TOTAL) As Boolean
+Dim DIS_srs_temp(SRS_TOTAL) As Boolean
+Dim DIS_srs_irrad_adj(SRS_TOTAL) As Boolean
+
+Dim srs_voltage_25(SRS_TOTAL) As Float
+Dim srs_voltage_250(SRS_TOTAL) As Float
+Dim srs_voltage_se1(SRS_TOTAL) As Float
+Dim srs_voltage_se2(SRS_TOTAL) As Float
+Dim srs_mv_ratio As Float
+Dim srs_counter As Long
+
+Units srs_irrad = W/m^2
+Units srs_irrad_dif = W/m^2
+Units srs_temp = Deg C
+Units srs_irrad_adj = W/m^2
+Units srs_temp_r = Ohms
+
+'################################################
+'cell temp sensor
+#If DRAKER_PN = CUSTOM
+
+'configuration for PV250 gen3
+#ElseIf DRAKER_PN = DL328
+  Const CTS_CFG_01_CH = 5
+  Const CTS_CFG_01_VX = VX1
+  Const CTS_CFG_02_CH = 0
+  Const CTS_CFG_03_CH = 0
+
+'configuration for PV2000 gen2
+#ElseIf DRAKER_PN = DL208
+  Const CTS_CFG_01_CH = 6
+  Const CTS_CFG_01_VX = VX2
+  Const CTS_CFG_02_CH = 5
+  Const CTS_CFG_02_VX = VX1
+  Const CTS_CFG_03_CH = 0
+
+'configuration for PV2000 gen3
+#ElseIf DRAKER_PN = DL315
+  Const CTS_CFG_01_CH = 14
+  Const CTS_CFG_01_VX = VX2
+  Const CTS_CFG_02_CH = 15
+  Const CTS_CFG_02_VX = VX2
+  Const CTS_CFG_03_CH = 0
+
+'configuration for PV5000 gen2
+#ElseIf DRAKER_PN = DL202
+  Const CTS_CFG_01_CH = 14
+  Const CTS_CFG_01_VX = VX2
+  Const CTS_CFG_02_CH = 15
+  Const CTS_CFG_02_VX = VX2
+  Const CTS_CFG_03_CH = 16
+  Const CTS_CFG_03_VX = VX2
+
+'configuration for PV5000 gen2 RMT
+#ElseIf DRAKER_PN = DL242
+  Const CTS_CFG_01_CH = 13
+  Const CTS_CFG_01_VX = VX2
+  Const CTS_CFG_02_CH = 0
+  Const CTS_CFG_03_CH = 0
+
+'configuration for PV5000 gen2 utility
+#ElseIf DRAKER_PN = DL264
+  Const CTS_CFG_01_CH = 14
+  Const CTS_CFG_01_VX = VX2
+  Const CTS_CFG_02_CH = 15
+  Const CTS_CFG_02_VX = VX2
+  Const CTS_CFG_03_CH = 16
+  Const CTS_CFG_03_VX = VX2
+
+'configuration for prospector
+#ElseIf DRAKER_PN = DL274
+  Const CTS_CFG_01_CH = 13
+  Const CTS_CFG_01_VX = VX2
+  Const CTS_CFG_02_CH = 0
+  Const CTS_CFG_03_CH = 0
+
+#Else
+  Const CTS_CFG_01_CH = 0
+  Const CTS_CFG_02_CH = 0
+  Const CTS_CFG_03_CH = 0
+#EndIf
+
+Const CTS_CFG_SETTLING = 3000
+Const CTS_CFG_FIXED_R = 24900
+
+Const CTS_CFG_SOLYN_AMB = 1
+Const CTS_CFG_SOLYN_WIND = 1
+
+Public cts_cfg_type(CTS_TOTAL) As String * 32
+Public cts_temp(CTS_TOTAL) As Float
+
+Public cts_temp_r(CTS_TOTAL) As Float
+
+Dim DIS_cts_temp(CTS_TOTAL) As Boolean
+
+Dim cts_mv_ratio As Float
+Dim cts_counter As Long
+
+Units cts_temp = Deg C
+Units cts_temp_r = Ohms
+
+'################################################
+'electro shark 100
+Public mtr_cfg_offset_energy_rcvd(MTR_TOTAL) As Float
+Public mtr_cfg_offset_energy_delv(MTR_TOTAL) As Float
+Public mtr_comm_code(MTR_TOTAL) As Long
+
+Public mtr_ac_voltage_an(MTR_TOTAL) As Float
+Public mtr_ac_voltage_bn(MTR_TOTAL) As Float
+Public mtr_ac_voltage_cn(MTR_TOTAL) As Float
+Public mtr_ac_voltage_ab(MTR_TOTAL) As Float
+Public mtr_ac_voltage_bc(MTR_TOTAL) As Float
+Public mtr_ac_voltage_ca(MTR_TOTAL) As Float
+Public mtr_ac_current_a(MTR_TOTAL) As Float
+Public mtr_ac_current_b(MTR_TOTAL) As Float
+Public mtr_ac_current_c(MTR_TOTAL) As Float
+Public mtr_ac_current_n(MTR_TOTAL) As Float
+Public mtr_ac_power(MTR_TOTAL) As Float
+Public mtr_ac_power_rcvd(MTR_TOTAL) As Float
+Public mtr_ac_power_delv(MTR_TOTAL) As Float
+Public mtr_ac_va(MTR_TOTAL) As Float
+Public mtr_ac_vars(MTR_TOTAL) As Float
+Public mtr_ac_pf(MTR_TOTAL) As Float
+Public mtr_ac_freq(MTR_TOTAL) As Float
+
+Public mtr_ac_energy_rcvd(MTR_TOTAL) As Float
+Public mtr_ac_energy_delv(MTR_TOTAL) As Float
+Public mtr_ac_energy_rcvd_raw(MTR_TOTAL) As Float
+Public mtr_ac_energy_delv_raw(MTR_TOTAL) As Float
+Public mtr_ac_energy_net(MTR_TOTAL) As Float
+Public mtr_ac_energy_total(MTR_TOTAL) As Float
+Public mtr_ac_va_hrs_total(MTR_TOTAL) As Float
+Public mtr_ac_var_hrs_pos(MTR_TOTAL) As Float
+Public mtr_ac_var_hrs_neg(MTR_TOTAL) As Float
+Public mtr_ac_var_hrs_net(MTR_TOTAL) As Float
+Public mtr_ac_var_hrs_total(MTR_TOTAL) As Float
+
+Public mtr_ac_voltage_ab_angle(MTR_TOTAL) As Float
+Public mtr_ac_voltage_bc_angle(MTR_TOTAL) As Float
+Public mtr_ac_voltage_ca_angle(MTR_TOTAL) As Float
+Public mtr_ac_current_a_angle(MTR_TOTAL) As Float
+Public mtr_ac_current_b_angle(MTR_TOTAL) As Float
+Public mtr_ac_current_c_angle(MTR_TOTAL) As Float
+
+Public mtr_fault_01(MTR_TOTAL) As Long
+Public mtr_sn(MTR_TOTAL) As String * 40
+Public mtr_fw_ver(MTR_TOTAL) As String * 40
+Public mtr_map_ver(MTR_TOTAL) As String * 40
+Public mtr_config(MTR_TOTAL) As String * 64
+
+Public mtr_ac_config(MTR_TOTAL) As String * 20
+Public mtr_ac_ct_ratio(MTR_TOTAL) As String * 20
+Public mtr_ac_pt_ratio(MTR_TOTAL) As String * 20
+
+Dim DIS_mtr_ac_voltage_an(MTR_TOTAL) As Boolean
+Dim DIS_mtr_ac_voltage_bn(MTR_TOTAL) As Boolean
+Dim DIS_mtr_ac_voltage_cn(MTR_TOTAL) As Boolean
+Dim DIS_mtr_ac_voltage_ab(MTR_TOTAL) As Boolean
+Dim DIS_mtr_ac_voltage_bc(MTR_TOTAL) As Boolean
+Dim DIS_mtr_ac_voltage_ca(MTR_TOTAL) As Boolean
+Dim DIS_mtr_ac_current_a(MTR_TOTAL) As Boolean
+Dim DIS_mtr_ac_current_b(MTR_TOTAL) As Boolean
+Dim DIS_mtr_ac_current_c(MTR_TOTAL) As Boolean
+Dim DIS_mtr_ac_current_n(MTR_TOTAL) As Boolean
+Dim DIS_mtr_ac_power(MTR_TOTAL) As Boolean
+Dim DIS_mtr_ac_power_rcvd(MTR_TOTAL) As Boolean
+Dim DIS_mtr_ac_power_delv(MTR_TOTAL) As Boolean
+Dim DIS_mtr_ac_va(MTR_TOTAL) As Boolean
+Dim DIS_mtr_ac_vars(MTR_TOTAL) As Boolean
+Dim DIS_mtr_ac_pf(MTR_TOTAL) As Boolean
+Dim DIS_mtr_ac_freq(MTR_TOTAL) As Boolean
+
+Dim mtr_last_record(MTR_TOTAL) As Long
+Dim mtr_last_day(MTR_TOTAL) As Long
+
+Units mtr_cfg_offset_energy_rcvd = kWh
+Units mtr_cfg_offset_energy_delv = kWh
+
+Units mtr_ac_voltage_an = Volts
+Units mtr_ac_voltage_bn = Volts
+Units mtr_ac_voltage_cn = Volts
+Units mtr_ac_voltage_ab = Volts
+Units mtr_ac_voltage_bc = Volts
+Units mtr_ac_voltage_ca = Volts
+Units mtr_ac_current_a = Amps
+Units mtr_ac_current_b = Amps
+Units mtr_ac_current_c = Amps
+Units mtr_ac_current_n = Amps
+Units mtr_ac_power = Watts
+Units mtr_ac_power_rcvd = Watts
+Units mtr_ac_power_delv = Watts
+Units mtr_ac_va = VAs
+Units mtr_ac_vars = VARs
+Units mtr_ac_freq = Hz
+
+Units mtr_ac_energy_rcvd = kWh
+Units mtr_ac_energy_delv = kWh
+Units mtr_ac_energy_rcvd_raw = kWh
+Units mtr_ac_energy_delv_raw = kWh
+Units mtr_ac_energy_net = kWh
+Units mtr_ac_energy_total = kWh
+Units mtr_ac_va_hrs_total = kVAh
+Units mtr_ac_var_hrs_pos = kVARh
+Units mtr_ac_var_hrs_neg = kVARh
+Units mtr_ac_var_hrs_net = kVARh
+Units mtr_ac_var_hrs_total = kVARh
+
+Units mtr_ac_voltage_ab_angle = Deg
+Units mtr_ac_voltage_bc_angle = Deg
+Units mtr_ac_voltage_ca_angle = Deg
+Units mtr_ac_current_a_angle = Deg
+Units mtr_ac_current_b_angle = Deg
+Units mtr_ac_current_c_angle = Deg
+
+'################################################
+'solectria xtm
+Public inv_comm_code(INV_TOTAL) As Long
+
+Public inv_dc_voltage(INV_TOTAL) As Float
+Public inv_ac_voltage_ab(INV_TOTAL) As Float
+Public inv_ac_voltage_bc(INV_TOTAL) As Float
+Public inv_ac_voltage_ca(INV_TOTAL) As Float
+Public inv_ac_current(INV_TOTAL) As Float
+Public inv_ac_va(INV_TOTAL) As Float
+Public inv_ac_freq(INV_TOTAL) As Float
+Public inv_ac_energy(INV_TOTAL) As Float
+Public inv_ac_power(INV_TOTAL) As Float
+
+Public inv_temp_01(INV_TOTAL) As Float
+Public inv_temp_02(INV_TOTAL) As Float
+Public inv_temp_03(INV_TOTAL) As Float
+
+Public inv_status_01(INV_TOTAL) As Long
+Public inv_status_02(INV_TOTAL) As Long
+Public inv_fault_01(INV_TOTAL) As Long
+
+Public inv_dc_string_channel_total(INV_TOTAL) As Float
+Public inv_dc_channel_01(INV_TOTAL) As Float
+Public inv_dc_channel_02(INV_TOTAL) As Float
+Public inv_dc_channel_03(INV_TOTAL) As Float
+Public inv_dc_channel_04(INV_TOTAL) As Float
+Public inv_dc_channel_05(INV_TOTAL) As Float
+Public inv_dc_channel_06(INV_TOTAL) As Float
+Public inv_dc_channel_07(INV_TOTAL) As Float
+Public inv_dc_channel_08(INV_TOTAL) As Float
+Public inv_dc_channel_09(INV_TOTAL) As Float
+Public inv_dc_channel_10(INV_TOTAL) As Float
+Public inv_dc_channel_11(INV_TOTAL) As Float
+Public inv_dc_channel_12(INV_TOTAL) As Float
+Public inv_dc_channel_13(INV_TOTAL) As Float
+Public inv_dc_channel_14(INV_TOTAL) As Float
+Public inv_dc_channel_15(INV_TOTAL) As Float
+Public inv_dc_channel_16(INV_TOTAL) As Float
+
+Public inv_faulted(INV_TOTAL) As Boolean
+
+Dim DIS_inv_dc_voltage(INV_TOTAL) As Boolean
+Dim DIS_inv_ac_voltage_ab(INV_TOTAL) As Boolean
+Dim DIS_inv_ac_voltage_bc(INV_TOTAL) As Boolean
+Dim DIS_inv_ac_voltage_ca(INV_TOTAL) As Boolean
+Dim DIS_inv_ac_current(INV_TOTAL) As Boolean
+Dim DIS_inv_ac_va(INV_TOTAL) As Boolean
+Dim DIS_inv_ac_freq(INV_TOTAL) As Boolean
+Dim DIS_inv_ac_power(INV_TOTAL) As Boolean
+Dim DIS_inv_temp_01(INV_TOTAL) As Boolean
+Dim DIS_inv_temp_02(INV_TOTAL) As Boolean
+Dim DIS_inv_temp_03(INV_TOTAL) As Boolean
+Dim DIS_inv_dc_string_channel_total(INV_TOTAL) As Boolean
+Dim DIS_inv_dc_channel_01(INV_TOTAL) As Boolean
+Dim DIS_inv_dc_channel_02(INV_TOTAL) As Boolean
+Dim DIS_inv_dc_channel_03(INV_TOTAL) As Boolean
+Dim DIS_inv_dc_channel_04(INV_TOTAL) As Boolean
+Dim DIS_inv_dc_channel_05(INV_TOTAL) As Boolean
+Dim DIS_inv_dc_channel_06(INV_TOTAL) As Boolean
+Dim DIS_inv_dc_channel_07(INV_TOTAL) As Boolean
+Dim DIS_inv_dc_channel_08(INV_TOTAL) As Boolean
+Dim DIS_inv_dc_channel_09(INV_TOTAL) As Boolean
+Dim DIS_inv_dc_channel_10(INV_TOTAL) As Boolean
+Dim DIS_inv_dc_channel_11(INV_TOTAL) As Boolean
+Dim DIS_inv_dc_channel_12(INV_TOTAL) As Boolean
+Dim DIS_inv_dc_channel_13(INV_TOTAL) As Boolean
+Dim DIS_inv_dc_channel_14(INV_TOTAL) As Boolean
+Dim DIS_inv_dc_channel_15(INV_TOTAL) As Boolean
+Dim DIS_inv_dc_channel_16(INV_TOTAL) As Boolean
+
+Dim inv_last_record(INV_TOTAL) As Long
+
+Units inv_dc_voltage = Volts
+Units inv_ac_voltage_ab = Volts
+Units inv_ac_voltage_bc = Volts
+Units inv_ac_voltage_ca = Volts
+Units inv_ac_current = Amps
+Units inv_ac_va = kVA
+Units inv_ac_freq = Hz
+Units inv_ac_energy = kWh
+Units inv_ac_power = Watts
+Units inv_temp_01 = Deg C
+Units inv_temp_02 = Deg C
+Units inv_temp_03 = Deg C
+Units inv_dc_string_channel_total = Amps
+Units inv_dc_channel_01 = Amps
+Units inv_dc_channel_02 = Amps
+Units inv_dc_channel_03 = Amps
+Units inv_dc_channel_04 = Amps
+Units inv_dc_channel_05 = Amps
+Units inv_dc_channel_06 = Amps
+Units inv_dc_channel_07 = Amps
+Units inv_dc_channel_08 = Amps
+Units inv_dc_channel_09 = Amps
+Units inv_dc_channel_10 = Amps
+Units inv_dc_channel_11 = Amps
+Units inv_dc_channel_12 = Amps
+Units inv_dc_channel_13 = Amps
+Units inv_dc_channel_14 = Amps
+Units inv_dc_channel_15 = Amps
+Units inv_dc_channel_16 = Amps
+
+'################################################
+'modbus slave
+Public mbs_cfg_address As Long
+Public mbs_cfg_port As Long
+
+Dim mbs_map(23000) As Long
+Dim mbs_bool(8) As Boolean
+
+'panel status - un-declared variables
+
+#If PNL_CFG_SDI_PORT <> 0
+
+#EndIf
+
+'ambient temp sensor - un-declared variables
+
+'barometric sensor - un-declared variables
+Public brm_pressure(BRM_TOTAL) As Float
+
+'wind sensor - un-declared variables
+
+'tipping rain bucket - un-declared variables
+Public rain_accum_daily(RAIN_TOTAL) As Float
+Public rain_duration_daily(RAIN_TOTAL) As Float
+Dim rain_accum(RAIN_TOTAL) As Float
+Dim rain_duration(RAIN_TOTAL) As Float
+Dim rain_intensity(RAIN_TOTAL) As Float
+
+'solar resource sensor - un-declared variables
+
+'cell temperature - un-declared variables
+
+'vaisala - un-declared variables
+#If MET_TOTAL > 0
+Public met_amb_temp(MET_TOTAL) As Float
+Public met_amb_humidity(MET_TOTAL) As Float
+Public met_amb_dew_point(MET_TOTAL) As Float
+Public met_brm_pressure(MET_TOTAL) As Float
+Public met_rain_accum(MET_TOTAL) As Float
+Public met_rain_accum_daily(MET_TOTAL) As Float
+Dim    met_rain_duration(MET_TOTAL) As Float
+Public met_rain_duration_daily(MET_TOTAL) As Float
+Dim    met_rain_intensity(MET_TOTAL) As Float
+Public met_wind_speed(MET_TOTAL) As Float
+Public met_wind_direction(MET_TOTAL) As Float
+#EndIf
+
+'meter - un-declared variables
+
+'inverter - un-declared variables
+
+Public inv_dc_voltage_input(INV_TOTAL) As Float
+Public inv_dc_current(INV_TOTAL) As Float
+Public inv_dc_power(INV_TOTAL) As Float
+Public inv_ac_voltage(INV_TOTAL) As Float
+Public inv_ac_voltage_an(INV_TOTAL) As Float
+Public inv_ac_voltage_bn(INV_TOTAL) As Float
+Public inv_ac_voltage_cn(INV_TOTAL) As Float
+Public inv_ac_current_a(INV_TOTAL) As Float
+Public inv_ac_current_b(INV_TOTAL) As Float
+Public inv_ac_current_c(INV_TOTAL) As Float
+Public inv_ac_current_n(INV_TOTAL) As Float
+Public inv_ac_vars(INV_TOTAL) As Float
+Public inv_ac_pf(INV_TOTAL) As Float
+Public inv_ac_energy_today(INV_TOTAL) As Float
+
+Public inv_run_state(INV_TOTAL) As Long
+Public inv_status_03(INV_TOTAL) As Long
+Public inv_status_04(INV_TOTAL) As Long
+Public inv_status_05(INV_TOTAL) As Long
+Public inv_fault_02(INV_TOTAL) As Long
+Public inv_fault_03(INV_TOTAL) As Long
+Public inv_fault_04(INV_TOTAL) As Long
+Public inv_fault_05(INV_TOTAL) As Long
+Public inv_fault_06(INV_TOTAL) As Long
+Public inv_fault_07(INV_TOTAL) As Long
+Public inv_temp_04(INV_TOTAL) As Float
+Public inv_temp_05(INV_TOTAL) As Float
+
+Public inv_sn(INV_TOTAL) As String * 40
+Public inv_fw_ver(INV_TOTAL) As String * 40
+Public inv_id(INV_TOTAL) As String * 40
+Public inv_map_ver(INV_TOTAL) As String * 40
+
+'################################################
+'utility
+Public run_ping_scan As Boolean
+Public ping_scan_results As String * 500
+
+Public run_ping As Boolean
+Public ping_addr As String * 15
+Public ping_result As String * 40
+
+Public run_modbus_check As Boolean
+Public modbus_addr As Long = 1
+Public modbus_serial_port As String = "COM1"
+Public modbus_baud As Long = 9600
+Public modbus_ip_address As String * 20 = ""
+Public modbus_ip_port As Long = 502
+Public modbus_results As String * 100
+
+Public run_modbus_poll As Boolean
+Public modbus_reg_lng(50) As Long
+Public modbus_reg_flt(50) As Float
+Public modbus_start As Long = 1
+Public modbus_length As Long = 1
+Public modbus_option As Long = 1
+Public modbus_function As Long = 3
+Public modbus_comm_code As Long
+
+Dim first_3_oct As String
+Dim das_ip As String
+Dim port_index As Long
+
+'################################################
+
+
+
+
+
+'## Data Tables #################################
+DataTable(OneMin, TRUE, -1)
+  DataInterval(0, 1, MIN, 0)
+  #If LoggerType = CR1000
+  CardOut(0, -1)
+  #EndIf
+  Sample(1, draker_base_ver, String)
+  Sample(1, draker_panel_sn, String)
+
+  'panel status
+  Sample(1, draker_pnl_status_ver, String)
+
+  Average(1, pnl_logger_voltage, IEEE4, FALSE)
+  Minimum(1, pnl_logger_voltage, IEEE4, FALSE, 0)
+  Average(1, pnl_logger_temp, IEEE4, FALSE)
+  Sample(1, pnl_logger_fault, Long)
+
+  #If PNL_CFG_SDI_PORT <> 0
+    Average(1, pnl_input_voltage, IEEE4, DIS_pnl_charge_sdi)
+    Average(1, pnl_input_current, IEEE4, DIS_pnl_charge_sdi)
+    Average(1, pnl_battery_voltage, IEEE4, DIS_pnl_charge_sdi)
+    Average(1, pnl_battery_current, IEEE4, DIS_pnl_charge_sdi)
+    Average(1, pnl_load_current, IEEE4, DIS_pnl_charge_sdi)
+    Average(1, pnl_charge_temp, IEEE4, DIS_pnl_charge_sdi)
+    Sample(1, pnl_charge_status_01, Long)
+    Sample(1, pnl_charge_status_02, Long)
+    Sample(1, pnl_charge_fault, Long)
+  #EndIf
+
+  'ambient temp sensor
+  Sample(1, draker_amb_ver, String)
+  Average(AMB_TOTAL, amb_temp(), IEEE4, DIS_amb_temp())
+  Average(AMB_TOTAL, amb_humidity(), IEEE4, DIS_amb_humidity())
+  Average(AMB_TOTAL, amb_dew_point(), IEEE4, DIS_amb_dew_point())
+
+  'wind sensor
+  Sample(1, draker_wind_ver, String)
+  Average(WIND_TOTAL, wind_speed(), IEEE4, DIS_wind_speed())
+  Maximum(WIND_TOTAL, wind_speed(), IEEE4, DIS_wind_speed(), 0)
+  WindVector(1, wind_speed(), wind_direction(), IEEE4, DIS_wind_direction(1), 0, 0, 3)
+  FieldNames("wind_direction_Avg")
+
+  'solar resource sensor
+  Sample(1, draker_srs_ver, String)
+  Average(SRS_TOTAL, srs_irrad(), IEEE4, DIS_srs_irrad())
+  Average(SRS_TOTAL, srs_irrad_dif(), IEEE4, DIS_srs_irrad_dif())
+  Average(SRS_TOTAL, srs_temp(), IEEE4, DIS_srs_temp())
+  Average(SRS_TOTAL, srs_irrad_adj(), IEEE4, DIS_srs_irrad_adj())
+
+  'cell temp sensor
+  Sample(1, draker_cts_ver, String)
+  Average(CTS_TOTAL, cts_temp(), IEEE4, DIS_cts_temp())
+
+  'electro shark 100
+  Sample(1, draker_shark_100_ver, String)
+  Sample(MTR_TOTAL, mtr_comm_code(), Long)
+
+  Average(MTR_TOTAL, mtr_ac_voltage_an(), IEEE4, DIS_mtr_ac_voltage_an())
+  Average(MTR_TOTAL, mtr_ac_voltage_bn(), IEEE4, DIS_mtr_ac_voltage_bn())
+  Average(MTR_TOTAL, mtr_ac_voltage_cn(), IEEE4, DIS_mtr_ac_voltage_cn())
+  Average(MTR_TOTAL, mtr_ac_voltage_ab(), IEEE4, DIS_mtr_ac_voltage_ab())
+  Average(MTR_TOTAL, mtr_ac_voltage_bc(), IEEE4, DIS_mtr_ac_voltage_bc())
+  Average(MTR_TOTAL, mtr_ac_voltage_ca(), IEEE4, DIS_mtr_ac_voltage_ca())
+  Average(MTR_TOTAL, mtr_ac_current_a(), IEEE4, DIS_mtr_ac_current_a())
+  Average(MTR_TOTAL, mtr_ac_current_b(), IEEE4, DIS_mtr_ac_current_b())
+  Average(MTR_TOTAL, mtr_ac_current_c(), IEEE4, DIS_mtr_ac_current_c())
+  Average(MTR_TOTAL, mtr_ac_current_n(), IEEE4, DIS_mtr_ac_current_n())
+  Average(MTR_TOTAL, mtr_ac_power(), IEEE4, DIS_mtr_ac_power())
+  Average(MTR_TOTAL, mtr_ac_power_rcvd(), IEEE4, DIS_mtr_ac_power_rcvd())
+  Average(MTR_TOTAL, mtr_ac_power_delv(), IEEE4, DIS_mtr_ac_power_delv())
+  Average(MTR_TOTAL, mtr_ac_va(), IEEE4, DIS_mtr_ac_va())
+  Average(MTR_TOTAL, mtr_ac_vars(), IEEE4, DIS_mtr_ac_vars())
+  Average(MTR_TOTAL, mtr_ac_pf(), IEEE4, DIS_mtr_ac_pf())
+  Average(MTR_TOTAL, mtr_ac_freq(), IEEE4, DIS_mtr_ac_freq())
+
+  Sample(MTR_TOTAL, mtr_ac_energy_rcvd(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_energy_delv(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_energy_rcvd_raw(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_energy_delv_raw(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_energy_net(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_energy_total(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_va_hrs_total(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_var_hrs_pos(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_var_hrs_neg(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_var_hrs_net(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_var_hrs_total(), IEEE4)
+
+  Sample(MTR_TOTAL, mtr_ac_voltage_ab_angle(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_voltage_bc_angle(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_voltage_ca_angle(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_current_a_angle(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_current_b_angle(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_current_c_angle(), IEEE4)
+
+  Sample(MTR_TOTAL, mtr_fault_01(), UINT4)
+  Sample(MTR_TOTAL, mtr_sn(), String)
+  Sample(MTR_TOTAL, mtr_fw_ver(), String)
+  Sample(MTR_TOTAL, mtr_map_ver(), String)
+  Sample(MTR_TOTAL, mtr_config(), String)
+
+  Sample(MTR_TOTAL, mtr_ac_config(), String)
+  Sample(MTR_TOTAL, mtr_ac_ct_ratio(), String)
+  Sample(MTR_TOTAL, mtr_ac_pt_ratio(), String)
+EndTable 'oneMin
+
+DataTable(fifteenMin, TRUE, -1)
+  DataInterval(0, 15, MIN, 0)
+  #If LoggerType = CR1000
+  CardOut(0, -1)
+  #EndIf
+  Sample(1, draker_base_ver, String)
+  Sample(1, draker_panel_sn, String)
+
+  'panel status
+  Sample(1, draker_pnl_status_ver, String)
+
+  Average(1, pnl_logger_voltage, IEEE4, FALSE)
+  Minimum(1, pnl_logger_voltage, IEEE4, FALSE, 0)
+  Average(1, pnl_logger_temp, IEEE4, FALSE)
+  Sample(1, pnl_logger_fault, Long)
+
+  #If PNL_CFG_SDI_PORT <> 0
+    Average(1, pnl_input_voltage, IEEE4, DIS_pnl_charge_sdi)
+    Average(1, pnl_input_current, IEEE4, DIS_pnl_charge_sdi)
+    Average(1, pnl_battery_voltage, IEEE4, DIS_pnl_charge_sdi)
+    Average(1, pnl_battery_current, IEEE4, DIS_pnl_charge_sdi)
+    Average(1, pnl_load_current, IEEE4, DIS_pnl_charge_sdi)
+    Average(1, pnl_charge_temp, IEEE4, DIS_pnl_charge_sdi)
+    Sample(1, pnl_charge_status_01, Long)
+    Sample(1, pnl_charge_status_02, Long)
+    Sample(1, pnl_charge_fault, Long)
+  #EndIf
+
+  'ambient temp sensor
+  Sample(1, draker_amb_ver, String)
+  Average(AMB_TOTAL, amb_temp(), IEEE4, DIS_amb_temp())
+  Average(AMB_TOTAL, amb_humidity(), IEEE4, DIS_amb_humidity())
+  Average(AMB_TOTAL, amb_dew_point(), IEEE4, DIS_amb_dew_point())
+
+  'wind sensor
+  Sample(1, draker_wind_ver, String)
+  Average(WIND_TOTAL, wind_speed(), IEEE4, DIS_wind_speed())
+  Maximum(WIND_TOTAL, wind_speed(), IEEE4, DIS_wind_speed(), 0)
+  WindVector(1, wind_speed(), wind_direction(), IEEE4, DIS_wind_direction(1), 0, 0, 3)
+  FieldNames("wind_direction_Avg")
+
+  'solar resource sensor
+  Sample(1, draker_srs_ver, String)
+  Average(SRS_TOTAL, srs_irrad(), IEEE4, DIS_srs_irrad())
+  Average(SRS_TOTAL, srs_irrad_dif(), IEEE4, DIS_srs_irrad_dif())
+  Average(SRS_TOTAL, srs_temp(), IEEE4, DIS_srs_temp())
+  Average(SRS_TOTAL, srs_irrad_adj(), IEEE4, DIS_srs_irrad_adj())
+
+  'cell temp sensor
+  Sample(1, draker_cts_ver, String)
+  Average(CTS_TOTAL, cts_temp(), IEEE4, DIS_cts_temp())
+
+  'electro shark 100
+  Sample(1, draker_shark_100_ver, String)
+  Sample(MTR_TOTAL, mtr_comm_code(), Long)
+
+  Average(MTR_TOTAL, mtr_ac_voltage_an(), IEEE4, DIS_mtr_ac_voltage_an())
+  Average(MTR_TOTAL, mtr_ac_voltage_bn(), IEEE4, DIS_mtr_ac_voltage_bn())
+  Average(MTR_TOTAL, mtr_ac_voltage_cn(), IEEE4, DIS_mtr_ac_voltage_cn())
+  Average(MTR_TOTAL, mtr_ac_voltage_ab(), IEEE4, DIS_mtr_ac_voltage_ab())
+  Average(MTR_TOTAL, mtr_ac_voltage_bc(), IEEE4, DIS_mtr_ac_voltage_bc())
+  Average(MTR_TOTAL, mtr_ac_voltage_ca(), IEEE4, DIS_mtr_ac_voltage_ca())
+  Average(MTR_TOTAL, mtr_ac_current_a(), IEEE4, DIS_mtr_ac_current_a())
+  Average(MTR_TOTAL, mtr_ac_current_b(), IEEE4, DIS_mtr_ac_current_b())
+  Average(MTR_TOTAL, mtr_ac_current_c(), IEEE4, DIS_mtr_ac_current_c())
+  Average(MTR_TOTAL, mtr_ac_current_n(), IEEE4, DIS_mtr_ac_current_n())
+  Average(MTR_TOTAL, mtr_ac_power(), IEEE4, DIS_mtr_ac_power())
+  Average(MTR_TOTAL, mtr_ac_power_rcvd(), IEEE4, DIS_mtr_ac_power_rcvd())
+  Average(MTR_TOTAL, mtr_ac_power_delv(), IEEE4, DIS_mtr_ac_power_delv())
+  Average(MTR_TOTAL, mtr_ac_va(), IEEE4, DIS_mtr_ac_va())
+  Average(MTR_TOTAL, mtr_ac_vars(), IEEE4, DIS_mtr_ac_vars())
+  Average(MTR_TOTAL, mtr_ac_pf(), IEEE4, DIS_mtr_ac_pf())
+  Average(MTR_TOTAL, mtr_ac_freq(), IEEE4, DIS_mtr_ac_freq())
+
+  Sample(MTR_TOTAL, mtr_ac_energy_rcvd(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_energy_delv(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_energy_rcvd_raw(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_energy_delv_raw(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_energy_net(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_energy_total(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_va_hrs_total(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_var_hrs_pos(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_var_hrs_neg(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_var_hrs_net(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_var_hrs_total(), IEEE4)
+
+  Sample(MTR_TOTAL, mtr_ac_voltage_ab_angle(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_voltage_bc_angle(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_voltage_ca_angle(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_current_a_angle(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_current_b_angle(), IEEE4)
+  Sample(MTR_TOTAL, mtr_ac_current_c_angle(), IEEE4)
+
+  Sample(MTR_TOTAL, mtr_fault_01(), UINT4)
+  Sample(MTR_TOTAL, mtr_sn(), String)
+  Sample(MTR_TOTAL, mtr_fw_ver(), String)
+  Sample(MTR_TOTAL, mtr_map_ver(), String)
+  Sample(MTR_TOTAL, mtr_config(), String)
+
+  Sample(MTR_TOTAL, mtr_ac_config(), String)
+  Sample(MTR_TOTAL, mtr_ac_ct_ratio(), String)
+  Sample(MTR_TOTAL, mtr_ac_pt_ratio(), String)
+
+  'solectria xtm
+  Sample(1, draker_solectria_modbus_level_8_ver, String)
+  Sample(INV_TOTAL, inv_comm_code(), Long)
+
+  Average(INV_TOTAL, inv_dc_voltage(), IEEE4, DIS_inv_dc_voltage())
+  Average(INV_TOTAL, inv_ac_voltage_ab(), IEEE4, DIS_inv_ac_voltage_ab())
+  Average(INV_TOTAL, inv_ac_voltage_bc(), IEEE4, DIS_inv_ac_voltage_bc())
+  Average(INV_TOTAL, inv_ac_voltage_ca(), IEEE4, DIS_inv_ac_voltage_ca())
+  Average(INV_TOTAL, inv_ac_current(), IEEE4, DIS_inv_ac_current())
+  Average(INV_TOTAL, inv_ac_va(), IEEE4, DIS_inv_ac_va())
+  Average(INV_TOTAL, inv_ac_freq(), IEEE4, DIS_inv_ac_freq())
+  Average(INV_TOTAL, inv_ac_power(), IEEE4, DIS_inv_ac_power())
+  Average(INV_TOTAL, inv_temp_01(), IEEE4, DIS_inv_temp_01())
+  Average(INV_TOTAL, inv_temp_02(), IEEE4, DIS_inv_temp_02())
+  Average(INV_TOTAL, inv_temp_03(), IEEE4, DIS_inv_temp_03())
+
+  Average(INV_TOTAL), inv_dc_channel_01(), IEEE4, DIS_inv_dc_channel_01())
+  Average(INV_TOTAL), inv_dc_channel_02(), IEEE4, DIS_inv_dc_channel_02())
+  Average(INV_TOTAL), inv_dc_channel_03(), IEEE4, DIS_inv_dc_channel_03())
+  Average(INV_TOTAL), inv_dc_channel_04(), IEEE4, DIS_inv_dc_channel_04())
+  Average(INV_TOTAL), inv_dc_channel_05(), IEEE4, DIS_inv_dc_channel_05())
+  Average(INV_TOTAL), inv_dc_channel_06(), IEEE4, DIS_inv_dc_channel_06())
+  Average(INV_TOTAL), inv_dc_channel_07(), IEEE4, DIS_inv_dc_channel_07())
+  Average(INV_TOTAL), inv_dc_channel_08(), IEEE4, DIS_inv_dc_channel_08())
+  Average(INV_TOTAL), inv_dc_channel_09(), IEEE4, DIS_inv_dc_channel_09())
+  Average(INV_TOTAL), inv_dc_channel_10(), IEEE4, DIS_inv_dc_channel_10())
+  Average(INV_TOTAL), inv_dc_channel_11(), IEEE4, DIS_inv_dc_channel_11())
+  Average(INV_TOTAL), inv_dc_channel_12(), IEEE4, DIS_inv_dc_channel_12())
+  Average(INV_TOTAL), inv_dc_channel_13(), IEEE4, DIS_inv_dc_channel_13())
+  Average(INV_TOTAL), inv_dc_channel_14(), IEEE4, DIS_inv_dc_channel_14())
+  Average(INV_TOTAL), inv_dc_channel_15(), IEEE4, DIS_inv_dc_channel_15())
+  Average(INV_TOTAL), inv_dc_channel_16(), IEEE4, DIS_inv_dc_channel_16())
+
+  Sample(INV_TOTAL, inv_ac_energy(), IEEE4)
+
+  Sample(INV_TOTAL, inv_status_01(), UINT4)
+  Sample(INV_TOTAL, inv_status_02(), UINT4)
+  Sample(INV_TOTAL, inv_fault_01(), UINT4)
+EndTable 'fifteenMin
+
+'panel status
+DataTable(panelStatus, pnl_trigger_table, 2000)
+  Sample(1, pnl_logger_fault, Long)
+
+  Sample(1, Status.WatchdogErrors, Long)
+  Sample(1, Status.VarOutOfBound, Long)
+  Sample(1, Status.SkippedScan, Long)
+  Sample(1, Status.SkippedSystemScan, Long)
+
+  Sample(1, Status.Battery, IEEE4)
+  Sample(1, Status.LithiumBattery, IEEE4)
+  Sample(1, Status.Low12VCount, Long)
+  Sample(1, Status.Low5VCount, Long)
+
+  #If PNL_CFG_SDI_PORT <> 0
+    Sample(1, pnl_input_voltage, IEEE4)
+    Sample(1, pnl_input_current, IEEE4)
+    Sample(1, pnl_battery_voltage, IEEE4)
+    Sample(1, pnl_battery_current, IEEE4)
+    Sample(1, pnl_load_current, IEEE4)
+    Sample(1, pnl_charge_temp, IEEE4)
+    Sample(1, pnl_charge_status_01, Long)
+    Sample(1, pnl_charge_status_02, Long)
+    Sample(1, pnl_charge_fault, Long)
+  #EndIf
+
+  Sample(1, pnl_logger_fill_days, IEEE4)
+  Sample(1, pnl_logger_ip_info, String)
+
+EndTable 'panelStatus
+
+'################################################
+
+
+
+
+
+'## Display Tables ##############################
+DisplayMenu("LIVE DATA", -2)
+  DisplayValue("Basestation SN:", draker_panel_sn)
+  SubMenu("Environmental")
+    'ambient temp sensor
+    DisplayValue("Ambient Temp", amb_temp(1))
+    #If AMB_CFG_SDI_PORT <> 0
+      DisplayValue("Humidity", amb_humidity(1))
+      DisplayValue("Dew Point", amb_dew_point(1))
+    #EndIf
+
+    'wind sensor
+    DisplayValue("Wind Speed", wind_speed(1))
+    #If WIND_CFG_01_CH <> 0
+      DisplayValue("Wind Dir", wind_direction(1))
+    #EndIf
+
+    'solar resource sensor
+    #If DRAKER_PN = DL328
+      DisplayValue("POA1 Irrad", srs_irrad(1))
+      DisplayValue("Horz Irrad", srs_irrad(2))
+
+    #ElseIf DRAKER_PN = DL208
+      DisplayValue("POA1 Irrad", srs_irrad(1))
+      DisplayValue("POA2 Irrad", srs_irrad(2))
+
+    #ElseIf DRAKER_PN = DL315
+      DisplayValue("POA1 Irrad", srs_irrad(1))
+      DisplayValue("POA2 Irrad", srs_irrad(2))
+      DisplayValue("Horz Irrad", srs_irrad(3))
+
+    #ElseIf DRAKER_PN = DL202
+      DisplayValue("Horz Irrad", srs_irrad(4))
+      DisplayValue("POA1 Irrad", srs_irrad(1))
+      DisplayValue("POA2 Irrad", srs_irrad(2))
+      DisplayValue("POA3 Irrad", srs_irrad(3))
+
+    #ElseIf DRAKER_PN = DL242
+      DisplayValue("POA Irrad", srs_irrad(1))
+      DisplayValue("Horz Irrad", srs_irrad(2))
+      DisplayValue("Horz Temp", srs_temp(2))
+      DisplayValue("Calb Irrad", srs_irrad(3))
+      DisplayValue("Calb Temp", srs_temp(3))
+      DisplayValue("Ref1 Irrad", srs_irrad(4))
+      DisplayValue("Ref1 Temp", srs_temp(4))
+      DisplayValue("Ref2 Irrad", srs_irrad(5))
+      DisplayValue("Ref2 Temp", srs_temp(5))
+
+    #ElseIf DRAKER_PN = DL264
+      DisplayValue("Pyr1 Irrad", srs_irrad(1))
+      DisplayValue("Pyr1 Temp", srs_temp(1))
+      DisplayValue("Pyr2 Irrad", srs_irrad(2))
+      DisplayValue("Pyr2 Temp", srs_temp(2))
+      DisplayValue("Pyr3 Irrad", srs_irrad(3))
+      DisplayValue("Pyr3 Temp", srs_temp(3))
+
+    #ElseIf DRAKER_PN = DL274
+      DisplayValue("POA Irrad", srs_irrad(1))
+      DisplayValue("Horz Irrad", srs_irrad(2))
+      DisplayValue("Horz Temp", srs_temp(2))
+      DisplayValue("Calb Irrad", srs_irrad(3))
+      DisplayValue("Calb Temp", srs_temp(3))
+    #EndIf
+
+    'cell temp sensor
+    #If DRAKER_PN = DL328
+      DisplayValue("Cell Temp 1", cts_temp(1))
+
+    #ElseIf DRAKER_PN = DL208 OR DRAKER_PN = DL315
+      DisplayValue("Cell Temp 1", cts_temp(1))
+      DisplayValue("Cell Temp 2", cts_temp(2))
+
+    #ElseIf DRAKER_PN = DL202
+      DisplayValue("Cell Temp 1", cts_temp(1))
+      DisplayValue("Cell Temp 2", cts_temp(2))
+      DisplayValue("Cell Temp 3", cts_temp(3))
+
+    #ElseIf DRAKER_PN = DL242
+      DisplayValue("Cell Temp", cts_temp(1))
+
+    #ElseIf DRAKER_PN = DL264
+      DisplayValue("Cell Temp 1", cts_temp(1))
+      DisplayValue("Cell Temp 2", cts_temp(2))
+      DisplayValue("Cell Temp 3", cts_temp(3))
+
+    #ElseIf DRAKER_PN = DL274
+      DisplayValue("Cell Temp", cts_temp(1))
+    #EndIf
+
+  EndSubMenu
+
+  'panel status
+  SubMenu("Panel Status")
+    DisplayValue("Logger SN", Status.SerialNumber)
+    DisplayValue("Logger IP", pnl_logger_ip_info)
+    DisplayValue("Logger Volt", pnl_logger_voltage)
+    DisplayValue("Logger Temp", pnl_logger_temp)
+    DisplayValue("Logger Fault", pnl_logger_faulted)
+
+    #If PNL_CFG_SDI_PORT <> 0
+      DisplayValue("Input Volt", pnl_input_voltage)
+      DisplayValue("Input Curr", pnl_input_current)
+      DisplayValue("Battery Volt", pnl_battery_voltage)
+      DisplayValue("Battery Curr", pnl_battery_current)
+      DisplayValue("Load Curr", pnl_load_current)
+      DisplayValue("Charge Temp", pnl_charge_temp)
+      DisplayValue("Charge State", pnl_charge_state)
+      DisplayValue("Charge Src", pnl_charge_source)
+      DisplayValue("Charge Error", pnl_charge_error)
+    #EndIf
+  EndSubMenu
+
+  'electro shark 100
+  SubMenu("AC Meter 1")
+    DisplayValue("Comm. Code", mtr_comm_code(1))
+    DisplayValue("SN", mtr_sn(1))
+    DisplayValue("Real Pwr", mtr_ac_power(1))
+    DisplayValue("Reactive Pwr", mtr_ac_vars(1))
+    DisplayValue("Pwr Factor", mtr_ac_pf(1))
+    DisplayValue("Frequency", mtr_ac_freq(1))
+    DisplayValue("A-B Volts", mtr_ac_voltage_ab(1))
+    DisplayValue("B-C Volts", mtr_ac_voltage_bc(1))
+    DisplayValue("C-A Volts", mtr_ac_voltage_ca(1))
+    DisplayValue("A-N Volts", mtr_ac_voltage_an(1))
+    DisplayValue("B-N Volts", mtr_ac_voltage_bn(1))
+    DisplayValue("C-N Volts", mtr_ac_voltage_cn(1))
+    DisplayValue("Phase A Cur", mtr_ac_current_a(1))
+    DisplayValue("Phase B Cur", mtr_ac_current_b(1))
+    DisplayValue("Phase C Cur", mtr_ac_current_c(1))
+  EndSubMenu
+
+  'solectria xtm
+  SubMenu("Inverter 1")
+    DisplayValue("Comm. Code", inv_comm_code(1))
+    DisplayValue("Faulted", inv_faulted(1))
+    DisplayValue("DC Voltage", inv_dc_voltage(1))
+    DisplayValue("AC Current", inv_ac_current(1))
+  EndSubMenu
+
+EndMenu
+'################################################
+
+
+
+
+
+'## Functions ###################################
+
+'panel status
+Function checkLoggerFault()
+  Dim fault_bit(16) As Boolean
+  Dim fault As Long
+  Dim counter As Long
+
+  'store the current fill days
+  pnl_logger_fill_days = Status.DataFillDays(1, 1)
+
+  'check for logger program faults
+  fault_bit(1) = (Status.WatchdogErrors > 0)
+  fault_bit(2) = (Status.VarOutOfBound > 0)
+  fault_bit(3) = (Status.SkippedScan > 0)
+  fault_bit(4) = (Status.SkippedSystemScan > 0)
+
+  'check for logger power faults
+  fault_bit(9) = (Status.Battery < 12.3)
+  fault_bit(10) = (Status.LithiumBattery < 3.3)
+  fault_bit(11) = (Status.Low12VCount > 0)
+  fault_bit(12) = (Status.Low5VCount > 0)
+  fault_bit(13) = (Status.Battery < 11.5)
+
+  'check logger fill days
+  fault_bit(16) = (pnl_logger_fill_days < 14)
+
+  'convert fault array to bits
+  fault = 0
+  For counter = 1 To 16
+    If fault_bit(counter) Then
+      fault = fault OR (1 << (counter - 1))
+    EndIf
+  Next
+
+  'trigger table if fault has changed
+  If pnl_logger_fault <> fault Then
+    pnl_logger_fault = fault
+    pnl_trigger_table = TRUE
+  EndIf
+
+  'set boolean value for display menu
+  pnl_logger_faulted = (fault <> 0)
+EndFunction 'checkLoggerFault
+
+
+
+
+
+Function checkIpInfo()
+  Dim ip_info As String * 128
+
+  'capture a frozen copy of the ip info
+  ip_info = Status.IPInfo
+
+  'tripper table if ip info has changed
+  If pnl_logger_ip_info <> ip_info Then
+    pnl_logger_ip_info = ip_info
+    pnl_trigger_table = TRUE
+  EndIf
+EndFunction 'checkIpInfo
+
+
+
+
+
+#If PNL_CFG_SDI_PORT <> 0
+Function getCh200(addr As Long)
+  Dim buffer_flt(20) As Float
+  Dim fault As Long
+
+  'query charge controller
+  SDI12Recorder(buffer_flt(), PNL_CFG_SDI_PORT, addr, "CC!", 1.0, 0)
+
+  'if data was received then store the values
+  If buffer_flt(1) <> NAN Then
+    pnl_battery_voltage = buffer_flt(1)
+    pnl_battery_current = buffer_flt(2)
+    pnl_load_current = buffer_flt(3)
+    pnl_input_voltage = buffer_flt(4)
+    pnl_input_current = buffer_flt(5)
+    pnl_charge_temp = buffer_flt(6)
+    pnl_charge_status_01 = buffer_flt(7)
+    pnl_charge_status_02 = buffer_flt(8)
+
+    'set fault bits (see value mapping below)
+    fault = 0
+    If buffer_flt(7) = -1 Then fault = fault OR (1 << 0)
+    If buffer_flt(9) = 1 Then fault = fault OR (1 << 1)
+
+    'trigger table if faults have changed
+    If pnl_charge_fault <> fault Then
+      pnl_charge_fault = fault
+      pnl_trigger_table = TRUE
+    EndIf
+
+    'parse charge state
+    Select Case buffer_flt(7)
+    Case -1
+      pnl_charge_state = "Regulator Fault"
+    Case 0
+      pnl_charge_state = "No Charge"
+    Case 1
+      pnl_charge_state = "Current limited"
+    Case 2
+      pnl_charge_state = "Cycle"
+    Case 3
+      pnl_charge_state = "Float"
+    Case 4
+      pnl_charge_state = "Battery test"
+    Case Else
+      pnl_charge_state = ""
+    EndSelect
+
+    'parse charge source
+    Select Case buffer_flt(8)
+    Case 0
+      pnl_charge_source = "None"
+    Case 1
+      pnl_charge_source = "Solar Panel"
+    Case 2
+      pnl_charge_source = "Continuous"
+    Case Else
+      pnl_charge_source = ""
+    EndSelect
+
+    'parse battery check
+    Select Case buffer_flt(9)
+    Case 0
+      pnl_charge_error = "None"
+    Case 1
+      pnl_charge_error = "Bad Battery"
+    Case Else
+      pnl_charge_error = ""
+    EndSelect
+
+  Else
+    pnl_battery_voltage = NAN
+    pnl_battery_current = NAN
+    pnl_load_current = NAN
+    pnl_input_voltage = NAN
+    pnl_input_current = NAN
+    pnl_charge_temp = NAN
+    pnl_charge_status_01 = 0
+    pnl_charge_status_02 = 0
+    pnl_charge_state = ""
+    pnl_charge_source = ""
+    pnl_charge_error = ""
+  EndIf
+
+  DIS_pnl_charge_sdi = (buffer_flt(1) = NAN)
+EndFunction 'getCh200
+#EndIf
+
+
+
+
+
+'ambient temp sensor
+Function calcAmbientTempCs107Cs108(resistance As Float) As Float
+  Const CS107_CS108_SHA = 8.271111E-4
+  Const CS107_CS108_SHB = 2.088020E-4
+  Const CS107_CS108_SHC = 8.059200E-8
+
+  Return (1 / (CS107_CS108_SHA + CS107_CS108_SHB * LN(resistance) + CS107_CS108_SHC * LN(resistance)^3) - 273.15)
+EndFunction 'calcAmbientTempCs107Cs108
+
+
+
+
+
+Function calcAmbientTempCs109(resistance As Float) As Float
+  Const CS109_SHA = 1.129241e-3
+  Const CS109_SHB = 2.341077e-4
+  Const CS109_SHC = 8.775468e-8
+
+  Return (1 / (CS109_SHA + CS109_SHB * LN(resistance) + CS109_SHC * LN(resistance)^3) - 273.15)
+EndFunction 'calcAmbientTempCs109
+
+
+
+
+
+Function getAmbientTempCs215(num As Long)
+  Dim buffer_flt(20) As Float
+
+  'if a port was given then make the call
+  #If AMB_CFG_SDI_PORT > 0
+    SDI12Recorder(buffer_flt(), AMB_CFG_SDI_PORT, 0, "CC!", 1.0, 0)
+  #EndIf
+
+  'if data was received then store the values
+  If buffer_flt(1) <> NAN Then
+    amb_temp(num) = buffer_flt(1)
+    amb_humidity(num) = buffer_flt(2)
+    DewPoint(amb_dew_point(num), amb_temp(num), amb_humidity(num))
+
+  'otherwise set them to NAN
+  Else
+    amb_temp(num) = NAN
+    amb_humidity(num) = NAN
+    amb_dew_point(num) = NAN
+  EndIf
+EndFunction 'getAmbientTempCs215
+
+
+
+
+
+'solar resource sensor
+Function calcTempHukseflux(resistance As Float) As Float
+  Const SR12_SHA = 1.0295e-3
+  Const SR12_SHB = 2.391e-4
+  Const SR12_SHC = 1.568e-7
+
+  Return (1 / (SR12_SHA + SR12_SHB * LN(resistance) + SR12_SHC * LN(resistance)^3) - 273)
+EndFunction 'calcTempHukseflux
+
+
+
+
+
+Function calcTempSi02tk(resistance As Float) As Float
+  Const SI02TK_A = -3.83e-5
+  Const SI02TK_B = 0.2103
+  Const SI02TK_C = -147.1
+
+  Return SI02TK_A * resistance^2 + SI02TK_B * resistance + SI02TK_C
+EndFunction 'calcTempSi02tk
+
+
+
+
+
+#If SRS_CFG_01_SE_TYPE = PVEL OR SRS_CFG_02_SE_TYPE = PVEL OR SRS_CFG_03_SE_TYPE = PVEL
+  Function calcPVELTemp(num As Long, voltage_open_circut As Float, _
+    voltage_short_circuit As Float) As Float
+
+    Dim eqn_vscc As Float
+    Dim temperature As Float
+
+    Const boltzmann_const = 1.380649e-23
+    Const elementary_charge = 1.602177e-19
+
+    eqn_vscc = 0
+    temperature = 0
+
+    eqn_vscc = srs_cfg_n(num) * (boltzmann_const / elementary_charge) * _
+      LN(voltage_short_circuit / srs_cfg_vsc(num))
+
+    temperature = (voltage_open_circut - srs_cfg_voc(num) - (273.15 * eqn_vscc) + _
+      (25 * srs_cfg_voc_coeff(num))) / (eqn_vscc + srs_cfg_voc_coeff(num))
+
+    Return temperature
+  EndFunction 'calcPVELTemp
+
+
+
+
+
+  Function parsePVELConstants(line_buffer As String * 128) As Boolean
+    Dim params(10) As String * 32
+    Dim index As Long
+    Dim type As String * 32
+
+    Dim vsc_coeff As Float
+    Dim vsc As Float
+    Dim voc As Float
+    Dim voc_coeff As Float
+    Dim n As Float
+
+    Dim counter As Long
+
+    'clear params array
+    For counter = 1 To ArrayLength(params)
+      params(counter) = ""
+    Next
+
+    'parse the device parameters
+    SplitStr(params(), line_buffer, ",", 10, 5)
+    index = params(2)
+    type = params(3)
+
+    vsc = params(6)
+    vsc_coeff = params(7)
+    voc = params(8)
+    voc_coeff = params(9)
+    n = params(10)
+
+    'make sure the index is valid
+    If index = NAN OR index < 1 OR index > SRS_TOTAL Then
+      cfg_reload_error = "Invalid index for srs device"
+      Return FALSE
+    EndIf
+
+    'make sure the multiplier is valid
+    If vsc_coeff = NAN OR vsc = NAN OR voc = NAN OR voc_coeff = NAN OR n = NAN Then
+      cfg_reload_error = "Invalid Constant for srs esti device"
+      Return FALSE
+    EndIf
+
+    'store the calibration constant
+    srs_cfg_type(index) = type
+    srs_cfg_vsc_coeff(index) = vsc_coeff
+    srs_cfg_vsc(index) = vsc
+    srs_cfg_voc(index) = voc
+    srs_cfg_voc_coeff(index) = voc_coeff
+    srs_cfg_n(index) = n
+
+    Return TRUE
+  EndFunction 'parsePVELConstants
+#EndIf
+
+
+
+
+'cell temp sensor
+Function calcCellTempDl209(resistance As Float) As Float
+  Const DL209_SHA = 9.376e-4
+  Const DL209_SHB = 2.208e-4
+  Const DL209_SHC = 1.276e-7
+
+  Return (1 / (DL209_SHA + DL209_SHB * LN(resistance) + DL209_SHC * LN(resistance)^3) - 273.15)
+EndFunction 'calcCellTempDl209
+
+
+
+
+
+Function calcCellTempCs110(resistance As Float) As Float
+  Const CS110_SHA = 1.129241e-3
+  Const CS110_SHB = 2.341077e-4
+  Const CS110_SHC = 8.775468e-8
+
+  Return (1 / (CS110_SHA + CS110_SHB * LN(resistance) + CS110_SHC * LN(resistance)^3) - 273.15)
+EndFunction 'calcCellTempCs110
+
+
+
+
+
+Function calcCellTempSolyn100(wind_speed As Float, irradiance As Float, ambient_temp As Float) As Float
+  Const SOLYN_100_EXT_THERM = 0.0025
+  Const SOLYN_100_INT_THERM = 0.009227646
+  Const SOLYN_100_WIND_COOL = 8
+  Const SOLYN_100_PWR_EFFIC = 0.126
+  Const SOLYN_100_TCX_ABSOR = 0.111
+  Const SOLYN_100_THERM_MULT = (1 - SOLYN_100_PWR_EFFIC) / (1 - SOLYN_100_TCX_ABSOR)
+
+  Dim therm_r As Float
+  therm_r = (1 / SOLYN_100_INT_THERM) + (1 / (SOLYN_100_EXT_THERM * SQR(1 + 3 * wind_speed / SOLYN_100_WIND_COOL)))
+
+  Return (ambient_temp + therm_r * SOLYN_100_THERM_MULT * irradiance * 0.0001)
+EndFunction 'calcCellTempSolyndra100
+
+
+
+
+
+Function calcCellTempSolyn200(wind_speed As Float, irradiance As Float, ambient_temp As Float) As Float
+  Const SOLYN_200_EXT_THERM = 0.00193
+  Const SOLYN_200_INT_THERM = 0.00712
+  Const SOLYN_200_WIND_COOL = 8
+  Const SOLYN_200_PWR_EFFIC = 0.126
+  Const SOLYN_200_TCX_ABSOR = 0.067
+  Const SOLYN_200_THERM_MULT = (1 - SOLYN_200_PWR_EFFIC) / (1 - SOLYN_200_TCX_ABSOR)
+
+  Dim therm_r As Float
+  therm_r = (1 / SOLYN_200_INT_THERM) + (1 / (SOLYN_200_EXT_THERM * SQR(1 + 3 * wind_speed / SOLYN_200_WIND_COOL)))
+
+  Return (ambient_temp + therm_r * SOLYN_200_THERM_MULT * irradiance * 0.0001)
+EndFunction 'calcCellTempSolyndra200
+
+
+
+
+
+'electro shark 100
+Function getElectroShark100(num As Long, port As Long, addr As Long) As Long
+  Dim result_every(5) As Long
+  Dim result_daily(3) As Long
+
+  Dim buffer_lng(9) As Long
+  Dim buffer_flt(15) As Float
+  Dim buffer_cfg(5) As String
+  Dim buffer_str As String * 64
+
+  Dim current_record As Long
+  Dim current_day As Long
+  Dim counter As Long
+
+  Dim ct_numer As Long
+  Dim ct_denom As Long
+  Dim ct_mult As Long
+  Dim pt_numer As Long
+  Dim pt_denom As Long
+  Dim pt_mult As Long
+
+  'if num is out of bounds, return error code
+  If num < 1 OR num > MTR_TOTAL Then Return -9999
+
+  'capture a frozen copy of the record number, used for clearing
+  current_record = fifteenMin.Record
+
+  'reset the result codes
+  For counter = 1 To ArrayLength(result_every)
+    result_every(counter) = 0
+  Next
+
+  'query! instantaneous voltage, current, power, vars, power factor and frequency
+  ModBusMaster(result_every(1), port, MTR_SHARK_100_BAUD, addr, 3, buffer_flt(1), 1000 - 1, 15, MTR_SHARK_100_TRIES, MTR_SHARK_100_TIMEOUT)
+  If result_every(1) = 0 Then
+    mtr_ac_voltage_an(num) = buffer_flt(1)
+    mtr_ac_voltage_bn(num) = buffer_flt(2)
+    mtr_ac_voltage_cn(num) = buffer_flt(3)
+    mtr_ac_voltage_ab(num) = buffer_flt(4)
+    mtr_ac_voltage_bc(num) = buffer_flt(5)
+    mtr_ac_voltage_ca(num) = buffer_flt(6)
+    mtr_ac_current_a(num) = buffer_flt(7)
+    mtr_ac_current_b(num) = buffer_flt(8)
+    mtr_ac_current_c(num) = buffer_flt(9)
+    mtr_ac_power(num) = buffer_flt(10)
+    mtr_ac_power_rcvd(num) = IIf(buffer_flt(10) < 0, Abs(buffer_flt(10)), 0)
+    mtr_ac_power_delv(num) = IIf(buffer_flt(10) > 0, Abs(buffer_flt(10)), 0)
+    mtr_ac_vars(num) = buffer_flt(11)
+    mtr_ac_va(num) = buffer_flt(12)
+    mtr_ac_pf(num) = buffer_flt(13)
+    mtr_ac_freq(num) = buffer_flt(14)
+    mtr_ac_current_n(num) = buffer_flt(15)
+
+    DIS_mtr_ac_voltage_an(num) = FALSE
+    DIS_mtr_ac_voltage_bn(num) = FALSE
+    DIS_mtr_ac_voltage_cn(num) = FALSE
+    DIS_mtr_ac_voltage_ab(num) = FALSE
+    DIS_mtr_ac_voltage_bc(num) = FALSE
+    DIS_mtr_ac_voltage_ca(num) = FALSE
+    DIS_mtr_ac_current_a(num) = FALSE
+    DIS_mtr_ac_current_b(num) = FALSE
+    DIS_mtr_ac_current_c(num) = FALSE
+    DIS_mtr_ac_power(num) = FALSE
+    DIS_mtr_ac_power_rcvd(num) = FALSE
+    DIS_mtr_ac_power_delv(num) = FALSE
+    DIS_mtr_ac_vars(num) = FALSE
+    DIS_mtr_ac_va(num) = FALSE
+    DIS_mtr_ac_pf(num) = FALSE
+    DIS_mtr_ac_freq(num) = FALSE
+    DIS_mtr_ac_current_n(num) = FALSE
+
+  Else
+    DIS_mtr_ac_voltage_an(num) = TRUE
+    DIS_mtr_ac_voltage_bn(num) = TRUE
+    DIS_mtr_ac_voltage_cn(num) = TRUE
+    DIS_mtr_ac_voltage_ab(num) = TRUE
+    DIS_mtr_ac_voltage_bc(num) = TRUE
+    DIS_mtr_ac_voltage_ca(num) = TRUE
+    DIS_mtr_ac_current_a(num) = TRUE
+    DIS_mtr_ac_current_b(num) = TRUE
+    DIS_mtr_ac_current_c(num) = TRUE
+    DIS_mtr_ac_power(num) = TRUE
+    DIS_mtr_ac_power_rcvd(num) = TRUE
+    DIS_mtr_ac_power_delv(num) = TRUE
+    DIS_mtr_ac_vars(num) = TRUE
+    DIS_mtr_ac_va(num) = TRUE
+    DIS_mtr_ac_pf(num) = TRUE
+    DIS_mtr_ac_freq(num) = TRUE
+    DIS_mtr_ac_current_n(num) = TRUE
+
+    mtr_ac_voltage_an(num) = NAN
+    mtr_ac_voltage_bn(num) = NAN
+    mtr_ac_voltage_cn(num) = NAN
+    mtr_ac_voltage_ab(num) = NAN
+    mtr_ac_voltage_bc(num) = NAN
+    mtr_ac_voltage_ca(num) = NAN
+    mtr_ac_current_a(num) = NAN
+    mtr_ac_current_b(num) = NAN
+    mtr_ac_current_c(num) = NAN
+    mtr_ac_power(num) = NAN
+    mtr_ac_power_rcvd(num) = NAN
+    mtr_ac_power_delv(num) = NAN
+    mtr_ac_vars(num) = NAN
+    mtr_ac_va(num) = NAN
+    mtr_ac_pf(num) = NAN
+    mtr_ac_freq(num) = NAN
+    mtr_ac_current_n(num) = NAN
+  EndIf
+
+  'query energy
+  ModBusMaster(result_every(2), port, MTR_SHARK_100_BAUD, addr, 3, buffer_lng(1), -1100, 9, MTR_SHARK_100_TRIES, MTR_SHARK_100_TIMEOUT, 2)
+  If result_every(2) = 0 Then
+    mtr_ac_energy_rcvd_raw(num) = buffer_lng(1)
+    mtr_ac_energy_delv_raw(num) = buffer_lng(2)
+    mtr_ac_energy_rcvd(num) = mtr_ac_energy_rcvd_raw(num) + mtr_cfg_offset_energy_rcvd(num)
+    mtr_ac_energy_delv(num) = mtr_ac_energy_delv_raw(num) + mtr_cfg_offset_energy_delv(num)
+
+    mtr_ac_energy_net(num) = buffer_lng(3)
+    mtr_ac_energy_total(num) = buffer_lng(4)
+    mtr_ac_var_hrs_pos(num) = buffer_lng(5)
+    mtr_ac_var_hrs_neg(num) = buffer_lng(6)
+    mtr_ac_var_hrs_net(num) = buffer_lng(7)
+    mtr_ac_var_hrs_total(num) = buffer_lng(8)
+    mtr_ac_va_hrs_total(num) = buffer_lng(9)
+  EndIf
+
+  'query voltage and current phase angles
+  ModBusMaster(result_every(3), port, MTR_SHARK_100_BAUD, addr, 3, buffer_lng(1), 4100, 6, MTR_SHARK_100_TRIES, MTR_SHARK_100_TIMEOUT, 1)
+  If result_every(3) = 0 Then
+    mtr_ac_current_a_angle(num) = buffer_lng(1) * 0.1
+    mtr_ac_current_b_angle(num) = buffer_lng(2) * 0.1
+    mtr_ac_current_c_angle(num) = buffer_lng(3) * 0.1
+    mtr_ac_voltage_ab_angle(num) = buffer_lng(4) * 0.1
+    mtr_ac_voltage_bc_angle(num) = buffer_lng(5) * 0.1
+    mtr_ac_voltage_ca_angle(num) = buffer_lng(6) * 0.1
+
+  Else
+    mtr_ac_current_a_angle(num) = NAN
+    mtr_ac_current_b_angle(num) = NAN
+    mtr_ac_current_c_angle(num) = NAN
+    mtr_ac_voltage_ab_angle(num) = NAN
+    mtr_ac_voltage_bc_angle(num) = NAN
+    mtr_ac_voltage_ca_angle(num) = NAN
+  EndIf
+
+  'query system sanity indicator
+  ModBusMaster(result_every(4), port, MTR_SHARK_100_BAUD, addr, 3, buffer_lng(1), 40001, 1, MTR_SHARK_100_TRIES, MTR_SHARK_100_TIMEOUT, 1)
+  If result_every(4) = 0 Then
+    mtr_fault_01(num) = IIf(buffer_lng(1) <> 0, (1 << 0), 0)
+
+  ElseIf current_record <> mtr_last_record(num) Then
+    mtr_fault_01(num) = 0
+  EndIf
+
+  'query serial number
+  ModBusMaster(result_every(5), port, MTR_SHARK_100_BAUD, addr, 3, buffer_lng(1), 9, 8, MTR_SHARK_100_TRIES, MTR_SHARK_100_TIMEOUT, 1)
+  If result_every(5) = 0 Then
+
+    buffer_str = ""
+    For counter = 0 To 7
+      'add 2 spaces to the end of the string then overwrite them with 2 character bytes
+      buffer_str &= "  "
+      MoveBytes(buffer_str, counter * 2, buffer_lng(1 + counter), 2, 2)
+    Next
+    mtr_sn(num) = Trim(buffer_str)
+
+  EndIf
+
+  'if the day of year has incremented since the last collection, update these variables
+  current_day = time_utc_day_of_year
+  If current_day <> mtr_last_day(num) Then
+
+    'reset the daily result codes
+    For counter = 1 To ArrayLength(result_daily)
+      result_daily(counter) = 0
+    Next
+
+    'query firmware version, map version, and meter config (calibration frequency)
+    ModBusMaster(result_daily(1), port, MTR_SHARK_100_BAUD, addr, 3, buffer_lng(1), 18, 4, MTR_SHARK_100_TRIES, MTR_SHARK_100_TIMEOUT, 1)
+    If result_daily(1) = 0 Then
+
+      buffer_str = ""
+      For counter = 0 To 1
+        'add 2 spaces to the end of the string then overwrite them with 2 character bytes
+        buffer_str &= "  "
+        MoveBytes(buffer_str, counter * 2, buffer_lng(1 + counter), 2, 2)
+      Next
+      mtr_fw_ver(num) = Trim(buffer_str)
+
+      mtr_map_ver(num) = buffer_lng(3) AND &HFFFF
+      buffer_cfg(1) = "calib:" & (buffer_lng(4) AND &H003F) & "hz"
+
+    Else
+      mtr_fw_ver(num) = "NAN"
+      mtr_map_ver(num) = "NAN"
+      buffer_cfg(1) = "NAN"
+    EndIf
+
+    'query meter config
+    ModBusMaster(result_daily(2), port, MTR_SHARK_100_BAUD, addr, 3, buffer_lng(1), 30000, 7, MTR_SHARK_100_TRIES, MTR_SHARK_100_TIMEOUT, 1)
+    If result_daily(2) = 0 Then
+
+      'extract the values
+      ct_mult = buffer_lng(1) AND &H00FF
+      ct_denom = (buffer_lng(1) >> 8) AND &H00FF
+      ct_numer = buffer_lng(2) AND &HFFFF
+      pt_numer = buffer_lng(3) AND &HFFFF
+      pt_denom = buffer_lng(4) AND &HFFFF
+      pt_mult = ((buffer_lng(5) << 4) AND &H0F00) OR ((buffer_lng(5) >> 8) AND &H00FF)
+
+      'create the ct ratio string and add the muliplier if not equal to 1
+      mtr_ac_ct_ratio(num) = FormatLong(ct_numer, "%01u") & ":" & FormatLong(ct_denom, "%01u")
+      If ct_mult <> 1 Then
+        mtr_ac_ct_ratio(num) = FormatLong(ct_mult, "%01u") & " * " & mtr_ac_ct_ratio(num)
+      EndIf
+
+      'create the pt ratio string and add the muliplier if not equal to 1
+      mtr_ac_pt_ratio(num) = FormatLong(pt_numer, "%01u") & ":" & FormatLong(pt_denom, "%01u")
+      If pt_mult <> 1 Then
+        mtr_ac_pt_ratio(num) = FormatLong(pt_mult, "%01u") & " * " & mtr_ac_pt_ratio(num)
+      EndIf
+
+      'parse meter hookup
+      Select Case (buffer_lng(5) AND &H000F)
+      Case 0
+        mtr_ac_config(num) = "3wye"
+      Case 1
+        mtr_ac_config(num) = "delta"
+      Case 3
+        mtr_ac_config(num) = "2.5wye"
+      Else
+        mtr_ac_config(num) = "error"
+      EndSelect
+
+      'parse energy scale
+      buffer_cfg(2) = "scale:"
+      Select Case ((buffer_lng(7) >> 4) AND &H0007)
+      Case 0
+        buffer_cfg(2) &= "unit"
+      Case 3
+        buffer_cfg(2) &= "kilo"
+      Case 6
+        buffer_cfg(2) &= "mega"
+      EndSelect
+
+      'parse energy decimal places
+      buffer_cfg(3) = "decimal:" & (buffer_lng(7) AND &H0007)
+
+    Else
+      mtr_ac_ct_ratio(num) = "NAN"
+      mtr_ac_pt_ratio(num) = "NAN"
+      mtr_ac_config(num) = "NAN"
+      buffer_cfg(2) = "NAN"
+      buffer_cfg(3) = "NAN"
+    EndIf
+
+    'query meter config flags
+    ModBusMaster(result_daily(3), port, MTR_SHARK_100_BAUD, addr, 3, buffer_lng(1), 30015, 1, MTR_SHARK_100_TRIES, MTR_SHARK_100_TIMEOUT, 1)
+    If result_daily(3) = 0 Then
+
+      'parse power direction
+      buffer_cfg(4) = "dir:"
+      If buffer_lng(1) AND (1 << 2) Then
+        buffer_cfg(4) &= "gen"
+      Else
+        buffer_cfg(4) &= "load"
+      EndIf
+
+      'parse power factor sign correction
+      buffer_cfg(5) = "pf:"
+      If buffer_lng(1) AND (1 << 1) Then
+        buffer_cfg(5) &= "flip"
+      Else
+        buffer_cfg(5) &= "none"
+      EndIf
+
+    Else
+      buffer_cfg(4) = "NAN"
+      buffer_cfg(5) = "NAN"
+    EndIf
+
+    'build config string
+    buffer_str = ""
+    For counter = 1 To ArrayLength(buffer_cfg)
+
+      'delimit list with commas
+      If counter > 1 AND buffer_str <> "" Then buffer_str &= ","
+      buffer_str &= buffer_cfg(counter)
+    Next
+    mtr_config(num) = buffer_str
+
+    'check the daily result codes and exit if any are nonzero
+    For counter = ArrayLength(result_daily) To 1 Step -1
+      If result_daily(counter) <> 0 Then ExitFor
+
+      'update the last day if we reach the first call and haven't exited
+      If counter = 1 Then mtr_last_day(num) = current_day
+    Next
+  EndIf
+
+  'capture the last record for next time
+  mtr_last_record(num) = current_record
+
+  'use instantaneous measurement query as indicator for comm code
+  If result_every(1) = 0 Then
+    mtr_comm_code(num) = 0
+
+  ElseIf result_every(1) < 0 Then
+    mtr_comm_code(num) = result_every(1)
+
+  Else
+    'only increment comm code if it hadn't been negative
+    If mtr_comm_code(num) >= 0 Then
+      mtr_comm_code(num) += 1
+    Else
+      mtr_comm_code(num) = 1
+    EndIf
+  EndIf
+
+  Return mtr_comm_code(num)
+EndFunction 'getElectroShark100
+
+
+
+
+
+'solectria xtm
+Function getSolectriaXTM(num As Long, port As Long, addr As Long) As Long
+  Dim result_every(8) As Long
+  Dim buffer_lng(25) As Long
+  Dim inv_buffer_lng(17) As Long
+
+  Dim current_record As Long
+  Dim counter As Long
+
+  'if num is out of bounds, return error code
+  If num < 1 OR num > INV_TOTAL Then Return -9999
+
+  'capture a frozen copy of the record number, used for clearing certain variables further on
+  current_record = fifteenMin.Record
+
+  'reset the result codes
+  For counter = 1 To ArrayLength(result_every)
+    result_every(counter) = 0
+  Next
+
+  'query voltage and current measurements
+  ModBusMaster(result_every(1), port, INV_SOLECTRIA_BAUD, addr, 3, buffer_lng(1), 1, 10, INV_SOLECTRIA_TRIES, INV_SOLECTRIA_TIMEOUT, 1)
+  If result_every(1) = 0 Then
+    If buffer_lng(1) <> &H8000 OR buffer_lng(1) <> "-32768" Then
+      inv_dc_voltage(num) = buffer_lng(1) * 0.1953125
+    Else
+      inv_dc_voltage(num) = NAN
+    EndIf
+
+    inv_ac_va(num) = ((buffer_lng(1) AND &HFFFF) * 19.5312500) * 0.01
+    inv_ac_freq(num) = buffer_lng(3) * 0.00610352
+    inv_ac_voltage_ab(num) = buffer_lng(5) * 0.1953125
+    inv_ac_voltage_bc(num) = buffer_lng(6) * 0.1953125
+    inv_ac_voltage_ca(num) = buffer_lng(7) * 0.1953125
+
+    'create 32 bit long value from 16bit registers
+    buffer_lng(9) = ((buffer_lng(9) << 16) OR (buffer_lng(10) AND &HFFFF))
+    inv_ac_energy(num) = buffer_lng(9) * 0.1
+
+    DIS_inv_dc_voltage(num) = FALSE
+    DIS_inv_ac_va(num) = FALSE
+    DIS_inv_ac_freq(num) = FALSE
+    DIS_inv_ac_voltage_ab(num) = FALSE
+    DIS_inv_ac_voltage_bc(num) = FALSE
+    DIS_inv_ac_voltage_ca(num) = FALSE
+
+  Else
+    DIS_inv_dc_voltage(num) = TRUE
+    DIS_inv_ac_va(num) = TRUE
+    DIS_inv_ac_freq(num) = TRUE
+    DIS_inv_ac_voltage_ab(num) = TRUE
+    DIS_inv_ac_voltage_bc(num) = TRUE
+    DIS_inv_ac_voltage_ca(num) = TRUE
+
+    inv_dc_voltage(num) = NAN
+    inv_ac_va(num) = NAN
+    inv_ac_freq(num) = NAN
+    inv_ac_voltage_ab(num) = NAN
+    inv_ac_voltage_bc(num) = NAN
+    inv_ac_voltage_ca(num) = NAN
+  EndIf
+
+  'query ac current
+  ModBusMaster(result_every(2), port, INV_SOLECTRIA_BAUD, addr, 3, buffer_lng(1), 94, 1, INV_SOLECTRIA_TRIES, INV_SOLECTRIA_TIMEOUT, 1)
+  If result_every(2) = 0 Then
+    inv_ac_current(num) = buffer_lng(1) * 0.09765625
+    DIS_inv_ac_current(num) = FALSE
+
+  Else
+    DIS_inv_ac_current(num) = TRUE
+    inv_ac_current(num) = NAN
+  EndIf
+
+
+   'query ac power
+  ModBusMaster(result_every(3), port, INV_SOLECTRIA_BAUD, addr, 3, buffer_lng(1), 81, 1, INV_SOLECTRIA_TRIES, INV_SOLECTRIA_TIMEOUT, 3)
+  If result_every(3) = 0 Then
+    inv_ac_power(num) = (buffer_lng(1) AND &HFFFF) * 19.53125
+    DIS_inv_ac_power(num) = FALSE
+  Else
+    DIS_inv_ac_power(num) = TRUE
+    inv_ac_power(num) = NAN
+
+  EndIf
+
+ 'query temps
+  ModBusMaster(result_every(4), port, INV_SOLECTRIA_BAUD, addr, 3, buffer_lng(1), 85, 5, INV_SOLECTRIA_TRIES, INV_SOLECTRIA_TIMEOUT, 1)
+  If result_every(4) = 0 Then
+
+    inv_temp_01(num) = buffer_lng(1) * 0.0976563
+    inv_temp_02(num) = buffer_lng(3) * 0.0976563
+    inv_temp_03(num) = buffer_lng(5) * 0.0976563
+
+    DIS_inv_temp_01(num) = FALSE
+    DIS_inv_temp_02(num) = FALSE
+    DIS_inv_temp_03(num) = FALSE
+  Else
+    DIS_inv_temp_01(num) = TRUE
+    DIS_inv_temp_02(num) = TRUE
+    DIS_inv_temp_03(num) = TRUE
+    inv_temp_01 = NAN
+    inv_temp_02 = NAN
+    inv_temp_03 = NAN
+  EndIf
+
+
+  'query! fault and status codes
+  ModBusMaster(result_every(5), port, INV_SOLECTRIA_BAUD, addr, 3, buffer_lng(1), 16, 5, INV_SOLECTRIA_TRIES, INV_SOLECTRIA_TIMEOUT, 1)
+  If result_every(5) = 0 Then
+    inv_fault_01(num) = buffer_lng(1) AND &HFFFF
+    inv_status_01(num) = buffer_lng(2) AND &HFFFF
+    inv_status_02(num) = buffer_lng(5) AND &HFFFF
+
+    'check if fault is nonzero
+    inv_faulted(num) = (buffer_lng(1) <> 0)
+
+  ElseIf current_record <> inv_last_record(num) Then
+    inv_fault_01(num) = 0
+    inv_status_01(num) = 0
+    inv_status_02(num) = 0
+
+    inv_faulted(num) = FALSE
+  EndIf
+
+   'query dc currents zones 1-8
+  ModBusMaster(result_every(6), port, INV_SOLECTRIA_BAUD, addr, 3, inv_buffer_lng(1), 21, 8, INV_SOLECTRIA_TRIES, INV_SOLECTRIA_TIMEOUT, 1)
+  If result_every(6) = 0 Then
+
+    inv_dc_channel_01(num) = IIF((inv_buffer_lng(1) AND &HFFFF)  = &H8000, NAN, (inv_buffer_lng(1)  AND &HFFFF) * 0.1)
+    inv_dc_channel_02(num) = IIF((inv_buffer_lng(2) AND &HFFFF)  = &H8000, NAN, (inv_buffer_lng(2)  AND &HFFFF) * 0.1)
+    inv_dc_channel_03(num) = IIF((inv_buffer_lng(3) AND &HFFFF)  = &H8000, NAN, (inv_buffer_lng(3)  AND &HFFFF) * 0.1)
+    inv_dc_channel_04(num) = IIF((inv_buffer_lng(4) AND &HFFFF)  = &H8000, NAN, (inv_buffer_lng(4)  AND &HFFFF) * 0.1)
+    inv_dc_channel_05(num) = IIF((inv_buffer_lng(5) AND &HFFFF)  = &H8000, NAN, (inv_buffer_lng(5)  AND &HFFFF) * 0.1)
+    inv_dc_channel_06(num) = IIF((inv_buffer_lng(6) AND &HFFFF)  = &H8000, NAN, (inv_buffer_lng(6)  AND &HFFFF) * 0.1)
+    inv_dc_channel_07(num) = IIF((inv_buffer_lng(7) AND &HFFFF)  = &H8000, NAN, (inv_buffer_lng(7)  AND &HFFFF) * 0.1)
+    inv_dc_channel_08(num) = IIF((inv_buffer_lng(8) AND &HFFFF)  = &H8000, NAN, (inv_buffer_lng(8)  AND &HFFFF) * 0.1)
+
+    DIS_inv_dc_channel_01(num) = FALSE
+    DIS_inv_dc_channel_02(num) = FALSE
+    DIS_inv_dc_channel_03(num) = FALSE
+    DIS_inv_dc_channel_04(num) = FALSE
+    DIS_inv_dc_channel_05(num) = FALSE
+    DIS_inv_dc_channel_06(num) = FALSE
+    DIS_inv_dc_channel_07(num) = FALSE
+    DIS_inv_dc_channel_08(num) = FALSE
+
+  Else
+
+    DIS_inv_dc_channel_01(num) = TRUE
+    DIS_inv_dc_channel_02(num) = TRUE
+    DIS_inv_dc_channel_03(num) = TRUE
+    DIS_inv_dc_channel_04(num) = TRUE
+    DIS_inv_dc_channel_05(num) = TRUE
+    DIS_inv_dc_channel_06(num) = TRUE
+    DIS_inv_dc_channel_07(num) = TRUE
+    DIS_inv_dc_channel_08(num) = TRUE
+
+    inv_dc_channel_01(num) = NAN
+    inv_dc_channel_02(num) = NAN
+    inv_dc_channel_03(num) = NAN
+    inv_dc_channel_04(num) = NAN
+    inv_dc_channel_05(num) = NAN
+    inv_dc_channel_06(num) = NAN
+    inv_dc_channel_07(num) = NAN
+    inv_dc_channel_08(num) = NAN
+  EndIf
+
+  'query dc currents zones 9-16
+  ModBusMaster(result_every(7), port, INV_SOLECTRIA_BAUD, addr, 3, inv_buffer_lng(9), 143, 8, INV_SOLECTRIA_TRIES, INV_SOLECTRIA_TIMEOUT, 1)
+  If result_every(7) = 0 Then
+
+    inv_dc_channel_09(num) = IIF((inv_buffer_lng(09) AND &HFFFF) = &H8000, NAN, (inv_buffer_lng(09) AND &HFFFF) * 0.1)
+    inv_dc_channel_10(num) = IIF((inv_buffer_lng(10) AND &HFFFF) = &H8000, NAN, (inv_buffer_lng(10) AND &HFFFF) * 0.1)
+    inv_dc_channel_11(num) = IIF((inv_buffer_lng(11) AND &HFFFF) = &H8000, NAN, (inv_buffer_lng(11) AND &HFFFF) * 0.1)
+    inv_dc_channel_12(num) = IIF((inv_buffer_lng(12) AND &HFFFF) = &H8000, NAN, (inv_buffer_lng(12) AND &HFFFF) * 0.1)
+    inv_dc_channel_13(num) = IIF((inv_buffer_lng(13) AND &HFFFF) = &H8000, NAN, (inv_buffer_lng(13) AND &HFFFF) * 0.1)
+    inv_dc_channel_14(num) = IIF((inv_buffer_lng(14) AND &HFFFF) = &H8000, NAN, (inv_buffer_lng(14) AND &HFFFF) * 0.1)
+    inv_dc_channel_15(num) = IIF((inv_buffer_lng(15) AND &HFFFF) = &H8000, NAN, (inv_buffer_lng(15) AND &HFFFF) * 0.1)
+    inv_dc_channel_16(num) = IIF((inv_buffer_lng(16) AND &HFFFF) = &H8000, NAN, (inv_buffer_lng(16) AND &HFFFF) * 0.1)
+
+    DIS_inv_dc_channel_09(num) = FALSE
+    DIS_inv_dc_channel_10(num) = FALSE
+    DIS_inv_dc_channel_11(num) = FALSE
+    DIS_inv_dc_channel_12(num) = FALSE
+    DIS_inv_dc_channel_13(num) = FALSE
+    DIS_inv_dc_channel_14(num) = FALSE
+    DIS_inv_dc_channel_15(num) = FALSE
+    DIS_inv_dc_channel_16(num) = FALSE
+
+  Else
+
+    DIS_inv_dc_channel_09(num) = TRUE
+    DIS_inv_dc_channel_10(num) = TRUE
+    DIS_inv_dc_channel_11(num) = TRUE
+    DIS_inv_dc_channel_12(num) = TRUE
+    DIS_inv_dc_channel_13(num) = TRUE
+    DIS_inv_dc_channel_14(num) = TRUE
+    DIS_inv_dc_channel_15(num) = TRUE
+    DIS_inv_dc_channel_16(num) = TRUE
+
+    inv_dc_channel_09(num) = NAN
+    inv_dc_channel_10(num) = NAN
+    inv_dc_channel_11(num) = NAN
+    inv_dc_channel_12(num) = NAN
+    inv_dc_channel_13(num) = NAN
+    inv_dc_channel_14(num) = NAN
+    inv_dc_channel_15(num) = NAN
+    inv_dc_channel_16(num) = NAN
+
+  EndIf
+
+  'query dc zone current total
+  ModBusMaster(result_every(8), port, INV_SOLECTRIA_BAUD, addr, 3, inv_buffer_lng(17), 29, 1, INV_SOLECTRIA_TRIES, INV_SOLECTRIA_TIMEOUT, 1)
+  If result_every(8) = 0 Then
+    inv_dc_string_channel_total(num) = IIF((inv_buffer_lng(17) AND &HFFFF) = &H8000, NAN, (inv_buffer_lng(17) AND &HFFFF) * 0.1)
+    DIS_inv_dc_string_channel_total(num) = FALSE
+  Else
+    inv_dc_string_channel_total(num) = NAN
+    DIS_inv_dc_string_channel_total(num) = TRUE
+  EndIf
+
+  'capture the last record for next time
+  inv_last_record(num) = current_record
+
+  'use inverter status and fault query to indicate comm code
+  If result_every(1) = 0 AND result_every(2) = 0 AND result_every(3) = 0 AND result_every(4) = 0 AND result_every(5) = 0 Then
+    inv_comm_code(num) = 0
+
+  ElseIf result_every(1) < 0 Then
+    inv_comm_code(num) = result_every(1)
+  ElseIf result_every(2) < 0 Then
+    inv_comm_code(num) = result_every(2)
+  ElseIf result_every(3) < 0 Then
+    inv_comm_code(num) = result_every(3)
+  ElseIf result_every(4) < 0 Then
+    inv_comm_code(num) = result_every(4)
+  ElseIf result_every(5) < 0 Then
+    inv_comm_code(num) = result_every(5)
+
+  Else
+    'only increment comm code if it hadn't been negative
+    If inv_comm_code(num) >= 0 Then
+      inv_comm_code(num) += 1
+    Else
+      inv_comm_code(num) = 1
+    EndIf
+  EndIf
+
+  Return inv_comm_code(num)
+EndFunction 'getSolectriaXTM
+
+
+
+
+
+'modbus slave
+Function populateMbsAsciiRegisters(start_register As Long, buffer_str As String * 32)
+  Dim char_counter As Long
+
+  For char_counter = 0 To (Len(buffer_str) >> 1) 'EH divide by two without generating a float
+    If buffer_str(1, 1, (1 + (char_counter * 2))) = "" Then ExitFor
+
+    mbs_map(start_register + (char_counter)) = ASCII(buffer_str( _
+    1, 1, (1 + (char_counter * 2)))) << 8 OR ASCII(buffer_str( _
+    1, 1, (2 + (char_counter * 2))))
+  Next
+EndFunction 'populateMbsAsciiRegisters
+
+
+
+
+Function populateModbusSlaveMap()
+  Dim counter As Long
+  Dim char_counter As Long
+  Dim mbs_base As Long
+
+  'draker unit information
+  populateMbsAsciiRegisters(100 + 1, draker_modbus_slave_ver)
+  populateMbsAsciiRegisters(104 + 1, draker_panel_sn)
+
+  'panel status
+  mbs_map(110 + 1) = pnl_logger_voltage * 100
+  mbs_map(111 + 1) = pnl_logger_temp * 100
+  mbs_map(112 + 1) = pnl_logger_fault
+
+  #If PNL_CFG_SDI_PORT <> 0
+    mbs_map(116 + 1) = pnl_battery_voltage * 100
+    mbs_map(117 + 1) = pnl_battery_current * 100
+
+    populateMbsAsciiRegisters(118 + 1, pnl_charge_state)
+    populateMbsAsciiRegisters(128 + 1, pnl_charge_source)
+    populateMbsAsciiRegisters(138 + 1, pnl_charge_error)
+
+  #EndIf
+
+  'environmental sensor information
+  #If MET_TOTAL > 0
+    'vaisala or lufft
+    mbs_map(200 + 1) = met_amb_temp(1) * 100
+    mbs_map(201 + 1) = met_amb_humidity(1) * 100
+    mbs_map(202 + 1) = met_amb_dew_point(1) * 100
+
+    mbs_map(207 + 1) = met_brm_pressure(1) * 10
+
+    mbs_map(210 + 1) = met_wind_speed(1) * 100
+    mbs_map(211 + 1) = met_wind_direction(1) * 10
+
+    mbs_map(216 + 1) = met_rain_accum(1) * 10
+    mbs_map(217 + 1) = met_rain_accum_daily(1) * 10
+    mbs_map(218 + 1) = met_rain_duration(1) >> 16
+    mbs_map(219 + 1) = met_rain_duration(1)
+    mbs_map(220 + 1) = met_rain_duration_daily(1) >> 16
+    mbs_map(221 + 1) = met_rain_duration_daily(1)
+    mbs_map(222 + 1) = met_rain_intensity(1) * 10
+
+
+  #Else
+    'ambient temp sensor
+    mbs_map(200 + 1) = amb_temp(1) * 100
+    mbs_map(201 + 1) = amb_humidity(1) * 100
+    mbs_map(202 + 1) = amb_dew_point(1) * 100
+
+    'barometric sensor
+    mbs_map(207 + 1) = brm_pressure(1) * 10
+
+    'wind sensor
+    mbs_map(210 + 1) = wind_speed(1) * 100
+    mbs_map(211 + 1) = wind_direction(1) * 10
+
+    'tipping rain bucket
+    mbs_map(216 + 1) = rain_accum(1) * 10
+    mbs_map(217 + 1) = rain_accum_daily(1) * 10
+    mbs_map(218 + 1) = rain_duration(1) >> 16
+    mbs_map(219 + 1) = rain_duration(1)
+    mbs_map(220 + 1) = rain_duration_daily(1) >> 16
+    mbs_map(221 + 1) = rain_duration_daily(1)
+    mbs_map(222 + 1) = rain_intensity(1) * 10
+  #EndIf
+
+  For counter = 1 To SRS_TOTAL
+    'solar resource sensor
+    mbs_map(236 + 1 + ((counter - 1) * 3)) = srs_irrad(counter) * 10
+    mbs_map(237 + 1 + ((counter - 1) * 3)) = srs_temp(counter) * 10
+  Next
+
+  For counter = 1 To CTS_TOTAL
+    'cell temperature
+    mbs_map(251 + 1 + (counter - 1)) = cts_temp(counter) * 10
+  Next
+
+  'meter
+  For counter = 1 To MTR_TOTAL
+    'Meter Modbus Slave Map
+    mbs_base = (1000 + 1) + (100 * (counter - 1))
+
+    mbs_map(mbs_base + 0) =  mtr_comm_code(counter)
+
+    populateMbsAsciiRegisters(mbs_base + 1, mtr_sn)
+    populateMbsAsciiRegisters(mbs_base + 11, mtr_fw_ver)
+    populateMbsAsciiRegisters(mbs_base + 21, mtr_map_ver)
+
+    mbs_map(mbs_base + 31) =  mtr_ac_voltage_an(counter) * 10
+    mbs_map(mbs_base + 32) =  mtr_ac_voltage_bn(counter) * 10
+    mbs_map(mbs_base + 33) =  mtr_ac_voltage_cn(counter) * 10
+    mbs_map(mbs_base + 34) =  mtr_ac_voltage_ab(counter) * 10
+    mbs_map(mbs_base + 35) =  mtr_ac_voltage_bc(counter) * 10
+    mbs_map(mbs_base + 36) =  mtr_ac_voltage_ca(counter) * 10
+    mbs_map(mbs_base + 37) =  mtr_ac_current_a(counter) * 10
+    mbs_map(mbs_base + 38) =  mtr_ac_current_b(counter) * 10
+    mbs_map(mbs_base + 39) =  mtr_ac_current_c(counter) * 10
+    mbs_map(mbs_base + 40) =  mtr_ac_current_n(counter) * 10
+    mbs_map(mbs_base + 41) =  (mtr_ac_power(counter) * 10) >> 16
+    mbs_map(mbs_base + 42) =  mtr_ac_power(counter) * 10
+    mbs_map(mbs_base + 43) =  (mtr_ac_vars(counter) * 10) >> 16
+    mbs_map(mbs_base + 44) =  mtr_ac_vars(counter) * 10
+    mbs_map(mbs_base + 45) =  (mtr_ac_va(counter) * 10) >> 16
+    mbs_map(mbs_base + 46) =  mtr_ac_va(counter) * 10
+    mbs_map(mbs_base + 47) =  mtr_ac_pf(counter) * 100
+    mbs_map(mbs_base + 48) =  mtr_ac_freq(counter) * 10
+
+    mbs_map(mbs_base + 49) =  mtr_ac_energy_rcvd(counter) >> 16
+    mbs_map(mbs_base + 50) =  mtr_ac_energy_rcvd(counter)
+    mbs_map(mbs_base + 51) =  mtr_ac_energy_delv(counter) >> 16
+    mbs_map(mbs_base + 52) =  mtr_ac_energy_delv(counter)
+    mbs_map(mbs_base + 57) =  mtr_ac_var_hrs_pos(counter) >> 16
+    mbs_map(mbs_base + 58) =  mtr_ac_var_hrs_pos(counter)
+    mbs_map(mbs_base + 59) =  mtr_ac_var_hrs_neg(counter) >> 16
+    mbs_map(mbs_base + 60) =  mtr_ac_var_hrs_neg(counter)
+  Next
+
+  For counter = 1 To INV_TOTAL
+    'Inverter Modbus Slave Map
+    mbs_base = (3000 + 1) + (100 * (counter - 1))
+
+    'variables in the generic modbus map
+    mbs_map(mbs_base + 0) = inv_comm_code(counter)
+    mbs_map(mbs_base + 1) = inv_dc_voltage(counter) * 10
+    mbs_map(mbs_base + 2) = inv_dc_current(counter) * 10
+    mbs_map(mbs_base + 3) = inv_dc_power(counter) * 10
+    mbs_map(mbs_base + 4) = inv_ac_voltage(counter) * 10
+    mbs_map(mbs_base + 5) = inv_ac_voltage_an(counter) * 10
+    mbs_map(mbs_base + 6) = inv_ac_voltage_bn(counter) * 10
+    mbs_map(mbs_base + 7) = inv_ac_voltage_cn(counter) * 10
+    mbs_map(mbs_base + 8) = inv_ac_voltage_ab(counter) * 10
+    mbs_map(mbs_base + 9) = inv_ac_voltage_bc(counter) * 10
+    mbs_map(mbs_base + 10) = inv_ac_voltage_ca(counter) * 10
+    mbs_map(mbs_base + 11) = inv_ac_current(counter) * 10
+    mbs_map(mbs_base + 12) = inv_ac_current_a(counter) * 10
+    mbs_map(mbs_base + 13) = inv_ac_current_b(counter) * 10
+    mbs_map(mbs_base + 14) = inv_ac_current_c(counter) * 10
+    mbs_map(mbs_base + 15) = inv_ac_current_n(counter) * 10
+    mbs_map(mbs_base + 16) = inv_ac_power(counter)
+    mbs_map(mbs_base + 17) = inv_ac_va(counter)
+    mbs_map(mbs_base + 18) = inv_ac_vars(counter)
+    mbs_map(mbs_base + 19) = inv_ac_pf(counter) * 100
+    mbs_map(mbs_base + 20) = inv_ac_freq(counter) * 100
+    mbs_map(mbs_base + 21) = inv_ac_energy(counter) >> 16
+    mbs_map(mbs_base + 22) = inv_ac_energy(counter)
+    mbs_map(mbs_base + 23) = inv_ac_energy_today(counter) >> 16
+    mbs_map(mbs_base + 24) = inv_ac_energy_today(counter)
+    mbs_map(mbs_base + 25) = inv_run_state(counter) >> 16
+    mbs_map(mbs_base + 26) = inv_run_state(counter)
+    mbs_map(mbs_base + 27) = inv_status_01(counter) >> 16
+    mbs_map(mbs_base + 28) = inv_status_01(counter)
+    mbs_map(mbs_base + 29) = inv_status_02(counter) >> 16
+    mbs_map(mbs_base + 30) = inv_status_02(counter)
+    mbs_map(mbs_base + 31) = inv_status_03(counter) >> 16
+    mbs_map(mbs_base + 32) = inv_status_03(counter)
+    mbs_map(mbs_base + 33) = inv_status_04(counter) >> 16
+    mbs_map(mbs_base + 34) = inv_status_04(counter)
+    mbs_map(mbs_base + 35) = inv_status_05(counter) >> 16
+    mbs_map(mbs_base + 36) = inv_status_05(counter)
+    mbs_map(mbs_base + 37) = inv_fault_01(counter) >> 16
+    mbs_map(mbs_base + 38) = inv_fault_01(counter)
+    mbs_map(mbs_base + 39) = inv_fault_02(counter) >> 16
+    mbs_map(mbs_base + 40) = inv_fault_02(counter)
+    mbs_map(mbs_base + 41) = inv_fault_03(counter) >> 16
+    mbs_map(mbs_base + 42) = inv_fault_03(counter)
+    mbs_map(mbs_base + 43) = inv_fault_04(counter) >> 16
+    mbs_map(mbs_base + 44) = inv_fault_04(counter)
+    mbs_map(mbs_base + 45) = inv_fault_05(counter) >> 16
+    mbs_map(mbs_base + 46) = inv_fault_05(counter)
+    mbs_map(mbs_base + 47) = inv_fault_06(counter) >> 16
+    mbs_map(mbs_base + 48) = inv_fault_06(counter)
+    mbs_map(mbs_base + 49) = inv_fault_07(counter) >> 16
+    mbs_map(mbs_base + 50) = inv_fault_07(counter)
+
+    mbs_map(mbs_base + 60) = inv_temp_01(counter) * 10
+    mbs_map(mbs_base + 61) = inv_temp_02(counter) * 10
+    mbs_map(mbs_base + 62) = inv_temp_03(counter) * 10
+    mbs_map(mbs_base + 63) = inv_temp_04(counter) * 10
+    mbs_map(mbs_base + 64) = inv_temp_05(counter) * 10
+
+    populateMbsAsciiRegisters(mbs_base + 65, inv_sn)
+    populateMbsAsciiRegisters(mbs_base + 75, inv_fw_ver)
+  Next
+EndFunction
+
+
+
+
+
+'utility
+Function Find_DAS_Ip()
+  Dim IPInfo As String * 300
+  Dim temp As String * 35
+  Dim count_to_ip As Long
+  Dim count_to_space As Long
+  Dim octet(4) As String
+
+  IPInfo = Status.IPInfo
+  count_to_ip = InStr(1, IPInfo, "IP:", 2)
+  temp = Mid(IPInfo, count_to_ip + 4, 35)
+
+  #If LoggerType = CR800 Then
+    count_to_space = InStr(1, temp, "CSIO(1) mask", 2)
+  #ElseIf LoggerType = CR1000
+    count_to_space = InStr(1, temp, "eth", 2)
+  #EndIf
+
+  das_ip = Mid(temp, 1, count_to_space - 3)
+  SplitStr(octet(), das_ip, ".", 4, 5)
+  first_3_oct = octet(1) + "." + octet(2) + "." + octet(3)
+EndFunction 'Find_DAS_Ip
+
+
+
+
+
+'utility
+Function Ping_Scan()
+  Dim counter As Long
+  Dim response_time As Long
+  Dim ping_reply As Boolean
+  Dim oct_4 As String
+
+  Find_DAS_Ip()
+
+  ping_scan_results = "Ping response from " + first_3_oct + ". "
+  ping_reply = FALSE
+  For counter = 1 To 255
+    response_time = 0
+    oct_4 = FormatLong(Long, counter)
+    response_time = PingIP(first_3_oct + "." + oct_4, 400)
+    If response_time <> 0 Then
+      ping_scan_results = ping_scan_results + counter + ", "
+      ping_reply = TRUE
+    EndIf
+  Next
+  If ping_reply = FALSE Then
+    ping_scan_results = "No ping responses  "
+  EndIf
+  ping_scan_results = Left(ping_scan_results, Len(ping_scan_results) - 2)
+  run_ping_scan = FALSE
+EndFunction 'Ping_Scan
+
+
+
+
+
+'utility
+Function Ping_Single()
+  Dim counter As Long
+  Dim response_time As Long
+  Dim response_time_string As String
+
+  ping_result = ""
+  response_time = PingIP(ping_addr, 400)
+    If response_time <> 0 Then
+      response_time_string = response_time
+      ping_result = ping_addr + " replied in " + response_time + "ms"
+    Else
+      ping_result = "no response from " + ping_addr
+    EndIf
+  run_ping = FALSE
+EndFunction 'Ping_Single
+
+
+
+
+
+'utility
+Function Modbus_Device_Check()
+  Dim counter As Long
+  Dim test_port As Long
+  Dim buffer_lng(1) As Long
+  Dim result_every(1) As Long
+
+  'reset the index and result
+  port_index = 0
+  modbus_results = ""
+  'change serial port string to lowercase
+  modbus_serial_port = LowerCase(modbus_serial_port)
+
+  'convert serial port string to proper number
+  If modbus_serial_port = "com1" Then
+    If Left(Status.OSVersion, 3) = "CR8" Then
+      test_port = 1
+    Else
+      test_port = 9
+    EndIf
+  ElseIf modbus_serial_port = "com2" Then
+    test_port = 10
+  ElseIf modbus_serial_port = "com3" Then
+    test_port = 11
+  ElseIf modbus_serial_port = "com4" Then
+    test_port = 12
+  ElseIf modbus_serial_port = "comrs232" Then
+    test_port = 1
+  Else
+    test_port = 0
+  EndIf
+
+  'if serial port has been entered run serial test
+  If test_port <> 0 Then
+    'determine if any cfg devices use the same port
+    For counter = 1 To cfg_port_total
+      If test_port = cfg_ports(counter) Then
+        port_index = counter
+      EndIf
+    Next
+    'if port is already in use check if it's busy
+    If port_index <> 0 Then
+      Do While cfg_port_busy(port_index)
+      Loop
+    EndIf
+    'set result_every to failed state
+    result_every(1) = 1
+    'set busy flag true to avoid conflicts
+    cfg_port_busy(port_index) = TRUE
+    'send out modbus poll for chosen baud
+    If modbus_baud = 9600 Then
+      ModbusMaster(result_every(1), test_port, 9600, modbus_addr, 3, buffer_lng(1), 1, 1, 1, 50)
+    ElseIf modbus_baud = 19200 Then
+      ModbusMaster(result_every(1), test_port, 19200, modbus_addr, 3, buffer_lng(1), 1, 1, 1, 50)
+    ElseIf modbus_baud = 38400 Then
+      ModbusMaster(result_every(1), test_port, 38400, modbus_addr, 3, buffer_lng(1), 1, 1, 1, 50)
+    ElseIf modbus_baud = 57600 Then
+      ModbusMaster(result_every(1), test_port, 57600, modbus_addr, 3, buffer_lng(1), 1, 1, 1, 50)
+    EndIf
+    SerialClose(test_port)
+    'release busy flag
+    cfg_port_busy(port_index) = FALSE
+    'display results of modbus poll
+    If result_every(1) < 1 Then
+      modbus_results = "Device present at " + modbus_serial_port + ", " + modbus_addr + ", " + modbus_baud
+    Else
+      modbus_results = "No device at " + modbus_serial_port + ", " + modbus_addr + ", " + modbus_baud
+    EndIf
+  EndIf
+
+  #If CFG_TCP_ENABLE
+  'if no serial port is entered run tcp poll
+  If modbus_ip_address <> "" AND test_port = 0 Then
+    'determine if any cfg devices use the ip address & port
+    For counter = 1 To cfg_port_total
+    If modbus_ip_address = cfg_tcp_addr(counter) AND modbus_ip_port = cfg_tcp_port(counter) Then
+    ' port_index = counter
+    EndIf
+    Next
+    'if port is already in use check if it's busy
+    If port_index <> 0 Then
+    Do While cfg_port_busy(port_index)
+    Loop
+    test_port = cfg_ports(port_index)
+    Else
+      'if chosen port is not in cfg open it
+      test_port = TCPOpen(modbus_ip_address, modbus_ip_port, 1)
+    EndIf
+    'set result_every to failed state
+    result_every(1) = 1
+    'set busy flag true to avoid conflicts
+    cfg_port_busy(port_index) = TRUE
+    'send out modbus poll
+    ModbusMaster(result_every(1), test_port, 9600, modbus_addr, 3, buffer_lng(1), 1, 1, 1, 50)
+    'release busy flag
+    cfg_port_busy(port_index) = FALSE
+    'if port was non cfg close it
+    If port_index = 0
+    ' TCPClose(test_port)
+    EndIf
+    'display results of modbus poll
+    If result_every(1) < 1 AND result_every(1) > -11 Then
+      modbus_results = "Device present at " + modbus_ip_address + ":" + modbus_ip_port + ", " + modbus_addr
+    Else
+     modbus_results = "No device at " + modbus_ip_address + ":" + modbus_ip_port + ", " + modbus_addr
+    EndIf
+  EndIf
+ #EndIf
+
+  'turn off test
+  run_modbus_check = FALSE
+EndFunction 'Modbus_Device_Check
+
+
+
+
+
+'utility
+Function Modbus_Poll()
+  Dim counter As Long
+  Dim test_port As Long
+  Dim result_every(1) As Long
+
+  'reset the index and result
+  port_index = 0
+  modbus_results = ""
+  Move(modbus_reg_lng, 50, 0, 1)
+  Move(modbus_reg_flt, 50, 0, 1)
+  modbus_comm_code = 0
+  result_every(1) = 0
+  'change serial port string to lowercase
+  modbus_serial_port = LowerCase(modbus_serial_port)
+
+  'convert serial port string to proper number
+  If modbus_serial_port = "com1" Then
+    If Left(Status.OSVersion, 3) = "CR8" Then
+      test_port = 1
+    Else
+      test_port = 9
+    EndIf
+  ElseIf modbus_serial_port = "com2" Then
+    test_port = 10
+  ElseIf modbus_serial_port = "com3" Then
+    test_port = 11
+  ElseIf modbus_serial_port = "com4" Then
+    test_port = 12
+  ElseIf modbus_serial_port = "comrs232" Then
+    test_port = 1
+  Else
+    test_port = 0
+  EndIf
+
+  'if serial port has been entered run serial test
+  If test_port <> 0 Then
+    'determine if any cfg devices use the same port
+    For counter = 1 To cfg_port_total
+      If test_port = cfg_ports(counter) Then
+        port_index = counter
+      EndIf
+    Next
+    'if port is already in use check if it's busy
+    If port_index <> 0 Then
+      Do While cfg_port_busy(port_index)
+      Loop
+    EndIf
+    'set busy flag true to avoid conflicts
+    cfg_port_busy(port_index) = TRUE
+
+    If modbus_option = 0 OR modbus_option = 2 Then
+      'send out modbus poll for chosen baud
+      If modbus_baud = 9600 Then
+        ModbusMaster(result_every(1), test_port, 9600, modbus_addr, modbus_function, modbus_reg_flt(1), modbus_start, modbus_length, 1, 50, modbus_option)
+      ElseIf modbus_baud = 19200 Then
+        ModbusMaster(result_every(1), test_port, 19200, modbus_addr, modbus_function, modbus_reg_flt(1), modbus_start, modbus_length, 1, 50, modbus_option)
+      ElseIf modbus_baud = 38400 Then
+        ModbusMaster(result_every(1), test_port, 38400, modbus_addr, modbus_function, modbus_reg_flt(1), modbus_start, modbus_length,1, 50, modbus_option)
+      ElseIf modbus_baud = 57600 Then
+        ModbusMaster(result_every(1), test_port, 57600, modbus_addr, modbus_function, modbus_reg_flt(1), modbus_start, modbus_length, 1, 50, modbus_option)
+      EndIf
+    ElseIf modbus_option = 1 Then
+      If modbus_baud = 9600 Then
+        ModbusMaster(result_every(1), test_port, 9600, modbus_addr, modbus_function, modbus_reg_lng(1), modbus_start, modbus_length, 1, 50, modbus_option)
+      ElseIf modbus_baud = 19200 Then
+        ModbusMaster(result_every(1), test_port, 19200, modbus_addr, modbus_function, modbus_reg_lng(1), modbus_start, modbus_length, 1, 50, modbus_option)
+      ElseIf modbus_baud = 38400 Then
+        ModbusMaster(result_every(1), test_port, 38400, modbus_addr, modbus_function, modbus_reg_lng(1), modbus_start, modbus_length, 1, 50, modbus_option)
+      ElseIf modbus_baud = 57600 Then
+        ModbusMaster(result_every(1), test_port, 57600, modbus_addr, modbus_function, modbus_reg_lng(1), modbus_start, modbus_length, 1, 50, modbus_option)
+      EndIf
+      For counter = 1 To modbus_length
+        modbus_reg_lng(counter) = modbus_reg_lng(counter) AND &HFFFF
+      Next
+    EndIf
+    SerialClose(test_port)
+    'release busy flag
+    cfg_port_busy(port_index) = FALSE
+  EndIf
+
+  #If CFG_TCP_ENABLE
+    'if no serial port is entered run tcp
+    If modbus_ip_address <> "" AND test_port = 0 Then
+      'determine if any cfg devices use the ip address & port
+      For counter = 1 To cfg_port_total
+        If modbus_ip_address = cfg_tcp_addr(counter) AND modbus_ip_port = cfg_tcp_port(counter) Then
+          port_index = counter
+        EndIf
+      Next
+      'if port is already in use check if it's busy
+      If port_index <> 0 Then
+        Do While cfg_port_busy(port_index)
+        Loop
+        test_port = cfg_ports(port_index)
+      Else
+        'if chosen port is not in cfg open it
+        test_port = TCPOpen(modbus_ip_address, modbus_ip_port, 1)
+      EndIf
+      'set busy flag true to avoid conflicts
+      cfg_port_busy(port_index) = TRUE
+
+      If modbus_option = 0 OR modbus_option = 2 Then
+        ModbusMaster(result_every(1), test_port, 9600, modbus_addr, modbus_function, modbus_reg_flt(1), modbus_start, modbus_length, 1, 50, modbus_option)
+      ElseIf modbus_option = 1 Then
+        ModbusMaster(result_every(1), test_port, 9600, modbus_addr, modbus_function, modbus_reg_lng(1), modbus_start, modbus_length, 1, 50, modbus_option)
+        For counter = 1 To modbus_length
+          modbus_reg_lng(counter) = modbus_reg_lng(counter) AND &HFFFF
+        Next
+      EndIf
+
+      'release busy flag
+      cfg_port_busy(port_index) = FALSE
+      'if port was non cfg close it
+      If port_index = 0
+        TCPClose(test_port)
+      EndIf
+    EndIf
+  #EndIf
+
+  modbus_comm_code = result_every(1)
+  'turn off test
+  run_modbus_poll = FALSE
+EndFunction 'Modbus_Poll
+
+
+
+
+
+'base
+' Function sendPowerUpEmail() As String * 40
+'   Dim email_subject As String * 300 = ""
+'   Dim email_message As String * 2200 = ""
+'   Dim project_number As String * 12 = ""
+'   Dim this_das As String
+'   Dim das_list As String * 64
+'   Dim file_handle As Long
+'   Dim line_buffer As String * 620
+'   Dim position As Long
+'   Dim email_additional(3) As String * 200 = {"", "", ""}
+'   Alias email_additional = email_addl_addrs, email_addl_subject, email_addl_message
+
+'   cfg_email_result = 0
+'   email_addl_addrs = ""
+'   email_addl_subject = ""
+'   email_addl_message = ""
+
+'   SplitStr(project_number, CFG_FILE, "_", 1, 5)
+'   project_number = Replace(Mid(project_number, 2 , Len(project_number)), "-", ".")
+
+'   'normalize this das's name by stripping the hyphan and adding a colon to the end
+'   this_das = Replace(LowerCase(draker_das_name), "-", "") & ":"
+
+'   'try to open config file
+'   file_handle = FileOpen("CPU:" & CFG_FILE, "r", 0)
+'   If file_handle = 0 Then
+'     cfg_reload_error = "Config file missing"
+'     ExitFunction
+'   EndIf
+
+'   'loop through each line of the file until we find a valid device
+'   Do While TRUE
+
+'     'read the next line, if we reach the end then return
+'     If FileReadLine(file_handle, line_buffer, 350) = -1 Then ExitDo
+
+'     'find the position of the first comma in the line
+'     position = InStr(1, line_buffer, ",", 2)
+
+'     'if the line begins with das and contains a comma before the last character
+'     If Left(LowerCase(line_buffer), 3) = "das" AND position > 0 AND position < Len(line_buffer) Then
+
+'       'then isolate and normalize the das list using the form "das##:das##:"
+'       das_list = LowerCase(Replace(Left(line_buffer, position - 1), "-", "") & ":")
+
+'       'if this das is in the list then determine if it
+'       If InStr(1, das_list, this_das, 2) <> 0 Then
+'         If InStr(1, line_buffer, "EMAIL", 2) Then
+'           line_buffer = line_buffer(1, 1, position + 13)
+'           SplitStr(email_additional, line_buffer, ",", 3, 5)
+'           ExitDo
+'         EndIf
+'       EndIf
+'     EndIf
+'   Loop
+
+'   FileClose(file_handle)
+
+'   If email_addl_addrs <> "" Then cfg_email_to_addr &= "," & Trim(Replace(email_addl_addrs, ";", ","))
+
+'   email_subject = draker_das_name & " on " & project_number & " is now online"
+
+'   If email_addl_subject <> "" Then email_subject &= ", " & Trim(email_addl_subject)
+
+'   email_message = draker_das_name & " on " & project_number & " is now online" & CRLF
+'   email_message += CRLF
+'   email_message += CRLF
+'   email_message += "The basestation information is:" & CRLF
+'   email_message += TB & "Basestation Model Number: " & draker_model_number & CRLF
+'   email_message += TB & "Basestation Manufacture Date: " & draker_mfg_date & CRLF
+'   email_message += TB & "Basestation Serial Number: " & draker_panel_sn & CRLF
+'   email_message += TB & "Datalogger Program: " & Status.ProgName & CRLF
+'   email_message += TB & "Datalogger OS Version: " & Status.OSVersion & CRLF
+'   email_message += TB & "Datalogger IPInfo: " & Replace(Status.IPInfo, CRLF, SP) & CRLF
+'   email_message += CRLF
+'   email_message += CRLF
+'   email_message += "The current time is: " & Mid(Status.TimeStamp, 1, 16) & CRLF
+'   email_message += "The datalogger was energized on: " & Status.StartTime & CRLF
+'   email_message += CRLF
+'   email_message += CRLF
+
+'   If email_addl_message <> "" Then
+'     email_message &= Trim(email_addl_message)
+'     email_message += CRLF
+'     email_message += CRLF
+'   EndIf
+
+'   '// PASTE EMAIL MESSAGE ///////////////////////////////////////////////
+
+'   cfg_email_result = EmailSend(cfg_email_server_addr, cfg_email_to_addr, _
+'     cfg_email_username, email_subject, email_message, _
+'     "", cfg_email_username, cfg_email_password, _
+'     cfg_email_server_respone)
+
+'   If cfg_email_result = -1 Then
+'     draker_email_sent = "TRUE"
+'   Else
+'     draker_email_sent = "FALSE"
+'   EndIf
+' EndFunction 'sendPowerUpEmail
+
+
+
+
+
+'base
+Function pingIpAddress(ip_addr As String, time_out As Long) As Long
+  Dim ping_response_time As Long
+  Dim counter
+
+  ping_response_time = 0
+
+  For counter = 1 To 10
+    ping_response_time += PingIP(ip_addr, time_out)
+  Next
+
+  Return ping_response_time / 10
+EndFunction
+
+
+
+
+
+'base
+Function pingKeepAlive(IPInfo As String * 200)
+  Dim datalogger_gateway As String * 16
+  Dim gateway_ping_response As Long
+  Dim datalogger_network_enabled As Boolean = TRUE
+  Dim current_record As Long
+
+  'capture a frozen copy of the record number, used for clearing
+  current_record = fifteenMin.Record
+
+  If current_record <> cfg_datalogger_last_record Then
+
+    'parse datalogger gateway information
+    #If LoggerType = CR1000
+      datalogger_gateway = Mid(IPInfo, InStr(1, IPInfo, "eth gw: ", 2) + 8, _
+        Len(IPInfo) - (InStr(1, IPInfo, "eth gw: ", 2) + 8) - 1)
+    #ElseIf LoggerType = CR800
+      datalogger_gateway = Mid(IPInfo, InStr(1, IPInfo, "csio(1) gw: ", 2) + 12, _
+        InStr(1, IPInfo, "dns: ", 2) - (InStr(1, IPInfo, "csio(1) gw: ", 2) + 12) - 2)
+    #EndIf
+
+    gateway_ping_response = pingIpAddress(datalogger_gateway,5000)
+
+    If gateway_ping_response = 0 Then
+      datalogger_network_enabled = FALSE
+
+      #If CFG_TCP_ENABLE
+        If cfg_port_total > 0 Then
+          For cfg_counter = 1 To cfg_port_total
+            If cfg_ports(cfg_counter) > 100 Then TCPClose(cfg_ports(cfg_counter))
+          Next
+        EndIf
+      #EndIf
+
+      'TRUE = network interface enabled, FALSE = network interface disabled
+      #If LoggerType = CR1000
+        IPNetPower(1, datalogger_network_enabled)
+      #ElseIf LoggerType = CR800
+        IPNetPower(2, datalogger_network_enabled)
+      #EndIf
+
+      Delay(1, 1, SEC)
+
+      datalogger_network_enabled = TRUE
+
+      'TRUE = network interface enabled, FALSE = network interface disabled
+      #If LoggerType = CR1000
+        IPNetPower(1, datalogger_network_enabled)
+      #ElseIf LoggerType = CR800
+        IPNetPower(2, datalogger_network_enabled)
+      #EndIf
+    EndIf
+
+    cfg_datalogger_last_record = current_record
+  EndIf
+EndFunction 'pingKeepAlive
+
+
+
+
+
+Function parseIpInfo()
+  Dim counter As Long
+  Dim buffer_str As String * 32
+  Dim line_buffer As String * 200
+
+  Move(buffer_str, Len(buffer_str), "", 1)
+
+  For counter = 1 to ArrayLength(ip_info)
+    Move(ip_info(counter), Len(ip_info(counter)), "", 1)
+  Next
+
+  'parse Status.IPInfo to get current settings
+  line_buffer = LowerCase(Status.IPInfo)
+  line_buffer = Replace(line_buffer, SP, "")
+  line_buffer = Replace(line_buffer, CRLF, ",")
+
+  SplitStr(ip_info(), line_buffer, ",", ArrayLength(ip_info), 5)
+
+  #If LoggerType = CR1000 Then
+    datalogger_ip = Status.IPAddressEth
+    datalogger_netmask = Status.IPMaskEth
+    datalogger_gateway = Status.IPGateway
+  #ElseIf LoggerType = CR800 Then
+    datalogger_ip = Status.IPAddressCSIO(1)
+    datalogger_netmask = Status.IPMaskCSIO(1)
+    datalogger_gateway = Status.IPGatewayCSIO(1)
+  #EndIf
+
+  'change mac address format from 00d02c0209b0 to 00:D0:2C:02:09:B0
+  datalogger_mac = Right(datalogger_mac, Len(datalogger_mac) - InStr(1, datalogger_mac, ":", 2))
+  datalogger_mac = UpperCase(datalogger_mac)
+
+  For counter = 1 To Len(datalogger_mac) Step 2
+    buffer_str &= Mid(datalogger_mac, counter, 2)
+
+    If counter < 11 Then buffer_str &= ":"
+  Next
+
+  datalogger_mac = buffer_str
+  datalogger_dns1 = Right(datalogger_dns1, Len(datalogger_dns1) - InStr(1, datalogger_dns1, ":", 2))
+  datalogger_dns2 = Right(datalogger_dns2, Len(datalogger_dns2) - InStr(1, datalogger_dns2, ":", 2))
+  datalogger_dns3 = Right(datalogger_dns3, Len(datalogger_dns3) - InStr(1, datalogger_dns3, ":", 2))
+  datalogger_dns4 = Right(datalogger_dns4, Len(datalogger_dns4) - InStr(1, datalogger_dns4, ":", 2))
+EndFunction 'parseIpInfo
+
+
+
+
+
+Function checkIpFormat(type As String * 24, ip_string As String * 24) As String * 1024
+  Dim buffer_str(4) As String * 3
+  Dim counter As Long
+  Dim chr_counter As Long
+
+  If ip_string = "" Then
+    Return type & " is missing"
+
+  ElseIf Len(ip_string) > 15 Then
+    Return type & " contains too many characters"
+
+  Else
+    'check for valid ip address format
+    SplitStr(buffer_str(1), ip_string, ".", 4, 5)
+
+    For counter = 1 To 4
+      If buffer_str(counter) = "" Then
+        Return type & " is missing octet number: " & counter
+      EndIf
+
+      If Len(buffer_str(counter)) > 3 Then
+        Return type & " has too many characters in octet number: " & counter
+      EndIf
+
+      For chr_counter = 1 To Len(buffer_str(counter))
+        If ASCII(buffer_str(counter, 1, chr_counter)) < 48 OR ASCII(buffer_str(counter, 1, chr_counter)) > 57 Then
+          Return type & " contains illegal character in octet number: " & counter
+        EndIf
+      Next
+    Next
+  EndIf
+
+  Return ""
+EndFunction 'checkIpFormat
+
+
+
+
+
+Function writeNetworkSettingsFile(network_settings_dld As String * 8, change_network_settings As String * 8, _
+  ip_addr As String * 24, netmask As String * 24, gateway As String * 24, dns1 As String * 24)
+
+  Dim file_handle As Long
+  Dim line_buffer As String * 500
+
+    'create network settings.dld file in line_buffer
+    line_buffer = "Public network_settings_dld_updated As Boolean = " & network_settings_dld & LF
+    line_buffer &= "Public pnl_cfg_change_network_settings As Boolean = " & change_network_settings & LF
+    line_buffer &= "Public pnl_logger_ip As String * 32 = " & QN & ip_addr & QN & LF
+    line_buffer &= "Public pnl_logger_netmask As String * 32 = " & QN & netmask & QN & LF
+    line_buffer &= "Public pnl_logger_gateway As String * 32 = " & QN & gateway & QN & LF
+    line_buffer &= "Public pnl_logger_dns1 As String * 32 = " & QN & dns1 & QN & LF
+    line_buffer &= LF
+    line_buffer &= "Const DNS1_ADDRESS = " & QN & dns1 & QN & LF
+    line_buffer &= LF
+
+    'open the file and write out the serialized parameters
+    file_handle = FileOpen("CPU:network_settings.dld", "w", 0)
+    FileWrite(file_handle, line_buffer, 0)
+    FileClose(file_handle)
+
+    'restart the program to pull in the new values
+    FileManage(Status.ProgName, 6)
+EndFunction 'writeNetworkSettingsFile
+
+
+
+
+
+Function setNetworkSettings(ip_addr As String * 24, netmask As String * 24, _
+  gateway As String * 24, dns1 As String * 24) As Boolean
+
+  Dim counter As Long
+
+  Move(pnl_network_settings_error, Len(pnl_network_settings_error), "", 1)
+
+  pnl_network_settings_error = checkIpFormat("ip_addr", ip_addr)
+  If pnl_network_settings_error <> "" Then ExitFunction
+
+  pnl_network_settings_error = checkIpFormat("dns1 address", dns1)
+  If pnl_network_settings_error <> "" Then Return FALSE
+
+  If StrComp(datalogger_ip, ip_addr) <> 0 Then
+    #If LoggerType = CR1000
+      SetStatus("IPAddressEth", ip_addr)
+    #ElseIf LoggerType = CR800
+      SetStatus("IPAddressCSIO(1)", ip_addr)
+    #EndIf
+
+  EndIf
+
+  'if setting to DHCP, set the default DNS addresses and skip setting the other network settings
+  If ip_addr <> "0.0.0.0" Then
+    pnl_network_settings_error = checkIpFormat("netmask", netmask)
+    If pnl_network_settings_error <> "" Then Return FALSE
+
+    pnl_network_settings_error = checkIpFormat("gateway", gateway)
+    If pnl_network_settings_error <> "" Then Return FALSE
+
+
+    If StrComp(datalogger_netmask, netmask) <> 0 Then
+      #If LoggerType = CR1000
+        SetStatus("IPMaskEth", netmask)
+      #ElseIf LoggerType = CR800
+        SetStatus("IPMaskCSIO(1)", netmask)
+      #EndIf
+    EndIf
+
+    If StrComp(datalogger_gateway, gateway) <> 0 Then
+      #If LoggerType = CR1000
+        SetStatus("IPGateway", gateway)
+      #ElseIf LoggerType = CR800
+        SetStatus("IPGatewayCSIO(1)", gateway)
+      #EndIf
+    EndIf
+  EndIf
+
+  SetStatus("Domain Name Server", DNS1_ADDRESS)
+
+  Return TRUE
+EndFunction 'setNetworkSettings
+
+
+
+
+
+'base
+Function readDrakerID() As Boolean
+  Dim file_handle As Long
+  Dim line_buffer As String * 80
+
+  'try to open the draker id file, exit if file doesn't exist
+  file_handle = FileOpen("CPU:" & DRAKER_ID_FILE, "r", 0)
+  If file_handle = 0 Then Return FALSE
+
+  'if the file is not empty, parse the contents into the draker id array
+  If FileRead(file_handle, line_buffer, 80) > 0 Then
+    SplitStr(draker_id(), line_buffer, ",", ArrayLength(draker_id), 5)
+  EndIf
+
+  FileClose(file_handle)
+  Return TRUE
+EndFunction 'readDrakerID
+
+
+
+
+
+Function writeDrakerID()
+  Dim file_handle As Long
+  Dim new_das_name As String * 12
+  Dim new_email_sent As String * 12
+  Dim line_buffer As String * 80
+  Dim counter As Long
+
+  'preserve the new das name before we potentially overwrite it
+  new_das_name = draker_das_name
+  new_email_sent = draker_email_sent
+
+  'read in the current file, restore the new das name if successful
+  If readDrakerID() Then draker_das_name = new_das_name
+
+  'only the values to be set from FALSE to TRUE
+  If draker_email_sent = "FALSE" Then draker_email_sent = new_email_sent
+
+  'serialize the draker id parameters
+  line_buffer = ""
+  For counter = 1 To ArrayLength(draker_id)
+
+    'use a comma delimiter between parameters
+    If counter > 1 Then line_buffer &= ","
+
+    'filter out any commas in the next parameter and append it
+    draker_id(counter) = Replace(draker_id(counter), ",", "")
+    line_buffer &= draker_id(counter)
+  Next
+
+  'open the file and write out the serialized parameters
+  file_handle = FileOpen("CPU:" & DRAKER_ID_FILE, "w", 0)
+  FileWrite(file_handle, line_buffer, 0)
+  FileClose(file_handle)
+
+  'hide the file to protect it
+  FileManage("CPU:" & DRAKER_ID_FILE, 32)
+EndFunction 'writeDrakerID
+
+
+
+
+
+Function compatibleConfigFile(file_handle As Long) As Boolean
+  Dim line_buffer As String * 32
+
+  'loop through each line of the file until we find the config version
+  Do While TRUE
+
+    'read the next line, if we reach the end then the file has no version
+    If FileReadLine(file_handle, line_buffer, 32) = -1 Then
+      cfg_reload_error = "Config file has no version"
+      Return FALSE
+    EndIf
+
+    'change the line to lower case and remove tabs and spaces
+    line_buffer = LowerCase(line_buffer)
+    line_buffer = Replace(line_buffer, TB, "")
+    line_buffer = Replace(line_buffer, SP, "")
+
+    'check if this line has the version
+    If Left(line_buffer, 9) = "##version" Then
+
+      'isolate just the version and check it against the component version
+      If Mid(line_buffer, 10, 4) = Left(draker_base_ver, 4) Then Return TRUE
+
+      'otherwise the file is incompatible
+      cfg_reload_error = "Config file version does not match parser"
+      Return FALSE
+    EndIf
+  Loop
+EndFunction 'compatibleConfigFile
+
+
+
+
+
+Function getNextLine(file_handle As Long) As String * 128
+  Dim line_buffer As String * 128
+  Dim position As Long
+  Dim das_list As String * 64
+  Dim this_das As String
+
+  'normalize this das's name by stripping the hyphan and adding a colon to the end
+  this_das = Replace(LowerCase(draker_das_name), "-", "") & ":"
+
+  'loop through each line of the file until we find a valid device
+  Do While TRUE
+
+    'read the next line, if we reach the end then return
+    If FileReadLine(file_handle, line_buffer, 128) = -1 Then Return "EOF"
+
+    'change the line to lower case and remove tabs, spaces and line ending characters
+    line_buffer = LowerCase(line_buffer)
+    line_buffer = Replace(line_buffer, TB, "")
+    line_buffer = Replace(line_buffer, SP, "")
+    line_buffer = Replace(line_buffer, CR, "")
+    line_buffer = Replace(line_buffer, LF, "")
+
+    'find the position of the first comma in the line
+    position = InStr(1, line_buffer, ",", 2)
+
+    'if the line begins with das and contains a comma before the last character
+    If Left(line_buffer, 3) = "das" AND position > 0 AND position < Len(line_buffer) Then
+
+      'then isolate and normalize the das list using the form "das##:das##:"
+      das_list = Replace(Left(line_buffer, position - 1), "-", "") & ":"
+
+      'if this das is in the list then return the rest of the line
+      If InStr(1, das_list, this_das, 2) <> 0 Then Return line_buffer(1, 1, position + 1)
+    EndIf
+  Loop
+EndFunction 'getNextLine
+
+
+
+
+
+Function registerPort(port As String * 24) As Long
+  Dim params(2) As String
+  Dim tcp_addr As String
+  Dim tcp_port As Long
+  Dim comm_port As Long
+  Dim counter As Long
+
+  If port = "" Then Return 0
+
+  tcp_addr = ""
+  tcp_port = 0
+  comm_port = 0
+
+  'check for tcp device
+  If InStr(1, port, ":", 2) > 0 Then
+
+    If NOT CFG_TCP_ENABLE Then
+      cfg_reload_error = "Tcp device was specified but is not enabled"
+      Return 0
+    EndIf
+
+    'clear params array
+    For counter = 1 To ArrayLength(params)
+      params(counter) = ""
+    Next
+
+    SplitStr(params(), port, ":", 2, 5)
+    tcp_addr = params(1)
+    tcp_port = params(2)
+
+    'validate the tcp address and port
+    If Len(tcp_addr) < 7 OR Len(tcp_addr) > 15 OR tcp_port = NAN Then
+      cfg_reload_error = "Invalid tcp address or port specified"
+      Return 0
+    EndIf
+
+  'otherwise check for comm port
+  Else
+    Select Case Left(port, 4)
+    Case "com1"
+      #If DRAKER_PN = DL328
+        comm_port = COMRS232
+      #Else
+        comm_port = COM1
+      #EndIf
+    Case "com2"
+      comm_port = COM2
+    Case "com3"
+      comm_port = COM3
+    Case "com4"
+      comm_port = COM4
+    Else
+      cfg_reload_error = "Invalid port specified"
+      Return 0
+    EndSelect
+  EndIf
+
+  'check if port is already registered and if so return port num
+  If cfg_port_total > 0 Then
+    For counter = 1 To cfg_port_total
+      If comm_port > 0 AND cfg_ports(counter) = comm_port Then
+        Return counter
+      EndIf
+
+      #If CFG_TCP_ENABLE
+        If tcp_addr <> "" AND cfg_tcp_addr(counter) = tcp_addr AND cfg_tcp_port(counter) = tcp_port Then
+          Return counter
+        EndIf
+      #EndIf
+    Next
+  EndIf
+
+  'check number of ports defined, exit if all port slots are used
+  If cfg_port_total = CFG_PORT_MAX Then
+    cfg_reload_error = "Ran out of slots in port array"
+    Return 0
+  EndIf
+
+  'register port and return port num
+  cfg_port_total += 1
+  cfg_ports(cfg_port_total) = comm_port
+  #If CFG_TCP_ENABLE
+    cfg_tcp_addr(cfg_port_total) = tcp_addr
+    cfg_tcp_port(cfg_port_total) = tcp_port
+  #EndIf
+
+  Return cfg_port_total
+EndFunction 'registerPort
+
+
+
+
+
+Sub parseConfig(file As String * 64)
+  Dim file_handle As Long
+  Dim line_buffer As String * 128
+  Dim counter As Long
+
+  Dim params(10) As String * 32
+  Alias params(1) = prefix
+  Alias params(3) = type
+
+  Dim index As Long
+  Dim port_num As Long
+  Dim addr As Long
+  Dim include_device As Boolean
+
+  'clear device information and reset device total
+  If cfg_device_total > 0 Then
+    For counter = 1 To cfg_device_total
+      cfg_device_prefix(counter) = ""
+      cfg_device_index(counter) = 0
+      cfg_device_type(counter) = ""
+      cfg_device_port_num(counter) = 0
+      cfg_device_addr(counter) = 0
+      cfg_device_result(counter) = 0
+    Next
+    cfg_device_total = 0
+  EndIf
+
+  'close tcp socket if open and reset port information
+  If cfg_port_total > 0 Then
+    For counter = 1 To cfg_port_total
+      #If CFG_TCP_ENABLE
+        If cfg_ports(counter) > 100 Then TCPClose(cfg_ports(counter))
+        cfg_tcp_addr(counter) = ""
+        cfg_tcp_port(counter) = 0
+      #EndIf
+      cfg_ports(counter) = 0
+      cfg_port_busy(counter) = FALSE
+    Next
+    cfg_port_total = 0
+  EndIf
+
+  'clear the error message
+  cfg_reload_error = ""
+
+  'panel status
+  pnl_cfg_charge_addr = -1
+
+  #If PNL_CFG_SDI_PORT <> 0
+    DIS_pnl_charge_sdi = TRUE
+  #EndIf
+
+  'ambient temp sensor
+  For counter = 1 To AMB_TOTAL
+    amb_cfg_type(counter) = ""
+
+    DIS_amb_temp(counter) = TRUE
+    DIS_amb_humidity(counter) = TRUE
+    DIS_amb_dew_point(counter) = TRUE
+  Next
+
+  'wind sensor
+  For counter = 1 To WIND_TOTAL
+    wind_cfg_type(counter) = ""
+
+    DIS_wind_speed(counter) = TRUE
+    DIS_wind_direction(counter) = TRUE
+  Next
+
+  'solar resource sensor
+  For counter = 1 To SRS_TOTAL
+    srs_cfg_type(counter) = ""
+    srs_cfg_mult(counter) = 0
+
+    DIS_srs_irrad(counter) = TRUE
+    DIS_srs_irrad_dif(counter) = TRUE
+    DIS_srs_temp(counter) = TRUE
+    DIS_srs_irrad_adj(counter) = TRUE
+  Next
+
+  'cell temp sensor
+  For counter = 1 To CTS_TOTAL
+    cts_cfg_type(counter) = ""
+
+    DIS_cts_temp(counter) = TRUE
+  Next
+
+  'electro shark 100
+  For counter = 1 To MTR_TOTAL
+    mtr_cfg_offset_energy_rcvd(counter) = 0
+    mtr_cfg_offset_energy_delv(counter) = 0
+    mtr_comm_code(counter) = 0
+
+    mtr_last_record(counter) = 0
+    mtr_last_day(counter) = 0
+
+    DIS_mtr_ac_voltage_an(counter) = TRUE
+    DIS_mtr_ac_voltage_bn(counter) = TRUE
+    DIS_mtr_ac_voltage_cn(counter) = TRUE
+    DIS_mtr_ac_voltage_ab(counter) = TRUE
+    DIS_mtr_ac_voltage_bc(counter) = TRUE
+    DIS_mtr_ac_voltage_ca(counter) = TRUE
+    DIS_mtr_ac_current_a(counter) = TRUE
+    DIS_mtr_ac_current_b(counter) = TRUE
+    DIS_mtr_ac_current_c(counter) = TRUE
+    DIS_mtr_ac_current_n(counter) = TRUE
+    DIS_mtr_ac_power(counter) = TRUE
+    DIS_mtr_ac_power_rcvd(counter) = TRUE
+    DIS_mtr_ac_power_delv(counter) = TRUE
+    DIS_mtr_ac_va(counter) = TRUE
+    DIS_mtr_ac_vars(counter) = TRUE
+    DIS_mtr_ac_pf(counter) = TRUE
+    DIS_mtr_ac_freq(counter) = TRUE
+  Next
+
+  'solectria xtm
+  For counter = 1 To INV_TOTAL
+    inv_comm_code(counter) = 0
+    inv_last_record(counter) = 0
+
+    inv_faulted(counter) = FALSE
+    DIS_inv_dc_voltage(counter) = TRUE
+    DIS_inv_ac_voltage_ab(counter) = TRUE
+    DIS_inv_ac_voltage_bc(counter) = TRUE
+    DIS_inv_ac_voltage_ca(counter) = TRUE
+    DIS_inv_ac_current(counter) = TRUE
+    DIS_inv_ac_va(counter) = TRUE
+    DIS_inv_ac_freq(counter) = TRUE
+  Next
+
+  'modbus slave
+  mbs_cfg_port = 0
+  mbs_cfg_address = 0
+  
+'only initialize the parts of the array being used
+ For counter = 1 To  255 
+    mbs_map(counter) = 0
+  Next
+   
+ For counter = 1000 To  ( 1000 +  100*MTR_TOTAL )
+    mbs_map(counter) = 0
+  Next
+  
+ For counter = 3000 To  ( 3000 +  100*INV_TOTAL )
+    mbs_map(counter) = 0
+  Next
+  
+  For counter = 1 To ArrayLength(mbs_bool)
+    mbs_bool(counter) = 0
+  Next
+
+  'try to open config file
+  file_handle = FileOpen(file, "r", 0)
+  If file_handle = 0 Then
+    cfg_reload_error = "Config file missing"
+    ExitSub
+  EndIf
+
+  'check if config file version matches the parser version
+  If NOT compatibleConfigFile(file_handle) Then
+    FileClose(file_handle)
+    ExitSub
+  EndIf
+
+  'continue through the file, any devices before the version line will be ignored
+  Do While cfg_reload_error = ""
+
+    'get the next device, check if we have reached the end of the file
+    line_buffer = getNextLine(file_handle)
+    If line_buffer = "EOF" Then ExitDo
+
+    'clear params array
+    For counter = 1 To ArrayLength(params)
+      params(counter) = ""
+    Next
+
+    'parse the device parameters
+    SplitStr(params(), line_buffer, ",", 10, 5)
+
+    'store index and addr as long
+    index = params(2)
+    port_num = registerPort(params(4))
+    addr = params(5)
+
+    'check if an error occured
+    If cfg_reload_error <> "" Then ExitDo
+
+    'check that the index is valid
+    If index = NAN OR index < 1 Then
+      cfg_reload_error = "Invalid index for " & type
+      ExitDo
+    EndIf
+
+    'reset add device flag
+    include_device = FALSE
+
+    'prefix specific config
+    Select Case prefix
+    'ambient temp sensor
+    Case "amb"
+      If index > AMB_TOTAL Then
+        cfg_reload_error = "Invalid index for " & type
+
+      Else
+        amb_cfg_type(index) = type
+      EndIf
+
+    'wind sensor
+    Case "wind"
+      If index > WIND_TOTAL Then
+        cfg_reload_error = "Invalid index for " & type
+
+      Else
+        wind_cfg_type(index) = type
+      EndIf
+
+    'solar resource sensor
+    Case "srs"
+      If index > SRS_TOTAL Then
+        cfg_reload_error = "Invalid index for" & type
+
+      Else
+        If type <> "pvel" Then
+          srs_cfg_type(index) = type
+          srs_cfg_mult(index) = params(6)
+        Else
+          #If SRS_CFG_01_SE_TYPE = PVEL  OR SRS_CFG_02_SE_TYPE = PVEL OR SRS_CFG_03_SE_TYPE = PVEL
+            parsePVELConstants(line_buffer)
+          #EndIf
+        EndIf
+      EndIf
+
+    'cell temp sensor
+    Case "cts"
+      If index > CTS_TOTAL Then
+        cfg_reload_error = "Invalid index for " & type
+
+      Else
+        cts_cfg_type(index) = type
+      EndIf
+
+    'modbus slave
+    Case "mbs"
+      mbs_cfg_port = cfg_ports(port_num)
+
+      #If CFG_TCP_ENABLE Then
+        If mbs_cfg_port = 0 Then
+          mbs_cfg_port = cfg_tcp_port(port_num)
+        EndIf
+      #EndIf
+
+      mbs_cfg_address = addr
+
+      'Initialize the Modbus Slave Functionality
+      ModBusSlave(mbs_cfg_port, MBS_BAUD, mbs_cfg_address, mbs_map(), mbs_bool(), 1)
+
+    EndSelect
+
+    'type specific config
+    Select Case type
+    'panel status
+    Case "ch200"
+      If DRAKER_PN = DL208 Then
+        cfg_reload_error = "Does not support " & type
+
+      ElseIf addr = NAN OR addr < 0 Then
+        cfg_reload_error = "Invalid address for " & type
+
+      Else
+        pnl_cfg_charge_addr = addr
+      EndIf
+
+    'electro shark 100
+    Case "shark_100"
+      If index > MTR_TOTAL Then
+        cfg_reload_error = "Invalid index for " & type
+
+      Else
+        mtr_cfg_offset_energy_rcvd(index) = params(6)
+        mtr_cfg_offset_energy_delv(index) = params(7)
+
+        If mtr_cfg_offset_energy_rcvd(index) = NAN Then
+          mtr_cfg_offset_energy_rcvd(index) = 0
+        EndIf
+
+        If mtr_cfg_offset_energy_delv(index) = NAN Then
+          mtr_cfg_offset_energy_delv(index) = 0
+        EndIf
+
+        include_device = TRUE
+      EndIf
+
+    Case "shark_100s"
+      If index > MTR_TOTAL Then
+        cfg_reload_error = "Invalid index for " & type
+
+      Else
+        mtr_cfg_offset_energy_rcvd(index) = params(6)
+        mtr_cfg_offset_energy_delv(index) = params(7)
+
+        If mtr_cfg_offset_energy_rcvd(index) = NAN Then
+          mtr_cfg_offset_energy_rcvd(index) = 0
+        EndIf
+
+        If mtr_cfg_offset_energy_delv(index) = NAN Then
+          mtr_cfg_offset_energy_delv(index) = 0
+        EndIf
+
+        include_device = TRUE
+      EndIf
+
+    'solectria
+    Case "solectria_xtm"
+      include_device = TRUE
+
+    EndSelect
+
+    'check if device should be added
+    If include_device AND cfg_reload_error = "" Then
+
+      If port_num = 0 Then
+        cfg_reload_error = "No port given for " & type
+
+      ElseIf addr = NAN OR addr < 0 Then
+        cfg_reload_error = "Invalid address for " & type
+
+      ElseIf cfg_device_total = CFG_DEVICE_MAX Then
+        cfg_reload_error = "Ran out of slots in device array"
+
+      Else
+        cfg_device_total += 1
+        cfg_device_prefix(cfg_device_total) = prefix
+        cfg_device_index(cfg_device_total) = index
+        cfg_device_type(cfg_device_total) = type
+        cfg_device_port_num(cfg_device_total) = port_num
+        cfg_device_addr(cfg_device_total) = addr
+      EndIf
+    EndIf
+  Loop
+
+  'close the file before exiting
+  FileClose(file_handle)
+EndSub 'parseConfig
+
+
+
+
+
+Function callDevice(num As Long, do_not_wait As Boolean)
+  Dim port_num As Long
+  Dim result As Long
+
+  'if device num is out of bounds then exit
+  If num < 1 OR num > cfg_device_total Then
+    cfg_reload_error = "The device called is out of bounds"
+    ExitFunction
+  EndIf
+
+  'if the port is being used by another call then wait for it to be freed
+  port_num = cfg_device_port_num(num)
+  Do While cfg_port_busy(port_num)
+
+    If do_not_wait Then ExitFunction
+  Loop
+  cfg_port_busy(port_num) = TRUE
+
+  'call the device
+  Select Case cfg_device_type(num)
+  'electro shark 100
+  Case "shark_100"
+    result = getElectroShark100(cfg_device_index(num), cfg_ports(port_num), cfg_device_addr(num))
+  Case "shark_100s"
+    result = getElectroShark100(cfg_device_index(num), cfg_ports(port_num), cfg_device_addr(num))
+
+  'solectria
+  Case "solectria_xtm"
+    result = getSolectriaXTM(cfg_device_index(num), cfg_ports(port_num), cfg_device_addr(num))
+
+  EndSelect
+
+  cfg_port_busy(port_num) = FALSE
+
+  'check if index was out of bounds
+  If result = -9999 Then cfg_reload_error = "The array index is out of bounds"
+
+  'capture the result code
+  If result = 0 Then
+    cfg_device_result(num) = 0
+  Else
+    cfg_device_result(num) += 1
+  EndIf
+EndFunction 'callDevice
+
+
+
+
+
+#If CFG_TCP_ENABLE
+Function validTcpSocket(num As Long) As Boolean
+  Dim counter As Long
+
+  'check the result for devices using this socket
+  For counter = 1 To cfg_device_total
+
+    'check if any device using this socket has a result under the threshold
+    If cfg_device_port_num(counter) = num AND cfg_device_result(counter) < CFG_TCP_FAIL_MAX Then
+      Return TRUE
+    EndIf
+  Next
+
+  Return FALSE
+EndFunction 'validTcpSocket
+#EndIf
+
+
+
+
+
+Sub clearDeviceResult(num As Long)
+  Dim counter As Long
+
+  'reset result for all devices using this port
+  For counter = 1 To cfg_device_total
+    If cfg_device_port_num(counter) = num Then cfg_device_result(counter) = 0
+  Next
+EndSub 'clearDeviceResult
+'################################################
+
+
+
+
+
+'## Shutdown ####################################
+ShutDownBegin
+
+  'base
+  #If CFG_TCP_ENABLE
+    If cfg_port_total > 0 Then
+      For cfg_counter = 1 To cfg_port_total
+        If cfg_ports(cfg_counter) > 100 Then TCPClose(cfg_ports(cfg_counter))
+      Next
+    EndIf
+  #EndIf
+
+ShutDownEnd
+'################################################
+
+
+
+
+
+'## Main Program ################################
+BeginProg
+
+  parseIpInfo()
+
+  If pnl_cfg_change_network_settings Then
+    If setNetworkSettings(pnl_logger_ip, pnl_logger_netmask, pnl_logger_gateway, pnl_logger_dns1) Then
+      'reset the flags to defaults
+      writeNetworkSettingsFile("FALSE", "FALSE", "", "", "", "")
+    EndIf
+  EndIf
+
+  readDrakerID()
+
+  'set the model number
+  If draker_model_number = "" Then
+    If DRAKER_BASESTATION_MODEL = PV5000 OR DRAKER_BASESTATION_MODEL = PV2000
+      draker_model_number = DRAKER_BASESTATION_MODEL & "-" & DRAKER_BASESTATION_POWER_SUPPLY _
+        & "-" & DRAKER_BASESTATION_GATEWAY & "-" & DRAKER_BASESTATION_NUM_OF_MODBUS_PORTS _
+        & "-" & DRAKER_BASESTATION_ETHERNET_SWITCH & "-" & DRAKER_BASESTATION_BP_SENSOR _
+        & "-" & DRAKER_BASESTATION_CAISO_RIG & "-" & DRAKER_BASESTATION_KEYPAD_DISPLAY _
+        & "-" & DRAKER_BASESTATION_TB_LAYOUT & "-" & DRAKER_BASESTATION_DATA_STORAGE
+    ElseIf DRAKER_BASESTATION_MODEL = PV250
+      draker_model_number = DRAKER_BASESTATION_MODEL & "-" & DRAKER_BASESTATION_POWER_SUPPLY _
+        & "-" & DRAKER_BASESTATION_GATEWAY & "-" & DRAKER_BASESTATION_NUM_OF_MODBUS_PORTS _
+        & "-" & DRAKER_BASESTATION_ETHERNET_SWITCH & "-" & DRAKER_BASESTATION_KEYPAD_DISPLAY _
+        & "-" & DRAKER_BASESTATION_TB_LAYOUT & "-" & DRAKER_BASESTATION_BATTERY_BACKUP
+    EndIf
+  EndIf
+
+  Scan(CFG_SCAN_INTERVAL_MAIN, SEC, 3, 0)
+    'Populate the time_utc array with the current timestamp
+    RealTime(time_utc())
+
+    'panel status
+    Battery(pnl_logger_voltage)
+    PanelTemp(pnl_logger_temp, FREQ_REJECTION)
+
+    'clear the table trigger
+    pnl_trigger_table = FALSE
+
+    checkLoggerFault()
+    checkIpInfo()
+
+    #If PNL_CFG_SDI_PORT <> 0
+      'only try to collect data from ch200 if address is valid
+      If pnl_cfg_charge_addr >= 0 Then
+        getCh200(pnl_cfg_charge_addr)
+      EndIf
+    #EndIf
+
+    CallTable(panelStatus)
+
+    'ambient temp sensor
+    For amb_counter = 1 To AMB_TOTAL
+      amb_temp_r(amb_counter) = NAN
+    Next
+
+    #If AMB_CFG_01_CH > 0
+      BrHalf(amb_mv_ratio, 1, mV2500, AMB_CFG_01_CH, AMB_CFG_01_VX, 1, 2500, TRUE, AMB_CFG_SETTLING, FREQ_REJECTION, 1.0, 0)
+
+      Select Case amb_cfg_type(1)
+      Case "cs107"
+        amb_temp_r(1) = (1000 / amb_mv_ratio) - 249000 - 1000
+
+      Case "cs108"
+        amb_temp_r(1) = (1000 / amb_mv_ratio) - 40000 - 1000
+
+      Else
+        amb_temp_r(1) = 24900 * amb_mv_ratio / (1 - amb_mv_ratio)
+      EndSelect
+    #EndIf
+
+    'calculate the ambient temp based on the sensor type
+    For amb_counter = 1 To AMB_TOTAL
+      Select Case amb_cfg_type(amb_counter)
+      Case "cs107", "cs108"
+        amb_temp(amb_counter) = calcAmbientTempCs107Cs108(amb_temp_r(amb_counter))
+        amb_humidity(amb_counter) = NAN
+        amb_dew_point(amb_counter) = NAN
+
+      Case "cs109"
+        amb_temp(amb_counter) = calcAmbientTempCs109(amb_temp_r(amb_counter))
+        amb_humidity(amb_counter) = NAN
+        amb_dew_point(amb_counter) = NAN
+
+      Case "cs215"
+        getAmbientTempCs215(amb_counter)
+
+      Else
+        amb_temp(amb_counter) = NAN
+        amb_humidity(amb_counter) = NAN
+        amb_dew_point(amb_counter) = NAN
+      EndSelect
+
+      'set disable variable based on invalid measurement values
+      DIS_amb_temp(amb_counter) = IIf(amb_temp(amb_counter) = NAN, TRUE, FALSE)
+      DIS_amb_humidity(amb_counter) = IIf(amb_humidity(amb_counter) = NAN, TRUE, FALSE)
+      DIS_amb_dew_point(amb_counter) = IIf(amb_dew_point(amb_counter) = NAN, TRUE, FALSE)
+    Next
+
+    'wind sensor
+    For wind_counter = 1 To WIND_TOTAL
+      wind_pulses(wind_counter) = NAN
+      wind_mv_ratio(wind_counter) = NAN
+    Next
+
+    #If WIND_CFG_01_PCH > 0
+      PulseCount(wind_pulses(1), 1, WIND_CFG_01_PCH, 2, 1, 1.0, 0)
+    #EndIf
+
+    #If WIND_CFG_01_CH > 0
+      BrHalf(wind_mv_ratio(1), 1, mV2500, WIND_CFG_01_CH, WIND_CFG_01_VX, 1, 2500, TRUE, WIND_CFG_SETTLING, FREQ_REJECTION, 1.0, 0)
+    #EndIf
+
+    For wind_counter = 1 To WIND_TOTAL
+      Select Case wind_cfg_type(wind_counter)
+      Case "metone_14a"
+        wind_speed(wind_counter) = IIf(wind_pulses(wind_counter) <> 0, wind_pulses(wind_counter) * 0.8 + 0.447, 0)
+        wind_direction(wind_counter) = NAN
+
+      Case "metone_34b"
+        wind_speed(wind_counter) = IIf(wind_pulses(wind_counter) <> 0, wind_pulses(wind_counter) * 0.7989 + 0.28, 0)
+        wind_direction(wind_counter) = wind_mv_ratio(wind_counter) * 360
+
+      Else
+        wind_speed(wind_counter) = NAN
+        wind_direction(wind_counter) = NAN
+      EndSelect
+
+      'set disable variable based on invalid measurement values
+      DIS_wind_speed(wind_counter) = IIf(wind_speed(wind_counter) = NAN, TRUE, FALSE)
+      DIS_wind_direction(wind_counter) = IIf(wind_direction(wind_counter) = NAN, TRUE, FALSE)
+    Next
+
+    'solar resource sensor
+    For srs_counter = 1 To SRS_TOTAL
+      srs_voltage_25(srs_counter) = NAN
+      srs_voltage_250(srs_counter) = NAN
+      srs_voltage_se1(srs_counter) = NAN
+      srs_voltage_se2(srs_counter) = NAN
+      srs_temp_r(srs_counter) = NAN
+    Next
+
+    'based on the panel make measurements for device 1
+    #If SRS_CFG_01_SE_TYPE <> NOT_USED
+      #If SRS_CFG_01_SE_01_CH > 0
+        VoltSe(srs_voltage_se1(1), 1, SRS_CFG_01_SE_01_RANGE, SRS_CFG_01_SE_01_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+      #EndIf
+
+      #If SRS_CFG_01_SE_02_CH > 0
+        VoltSe(srs_voltage_se2(1), 1, SRS_CFG_01_SE_02_RANGE, SRS_CFG_01_SE_02_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+      #EndIf
+
+    #ElseIf SRS_CFG_01_DIFF_CH > 0
+        VoltDiff(srs_voltage_25(1), 1, mV25C, SRS_CFG_01_DIFF_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+        VoltDiff(srs_voltage_250(1), 1, mV250C, SRS_CFG_01_DIFF_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+    #EndIf
+
+    'based on the panel make measurements for device 2
+    #If SRS_CFG_02_SE_TYPE <> NOT_USED
+      #If SRS_CFG_02_SE_01_CH > 0
+        VoltSe(srs_voltage_se1(2), 1, SRS_CFG_02_SE_01_RANGE, SRS_CFG_02_SE_01_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+      #EndIf
+
+      #If SRS_CFG_02_SE_02_CH > 0
+        VoltSe(srs_voltage_se2(2), 1, SRS_CFG_02_SE_02_RANGE, SRS_CFG_02_SE_02_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+      #EndIf
+
+    #ElseIf SRS_CFG_02_DIFF_CH > 0
+      VoltDiff(srs_voltage_25(2), 1, mV25C, SRS_CFG_02_DIFF_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+      VoltDiff(srs_voltage_250(2), 1, mV250C, SRS_CFG_02_DIFF_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+    #EndIf
+
+    'based on the panel make measurements for device 3
+    #If SRS_CFG_03_SE_TYPE <> NOT_USED
+      #If SRS_CFG_03_SE_01_CH > 0
+        VoltSe(srs_voltage_se1(3), 1, SRS_CFG_03_SE_01_RANGE, SRS_CFG_03_SE_01_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+      #EndIf
+
+      #If SRS_CFG_03_SE_02_CH > 0
+        VoltSe(srs_voltage_se2(3), 1, SRS_CFG_03_SE_02_RANGE, SRS_CFG_03_SE_02_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+      #EndIf
+
+    #ElseIf SRS_CFG_03_DIFF_CH > 0
+      VoltDiff(srs_voltage_25(3), 1, mV25C, SRS_CFG_03_DIFF_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+      VoltDiff(srs_voltage_250(3), 1, mV250C, SRS_CFG_03_DIFF_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+    #EndIf
+
+    'based on the panel make measurements for device 4
+    #If SRS_CFG_04_SE_TYPE <> NOT_USED
+      #If SRS_CFG_04_SE_01_CH > 0
+        VoltSe(srs_voltage_se1(4), 1, SRS_CFG_04_SE_01_RANGE, SRS_CFG_04_SE_01_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+      #EndIf
+
+      #If SRS_CFG_04_SE_02_CH > 0
+        VoltSe(srs_voltage_se2(4), 1, SRS_CFG_04_SE_02_RANGE, SRS_CFG_04_SE_02_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+      #EndIf
+
+    #ElseIf SRS_CFG_04_DIFF_CH > 0
+      VoltDiff(srs_voltage_25(4), 1, mV25C, SRS_CFG_04_DIFF_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+      VoltDiff(srs_voltage_250(4), 1, mV250C, SRS_CFG_04_DIFF_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+    #EndIf
+
+    'based on the panel make measurements for device 5
+    #If SRS_CFG_05_SE_TYPE <> NOT_USED
+      #If SRS_CFG_05_SE_01_CH > 0
+        VoltSe(srs_voltage_se1(5), 1, SRS_CFG_05_SE_01_RANGE, SRS_CFG_05_SE_01_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+      #EndIf
+
+      #If SRS_CFG_05_SE_02_CH > 0
+        VoltSe(srs_voltage_se2(5), 1, SRS_CFG_05_SE_02_RANGE, SRS_CFG_05_SE_02_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+      #EndIf
+
+    #ElseIf SRS_CFG_05_DIFF_CH > 0
+      VoltDiff(srs_voltage_25(5), 1, mV25C, SRS_CFG_05_DIFF_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+      VoltDiff(srs_voltage_250(5), 1, mV250C, SRS_CFG_05_DIFF_CH, TRUE, 0, FREQ_REJECTION, 1.0, 0)
+    #EndIf
+
+    'calculate the irradiance based on the sensor type
+    For srs_counter = 1 To SRS_TOTAL
+      Select Case srs_cfg_type(srs_counter)
+      Case "licor"
+        srs_irrad(srs_counter) = srs_voltage_25(srs_counter) * srs_cfg_mult(srs_counter)
+        srs_irrad_dif(srs_counter) = NAN
+
+      Case "kipp_z", "epply", "hukseflux", "lp02_t2", "sr12", "eko"
+        srs_irrad(srs_counter) = srs_voltage_25(srs_counter) * 1000 / srs_cfg_mult(srs_counter)
+        srs_irrad_dif(srs_counter) = NAN
+
+      Case "si02tk"
+        srs_irrad(srs_counter) = srs_voltage_se1(srs_counter) * 1000 / srs_cfg_mult(srs_counter)
+        srs_irrad_dif(srs_counter) = NAN
+
+      Case "spn1"
+        srs_irrad(srs_counter) = srs_voltage_se1(srs_counter)
+        srs_irrad_dif(srs_counter) = srs_voltage_se2(srs_counter)
+
+      Case "eko_ml01"
+        srs_irrad(srs_counter) = srs_voltage_250(srs_counter) * 1000 / srs_cfg_mult(srs_counter)
+        srs_irrad_dif(srs_counter) = NAN
+
+      #If SRS_CFG_01_SE_TYPE = PVEL OR SRS_CFG_02_SE_TYPE = PVEL OR SRS_CFG_03_SE_TYPE = PVEL
+      Case "pvel"
+        ' convert to volts from millivolts
+        'srs_voltage_se1 = Open-circuit Voltage
+        'srs_voltage_se2 = Voltage Proportional to Short-circuit Current
+        srs_voltage_se1(srs_counter) = srs_voltage_se1(srs_counter) / 1000
+        srs_voltage_se2(srs_counter) = srs_voltage_se2(srs_counter) / 1000
+
+        srs_irrad(srs_counter) = (1000 * srs_voltage_se2(srs_counter)) / srs_cfg_vsc(srs_counter)
+        srs_irrad_dif(srs_counter) = NAN
+      #EndIf
+
+      Else
+        srs_irrad(srs_counter) = NAN
+        srs_irrad_dif(srs_counter) = NAN
+      EndSelect
+
+      'set disable variable based on invalid measurement values
+      DIS_srs_irrad(srs_counter) = IIf(srs_irrad(srs_counter) = NAN, TRUE, FALSE)
+      DIS_srs_irrad_dif(srs_counter) = IIf(srs_irrad_dif(srs_counter) = NAN, TRUE, FALSE)
+
+      'filter out noise when measurement goes slightly negative
+      If srs_irrad(srs_counter) <> NAN AND srs_irrad(srs_counter) < 0 AND srs_irrad(srs_counter) > -5 Then
+        srs_irrad(srs_counter) = 0
+      EndIf
+    Next
+
+    'if a temperature sensor is defined for this panel then make the measurement and calculate the resistance
+    #If SRS_CFG_01_TEMP_CH > 0
+      BrHalf(srs_mv_ratio, 1, mV2500, SRS_CFG_01_TEMP_CH, SRS_CFG_01_TEMP_VX, 1, 2500, TRUE, SRS_CFG_SETTLING, FREQ_REJECTION, 1.0, 0)
+      srs_temp_r(1) = SRS_CFG_FIXED_R * srs_mv_ratio / (1 - srs_mv_ratio)
+    #EndIf
+
+    #If SRS_CFG_02_TEMP_CH > 0
+      BrHalf(srs_mv_ratio, 1, mV2500, SRS_CFG_02_TEMP_CH, SRS_CFG_02_TEMP_VX, 1, 2500, TRUE, SRS_CFG_SETTLING, FREQ_REJECTION, 1.0, 0)
+      srs_temp_r(2) = SRS_CFG_FIXED_R * srs_mv_ratio / (1 - srs_mv_ratio)
+    #EndIf
+
+    #If SRS_CFG_03_TEMP_CH > 0
+      BrHalf(srs_mv_ratio, 1, mV2500, SRS_CFG_03_TEMP_CH, SRS_CFG_03_TEMP_VX, 1, 2500, TRUE, SRS_CFG_SETTLING, FREQ_REJECTION, 1.0, 0)
+      srs_temp_r(3) = SRS_CFG_FIXED_R * srs_mv_ratio / (1 - srs_mv_ratio)
+    #EndIf
+
+    #If SRS_CFG_04_TEMP_CH > 0
+      BrHalf(srs_mv_ratio, 1, mV2500, SRS_CFG_04_TEMP_CH, SRS_CFG_04_TEMP_VX, 1, 2500, TRUE, SRS_CFG_SETTLING, FREQ_REJECTION, 1.0, 0)
+      srs_temp_r(4) = SRS_CFG_FIXED_R * srs_mv_ratio / (1 - srs_mv_ratio)
+    #EndIf
+
+    #If SRS_CFG_05_TEMP_CH > 0
+      BrHalf(srs_mv_ratio, 1, mV2500, SRS_CFG_05_TEMP_CH, SRS_CFG_05_TEMP_VX, 1, 2500, TRUE, SRS_CFG_SETTLING, FREQ_REJECTION, 1.0, 0)
+      srs_temp_r(5) = SRS_CFG_FIXED_R * srs_mv_ratio / (1 - srs_mv_ratio)
+    #EndIf
+
+    'calculate the temparture based on the sensor type
+    For srs_counter = 1 To SRS_TOTAL
+      Select Case srs_cfg_type(srs_counter)
+      Case "lp02_t2"
+        srs_temp(srs_counter) = calcTempHukseflux(srs_temp_r(srs_counter))
+
+        'calculate the temperature adjusted irradiance
+        srs_irrad_adj(srs_counter) = srs_irrad(srs_counter) * ((20 - srs_temp(srs_counter)) * 0.0008 + 1)
+
+      Case "sr12"
+        srs_temp(srs_counter) = calcTempHukseflux(srs_temp_r(srs_counter))
+
+        'calculate the temperature adjusted irradiance
+        srs_irrad_adj(srs_counter) = srs_irrad(srs_counter) / ((srs_temp(srs_counter) - 20) * 0.0008 + 1)
+
+      Case "si02tk"
+        srs_temp(srs_counter) = calcTempSi02tk(srs_temp_r(srs_counter))
+
+        'calculate the temperature adjusted irradiance
+        srs_irrad_adj(srs_counter) = srs_irrad(srs_counter) / ((srs_temp(srs_counter) - 25) * 0.0005 + 1)
+
+      #If SRS_CFG_01_SE_TYPE = PVEL OR SRS_CFG_02_SE_TYPE = PVEL OR SRS_CFG_03_SE_TYPE = PVEL
+      Case "pvel"
+        srs_temp(srs_counter) = calcPVELTemp(srs_counter, srs_voltage_se1(srs_counter), srs_voltage_se2(srs_counter))
+
+        srs_irrad_adj(srs_counter) = srs_irrad(srs_counter) / _
+          (1 + srs_cfg_vsc_coeff(srs_counter) * (srs_temp(srs_counter) - 25))
+      #EndIf
+
+      Else
+        srs_temp(srs_counter) = NAN
+        srs_irrad_adj(srs_counter) = NAN
+      EndSelect
+
+      'set disable variable based on invalid measurement values
+      DIS_srs_temp(srs_counter) = IIf(srs_temp(srs_counter) = NAN, TRUE, FALSE)
+      DIS_srs_irrad_adj(srs_counter) = IIf(srs_irrad_adj(srs_counter) = NAN, TRUE, FALSE)
+    Next
+
+    'cell temp sensor
+    For cts_counter = 1 To CTS_TOTAL
+      cts_temp_r(cts_counter) = NAN
+    Next
+
+    'if the sensor is defined for this panel then make the measurement
+    #If CTS_CFG_01_CH > 0
+      BrHalf(cts_mv_ratio, 1, mV2500, CTS_CFG_01_CH, CTS_CFG_01_VX, 1, 2500, TRUE, CTS_CFG_SETTLING, FREQ_REJECTION, 1.0, 0)
+      cts_temp_r(1) = CTS_CFG_FIXED_R * cts_mv_ratio / (1 - cts_mv_ratio)
+    #EndIf
+
+    #If CTS_CFG_02_CH > 0
+      BrHalf(cts_mv_ratio, 1, mV2500, CTS_CFG_02_CH, CTS_CFG_02_VX, 1, 2500, TRUE, CTS_CFG_SETTLING, FREQ_REJECTION, 1.0, 0)
+      cts_temp_r(2) = CTS_CFG_FIXED_R * cts_mv_ratio / (1 - cts_mv_ratio)
+    #EndIf
+
+    #If CTS_CFG_03_CH > 0
+      BrHalf(cts_mv_ratio, 1, mV2500, CTS_CFG_03_CH, CTS_CFG_03_VX, 1, 2500, TRUE, CTS_CFG_SETTLING, FREQ_REJECTION, 1.0, 0)
+      cts_temp_r(3) = CTS_CFG_FIXED_R * cts_mv_ratio / (1 - cts_mv_ratio)
+    #EndIf
+
+    'calculate the cell temp based on the sensor type
+    For cts_counter = 1 To CTS_TOTAL
+      Select Case cts_cfg_type(cts_counter)
+      Case "dl209"
+        cts_temp(cts_counter) = calcCellTempDl209(cts_temp_r(cts_counter))
+
+      Case "cs110"
+        cts_temp(cts_counter) = calcCellTempCs110(cts_temp_r(cts_counter))
+
+      #If CTS_SOLYNDRA_ENABLE
+      Case "solyn_100"
+        cts_temp(cts_counter) = calcCellTempSolyn100(wind_speed(CTS_CFG_SOLYN_WIND), srs_irrad(CTS_CFG_SOLYN_SRS), amb_temp(CTS_CFG_SOLYN_AMB))
+
+      Case "solyn_200"
+        cts_temp(cts_counter) = calcCellTempSolyn200(wind_speed(CTS_CFG_SOLYN_WIND), srs_irrad(CTS_CFG_SOLYN_SRS), amb_temp(CTS_CFG_SOLYN_AMB))
+      #EndIf
+
+      Else
+        cts_temp(cts_counter) = NAN
+      EndSelect
+
+      'set disable variable based on invalid measurement values
+      DIS_cts_temp(cts_counter) = IIf(cts_temp(cts_counter) = NAN, TRUE, FALSE)
+    Next
+
+    'modbus slave
+    populateModbusSlaveMap()
+
+    'utility
+    If run_modbus_check Then
+      Modbus_Device_Check()
+    EndIf
+
+    If run_modbus_poll Then
+      Modbus_Poll()
+    EndIf
+
+    If run_ping Then
+      Ping_Single()
+    EndIf
+
+    If run_ping_scan Then
+      Ping_Scan()
+    EndIf
+
+    CallTable(fifteenMin)
+	CallTable(OneMin)
+  NextScan
+
+
+
+
+
+  'slow scan for devices with clean communications (comm code = 0)
+  SlowSequence
+  Do While TRUE
+    Timer(1, MSEC, 2)
+
+    If cfg_device_total > 0 Then
+      For cfg_counter_clean = 1 To cfg_device_total
+        If draker_das_name_save OR cfg_reload Then ExitFor
+
+        'only call devices that have clean communications
+        If cfg_device_result(cfg_counter_clean) = 0 Then
+
+          'report which device is being called
+          cfg_device_current_clean = cfg_device_type(cfg_counter_clean) & ":" & cfg_device_index(cfg_counter_clean)
+
+          'call the device, don't wait if port is busy
+          callDevice(cfg_counter_clean, TRUE)
+
+          cfg_device_current_clean = ""
+        EndIf
+      Next
+    EndIf
+
+    'capture the scan time (the timer function returns an integer, doing this conversion provides a decimal)
+    cfg_scan_timer_clean = Timer(1, MSEC, 4) * 0.001
+
+    'calculate the delay (the delay function requires an integer so scale the value to MSEC and store in long)
+    cfg_scan_delay_clean = (CFG_SCAN_INTERVAL_CLEAN - cfg_scan_timer_clean) * 1000
+
+    'only delay the scan if the calculated value is positive time
+    If cfg_scan_delay_clean > 0 Then Delay(1, cfg_scan_delay_clean, MSEC)
+  Loop
+  EndSequence
+
+
+
+
+
+  'slow scan for devices with dirty communications (comm code <> 0)
+  SlowSequence
+  Do While TRUE
+    Timer(2, MSEC, 2)
+
+    If cfg_device_total > 0 Then
+      For cfg_counter_dirty = 1 To cfg_device_total
+        If draker_das_name_save OR cfg_reload Then ExitFor
+
+        'only call devices that have dirty communications
+        If cfg_device_result(cfg_counter_dirty) <> 0 Then
+
+          'report which device is being called
+          cfg_device_current_dirty = cfg_device_type(cfg_counter_dirty) & ":" & cfg_device_index(cfg_counter_dirty)
+
+          'call the device, wait if port is busy
+          callDevice(cfg_counter_dirty, FALSE)
+
+          cfg_device_current_dirty = ""
+        EndIf
+      Next
+    EndIf
+
+    'capture the scan time (the timer function returns an integer, doing this conversion provides a decimal)
+    cfg_scan_timer_dirty = Timer(2, MSEC, 4) * 0.001
+
+    'calculate the delay (the delay function requires an integer so scale the value to MSEC and store in long)
+    cfg_scan_delay_dirty = (CFG_SCAN_INTERVAL_DIRTY - cfg_scan_timer_dirty) * 1000
+
+    'only delay the scan if the calculated value is positive time
+    If cfg_scan_delay_dirty > 0 Then Delay(1, cfg_scan_delay_dirty, MSEC)
+  Loop
+  EndSequence
+
+
+
+
+
+  'slow scan for checking user input flags and maintaining tcp sockets if enabled
+  SlowSequence
+  Do While TRUE
+    Timer(3, MSEC, 2)
+
+    ' If draker_mfg_date <> "YYYY-MM-DD" Then
+    '   draker_mfg_date_sec = SecsSince1990(draker_mfg_date & " 00:00:00", 4)
+    '   pnl_current_date = Status.TimeStamp
+    '   pnl_current_date_sec = SecsSince1990(pnl_current_date, 1)
+
+    '   'send if at least more time has passed than has been set by CFG_EMAIL_SEND_DELAY
+    '   If draker_email_sent = "FALSE" AND (draker_mfg_date_sec + (CFG_EMAIL_SEND_DELAY * 86400)) < pnl_current_date_sec Then
+
+    '     'send initial project online email
+    '     sendPowerUpEmail()
+
+    '     If draker_email_sent = "TRUE" Then
+    '       draker_das_name_save = TRUE
+    '     EndIf
+
+    '   EndIf
+    ' EndIf
+
+    ' 'send email if requested
+    ' If draker_email_resend Then
+    '   sendPowerUpEmail()
+    '   draker_email_resend = FALSE
+    ' EndIf
+
+    'check if the draker id file should be updated
+    If draker_das_name_save Then
+      writeDrakerID()
+      draker_das_name_save = FALSE
+
+      'set flag to reparse the config file
+      cfg_reload = TRUE
+    EndIf
+
+    'check if the draker id file should be backed up
+    If draker_id_backup Then
+      FileCopy("CPU:" & DRAKER_ID_FILE, "CPU:backup" & DRAKER_ID_FILE)
+      draker_id_backup = FALSE
+    EndIf
+
+    'check if config file needs to be reloaded
+    If cfg_reload Then
+      Call parseConfig("CPU:" & CFG_FILE)
+      cfg_reload = FALSE
+    EndIf
+
+    If PING_KEEP_ALIVE_ENABLE Then pingKeepAlive(LowerCase(Status.IPInfo))
+
+    #If CFG_TCP_ENABLE
+      If cfg_port_total > 0 Then
+        For cfg_tcp_open = 1 To cfg_port_total
+
+          'break out of the loop if either flag is set
+          If draker_das_name_save OR cfg_reload Then ExitFor
+
+          'check if user has set tcp socket override to none zero
+          If cfg_tcp_open_override > 0 AND cfg_tcp_open_override <= cfg_port_total Then
+
+            'if so then overwrite current tcp open
+            cfg_tcp_open = cfg_tcp_open_override
+            cfg_tcp_open_override = 0
+
+            'if socket is currently open then close it
+            If cfg_ports(cfg_tcp_open) > 100 Then
+              TCPClose(cfg_ports(cfg_tcp_open))
+              cfg_ports(cfg_tcp_open) = 0
+            EndIf
+
+          'otherwise if socket is currently open
+          ElseIf cfg_ports(cfg_tcp_open) > 100 Then
+
+            'close the socket if all devices have stopped communicating
+            If NOT validTcpSocket(cfg_tcp_open) Then
+              TCPClose(cfg_ports(cfg_tcp_open))
+              cfg_ports(cfg_tcp_open) = 0
+            EndIf
+          EndIf
+
+
+          'only try to open sockets that aren't already open
+          If cfg_ports(cfg_tcp_open) = 0 Then
+
+            #If OS_VERSION < 26
+              'must use a different tcpOpen command for each unique socket
+              Select Case cfg_tcp_open
+              Case 1
+                cfg_ports(cfg_tcp_open) = TCPOpen(cfg_tcp_addr(cfg_tcp_open), cfg_tcp_port(cfg_tcp_open), 1)
+              Case 2
+                cfg_ports(cfg_tcp_open) = TCPOpen(cfg_tcp_addr(cfg_tcp_open), cfg_tcp_port(cfg_tcp_open), 1)
+              EndSelect
+            #Else OS_VERSION => 26
+              'CSI updated the TCPOpen command in OS26 to allow the use of it in a loop.
+              cfg_ports(cfg_tcp_open) = TCPOpen(cfg_tcp_addr(cfg_tcp_open), cfg_tcp_port(cfg_tcp_open), 1, 1000, cfg_ports(cfg_tcp_open), CFG_PORT_MAX)
+            #EndIf
+
+            'reset the result when a new socket is opened
+            If cfg_ports(cfg_tcp_open) > 100 Then Call clearDeviceResult(cfg_tcp_open)
+          EndIf
+        Next
+      EndIf
+    #EndIf
+
+    If pnl_cfg_change_network_settings Then
+      If network_settings_dld_updated Then
+        If setNetworkSettings(pnl_logger_ip, pnl_logger_netmask, pnl_logger_gateway, pnl_logger_dns1) Then
+          'reset the flags to defaults
+          writeNetworkSettingsFile("FALSE", "FALSE", "", "", "", "")
+        EndIf
+      Else
+        If pnl_logger_ip = "0.0.0.0" AND pnl_logger_dns1 = "" Then
+          writeNetworkSettingsFile("TRUE", "TRUE", pnl_logger_ip, pnl_logger_netmask, _
+            pnl_logger_gateway, "8.8.8.8")
+        Else
+          writeNetworkSettingsFile("TRUE", "TRUE", pnl_logger_ip, pnl_logger_netmask, _
+            pnl_logger_gateway, pnl_logger_dns1)
+        EndIf
+      EndIf
+    EndIf
+
+    'capture the scan time (the timer function returns an integer, doing this conversion provides a decimal)
+    cfg_scan_timer_util = Timer(3, MSEC, 4) * 0.001
+
+    'calculate the delay (the delay function requires an integer so scale the value to MSEC and store in long)
+    cfg_scan_delay_util = (CFG_SCAN_INTERVAL_UTIL - cfg_scan_timer_util) * 1000
+
+    'only delay the scan if the calculated value is positive time
+    If cfg_scan_delay_util > 0 Then Delay(1, cfg_scan_delay_util, MSEC)
+  Loop
+  EndSequence
+
+EndProg
+'################################################
+
+
+'Built using Daft version 0.6.1
+'Component library was on branch master
+'At commit hash 79ef797b4dd9ef76f09a43597a6875e6074b8d8c
