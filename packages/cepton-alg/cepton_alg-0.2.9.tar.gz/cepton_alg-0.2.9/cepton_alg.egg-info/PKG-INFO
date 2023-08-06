@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: cepton-alg
+Version: 0.2.9
+Summary: Cepton Python
+Home-page: https://github.com/ceptontech/cepton_alg_redist
+Author: Cepton Technologies
+License: UNKNOWN
+Description: Cepton Python Alg
+        =================
+        
+        ## Installation
+        
+        ```sh
+        pip install cepton_alg
+        ```
+Keywords: cepton
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.3
+Provides-Extra: capture
+Provides-Extra: mask

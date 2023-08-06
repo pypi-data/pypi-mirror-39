@@ -1,0 +1,18 @@
+{
+    "sensor_tasks": [
+        {
+            "name": "ComputeOcclusion"
+        }
+    ],
+    "tasks": [
+        {
+            "name": "ComputeStationary"
+        },
+        {
+            "name": "FilterStray"
+        },
+        {
+            "name": "ComputeObjects"
+        }
+    ]
+}

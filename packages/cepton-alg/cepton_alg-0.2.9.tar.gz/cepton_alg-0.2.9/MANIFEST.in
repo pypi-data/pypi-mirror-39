@@ -1,0 +1,4 @@
+include *.md
+recursive-include cepton_alg/lib *
+recursive-include cepton_alg/common/meshes *
+recursive-include cepton_alg/settings *
