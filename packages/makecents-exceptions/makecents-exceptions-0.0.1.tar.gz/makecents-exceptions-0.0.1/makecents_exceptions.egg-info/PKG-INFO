@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: makecents-exceptions
+Version: 0.0.1
+Summary: exceptions package
+Home-page: https://github.com/MakeCents-NYC/makecents-exceptionst
+Author: MakeCents
+Author-email: yma@mymakecents.com
+License: UNKNOWN
+Description: # makecents-exceptions
+        ####For exception information display and reference
+        #####Usage Infomation:   
+            from makecents_exceptions import exceptions as (name you want)
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
