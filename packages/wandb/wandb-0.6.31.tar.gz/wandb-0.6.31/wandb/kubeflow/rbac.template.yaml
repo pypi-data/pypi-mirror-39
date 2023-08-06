@@ -1,0 +1,35 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+    name: tiller-user
+    namespace: default
+rules:
+    - apiGroups:
+          - ""
+      resources:
+          - pods/portforward
+      verbs:
+          - create
+    - apiGroups:
+          - ""
+      resources:
+          - pods
+          - namespaces
+          - pods/log
+      verbs:
+          - list
+          - get
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+    name: tiller-user-binding
+    namespace: default
+roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: Role
+    name: tiller-user
+subjects:
+    - kind: ServiceAccount
+      name: pipeline-runner
+      namespace: kubeflow
