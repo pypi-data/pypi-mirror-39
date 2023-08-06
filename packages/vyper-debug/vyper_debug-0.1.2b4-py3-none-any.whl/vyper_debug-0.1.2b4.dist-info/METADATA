@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: vyper-debug
+Version: 0.1.2b4
+Summary: vyper-debug: Easy to use Vyper debugger | vdb
+Home-page: https://github.com/ethereum/vyper-debug
+Author: Jacques Wagener
+Author-email: jacques+pip@dilectum.co.za
+License: MIT
+Keywords: ethereum
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6, <4
+Provides-Extra: lint
+Provides-Extra: doc
+Provides-Extra: test
+Provides-Extra: dev
+Requires-Dist: py-evm (==0.2.0a33)
+Requires-Dist: eth-tester (==0.1.0b33)
+Requires-Dist: vyper (==0.1.0b4)
+Requires-Dist: web3 (==4.8.1)
+Provides-Extra: dev
+Requires-Dist: bumpversion (<1,>=0.5.3); extra == 'dev'
+Requires-Dist: pytest-watch (<5,>=4.1.0); extra == 'dev'
+Requires-Dist: wheel; extra == 'dev'
+Requires-Dist: twine; extra == 'dev'
+Requires-Dist: ipython; extra == 'dev'
+Requires-Dist: pytest (==3.3.2); extra == 'dev'
+Requires-Dist: pytest-xdist; extra == 'dev'
+Requires-Dist: tox (<3,>=2.9.1); extra == 'dev'
+Requires-Dist: flake8 (==3.4.1); extra == 'dev'
+Requires-Dist: isort (<5,>=4.2.15); extra == 'dev'
+Requires-Dist: Sphinx (<2,>=1.6.5); extra == 'dev'
+Requires-Dist: sphinx-rtd-theme (>=0.1.9); extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: Sphinx (<2,>=1.6.5); extra == 'doc'
+Requires-Dist: sphinx-rtd-theme (>=0.1.9); extra == 'doc'
+Provides-Extra: lint
+Requires-Dist: flake8 (==3.4.1); extra == 'lint'
+Requires-Dist: isort (<5,>=4.2.15); extra == 'lint'
+Provides-Extra: test
+Requires-Dist: pytest (==3.3.2); extra == 'test'
+Requires-Dist: pytest-xdist; extra == 'test'
+Requires-Dist: tox (<3,>=2.9.1); extra == 'test'
+
+vyper-debug
+===========
+
+|Join the chat at https://gitter.im/status-im/vyper-debug| |Build
+Status| |PyPI version| |Python versions| |Docs build|
+
+Easy to use Vyper debugger \| vdb
+
+Read more in the `documentation on
+ReadTheDocs <https://vyper-debug.readthedocs.io/>`__. `View the change
+log <https://vyper-debug.readthedocs.io/en/latest/releases.html>`__.
+
+Quickstart
+----------
+
+.. code:: sh
+
+    pip install vyper-debug
+
+Developer Setup
+---------------
+
+If you would like to hack on vyper-debug, please check out the `Ethereum
+Development Tactical
+Manual <https://github.com/pipermerriam/ethereum-dev-tactical-manual>`__
+for information on how we do:
+
+-  Testing
+-  Pull Requests
+-  Code Style
+-  Documentation
+
+.. |Join the chat at https://gitter.im/status-im/vyper-debug| image:: https://badges.gitter.im/status-im/vyper-debug.svg
+   :target: https://gitter.im/status-im/vyper-debug?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+.. |Build Status| image:: https://circleci.com/gh/status-im/vyper-debug.svg?style=shield
+   :target: https://circleci.com/gh/status-im/vyper-debug
+.. |PyPI version| image:: https://badge.fury.io/py/vyper-debug.svg
+   :target: https://badge.fury.io/py/vyper-debug
+.. |Python versions| image:: https://img.shields.io/pypi/pyversions/vyper-debug.svg
+   :target: https://pypi.python.org/pypi/vyper-debug
+.. |Docs build| image:: https://readthedocs.org/projects/vyper-debug/badge/?version=latest
+   :target: http://vyper-debug.readthedocs.io/en/latest/?badge=latest
+
+
