@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: luma
+Version: 0.7.4
+Summary: A CLI to interact with the Lumavate platform
+Home-page: https://github.com/LabelNexus/lumavate-cli
+Author: Gunnar Norred
+Author-email: g.norred@lumavate.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: click (>=7.0)
+Requires-Dist: pycparser (==2.18)
+Requires-Dist: pyparsing (==2.2.0)
+Requires-Dist: python-dateutil (==2.7.3)
+Requires-Dist: requests (==2.19.1)
+Requires-Dist: docker-py (==1.10.6)
+
+# Lumavate CLI
+___
+## Config Summary:
+* Install CLI
+* Provision CLI credentials
+* Configure CLI
+* Example Commands
+
+### Installing the CLI from source:
+---
+* Clone this repo.
+* CD into the CLI dir and run:
+```
+$ sudo pip3 install .
+```
+
+### Installing the CLI from pip:
+---
+```
+$ sudo pip3 install luma
+```
+
+### Provision CLI Credentials:
+---
+* In the Lumavate App, navigate to the Lumavate CLI page inside a command center
+* Provisioning CLI credentials will generate credentials for the user you are currently signed in as
+* When running the add profile command, you will have the option to associate the new profile to any \
+organization your user has access to, regardless of the command center you are currently in
+
+### CLI Config:
+---
+* Configuring the CLI requires two steps, configuring environments and configuring profiles.
+    * **Environments** know how to get and refresh tokens so you stay authorized with the platform as a user.
+    * **Profiles** give the user a company context which is required by most of the platform API.
+
+#### CLI Env:
+* To configure a CLI Env get your Lumavate users CLI credentials and then run:
+```
+$ luma env config
+
+Env Name: exampleEnv
+App: appUrl
+Token: token
+Audience: audience
+Client id: clientId
+Client secret: clientSecret
+```
+
+#### CLI Profile:
+* The profile name cannot contain spaces
+* To add a profile to the CLI, run:
+```
+$ luma profile add
+
+Profile Name: intel
+Env: exampleEnv
+Org ID you want to associate with this profile: 11
+```
+
+## Running Commands
+___
+* To list top level commands, run:
+```
+$ luma
+```
+* To get help with any command or subcommand, run it without passing in any options or, pass in the --help flag
+* As an example let's create a microservice, create a version, upload a docker image, and start the service
+
+```
+$ luma microservice add
+Profile: intel
+Name: Auth Service
+Url ref: auth
+| id | name         | urlRef | createdAt         | createdBY          |
+|----|--------------|--------|-------------------|--------------------|
+| 45 | Auth Service | auth   | 10/16/18 20:29:49 | john+doe@gmail.com |
+
+$ luma microservice access --profile intel
+Microservice: auth
+| failed | sharedWith | unsharedWith | resultingGrantees |
+|--------|------------|--------------|-------------------|
+| []     | []         | []           | []                |
+
+$ luma microservice access --profile intel --microservice auth --add "Eli Lilly" --add Nvidia
+| failed | sharedWith   | unsharedWith | resultingGrantees        |
+|--------|--------------|--------------|--------------------------|
+| []     | [{id}, {id}] | []           | ['Eli Lilly', 'Nvidia']  |
+
+$ luma microservice-version add --profile intel --version-number 0.1.0 --microservice-file-path ~/Desktop/auth-service.tar.gz --label prod --port 8080
+Microservice: auth
+| id  | actualState | versionNumber | label | createdAt         | createdBy          |
+|-----|-------------|---------------|-------|-------------------|--------------------|
+| 107 | created     | 0.1.0         | prod  | 10/16/18 20:46:44 | john+doe@gmail.com |
+
+$ luma microservice-version start --profile intel
+Widget: auth
+Version: 0.1.0
+Starting Microservice  [####################################]  100%
+```
+
+
