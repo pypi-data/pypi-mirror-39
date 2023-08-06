@@ -1,0 +1,3 @@
+[console_scripts]
+cadccutout = cadccutout.core:main_app
+
