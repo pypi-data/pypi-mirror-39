@@ -1,0 +1,15 @@
+odoo/addons/base_currency_iso_4217/README.rst,sha256=Diy5T8sSYBEFUQnKnfm0NXxS9VRGkRzqGr4F9gMx7o0,3122
+odoo/addons/base_currency_iso_4217/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+odoo/addons/base_currency_iso_4217/__manifest__.py,sha256=FKaQrWYYgHz9N7ZG7qU8Uvy3so5KaIXshfexwoz2uxA,676
+odoo/addons/base_currency_iso_4217/data/res_currency_data.xml,sha256=k6Th8Il1hpI90UFXFWyMqrjJiIragLNVj71JzdkCZrE,25814
+odoo/addons/base_currency_iso_4217/models/__init__.py,sha256=MWnNBq3YxqPm8zuuVZzumz531Ox6HHRdW_5TzoprnxE,27
+odoo/addons/base_currency_iso_4217/models/res_currency.py,sha256=N5TdSgmGBb5s-7y1iNmGYSU3VS6K0UfDzEX9IsmP1Ck,570
+odoo/addons/base_currency_iso_4217/readme/CONTRIBUTORS.rst,sha256=Rg5B83KYckzAv8INQs5sbAKSDNO3dBEB1jC0BrJXQ54,162
+odoo/addons/base_currency_iso_4217/readme/DESCRIPTION.rst,sha256=8OUu0HWfDYBCOODnY-tMK5Zqk5SUFS3EM-Miaug0vCg,315
+odoo/addons/base_currency_iso_4217/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/base_currency_iso_4217/static/description/index.html,sha256=gFFEMuxAPkLQGlVkWEhSMO7nbyLYxryDKAJFM0RTnrk,12609
+odoo/addons/base_currency_iso_4217/views/res_currency_views.xml,sha256=7niPHDDtlozl4ziVCGMBCTfCxRpiHSNN64ZzcCKFSew,1237
+odoo11_addon_base_currency_iso_4217-11.0.1.0.0.99.dev2.dist-info/METADATA,sha256=X2920-6oVXqjk2Q5X1egav8yIIrfxcGJvA8rS0Jk-FU,3734
+odoo11_addon_base_currency_iso_4217-11.0.1.0.0.99.dev2.dist-info/RECORD,,
+odoo11_addon_base_currency_iso_4217-11.0.1.0.0.99.dev2.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+odoo11_addon_base_currency_iso_4217-11.0.1.0.0.99.dev2.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
