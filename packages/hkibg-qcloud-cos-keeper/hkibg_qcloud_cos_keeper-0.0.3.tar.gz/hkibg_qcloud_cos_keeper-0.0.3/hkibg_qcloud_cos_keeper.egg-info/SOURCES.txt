@@ -1,0 +1,17 @@
+README.md
+setup.py
+bin/qcloud_cos_keeper_file_cleaner.py
+bin/qcloud_cos_keeper_file_rotator.py
+bin/qcloud_cos_keeper_file_uploader.py
+hkibg_qcloud_cos_keeper/__init__.py
+hkibg_qcloud_cos_keeper/args_util.py
+hkibg_qcloud_cos_keeper/config_util.py
+hkibg_qcloud_cos_keeper/cos_util.py
+hkibg_qcloud_cos_keeper/date_util.py
+hkibg_qcloud_cos_keeper/decorator.py
+hkibg_qcloud_cos_keeper/generic_util.py
+hkibg_qcloud_cos_keeper.egg-info/PKG-INFO
+hkibg_qcloud_cos_keeper.egg-info/SOURCES.txt
+hkibg_qcloud_cos_keeper.egg-info/dependency_links.txt
+hkibg_qcloud_cos_keeper.egg-info/requires.txt
+hkibg_qcloud_cos_keeper.egg-info/top_level.txt
