@@ -1,0 +1,4 @@
+include README.rst
+recursive-include admin_city/templates *
+recursive-include templates *
+recursive-include */templates

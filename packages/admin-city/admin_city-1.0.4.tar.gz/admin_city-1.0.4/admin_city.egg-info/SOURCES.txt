@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+admin_city/__init__.py
+admin_city/city.py
+admin_city/fields.py
+admin_city.egg-info/PKG-INFO
+admin_city.egg-info/SOURCES.txt
+admin_city.egg-info/dependency_links.txt
+admin_city.egg-info/top_level.txt
+admin_city/templates/city.html
