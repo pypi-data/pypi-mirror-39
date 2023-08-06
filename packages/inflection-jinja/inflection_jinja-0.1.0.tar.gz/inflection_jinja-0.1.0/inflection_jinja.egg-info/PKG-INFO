@@ -1,0 +1,67 @@
+Metadata-Version: 1.1
+Name: inflection-jinja
+Version: 0.1.0
+Summary: Jinja extension wrapping infection package.
+Home-page: https://github.com/macher91/inflection_jinja
+Author: Mateusz Mejsner
+Author-email: mateusz.mejsner@gmail.com
+License: BSD license
+Description: ================
+        inflection-jinja
+        ================
+        
+        
+        .. image:: https://img.shields.io/pypi/v/inflection_jinja.svg
+                :target: https://pypi.python.org/pypi/inflection_jinja
+        
+        .. image:: https://img.shields.io/travis/macher91/inflection_jinja.svg
+                :target: https://travis-ci.org/macher91/inflection_jinja
+        
+        .. image:: https://readthedocs.org/projects/inflection-jinja/badge/?version=latest
+                :target: https://inflection-jinja.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        
+        
+        
+        Jinja extension wrapping infection package.
+        
+        
+        * Free software: BSD license
+        * Documentation: https://inflection-jinja.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2018-12-20)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: inflection_jinja
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
