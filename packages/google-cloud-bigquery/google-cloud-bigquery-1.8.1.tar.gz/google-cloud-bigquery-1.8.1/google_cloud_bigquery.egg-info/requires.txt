@@ -1,0 +1,12 @@
+google-api-core<2.0.0dev,>=1.6.0
+google-cloud-core<0.30dev,>=0.29.0
+google-resumable-media>=0.3.1
+
+[bqstorage]
+google-cloud-bigquery-storage<=2.0.0dev
+
+[pandas]
+pandas>=0.17.1
+
+[pyarrow: platform_system != "Windows" or python_version >= "3.4"]
+pyarrow>=0.4.1
