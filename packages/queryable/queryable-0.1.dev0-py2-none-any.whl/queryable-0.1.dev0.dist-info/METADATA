@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: queryable
+Version: 0.1.dev0
+Summary: SQLite in memory without boiler plate
+Home-page: https://github.com/kurtbrose/queryable
+Author: Kurt Rose
+Author-email: kurt@kurtrose.com
+License: BSD
+Platform: any
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+
+*MemDB* SQLite in-memory database without the boilerplate
+
+If you know would like to work with a SQL-based data structure
+in memory, this module makes your life as easy as possible
+
+
