@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.html
+README.txt
+setup.py
+CppHeaderParser/CppHeaderParser.py
+CppHeaderParser/__init__.py
+CppHeaderParser/version.py
+CppHeaderParser/doc/CppHeaderParser.html
+CppHeaderParser/examples/SampleClass.h
+CppHeaderParser/examples/readSampleClass.py
+robotpy_cppheaderparser.egg-info/PKG-INFO
+robotpy_cppheaderparser.egg-info/SOURCES.txt
+robotpy_cppheaderparser.egg-info/dependency_links.txt
+robotpy_cppheaderparser.egg-info/requires.txt
+robotpy_cppheaderparser.egg-info/top_level.txt
