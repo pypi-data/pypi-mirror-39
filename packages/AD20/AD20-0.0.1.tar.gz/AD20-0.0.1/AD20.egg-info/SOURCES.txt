@@ -1,0 +1,13 @@
+README.md
+setup.py
+AD20/ADgraph.py
+AD20/ADmath.py
+AD20/ADnum.py
+AD20/__init__.py
+AD20.egg-info/PKG-INFO
+AD20.egg-info/SOURCES.txt
+AD20.egg-info/dependency_links.txt
+AD20.egg-info/requires.txt
+AD20.egg-info/top_level.txt
+Tests/__init__.py
+Tests/test_AD20.py
