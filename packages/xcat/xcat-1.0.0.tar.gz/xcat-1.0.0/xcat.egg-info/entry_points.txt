@@ -1,0 +1,3 @@
+[console_scripts]
+xcat = xcat.cli:cli
+

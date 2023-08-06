@@ -1,0 +1,8 @@
+xpath-expressions~=1.0
+aiohttp~=3.0
+aiodns
+cchardet
+colorama
+prompt_toolkit
+click
+appdirs
