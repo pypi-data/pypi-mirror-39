@@ -1,0 +1,3 @@
+[console_scripts]
+slugifile = slugifile.cli:main
+
