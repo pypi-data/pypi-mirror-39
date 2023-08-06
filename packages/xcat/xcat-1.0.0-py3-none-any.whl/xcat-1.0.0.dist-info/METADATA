@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: xcat
+Version: 1.0.0
+Summary: A command line tool to automate the exploitation of blind XPath injection vulnerabilities
+Home-page: https://github.com/orf/xcat
+Author: Tom Forbes
+Author-email: tom@tomforb.es
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Requires-Dist: xpath-expressions (~=1.0)
+Requires-Dist: aiohttp (~=3.0)
+Requires-Dist: aiodns
+Requires-Dist: cchardet
+Requires-Dist: colorama
+Requires-Dist: prompt-toolkit
+Requires-Dist: click
+Requires-Dist: appdirs
+
+UNKNOWN
+
+
