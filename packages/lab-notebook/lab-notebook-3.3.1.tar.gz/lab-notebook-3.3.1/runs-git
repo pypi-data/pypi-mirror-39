@@ -1,0 +1,12 @@
+#!/bin/zsh
+positional=($@)
+for i ({0..$#}); do
+  if [[ ${positional[$i][1,1]} != '-' ]]; then
+    j=$i
+  fi
+done
+commit=$(runs lookup commit ${positional[$j]} --porcelain)
+echo $commit
+positional[$j]=$commit
+
+/usr/bin/git $positional
