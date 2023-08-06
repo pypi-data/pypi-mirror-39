@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: fasttextannotator
+Version: 1.0.0
+Summary: A python package that allows the user to annotate corpuses for FastText
+Home-page: https://github.com/dust10141/fasttext-annotator
+Author: Will Sackfield
+Author-email: will.sackfield@gmail.com
+License: MIT
+Description: <img alt="fasttext-annotator" src="fasttext-annotator.png" width="100%" max-width="888">
+        
+        Annotates corpuses for use in FastText over a Command Line Interface.
+        
+        [![CircleCI](https://circleci.com/gh/dust10141/fasttext-annotator.svg?style=svg)](https://circleci.com/gh/dust10141/fasttext-annotator)
+        [![PyPi version](https://pypip.in/v/textnormaliser/badge.png)](https://crate.io/packages/fasttextannotator/)
+        
+        ## Raison D'être :thought_balloon:
+        This allows a large corpus to be annotated easily using a command line interface for purposes of being used in a [FastText](https://fasttext.cc/) supervised classifier.
+        
+        ## Architecture :triangular_ruler:
+        `fasttext-annotator` has a very simple architecture that basically reads each line of the file fed to it, and asks the user for an annotation given the options provided to it via the command line.
+        
+        ## Dependencies :globe_with_meridians:
+        * [prompt](https://pypi.org/project/prompt/)
+        
+        ## Installation :inbox_tray:
+        You can install this via the PyPi package manager, or manually.
+        
+        ### Manually
+        1. Run `python setup.py --install`
+        
+        ### Via Pypi
+        1. Run `pip install fasttextannotator`
+        
+        ## Usage example :eyes:
+        In order to annotate a corpus of text, execute the following:
+        ```bash
+        fasttextannotator [corpus-file] [output-file] [labels...]
+        ```
+        You will then be presented with a line of text from the corpus, and a range of options based on the labels you provided.
+        
+        ## License :memo:
+        The project is available under the [MIT](https://opensource.org/licenses/MIT) license.
+        
+        ## Acknowledgements
+        - Icon in README banner is [text](https://thenounproject.com/search/?q=text&i=377463) by Chameleon Design from the Noun Project.
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
