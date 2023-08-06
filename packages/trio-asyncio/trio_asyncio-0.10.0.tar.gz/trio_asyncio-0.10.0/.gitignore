@@ -1,0 +1,14 @@
+*.swp
+
+/.pytest_cache/
+/.coverage
+/.cache/
+/.eggs/
+/.pybuild/
+/build/
+/docs/build/
+__pycache__/
+/trio_asyncio.egg-info/
+/.pybuild/
+/dist
+/empty

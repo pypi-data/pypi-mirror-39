@@ -1,0 +1,24 @@
+Source: trio-asyncio
+Maintainer: Matthias Urlichs <matthias@urlichs.de>
+Section: python
+Priority: optional
+Build-Depends: dh-python, python3-setuptools, python3-all, debhelper (>= 9),
+  python3-trio (>= 0.5.0),
+  python3-pytest-trio,
+  python3-pytest-runner,
+  python3-outcome,
+Standards-Version: 3.9.6
+Homepage: https://github.com/smurfix/trio-asyncio
+
+Package: python3-trio-asyncio
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends},
+  python3-trio (>= 0.5.0),
+  python3-outcome,
+Description: Re-implementation of the asyncio mainloop on top of Trio
+ trio_asyncio allows you to call asyncio code from within Trio,
+ or vice versa.
+ .
+ While there's a compatibility mode which allows you to use a standard
+ asyncio mainloop, trio-asyncio works best when used with a Trio mainloop.
+ Examples how to convert one to the other are included in the documentation.
