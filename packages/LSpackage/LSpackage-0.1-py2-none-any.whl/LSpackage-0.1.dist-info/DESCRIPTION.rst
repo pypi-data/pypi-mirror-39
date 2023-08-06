@@ -1,0 +1,70 @@
+Local Search - Metaheuristic
+============================
+
+Project GIT address: https://github.com/anduralex/LSpackage.git
+
+This lib implements some algorithms described on the book "Metaheuristics - From Design to Implementation", from El-Ghazali Talbi.
+
+This implementation takes some of the ideas from the SimpleAI implementation. I am testing the majority of the lib, it's available via pip install, has a standard repo and lib architecture, well documented.
+
+At this moment, the implementation includes:
+
+* Search
+    * Local Search algorithms
+
+Installation
+============
+
+Just get it:
+
+.. code-block:: none
+
+    pip install LSpackage
+
+You will need to have pip installed on your system. On linux install the 
+python-pip package.
+
+Examples
+========
+
+LSpackage allows you to define problems and look for the solution with
+different strategies. Another samples are in the ``samples`` directory, but
+here is an easy one.
+
+This problem tries to create the string "HELLO WORLD" using _local_search algorithm:
+
+.. code-block:: python
+
+ from code.models import SearchProblem
+ from code.local import hill_climbing,_local_search,_first_expander
+ GOAL ='HELLO WORLD'
+
+ class HelloProblem(SearchProblem):
+    def actions(self, state):
+        if len(state) < len(GOAL):
+            return list(' ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+        else:
+            return []
+
+    def result(self, state, action):
+        return state+action
+
+    def value(self, state):
+        return sum(1 if state[i] == GOAL[i] else 0
+                   for i in range(min(len(GOAL), len(state))))
+
+  problem = HelloProblem(initial_state='')
+  result = _local_search(problem, _first_expander)
+  print(result.state)
+
+More detailed documentation
+===========================
+
+You can read the book "Metaheuristics - From Design to Implementation", from El-Ghazali Talbi. Or for offline access, you can clone the project code repository and work with it.
+
+Authors
+=======
+
+* Andurnache Alexandru
+
+
