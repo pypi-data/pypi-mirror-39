@@ -1,0 +1,3 @@
+[console_scripts]
+ip2geotools_locator = ip2geotools_locator.cli:main
+
