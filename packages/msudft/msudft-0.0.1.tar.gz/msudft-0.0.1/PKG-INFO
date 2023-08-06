@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: msudft
+Version: 0.0.1
+Summary: Python tools for physics simulations
+Home-page: https://github.com/pypa/msudft
+Author: Seong-Gon Kim
+Author-email: sk162@msstate.edu
+License: UNKNOWN
+Description: # MSUDFT python package
+        
+        Python tools for physics simulations
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

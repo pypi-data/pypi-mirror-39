@@ -1,0 +1,12 @@
+README.md
+setup.py
+msudft/__init__.py
+msudft/convertfmt.py
+msudft/make-slab.py
+msudft.egg-info/PKG-INFO
+msudft.egg-info/SOURCES.txt
+msudft.egg-info/dependency_links.txt
+msudft.egg-info/top_level.txt
+msudft/io/__init__.py
+msudft/io/fileUtil.py
+msudft/io/xcsf.py
