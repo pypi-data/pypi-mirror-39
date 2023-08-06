@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: syllapy
+Version: 0.7.0
+Summary: Calculate syllable counts for English words.
+Home-page: https://github.com/mholtzscher/syllapy
+License: MIT
+Keywords: syllables,nlp
+Author: Michael Holtzscher
+Author-email: mholtz@protonmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: ujson (>=1.35,<2.0)
+Project-URL: Repository, https://github.com/mholtzscher/syllapy
+Description-Content-Type: text/markdown
+
+SyllaPy
+=======
+
+<p>
+  <a href="https://badge.fury.io/py/syllapy"><img src="https://badge.fury.io/py/syllapy.svg" alt="PyPI version"></a>
+  <a href="https://travis-ci.org/mholtzscher/syllapy"><img src="https://travis-ci.org/mholtzscher/syllapy.svg?branch=master" alt="Travis CI"></a>
+  <a href="https://github.com/mholtzscher/syllapy"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Black"></a>
+  <a href="https://codecov.io/gh/mholtzscher/syllapy">
+  <img src="https://codecov.io/gh/mholtzscher/syllapy/branch/master/graph/badge.svg" alt="Codecov"/></a>
+</p>
+
+Calculate syllable counts for English words.
+
+
+Installation
+------------
+
+``` {.sourceCode .python}
+pip install syllapy
+```
+
+Usage
+-----
+
+``` {.sourceCode .python}
+import syllapy
+count = syllapy.count('additional')
+```
+
+
