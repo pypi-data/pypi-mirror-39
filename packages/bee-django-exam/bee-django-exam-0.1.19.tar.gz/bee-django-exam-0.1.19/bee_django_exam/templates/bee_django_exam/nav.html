@@ -1,0 +1,27 @@
+<style>
+    .nav {
+        background-color: #4B6788;
+        height: 40px;
+        color: #ffffff;
+        line-height: 40px;
+        padding: 0 10px;
+    }
+
+    .nav a {
+        color: #ffffff;
+    }
+</style>
+<div class="nav">
+    {% if perms.bee_django_exam.view_all_user_exam_record_list %}
+        <a href="{% url 'bee_django_exam:user_exam_record_list' 0 %}">学生报考管理</a> |
+    {% endif %}
+    {% if perms.bee_django_exam.view_notice_list %}
+        <a href="{% url 'bee_django_exam:notice_list' %}">须知管理</a> |
+    {% endif %}
+    {% if perms.bee_django_exam.view_grade_list %}
+        <a href="{% url 'bee_django_exam:grade_list' %}">级别管理</a> |
+    {% endif %}
+    <a href="{% url 'bee_django_exam:user_exam_record_list' 1 %}">考级记录(test)</a> |
+    <a href="https://www.kancloud.cn/zhangyue/bee_django_exam/520934" target="_blank">使用说明</a> |
+
+</div>
