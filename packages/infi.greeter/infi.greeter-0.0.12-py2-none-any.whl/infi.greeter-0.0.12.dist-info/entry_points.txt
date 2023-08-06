@@ -1,0 +1,7 @@
+[console_scripts]
+greeter = infi.greeter.scripts:greet
+install_greeter = infi.greeter.scripts:install
+
+[gui_scripts]
+
+
