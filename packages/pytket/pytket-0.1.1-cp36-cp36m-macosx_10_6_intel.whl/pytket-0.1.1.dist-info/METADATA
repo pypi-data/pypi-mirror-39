@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pytket
+Version: 0.1.1
+Summary: Python module for interfacing with the CQC t|ket> library of quantum software
+Home-page: https://github.com/CQCL/pytket
+Author: Seyon Sivarajah
+Author-email: seyon.sivarajah@cambridgequantum.com
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.5
+Requires-Dist: qiskit (~=0.7.0)
+Requires-Dist: qiskit-aqua (~=0.4.0)
+Requires-Dist: qiskit-aqua-chemistry (~=0.4.0)
+Requires-Dist: matplotlib (~=2.2)
+Requires-Dist: cirq (<=0.4.0,>=0.3.1.35)
+Requires-Dist: scipy (~=1.1.0)
+Requires-Dist: numpy
+
+[![PyPI version](https://badge.fury.io/py/pytket.svg)](https://badge.fury.io/py/pytket)
+[![Documentation Status](https://readthedocs.org/projects/pytket/badge/?version=latest)](https://pytket.readthedocs.io/en/latest/?badge=latest)
+
+`pytket` is a python module for interfacing with CQC t|ket>, a set of quantum programming tools. We currently support circuits and device architectures from both Google [Cirq](https://www.github.com/quantumlib/cirq) and [Qiskit](https://qiskit.org), allowing the t|ket> tools to be used in conjunction with projects on these platforms.
+
+#### Getting Started
+``pytket`` is available for ``python3.5`` or higher, on Linux and Macos.
+To install, run 
+
+``pip install pytket``
+
+(we recommend using a fresh python environment).
+
+Note, installation from source will not work, you must use pip.
+
+See [examples/cirq_routing_example.ipynb](https://github.com/CQCL/pytket/blob/master/examples/cirq_routing_example.ipynb) for a quick introduction to using `pytket`. 
+
+Documentation of the soure code can be found at [pytket.readthedocs.io](https://pytket.readthedocs.io)
+
