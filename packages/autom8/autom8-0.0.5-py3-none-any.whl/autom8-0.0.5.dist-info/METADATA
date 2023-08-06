@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: autom8
+Version: 0.0.5
+Summary: Python AutoML library
+Home-page: https://github.com/jvs/autom8
+Author: John K. Von Seggern
+Author-email: john@machinate.com
+License: MIT License
+Keywords: machine learning,autoML
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: chardet (>=3.0.4)
+Requires-Dist: numpy (>=1.14.4)
+Requires-Dist: pandas (>=0.23.4)
+Requires-Dist: scikit-learn (>=0.19.1)
+Requires-Dist: scipy (>=1.1.0)
+Provides-Extra: ml
+Requires-Dist: lightgbm (>=2.1.2) ; extra == 'ml'
+Requires-Dist: xgboost (>=0.80) ; extra == 'ml'
+
+
+# autom8
+
+autom8 is an automated machine learning library. It is being developed for
+[machinate.com](https://machinate.com), a machine learning platform for Excel.
+
+This is a work in progress.
+
+
