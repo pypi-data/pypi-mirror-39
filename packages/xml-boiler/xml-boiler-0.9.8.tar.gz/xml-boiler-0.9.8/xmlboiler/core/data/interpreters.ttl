@@ -1,0 +1,98 @@
+@prefix : <http://portonvictor.org/ns/trans/internal/> .
+@prefix int: <http://portonvictor.org/ns/trans/internal/interpreters/> .
+@prefix lang: <http://portonvictor.org/ns/trans/scripts/#> .
+
+# The list of all interpreters in order of precedence (these interpreters which
+# are earlier in the list "win").
+:boiler :interpretersList
+(
+    int:xsltproc
+    int:Saxon
+    int:Python2
+    int:Python3
+    int:nsclean
+    int:format
+    int:XInclude
+    int:HTMLTidy
+    int:Pygments
+) .
+
+# Don't confuse language version and package version.
+# The language version is specified either as with `:langMinVersion` and `:langMaxVersion`.
+# Also possible `:langMaxVersion :fromPackageVersion`.
+# Package versions are specified as `:packageMinVersion` and `:packageMaxVersion`.
+
+int:xsltproc
+    :lang lang:XSLT ;
+    :langMinVersion "1.0" ;
+    :langMaxVersion "1.0" ;
+    :scriptCommand ("xsltproc"
+                    [ :params ("--param" :name :value) ]
+                    :script
+                    "-") ;
+    :executable "xsltproc" ;
+    :debianPackage "xsltproc" .
+
+# We don't support Saxon 6.5.5. Saxon PE and EE are also currently not supported.
+int:Saxon
+    :lang lang:XSLT ;
+    :langMinVersion "1.0" ;
+    :langMaxVersion "2.0" ;
+    :scriptCommand ("saxonb-xslt"
+                    [ :concat ("-xsl:" :script) ]
+                    "-s:-"
+                    [ :params [ :concat (:name "=" :value) ]]) ;
+    :executable "saxonb-xslt" ;
+    :debianPackage "libsaxonb-java" ;
+    :packageMinVersion "9.0" .
+
+int:Python2
+    :lang lang:Python ;
+    :langMinVersion :fromPackageVersion ;
+    :langMaxVersion :fromPackageVersion ;
+    :scriptCommand ("python"
+                    :script) ;
+    :executable "python" ;
+    :debianPackage "python" .
+
+int:Python3
+    :lang lang:Python ;
+    :langMinVersion :fromPackageVersion ;
+    :langMaxVersion :fromPackageVersion ;
+    :scriptCommand ("python3"
+                    :script) ;
+    :executable "python3" ;
+    :debianPackage "python3" .
+
+# It does not remove unused namespaces
+#int:nsclean
+#    :lang lang:nsclean ;
+#    :inlineCommand ("xmllint" "--nsclean" "--nonet" "-") ;
+#    :executable "xmllint" ;
+#    :debianPackage "libxml2-utils" .
+
+int:format
+    :lang lang:format ;
+    :inlineCommand ("xmllint" "--format" "--nonet" "-") ;
+    :executable "xmllint" ;
+    :debianPackage "libxml2-utils" .
+
+int:XInclude
+    :lang lang:XInclude ;
+    :inlineCommand ("xmllint" "--xinclude" "--nonet" "-") ;
+    :executable "xmllint" ;
+    :debianPackage "libxml2-utils" .
+
+int:HTMLTidy
+    :lang lang:HTMLTidy ;
+    :inlineCommand ("tidy" "-q" "-xml" "-asxml") ;
+    :executable "tidy" ;
+    :debianPackage "tidy" .
+
+int:Pygments
+    :lang lang:Syntax ;
+    :inlineCommand ("pygmentize"
+                    "-l" [ :param "lexer" ]
+                    "-f" [ :param "formatter" ]) ;
+    :executable "pygmentize" ;
+    :debianPackage "python-pygments" .
