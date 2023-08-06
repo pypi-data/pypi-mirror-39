@@ -1,0 +1,13 @@
+README.md
+setup.py
+svgling/__init__.py
+svgling/__main__.py
+svgling/core.py
+svgling/figure.py
+svgling/html.py
+svgling/semantics.py
+svgling.egg-info/PKG-INFO
+svgling.egg-info/SOURCES.txt
+svgling.egg-info/dependency_links.txt
+svgling.egg-info/requires.txt
+svgling.egg-info/top_level.txt
