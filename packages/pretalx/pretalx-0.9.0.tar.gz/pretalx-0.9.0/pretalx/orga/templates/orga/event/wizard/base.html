@@ -1,0 +1,29 @@
+{% extends "orga/base.html" %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+<form method="post"><fieldset>
+    <legend>
+        <span>
+            {% trans "New event" %}
+            <span class="text-muted small">{% blocktrans with total=wizard.steps.count current=wizard.steps.step1 trimmed %}
+                Step {{current}} of {{ total }}
+            {% endblocktrans %}</span>
+        </span>
+    </legend>
+    {{ wizard.form.media }}
+    {% block wizard_content %}{% endblock %}
+        {% csrf_token %}
+        {{ wizard.management_form }}
+        {% bootstrap_form wizard.form layout='event' %}
+    <div class="submit-group wizard-row">
+        <button type="submit" class="btn btn-success btn-lg float-right ml-auto">{% trans "Next step" %}</button>
+        {% if wizard.steps.prev %}
+        <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}" class="btn btn-lg btn-info">{% trans "Previous step" %}</button>
+        {% else %}
+        <span></span>
+        {% endif %}
+    </div>
+</fieldset></form>
+{% endblock %}

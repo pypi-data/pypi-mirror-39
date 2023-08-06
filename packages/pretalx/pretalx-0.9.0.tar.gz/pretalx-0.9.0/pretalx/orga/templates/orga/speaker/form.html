@@ -1,0 +1,69 @@
+{% extends "orga/cfp/base.html" %}
+{% load bootstrap4 %}
+{% load i18n %}
+{% load rules %}
+{% load static %}
+
+{% block content %}
+{% has_perm 'orga.change_speaker' request.user form.instance as can_edit_speaker %}
+    <h2>
+        {{ form.instance.user.get_display_name }} ({{ submission_count }}
+        {% blocktrans trimmed count count=submission_count %}
+        submission
+        {% plural %}
+        submissions
+        {% endblocktrans %})
+    </h2>
+    <div class="alert alert-info col-md-9 ml-auto">
+        <span>
+        <h5>{% if submission_count > 1 %}{% trans "Submissions" %}{% else %}{% trans "Submission" %}{% endif %}</h5>
+        <ul>
+            {% for submission in submissions %}
+            <li>
+                <a href="{{ submission.orga_urls.base }}">
+                    {{ submission.title }}
+                    ({% include "cfp/event/fragment_state.html" with state=submission.state %})
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        </span>
+    </div>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% bootstrap_form_errors form %}
+        <div class="speaker-info avatar-form">
+            <div class="col-md-3 col-form-label">
+                <img
+                  class="avatar float-right"
+                  data-gravatar="{{ form.instance.user.gravatar_parameter }}"
+                  data-avatar="{% if form.instance.user.avatar %}{{ form.instance.user.avatar.url }}{% endif %}"
+                  alt="{% trans "The speaker's profile picture" %}"
+                  {% if form.instance.user.get_gravatar %}
+                  src="https://www.gravatar.com/avatar/{{ form.instance.user.gravatar_parameter }}"
+                  {% elif form.instance.user.avatar and form.instance.user.avatar != 'False' %}
+                  src="{{ form.instance.user.avatar.url }}"
+                  {% endif %}
+                />
+            </div>
+            <div class="avatar-form-fields col-md-9">
+                {% bootstrap_field form.get_gravatar layout='event-inline' %}
+                <div class="user-avatar-display">
+                    {% bootstrap_field form.avatar layout='inline' %}
+                </div>
+            </div>
+        </div>
+        {% bootstrap_field form.name layout='event' %}
+        {% bootstrap_field form.email layout='event' %}
+        <div class="d-flex mb-4">
+            <a href="{{ form.instance.orga_urls.password_reset }}" class="btn btn-info ml-auto">{% trans "Reset password" %}</a>
+        </div>
+        {% if form.biography %}{% bootstrap_field form.biography layout='event' %}{% endif %}
+        {% if form.availabilities %}{% bootstrap_field form.availabilities layout='event' %}{% endif %}
+        {% bootstrap_form questions_form layout='event' %}
+    {% include "orga/submit_row.html" %}
+    </form>
+
+
+    <script src="{% static "cfp/js/profile.js" %}"></script>
+{% endblock %}

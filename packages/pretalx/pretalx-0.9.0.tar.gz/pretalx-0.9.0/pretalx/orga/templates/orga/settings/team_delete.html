@@ -1,0 +1,21 @@
+{% extends "orga/settings/base.html" %}
+{% load i18n %}
+
+{% block settings_content %}
+<div>
+    <h2>
+        {% trans "Team" %} »{{ team.name }}«
+    </h2>
+
+    {% trans "Do you really want to go through with this deletion?" %} <em>{{ object.email }}</em>
+<div class="submit-group panel">
+    <span></span>
+    <span>
+    <form class="float-right" method="post">{% csrf_token %}
+        <a class="btn btn-info btn-lg" href={% if request.event %}{{ request.event.orga_urls.team_settings }}{% else %}{{ request.organiser.orga_urls.teams }}{% endif %}>{% trans "Back" %}</a>
+        <button class="btn btn-danger btn-lg" type="submit">{% trans "Yes" %}</button>
+    </form>
+    </span>
+</div>
+</div>
+{% endblock %}

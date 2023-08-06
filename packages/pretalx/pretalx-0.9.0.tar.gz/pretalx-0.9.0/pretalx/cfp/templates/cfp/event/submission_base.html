@@ -1,0 +1,44 @@
+{% extends "cfp/event/base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Create submission" %} :: {{ request.event.name }}{% endblock %}
+
+{% block content %}
+    <div id="submission-steps" class="stages">
+        {% for stp in step_list %}
+        <a {% if stp.phase == 'done' %}href="{{ stp.url }}"{% endif %} class="step step-{{ stp.phase }}">
+            <div class="step-icon">
+                <span class="fa {% if stp.phase == 'done' %}fa-check{% elif stp.icon %}fa-{{ stp.icon }}{% else %}fa-pencil{% endif %}"></span>
+            </div>
+            <div class="step-label">
+                {{ stp.label }}
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ wizard.management_form }}
+        {% block inner %}
+        {% endblock %}
+        <div class="row wizard-row">
+            <div class="col-md-3 ml-auto">
+                <button type="submit" class="btn btn-block btn-success btn-lg">
+                    {% if wizard.steps.next %}
+                        {% trans "Continue" %} &raquo;
+                    {% else %}
+                        {% trans "Submit" %} &raquo;
+                    {% endif %}
+                </button>
+            </div>
+            <div class="col-md-3">
+                {% if wizard.steps.prev %}
+                    <button type="submit" class="btn btn-block btn-info btn-lg"
+                            value="{{ wizard.steps.prev }}" name="wizard_goto_step">
+                        &laquo; {% trans "Back" %}
+                    </button>
+                {% endif %}
+            </div>
+        </div>
+    </form>
+{% endblock %}

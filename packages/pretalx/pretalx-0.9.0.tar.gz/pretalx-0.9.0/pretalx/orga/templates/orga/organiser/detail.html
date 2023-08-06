@@ -1,0 +1,52 @@
+{% extends "orga/base.html" %}
+{% load bootstrap4 %}
+{% load i18n %}
+{% load rules %}
+
+{% block title %}{% if request.event %}{{ request.event.name }}{% else %}{{ request.organiser.name }}{% endif %}{% endblock %}
+
+{% block content %}
+<form method="post"><fieldset>
+    <legend>{% trans "Settings" %}</legend>
+    {% csrf_token %}
+    {% bootstrap_form form layout='event' %}
+    <div class="submit-group panel">
+        <span>
+            {% has_perm "person.is_administrator" request.user request.organiser as can_delete_event %}
+            {% if can_delete_event %}
+            <a class="btn btn-outline-danger btn-lg" href="{{ request.organiser.orga_urls.delete }}">
+                {% trans "Delete organiser" %}
+            </a>
+            {% endif %}
+        </span>
+        <span>
+            <button type="submit" class="btn btn-success btn-lg">
+                <i class="fa fa-check"></i>
+                {% trans "Save" %}
+            </button>
+        </span>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend>{% trans "Teams" %}</legend>
+    <div class="dashboard-list">
+        {% for team in request.organiser.teams.all %}
+            <a href="{% url "orga:organiser.teams.view" organiser=request.organiser.slug pk=team.pk %}" class="dashboard-block">
+                <h1>{{ team.name }}</h1>
+                <span class="dashboard-description">
+                    {% blocktrans trimmed count count=team.members.count %}
+                        {{ count}} member
+                        {% plural %}
+                        {{ count}} members
+                    {% endblocktrans %}
+                </span>
+            </a>
+        {% endfor %}
+        <a href="{{ request.organiser.orga_urls.new_team }}" class="dashboard-block">
+            <h1><i class="fa fa-plus"></i> {% trans "New team" %}</h1>
+        </a>
+    </div>
+</fieldset>
+</form>
+{% endblock %}

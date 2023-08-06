@@ -1,0 +1,7 @@
+data/
+*.sqlite
+.cache
+static.dist/
+build/
+*.egg-info/
+*.bak
