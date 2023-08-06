@@ -1,0 +1,12 @@
+fold_to_ascii/__init__.py,sha256=EI5b29zPw7MpD65lOXMATvZ7tSMhjCqt4rL6_koQo3M,37
+fold_to_ascii/core.py,sha256=lTAWm4yjD2t3N31BgndlliYkezgaQb9wy0jx7iJVTK8,1291
+fold_to_ascii/mapping.py,sha256=S8UMyb4eGB1AWoyPu0IAJ8dglboCnUIUtN-weQZqVWE,26996
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/context.py,sha256=rXmqLeQsPOfCZLXhgkdpcXmFvLbLwAIe671DlEd7Ors,168
+tests/test_basic.py,sha256=uqZt2kfhQrGCykhwj32IO5K4yRHbzjuuh8m6Gdlch-M,1348
+tests/test_comprehensive.py,sha256=W96NnpH8lazHMm7cIV0L1jrmLOpEbRm6Kwigv7nuW4o,184236
+fold_to_ascii-1.0.1.dist-info/LICENSE,sha256=bZRaI5fIOAqzEmg18j2gy2VWfM6PdBFyqCgFF-16-H8,1068
+fold_to_ascii-1.0.1.dist-info/METADATA,sha256=KBzrHPzIBvcF4QbG277UEs-6caIhSWInqAk4tdzhDI8,3085
+fold_to_ascii-1.0.1.dist-info/WHEEL,sha256=oAVPkyAEF4ax3tnqlvKYGy8JOdoAihZXbcM6C6xJNOI,92
+fold_to_ascii-1.0.1.dist-info/top_level.txt,sha256=fB5R6yquv252subMo4yhCDYfW5cbPungM-zsCTDh8A0,20
+fold_to_ascii-1.0.1.dist-info/RECORD,,
