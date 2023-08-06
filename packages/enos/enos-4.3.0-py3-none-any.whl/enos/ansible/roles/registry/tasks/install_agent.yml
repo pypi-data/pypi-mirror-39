@@ -1,0 +1,16 @@
+- name: Installing dependencies
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items:
+    - apt-transport-https
+    - ca-certificates
+
+- name: Installing docker
+  shell: (curl -sSL https://get.docker.com/ | sh)
+
+- name: Installing dependencies
+  apt: name={{ item }} state=present update_cache=yes
+  with_items:
+    - curl
