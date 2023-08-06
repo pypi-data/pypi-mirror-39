@@ -1,0 +1,6 @@
+wagtail>=2.0
+
+[dev]
+pylint-django
+sphinx
+twine
