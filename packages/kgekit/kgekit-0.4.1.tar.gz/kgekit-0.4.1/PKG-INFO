@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: kgekit
+Version: 0.4.1
+Summary: knowledge representation tools
+Home-page: http://github.com/fantasticfears/kgekit
+Author: Erick Guan
+Author-email: fantasticfears@gmail.com
+License: GPLv2
+Description: Knowledge Embedding Kit
+        ===
+        
+        [![PyPI version fury.io](https://badge.fury.io/py/kgekit.svg)](https://pypi.python.org/project/kgekit/)
+        [![PyPI license](https://img.shields.io/pypi/l/kgekit.svg)](https://pypi.python.org/project/kgekit/)
+        [![Build Status](https://travis-ci.com/fantasticfears/kgekit.svg?branch=master)](https://travis-ci.com/fantasticfears/kgekit)
+        
+        This library provides helpful functions and sampling for KGE learning.
+        The data processing part is strictly research-oriented.
+        
+        Requirements:
+        
+        - C++17 compilers
+        
+        # Features
+        
+        - Eficient data representation in C++ and interoperability in Python by pybind11.
+        - Triple data IO, processing and extraction.
+        - Various sampling methods.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
