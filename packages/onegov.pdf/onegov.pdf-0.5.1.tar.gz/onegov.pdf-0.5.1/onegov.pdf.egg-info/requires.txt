@@ -1,0 +1,15 @@
+bleach
+lxml
+html5lib
+onegov.core>=0.4.0
+pdfdocument
+pdfrw
+reportlab
+svglib>=0.9.0
+
+[test]
+coverage
+onegov_testing
+pytest
+PyPDF2
+lxml
