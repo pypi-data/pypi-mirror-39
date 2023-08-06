@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: django-bleach
+Version: 0.4.0
+Summary: Easily use bleach with Django models and templates
+Home-page: https://bitbucket.org/marksweb/django-bleach
+Author: Mark Walker
+Author-email: theshow@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Django
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Dist: bleach
+Requires-Dist: Django (>=1.8)
+
+UNKNOWN
+
+
