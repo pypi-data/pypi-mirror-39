@@ -1,0 +1,483 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>candyshop.bundle &#8212; Candyshop 0.1.4 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for candyshop.bundle</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1">#</span>
+<span class="c1">#   This file is part of Candyshop</span>
+<span class="c1">#   Copyright (C) 2016, Candyshop Developers</span>
+<span class="c1">#   All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1">#   Please refer to AUTHORS.md for a complete list of Copyright</span>
+<span class="c1">#   holders.</span>
+<span class="c1">#</span>
+<span class="c1">#   Candyshop is free software: you can redistribute it and/or modify</span>
+<span class="c1">#   it under the terms of the GNU Affero General Public License as published</span>
+<span class="c1">#   by the Free Software Foundation, either version 3 of the License, or</span>
+<span class="c1">#   (at your option) any later version.</span>
+<span class="c1">#</span>
+<span class="c1">#   Candyshop is distributed in the hope that it will be useful,</span>
+<span class="c1">#   but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="c1">#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="c1">#   GNU Affero General Public License for more details.</span>
+<span class="c1">#</span>
+<span class="c1">#   You should have received a copy of the GNU Affero General Public License</span>
+<span class="c1">#   along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">``candyshop.bundle`` is a module for representing Odoo Modules.</span>
+
+<span class="sd">This module contains abstraction classes to represent a ``Module`` or a</span>
+<span class="sd">``Bundle`` (a group of modules). These classes are *read-only*. For now,</span>
+<span class="sd">you cannot create or modify Bundles or Modules through these abstractions.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">print_function</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">ast</span> <span class="k">import</span> <span class="n">literal_eval</span>
+
+<span class="kn">from</span> <span class="nn">lxml</span> <span class="k">import</span> <span class="n">etree</span>
+
+<span class="kn">from</span> <span class="nn">.utils</span> <span class="k">import</span> <span class="n">find_files</span><span class="p">,</span> <span class="n">ModuleProperties</span><span class="p">,</span> <span class="n">strip_comments_and_blanks</span>
+
+<span class="n">MANIFEST_FILES</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;__odoo__.py&#39;</span><span class="p">,</span> <span class="s1">&#39;__openerp__.py&#39;</span><span class="p">,</span> <span class="s1">&#39;__terp__.py&#39;</span><span class="p">]</span>
+<span class="n">DEFAULT_OCA_USER</span> <span class="o">=</span> <span class="s1">&#39;OCA&#39;</span>
+<span class="n">DEFAULT_OCA_BRANCH</span> <span class="o">=</span> <span class="s1">&#39;8.0&#39;</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">3</span><span class="p">,):</span>
+    <span class="n">basestring</span> <span class="o">=</span> <span class="nb">str</span>
+
+
+<div class="viewcode-block" id="Module"><a class="viewcode-back" href="../../api.html#candyshop.bundle.Module">[docs]</a><span class="k">class</span> <span class="nc">Module</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class represents an Odoo Module.</span>
+
+<span class="sd">    An Odoo module is a method to extend the Odoo codebase, adding or</span>
+<span class="sd">    customizing functionalities. It is declared through its manifest file,</span>
+<span class="sd">    and often contains other data files.</span>
+
+<span class="sd">    For more information, please refer to official documentation.</span>
+
+<span class="sd">    `Modules &lt;https://www.odoo.com/documentation/8.0/howtos/backend.html&gt;`_.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Module.__init__"><a class="viewcode-back" href="../../api.html#candyshop.bundle.Module.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">bundle</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the ``Module`` instance.</span>
+
+<span class="sd">        :param path: a path pointing to the root directory of an Odoo Module.</span>
+<span class="sd">        :param bundle: a ``Bundle`` instance (indicating this module is part of</span>
+<span class="sd">                       such bundle), or ``None`` (indicating that is a</span>
+<span class="sd">                       standalone module).</span>
+<span class="sd">        :return: a ``Module`` instance.</span>
+
+<span class="sd">        .. versionadded:: 0.1.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> \
+            <span class="s1">&#39;</span><span class="si">{0}</span><span class="s1"> is not a directory or does not exist.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">bundle</span><span class="p">,</span> <span class="n">Bundle</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">bundle</span><span class="p">),</span> \
+            <span class="s1">&#39;Wrong bundle type.&#39;</span>
+
+        <span class="c1">#: Attribute ``Module.bundle`` (``Bundle`` or ``None``): Holds the</span>
+        <span class="c1">#: information regarding the bundle to which this Module belongs.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bundle</span> <span class="o">=</span> <span class="n">bundle</span>
+
+        <span class="c1">#: Attribute ``Module.path`` (string): Refers to the absolute path</span>
+        <span class="c1">#: of the root directory that contains the module.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="c1">#: Attribute ``Module.manifest`` (string): Refers to the absolute path</span>
+        <span class="c1">#: to the manifest file of the module (``__openerp__.py``,</span>
+        <span class="c1">#: ``__odoo__.py`` or ``__terp__.py``).</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">manifest</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__get_manifest</span><span class="p">()</span>
+
+        <span class="c1">#: Object ``Module.properties`` (``ModuleProperties``): Placeholder</span>
+        <span class="c1">#: for the module&#39;s properties. Access the module&#39;s properties as</span>
+        <span class="c1">#: attributes of this object.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">properties</span> <span class="o">=</span> <span class="n">ModuleProperties</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__extract_properties</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">slug</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">__is_python_package</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Private method to determine if a module is a python package.</span>
+
+<span class="sd">        .. versionadded:: 0.1.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">find_files</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;__init__.py&#39;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">__get_manifest</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Private method to find the manifest file within the module.</span>
+
+<span class="sd">        .. versionadded:: 0.1.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">__is_python_package</span><span class="p">(),</span> \
+            <span class="s1">&#39;The module is not a python package.&#39;</span>
+        <span class="k">for</span> <span class="n">mfst</span> <span class="ow">in</span> <span class="n">MANIFEST_FILES</span><span class="p">:</span>
+            <span class="n">found</span> <span class="o">=</span> <span class="n">find_files</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">mfst</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">found</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">return</span> <span class="n">found</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">__extract_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Private method to extract information of the module&#39;s manifest file.</span>
+
+<span class="sd">        .. versionadded:: 0.1.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">manifest</span><span class="p">,</span> \
+            <span class="s1">&#39;The specified path does not contain a manifest file.&#39;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">manifest</span><span class="p">)</span> <span class="k">as</span> <span class="n">properties</span><span class="p">:</span>
+                <span class="n">props</span> <span class="o">=</span> <span class="n">literal_eval</span><span class="p">(</span><span class="n">properties</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+        <span class="k">except</span> <span class="ne">BaseException</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">IOError</span><span class="p">((</span><span class="s1">&#39;An error ocurred while &#39;</span>
+                           <span class="s1">&#39;reading </span><span class="si">{0}</span><span class="s1">.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">manifest</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">props</span>
+
+    <span class="k">def</span> <span class="nf">__xmlfile_isfrom_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xmlfile</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Private method to determine if a module contains an XML file.</span>
+
+<span class="sd">        .. versionadded:: 0.1.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span> <span class="ow">and</span>
+                <span class="n">xmlfile</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">/&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+                <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Module.parse_xml_fromfile"><a class="viewcode-back" href="../../api.html#candyshop.bundle.Module.parse_xml_fromfile">[docs]</a>    <span class="k">def</span> <span class="nf">parse_xml_fromfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xmlfile</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get XML parsed from an input file.</span>
+
+<span class="sd">        :param xmlfile: (string) a path pointing to an XML file.</span>
+<span class="sd">        :return: Parsed document (``lxml.etree`` object). If there is</span>
+<span class="sd">                 a syntax error return string error message.</span>
+
+<span class="sd">        .. versionadded:: 0.1.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">__xmlfile_isfrom_module</span><span class="p">(</span><span class="n">xmlfile</span><span class="p">),</span> \
+            <span class="s1">&#39;The file </span><span class="si">{0}</span><span class="s1"> does not belong to this module.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">xmlfile</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">doc</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">xmlfile</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">etree</span><span class="o">.</span><span class="n">XMLSyntaxError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">e</span><span class="o">.</span><span class="n">message</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">doc</span></div>
+
+<div class="viewcode-block" id="Module.get_records_fromfile"><a class="viewcode-back" href="../../api.html#candyshop.bundle.Module.get_records_fromfile">[docs]</a>    <span class="k">def</span> <span class="nf">get_records_fromfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xmlfile</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get ``record`` tags of an Odoo XML file.</span>
+
+<span class="sd">        :param xmlfile: (string) a path pointing to an XML file.</span>
+<span class="sd">        :param model: (string or None) a record model to filter.</span>
+<span class="sd">                      If model is None (default) then get all records.</span>
+<span class="sd">        :return: a list of lxml ``record`` nodes. If there</span>
+<span class="sd">                 is a syntax error return [].</span>
+
+<span class="sd">        .. versionadded:: 0.1.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model_filter</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">model</span><span class="p">:</span>
+            <span class="n">model_filter</span> <span class="o">=</span> <span class="s1">&#39;[@model=&quot;</span><span class="si">{model}</span><span class="s1">&quot;]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">)</span>
+        <span class="n">doc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_xml_fromfile</span><span class="p">(</span><span class="n">xmlfile</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">basestring</span><span class="p">):</span>
+            <span class="k">return</span> <span class="p">[]</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;/openerp//record&#39;</span> <span class="o">+</span> <span class="n">model_filter</span><span class="p">)</span> <span class="o">+</span>
+                <span class="n">doc</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;/odoo//record&#39;</span> <span class="o">+</span> <span class="n">model_filter</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Module.get_record_ids_fromfile"><a class="viewcode-back" href="../../api.html#candyshop.bundle.Module.get_record_ids_fromfile">[docs]</a>    <span class="k">def</span> <span class="nf">get_record_ids_fromfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xmlfile</span><span class="p">,</span> <span class="n">module</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get ids from `record` tags of an Odoo XML file.</span>
+
+<span class="sd">        :param xmlfile: (string) a path pointing to the XML file.</span>
+<span class="sd">        :param module: (string or None) a record module to filter.</span>
+<span class="sd">                       If module is None (default) then get all modules.</span>
+<span class="sd">        :return: a generator that produces an iterable of strings</span>
+<span class="sd">                 with all ``[MODULE].[ID]`` found.</span>
+
+<span class="sd">        .. versionadded:: 0.1.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_records_fromfile</span><span class="p">(</span><span class="n">xmlfile</span><span class="p">):</span>
+            <span class="n">rid</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">rid</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">rid</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">xml_module</span><span class="p">,</span> <span class="n">xml_id</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">slug</span><span class="p">,</span> <span class="n">rid</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">xml_module</span><span class="p">,</span> <span class="n">xml_id</span> <span class="o">=</span> <span class="n">rid</span>
+            <span class="k">if</span> <span class="n">module</span> <span class="ow">and</span> <span class="n">xml_module</span> <span class="o">!=</span> <span class="n">module</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">noupdate</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">getparent</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;noupdate&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span>
+            <span class="k">yield</span> <span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">.</span><span class="si">{1}</span><span class="s1">.noupdate=</span><span class="si">{2}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">xml_module</span><span class="p">,</span> <span class="n">xml_id</span><span class="p">,</span> <span class="n">noupdate</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Module.get_record_ids"><a class="viewcode-back" href="../../api.html#candyshop.bundle.Module.get_record_ids">[docs]</a>    <span class="k">def</span> <span class="nf">get_record_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get all record ids contained in all of the module&#39;s XML files.</span>
+
+<span class="sd">        :return: a generator that returns an iterable of dictionaries</span>
+<span class="sd">                 containing a list of record ids referenced in each</span>
+<span class="sd">                 XML file, like this one::</span>
+
+<span class="sd">                     [</span>
+<span class="sd">                        {&#39;path/file1.xml&#39;: [&#39;module_a.id_a.noupdate=0&#39;]},</span>
+<span class="sd">                        {&#39;path/file2.xml&#39;: [&#39;module_b.id_b.noupdate=0&#39;]}</span>
+<span class="sd">                     ]</span>
+
+<span class="sd">        .. versionadded:: 0.1.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">):</span>
+            <span class="k">return</span>
+            <span class="k">yield</span>
+        <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+            <span class="n">datafile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">datafile</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">!=</span> <span class="s1">&#39;.xml&#39;</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">yield</span> <span class="p">{</span><span class="n">data</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_record_ids_fromfile</span><span class="p">(</span><span class="n">datafile</span><span class="p">)}</span></div>
+
+<div class="viewcode-block" id="Module.get_record_ids_module_references"><a class="viewcode-back" href="../../api.html#candyshop.bundle.Module.get_record_ids_module_references">[docs]</a>    <span class="k">def</span> <span class="nf">get_record_ids_module_references</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get all modules referenced in Odoo XML files.</span>
+
+<span class="sd">        :return: a generator that returns an iterable of dictionaries</span>
+<span class="sd">                 containing a list of modules referenced in each</span>
+<span class="sd">                 XML file, like this one::</span>
+
+<span class="sd">                     [</span>
+<span class="sd">                        {&#39;path/file1.xml&#39;: [&#39;module_a&#39;, &#39;module_b&#39;]},</span>
+<span class="sd">                        {&#39;path/file2.xml&#39;: [&#39;module_c&#39;]}</span>
+<span class="sd">                     ]</span>
+
+<span class="sd">        .. versionadded:: 0.1.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">xmldict</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_record_ids</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">data</span><span class="p">,</span> <span class="n">ids</span> <span class="ow">in</span> <span class="n">xmldict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">record_ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ids</span><span class="p">]</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">record_ids</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="k">yield</span> <span class="p">{</span><span class="n">data</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">record_ids</span><span class="p">))}</span></div></div>
+
+
+<div class="viewcode-block" id="Bundle"><a class="viewcode-back" href="../../api.html#candyshop.bundle.Bundle">[docs]</a><span class="k">class</span> <span class="nc">Bundle</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class represents a group of modules or ``Bundle``.</span>
+
+<span class="sd">    Also referred as ``Addons``, a group of modules is simply a folder where</span>
+<span class="sd">    you can put modules. Optionally, it can have a ``oca_dependencies.txt``</span>
+<span class="sd">    file (located at the root folder), where you can specify other git</span>
+<span class="sd">    repositories needed for the correct operation of some of the modules</span>
+<span class="sd">    included in the ``Bundle``.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Bundle.__init__"><a class="viewcode-back" href="../../api.html#candyshop.bundle.Bundle.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">exclude_tests</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize a ``Bundle`` instance.</span>
+
+<span class="sd">        :param path: (string) a path pointing to the root directory containing</span>
+<span class="sd">                     Odoo Modules.</span>
+<span class="sd">        :param exclude_tests: (boolean) ``True`` (default) to exclude modules</span>
+<span class="sd">                              that are inside a ``tests`` folder. ``False`` to</span>
+<span class="sd">                              include such modules.</span>
+<span class="sd">        :return: a ``Bundle`` instance.</span>
+
+<span class="sd">        .. versionadded:: 0.1.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> \
+            <span class="s1">&#39;</span><span class="si">{0}</span><span class="s1"> is not a directory or does not exist.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="c1">#: Attribute ``Bundle.path`` (string): Refers to the absolute path</span>
+        <span class="c1">#: of the root directory that contains the bundle.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="c1">#: Attribute ``Bundle.exclude_tests`` (boolean): True if modules</span>
+        <span class="c1">#: inside a ``tests`` folder will be excluded. False otherwise.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exclude_tests</span> <span class="o">=</span> <span class="n">exclude_tests</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1">#: Attribute ``Bundle.modules`` (list): A list containing</span>
+            <span class="c1">#: instances of ``Module`` for each module inside the bundle.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">modules</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__get_modules</span><span class="p">())</span>
+        <span class="k">except</span> <span class="ne">BaseException</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The specified path contains broken Odoo Modules.&#39;</span><span class="p">)</span>
+            <span class="k">raise</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">modules</span><span class="p">,</span> \
+                <span class="s1">&#39;The specified path does not contain valid Odoo modules.&#39;</span>
+
+            <span class="c1">#: Attribute ``Bundle.name`` (string): The name of the bundle.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+
+            <span class="c1">#: Attribute ``Bundle.oca_dependencies`` (dict): A dictionary</span>
+            <span class="c1">#: containing key-values of the names and repositories of</span>
+            <span class="c1">#: OCA dependencies.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">oca_dependencies</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__parse_oca_dependencies</span><span class="p">())</span></div>
+
+    <span class="k">def</span> <span class="nf">__get_modules</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Private method to find and instance all valid modules inside a bundle.</span>
+
+<span class="sd">        .. versionadded:: 0.1.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">mfst</span> <span class="ow">in</span> <span class="n">MANIFEST_FILES</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">mods</span> <span class="ow">in</span> <span class="n">find_files</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">mfst</span><span class="p">):</span>
+                <span class="k">if</span> <span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">exclude_tests</span> <span class="ow">and</span>
+                     <span class="s1">&#39;tests&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mods</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">))</span> <span class="ow">or</span>
+                   <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">exclude_tests</span><span class="p">):</span>
+                    <span class="k">yield</span> <span class="n">Module</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">mods</span><span class="p">),</span> <span class="n">bundle</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__get_oca_dependencies_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Private method to find (if any) the oca_dependencies.txt file.</span>
+
+<span class="sd">        .. versionadded:: 0.1.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">oca_dependencies_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;oca_dependencies.txt&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">oca_dependencies_file</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">oca_dependencies_file</span> <span class="o">=</span> <span class="n">oca_dependencies_file</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">__parse_oca_dependencies</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Private method to parse (if any) the oca_dependencies.txt file.</span>
+
+<span class="sd">        .. versionadded:: 0.1.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">__get_oca_dependencies_file</span><span class="p">():</span>
+            <span class="k">return</span>
+            <span class="k">yield</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">oca_dependencies_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">oca</span> <span class="o">=</span> <span class="n">strip_comments_and_blanks</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+        <span class="k">for</span> <span class="n">dep</span> <span class="ow">in</span> <span class="p">[</span><span class="n">o</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">oca</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)]:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dep</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">dep</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;https://github.com/</span><span class="si">{0}</span><span class="s1">/</span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">DEFAULT_OCA_USER</span><span class="p">,</span> <span class="n">dep</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dep</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">dep</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">DEFAULT_OCA_BRANCH</span><span class="p">)</span>
+            <span class="k">yield</span> <span class="n">dep</span></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">Candyshop is a helper to determine if all your dependencies are declared properly.</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=LuisAlejandro&repo=candyshop&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+    
+
+<p>
+<a class="badge" href="https://travis-ci.org/LuisAlejandro/candyshop">
+    <img
+        alt="https://secure.travis-ci.org/LuisAlejandro/candyshop.svg?branch=master"
+        src="https://secure.travis-ci.org/LuisAlejandro/candyshop.svg?branch=master"
+    />
+</a>
+</p>
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage.html">Use cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">Internal API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Changelog</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Candyshop Developers.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

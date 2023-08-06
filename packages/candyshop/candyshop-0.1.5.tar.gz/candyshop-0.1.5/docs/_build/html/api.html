@@ -1,0 +1,631 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Internal API &#8212; Candyshop 0.1.4 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contributing" href="contributing.html" />
+    <link rel="prev" title="Use cases" href="usage.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="internal-api">
+<h1>Internal API<a class="headerlink" href="#internal-api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-candyshop">
+<span id="candyshop-package"></span><h2>candyshop package<a class="headerlink" href="#module-candyshop" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">candyshop</span></code> is just pure art.</p>
+<p>Candyshop is a package that serves as a processor of the information
+contained in Odoo Modules. It’s primarily aimed at making reports of missing
+dependencies in an Odoo Environment.</p>
+<p>It has abstractions that represent Odoo Modules and virtual Odoo Enviroments,
+as well as functions to resolve dependency trees.</p>
+</div>
+<div class="section" id="module-candyshop.bundle">
+<span id="candyshop-bundle-submodule"></span><h2>candyshop.bundle submodule<a class="headerlink" href="#module-candyshop.bundle" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">candyshop.bundle</span></code> is a module for representing Odoo Modules.</p>
+<p>This module contains abstraction classes to represent a <code class="docutils literal notranslate"><span class="pre">Module</span></code> or a
+<code class="docutils literal notranslate"><span class="pre">Bundle</span></code> (a group of modules). These classes are <em>read-only</em>. For now,
+you cannot create or modify Bundles or Modules through these abstractions.</p>
+<dl class="class">
+<dt id="candyshop.bundle.Bundle">
+<em class="property">class </em><code class="descclassname">candyshop.bundle.</code><code class="descname">Bundle</code><span class="sig-paren">(</span><em>path=None</em>, <em>exclude_tests=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/candyshop/bundle.html#Bundle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#candyshop.bundle.Bundle" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents a group of modules or <code class="docutils literal notranslate"><span class="pre">Bundle</span></code>.</p>
+<p>Also referred as <code class="docutils literal notranslate"><span class="pre">Addons</span></code>, a group of modules is simply a folder where
+you can put modules. Optionally, it can have a <code class="docutils literal notranslate"><span class="pre">oca_dependencies.txt</span></code>
+file (located at the root folder), where you can specify other git
+repositories needed for the correct operation of some of the modules
+included in the <code class="docutils literal notranslate"><span class="pre">Bundle</span></code>.</p>
+<dl class="method">
+<dt id="candyshop.bundle.Bundle._Bundle__get_modules">
+<code class="descname">_Bundle__get_modules</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#candyshop.bundle.Bundle._Bundle__get_modules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Private method to find and instance all valid modules inside a bundle.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="candyshop.bundle.Bundle._Bundle__get_oca_dependencies_file">
+<code class="descname">_Bundle__get_oca_dependencies_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#candyshop.bundle.Bundle._Bundle__get_oca_dependencies_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Private method to find (if any) the oca_dependencies.txt file.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="candyshop.bundle.Bundle._Bundle__parse_oca_dependencies">
+<code class="descname">_Bundle__parse_oca_dependencies</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#candyshop.bundle.Bundle._Bundle__parse_oca_dependencies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Private method to parse (if any) the oca_dependencies.txt file.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="candyshop.bundle.Bundle.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>path=None</em>, <em>exclude_tests=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/candyshop/bundle.html#Bundle.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#candyshop.bundle.Bundle.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize a <code class="docutils literal notranslate"><span class="pre">Bundle</span></code> instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>path</strong> – (string) a path pointing to the root directory containing
+Odoo Modules.</li>
+<li><strong>exclude_tests</strong> – (boolean) <code class="docutils literal notranslate"><span class="pre">True</span></code> (default) to exclude modules
+that are inside a <code class="docutils literal notranslate"><span class="pre">tests</span></code> folder. <code class="docutils literal notranslate"><span class="pre">False</span></code> to
+include such modules.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">a <code class="docutils literal notranslate"><span class="pre">Bundle</span></code> instance.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="candyshop.bundle.Bundle.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#candyshop.bundle.Bundle.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="candyshop.bundle.Bundle.exclude_tests">
+<code class="descname">exclude_tests</code><em class="property"> = None</em><a class="headerlink" href="#candyshop.bundle.Bundle.exclude_tests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute <code class="docutils literal notranslate"><span class="pre">Bundle.exclude_tests</span></code> (boolean): True if modules
+inside a <code class="docutils literal notranslate"><span class="pre">tests</span></code> folder will be excluded. False otherwise.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="candyshop.bundle.Bundle.modules">
+<code class="descname">modules</code><em class="property"> = None</em><a class="headerlink" href="#candyshop.bundle.Bundle.modules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute <code class="docutils literal notranslate"><span class="pre">Bundle.modules</span></code> (list): A list containing
+instances of <code class="docutils literal notranslate"><span class="pre">Module</span></code> for each module inside the bundle.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="candyshop.bundle.Bundle.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#candyshop.bundle.Bundle.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute <code class="docutils literal notranslate"><span class="pre">Bundle.name</span></code> (string): The name of the bundle.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="candyshop.bundle.Bundle.oca_dependencies">
+<code class="descname">oca_dependencies</code><em class="property"> = None</em><a class="headerlink" href="#candyshop.bundle.Bundle.oca_dependencies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute <code class="docutils literal notranslate"><span class="pre">Bundle.oca_dependencies</span></code> (dict): A dictionary
+containing key-values of the names and repositories of
+OCA dependencies.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="candyshop.bundle.Bundle.path">
+<code class="descname">path</code><em class="property"> = None</em><a class="headerlink" href="#candyshop.bundle.Bundle.path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute <code class="docutils literal notranslate"><span class="pre">Bundle.path</span></code> (string): Refers to the absolute path
+of the root directory that contains the bundle.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="candyshop.bundle.Module">
+<em class="property">class </em><code class="descclassname">candyshop.bundle.</code><code class="descname">Module</code><span class="sig-paren">(</span><em>path</em>, <em>bundle=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/candyshop/bundle.html#Module"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#candyshop.bundle.Module" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents an Odoo Module.</p>
+<p>An Odoo module is a method to extend the Odoo codebase, adding or
+customizing functionalities. It is declared through its manifest file,
+and often contains other data files.</p>
+<p>For more information, please refer to official documentation.</p>
+<p><a class="reference external" href="https://www.odoo.com/documentation/8.0/howtos/backend.html">Modules</a>.</p>
+<dl class="method">
+<dt id="candyshop.bundle.Module._Module__extract_properties">
+<code class="descname">_Module__extract_properties</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#candyshop.bundle.Module._Module__extract_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Private method to extract information of the module’s manifest file.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="candyshop.bundle.Module._Module__get_manifest">
+<code class="descname">_Module__get_manifest</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#candyshop.bundle.Module._Module__get_manifest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Private method to find the manifest file within the module.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="candyshop.bundle.Module._Module__is_python_package">
+<code class="descname">_Module__is_python_package</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#candyshop.bundle.Module._Module__is_python_package" title="Permalink to this definition">¶</a></dt>
+<dd><p>Private method to determine if a module is a python package.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="candyshop.bundle.Module._Module__xmlfile_isfrom_module">
+<code class="descname">_Module__xmlfile_isfrom_module</code><span class="sig-paren">(</span><em>xmlfile</em><span class="sig-paren">)</span><a class="headerlink" href="#candyshop.bundle.Module._Module__xmlfile_isfrom_module" title="Permalink to this definition">¶</a></dt>
+<dd><p>Private method to determine if a module contains an XML file.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="candyshop.bundle.Module.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>path</em>, <em>bundle=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/candyshop/bundle.html#Module.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#candyshop.bundle.Module.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the <code class="docutils literal notranslate"><span class="pre">Module</span></code> instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>path</strong> – a path pointing to the root directory of an Odoo Module.</li>
+<li><strong>bundle</strong> – a <code class="docutils literal notranslate"><span class="pre">Bundle</span></code> instance (indicating this module is part of
+such bundle), or <code class="docutils literal notranslate"><span class="pre">None</span></code> (indicating that is a
+standalone module).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">a <code class="docutils literal notranslate"><span class="pre">Module</span></code> instance.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="candyshop.bundle.Module.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#candyshop.bundle.Module.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="candyshop.bundle.Module.bundle">
+<code class="descname">bundle</code><em class="property"> = None</em><a class="headerlink" href="#candyshop.bundle.Module.bundle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute <code class="docutils literal notranslate"><span class="pre">Module.bundle</span></code> (<code class="docutils literal notranslate"><span class="pre">Bundle</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code>): Holds the
+information regarding the bundle to which this Module belongs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="candyshop.bundle.Module.get_record_ids">
+<code class="descname">get_record_ids</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/candyshop/bundle.html#Module.get_record_ids"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#candyshop.bundle.Module.get_record_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all record ids contained in all of the module’s XML files.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a generator that returns an iterable of dictionaries
+containing a list of record ids referenced in each
+XML file, like this one:<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+   <span class="p">{</span><span class="s1">&#39;path/file1.xml&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;module_a.id_a.noupdate=0&#39;</span><span class="p">]},</span>
+   <span class="p">{</span><span class="s1">&#39;path/file2.xml&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;module_b.id_b.noupdate=0&#39;</span><span class="p">]}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="candyshop.bundle.Module.get_record_ids_fromfile">
+<code class="descname">get_record_ids_fromfile</code><span class="sig-paren">(</span><em>xmlfile</em>, <em>module=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/candyshop/bundle.html#Module.get_record_ids_fromfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#candyshop.bundle.Module.get_record_ids_fromfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get ids from <cite>record</cite> tags of an Odoo XML file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>xmlfile</strong> – (string) a path pointing to the XML file.</li>
+<li><strong>module</strong> – (string or None) a record module to filter.
+If module is None (default) then get all modules.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">a generator that produces an iterable of strings
+with all <code class="docutils literal notranslate"><span class="pre">[MODULE].[ID]</span></code> found.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="candyshop.bundle.Module.get_record_ids_module_references">
+<code class="descname">get_record_ids_module_references</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/candyshop/bundle.html#Module.get_record_ids_module_references"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#candyshop.bundle.Module.get_record_ids_module_references" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all modules referenced in Odoo XML files.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a generator that returns an iterable of dictionaries
+containing a list of modules referenced in each
+XML file, like this one:<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+   <span class="p">{</span><span class="s1">&#39;path/file1.xml&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;module_a&#39;</span><span class="p">,</span> <span class="s1">&#39;module_b&#39;</span><span class="p">]},</span>
+   <span class="p">{</span><span class="s1">&#39;path/file2.xml&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;module_c&#39;</span><span class="p">]}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="candyshop.bundle.Module.get_records_fromfile">
+<code class="descname">get_records_fromfile</code><span class="sig-paren">(</span><em>xmlfile</em>, <em>model=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/candyshop/bundle.html#Module.get_records_fromfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#candyshop.bundle.Module.get_records_fromfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get <code class="docutils literal notranslate"><span class="pre">record</span></code> tags of an Odoo XML file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>xmlfile</strong> – (string) a path pointing to an XML file.</li>
+<li><strong>model</strong> – (string or None) a record model to filter.
+If model is None (default) then get all records.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">a list of lxml <code class="docutils literal notranslate"><span class="pre">record</span></code> nodes. If there
+is a syntax error return [].</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="candyshop.bundle.Module.manifest">
+<code class="descname">manifest</code><em class="property"> = None</em><a class="headerlink" href="#candyshop.bundle.Module.manifest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute <code class="docutils literal notranslate"><span class="pre">Module.manifest</span></code> (string): Refers to the absolute path
+to the manifest file of the module (<code class="docutils literal notranslate"><span class="pre">__openerp__.py</span></code>,
+<code class="docutils literal notranslate"><span class="pre">__odoo__.py</span></code> or <code class="docutils literal notranslate"><span class="pre">__terp__.py</span></code>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="candyshop.bundle.Module.parse_xml_fromfile">
+<code class="descname">parse_xml_fromfile</code><span class="sig-paren">(</span><em>xmlfile</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/candyshop/bundle.html#Module.parse_xml_fromfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#candyshop.bundle.Module.parse_xml_fromfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get XML parsed from an input file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xmlfile</strong> – (string) a path pointing to an XML file.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Parsed document (<code class="docutils literal notranslate"><span class="pre">lxml.etree</span></code> object). If there is
+a syntax error return string error message.</td>
+</tr>
+</tbody>
+</table>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="candyshop.bundle.Module.path">
+<code class="descname">path</code><em class="property"> = None</em><a class="headerlink" href="#candyshop.bundle.Module.path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute <code class="docutils literal notranslate"><span class="pre">Module.path</span></code> (string): Refers to the absolute path
+of the root directory that contains the module.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="candyshop.bundle.Module.properties">
+<code class="descname">properties</code><em class="property"> = None</em><a class="headerlink" href="#candyshop.bundle.Module.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object <code class="docutils literal notranslate"><span class="pre">Module.properties</span></code> (<code class="docutils literal notranslate"><span class="pre">ModuleProperties</span></code>): Placeholder
+for the module’s properties. Access the module’s properties as
+attributes of this object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="candyshop-environment-submodule">
+<h2>candyshop.environment submodule<a class="headerlink" href="#candyshop-environment-submodule" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-candyshop.utils">
+<span id="candyshop-utils-submodule"></span><h2>candyshop.utils submodule<a class="headerlink" href="#module-candyshop.utils" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">candyshop.utils</span></code> is a utility module.</p>
+<p>This module contains several utilities to process information coming from the
+other modules.</p>
+<dl class="class">
+<dt id="candyshop.utils.ModuleProperties">
+<em class="property">class </em><code class="descclassname">candyshop.utils.</code><code class="descname">ModuleProperties</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/candyshop/utils.html#ModuleProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#candyshop.utils.ModuleProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class holds the properties of a module.</p>
+<p>It recieves a Dictionary and converts it to class attributes
+for better access.</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">ModuleProperties</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Vauxoo Module&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">name</span>
+<span class="go">&#39;Vauxoo Module&#39;</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="candyshop.utils.ModuleProperties.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/candyshop/utils.html#ModuleProperties.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#candyshop.utils.ModuleProperties.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the <code class="docutils literal notranslate"><span class="pre">ModuleProperties</span></code> instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – a dictionary containing the properties of a module as
+specified in the manifest file of an Odoo Module.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">each key-value is assigned as an attribute to this class.</td>
+</tr>
+</tbody>
+</table>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="candyshop.utils.ModuleProperties.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#candyshop.utils.ModuleProperties.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="candyshop.utils.find_files">
+<code class="descclassname">candyshop.utils.</code><code class="descname">find_files</code><span class="sig-paren">(</span><em>path=None</em>, <em>pattern='*'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/candyshop/utils.html#find_files"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#candyshop.utils.find_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search for files.</p>
+<p>Locate all the files matching the supplied filename pattern in and below
+the supplied root directory. If no pattern is supplied, all files will be
+returned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>path</strong> – a string containing a path where the files will be looked for.</li>
+<li><strong>pattern</strong> – a string containing a regular expression.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">a list of files matching the pattern within path (recursive).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="candyshop.utils.get_path">
+<code class="descclassname">candyshop.utils.</code><code class="descname">get_path</code><span class="sig-paren">(</span><em>path=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/candyshop/utils.html#get_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#candyshop.utils.get_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build and normalize a path.</p>
+<p>This will resolve symlinks to their destination and convert
+relative to absolute paths. This function does not check if
+the python path really exists.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> – a list with the components of a path.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a string indicating the full path.</td>
+</tr>
+</tbody>
+</table>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;/usr&#39;</span><span class="p">,</span> <span class="s1">&#39;share&#39;</span><span class="p">,</span> <span class="s1">&#39;logs/vars&#39;</span><span class="p">,</span> <span class="s1">&#39;included&#39;</span><span class="p">,</span> <span class="s1">&#39;hola.txt&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_path</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="go">&#39;/usr/share/logs/vars/included/hola.txt&#39;</span>
+</pre></div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="candyshop.utils.strip_comments_and_blanks">
+<code class="descclassname">candyshop.utils.</code><code class="descname">strip_comments_and_blanks</code><span class="sig-paren">(</span><em>strng=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/candyshop/utils.html#strip_comments_and_blanks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#candyshop.utils.strip_comments_and_blanks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove single-line comments and blank lines.</p>
+<p>This function receives a string and removes every line containing a comment
+or a blank line.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>strng</strong> – (string) a string.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(string) the string without comments or blank lines.</td>
+</tr>
+</tbody>
+</table>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="gp">... </span><span class="s1"># This is a comment</span>
+<span class="gp">...</span><span class="s1"></span>
+<span class="gp">... </span><span class="s1">bar # This is an inline comment</span>
+<span class="gp">...</span><span class="s1"></span>
+<span class="gp">... </span><span class="s1">foo # Another comment</span>
+<span class="gp">... </span><span class="s1"># I comment a lot</span>
+<span class="gp">...</span><span class="s1"></span>
+<span class="gp">... </span><span class="s1">&#39;&#39;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">strip_comments_and_blanks</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="go">&#39;bar\nfoo&#39;</span>
+</pre></div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/logo.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">Candyshop is a helper to determine if all your dependencies are declared properly.</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=LuisAlejandro&repo=candyshop&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+    
+
+<p>
+<a class="badge" href="https://travis-ci.org/LuisAlejandro/candyshop">
+    <img
+        alt="https://secure.travis-ci.org/LuisAlejandro/candyshop.svg?branch=master"
+        src="https://secure.travis-ci.org/LuisAlejandro/candyshop.svg?branch=master"
+    />
+</a>
+</p>
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Use cases</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Internal API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-candyshop">candyshop package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-candyshop.bundle">candyshop.bundle submodule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#candyshop-environment-submodule">candyshop.environment submodule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-candyshop.utils">candyshop.utils submodule</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Changelog</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Candyshop Developers.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/api.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
