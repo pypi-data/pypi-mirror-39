@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: JMSPComm
+Version: 1.0.0
+Summary: Implement a simple serial communication protocol. Use binary mode with frame CRC check. Each data length is no more than 256 bytes (including frame header).
+Home-page: https://github.com/mobinrg/JMSPComm_python
+Author: Kunpeng Zhang
+Author-email: zkppro@gmail.com
+License: MIT
+Description: Implement a simple serial communication protocol. Use binary mode with frame CRC check. Each data length is no more than 256 bytes (including frame header).
+Keywords: communication protocolwireless commarduino433MHz 315MHz
+Platform: Linux
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Communications

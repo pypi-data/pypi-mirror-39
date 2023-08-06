@@ -1,0 +1,11 @@
+README.rst
+setup.py
+JMSPComm.egg-info/PKG-INFO
+JMSPComm.egg-info/SOURCES.txt
+JMSPComm.egg-info/dependency_links.txt
+JMSPComm.egg-info/top_level.txt
+test/test_JMSPComm.py
+test/test_JMSPCommReceiver.py
+test/test_JMSPCommSender.py
+test/test_crc8.py
+test/test_helper.py
