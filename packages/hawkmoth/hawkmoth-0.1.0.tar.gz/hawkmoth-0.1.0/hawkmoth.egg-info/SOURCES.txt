@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+hawkmoth/__init__.py
+hawkmoth/hawkmoth.py
+hawkmoth.egg-info/PKG-INFO
+hawkmoth.egg-info/SOURCES.txt
+hawkmoth.egg-info/dependency_links.txt
+hawkmoth.egg-info/requires.txt
+hawkmoth.egg-info/top_level.txt
