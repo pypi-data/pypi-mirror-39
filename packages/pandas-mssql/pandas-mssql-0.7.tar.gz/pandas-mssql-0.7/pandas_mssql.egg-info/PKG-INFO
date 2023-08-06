@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pandas-mssql
+Version: 0.7
+Summary: Pandas DataFrame methods for reading from and writing to SQL Server
+Home-page: https://github.com/connellblackett/pandas-mssql
+Author: Connell Blackett
+License: UNKNOWN
+Description: # pandas-mssql
+        Pandas DataFrame methods for reading from and writing to SQL Server
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
