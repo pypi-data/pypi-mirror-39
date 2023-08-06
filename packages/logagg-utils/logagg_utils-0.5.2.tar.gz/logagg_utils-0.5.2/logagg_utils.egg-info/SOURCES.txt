@@ -1,0 +1,10 @@
+README.md
+setup.py
+logagg_utils/__init__.py
+logagg_utils/nsqsender.py
+logagg_utils/utils.py
+logagg_utils.egg-info/PKG-INFO
+logagg_utils.egg-info/SOURCES.txt
+logagg_utils.egg-info/dependency_links.txt
+logagg_utils.egg-info/requires.txt
+logagg_utils.egg-info/top_level.txt
