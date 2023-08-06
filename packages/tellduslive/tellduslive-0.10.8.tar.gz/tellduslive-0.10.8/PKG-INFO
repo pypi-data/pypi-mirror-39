@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: tellduslive
+Version: 0.10.8
+Summary: Communicate with Telldus Live
+Home-page: https://github.com/molobrakos/tellduslive
+Author: Erik
+Author-email: error.errorsson@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides: tellduslive
+Provides-Extra: console
