@@ -1,0 +1,8 @@
+.vscode/
+.idea/
+.eggs/
+__pycache__/
+.pytest_cache/
+pytest_yield.egg-info/
+venv/
+*.pyc
