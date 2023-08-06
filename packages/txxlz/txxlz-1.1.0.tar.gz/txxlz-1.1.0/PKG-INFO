@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: txxlz
+Version: 1.1.0
+Summary: Simple Small Python tools
+Home-page: https://github.com/ignertic/txxlz
+Author: Gishobert (SuperCode) Gwenzi
+Author-email: ilovebugsincode@gmail.com
+License: MIT
+Description: #Txxlz
+        ##Python Small Tools
+        ####A collection of miscellaneous tools
+        #####Currently Avaliable :
+        *Public IP checker*
+        
+        
+        >pip install txxlz
+        
+        ```python
+        >>> import txxlz
+        >>> addr = txxlz.ip.current_adress()
+        >>> print(add)
+        ```
+        
+        ##Feel Free to Contribute
+        If you have any small light Python tools feel free to contribute..
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/plain
