@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: tckn
+Version: 1.1.0
+Summary: A library for generating and validating Republic of Turkey identity numbers
+Home-page: https://github.com/sdispater/poetry
+License: MIT
+Author: Ekin Dursun
+Author-email: ekindursun@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Project-URL: Repository, https://github.com/sdispater/poetry
+Description-Content-Type: text/markdown
+
+# tckn
+[![PyPI version](https://badge.fury.io/py/tckn.svg)](https://badge.fury.io/py/tckn)
+ 
+*tckn* is a library for generating and validating Republic of Turkey identity numbers.
+It exposes two functions: `generate` and `validate`.
+
+## Installation
+```bash 
+poetry add tckn
+```
+or
+```bash
+pip install tckn
+```
+
+## Usage
+```python3
+>>> import tckn
+>>> tckn.generate()
+'21862110720'
+>>> tckn.validate('43650391326')
+True
+```
+
