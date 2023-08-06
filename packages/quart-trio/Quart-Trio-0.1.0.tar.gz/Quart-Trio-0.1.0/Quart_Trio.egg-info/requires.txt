@@ -1,0 +1,3 @@
+hypercorn[trio]
+quart>=0.7.0
+trio>=0.9.0
