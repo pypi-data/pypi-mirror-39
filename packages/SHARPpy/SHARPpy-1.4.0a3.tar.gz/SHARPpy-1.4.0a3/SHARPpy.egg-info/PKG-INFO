@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: SHARPpy
+Version: 1.4.0a3
+Summary: Sounding/Hodograph Analysis and Research Program for Python
+Home-page: https://github.com/sharppy/SHARPpy
+Author: Patrick Marsh, Kelton Halbert, Greg Blumberg, and Tim Supinie
+Author-email: patrick.marsh@noaa.gov, keltonhalbert@ou.edu, wblumberg@ou.edu, tsupinie@ou.edu
+License: BSD
+Description: SHARPpy is a collection of open source sounding and hodograph analysis routines, a sounding plotting package, and an interactive, cross-platform application for analyzing real-time soundings all written in Python. It was developed to provide the atmospheric science community a free and consistent source of sounding analysis routines. SHARPpy is constantly updated and vetted by professional meteorologists and climatologists within the scientific community to help maintain a standard source of sounding routines.
+Keywords: meteorology soundings analysis
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
