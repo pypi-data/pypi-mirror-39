@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cloudcms
+Version: 1.0.0
+Summary: Cloud CMS Python Driver
+Home-page: https://github.com/gitana/cloudcms-python-driver
+Author: Michael Whitman
+Author-email: michael.whitman@cloudcms.com
+License: UNKNOWN
+Description: # cloudcms-python-driver
+        Cloud CMS Python Driver
+        
+        https://www.cloudcms.com
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
