@@ -1,0 +1,67 @@
+Metadata-Version: 1.1
+Name: sphinx-removed-in
+Version: 0.1.2
+Summary: versionremoved and removed-in directives for Sphinx
+Home-page: https://github.com/MrSenko/sphinx-removed-in
+Author: Alexander Todorov
+Author-email: atodorov@MrSenko.com
+License: BSD
+Description-Content-Type: UNKNOWN
+Description: Sphinx Removed In Extension
+        ---------------------------
+        
+        .. image:: https://travis-ci.org/MrSenko/sphinx-removed-in.svg?branch=master
+           :target: https://travis-ci.org/MrSenko/sphinx-removed-in
+        
+        .. image:: https://coveralls.io/repos/github/MrSenko/sphinx-removed-in/badge.svg?branch=master
+           :target: https://coveralls.io/github/MrSenko/sphinx-removed-in?branch=master
+        
+        .. image:: https://landscape.io/github/MrSenko/sphinx-removed-in/master/landscape.svg?style=flat
+           :target: https://landscape.io/github/MrSenko/sphinx-removed-in/master
+           :alt: Code Health
+        
+        This is a Sphinx extension which recognizes the ``.. versionremoved::`` and
+        ``.. removed-in::`` directives. These are missing from Sphinx'es
+        `core markup <http://www.sphinx-doc.org/en/stable/markup/para.html>`_.
+        
+        Installation
+        ============
+        
+        Use pip to install from PyPI:
+        
+        ::
+        
+            pip install sphinx-removed-in
+        
+        
+        Configure your ``conf.py``:
+        
+        ::
+        
+            # Add any Sphinx extension module names here, as strings. They can be extensions
+            # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
+            extensions = ['sphinx_removed_in']
+        
+        Contributing
+        ============
+        
+        Source code and issue tracker are at https://github.com/MrSenko/sphinx-removed-in
+        
+Keywords: Sphinx
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Sphinx
+Classifier: Framework :: Sphinx :: Extension
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Documentation
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
