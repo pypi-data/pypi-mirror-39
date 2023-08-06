@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ssu-tk
+Version: 0.0.0.1.1
+Summary: support custom tf.keras modules bundle for tensorflow v2.x
+Home-page: https://github.com/jason9693/ssu_keras
+Author: Yang Kichang
+Author-email: ykcha9@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.4
+Requires-Python: >=3
+Requires-Dist: tensorflow (>=1.1.2)
+
+UNKNOWN
+
+
