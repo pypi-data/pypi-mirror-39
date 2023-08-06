@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: aiohttp-swagger3
+Version: 0.0.1
+Summary: validation for aiohttp swagger openAPI 3
+Home-page: https://github.com/hh-h/aiohttp-swagger3
+Author: Valetov Konstantin
+Author-email: forjob@thetrue.name
+License: Apache 2
+Description: # aiohttp-swagger3
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Development Status :: 1 - Planning
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Framework :: AsyncIO
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
