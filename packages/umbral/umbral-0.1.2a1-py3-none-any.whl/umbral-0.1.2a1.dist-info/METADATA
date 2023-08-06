@@ -1,0 +1,265 @@
+Metadata-Version: 2.1
+Name: umbral
+Version: 0.1.2a1
+Summary: NuCypher's Umbral Proxy Re-Encryption Implementation
+Home-page: https://github.com/nucypher/pyUmbral
+Author: NuCypher
+Author-email: dev@nucypher.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3
+Requires-Dist: asn1crypto (==0.24.0)
+Requires-Dist: bytestring-splitter (==1.0.0a4)
+Requires-Dist: cffi (==1.11.5)
+Requires-Dist: constant-sorrow (==0.1.0a7)
+Requires-Dist: cryptography (==2.4.2)
+Requires-Dist: idna (==2.8)
+Requires-Dist: msgpack-python (==0.5.6)
+Requires-Dist: pycparser (==2.19)
+Requires-Dist: pynacl (==1.3.0)
+Requires-Dist: pysha3 (==1.0.2)
+Requires-Dist: six (==1.12.0)
+Provides-Extra: benchmarks
+Requires-Dist: pytest-benchmark ; extra == 'benchmarks'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-autobuild ; extra == 'docs'
+Provides-Extra: testing
+Requires-Dist: alabaster (==0.7.12) ; extra == 'testing'
+Requires-Dist: argh (==0.26.2) ; extra == 'testing'
+Requires-Dist: atomicwrites (==1.2.1) ; extra == 'testing'
+Requires-Dist: attrs (==18.2.0) ; extra == 'testing'
+Requires-Dist: babel (==2.6.0) ; extra == 'testing'
+Requires-Dist: backcall (==0.1.0) ; extra == 'testing'
+Requires-Dist: bumpversion (==0.5.3) ; extra == 'testing'
+Requires-Dist: certifi (==2018.11.29) ; extra == 'testing'
+Requires-Dist: chardet (==3.0.4) ; extra == 'testing'
+Requires-Dist: click (==7.0) ; extra == 'testing'
+Requires-Dist: codecov (==2.0.15) ; extra == 'testing'
+Requires-Dist: coverage (==5.0a4) ; extra == 'testing'
+Requires-Dist: decorator (==4.3.0) ; extra == 'testing'
+Requires-Dist: docutils (==0.14) ; extra == 'testing'
+Requires-Dist: hypothesis (==3.82.5) ; extra == 'testing'
+Requires-Dist: idna (==2.8) ; extra == 'testing'
+Requires-Dist: imagesize (==1.1.0) ; extra == 'testing'
+Requires-Dist: ipykernel (==5.1.0) ; extra == 'testing'
+Requires-Dist: ipython-genutils (==0.2.0) ; extra == 'testing'
+Requires-Dist: ipython (==7.2.0) ; extra == 'testing'
+Requires-Dist: jedi (==0.13.1) ; extra == 'testing'
+Requires-Dist: jinja2 (==2.10) ; extra == 'testing'
+Requires-Dist: jsonschema (==3.0.0a3) ; extra == 'testing'
+Requires-Dist: jupyter-client (==5.2.4) ; extra == 'testing'
+Requires-Dist: jupyter-core (==4.4.0) ; extra == 'testing'
+Requires-Dist: livereload (==2.6.0) ; extra == 'testing'
+Requires-Dist: markupsafe (==1.1.0) ; extra == 'testing'
+Requires-Dist: mock (==2.0.0) ; extra == 'testing'
+Requires-Dist: monkeytype (==18.2.0) ; extra == 'testing'
+Requires-Dist: more-itertools (==4.3.0) ; extra == 'testing'
+Requires-Dist: mypy-extensions (==0.4.1) ; extra == 'testing'
+Requires-Dist: mypy (==0.650) ; extra == 'testing'
+Requires-Dist: nbformat (==4.4.0) ; extra == 'testing'
+Requires-Dist: nbval (==0.9.1) ; extra == 'testing'
+Requires-Dist: packaging (==18.0) ; extra == 'testing'
+Requires-Dist: parso (==0.3.1) ; extra == 'testing'
+Requires-Dist: pathtools (==0.1.2) ; extra == 'testing'
+Requires-Dist: pbr (==5.1.1) ; extra == 'testing'
+Requires-Dist: pickleshare (==0.7.5) ; extra == 'testing'
+Requires-Dist: pluggy (==0.8.0) ; extra == 'testing'
+Requires-Dist: port-for (==0.3.1) ; extra == 'testing'
+Requires-Dist: prompt-toolkit (==2.0.7) ; extra == 'testing'
+Requires-Dist: ptyprocess (==0.6.0) ; extra == 'testing'
+Requires-Dist: py-cpuinfo (==4.0.0) ; extra == 'testing'
+Requires-Dist: py (==1.7.0) ; extra == 'testing'
+Requires-Dist: pygal (==2.4.0) ; extra == 'testing'
+Requires-Dist: pygaljs (==1.0.1) ; extra == 'testing'
+Requires-Dist: pygments (==2.3.0) ; extra == 'testing'
+Requires-Dist: pyparsing (==2.3.0) ; extra == 'testing'
+Requires-Dist: pyrsistent (==0.14.7) ; extra == 'testing'
+Requires-Dist: pytest-benchmark[histogram] (==3.1.1) ; extra == 'testing'
+Requires-Dist: pytest-cov (==2.6.0) ; extra == 'testing'
+Requires-Dist: pytest-mock (==1.10.0) ; extra == 'testing'
+Requires-Dist: pytest-mypy (==0.3.2) ; extra == 'testing'
+Requires-Dist: pytest (==3.10.1) ; extra == 'testing'
+Requires-Dist: python-dateutil (==2.7.5) ; extra == 'testing'
+Requires-Dist: pytz (==2018.7) ; extra == 'testing'
+Requires-Dist: pyyaml (==4.2b4) ; extra == 'testing'
+Requires-Dist: pyzmq (==17.1.2) ; extra == 'testing'
+Requires-Dist: requests (==2.21.0) ; extra == 'testing'
+Requires-Dist: retype (==17.12.0) ; extra == 'testing'
+Requires-Dist: six (==1.12.0) ; extra == 'testing'
+Requires-Dist: snowballstemmer (==1.2.1) ; extra == 'testing'
+Requires-Dist: sphinx-autobuild (==0.7.1) ; extra == 'testing'
+Requires-Dist: sphinx (==1.8.2) ; extra == 'testing'
+Requires-Dist: sphinxcontrib-websupport (==1.1.0) ; extra == 'testing'
+Requires-Dist: tornado (==5.1.1) ; extra == 'testing'
+Requires-Dist: traitlets (==4.3.2) ; extra == 'testing'
+Requires-Dist: typed-ast (==1.1.0) ; extra == 'testing'
+Requires-Dist: urllib3 (==1.24.1) ; extra == 'testing'
+Requires-Dist: watchdog (==0.9.0) ; extra == 'testing'
+Requires-Dist: wcwidth (==0.1.7) ; extra == 'testing'
+Requires-Dist: pexpect (==4.6.0) ; (sys_platform != "win32") and extra == 'testing'
+
+.. role:: bash(code)
+   :language: bash
+
+=========
+pyUmbral
+=========
+v0.1.2-alpha.1
+
+.. image:: https://circleci.com/gh/nucypher/pyUmbral/tree/master.svg?style=svg
+    :target: https://circleci.com/gh/nucypher/pyUmbral/tree/master
+
+pyUmbral is a python implementation of David Nuñez's threshold proxy re-encryption scheme: Umbral_.
+Implemented with OpenSSL_ and Cryptography.io_, pyUmbral is a referential and open-source cryptography library
+extending the traditional cryptological narrative of "Alice and Bob" by introducing a new actor,
+*Ursula*, who has the ability to take secrets encrypted for Alice and *re-encrypt* them for Bob.
+
+.. _Umbral: https://github.com/nucypher/umbral-doc/blob/master/umbral-doc.pdf
+.. _Cryptography.io: https://cryptography.io/en/latest/
+.. _OpenSSL: https://www.openssl.org/
+
+Usage
+=====
+
+**Key Generation**
+
+.. code-block:: python
+
+    from umbral import pre, keys, signing
+
+    # Generate Umbral keys for Alice.
+    alices_private_key = keys.UmbralPrivateKey.gen_key()
+    alices_public_key = alices_private_key.get_pubkey()
+
+    alices_signing_key = keys.UmbralPrivateKey.gen_key()
+    alices_verifying_key = alices_signing_key.get_pubkey()
+    alices_signer = signing.Signer(private_key=alices_signing_key)
+
+    # Generate Umbral keys for Bob.
+    bobs_private_key = keys.UmbralPrivateKey.gen_key()
+    bobs_public_key = bobs_private_key.get_pubkey()
+
+
+**Encryption**
+
+.. code-block:: python
+
+    # Encrypt data with Alice's public key.
+    plaintext = b'Proxy Re-encryption is cool!'
+    ciphertext, capsule = pre.encrypt(alices_public_key, plaintext)
+
+    # Decrypt data with Alice's private key.
+    cleartext = pre.decrypt(ciphertext=ciphertext, 
+                            capsule=capsule, 
+                            decrypting_key=alices_private_key)
+
+
+**Re-Encryption Key Fragments**
+
+.. code-block:: python
+
+    # Alice generates "M of N" re-encryption key fragments (or "KFrags") for Bob.
+    # In this example, 10 out of 20.
+    kfrags = pre.generate_kfrags(delegating_privkey=alices_private_key,
+                                 signer=alices_signer,
+                                 receiving_pubkey=bobs_public_key,
+                                 threshold=10,
+                                 N=20)
+
+
+**Re-Encryption**
+
+.. code-block:: python
+
+  # Several Ursulas perform re-encryption, and Bob collects the resulting `cfrags`.
+  # He must gather at least `threshold` `cfrags` in order to activate the capsule.
+
+  capsule.set_correctness_keys(delegating=alices_public_key,
+                               receiving=bobs_public_key,
+                               verifying=alices_verifying_key)
+
+  cfrags = list()           # Bob's cfrag collection
+  for kfrag in kfrags[:10]:
+    cfrag = pre.reencrypt(kfrag=kfrag, capsule=capsule)
+    cfrags.append(cfrag)    # Bob collects a cfrag
+
+
+**Decryption by Bob**
+
+.. code-block:: python
+
+  # Bob activates and opens the capsule
+  for cfrag in cfrags:
+    capsule.attach_cfrag(cfrag)
+
+  bob_cleartext = pre.decrypt(ciphertext=ciphertext, 
+                              capsule=capsule, 
+                              decrypting_key=bobs_private_key)
+  assert bob_cleartext == plaintext
+
+See more detailed usage examples in the docs_ directory.
+
+.. _docs : https://github.com/nucypher/pyUmbral/tree/master/docs
+
+
+Quick Installation
+==================
+
+To install pyUmbral, simply use `pip`:
+
+.. code-block:: bash
+
+  $ pip3 install umbral
+
+
+Alternatively, you can checkout the repo and install it from there. 
+The NuCypher team uses pipenv for managing pyUmbral's dependencies.
+The recommended installation procedure is as follows:
+
+.. code-block:: bash
+
+    $ sudo pip3 install pipenv
+    $ pipenv install
+
+Post-installation, you can activate the project virtual environment
+in your current terminal session by running :bash:`pipenv shell`.
+
+For more information on pipenv, find the official documentation here: https://docs.pipenv.org/.
+
+
+Academic Whitepaper
+====================
+
+The Umbral scheme academic whitepaper and cryptographic specifications
+are available on GitHub_.
+
+  "Umbral: A Threshold Proxy Re-Encryption Scheme"
+  *by David Nuñez*
+  https://github.com/nucypher/umbral-doc/blob/master/umbral-doc.pdf
+
+.. _GitHub: https://github.com/nucypher/umbral-doc/
+
+
+Support & Contribute
+=====================
+
+- Issue Tracker: https://github.com/nucypher/pyUmbral/issues
+- Source Code: https://github.com/nucypher/pyUmbral
+
+OFAC Sanctions Disclaimer
+=========================
+
+By using this software, you hereby affirm you are not an individual or entity subject to economic sanctions administered by the U.S. Government or any other applicable authority, including but not limited to, sanctioned party lists administered by the U.S. Treasury Department’s Office of Foreign Assets Control (OFAC), the U.S. State Department, and the U.S. Commerce Department.  You further affirm you are not located in, or ordinarily resident in, any country, territory or region subject to comprehensive economic sanctions administered by OFAC, which are subject to change but currently include Cuba, Iran, North Korea, Syria and the Crimea region.
+
+
