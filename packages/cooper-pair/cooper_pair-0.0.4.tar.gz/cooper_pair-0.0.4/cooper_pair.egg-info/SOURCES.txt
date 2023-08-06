@@ -1,0 +1,11 @@
+README.md
+setup.py
+cooper_pair/__init__.py
+cooper_pair/pair.py
+cooper_pair.egg-info/PKG-INFO
+cooper_pair.egg-info/SOURCES.txt
+cooper_pair.egg-info/dependency_links.txt
+cooper_pair.egg-info/requires.txt
+cooper_pair.egg-info/top_level.txt
+tests/__init__.py
+tests/test_pair.py
