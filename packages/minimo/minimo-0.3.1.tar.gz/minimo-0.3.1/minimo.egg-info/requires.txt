@@ -1,0 +1,8 @@
+mako>=1.0.7
+click
+unittest-xml-reporting
+
+[dev]
+tox
+check-manifest
+flake8
