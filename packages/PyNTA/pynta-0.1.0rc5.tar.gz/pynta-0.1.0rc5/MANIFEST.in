@@ -1,0 +1,9 @@
+include MANIFEST.in
+include README.md
+include setup.py
+include LICENSE
+include AUTHORS
+include examples/*
+include pynta/view/GUI/Icons/*
+include pynta/view/GUI/designer/*
+exlude pynta/view/old/
