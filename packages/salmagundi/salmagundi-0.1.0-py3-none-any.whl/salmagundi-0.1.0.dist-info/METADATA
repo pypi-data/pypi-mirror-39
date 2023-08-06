@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: salmagundi
+Version: 0.1.0
+Summary: Library with a collection of some more or less usefull functions.
+Home-page: https://andreas19.github.io/salmagundi/
+Author: Andreas19
+Author-email: andreas19@posteo.eu
+License: BSD-3-Clause
+Project-URL: Source code, https://github.com/andreas19/salmagundi/
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# ansictrls
+
+Library with a collection of some more or less usefull functions.
+
+More functions will be added soon.
+
+For more information visit the [documentation](https://andreas19.github.io/salmagundi/overview.html).
+
+History
+-------
+
+**2018-12-17 (0.1.0)**
+ - First public release
+
+
+
