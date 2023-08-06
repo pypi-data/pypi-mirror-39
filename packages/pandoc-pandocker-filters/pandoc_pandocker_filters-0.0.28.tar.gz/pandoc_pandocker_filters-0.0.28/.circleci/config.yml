@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: k4zuki/pandocker
+    steps:
+      - checkout
+      - run:
+          name: pip install from local
+          command: |
+            pip3 install -U .
+      - run:
+          name: Make HTML
+          command: |
+            cd tests
+            ls
+            make initdir html
+      - run:
+          name: Make PDF
+          command: |
+            cd tests
+            ls
+            make initdir pdf
+      # - run:
+      #     name: Deploy preparation
+      #     command: |
+      #       mkdir deploy
+      #       mv Out/*.html deploy/`basename Out/*.html .html`-`git rev-parse --short HEAD`.html
+      #       mv Out/*.pdf deploy/`basename Out/*.pdf .pdf`-`git rev-parse --short HEAD`.pdf
+      # - run:
+      #     name: Deploy
+      #     command: ghr -replace -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME build-`git rev-parse --short HEAD` test/svg/
+notify:
+  webhooks:
+    - url: $PANDOCKER_HOOK_URL
