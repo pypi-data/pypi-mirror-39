@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: eht-houghtransform
+Version: 0.0.1
+Summary: Hough transform package, created and distributed by SAO-EHT
+Home-page: https://github.com/sao-eht/HoughTransform
+Author: Joseph Farah
+Author-email: joseph.farah@cfa.harvard.edu
+License: UNKNOWN
+Description: Hough transform package, created and distributed by SAO_EHT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Description-Content-Type: text/markdown
