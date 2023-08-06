@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: excel-modelling-helper
+Version: 0.6.7
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Daniel Schien
+Author-email: dschien@gmail.com
+License: GPL see LICENSE
+Download-URL: https://github.com/dschien/PyExcelModelingHelper/releases/tag/0.2.0
+Description: Use Excel to define your model parameters.
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
