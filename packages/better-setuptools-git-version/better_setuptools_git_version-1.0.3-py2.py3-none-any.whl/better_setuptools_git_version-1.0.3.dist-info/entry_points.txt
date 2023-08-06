@@ -1,0 +1,6 @@
+[console_scripts]
+better-setuptools-git-version = better_setuptools_git_version:get_version
+
+[distutils.setup_keywords]
+version_config = better_setuptools_git_version:validate_version_config
+
