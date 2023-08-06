@@ -1,0 +1,10 @@
+idna==2.7
+pysolr==3.8.1
+elasticsearch==6.3.1
+aiohttp==2.3.10
+elasticsearch-async==6.2.0
+redis==2.10.6
+asyncio_redis==0.15.1
+psycopg2-binary==2.7.6.1
+aiopg==0.15
+sqlalchemy==1.2.14

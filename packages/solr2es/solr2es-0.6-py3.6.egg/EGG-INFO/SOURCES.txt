@@ -1,0 +1,15 @@
+CHANGES.rst
+MANIFEST.in
+README.rst
+setup.py
+solr2es/__init__.py
+solr2es/__main__.py
+solr2es/postgresql_queue.py
+solr2es/redis_queue.py
+solr2es.egg-info/PKG-INFO
+solr2es.egg-info/SOURCES.txt
+solr2es.egg-info/dependency_links.txt
+solr2es.egg-info/entry_points.txt
+solr2es.egg-info/not-zip-safe
+solr2es.egg-info/requires.txt
+solr2es.egg-info/top_level.txt
