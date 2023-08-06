@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: mvar
+Version: 0.0.1
+Summary: Python implementation of Haskell's Control.Concurrent.MVar
+Home-page: https://github.com/gabrik/mvar-python
+Author: Gabriele Baldoni
+Author-email: UNKNOWN
+License: Apache 2.O
+Description: # pyhton-mvar
+        
+        <!-- [![PyPI version](https://badge.fury.io/py/yaks.svg)](https://badge.fury.io/py/yaks) -->
+        [![Build Status](https://travis-ci.com/gabrik/mvar-python.svg?branch=master)](https://travis-ci.com/gabrik/mvar-python)
+        [![codecov](https://codecov.io/gh/gabrik/mvar-python/branch/master/graph/badge.svg)](https://codecov.io/gh/gabrik/mvar-python)
+        
+        
+        A Pyhton port of Haskell's [Control.Concurrent.MVar](https://hackage.haskell.org/package/base/docs/Control-Concurrent-MVar.html).
+        
+        A MVar is a mutable location which can either be empty, or contain a value.
+        The location can be written to and read from safely from multiple concurrent Unix threads.
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
