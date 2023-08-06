@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: ait-gui
+Version: 1.3.0
+Summary: A framework for building a custom website for realtime telemetry monitoring, commanding, and other MOS operations, built atop the AIT Core libraries.
+Home-page: https://github.com/NASA-AMMOS/AIT-GUI
+Author: AIT Development Team
+Author-email: ait-pmc@googlegroups.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst
+Provides-Extra: docs
+Requires-Dist: ait-core (>=1.3.0)
+Provides-Extra: docs
+Requires-Dist: Sphinx (==1.7.2); extra == 'docs'
+Requires-Dist: sphinx-rtd-theme; extra == 'docs'
+Requires-Dist: sphinxcontrib-httpdomain; extra == 'docs'
+Requires-Dist: sphinx-js; extra == 'docs'
+
+AMMOS Instrument Toolkit (AIT) GUI
+==================================
+
+AIT GUI provides a framework for building a custom website for realtime
+telemetry monitoring, commanding, and other MOS operations with only
+minimal HTML and configuration file changes. Built on top of the AIT
+Core libraries, AIT GUI provides web-development friendly access to the
+underlying telemetry, commanding, EVR, system logging, and other AIT
+Core functions in addition to a suite of pre-built UI Components and a
+REST API to handle common MOS use cases.
+
+Getting Started
+---------------
+
+You can read through the `Installation
+Page <http://ait-gui.readthedocs.io/en/latest/installation.html>`__ for
+instruction on how to install AIT GUI.
+
+Browser Requirements
+--------------------
+
+AIT GUI requires one of the following browsers:
+
+-  Firefox version 52.0 or newer
+-  Chrome version 57.0 or newer
+
+Safari v10.1 or newer will likely work as well but compatibility is not
+regularly checked or guaranteed.
+
+Join the Community
+------------------
+
+The project's `User and Developer Mailing List <https://groups.google.com/forum/#!forum/ait-dev>`__ is the best way to communicate with the team, ask questions, brainstorm plans for future changes, and help contribute to the project.
+
+This project exists thanks to the dedicated users, contributors, committers, and project management committee members. If you'd like to learn more about how the project is organized and how to become a part of the team please check out the `Project Structure and Governance <https://github.com/NASA-AMMOS/AIT-Core/wiki/Project-Structure-and-Governance>`__ documentation.
+
+Contributing
+------------
+
+For information on how to contribute please see the `AIT Contributing
+Guide <https://github.com/NASA-AMMOS/AIT-Core/wiki/Contributing>`__
+
+--------------
+
+|travis|
+|docs|
+
+.. |travis| image:: https://travis-ci.org/NASA-AMMOS/AIT-GUI.svg?branch=master
+    :alt: build status
+    :scale: 100%
+    :target: https://travis-ci.org/NASA-AMMOS/AIT-GUI
+.. |docs| image:: https://readthedocs.org/projects/ait-gui/badge/?version=master
+    :alt: Documentation Status
+    :scale: 100%
+    :target: https://ait-gui.readthedocs.io/en/latest/?badge=master
+
+

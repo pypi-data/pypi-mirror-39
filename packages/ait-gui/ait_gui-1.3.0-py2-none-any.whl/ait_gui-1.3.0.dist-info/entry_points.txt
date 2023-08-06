@@ -1,0 +1,4 @@
+[console_scripts]
+ait-example = ait.gui.bin.ait_example:main
+ait-gui = ait.gui.bin.ait_gui:main
+
