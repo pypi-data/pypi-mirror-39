@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: wc-csv
+Version: 0.2.0
+Summary: Awesome library
+Home-page: https://github.com/Oshita/wc_csv
+Author: NoriakiOshita
+Author-email: oshitanoriaki@gmail.com
+License: MIT
+Keywords: wordcloud csv
+Platform: UNKNOWN
+Requires-Dist: requests (>=2.14.2)
+
+UNKNOWN
+
+
