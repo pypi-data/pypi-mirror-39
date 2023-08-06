@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: Flask-Exchange
+Version: 0.0.2
+Summary: Exchange support for Flask using ExchangeLib.
+Home-page: https://github.com/jscurtu/flask-exchange
+Author: Jason Scurtu
+Author-email: jscurtu@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Framework :: Flask
+Classifier: Topic :: Office/Business :: Groupware
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: flask (>=0.10.1)
+Requires-Dist: exchangelib (>=1.12.0)
+Requires-Dist: urllib3
+
+
+Flask-Exchange
+==============
+Flask-Exchange is a simple and basic Flask extension which adds support for the Exchange using ExchangeLib.
+This extension is still in development and does not cover all setups for exchangelib.
+Even with its current limited functionality, it still might be useful for most users.
+
+TODO for next release
+===============
+- develop API for sending, getting and finding mail (and other items).
+- use APScheduler for fetching mail (exchangelib push currently not finished).
+
+
+Doc
+===============
+look at the examples_ to see how to set it up in your Flask app. 
+If you need to know how to use the ExchangeLib API then please look at the authors page:
+https://github.com/ecederstrand/exchangelib
+
+Requirements
+===============
+
+	Python > 3.6
+	Flask > 0.10.1
+	ExchangeLib > 1.12.0
+
+Install
+===============
+You can install Flask-Exchange via Python Package Index (PyPI_),::
+
+    $ pip install Flask-Exchange
+
+Contribution
+===============
+Please use the Issues_ for feature requests & troubleshooting.
+
