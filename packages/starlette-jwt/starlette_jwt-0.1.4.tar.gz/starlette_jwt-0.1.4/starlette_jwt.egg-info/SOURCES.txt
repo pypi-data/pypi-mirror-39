@@ -1,0 +1,10 @@
+README.md
+setup.py
+starlette_jwt/__init__.py
+starlette_jwt/middleware.py
+starlette_jwt.egg-info/PKG-INFO
+starlette_jwt.egg-info/SOURCES.txt
+starlette_jwt.egg-info/dependency_links.txt
+starlette_jwt.egg-info/not-zip-safe
+starlette_jwt.egg-info/requires.txt
+starlette_jwt.egg-info/top_level.txt
