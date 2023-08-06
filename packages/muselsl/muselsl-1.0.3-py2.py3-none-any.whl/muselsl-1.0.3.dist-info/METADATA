@@ -1,0 +1,35 @@
+Metadata-Version: 2.0
+Name: muselsl
+Version: 1.0.3
+Summary: Stream and visualize EEG data from the Muse 2016 headset.
+Home-page: https://github.com/alexandrebarachant/muse-lsl/
+Author: Alexandre Barachant
+Author-email: alexandre.barachant@gmail.com
+License: BSD (3-clause)
+Keywords: muse lsl eeg ble neuroscience
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python
+Provides-Extra: Viewer V2
+Requires-Dist: bitstring
+Requires-Dist: pylsl
+Requires-Dist: pygatt (==3.2.0)
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: numpy
+Requires-Dist: seaborn
+Requires-Dist: pexpect
+Provides-Extra: Viewer V2
+Requires-Dist: mne; extra == 'Viewer V2'
+Requires-Dist: vispy; extra == 'Viewer V2'
+
+UNKNOWN
+
+
