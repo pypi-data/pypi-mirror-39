@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: scrapemeagain
+Version: 1.0.0
+Summary: Yet another Python web scraping application
+Home-page: https://github.com/DusanMadar/ScrapeMeAgain
+Author: Dusan Madar
+Author-email: madar.dusan@gmail.com
+License: MIT
+Keywords: web scraper
+Platform: linux
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Internet :: WWW/HTTP
+
+Yet another Python web scraping application
+
+
