@@ -1,0 +1,3 @@
+[console_scripts]
+sfx-py-trace = scripts.sfx_py_trace:main
+

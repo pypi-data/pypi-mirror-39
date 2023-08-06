@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: signalfx-tracing
+Version: 0.0.0
+Summary: Provides auto-instrumentation for OpenTracing traced libraries and frameworks
+Home-page: http://github.com/signalfx/signalfx-python-tracing
+Author: SignalFx, Inc.
+Author-email: info@signalfx.com
+License: Apache Software License v2
+Download-URL: http://github.com/signalfx/signalfx-python-tracing/tarball/master
+Description: Provides auto-instrumentation for OpenTracing traced libraries and frameworks
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: tests

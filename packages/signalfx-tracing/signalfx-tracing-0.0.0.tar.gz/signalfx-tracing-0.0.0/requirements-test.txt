@@ -1,0 +1,14 @@
+-e .
+django
+docker
+flake8
+mock
+mockupdb
+pymongo
+pymysql
+pytest
+pytest-django
+redis
+requests
+tornado
+six

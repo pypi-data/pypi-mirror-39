@@ -1,0 +1,8 @@
+opentracing>=2.0<2.1
+wrapt
+
+[tests]
+docker
+mock
+pytest
+six
