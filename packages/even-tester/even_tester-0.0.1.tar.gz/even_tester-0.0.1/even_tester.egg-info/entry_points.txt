@@ -1,0 +1,3 @@
+[console_scripts]
+even_tester = even_tester.main:main
+

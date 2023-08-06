@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: even_tester
+Version: 0.0.1
+Summary: A python library by srb
+Home-page: http://github.com/srbcheema2/even_tester
+Author: Sarbjit Singh
+Author-email: srbcheema2@gmail.com
+License: MIT License
+Description: # test0010
+        
+        a program to test even/odd
+        
+Platform: UNKNOWN
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Description-Content-Type: text/markdown
