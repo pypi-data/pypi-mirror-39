@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: msa
+Version: 1.1.1
+Summary: Maven settings administrator
+Home-page: https://github.com/Gunmer/maven-setting-administrator.git
+Author: Gunmer
+Author-email: csosaur@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
