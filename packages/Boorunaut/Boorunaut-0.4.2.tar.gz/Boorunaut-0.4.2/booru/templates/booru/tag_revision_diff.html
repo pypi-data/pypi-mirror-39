@@ -1,0 +1,41 @@
+{% extends 'booru/base.html' %}
+
+{% block css %}
+    {% load staticfiles %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block body %}
+    {% load markdown_deux_tags %}
+    <div class="container">
+        <div class="row mb-1">
+            <h1>Tag: <a href="{% url 'booru:tag_history' tag.id %}">{{tag}}</a></h1>
+        </div>
+
+        <div class="row col">
+            Showing the differences between {{old_version.history_date}} (<a href="{{old_version.history_user.get_absolute_url}}">{{old_version.history_user}}</a>) and
+            {{new_version.history_date}} (<a href="{{new_version.history_user.get_absolute_url}}">{{new_version.history_user}}</a>)
+        </div>
+
+        {% for change in changes %}
+        <div class="row mt-3">
+            <h2 class="h4">{{change.field}}</h2>
+        </div>
+
+        <div class="pl-1 pr-1">
+            {% if change.new %}
+            <div class="row" style="background-color: #0080004d;">
+                <div class="col-1">+</div><div class="col">{{change.new}}</div>
+            </div>
+            {% endif %}
+            {% if change.old %}
+            <div class="row" style="background-color: #f006;">
+                <div class="col-1">-</div><div class="col">{{change.old}}</div>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

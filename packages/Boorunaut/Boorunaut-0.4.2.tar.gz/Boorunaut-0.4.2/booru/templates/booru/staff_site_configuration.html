@@ -1,0 +1,38 @@
+{% extends 'booru/base_admin.html' %}
+
+{% block css %}
+    {% load staticfiles %}
+    <link href="{% static 'booru/bootstrap-toggle-master/css/bootstrap-toggle.min.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'booru/bootstrap-toggle-master/js/bootstrap-toggle.min.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+<div class="col-12 text-white bg-primary">
+    <h1 class="h4 text-uppercase p-3 mb-0"><i class="fas fa-cogs mr-3"></i>Configuration</h1>
+</div>
+
+<div class="col bg-white align-middle mt-3 pl-4 pt-3 pb-3 pr-4">
+    <h1>Customize the booru</h1>
+
+    <form method="post" enctype="multipart/x-www-form-urlencoded">
+        {% csrf_token %}
+        {% for field in form %}
+            {% if field.label != 'Welcome page' %}
+                {{ field|as_crispy_field }}
+            {% else %}
+            <div id="div_id_announcement" class="form-group">
+                <label for="id_announcement" class="col-form-label">{{ field.label }}</label>
+                <div class="">
+                    {{ field }}
+                </div>
+            </div>
+            {% endif %}
+        {% endfor%}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

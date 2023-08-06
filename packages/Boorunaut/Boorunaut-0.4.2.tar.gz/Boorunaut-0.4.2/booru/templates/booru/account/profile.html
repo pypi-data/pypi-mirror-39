@@ -1,0 +1,209 @@
+{% extends 'booru/base.html' %}
+
+{% block css %}
+    {% load staticfiles %}
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'booru/account/js/profile.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+    {% load humanize %}
+    {% load permission_tags %}
+    {% load crispy_forms_tags %}
+    <div class="row">
+        <div class="col col-md-2 mb-5">
+            <div class="col text-center">
+                <h4 class="mb-0">{{account.username}}</h4>
+            </div>
+
+            <div class="col text-center">
+                <span class="text-muted">{{account.groups.all.0}}</span>
+            </div>
+
+            {% if account.avatar %}
+            <div class="col">
+                <a href="{% url 'booru:post_detail' account.avatar.id %}"><img class="mx-auto d-block" src='{{account.avatar.preview.url}}'></a>
+            </div>
+            {% endif %}
+
+            <table class="table table-sm mt-3">
+                <tbody>
+                    <tr>
+                        <th scope="row">Joined</th>
+                        <td title="{{account.date_joined}}">{{account.date_joined|date:"Y-m-d"}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Posts</th>
+                        <td>{{recent_uploads.count}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Deleted Posts</th>
+                        <td>{{deleted_posts.count}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Favorites</th>
+                        <td>{{account.get_favorites_count}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Comments</th>
+                        <td>{{account.get_comments_count}}</td>
+                    </tr>
+                    {% comment %}
+                    <tr>
+                        <th scope="row">Tag Edits</th>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Note Edits</th>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Forum Posts</th>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Record +</th>
+                        <td>-</td>
+                    </tr>
+                    {% endcomment %}
+                </tbody>
+            </table>
+            {% if user|can:'change_user_group' %}
+            <div>
+                <h4>Admin tools</h4>
+                <form method="post" enctype="multipart/x-www-form-urlencoded">
+                    {% csrf_token %}
+                    {{ user_group_form |crispy }}
+                    <button type="submit" class="btn btn-primary">Set</button>
+                </form>
+            </div>
+            {% endif %}
+        </div>
+        <div class="col col-md-6 mb-5">
+            <div class="col">
+                <h3>Recent Favorites</h3>
+
+                {% if recent_favorites %}
+                <table class="table table-sm mt-3">
+                    <tbody>
+                        {% for post in recent_favorites|slice:":5" %}
+                        <tr>
+                            <td><a href="{% url 'booru:post_detail' post.id %}"><img src='{{post.preview.url}}' style="width:100px;"></a></td>
+                            <td class="align-middle">Added favorite #<a href="{% url 'booru:post_detail' post.id %}">{{post.id}}</a> <span title="{{post.timestamp}}">{{post.timestamp|date:"Y/m/d f A"}}</span></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <p class="text-muted">No favorites have been added by this user yet!</p>
+                {% endif %}
+            </div>
+            <div class="col mt-4">
+                <h3>Recent Uploads</h3>
+
+                {% if recent_uploads %}
+                <table class="table table-sm mt-3">
+                    <tbody>
+                        {% for post in recent_uploads|slice:":5" %}
+                        <tr>
+                            <td><a href="{% url 'booru:post_detail' post.id %}"><img src='{{post.preview.url}}' style="width:100px;"></a></td>
+                            <td class="align-middle">Uploaded #<a href="{% url 'booru:post_detail' post.id %}">{{post.id}}</a> <span title="{{post.timestamp}}">{{post.timestamp|date:"Y/m/d f A"}}</span></td>
+                        </tr>
+                        {% endfor %}
+                        
+                    </tbody>
+                </table>
+                {% else %}
+                <p class="text-muted">No posts have been added by this user yet!</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col col-md-4">
+            <h3>
+                About myself
+                {% if user|can:'modify_profile' %}
+                <a class="float-right" id="edit_about" href="#"><i class="fas fa-pencil-alt"></i></a>
+                {% endif %}
+            </h3>
+
+            {% load markdown_deux_tags %}
+
+            <div id="about-data">
+                {% if account.about %}
+                {{ account.about|markdown }}
+                {% else %}
+                <p class="text-muted">This user have not written nothing about themselves yet!</p>
+                {% endif %}
+            </div>
+
+            <div class="form-group" id="about-edit" style="display: none;">
+                <form method="post" action="." enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <textarea class="form-control" id="aboutUserTextarea" name="aboutUserTextarea" rows="4">{{account.about}}</textarea>
+                    <button type="submit" id="send_about" class="btn btn-md btn-primary float-right mt-1">Save changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% if request.user.show_comments %}
+    <div class="row">
+        <div id="comment-section" class="mt-3 mb-3 col offset-2">
+            <h3>Comments</h3>
+            <div id="comments" class="row">
+                {% for comment in account.comments.all %}
+                <div id="comment-{{comment.id}}" class="comment col-10 border comment-border pt-3 pb-3 mb-2">
+                    <div class="row">
+                        <div class="comment col">
+                            <div class="row">
+                                <span class="col">
+                                    <h5><a href="{{comment.author.get_absolute_url}}">{{comment.author}}</a></h5>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <span class="col text-muted">
+                                    {{comment.timestamp|naturaltime}}
+                                </span>
+                            </div>
+                            <div class="row">
+                                <span class="col">
+                                    <small>Score: {{comment.get_score}}</small>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="comment col-9">
+                            {% load markdown_deux_tags %}
+                            {{comment.content|markdown}}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div id="comment-create-form" class="row mt-3">
+                <form class="col-10" method="post" action="." enctype="multipart/form-data">
+                    {% if not user.is_authenticated %}
+                    <fieldset disabled>
+                    {% endif %}
+
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {% if not user.is_authenticated %}
+                            <label for="newCommentTextarea" class="text-muted">New comment (Login to comment)</label>
+                            {% else %}
+                            <label for="newCommentTextarea">New comment</label>
+                            {% endif %}
+                            <textarea class="form-control" id="newCommentTextarea" name="newCommentTextarea" rows="3" {% if not can_comment %}placeholder="This account cannot comment currently." disabled{% endif %}></textarea>
+                        </div>
+                        {% if can_comment %}
+                        <button type="submit" id="sendComment" class="btn btn-sm btn-primary">Create comment</button>
+                        {% endif %}
+                    {% if not user.is_authenticated %}
+                    </fieldset>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}
