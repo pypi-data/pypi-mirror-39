@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: pycostanza
+Version: 0.1.3
+Summary: Python version of Costanza
+Home-page: https://gitlab.com/slcu/teamHJ/henrik_aahl/pycostanza
+Author: Henrik Ahl
+Author-email: hpa22@cam.ac.uk
+License: GNU General Public License v3
+Keywords: pycostanza
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: Click (>=6.0)
+Requires-Dist: scipy (>=1.0.0)
+Requires-Dist: mahotas (>=1.4.4)
+Requires-Dist: numpy (>=1.9.0)
+Requires-Dist: scikit-image (>=0.14)
+Requires-Dist: networkx (>=1.11)
+Requires-Dist: matplotlib (<3.0)
+
+==========
+pyCostanza
+==========
+
+
+.. image:: https://img.shields.io/pypi/v/pycostanza.svg
+        :target: https://pypi.python.org/pypi/pycostanza
+
+.. image:: https://img.shields.io/travis/supersubscript/pycostanza.svg
+        :target: https://travis-ci.org/supersubscript/pycostanza
+
+.. image:: https://readthedocs.org/projects/pycostanza/badge/?version=latest
+        :target: https://pycostanza.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+
+
+PyCostanza is a Python re-write of the ImageJ tool Costanza. It includes
+features for segmenting objects in images (e.g. cell nuclei or whole cells)
+based on an intensity gradient. 
+
+
+* Free software: GNU General Public License v3
+* Documentation: https://pycostanza.readthedocs.io.
+
+
+Features
+--------
+
+* TODO 
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.2 (2018-09-18)
+------------------
+
+* Implemented new merging method `merge_labels_small2closest`.
+
+0.1.1 (2018-09-18)
+------------------
+
+* Minor performance improvements in segmentation function.
+* Resolved bugfix due to not importing functions through relative paths.
+* Corrected erronous repository link on pypi.
+
+0.1.0 (2018-09-07)
+------------------
+
+* First release on PyPI.
+
+
