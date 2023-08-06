@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: btodo
+Version: 0.0.1
+Summary: Minimal todo app implementation
+Home-page: https://github.com/plant99/todo
+Author: plant99
+Author-email: shivashispadhi@gmail.com
+License: UNKNOWN
+Description: # todo
+        
+        A simple todo record which is simple as elegant, as it shows itself every time you spawn your terminal. 
+        
+        # usage
+        
+        - type todo -h to list all functions
+        - --enable / --disable is to enable or disable todo. For example, if you choose to `python /path_to_todo/todo` in your .bashrc, this flag would help you to disable you if it irritates at some point.
+        - -n flag is to add new task. The format is as follows
+        	- python todo 'task-name'
+        	- a dialogue box opens to save priority preference on a scale of 1-3
+        - -e flag is to edit a task. Usage:
+        	- python todo -e 'task-id'
+        	- save new description and priority on the same scale
+        - -d flag deletes a task. Usage:
+        	- python todo -d 'task-id'
+        	
+        # Todo [ get it?! ]
+        
+        - sort on the basis of priorities
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
