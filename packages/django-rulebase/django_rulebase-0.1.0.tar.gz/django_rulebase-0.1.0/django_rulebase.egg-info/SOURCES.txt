@@ -1,0 +1,11 @@
+README.md
+setup.py
+django_rulebase/__init__.py
+django_rulebase/request.py
+django_rulebase/rule.py
+django_rulebase/validator.py
+django_rulebase.egg-info/PKG-INFO
+django_rulebase.egg-info/SOURCES.txt
+django_rulebase.egg-info/dependency_links.txt
+django_rulebase.egg-info/requires.txt
+django_rulebase.egg-info/top_level.txt
