@@ -1,0 +1,21 @@
+intelhex
+six
+future
+websocket-client
+intervaltree
+colorama
+pyelftools
+pyusb>=1.0.0b2
+pyyaml
+
+[:platform_system == "Darwin"]
+hidapi
+
+[:platform_system == "Windows"]
+pywinusb>=0.4.0
+
+[:python_version < "3.4"]
+enum34
+
+[dissassembler]
+capstone
