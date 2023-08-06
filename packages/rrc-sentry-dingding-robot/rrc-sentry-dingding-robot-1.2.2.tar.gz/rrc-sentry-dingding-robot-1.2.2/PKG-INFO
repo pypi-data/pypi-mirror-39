@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: rrc-sentry-dingding-robot
+Version: 1.2.2
+Summary: Sentry的钉钉插件
+Home-page: https://github.com/renrenche-fe/sentry-dingding
+Author: xierenhong
+Author-email: xierenhong@renrenche.com
+License: UNKNOWN
+Description: 
+        rrc-sentry-dingding-robot
+        ==============
+        sentry 钉钉机器人通知插件
+        
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development

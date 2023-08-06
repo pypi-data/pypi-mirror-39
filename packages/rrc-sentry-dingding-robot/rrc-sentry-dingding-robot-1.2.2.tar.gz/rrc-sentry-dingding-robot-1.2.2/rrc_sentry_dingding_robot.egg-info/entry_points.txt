@@ -1,0 +1,6 @@
+[sentry.apps]
+sentry_dingding = sentry_dingding
+
+[sentry.plugins]
+dingding = sentry_dingding.models:DingDingMessage
+
