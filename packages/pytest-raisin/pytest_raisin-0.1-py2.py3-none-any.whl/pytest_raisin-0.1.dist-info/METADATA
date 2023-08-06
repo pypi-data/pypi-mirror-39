@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pytest-raisin
+Version: 0.1
+Summary: Plugin enabling the use of exception instances with pytest.raises
+Home-page: https://github.com/wimglenn/pytest-raisin
+License: UNKNOWN
+Author: Wim Glenn
+Author-email: hey@wimglenn.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Framework :: Pytest
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: pytest
+Provides-Extra: .none
