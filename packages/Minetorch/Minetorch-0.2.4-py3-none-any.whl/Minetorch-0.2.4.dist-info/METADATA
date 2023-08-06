@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: Minetorch
+Version: 0.2.4
+Summary: A tools collection for pytorch users
+Home-page: https://github.com/louis-she/minetorch
+Author: louis
+Author-email: chenglu.she@gmail.com
+License: UNKNOWN
+Keywords: pytorch minecraft
+Platform: UNKNOWN
+Requires-Dist: tensorboardX
+Requires-Dist: torch
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
