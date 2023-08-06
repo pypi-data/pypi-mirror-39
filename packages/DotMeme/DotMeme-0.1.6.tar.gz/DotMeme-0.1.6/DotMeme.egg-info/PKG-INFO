@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: DotMeme
+Version: 0.1.6
+Summary: A small example package to make memes from .meme files
+Home-page: https://gitlab.com/ire4ever1190/dotmeme
+Author: Jake Leahy
+Author-email: darhyaust@gmail.com
+License: UNKNOWN
+Description: the meme file is basically just a yaml file but with .meme extension
+        
+        it should go like this
+        
+        ```name: disloyal boyfriend
+        image:
+          url: https://i.kym-cdn.com/entries/icons/mobile/000/023/732/damngina.jpg
+        text:
+          point1:
+            point: 448 176
+          point2:
+            point: 94 270
+          point3:
+            point: 623 209
+        ```
+        
+        This is a the disloyal boyfriend in .meme format
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
