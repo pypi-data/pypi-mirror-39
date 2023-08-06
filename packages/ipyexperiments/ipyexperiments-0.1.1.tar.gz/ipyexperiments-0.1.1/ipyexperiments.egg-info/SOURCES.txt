@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ipyexperiments/__init__.py
+ipyexperiments/ipyexperiments.py
+ipyexperiments/version.py
+ipyexperiments.egg-info/PKG-INFO
+ipyexperiments.egg-info/SOURCES.txt
+ipyexperiments.egg-info/dependency_links.txt
+ipyexperiments.egg-info/not-zip-safe
+ipyexperiments.egg-info/requires.txt
+ipyexperiments.egg-info/top_level.txt
+tests/conftest.py
+tests/test_basic.py
