@@ -1,0 +1,6 @@
+click>=6.0
+six
+attrs
+pluggy
+termcolor
+execnet
