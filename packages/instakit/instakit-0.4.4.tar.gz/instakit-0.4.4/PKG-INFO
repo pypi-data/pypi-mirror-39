@@ -1,0 +1,40 @@
+Metadata-Version: 1.1
+Name: instakit
+Version: 0.4.4
+Summary: Image processors and filters.
+Home-page: http://github.com/fish2000/instakit
+Author: Alexander Bohn
+Author-email: fish2000@gmail.com
+License: MIT
+Download-URL: http://github.com/fish2000/instakit/zipball/master
+Description: 
+        Image processors and filters, inspired by Instagram, and ready for use
+        with django-imagekit.
+        
+        Included are filters for Atkinson-dither halftoning,  dot-pitch halftoning
+        (with GCR and per-channel pipeline processors), classes for Numpy-based
+        image processors, Gaussian kernel functions, processors for applying curves
+        to images from Photoshop .acv files, imagekit-ready processors exposing
+        Pillow’s many image adjustment algorithms (e.g. noise and blur functions,
+        histogram-based adjustments like Brightness/Contrast, and many others),
+        and an implementation of the entropy-based smart-crop algorithm that many
+        know from the easy-thumbnails Django app.
+        
+        Experienced users may also make use of the many utilities shipping with
+        instakit: LUT maps, color structs, pipeline processing primitives and 
+        ink-based separation simulation tools, and other related miscellany.
+        
+Keywords: python django imagekit image processing filters
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
