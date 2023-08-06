@@ -1,0 +1,16 @@
+xgboost==0.80
+sklearn
+sklearn_crfsuite
+scikit-learn==0.19.1
+requests
+fuzzywuzzy
+tqdm
+nltk
+unidecode
+tensorflow
+numpy
+scipy
+python-levenshtein
+pandas
+PySastrawi
+toolz
