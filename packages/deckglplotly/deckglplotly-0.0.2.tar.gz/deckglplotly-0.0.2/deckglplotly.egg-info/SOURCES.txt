@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+deckglplotly/__init__.py
+deckglplotly/_imports_.py
+deckglplotly/deckglplotly.dev.js
+deckglplotly/deckglplotly.min.js
+deckglplotly/deckglplotly.py
+deckglplotly/line.py
+deckglplotly/metadata.json
+deckglplotly/package.json
+deckglplotly/scatter.py
+deckglplotly/style.css
+deckglplotly.egg-info/PKG-INFO
+deckglplotly.egg-info/SOURCES.txt
+deckglplotly.egg-info/dependency_links.txt
+deckglplotly.egg-info/top_level.txt
