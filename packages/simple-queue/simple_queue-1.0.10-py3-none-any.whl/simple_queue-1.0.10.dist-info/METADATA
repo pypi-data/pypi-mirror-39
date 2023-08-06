@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: simple-queue
+Version: 1.0.10
+Summary: A lightweight and ready to use SQS worker implementation.
+Home-page: UNKNOWN
+Author: Luis Felipe Muller
+Author-email: luisfmuller@gmail.com
+License: UNKNOWN
+Keywords: queue,AWS,SQS,Worker
+Platform: UNKNOWN
+Requires-Dist: blinker (==1.4)
+Requires-Dist: boto3 (>=1.7.61)
+Requires-Dist: botocore (>=1.10.61)
+Requires-Dist: docutils (==0.14)
+Requires-Dist: jmespath (==0.9.3)
+Requires-Dist: pytz (>=2018.5)
+Requires-Dist: s3transfer (==0.1.13)
+Requires-Dist: simple-mappers (>=1.0.1)
+Requires-Dist: six (>=1.11.0)
+Requires-Dist: python-dateutil (>=2.7.3) ; python_version >= "2.7"
+Requires-Dist: urllib3 (>=1.23) ; python_version >= "3.4"
+
+UNKNOWN
+
+
