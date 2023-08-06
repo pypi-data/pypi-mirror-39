@@ -1,0 +1,588 @@
+#!/usr/bin/env python
+#
+# config.py - Parses command line arguments and configuration files.
+#
+# Author: Paul McCarthy <pauldmccarthy@gmail.com>
+#
+"""This module contains functions for parsing ``ukbparse`` command line
+arguments and configuration files.
+"""
+
+
+import os.path         as op
+import functools       as ft
+import multiprocessing as mp
+import                    sys
+import                    logging
+import                    argparse
+import                    collections
+
+import ukbparse
+import ukbparse.util           as util
+import ukbparse.importing      as importing
+import ukbparse.exporting      as exporting
+import ukbparse.exporting_hdf5 as exporting_hdf5
+import ukbparse.exporting_tsv  as exporting_tsv
+
+
+log = logging.getLogger(__name__)
+
+
+VERSION                    = ukbparse.__version__
+UKBPARSEDIR                = op.dirname(__file__)
+DEFAULT_VFILE              = op.join(UKBPARSEDIR, 'data', 'variables.tsv')
+DEFAULT_DFILE              = op.join(UKBPARSEDIR, 'data', 'datacodings.tsv')
+DEFAULT_TFILE              = op.join(UKBPARSEDIR, 'data', 'types.tsv')
+DEFAULT_PFILE              = op.join(UKBPARSEDIR, 'data', 'processing.tsv')
+DEFAULT_CFILE              = op.join(UKBPARSEDIR, 'data', 'categories.tsv')
+DEFAULT_ICD10FILE          = op.join(UKBPARSEDIR, 'data', 'icd10.tsv')
+DEFAULT_MERGE_AXIS         = importing.MERGE_AXIS
+DEFAULT_MERGE_STRATEGY     = importing.MERGE_STRATEGY
+DEFAULT_EXPORT_FORMAT      = exporting.EXPORT_FORMAT
+AVAILABLE_MERGE_AXES       = importing.MERGE_AXIS_OPTIONS
+AVAILABLE_MERGE_STRATEGIES = importing.MERGE_STRATEGY_OPTIONS
+DEFAULT_OUTPUT_ID_COLUMN   = exporting.ID_COLUMN
+DEFAULT_COLUMN_PATTERN     = exporting.COLUMN_PATTERN
+DEFAULT_TSV_SEP            = exporting_tsv.TSV_SEP
+DEFAULT_HDF5_KEY           = exporting_hdf5.HDF5_KEY
+DEFAULT_HDF5_STYLE         = exporting_hdf5.HDF5_STYLE
+AVAILABLE_HDF5_STYLES      = exporting_hdf5.HDF5_STYLES
+CLI_ARGUMENTS              = collections.OrderedDict((
+
+    ('Inputs', [
+        ((       'outfile',),        {}),
+        ((       'infile',),         {'nargs'   : '+'}),
+        (('e',   'encoding'),        {'action'  : 'append'}),
+        (('l',   'loader'),          {'nargs'   : 2,
+                                      'metavar' : ('FILE', 'LOADER'),
+                                      'action'  : 'append'}),
+        (('ma',  'merge_axis'),      {'choices' : AVAILABLE_MERGE_AXES,
+                                      'default' : DEFAULT_MERGE_AXIS}),
+        (('ms',  'merge_strategy'),  {'choices' : AVAILABLE_MERGE_STRATEGIES,
+                                      'default' : DEFAULT_MERGE_STRATEGY}),
+        (('cfg', 'config_file'),     {}),
+        (('vf',  'variable_file'),   {'default' : DEFAULT_VFILE}),
+        (('df',  'datacoding_file'), {'default' : DEFAULT_DFILE}),
+        (('tf',  'type_file'),       {'default' : DEFAULT_TFILE}),
+        (('pf',  'processing_file'), {'default' : DEFAULT_PFILE}),
+        (('cf',  'category_file'),   {'default' : DEFAULT_CFILE}),
+        (('if',  'icd10_file'),      {'default' : DEFAULT_ICD10FILE})]),
+
+    ('Import options', [
+        (('ia', 'import_all'),     {'action' : 'store_true'}),
+        (('r',  'remove_unknown'), {'action' : 'store_true'}),
+        (('s',  'subject'),        {'action' : 'append'}),
+        (('v',  'variable'),       {'action' : 'append'}),
+        (('c',  'category'),       {'action' : 'append'}),
+        (('vi', 'visit'),          {'action' : 'append'}),
+        (('ex', 'exclude'),        {'action' : 'append'})]),
+
+    ('Cleaning options', [
+        (('sn',  'skip_insertna'),      {'action'  : 'store_true'}),
+        (('scv', 'skip_childvalues'),   {'action'  : 'store_true'}),
+        (('scf', 'skip_clean_funcs'),   {'action'  : 'store_true'}),
+        (('sr',  'skip_recoding'),      {'action'  : 'store_true'}),
+        (('cl',  'clean'),              {'nargs'   : 2,
+                                         'action'  : 'append',
+                                         'metavar' : ('VID', 'EXPR')}),
+        (('tc',  'type_clean'),         {'nargs'   : 2,
+                                         'action'  : 'append',
+                                         'metavar' : ('TYPE', 'EXPR')}),
+        (('gc',  'global_clean'),       {'metavar' : 'EXPR'})]),
+
+    ('Processing options', [
+        (('sp',  'skip_processing'), {'action'  : 'store_true'}),
+        (('ppr', 'prepend_process'), {'action'  : 'append',
+                                      'nargs'   : 2,
+                                      'metavar' : ('VARS', 'PROCS')}),
+        (('apr', 'append_process'),  {'action'  : 'append',
+                                      'nargs'   : 2,
+                                      'metavar' : ('VARS', 'PROCS')})]),
+
+    ('Export options', [
+        (('f',    'format'),            {'default' : DEFAULT_EXPORT_FORMAT}),
+        (('cp',   'column_pattern'),    {'default' : DEFAULT_COLUMN_PATTERN}),
+        (('rc',   'rename_column'),     {'action'  : 'append',
+                                         'nargs'   : 2,
+                                         'metavar' : ('OLD_NAME', 'NEW_NAME')}),  # noqa
+        (('oi',   'output_id_column'),  {'default' : DEFAULT_OUTPUT_ID_COLUMN}),  # noqa
+        (('edf',  'date_format'),       {'default' : 'default'}),
+        (('etf',  'time_format'),       {'default' : 'default'}),
+        (('nr',   'num_rows'),          {'type'    : int}),
+        (('uf',   'unknown_vars_file'), {}),
+        (('imf',  'icd10_map_file'),    {})]),
+
+    ('TSV export options', [
+        (('ts',  'tsv_sep'),            {'default' : DEFAULT_TSV_SEP}),
+        (('tm',  'tsv_missing_values'), {'default' : ''}),
+        (('tvf', 'tsv_var_format'),     {'nargs'   : 2,
+                                         'metavar' : ('VID', 'FORMATTER'),
+                                         'action'  : 'append'})]),
+
+    ('HDF5 export options', [
+
+        (('hk', 'hdf5_key'),   {'default' : DEFAULT_HDF5_KEY}),
+        (('hs', 'hdf5_style'), {'default' : DEFAULT_HDF5_STYLE,
+                                'choices' : AVAILABLE_HDF5_STYLES})]),
+
+    ('Miscellaneous options', [
+        (('V',  'version'),      {'action'  : 'version',
+                                  'version' :
+                                  '%(prog)s {}'.format(VERSION)}),
+        (('d',  'dry_run'),      {'action' : 'store_true'}),
+        (('lm', 'low_memory'),   {'action' : 'store_true'}),
+        (('wd', 'work_dir'),     {}),
+        (('lf', 'log_file'),     {}),
+        (('nj', 'num_jobs'),     {'type'    : int,
+                                  'default' : mp.cpu_count()}),
+        (('pt', 'pass_through'), {'action'  : 'store_true'}),
+        (('p',  'plugin_file'),  {'action'  : 'append',
+                                  'metavar' : 'FILE'}),
+        (('ow', 'overwrite'),    {'action'  : 'store_true'}),
+        (('n',  'noisy'),        {'action'  : 'count'}),
+        (('q',  'quiet'),        {'action'  : 'store_true'})])))
+
+
+CLI_DESCRIPTIONS = {
+
+    'Import options' :
+    'Using the --import_all option will increase RAM and CPU requirements, '
+    'as it forces every column to be loaded and processed. The purpose of '
+    'this option is to allow the user to identify previously unknown '
+    'columns that passed the processing steps (e.g. the sparsity test), and '
+    'therefore may need to be looked at more closely. Intended to be used '
+    'with the --unknown_vars_file export option.',
+
+    'Export options' :
+    'The --unknown_vars_file (only active if --import_all is also active) '
+    'allows a file to be saved containing information about columns which '
+    'were in the input data, but not in the variable table. It contains '
+    'four columns - the column name, the originating input file, whether '
+    'the column passed the processing stage (e.g. sparsity/redundancy '
+    'checks), and whether the column was exported.',
+}
+
+
+CLI_ARGUMENT_HELP = {
+
+    # Input options
+    'outfile' : 'Location to store output data.',
+    'infile'  : 'File(s) containing input data.',
+
+    'encoding' :
+    'Character encoding. A single encoding can be specified, or this option '
+    'can be used multiple times, one for each input file.',
+
+    'loader' :
+    'Use custom loader for file. Can be used multiple times.',
+
+    'merge_axis' :
+    'Axis to concatenate multiple input files along (default: "{}"). '
+    'Options are "subjects"/"rows"/"0" or "variables"/"columns"/'
+    '"1".'.format(DEFAULT_MERGE_AXIS),
+
+    'merge_strategy' :
+    'Strategy for merging multiple input files (default: "{}"). '
+    'Options are "naive", "intersection"/"inner", or "union"/'
+    '"outer".'.format(DEFAULT_MERGE_STRATEGY),
+
+    'config_file' :
+    'File containing default command line arguments.',
+
+    'variable_file' :
+    'File containing rules for handling variables '
+    '(default: {}).'.format(DEFAULT_VFILE),
+
+    'datacoding_file' :
+    'File containing rules for handling data codings '
+    '(default: {}).'.format(DEFAULT_DFILE),
+
+    'type_file' :
+    'File containing rules for handling types '
+    '(default: {}).'.format(DEFAULT_TFILE),
+
+    'processing_file' :
+    'File containing variable processing rules '
+    '(default: {}).'.format(DEFAULT_PFILE),
+
+    'category_file' :
+    'File containing variable categories '
+    '(default: {}).'.format(DEFAULT_CFILE),
+
+    'icd10_file' :
+    'File containing ICD10 hierarchy '
+    '(default: {}).'.format(DEFAULT_ICD10FILE),
+
+    # Import options
+    'import_all' :
+    'Import and process all columns, and apply --variable/--category/'
+    '--remove_unknown options after processing.',
+
+    'remove_unknown' :
+    'Remove variables which are not listed in variable table. Implied if '
+    'variables are specified using --variable or --category.',
+
+    'subject' :
+    'Subject ID, ID range, file containing a list of subject IDs, or variable '
+    'expression, denoting subjects to include. Can be used multiple times.',
+
+    'variable' :
+    'Variable ID, ID range, or file containing a list of variable IDs, to '
+    'import. Can be used multiple times. Implies --remove_unknown.',
+
+    'category' :
+    'Category ID or label to import. Can be used multiple times. Implies '
+    '--remove_unknown.',
+
+    'visit' :
+    'Import this visit. Can be used multiple times. Allowable values are '
+    '\'first\', \'last\', or a visit number.',
+
+    'exclude' :
+    'Subject ID, ID range, file containing a list of subject IDs specifying '
+    'subjects to exclude. Can be used multiple times.',
+
+    # Clean options
+    'skip_insertna' :
+    'Skip NA insertion.',
+    'skip_childvalues' :
+    'Skip child value replacement.',
+    'skip_clean_funcs' :
+    'Skip cleaning functions defined in variable table.',
+    'skip_recoding' :
+    'Skip raw->new level recoding.',
+
+    'clean' :
+    'Apply cleaning function(s) to variable (overrides any cleaning '
+    'specified in variable table).',
+
+    'type_clean' :
+    'Apply clean function(s) to all variables of the specified type '
+    '(overrides any cleaning specified in type table).',
+
+    'global_clean' :
+    'Apply cleaning function(s) to every variable (after variable-'
+    'specific cleaning specified in variable table or via --clean).',
+
+    # Processing options
+    'skip_processing' :
+    'Skip processing functions defined in processing table (but not '
+    'those specified via --prepend_process and --append_process).',
+    'prepend_process' :
+    'Apply processing function(s) before processing defined in processing '
+    'table.',
+    'append_process' :
+    'Apply processing function(s) after processing defined in processing '
+    'table.',
+
+    # Export options
+    'format' :
+    'Output file format (default: "{}").'.format(DEFAULT_EXPORT_FORMAT),
+
+    'column_pattern' :
+    'Pattern defining output column names (default: "{}").'.format(
+        DEFAULT_COLUMN_PATTERN),
+
+    'rename_column' :
+    'Rename the given column instead of applying --column_pattern. Can '
+    'be used multiple times',
+
+    'output_id_column' :
+    'Name of ID column in output file '
+    '(default: \'{}\')'.format(DEFAULT_OUTPUT_ID_COLUMN),
+
+    'date_format' :
+    'Formatter to use for date variables (default: "default").',
+
+    'time_format' :
+    'Formatter to use for time variables (default: "default").',
+
+    'num_rows' :
+    'Number of rows to write at a time.',
+
+    'unknown_vars_file' :
+    'Save list of unknown variables/columns to file. Only applicable if '
+    '--import_all is enabled.',
+
+    'icd10_map_file' :
+    'Save converted ICD10 code mappings to file',
+
+    # TSV export options
+    'tsv_sep'    :
+    'Column separator string to use in output file (default: "{}")'.format(
+        DEFAULT_TSV_SEP.replace('\t', '\\t')),
+
+    'tsv_missing_values' :
+    'String to use for missing values in output file (default: empty '
+    'string).' ,
+
+    'tsv_var_format' :
+    'Apply custom formatter to the specified variable.',
+
+    # HDF5 export options
+    'hdf5_key'    :
+    'Key/name to use for the HDF5 group (default: '
+    '"{}").'.format(DEFAULT_HDF5_KEY),
+    'hdf5_style'  :
+    'HDF5 style to save as (default: "{}").'.format(DEFAULT_HDF5_STYLE),
+
+    # Miscellaneous options
+    'version'      : 'Print version and exit.',
+    'dry_run'      : 'Print a summary of what would happen and exit.',
+    'low_memory'   : 'Store intermediate results on disk, rather than in RAM. '
+                     'Use this flag on systems which cannot store the full '
+                     'data set in RAM. ',
+    'work_dir'     : 'Directory to store intermediate files (default: '
+                     'temporary directory). Only relevant when using '
+                     '--low_memory.',
+    'log_file'     : 'Save log messages to file.',
+    'num_jobs'     : 'Maximum number of jobs to run in parallel. '
+                     '(default: {}).',
+    'pass_through' : 'Do not perform any cleaning or processing on the data - '
+                     'implies --skip_insertna, --skip_childvalues, '
+                     '--skip_clean_funcs, --skip_recoding, and '
+                     '--skip_processing.',
+    'plugin_file'  : 'Path to file containing custom ukbparse plugins. Can be '
+                     'used multiple times.',
+    'overwrite'    : 'Overwrite output file if it already exists',
+    'noisy'        : 'Print debug statements. Can be used up to three times.',
+    'quiet'        : 'Be quiet.',
+}
+
+
+@ft.lru_cache()
+def makeParser(include=None, exclude=None):
+    """Creates and returns an ``argparse.ArgumentParser`` for parsing
+    ``ukbparse`` command line arguments.
+
+    :arg include: Configure the parser so it only includes the specified
+                  arguments.
+
+    :arg exclude: Configure the parser so it excludes the specified
+                  arguments - this overrides ``include``.
+    """
+
+    parser = argparse.ArgumentParser('ukbparse', allow_abbrev=False)
+    helps  = CLI_ARGUMENT_HELP
+    descs  = CLI_DESCRIPTIONS
+
+    for group, args in CLI_ARGUMENTS.items():
+
+        desc  = descs.get(group, None)
+        group = parser.add_argument_group(group, description=desc)
+
+        for arg, kwargs in args:
+
+            name = arg[-1]
+
+            if exclude is not None and name     in exclude: continue
+            if include is not None and name not in include: continue
+
+            if len(arg) == 2:
+                arg = ('-{}'.format(arg[0]), '--{}'.format(arg[1]))
+
+            group.add_argument(*arg, help=helps[name], **kwargs)
+
+    return parser
+
+
+def parseArgsWithConfigFile(argv=None):
+    """Checks the command line arguments to see if a configuration file has
+    been specified. If so, loads the arguments in the configuration file,
+    and then parses the rest of the command line arguments.
+
+    :returns: see :func:`parseArgs`.
+    """
+
+    if argv is None:
+        argv = sys.argv[1:]
+
+    cfgfile = None
+
+    if '-cfg' in argv or '--config_file' in argv:
+        cfgparser = makeParser('config_file')
+        cfgfile   = cfgparser.parse_known_args(argv)[0].config_file
+
+    if cfgfile is not None: namespace = loadConfigFile(cfgfile)
+    else:                   namespace = None
+
+    return parseArgs(argv, namespace)
+
+
+def parseArgs(argv=None, namespace=None):
+    """Parses ``ukbparse`` command line arguments.
+
+    :arg argv:      List of arguments to parse.
+    :arg namespace: Existing ``argparse.Namespace`` - if not provided, an
+                    empty one will be created.
+    :returns:       A tuple containing:
+                     - an ``argparse.Namespace`` object containing the parsed
+                       command-line arguments.
+                     - A list of the original arguments that were parsed.
+
+    """
+
+    if argv is None:
+        argv = sys.argv[1:]
+
+    args = makeParser().parse_args(argv, namespace)
+
+    # error if output file exists
+    if (not args.dry_run) and (not args.overwrite) and op.exists(args.outfile):
+        print('Output file already exists, and --overwrite was not '
+              'specified!')
+        sys.exit(1)
+
+    if args.pass_through:
+        args.skip_insertna    = True
+        args.skip_childvalues = True
+        args.skip_clean_funcs = True
+        args.skip_recoding    = True
+        args.skip_processing  = True
+
+    # the importing.loadData function accepts
+    # either a single encoding, or one encoding
+    # for each data file.
+    if args.encoding is not None:
+        if len(args.encoding) == 1:
+            args.encoding = args.encoding[0]
+        elif len(args.encoding) != len(args.infile):
+            raise ValueError('Wrong number of encodings specified - specify '
+                             'either one encoding, or one encoding for each '
+                             'input file.')
+
+    # parallelisation only allowed
+    # in low_memory mode
+    if not args.low_memory:
+        args.num_jobs = 0
+
+    # turn loaders into dict of { file : name } mappings
+    if args.loader is not None:
+        args.loader = {f : n for f, n in args.loader}
+
+    # turn formatters into dict of { vid : name } mappings
+    if args.tsv_var_format is not None:
+
+        tsv_var_format = {}
+
+        for i, (v, n) in enumerate(args.tsv_var_format):
+
+            # Formatters should be set on integer
+            # variable IDs. But we allow non-integers
+            # to pass through, as the exportData
+            # function will also check against column
+            # names.
+            try:               v = int(v)
+            except ValueError: pass
+
+            tsv_var_format[v] = n
+
+        args.tsv_var_format = tsv_var_format
+
+    # turn --subject/--variable/--exclude
+    # arguments into lists of IDs
+    def replaceIDs(things):
+        newthings = []
+        failed    = []
+        for i, thing in enumerate(things):
+
+            # --subject/--variable/--exclude args
+            # may be either an ID or matlab-style
+            # start[:step[:stop]] range (both handled
+            # by the parseMatlabRange function).
+            # --subject may also be an expression,
+            # so if the range parse fails, we pass
+            # the argument through
+            if not op.exists(thing):
+                try:
+                    thing = util.parseMatlabRange(thing)
+                except ValueError:
+                    failed.append(thing)
+                    continue
+
+            # or they may be a file name
+            # containing a list of IDs
+            else:
+                with open(thing, 'rt') as f:
+                    thing = f.read().split()
+                    thing = [int(t.strip()) for t in thing]
+            for t in thing:
+                if t not in newthings:
+                    newthings.append(t)
+        return newthings, failed
+
+    # variable/exclude is transformed into
+    # a list of integer IDs, but subject is
+    # transformed into a tuple containing
+    # ([ID], [exprStr])
+    if args.noisy    is     None: args.noisy    = 0
+    if args.subject  is not None: args.subject  = replaceIDs(args.subject)
+    if args.variable is not None: args.variable = replaceIDs(args.variable)[0]
+    if args.exclude  is not None: args.exclude  = replaceIDs(args.exclude)[0]
+
+    # visits are restricted using the
+    # keepVisits cleaning function
+    if args.visit is not None:
+        visit = []
+        for v in args.visit:
+            if v in ('first', 'last'): visit.append('"{}"'.format(v))
+            else:                      visit.append(str(v))
+
+        visit = 'keepVisits({})'.format(','.join(visit))
+
+        if args.global_clean is None: args.global_clean  =       visit
+        else:                         args.global_clean += ',' + visit
+
+    # If variables/categories are explicitly
+    # specified, remove_unknown is implied.
+    if args.variable is not None or args.category is not None:
+        args.remove_unknown = True
+
+    # categories can be specified
+    # either by name or by ID -
+    # convert the latter to integers.
+    if args.category is not None:
+        for i, c in enumerate(args.category):
+            try:               args.category[i] = int(c)
+            except ValueError: continue
+
+    # convert rename_column from a sequence of
+    # [(oldname, newname)] pairs into a dict of
+    # { oldname : newname } mappings.
+    if args.rename_column is not None:
+        args.rename_column = dict(args.rename_column)
+
+    # convert clean from a sequence of [(varid, expr)]
+    # pairs into a dict of {varid : expr} mappings.
+    if args.clean is not None:
+        args.clean = {int(vid) : expr for vid, expr in args.clean}
+
+    # convert type_clean from a sequence of [(type, expr)]
+    # pairs into a dict of {type : expr} mappings.
+    if args.type_clean is not None:
+        args.type_clean = {util.CTYPES[t] : e for t, e in args.type_clean}
+
+    return args, argv
+
+
+def loadConfigFile(cfgfile):
+    """Loads arguments from the given configuration file, returning an
+    ``argparse.Namespace`` object.
+    """
+
+    argv = []
+
+    log.debug('Loading arguments from configuration file %s', cfgfile)
+
+    with open(cfgfile, 'rt') as f:
+        lines = [l.strip() for l in f.readlines()]
+        lines = [l         for l in lines if not l.startswith('#')]
+
+    for line in lines:
+        words        = list(line.split())
+        name, values = words[0], words[1:]
+
+        argv.append('--{}'.format(name))
+        argv.extend(values)
+
+    return makeParser(exclude=('outfile', 'infile')).parse_args(argv)
