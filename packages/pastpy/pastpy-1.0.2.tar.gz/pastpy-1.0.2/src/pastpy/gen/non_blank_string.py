@@ -1,0 +1,1 @@
+NonBlankString = str
