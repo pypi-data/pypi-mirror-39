@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: bq-tools-dirupload
+Version: 0.1.1
+Summary: Upload files to bisque/ViQi in parallel
+Home-page: https://www.viqi.org
+Author: ViQi Inc
+Author-email: support@viqi.org
+License: BSD
+Platform: UNKNOWN
+Requires-Dist: bisque-api
+Requires-Dist: future
+Requires-Dist: configparser
+
+bq-dirupload
+
+Directory uploader utility
+
+
+Example:
+
+bq-dirupload -d -n --include *.JPG --tag activity:bear  --re-tags "(?P<location>\w+)_(?P<camera>\w+)__(?P<date>[\d-]+)__(?P<time>[\d-]+).*" ~/Desktop/pics/bears/
+
+
+usage: Upload files to bisque [-h] [-c CONFIG] [--profile PROFILE] [-n] [-d]
+                              [-a CREDENTIALS] [--bisque-host BISQUE_HOST]
+                              [--tag TAG] [--path-tags PATH_TAGS]
+                              [--re-tags RE_TAGS] [--include INCLUDE]
+                              [--exclude EXCLUDE] [--dataset DATASET]
+                              directory
+
+positional arguments:
+  directory             directory to upload
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c CONFIG, --config CONFIG
+                        bisque config (default: ~/.bisque/config)
+  --profile PROFILE     Profile to use in bisque config (default: default)
+  -n, --dry-run         report actions w/o changes (default: False)
+  -d, --debug           print activities (default: False)
+  -a CREDENTIALS, --credentials CREDENTIALS
+                        A bisque login.. admin (default: None)
+  --bisque-host BISQUE_HOST
+                        Default bisque server to connect to (default: None)
+  --tag TAG             fixed name:value pair. Any number allow (default: [])
+  --path-tags PATH_TAGS
+                        tag names for a parsible path i.e.
+                        /project/date/subject/ (default: )
+  --re-tags RE_TAGS     re expressions for tags i.e.
+                        (?P<location>\w+)--(?P<date>[\d-]+) (default: None)
+  --include INCLUDE     re expression for files to include (default: None)
+  --exclude EXCLUDE     re expression for files to exclude (default: None)
+  --dataset DATASET     create dataset and add files to it (default: None)
+
+
