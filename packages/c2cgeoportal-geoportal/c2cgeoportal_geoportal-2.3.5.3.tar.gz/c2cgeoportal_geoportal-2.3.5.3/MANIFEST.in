@@ -1,0 +1,3 @@
+include requirements.txt
+recursive-include c2cgeoportal_geoportal *.png *.html *.mo
+recursive-include c2cgeoportal_geoportal/scaffolds *
