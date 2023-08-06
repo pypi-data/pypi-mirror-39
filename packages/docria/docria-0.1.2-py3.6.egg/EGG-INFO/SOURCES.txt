@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+docria/__init__.py
+docria/algorithm.py
+docria/codec.py
+docria/index.py
+docria/model.py
+docria/printout.py
+docria/storage.py
+docria.egg-info/PKG-INFO
+docria.egg-info/SOURCES.txt
+docria.egg-info/dependency_links.txt
+docria.egg-info/requires.txt
+docria.egg-info/top_level.txt
