@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: supy-driver
+Version: 2018b15
+Summary: the SUEWS driver driven by f2py
+Home-page: https://github.com/sunt05/SuPy
+Author: Ting Sun
+Author-email: ting.sun@reading.ac.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: numpy (>=1.15.2)
+
+# SuPy
+the SUEWS model that speaks python
+
+
