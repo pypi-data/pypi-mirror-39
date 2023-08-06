@@ -1,0 +1,3 @@
+[console_scripts]
+postman-to-csv = postman_to_csv.postman_to_csv:main
+
