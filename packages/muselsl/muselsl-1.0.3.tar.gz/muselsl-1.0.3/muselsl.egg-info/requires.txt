@@ -1,0 +1,12 @@
+bitstring
+pylsl
+pygatt==3.2.0
+pandas
+scikit-learn
+numpy
+seaborn
+pexpect
+
+[Viewer V2]
+mne
+vispy
