@@ -1,0 +1,3 @@
+[console_scripts]
+protean-sqlalchemy = protean_sqlalchemy.cli:main
+
