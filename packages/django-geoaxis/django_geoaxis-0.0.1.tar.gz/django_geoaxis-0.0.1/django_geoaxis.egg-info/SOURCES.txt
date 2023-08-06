@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+setup.py
+django_geoaxis/__init__.py
+django_geoaxis.egg-info/PKG-INFO
+django_geoaxis.egg-info/SOURCES.txt
+django_geoaxis.egg-info/dependency_links.txt
+django_geoaxis.egg-info/not-zip-safe
+django_geoaxis.egg-info/requires.txt
+django_geoaxis.egg-info/top_level.txt
+django_geoaxis/backends/__init__.py
+django_geoaxis/backends/geoaxis.py
