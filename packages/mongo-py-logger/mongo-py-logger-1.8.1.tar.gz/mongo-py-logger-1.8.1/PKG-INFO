@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: mongo-py-logger
+Version: 1.8.1
+Summary: Logger for python, with MongoHandler.
+Home-page: https://github.com/razens/mongo-py-logger
+Author: Andrey Arambitsky
+Author-email: razens@gmail.com
+License: MIT
+Description: # mongo-py-logger
+        Python logger based on logging with mongoDB handle.
+        
+        Example:
+        ```python
+        from mongo_py_logger.logger import *
+        logger = MongoLogger(
+        'MONGODB_CONNECTION_STRING', cert_pth='path/to/client.pem',
+            collection_name='name_of_my_collection',
+            name='my_logger',
+            additional_field = "my_additional_data")
+        ```
+Keywords: Logger Logging Log
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Provides-Extra: test
+Provides-Extra: dev
