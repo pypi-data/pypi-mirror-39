@@ -1,0 +1,12 @@
+pyexpander>=1.6
+
+[dev]
+sphinx
+sphinx-argparse
+
+[doc]
+sphinx
+sphinx-argparse
+
+[doe]
+pyDOE2

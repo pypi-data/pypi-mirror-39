@@ -1,0 +1,17 @@
+README.rst
+setup.cfg
+setup.py
+parsim/__init__.py
+parsim/cli.py
+parsim/commands.py
+parsim/core.py
+parsim/dakota.py
+parsim/doe.py
+parsim/expander.py
+parsim/loggers.py
+parsim.egg-info/PKG-INFO
+parsim.egg-info/SOURCES.txt
+parsim.egg-info/dependency_links.txt
+parsim.egg-info/entry_points.txt
+parsim.egg-info/requires.txt
+parsim.egg-info/top_level.txt
