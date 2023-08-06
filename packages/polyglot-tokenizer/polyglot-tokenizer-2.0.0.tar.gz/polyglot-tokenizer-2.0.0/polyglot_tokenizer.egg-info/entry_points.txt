@@ -1,0 +1,3 @@
+[console_scripts]
+polyglot-tokenizer = polyglot_tokenizer:main
+
