@@ -1,0 +1,6 @@
+
+[aioredis]
+aioredis>=1.2.0
+
+[mongodb]
+motor>=2
