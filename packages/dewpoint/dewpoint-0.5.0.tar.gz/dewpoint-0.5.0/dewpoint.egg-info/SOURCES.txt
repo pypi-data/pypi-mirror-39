@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+dewpoint/__init__.py
+dewpoint/aws.py
+dewpoint/oauth.py
+dewpoint.egg-info/PKG-INFO
+dewpoint.egg-info/SOURCES.txt
+dewpoint.egg-info/dependency_links.txt
+dewpoint.egg-info/top_level.txt
+examples/ec2.py
+examples/twitter_oauth.py
