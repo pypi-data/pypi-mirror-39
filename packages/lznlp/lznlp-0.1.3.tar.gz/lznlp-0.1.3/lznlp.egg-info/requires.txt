@@ -1,0 +1,8 @@
+requests>=2.0.0
+nose
+keras
+xgboost
+pika
+scrapy
+w3lib
+lxml
