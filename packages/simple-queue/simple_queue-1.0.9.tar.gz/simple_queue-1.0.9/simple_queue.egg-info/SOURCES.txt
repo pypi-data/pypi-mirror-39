@@ -1,0 +1,15 @@
+MANIFEST.in
+requirements.txt
+setup.py
+simple_queue/__init__.py
+simple_queue/exceptions.py
+simple_queue/message.py
+simple_queue/processor.py
+simple_queue/queue.py
+simple_queue/utils.py
+simple_queue/worker.py
+simple_queue.egg-info/PKG-INFO
+simple_queue.egg-info/SOURCES.txt
+simple_queue.egg-info/dependency_links.txt
+simple_queue.egg-info/requires.txt
+simple_queue.egg-info/top_level.txt
