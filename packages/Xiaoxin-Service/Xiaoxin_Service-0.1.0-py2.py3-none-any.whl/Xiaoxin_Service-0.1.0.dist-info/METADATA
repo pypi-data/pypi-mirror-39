@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: Xiaoxin-Service
+Version: 0.1.0
+Summary: A Python library for using Cuda resume filter service
+Home-page: https://github.com/zhengfuping80/XiaoxinService
+Author: Zheng Fuping
+Author-email: zhengfuping80@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.6
+
+==============================
+XiaoXin Service Python Package
+==============================
+
+|PyPI version|
+
+Notes
+=====
+
+- Windows users: pip installation may not work on some Windows environments, and it may cause unexpected errors.
+
+- Only verified in CentOS 7.5 + Python3.6 officially
+
+Requirements
+============
+
+macOS
+-----
+
+pip3 install setuptools
+
+Linux
+-----
+
+pip3 install setuptools
+
+Installation
+============
+
+From source
+-----------
+
+For an up-to-date version:
+
+- Get code from git::
+
+    git clone http://git.prod.qiaodata.lan/ai/kg.git
+
+-  Make sure you have `setuptools <https://pypi.python.org/pypi/setuptools>`_ installed::
+
+    pip3 install setuptools
+
+-  Install with  from the root of the repo::
+
+    cd XiaoxinService
+    python setup.py install
+
+Examples
+========
+
+-  Refer also to the walk through example in::
+
+    cd XiaoxinService/examples
+
+.. |PyPI version| image:: https://badge.fury.io/py/xiaoxinservice.svg
+   :target: http://badge.fury.io/py/xiaoxinservice
+
+
