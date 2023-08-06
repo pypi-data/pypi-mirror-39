@@ -1,0 +1,12 @@
+apk_parse-1.0.0.dist-info/METADATA,sha256=Eo8PqZ-Sq_XctDzFfjhM8oWAFzKR6UihWxNf-7DD1X8,3793
+apk_parse-1.0.0.dist-info/RECORD,,
+apk_parse-1.0.0.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+apk_parse-1.0.0.dist-info/top_level.txt,sha256=ZAMgPdWghn6xTRBO6Kc3ML1y3ZrZLnjZlqbboKXc_AE,5
+main/__init__.py,sha256=w9O54apm-Fdti8P43jI9YeRPv9tL8EtiQ-OQ1mNwHUM,45
+main/androconf.py,sha256=9m7cKIfKhViF3oyYxRHTfX43_mQmnZ-TtcQg64t7kWk,8953
+main/apk.py,sha256=jl4CMzbHOqGMxARuuhj6kWVFEDPE-P3O1Wo4g45Ek5Q,60427
+main/bytecode.py,sha256=juIKjn3ttdplxd1x2n2HXfh0A9KgbsnOwiI-1etUt-M,24714
+main/dvm_permissions.py,sha256=QQjC384acB3q9G_0sSS9ZlBNS-zsQJauiUhGIkqfoag,43712
+main/test.py,sha256=NzlDj8jT9dl3hpUSkP1_L_GCMsxoZRKSpZP3a8oB13I,1482
+main/util.py,sha256=nvQ3HM8YWhXLPYFqVdjwRBzECxtRA835Ul4gusB2TGs,856
+main/zipfile.py,sha256=8lOu5Q5l6GQwve7YTli6L9kKyZopybwJsImtzzO2dnw,53983
