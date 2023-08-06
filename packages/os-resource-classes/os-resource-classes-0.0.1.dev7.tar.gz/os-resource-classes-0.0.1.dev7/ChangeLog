@@ -1,0 +1,11 @@
+CHANGES
+=======
+
+* Tune up documentation to be more useful
+* Sync STANDARDS with placement/nova rc\_fields
+* Rename ORDERED\_CLASSES to STANDARDS
+* Initial automated testing for os-resource-classes
+* fix formatting in README
+* Set some real tests for the ids in ORDERED\_CLASSES
+* Initial tuning from cookiecutter start
+* Initial Cookiecutter Commit
