@@ -1,0 +1,16 @@
+sense_core/__init__.py,sha256=_ojnQVvO_GCaAB9LfgIG8xWJXpyo032X26IvfDhGA80,461
+sense_core/config.py,sha256=6eLA0EfCt5059nzVx3mIx-V7gwQC4XQhPVe9feOJFrI,6100
+sense_core/django.py,sha256=KAyhQXuXmB8o_z-3TpTmnB_-td_YaPsWUq6k7wSzDSo,102
+sense_core/es.py,sha256=NKj1C3fjfUdvZ_SIr0Uc52MKBQtSE22aVe7dpD_gdGE,4013
+sense_core/log.py,sha256=s2paWoJZCpEZQOf7kM1YGQ__4pvEv76Isq1lgLEOZkg,3596
+sense_core/object_id.py,sha256=Fm6KVRn4uzFR2r47cDOrS6HxAtdNIdHL7xeViwXGXU4,9485
+sense_core/queue.py,sha256=36VknAw4K707D99VdsYYklUvwX_UYxbjWVyQR0AEkvs,471
+sense_core/queue0.py,sha256=k1C_5W_SQfShDWaLti150zkUB9djxkqfo9q5d_YCLtQ,2126
+sense_core/redis.py,sha256=hva1nEtQsC91YCQnLdvSY1ZvSRlhFdQtcv5-sn0Y-20,701
+sense_core/sqlalchemy.py,sha256=PnCcG50MbdiLA1BqgfjeWJk8qYuVLmks9sMpvHVfBXM,3091
+sense_core/url_uuid.py,sha256=2A64x4QEmdOv07RJV_LUP572MQCn7kui3_DcqCuHDdQ,2463
+sense_core/utils.py,sha256=LzvxWTUNPFz90Vuzf-KxgkG9WtPZbsu4yFAP8D4xfac,556
+sense_core-0.0.7.dist-info/METADATA,sha256=RBuWdj87hqngvom8lgzgLF1e_uq1lZJSqmGIT55n6Mw,1871
+sense_core-0.0.7.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+sense_core-0.0.7.dist-info/top_level.txt,sha256=_xmrBOjkD1slEtYfR3JLy2v08mi1sHgCOYZCdPZMEVE,11
+sense_core-0.0.7.dist-info/RECORD,,
