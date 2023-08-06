@@ -1,0 +1,14 @@
+*.pyc
+*.pyo
+*.egg-info
+__pycache__
+docs/_build
+
+.coverage
+*.doit.db
+dist
+.pytest_cache
+.tox
+.pytest-incremental*
+MANIFEST
+revision.txt
