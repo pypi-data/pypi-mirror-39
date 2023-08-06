@@ -1,0 +1,2885 @@
+ID	Type	Description	DataCoding	NAValues	RawLevels	NewLevels	ParentValues	ChildValues	Clean
+0	Sequence	Encoded anonymised participant ID
+3	Integer	Verbal interview duration
+4	Integer	Biometrics duration
+5	Integer	Sample collection duration
+6	Integer	Conclusion duration
+19	Categorical (single)	Heel ultrasound method	100260
+21	Categorical (single)	Weight method	100261
+23	Categorical (single)	Spirometry method	100270
+31	Categorical (single)	Sex	9
+34	Integer	Year of birth
+35	Categorical (single)	Was blood sampling attempted	7
+46	Integer	Hand grip strength (left)
+47	Integer	Hand grip strength (right)
+48	Continuous	Waist circumference
+49	Continuous	Hip circumference
+50	Continuous	Standing height
+52	Categorical (single)	Month of birth	8
+53	Date	Date of attending assessment centre
+54	Categorical (single)	UK Biobank assessment centre	10
+62	Categorical (single)	Willing to attempt cognitive tests	100641
+68	Integer	Number of blood samples taken
+74	Integer	Fasting time
+77	Continuous	Heel bone ultrasound T-score, manual entry
+78	Continuous	Heel bone mineral density (BMD) T-score, automated
+84	Integer	Cancer year/age first occurred	37
+87	Integer	Non-cancer illness year/age first occurred	37
+92	Integer	Operation year/age first occurred	37
+93	Integer	Systolic blood pressure, manual reading
+94	Integer	Diastolic blood pressure, manual reading
+95	Integer	Pulse rate (during blood-pressure measurement)
+102	Integer	Pulse rate, automated reading
+111	Categorical (single)	Aide-memoire completed	7
+120	Categorical (single)	Birth weight known	100258
+129	Integer	Place of birth in UK - north co-ordinate	170
+130	Integer	Place of birth in UK - east co-ordinate	170
+132	Categorical (single)	Job code	2
+134	Integer	Number of self-reported cancers
+135	Integer	Number of self-reported non-cancer illnesses
+136	Integer	Number of operations, self-reported
+137	Integer	Number of treatments/medications taken
+189	Continuous	Townsend deprivation index at recruitment
+396	Integer	Number of columns displayed in round
+397	Integer	Number of rows displayed in round
+398	Integer	Number of correct matches in round
+399	Integer	Number of incorrect matches in round
+400	Integer	Time to complete round	402
+401	Categorical (single)	Index for card A in round	92
+402	Categorical (single)	Index for card B in round	92
+403	Integer	Number of times snap-button pressed
+404	Integer	Duration to first press of snap-button in each round
+630	Integer	Touchscreen duration
+670	Categorical (single)	Type of accommodation lived in	100286
+680	Categorical (single)	Own or rent accommodation lived in	100287
+699	Integer	Length of time at current address	100290
+709	Integer	Number in household	100291
+728	Categorical (single)	Number of vehicles in household	100293
+738	Categorical (single)	Average total household income before tax	100294
+757	Integer	Time employed in main current job	100290				v6142 == 1	0
+767	Integer	Length of working week for main job	100291				v6142 == 1	0
+777	Integer	Frequency of travelling from home to job workplace	100298				v6142 == 1	0
+796	Integer	Distance between home and job workplace	100300				v6142 == 1 || v777 == 0	0
+806	Categorical (single)	Job involves mainly walking or standing	100301				v6142 == 1	0
+816	Categorical (single)	Job involves heavy manual or physical work	100301				v6142 == 1	0
+826	Categorical (single)	Job involves shift work	100301				v6142 == 1	0
+845	Integer	Age completed full time education	100306
+864	Integer	Number of days/week walked 10+ minutes	100307
+874	Integer	Duration of walks	100291				v864 >= 1	0
+884	Integer	Number of days/week of moderate physical activity 10+ minutes	100291
+894	Integer	Duration of moderate activity	100291				v884 >= 1	0
+904	Integer	Number of days/week of vigorous physical activity 10+ minutes	100291
+914	Integer	Duration of vigorous activity	100291				v904 >= 1	0
+924	Categorical (single)	Usual walking pace	100313				v864 >= 1	0
+943	Categorical (single)	Frequency of stair climbing in last 4 weeks	100314				v864 >= 1	0
+971	Categorical (single)	Frequency of walking for pleasure in last 4 weeks	100317				v6164 == 1	0
+981	Categorical (single)	Duration walking for pleasure	100318				v6164== 1	0
+991	Categorical (single)	Frequency of strenuous sports in last 4 weeks	100317				v6164== 3	0
+1001	Categorical (single)	Duration of strenuous sports	100318				v6164 == 3	0
+1011	Categorical (single)	Frequency of light DIY in last 4 weeks	100317				v6164 == 4	0
+1021	Categorical (single)	Duration of light DIY	100318				v6164 == 4	0
+1031	Categorical (single)	Frequency of friend/family visits	100327
+1050	Integer	Time spend outdoors in summer	100329
+1060	Integer	Time spent outdoors in winter	100329
+1070	Integer	Time spent watching television (TV)	100329
+1080	Integer	Time spent using computer	100329
+1090	Integer	Time spent driving	100329
+1100	Categorical (single)	Drive faster than motorway speed limit	100334
+1110	Categorical (single)	Length of mobile phone use	100335
+1120	Categorical (single)	Weekly usage of mobile phone in last 3 months	100336				v1110 == -1 || v1110 >= 1	0
+1130	Categorical (single)	Hands-free device/speakerphone use with mobile phone in last 3 month	100337				v1110 == -1 || v1110 >= 1	0
+1140	Categorical (single)	Difference in mobile phone use compared to two years previously	100338				v1110 == -1 || v1110 >= 1	0
+1150	Categorical (single)	Usual side of head for mobile phone use	100339				v1110 == -1 || v1110 >= 1	0
+1160	Integer	Sleep duration	100291
+1170	Categorical (single)	Getting up in morning	100341
+1180	Categorical (single)	Morning/evening person (chronotype)	100342
+1190	Categorical (single)	Nap during day	100343
+1200	Categorical (single)	Sleeplessness / insomnia	100343
+1210	Categorical (single)	Snoring	100345
+1220	Categorical (single)	Daytime dozing / sleeping (narcolepsy)	100346
+1239	Categorical (single)	Current tobacco smoking	100347
+1249	Categorical (single)	Past tobacco smoking	100348				v1239 != 1	0
+1259	Categorical (single)	Smoking/smokers in household	100370				v1239 != 1	0
+1269	Integer	Exposure to tobacco smoke at home	100291				v1239 != 1	0
+1279	Integer	Exposure to tobacco smoke outside home	100291				v1239 != 1	0
+1289	Integer	Cooked vegetable intake	100373
+1299	Integer	Salad / raw vegetable intake	100373
+1309	Integer	Fresh fruit intake	100373
+1319	Integer	Dried fruit intake	100373
+1329	Categorical (single)	Oily fish intake	100377
+1339	Categorical (single)	Non-oily fish intake	100377
+1349	Categorical (single)	Processed meat intake	100377
+1359	Categorical (single)	Poultry intake	100377
+1369	Categorical (single)	Beef intake	100377
+1379	Categorical (single)	Lamb/mutton intake	100377
+1389	Categorical (single)	Pork intake	100377
+1408	Categorical (single)	Cheese intake	100377
+1418	Categorical (single)	Milk type used	100387
+1428	Categorical (single)	Spread type	100388
+1438	Integer	Bread intake	100373
+1448	Categorical (single)	Bread type	100391				v1438 == -10	0
+1458	Integer	Cereal intake	100373
+1468	Categorical (single)	Cereal type	100393				v1458 == -10	0
+1478	Categorical (single)	Salt added to food	100394
+1488	Integer	Tea intake	100373
+1498	Integer	Coffee intake	100373
+1508	Categorical (single)	Coffee type	100397				v1498 == -10	0
+1518	Categorical (single)	Hot drink temperature	100398
+1528	Integer	Water intake	100373
+1538	Categorical (single)	Major dietary changes in the last 5 years	100400
+1548	Categorical (single)	Variation in diet	100401
+1558	Categorical (single)	Alcohol intake frequency.	100402
+1568	Integer	Average weekly red wine intake	100291
+1578	Integer	Average weekly champagne plus white wine intake	100291
+1588	Integer	Average weekly beer plus cider intake	100291
+1598	Integer	Average weekly spirits intake	100291
+1608	Integer	Average weekly fortified wine intake	100291
+1618	Categorical (single)	Alcohol usually taken with meals	100416
+1628	Categorical (single)	Alcohol intake versus 10 years previously	100417
+1647	Categorical (single)	Country of birth (UK/elsewhere)	100420
+1677	Categorical (single)	Breastfed as a baby	100349
+1687	Categorical (single)	Comparative body size at age 10	100428
+1697	Categorical (single)	Comparative height size at age 10	100429
+1707	Categorical (single)	Handedness (chirality/laterality)	100430
+1717	Categorical (single)	Skin colour	100431
+1727	Categorical (single)	Ease of skin tanning	100432
+1737	Integer	Childhood sunburn occasions	100291
+1747	Categorical (single)	Hair colour (natural, before greying)	100434
+1757	Categorical (single)	Facial ageing	100435
+1767	Categorical (single)	Adopted as a child	100349
+1777	Categorical (single)	Part of a multiple birth	100349
+1787	Categorical (single)	Maternal smoking around birth	100349
+1797	Categorical (single)	Father still alive	100349
+1807	Integer	Father's age at death	100291
+1835	Categorical (single)	Mother still alive	100349
+1845	Integer	Mother's age	100291
+1873	Integer	Number of full brothers	100291
+1883	Integer	Number of full sisters	100291
+1920	Categorical (single)	Mood swings	100349
+1930	Categorical (single)	Miserableness	100349
+1940	Categorical (single)	Irritability	100349
+1950	Categorical (single)	Sensitivity / hurt feelings	100349
+1960	Categorical (single)	Fed-up feelings	100349
+1970	Categorical (single)	Nervous feelings	100349
+1980	Categorical (single)	Worrier / anxious feelings	100349
+1990	Categorical (single)	Tense / 'highly strung'	100349
+2000	Categorical (single)	Worry too long after embarrassment	100349
+2010	Categorical (single)	Suffer from 'nerves'	100349
+2020	Categorical (single)	Loneliness, isolation	100349
+2030	Categorical (single)	Guilty feelings	100349
+2040	Categorical (single)	Risk taking	100349
+2050	Categorical (single)	Frequency of depressed mood in last 2 weeks	100484
+2060	Categorical (single)	Frequency of unenthusiasm / disinterest in last 2 weeks	100484
+2070	Categorical (single)	Frequency of tenseness / restlessness in last 2 weeks	100484
+2080	Categorical (single)	Frequency of tiredness / lethargy in last 2 weeks	100484
+2090	Categorical (single)	Seen doctor (GP) for nerves, anxiety, tension or depression	100349
+2100	Categorical (single)	Seen a psychiatrist for nerves, anxiety, tension or depression	100349
+2110	Categorical (single)	Able to confide	100501
+2129	Categorical (single)	Answered sexual history questions	100503
+2139	Integer	Age first had sexual intercourse	100504
+2149	Integer	Lifetime number of sexual partners	100291
+2159	Categorical (single)	Ever had same-sex intercourse	100352
+2178	Categorical (single)	Overall health rating	100508
+2188	Categorical (single)	Long-standing illness, disability or infirmity	100349
+2207	Categorical (single)	Wears glasses or contact lenses	100352
+2217	Integer	Age started wearing glasses or contact lenses	100291
+2227	Categorical (single)	Other eye problems	100352
+2237	Categorical (single)	Plays computer games	100639
+2247	Categorical (single)	Hearing difficulty/problems	100631
+2257	Categorical (single)	Hearing difficulty/problems with background noise	100349
+2267	Categorical (single)	Use of sun/uv protection	100536
+2277	Integer	Frequency of solarium/sunlamp use	100537
+2296	Categorical (single)	Falls in the last year	100539
+2306	Categorical (single)	Weight change compared with 1 year ago	100540
+2316	Categorical (single)	Wheeze or whistling in the chest in last year	100349
+2335	Categorical (single)	Chest pain or discomfort	100349
+2345	Categorical (single)	Ever had bowel cancer screening	100349
+2355	Integer	Most recent bowel cancer screening	100567
+2365	Categorical (single)	Ever had prostate specific antigen (PSA) test	100349
+2375	Categorical (single)	Relative age of first facial hair	100570
+2385	Categorical (single)	Relative age voice broke	100570
+2395	Categorical (single)	Hair/balding pattern	100572
+2405	Integer	Number of children fathered	100291
+2415	Categorical (single)	Had major operations	100603
+2443	Categorical (single)	Diabetes diagnosed by doctor	100349
+2453	Categorical (single)	Cancer diagnosed by doctor	100603
+2463	Categorical (single)	Fractured/broken bones in last 5 years	100349
+2473	Categorical (single)	Other serious medical condition/disability diagnosed by doctor	100603
+2492	Categorical (single)	Taking other prescription medications	100603
+2624	Categorical (single)	Frequency of heavy DIY in last 4 weeks	100317
+2634	Categorical (single)	Duration of heavy DIY	100318
+2644	Categorical (single)	Light smokers, at least 100 smokes in lifetime	100349
+2654	Categorical (single)	Non-butter spread type details	100389				v1428 == 3	0
+2664	Categorical (single)	Reason for reducing amount of alcohol drunk	100418				v1558 >= 1 && v1558 <= 5 && v1568 == 3	0
+2674	Categorical (single)	Ever had breast cancer screening / mammogram	100349
+2684	Integer	Years since last breast cancer screening / mammogram	100567
+2694	Categorical (single)	Ever had cervical smear test	100349
+2704	Integer	Years since last cervical smear test	100569
+2714	Integer	Age when periods started (menarche)	100291
+2724	Categorical (single)	Had menopause	100579
+2734	Integer	Number of live births	100584
+2744	Integer	Birth weight of first child	100585
+2754	Integer	Age at first live birth	100586
+2764	Integer	Age at last live birth	100586
+2774	Categorical (single)	Ever had stillbirth, spontaneous miscarriage or termination	100349
+2784	Categorical (single)	Ever taken oral contraceptive pill	100349
+2794	Integer	Age started oral contraceptive pill	100291
+2804	Integer	Age when last used oral contraceptive pill	100595
+2814	Categorical (single)	Ever used hormone-replacement therapy (HRT)	100349
+2824	Integer	Age at hysterectomy	100291
+2834	Categorical (single)	Bilateral oophorectomy (both ovaries removed)	100599
+2844	Categorical (single)	Had other major operations	100603
+2867	Integer	Age started smoking in former smokers	100291				v1249 == 1	0
+2877	Categorical (single)	Type of tobacco previously smoked	100351				v1249 == 1	0
+2887	Integer	Number of cigarettes previously smoked daily	100353				v1249 == 1 && v2877 >= 1 && v2877 <= 2	0
+2897	Integer	Age stopped smoking	100291				v1249 == 1	0
+2907	Categorical (single)	Ever stopped smoking for 6+ months	100349				v1249 == 1	0
+2926	Integer	Number of unsuccessful stop-smoking attempts	100291				v1249 == 1 && v2907 == 1	0
+2936	Categorical (single)	Likelihood of resuming smoking	100369				v1249 == 1 && v2907 == 1	0
+2946	Integer	Father's age	100291
+2956	Categorical (single)	General pain for 3+ months	100349
+2966	Integer	Age high blood pressure diagnosed	100291
+2976	Integer	Age diabetes diagnosed	100291
+2986	Categorical (single)	Started insulin within one year diagnosis of diabetes	100349
+3005	Categorical (single)	Fracture resulting from simple fall	100349
+3059	Categorical (single)	Result ranking	22
+3062	Continuous	Forced vital capacity (FVC)
+3063	Continuous	Forced expiratory volume in 1-second (FEV1)
+3064	Integer	Peak expiratory flow (PEF)
+3065	Categorical (single)	Ordering of blows	23
+3066	Compound	Data points for blow							parseSpirometryData
+3079	Categorical (single)	Pace-maker	7
+3081	Categorical (single)	Foot measured for bone density	24
+3082	Categorical (single)	Fractured heel	100267
+3083	Continuous	Heel quantitative ultrasound index (QUI), manual entry
+3084	Continuous	Heel bone mineral density (BMD), manual entry
+3085	Continuous	Heel Broadband ultrasound attenuation (BUA), manual entry
+3088	Categorical (single)	Contra-indications for spirometry	100267
+3089	Categorical (single)	Caffeine drink within last hour	7
+3090	Categorical (single)	Used an inhaler for chest within last hour	7
+3137	Integer	Number of measurements made
+3140	Categorical (single)	Pregnant	100267
+3143	Continuous	Ankle spacing width
+3144	Continuous	Heel Broadband ultrasound attenuation, direct entry
+3147	Continuous	Heel quantitative ultrasound index (QUI), direct entry
+3148	Continuous	Heel bone mineral density (BMD)
+3159	Categorical (single)	Smoked cigarette or pipe within last hour	7
+3160	Continuous	Weight, manual entry
+3393	Categorical (single)	Hearing aid user	100352
+3404	Categorical (single)	Neck/shoulder pain for 3+ months	100349
+3414	Categorical (single)	Hip pain for 3+ months	100349
+3426	Categorical (single)	Job involve night shift work	100301
+3436	Integer	Age started smoking in current smokers	100291
+3446	Categorical (single)	Type of tobacco currently smoked	100351
+3456	Integer	Number of cigarettes currently smoked daily (current cigarette smokers)	100355
+3466	Categorical (single)	Time from waking to first cigarette	100356
+3476	Categorical (single)	Difficulty not smoking for 1 day	100357
+3486	Categorical (single)	Ever tried to stop smoking	100358
+3496	Categorical (single)	Wants to stop smoking	100359
+3506	Categorical (single)	Smoking compared to 10 years previous	100360
+3526	Integer	Mother's age at death	100291
+3536	Integer	Age started hormone-replacement therapy (HRT)	100291
+3546	Integer	Age last used hormone-replacement therapy (HRT)	100598
+3571	Categorical (single)	Back pain for 3+ months	100349
+3581	Integer	Age at menopause (last menstrual period)	100291
+3591	Categorical (single)	Ever had hysterectomy (womb removed)	100599
+3606	Categorical (single)	Chest pain or discomfort walking normally	100563
+3616	Categorical (single)	Chest pain due to walking ceases when standing still	100349
+3627	Integer	Age angina diagnosed	100291
+3637	Categorical (single)	Frequency of other exercises in last 4 weeks	100317
+3647	Categorical (single)	Duration of other exercises	100318
+3659	Integer	Year immigrated to UK (United Kingdom)	100291
+3669	Integer	Lifetime number of same-sex sexual partners	100291
+3680	Integer	Age when last ate meat	100291
+3700	Integer	Time since last menstrual period	100291
+3710	Integer	Length of menstrual cycle	100582
+3720	Categorical (single)	Menstruating today	100349
+3731	Categorical (single)	Former alcohol drinker	100352
+3741	Categorical (single)	Stomach/abdominal pain for 3+ months	100349
+3751	Categorical (single)	Chest pain or discomfort when walking uphill or hurrying	100564
+3761	Integer	Age hay fever, rhinitis or eczema diagnosed	100291
+3773	Categorical (single)	Knee pain for 3+ months	100349
+3786	Integer	Age asthma diagnosed	100291
+3799	Categorical (single)	Headaches for 3+ months	100349
+3809	Integer	Time since last prostate specific antigen (PSA) test	100569
+3829	Integer	Number of stillbirths	100291
+3839	Integer	Number of spontaneous miscarriages	100291
+3849	Integer	Number of pregnancy terminations	100291
+3859	Categorical (single)	Reason former drinker stopped drinking alcohol	100418
+3872	Integer	Age of primiparous women at birth of child	100586
+3882	Integer	Age at bilateral oophorectomy (both ovaries removed)	100291
+3894	Integer	Age heart attack diagnosed	100291
+3912	Categorical (single)	Adopted father still alive	100349
+3942	Categorical (single)	Adopted mother still alive	100349
+3972	Integer	Number of adopted brothers	100291
+3982	Integer	Number of adopted sisters	100291
+3992	Integer	Age emphysema/chronic bronchitis diagnosed	100291
+4012	Integer	Age deep-vein thrombosis (DVT, blood clot in leg) diagnosed	100291
+4022	Integer	Age pulmonary embolism (blood clot in lung) diagnosed	100291
+4041	Categorical (single)	Gestational diabetes only	100617
+4056	Integer	Age stroke diagnosed	100291
+4067	Categorical (single)	Facial pains for 3+ months	100349
+4079	Integer	Diastolic blood pressure, automated reading
+4080	Integer	Systolic blood pressure, automated reading
+4092	Categorical (single)	Heel ultrasound method (left)	100260
+4093	Categorical (single)	Fractured heel (left)	27
+4095	Categorical (single)	Heel ultrasound method (right)	100260
+4096	Categorical (single)	Fractured heel (right)	27
+4100	Continuous	Ankle spacing width (left)
+4101	Continuous	Heel broadband ultrasound attenuation (left)
+4104	Continuous	Heel quantitative ultrasound index (QUI), direct entry (left)
+4105	Continuous	Heel bone mineral density (BMD) (left)
+4106	Continuous	Heel bone mineral density (BMD) T-score, automated (left)
+4119	Continuous	Ankle spacing width (right)
+4120	Continuous	Heel broadband ultrasound attenuation (right)
+4123	Continuous	Heel quantitative ultrasound index (QUI), direct entry (right)
+4124	Continuous	Heel bone mineral density (BMD) (right)
+4125	Continuous	Heel bone mineral density (BMD) T-score, automated (right)
+4138	Continuous	Heel bone mineral density (BMD) T-score, manual entry (left)
+4139	Continuous	Heel quantitative ultrasound index (QUI), manual entry (left)
+4140	Continuous	Heel bone mineral density (BMD), manual entry (left)
+4141	Continuous	Heel broadband ultrasound attenuation (BUA), manual entry (left)
+4143	Continuous	Heel bone mineral density (BMD) T-score, manual entry (right)
+4144	Continuous	Heel quantitative ultrasound index (QUI), manual entry (right)
+4145	Continuous	Heel bone mineral density (BMD), manual entry (right)
+4146	Continuous	Heel broadband ultrasound attenuation (BUA), manual entry (right)
+4186	Categorical (single)	Stiffness method	100263
+4194	Integer	Pulse rate
+4195	Integer	Pulse wave reflection index
+4196	Integer	Pulse wave peak to peak time
+4205	Compound	Pulse wave pressure versus time response curve
+4207	Continuous	Pulse wave velocity (manual entry)
+4229	Text	Triplet played (left)
+4230	Integer	Signal-to-noise-ratio (SNR) of triplet (left)
+4232	Categorical (single)	Triplet correct (left)	29
+4233	Continuous	Mean signal-to-noise ratio (SNR), (left)
+4236	Text	Triplet entered (left)
+4240	Text	Triplet played (right)
+4241	Integer	Signal-to-noise-ratio (SNR) of triplet (right)
+4242	Text	Triplet entered (right)
+4243	Categorical (single)	Triplet correct (right)	29
+4244	Continuous	Mean signal-to-noise ratio (SNR), (right)
+4250	Integer	Number of digits to be memorised/recalled
+4251	Text	Target number to be memorised
+4252	Text	Target number to be entered
+4253	Integer	Time number displayed for
+4254	Integer	Time first key touched
+4255	Integer	Time last key touched
+4256	Integer	Time elapsed
+4257	Text	Keystroke history
+4258	Text	Number entered by participant
+4259	Categorical (single)	Digits entered correctly	29
+4260	Integer	Round of numeric memory test
+4268	Categorical (single)	Completion status (left)	30
+4269	Integer	Number of triplets attempted (left)
+4270	Categorical (single)	Volume level set by participant (left)	15
+4275	Categorical (single)	Completion status (right)	30
+4276	Integer	Number of triplets attempted (right)
+4277	Categorical (single)	Volume level set by participant (right)	15
+4281	Categorical (single)	Completion status of numeric memory test	31
+4282	Integer	Maximum digits remembered correctly	100696
+4283	Integer	Number of rounds of numeric memory test performed
+4285	Integer	Time to complete test
+4286	Time	Time when initial screen shown
+4287	Categorical (single)	Test completion status	32
+4288	Integer	Time to answer
+4289	Time	Time screen exited
+4290	Integer	Duration screen displayed
+4291	Integer	Number of attempts
+4292	Categorical (single)	PM: initial answer	16
+4293	Categorical (single)	PM: final answer	16
+4294	Categorical (single)	Final attempt correct	29
+4295	Text	History of attempts
+4407	Integer	Average monthly red wine intake	100291
+4418	Integer	Average monthly champagne plus white wine intake	100291
+4429	Integer	Average monthly beer plus cider intake	100291
+4440	Integer	Average monthly spirits intake	100291
+4451	Integer	Average monthly fortified wine intake	100291
+4462	Integer	Average monthly intake of other alcoholic drinks	100291
+4501	Categorical (single)	Non-accidental death in close genetic family	100349
+4526	Categorical (single)	Happiness	100478
+4537	Categorical (single)	Work/job satisfaction	100479
+4548	Categorical (single)	Health satisfaction	100478
+4559	Categorical (single)	Family relationship satisfaction	100478
+4570	Categorical (single)	Friendships satisfaction	100478
+4581	Categorical (single)	Financial situation satisfaction	100478
+4598	Categorical (single)	Ever depressed for a whole week	100349
+4609	Integer	Longest period of depression	100291
+4620	Integer	Number of depression episodes	100291
+4631	Categorical (single)	Ever unenthusiastic/disinterested for a whole week	100349
+4642	Categorical (single)	Ever manic/hyper for 2 days	100349
+4653	Categorical (single)	Ever highly irritable/argumentative for 2 days	100349
+4674	Categorical (single)	Private healthcare	100511
+4689	Integer	Age glaucoma diagnosed	100291
+4700	Integer	Age cataract diagnosed	100291
+4717	Categorical (single)	Shortness of breath walking on level ground	100349
+4728	Categorical (single)	Leg pain on walking	100349
+4792	Categorical (single)	Cochlear implant	100352
+4803	Categorical (single)	Tinnitus	100635
+4814	Categorical (single)	Tinnitus severity/nuisance	100636
+4825	Categorical (single)	Noisy workplace	100637				v2247 == 99	0
+4836	Categorical (single)	Loud music exposure frequency	100637				v2247 == 99	0
+4849	Categorical (single)	Hearing test done	100640
+4924	Categorical (single)	Attempted fluid intelligence (FI) test.	100642
+4935	Categorical (single)	FI1 : numeric addition test	100643
+4946	Categorical (single)	FI2 : identify largest number	100644
+4957	Categorical (single)	FI3 : word interpolation	100645
+4968	Categorical (single)	FI4 : positional arithmetic	100646
+4979	Categorical (single)	FI5 : family relationship calculation	100647
+4990	Categorical (single)	FI6 : conditional arithmetic	100648
+5001	Categorical (single)	FI7 : synonym	100649
+5012	Categorical (single)	FI8 : chained arithmetic	100650
+5057	Integer	Number of older siblings	100291
+5084	Continuous	Spherical power (right)
+5085	Continuous	Spherical power (left)
+5086	Continuous	Cylindrical power (left)
+5087	Continuous	Cylindrical power (right)
+5088	Integer	Astigmatism angle (right)
+5089	Integer	Astigmatism angle (left)
+5090	Categorical (single non-numeric)	Refractometry result unreliable (left)	1204
+5091	Categorical (single non-numeric)	Refractometry result unreliable (right)	1204
+5096	Continuous	3mm weak meridian (left)
+5097	Continuous	6mm weak meridian (left)
+5098	Continuous	6mm weak meridian (right)
+5099	Continuous	3mm weak meridian (right)
+5100	Integer	3mm weak meridian angle (right)
+5101	Integer	6mm weak meridian angle (right)
+5102	Integer	6mm weak meridian angle (left)
+5103	Integer	3mm weak meridian angle (left)
+5104	Integer	3mm strong meridian angle (left)
+5105	Integer	6mm strong meridian angle (left)
+5106	Integer	6mm strong meridian angle (right)
+5107	Integer	3mm strong meridian angle (right)
+5108	Integer	3mm asymmetry angle (right)
+5109	Integer	6mm asymmetry angle (right)
+5110	Integer	6mm asymmetry angle (left)
+5111	Integer	3mm asymmetry angle (left)
+5112	Integer	3mm cylindrical power angle (left)
+5113	Integer	6mm cylindrical power angle (left)
+5114	Integer	6mm cylindrical power angle (right)
+5115	Integer	3mm cylindrical power angle (right)
+5116	Continuous	3mm cylindrical power (right)
+5117	Continuous	6mm cylindrical power (right)
+5118	Continuous	6mm cylindrical power (left)
+5119	Continuous	3mm cylindrical power (left)
+5132	Continuous	3mm strong meridian (right)
+5133	Continuous	6mm strong meridian (right)
+5134	Continuous	6mm strong meridian (left)
+5135	Continuous	3mm strong meridian (left)
+5136	Categorical (single non-numeric)	3mm keratometry result unreliable (left)	1205
+5138	Categorical (single non-numeric)	6mm keratometry result unreliable (left)	1206
+5139	Categorical (single non-numeric)	6mm keratometry result unreliable (right)	1206
+5140	Categorical (single non-numeric)	3mm keratometry result unreliable (right)	1205
+5141	Categorical (single non-numeric)	3mm asymmetry index unreliable (left)	1207
+5142	Categorical (single non-numeric)	6mm asymmetry index unreliable (left)	1208
+5143	Categorical (single non-numeric)	6mm asymmetry index unreliable (right)	1208
+5144	Categorical (single non-numeric)	3mm asymmetry index unreliable (right)	1207
+5145	Categorical (single non-numeric)	3mm regularity index unreliable (right)	1209
+5146	Categorical (single non-numeric)	6mm regularity index unreliable (right)	1209
+5147	Categorical (single non-numeric)	6mm regularity index unreliable (left)	1210
+5148	Categorical (single non-numeric)	3mm regularity index unreliable (left)	1210
+5149	Categorical (single)	3mm regularity index for irregular astigmatism level (left)	33
+5152	Categorical (single)	3mm asymmetry index for irregular astigmatism level (right)	33
+5155	Categorical (single)	3mm asymmetry index for irregular astigmatism level (left)	33
+5156	Continuous	3mm asymmetry index (left)
+5157	Continuous	6mm asymmetry index (left)
+5158	Continuous	6mm asymmetry index (right)
+5159	Continuous	3mm asymmetry index (right)
+5160	Continuous	3mm regularity index (right)
+5161	Continuous	6mm regularity index (right)
+5162	Continuous	6mm regularity index (left)
+5163	Continuous	3mm regularity index (left)
+5164	Categorical (single)	3mm regularity index for irregular astigmatism level (right)	33
+5181	Categorical (single)	Ever had eye surgery	100271
+5182	Categorical (single)	Both eyes present	100273
+5183	Categorical (single)	Current eye infection	7
+5189	Categorical (single)	Auto-refraction method (right)	100274
+5191	Categorical (single)	Auto-refraction method (left)	100274
+5194	Categorical (single)	Intra-ocular pressure (IOP) method (right)	100274
+5196	Categorical (single)	Intra-ocular pressure (IOP) method (left)	100274
+5198	Integer	Eye measures duration
+5215	Continuous	Vertex distance (right)
+5221	Integer	Index of best refractometry result (right)
+5237	Integer	3mm index of best keratometry results (right)
+5251	Integer	6mm index of best keratometry results (right)
+5254	Continuous	Intra-ocular pressure, corneal-compensated (right)
+5255	Continuous	Intra-ocular pressure, Goldmann-correlated (right)
+5256	Continuous	Corneal hysteresis (right)
+5257	Continuous	Corneal resistance factor (right)
+5258	Compound	Applanation curve (right)
+5259	Compound	Pressure curve (right)
+5262	Continuous	Intra-ocular pressure, corneal-compensated (left)
+5263	Continuous	Intra-ocular pressure, Goldmann-correlated (left)
+5264	Continuous	Corneal hysteresis (left)
+5265	Continuous	Corneal resistance factor (left)
+5266	Compound	Applanation curve (left)
+5267	Compound	Pressure curve (left)
+5274	Continuous	Vertex distance (left)
+5276	Integer	Index of best refractometry result (left)
+5292	Integer	3mm index of best keratometry results (left)
+5306	Integer	6mm index of best keratometry results (left)
+5324	Categorical (single)	Ever had cataract surgery	100272
+5325	Categorical (single)	Ever had refractive laser eye surgery	100272
+5326	Categorical (single)	Ever had surgery for glaucoma or high eye pressure	100272
+5327	Categorical (single)	Ever had laser treatment for glaucoma or high eye pressure	100272
+5328	Categorical (single)	Ever had corneal graft surgery	100272
+5364	Integer	Average weekly intake of other alcoholic drinks	100291
+5375	Integer	Longest period of unenthusiasm / disinterest	100291
+5386	Integer	Number of unenthusiastic/disinterested episodes	100291
+5408	Categorical (single)	Which eye(s) affected by amblyopia (lazy eye)	100515
+5419	Categorical (single)	Which eye(s) affected by injury or trauma resulting in loss of vision	100515
+5430	Integer	Age when loss of vision due to injury or trauma diagnosed	100291
+5441	Categorical (single)	Which eye(s) are affected by cataract	100515
+5452	Categorical (single)	Leg pain when standing still or sitting	100349
+5463	Categorical (single)	Leg pain in calf/calves	100349
+5474	Categorical (single)	Leg pain when walking uphill or hurrying	100349
+5485	Categorical (single)	Leg pain when walking normally	100349
+5496	Categorical (single)	Leg pain when walking ever disappears while walking	100349
+5507	Categorical (single)	Leg pain on walking : action taken	100549
+5518	Categorical (single)	Leg pain on walking : effect of standing still	100550
+5529	Categorical (single)	Surgery on leg arteries (other than for varicose veins)	100349
+5540	Categorical (single)	Surgery/amputation of toe or leg	100552
+5556	Categorical (single)	FI9 : concept interpolation	100651
+5610	Categorical (single)	Which eye(s) affected by presbyopia	100515
+5663	Categorical (single)	Length of longest manic/irritable episode	100499
+5674	Categorical (single)	Severity of manic/irritable episodes	100500
+5699	Categorical (single)	FI10 : arithmetic sequence recognition	100652
+5779	Categorical (single)	FI11 : antonym	100653
+5790	Categorical (single)	FI12 : square sequence recognition	100654
+5832	Categorical (single)	Which eye(s) affected by hypermetropia (long sight)	100515
+5843	Categorical (single)	Which eye(s) affected by myopia (short sight)	100515
+5855	Categorical (single)	Which eye(s) affected by astigmatism	100515
+5866	Categorical (single)	FI13 : subset inclusion logic	100655
+5877	Categorical (single)	Which eye(s) affected by other eye condition	100515
+5890	Categorical (single)	Which eye(s) affected by diabetes-related eye disease	100515
+5901	Integer	Age when diabetes-related eye disease diagnosed	100291
+5912	Categorical (single)	Which eye(s) affected by macular degeneration	100515
+5923	Integer	Age macular degeneration diagnosed	100291
+5934	Categorical (single)	Which eye(s) affected by other serious eye condition	100515
+5945	Integer	Age other serious eye condition diagnosed	100291
+5959	Categorical (single)	Previously smoked cigarettes on most/all days	100352
+5983	Integer	ECG, heart rate
+5984	Integer	ECG, load
+5986	Integer	ECG, phase time
+5987	Text	ECG, trend phase name
+5988	Text	ECG, stage name
+5991	Text	ECG, phase name
+5992	Integer	ECG, phase duration
+5993	Integer	ECG, number of stages in a phase
+6014	Categorical (single)	Doctor restricts physical activity due to heart condition	100267
+6015	Categorical (single)	Chest pain felt during physical activity	100267
+6016	Categorical (single)	Chest pain felt outside physical activity	100267
+6017	Categorical (single)	Able to walk or cycle unaided for 10 minutes	100267
+6019	Categorical (single)	ECG/bike method for fitness test	100256
+6020	Categorical (single)	Completion status of test	100257
+6022	Integer	ECG during exercise duration
+6024	Categorical (single)	Program category	35
+6032	Integer	Maximum workload during fitness test
+6033	Integer	Maximum heart rate during fitness test
+6034	Categorical (single)	Target heart rate achieved	12
+6038	Integer	Number of trend entries
+6039	Integer	Duration of fitness test
+6070	Categorical (single)	OCT measured (right)	100274
+6072	Categorical (single)	OCT measured (left)	100274
+6119	Categorical (single)	Which eye(s) affected by glaucoma	100515
+6138	Categorical (multiple)	Qualifications	100305
+6139	Categorical (multiple)	Gas or solid-fuel cooking/heating	100288
+6140	Categorical (multiple)	Heating type(s) in home	100289
+6141	Categorical (multiple)	How are people in household related to participant	100292
+6142	Categorical (multiple)	Current employment status	100295
+6143	Categorical (multiple)	Transport type for commuting to job workplace	100299
+6144	Categorical (multiple)	Never eat eggs, dairy, wheat, sugar	100385
+6145	Categorical (multiple)	Illness, injury, bereavement, stress in last 2 years	100502
+6146	Categorical (multiple)	Attendance/disability/mobility allowance	100510
+6147	Categorical (multiple)	Reason for glasses/contact lenses	100514				v1249 == 1 && v2907 == 1	0
+6148	Categorical (multiple)	Eye problems/disorders	100523
+6149	Categorical (multiple)	Mouth/teeth dental problems	100538
+6150	Categorical (multiple)	Vascular/heart problems diagnosed by doctor	100605
+6151	Categorical (multiple)	Fractured bone site(s)	100622
+6152	Categorical (multiple)	Blood clot, DVT, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor	100610
+6153	Categorical (multiple)	Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones	100626
+6154	Categorical (multiple)	Medication for pain relief, constipation, heartburn	100628
+6155	Categorical (multiple)	Vitamin and mineral supplements	100629
+6156	Categorical (multiple)	Manic/hyper symptoms	100498
+6157	Categorical (multiple)	Why stopped smoking	100361
+6158	Categorical (multiple)	Why reduced smoking	100361
+6159	Categorical (multiple)	Pain type(s) experienced in last month	100553
+6160	Categorical (multiple)	Leisure/social activities	100328
+6162	Categorical (multiple)	Types of transport used (excluding work)	100299
+6164	Categorical (multiple)	Types of physical activity in last 4 weeks	100316
+6177	Categorical (multiple)	Medication for cholesterol, blood pressure or diabetes	100625
+6179	Categorical (multiple)	Mineral and other dietary supplements	100630
+6183	Integer	Number of cigarettes previously smoked daily (current cigar/pipe smokers)	100353
+6194	Integer	Age stopped smoking cigarettes (current cigar/pipe or previous cigarette smoker)	100291
+6205	Categorical (single)	Which eye(s) affected by strabismus (squint)	100515
+10004	Categorical (multiple)	Medication for pain relief, constipation, heartburn (pilot)	100688
+10005	Categorical (multiple)	Medication for smoking cessation, constipation, heartburn, allergies (pilot)	100689
+10006	Categorical (multiple)	Mouth/teeth dental problems (pilot)	100685
+10007	Categorical (multiple)	Vitamin and mineral supplements (pilot)	100692
+10016	Categorical (single)	Regular use of hands-free device/speakerphone with mobile phone (pilot)	100349
+10105	Categorical (single)	Internet user (pilot)	100352
+10114	Categorical (single)	Willing to be contacted by email (pilot)	100352
+10115	Categorical (single)	Why stopped smoking (pilot)	100669
+10132	Categorical (single)	Type of progestan-only oral contraceptive used (pilot)	100686
+10133	Integer	Number of columns displayed in round (pilot)
+10134	Integer	Number of rows displayed in round (pilot)
+10136	Integer	Number of correct matches in round (pilot)
+10137	Integer	Number of incorrect matches in round (pilot)
+10138	Integer	Time to complete round (pilot)	402
+10139	Categorical (single)	Index for card A in round (pilot)	92
+10140	Categorical (single)	Index for card B in round (pilot)	92
+10141	Integer	Number of times snap-button pressed (pilot)
+10142	Integer	Number of columns displayed (pilot)
+10143	Integer	Number of rows displayed (pilot)
+10144	Integer	Time taken to complete lights test (pilot)
+10145	Text	Pattern of lights displayed (pilot)
+10146	Text	Pattern of lights as remembered (pilot)
+10147	Integer	Duration to first press of snap-button in each round (pilot)
+10241	Integer	Touchscreen duration (pilot)
+10609	Integer	Words answer array (pilot)
+10610	Categorical (single)	Word count (pilot)	100280
+10612	Integer	Number of words beginning with 'S' (pilot)	100696
+10691	Categorical (single)	Result ranking (pilot)	22
+10694	Continuous	Forced vital capacity (FVC) (pilot)
+10695	Continuous	Forced expiratory volume in 1-second (FEV1) (pilot)
+10696	Integer	Peak expiratory flow (PEF) (pilot)
+10697	Compound	Data points for blow (pilot)							parseSpirometryData
+10711	Categorical (single)	Spirometry method (pilot)	100282
+10721	Categorical (multiple)	Illness, injury, bereavement, stress in last 2 years (pilot)	100683
+10722	Categorical (multiple)	Qualifications (pilot)	100658
+10723	Categorical (multiple)	Vitamin supplements (pilot)	100691
+10740	Categorical (single)	Frequency of friend/family visits (pilot)	100662
+10749	Categorical (single)	Time using mobile phone in last 3 months (pilot)	100663
+10767	Categorical (single)	Spread type (pilot)	100673
+10776	Categorical (single)	Bread type/intake (pilot)	100674
+10793	Categorical (single)	Hearing difficulty/problems (pilot)	100349
+10818	Categorical (single)	Reason for reducing amount of alcohol drunk (pilot)	100669
+10827	Categorical (single)	Ever stopped smoking for 6+ months (pilot)	100668
+10844	Categorical (single)	Gestational diabetes only (pilot)	100349
+10853	Categorical (single)	Reason former drinker stopped drinking alcohol (pilot)	100669
+10854	Categorical (multiple)	Other dietary supplements (pilot)	100690
+10855	Categorical (multiple)	Never eat eggs, dairy, wheat, sugar (pilot)	100672
+10860	Categorical (multiple)	Gas or solid-fuel cooking/heating (pilot)	100656
+10877	Categorical (single)	Average total household income before tax (pilot)	100657
+10886	Categorical (single)	Difference in mobile phone use compared to one year previously (pilot)	100664
+10895	Categorical (single)	Light smokers, at least 100 smokes in lifetime (pilot)	100352
+10912	Categorical (single)	Variation in diet (pilot)	100394
+10953	Categorical (single)	Duration of walks (pilot)	100659
+10962	Categorical (single)	Duration of moderate physical activity (pilot)	100659
+10971	Categorical (single)	Duration of vigorous physical activity (pilot)	100659
+12139	Categorical (single)	Believed safe to perform brain MRI scan	634
+12140	Categorical (single)	Believed safe to perform abdominal MRI scan	634
+12141	Categorical (single)	Believed safe to perform DXA scan	634
+12187	Categorical (single)	Brain MRI measuring method	470
+12188	Categorical (single)	Brain MRI measurement completed	21
+12223	Categorical (single)	Abdominal MRI measuring method	470
+12224	Categorical (single)	Abdominal MRI measurement completed	7
+12253	Categorical (single)	DXA measuring method	470
+12254	Categorical (single)	DXA measurement completed	7
+12623	Text	Reason abdominal MRI not completed
+12624	Text	Identifier for blood pressure device
+12651	Integer	Duration of eprime test
+12652	Text	Reason brain MRI not performed
+12663	Text	Reason believed unsafe to perform brain MRI
+12664	Text	Reason believed unsafe to perform abdominal MRI
+12671	Text	PWA start time
+12673	Integer	Heart rate during PWA
+12674	Integer	Systolic brachial blood pressure during PWA
+12675	Integer	Diastolic brachial blood pressure during PWA
+12676	Integer	Peripheral pulse pressure during PWA
+12677	Integer	Central systolic blood pressure during PWA
+12678	Integer	Central pulse pressure during PWA
+12679	Continuous	Number of beats in waveform average for PWA
+12680	Continuous	Central augmentation pressure during PWA
+12681	Continuous	Augmentation index for PWA
+12682	Continuous	Cardiac output during PWA
+12683	Continuous	End systolic pressure during PWA
+12684	Continuous	End systolic pressure index during PWA
+12685	Continuous	Total peripheral resistance during PWA
+12686	Integer	Stroke volume during PWA
+12687	Integer	Mean arterial pressure during PWA
+12695	Text	Blood pressure test start time
+12697	Integer	Systolic brachial blood pressure
+12698	Integer	Diastolic brachial blood pressure
+12699	Integer	Number of PWA tests performed
+12700	Categorical (single)	Vicorder results plausible	7
+12702	Continuous	Cardiac index during PWA
+12704	Text	Reason brain MRI not completed
+12706	Categorical (single)	Eprime error flag	100699
+12848	Text	Reason abdominal MRI not performed
+12851	Text	Reason DXA not performed
+12854	Text	Reason DXA not completed
+20001	Categorical (multiple)	Cancer code, self-reported	3
+20002	Categorical (multiple)	Non-cancer illness code, self-reported	6
+20003	Categorical (multiple)	Treatment/medication code	4
+20004	Categorical (multiple)	Operation code	5
+20005	Categorical (single)	Email access	1007
+20006	Continuous	Interpolated Year when cancer first diagnosed	13
+20007	Continuous	Interpolated Age of participant when cancer first diagnosed	13
+20008	Continuous	Interpolated Year when non-cancer illness first diagnosed	13
+20009	Continuous	Interpolated Age of participant when non-cancer illness first diagnosed	13
+20010	Continuous	Interpolated Year when operation took place	13
+20011	Continuous	Interpolated Age of participant when operation took place	13
+20012	Categorical (single)	Method of recording time when cancer first diagnosed	14
+20013	Categorical (single)	Method of recording time when non-cancer illness first diagnosed	14
+20014	Categorical (single)	Method of recording time when operation occurred	14
+20015	Continuous	Sitting height
+20016	Integer	Fluid intelligence score
+20018	Categorical (single)	Prospective memory result	18
+20019	Continuous	Speech-reception-threshold (SRT) estimate (left)
+20021	Continuous	Speech-reception-threshold (SRT) estimate (right)
+20022	Continuous	Birth weight
+20023	Integer	Mean time to correctly identify matches
+20024	Categorical (single)	Job code - deduced	2
+20031	Text	Acceptability of each blow result (text)
+20032	Text	Acceptability of each blow result (text) (pilot)
+20041	Categorical (single)	Reason for skipping weight	47
+20042	Categorical (single)	Reason for skipping spirometry	47
+20043	Categorical (single)	Reason for skipping grip strength (right)	47
+20044	Categorical (single)	Reason for skipping grip strength (left)	47
+20045	Categorical (single)	Reason for skipping waist	47
+20046	Categorical (single)	Reason for skipping hip measurement	47
+20047	Categorical (single)	Reason for skipping standing height	47
+20048	Categorical (single)	Reason for skipping sitting height	47
+20049	Categorical (single)	Blood sample #, note contents	49
+20050	Categorical (single)	Reason blood sampling not attempted	50
+20051	Categorical (single)	Reason for skipping arterial stiffness	51
+20052	Categorical (single)	Reason for skipping refractometry (left)	54
+20053	Categorical (single)	Reason for skipping IOP (right)	54
+20054	Categorical (single)	Reason for skipping IOP (left)	54
+20055	Categorical (single)	Reason for skipping refractometry (right)	54
+20058	Categorical (single)	Reason for skipping ECG	47
+20059	Categorical (single)	Reason ECG not completed	59
+20060	Categorical (single)	Reason at-rest ECG performed without bicycle	60
+20061	Categorical (single)	Reason for skipping OCT (right)	54
+20062	Categorical (single)	Reason for skipping OCT (left)	54
+20074	Integer	Home location at assessment - east co-ordinate (rounded)
+20075	Integer	Home location at assessment - north co-ordinate (rounded)
+20077	Integer	Number of diet questionnaires completed
+20078	Date	When diet questionnaire completion requested
+20082	Integer	Duration of questionnaire
+20083	Integer	Delay between questionnaire request and completion
+20084	Categorical (multiple)	Vitamin and/or mineral supplement use	74				v104670 == 1	0
+20085	Categorical (multiple)	Reason for not eating or drinking normally	75
+20086	Categorical (multiple)	Type of special diet followed	76
+20087	Categorical (multiple)	Types of spread used on bread/crackers	77				v101300 == 1	0
+20088	Categorical (multiple)	Types of spreads/sauces consumed	78				v103310 == 1	0
+20089	Categorical (multiple)	Type of meals eaten	79
+20090	Categorical (multiple)	Type of fat/oil used in cooking	80
+20091	Categorical (multiple)	Type of sliced bread eaten	81				v100950 > 0	0
+20092	Categorical (multiple)	Type of baguette eaten	81
+20093	Categorical (multiple)	Type of large bap eaten	81
+20094	Categorical (multiple)	Type of bread roll eaten	81
+20095	Categorical (multiple)	Size of white wine glass drunk	82
+20096	Categorical (multiple)	Size of red wine glass drunk	82
+20097	Categorical (multiple)	Size of rose wine glass drunk	82
+20098	Categorical (multiple)	Thickness of butter/margarine spread on sliced bread	83				v101310 > 0	0
+20099	Categorical (multiple)	Thickness of butter/margarine spread on baguettes	83
+20100	Categorical (multiple)	Thickness of butter/margarine spread on large baps	83
+20101	Categorical (multiple)	Thickness of butter/margarine spread on bread rolls	83
+20102	Categorical (multiple)	Thickness of butter/margarine spread on crackers/crispbreads	83
+20103	Categorical (multiple)	Thickness of butter/margarine spread on oatcakes	83
+20104	Categorical (multiple)	Thickness of butter/margarine spread on other bread	83
+20105	Categorical (multiple)	Liquid used to make porridge	84
+20106	Categorical (multiple)	Type of yogurt eaten	85				v102090 > 0	0
+20107	Categorical (single)	Illnesses of father	1010
+20108	Categorical (multiple)	Ingredients in canned soup	86
+20109	Categorical (multiple)	Ingredients in homemade soup	86
+20110	Categorical (single)	Illnesses of mother	1010
+20111	Categorical (single)	Illnesses of siblings	1010
+20112	Categorical (single)	Illnesses of adopted father	1010
+20113	Categorical (single)	Illnesses of adopted mother	1010
+20114	Categorical (single)	Illnesses of adopted siblings	1010
+20115	Categorical (single)	Country of Birth (non-UK origin)	89
+20116	Categorical (single)	Smoking status	90
+20117	Categorical (single)	Alcohol drinker status	90
+20118	Categorical (single)	Home area population density - urban or rural	91
+20119	Categorical (single)	Current employment status - corrected	100295
+20121	Integer	Cascot confidence score
+20128	Integer	Number of fluid intelligence questions attempted within time limit
+20129	Integer	Number of columns displayed in round
+20130	Integer	Number of rows displayed in round
+20131	Integer	Number of correct matches in round
+20132	Integer	Number of incorrect matches in round
+20133	Integer	Time to complete round	485
+20134	Time	When pairs test completed
+20135	Time	When fluid intelligence test completed
+20136	Time	When trail making test completed
+20137	Time	When symbol digit substitution test completed
+20138	Time	When numeric memory test completed
+20147	Integer	Errors before selecting correct item in numeric path (trail #1)
+20148	Integer	Errors before selecting correct item in alphanumeric path (trail #2)
+20149	Integer	Interval between previous point and current one in numeric path (trail #1)	485
+20155	Integer	Interval between previous point and current one in alphanumeric path (trail #2)	485
+20156	Continuous	Duration to complete numeric path (trail #1)
+20157	Continuous	Duration to complete alphanumeric path (trail #2)
+20158	Text	DXA images
+20159	Integer	Number of symbol digit matches made correctly
+20165	Categorical (single)	FI1 : numeric addition test	5001
+20167	Categorical (single)	FI2 : identify largest number	5002
+20169	Categorical (single)	FI3 : word interpolation	5003
+20171	Categorical (single)	FI4 : positional arithmetic	5004
+20173	Categorical (single)	FI5 : family relationship calculation	5005
+20175	Categorical (single)	FI6 : conditional arithmetic	5006
+20177	Categorical (single)	FI7 : synonym	5007
+20179	Categorical (single)	FI8 : chained arithmetic	5008
+20181	Categorical (single)	FI9 : concept interpolation	5009
+20183	Categorical (single)	FI10 : arithmetic sequence recognition	5010
+20185	Categorical (single)	FI11 : antonym	5011
+20187	Categorical (single)	FI12 : square sequence recognition	5012
+20189	Categorical (single)	FI13 : subset inclusion logic	5013
+20191	Integer	Fluid intelligence score
+20193	Categorical (single)	FI14 : alphanumeric substitution	5014
+20195	Integer	Number of symbol digit matches attempted
+20196	Categorical (single)	First code array presented	500
+20198	Categorical (single)	Test array presented	500
+20200	Integer	Values wanted
+20201	Text	Dixon technique for internal fat - DICOM
+20202	Text	Pancreatic fat - DICOM
+20203	Text	Liver images - gradient echo
+20204	Text	OCRM experimental sequence - DICOM
+20206	Text	Measurements of pancreas volume - DICOM
+20207	Text	Scout images for heart MRI - DICOM
+20208	Text	Long axis heart images - DICOM
+20209	Text	Short axis heart images - DICOM
+20210	Text	Aortic distensibilty images - DICOM
+20211	Text	Cine tagging images - DICOM
+20212	Text	Left ventricular outflow tract images - DICOM
+20213	Text	Blood flow images - DICOM
+20214	Text	Experimental shMOLLI sequence images - DICOM
+20215	Text	Scout images for brain scans - DICOM
+20217	Text	Functional brain images - task - DICOM
+20218	Text	Multiband diffusion brain images - DICOM
+20219	Text	Susceptibility weighted brain images - DICOM
+20224	Text	Phoenix - DICOM
+20225	Text	Functional brain images - resting - DICOM
+20227	Text	Functional brain images - resting - NIFTI
+20229	Integer	Values entered
+20230	Integer	Duration to entering value					v20229 > 0	0
+20240	Integer	Maximum digits remembered correctly
+20242	Categorical (single)	Fluid intelligence completion status	498
+20244	Categorical (single)	Pairs matching completion status	498
+20245	Categorical (single)	Symbol digit completion status	498
+20246	Categorical (single)	Trail making completion status	479
+20247	Integer	Total errors traversing numeric path (trail #1)					v20147 > 0	0
+20248	Integer	Total errors traversing alphanumeric path (trail #2)					v20148 > 0	0
+20249	Text	Functional brain images - task - NIFTI
+20250	Text	Multiband diffusion brain images - NIFTI
+20251	Text	Susceptibility weighted brain images - NIFTI
+20252	Text	T1 structural brain images - NIFTI
+20253	Text	T2 FLAIR structural brain images - NIFTI
+21000	Categorical (single)	Ethnic background	1001
+21001	Continuous	Body mass index (BMI)
+21002	Continuous	Weight
+21003	Integer	Age when attended assessment centre
+21021	Continuous	Pulse wave Arterial Stiffness index
+22000	Categorical (single)	Genotype measurement batch	22000
+22001	Categorical (single)	Genetic sex	9
+22002	Text	CEL files
+22003	Continuous	Heterozygosity
+22004	Continuous	Heterozygosity, PCA corrected
+22005	Continuous	Missingness
+22006	Categorical (single)	Genetic ethnic grouping	1002
+22007	Text	Genotype measurement plate
+22008	Text	Genotype measurement well
+22009	Continuous	Genetic principal components
+22010	Categorical (single)	Recommended genomic analysis exclusions	1101
+22011	Integer	Genetic relatedness pairing
+22012	Continuous	Genetic relatedness factor
+22013	Continuous	Genetic relatedness IBS0
+22014	Continuous	Average X chromosome intensities for determining sex
+22015	Continuous	Average Y chromosome intensities for determining sex
+22050	Categorical (single)	UKBiLEVE Affymetrix quality control for samples	100
+22051	Categorical (single)	UKBiLEVE genotype quality control for samples	100
+22052	Categorical (single)	UKBiLEVE unrelatedness indicator	101
+22101	Text	Chromosome 1 genotype results
+22102	Text	Chromosome 2 genotype results
+22103	Text	Chromosome 3 genotype results
+22104	Text	Chromosome 4 genotype results
+22105	Text	Chromosome 5 genotype results
+22106	Text	Chromosome 6 genotype results
+22107	Text	Chromosome 7 genotype results
+22108	Text	Chromosome 8 genotype results
+22109	Text	Chromosome 9 genotype results
+22110	Text	Chromosome 10 genotype results
+22111	Text	Chromosome 11 genotype results
+22112	Text	Chromosome 12 genotype results
+22113	Text	Chromosome 13 genotype results
+22114	Text	Chromosome 14 genotype results
+22115	Text	Chromosome 15 genotype results
+22116	Text	Chromosome 16 genotype results
+22117	Text	Chromosome 17 genotype results
+22118	Text	Chromosome 18 genotype results
+22119	Text	Chromosome 19 genotype results
+22120	Text	Chromosome 20 genotype results
+22121	Text	Chromosome 21 genotype results
+22122	Text	Chromosome 22 genotype results
+22123	Text	Chromosome X genotype results
+22124	Text	Chromosome Y genotype results
+22125	Text	Mitochondrial genotype results
+22126	Categorical (single)	Doctor diagnosed hayfever or allergic rhinitis	7
+22127	Categorical (single)	Doctor diagnosed asthma	7
+22128	Categorical (single)	Doctor diagnosed emphysema	7
+22129	Categorical (single)	Doctor diagnosed chronic bronchitis	7
+22130	Categorical (single)	Doctor diagnosed COPD (chronic obstructive pulmonary disease)	7
+22131	Categorical (single)	Doctor diagnosed cystic fibrosis	7
+22132	Categorical (single)	Doctor diagnosed alpha-1 antitrypsin deficiency	7
+22133	Categorical (single)	Doctor diagnosed sarcoidosis	7
+22134	Categorical (single)	Doctor diagnosed bronchiectasis	7
+22135	Categorical (single)	Doctor diagnosed idiopathic pulmonary fibrosis	7
+22136	Categorical (single)	Doctor diagnosed fibrosing alveolitis/unspecified alveolitis	7
+22137	Categorical (single)	Doctor diagnosed tuberculosis	7
+22138	Categorical (single)	Doctor diagnosed silicosis	7
+22139	Categorical (single)	Doctor diagnosed asbestosis	7
+22140	Categorical (single)	Doctor diagnosed lung cancer (not mesothelioma)	7
+22141	Categorical (single)	Doctor diagnosed mesothelioma of the lung	7
+22146	Integer	Age hayfever or allergic rhinitis diagnosed by doctor
+22147	Integer	Age asthma diagnosed by doctor
+22148	Integer	Age emphysema diagnosed by doctor
+22149	Integer	Age chronic bronchitis diagnosed by doctor
+22150	Integer	Age COPD (Chronic Obstructive Pulmonary Disease) diagnosed by doctor
+22151	Integer	Age cystic fibrosis diagnosed by doctor
+22152	Integer	Age alpha-1 antitrypsin deficiency diagnosed by doctor
+22153	Integer	Age sarcoidosis diagnosed by doctor
+22154	Integer	Age bronchiectasis diagnosed by doctor
+22155	Integer	Age idiopathic pulmonary fibrosis diagnosed by doctor
+22156	Integer	Age fibrosing alveolitis/unspecified alveolitis diagnosed by doctor
+22157	Integer	Age tuberculosis diagnosed by doctor
+22158	Integer	Age silicosis diagnosed by doctor
+22159	Integer	Age asbestosis diagnosed by doctor
+22160	Integer	Age lung cancer (not mesothelioma) diagnosed by doctor
+22161	Integer	Age mesothelioma of the lung diagnosed by doctor
+22166	Categorical (single)	Recent medication for hayfever or allergic rhinitis	7
+22167	Categorical (single)	Recent medication for asthma	7
+22168	Categorical (single)	Recent medication for emphysema	7
+22169	Categorical (single)	Recent medication for chronic bronchitis	7
+22170	Categorical (single)	Recent medication for COPD (Chronic Obstructive Pulmonary Disease)	7
+22171	Categorical (single)	Recent medication for cystic fibrosis	7
+22172	Categorical (single)	Recent medication for alpha-1 antitrypsin deficiency	7
+22173	Categorical (single)	Recent medication for sarcoidosis	7
+22174	Categorical (single)	Recent medication for bronchiectasis	7
+22175	Categorical (single)	Recent medication for idiopathic pulmonary fibrosis	7
+22176	Categorical (single)	Recent medication for fibrosing alveolitis/unspecified alveolitis	7
+22177	Categorical (single)	Recent medication for tuberculosis	7
+22178	Categorical (single)	Recent medication for silicosis	7
+22179	Categorical (single)	Recent medication for asbestosis	7
+22180	Categorical (single)	Recent medication for lung cancer (not mesothelioma)	7
+22181	Categorical (single)	Recent medication for mesothelioma of the lung	7
+22200	Integer	Year of birth
+22201	Text	Chromosome 1 genotype probabilities
+22202	Text	Chromosome 2 genotype probabilities
+22203	Text	Chromosome 3 genotype probabilities
+22204	Text	Chromosome 4 genotype probabilities
+22205	Text	Chromosome 5 genotype probabilities
+22206	Text	Chromosome 6 genotype probabilities
+22207	Text	Chromosome 7 genotype probabilities
+22208	Text	Chromosome 8 genotype probabilities
+22209	Text	Chromosome 9 genotype probabilities
+22210	Text	Chromosome 10 genotype probabilities
+22211	Text	Chromosome 11 genotype probabilities
+22212	Text	Chromosome 12 genotype probabilities
+22213	Text	Chromosome 13 genotype probabilities
+22214	Text	Chromosome 14 genotype probabilities
+22215	Text	Chromosome 15 genotype probabilities
+22216	Text	Chromosome 16 genotype probabilities
+22217	Text	Chromosome 17 genotype probabilities
+22218	Text	Chromosome 18 genotype probabilities
+22219	Text	Chromosome 19 genotype probabilities
+22220	Text	Chromosome 20 genotype probabilities
+22221	Text	Chromosome 21 genotype probabilities
+22222	Text	Chromosome 22 genotype probabilities
+22223	Text	Chromosome X genotype probabilities
+22224	Text	Chromosome Y genotype probabilities
+22225	Text	Mitochondrial genotype probabilities
+22301	Text	Chromosome 1 genotype intensities
+22302	Text	Chromosome 2 genotype intensities
+22303	Text	Chromosome 3 genotype intensities
+22304	Text	Chromosome 4 genotype intensities
+22305	Text	Chromosome 5 genotype intensities
+22306	Text	Chromosome 6 genotype intensities
+22307	Text	Chromosome 7 genotype intensities
+22308	Text	Chromosome 8 genotype intensities
+22309	Text	Chromosome 9 genotype intensities
+22310	Text	Chromosome 10 genotype intensities
+22311	Text	Chromosome 11 genotype intensities
+22312	Text	Chromosome 12 genotype intensities
+22313	Text	Chromosome 13 genotype intensities
+22314	Text	Chromosome 14 genotype intensities
+22315	Text	Chromosome 15 genotype intensities
+22316	Text	Chromosome 16 genotype intensities
+22317	Text	Chromosome 17 genotype intensities
+22318	Text	Chromosome 18 genotype intensities
+22319	Text	Chromosome 19 genotype intensities
+22320	Text	Chromosome 20 genotype intensities
+22321	Text	Chromosome 21 genotype intensities
+22322	Text	Chromosome 22 genotype intensities
+22323	Text	Chromosome X genotype intensities
+22324	Text	Chromosome Y genotype intensities
+22325	Text	Mitochondrial genotype intensities
+22403	Continuous	Anterior thigh lean muscle volume (right)
+22404	Continuous	Posterior thigh lean muscle volume (right)
+22405	Continuous	Anterior thigh lean muscle volume (left)
+22406	Continuous	Posterior thigh lean muscle volume (left)
+22407	Continuous	Visceral adipose tissue volume (VAT)
+22408	Continuous	Abdominal subcutaneous adipose tissue volume (ASAT)
+22409	Continuous	Total thigh muscle volume
+22410	Continuous	Total trunk fat
+22411	Categorical (single)	VAT/ASAT error indicator	403
+22412	Categorical (multiple)	Thigh error indicator (left)	401
+22413	Categorical (multiple)	Thigh error indicator (right)	401
+22414	Categorical (single)	Image quality indicator	400
+22420	Integer	LV ejection fraction
+22421	Integer	LV end diastolic volume
+22422	Integer	LV end systolic volume
+22423	Integer	LV stroke volume
+22424	Continuous	Cardiac output
+22425	Continuous	Cardiac index
+22426	Integer	Average heart rate
+22427	Continuous	Body surface area
+22499	Categorical (single)	Device used to enter occupational data	480
+22500	Date	When occupational data entered
+22501	Integer	Year ended full time education	100306
+22502	Categorical (single)	Cough on most days	7
+22503	Integer	Years of cough on most days
+22504	Categorical (single)	Bring up phlegm/sputum/mucus on most days	7
+22505	Integer	Years of bringing up phlegm/sputum/mucus on most days
+22506	Categorical (single)	Tobacco smoking	496
+22507	Integer	Age of stopping smoking					v22506 == 113	0
+22508	Integer	Amount of tobacco currently smoked	946
+22599	Integer	Number of jobs held
+22600	Text	Job title
+22601	Categorical (single)	Job coding	497
+22602	Integer	Year job started
+22603	Integer	Year job ended	100698
+22604	Categorical (single)	Work hours - lumped category	494
+22605	Continuous	Work hours per week - exact value
+22606	Categorical (single)	Workplace very noisy	493
+22607	Categorical (single)	Workplace very cold	493
+22608	Categorical (single)	Workplace very hot	493
+22609	Categorical (single)	Workplace very dusty	493
+22610	Categorical (single)	Workplace full of chemical or other fumes	493
+22611	Categorical (single)	Workplace had a lot of cigarette smoke from other people smoking	493
+22612	Categorical (single)	Worked with materials containing asbestos	493
+22613	Categorical (single)	Worked with paints, thinners or glues	493
+22614	Categorical (single)	Worked with pesticides	493
+22615	Categorical (single)	Workplace had a lot of diesel exhaust	493
+22616	Categorical (single)	Breathing problems during period of job	7
+22617	Categorical (single)	Job SOC coding	2
+22618	Categorical (single)	Breathing problems improved/stopped away from workplace or on holiday	7
+22619	Categorical (single)	Breathing problems responsible for leaving job	7
+22620	Categorical (single)	Job involved shift work	7
+22630	Categorical (single)	Day shifts worked	489
+22631	Continuous	Period spent working day shifts
+22640	Categorical (single)	Mixture of day and night shifts worked	489
+22641	Continuous	Period spent working mix of day and night shifts	488
+22642	Integer	Usual length of each night shift during mixed shift periods
+22643	Integer	Number of night shifts worked monthly during mixed shift periods
+22644	Integer	Consecutive night shifts during mixed shift periods	487
+22645	Integer	Rest days during mixed shift periods	487
+22650	Categorical (single)	Night shifts worked	489
+22651	Continuous	Period spent working night shifts	488
+22652	Integer	Usual length of each night shift during night shift periods
+22653	Integer	Number of night shifts worked monthly during night shift periods
+22654	Integer	Consecutive night shifts during night shift periods	487
+22655	Integer	Rest days during night shift periods	487
+22660	Categorical (single)	Gap coding	486
+22661	Integer	Number of gap periods
+22662	Text	Title for other gap
+22663	Integer	Year gap started
+22664	Integer	Year gap ended	100698
+22700	Date	Date first recorded at location
+22702	Integer	Home location - east co-ordinate (rounded)
+22704	Integer	Home location - north co-ordinate (rounded)
+23098	Continuous	Weight
+23099	Continuous	Body fat percentage
+23100	Continuous	Whole body fat mass
+23101	Continuous	Whole body fat-free mass
+23102	Continuous	Whole body water mass
+23104	Continuous	Body mass index (BMI)
+23105	Continuous	Basal metabolic rate
+23106	Continuous	Impedance of whole body
+23107	Continuous	Impedance of leg (right)
+23108	Continuous	Impedance of leg (left)
+23109	Continuous	Impedance of arm (right)
+23110	Continuous	Impedance of arm (left)
+23111	Continuous	Leg fat percentage (right)
+23112	Continuous	Leg fat mass (right)
+23113	Continuous	Leg fat-free mass (right)
+23114	Continuous	Leg predicted mass (right)
+23115	Continuous	Leg fat percentage (left)
+23116	Continuous	Leg fat mass (left)
+23117	Continuous	Leg fat-free mass (left)
+23118	Continuous	Leg predicted mass (left)
+23119	Continuous	Arm fat percentage (right)
+23120	Continuous	Arm fat mass (right)
+23121	Continuous	Arm fat-free mass (right)
+23122	Continuous	Arm predicted mass (right)
+23123	Continuous	Arm fat percentage (left)
+23124	Continuous	Arm fat mass (left)
+23125	Continuous	Arm fat-free mass (left)
+23126	Continuous	Arm predicted mass (left)
+23127	Continuous	Trunk fat percentage
+23128	Continuous	Trunk fat mass
+23129	Continuous	Trunk fat-free mass
+23130	Continuous	Trunk predicted mass
+23200	Continuous	L1-L4 area
+23201	Continuous	L1-L4 average height
+23202	Continuous	L1-L4 average width
+23203	Continuous	L1-L4 BMC (bone mineral content)
+23204	Continuous	L1-L4 BMD (bone mineral density)
+23205	Continuous	L1-L4 BMD (bone mineral density) T-score
+23206	Continuous	Femur lower neck BMD (bone mineral density) (right)
+23208	Continuous	Femur neck BMD (bone mineral density) (right)
+23209	Continuous	Femur neck BMD (bone mineral density) T-score (right)
+23210	Continuous	Femur shaft BMD (bone mineral density) (right)
+23212	Continuous	Femur total BMD (bone mineral density) (right)
+23213	Continuous	Femur total BMD (bone mineral density) T-score (right)
+23214	Continuous	Femur troch BMD (bone mineral density) (right)
+23215	Continuous	Femur troch BMD (bone mineral density) T-score (right)
+23216	Continuous	Femur upper neck BMD (bone mineral density) (right)
+23217	Continuous	Femur upper neck BMD (bone mineral density) T-score (right)
+23218	Continuous	Femur wards BMD (bone mineral density) (right)
+23219	Continuous	Femur wards BMD (bone mineral density) T-score (right)
+23220	Continuous	Arm BMC (bone mineral content) (left)
+23221	Continuous	Arm BMD (bone mineral density) (left)
+23222	Continuous	Arm BMC (bone mineral content) (right)
+23223	Continuous	Arm BMD (bone mineral density) (right)
+23224	Continuous	Arms BMC (bone mineral content)
+23225	Continuous	Arms BMD (bone mineral density)
+23226	Continuous	Head BMD (bone mineral density)
+23227	Continuous	Leg BMD (bone mineral density) (left)
+23228	Continuous	Leg BMC (bone mineral content) (right)
+23229	Continuous	Leg BMD (bone mineral density) (right)
+23230	Continuous	Legs BMC (bone mineral content)
+23231	Continuous	Legs BMD (bone mineral density)
+23232	Continuous	Pelvis BMD (bone mineral density)
+23233	Continuous	Ribs BMD (bone mineral density)
+23234	Continuous	Spine BMD (bone mineral density)
+23235	Continuous	Total BMC (bone mineral content)
+23236	Continuous	Total BMD (bone mineral density)
+23237	Continuous	Total BMD (bone mineral density) (left)
+23238	Continuous	Total BMD (bone mineral density) (right)
+23239	Continuous	Total BMD (bone mineral density) T-score
+23240	Continuous	Trunk BMC (bone mineral content)
+23241	Continuous	Trunk BMD (bone mineral density)
+23242	Continuous	Trunk BMD (bone mineral density) (left)
+23243	Continuous	Trunk BMD (bone mineral density) (right)
+23244	Integer	Android bone mass
+23245	Integer	Android fat mass
+23246	Integer	Android lean mass
+23247	Continuous	Android tissue fat percentage
+23248	Continuous	Android total mass
+23249	Integer	Arm fat mass (left)
+23250	Integer	Arm lean mass (left)
+23251	Continuous	Arm tissue fat percentage (left)
+23252	Continuous	Arm total mass (left)
+23253	Integer	Arm fat mass (right)
+23254	Integer	Arm lean mass (right)
+23255	Continuous	Arm tissue fat percentage (right)
+23256	Continuous	Arm total mass (right)
+23257	Integer	Arms fat mass
+23258	Integer	Arms lean mass
+23259	Continuous	Arms tissue fat percentage
+23260	Continuous	Arms total mass
+23261	Integer	Gynoid bone mass
+23262	Integer	Gynoid fat mass
+23263	Integer	Gynoid lean mass
+23264	Continuous	Gynoid tissue fat percentage
+23265	Continuous	Gynoid total mass
+23266	Integer	Leg fat mass (left)
+23267	Integer	Leg lean mass (left)
+23268	Continuous	Leg tissue fat percentage (left)
+23269	Continuous	Leg total mass (left)
+23270	Integer	Leg fat mass (right)
+23271	Integer	Leg lean mass (right)
+23272	Continuous	Leg tissue fat percentage (right)
+23273	Continuous	Leg total mass (right)
+23274	Integer	Legs fat mass
+23275	Integer	Legs lean mass
+23276	Continuous	Legs tissue fat percentage
+23277	Continuous	Legs total mass
+23278	Integer	Total fat mass
+23279	Integer	Total fat-free mass
+23280	Integer	Total lean mass
+23281	Continuous	Total tissue fat percentage
+23282	Integer	Total tissue mass
+23283	Continuous	Total mass
+23284	Integer	Trunk fat mass
+23285	Integer	Trunk lean mass
+23286	Continuous	Trunk tissue fat percentage
+23287	Continuous	Trunk total mass
+23288	Integer	VAT (visceral adipose tissue) mass
+23289	Integer	VAT (visceral adipose tissue) volume
+23290	Continuous	Femur shaft BMD (bone mineral density) (left)
+23291	Continuous	Femur total BMD (bone mineral density) (left)
+23292	Continuous	Femur upper neck BMD (bone mineral density) (left)
+23293	Continuous	Femur total BMD (bone mineral density) T-score (left)
+23295	Continuous	Femur troch BMD (bone mineral density) (left)
+23296	Continuous	Femur upper neck BMD (bone mineral density) T-score (left)
+23297	Continuous	Femur wards BMD (bone mineral density) (left)
+23298	Continuous	Femur troch BMD (bone mineral density) T-score (left)
+23299	Continuous	Femur neck BMD (bone mineral density) (left)
+23300	Continuous	Femur neck BMD (bone mineral density) T-score (left)
+23301	Continuous	Femur wards BMD (bone mineral density) T-score (left)
+23302	Continuous	Femur lower neck BMD (bone mineral density) (left)
+23304	Continuous	Trunk bone area
+23305	Continuous	Head bone area
+23306	Continuous	Head BMC (bone mineral content)
+23307	Continuous	Pelvis bone area
+23308	Continuous	Pelvis BMC (bone mineral content)
+23309	Continuous	Ribs bone area
+23310	Continuous	Ribs BMC (bone mineral content)
+23311	Continuous	Spine bone area
+23312	Continuous	Spine BMC (bone mineral content)
+23313	Continuous	Arm bone area (left)
+23314	Continuous	Arm bone area (right)
+23315	Continuous	Leg bone area (left)
+23316	Continuous	Leg bone area (right)
+23317	Continuous	Arms combined bone area
+23318	Continuous	Legs combined bone area
+23320	Continuous	Leg BMC (bone mineral content) (left)
+25000	Continuous	Volumetric scaling from T1 head image to standard space
+25001	Continuous	Volume of peripheral cortical grey matter (normalised for head size)
+25002	Continuous	Volume of peripheral cortical grey matter
+25003	Continuous	Volume of ventricular cerebrospinal fluid (normalised for head size)
+25004	Continuous	Volume of ventricular cerebrospinal fluid
+25005	Continuous	Volume of grey matter (normalised for head size)
+25006	Continuous	Volume of grey matter
+25007	Continuous	Volume of white matter (normalised for head size)
+25008	Continuous	Volume of white matter
+25009	Continuous	Volume of brain, grey+white matter (normalised for head size)
+25010	Continuous	Volume of brain, grey+white matter
+25011	Continuous	Volume of thalamus (left)
+25012	Continuous	Volume of thalamus (right)
+25013	Continuous	Volume of caudate (left)
+25014	Continuous	Volume of caudate (right)
+25015	Continuous	Volume of putamen (left)
+25016	Continuous	Volume of putamen (right)
+25017	Continuous	Volume of pallidum (left)
+25018	Continuous	Volume of pallidum (right)
+25019	Continuous	Volume of hippocampus (left)
+25020	Continuous	Volume of hippocampus (right)
+25021	Continuous	Volume of amygdala (left)
+25022	Continuous	Volume of amygdala (right)
+25023	Continuous	Volume of accumbens (left)
+25024	Continuous	Volume of accumbens (right)
+25025	Continuous	Volume of brain stem + 4th ventricle
+25026	Continuous	Median T2star in thalamus (left)
+25027	Continuous	Median T2star in thalamus (right)
+25028	Continuous	Median T2star in caudate (left)
+25029	Continuous	Median T2star in caudate (right)
+25030	Continuous	Median T2star in putamen (left)
+25031	Continuous	Median T2star in putamen (right)
+25032	Continuous	Median T2star in pallidum (left)
+25033	Continuous	Median T2star in pallidum (right)
+25034	Continuous	Median T2star in hippocampus (left)
+25035	Continuous	Median T2star in hippocampus (right)
+25036	Continuous	Median T2star in amygdala (left)
+25037	Continuous	Median T2star in amygdala (right)
+25038	Continuous	Median T2star in accumbens (left)
+25039	Continuous	Median T2star in accumbens (right)
+25040	Continuous	Median BOLD effect (in group-defined mask) for shapes activation
+25042	Continuous	Median z-statistic (in group-defined mask) for shapes activation
+25044	Continuous	Median BOLD effect (in group-defined mask) for faces activation
+25046	Continuous	Median z-statistic (in group-defined mask) for faces activation
+25048	Continuous	Median BOLD effect (in group-defined mask) for faces-shapes contrast
+25050	Continuous	Median z-statistic (in group-defined mask) for faces-shapes contrast
+25052	Continuous	Median BOLD effect (in group-defined amygdala activation mask) for faces-shapes contrast
+25054	Continuous	Median z-statistic (in group-defined amygdala activation mask) for faces-shapes contrast
+25056	Continuous	Mean FA in middle cerebellar peduncle on FA skeleton
+25057	Continuous	Mean FA in pontine crossing tract on FA skeleton
+25058	Continuous	Mean FA in genu of corpus callosum on FA skeleton
+25059	Continuous	Mean FA in body of corpus callosum on FA skeleton
+25060	Continuous	Mean FA in splenium of corpus callosum on FA skeleton
+25061	Continuous	Mean FA in fornix on FA skeleton
+25062	Continuous	Mean FA in corticospinal tract on FA skeleton (right)
+25063	Continuous	Mean FA in corticospinal tract on FA skeleton (left)
+25064	Continuous	Mean FA in medial lemniscus on FA skeleton (right)
+25065	Continuous	Mean FA in medial lemniscus on FA skeleton (left)
+25066	Continuous	Mean FA in inferior cerebellar peduncle on FA skeleton (right)
+25067	Continuous	Mean FA in inferior cerebellar peduncle on FA skeleton (left)
+25068	Continuous	Mean FA in superior cerebellar peduncle on FA skeleton (right)
+25069	Continuous	Mean FA in superior cerebellar peduncle on FA skeleton (left)
+25070	Continuous	Mean FA in cerebral peduncle on FA skeleton (right)
+25071	Continuous	Mean FA in cerebral peduncle on FA skeleton (left)
+25072	Continuous	Mean FA in anterior limb of internal capsule on FA skeleton (right)
+25073	Continuous	Mean FA in anterior limb of internal capsule on FA skeleton (left)
+25074	Continuous	Mean FA in posterior limb of internal capsule on FA skeleton (right)
+25075	Continuous	Mean FA in posterior limb of internal capsule on FA skeleton (left)
+25076	Continuous	Mean FA in retrolenticular part of internal capsule on FA skeleton (right)
+25077	Continuous	Mean FA in retrolenticular part of internal capsule on FA skeleton (left)
+25078	Continuous	Mean FA in anterior corona radiata on FA skeleton (right)
+25079	Continuous	Mean FA in anterior corona radiata on FA skeleton (left)
+25080	Continuous	Mean FA in superior corona radiata on FA skeleton (right)
+25081	Continuous	Mean FA in superior corona radiata on FA skeleton (left)
+25082	Continuous	Mean FA in posterior corona radiata on FA skeleton (right)
+25083	Continuous	Mean FA in posterior corona radiata on FA skeleton (left)
+25084	Continuous	Mean FA in posterior thalamic radiation on FA skeleton (right)
+25085	Continuous	Mean FA in posterior thalamic radiation on FA skeleton (left)
+25086	Continuous	Mean FA in sagittal stratum on FA skeleton (right)
+25087	Continuous	Mean FA in sagittal stratum on FA skeleton (left)
+25088	Continuous	Mean FA in external capsule on FA skeleton (right)
+25089	Continuous	Mean FA in external capsule on FA skeleton (left)
+25090	Continuous	Mean FA in cingulum cingulate gyrus on FA skeleton (right)
+25091	Continuous	Mean FA in cingulum cingulate gyrus on FA skeleton (left)
+25092	Continuous	Mean FA in cingulum hippocampus on FA skeleton (right)
+25093	Continuous	Mean FA in cingulum hippocampus on FA skeleton (left)
+25094	Continuous	Mean FA in fornix cres+stria terminalis on FA skeleton (right)
+25095	Continuous	Mean FA in fornix cres+stria terminalis on FA skeleton (left)
+25096	Continuous	Mean FA in superior longitudinal fasciculus on FA skeleton (right)
+25097	Continuous	Mean FA in superior longitudinal fasciculus on FA skeleton (left)
+25098	Continuous	Mean FA in superior fronto-occipital fasciculus on FA skeleton (right)
+25099	Continuous	Mean FA in superior fronto-occipital fasciculus on FA skeleton (left)
+25100	Continuous	Mean FA in uncinate fasciculus on FA skeleton (right)
+25101	Continuous	Mean FA in uncinate fasciculus on FA skeleton (left)
+25102	Continuous	Mean FA in tapetum on FA skeleton (right)
+25103	Continuous	Mean FA in tapetum on FA skeleton (left)
+25104	Continuous	Mean MD in middle cerebellar peduncle on FA skeleton
+25105	Continuous	Mean MD in pontine crossing tract on FA skeleton
+25106	Continuous	Mean MD in genu of corpus callosum on FA skeleton
+25107	Continuous	Mean MD in body of corpus callosum on FA skeleton
+25108	Continuous	Mean MD in splenium of corpus callosum on FA skeleton
+25109	Continuous	Mean MD in fornix on FA skeleton
+25110	Continuous	Mean MD in corticospinal tract on FA skeleton (right)
+25111	Continuous	Mean MD in corticospinal tract on FA skeleton (left)
+25112	Continuous	Mean MD in medial lemniscus on FA skeleton (right)
+25113	Continuous	Mean MD in medial lemniscus on FA skeleton (left)
+25114	Continuous	Mean MD in inferior cerebellar peduncle on FA skeleton (right)
+25115	Continuous	Mean MD in inferior cerebellar peduncle on FA skeleton (left)
+25116	Continuous	Mean MD in superior cerebellar peduncle on FA skeleton (right)
+25117	Continuous	Mean MD in superior cerebellar peduncle on FA skeleton (left)
+25118	Continuous	Mean MD in cerebral peduncle on FA skeleton (right)
+25119	Continuous	Mean MD in cerebral peduncle on FA skeleton (left)
+25120	Continuous	Mean MD in anterior limb of internal capsule on FA skeleton (right)
+25121	Continuous	Mean MD in anterior limb of internal capsule on FA skeleton (left)
+25122	Continuous	Mean MD in posterior limb of internal capsule on FA skeleton (right)
+25123	Continuous	Mean MD in posterior limb of internal capsule on FA skeleton (left)
+25124	Continuous	Mean MD in retrolenticular part of internal capsule on FA skeleton (right)
+25125	Continuous	Mean MD in retrolenticular part of internal capsule on FA skeleton (left)
+25126	Continuous	Mean MD in anterior corona radiata on FA skeleton (right)
+25127	Continuous	Mean MD in anterior corona radiata on FA skeleton (left)
+25128	Continuous	Mean MD in superior corona radiata on FA skeleton (right)
+25129	Continuous	Mean MD in superior corona radiata on FA skeleton (left)
+25130	Continuous	Mean MD in posterior corona radiata on FA skeleton (right)
+25131	Continuous	Mean MD in posterior corona radiata on FA skeleton (left)
+25132	Continuous	Mean MD in posterior thalamic radiation on FA skeleton (right)
+25133	Continuous	Mean MD in posterior thalamic radiation on FA skeleton (left)
+25134	Continuous	Mean MD in sagittal stratum on FA skeleton (right)
+25135	Continuous	Mean MD in sagittal stratum on FA skeleton (left)
+25136	Continuous	Mean MD in external capsule on FA skeleton (right)
+25137	Continuous	Mean MD in external capsule on FA skeleton (left)
+25138	Continuous	Mean MD in cingulum cingulate gyrus on FA skeleton (right)
+25139	Continuous	Mean MD in cingulum cingulate gyrus on FA skeleton (left)
+25140	Continuous	Mean MD in cingulum hippocampus on FA skeleton (right)
+25141	Continuous	Mean MD in cingulum hippocampus on FA skeleton (left)
+25142	Continuous	Mean MD in fornix cres+stria terminalis on FA skeleton (right)
+25143	Continuous	Mean MD in fornix cres+stria terminalis on FA skeleton (left)
+25144	Continuous	Mean MD in superior longitudinal fasciculus on FA skeleton (right)
+25145	Continuous	Mean MD in superior longitudinal fasciculus on FA skeleton (left)
+25146	Continuous	Mean MD in superior fronto-occipital fasciculus on FA skeleton (right)
+25147	Continuous	Mean MD in superior fronto-occipital fasciculus on FA skeleton (left)
+25148	Continuous	Mean MD in uncinate fasciculus on FA skeleton (right)
+25149	Continuous	Mean MD in uncinate fasciculus on FA skeleton (left)
+25150	Continuous	Mean MD in tapetum on FA skeleton (right)
+25151	Continuous	Mean MD in tapetum on FA skeleton (left)
+25152	Continuous	Mean MO in middle cerebellar peduncle on FA skeleton
+25153	Continuous	Mean MO in pontine crossing tract on FA skeleton
+25154	Continuous	Mean MO in genu of corpus callosum on FA skeleton
+25155	Continuous	Mean MO in body of corpus callosum on FA skeleton
+25156	Continuous	Mean MO in splenium of corpus callosum on FA skeleton
+25157	Continuous	Mean MO in fornix on FA skeleton
+25158	Continuous	Mean MO in corticospinal tract on FA skeleton (right)
+25159	Continuous	Mean MO in corticospinal tract on FA skeleton (left)
+25160	Continuous	Mean MO in medial lemniscus on FA skeleton (right)
+25161	Continuous	Mean MO in medial lemniscus on FA skeleton (left)
+25162	Continuous	Mean MO in inferior cerebellar peduncle on FA skeleton (right)
+25163	Continuous	Mean MO in inferior cerebellar peduncle on FA skeleton (left)
+25164	Continuous	Mean MO in superior cerebellar peduncle on FA skeleton (right)
+25165	Continuous	Mean MO in superior cerebellar peduncle on FA skeleton (left)
+25166	Continuous	Mean MO in cerebral peduncle on FA skeleton (right)
+25167	Continuous	Mean MO in cerebral peduncle on FA skeleton (left)
+25168	Continuous	Mean MO in anterior limb of internal capsule on FA skeleton (right)
+25169	Continuous	Mean MO in anterior limb of internal capsule on FA skeleton (left)
+25170	Continuous	Mean MO in posterior limb of internal capsule on FA skeleton (right)
+25171	Continuous	Mean MO in posterior limb of internal capsule on FA skeleton (left)
+25172	Continuous	Mean MO in retrolenticular part of internal capsule on FA skeleton (right)
+25173	Continuous	Mean MO in retrolenticular part of internal capsule on FA skeleton (left)
+25174	Continuous	Mean MO in anterior corona radiata on FA skeleton (right)
+25175	Continuous	Mean MO in anterior corona radiata on FA skeleton (left)
+25176	Continuous	Mean MO in superior corona radiata on FA skeleton (right)
+25177	Continuous	Mean MO in superior corona radiata on FA skeleton (left)
+25178	Continuous	Mean MO in posterior corona radiata on FA skeleton (right)
+25179	Continuous	Mean MO in posterior corona radiata on FA skeleton (left)
+25180	Continuous	Mean MO in posterior thalamic radiation on FA skeleton (right)
+25181	Continuous	Mean MO in posterior thalamic radiation on FA skeleton (left)
+25182	Continuous	Mean MO in sagittal stratum on FA skeleton (right)
+25183	Continuous	Mean MO in sagittal stratum on FA skeleton (left)
+25184	Continuous	Mean MO in external capsule on FA skeleton (right)
+25185	Continuous	Mean MO in external capsule on FA skeleton (left)
+25186	Continuous	Mean MO in cingulum cingulate gyrus on FA skeleton (right)
+25187	Continuous	Mean MO in cingulum cingulate gyrus on FA skeleton (left)
+25188	Continuous	Mean MO in cingulum hippocampus on FA skeleton (right)
+25189	Continuous	Mean MO in cingulum hippocampus on FA skeleton (left)
+25190	Continuous	Mean MO in fornix cres+stria terminalis on FA skeleton (right)
+25191	Continuous	Mean MO in fornix cres+stria terminalis on FA skeleton (left)
+25192	Continuous	Mean MO in superior longitudinal fasciculus on FA skeleton (right)
+25193	Continuous	Mean MO in superior longitudinal fasciculus on FA skeleton (left)
+25194	Continuous	Mean MO in superior fronto-occipital fasciculus on FA skeleton (right)
+25195	Continuous	Mean MO in superior fronto-occipital fasciculus on FA skeleton (left)
+25196	Continuous	Mean MO in uncinate fasciculus on FA skeleton (right)
+25197	Continuous	Mean MO in uncinate fasciculus on FA skeleton (left)
+25198	Continuous	Mean MO in tapetum on FA skeleton (right)
+25199	Continuous	Mean MO in tapetum on FA skeleton (left)
+25200	Continuous	Mean L1 in middle cerebellar peduncle on FA skeleton
+25201	Continuous	Mean L1 in pontine crossing tract on FA skeleton
+25202	Continuous	Mean L1 in genu of corpus callosum on FA skeleton
+25203	Continuous	Mean L1 in body of corpus callosum on FA skeleton
+25204	Continuous	Mean L1 in splenium of corpus callosum on FA skeleton
+25205	Continuous	Mean L1 in fornix on FA skeleton
+25206	Continuous	Mean L1 in corticospinal tract on FA skeleton (right)
+25207	Continuous	Mean L1 in corticospinal tract on FA skeleton (left)
+25208	Continuous	Mean L1 in medial lemniscus on FA skeleton (right)
+25209	Continuous	Mean L1 in medial lemniscus on FA skeleton (left)
+25210	Continuous	Mean L1 in inferior cerebellar peduncle on FA skeleton (right)
+25211	Continuous	Mean L1 in inferior cerebellar peduncle on FA skeleton (left)
+25212	Continuous	Mean L1 in superior cerebellar peduncle on FA skeleton (right)
+25213	Continuous	Mean L1 in superior cerebellar peduncle on FA skeleton (left)
+25214	Continuous	Mean L1 in cerebral peduncle on FA skeleton (right)
+25215	Continuous	Mean L1 in cerebral peduncle on FA skeleton (left)
+25216	Continuous	Mean L1 in anterior limb of internal capsule on FA skeleton (right)
+25217	Continuous	Mean L1 in anterior limb of internal capsule on FA skeleton (left)
+25218	Continuous	Mean L1 in posterior limb of internal capsule on FA skeleton (right)
+25219	Continuous	Mean L1 in posterior limb of internal capsule on FA skeleton (left)
+25220	Continuous	Mean L1 in retrolenticular part of internal capsule on FA skeleton (right)
+25221	Continuous	Mean L1 in retrolenticular part of internal capsule on FA skeleton (left)
+25222	Continuous	Mean L1 in anterior corona radiata on FA skeleton (right)
+25223	Continuous	Mean L1 in anterior corona radiata on FA skeleton (left)
+25224	Continuous	Mean L1 in superior corona radiata on FA skeleton (right)
+25225	Continuous	Mean L1 in superior corona radiata on FA skeleton (left)
+25226	Continuous	Mean L1 in posterior corona radiata on FA skeleton (right)
+25227	Continuous	Mean L1 in posterior corona radiata on FA skeleton (left)
+25228	Continuous	Mean L1 in posterior thalamic radiation on FA skeleton (right)
+25229	Continuous	Mean L1 in posterior thalamic radiation on FA skeleton (left)
+25230	Continuous	Mean L1 in sagittal stratum on FA skeleton (right)
+25231	Continuous	Mean L1 in sagittal stratum on FA skeleton (left)
+25232	Continuous	Mean L1 in external capsule on FA skeleton (right)
+25233	Continuous	Mean L1 in external capsule on FA skeleton (left)
+25234	Continuous	Mean L1 in cingulum cingulate gyrus on FA skeleton (right)
+25235	Continuous	Mean L1 in cingulum cingulate gyrus on FA skeleton (left)
+25236	Continuous	Mean L1 in cingulum hippocampus on FA skeleton (right)
+25237	Continuous	Mean L1 in cingulum hippocampus on FA skeleton (left)
+25238	Continuous	Mean L1 in fornix cres+stria terminalis on FA skeleton (right)
+25239	Continuous	Mean L1 in fornix cres+stria terminalis on FA skeleton (left)
+25240	Continuous	Mean L1 in superior longitudinal fasciculus on FA skeleton (right)
+25241	Continuous	Mean L1 in superior longitudinal fasciculus on FA skeleton (left)
+25242	Continuous	Mean L1 in superior fronto-occipital fasciculus on FA skeleton (right)
+25243	Continuous	Mean L1 in superior fronto-occipital fasciculus on FA skeleton (left)
+25244	Continuous	Mean L1 in uncinate fasciculus on FA skeleton (right)
+25245	Continuous	Mean L1 in uncinate fasciculus on FA skeleton (left)
+25246	Continuous	Mean L1 in tapetum on FA skeleton (right)
+25247	Continuous	Mean L1 in tapetum on FA skeleton (left)
+25248	Continuous	Mean L2 in middle cerebellar peduncle on FA skeleton
+25249	Continuous	Mean L2 in pontine crossing tract on FA skeleton
+25250	Continuous	Mean L2 in genu of corpus callosum on FA skeleton
+25251	Continuous	Mean L2 in body of corpus callosum on FA skeleton
+25252	Continuous	Mean L2 in splenium of corpus callosum on FA skeleton
+25253	Continuous	Mean L2 in fornix on FA skeleton
+25254	Continuous	Mean L2 in corticospinal tract on FA skeleton (right)
+25255	Continuous	Mean L2 in corticospinal tract on FA skeleton (left)
+25256	Continuous	Mean L2 in medial lemniscus on FA skeleton (right)
+25257	Continuous	Mean L2 in medial lemniscus on FA skeleton (left)
+25258	Continuous	Mean L2 in inferior cerebellar peduncle on FA skeleton (right)
+25259	Continuous	Mean L2 in inferior cerebellar peduncle on FA skeleton (left)
+25260	Continuous	Mean L2 in superior cerebellar peduncle on FA skeleton (right)
+25261	Continuous	Mean L2 in superior cerebellar peduncle on FA skeleton (left)
+25262	Continuous	Mean L2 in cerebral peduncle on FA skeleton (right)
+25263	Continuous	Mean L2 in cerebral peduncle on FA skeleton (left)
+25264	Continuous	Mean L2 in anterior limb of internal capsule on FA skeleton (right)
+25265	Continuous	Mean L2 in anterior limb of internal capsule on FA skeleton (left)
+25266	Continuous	Mean L2 in posterior limb of internal capsule on FA skeleton (right)
+25267	Continuous	Mean L2 in posterior limb of internal capsule on FA skeleton (left)
+25268	Continuous	Mean L2 in retrolenticular part of internal capsule on FA skeleton (right)
+25269	Continuous	Mean L2 in retrolenticular part of internal capsule on FA skeleton (left)
+25270	Continuous	Mean L2 in anterior corona radiata on FA skeleton (right)
+25271	Continuous	Mean L2 in anterior corona radiata on FA skeleton (left)
+25272	Continuous	Mean L2 in superior corona radiata on FA skeleton (right)
+25273	Continuous	Mean L2 in superior corona radiata on FA skeleton (left)
+25274	Continuous	Mean L2 in posterior corona radiata on FA skeleton (right)
+25275	Continuous	Mean L2 in posterior corona radiata on FA skeleton (left)
+25276	Continuous	Mean L2 in posterior thalamic radiation on FA skeleton (right)
+25277	Continuous	Mean L2 in posterior thalamic radiation on FA skeleton (left)
+25278	Continuous	Mean L2 in sagittal stratum on FA skeleton (right)
+25279	Continuous	Mean L2 in sagittal stratum on FA skeleton (left)
+25280	Continuous	Mean L2 in external capsule on FA skeleton (right)
+25281	Continuous	Mean L2 in external capsule on FA skeleton (left)
+25282	Continuous	Mean L2 in cingulum cingulate gyrus on FA skeleton (right)
+25283	Continuous	Mean L2 in cingulum cingulate gyrus on FA skeleton (left)
+25284	Continuous	Mean L2 in cingulum hippocampus on FA skeleton (right)
+25285	Continuous	Mean L2 in cingulum hippocampus on FA skeleton (left)
+25286	Continuous	Mean L2 in fornix cres+stria terminalis on FA skeleton (right)
+25287	Continuous	Mean L2 in fornix cres+stria terminalis on FA skeleton (left)
+25288	Continuous	Mean L2 in superior longitudinal fasciculus on FA skeleton (right)
+25289	Continuous	Mean L2 in superior longitudinal fasciculus on FA skeleton (left)
+25290	Continuous	Mean L2 in superior fronto-occipital fasciculus on FA skeleton (right)
+25291	Continuous	Mean L2 in superior fronto-occipital fasciculus on FA skeleton (left)
+25292	Continuous	Mean L2 in uncinate fasciculus on FA skeleton (right)
+25293	Continuous	Mean L2 in uncinate fasciculus on FA skeleton (left)
+25294	Continuous	Mean L2 in tapetum on FA skeleton (right)
+25295	Continuous	Mean L2 in tapetum on FA skeleton (left)
+25296	Continuous	Mean L3 in middle cerebellar peduncle on FA skeleton
+25297	Continuous	Mean L3 in pontine crossing tract on FA skeleton
+25298	Continuous	Mean L3 in genu of corpus callosum on FA skeleton
+25299	Continuous	Mean L3 in body of corpus callosum on FA skeleton
+25300	Continuous	Mean L3 in splenium of corpus callosum on FA skeleton
+25301	Continuous	Mean L3 in fornix on FA skeleton
+25302	Continuous	Mean L3 in corticospinal tract on FA skeleton (right)
+25303	Continuous	Mean L3 in corticospinal tract on FA skeleton (left)
+25304	Continuous	Mean L3 in medial lemniscus on FA skeleton (right)
+25305	Continuous	Mean L3 in medial lemniscus on FA skeleton (left)
+25306	Continuous	Mean L3 in inferior cerebellar peduncle on FA skeleton (right)
+25307	Continuous	Mean L3 in inferior cerebellar peduncle on FA skeleton (left)
+25308	Continuous	Mean L3 in superior cerebellar peduncle on FA skeleton (right)
+25309	Continuous	Mean L3 in superior cerebellar peduncle on FA skeleton (left)
+25310	Continuous	Mean L3 in cerebral peduncle on FA skeleton (right)
+25311	Continuous	Mean L3 in cerebral peduncle on FA skeleton (left)
+25312	Continuous	Mean L3 in anterior limb of internal capsule on FA skeleton (right)
+25313	Continuous	Mean L3 in anterior limb of internal capsule on FA skeleton (left)
+25314	Continuous	Mean L3 in posterior limb of internal capsule on FA skeleton (right)
+25315	Continuous	Mean L3 in posterior limb of internal capsule on FA skeleton (left)
+25316	Continuous	Mean L3 in retrolenticular part of internal capsule on FA skeleton (right)
+25317	Continuous	Mean L3 in retrolenticular part of internal capsule on FA skeleton (left)
+25318	Continuous	Mean L3 in anterior corona radiata on FA skeleton (right)
+25319	Continuous	Mean L3 in anterior corona radiata on FA skeleton (left)
+25320	Continuous	Mean L3 in superior corona radiata on FA skeleton (right)
+25321	Continuous	Mean L3 in superior corona radiata on FA skeleton (left)
+25322	Continuous	Mean L3 in posterior corona radiata on FA skeleton (right)
+25323	Continuous	Mean L3 in posterior corona radiata on FA skeleton (left)
+25324	Continuous	Mean L3 in posterior thalamic radiation on FA skeleton (right)
+25325	Continuous	Mean L3 in posterior thalamic radiation on FA skeleton (left)
+25326	Continuous	Mean L3 in sagittal stratum on FA skeleton (right)
+25327	Continuous	Mean L3 in sagittal stratum on FA skeleton (left)
+25328	Continuous	Mean L3 in external capsule on FA skeleton (right)
+25329	Continuous	Mean L3 in external capsule on FA skeleton (left)
+25330	Continuous	Mean L3 in cingulum cingulate gyrus on FA skeleton (right)
+25331	Continuous	Mean L3 in cingulum cingulate gyrus on FA skeleton (left)
+25332	Continuous	Mean L3 in cingulum hippocampus on FA skeleton (right)
+25333	Continuous	Mean L3 in cingulum hippocampus on FA skeleton (left)
+25334	Continuous	Mean L3 in fornix cres+stria terminalis on FA skeleton (right)
+25335	Continuous	Mean L3 in fornix cres+stria terminalis on FA skeleton (left)
+25336	Continuous	Mean L3 in superior longitudinal fasciculus on FA skeleton (right)
+25337	Continuous	Mean L3 in superior longitudinal fasciculus on FA skeleton (left)
+25338	Continuous	Mean L3 in superior fronto-occipital fasciculus on FA skeleton (right)
+25339	Continuous	Mean L3 in superior fronto-occipital fasciculus on FA skeleton (left)
+25340	Continuous	Mean L3 in uncinate fasciculus on FA skeleton (right)
+25341	Continuous	Mean L3 in uncinate fasciculus on FA skeleton (left)
+25342	Continuous	Mean L3 in tapetum on FA skeleton (right)
+25343	Continuous	Mean L3 in tapetum on FA skeleton (left)
+25344	Continuous	Mean ICVF in middle cerebellar peduncle on FA skeleton
+25345	Continuous	Mean ICVF in pontine crossing tract on FA skeleton
+25346	Continuous	Mean ICVF in genu of corpus callosum on FA skeleton
+25347	Continuous	Mean ICVF in body of corpus callosum on FA skeleton
+25348	Continuous	Mean ICVF in splenium of corpus callosum on FA skeleton
+25349	Continuous	Mean ICVF in fornix on FA skeleton
+25350	Continuous	Mean ICVF in corticospinal tract on FA skeleton (right)
+25351	Continuous	Mean ICVF in corticospinal tract on FA skeleton (left)
+25352	Continuous	Mean ICVF in medial lemniscus on FA skeleton (right)
+25353	Continuous	Mean ICVF in medial lemniscus on FA skeleton (left)
+25354	Continuous	Mean ICVF in inferior cerebellar peduncle on FA skeleton (right)
+25355	Continuous	Mean ICVF in inferior cerebellar peduncle on FA skeleton (left)
+25356	Continuous	Mean ICVF in superior cerebellar peduncle on FA skeleton (right)
+25357	Continuous	Mean ICVF in superior cerebellar peduncle on FA skeleton (left)
+25358	Continuous	Mean ICVF in cerebral peduncle on FA skeleton (right)
+25359	Continuous	Mean ICVF in cerebral peduncle on FA skeleton (left)
+25360	Continuous	Mean ICVF in anterior limb of internal capsule on FA skeleton (right)
+25361	Continuous	Mean ICVF in anterior limb of internal capsule on FA skeleton (left)
+25362	Continuous	Mean ICVF in posterior limb of internal capsule on FA skeleton (right)
+25363	Continuous	Mean ICVF in posterior limb of internal capsule on FA skeleton (left)
+25364	Continuous	Mean ICVF in retrolenticular part of internal capsule on FA skeleton (right)
+25365	Continuous	Mean ICVF in retrolenticular part of internal capsule on FA skeleton (left)
+25366	Continuous	Mean ICVF in anterior corona radiata on FA skeleton (right)
+25367	Continuous	Mean ICVF in anterior corona radiata on FA skeleton (left)
+25368	Continuous	Mean ICVF in superior corona radiata on FA skeleton (right)
+25369	Continuous	Mean ICVF in superior corona radiata on FA skeleton (left)
+25370	Continuous	Mean ICVF in posterior corona radiata on FA skeleton (right)
+25371	Continuous	Mean ICVF in posterior corona radiata on FA skeleton (left)
+25372	Continuous	Mean ICVF in posterior thalamic radiation on FA skeleton (right)
+25373	Continuous	Mean ICVF in posterior thalamic radiation on FA skeleton (left)
+25374	Continuous	Mean ICVF in sagittal stratum on FA skeleton (right)
+25375	Continuous	Mean ICVF in sagittal stratum on FA skeleton (left)
+25376	Continuous	Mean ICVF in external capsule on FA skeleton (right)
+25377	Continuous	Mean ICVF in external capsule on FA skeleton (left)
+25378	Continuous	Mean ICVF in cingulum cingulate gyrus on FA skeleton (right)
+25379	Continuous	Mean ICVF in cingulum cingulate gyrus on FA skeleton (left)
+25380	Continuous	Mean ICVF in cingulum hippocampus on FA skeleton (right)
+25381	Continuous	Mean ICVF in cingulum hippocampus on FA skeleton (left)
+25382	Continuous	Mean ICVF in fornix cres+stria terminalis on FA skeleton (right)
+25383	Continuous	Mean ICVF in fornix cres+stria terminalis on FA skeleton (left)
+25384	Continuous	Mean ICVF in superior longitudinal fasciculus on FA skeleton (right)
+25385	Continuous	Mean ICVF in superior longitudinal fasciculus on FA skeleton (left)
+25386	Continuous	Mean ICVF in superior fronto-occipital fasciculus on FA skeleton (right)
+25387	Continuous	Mean ICVF in superior fronto-occipital fasciculus on FA skeleton (left)
+25388	Continuous	Mean ICVF in uncinate fasciculus on FA skeleton (right)
+25389	Continuous	Mean ICVF in uncinate fasciculus on FA skeleton (left)
+25390	Continuous	Mean ICVF in tapetum on FA skeleton (right)
+25391	Continuous	Mean ICVF in tapetum on FA skeleton (left)
+25392	Continuous	Mean OD in middle cerebellar peduncle on FA skeleton
+25393	Continuous	Mean OD in pontine crossing tract on FA skeleton
+25394	Continuous	Mean OD in genu of corpus callosum on FA skeleton
+25395	Continuous	Mean OD in body of corpus callosum on FA skeleton
+25396	Continuous	Mean OD in splenium of corpus callosum on FA skeleton
+25397	Continuous	Mean OD in fornix on FA skeleton
+25398	Continuous	Mean OD in corticospinal tract on FA skeleton (right)
+25399	Continuous	Mean OD in corticospinal tract on FA skeleton (left)
+25400	Continuous	Mean OD in medial lemniscus on FA skeleton (right)
+25401	Continuous	Mean OD in medial lemniscus on FA skeleton (left)
+25402	Continuous	Mean OD in inferior cerebellar peduncle on FA skeleton (right)
+25403	Continuous	Mean OD in inferior cerebellar peduncle on FA skeleton (left)
+25404	Continuous	Mean OD in superior cerebellar peduncle on FA skeleton (right)
+25405	Continuous	Mean OD in superior cerebellar peduncle on FA skeleton (left)
+25406	Continuous	Mean OD in cerebral peduncle on FA skeleton (right)
+25407	Continuous	Mean OD in cerebral peduncle on FA skeleton (left)
+25408	Continuous	Mean OD in anterior limb of internal capsule on FA skeleton (right)
+25409	Continuous	Mean OD in anterior limb of internal capsule on FA skeleton (left)
+25410	Continuous	Mean OD in posterior limb of internal capsule on FA skeleton (right)
+25411	Continuous	Mean OD in posterior limb of internal capsule on FA skeleton (left)
+25412	Continuous	Mean OD in retrolenticular part of internal capsule on FA skeleton (right)
+25413	Continuous	Mean OD in retrolenticular part of internal capsule on FA skeleton (left)
+25414	Continuous	Mean OD in anterior corona radiata on FA skeleton (right)
+25415	Continuous	Mean OD in anterior corona radiata on FA skeleton (left)
+25416	Continuous	Mean OD in superior corona radiata on FA skeleton (right)
+25417	Continuous	Mean OD in superior corona radiata on FA skeleton (left)
+25418	Continuous	Mean OD in posterior corona radiata on FA skeleton (right)
+25419	Continuous	Mean OD in posterior corona radiata on FA skeleton (left)
+25420	Continuous	Mean OD in posterior thalamic radiation on FA skeleton (right)
+25421	Continuous	Mean OD in posterior thalamic radiation on FA skeleton (left)
+25422	Continuous	Mean OD in sagittal stratum on FA skeleton (right)
+25423	Continuous	Mean OD in sagittal stratum on FA skeleton (left)
+25424	Continuous	Mean OD in external capsule on FA skeleton (right)
+25425	Continuous	Mean OD in external capsule on FA skeleton (left)
+25426	Continuous	Mean OD in cingulum cingulate gyrus on FA skeleton (right)
+25427	Continuous	Mean OD in cingulum cingulate gyrus on FA skeleton (left)
+25428	Continuous	Mean OD in cingulum hippocampus on FA skeleton (right)
+25429	Continuous	Mean OD in cingulum hippocampus on FA skeleton (left)
+25430	Continuous	Mean OD in fornix cres+stria terminalis on FA skeleton (right)
+25431	Continuous	Mean OD in fornix cres+stria terminalis on FA skeleton (left)
+25432	Continuous	Mean OD in superior longitudinal fasciculus on FA skeleton (right)
+25433	Continuous	Mean OD in superior longitudinal fasciculus on FA skeleton (left)
+25434	Continuous	Mean OD in superior fronto-occipital fasciculus on FA skeleton (right)
+25435	Continuous	Mean OD in superior fronto-occipital fasciculus on FA skeleton (left)
+25436	Continuous	Mean OD in uncinate fasciculus on FA skeleton (right)
+25437	Continuous	Mean OD in uncinate fasciculus on FA skeleton (left)
+25438	Continuous	Mean OD in tapetum on FA skeleton (right)
+25439	Continuous	Mean OD in tapetum on FA skeleton (left)
+25440	Continuous	Mean ISOVF in middle cerebellar peduncle on FA skeleton
+25441	Continuous	Mean ISOVF in pontine crossing tract on FA skeleton
+25442	Continuous	Mean ISOVF in genu of corpus callosum on FA skeleton
+25443	Continuous	Mean ISOVF in body of corpus callosum on FA skeleton
+25444	Continuous	Mean ISOVF in splenium of corpus callosum on FA skeleton
+25445	Continuous	Mean ISOVF in fornix on FA skeleton
+25446	Continuous	Mean ISOVF in corticospinal tract on FA skeleton (right)
+25447	Continuous	Mean ISOVF in corticospinal tract on FA skeleton (left)
+25448	Continuous	Mean ISOVF in medial lemniscus on FA skeleton (right)
+25449	Continuous	Mean ISOVF in medial lemniscus on FA skeleton (left)
+25450	Continuous	Mean ISOVF in inferior cerebellar peduncle on FA skeleton (right)
+25451	Continuous	Mean ISOVF in inferior cerebellar peduncle on FA skeleton (left)
+25452	Continuous	Mean ISOVF in superior cerebellar peduncle on FA skeleton (right)
+25453	Continuous	Mean ISOVF in superior cerebellar peduncle on FA skeleton (left)
+25454	Continuous	Mean ISOVF in cerebral peduncle on FA skeleton (right)
+25455	Continuous	Mean ISOVF in cerebral peduncle on FA skeleton (left)
+25456	Continuous	Mean ISOVF in anterior limb of internal capsule on FA skeleton (right)
+25457	Continuous	Mean ISOVF in anterior limb of internal capsule on FA skeleton (left)
+25458	Continuous	Mean ISOVF in posterior limb of internal capsule on FA skeleton (right)
+25459	Continuous	Mean ISOVF in posterior limb of internal capsule on FA skeleton (left)
+25460	Continuous	Mean ISOVF in retrolenticular part of internal capsule on FA skeleton (right)
+25461	Continuous	Mean ISOVF in retrolenticular part of internal capsule on FA skeleton (left)
+25462	Continuous	Mean ISOVF in anterior corona radiata on FA skeleton (right)
+25463	Continuous	Mean ISOVF in anterior corona radiata on FA skeleton (left)
+25464	Continuous	Mean ISOVF in superior corona radiata on FA skeleton (right)
+25465	Continuous	Mean ISOVF in superior corona radiata on FA skeleton (left)
+25466	Continuous	Mean ISOVF in posterior corona radiata on FA skeleton (right)
+25467	Continuous	Mean ISOVF in posterior corona radiata on FA skeleton (left)
+25468	Continuous	Mean ISOVF in posterior thalamic radiation on FA skeleton (right)
+25469	Continuous	Mean ISOVF in posterior thalamic radiation on FA skeleton (left)
+25470	Continuous	Mean ISOVF in sagittal stratum on FA skeleton (right)
+25471	Continuous	Mean ISOVF in sagittal stratum on FA skeleton (left)
+25472	Continuous	Mean ISOVF in external capsule on FA skeleton (right)
+25473	Continuous	Mean ISOVF in external capsule on FA skeleton (left)
+25474	Continuous	Mean ISOVF in cingulum cingulate gyrus on FA skeleton (right)
+25475	Continuous	Mean ISOVF in cingulum cingulate gyrus on FA skeleton (left)
+25476	Continuous	Mean ISOVF in cingulum hippocampus on FA skeleton (right)
+25477	Continuous	Mean ISOVF in cingulum hippocampus on FA skeleton (left)
+25478	Continuous	Mean ISOVF in fornix cres+stria terminalis on FA skeleton (right)
+25479	Continuous	Mean ISOVF in fornix cres+stria terminalis on FA skeleton (left)
+25480	Continuous	Mean ISOVF in superior longitudinal fasciculus on FA skeleton (right)
+25481	Continuous	Mean ISOVF in superior longitudinal fasciculus on FA skeleton (left)
+25482	Continuous	Mean ISOVF in superior fronto-occipital fasciculus on FA skeleton (right)
+25483	Continuous	Mean ISOVF in superior fronto-occipital fasciculus on FA skeleton (left)
+25484	Continuous	Mean ISOVF in uncinate fasciculus on FA skeleton (right)
+25485	Continuous	Mean ISOVF in uncinate fasciculus on FA skeleton (left)
+25486	Continuous	Mean ISOVF in tapetum on FA skeleton (right)
+25487	Continuous	Mean ISOVF in tapetum on FA skeleton (left)
+25488	Continuous	Weighted-mean FA in tract acoustic radiation (left)
+25489	Continuous	Weighted-mean FA in tract acoustic radiation (right)
+25490	Continuous	Weighted-mean FA in tract anterior thalamic radiation (left)
+25491	Continuous	Weighted-mean FA in tract anterior thalamic radiation (right)
+25492	Continuous	Weighted-mean FA in tract cingulate gyrus part of cingulum (left)
+25493	Continuous	Weighted-mean FA in tract cingulate gyrus part of cingulum (right)
+25494	Continuous	Weighted-mean FA in tract parahippocampal part of cingulum (left)
+25495	Continuous	Weighted-mean FA in tract parahippocampal part of cingulum (right)
+25496	Continuous	Weighted-mean FA in tract corticospinal tract (left)
+25497	Continuous	Weighted-mean FA in tract corticospinal tract (right)
+25498	Continuous	Weighted-mean FA in tract forceps major
+25499	Continuous	Weighted-mean FA in tract forceps minor
+25500	Continuous	Weighted-mean FA in tract inferior fronto-occipital fasciculus (left)
+25501	Continuous	Weighted-mean FA in tract inferior fronto-occipital fasciculus (right)
+25502	Continuous	Weighted-mean FA in tract inferior longitudinal fasciculus (left)
+25503	Continuous	Weighted-mean FA in tract inferior longitudinal fasciculus (right)
+25504	Continuous	Weighted-mean FA in tract middle cerebellar peduncle
+25505	Continuous	Weighted-mean FA in tract medial lemniscus (left)
+25506	Continuous	Weighted-mean FA in tract medial lemniscus (right)
+25507	Continuous	Weighted-mean FA in tract posterior thalamic radiation (left)
+25508	Continuous	Weighted-mean FA in tract posterior thalamic radiation (right)
+25509	Continuous	Weighted-mean FA in tract superior longitudinal fasciculus (left)
+25510	Continuous	Weighted-mean FA in tract superior longitudinal fasciculus (right)
+25511	Continuous	Weighted-mean FA in tract superior thalamic radiation (left)
+25512	Continuous	Weighted-mean FA in tract superior thalamic radiation (right)
+25513	Continuous	Weighted-mean FA in tract uncinate fasciculus (left)
+25514	Continuous	Weighted-mean FA in tract uncinate fasciculus (right)
+25515	Continuous	Weighted-mean MD in tract acoustic radiation (left)
+25516	Continuous	Weighted-mean MD in tract acoustic radiation (right)
+25517	Continuous	Weighted-mean MD in tract anterior thalamic radiation (left)
+25518	Continuous	Weighted-mean MD in tract anterior thalamic radiation (right)
+25519	Continuous	Weighted-mean MD in tract cingulate gyrus part of cingulum (left)
+25520	Continuous	Weighted-mean MD in tract cingulate gyrus part of cingulum (right)
+25521	Continuous	Weighted-mean MD in tract parahippocampal part of cingulum (left)
+25522	Continuous	Weighted-mean MD in tract parahippocampal part of cingulum (right)
+25523	Continuous	Weighted-mean MD in tract corticospinal tract (left)
+25524	Continuous	Weighted-mean MD in tract corticospinal tract (right)
+25525	Continuous	Weighted-mean MD in tract forceps major
+25526	Continuous	Weighted-mean MD in tract forceps minor
+25527	Continuous	Weighted-mean MD in tract inferior fronto-occipital fasciculus (left)
+25528	Continuous	Weighted-mean MD in tract inferior fronto-occipital fasciculus (right)
+25529	Continuous	Weighted-mean MD in tract inferior longitudinal fasciculus (left)
+25530	Continuous	Weighted-mean MD in tract inferior longitudinal fasciculus (right)
+25531	Continuous	Weighted-mean MD in tract middle cerebellar peduncle
+25532	Continuous	Weighted-mean MD in tract medial lemniscus (left)
+25533	Continuous	Weighted-mean MD in tract medial lemniscus (right)
+25534	Continuous	Weighted-mean MD in tract posterior thalamic radiation (left)
+25535	Continuous	Weighted-mean MD in tract posterior thalamic radiation (right)
+25536	Continuous	Weighted-mean MD in tract superior longitudinal fasciculus (left)
+25537	Continuous	Weighted-mean MD in tract superior longitudinal fasciculus (right)
+25538	Continuous	Weighted-mean MD in tract superior thalamic radiation (left)
+25539	Continuous	Weighted-mean MD in tract superior thalamic radiation (right)
+25540	Continuous	Weighted-mean MD in tract uncinate fasciculus (left)
+25541	Continuous	Weighted-mean MD in tract uncinate fasciculus (right)
+25542	Continuous	Weighted-mean MO in tract acoustic radiation (left)
+25543	Continuous	Weighted-mean MO in tract acoustic radiation (right)
+25544	Continuous	Weighted-mean MO in tract anterior thalamic radiation (left)
+25545	Continuous	Weighted-mean MO in tract anterior thalamic radiation (right)
+25546	Continuous	Weighted-mean MO in tract cingulate gyrus part of cingulum (left)
+25547	Continuous	Weighted-mean MO in tract cingulate gyrus part of cingulum (right)
+25548	Continuous	Weighted-mean MO in tract parahippocampal part of cingulum (left)
+25549	Continuous	Weighted-mean MO in tract parahippocampal part of cingulum (right)
+25550	Continuous	Weighted-mean MO in tract corticospinal tract (left)
+25551	Continuous	Weighted-mean MO in tract corticospinal tract (right)
+25552	Continuous	Weighted-mean MO in tract forceps major
+25553	Continuous	Weighted-mean MO in tract forceps minor
+25554	Continuous	Weighted-mean MO in tract inferior fronto-occipital fasciculus (left)
+25555	Continuous	Weighted-mean MO in tract inferior fronto-occipital fasciculus (right)
+25556	Continuous	Weighted-mean MO in tract inferior longitudinal fasciculus (left)
+25557	Continuous	Weighted-mean MO in tract inferior longitudinal fasciculus (right)
+25558	Continuous	Weighted-mean MO in tract middle cerebellar peduncle
+25559	Continuous	Weighted-mean MO in tract medial lemniscus (left)
+25560	Continuous	Weighted-mean MO in tract medial lemniscus (right)
+25561	Continuous	Weighted-mean MO in tract posterior thalamic radiation (left)
+25562	Continuous	Weighted-mean MO in tract posterior thalamic radiation (right)
+25563	Continuous	Weighted-mean MO in tract superior longitudinal fasciculus (left)
+25564	Continuous	Weighted-mean MO in tract superior longitudinal fasciculus (right)
+25565	Continuous	Weighted-mean MO in tract superior thalamic radiation (left)
+25566	Continuous	Weighted-mean MO in tract superior thalamic radiation (right)
+25567	Continuous	Weighted-mean MO in tract uncinate fasciculus (left)
+25568	Continuous	Weighted-mean MO in tract uncinate fasciculus (right)
+25569	Continuous	Weighted-mean L1 in tract acoustic radiation (left)
+25570	Continuous	Weighted-mean L1 in tract acoustic radiation (right)
+25571	Continuous	Weighted-mean L1 in tract anterior thalamic radiation (left)
+25572	Continuous	Weighted-mean L1 in tract anterior thalamic radiation (right)
+25573	Continuous	Weighted-mean L1 in tract cingulate gyrus part of cingulum (left)
+25574	Continuous	Weighted-mean L1 in tract cingulate gyrus part of cingulum (right)
+25575	Continuous	Weighted-mean L1 in tract parahippocampal part of cingulum (left)
+25576	Continuous	Weighted-mean L1 in tract parahippocampal part of cingulum (right)
+25577	Continuous	Weighted-mean L1 in tract corticospinal tract (left)
+25578	Continuous	Weighted-mean L1 in tract corticospinal tract (right)
+25579	Continuous	Weighted-mean L1 in tract forceps major
+25580	Continuous	Weighted-mean L1 in tract forceps minor
+25581	Continuous	Weighted-mean L1 in tract inferior fronto-occipital fasciculus (left)
+25582	Continuous	Weighted-mean L1 in tract inferior fronto-occipital fasciculus (right)
+25583	Continuous	Weighted-mean L1 in tract inferior longitudinal fasciculus (left)
+25584	Continuous	Weighted-mean L1 in tract inferior longitudinal fasciculus (right)
+25585	Continuous	Weighted-mean L1 in tract middle cerebellar peduncle
+25586	Continuous	Weighted-mean L1 in tract medial lemniscus (left)
+25587	Continuous	Weighted-mean L1 in tract medial lemniscus (right)
+25588	Continuous	Weighted-mean L1 in tract posterior thalamic radiation (left)
+25589	Continuous	Weighted-mean L1 in tract posterior thalamic radiation (right)
+25590	Continuous	Weighted-mean L1 in tract superior longitudinal fasciculus (left)
+25591	Continuous	Weighted-mean L1 in tract superior longitudinal fasciculus (right)
+25592	Continuous	Weighted-mean L1 in tract superior thalamic radiation (left)
+25593	Continuous	Weighted-mean L1 in tract superior thalamic radiation (right)
+25594	Continuous	Weighted-mean L1 in tract uncinate fasciculus (left)
+25595	Continuous	Weighted-mean L1 in tract uncinate fasciculus (right)
+25596	Continuous	Weighted-mean L2 in tract acoustic radiation (left)
+25597	Continuous	Weighted-mean L2 in tract acoustic radiation (right)
+25598	Continuous	Weighted-mean L2 in tract anterior thalamic radiation (left)
+25599	Continuous	Weighted-mean L2 in tract anterior thalamic radiation (right)
+25600	Continuous	Weighted-mean L2 in tract cingulate gyrus part of cingulum (left)
+25601	Continuous	Weighted-mean L2 in tract cingulate gyrus part of cingulum (right)
+25602	Continuous	Weighted-mean L2 in tract parahippocampal part of cingulum (left)
+25603	Continuous	Weighted-mean L2 in tract parahippocampal part of cingulum (right)
+25604	Continuous	Weighted-mean L2 in tract corticospinal tract (left)
+25605	Continuous	Weighted-mean L2 in tract corticospinal tract (right)
+25606	Continuous	Weighted-mean L2 in tract forceps major
+25607	Continuous	Weighted-mean L2 in tract forceps minor
+25608	Continuous	Weighted-mean L2 in tract inferior fronto-occipital fasciculus (left)
+25609	Continuous	Weighted-mean L2 in tract inferior fronto-occipital fasciculus (right)
+25610	Continuous	Weighted-mean L2 in tract inferior longitudinal fasciculus (left)
+25611	Continuous	Weighted-mean L2 in tract inferior longitudinal fasciculus (right)
+25612	Continuous	Weighted-mean L2 in tract middle cerebellar peduncle
+25613	Continuous	Weighted-mean L2 in tract medial lemniscus (left)
+25614	Continuous	Weighted-mean L2 in tract medial lemniscus (right)
+25615	Continuous	Weighted-mean L2 in tract posterior thalamic radiation (left)
+25616	Continuous	Weighted-mean L2 in tract posterior thalamic radiation (right)
+25617	Continuous	Weighted-mean L2 in tract superior longitudinal fasciculus (left)
+25618	Continuous	Weighted-mean L2 in tract superior longitudinal fasciculus (right)
+25619	Continuous	Weighted-mean L2 in tract superior thalamic radiation (left)
+25620	Continuous	Weighted-mean L2 in tract superior thalamic radiation (right)
+25621	Continuous	Weighted-mean L2 in tract uncinate fasciculus (left)
+25622	Continuous	Weighted-mean L2 in tract uncinate fasciculus (right)
+25623	Continuous	Weighted-mean L3 in tract acoustic radiation (left)
+25624	Continuous	Weighted-mean L3 in tract acoustic radiation (right)
+25625	Continuous	Weighted-mean L3 in tract anterior thalamic radiation (left)
+25626	Continuous	Weighted-mean L3 in tract anterior thalamic radiation (right)
+25627	Continuous	Weighted-mean L3 in tract cingulate gyrus part of cingulum (left)
+25628	Continuous	Weighted-mean L3 in tract cingulate gyrus part of cingulum (right)
+25629	Continuous	Weighted-mean L3 in tract parahippocampal part of cingulum (left)
+25630	Continuous	Weighted-mean L3 in tract parahippocampal part of cingulum (right)
+25631	Continuous	Weighted-mean L3 in tract corticospinal tract (left)
+25632	Continuous	Weighted-mean L3 in tract corticospinal tract (right)
+25633	Continuous	Weighted-mean L3 in tract forceps major
+25634	Continuous	Weighted-mean L3 in tract forceps minor
+25635	Continuous	Weighted-mean L3 in tract inferior fronto-occipital fasciculus (left)
+25636	Continuous	Weighted-mean L3 in tract inferior fronto-occipital fasciculus (right)
+25637	Continuous	Weighted-mean L3 in tract inferior longitudinal fasciculus (left)
+25638	Continuous	Weighted-mean L3 in tract inferior longitudinal fasciculus (right)
+25639	Continuous	Weighted-mean L3 in tract middle cerebellar peduncle
+25640	Continuous	Weighted-mean L3 in tract medial lemniscus (left)
+25641	Continuous	Weighted-mean L3 in tract medial lemniscus (right)
+25642	Continuous	Weighted-mean L3 in tract posterior thalamic radiation (left)
+25643	Continuous	Weighted-mean L3 in tract posterior thalamic radiation (right)
+25644	Continuous	Weighted-mean L3 in tract superior longitudinal fasciculus (left)
+25645	Continuous	Weighted-mean L3 in tract superior longitudinal fasciculus (right)
+25646	Continuous	Weighted-mean L3 in tract superior thalamic radiation (left)
+25647	Continuous	Weighted-mean L3 in tract superior thalamic radiation (right)
+25648	Continuous	Weighted-mean L3 in tract uncinate fasciculus (left)
+25649	Continuous	Weighted-mean L3 in tract uncinate fasciculus (right)
+25650	Continuous	Weighted-mean ICVF in tract acoustic radiation (left)
+25651	Continuous	Weighted-mean ICVF in tract acoustic radiation (right)
+25652	Continuous	Weighted-mean ICVF in tract anterior thalamic radiation (left)
+25653	Continuous	Weighted-mean ICVF in tract anterior thalamic radiation (right)
+25654	Continuous	Weighted-mean ICVF in tract cingulate gyrus part of cingulum (left)
+25655	Continuous	Weighted-mean ICVF in tract cingulate gyrus part of cingulum (right)
+25656	Continuous	Weighted-mean ICVF in tract parahippocampal part of cingulum (left)
+25657	Continuous	Weighted-mean ICVF in tract parahippocampal part of cingulum (right)
+25658	Continuous	Weighted-mean ICVF in tract corticospinal tract (left)
+25659	Continuous	Weighted-mean ICVF in tract corticospinal tract (right)
+25660	Continuous	Weighted-mean ICVF in tract forceps major
+25661	Continuous	Weighted-mean ICVF in tract forceps minor
+25662	Continuous	Weighted-mean ICVF in tract inferior fronto-occipital fasciculus (left)
+25663	Continuous	Weighted-mean ICVF in tract inferior fronto-occipital fasciculus (right)
+25664	Continuous	Weighted-mean ICVF in tract inferior longitudinal fasciculus (left)
+25665	Continuous	Weighted-mean ICVF in tract inferior longitudinal fasciculus (right)
+25666	Continuous	Weighted-mean ICVF in tract middle cerebellar peduncle
+25667	Continuous	Weighted-mean ICVF in tract medial lemniscus (left)
+25668	Continuous	Weighted-mean ICVF in tract medial lemniscus (right)
+25669	Continuous	Weighted-mean ICVF in tract posterior thalamic radiation (left)
+25670	Continuous	Weighted-mean ICVF in tract posterior thalamic radiation (right)
+25671	Continuous	Weighted-mean ICVF in tract superior longitudinal fasciculus (left)
+25672	Continuous	Weighted-mean ICVF in tract superior longitudinal fasciculus (right)
+25673	Continuous	Weighted-mean ICVF in tract superior thalamic radiation (left)
+25674	Continuous	Weighted-mean ICVF in tract superior thalamic radiation (right)
+25675	Continuous	Weighted-mean ICVF in tract uncinate fasciculus (left)
+25676	Continuous	Weighted-mean ICVF in tract uncinate fasciculus (right)
+25677	Continuous	Weighted-mean OD in tract acoustic radiation (left)
+25678	Continuous	Weighted-mean OD in tract acoustic radiation (right)
+25679	Continuous	Weighted-mean OD in tract anterior thalamic radiation (left)
+25680	Continuous	Weighted-mean OD in tract anterior thalamic radiation (right)
+25681	Continuous	Weighted-mean OD in tract cingulate gyrus part of cingulum (left)
+25682	Continuous	Weighted-mean OD in tract cingulate gyrus part of cingulum (right)
+25683	Continuous	Weighted-mean OD in tract parahippocampal part of cingulum (left)
+25684	Continuous	Weighted-mean OD in tract parahippocampal part of cingulum (right)
+25685	Continuous	Weighted-mean OD in tract corticospinal tract (left)
+25686	Continuous	Weighted-mean OD in tract corticospinal tract (right)
+25687	Continuous	Weighted-mean OD in tract forceps major
+25688	Continuous	Weighted-mean OD in tract forceps minor
+25689	Continuous	Weighted-mean OD in tract inferior fronto-occipital fasciculus (left)
+25690	Continuous	Weighted-mean OD in tract inferior fronto-occipital fasciculus (right)
+25691	Continuous	Weighted-mean OD in tract inferior longitudinal fasciculus (left)
+25692	Continuous	Weighted-mean OD in tract inferior longitudinal fasciculus (right)
+25693	Continuous	Weighted-mean OD in tract middle cerebellar peduncle
+25694	Continuous	Weighted-mean OD in tract medial lemniscus (left)
+25695	Continuous	Weighted-mean OD in tract medial lemniscus (right)
+25696	Continuous	Weighted-mean OD in tract posterior thalamic radiation (left)
+25697	Continuous	Weighted-mean OD in tract posterior thalamic radiation (right)
+25698	Continuous	Weighted-mean OD in tract superior longitudinal fasciculus (left)
+25699	Continuous	Weighted-mean OD in tract superior longitudinal fasciculus (right)
+25700	Continuous	Weighted-mean OD in tract superior thalamic radiation (left)
+25701	Continuous	Weighted-mean OD in tract superior thalamic radiation (right)
+25702	Continuous	Weighted-mean OD in tract uncinate fasciculus (left)
+25703	Continuous	Weighted-mean OD in tract uncinate fasciculus (right)
+25704	Continuous	Weighted-mean ISOVF in tract acoustic radiation (left)
+25705	Continuous	Weighted-mean ISOVF in tract acoustic radiation (right)
+25706	Continuous	Weighted-mean ISOVF in tract anterior thalamic radiation (left)
+25707	Continuous	Weighted-mean ISOVF in tract anterior thalamic radiation (right)
+25708	Continuous	Weighted-mean ISOVF in tract cingulate gyrus part of cingulum (left)
+25709	Continuous	Weighted-mean ISOVF in tract cingulate gyrus part of cingulum (right)
+25710	Continuous	Weighted-mean ISOVF in tract parahippocampal part of cingulum (left)
+25711	Continuous	Weighted-mean ISOVF in tract parahippocampal part of cingulum (right)
+25712	Continuous	Weighted-mean ISOVF in tract corticospinal tract (left)
+25713	Continuous	Weighted-mean ISOVF in tract corticospinal tract (right)
+25714	Continuous	Weighted-mean ISOVF in tract forceps major
+25715	Continuous	Weighted-mean ISOVF in tract forceps minor
+25716	Continuous	Weighted-mean ISOVF in tract inferior fronto-occipital fasciculus (left)
+25717	Continuous	Weighted-mean ISOVF in tract inferior fronto-occipital fasciculus (right)
+25718	Continuous	Weighted-mean ISOVF in tract inferior longitudinal fasciculus (left)
+25719	Continuous	Weighted-mean ISOVF in tract inferior longitudinal fasciculus (right)
+25720	Continuous	Weighted-mean ISOVF in tract middle cerebellar peduncle
+25721	Continuous	Weighted-mean ISOVF in tract medial lemniscus (left)
+25722	Continuous	Weighted-mean ISOVF in tract medial lemniscus (right)
+25723	Continuous	Weighted-mean ISOVF in tract posterior thalamic radiation (left)
+25724	Continuous	Weighted-mean ISOVF in tract posterior thalamic radiation (right)
+25725	Continuous	Weighted-mean ISOVF in tract superior longitudinal fasciculus (left)
+25726	Continuous	Weighted-mean ISOVF in tract superior longitudinal fasciculus (right)
+25727	Continuous	Weighted-mean ISOVF in tract superior thalamic radiation (left)
+25728	Continuous	Weighted-mean ISOVF in tract superior thalamic radiation (right)
+25729	Continuous	Weighted-mean ISOVF in tract uncinate fasciculus (left)
+25730	Continuous	Weighted-mean ISOVF in tract uncinate fasciculus (right)
+25731	Continuous	Discrepancy between T1 brain image and standard-space brain template (linearly-aligned)
+25732	Continuous	Discrepancy between T1 brain image and standard-space brain template (nonlinearly-aligned)
+25733	Continuous	Amount of warping applied to non-linearly align T1 brain image to standard-space
+25734	Continuous	Inverted signal-to-noise ratio in T1
+25735	Continuous	Inverted contrast-to-noise ratio in T1
+25736	Continuous	Discrepancy between T2 FLAIR brain image and T1 brain image
+25737	Continuous	Discrepancy between dMRI brain image and T1 brain image
+25738	Continuous	Discrepancy between SWI brain image and T1 brain image
+25739	Continuous	Discrepancy between rfMRI brain image and T1 brain image
+25740	Continuous	Discrepancy between tfMRI brain image and T1 brain image
+25741	Continuous	Mean rfMRI head motion, averaged across space and time points
+25742	Continuous	Mean tfMRI head motion, averaged across space and time points
+25743	Continuous	Inverted temporal signal-to-noise ratio in pre-processed rfMRI
+25744	Continuous	Inverted temporal signal-to-noise ratio in artefact-cleaned pre-processed rfMRI
+25745	Continuous	Inverted temporal signal-to-noise ratio in pre-processed tfMRI
+25746	Integer	Number of dMRI outlier slices detected and corrected
+25747	Text	Eprime advisor file
+25748	Text	Eprime txt file
+25749	Text	Eprime ed2 file
+25750	Text	rfMRI full correlation matrix, dimension 25
+25751	Text	rfMRI full correlation matrix, dimension 100
+25752	Text	rfMRI partial correlation matrix, dimension 25
+25753	Text	rfMRI partial correlation matrix, dimension 100
+25761	Continuous	90th percentile of BOLD effect (in group-defined mask) for shapes activation
+25762	Continuous	90th percentile of z-statistic (in group-defined mask) for shapes activation
+25763	Continuous	90th percentile of BOLD effect (in group-defined mask) for faces activation
+25764	Continuous	90th percentile of z-statistic (in group-defined mask) for faces activation
+25765	Continuous	90th percentile of BOLD effect (in group-defined mask) for faces-shapes contrast
+25766	Continuous	90th percentile of z-statistic (in group-defined mask) for faces-shapes contrast
+25767	Continuous	90th percentile of BOLD effect (in group-defined amygdala activation mask) for faces-shapes contrast
+25768	Continuous	90th percentile of z-statistic (in group-defined amygdala activation mask) for faces-shapes contrast
+25780	Categorical (single)	Acquisition protocol phase.	778
+25781	Continuous	Total volume of white matter hyperintensities (from T1 and T2_FLAIR images)
+25782	Continuous	Volume of grey matter in Frontal Pole (left)
+25783	Continuous	Volume of grey matter in Frontal Pole (right)
+25784	Continuous	Volume of grey matter in Insular Cortex (left)
+25785	Continuous	Volume of grey matter in Insular Cortex (right)
+25786	Continuous	Volume of grey matter in Superior Frontal Gyrus (left)
+25787	Continuous	Volume of grey matter in Superior Frontal Gyrus (right)
+25788	Continuous	Volume of grey matter in Middle Frontal Gyrus (left)
+25789	Continuous	Volume of grey matter in Middle Frontal Gyrus (right)
+25790	Continuous	Volume of grey matter in Inferior Frontal Gyrus, pars triangularis (left)
+25791	Continuous	Volume of grey matter in Inferior Frontal Gyrus, pars triangularis (right)
+25792	Continuous	Volume of grey matter in Inferior Frontal Gyrus, pars opercularis (left)
+25793	Continuous	Volume of grey matter in Inferior Frontal Gyrus, pars opercularis (right)
+25794	Continuous	Volume of grey matter in Precentral Gyrus (left)
+25795	Continuous	Volume of grey matter in Precentral Gyrus (right)
+25796	Continuous	Volume of grey matter in Temporal Pole (left)
+25797	Continuous	Volume of grey matter in Temporal Pole (right)
+25798	Continuous	Volume of grey matter in Superior Temporal Gyrus, anterior division (left)
+25799	Continuous	Volume of grey matter in Superior Temporal Gyrus, anterior division (right)
+25800	Continuous	Volume of grey matter in Superior Temporal Gyrus, posterior division (left)
+25801	Continuous	Volume of grey matter in Superior Temporal Gyrus, posterior division (right)
+25802	Continuous	Volume of grey matter in Middle Temporal Gyrus, anterior division (left)
+25803	Continuous	Volume of grey matter in Middle Temporal Gyrus, anterior division (right)
+25804	Continuous	Volume of grey matter in Middle Temporal Gyrus, posterior division (left)
+25805	Continuous	Volume of grey matter in Middle Temporal Gyrus, posterior division (right)
+25806	Continuous	Volume of grey matter in Middle Temporal Gyrus, temporooccipital part (left)
+25807	Continuous	Volume of grey matter in Middle Temporal Gyrus, temporooccipital part (right)
+25808	Continuous	Volume of grey matter in Inferior Temporal Gyrus, anterior division (left)
+25809	Continuous	Volume of grey matter in Inferior Temporal Gyrus, anterior division (right)
+25810	Continuous	Volume of grey matter in Inferior Temporal Gyrus, posterior division (left)
+25811	Continuous	Volume of grey matter in Inferior Temporal Gyrus, posterior division (right)
+25812	Continuous	Volume of grey matter in Inferior Temporal Gyrus, temporooccipital part (left)
+25813	Continuous	Volume of grey matter in Inferior Temporal Gyrus, temporooccipital part (right)
+25814	Continuous	Volume of grey matter in Postcentral Gyrus (left)
+25815	Continuous	Volume of grey matter in Postcentral Gyrus (right)
+25816	Continuous	Volume of grey matter in Superior Parietal Lobule (left)
+25817	Continuous	Volume of grey matter in Superior Parietal Lobule (right)
+25818	Continuous	Volume of grey matter in Supramarginal Gyrus, anterior division (left)
+25819	Continuous	Volume of grey matter in Supramarginal Gyrus, anterior division (right)
+25820	Continuous	Volume of grey matter in Supramarginal Gyrus, posterior division (left)
+25821	Continuous	Volume of grey matter in Supramarginal Gyrus, posterior division (right)
+25822	Continuous	Volume of grey matter in Angular Gyrus (left)
+25823	Continuous	Volume of grey matter in Angular Gyrus (right)
+25824	Continuous	Volume of grey matter in Lateral Occipital Cortex, superior division (left)
+25825	Continuous	Volume of grey matter in Lateral Occipital Cortex, superior division (right)
+25826	Continuous	Volume of grey matter in Lateral Occipital Cortex, inferior division (left)
+25827	Continuous	Volume of grey matter in Lateral Occipital Cortex, inferior division (right)
+25828	Continuous	Volume of grey matter in Intracalcarine Cortex (left)
+25829	Continuous	Volume of grey matter in Intracalcarine Cortex (right)
+25830	Continuous	Volume of grey matter in Frontal Medial Cortex (left)
+25831	Continuous	Volume of grey matter in Frontal Medial Cortex (right)
+25832	Continuous	Volume of grey matter in Juxtapositional Lobule Cortex (formerly Supplementary Motor Cortex) (left)
+25833	Continuous	Volume of grey matter in Juxtapositional Lobule Cortex (formerly Supplementary Motor Cortex) (right)
+25834	Continuous	Volume of grey matter in Subcallosal Cortex (left)
+25835	Continuous	Volume of grey matter in Subcallosal Cortex (right)
+25836	Continuous	Volume of grey matter in Paracingulate Gyrus (left)
+25837	Continuous	Volume of grey matter in Paracingulate Gyrus (right)
+25838	Continuous	Volume of grey matter in Cingulate Gyrus, anterior division (left)
+25839	Continuous	Volume of grey matter in Cingulate Gyrus, anterior division (right)
+25840	Continuous	Volume of grey matter in Cingulate Gyrus, posterior division (left)
+25841	Continuous	Volume of grey matter in Cingulate Gyrus, posterior division (right)
+25842	Continuous	Volume of grey matter in Precuneous Cortex (left)
+25843	Continuous	Volume of grey matter in Precuneous Cortex (right)
+25844	Continuous	Volume of grey matter in Cuneal Cortex (left)
+25845	Continuous	Volume of grey matter in Cuneal Cortex (right)
+25846	Continuous	Volume of grey matter in Frontal Orbital Cortex (left)
+25847	Continuous	Volume of grey matter in Frontal Orbital Cortex (right)
+25848	Continuous	Volume of grey matter in Parahippocampal Gyrus, anterior division (left)
+25849	Continuous	Volume of grey matter in Parahippocampal Gyrus, anterior division (right)
+25850	Continuous	Volume of grey matter in Parahippocampal Gyrus, posterior division (left)
+25851	Continuous	Volume of grey matter in Parahippocampal Gyrus, posterior division (right)
+25852	Continuous	Volume of grey matter in Lingual Gyrus (left)
+25853	Continuous	Volume of grey matter in Lingual Gyrus (right)
+25854	Continuous	Volume of grey matter in Temporal Fusiform Cortex, anterior division (left)
+25855	Continuous	Volume of grey matter in Temporal Fusiform Cortex, anterior division (right)
+25856	Continuous	Volume of grey matter in Temporal Fusiform Cortex, posterior division (left)
+25857	Continuous	Volume of grey matter in Temporal Fusiform Cortex, posterior division (right)
+25858	Continuous	Volume of grey matter in Temporal Occipital Fusiform Cortex (left)
+25859	Continuous	Volume of grey matter in Temporal Occipital Fusiform Cortex (right)
+25860	Continuous	Volume of grey matter in Occipital Fusiform Gyrus (left)
+25861	Continuous	Volume of grey matter in Occipital Fusiform Gyrus (right)
+25862	Continuous	Volume of grey matter in Frontal Operculum Cortex (left)
+25863	Continuous	Volume of grey matter in Frontal Operculum Cortex (right)
+25864	Continuous	Volume of grey matter in Central Opercular Cortex (left)
+25865	Continuous	Volume of grey matter in Central Opercular Cortex (right)
+25866	Continuous	Volume of grey matter in Parietal Operculum Cortex (left)
+25867	Continuous	Volume of grey matter in Parietal Operculum Cortex (right)
+25868	Continuous	Volume of grey matter in Planum Polare (left)
+25869	Continuous	Volume of grey matter in Planum Polare (right)
+25870	Continuous	Volume of grey matter in Heschl's Gyrus (includes H1 and H2) (left)
+25871	Continuous	Volume of grey matter in Heschl's Gyrus (includes H1 and H2) (right)
+25872	Continuous	Volume of grey matter in Planum Temporale (left)
+25873	Continuous	Volume of grey matter in Planum Temporale (right)
+25874	Continuous	Volume of grey matter in Supracalcarine Cortex (left)
+25875	Continuous	Volume of grey matter in Supracalcarine Cortex (right)
+25876	Continuous	Volume of grey matter in Occipital Pole (left)
+25877	Continuous	Volume of grey matter in Occipital Pole (right)
+25878	Continuous	Volume of grey matter in Thalamus (left)
+25879	Continuous	Volume of grey matter in Thalamus (right)
+25880	Continuous	Volume of grey matter in Caudate (left)
+25881	Continuous	Volume of grey matter in Caudate (right)
+25882	Continuous	Volume of grey matter in Putamen (left)
+25883	Continuous	Volume of grey matter in Putamen (right)
+25884	Continuous	Volume of grey matter in Pallidum (left)
+25885	Continuous	Volume of grey matter in Pallidum (right)
+25886	Continuous	Volume of grey matter in Hippocampus (left)
+25887	Continuous	Volume of grey matter in Hippocampus (right)
+25888	Continuous	Volume of grey matter in Amygdala (left)
+25889	Continuous	Volume of grey matter in Amygdala (right)
+25890	Continuous	Volume of grey matter in Ventral Striatum (left)
+25891	Continuous	Volume of grey matter in Ventral Striatum (right)
+25892	Continuous	Volume of grey matter in Brain-Stem
+25893	Continuous	Volume of grey matter in I-IV Cerebellum (left)
+25894	Continuous	Volume of grey matter in I-IV Cerebellum (right)
+25895	Continuous	Volume of grey matter in V Cerebellum (left)
+25896	Continuous	Volume of grey matter in V Cerebellum (right)
+25897	Continuous	Volume of grey matter in VI Cerebellum (left)
+25898	Continuous	Volume of grey matter in Vermis VI Cerebellum
+25899	Continuous	Volume of grey matter in VI Cerebellum (right)
+25900	Continuous	Volume of grey matter in Crus I Cerebellum (left)
+25901	Continuous	Volume of grey matter in Vermis Crus I Cerebellum
+25902	Continuous	Volume of grey matter in Crus I Cerebellum (right)
+25903	Continuous	Volume of grey matter in Crus II Cerebellum (left)
+25904	Continuous	Volume of grey matter in Vermis Crus II Cerebellum
+25905	Continuous	Volume of grey matter in Crus II Cerebellum (right)
+25906	Continuous	Volume of grey matter in VIIb Cerebellum (left)
+25907	Continuous	Volume of grey matter in Vermis VIIb Cerebellum
+25908	Continuous	Volume of grey matter in VIIb Cerebellum (right)
+25909	Continuous	Volume of grey matter in VIIIa Cerebellum (left)
+25910	Continuous	Volume of grey matter in Vermis VIIIa Cerebellum
+25911	Continuous	Volume of grey matter in VIIIa Cerebellum (right)
+25912	Continuous	Volume of grey matter in VIIIb Cerebellum (left)
+25913	Continuous	Volume of grey matter in Vermis VIIIb Cerebellum
+25914	Continuous	Volume of grey matter in VIIIb Cerebellum (right)
+25915	Continuous	Volume of grey matter in IX Cerebellum (left)
+25916	Continuous	Volume of grey matter in Vermis IX Cerebellum
+25917	Continuous	Volume of grey matter in IX Cerebellum (right)
+25918	Continuous	Volume of grey matter in X Cerebellum (left)
+25919	Continuous	Volume of grey matter in Vermis X Cerebellum
+25920	Continuous	Volume of grey matter in X Cerebellum (right)
+30000	Continuous	White blood cell (leukocyte) count
+30001	Integer	White blood cell (leukocyte) count freeze-thaw cycles
+30002	Time	White blood cell (leukocyte) count acquisition time
+30003	Text	White blood cell (leukocyte) count device ID
+30004	Categorical (single)	White blood cell (leukocyte) count acquisition route	2226
+30010	Continuous	Red blood cell (erythrocyte) count
+30011	Integer	Red blood cell (erythrocyte) count freeze-thaw cycles
+30012	Time	Red blood cell (erythrocyte) count acquisition time
+30013	Text	Red blood cell (erythrocyte) count device ID
+30014	Categorical (single)	Red blood cell (erythrocyte) count acquisition route	2226
+30020	Continuous	Haemoglobin concentration
+30021	Integer	Haemoglobin concentration freeze-thaw cycles
+30022	Time	Haemoglobin concentration acquisition time
+30023	Text	Haemoglobin concentration device ID
+30024	Categorical (single)	Haemoglobin concentration acquisition route	2226
+30030	Continuous	Haematocrit percentage
+30031	Integer	Haematocrit freeze-thaw cycles
+30032	Time	Haematocrit acquisition time
+30033	Text	Haematocrit percentage device ID
+30034	Categorical (single)	Haematocrit percentage acquisition route	2226
+30040	Continuous	Mean corpuscular volume
+30041	Integer	Mean corpuscular volume freeze-thaw cycles
+30042	Time	Mean corpuscular volume acquisition time
+30043	Text	Mean corpuscular volume device ID
+30044	Categorical (single)	Mean corpuscular volume acquisition route	2226
+30050	Continuous	Mean corpuscular haemoglobin
+30051	Integer	Mean corpuscular haemoglobin freeze-thaw cycles
+30052	Time	Mean corpuscular haemoglobin acquisition time
+30053	Text	Mean corpuscular haemoglobin device ID
+30054	Categorical (single)	Mean corpuscular haemoglobin acquisition route	2226
+30060	Continuous	Mean corpuscular haemoglobin concentration
+30061	Integer	Mean corpuscular haemoglobin concentration freeze-thaw cycles
+30062	Time	Mean corpuscular haemoglobin concentration acquisition time
+30063	Text	Mean corpuscular haemoglobin concentration device ID
+30064	Categorical (single)	Mean corpuscular haemoglobin concentration acquisition route	2226
+30070	Continuous	Red blood cell (erythrocyte) distribution width
+30071	Integer	Red blood cell (erythrocyte) distribution width freeze-thaw cycles
+30072	Time	Red blood cell (erythrocyte) distribution width acquisition time
+30073	Text	Red blood cell (erythrocyte) distribution width device ID
+30074	Categorical (single)	Red blood cell (erythrocyte) distribution width acquisition route	2226
+30080	Continuous	Platelet count
+30081	Integer	Platelet count freeze-thaw cycles
+30082	Time	Platelet count acquisition time
+30083	Text	Platelet count device ID
+30084	Categorical (single)	Platelet count acquisition route	2226
+30090	Continuous	Platelet crit
+30091	Integer	Platelet crit freeze-thaw cycles
+30092	Time	Platelet crit acquisition time
+30093	Text	Platelet crit device ID
+30094	Categorical (single)	Platelet crit acquisition route	2226
+30100	Continuous	Mean platelet (thrombocyte) volume
+30101	Integer	Mean platelet (thrombocyte) volume freeze-thaw cycles
+30102	Time	Mean platelet (thrombocyte) volume acquisition time
+30103	Text	Mean platelet (thrombocyte) volume device ID
+30104	Categorical (single)	Mean platelet (thrombocyte) volume acquisition route	2226
+30110	Continuous	Platelet distribution width
+30111	Integer	Platelet distribution width freeze-thaw cycles
+30112	Time	Platelet distribution width acquisition time
+30113	Text	Platelet distribution width device ID
+30114	Categorical (single)	Platelet distribution width acquisition route	2226
+30120	Continuous	Lymphocyte count
+30121	Integer	Lymphocyte count freeze-thaw cycles
+30122	Time	Lymphocyte count acquisition time
+30123	Text	Lymphocyte count device ID
+30124	Categorical (single)	Lymphocyte count acquisition route	2226
+30130	Continuous	Monocyte count
+30131	Integer	Monocyte count freeze-thaw cycles
+30132	Time	Monocyte count acquisition time
+30133	Text	Monocyte count device ID
+30134	Categorical (single)	Monocyte count acquisition route	2226
+30140	Continuous	Neutrophill count
+30141	Integer	Neutrophill count freeze-thaw cycles
+30142	Time	Neutrophill count acquisition time
+30143	Text	Neutrophill count device ID
+30144	Categorical (single)	Neutrophill count acquisition route	2226
+30150	Continuous	Eosinophill count
+30151	Integer	Eosinophill count freeze-thaw cycles
+30152	Time	Eosinophill count acquisition time
+30153	Text	Eosinophill count device ID
+30154	Categorical (single)	Eosinophill count acquisition route	2226
+30160	Continuous	Basophill count
+30161	Integer	Basophill count freeze-thaw cycles
+30162	Time	Basophill count acquisition time
+30163	Text	Basophill count device ID
+30164	Categorical (single)	Basophill count acquisition route	2226
+30170	Continuous	Nucleated red blood cell count
+30171	Integer	Nucleated red blood cell count freeze-thaw cycles
+30172	Time	Nucleated red blood cell count acquisition time
+30173	Text	Nucleated red blood cell count device ID
+30174	Categorical (single)	Nucleated red blood cell count acquisition route	2226
+30180	Continuous	Lymphocyte percentage
+30181	Integer	Lymphocyte percentage freeze-thaw cycles
+30182	Time	Lymphocyte percentage acquisition time
+30183	Text	Lymphocyte percentage device ID
+30184	Categorical (single)	Lymphocyte percentage acquisition route	2226
+30190	Continuous	Monocyte percentage
+30191	Integer	Monocyte percentage freeze-thaw cycles
+30192	Time	Monocyte percentage acquisition time
+30193	Text	Monocyte percentage device ID
+30194	Categorical (single)	Monocyte percentage acquisition route	2226
+30200	Continuous	Neutrophill percentage
+30201	Integer	Neutrophill percentage freeze-thaw cycles
+30202	Time	Neutrophill percentage acquisition time
+30203	Text	Neutrophill percentage device ID
+30204	Categorical (single)	Neutrophill percentage acquisition route	2226
+30210	Continuous	Eosinophill percentage
+30211	Integer	Eosinophill percentage freeze-thaw cycles
+30212	Time	Eosinophill percentage acquisition time
+30213	Text	Eosinophill percentage device ID
+30214	Categorical (single)	Eosinophill percentage acquisition route	2226
+30220	Continuous	Basophill percentage
+30221	Integer	Basophill percentage freeze-thaw cycles
+30222	Time	Basophill percentage acquisition time
+30223	Text	Basophill percentage device ID
+30224	Categorical (single)	Basophill percentage acquisition route	2226
+30230	Continuous	Nucleated red blood cell percentage
+30231	Integer	Nucleated red blood cell percentage freeze-thaw cycles
+30232	Time	Nucleated red blood cell percentage acquisition time
+30233	Text	Nucleated red blood cell percentage device ID
+30234	Categorical (single)	Nucleated red blood cell percentage acquisition route	2226
+30240	Continuous	Reticulocyte percentage
+30241	Integer	Reticulocyte percentage freeze-thaw cycles
+30242	Time	Reticulocyte percentage acquisition time
+30243	Text	Reticulocyte percentage device ID
+30244	Categorical (single)	Reticulocyte percentage acquisition route	2226
+30250	Continuous	Reticulocyte count
+30251	Integer	Reticulocyte count freeze-thaw cycles
+30252	Time	Reticulocyte count acquisition time
+30253	Text	Reticulocyte count device ID
+30254	Categorical (single)	Reticulocyte count acquisition route	2226
+30260	Continuous	Mean reticulocyte volume
+30261	Integer	Mean reticulocyte volume freeze-thaw cycles
+30262	Time	Mean reticulocyte volume acquisition time
+30263	Text	Mean reticulocyte volume device ID
+30264	Categorical (single)	Mean reticulocyte volume acquisition route	2226
+30270	Continuous	Mean sphered cell volume
+30271	Integer	Mean sphered cell volume freeze-thaw cycles
+30272	Time	Mean sphered cell volume acquisition time
+30273	Text	Mean sphered cell volume device ID
+30274	Categorical (single)	Mean sphered cell volume acquisition route	2226
+30280	Continuous	Immature reticulocyte fraction
+30281	Integer	Immature reticulocyte fraction freeze-thaw cycles
+30282	Time	Immature reticulocyte fraction acquisition time
+30283	Text	Immature reticulocyte fraction device ID
+30284	Categorical (single)	Immature reticulocyte fraction acquisition route	2226
+30290	Continuous	High light scatter reticulocyte percentage
+30291	Integer	High light scatter reticulocyte percentage freeze-thaw cycles
+30292	Time	High light scatter reticulocyte percentage acquisition time
+30293	Text	High light scatter reticulocyte percentage device ID
+30294	Categorical (single)	High light scatter reticulocyte percentage acquisition route	2226
+30300	Continuous	High light scatter reticulocyte count
+30301	Integer	High light scatter reticulocyte count freeze-thaw cycles
+30302	Time	High light scatter reticulocyte count acquisition time
+30303	Text	High light scatter reticulocyte count device ID
+30304	Categorical (single)	High light scatter reticulocyte count acquisition route	2226
+40000	Date	Date of death
+40001	Categorical (single non-numeric)	Underlying (primary) cause of death: ICD10	19						convertICD10Codes
+40002	Categorical (single non-numeric)	Contributory (secondary) causes of death: ICD10	19						convertICD10Codes
+40005	Date	Date of cancer diagnosis
+40006	Categorical (single non-numeric)	Type of cancer: ICD10	19						convertICD10Codes
+40007	Continuous	Age at death
+40008	Continuous	Age at cancer diagnosis
+40009	Integer	Reported occurrences of cancer
+40010	Compound	Description of cause of death
+40011	Categorical (single)	Histology of cancer tumour	38
+40012	Categorical (single)	Behaviour of cancer tumour	39
+40013	Categorical (single)	Type of cancer: ICD9	87
+40018	Categorical (single)	Death report format	261
+40019	Categorical (single)	Cancer report format	262
+41066	Integer	Episodes containing "Number of weeks of gestation" data
+41067	Integer	Episodes containing "Delivery place" data
+41068	Integer	Episodes containing "Delivery method" data
+41069	Integer	Episodes containing "Birth order" data
+41070	Integer	Episodes containing "Date of birth of baby" data
+41071	Integer	Episodes containing "Status of baby at birth" data
+41072	Integer	Episodes containing "Resuscitation method" data
+41073	Integer	Episodes containing "Sex of baby" data
+41074	Integer	Episodes containing "Weight of baby" data
+41075	Integer	Episodes containing "Status of person conducting delivery" data
+41076	Integer	Episodes containing "Diagnoses - secondary ICD9" data
+41078	Integer	Episodes containing "Diagnoses - secondary ICD10" data
+41079	Integer	Episodes containing "Diagnoses - secondary ICD10 addendum" data
+41080	Integer	Episodes containing "Operative procedures - secondary OPCS" data
+41082	Integer	Episodes containing "Dates of operations" data
+41083	Integer	Episodes containing "Episode start date" data
+41084	Integer	Episodes containing "Episode end date" data
+41085	Integer	Episodes containing "Duration of episode" data
+41086	Integer	Episodes containing "Episode order" data
+41087	Integer	Episodes containing "Episode status" data
+41088	Integer	Episodes containing "Duration of episode within HES data year" data
+41089	Integer	Episodes containing "Beginning of spell indicator" data
+41090	Integer	Episodes containing "End of spell indicator" data
+41091	Integer	Episodes containing "Duration of spell" data
+41092	Integer	Episodes containing "Current PCT responsible for patient" data
+41093	Integer	Episodes containing "PCT where patients GP was registered" data
+41094	Integer	Episodes containing "Administrative and legal status of patient" data
+41095	Integer	Episodes containing "Date of decision to admit to hospital" data
+41096	Integer	Episodes containing "Date of admission to hospital" data
+41097	Integer	Episodes containing "Waiting time for hospital admission" data
+41100	Integer	Episodes containing "First regular day or night of admission to hosp" data
+41101	Integer	Episodes containing "Date of discharge from hospital" data
+41104	Integer	Episodes containing "External cause - ICD10" data
+41105	Integer	Episodes containing "External cause - ICD10 addendum" data
+41106	Integer	Episodes containing "Operation status" data
+41107	Integer	Episodes containing "Duration of post-operative stay" data
+41108	Integer	Episodes containing "Duration of pre-operative stay" data
+41113	Integer	Episodes containing "Date of first antenatal assessment" data
+41114	Integer	Episodes containing "Gestation period at first antenatal assessment" data
+41115	Integer	Episodes containing "Antenatal stay" data
+41116	Integer	Episodes containing "Intended delivery place" data
+41117	Integer	Episodes containing "Reason for changing delivery place" data
+41118	Integer	Episodes containing "Anaesthetic administered during delivery" data
+41119	Integer	Episodes containing "Anaesthetic administered post delivery" data
+41120	Integer	Episodes containing "Delivery onset method" data
+41121	Integer	Episodes containing "Number of babies delivered from single pregnancy" data
+41122	Integer	Episodes containing "Postnatal stay" data
+41123	Integer	Episodes containing "Level of neonatal care" data
+41124	Integer	Episodes containing "Mother age on date of delivery" data
+41125	Integer	Episodes containing "Number of previous pregnancies" data
+41132	Integer	Episodes containing "Episode type" data
+41142	Integer	Episodes containing "Diagnoses - main ICD10" data
+41143	Integer	Episodes containing "Diagnoses - main ICD10 - addendum" data
+41144	Integer	Episodes containing "Diagnoses - main ICD9" data
+41146	Integer	Episodes containing "Operative procedure - main OPCS" data
+41148	Integer	Episodes containing "Date of operation" data
+41201	Categorical (multiple)	External causes	19
+41202	Categorical (multiple non-numeric)	Diagnoses - main ICD10	19						convertICD10Codes
+41204	Categorical (multiple non-numeric)	Diagnoses - secondary ICD10	19						convertICD10Codes
+41214	Categorical (multiple)	Carer support indicators	227
+41215	Categorical (multiple)	Detention categories	230
+41216	Categorical (multiple)	Legal statuses	231
+41217	Categorical (multiple)	Mental categories	228
+41218	Categorical (multiple)	History of psychiatric care on admission	229
+41219	Categorical (multiple)	Anaesthetics administered during delivery	212
+41220	Categorical (multiple)	Anaesthetics administered post delivery	212
+41221	Categorical (multiple)	Delivery methods	216
+41222	Categorical (multiple)	Delivery onset methods	220
+41223	Categorical (multiple)	Delivery places	217
+41224	Categorical (multiple)	Intended delivery places	217
+41225	Categorical (multiple)	Resuscitation methods	223
+41226	Categorical (multiple)	Sex of baby	224
+41227	Categorical (multiple)	Status of baby at birth	219
+41228	Categorical (multiple)	Statuses of person conducting delivery	225
+41229	Categorical (multiple non-numeric)	PCT responsible for patient data	239
+41230	Categorical (multiple non-numeric)	PCT where patients GP was registered	239
+41231	Categorical (multiple)	Hospital episode type	238
+41232	Categorical (multiple)	Administrative and legal statuses	201
+41235	Integer	Spells in hospital
+41236	Integer	Episodes containing "Method of admission to hospital" data (recoded)
+41237	Integer	Episodes containing "Source of admission to hospital" data (recoded)
+41238	Integer	Episodes containing "Method of discharge from hospital" data (recoded)
+41239	Integer	Episodes containing "Destination on discharge from hospital" data (recoded)
+41240	Integer	Episodes containing "Patient classification on admission" data (recoded)
+41241	Integer	Episodes containing "Intended management of patient" data (recoded)
+41242	Integer	Episodes containing "Main speciality of consultant" data (recoded)
+41243	Integer	Episodes containing "Treatment speciality of consultant" data (recoded)
+41244	Categorical (multiple)	Intended management of patient (recoded)	271
+41245	Categorical (multiple)	Main speciality of consultant (recoded)	270
+41246	Categorical (multiple)	Treatment speciality of consultant (recoded)	269
+41247	Categorical (multiple)	Patient classification on admission (recoded)	266
+41248	Categorical (multiple)	Destinations on discharge from hospital (recoded)	267
+41249	Categorical (multiple)	Methods of admission to hospital (recoded)	264
+41250	Categorical (multiple)	Methods of discharge from hospital (recoded)	268
+41251	Categorical (multiple)	Sources of admission to hospital (recoded)	265
+41252	Integer	Episodes containing "Inpatient record format" data
+41253	Categorical (multiple)	Inpatient record format	263
+42000	Date	Date of first myocardial infarction	272
+42001	Categorical (single)	Source of first myocardial infarction report	300
+42002	Date	Date of first STEMI	272
+42003	Categorical (single)	Source of first STEMI report	300
+42004	Date	Date of first NSTEMI	272
+42005	Categorical (single)	Source of first NSTEMI report	300
+42006	Date	Date of first stroke	272
+42007	Categorical (single)	Source of first stroke report	300
+42008	Date	Date of first ischaemic stroke	272
+42009	Categorical (single)	Source of first ischaemic stroke report	300
+42010	Date	Date of first intracerebral haemorrhage	272
+42011	Categorical (single)	Source of first intracerebral haemorrhage report	300
+42012	Date	Date of first subarachnoid haemorrhage	272
+42013	Categorical (single)	Source of first subarachnoid haemorrhage report	300
+90002	Categorical (single)	Data problem indicator	93
+90003	Time	Start of requested wear period
+90010	Time	Start time of wear
+90011	Time	End time of wear
+90012	Continuous	Overall acceleration average
+90013	Continuous	Standard deviation of acceleration
+90015	Categorical (single)	Data quality, good wear time	7
+90016	Categorical (single)	Data quality, good calibration	7
+90017	Categorical (single)	Data quality, calibrated on own data	7
+90018	Categorical (single)	Daylight savings crossover	7
+90019	Continuous	Monday average acceleration
+90020	Continuous	Tuesday average acceleration
+90021	Continuous	Wednesday average acceleration
+90022	Continuous	Thursday average acceleration
+90023	Continuous	Friday average acceleration
+90024	Continuous	Saturday average acceleration
+90025	Continuous	Sunday average acceleration
+90026	Categorical (single)	First weekday of wear	777
+90027	Continuous	Average acceleration 00:00 - 00:59
+90028	Continuous	Average acceleration 01:00 - 01:59
+90029	Continuous	Average acceleration 02:00 - 02:59
+90030	Continuous	Average acceleration 03:00 - 03:59
+90031	Continuous	Average acceleration 04:00 - 04:59
+90032	Continuous	Average acceleration 05:00 - 05:59
+90033	Continuous	Average acceleration 06:00 - 06:59
+90034	Continuous	Average acceleration 07:00 - 07:59
+90035	Continuous	Average acceleration 08:00 - 08:59
+90036	Continuous	Average acceleration 09:00 - 09:59
+90037	Continuous	Average acceleration 10:00 - 10:59
+90038	Continuous	Average acceleration 11:00 - 11:59
+90039	Continuous	Average acceleration 12:00 - 12:59
+90040	Continuous	Average acceleration 13:00 - 13:59
+90041	Continuous	Average acceleration 14:00 - 14:59
+90042	Continuous	Average acceleration 15:00 - 15:59
+90043	Continuous	Average acceleration 16:00 - 16:59
+90044	Continuous	Average acceleration 17:00 - 17:59
+90045	Continuous	Average acceleration 18:00 - 18:59
+90046	Continuous	Average acceleration 19:00 - 19:59
+90047	Continuous	Average acceleration 20:00 - 20:59
+90048	Continuous	Average acceleration 21:00 - 21:59
+90049	Continuous	Average acceleration 22:00 - 22:59
+90050	Continuous	Average acceleration 23:00 - 23:59
+90051	Continuous	Wear duration overall
+90052	Continuous	Non wear duration overall
+90053	Continuous	Wear duration during Monday
+90054	Continuous	Wear duration during Tuesday
+90055	Continuous	Wear duration during Wednesday
+90056	Continuous	Wear duration during Thursday
+90057	Continuous	Wear duration during Friday
+90058	Continuous	Wear duration during Saturday
+90059	Continuous	Wear duration during Sunday
+90060	Continuous	Wear duration during 00:00 - 00:59
+90061	Continuous	Wear duration during 01:00 - 01:59
+90062	Continuous	Wear duration during 02:00 - 02:59
+90063	Continuous	Wear duration during 03:00 - 03:59
+90064	Continuous	Wear duration during 04:00 - 04:59
+90065	Continuous	Wear duration during 05:00 - 05:59
+90066	Continuous	Wear duration during 06:00 - 06:59
+90067	Continuous	Wear duration during 07:00 - 07:59
+90068	Continuous	Wear duration during 08:00 - 08:59
+90069	Continuous	Wear duration during 09:00 - 09:59
+90070	Continuous	Wear duration during 10:00 - 10:59
+90071	Continuous	Wear duration during 11:00 - 11:59
+90072	Continuous	Wear duration during 12:00 - 12:59
+90073	Continuous	Wear duration during 13:00 - 13:59
+90074	Continuous	Wear duration during 14:00 - 14:59
+90075	Continuous	Wear duration during 15:00 - 15:59
+90076	Continuous	Wear duration during 16:00 - 16:59
+90077	Continuous	Wear duration during 17:00 - 17:59
+90078	Continuous	Wear duration during 18:00 - 18:59
+90079	Continuous	Wear duration during 19:00 - 19:59
+90080	Continuous	Wear duration during 20:00 - 20:59
+90081	Continuous	Wear duration during 21:00 - 21:59
+90082	Continuous	Wear duration during 22:00 - 22:59
+90083	Continuous	Wear duration during 23:00 - 23:59
+90084	Integer	Unique hours of wear in a 24 hour cycle (scattered over multiple days)
+90085	Integer	Unique minutes of wear in a 24 hour cycle (scattered over multiple days)
+90086	Integer	Non wear episodes over 1 hour duration
+90087	Continuous	No-wear time bias adjusted average acceleration
+90088	Continuous	No-wear time bias adjusted acceleration standard deviation
+90089	Continuous	No-wear time bias adjusted acceleration median
+90090	Continuous	No-wear time bias adjusted acceleration minimum
+90091	Continuous	No-wear time bias adjusted acceleration maximum
+90092	Continuous	Fraction acceleration <= 1 milli-gravities
+90093	Continuous	Fraction acceleration <= 2 milli-gravities
+90094	Continuous	Fraction acceleration <= 3 milli-gravities
+90095	Continuous	Fraction acceleration <= 4 milli-gravities
+90096	Continuous	Fraction acceleration <= 5 milli-gravities
+90097	Continuous	Fraction acceleration <= 6 milli-gravities
+90098	Continuous	Fraction acceleration <= 7 milli-gravities
+90099	Continuous	Fraction acceleration <= 8 milli-gravities
+90100	Continuous	Fraction acceleration <= 9 milli-gravities
+90101	Continuous	Fraction acceleration <= 10 milli-gravities
+90102	Continuous	Fraction acceleration <= 11 milli-gravities
+90103	Continuous	Fraction acceleration <= 12 milli-gravities
+90104	Continuous	Fraction acceleration <= 13 milli-gravities
+90105	Continuous	Fraction acceleration <= 14 milli-gravities
+90106	Continuous	Fraction acceleration <= 15 milli-gravities
+90107	Continuous	Fraction acceleration <= 16 milli-gravities
+90108	Continuous	Fraction acceleration <= 17 milli-gravities
+90109	Continuous	Fraction acceleration <= 18 milli-gravities
+90110	Continuous	Fraction acceleration <= 19 milli-gravities
+90111	Continuous	Fraction acceleration <= 20 milli-gravities
+90112	Continuous	Fraction acceleration <= 25 milli-gravities
+90113	Continuous	Fraction acceleration <= 30 milli-gravities
+90114	Continuous	Fraction acceleration <= 35 milli-gravities
+90115	Continuous	Fraction acceleration <= 40 milli-gravities
+90116	Continuous	Fraction acceleration <= 45 milli-gravities
+90117	Continuous	Fraction acceleration <= 50 milli-gravities
+90118	Continuous	Fraction acceleration <= 55 milli-gravities
+90119	Continuous	Fraction acceleration <= 60 milli-gravities
+90120	Continuous	Fraction acceleration <= 65 milli-gravities
+90121	Continuous	Fraction acceleration <= 70 milli-gravities
+90122	Continuous	Fraction acceleration <= 75 milli-gravities
+90123	Continuous	Fraction acceleration <= 80 milli-gravities
+90124	Continuous	Fraction acceleration <= 85 milli-gravities
+90125	Continuous	Fraction acceleration <= 90 milli-gravities
+90126	Continuous	Fraction acceleration <= 95 milli-gravities
+90127	Continuous	Fraction acceleration <= 100 milli-gravities
+90128	Continuous	Fraction acceleration <= 125 milli-gravities
+90129	Continuous	Fraction acceleration <= 150 milli-gravities
+90130	Continuous	Fraction acceleration <= 175 milli-gravities
+90131	Continuous	Fraction acceleration <= 200 milli-gravities
+90132	Continuous	Fraction acceleration <= 225 milli-gravities
+90133	Continuous	Fraction acceleration <= 250 milli-gravities
+90134	Continuous	Fraction acceleration <= 275 milli-gravities
+90135	Continuous	Fraction acceleration <= 300 milli-gravities
+90136	Continuous	Fraction acceleration <= 325 milli-gravities
+90137	Continuous	Fraction acceleration <= 350 milli-gravities
+90138	Continuous	Fraction acceleration <= 375 milli-gravities
+90139	Continuous	Fraction acceleration <= 400 milli-gravities
+90140	Continuous	Fraction acceleration <= 425 milli-gravities
+90141	Continuous	Fraction acceleration <= 450 milli-gravities
+90142	Continuous	Fraction acceleration <= 475 milli-gravities
+90143	Continuous	Fraction acceleration <= 500 milli-gravities
+90144	Continuous	Fraction acceleration <= 600 milli-gravities
+90145	Continuous	Fraction acceleration <= 700 milli-gravities
+90146	Continuous	Fraction acceleration <= 800 milli-gravities
+90147	Continuous	Fraction acceleration <= 900 milli-gravities
+90148	Continuous	Fraction acceleration <= 1000 milli-gravities
+90149	Continuous	Fraction acceleration <= 1100 milli-gravities
+90150	Continuous	Fraction acceleration <= 1200 milli-gravities
+90151	Continuous	Fraction acceleration <= 1300 milli-gravities
+90152	Continuous	Fraction acceleration <= 1400 milli-gravities
+90153	Continuous	Fraction acceleration <= 1500 milli-gravities
+90154	Continuous	Fraction acceleration <= 1600 milli-gravities
+90155	Continuous	Fraction acceleration <= 1700 milli-gravities
+90156	Continuous	Fraction acceleration <= 1800 milli-gravities
+90157	Continuous	Fraction acceleration <= 1900 milli-gravities
+90158	Continuous	Fraction acceleration <= 2000 milli-gravities
+90159	Continuous	Error tolerance before calibration
+90160	Continuous	Error tolerance after calibration
+90161	Continuous	Calibration coefficients - x offset
+90162	Continuous	Calibration coefficients - y offset
+90163	Continuous	Calibration coefficients - z offset
+90164	Continuous	Calibration coefficients - x slope
+90165	Continuous	Calibration coefficients - y slope
+90166	Continuous	Calibration coefficients - z slope
+90167	Continuous	Calibration coefficients - x temp
+90168	Continuous	Calibration coefficients - y temp
+90169	Continuous	Calibration coefficients - z temp
+90170	Continuous	Calibration coefficients - mean temperature
+90171	Integer	Calibration - number of static points
+90172	Continuous	Calibration - minimum x stationary value
+90173	Continuous	Calibration - maximum x stationary value
+90174	Continuous	Calibration - minimum y stationary value
+90175	Continuous	Calibration - maximum y stationary value
+90176	Continuous	Calibration - minimum z stationary value
+90177	Continuous	Calibration - maximum z stationary value
+90179	Integer	Device ID
+90180	Integer	Interrupted recording periods
+90181	Continuous	Duration of interrupted recording periods
+90182	Integer	Data recording errors
+90183	Integer	Readings exceeding +/-8 gravities before calibration
+90184	Integer	Maximum readings exceeding +/-8 gravities before calibration in a 5 second epoch
+90185	Integer	Readings exceeding +/-8 gravities after calibration
+90186	Integer	Maximum readings exceeding +/-8 gravities after calibration in a 5 second epoch
+90187	Integer	Total data readings
+90188	Continuous	Sample rate average
+90189	Continuous	Sample rate standard deviation
+90190	Continuous	Sample rate minimum
+90191	Continuous	Sample rate maximum
+90192	Continuous	Temperature average
+90193	Continuous	Temperature standard deviation
+90194	Continuous	Temperature minimum
+90195	Continuous	Temperature maximum
+100001	Continuous	Food weight
+100002	Continuous	Energy
+100003	Continuous	Protein
+100004	Continuous	Fat
+100005	Continuous	Carbohydrate
+100006	Continuous	Saturated fat
+100007	Continuous	Polyunsaturated fat
+100008	Continuous	Total sugars
+100009	Continuous	Englyst dietary fibre
+100010	Categorical (single)	Portion size	100014
+100011	Continuous	Iron
+100012	Continuous	Vitamin B6
+100013	Continuous	Vitamin B12
+100014	Continuous	Folate
+100015	Continuous	Vitamin C
+100016	Continuous	Potassium
+100017	Continuous	Magnesium
+100018	Continuous	Retinol
+100019	Continuous	Carotene
+100020	Categorical (single)	Typical diet yesterday	100010
+100021	Continuous	Vitamin D
+100022	Continuous	Alcohol
+100023	Continuous	Starch
+100024	Continuous	Calcium
+100025	Continuous	Vitamin E
+100150	Categorical (single)	Drinking water intake	100006
+100160	Categorical (single)	Low calorie drink intake	100006
+100170	Categorical (single)	Fizzy drink intake	100006
+100180	Categorical (single)	Squash intake	100006
+100190	Categorical (single)	Orange juice intake	100006
+100200	Categorical (single)	Grapefruit juice intake	100006
+100210	Categorical (single)	Pure fruit/vegetable juice intake	100006
+100220	Categorical (single)	Fruit smoothie intake	100006
+100230	Categorical (single)	Dairy smoothie intake	100006
+100240	Categorical (single)	Coffee consumed	100010
+100250	Categorical (single)	Instant coffee intake	100006				v100240 == 0	0
+100260	Categorical (single)	Added milk to instant coffee	100009				v100250 != na	0
+100270	Categorical (single)	Filtered coffee intake	100006				v100240 == 0	0
+100280	Categorical (single)	Added milk to filtered coffee	100009				v100270 != na	0
+100290	Categorical (single)	Cappuccino intake	100006				v100240 == 0	0
+100300	Categorical (single)	Latte intake	100006				v100240 == 0	0
+100310	Categorical (single)	Espresso intake	100006				v100240 == 0	0
+100320	Categorical (single)	Added milk to espresso	100009				v100310 != na	0
+100330	Categorical (single)	Other coffee type	100006				v100240 == 0	0
+100350	Categorical (single)	Added milk to other coffee type	100009				v100330 != na	0
+100360	Categorical (single)	Decaffeinated coffee	100009				v100240 == 0	0
+100370	Categorical (single)	Intake of sugar added to coffee	100002				v100240 == 0	0
+100380	Categorical (single)	Intake of artificial sweetener added to coffee	100002				v100240 == 0	0
+100390	Categorical (single)	Tea consumed	100010
+100400	Categorical (single)	Standard tea intake	100007				v100390 == 0	0
+100410	Categorical (single)	Rooibos tea intake	100007				v100390 == 0	0
+100420	Categorical (single)	Green tea intake	100007				v100390 == 0	0
+100430	Categorical (single)	Herbal tea intake	100007				v100390 == 0	0
+100440	Categorical (single)	Other tea intake	100007				v100390 == 0	0
+100460	Categorical (single)	Added milk to standard tea	100009				v100400 != na	0
+100470	Categorical (single)	Decaffeinated tea	100009
+100480	Categorical (single)	Added milk to rooibos tea	100009				v100410 != na	0
+100490	Categorical (single)	Intake of sugar added to tea	100002				v100390 == 0	0
+100500	Categorical (single)	Intake of artificial sweetener added to tea	100002				v100390 == 0	0
+100510	Categorical (single)	Other non-alcoholic drinks	100010
+100520	Categorical (single)	Milk intake	100006
+100530	Categorical (single)	Flavoured milk intake	100006
+100540	Categorical (single)	Low calorie hot chocolate intake	100006
+100550	Categorical (single)	Hot chocolate intake	100006
+100560	Categorical (single)	Other drink intake	100006
+100580	Categorical (single)	Alcohol consumed	100010
+100590	Categorical (single)	Red wine intake	100006
+100630	Categorical (single)	Rose wine intake	100006
+100670	Categorical (single)	White wine intake	100006
+100710	Categorical (single)	Beer/cider intake	100006
+100720	Categorical (single)	Fortified wine intake	100006
+100730	Categorical (single)	Spirits intake	100006
+100740	Categorical (single)	Other alcohol intake	100006
+100760	Categorical (single)	Breakfast cereal consumed	100010
+100770	Categorical (single)	Porridge intake	100001
+100800	Categorical (single)	Muesli intake	100001
+100810	Categorical (single)	Oat crunch intake	100001
+100820	Categorical (single)	Sweetened cereal intake	100001
+100830	Categorical (single)	Plain cereal intake	100001
+100840	Categorical (single)	Bran cereal intake	100001
+100850	Categorical (single)	Whole-wheat cereal intake	100001
+100860	Categorical (single)	Other cereal intake	100001
+100880	Categorical (single)	Dried fruit added to cereal	100009
+100890	Categorical (single)	Milk added to cereal	100009
+100900	Categorical (single)	Intake of sugar added to cereal	100002
+100910	Categorical (single)	Intake of artificial sweetener added to cereal	100002
+100920	Categorical (single)	Type milk consumed	100015
+100940	Categorical (single)	Bread consumed	100010
+100950	Categorical (single)	Sliced bread intake	100006				v100940 == 1	0
+101020	Categorical (single)	Baguette intake	100006
+101090	Categorical (single)	Bap intake	100006
+101160	Categorical (single)	Bread roll intake	100006
+101230	Categorical (single)	Naan bread intake	100006
+101240	Categorical (single)	Garlic bread intake	100006
+101250	Categorical (single)	Crispbread intake	100006
+101260	Categorical (single)	Oatcakes intake	100006
+101270	Categorical (single)	Other bread intake	100006
+101300	Categorical (single)	Butter/margarine on bread/crackers	100010				v1438 == -10	0
+101310	Categorical (single)	Number of bread slices with butter/margarine	100006				v101300 == 1	0
+101350	Categorical (single)	Number of baguettes with butter/margarine	100006
+101390	Categorical (single)	Number of baps with  butter/margarine	100006
+101430	Categorical (single)	Number of bread rolls with  butter/margarine	100006
+101470	Categorical (single)	Number of crackers/crispbreads with butter/margarine	100006
+101510	Categorical (single)	Number of oatcakes with  butter/margarine	100006
+101550	Categorical (single)	Number of other bread types with  butter/margarine	100006
+101970	Categorical (single)	Double crust pastry intake	100004
+101980	Categorical (single)	Single crust pastry intake	100004
+101990	Categorical (single)	Crumble intake	100004
+102000	Categorical (single)	Pizza intake	100004
+102010	Categorical (single)	Pancake intake	100004
+102020	Categorical (single)	Scotch pancake intake	100004
+102030	Categorical (single)	Yorkshire pudding intake	100004
+102040	Categorical (single)	Indian snacks intake	100004
+102050	Categorical (single)	Croissant intake	100004
+102060	Categorical (single)	Danish pastry intake	100004
+102070	Categorical (single)	Scone intake	100004
+102080	Categorical (single)	Yogurt/ice-cream consumers	100010
+102090	Categorical (single)	Yogurt intake	100003				v102080 == 1	0
+102120	Categorical (single)	Ice-cream intake	100003
+102130	Categorical (single)	Dessert consumers	100010
+102140	Categorical (single)	Milk-based pudding intake	100003
+102150	Categorical (single)	Other milk-based pudding intake	100003
+102170	Categorical (single)	Soya dessert intake	100003
+102180	Categorical (single)	Fruitcake intake	100003
+102190	Categorical (single)	Cake intake	100003
+102200	Categorical (single)	Doughnut intake	100003
+102210	Categorical (single)	Sponge pudding intake	100003
+102220	Categorical (single)	Cheesecake intake	100003
+102230	Categorical (single)	Other dessert intake	100003
+102250	Categorical (single)	Sweet snack consumers	100010
+102260	Categorical (single)	Chocolate bar intake	100005
+102270	Categorical (single)	White chocolate intake	100005
+102280	Categorical (single)	Milk chocolate intake	100005
+102290	Categorical (single)	Dark chocolate intake	100005
+102300	Categorical (single)	Chocolate-covered raisin intake	100005
+102310	Categorical (single)	Chocolate sweet intake	100005
+102320	Categorical (single)	Diet sweets intake	100005
+102330	Categorical (single)	Sweets intake	100005
+102340	Categorical (single)	Chocolate-covered biscuits intake	100005
+102350	Categorical (single)	Chocolate biscuits intake	100005
+102360	Categorical (single)	Sweet biscuits intake	100005
+102370	Categorical (single)	Cereal bar intake	100005
+102380	Categorical (single)	Other sweets intake	100005
+102400	Categorical (single)	Savoury snack consumers	100010
+102410	Categorical (single)	Salted peanuts intake	100003
+102420	Categorical (single)	Unsalted peanuts intake	100003
+102430	Categorical (single)	Salted nuts intake	100003
+102440	Categorical (single)	Unsalted nuts intake	100003
+102450	Categorical (single)	Seeds intake	100003
+102460	Categorical (single)	Crisp intake	100003
+102470	Categorical (single)	Savoury biscuits intake	100003
+102480	Categorical (single)	Cheesy biscuits intake	100003
+102490	Categorical (single)	Olives intake	100003
+102500	Categorical (single)	Other savoury snack intake	100003
+102520	Categorical (single)	Soup consumers	100010
+102530	Categorical (single)	Powdered/instant soup intake	100004
+102540	Categorical (single)	Canned soup intake	100004
+102620	Categorical (single)	Homemade soup intake	100004
+102700	Categorical (single)	Starchy food consumers	100010
+102710	Categorical (single)	White pasta intake	100001
+102720	Categorical (single)	Wholemeal pasta intake	100001
+102730	Categorical (single)	White rice intake	100001
+102740	Categorical (single)	Brown rice intake	100001
+102750	Categorical (single)	Sushi intake	100001
+102760	Categorical (single)	Snackpot intake	100001
+102770	Categorical (single)	Couscous intake	100001
+102780	Categorical (single)	Other grain intake	100001
+102800	Categorical (single)	Cheese consumers	100010
+102810	Categorical (single)	Low fat hard cheese intake	100003
+102820	Categorical (single)	Hard cheese intake	100003				v102800 == 1	0
+102830	Categorical (single)	Soft cheese intake	100003
+102840	Categorical (single)	Blue cheese intake	100003
+102850	Categorical (single)	Low fat cheese spread intake	100003
+102860	Categorical (single)	Cheese spread intake	100003
+102870	Categorical (single)	Cottage cheese intake	100003
+102880	Categorical (single)	Feta intake	100003
+102890	Categorical (single)	Mozzarella intake	100003
+102900	Categorical (single)	Goat's cheese intake	100003
+102910	Categorical (single)	Other cheese intake	100003
+102930	Categorical (single)	Egg consumers	100010
+102940	Categorical (single)	Whole egg intake	100003
+102950	Categorical (single)	Omelette intake	100003
+102960	Categorical (single)	Eggs in sandwiches intake	100003
+102970	Categorical (single)	Scotch egg intake	100003
+102980	Categorical (single)	Other egg intake	100003
+103000	Categorical (single)	Meat consumers	100010
+103010	Categorical (single)	Sausage intake	100016
+103020	Categorical (single)	Beef intake	100016
+103030	Categorical (single)	Pork intake	100016
+103040	Categorical (single)	Lamb intake	100016
+103050	Categorical (single)	Crumbed or deep-fried poultry intake	100016
+103060	Categorical (single)	Poultry intake	100016
+103070	Categorical (single)	Bacon intake	100016
+103080	Categorical (single)	Ham intake	100016
+103090	Categorical (single)	Liver intake	100016
+103100	Categorical (single)	Other meat intake	100016
+103120	Categorical (single)	Fat removed from meat	100008
+103130	Categorical (single)	Skin removed from poultry	100008
+103140	Categorical (single)	Fish consumer	100010
+103150	Categorical (single)	Tinned tuna intake	100004
+103160	Categorical (single)	Oily fish intake	100004
+103170	Categorical (single)	Breaded fish intake	100004
+103180	Categorical (single)	Battered fish intake	100004
+103190	Categorical (single)	White fish intake	100004
+103200	Categorical (single)	Prawns intake	100004
+103210	Categorical (single)	Lobster/crab intake	100004
+103220	Categorical (single)	Shellfish intake	100004
+103230	Categorical (single)	Other fish intake	100004
+103250	Categorical (single)	Vegetarian alternatives intake	100010
+103260	Categorical (single)	Vegetarian sausages/burgers intake	100004
+103270	Categorical (single)	Tofu intake	100004
+103280	Categorical (single)	Quorn intake	100004
+103290	Categorical (single)	Other vegetarian alternative intake	100004
+103310	Categorical (single)	Spreads/sauces consumers	100010
+103980	Categorical (single)	No fat for cooking	100010
+103990	Categorical (single)	Vegetable consumers	100010
+104000	Categorical (single)	Baked bean intake	100017
+104010	Categorical (single)	Pulses intake	100017
+104020	Categorical (single)	Fried potatoes intake	100017
+104030	Categorical (single)	Boiled/baked potatoes intake	100017				v103990 == 1	0
+104040	Categorical (single)	Butter/margarine added to potatoes	100013
+104050	Categorical (single)	Mashed potato intake	100017
+104060	Categorical (single)	Mixed vegetable intake	100017
+104070	Categorical (single)	Vegetable pieces intake	100017
+104080	Categorical (single)	Coleslaw intake	100017
+104090	Categorical (single)	Side salad intake	100017				v103990 == 1	0
+104100	Categorical (single)	Avocado intake	100017
+104110	Categorical (single)	Broad bean intake	100017
+104120	Categorical (single)	Green bean intake	100017
+104130	Categorical (single)	Beetroot intake	100017
+104140	Categorical (single)	Broccoli intake	100017
+104150	Categorical (single)	Butternut squash intake	100017
+104160	Categorical (single)	Cabbage/kale intake	100017
+104170	Categorical (single)	Carrot intake	100017				v103990 == 1	0
+104180	Categorical (single)	Cauliflower intake	100017
+104190	Categorical (single)	Celery intake	100017
+104200	Categorical (single)	Courgette intake	100017
+104210	Categorical (single)	Cucumber intake	100017
+104220	Categorical (single)	Garlic intake	100017
+104230	Categorical (single)	Leek intake	100017
+104240	Categorical (single)	Lettuce intake	100017
+104250	Categorical (single)	Mushroom intake	100017
+104260	Categorical (single)	Onion intake	100017				v103990 == 1	0
+104270	Categorical (single)	Parsnip intake	100017
+104280	Categorical (single)	Pea intake	100017
+104290	Categorical (single)	Sweet pepper intake	100017
+104300	Categorical (single)	Spinach intake	100017
+104310	Categorical (single)	Sprouts intake	100017
+104320	Categorical (single)	Sweetcorn intake	100017
+104330	Categorical (single)	Sweet potato intake	100017
+104340	Categorical (single)	Fresh tomato intake	100017				v103990 == 1	0
+104350	Categorical (single)	Tinned tomato intake	100017
+104360	Categorical (single)	Turnip/swede intake	100017
+104370	Categorical (single)	Watercress intake	100017
+104380	Categorical (single)	Other vegetables intake	100017
+104400	Categorical (single)	Fruit consumers	100010
+104410	Categorical (single)	Stewed fruit intake	100004
+104420	Categorical (single)	Prune intake	100004
+104430	Categorical (single)	Dried fruit intake	100004
+104440	Categorical (single)	Mixed fruit intake	100004
+104450	Categorical (single)	Apple intake	100004				v104400 == 1	0
+104460	Categorical (single)	Banana intake	100004				v104400 == 1	0
+104470	Categorical (single)	Berry intake	100004
+104480	Categorical (single)	Cherry intake	100004
+104490	Categorical (single)	Grapefruit intake	100004
+104500	Categorical (single)	Grape intake	100004
+104510	Categorical (single)	Mango intake	100004
+104520	Categorical (single)	Melon intake	100004
+104530	Categorical (single)	Orange intake	100004
+104540	Categorical (single)	Satsuma intake	100004
+104550	Categorical (single)	Peach/nectarine intake	100004
+104560	Categorical (single)	Pear intake	100004
+104570	Categorical (single)	Pineapple intake	100004
+104580	Categorical (single)	Plum intake	100004
+104590	Categorical (single)	Other fruit intake	100004
+104660	Categorical (single)	Added salt to food	100010
+104670	Categorical (single)	Vitamin supplement user	100010
+104900	Categorical (single)	Time spent doing vigorous physical activity	100011
+104910	Categorical (single)	Time spent doing moderate physical activity	100011
+104920	Categorical (single)	Time spent doing light physical activity	100012
+105010	Time	When diet questionnaire completed
+105030	Time	When diet questionnaire started
+110005	Categorical (single)	Invitation to physical activity study, acceptance	100693
+110006	Date	Invitation to physical activity study, date sent
