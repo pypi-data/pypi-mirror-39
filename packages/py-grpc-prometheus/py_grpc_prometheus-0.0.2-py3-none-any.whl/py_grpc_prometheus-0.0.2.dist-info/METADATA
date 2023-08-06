@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: py-grpc-prometheus
+Version: 0.0.2
+Summary: Python gRPC Prometheus Interceptors
+Home-page: UNKNOWN
+Author: Lin Chen
+Author-email: linchen04@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: setuptools (==39.0.1)
+Requires-Dist: protobuf (==3.5.2)
+Requires-Dist: grpcio (==1.10.0)
+Requires-Dist: prometheus-client (==0.3.0)
+
+UNKNOWN
+
+
