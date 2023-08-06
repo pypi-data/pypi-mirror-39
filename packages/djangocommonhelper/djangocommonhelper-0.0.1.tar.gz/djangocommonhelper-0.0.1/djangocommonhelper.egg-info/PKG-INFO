@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: djangocommonhelper
+Version: 0.0.1
+Summary: Django app that has common features.
+Home-page: UNKNOWN
+Author: TDS Programming
+License: MIT License
+Description: djangocommonhelper is a simple reusable django app that has common features such as:
+        1. TimeStampedModel
+        2. User Mixins for CBVs
+        
+        Quick start
+        -----------
+        1. pip install djangocommonhelper
+        2. Add "commonhelper" to your INSTALLED_APPS setting like this::
+        
+            INSTALLED_APPS = [
+                ...
+                'commonhelper',
+            ]
+        
+        3. import into your file as: import commonhelper
+        
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
