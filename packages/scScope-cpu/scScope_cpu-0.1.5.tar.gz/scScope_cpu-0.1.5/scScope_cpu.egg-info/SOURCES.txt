@@ -1,0 +1,11 @@
+README.rst
+setup.py
+scScope_cpu.egg-info/PKG-INFO
+scScope_cpu.egg-info/SOURCES.txt
+scScope_cpu.egg-info/dependency_links.txt
+scScope_cpu.egg-info/not-zip-safe
+scScope_cpu.egg-info/requires.txt
+scScope_cpu.egg-info/top_level.txt
+scscope/__init__.py
+scscope/large_scale_processing.py
+scscope/ops.py

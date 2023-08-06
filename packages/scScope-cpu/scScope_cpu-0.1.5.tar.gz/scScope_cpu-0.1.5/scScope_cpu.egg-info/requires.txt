@@ -1,0 +1,6 @@
+numpy>=1.14.0
+pandas>=0.21.0
+scipy
+scikit-learn>=0.18.0
+phenograph
+tensorflow>=1.2.1
