@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+smartmonkey/__init__.py
+smartmonkey/client.py
+smartmonkey/exceptions.py
+smartmonkey/models.py
+smartmonkey/optimize.py
+smartmonkey/serializer.py
+smartmonkey.egg-info/PKG-INFO
+smartmonkey.egg-info/SOURCES.txt
+smartmonkey.egg-info/dependency_links.txt
+smartmonkey.egg-info/requires.txt
+smartmonkey.egg-info/top_level.txt
