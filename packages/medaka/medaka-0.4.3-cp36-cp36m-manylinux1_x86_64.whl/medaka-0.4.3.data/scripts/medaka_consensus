@@ -1,0 +1,81 @@
+#!/bin/bash
+set -e
+
+OUTPUT="medaka"
+THREADS=1
+
+MODEL=$(medaka_data_path)/medaka_model.hdf5
+BATCH_SIZE=200
+iflag=false
+dflag=false
+
+usage="$(basename "$0") [-h] -i <fastx>
+
+Polish an assembly using medaka
+
+    -h  show this help text.
+    -i  fastx input basecalls (required).
+    -d  fasta input assembly (required). 
+    -o  output folder (default: medaka).
+    -m  medaka model (default: ${MODEL}). 
+    -t  number of threads with which to create features (default: 1).
+    -b  batchsize (controls how much memory is used running network) (default: 200)."
+
+while getopts ':hi::d:o:m:t:b:' option; do
+  case "$option" in
+    h  ) echo "$usage" >&2; exit;;
+    i  ) iflag=true; BASECALLS=$(readlink -f $OPTARG);;
+    d  ) dflag=true; DRAFT=$(readlink -f $OPTARG);;
+    o  ) OUTPUT=$OPTARG;;
+    m  ) MODEL=$OPTARG;;
+    t  ) THREADS=$OPTARG;;
+    b  ) BATCH_SIZE=$OPTARG;;
+    \? ) echo "Invalid option: -${OPTARG}." >&2; exit 1;;
+    :  ) echo "Option -$OPTARG requires an argument." >&2; exit 1;;
+  esac
+done
+shift $(($OPTIND - 1))
+
+if ! $iflag; then
+  echo "$usage" >&2;
+  echo "-i must be specified." >&2;
+  exit 1;
+fi
+
+if ! $dflag; then
+  echo "$usage" >&2;
+  echo "-d must be specified." >&2;
+  exit 1;
+fi
+if [[ ! -e ${OUTPUT} ]]; then
+  mkdir -p ${OUTPUT}
+else
+  echo "Warning: Output ${OUTPUT} already exists, may use old results."
+fi
+
+cd ${OUTPUT}
+
+CALLS2DRAFT=calls_to_draft
+if [[ ! -e ${CALLS2DRAFT}.bam ]]; then
+    echo "Aligning basecalls to draft"
+    mini_align -i ${BASECALLS} -r ${DRAFT} -P -m -p ${CALLS2DRAFT} -t ${THREADS}
+else
+    echo "Not aligning basecalls to draft, ${CALLS2DRAFT}.bam exists."
+fi
+
+CONSENSUSPROBS=consensus_probs.hdf
+if [[ ! -e ${CONSENSUSPROBS} ]]; then
+    echo "Running medaka consensus"
+    medaka consensus ${CALLS2DRAFT}.bam ${CONSENSUSPROBS} --model ${MODEL} --batch_size ${BATCH_SIZE} --threads ${THREADS}
+else 
+    echo "Not running medaka consensus, ${CONSENSUSPROBS} exists."
+fi
+
+CONSENSUS=consensus.fasta
+if [[ ! -e ${CONSENSUS} ]]; then
+    echo "Running medaka stitch"
+    medaka stitch ${CONSENSUSPROBS} ${CONSENSUS} --mode hdf 
+    echo "Polished assembly written to ${OUTPUT}/${CONSENSUS}, have a nice day."
+else
+    echo "Consensus ${OUTPUT}/${CONSENSUS} exists, remove ${OUTPUT} and try again."
+fi
