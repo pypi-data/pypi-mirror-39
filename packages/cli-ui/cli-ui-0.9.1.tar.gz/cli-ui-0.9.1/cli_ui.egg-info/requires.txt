@@ -1,0 +1,13 @@
+colorama
+tabulate
+unidecode
+
+[dev]
+black
+ghp-import
+mypy
+pyflakes
+pytest
+sphinx
+twine
+wheel
