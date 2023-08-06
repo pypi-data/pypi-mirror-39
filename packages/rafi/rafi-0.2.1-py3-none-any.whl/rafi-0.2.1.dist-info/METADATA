@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: rafi
+Version: 0.2.1
+Summary: A tiny route dispatcher for Google Cloud Functions.
+Home-page: http://github.com/dabio/rafi
+License: MIT
+Author: Danilo Braband
+Author-email: dbraband@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Project-URL: Repository, http://github.com/dabio/rafi
+Description-Content-Type: text/x-rst
+
+Rafi
+====
+
+A tiny route dispatcher for `Google Cloud Functions`_.
+
+.. code-block:: python
+
+  app = rafi.App("demo_app")
+
+  @app.route("/hello/<name>")
+  def index(name):
+      return f"hello {name}"
+
+In your `Google Cloud Function`__ set **Function to execute** to `app`.
+
+.. _Google Cloud Functions: https://cloud.google.com/functions/
+__ `Google Cloud Functions`_
+
