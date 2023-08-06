@@ -1,0 +1,13 @@
+README.md
+setup.py
+HASS_data_detective.egg-info/PKG-INFO
+HASS_data_detective.egg-info/SOURCES.txt
+HASS_data_detective.egg-info/dependency_links.txt
+HASS_data_detective.egg-info/requires.txt
+HASS_data_detective.egg-info/top_level.txt
+detective/__init__.py
+detective/auth.py
+detective/config.py
+detective/core.py
+detective/functions.py
+detective/time.py
