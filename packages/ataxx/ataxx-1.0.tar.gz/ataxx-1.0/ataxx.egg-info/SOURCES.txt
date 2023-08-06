@@ -1,0 +1,13 @@
+README.md
+setup.py
+ataxx/__init__.py
+ataxx/draw.py
+ataxx/pgn.py
+ataxx/players.py
+ataxx/process.py
+ataxx/uai.py
+ataxx.egg-info/PKG-INFO
+ataxx.egg-info/SOURCES.txt
+ataxx.egg-info/dependency_links.txt
+ataxx.egg-info/requires.txt
+ataxx.egg-info/top_level.txt
