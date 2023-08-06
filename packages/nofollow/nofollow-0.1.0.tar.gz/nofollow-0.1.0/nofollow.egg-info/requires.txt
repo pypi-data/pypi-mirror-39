@@ -1,0 +1,11 @@
+celery
+django>=2.0
+django-boris
+django-cindy
+django_compressor
+django-kip
+django-model-utils
+djangorestframework
+django-material
+libsass
+psycopg2-binary

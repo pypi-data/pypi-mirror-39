@@ -1,0 +1,30 @@
+{% extends "web/base.tmpl.html" %}
+{% block main_contents %}
+<h2>My Links</h2>
+<div class="row">
+  {% for item in object_list %}
+  <div class="col m4 s12">
+    <div class="card medium link">
+      <div class="card-image">
+        <a href="{% url 'read-link' item.link.id %}">
+          {% if item.lead_image %}
+          <img src="{{ item.lead_image.url }}" />
+          {% endif %}
+        </a>
+      </div>
+      <div class="card-content">
+        <a href="{% url 'read-link' item.link.id %}">
+          <span class="card-title">{{ item.title }}</span>
+        </a>
+      </div>
+      <div class="card-action valign-wrapper">
+        {% if item.link.site.favicon %}
+        <img class="site-favicon" src="{{ item.link.site.favicon.url }}" />
+        {% endif %}
+        <a href="{{ item.link.url }}" target="_blank">View Original</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

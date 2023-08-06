@@ -1,0 +1,61 @@
+{% load static compress %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% compress css %}
+    {% include "material/includes/material_css.html" %}
+    <link rel="stylesheet" type="text/x-sass" href="{% static 'web/styles/site.sass' %}" />
+    {% endcompress %}
+    {% compress js %}
+    <script src="{% static 'material/js/jquery.js' %}"></script>
+    {% include "material/includes/material_js.html" %}
+    <script src="{% static 'web/scripts/csrf.js' %}"></script>
+    {% endcompress %}
+    
+    <title>{% block title %}Cindy: Syndication and Link Cleaner{% endblock %}</title>
+  </head>
+  <body class="{% block body_container_style %}{% endblock %}">
+    {% block header %}
+    <header>
+      <nav role="navigation">
+        <div class="container">
+          <a class="brand-logo" href="{% url 'home' %}">{{ request.site.name }}</a>
+          <a href="#" data-target="mobile-sidebar" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            {% include "web/navigation.tmpl.html" %}
+          </ul>
+        </div>
+      </nav>
+      <ul class="sidenav" id="mobile-sidebar">
+        {% include "web/navigation.tmpl.html" %}
+      </ul>
+    </header>
+    {% endblock %}
+    {% block main %}
+    <main>
+      <div class="container">
+        {% block main_contents %}{% endblock %}
+      </div>
+    </main>
+    {% endblock %} <!-- Main Container -->
+
+    {% block fixed_action_button %}
+    {% if user.is_authenticated %}
+    <div class="fixed-action-btn">
+      <a href="{% url 'submission' %}" class="btn-floating btn-large">
+        <i class="large material-icons">add</i>
+      </a>
+    </div>
+    {% endif %}
+    {% endblock %}
+
+    {% block footer %}{% endblock %}
+
+    <script>
+     $(document).ready(function(){
+       $('.sidenav').sidenav();
+     });
+    </script>
+  </body>
+</html>
