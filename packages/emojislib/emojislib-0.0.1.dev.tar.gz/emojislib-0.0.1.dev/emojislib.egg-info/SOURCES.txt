@@ -1,0 +1,11 @@
+README.md
+setup.py
+emojislib/__init__.py
+emojislib/__main__.py
+emojislib/__version__.py
+emojislib/cli.py
+emojislib/emojis.py
+emojislib.egg-info/PKG-INFO
+emojislib.egg-info/SOURCES.txt
+emojislib.egg-info/dependency_links.txt
+emojislib.egg-info/top_level.txt
