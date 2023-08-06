@@ -1,0 +1,10 @@
+google-api-core[grpc]<2.0.0dev,>=1.6.0
+
+[:python_version < "3.4"]
+enum34
+
+[fastavro]
+fastavro>=0.21.2
+
+[pandas]
+pandas>=0.17.1
