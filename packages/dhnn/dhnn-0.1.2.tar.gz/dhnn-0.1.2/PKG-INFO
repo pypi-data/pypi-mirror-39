@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: dhnn
+Version: 0.1.2
+Summary: Discrete Hopfield Network (DHNN) implemented with Python
+Home-page: https://github.com/Zeroto521/DHNN
+Author: Zeroto521
+Author-email: Zeroto521@gmail.com
+License: MIT
+Download-URL: https://github.com/Zeroto521/DHNN/archive/master.zip
+Description: UNKNOWN
+Keywords: machine learning,neural networks,hopfield,DHNN
+Platform: UNKNOWN
+Requires: numpy
