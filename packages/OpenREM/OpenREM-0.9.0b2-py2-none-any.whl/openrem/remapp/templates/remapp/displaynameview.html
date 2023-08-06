@@ -1,0 +1,159 @@
+{% extends "remapp/base.html" %}
+
+{% block headextras %}
+  <script src="{{ STATIC_URL }}js/sorttable.js"></script>
+{% endblock %}
+
+{% block confnav %}
+  <li class="dropdown active">{% endblock %}
+
+{% block navhelp %}
+  <li>
+    <a href="https://docs.openrem.org/en/{{ admin.docsversion }}/i_displaynames.html" target="_blank"
+       data-toggle="tooltip" title="Display name documentation - opens in a new tab">
+      Display name documentation
+    </a>
+  </li>
+  <li>
+    <a href="https://docs.openrem.org/en/{{ admin.docsversion }}/i_deletestudies.html" target="_blank"
+       data-toggle="tooltip" title="Study deletion documentation - opens in a new tab">
+      Study deletion documentation
+    </a>
+  </li>
+{% endblock %}
+
+{% block toprow %}
+  {% load pagination_tags %}
+  <a name="#top"></a>
+  <p>{% if admin.admingroup %}Check one or more boxes and click an Update button to be taken to a page where you can
+    update all of the selected systems to the same display name and / or set a user defined modality type.</p>
+    <p>The boxes can be checked or unchecked by clicking anywhere on the row. Tables can be sorted by clicking on
+    column headers.{% endif %}</p>
+  <p>
+    Jump to <a href="#ct">CT</a> | <a href="#fluoro">Fluoroscopy</a> |<a href="#mammo">Mammography</a> |
+    <a href="#dx">DX and CR</a> | <a href="#others">Others</a> | <a href="#failed">Failed imports</a> |
+  </p>
+{% endblock %}
+
+
+{% block mainblock %}
+
+  {% paginate %}
+
+  {% if admin.admingroup %}
+    <form action="{% url 'display_name_update' %}" method="get">
+  {% endif %}
+
+{% for modality in modalities %}
+  <script>
+      $(document).ready(
+          function get_display_name_list(json) {
+              $.ajax(
+                  {
+                      url: "{% url 'display_name_populate' %}",
+                      data: {
+                          modality: '{{ modality }}',
+                          csrfmiddlewaretoken: '{{ csrf_token }}'
+                      },
+                      type: "POST",
+                      success: function (data) {
+                          $('#{{ modality }}-names').html(data);
+                          var display_name_table_{{ modality }} = document.getElementById("display_name_table_{{ modality }}");
+                          sorttable.makeSortable(display_name_table_{{ modality }});
+
+                          {% if admin.admingroup %}
+                          $("#display_name_table_{{ modality }} .clickable-row").click(function () {
+                              var row_name = $(this).attr('row_name');
+                              $('input[name=' + row_name + ']').prop("checked", !$('input[name=' + row_name + ']').prop("checked"));
+                          });
+                          {% endif %}
+                      }
+                  }
+              )
+          }
+      );
+      $(document).ready(
+          function get_failed_imports_list(json) {
+              $.ajax(
+                  {
+                      url: "/populatefailedimportlist",
+                      data: {
+                          csrfmiddlewaretoken: '{{ csrf_token }}'
+                      },
+                      type: "POST",
+                      success: function (data) {
+                          $('#failed-list').html(data);
+                      }
+                  }
+              )
+          }
+      )
+  </script>
+{% endfor %}
+
+{% if admin.admingroup %}
+  <input class="btn btn-default" type="submit" value="Update">
+{% endif %}
+
+<a name="ct" class="vert-offset">
+  <h3>CT</h3>
+</a>
+<span id="CT-names"><p>Querying the database for display names, please wait</p></span>
+{% if admin.admingroup %}
+  <input class="btn btn-default" type="submit" value="Update">
+{% endif %}
+
+<a name="fluoro" class="vert-offset">
+  <h3>Fluoroscopy</h3>
+</a>
+<span id="RF-names"><p>Querying the database for display names, please wait</p></span>
+{% if admin.admingroup %}
+  <input class="btn btn-default" type="submit" value="Update">
+{% endif %}
+
+<a name="mammo" class="vert-offset">
+  <h3>Mammography</h3>
+</a>
+<span id="MG-names"><p>Querying the database for display names, please wait</p></span>
+{% if admin.admingroup %}
+  <input class="btn btn-default" type="submit" value="Update">
+{% endif %}
+
+<a name="dx" class="vert-offset">
+  <h3>DX and CR</h3>
+</a>
+<span id="DX-names"><p>Querying the database for display names, please wait</p></span>
+{% if admin.admingroup %}
+  <input class="btn btn-default" type="submit" value="Update">
+{% endif %}
+
+<a name="others" class="vert-offset">
+  <h3>Others</h3>
+</a>
+<span id="OT-names"><p>Querying the database for display names, please wait</p></span>
+{% if admin.admingroup %}
+  <input class="btn btn-default" type="submit" value="Update">
+{% endif %}
+
+  {% if admin.admingroup %}
+  </form>
+{% endif %}
+
+
+<a name="failed" class="vert-offset">
+  <h3>Review studies that failed to import</h3>
+</a>
+<p>These are studies that do not have an entry in the unique_equipment_name table, and therefore the import would have
+aborted early in the process. Members of the admingroup can click through to review and delete these studies.</p>
+<span id="failed-list">
+<ul>
+  <li><a href="/admin/review/failed/CT/">CT</a></li>
+  <li><a href="/admin/review/failed/MG/">Mammography</a></li>
+  <li><a href="/admin/review/failed/DX/">Radiography</a></li>
+  <li><a href="/admin/review/failed/RF/">Fluoro</a></li>
+</ul>
+</span>
+
+
+
+{% endblock %}
