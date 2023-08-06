@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+rabbitmq_metrics_to_graphite/__init__.py
+rabbitmq_metrics_to_graphite.egg-info/PKG-INFO
+rabbitmq_metrics_to_graphite.egg-info/SOURCES.txt
+rabbitmq_metrics_to_graphite.egg-info/dependency_links.txt
+rabbitmq_metrics_to_graphite.egg-info/entry_points.txt
+rabbitmq_metrics_to_graphite.egg-info/requires.txt
+rabbitmq_metrics_to_graphite.egg-info/top_level.txt
+rabbitmq_metrics_to_graphite.egg-info/zip-safe
