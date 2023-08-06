@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: mlrank
+Version: 0.0.1a2
+Summary: Python client to submit output to evaluation server.
+Home-page: https://github.com/nixphix/mlrank
+Author: Prabakaran Kumaresshan
+Author-email: k_prabakaran@hotmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 1 - Planning
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+# mlrank
+Python client for mlrank evaluation server.
+
+
