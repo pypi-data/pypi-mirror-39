@@ -1,0 +1,6 @@
+pandas
+requests>=2.18.4
+docker
+numpy
+passlib
+simplejson==3.16.0
