@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: django-url-checks
+Version: 0.1.0
+Summary: Django checks to ensure valid URL Configurations
+Home-page: https://github.com/jambonsw/django-url-checks
+Author: Andrew Pinkham
+Author-email: code@andrewsforge.com
+Keywords: django,check,url,uri,slash
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Project-URL: Repository, https://github.com/jambonsw/django-url-checks
