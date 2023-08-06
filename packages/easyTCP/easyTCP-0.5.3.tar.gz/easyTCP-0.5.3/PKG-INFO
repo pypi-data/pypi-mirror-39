@@ -1,0 +1,24 @@
+Metadata-Version: 1.2
+Name: easyTCP
+Version: 0.5.3
+Summary: easy&fast way to create asyncronus server&clients
+Home-page: https://github.com/dsal3389/easyTCP
+Author: Daniel Sonbolian
+Author-email: dsal3389@gmail.com
+License: Apache 2.0
+Download-URL: https://github.com/dsal3389/easyTCP.git
+Description: [Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+        
+        # easyTCP
+        python asyncronus server/client with encryption very very easy to use
+        
+        at the current state the module is stable and working fine but there is a lot to add and change
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.4.*
