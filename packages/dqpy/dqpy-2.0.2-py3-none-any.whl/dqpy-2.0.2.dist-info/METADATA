@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: dqpy
+Version: 2.0.2
+Summary: Danqing's shared Python library
+Home-page: https://github.com/danqing/dqpy
+Author: Danqing Liu
+Author-email: code@danqing.io
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: arrow (==0.12.1)
+Requires-Dist: emails (==0.5.15)
+Requires-Dist: PyMySQL (==0.9.2)
+Requires-Dist: redis (==3.0.1)
+Requires-Dist: schematics (==2.1.0)
+Requires-Dist: SQLAlchemy-Utils (==0.33.9)
+Requires-Dist: SQLAlchemy (==1.2.15)
+Requires-Dist: toml (==0.10.0)
+
+This is Danqing's shared Python library, for [the better Danqing](https://www.danqing.co).
+
+This library provides convenient APIs for dealing with SQLAlchemy, Redis, configurations, logging, and many other things. The full documentation can be found at the [documentation site](https://dqpy.danqing.io).
+
+
