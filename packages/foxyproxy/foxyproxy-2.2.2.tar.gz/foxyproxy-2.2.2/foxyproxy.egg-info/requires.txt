@@ -1,0 +1,12 @@
+cryptography>=1.5.2
+idna<2.7,>=2.5
+requests>=2.11.1
+coloredlogs>=9.0
+setuptools>=39.0
+pem
+six
+eventlet
+flask
+flask_sslify
+flask_socketio
+future
