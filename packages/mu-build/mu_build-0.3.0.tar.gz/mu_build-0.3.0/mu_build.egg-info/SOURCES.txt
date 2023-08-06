@@ -1,0 +1,16 @@
+ConfirmVersionAndTag.py
+Git_Repo_Clone_Checkout_Process_mu.PNG
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+MuBuild/ConfigValidator.py
+MuBuild/MuBuild.py
+MuBuild/__init__.py
+MuBuild/tests/test_ConfigValidator.py
+mu_build.egg-info/PKG-INFO
+mu_build.egg-info/SOURCES.txt
+mu_build.egg-info/dependency_links.txt
+mu_build.egg-info/entry_points.txt
+mu_build.egg-info/requires.txt
+mu_build.egg-info/top_level.txt
