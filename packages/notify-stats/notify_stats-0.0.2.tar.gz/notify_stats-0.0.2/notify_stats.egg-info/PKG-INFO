@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: notify-stats
+Version: 0.0.2
+Summary: Send stats to email(s) in HTML format.
+Home-page: UNKNOWN
+Author: Ghayoor
+Author-email: 
+License: UNKNOWN
+Description: Send your scrapy stats to email(s)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
