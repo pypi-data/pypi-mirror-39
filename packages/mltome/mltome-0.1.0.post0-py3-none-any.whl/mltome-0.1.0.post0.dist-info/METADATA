@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: mltome
+Version: 0.1.0.post0
+Summary: A collection of Mtools that builds on Python ML frameworks.
+Home-page: https://github.com/thomasjpfan/mltome
+Author: Thomas Fan
+Author-email: thomasjpfan@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.5
+Requires-Dist: numpy (>=1.13.3)
+Requires-Dist: skorch
+Requires-Dist: tensorboardx
+Provides-Extra: dev
+Requires-Dist: flake8 (>=3.5.0); extra == 'dev'
+Requires-Dist: pytest (>=3.3.2); extra == 'dev'
+Requires-Dist: twine (>=1.9.1); extra == 'dev'
+Requires-Dist: pytest-cov (>=2.5.1); extra == 'dev'
+Requires-Dist: codecov (>=2.0.15); extra == 'dev'
+Requires-Dist: wheel (>=0.32.3); extra == 'dev'
+
+mltome
+======
+
+A collection of ML tools that builds on Python ML frameworks. The API of these tools are **not** stable!
+
+.. image:: https://circleci.com/gh/thomasjpfan/mltome.svg?style=shield
+    :target: https://circleci.com/gh/thomasjpfan/mltome
+    :alt: CI Status
+
+.. image:: https://codecov.io/gh/thomasjpfan/mltome/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/thomasjpfan/mltome
+    :alt: Codecov Status
+
+
+Installation
+------------
+
+You can install mltome directly from pypi:
+
+.. code-block:: bash
+
+    pip install git+https://github.com/thomasjpfan/mltome
+
+- ``mltome.pytorch`` - For installation
+instructions for PyTorch, visit the `PyTorch website
+<http://pytorch.org/>`__.
+
+Development
+-----------
+
+The development version can be installed by running ``make dev``. Then we can lint ``make lint`` and tests by running ``pytest``.
+
+
