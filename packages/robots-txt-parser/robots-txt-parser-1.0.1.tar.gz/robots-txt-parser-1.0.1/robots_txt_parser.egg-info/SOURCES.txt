@@ -1,0 +1,10 @@
+README.md
+robotstxtparser.py
+setup.cfg
+setup.py
+robots_txt_parser.egg-info/PKG-INFO
+robots_txt_parser.egg-info/SOURCES.txt
+robots_txt_parser.egg-info/dependency_links.txt
+robots_txt_parser.egg-info/top_level.txt
+tests/__init__.py
+tests/test_robots.py
