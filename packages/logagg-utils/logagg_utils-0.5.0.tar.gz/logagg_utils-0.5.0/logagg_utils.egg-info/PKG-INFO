@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: logagg-utils
+Version: 0.5.0
+Summary: Commonly re-used logic for loggag kept in one library
+Home-page: https://github.com/deep-compute/logagg/logagg-utils
+Author: Deep Compute, LLC
+Author-email: contact@deepcompute.com
+License: MIT
+Description: UNKNOWN
+Keywords: logagg-utils
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
