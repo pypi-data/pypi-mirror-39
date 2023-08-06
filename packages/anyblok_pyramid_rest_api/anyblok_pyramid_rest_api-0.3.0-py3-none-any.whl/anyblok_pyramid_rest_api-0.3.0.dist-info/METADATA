@@ -1,0 +1,189 @@
+Metadata-Version: 2.1
+Name: anyblok-pyramid-rest-api
+Version: 0.3.0
+Summary: Tools to build rest api's
+Home-page: https://github.com/franckbret/anyblok-pyramid-rest-api
+Author: Franck Bret
+Author-email: franckbret@gmail.com
+License: UNKNOWN
+Keywords: anyblok-pyramid-rest-api
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Framework :: Pyramid
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Server
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Requires-Dist: anyblok
+Requires-Dist: anyblok-pyramid
+Requires-Dist: cornice
+Requires-Dist: anyblok-marshmallow
+
+.. This file is a part of the AnyBlok / Pyramid / REST api project
+..
+..    Copyright (C) 2017 Franck BRET <franckbret@gmail.com>
+..    Copyright (C) 2017 Jean-Sebastien SUZANNE <jssuzanne@anybox.fr>
+..
+.. This Source Code Form is subject to the terms of the Mozilla Public License,
+.. v. 2.0. If a copy of the MPL was not distributed with this file,You can
+.. obtain one at http://mozilla.org/MPL/2.0/.
+
+.. image:: https://travis-ci.org/AnyBlok/anyblok-pyramid-rest-api.svg?branch=master
+    :target: https://travis-ci.org/AnyBlok/anyblok-pyramid-rest-api
+    :alt: Build status
+
+.. image:: https://coveralls.io/repos/github/AnyBlok/anyblok-pyramid-rest-api/badge.svg?branch=master
+    :target: https://coveralls.io/github/AnyBlok/anyblok-pyramid-rest-api?branch=master
+    :alt: Coverage
+
+.. image:: https://img.shields.io/pypi/v/anyblok-pyramid-rest-api.svg
+   :target: https://pypi.python.org/pypi/anyblok-pyramid-rest-api/
+   :alt: Version status
+
+.. image:: https://readthedocs.org/projects/anyblok-pyramid-rest-api/badge/?version=latest
+    :alt: Documentation Status
+    :scale: 100%
+    :target: https://doc.anyblok-pyramid-rest-api.anyblok.org/en/latest/?badge=latest
+
+Anyblok Pyramid Rest Api
+========================
+
+The main idea is to provide facilities for building restful api that interacts with AnyBlok_ models
+through a CRUD like pattern.
+
+As dependecy, it use Cornice_ for its validators and schema abilities and Marshmallow_ for
+schema definition, serialization and deserialization (we have since split this work to
+AnyBlok_Marshmallow_).
+
+* Free software: Mozilla Public License Version 2.0
+* Documentation: https://anyblok-pyramid-rest-api.readthedocs.io
+
+Features
+--------
+
+* Incoming request validation through schema (validation before database query and ability to
+  validate several parts of the request object)
+* CRUD queries always with request.validated data
+* Data deserialization for response through schema
+* Easy CRUD resource declaration (map a model on an endpoint)
+* Automatic schema generation based on models introspection
+* Advanced collection filtering, ordering, paging (querystring validation through schema)
+
+Todo
+----
+
+* Helpers for JsonSchema or Swagger
+* Advanced introspection for api documentation generation
+
+Request lifecyle
+----------------
+
+incoming request ::
+
+    -> validators -> deserializer (json to dict) -> schema load -> request.validated -> request.errors
+
+request.validated ::
+
+    -> crud -> resulting records
+    -> deserializer (records to schema dump)
+    -> serializer (default pyramid / cornice dict to json serializer)
+    -> response
+
+Author
+------
+
+Franck Bret 
+franckbret@gmail.com
+https://github.com/franckbret
+
+Credits
+-------
+
+* Anyblok_
+* Pyramid_
+* Cornice_
+* Marshmallow_
+* AnyBlok_Marshmallow_
+
+.. _Anyblok: https://github.com/AnyBlok/AnyBlok
+.. _Pyramid: https://getpyramid.com
+.. _Cornice: http://cornice.readthedocs.io/
+.. _Marshmallow: http://marshmallow.readthedocs.io/
+.. _AnyBlok_Marshmallow: https://github.com/AnyBlok/AnyBlok_Marshmallow
+
+
+Change Log
+==========
+
+All notable changes to this project will be documented in this file.
+This project adheres to [Semantic Versioning](http://semver.org/).
+
+0.3.0
+-----
+
+Removed
+~~~~~~~
+
+* Compatibility with python 3.3
+
+Fixed
+~~~~~
+* QueryString filters and tags are executed only one time by query
+
+Refactored
+~~~~~~~~~~
+
+* The error field is now the key of the errors description dict (All validation errors messages are now dict)
+
+0.2.2
+-----
+
+Fixed
+~~~~~
+
+* in the context manager to save the error, the registry is now rollbacked
+
+0.2.1 (2019-10-06)
+------------------
+
+Added
+~~~~~
+
+* MANIFEST.in file
+
+Removed
+~~~~~~~
+
+* VERSION file
+
+0.2.0 (2019-10-01)
+------------------
+
+Added
+~~~~~
+
+* **context** key in querystring. The goal is to add some informations 
+  to help custom filter and tag to build their query
+
+Refactored
+~~~~~~~~~~
+
+* Now the querystring desarializer use regex to get the informations
+
+0.1.0 (2018-09-26)
+------------------
+
+Added
+~~~~~
+
+* **CRUDResource** class to define REST api
+* service behaviours
+
+
