@@ -1,0 +1,8 @@
+[distutils.commands]
+build = mo_installer.builder:build
+build_mo = mo_installer.builder:build_mo
+
+[distutils.setup_keywords]
+locale_dir = mo_installer.builder:validate_dir
+locale_src = mo_installer.builder:validate_src
+
