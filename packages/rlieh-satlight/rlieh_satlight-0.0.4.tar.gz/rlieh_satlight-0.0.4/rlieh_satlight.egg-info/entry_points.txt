@@ -1,0 +1,3 @@
+[console_scripts]
+rlieh-satlight = rlieh_satlight.core:main
+

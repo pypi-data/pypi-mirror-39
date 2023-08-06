@@ -1,0 +1,13 @@
+COPYING.md
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+rlieh_satlight/__init__.py
+rlieh_satlight/core.py
+rlieh_satlight.egg-info/PKG-INFO
+rlieh_satlight.egg-info/SOURCES.txt
+rlieh_satlight.egg-info/dependency_links.txt
+rlieh_satlight.egg-info/entry_points.txt
+rlieh_satlight.egg-info/requires.txt
+rlieh_satlight.egg-info/top_level.txt
