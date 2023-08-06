@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: xacc
+Version: 0.1.12
+Summary: Hardware-agnostic quantum programming framework
+Home-page: UNKNOWN
+Author: Alex McCaskey
+Author-email: xacc-dev@eclipse.org
+License: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: all
+Requires-Dist: numpy
+Requires-Dist: ipopo
+Requires-Dist: configparser
+Provides-Extra: all
+Requires-Dist: xacc-rigetti; extra == 'all'
+Requires-Dist: xacc-ibm; extra == 'all'
+Requires-Dist: tnqvm; extra == 'all'
+Requires-Dist: xacc-vqe; extra == 'all'
+
+XACC provides a language and hardware agnostic programming framework for hybrid classical-quantum applications.
+
+
