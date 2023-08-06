@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+pycsoap/__init__.py
+pycsoap/base.py
+pycsoap/msg.py
+pycsoap.egg-info/PKG-INFO
+pycsoap.egg-info/SOURCES.txt
+pycsoap.egg-info/dependency_links.txt
+pycsoap.egg-info/not-zip-safe
+pycsoap.egg-info/requires.txt
+pycsoap.egg-info/top_level.txt
