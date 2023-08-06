@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: lstpy
+Version: 0.0.1
+Summary: Python library to read list file for MPA3 system
+Home-page: http://github.com/fujiisoup/lstpy
+Author: Keisuke Fujii
+Author-email: fujiisoup@gmail.com
+License: BSD 3-clause
+Description: UNKNOWN
+Keywords: data acquisition
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Physics
