@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+sqlitalk/__init__.py
+sqlitalk/client.py
+sqlitalk/server.py
+sqlitalk.egg-info/PKG-INFO
+sqlitalk.egg-info/SOURCES.txt
+sqlitalk.egg-info/dependency_links.txt
+sqlitalk.egg-info/entry_points.txt
+sqlitalk.egg-info/requires.txt
+sqlitalk.egg-info/top_level.txt

@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: sqlitalk
+Version: 0.1.2
+Summary: Server and Client for SQLite3.
+Home-page: https://github.com/yhay81/sqlitalk
+Author: Yusuke Hayashi
+Author-email: yusuke8h@gmail.com
+License: MIT
+Description: 
+        # sqlitalk
+        Server and Client for SQLite3
+        
+        ## Install
+        
+        ```bash
+        pip install sqlitalk
+        ```
+        
+        ```bash
+        
+        ```
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.5.0
+Description-Content-Type: text/markdown

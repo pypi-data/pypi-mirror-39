@@ -1,0 +1,4 @@
+[console_scripts]
+sqlitalk = sqlitalk.client:main
+sqlitalks = sqlitalk.server:main
+
