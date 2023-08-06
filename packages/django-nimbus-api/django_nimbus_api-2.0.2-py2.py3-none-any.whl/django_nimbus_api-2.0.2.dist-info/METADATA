@@ -1,0 +1,75 @@
+Metadata-Version: 2.0
+Name: django-nimbus-api
+Version: 2.0.2
+Summary: django_nimbus_api
+Home-page: https://github.com/williamren
+Author: william
+Author-email: william.ren@live.cn
+License: Apache License 2.0
+Description-Content-Type: UNKNOWN
+Keywords: django_nimbus_api,nimbus,django,api
+Platform: Any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.8
+Classifier: Framework :: Django :: 1.9
+Classifier: Framework :: Django :: 1.10
+Classifier: Framework :: Django :: 1.11
+Requires-Dist: Django
+Requires-Dist: djangorestframework
+Requires-Dist: pycrypto
+Requires-Dist: rncryptor
+Requires-Dist: python-dateutil
+Requires-Dist: nimbus-utils
+
+django_nimbus_api
+=================
+
+A Python Extended for Django.
+
+-  Supports Python 2.7, 3.4 or 3.5+
+-  Free software: Apache License 2.0
+-  On the ``Python Package Index (PyPI)``
+
+Python Package Index (PyPI):
+https://pypi.python.org/pypi/django_nimbus_api/
+
+Install
+-------
+
+Easiest installation is via ``pip``
+
+::
+
+       pip install django_nimbus_api
+
+Quick Usage
+-----------
+
+Copyright and License
+---------------------
+
+Copyright (c) 2001-2017 william.ren@live.cn All rights reserved.
+
+This software is licensed under the Apache License, Version 2.0. The
+Apache License is a well-established open source license, enabling
+collaborative open source software development.
+
+See the “LICENSE” file for the full text of the license terms.
+
+
