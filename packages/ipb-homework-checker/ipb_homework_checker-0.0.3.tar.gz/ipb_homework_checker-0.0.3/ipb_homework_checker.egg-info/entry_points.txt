@@ -1,0 +1,3 @@
+[console_scripts]
+check_homework = ipb_homework_checker.check_homework:main
+
