@@ -1,0 +1,40 @@
+Metadata-Version: 1.2
+Name: rolling-window
+Version: 0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: MIT License
+Description: # Rolling Window
+        ## A generic rolling window function for analytics
+        
+        (To be expanded on)
+        
+        Example of use:
+        
+        ```
+        from dataclasses import dataclass
+        import random
+        
+        @dataclass
+        class PressureData:
+            time: int
+            pressure: float
+        
+        window = RollingWindow(window_type = 'sliding', datastructure=PressureData, sort=False, persistance=False, window_options=window_options)
+        
+        for ii in range(0,N):
+            data = PressureData(time=ii, pressure=round(random.uniform(2,20),2) )
+            await rolling_window.add_data(id = window_id, data=data)
+            data_to_process = rolling_window.send(id=window_id)
+        
+        ```
+        
+        when data is available to the processed 'data_to_process' will return a numpy representation of the data in a structured array
+        
+        ## License
+        
+        This project is licensed under the MIT License
+        
+        
+Platform: UNKNOWN
+Requires-Python: >=3.7
