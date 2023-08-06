@@ -1,0 +1,99 @@
+<h1 tal:replace="structure context/manage_page_header">header</h1>
+<h2 tal:condition="view/support_zmi|nothing"
+    tal:replace="structure context/manage_tabs">manage_tabs</h2>
+
+<main class="container-fluid">
+
+  <tal:comment replace="nothing">
+       the strange `action` determination below should not be necessary
+       almost surely a bug in the modal implementation
+  </tal:comment>
+  <form action="." metal:define-macro="master"
+      tal:attributes="
+        action python: request['URL'][len(request['URL1'])+1:];
+	class view/form_class;
+	"
+      method="post"
+      enctype="multipart/form-data"
+      id="zc.page.browser_form">
+
+    <tal:status define="status view/status" condition="status">
+        <dl class="text-danger"
+            tal:condition="view/errors">
+            <dt i18n:translate="">
+                Error
+            </dt>
+            <dd tal:content="status" />
+        </dl>
+ 
+        <dl class="text-success"
+            tal:condition="not: view/errors">
+            <dt i18n:translate="">
+                Info
+            </dt>
+            <dd tal:content="status" />
+        </dl>
+    </tal:status>
+
+      <h1 
+       i18n:translate=""
+       tal:condition="view/label"
+       tal:content="view/label"
+       >Do something</h1>
+  <p tal:content="view/description|nothing" class="form-help">Description</p>
+  <fieldset
+    tal:define="form_name view/form_name|nothing"
+    tal:omit-tag="not:  form_name">
+    <legend tal:content="form_name"
+            tal:condition="form_name">Form name</legend>
+  <tal:block tal:repeat="widget view/widgets">
+    <div
+         tal:define="description widget/hint;
+                     error widget/error;
+                     normalized_name python:widget.name.replace('.', '-');
+                     error_class python:error and ' is-invalid' or ' '"
+         tal:attributes="id string:formfield-${normalized_name};
+                         class string:form-group row ${error_class}">
+         <div class="col-sm-3">
+          <label tal:condition="widget/label"
+                 tal:attributes="for widget/name">
+            <span i18n:translate=""
+                  tal:content="widget/label">label</span>
+          </label>
+          <span class="fieldRequired" title="Required"
+                tal:condition="widget/required"
+                i18n:translate="label_required"
+                i18n:attributes="title title_required;">
+            (Required)
+          </span>
+	  </div>
+          <div class="col-sm-9 widget" tal:content="structure widget" />
+          <div class="col-sm-12">
+	    <div class="form-help"
+               i18n:translate=""
+               tal:content="description"
+               tal:condition="description"
+               >field description</div>
+	    <tal:comment tal:condition="nothing">
+	      <!-- The structure keyword is necessary as Invariant strings have a
+	           span tag. It is often useful to set Invariant errors on the
+		   fields they refer to. -->
+	    </tal:comment>
+            <div class="fieldErrorBox" tal:content="structure error" tal:condition="error">
+              The Error
+            </div>
+	  </div>
+    </div>
+  </tal:block>
+  <div id="actionsView" class="form-group row zmi-controls">
+    <span class="actionButtons"
+          tal:condition="view/availableActions">
+      <input tal:repeat="action view/actions"
+             tal:replace="structure action/render"
+             />
+    </span>
+  </div>
+  </fieldset>
+  </form>
+</main>
+<h1 tal:replace="structure context/manage_page_footer">Footer</h1>
