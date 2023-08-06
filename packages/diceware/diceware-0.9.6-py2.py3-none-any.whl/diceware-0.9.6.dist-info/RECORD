@@ -1,0 +1,17 @@
+diceware/__init__.py,sha256=YQ4Lcz9OSErFosufOV4N02Kw4ZVScPFNI0o6TtKpZeE,8070
+diceware/config.py,sha256=tFkjIcuoin2ewID97FzsD3AVtJmFKUY0a_pbXVt9qXo,3004
+diceware/logger.py,sha256=GHRJ2lGuUTttogA_pFoqgxoq_6rzDU4ZdHbWeASMXVM,2332
+diceware/random_sources.py,sha256=knDJ2U3jb1-jVSPVtfUTy7S3nhpmbES0dmI6pGStbrA,7170
+diceware/wordlist.py,sha256=15oKovT2sNrjWvUCRpWKJZvHOMGR3tC9YhEDc72RGfI,5889
+diceware/wordlists/wordlist_en.txt,sha256=_tU4UNtThH0xtKBwr7ShnVIGdYcKPI6eWtJV2YXyTUI,41988
+diceware/wordlists/wordlist_en_8k.txt,sha256=_tU4UNtThH0xtKBwr7ShnVIGdYcKPI6eWtJV2YXyTUI,41988
+diceware/wordlists/wordlist_en_eff.txt,sha256=rd01U2URWXoC-gqf8eUoRne4iDuD6YbkPxWj25lrkD4,108800
+diceware/wordlists/wordlist_en_orig.asc,sha256=PNYWSpnpU4H4YgrseCqTNUW81YM_ozHSZ6aCn2ZlJW4,87757
+diceware/wordlists/wordlist_en_securedrop.asc,sha256=wQWy_JTBJFEXSQG1vJto_WzUY-0r89oL4zXGyDwPST0,48736
+diceware-0.9.6.dist-info/LICENSE,sha256=EqxQR_KvBSLwZ5ixWJ_8RZm8KckflU14dOAyBjTnd8A,35122
+diceware-0.9.6.dist-info/METADATA,sha256=C_aIyxNu0VkGaSq7TCffyJ3pCKDAnWop2CLVt_FGsp0,23993
+diceware-0.9.6.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+diceware-0.9.6.dist-info/entry_points.txt,sha256=DEOAOX6CstzSd5Lnl7hSgB1FkU7lWFgV612yIRXWPXA,179
+diceware-0.9.6.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+diceware-0.9.6.dist-info/top_level.txt,sha256=hbBUz4P2SXeBPA-LiOV8jfWdDQaurzzD0t-fuqOWuII,9
+diceware-0.9.6.dist-info/RECORD,,
