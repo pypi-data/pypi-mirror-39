@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: graphRLnx
+Version: 0.0.3
+Summary: a directed acyclic graph environment for use with openAI gym, with a networkX backend
+Home-page: https://github.com/luludarcy/graphRLnx
+Author: Laura D'Arcy
+Author-email: luludarcy@gmail.com
+License: UNKNOWN
+Description: # graphRL with NetworkX
+        
+        
+        
+        This repository contains a PIP package which is an OpenAI environment for simulating directed acyclic graphs for workflow scheduling, using a NetworkX backend.
+        
+        
+        ## Installation
+        
+        install this package via
+        
+        ```bash
+        pip3 install graphRLnx
+        ```
+        
+        ## Usage
+        
+        ```python
+        import gym
+        import graphRLnx
+        
+        env = gym.make('graphRL-v0')
+        ```
+        
+        
+        ## The Environment
+        
+        Tbc.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
