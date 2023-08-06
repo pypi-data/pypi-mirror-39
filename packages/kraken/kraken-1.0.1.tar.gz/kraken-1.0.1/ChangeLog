@@ -1,0 +1,60 @@
+CHANGES
+=======
+
+1.0.1
+-----
+
+* Temporarily disable script detection
+
+1.0.0
+-----
+
+* for some reason the openmp thread setter doesn't work in tests
+* more travis stuff
+* Add channels to travis
+* quiet down travis script
+* Update README for 1.0 release
+* rudimentary cli tests
+* skip existing distributions on pypi
+* Add pytorch 1.0.0 to requirements file
+* bump pytorch release to 1.0.0
+* fix typo in parallell loading
+* Add parallel data loading of non-preloaded sets
+* autoscale early stopping
+* lower min-delta in early stopping again
+* Fix python version in conda env to 3.6
+* Restore model location if saving fails
+* fix crash on infinite loss debug message
+* correctly encode training set in \`add\` mode
+* adjust train stopper tests to new behavior
+* disable script detection by default
+* partial early stopping fix
+* final part of sub-epoch saving/testing and stopping
+* allow sub-epoch testing/saving intervals
+* Add option for external segmentation to ketos transcribe
+* reorder code points in \`test\` command
+* apparently i'm being paid by psl not ephe
+* decrease min-delta in early stopping to 0.002
+* correct typo in log message
+* fix wildly broken bounding boxes in recognition
+* Helper scrpit for marking up character bounding boxes
+* autoescape jinja2 templates
+* Add master branch installation instructions to readme
+* updated training manual
+* fix make\_printable for empty string
+* generic make\_printable function
+* typing extensions
+* print warning if no\_segmentation mode is enabled but segmentation is provided through any other option
+* add no\_segmentation mode to ocr subcommand
+* Add no\_segmentation mode to ocr subcommand
+* add conda env files
+* update documentation for \`ketos test\` command
+* fix test in fixed epoch trainer
+* Add batch input tooling to kraken cli command
+* add ISRI-style accuracy report
+* global alignment and per-script confusion matrix code
+* move it to correct location
+* script database as of now
+* generate\_scripts.py
+* also save result of first epoch
+* Print warning for invalid entries in manifest files
