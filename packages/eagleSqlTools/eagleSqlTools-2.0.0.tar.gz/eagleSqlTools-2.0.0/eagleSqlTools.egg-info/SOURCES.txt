@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+eagleSqlTools/VERSION
+eagleSqlTools/__init__.py
+eagleSqlTools/_eagleSqlTools.py
+eagleSqlTools/_version.py
+eagleSqlTools.egg-info/PKG-INFO
+eagleSqlTools.egg-info/SOURCES.txt
+eagleSqlTools.egg-info/dependency_links.txt
+eagleSqlTools.egg-info/not-zip-safe
+eagleSqlTools.egg-info/requires.txt
+eagleSqlTools.egg-info/top_level.txt
