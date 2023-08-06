@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+VayDiff/BasicMath.py
+VayDiff/VayDiff.py
+VayDiff/__init__.py
+VayDiff.egg-info/PKG-INFO
+VayDiff.egg-info/SOURCES.txt
+VayDiff.egg-info/dependency_links.txt
+VayDiff.egg-info/top_level.txt
+VayDiff/tests/__init__.py
+VayDiff/tests/tests.py
+VayDiff/tests/tests_jacobian.py
+VayDiff/tests/tests_vector.py
