@@ -1,0 +1,10 @@
+[package]
+authors = ["Messense Lv <messense@icloud.com>"]
+name = "is-minified-js"
+version = "0.2.0"
+
+[dependencies]
+might-be-minified = "0.2.1"
+
+[lib]
+crate-type = ["cdylib"]

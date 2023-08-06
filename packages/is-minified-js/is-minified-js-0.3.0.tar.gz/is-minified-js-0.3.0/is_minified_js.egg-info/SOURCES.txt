@@ -1,0 +1,16 @@
+Cargo.toml
+LICENSE
+MANIFEST.in
+README.md
+is_minified_js.h
+setup.py
+is_minified_js/__init__.py
+is_minified_js/_native.py
+is_minified_js/_native__ffi.py
+is_minified_js.egg-info/PKG-INFO
+is_minified_js.egg-info/SOURCES.txt
+is_minified_js.egg-info/dependency_links.txt
+is_minified_js.egg-info/not-zip-safe
+is_minified_js.egg-info/requires.txt
+is_minified_js.egg-info/top_level.txt
+src/lib.rs
