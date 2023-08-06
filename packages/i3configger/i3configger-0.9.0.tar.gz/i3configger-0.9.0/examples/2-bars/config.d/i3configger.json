@@ -1,0 +1,24 @@
+{
+  "bars": {
+    "defaults": {
+      "target": "..",
+      "template": "tpl",
+      "mode": "dock"
+    },
+    "targets": {
+      "laptop": {
+        "output": "DP-3",
+        "position": "bottom",
+        "select": "full"
+      },
+      "external": {
+        "output": "DP-4",
+        "position": "top",
+        "select": "clock"
+      }
+    }
+  },
+  "main": {
+    "target": "../config"
+  }
+}

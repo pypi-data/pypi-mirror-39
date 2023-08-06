@@ -1,0 +1,10 @@
+###############################################################################
+# Built by i3configger /from/some/directory/who/cares  (some time after 1972) #
+###############################################################################
+
+### some-key.value2.conf ###
+# This is integrated, because it had been selected by a remembered message.
+
+# var will also be replaced here - although this is just a comment: default
+default_orientation horizontal
+workspace_layout default

@@ -1,0 +1,13 @@
+{
+  "bars": {
+    "defaults": {
+      "mode": "dock"
+    },
+    "targets": {
+      "laptop": {
+        "output": "DP-3",
+        "position": "bottom"
+      }
+    }
+  }
+}

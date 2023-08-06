@@ -1,0 +1,9 @@
+{
+  "bars": {
+    "defaults": {},
+    "targets": {}
+  },
+  "main": {
+    "target": "../config"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "bars": {
+    "defaults": {
+      "target": "..",
+      "template": "tpl",
+      "select": "default"
+    },
+    "targets": {}
+  },
+  "main": {
+    "i3_refresh_msg": "reload",
+    "status_command": "i3status",
+    "log": null,
+    "notify": false,
+    "target": "../config"
+  }
+}

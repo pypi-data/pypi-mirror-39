@@ -1,0 +1,17 @@
+psutil
+python-daemon
+
+[docs]
+mkdocs
+mkdocs-material
+
+[lint]
+pre-commit
+
+[release]
+plumbum
+twine
+readme_renderer[md]
+
+[test]
+pytest

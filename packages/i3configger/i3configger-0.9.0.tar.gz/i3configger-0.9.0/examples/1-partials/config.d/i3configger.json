@@ -1,0 +1,13 @@
+{
+  "bars": {
+    "defaults": {
+      "target": "..",
+      "template": "tpl"
+    },
+    "targets": {
+      "single-bar": {
+        "select": "default"
+      }
+    }
+  }
+}
