@@ -1,0 +1,10 @@
+README.md
+setup.py
+pychkari/__init__.py
+pychkari/container.py
+pychkari/dependencymanager.py
+pychkari/errors.py
+pychkari.egg-info/PKG-INFO
+pychkari.egg-info/SOURCES.txt
+pychkari.egg-info/dependency_links.txt
+pychkari.egg-info/top_level.txt
