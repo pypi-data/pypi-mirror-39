@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: torchrecord
+Version: 0.1.1
+Summary: TorchRecord can merge the small files into one or multiple big file to improve the reading performance for pytorch training.
+Home-page: https://github.com/GeoffreyChen777/TorchRecord
+Author: Geoffrey CHen
+Author-email: geoffreychen777@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: lmdb
+Requires-Dist: protobuf
+Requires-Dist: pillow-simd
+
+UNKNOWN
+
+
