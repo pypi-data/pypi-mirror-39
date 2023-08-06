@@ -1,0 +1,15 @@
+monads/__init__.py,sha256=r48hPbjI9Htwr5X-kzzmS-g7yEOcHCn3xa4HIVu2A6s,217
+monads/applicative.py,sha256=RgBM9LqyYQgyhkEr1owQK8-HBXf2z3omcEu_9yYjGo0,625
+monads/functor.py,sha256=0NNFW5JJEshZa9DhPL-uqLiA5-cfBi1Xbrp7vJGDoVw,295
+monads/list.py,sha256=s0oP29tWQGD_rmbFbElvEPGITHWaIdzSl4T33fmEyh4,1027
+monads/maybe.py,sha256=GQbQmxACWgGiZraRwNCeiG9m8np3GMZYp_N254y4cwY,3487
+monads/monad.py,sha256=UO6Rida0cCQGK8BwyFYgMkCtzN_kYGLQOuixNcMZMsE,577
+monads/monoid.py,sha256=wgyB0BfzSx-q7uWbQa9gPuWBTr2KDszNURJyRZ-dt6M,1918
+monads/py.typed,sha256=8PjyZ1aVoQpRVvt71muvuq5qE-jTFZkK-GLHkhdebmc,26
+monads/reader.py,sha256=sEYh3E2I6ICqD5JIqu0tO-SJerXQ7QKE79Mbh56g6eA,1885
+monads/result.py,sha256=rlqjvFmMaD6KJhwzhk4a188E90ONSbxRM8j9M_bsmVY,2857
+typesafe_monads-0.4.dist-info/LICENSE,sha256=z8vU3POeQaGqq-aNIGdja9ZfVGuWpfN0ZVTR7lFyUs4,1069
+typesafe_monads-0.4.dist-info/METADATA,sha256=ZDfVhIvKZZY0hNNNxvfg3gNMCR-mxpR2i1oXdcbfl5c,1541
+typesafe_monads-0.4.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+typesafe_monads-0.4.dist-info/top_level.txt,sha256=R2DeUjfIvNDKrSjJ8KdqWKx85tLqF2EO8BfNfatKkWQ,7
+typesafe_monads-0.4.dist-info/RECORD,,
