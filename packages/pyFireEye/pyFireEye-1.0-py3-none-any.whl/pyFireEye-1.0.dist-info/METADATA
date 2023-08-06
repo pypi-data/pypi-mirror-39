@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pyFireEye
+Version: 1.0
+Summary: Python API bindings for FireEye Products
+Home-page: https://gitlab.com/EmersonElectricCo/pyFireEye
+Author: Isaiah Eichen, Grant Steiner, Timothy Lemm
+Author-email: timothy.lemm@emerson.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: requests
+
+UNKNOWN
+
+
