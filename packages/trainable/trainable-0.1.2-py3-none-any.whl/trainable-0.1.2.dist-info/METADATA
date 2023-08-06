@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: trainable
+Version: 0.1.2
+Summary: The flexible training toolbox
+Home-page: UNKNOWN
+Author: Jeff Hilton
+Author-email: jeffhilton.code@gmail.com
+License: UNKNOWN
+Keywords: deep-learning dnn training torch
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: tqdm
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+
+# Trainable: The Flexible PyTorch Training Toolbox
+
+Trainable is a dead simple interface for training your pytorch models, and yet allows for a surpizing degree of 
+flexibility. 
+
+## 1. Installation
+```
+pip install trainable
+```
+
+
+
+
+
