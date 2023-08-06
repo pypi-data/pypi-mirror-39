@@ -1,0 +1,3 @@
+[console_scripts]
+pyalgotrade_tushare = pyalgotrade_tushare.cli:main
+
