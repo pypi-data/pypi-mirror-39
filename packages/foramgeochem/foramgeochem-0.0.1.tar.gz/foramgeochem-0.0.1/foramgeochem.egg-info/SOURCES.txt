@@ -1,0 +1,15 @@
+README.md
+setup.py
+foramgeochem/__init__.py
+foramgeochem/general.py
+foramgeochem/helpers.py
+foramgeochem.egg-info/PKG-INFO
+foramgeochem.egg-info/SOURCES.txt
+foramgeochem.egg-info/dependency_links.txt
+foramgeochem.egg-info/requires.txt
+foramgeochem.egg-info/top_level.txt
+foramgeochem.egg-info/zip-safe
+foramgeochem/mgca/__init__.py
+foramgeochem/mgca/converters.py
+foramgeochem/mgca/tfr.py
+foramgeochem/resources/params.json
