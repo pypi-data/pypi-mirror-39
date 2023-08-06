@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: astroslam
+Version: 1.2018.1221.0
+Summary: A forward model using SVR to estimate stellar parameters from spectra.
+Home-page: http://github.com/hypergravity/astroslam
+Author: Bo Zhang
+Author-email: bozhang@nao.cas.cn
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Requires: numpy
+Requires: scipy
+Requires: matplotlib
+Requires: astropy
+Requires: sklearn
+Requires: joblib
+Requires: pandas
+Requires: emcee
+Requires: lmfit
+Requires: ipyparallel
+Description-Content-Type: text/markdown
+
+## SLAM
+
+Stellar LAbel Machine (SLAM) is a forward model to estimate stellar parameters (e.g., Teff, logg, [Fe/H] and chemical abundances).
+It is based on Support Vector Regression (SVR), which in essential is a non-parametric regression method.
+
+## Author
+
+Bo Zhang (bozhang@nao.cas.cn)
+
+## Home page
+
+- [https://github.com/hypergravity/astroslam](https://github.com/hypergravity/astroslam)
+- [https://pypi.org/project/astroslam/](https://pypi.org/project/astroslam/)
+
+## Install
+- for the latest **stable** version:
+  - `pip install astroslam`
+- for the latest **github** version:
+  - `pip install git+git://github.com/hypergravity/astroslam`
+
+
+## Requirements
+
+- numpy
+- scipy
+- matplotlib
+- astropy
+- sklearn
+- joblib
+- pandas
+- emcee
+
+
