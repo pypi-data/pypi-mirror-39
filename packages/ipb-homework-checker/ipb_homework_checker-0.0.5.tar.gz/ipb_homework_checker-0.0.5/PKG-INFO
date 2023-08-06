@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: ipb_homework_checker
+Version: 0.0.5
+Summary: A generic homework checker.
+Home-page: https://github.com/PRBonn/ipb_homework_checker
+Author: Igor Bogoslavskyi
+Author-email: igor.bogoslavskyi@uni-bonn.de
+Maintainer: Igor Bogoslavskyi
+Maintainer-email: igor.bogoslavskyi@uni-bonn.de
+License: Apache 2.0
+Download-URL: https://github.com/PRBonn/ipb_homework_checker/tarball/0.0.5
+Description: This is a homework checker. It can run various types of
+            code, such as Python, Bash and C++ and compare the output with expected one
+            defined in a yaml receipt. It is also able to run Google tests. As a result
+            it generates a markdown table that is suited for an upload to a students
+            repo.
+Keywords: ipb,homework-checker
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
