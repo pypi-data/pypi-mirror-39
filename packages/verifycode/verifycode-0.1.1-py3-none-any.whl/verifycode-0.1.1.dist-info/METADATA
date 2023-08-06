@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: verifycode
+Version: 0.1.1
+Summary: a library for generate verificatio code png
+Home-page: https://github.com/yeqown/verification_code
+Author: Yeqown
+Author-email: yeqown@gmail.com
+License: MIT License
+Keywords: verificationcode
+Platform: OSX
+Requires-Dist: pillow
+
+UNKNOWN
+
+
