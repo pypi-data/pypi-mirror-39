@@ -1,0 +1,11 @@
+README.md
+setup.py
+papr/__init__.py
+papr/__main__.py
+papr/cli.py
+papr.egg-info/PKG-INFO
+papr.egg-info/SOURCES.txt
+papr.egg-info/dependency_links.txt
+papr.egg-info/entry_points.txt
+papr.egg-info/requires.txt
+papr.egg-info/top_level.txt
