@@ -1,0 +1,6 @@
+pytest
+pytest-flake8
+mock
+testpath
+pytoml
+setuptools>=30
