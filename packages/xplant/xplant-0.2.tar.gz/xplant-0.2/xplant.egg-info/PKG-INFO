@@ -1,0 +1,75 @@
+Metadata-Version: 1.2
+Name: xplant
+Version: 0.2
+Summary: Tree model markup builder.
+Home-page: https://gitlab.com/kamichal/xplant
+Author: Michal Kaczmarczyk
+Author-email: michal.s.kaczmarczyk@gmail.com
+Maintainer: Michal Kaczmarczyk
+Maintainer-email: michal.s.kaczmarczyk@gmail.com
+License: MIT license
+Description: XPLANT
+        ======
+        
+        Pure pythonic tree structure model builder.
+        
+        - Enter tree nodes with python's contextmanagers.
+        - Cast the tree to given markup (basically it's suited for XML).
+        - Enjoy 1:1 translation from python to given markup.
+        
+        Example
+        --------
+        ::
+        
+            from xplant.xml import XmlPlant
+        
+            x = XmlPlant()
+            with x.node("section_a", attribute_1=1):
+                with x.node("nested_1", empty=True):
+                    pass
+                with x.node("nested_2"):
+                    x.comment("Can handle also comments.")
+                    for number in range(3):
+                        x.leaf("a number {:02}".format(number), num=number)
+        
+            print(x)
+        
+        Will give::
+        
+            <section_a attribute_1="1">
+              <nested_1 empty="true"></nested_1>
+              <nested_2>
+                <!-- Can handle also comments. -->
+                <a number 00 num="0" />
+                <a number 01 num="1" />
+                <a number 02 num="2" />
+              </nested_2>
+            </section_a>
+        
+Keywords: pythonic xml builder generator markup yaml
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Documentation
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Browsers
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License

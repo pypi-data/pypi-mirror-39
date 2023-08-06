@@ -1,0 +1,14 @@
+recursive-include xplant *.py
+include setup.py
+include requirements.txt
+include LICENSE
+include README.rst
+include CHANGELOG.md
+
+exclude .coveragerc
+exclude distribute_info.txt
+exclude tests
+exclude tox.ini
+exclude .gitlab-ci.yml
+
+recursive-exclude tests *
