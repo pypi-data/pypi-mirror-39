@@ -1,0 +1,15 @@
+shepherd/__init__.py,sha256=3XixHyHxRLi8uCJJGhgLf-Jb2dhsD18vEMVwO1zlM2Y,23
+shepherd/api.py,sha256=hRs7xJfGJAWwJ2H5DspcZm-ToOg5cx8QeZIrv_iGZ78,5237
+shepherd/network_pool.py,sha256=79vFIuIJDtYs3l17Tiw6_Lnlg02huug7otdjtrVocOM,2854
+shepherd/pool.py,sha256=4RrTpQ3aD5jXvwA47AK3slvQfOZKjQxh53Ill7dPecY,13798
+shepherd/schema.py,sha256=-bE-5yHheiaP4ia1BPHJQ7x8GMrtK7RznJoLwoAzGvE,1657
+shepherd/shepherd.py,sha256=T2Rf8JoRDcopagm1jSk4V5mbwXIUwO5mEvkJH6F6btg,22164
+shepherd/wsgi.py,sha256=VVxTb7f4_RAC5quopbCAZrocvMRQEH8_3ZMCdlT0gN4,4628
+shepherd-1.0.1.dist-info/DESCRIPTION.rst,sha256=OeuVa9f94b9dRsnKRc5-Ciy95xiyp_bFP9KwnD4AOpo,1508
+shepherd-1.0.1.dist-info/METADATA,sha256=IG6_6fRjR9kPUgSErGG68zdgisbtlYsFmMnSVmAzOzc,2354
+shepherd-1.0.1.dist-info/RECORD,,
+shepherd-1.0.1.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+shepherd-1.0.1.dist-info/entry_points.txt,sha256=uJW6vlMaa9-9d6xNM_Y_93BSumkOv1QVo2hqnHtBEsE,31
+shepherd-1.0.1.dist-info/metadata.json,sha256=1_MaJ6BuagmET781O4q6Vh6rGlI0CwP21HQ1FTnSATI,1060
+shepherd-1.0.1.dist-info/top_level.txt,sha256=bp0tmLpyQSEclAHOfG3ScijK8XAq2hOkSB8xZ7jCwVU,9
+shepherd-1.0.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
