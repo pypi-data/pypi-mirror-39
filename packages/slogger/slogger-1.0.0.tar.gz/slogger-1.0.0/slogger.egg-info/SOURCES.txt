@@ -1,0 +1,11 @@
+README.md
+setup.py
+slogger/__init__.py
+slogger/handler.py
+slogger/log.py
+slogger/util.py
+slogger.egg-info/PKG-INFO
+slogger.egg-info/SOURCES.txt
+slogger.egg-info/dependency_links.txt
+slogger.egg-info/requires.txt
+slogger.egg-info/top_level.txt
