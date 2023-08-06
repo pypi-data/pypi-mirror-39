@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+set -e
+
+if [ -f /var/utils.sh ]; then
+  . /var/utils.sh # import helper functions
+fi
+
+function __trap_clean_up {
+  set +e
+  gcloud pubsub topics delete {{ vm_name }} --quiet
+  gcloud pubsub subscriptions delete {{ vm_name }} --quiet
+  gcloud compute instance-groups managed delete {{ vm_name }} --quiet --zone {{ zone }}
+}
+
+trap __trap_clean_up EXIT
+
+set +e
+docker run {% if privileged %}--privileged{% endif %} --env-file /var/clash.env -v /var/script.sh:/var/script.sh $target_docker_mounts --rm --log-driver=gcplogs --name=clash-runner {{ image }} bash /var/script.sh
+success=$?
+set -e
+
+gcloud pubsub topics publish {{ vm_name }} --message="{\"status\": $success}"
