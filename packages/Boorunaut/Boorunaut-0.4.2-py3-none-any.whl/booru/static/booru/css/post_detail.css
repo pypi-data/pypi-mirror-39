@@ -1,0 +1,26 @@
+.tag-table{
+    table-layout: fixed;
+}
+
+.tag-wiki-link{
+    width: 1em;
+}
+
+.tag-label{
+    word-wrap: break-word;
+}
+
+.tag-count{
+    word-wrap: break-word;
+    text-align: right;
+    width: 3em;
+}
+
+.borderless th, .borderless td{
+    border-top: none !important;
+    padding: 0px;
+}
+
+.comment-border{
+    background-color: ghostwhite;
+}

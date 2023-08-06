@@ -1,0 +1,110 @@
+{% extends 'booru/base.html' %}
+
+{% block css %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'booru/css/post_detail.css' %}"/>
+    {% endblock %}
+
+{% block scripts %}
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+{% endblock %}
+
+{% block ld_json %}
+<link href="{{request.get_host}}{{request.path}}" rel="canonical" />
+{% endblock %}
+
+
+{% block body %}
+    {% load number_converter %}
+    <div class="row">
+        <aside id="sidebar" class="col-md-3 col">
+            <div id="tag-tables" class="col">
+                <div id="tag-table-general" class="mb-3">
+                    <div class="row col">
+                        <span class="font-weight-bold">Tags</span>
+                    </div>
+                    <table class="tag-table table-sm table borderless">
+                        <tbody>
+                            {% for tag in tags_list %}
+                            <tr>
+                                <th class="tag-wiki-link" scope="row">
+                                    <a style="color: #{{tag.category.color}};" href="{% url 'booru:tag_detail' tag.id %}">
+                                        ?
+                                    </a>
+                                </th>
+                                <td class="tag-label">
+                                    <a style="color: #{{tag.category.color}};" href="{{ tag.get_search_url }}">{{tag}}</a>
+                                </td>
+                                <td class="tag-count">{{tag.get_count|number_converter}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </aside>
+        <section id="post" class="col">
+            {% if is_safe_only %}
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="alert alert-primary pt-1 pb-1" role="alert">
+                        <small>
+                            <a href="{% url 'account:settings' %}" data-toggle="tooltip" title="Only safe posts will be shown. Search with any tags or disable it in your account.">
+                                <i class="far fa-eye"></i> Safe Only Listing: On
+                            </a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            <div class="row">
+                <main class="col">
+                    <div class="row">
+                        {% for post in posts %}
+                        <a class="mr-3 mb-3" href="{{post.get_absolute_url}}"><img src="{{post.preview.url}}" alt="{{ post.tags_mirror }}" title="{{ post.tags_mirror }}"></a>
+                        {% endfor %}
+                    </div>
+                </main>
+            </div>
+            <div class="row">
+                <nav aria-label="..." class="col mt-5">
+                    <ul class="pagination">
+                        {% if page.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link" href="{% url 'booru:post_page_detail' page.previous_page_number %}" tabindex="-1">Previous</a>
+                            </li>
+                        {% else %}
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                        {% endif %}
+                        {% for i in page.paginator.page_range %}
+                            {% if page.number == i %}
+                            <li class="page-item active">
+                                <a class="page-link" href="{% url 'booru:post_page_detail' i %}">{{i}} <span class="sr-only">(current)</span></a>
+                            </li>
+                            {% elif i > page.number|add:'-3' and i < page.number|add:'3' %}
+                            <li class="page-item">
+                                <a class="page-link" href="{% url 'booru:post_page_detail' i %}">{{i}}</a>
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                        {% if page.has_next %}
+                            <li class="page-item">
+                                <a class="page-link" href="{% url 'booru:post_page_detail' page.next_page_number %}">Next</a>
+                            </li>
+                        {% else %}
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </div>
+{% endblock %}
