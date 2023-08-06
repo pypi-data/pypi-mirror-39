@@ -1,0 +1,16 @@
+access/__init__.py,sha256=lx_lawkU0pQwq5Urkp21axRRbMNCMyL3fN4j_IULaEo,24
+access/decorators.py,sha256=nZXGlREL1Wtk3n1Mq5T1LNmbY9x7NdEgro5FfKUKsHg,457
+access/factories.py,sha256=EUK8Kt_CEt9QE1M2Zw_Nbr6KSrWlbs7eTf06NAXAAxc,527
+access/http.py,sha256=83SdlnB1ozbBt-A2jB38DKUV02V6HXdDTPWStn9AyVc,363
+access/requirements.py,sha256=qecPd7y3ew_4kuvoOctiM1CTZ_MQCjeIZGGsqq21erM,2801
+access/views.py,sha256=5CacPn0hChi4oVO-S3EW9EhYUOnAn-Bs7Bm5TcxPYxQ,1070
+access/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+access/tests/test_decorators.py,sha256=bQgfxVF-CJkP1HPwajNziL5wbiuw-Cgr6C8oOYcxvMU,2519
+access/tests/test_requirements.py,sha256=mwJQBbsmLMYairp-Ui-rL8XvaKLyNsSQ0Qr1y3RRy34,4339
+access/tests/test_views.py,sha256=6lHg13KQMC296T-kXQFd79BKub3y8O1964fVLKuXIqk,1835
+access/tests/utils.py,sha256=Kes7hhAKVbg9nJX9TRmxgzGp0VoCvUcw99vBZMtjzrY,448
+django_access_tools-2.0.0.dist-info/LICENSE,sha256=iVC4nAzBLHKC6Mqi08_OosYwryfSewfeiBGcsgNnMII,1115
+django_access_tools-2.0.0.dist-info/METADATA,sha256=Q2_niRfSs7gBSdkYYYX4fTw6ztDcW544FN7KQhX1mCM,669
+django_access_tools-2.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+django_access_tools-2.0.0.dist-info/top_level.txt,sha256=dKU9Xvk9JgcB3ufviuSVfTY6KZ2eihlcvYerY_-00OQ,7
+django_access_tools-2.0.0.dist-info/RECORD,,
