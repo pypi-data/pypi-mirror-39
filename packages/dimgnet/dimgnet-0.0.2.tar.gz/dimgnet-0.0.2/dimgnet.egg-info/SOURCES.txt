@@ -1,0 +1,11 @@
+README.md
+setup.py
+dimgnet/__init__.py
+dimgnet/bar.py
+dimgnet/download_img.py
+dimgnet/progress.py
+dimgnet.egg-info/PKG-INFO
+dimgnet.egg-info/SOURCES.txt
+dimgnet.egg-info/dependency_links.txt
+dimgnet.egg-info/entry_points.txt
+dimgnet.egg-info/top_level.txt
