@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: django-url-checks
+Version: 0.1.0
+Summary: Django checks to ensure valid URL Configurations
+Home-page: https://github.com/jambonsw/django-url-checks
+License: BSD-2-Clause
+Keywords: django,check,url,uri,slash
+Author: Andrew Pinkham
+Author-email: code@andrewsforge.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Project-URL: Repository, https://github.com/jambonsw/django-url-checks
+Description-Content-Type: text/markdown
+
+# Read Me
+
+Even with proper testing, it's easy to accidentally forget a slash at
+the end of a URI path in Django's URL configuration, which in turn can
+lead to unexpected behavior. This Django check helps follow a
+belt-and-braces approach and will verify that all paths (endpoints and
+includes) end with a slash (or, for regular expressions, `"/$"`).
+
+I am open to suggestions on improving the check. Please open an issue to
+do so.
+
