@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: nsq-api
+Version: 0.0.2
+Summary: API to read logs from NSQ for logagg
+Home-page: https://github.com/deep-compute/nsq-api
+Author: Deep Compute, LLC
+Author-email: contact@deepcompute.com
+License: MIT
+Keywords: nsq-api
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: tornado
+Requires-Dist: basescript (==0.2.9)
+Requires-Dist: nsq-py (==0.1.10)
+Requires-Dist: logagg-utils (==0.5.2)
+
+UNKNOWN
+
+
