@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: itglue
+Version: 0.1.3
+Summary: A simple wrapper for the IT Glue API
+Home-page: http://github.com/b-loyola/itglue-py
+Author: Ben Loyola
+Author-email: bloyola@itglue.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: requests
+
+UNKNOWN
+
+
