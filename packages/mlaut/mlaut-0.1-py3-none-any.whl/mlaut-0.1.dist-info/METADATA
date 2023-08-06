@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: mlaut
+Version: 0.1
+Summary: Automation of large-scale training, evaluation and benchmarking of machine learning algorithms.
+Home-page: https://viktorkaz.github.io/
+Author: Viktor Kazakov
+Author-email: viktor.kazakov.18@ucl.ac.uk
+License: BDS
+Platform: UNKNOWN
+Requires-Dist: Orange3 (>=3.18.0)
+Requires-Dist: h5py (>=2.8pandas>=0.21)
+Requires-Dist: matplotlib (>=2.1.0)
+Requires-Dist: numpy (>=1.7)
+Requires-Dist: scikit-learn (>=0.20.1)
+Requires-Dist: scikit-posthocs (>=0.3.4)
+Requires-Dist: scipy (>=1.0.0)
+Requires-Dist: tables (>=3.4.2)
+Requires-Dist: tensorflow (>=1.5.0)
+
+UNKNOWN
+
+
