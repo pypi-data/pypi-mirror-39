@@ -1,0 +1,2 @@
+SEED = 2
+SCORE_SEED = 10
