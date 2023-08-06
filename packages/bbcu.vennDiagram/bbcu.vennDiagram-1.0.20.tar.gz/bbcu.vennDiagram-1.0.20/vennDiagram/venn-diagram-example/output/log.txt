@@ -1,0 +1,9 @@
+Parameters:
+Input directory: vennDiagram/venn-diagram-example/input
+Output directory: vennDiagram/venn-diagram-example/output
+Minimum fold change: 1.0
+Maximum fold change: 1.79769313486e+308
+Minimum p-value: 0.0
+Maximum p-value: 0.05
+Total gene numbers: 30000
+Package directory: /data/users/pmrefael/workspace/ve-2.7-vennDiagram/lib/python2.7/site-packages/vennDiagram/
