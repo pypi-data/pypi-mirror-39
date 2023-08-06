@@ -1,0 +1,17 @@
+include *.py
+recursive-include *.py
+
+exclude A.py
+exclude test.py
+exclude calibrate.py
+exclude *.icloud
+exclude .gitignore
+exclude *.exe
+
+graft pybluez
+graft klego
+
+prune nxt
+prune .idea
+prune .git
+prune __pycache__
