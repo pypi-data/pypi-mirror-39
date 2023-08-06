@@ -1,0 +1,12 @@
+earthengine-api
+daiquiri
+requests-oauthlib
+google-auth-oauthlib
+click
+dask[complete]
+click-configfile
+pendulum
+gee-pheno
+marmee
+oauth2client
+toolz
