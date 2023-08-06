@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: portscan
+Version: 0.2.1
+Summary: Simple port scanning utility at terminal
+Home-page: https://github.com/Aperocky/PortScan
+Author: Rocky Li
+Author-email: aperocky@gmail.com
+License: MIT
+Keywords: port,scanner,multithreading,queue,terminal,utility
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+
+UNKNOWN
+
+
