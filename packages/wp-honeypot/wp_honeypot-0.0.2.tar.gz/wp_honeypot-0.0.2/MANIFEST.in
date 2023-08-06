@@ -1,0 +1,4 @@
+include README.md
+recursive-include wp_honeypot/static *
+recursive-include wp_honeypot/templates *
+global-exclude __pycache__

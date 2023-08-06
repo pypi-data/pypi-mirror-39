@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: wp-honeypot
+Version: 0.0.2
+Summary: Create a fake WordPress login page that logs email addresses and redirects bots to a 10gb download file.
+Home-page: https://github.com/KalobTaulien/wp_honeypot
+Author: Kalob Taulien
+Author-email: kalob@kalob.io
+License: MIT
+Description: For installation instructions see https://github.com/KalobTaulien/wp_honeypot
+Keywords: development
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Wagtail
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
