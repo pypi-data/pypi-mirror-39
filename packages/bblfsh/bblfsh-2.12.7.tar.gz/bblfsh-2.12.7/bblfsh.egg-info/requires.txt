@@ -1,0 +1,4 @@
+grpcio<2.0,>=1.13.0
+grpcio-tools<2.0,>=1.13.0
+docker
+protobuf>=3.4.0
