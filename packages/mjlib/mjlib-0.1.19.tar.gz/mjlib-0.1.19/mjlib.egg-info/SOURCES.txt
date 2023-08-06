@@ -1,0 +1,15 @@
+README.txt
+setup.cfg
+setup.py
+mjlib/__init__.py
+mjlib/eeg.py
+mjlib/jsonobject.py
+mjlib/lang.py
+mjlib/reg.py
+mjlib/signal.py
+mjlib/util.py
+mjlib.egg-info/PKG-INFO
+mjlib.egg-info/SOURCES.txt
+mjlib.egg-info/dependency_links.txt
+mjlib.egg-info/requires.txt
+mjlib.egg-info/top_level.txt
