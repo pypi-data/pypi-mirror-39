@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: tor-router
+Version: 0.0.3
+Summary: make routing similar to flask blueprint
+Home-page: https://github.com/whales2018/Tornado_Router
+Author: Whales Zhong
+Author-email: whaleszhong@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/x-rst
+
+==============
+Tornado-Router
+==============
+
+.. contents::
+
+
+* Just like flask blueprint, Handler match to url prefix and the url endpoint map to handler instance method decorated by route decorator.
+
+
+INSTALL
+-------
+::
+
+    pip install tor-router (recommended pypi: "https://pypi.python.org/pypi")
+
+EXAMPLE
+-------
+::
+
+    from tornado import gen
+    from tornado.httpserver import HTTPServer
+    from tornado.ioloop import IOLoop
+    from web import TrfRequestHandler, route, TrfApplication
+
+
+    class TrfHandler(TrfRequestHandler):
+        def get(self, *args, **kwargs):
+            self.write("get ok")
+            self.finish()
+
+        @gen.coroutine
+        def post(self, *args, **kwargs):
+            self.write("post ok")
+            self.finish()
+
+        @route("/hello")
+        def say_hello(self, *args, **kwargs):
+            self.write("hello")
+            self.finish()
+
+        @route("/hi")
+        @gen.coroutine
+        def say_hi(self, *args, **kwargs):
+            self.write("hi")
+            self.finish()
+
+        @route("/fine", allow_method=["get", "post", "put"])
+        @gen.coroutine
+        def say_fine(self, *args, **kwargs):
+            self.write("fine")
+            self.finish()
+
+
+    if __name__ == '__main__':
+        app = TrfApplication([(r"/api", TrfHandler)])
+        server = HTTPServer(app)
+        print 8988
+        server.listen(8988)
+        IOLoop.current().start()
+
+Requirement
+-----------
+- Cpython 2.7.12
+- tornado 4.2.1
+
+
+
