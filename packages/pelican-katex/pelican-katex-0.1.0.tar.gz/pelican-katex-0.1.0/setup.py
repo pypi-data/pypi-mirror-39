@@ -1,0 +1,21 @@
+from setuptools import setup, find_packages
+
+with open("README.md", "r") as f:
+    long_description = f.read()
+
+setup(
+    name="pelican-katex",
+    version="0.1.0",
+    author="Marten Lienen",
+    author_email="marten.lienen@gmail.com",
+    description="Server-Side LaTeX Compilation for Pelican",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/cqql/pelican-katex",
+    packages=find_packages(),
+    install_requires=["pelican", "docutils"],
+    classifiers=[
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+        "Programming Language :: Python :: 3",
+        "Framework :: Pelican :: Plugins"
+    ])
