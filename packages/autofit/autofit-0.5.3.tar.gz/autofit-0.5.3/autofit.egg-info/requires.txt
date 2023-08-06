@@ -1,0 +1,10 @@
+GetDist
+scipy
+numpy
+pymultinest
+matplotlib
+
+[test]
+coverage
+pytest
+pytest-cov
