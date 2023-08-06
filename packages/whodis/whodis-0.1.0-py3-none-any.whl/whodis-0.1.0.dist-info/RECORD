@@ -1,0 +1,15 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_whodis.py,sha256=39CewaIYxQ1IYOYV-H5mn-OEu5y4VkRNRXHeVWHXvDs,2956
+whodis/__init__.py,sha256=uVIMgvwNw4GPuQpL4cKSYB9fLv7S_4RnzYJffl8hJMM,128
+whodis/common_filters.py,sha256=4XARADZyGI2SxQOpMS7FG_cJr5DEXyHrFDSgJjRRiwQ,32
+whodis/go_filters.py,sha256=44uE6S7HRDlHLFRGk1WjU_wiWT10Cd8q1X8FFLVPG_4,18
+whodis/java_filters.py,sha256=X0FvifPDuVdYU7YMCPmqc5ZqIV1_nzMUYEyAzw9UAuk,20
+whodis/javascript_filters.py,sha256=j4fBh2WlR8YLt3bK-w7kCDXGD3G_Q8iMzcyBE7IELO8,26
+whodis/python_filters.py,sha256=jsDlnP6eXmJyCf6-7KdUVCgd9CkeIsTqd2h06Nj-S-E,171
+whodis/ruby_filters.py,sha256=0JM__lAvccyog89MwPomMU9CE3CKi1juf6kjjEKHDfw,20
+whodis/whodis.py,sha256=GeHYrkfc3YsAYSAVjSrTcQwj02vi31rMKCS28FYI7lQ,5064
+whodis-0.1.0.dist-info/LICENSE,sha256=IkV2nDwaJTaT1SLHd-DgMy_KQV68A04k-PLjheC21v4,1070
+whodis-0.1.0.dist-info/METADATA,sha256=atUGJGnCEIboz1dkB_szNtOdBY4xB4GEZZ3wC_c_6F4,1042
+whodis-0.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+whodis-0.1.0.dist-info/top_level.txt,sha256=Aq8QdolNlKHK7X0b0ktoLrint40L4CrWzAFZFM5FZhM,13
+whodis-0.1.0.dist-info/RECORD,,
