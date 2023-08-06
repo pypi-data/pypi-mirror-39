@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: supercog
+Version: 2.4.4
+Summary: A project that assists in making a Discord bot. Includes HTML and Markdown support.
+Home-page: https://github.com/FellowHashbrown/supercog
+Author: FellowHashbrown
+Author-email: fellowhashbrown@gmail.com
+License: MIT
+Download-URL: https://github.com/FellowHashbrown/supercog/archive/v2.4.4.tar.gz
+Description: UNKNOWN
+Keywords: discord,bot,cogs,extensions,command,category,html,markdown
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
