@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: image-compression
+Version: 0.4
+Summary: compress image without losing quality
+Home-page: https://github.com/saurabhgharat
+Author: Saurabh Gharat
+Author-email: saurabhhgharat9@gmail.com
+License: MIT
+Download-URL: https://github.com/saurabhgharat/image-compression/archive/0.4.tar.gz
+Description: Image compression using Python 
+        
+        Image compression is done to reduce the cost of storage and transmission
+        Steps
+        1. Open the file and read it
+        2. Get the pixel values in RGB format
+        3. Convert the tuples into one list
+        4. Round the pixel values to nearest 10
+        5. Regroup the pixel values into tuple of 3
+        6. Create a new image from the tuple list where each pixel value in tuple indicate R,G,B value
+           E.g. (42,34,67) indicates R=42,G=34,B=67
+        7. Save the compressed image
+Keywords: compression,image,python,django
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
