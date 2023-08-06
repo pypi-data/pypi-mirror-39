@@ -1,0 +1,49 @@
+{% extends "bee_django_message/base.html" %}
+{% load bootstrap3 %}
+{% load bee_django_message_filter %}
+{% block content %}
+    <h4>详情</h4>
+
+    {% if record.message.need_done %}
+        {% if not record.is_done %}
+            <a href="{% url 'bee_django_message:record_update' record.id %}" class="btn btn-danger">去处理</a>
+
+        {% endif %}
+    {% endif %}
+    <table class="table">
+        <tr>
+            <td class="col-xs-3">发送人</td>
+            <td>{{ record.from_user }}</td>
+        </tr>
+        <tr>
+            <td>标题</td>
+            <td>{{ record.title }}</td>
+        </tr>
+        <tr>
+            <td>内容</td>
+            <td>{{ record.info }}</td>
+        </tr>
+        <tr>
+            <td>链接</td>
+            <td>{{ record.url }}</td>
+        </tr>
+        <tr>
+            <td>发送时间</td>
+            <td>{{ record.sent_at }}</td>
+        </tr>
+        {% if record.message.need_done %}
+            <tr>
+                <td>处理结果</td>
+                <td>{{ record.done_info|linebreaks|default:"" }}</td>
+            </tr>
+            <tr>
+                <td>处理时间</td>
+                <td>{{ record.done_at|default:"" }}</td>
+            </tr>
+            <tr>
+                <td>处理人</td>
+                <td>{{ record.done_by|get_name_detail:False }}</td>
+            </tr>
+        {% endif %}
+    </table>
+{% endblock %}
