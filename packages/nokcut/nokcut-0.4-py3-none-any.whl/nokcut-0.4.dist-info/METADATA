@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: nokcut
+Version: 0.4
+Summary: Thai Word Segmentation using TCC + Bidirectional RNNs
+Home-page: https://github.com/wannaphongcom/NokCut/
+Author: NokCut
+Author-email: wannaphong@kkumail.com
+License: Apache Software License 2.0
+Keywords: nokcut
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: Thai
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: pythainlp (>=1.7)
+Requires-Dist: torch
+
+# NokCut
+Thai Word Segmentation using TCC + Bidirectional RNNs (PyTorch)
+
+Credit code from [A Beginner's Guide to Deep NLP with PyTorch - Dr. Prachya Boonkwan](https://tinyurl.com/y7vwlvur)
+
+Colab Notebook : https://colab.research.google.com/drive/1WS08VsjlZGAmCGsoI7AlRm-Do3zo-b-g
+
+Train by BEST I Corpus Training set. (90% training , 10% test)
+```
+ep 6
+loss: 0.017879242024514966
+f1 : 98.47012481095481
+```
+
+
+F1 From BEST I Corpus Test set
+```
+F-measure: 96.94929
+Recall: 122271.00000/125850.00000 = 97.15614
+
+Precision: 122271.00000/126387.00000 = 96.74333
+
+Number of incorrect : 3579.00000 words
+```
+
+Mr. Wannaphong Phatthiyaphaibun
+wannaphong@kkumail.com
+
+
