@@ -1,0 +1,9 @@
+README.md
+setup.py
+S3_Utils.egg-info/PKG-INFO
+S3_Utils.egg-info/SOURCES.txt
+S3_Utils.egg-info/dependency_links.txt
+S3_Utils.egg-info/top_level.txt
+s3utils/__init__.py
+s3utils/s3_downloader.py
+s3utils/s3_uploader.py
