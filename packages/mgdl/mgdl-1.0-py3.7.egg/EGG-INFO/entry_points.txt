@@ -1,0 +1,3 @@
+[console_scripts]
+mgdl = mgdl.cli_entry:main
+
