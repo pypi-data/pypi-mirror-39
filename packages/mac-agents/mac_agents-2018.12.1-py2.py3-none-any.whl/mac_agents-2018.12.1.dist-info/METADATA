@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: mac-agents
+Version: 2018.12.1
+Summary: LaunchAgents + python
+Home-page: https://github.com/looking-for-a-job/mac-agents.py
+License: UNKNOWN
+Keywords: LaunchAgents launchd plist
+Platform: UNKNOWN
+Classifier: Environment :: MacOS X
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
+Requires-Dist: Click
+Requires-Dist: launchd-plist
+Requires-Dist: mac-colors
+Requires-Dist: public
+Requires-Dist: runcmd
+Requires-Dist: setuptools
+
+[![](https://img.shields.io/badge/OS-MacOS-blue.svg?longCache=True)]()
+[![](https://img.shields.io/pypi/pyversions/mac-agents.svg?longCache=True)](https://pypi.org/project/mac-agents/)
+
+#### Install
+```bash
+$ [sudo] pip install mac-agents
+```
+
+#### Classes
+`mac_agents.Agent` - launchd.plist generator
+
+method|`__doc__`
+-|-
+`create()`|create launchd.plist file and `StandardOutPath`, `StandardErrorPath` logs
+`load()`|`launchctl load` plist file
+`read()`|return a dictionary with plist file data
+`rm()`|remove plist file (if exist)
+`unload()`|`launchctl unload` plist file
+`update(**kwargs)`|update plist file data
+`write(data)`|write a dictionary to a plist file
+
+@property|`__doc__`
+-|-
+`Label`|path.to.file.py
+`ProgramArguments`|['bash','-l','-c','python $script $plist']
+`StandardErrorPath`|`~/Library/Logs/LaunchAgents/$Label/err.log`
+`StandardOutPath`|`~/Library/Logs/LaunchAgents/$Label/out.log`
+`WorkingDirectory`|script file dirname
+`path`|plist path - `file.py.plist`
+`script`|script path - class module file
+
+#### Functions
+function|`__doc__`
+-|-
+`mac_agents.agents(path='~/Library/LaunchAgents')`|return list with launchd.plist files for .py scripts
+`mac_agents.create(path)`|create launchd.plist from python file and return path
+`mac_agents.jobs()`|return list with launchctl jobs (`pid`, `status`, `label`)
+`mac_agents.scripts(path='~/Library/LaunchAgents')`|return list with `*.py` files
+`mac_agents.tag(path='~/Library/LaunchAgents')`|set Finder tags. `red` - status, `orange` - stderr, `gray` - unloaded
+
+#### CLI
+usage|`__doc__`
+-|-
+`python -m mac_agents.create path ...`|generate launchd.plist from python file(s)
+`python -m mac_agents.tag [path]`|set Finder tags. `red` - status, `orange` - stderr, `gray` - unloaded
+
+#### Examples
+`~/Library/LaunchAgents/file.py`
+```python
+import mac_agents
+
+class Agent(mac_agents.Agent):
+    StartInterval = 5
+
+    def run(self):
+        pass
+
+if __name__ == "__main__":
+    Agent().run()
+```
+
+```python
+>>> Agent().create().load()
+>>> Agent().unload().rm()
+```
+
+```bash
+$ cd ~/Library/LaunchAgents
+$ find . -name "*.py" | xargs python -m mac_agents.create "$@"
+$ find ~/Library/LaunchAgents -name "*.plist" | xargs launchctl load
+$ launchctl list | grep .py$
+$ find ~/Library/LaunchAgents -name "*.plist" | xargs launchctl unload
+$ launchctl list | grep .py$ | awk '{print $3}' | xargs -I '{}' launchctl remove {}
+$ find ~/Library/LaunchAgents -type f -name "*.py.plist" -exec rm {} +
+```
+
+#### Links
++   [launchd.plist](https://www.real-world-systems.com/docs/launchd.plist.5.html)
+
+<p align="center"><a href="https://pypi.org/project/readme-md/">readme-md</a> - README.md generator</p>
+
