@@ -1,0 +1,14 @@
+bokeh>=0.12.5
+cloudpickle
+docopt>=0.6.2
+matplotlib>=2.2.2
+multiprocessing_on_dill>=3.5.0a4
+numba>=0.35.0
+numexpr>=2.6.8
+numpy>=1.14.3
+scipy>=1.1.0
+sympy>=1.1.1
+pathos>=0.2.2.1
+pytest>=3.5.1
+pytest-cov>=2.5.1
+pytest-describe>=0.11.1

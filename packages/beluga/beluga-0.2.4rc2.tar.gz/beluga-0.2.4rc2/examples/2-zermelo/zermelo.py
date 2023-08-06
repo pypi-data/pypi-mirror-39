@@ -1,0 +1,92 @@
+import beluga
+import logging
+
+ocp = beluga.OCP('zermelos_problem')
+
+def drift_x(x, y):
+    return 0
+
+def drift_y(x, y):
+    return ((x-5)**4 - 625)/625
+
+# ocp.custom_function('drift_x', drift_x)
+# ocp.custom_function('drift_y', drift_y)
+
+# Define independent variables
+ocp.independent('t', 's')
+
+# Define equations of motion
+ocp.state('x', 'V*cos(theta)', 'm')   \
+   .state('y', 'V*sin(theta)', 'm')
+
+ocp.constant_of_motion('c1','lamX','s/m')
+ocp.constant_of_motion('c2','lamY','s/m')
+
+# Define controls
+ocp.control('theta', 'rad')
+
+# Define constants
+ocp.constant('V', 10, 'm/s')
+# ocp.constant('epsilon', 0.001, '1')
+ocp.constant('x_f', 0, 'm')
+ocp.constant('y_f', 0, 'm')
+
+# Define costs
+ocp.path_cost('0.1', '1')
+
+# Define constraints
+ocp.constraints() \
+    .initial('x', 'm') \
+    .initial('y', 'm') \
+    .terminal('x-x_f', 'm') \
+    .terminal('y-y_f', 'm')
+
+ocp.scale(m='x', s='x/V', rad=1)
+
+bvp_solver = beluga.bvp_algorithm('Shooting',
+                        derivative_method='fd',
+                        tolerance=1e-4, algorithm='SLSQP')
+
+guess_maker = beluga.guess_generator('auto',
+                start=[0, 0],
+                control_guess=[0],
+                use_control_guess = True,
+                direction='forward'
+)
+
+continuation_steps = beluga.init_continuation()
+
+continuation_steps.add_step('bisection') \
+                .num_cases(10) \
+                .const('x_f', 10)
+
+continuation_steps.add_step('bisection') \
+                .num_cases(10) \
+                .const('y_f', 10)
+
+# continuation_steps.add_step('bisection') \
+#                 .num_cases(10) \
+#                 .const('epsilon', 1)
+
+beluga.add_logger(logging_level=logging.DEBUG, display_level=logging.DEBUG)
+
+sol = beluga.solve(ocp,
+             method='diffyg',
+             bvp_algorithm=bvp_solver,
+             steps=continuation_steps,
+             guess_generator=guess_maker)
+
+import matplotlib
+import matplotlib.pyplot as plt
+font = {'family' : 'normal',
+        'weight' : 'bold',
+        'size'   : 16}
+
+matplotlib.rc('font', **font)
+plt.plot(sol.q[:,0], sol.q[:,1], linestyle='', marker='o')
+plt.xlabel('X [m]')
+plt.ylabel('Y [m]')
+plt.title('0-D Zermelo\'s Problem')
+plt.grid(True)
+# plt.show()
+plt.savefig('zerm.png')

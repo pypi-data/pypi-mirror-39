@@ -1,0 +1,24 @@
+Metadata-Version: 1.2
+Name: beluga
+Version: 0.2.4rc2
+Summary: An indirect trajectory optimization framework.
+Home-page: https://github.com/Rapid-Design-of-Systems-Laboratory/beluga
+Author: Michael Sparapany
+Author-email: msparapa@purdue.edu
+License: MIT
+Description: beluga is a Python library for trajectory optimization
+        via indirect methods.
+Platform: any
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >3.5
