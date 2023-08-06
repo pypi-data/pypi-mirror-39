@@ -1,0 +1,17 @@
+cpymad/clibmadx.pxd,sha256=g3MtLgWhRZVatWvtHsxwtXKU8S2TrK_5KZrVcKwmS7I,8012
+cpymad/stream.py,sha256=rRoK2YJdspA2gk9LjhDBEn0USDUVZU31KdZXBkkbNZw,2482
+cpymad/madx.py,sha256=Rh44lOglX2Fc-WHep1cRXNTac6Pdpe28aRLe2H8S8Kw,36517
+cpymad/__init__.py,sha256=nNpxH8RZFXwE8zbXCxzwnjKbLm0f0vgNOjPiSFrsEkU,1561
+cpymad/_rpc.py,sha256=6w_aggj6m03vPmcyeNRvqZCufofhejWfAgHJJuIwDIo,2028
+cpymad/libmadx.pyx,sha256=XD17oL9uIsj0zRLYoax4gs6w3xecp_xzy8r_U8pMhIo,39073
+cpymad/libmadx.so,sha256=vE7sYhvkcx87d5KmB-2Av86RA4sRUNDoh3M_1XM65eU,22075184
+cpymad/util.py,sha256=V0LhuAkxSUY01G8FUS5jWP9HmI0TYa8zFPv-b7KyldM,15150
+cpymad/libmadx.c,sha256=Ir2Ek08Kv4fhC-gRxPIop38hUwpywFmPNaDmtdbnqrs,855245
+cpymad/types.py,sha256=p5ETKFD2SAsNBoskEvn20J1Y-pODU6A5pGPGIPGTngY,2171
+cpymad/COPYING/cpymad.rst,sha256=byLjW-OHM4fQzQ5Eu-PczNB0ZtWWRm4H4_lGs6VN-FY,1540
+cpymad/COPYING/madx.rst,sha256=vUJyvCpjMEZNWeJ9ESefYx6NVgNxi5zzU3IHGVzFlig,1237
+cpymad/.libs/libgfortran-ed201abd.so.3.0.0,sha256=xkH_25s9lTuTrEf3fE8GZK68sYSPsIlP3SJ6Qze9aIM,1023960
+cpymad-1.0.10.dist-info/WHEEL,sha256=CKrsQRZNKddeqWkqlP4DoIBo-Lb-ExiV2oTN8bWPh84,109
+cpymad-1.0.10.dist-info/top_level.txt,sha256=WhqESCx0JaHgVr58nBv6NrA1NXAaRKqme-AURbbpK-M,7
+cpymad-1.0.10.dist-info/METADATA,sha256=a5cBgYtoxX1t2qIZS6q7lcVW7_tzvcZiLTNhW0J_QaQ,6441
+cpymad-1.0.10.dist-info/RECORD,,
