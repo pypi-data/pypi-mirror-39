@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        cert=certgenerator.cli:main
+    
