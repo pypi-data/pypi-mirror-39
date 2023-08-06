@@ -1,0 +1,2 @@
+class UnknownStationError(Exception):
+    pass
