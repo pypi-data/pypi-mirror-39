@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: scrapy-redis-expiredupefilter
+Version: 0.1.99
+Summary: A distributed crawler component based on scrapy_redis which can specify the expiration time of fingerprints in dupefilter.
+Home-page: https://blog.csdn.net/aaronjny
+Author: AaronJny
+Author-email: aaronjny@163.com
+License: MIT
+Description: UNKNOWN
+Keywords: scrapy,redis,expire,dupefilter,expiredupefilter
+Platform: UNKNOWN
