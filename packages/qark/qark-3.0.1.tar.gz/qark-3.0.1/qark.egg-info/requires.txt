@@ -1,0 +1,9 @@
+requests[security]
+pluginbase
+jinja2
+javalang
+click
+six
+
+[:python_version < "3.4"]
+enum34
