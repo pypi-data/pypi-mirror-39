@@ -1,0 +1,5 @@
+boto3>=1.9.48
+awscli>=1.11.175
+future>=0.16.0
+tabulate>=0.8.2
+configparser>=3.5.0
