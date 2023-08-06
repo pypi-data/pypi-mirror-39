@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+bin/omnitagger
+omnitagger/__init__.py
+omnitagger/metatagger.py
+omnitagger/omnitagger.py
+omnitagger.egg-info/PKG-INFO
+omnitagger.egg-info/SOURCES.txt
+omnitagger.egg-info/dependency_links.txt
+omnitagger.egg-info/requires.txt
+omnitagger.egg-info/top_level.txt
