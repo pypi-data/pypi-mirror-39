@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ig_streaming_client/__init__.py
+ig_streaming_client.egg-info/PKG-INFO
+ig_streaming_client.egg-info/SOURCES.txt
+ig_streaming_client.egg-info/dependency_links.txt
+ig_streaming_client.egg-info/requires.txt
+ig_streaming_client.egg-info/top_level.txt
