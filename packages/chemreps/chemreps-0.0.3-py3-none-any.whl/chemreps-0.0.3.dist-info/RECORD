@@ -1,0 +1,14 @@
+chemreps/__init__.py,sha256=7GjayK1rGWyV8-RSuBDlTT6xr726pccK7sP53dwQ00s,178
+chemreps/bag_of_bonds.py,sha256=DrCbY9Haa2sbY6zXly1f6opZM_8GEfvpu1joMfIaL_0,3608
+chemreps/bat.py,sha256=bSBmnS-XMGnluLPV1sdBAjzGaWg3OfTkkMDQRFNAJks,13635
+chemreps/coulomb_matrix.py,sha256=2Fsr5pg0WwttCVrXBaUnZPGx7RSqNeqrKHJAXlBIHLo,1557
+chemreps/just_bonds.py,sha256=hReuBlsZcm1e3jiap-uenkENKEsc0x9Uuj-lwiWS5Eo,4338
+chemreps/utils/__init__.py,sha256=QZrMVH0gMFFbAClgiWjd7_uWf8kAKtl4SRPjNF2m70Y,275
+chemreps/utils/bag_handler.py,sha256=WZEwo-uFjXonG7M_z_dOjnfgodv4s3qc12fdE_Egrvs,2132
+chemreps/utils/calcs.py,sha256=XkWqQIBlqQyjsFw8WP3JJc6UZTg-e--OKfMfUVl7ssI,3215
+chemreps/utils/molecule.py,sha256=aSo2MQ6Sw70pv1H1o2Uu3ZMdC5__4u2Wj3zQsfYuT_8,5127
+chemreps-0.0.3.dist-info/LICENSE,sha256=I_PxriTa1ISMoQQ8PV3jbkyOy8NN9e6yxF25j7QWXa4,1072
+chemreps-0.0.3.dist-info/METADATA,sha256=9N_FY1ZimwVr1D4cImxbvavOsNTl2-8S0utBzxNHui8,2581
+chemreps-0.0.3.dist-info/WHEEL,sha256=-ZFxwj8mZJPIVcZGLrsQ8UGRcxVAOExzPLVBGR7u7bE,92
+chemreps-0.0.3.dist-info/top_level.txt,sha256=ID5BDZ9advwimnI3J7LwY2eiV__wTpe-Sdy7JzfamfU,9
+chemreps-0.0.3.dist-info/RECORD,,
