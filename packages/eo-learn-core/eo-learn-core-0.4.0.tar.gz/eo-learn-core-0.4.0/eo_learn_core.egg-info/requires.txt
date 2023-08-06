@@ -1,0 +1,11 @@
+attrs>=18.2.0
+geopandas
+graphviz>=0.10.1
+jinja2
+matplotlib
+networkx
+numpy
+pydot
+pygments
+python-dateutil
+sentinelhub>=2.4.7
