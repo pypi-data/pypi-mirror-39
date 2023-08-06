@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: ghistylus
+Version: 0.0.1
+Summary: Print Stylus
+Home-page: https://github.com/gustavoghioldi/ghistylus
+Author: Gustavo Ghioldi
+Author-email: gustavoghioldi@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+
+TypesValidator
+==============
+
+ejemplo:
+```python
+
+from typesvalidator.typesvalidator import TypesValidator
+
+class Persona(object):
+    pass
+
+@TypesValidator.validator(True)
+def ala(nom: str)->Persona:
+    print ("sd")
+    a = Persona()
+    return a
+
+
+ala("cocho")
+
+```
+
