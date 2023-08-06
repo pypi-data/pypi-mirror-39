@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: Aggrescan3D
+Version: 1.0.0
+Summary: Aggrescan3D - protein aggregation analysis standalone application
+Home-page: https://bitbucket.org/lcbio/aggrescan3d
+Author: Laboratory of Computational Biology
+Author-email: UNKNOWN
+License: free for non-commercial users
+Platform: UNKNOWN
+Requires-Dist: matplotlib (>=2.0)
+Requires-Dist: numpy
+Requires-Dist: requests
+
+UNKNOWN
+
+

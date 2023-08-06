@@ -1,0 +1,4 @@
+[console_scripts]
+a3d_server = a3d_gui.run_server:run_server
+aggrescan = aggrescan.__main__:run_program
+
