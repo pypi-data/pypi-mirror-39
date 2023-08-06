@@ -1,0 +1,9 @@
+
+[all]
+Django<2.2,>=1.9
+plotly>=2.0.8
+dash_renderer>=0.14.1
+
+[no-dash-renderer]
+Django<2.2,>=1.9
+plotly>=2.0.8
