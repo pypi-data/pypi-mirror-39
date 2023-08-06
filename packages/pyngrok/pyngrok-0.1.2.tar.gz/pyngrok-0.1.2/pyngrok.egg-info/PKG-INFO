@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: pyngrok
+Version: 0.1.2
+Summary: A Python wrapper for Ngrok.
+Home-page: https://github.com/alexdlaird/pyngrok
+Author: Alex Laird
+Author-email: contact@alexlaird.com
+License: MIT
+Download-URL: https://github.com/alexdlaird/pyngrok/archive/0.1.2.tar.gz
+Description: [![Build Status](https://travis-ci.org/alexdlaird/pyngrok.svg?branch=master)](https://travis-ci.org/alexdlaird/pyngrok)
+        [![Python 3](https://pyup.io/repos/github/HeliumEdu/heliumcli/python-3-shield.svg)](https://pyup.io/repos/github/alexdlaird/pyngrok/)
+        [![PyPI version](https://badge.fury.io/py/pyngrok.svg)](https://badge.fury.io/py/pyngrok)
+        
+        
+        # pyngrok
+        
+        ## Getting Started
+        
+        Note: this package is still in early development.
+        
+        The `pyngrok` package is a [ngrok](https://ngrok.com/) wrapper for Python. The module will download
+        and use its own `ngrok` binaries if none are provided.
+        
+        Here is an example of basic usage:
+        
+        ```
+        public_url = ngrok.connect() # http://localhost:80
+        public_url = ngrok.connect(5000, "https") # https://localhost:5000
+        
+        tunnels = ngrok.get_tunnels()
+        ```
+        
+        More functionality and documentation will be published soon.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*
+Description-Content-Type: text/markdown
