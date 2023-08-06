@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: yo_ds
+Version: 0.1.2
+Summary: The toolkit for data science projects with a focus on functional programming
+Home-page: http://comingsoon.com
+Author: Yuri Okulovsky
+Author-email: yuri.okulovsky@gmail.com
+License: MIT
+Description: ## Yo
+        
+        `fluq` for FLUent Queries is a port of C# LINQ to Python. It distinguishes from `asq` by the type annotations.
+        
+        `via`, `feed` and `drag`
+        
+        ## Kraken
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
