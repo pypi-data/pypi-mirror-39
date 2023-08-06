@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pysignald
+Version: 0.0.2
+Summary: A library that allows communication via the Signal IM service using the signald daemon.
+Home-page: https://gitlab.com/stavros/pysignald/
+Author: Stavros Korokithakis
+Author-email: hi@stavros.io
+Requires-Python: >=3.4,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: attrs (>=18.2,<19.0)
+Project-URL: Repository, https://gitlab.com/stavros/pysignald/
