@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: teleinfo
+Version: 1.0.4
+Summary: EDF Teleinfo frame acquisition
+Home-page: http://github.com/demikl/python-teleinfo
+Author: Mickael Le Baillif
+Author-email: mickael.le.baillif@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: pyserial
+
+# python-teleinfo
+Read and parse teleinfo data from France EDF electricity provider
+
+Lors de l'installation, un outil CLI est installé : `bin/teleinfo_json`
+
+Usage du module :
+
+```
+  from teleinfo import Teleinfo
+  from teleinfo.hw_vendors import RpiDom
+  ti = Teleinfo(RpiDom())
+  print ti.get_frame()
+```
+
+Le parseur supporte aussi l'itération :
+
+```
+  for frame in Teleinfo(RpiDom()):
+      do_something_with(frame)
+```
+
+
