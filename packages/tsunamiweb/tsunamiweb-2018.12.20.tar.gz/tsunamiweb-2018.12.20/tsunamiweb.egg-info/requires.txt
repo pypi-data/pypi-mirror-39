@@ -1,0 +1,8 @@
+aiohttp
+pytest-aiohttp
+uvloop
+gunicorn
+
+[dev]
+
+[test]
