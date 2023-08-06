@@ -1,0 +1,3 @@
+include README.rst
+recursive-include emp_offline/static *
+recursive-include emp_offline/templates *
