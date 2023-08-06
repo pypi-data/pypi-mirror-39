@@ -1,0 +1,13 @@
+{
+    "tasks": [
+        {
+            "name": "FilterGround"
+        },
+        {
+            "name": "FilterCeiling"
+        },
+        {
+            "name": "FilterStray"
+        }
+    ]
+}
