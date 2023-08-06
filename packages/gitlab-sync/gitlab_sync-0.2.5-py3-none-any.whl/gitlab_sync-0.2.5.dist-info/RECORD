@@ -1,0 +1,11 @@
+gitlab_sync/__init__.py,sha256=1dB10eFKDRMr8Rohk7ItWwTJTk3WrI4lIl7GIlrPnag,148
+gitlab_sync/cli.py,sha256=AFFVwtDAjq1sQZNKPDRWy8zVHnvD12TZbAQKErUB9DU,1413
+gitlab_sync/config.py,sha256=hVoKSPotk1-ia40Y2Jra9rMETeX60bFxWjRkQLqgvGA,3878
+gitlab_sync/operations.py,sha256=ec17AI7U4rghxgTjTRMfm2OLkodmf-Vj_AdufleJjnc,2748
+gitlab_sync/repository.py,sha256=X7Ve74YVez_LW_Inzb5m446_yxoWbuOjCjPvIdwLJFY,9473
+gitlab_sync/strategy.py,sha256=d_E6UYoNldasqKxRpXvexcwHpBpu1M2P33PUBeqTwhY,2999
+gitlab_sync-0.2.5.dist-info/METADATA,sha256=ZYcrIYVvi_oCf5n0HuQrlwKJOUl4-hpf7VbJhODWyrY,2535
+gitlab_sync-0.2.5.dist-info/RECORD,,
+gitlab_sync-0.2.5.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+gitlab_sync-0.2.5.dist-info/entry_points.txt,sha256=-QRLdOkcue7ETQfuyGCxLdzjzZlZ_AxF_VgfntIzVP8,54
+gitlab_sync-0.2.5.dist-info/top_level.txt,sha256=_Sk6a5HLBLrtlGcOjvlpoE3aFT_wI7ufBV9hAZHufWY,12
