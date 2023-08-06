@@ -1,0 +1,545 @@
+/**
+ * @file kastore.h
+ * @brief Public API for kastore.
+ *
+ * This is the API documentation for kastore.
+ */
+#ifndef KASTORE_H
+#define KASTORE_H
+
+#ifdef __GNUC__
+    #define KAS_WARN_UNUSED __attribute__ ((warn_unused_result))
+    #define KAS_UNUSED(x) KAS_UNUSED_ ## x __attribute__((__unused__))
+#else
+    #define KAS_WARN_UNUSED
+    #define KAS_UNUSED(x) KAS_UNUSED_ ## x
+#endif
+
+#include <stdint.h>
+#include <stddef.h>
+#include <stdio.h>
+
+/** @} */
+
+/**
+@defgroup ERROR_GROUP Error return values.
+@{
+*/
+/**
+Generic error thrown when no other message can be generated.
+*/
+#define KAS_ERR_GENERIC                               -1
+/**
+An error occured during IO.
+*/
+#define KAS_ERR_IO                                    -2
+/**
+A unrecognised mode string was passed to open().
+*/
+#define KAS_ERR_BAD_MODE                              -3
+/**
+Out-of-memory condition.
+*/
+#define KAS_ERR_NO_MEMORY                             -4
+/**
+Attempt to read an unknown file format.
+*/
+#define KAS_ERR_BAD_FILE_FORMAT                       -5
+/**
+The file is in kastore format, but the version is too old for this
+version of the library to read.
+*/
+#define KAS_ERR_VERSION_TOO_OLD                       -6
+/**
+The file is in kastore format, but the version is too new for this
+version of the library to read.
+*/
+#define KAS_ERR_VERSION_TOO_NEW                       -7
+/**
+An unknown type key was specified.
+*/
+#define KAS_ERR_BAD_TYPE                              -8
+/**
+A zero-length key was specified.
+*/
+#define KAS_ERR_EMPTY_KEY                             -9
+/**
+A duplicate key was specified.
+*/
+#define KAS_ERR_DUPLICATE_KEY                         -10
+/**
+The requested key does not exist in the store.
+*/
+#define KAS_ERR_KEY_NOT_FOUND                         -11
+/**
+The requestion function cannot be called in the current mode.
+*/
+#define KAS_ERR_ILLEGAL_OPERATION                     -12
+/**
+The requested type does not match the type of the stored values.
+*/
+#define KAS_ERR_TYPE_MISMATCH                         -13
+/** @} */
+
+/* Flags for open */
+#define KAS_READ_ALL            1
+
+
+/**
+@defgroup TYPE_GROUP Data types.
+@{
+*/
+#define KAS_INT8                0
+#define KAS_UINT8               1
+#define KAS_INT16               2
+#define KAS_UINT16              3
+#define KAS_INT32               4
+#define KAS_UINT32              5
+#define KAS_INT64               6
+#define KAS_UINT64              7
+#define KAS_FLOAT32             8
+#define KAS_FLOAT64             9
+/** @} */
+
+#define KAS_NUM_TYPES           10
+
+#define KAS_READ                1
+#define KAS_WRITE               2
+
+/**
+@defgroup FILE_VERSION_GROUP File version macros.
+@{
+*/
+/**
+The file version major number. Incremented when any breaking changes are made
+to the file format.
+*/
+#define KAS_FILE_VERSION_MAJOR  1
+/**
+The file version minor number. Incremented when non-breaking backward-compatible
+changes are madeto the file format.
+*/
+#define KAS_FILE_VERSION_MINOR  0
+/** @} */
+
+/**
+@defgroup API_VERSION_GROUP API version macros.
+@{
+*/
+/**
+The library major version. Incremented when breaking changes to the API or ABI are
+introduced. This includes any changes to the signatures of functions and the
+sizes and types of externally visible structs.
+*/
+#define KAS_VERSION_MAJOR   0
+/**
+The library major version. Incremented when non-breaking backward-compatible changes
+to the API or ABI are introduced, i.e., the addition of a new function.
+*/
+#define KAS_VERSION_MINOR   1
+/**
+The library patch version. Incremented when any changes not relevant to the
+to the API or ABI are introduced, i.e., internal refactors of bugfixes.
+*/
+#define KAS_VERSION_PATCH   0
+/** @} */
+
+#define KAS_HEADER_SIZE             64
+#define KAS_ITEM_DESCRIPTOR_SIZE    64
+#define KAS_MAGIC                   "\211KAS\r\n\032\n"
+#define KAS_ARRAY_ALIGN             8
+
+typedef struct {
+    int type;
+    size_t key_len;
+    size_t array_len;
+    char *key;
+    void *array;
+    size_t key_start;
+    size_t array_start;
+} kaitem_t;
+
+/**
+@brief A file-backed store of key-array values.
+*/
+typedef struct {
+    int flags;
+    int mode;
+    int file_version[2];
+    size_t num_items;
+    kaitem_t *items;
+    FILE *file;
+    const char *filename;
+    size_t file_size;
+    char *read_buffer;
+} kastore_t;
+
+/**
+@brief Library version information.
+*/
+typedef struct {
+    /** @brief The major version number. */
+    int major;
+    /** @brief The minor version number. */
+    int minor;
+    /** @brief The patch version number. */
+    int patch;
+} kas_version_t;
+
+/* Definitions of the prototypes for the functions. This is done to avoid
+ * duplication in the standard and dynamic API exports.
+ */
+
+#define KAS_PROTO_OPEN (kastore_t *self, const char *filename, const char *mode, int flags)
+#define KAS_PROTO_CLOSE (kastore_t *self)
+
+#define KAS_PROTO_GET (kastore_t *self, const char *key, size_t key_len, \
+        void **array, size_t *array_len, int *type)
+#define KAS_PROTO_GETS \
+    (kastore_t *self, const char *key, void **array, size_t *array_len, int *type)
+#define KAS_PROTO_GETS_INT8 \
+    (kastore_t *self, const char *key, int8_t **array, size_t *array_len)
+#define KAS_PROTO_GETS_UINT8 \
+    (kastore_t *self, const char *key, uint8_t **array, size_t *array_len)
+#define KAS_PROTO_GETS_INT16 \
+    (kastore_t *self, const char *key, int16_t **array, size_t *array_len)
+#define KAS_PROTO_GETS_UINT16 \
+    (kastore_t *self, const char *key, uint16_t **array, size_t *array_len)
+#define KAS_PROTO_GETS_INT32 \
+    (kastore_t *self, const char *key, int32_t **array, size_t *array_len)
+#define KAS_PROTO_GETS_UINT32 \
+    (kastore_t *self, const char *key, uint32_t **array, size_t *array_len)
+#define KAS_PROTO_GETS_INT64 \
+    (kastore_t *self, const char *key, int64_t **array, size_t *array_len)
+#define KAS_PROTO_GETS_UINT64 \
+    (kastore_t *self, const char *key, uint64_t **array, size_t *array_len)
+#define KAS_PROTO_GETS_FLOAT32 \
+    (kastore_t *self, const char *key, float **array, size_t *array_len)
+#define KAS_PROTO_GETS_FLOAT64 \
+    (kastore_t *self, const char *key, double **array, size_t *array_len)
+
+#define KAS_PROTO_PUT (kastore_t *self, const char *key, size_t key_len, \
+       const void *array, size_t array_len, int type, int flags)
+#define KAS_PROTO_PUTS (kastore_t *self, const char *key, \
+       const void *array, size_t array_len, int type, int flags)
+#define KAS_PROTO_PUTS_INT8 (kastore_t *self, const char *key, const int8_t *array, \
+        size_t array_len, int flags)
+#define KAS_PROTO_PUTS_UINT8 (kastore_t *self, const char *key, const uint8_t *array, \
+        size_t array_len, int flags)
+#define KAS_PROTO_PUTS_INT16 (kastore_t *self, const char *key, const int16_t *array, \
+        size_t array_len, int flags)
+#define KAS_PROTO_PUTS_UINT16 (kastore_t *self, const char *key, const uint16_t *array, \
+        size_t array_len, int flags)
+#define KAS_PROTO_PUTS_INT32 (kastore_t *self, const char *key, const int32_t *array, \
+        size_t array_len, int flags)
+#define KAS_PROTO_PUTS_UINT32 (kastore_t *self, const char *key, const uint32_t *array, \
+        size_t array_len, int flags)
+#define KAS_PROTO_PUTS_INT64 (kastore_t *self, const char *key, const int64_t *array, \
+        size_t array_len, int flags)
+#define KAS_PROTO_PUTS_UINT64 (kastore_t *self, const char *key, const uint64_t *array, \
+        size_t array_len, int flags)
+#define KAS_PROTO_PUTS_FLOAT32 (kastore_t *self, const char *key, const float *array, \
+        size_t array_len, int flags)
+#define KAS_PROTO_PUTS_FLOAT64 (kastore_t *self, const char *key, const double *array, \
+        size_t array_len, int flags)
+
+#define KAS_PROTO_PRINT_STATE (kastore_t *self, FILE *out)
+#define KAS_PROTO_STRERROR (int err)
+#define KAS_PROTO_VERSION (void)
+
+#define KAS_INDEX_OPEN              0
+#define KAS_INDEX_CLOSE             1
+#define KAS_INDEX_GET               2
+#define KAS_INDEX_GETS              3
+#define KAS_INDEX_GETS_INT8         4
+#define KAS_INDEX_GETS_UINT8        5
+#define KAS_INDEX_GETS_INT16        6
+#define KAS_INDEX_GETS_UINT16       7
+#define KAS_INDEX_GETS_INT32        8
+#define KAS_INDEX_GETS_UINT32       9
+#define KAS_INDEX_GETS_INT64        10
+#define KAS_INDEX_GETS_UINT64       11
+#define KAS_INDEX_GETS_FLOAT32      12
+#define KAS_INDEX_GETS_FLOAT64      13
+#define KAS_INDEX_PUT               14
+#define KAS_INDEX_PUTS              15
+#define KAS_INDEX_PUTS_INT8         16
+#define KAS_INDEX_PUTS_UINT8        17
+#define KAS_INDEX_PUTS_INT16        18
+#define KAS_INDEX_PUTS_UINT16       19
+#define KAS_INDEX_PUTS_INT32        20
+#define KAS_INDEX_PUTS_UINT32       21
+#define KAS_INDEX_PUTS_INT64        22
+#define KAS_INDEX_PUTS_UINT64       23
+#define KAS_INDEX_PUTS_FLOAT32      24
+#define KAS_INDEX_PUTS_FLOAT64      25
+#define KAS_INDEX_PRINT_STATE       26
+#define KAS_INDEX_STRERROR          27
+#define KAS_INDEX_VERSION           28
+
+/* Total number of exported functions */
+#define KAS_DYNAMIC_API_NUM 29
+
+/* We need to pass around arrays of generic function pointers. Because
+ * C99 does not allow us to cast function pointers to void *, it's useful
+ * to have this shorthand. */
+typedef void (*kas_funcptr)(void);
+
+#ifdef KAS_DYNAMIC_API
+extern kas_funcptr *kas_dynamic_api;
+
+#define kastore_open (*(int (*)KAS_PROTO_OPEN) kas_dynamic_api[KAS_INDEX_OPEN])
+#define kastore_close (*(int (*)KAS_PROTO_CLOSE) kas_dynamic_api[KAS_INDEX_CLOSE])
+
+#define kastore_get (*(int (*)KAS_PROTO_GET) kas_dynamic_api[KAS_INDEX_GET])
+#define kastore_gets (*(int (*)KAS_PROTO_GETS) kas_dynamic_api[KAS_INDEX_GETS])
+#define kastore_gets_int8 (*(int (*)KAS_PROTO_GETS_INT8) \
+        kas_dynamic_api[KAS_INDEX_GETS_INT8])
+#define kastore_gets_uint8 (*(int (*)KAS_PROTO_GETS_UINT8) \
+        kas_dynamic_api[KAS_INDEX_GETS_UINT8])
+#define kastore_gets_int16 (*(int (*)KAS_PROTO_GETS_INT16) \
+        kas_dynamic_api[KAS_INDEX_GETS_INT16])
+#define kastore_gets_uint16 (*(int (*)KAS_PROTO_GETS_UINT16) \
+        kas_dynamic_api[KAS_INDEX_GETS_UINT16])
+#define kastore_gets_int32 (*(int (*)KAS_PROTO_GETS_INT32) \
+        kas_dynamic_api[KAS_INDEX_GETS_INT32])
+#define kastore_gets_uint32 (*(int (*)KAS_PROTO_GETS_UINT32) \
+        kas_dynamic_api[KAS_INDEX_GETS_UINT32])
+#define kastore_gets_int64 (*(int (*)KAS_PROTO_GETS_INT64) \
+        kas_dynamic_api[KAS_INDEX_GETS_INT64])
+#define kastore_gets_uint64 (*(int (*)KAS_PROTO_GETS_UINT64) \
+        kas_dynamic_api[KAS_INDEX_GETS_UINT64])
+#define kastore_gets_float32 (*(int (*)KAS_PROTO_GETS_FLOAT32) \
+        kas_dynamic_api[KAS_INDEX_GETS_FLOAT32])
+#define kastore_gets_float64 (*(int (*)KAS_PROTO_GETS_FLOAT64) \
+        kas_dynamic_api[KAS_INDEX_GETS_FLOAT64])
+
+#define kastore_put (*(int (*)KAS_PROTO_PUT) kas_dynamic_api[KAS_INDEX_PUT])
+#define kastore_puts (*(int (*)KAS_PROTO_PUTS) kas_dynamic_api[KAS_INDEX_PUTS])
+#define kastore_puts_int8 (*(int (*)KAS_PROTO_PUTS_INT8) \
+        kas_dynamic_api[KAS_INDEX_PUTS_INT8])
+#define kastore_puts_uint8 (*(int (*)KAS_PROTO_PUTS_UINT8) \
+        kas_dynamic_api[KAS_INDEX_PUTS_UINT8])
+#define kastore_puts_int16 (*(int (*)KAS_PROTO_PUTS_INT16) \
+        kas_dynamic_api[KAS_INDEX_PUTS_INT16])
+#define kastore_puts_uint16 (*(int (*)KAS_PROTO_PUTS_UINT16) \
+        kas_dynamic_api[KAS_INDEX_PUTS_UINT16])
+#define kastore_puts_int32 (*(int (*)KAS_PROTO_PUTS_INT32) \
+        kas_dynamic_api[KAS_INDEX_PUTS_INT32])
+#define kastore_puts_uint32 (*(int (*)KAS_PROTO_PUTS_UINT32) \
+        kas_dynamic_api[KAS_INDEX_PUTS_UINT32])
+#define kastore_puts_int64 (*(int (*)KAS_PROTO_PUTS_INT64) \
+        kas_dynamic_api[KAS_INDEX_PUTS_INT64])
+#define kastore_puts_uint64 (*(int (*)KAS_PROTO_PUTS_UINT64) \
+        kas_dynamic_api[KAS_INDEX_PUTS_UINT64])
+#define kastore_puts_float32 (*(int (*)KAS_PROTO_PUTS_FLOAT32) \
+        kas_dynamic_api[KAS_INDEX_PUTS_FLOAT32])
+#define kastore_puts_float64 (*(int (*)KAS_PROTO_PUTS_FLOAT64) \
+        kas_dynamic_api[KAS_INDEX_PUTS_FLOAT64])
+
+#define kastore_print_state (*(void (*)KAS_PROTO_PRINT_STATE) \
+        kas_dynamic_api[KAS_INDEX_PRINT_STATE])
+#define kas_strerror (*(const char * (*)KAS_PROTO_STRERROR) \
+        kas_dynamic_api[KAS_INDEX_STRERROR])
+#define kas_version (*(kas_version_t (*)KAS_PROTO_VERSION) \
+        kas_dynamic_api[KAS_INDEX_VERSION])
+
+#else
+
+/**
+@brief Open a store from a given file in read ("r"), write ("w") or
+append ("a") mode.
+
+@rst
+In read mode, a store can be queried using the :ref:`get functions
+<sec_c_api_get>` and any attempts to write to the store will return an error.
+In write and append mode, the store can written to using the :ref:`put
+functions <sec_c_api_put>` and any attempt to read will return an error.
+
+After :c:func:`kastore_open` has been called on a particular store,
+:c:func:`kastore_close` must be called to avoid leaking memory. This must also
+be done when :c:func:`kastore_open` returns an error.
+
+.. todo:: Document open flags.
+@endrst
+
+@param self A pointer to a kastore object.
+@param filename The file path to open.
+@param mode The open mode: can be read ("r"), write ("w") or append ("a").
+@param flags The open flags.
+@return Return 0 on success or a negative value on failure.
+*/
+int kastore_open KAS_PROTO_OPEN;
+
+/**
+@brief Close an opened store, freeing all resources.
+
+Any store that has been opened must be closed to avoid memory leaks
+(including cases in which errors have occured). It is not an error to
+call ``kastore_close`` multiple times on the same object, but
+``kastore_open`` must be called before ``kastore_close``.
+
+@param self A pointer to a kastore object.
+@return Return 0 on success or a negative value on failure.
+*/
+int kastore_close KAS_PROTO_CLOSE;
+
+/**
+@brief Get the array for the specified key.
+
+@rst
+Queries the store for the specified key and stores pointers to the memory for
+the corresponding array, the number of elements in this array and the type of
+the array in the specified destination pointers. This is the most general form
+of ``get`` query in kastore, as non NULL-terminated strings can be used as
+keys and the resulting array is returned in a generic pointer. When standard C
+strings are used as keys and the type of the array is known, it is more
+convenient to use the :ref:`typed variants <sec_c_api_typed_get>` of this function.
+
+The returned array points to memory that is internally managed by the store
+and must not be freed or modified. The pointer is guaranteed to be valid
+until :c:func:`kastore_close` is called.
+@endrst
+
+@param self A pointer to a kastore object.
+@param key The key.
+@param key_len The length of the key.
+@param array The destination pointer for the array.
+@param array_len The destination pointer for the number of elements
+in the array.
+@param type The destination pointer for the type code of the array.
+@return Return 0 on success or a negative value on failure.
+*/
+int kastore_get KAS_PROTO_GET;
+
+/**
+@brief Get the array for the specified NULL-terminated key.
+
+@rst
+As for :c:func:`kastore_get()` except the key is a NULL-terminated string.
+@endrst
+
+@param self A pointer to a kastore object.
+@param key The key.
+@param array The destination pointer for the array.
+@param array_len The destination pointer for the number of elements
+in the array.
+@param type The destination pointer for the type code of the array.
+@return Return 0 on success or a negative value on failure.
+*/
+int kastore_gets KAS_PROTO_GETS;
+
+/**
+@defgroup TYPED_GETS_GROUP Typed get functions.
+@{
+*/
+
+int kastore_gets_int8 KAS_PROTO_GETS_INT8;
+int kastore_gets_uint8 KAS_PROTO_GETS_UINT8;
+int kastore_gets_int16 KAS_PROTO_GETS_INT16;
+int kastore_gets_uint16 KAS_PROTO_GETS_UINT16;
+int kastore_gets_int32 KAS_PROTO_GETS_INT32;
+int kastore_gets_uint32 KAS_PROTO_GETS_UINT32;
+int kastore_gets_int64 KAS_PROTO_GETS_INT64;
+int kastore_gets_uint64 KAS_PROTO_GETS_UINT64;
+int kastore_gets_float32 KAS_PROTO_GETS_FLOAT32;
+int kastore_gets_float64 KAS_PROTO_GETS_FLOAT64;
+
+/** @} */
+
+/**
+@brief Insert the specified key-array pair into the store.
+
+@rst
+A key with the specified length is inserted into the store and associated with
+an array of the specified type and number of elements. The contents of the
+specified key and array are copied. Keys can be any sequence of bytes but must
+be at least one byte long and be unique. There is no restriction on the
+contents of arrays. This is the most general form of ``put`` operation in
+kastore; when the type of the array is known and the keys are standard C
+strings, it is usually more convenient to use the :ref:`typed variants
+<sec_c_api_typed_put>` of this function.
+@endrst
+
+@param self A pointer to a kastore object.
+@param key The key.
+@param key_len The length of the key.
+@param array The array.
+@param array_len The number of elements in the array.
+@param type The type of the array.
+@param flags The insertion flags. Currently unused.
+@return Return 0 on success or a negative value on failure.
+*/
+int kastore_put KAS_PROTO_PUT;
+/**
+@brief Insert the specified null terminated key and array pair into the store.
+
+@rst
+As for :c:func:`kastore_put` except the key must be NULL-terminated C string.
+@endrst
+
+@param self A pointer to a kastore object.
+@param key The key.
+@param array The array.
+@param array_len The number of elements in the array.
+@param type The type of the array.
+@param flags The insertion flags. Currently unused.
+@return Return 0 on success or a negative value on failure.
+*/
+int kastore_puts KAS_PROTO_PUTS;
+
+/**
+ @defgroup TYPED_PUTS_GROUP Typed put functions.
+ @{
+ */
+
+int kastore_puts_int8 KAS_PROTO_PUTS_INT8;
+int kastore_puts_uint8 KAS_PROTO_PUTS_UINT8;
+int kastore_puts_int16 KAS_PROTO_PUTS_INT16;
+int kastore_puts_uint16 KAS_PROTO_PUTS_UINT16;
+int kastore_puts_int32 KAS_PROTO_PUTS_INT32;
+int kastore_puts_uint32 KAS_PROTO_PUTS_UINT32;
+int kastore_puts_int64 KAS_PROTO_PUTS_INT64;
+int kastore_puts_uint64 KAS_PROTO_PUTS_UINT64;
+int kastore_puts_float32 KAS_PROTO_PUTS_FLOAT32;
+int kastore_puts_float64 KAS_PROTO_PUTS_FLOAT64;
+
+/** @} */
+
+void kastore_print_state KAS_PROTO_PRINT_STATE;
+
+/**
+@brief Returns a description of the specified error code.
+
+@param err The error code.
+@return String describing the error code.
+*/
+const char *kas_strerror KAS_PROTO_STRERROR;
+
+/**
+@brief Returns the API version.
+
+@rst
+The API follows the `semver convention <https://semver.org/>`_, where the
+major, minor and patch numbers have specific meanings. The versioning
+scheme here also takes into account ABI compatability.
+@endrst
+*/
+kas_version_t kas_version KAS_PROTO_VERSION;
+
+/**
+@brief Initialises the dynamic API.
+*/
+kas_funcptr* kas_dynamic_api_init(void);
+
+#endif
+
+#define kas_safe_free(pointer) \
+do {\
+    if (pointer != NULL) {\
+        free(pointer);\
+        pointer = NULL;\
+    }\
+} while (0)
+
+#endif
