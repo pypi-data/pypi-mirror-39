@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: Flask-InterfacePubSub
+Version: 0.0.1
+Summary: Package for help to send contract to Google Pub Sub.
+Home-page: https://github.com/rafaelportugal/Flask-InterfacePubSub
+Author: Rafael Portugal
+Author-email: rafaelportugal05@gmail.com
+License: MIT
+Description: # Flask-InterfacePubSub
+        Python Package for help to validate and send json contract to Google Pub Sub.
+        
+Platform: UNKNOWN
+Classifier: Framework :: Flask
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
