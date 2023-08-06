@@ -1,0 +1,3 @@
+[console_scripts]
+workflows-init = biowardrobe_cwl_workflows.workflows_init:generate_biowardrobe_workflow
+
