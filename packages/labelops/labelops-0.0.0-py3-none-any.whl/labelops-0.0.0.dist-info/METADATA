@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: labelops
+Version: 0.0.0
+Summary: Operates on labeled neuronal meshes.
+Home-page: https://github.com/Cajal/LabelOps
+Author: Christos Papadopoulos
+Author-email: cpapa97@gmail.com
+License: GNU LGPL
+Keywords: functional connectomics
+Platform: UNKNOWN
+Requires-Dist: numpy
+
+A package to handle specific operations on neuronal meshes with labeled data, including compressing and decompressing those labels.
+
+
