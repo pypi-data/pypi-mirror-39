@@ -1,0 +1,33 @@
+dist: xenial
+sudo: false
+language: python
+
+python:
+- 3.6
+- &latest_py3 3.7
+
+jobs:
+  fast_finish: true
+  include:
+  - stage: deploy
+    if: tag IS present
+    python: *latest_py3
+    before_script: skip
+    env:
+    - TWINE_USERNAME=jaraco
+    # TWINE_PASSWORD
+    - secure: D9S9kHs8IkvnrpKx5yauQB6uD5cx62BUvnpTZoRiJ98K1HMMjQ8Uo1SlcY/UzfQT6fElbJOHRSscK/HGwmDDaJgQiquvi+mbGPycPk/rT9mDMFtXysree8TVPOXbzqUdvTvUckOxBF0NsIcRGpl2Er9D4kjypQOn0+ReT5vtcnqJPv0RVh+r+WuPfdh60f9BlcKTrqFFJWtq3UnxWrHoexRDFsby/WmxJZ4pXksvM/Jf4tuwADUOZa/tfsMZ7kZCtfJtYq2dUNciWUMBGlxTH8tbrnhP2s9x3TyLj2POPbFsstQ7GHHUH7LB2EiGnsXkuUohlIfDUPsVfjR9B3YIHejFoRPnNqNPjrNUIjnPfAk1SmQQUSnWP+S8lXpN48PAxorywkaNQPDMvml6KlNv8EPW4FmSKsCeiCemaRoZxkhgRt0lw7Y2Nyd9IwzOqqWJMnN7YL+ndQ306tPpPqKxekArR4OCBHdFSX+C1VD8BhtQNzX5vNsMpoj5xR0BgzsD3j3JHArFZOCdq6sB8H28AP7rD6nAXNaETWKbF+vethVfNUkbJ9srpVXfrfnOHaxm5CTLckqPLbv0E5zFRpSmTb57wUtbzS9WoBGrncI26nwgWmgGT+Eq1v9D34vQXq4r6FOTv9O4DHaz4RmJna/jpX77SP9S+wnqe/nNR3zuPEU=
+    - TOX_TESTENV_PASSENV="TWINE_USERNAME TWINE_PASSWORD"
+    script: tox -e release
+
+cache: pip
+
+install:
+- pip install tox tox-venv
+
+before_script:
+  # Disable IPv6. Ref travis-ci/travis-ci#8361
+  - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then
+      sudo sh -c 'echo 0 > /proc/sys/net/ipv6/conf/all/disable_ipv6';
+    fi
+script: tox
