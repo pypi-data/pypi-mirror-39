@@ -1,0 +1,343 @@
+Metadata-Version: 2.1
+Name: mlblocks
+Version: 0.2.4
+Summary: Pipelines and primitives for machine learning and data science.
+Home-page: https://github.com/HDI-Project/MLBlocks
+Author: MIT Data To AI Lab
+Author-email: dailabmit@gmail.com
+License: MIT license
+Keywords: auto machine learning classification regression data science pipeline
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mlprimitives (>=0.1.3)
+Provides-Extra: dev
+Requires-Dist: bumpversion (>=0.5.3) ; extra == 'dev'
+Requires-Dist: pip (>=9.0.1) ; extra == 'dev'
+Requires-Dist: watchdog (>=0.8.3) ; extra == 'dev'
+Requires-Dist: m2r (>=0.2.0) ; extra == 'dev'
+Requires-Dist: Sphinx (>=1.7.1) ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme (>=0.2.4) ; extra == 'dev'
+Requires-Dist: graphviz (==0.9) ; extra == 'dev'
+Requires-Dist: ipython (==6.5.0) ; extra == 'dev'
+Requires-Dist: matplotlib (==2.2.3) ; extra == 'dev'
+Requires-Dist: recommonmark (>=0.4.0) ; extra == 'dev'
+Requires-Dist: flake8 (>=3.5.0) ; extra == 'dev'
+Requires-Dist: isort (>=4.3.4) ; extra == 'dev'
+Requires-Dist: autoflake (>=1.2) ; extra == 'dev'
+Requires-Dist: autopep8 (>=1.3.5) ; extra == 'dev'
+Requires-Dist: twine (>=1.10.0) ; extra == 'dev'
+Requires-Dist: wheel (>=0.30.0) ; extra == 'dev'
+Requires-Dist: tox (>=2.9.1) ; extra == 'dev'
+Requires-Dist: coverage (>=4.5.1) ; extra == 'dev'
+Requires-Dist: pytest (>=3.4.2) ; extra == 'dev'
+Requires-Dist: pytest-cov (>=2.6.0) ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest (>=3.4.2) ; extra == 'test'
+Requires-Dist: pytest-cov (>=2.6.0) ; extra == 'test'
+
+<p align="center">
+<img width=30% src="https://dai.lids.mit.edu/wp-content/uploads/2018/06/mlblocks-icon.png" alt=“MLBlocks” />
+</p>
+
+<p align="center">
+<i>
+Pipelines and Primitives for Machine Learning and Data Science.
+</i>
+</p>
+
+[![PyPi][pypi-img]][pypi-url]
+[![Travis][travis-img]][travis-url]
+[![CodeCov][codecov-img]][codecov-url]
+
+[pypi-img]: https://img.shields.io/pypi/v/mlblocks.svg
+[pypi-url]: https://pypi.python.org/pypi/mlblocks
+[travis-img]: https://travis-ci.org/HDI-Project/MLBlocks.svg?branch=master
+[travis-url]: https://travis-ci.org/HDI-Project/MLBlocks
+[codecov-img]: https://codecov.io/gh/HDI-Project/MLBlocks/branch/master/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/HDI-Project/MLBlocks
+
+* Free software: MIT license
+* Documentation: https://HDI-Project.github.io/MLBlocks
+
+# Overview
+
+MLBlocks is a simple framework for composing end-to-end tunable Machine Learning Pipelines by
+seamlessly combining tools from any python library with a simple, common and uniform interface.
+
+Features include:
+
+* Build Machine Learning Pipelines combining **any Machine Learning Library in Python**.
+* Access a repository with hundreds of primitives and pipelines ready to be used with little to
+  no python code to write, carefully curated by Machine Learning and Domain experts.
+* Extract machine-readable information about which hyperparameters can be tuned and within
+  which ranges, allowing automated integration with Hyperparameter Optimization tools like
+  [BTB](https://github.com/HDI-Project/BTB).
+* Complex multi-branch pipelines and DAG configurations, with unlimited number of inputs and
+  outputs per primitive.
+* Easy save and load Pipelines using JSON Annotations.
+
+# Installation
+
+The simplest and recommended way to install MLBlocks is using `pip`:
+
+```bash
+pip install mlblocks
+```
+
+Alternatively, you can also clone the repository and install it from sources
+
+```bash
+git clone git@github.com:HDI-Project/MLBlocks.git
+cd MLBlocks
+make install
+```
+
+For development, you can use `make install-develop` instead in order to install all
+the required dependencies for testing and code linting.
+
+# Usage Example
+
+Below there is a short example about how to use MLBlocks to create a simple pipeline, fit it
+using demo data and use it to make predictions.
+
+For advance usage and more detailed explanation about each component, please have a look
+at the [documentation](https://HDI-Project.github.io/MLBlocks)
+
+## Creating a pipeline
+
+With MLBlocks, creating a pipeline is as simple as specifying a list of primitives and passing
+them to the `MLPipeline` class.
+
+```python
+>>> from mlblocks import MLPipeline
+... primitives = [
+...     'cv2.GaussianBlur',
+...     'skimage.feature.hog',
+...     'sklearn.ensemble.RandomForestClassifier'
+... ]
+>>> pipeline = MLPipeline(primitives)
+```
+
+Optionally, specific hyperparameters can be also set by specifying them in a dictionary:
+
+```python
+>>> hyperparameters = {
+...    'skimage.feature.hog': {
+...        'multichannel': True,
+...        'visualize': False
+...    },
+...    'sklearn.ensemble.RandomForestClassifier': {
+...         'n_estimators': 100,
+...    }
+... }
+>>> pipeline = MLPipeline(primitives, hyperparameters)
+```
+
+If you can see which hyperparameters a particular pipeline is using, you can do so by calling
+its `get_hyperparameters` method:
+
+```python
+>>> import json
+>>> hyperparameters = pipeline.get_hyperparameters()
+>>> print(json.dumps(hyperparameters, indent=4))
+{
+    "cv2.GaussianBlur#1": {
+        "ksize_width": 3,
+        "ksize_height": 3,
+        "sigma_x": 0,
+        "sigma_y": 0
+    },
+    "skimage.feature.hog#1": {
+        "multichannel": true,
+        "visualize": false,
+        "orientations": 9,
+        "pixels_per_cell_x": 8,
+        "pixels_per_cell_y": 8,
+        "cells_per_block_x": 3,
+        "cells_per_block_y": 3,
+        "block_norm": null
+    },
+    "sklearn.ensemble.RandomForestClassifier#1": {
+        "n_jobs": -1,
+        "n_estimators": 100,
+        "criterion": "entropy",
+        "max_features": null,
+        "max_depth": 10,
+        "min_samples_split": 0.1,
+        "min_samples_leaf": 0.1,
+        "class_weight": null
+    }
+}
+```
+
+### Making predictions
+
+Once we have created the pipeline with the desired hyperparameters we can fit it
+and then use it to make predictions on new data.
+
+To do this, we first call the `fit` method passing the training data and the corresponding labels.
+
+In this case in particular, we will be loading the handwritten digit classification dataset
+from USPS using the `mlblocks.datasets.load_usps` method, which returns a dataset object
+ready to be played with.
+
+```python
+>>> from mlblocks.datasets import load_usps
+>>> dataset = load_usps()
+>>> X_train, X_test, y_train, y_test = dataset.get_splits(1)
+>>> pipeline.fit(X_train, y_train)
+```
+
+Once we have fitted our model to our data, we can call the `predict` method passing new data
+to obtain predictions from the pipeline.
+
+```python
+>>> predictions = pipeline.predict(X_test)
+>>> predictions
+array([3, 2, 1, ..., 1, 1, 2])
+```
+
+## What's Next?
+
+If you want to learn more about how to tune the pipeline hyperparameters, save and load
+the pipelines using JSON annotations or build complex multi-branched pipelines, please
+check our [documentation](https://HDI-Project.github.io/MLBlocks).
+
+# History
+
+In its first iteration in 2015, MLBlocks was designed for only multi table, multi entity temporal
+data. A good reference to see our design rationale at that time is Bryan Collazo’s thesis:
+* [Machine learning blocks](https://dai.lids.mit.edu/wp-content/uploads/2018/06/Mlblocks_Bryan.pdf).
+  Bryan Collazo. Masters thesis, MIT EECS, 2015.
+
+With recent availability of a multitude of libraries and tools, we decided it was time to integrate
+them and expand the library to address other data types: images, text, graph, time series and
+integrate with deep learning libraries.
+
+
+Changelog
+=========
+
+0.2.4 - New Datasets and Unit Tests
+-----------------------------------
+
+* Add a new multi-table dataset.
+* Add Unit Tests up to 50% coverage.
+* Improve documentation.
+* Fix minor bug in newsgroups dataset.
+
+0.2.3 - Demo Datasets
+---------------------
+
+* Add new methods to Dataset class.
+* Add documentation for the datasets module.
+
+0.2.2 - MLPipeline Load/Save
+----------------------------
+
+* Implement save and load methods for MLPipelines
+* Add more datasets
+
+0.2.1 - New Documentation
+-------------------------
+
+* Add mlblocks.datasets module with demo data download functions.
+* Extensive documentation, including multiple pipeline examples.
+
+0.2.0 - New MLBlocks API
+------------------------
+
+A new MLBlocks API and Primitive format.
+
+This is a summary of the changes:
+
+* Primitives JSONs and Python code has been moved to a different repository, called MLPrimitives
+* Optional usage of multiple JSON primitive folders.
+* JSON format has been changed to allow more flexibility and features:
+    * input and output arguments, as well as argument types, can be specified for each method
+    * both classes and function as primitives are supported
+    * multitype and conditional hyperparameters fully supported
+    * data modalities and primitive classifiers introduced
+    * metadata such as documentation, description and author fields added
+* Parsers are removed, and now the MLBlock class is responsible for loading and reading the
+  JSON primitive.
+* Multiple blocks of the same primitive are supported within the same pipeline.
+* Arbitrary inputs and outputs for both pipelines and blocks are allowed.
+* Shared variables during pipeline execution, usable by multiple blocks.
+
+0.1.9 - Bugfix Release
+----------------------
+
+* Disable some NetworkX functions for incompatibilities with some types of graphs.
+
+0.1.8 - New primitives and some improvements
+--------------------------------------------
+
+* Improve the NetworkX primitives.
+* Add String Vectorization and Datetime Featurization primitives.
+* Refactor some Keras primitives to work with single dimension `y` arrays and be compatible with `pickle`.
+* Add XGBClassifier and XGBRegressor primitives.
+* Add some `keras.applications` pretrained networks as preprocessing primitives.
+* Add helper class to allow function primitives.
+
+0.1.7 - Nested hyperparams dicts
+--------------------------------
+
+* Support passing hyperparams as nested dicts.
+
+0.1.6 - Text and Graph Pipelines
+--------------------------------
+
+* Add LSTM classifier and regressor primitives.
+* Add OneHotEncoder and MultiLabelEncoder primitives.
+* Add several NetworkX graph featurization primitives.
+* Add `community.best_partition` primitive.
+
+0.1.5 - Collaborative Filtering Pipelines
+-----------------------------------------
+
+* Add LightFM primitive.
+
+0.1.4 - Image pipelines improved
+--------------------------------
+
+* Allow passing `init_params` on `MLPipeline` creation.
+* Fix bug with MLHyperparam types and Keras.
+* Rename `produce_params` as `predict_params`.
+* Add SingleCNN Classifier and Regressor primitives.
+* Simplify and improve Trivial Predictor
+
+0.1.3 - Multi Table pipelines improved
+--------------------------------------
+
+* Improve RandomForest primitive ranges
+* Improve DFS primitive
+* Add Tree Based Feature Selection primitives
+* Fix bugs in TrivialPredictor
+* Improved documentation
+
+0.1.2 - Bugfix release
+----------------------
+
+* Fix bug in TrivialMedianPredictor
+* Fix bug in OneHotLabelEncoder
+
+0.1.1 - Single Table pipelines improved
+---------------------------------------
+
+* New project structure and primitives for integration into MIT-TA2.
+* MIT-TA2 default pipelines and single table pipelines fully working.
+
+0.1.0
+-----
+
+* First release on PyPI.
+
+
