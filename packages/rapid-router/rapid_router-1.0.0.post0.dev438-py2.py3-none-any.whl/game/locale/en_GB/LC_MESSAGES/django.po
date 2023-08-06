@@ -1,0 +1,1954 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-06 11:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: messages.py:43
+msgid "Code For Life : Custom level to moderate"
+msgstr ""
+
+#: messages.py:47
+#, python-brace-format
+msgid ""
+"Your student {student_name} from your class {class_name} has created this level: {level_url}. If you want to moderate it, you can do it on the moderation board: {moderate_url}.\n"
+"\n"
+"Thanks,\n"
+"\n"
+"The Code for Life team.\n"
+"{home_url}"
+msgstr ""
+
+#: messages.py:59
+msgid "Play button"
+msgstr ""
+
+#: messages.py:63
+msgid "You have no permission to see this."
+msgstr ""
+
+#: messages.py:67
+msgid "This level is private. You can only see the public levels and the ones created by other users only if they share them with you."
+msgstr ""
+
+#: messages.py:75 messages.py:92
+msgid "No permission "
+msgstr ""
+
+#: messages.py:79
+msgid "Scoreboard is only visible to school students and teachers. Log in if you think you should be able to see it. "
+msgstr ""
+
+#: messages.py:84
+msgid "There is no data to show. Please contact your administrator if this is unexpected. "
+msgstr ""
+
+#: messages.py:96
+msgid "Level moderation is only visible to teachers. Log in if you think you should be able to see it. "
+msgstr ""
+
+#: messages.py:101
+msgid "You do not teach this class. Please contact your administrator if this is unexpected."
+msgstr ""
+
+#: messages.py:106
+msgid "You do not teach this student. Please contact your administrator if this is unexpected."
+msgstr ""
+
+#: messages.py:111
+msgid "You have not created any classes and therefore is no data to show. Please contact your administrator if this is unexpected."
+msgstr ""
+
+#: messages.py:119
+msgid "Level Share"
+msgstr ""
+
+#: messages.py:123
+#, python-brace-format
+msgid "You shared your level with {0} {1} successfully! "
+msgstr ""
+
+#: messages.py:127
+#, python-brace-format
+msgid "You shared your level with class {0} successfully! "
+msgstr ""
+
+#: messages.py:131
+#, python-format
+msgid "We were unable to find %(name)s %(surname)s. "
+msgstr ""
+
+#: messages.py:137
+#, python-format
+msgid "We were unable to find class %(class)s. Are you sure you got it right?"
+msgstr ""
+
+#: messages.py:142
+msgid "It seems that you have not created any levels. How about creating one now? "
+msgstr ""
+
+#: messages.py:147
+msgid "All the levels you have created so far. Click on them to play them or share them with your friends. "
+msgstr ""
+
+#: messages.py:152
+msgid "All the levels created by others that were shared with you. Click on them to play them"
+msgstr ""
+
+#: messages.py:157
+msgid "No one shared a level with you yet. "
+msgstr ""
+
+#: messages.py:164
+msgid "Choose a class you want to see. "
+msgstr ""
+
+#: messages.py:168
+msgid "You don't have permissions to see this. "
+msgstr ""
+
+#: messages.py:188
+msgid " "
+msgstr ""
+
+#: messages.py:192
+msgid "Can you find the shortest route? "
+msgstr ""
+
+#: messages.py:197
+msgid "Think back to earlier levels. What did you learn? "
+msgstr ""
+
+#: messages.py:202
+msgid "Can you help the van get to the house? "
+msgstr ""
+
+#: messages.py:206
+#, python-format
+msgid "Choose the right blocks to tell the van where to go. <br> Drag the blocks under the <b>Start</b> block to attach them. <br> To remove a block, drag it into the bin in the bottom right of the screen. <br> When you are happy with your sequence, press %(play_button)s! "
+msgstr ""
+
+#: messages.py:215
+#, python-format
+msgid "Drag the <b>Move forwards</b> block so that it is under the <b>Start</b> block - close enough to be touching. <br><br>Clicking on the arrows next to the %(play_button)s button will also drag the blocks into a sequence for you. <br><br>Don't forget to press %(play_button)s when you are done. "
+msgstr ""
+
+#: messages.py:224
+msgid "This time the house is further away. "
+msgstr ""
+
+#: messages.py:228
+#, python-format
+msgid "A block can be placed next to or under another, like a jigsaw. A second <b>Move forwards</b> block can be placed under the first <b>Move forwards</b> block. <br> To remove a block, drag it back to the left of the screen or drop it in the bin. <br> When you are happy with your sequence, press %(play_button)s! "
+msgstr ""
+
+#: messages.py:237
+#, python-format
+msgid "A second <b>Move forwards</b> block can be placed under the first <b>Move forwards</b> block. <br><br>The arrows next to the <b>%(play_button)s</b> button will drag the blocks into a sequence for you. "
+msgstr ""
+
+#: messages.py:245
+msgid "Can you make the van turn right? "
+msgstr ""
+
+#: messages.py:249
+#, python-format
+msgid "This time, the van has to turn right to reach the house. Make sure you use the <b>Turn right</b> block in your sequence. <br> Drag the blocks and attach them under the <b>Start</b> block like before. To remove a block, drag it back to the left of the screen or drop it in the bin. <br> When you are happy with your sequence, press %(play_button)s! "
+msgstr ""
+
+#: messages.py:259
+#, python-format
+msgid "A <b>Turn right</b> block can be placed under the first <b>Move forwards</b> block. <br><br> The arrows next to the %(play_button)s button will drag the blocks into a sequence for you. "
+msgstr ""
+
+#: messages.py:266
+msgid "You are getting good at this! Let's try turning left. "
+msgstr ""
+
+#: messages.py:270
+#, python-format
+msgid "This time the van has to go left. Make sure you use the <b>Turn left</b> block in your sequence. <br> Drag and attach the blocks like before. <br> When you are happy with your sequence, press %(play_button)s! "
+msgstr ""
+
+#: messages.py:278
+#, python-format
+msgid "A <b>Turn left</b> block can be placed under a series of <b>Move forwards</b> blocks. <br> The arrows next to the %(play_button)s button will drag the blocks into a sequence for you. "
+msgstr ""
+
+#: messages.py:285
+msgid "Good work! You are ready for something harder. "
+msgstr ""
+
+#: messages.py:289
+#, python-format
+msgid "You already know how to make the van turn left or right. This time the van has to make lots of turns to reach the house. <br> Drag and attach the blocks to make your sequence.<br> When you are happy with your sequence, press %(play_button)s! "
+msgstr ""
+
+#: messages.py:298
+#, python-format
+msgid "This road starts by curving to the <b>left</b>. Then it curves to the <b>right</b>. <br><br> The arrows next to the %(play_button)s button will drag the blocks into a sequence for you. "
+msgstr ""
+
+#: messages.py:305
+msgid "Well done! Let's use all three blocks. "
+msgstr ""
+
+#: messages.py:309
+#, python-format
+msgid "This time the van has to <b>Move forwards</b>, <b>Turn left</b> and <b>Turn right</b>. <br><br> Drag and attach the blocks like before. <br> When you are happy with your sequence, press %(play_button)s! "
+msgstr ""
+
+#: messages.py:317
+#, python-format
+msgid "Follow the road around. How many <b>Move forwards</b> do you need? <br><br>The arrows next to the %(play_button)s button will drag the blocks into a sequence for you. "
+msgstr ""
+
+#: messages.py:324 messages.py:420
+msgid "This road is more complicated. "
+msgstr ""
+
+#: messages.py:328 messages.py:367
+#, python-format
+msgid "Practise your new skills on this road by helping the driver to arrive at the house. <br> When you are happy with your sequence, press %(play_button)s! "
+msgstr ""
+
+#: messages.py:335
+#, python-format
+msgid "Follow the road around. Don't forget to <b>Turn left</b> first. <br><br>The arrows next to the %(play_button)s button will drag the blocks into a sequence for you."
+msgstr ""
+
+#: messages.py:342
+msgid "The warehouse is not always in the same place. "
+msgstr ""
+
+#: messages.py:346
+#, python-format
+msgid "This time the warehouse is somewhere else on the screen but you still need to use the <b>Move forwards</b> block. <br> Can you use the <b>Move forwards</b> block correctly even when it looks like the van goes in a different direction? <br> When you are happy with your sequence, press %(play_button)s! "
+msgstr ""
+
+#: messages.py:356
+msgid "On screen, the van looks like it follows the road down. If you were in the van, it would look like you should <b>Move forwards</b>, then <b>Turn right</b>. "
+msgstr ""
+
+#: messages.py:363
+msgid "Can you go from right to left? "
+msgstr ""
+
+#: messages.py:375
+msgid "How many times do you have to <b>Move forwards</b> before you <b>Turn left</b>? "
+msgstr ""
+
+#: messages.py:381
+msgid "Well done! How about another go? "
+msgstr ""
+
+#: messages.py:385
+#, python-format
+msgid "You've done really well so far. Try to get the van to the house. <br> When you are happy with your sequence, press %(play_button)s! "
+msgstr ""
+
+#: messages.py:392
+#, python-format
+msgid "This map is not so hard. Notice that to you it looks like the road goes up, but if you were in the in the van, you would see the road goes right. <br><br> Do you know which turn the van will take next? <br><br> The arrows next to the %(play_button)s button will drag the blocks into a sequence for you. "
+msgstr ""
+
+#: messages.py:401
+msgid "Snail maze! "
+msgstr ""
+
+#: messages.py:405
+#, python-format
+msgid "Uh oh, a tricky snail maze! Can you take the van through it? <br> When you are happy with your sequence, press %(play_button)s! "
+msgstr ""
+
+#: messages.py:412
+#, python-format
+msgid "The maze looks a bit like a snail, doesn't it? That means that for most of the time the van should only <b>Move forwards</b> and <b>Turn right</b>. <br><br> The arrows next to the %(play_button)s button will drag the blocks into a sequence for you. "
+msgstr ""
+
+#: messages.py:424
+#, python-format
+msgid "Good work, by now you are able to solve quite complicated levels. Prove your skills! <br> When you are happy with your sequence, press %(play_button)s! "
+msgstr ""
+
+#: messages.py:432
+msgid "This road might look much longer and more complicated, but it's not that hard. <br> Start by using <b>Move forwards</b> a few steps and <b>Move left</b>. "
+msgstr ""
+
+#: messages.py:439
+msgid "Multiple routes"
+msgstr ""
+
+#: messages.py:443
+#, python-format
+msgid "Often there is more than one way to get to the house. The route that needs the fewest directions is usually best. <br> Help the van find the shortest route to the house. <br> You can press the %(play_button)s or <b>Play</b> buttons to start the van. "
+msgstr ""
+
+#: messages.py:451
+msgid "Try taking the route that starts by turning left then turns right. Do you know what follows next? "
+msgstr ""
+
+#: messages.py:457
+msgid "Can you spot the shortest route? "
+msgstr ""
+
+#: messages.py:461
+msgid "So many options to choose from! <br> Do you know which is the shortest route to get the van to house? "
+msgstr ""
+
+#: messages.py:467
+msgid "The middle route seems to be shortest. Do you know what sequence of instructions will make the van follow it?"
+msgstr ""
+
+#: messages.py:473
+msgid "What if there is more than one delivery? "
+msgstr ""
+
+#: messages.py:477
+msgid "Our vans often need to go to more than one house. To make the van deliver to a house use the <b>Deliver</b> block. <br> Make sure your sequence gets the van to travel the shortest route! "
+msgstr ""
+
+#: messages.py:484
+msgid "Make the van turn left and go directly to the closest house first. This is the shortest route. <br><br> The <b>Deliver</b> block is not needed when the van is only going to one house, but you need it when the van is going to two or more houses. <br><br> Use the <b>Deliver</b> block every time the van gets to a house. "
+msgstr ""
+
+#: messages.py:493
+msgid "This time there are even more houses. "
+msgstr ""
+
+#: messages.py:497
+msgid "Well done! You have done really well to get so far - let's take it to the next level and add another house. <br> Can you work out the shortest, most efficient route to each house? "
+msgstr ""
+
+#: messages.py:504
+msgid "Although the <b>Deliver</b> block is not needed when there is only one house, you need it when there are more houses, like now. <br><br>Once the van is at a house, make sure you use the <b>Deliver</b> block. Do that for each house. "
+msgstr ""
+
+#: messages.py:512
+msgid "House overload! "
+msgstr ""
+
+#: messages.py:516
+msgid "Well done, you're getting a hang of it! Can you do the same for even more houses?<br> Don't forget to use the <b>Deliver</b> block at each house. "
+msgstr ""
+
+#: messages.py:522
+msgid "Test your sequence to make sure that the van takes the shortest route to visit all the houses on the way. <br><br> Use the <b>Deliver</b> block every time the van gets to a house. "
+msgstr ""
+
+#: messages.py:529
+msgid "This one is quite a tangle. "
+msgstr ""
+
+#: messages.py:533
+msgid "Practise your new skills on this road by getting the van to <b>Deliver</b> to each of the houses. "
+msgstr ""
+
+#: messages.py:539
+msgid "To make sure the van takes the shortest route, first turn left. <br><br> Use the <b>Deliver</b> block every time the van gets to a house. "
+msgstr ""
+
+#: messages.py:545
+msgid "Repeating yourself is boring."
+msgstr ""
+
+#: messages.py:550
+msgid "Attach a block inside the <b>Repeat</b> block to make the van repeat that instruction. <br> This means you can use one block instead of lots of blocks to do the same thing over and over again. <br> How many times do you want the instruction repeated? Type the number into the <b>Repeat</b> block. <br> The repeated sets of blocks make a 'loop'.  <br><br> When you are ready, press <b>Play</b>! "
+msgstr ""
+
+#: messages.py:560
+msgid "A <b>Move forwards</b> block can be placed inside a <b>Repeat</b> block (to the right of the word 'Do'). <br><br> Don't forget to change the number of times you need to repeat the instruction. "
+msgstr ""
+
+#: messages.py:567
+msgid "Use the <b>Repeat</b> block to make your sequence shorter and simpler. "
+msgstr ""
+
+#: messages.py:571
+msgid "You drove the van down this road on Level 5. This time, use the <b>Repeat</b> block to get the van to the house. <br> This will make your sequence shorter and simpler than last time."
+msgstr ""
+
+#: messages.py:578
+msgid "This level can be broken down into three repeated sets of: <b>Turn left</b>, then <b>Turn right</b>. <br><br> These repeated steps make a 'loop'. "
+msgstr ""
+
+#: messages.py:585
+msgid "Four leaf clover."
+msgstr ""
+
+#: messages.py:589
+msgid "This path looks a bit like a four leaf clover. Can you take the driver through it? "
+msgstr ""
+
+#: messages.py:595
+msgid "This level can be broken down into repeated sets of: <b>Move forwards</b>, <b>Turn left</b>, <b>Turn right</b>, <b>Turn left</b>. "
+msgstr ""
+
+#: messages.py:601
+msgid "Now things are getting quite long and complicated. "
+msgstr ""
+
+#: messages.py:605
+msgid "An algorithm (a set of instructions in a particular order) to get the van to the house might not be very simple, but it can be made shorter by using the <b>Repeat</b> blocks. <br> Are you up for this challenge? "
+msgstr ""
+
+#: messages.py:612
+msgid "Look to see where you have used <b>Move forwards</b>, <b>Turn left</b> and <b>Turn right</b> blocks. Are any blocks next to them the same? Put them into one <b>Repeat</b> block. Don't forget to change the number of times you need to repeat the instruction. "
+msgstr ""
+
+#: messages.py:620
+msgid "Sssssssssnake!"
+msgstr ""
+
+#: messages.py:624
+msgid "This road seems to be winding just like a snake! Can you find a nice and simple route to get the van to the house? "
+msgstr ""
+
+#: messages.py:630
+msgid "How about using <b>Repeat</b> inside another <b>Repeat</b>? <br><br> This level can be broken down into sets of: <ul><li> a set (nested loop) of <b>Move forwards</b>, </li> <li> two <b>Turn left</b>s, </li> <li> a set (nested loop) of <b>Move forwards</b>, </li> <li> two <b>Turn right</b>s. </li></ul>"
+msgstr ""
+
+#: messages.py:640
+msgid "The road is very long and very bendy."
+msgstr ""
+
+#: messages.py:644
+msgid "Wow! Look at that! It won't get more complicated than this, we promise."
+msgstr ""
+
+#: messages.py:649
+msgid "With all these twists and turns, you will have to think hard about what sets of repeated instructions to use. <br><br>"
+msgstr ""
+
+#: messages.py:655
+msgid "Waterfall level. "
+msgstr ""
+
+#: messages.py:659
+msgid "Since you did so well with the repeat loops, have a go at this level. "
+msgstr ""
+
+#: messages.py:664
+msgid "Most of the program will consist of repeated sets of <b>Move forwards</b> and a set of <b>Turn right</b> and <b>Turn left</b>. "
+msgstr ""
+
+#: messages.py:670
+msgid "Winter wonderland!"
+msgstr ""
+
+#: messages.py:674
+msgid "Notice the snow! You can create new levels with different 'themes' of backgrounds and decorations in the Level Editor. But first, try getting the van to the house! "
+msgstr ""
+
+#: messages.py:681
+msgid "Break the program into two <b>Repeat</b>s with a <b>Turn left</b> in between them. "
+msgstr ""
+
+#: messages.py:687
+msgid "Farmyard"
+msgstr ""
+
+#: messages.py:691
+msgid "What a muddy road! Can you help Dee find her way from the barn to the house? "
+msgstr ""
+
+#: messages.py:697
+msgid "Make sure you drag the correct turns into your <b>Repeat</b> block. "
+msgstr ""
+
+#: messages.py:702
+msgid "The big city"
+msgstr ""
+
+#: messages.py:706
+msgid "Can you get the van from the warehouse to the house? Don't stop at any shops on the way! "
+msgstr ""
+
+#: messages.py:712
+msgid "Make sure you drag the correct turns into your <b>Repeat</b> block."
+msgstr ""
+
+#: messages.py:717
+msgid "No need for numbers. "
+msgstr ""
+
+#: messages.py:722
+msgid "Drag a block inside a <b>Repeat until</b> block to make the van repeat an instruction. <br> Attach a 'condition' so the van knows when to stop repeating the instruction. <br> Here, you want the van to repeat your instruction until it is at the destination. <br> Doing this means you don't have to work out how many times the van should repeat your instruction. "
+msgstr ""
+
+#: messages.py:732
+msgid "The blocks should read like a sentence: '<b>Repeat until at destination do</b>: <b>Move forwards</b>'. "
+msgstr ""
+
+#: messages.py:738
+msgid "Can you do that again? "
+msgstr ""
+
+#: messages.py:742
+msgid "Well done, you did it! Now have a go at using the <b>Repeat until</b> block on a road with lots of turns. "
+msgstr ""
+
+#: messages.py:748
+msgid "The blocks should read like a sentence: '<b>Repeat until at destination do</b>: <b>Turn left</b>, <b>Turn right</b>'. "
+msgstr ""
+
+#: messages.py:754
+msgid "Practice makes perfect. "
+msgstr ""
+
+#: messages.py:758
+msgid "Have another go to make sure you have got the hang of it. "
+msgstr ""
+
+#: messages.py:763
+msgid "This program can be broken into repeated sets of <b>Turn left</b>, <b>Turn right</b> and two <b>Move forwards</b>. "
+msgstr ""
+
+#: messages.py:769
+msgid "Uh oh, it's <b>Until</b> fever! "
+msgstr ""
+
+#: messages.py:773
+msgid "Good job! Can you help the driver reach the destination again? "
+msgstr ""
+
+#: messages.py:778
+msgid "This program is quite similar to the one you just solved. Do you remember the solution you came up with back then? "
+msgstr ""
+
+#: messages.py:784
+msgid "Now it's time to try the <b>If</b> block. "
+msgstr ""
+
+#: messages.py:789
+msgid "Another way of telling the van what to do is to use the <b>If</b> block. For example, <b>If</b> the <b>road exists forwards do</b> <b>Move forwards</b>. <br> This is called an 'if statement'. <br> Try using the <b>If</b> block and the <b>Repeat</b> block together. <br> The <b>Repeat</b> block will stretch if you attach the <b>If</b> block inside it. "
+msgstr ""
+
+#: messages.py:799
+msgid "We say that the road 'exists' in a direction. For example, if the road goes forwards we say that it 'exists forwards'. <br><br> <b>If</b> a <b>road exists forwards</b> then <b>do Move forwards</b>.<br><br>Repeat this set to get the van to the house. "
+msgstr ""
+
+#: messages.py:807
+msgid "Multiple <b>If</b>s"
+msgstr ""
+
+#: messages.py:811
+msgid "It can be handy to use <b>If</b> to give your van choices, so you don't have to give the van new instructions at every step. <br> For example: Tell the van <b>If</b> the <b>road exists forwards do Move forwards,</b> but <b>If</b> the <b>road exists left do Turn left</b>. <br> The van will choose correctly from the <b>Move forwards</b> and <b>Turn left</b> instructions depending on the road. <br> Use an 'if statement' in a 'loop' to drive the van down this bendy road. "
+msgstr ""
+
+#: messages.py:822 messages.py:841
+msgid "At each bend the van can either <b>Move forwards</b> or <b>Turn left</b>. Create a loop so it can make the correct choice. <br><br> We say that the road 'exists' in a direction. For example, if the road goes forwards we say that it 'exists forwards'. "
+msgstr ""
+
+#: messages.py:830
+msgid "Let's put it all together!"
+msgstr ""
+
+#: messages.py:834
+msgid "You have discovered the magic of 'if statements'. Can you make a program that uses <b>Move forwards</b>, <b>Turn left</b> and <b>Turn right</b> to get the van to the house. "
+msgstr ""
+
+#: messages.py:849
+msgid "What else? If-else, that's what! "
+msgstr ""
+
+#: messages.py:854
+msgid "You can change the <b>If</b> block to make more choices. Click on the star in the <b>If</b> block and add <b>Else if</b>. <br> This will tell the van what to do if the first <b>If</b> direction can't be done. <br> For example, tell the van to <b>Turn left</b> <b>If</b> the <b>road exists left</b>. Add <b>Else if</b> the <b>road exists right</b>, <b>Turn right</b>. <br> This uses fewer blocks and makes sure that only one step is taken in each loop. <br> This type of algorithm is called a 'general algorithm' as it can be used with most simple routes. "
+msgstr ""
+
+#: messages.py:867
+msgid "The program should be a simple set of: <b>If road exists forwards do</b> <b>Move forwards</b>, <b>Else if road exists left do Turn left</b>, <b>Else if road exists right do Turn right</b>. <br><br> You can find <b>Else if</b> by clicking the star on the <b>If</b> block and adding the <b>Else if</b>.<br><br> If the first 'condition' is true (this means if the road exists in the direction you put first) the van will follow the blocks after <b>If</b>. <br><br> If not, the van will check to see if it can follow the direction you put after <b>Else if</b>. It will keep checking until it has a direction it can take. "
+msgstr ""
+
+#: messages.py:880
+msgid "A bit longer."
+msgstr ""
+
+#: messages.py:884
+msgid "Let's see if we can go further - this road is longer. Notice that the length of the road does not change the length of your program! "
+msgstr ""
+
+#: messages.py:890 messages.py:905
+msgid "Think back to the solutions you produced using 'if statements' before. "
+msgstr ""
+
+#: messages.py:895
+msgid "Third time lucky! "
+msgstr ""
+
+#: messages.py:899
+msgid "Well done! You've got so far. <br> Can you apply the knowledge you gained going through this part of the game to this level? "
+msgstr ""
+
+#: messages.py:910
+msgid "Dead ends! "
+msgstr ""
+
+#: messages.py:914
+msgid "Can you change the 'general algorithm' so that the van takes a shorter route? <br> What if you change the order the van checks for directions? <br> Keep an eye on the fuel level - try to use as little as possible. "
+msgstr ""
+
+#: messages.py:922
+msgid "Make the van check if the road exists right before it checks if the road exists left. <br><br> Then it will be able to reach the destination using the 'general algorithm'. Can you see why? "
+msgstr ""
+
+#: messages.py:929
+msgid "Adjust your previous solution."
+msgstr ""
+
+#: messages.py:933
+msgid "Can you think of a way you could change the 'general algorithm' you have implemented earlier to make sure the van driver reaches the house having travelled the shortest route? "
+msgstr ""
+
+#: messages.py:940
+msgid "The 'general algorithm' will work here. <br><br> Make sure you change the order the van checks for directions to take the shortest route to the destination. "
+msgstr ""
+
+#: messages.py:947
+msgid "Decision time. "
+msgstr ""
+
+#: messages.py:951
+msgid "Do you think changes to the 'general algorithm' will help the van find the shortest route? <br> Or do you have to come up with a different solution? <br> Time to make a decision... "
+msgstr ""
+
+#: messages.py:958
+msgid "Psst! You can simply make a change to the 'general algorithm'. <br><br> If you make the van check for turns before it checks the road exists forwards, you will come up with the perfect solution. <br><br>Notice that here it doesn't matter which turn you check for first - it will change the route but provide you with the same score. "
+msgstr ""
+
+#: messages.py:967
+msgid "What do you think this time? "
+msgstr ""
+
+#: messages.py:971
+msgid "Can you use the 'general algorithm' here? <br> Can it be changed so that it finds a shorter route, or will you need a new solution? "
+msgstr ""
+
+#: messages.py:977
+msgid "Uh oh, moving around the blocks in your 'general algorithm' won't help. <br> How about creating a simple solution without 'if statements' that will help the van reach the house? "
+msgstr ""
+
+#: messages.py:984
+msgid "Good work! What else can you do? "
+msgstr ""
+
+#: messages.py:988
+msgid "You should be really good at this by now. Can you manage this complicated road? "
+msgstr ""
+
+#: messages.py:994
+msgid "This road cannot be solved by a 'general algorithm'. Can you solve it without 'if statements'? <br><br> Remember to choose the shortest route and an algorithm which is as short as possible.  "
+msgstr ""
+
+#: messages.py:1001
+msgid "Oh no! Traffic lights! "
+msgstr ""
+
+#: messages.py:1006
+msgid "The light varies from red to green. <br>The van must check which colour the traffic light is when it reaches them - if it goes past a red light it will break the Highway Code.<br> Here, you want the van to repeat the wait instruction while the traffic light is red. Drag a block inside a <b>Repeat while</b> block to make the van repeat an instruction. <br> Attach a 'condition' so the van knows when to repeat the instruction. "
+msgstr ""
+
+#: messages.py:1016
+msgid "Don't worry about the 'general algorithm' here. Just go forwards. <br><br>Once the van is right under the traffic light, make it wait for a green light by adding a <b>Wait</b> block. "
+msgstr ""
+
+#: messages.py:1023
+msgid "Green for go, red for wait. "
+msgstr ""
+
+#: messages.py:1027
+msgid "Can you write a program so the van moves forwards on a green light but waits at a red light? "
+msgstr ""
+
+#: messages.py:1033
+msgid "Use an 'if statement' to tell the van <b>If traffic light is red, Wait, Else Move forwards</b>. <br><br> Remember to repeat that until you get to the destination. "
+msgstr ""
+
+#: messages.py:1040
+msgid "Well done - you've made it really far! "
+msgstr ""
+
+#: messages.py:1044
+msgid "Let's practise what you've learnt so far. <br> Don't forget to add a turn and to make the van wait at a traffic light. "
+msgstr ""
+
+#: messages.py:1050
+msgid "Be careful about the order you put your <b>If</b> blocks in. <br><br>If you make the van check the road exists forwards before checking for a light, it might break the Highway Code. "
+msgstr ""
+
+#: messages.py:1057
+msgid "What a mess! But can you spot a route? "
+msgstr ""
+
+#: messages.py:1061
+msgid "Put your knowledge to test. Create an algorithm to lead the van to the house. <br> Don't forget to add a turn and to make the van wait at a traffic light. "
+msgstr ""
+
+#: messages.py:1068
+msgid "Use an 'if statement' and check if the light is red. <br><br> <b>If traffic light is red, wait, Else if road exists forwards, Move forwards, Else Turn left</b>. <br><br> Remember to repeat that until you get to the destination! "
+msgstr ""
+
+#: messages.py:1076
+msgid "Put all that hard work to the test. "
+msgstr ""
+
+#: messages.py:1080
+msgid "Congratulations - you've made it really far! <br> Can you create a 'general algorithm' that will help the van reach the destination in the shortest way but stop at a traffic light? "
+msgstr ""
+
+#: messages.py:1087
+msgid "You need to check: <ul><li> if the lights are red </li><li> if the road exists right </li><li> if the road exists forwards </li> <li> if the road exists left </li><li> if it is a dead end </li></ul>Make sure you put the checks in the right order. "
+msgstr ""
+
+#: messages.py:1098
+msgid "Amazing! Have another go! "
+msgstr ""
+
+#: messages.py:1102
+msgid "Can you change the 'general algorithm' you created before to make the van take the shortest route to the destination? "
+msgstr ""
+
+#: messages.py:1108
+msgid "You need to check: <ul><li> if the light is red </li><li> if the road exists left </li><li> if the road exists forwards </li><li> or if the road exists right </li></ul>Do you think you need to check for a dead end? <br> Make sure you put the checks in the right order. "
+msgstr ""
+
+#: messages.py:1119
+msgid "Light maze. "
+msgstr ""
+
+#: messages.py:1123
+msgid "Well this is tricky. Look at all those lights! <br> Can you find the shortest route to the destination? It would be good if the van doesn't have to wait at too many lights. "
+msgstr ""
+
+#: messages.py:1130
+msgid "Don't worry about the algorithm you've already come up with. Take the first turn left which has fewer traffic lights. <br><br> Once your van is right under the traffic lights, make sure it waits for a green light. "
+msgstr ""
+
+#: messages.py:1138
+msgid "Back to basics with a twist"
+msgstr ""
+
+#: messages.py:1142
+msgid "Can you come up with a solution to this level using the limited number of blocks we provide at the start?"
+msgstr ""
+
+#: messages.py:1148 messages.py:1421 messages.py:1435 messages.py:1449
+#: messages.py:1463 messages.py:1477 messages.py:1491 messages.py:1505
+#: messages.py:1519 messages.py:1575
+msgid "Think back to earlier levels - what did you learn?"
+msgstr ""
+
+#: messages.py:1153
+msgid "A Bit more Tricky"
+msgstr ""
+
+#: messages.py:1157
+msgid "Well done so far! Can you find a solution to this road? You have to move forward, but you have no forward block to use. Do you know how to help the van get to the destination?"
+msgstr ""
+
+#: messages.py:1164
+msgid "Don't forget to use the repeat loop."
+msgstr ""
+
+#: messages.py:1169
+msgid "Choose your blocks wisely"
+msgstr ""
+
+#: messages.py:1173 messages.py:1188
+msgid "Can you find the shortest route? Use your blocks carefully and don't forget the <b>repeat</b> loop."
+msgstr ""
+
+#: messages.py:1179 messages.py:1194
+msgid "Think back to earlier levels - what did you learn"
+msgstr ""
+
+#: messages.py:1184
+msgid "Round and Round"
+msgstr ""
+
+#: messages.py:1199
+msgid "Wonky Fish!"
+msgstr ""
+
+#: messages.py:1203
+msgid "Use <b>repeat until</b> and the <b>if</b> statement to find your way around the Wonky Fish."
+msgstr ""
+
+#: messages.py:1208 messages.py:1223
+msgid "Think back to earlier levels - what did you learn."
+msgstr ""
+
+#: messages.py:1213
+msgid "Concrete Wasteland"
+msgstr ""
+
+#: messages.py:1217
+msgid "Use <b>repeat until</b> and the <b>if</b> statement to find your way around the Concrete Wasteland"
+msgstr ""
+
+#: messages.py:1228
+msgid "This is <b>not...</b> the same"
+msgstr ""
+
+#: messages.py:1232
+msgid "Like <b>repeat until</b>, <b>repeat while</b> is the opposite. Here, you want the van to repeat your instructions while it is not at the destination.<br>Doing this means you don't have to work out how many times the van should repeat your instructions."
+msgstr ""
+
+#: messages.py:1240
+msgid "The blocks should read like a sentence. Repeat while not at destination then add your instructions using the blocks provided."
+msgstr ""
+
+#: messages.py:1246
+msgid "Snow snake"
+msgstr ""
+
+#: messages.py:1250
+msgid "Combining what you have just learnt using <b>repeat while</b> with the repeat loop, can you find your way around the snow snake?"
+msgstr ""
+
+#: messages.py:1256
+msgid "The blocks should read like a sentence: <b>repeat while not at destination</b> then using the <b>repeat</b> add your instructions"
+msgstr ""
+
+#: messages.py:1262
+msgid "Tricky turnaround"
+msgstr ""
+
+#: messages.py:1266
+msgid "Use your blocks carefully not forgetting the <b>turnaround</b>."
+msgstr ""
+
+#: messages.py:1271
+msgid "Inside the repeat <b>repeat until</b> block, <b>turn left</b>, <b>turn around</b> and <b>turn left</b> again should do it."
+msgstr ""
+
+#: messages.py:1277
+msgid "Right around the block"
+msgstr ""
+
+#: messages.py:1281
+msgid "Can you find your way around this puzzle?"
+msgstr ""
+
+#: messages.py:1286
+msgid "The trick to this level is to <b>turn right</b> then <b>turn around</b>."
+msgstr ""
+
+#: messages.py:1291
+msgid "Can you create the 'Wiggle' procedure?"
+msgstr ""
+
+#: messages.py:1295
+msgid "Procedures are groups of instructions that can be executed multiple times without being rewritten. For example, if you want to instruct the van to follow a repeated pattern in the road, you can create a specific procedure. To create a procedure, simply choose the correct blocks and put them in the right order inside the <b>Define do</b> block. Once you have done that, give it a name eg wiggle.<br>Now you're ready! Attach the <b>Call</b> block where you want your 'wiggle' procedure to be executed. Don't forget to put the name in it!"
+msgstr ""
+
+#: messages.py:1306
+msgid "Don't forget to use <b>Define</b>. Name your procedure and attach the blocks in the right order. Start with <b>move forwards</b>, <b>turn left</b>, you can add repeat loops to a procedure and ending with <b>turn left</b>. Call your procedure under your start block and off you go..."
+msgstr ""
+
+#: messages.py:1314
+msgid "Lots of Traffic Lights!"
+msgstr ""
+
+#: messages.py:1318
+msgid "Create a procedure which tells the van to wait until the traffic lights are green."
+msgstr ""
+
+#: messages.py:1323
+msgid "Don't forget to name your procedure eg 'lights' and every time you want the van to check the traffic lights you need to '<b>call</b>' it."
+msgstr ""
+
+#: messages.py:1329
+msgid "Wiggle Wiggle"
+msgstr ""
+
+#: messages.py:1333
+msgid "Can you find the repeating pattern here and create a new 'wiggle' procedure? And do the Wiggle Wiggle!"
+msgstr ""
+
+#: messages.py:1339
+msgid "Can you see the repeating pattern in the path? The 'wiggle' consisting of a <b>turn left</b>, <b>move forwards</b>, <b>turn right</b>, <b>turn right</b>, <b>turn left</b> can be put in a <b>Define</b> block to create a procedure. Once you have named it, attach the <b>Call</b> block with the procedure's name in the text box to execute it."
+msgstr ""
+
+#: messages.py:1348
+msgid "Muddy Patterns with Phil"
+msgstr ""
+
+#: messages.py:1352
+msgid "Can you spot a pattern here? Create several procedures, it can save time when writing a program. Don't forget to clearly name your procedures and then call them."
+msgstr ""
+
+#: messages.py:1358
+msgid "One procedure could be <b>turn left</b>, <b>turn right</b>, <b>move forwards</b>, <b>turn right</b> and <b>turn left</b>. Don't forget you can create a repeat loop in your procedures."
+msgstr ""
+
+#: messages.py:1365
+msgid "Complicated roads."
+msgstr ""
+
+#: messages.py:1369
+msgid "This road might be a bit more complicated, but the procedures you could come up with are quite simple. Have a go and find out yourself!"
+msgstr ""
+
+#: messages.py:1375
+msgid "Your first procedure could be <b>turn left</b> and <b>turn right</b> 'left-right' The second procedure could be <b>turn right</b> <b>turn left</b>, 'right-left'."
+msgstr ""
+
+#: messages.py:1381
+msgid "Dee's snowy walk"
+msgstr ""
+
+#: messages.py:1385
+msgid "Did you know procedures can call other procedures?"
+msgstr ""
+
+#: messages.py:1390
+msgid "Create 2 procedures. The first one should read <b>move forwards</b>, <b>move forwards</b>, <b>turn right</b>. The second <b>move forwards</b> then <b>call</b> your first procedure"
+msgstr ""
+
+#: messages.py:1397
+msgid "Crazy Farm"
+msgstr ""
+
+#: messages.py:1401
+msgid "This one will really test what you have learnt."
+msgstr ""
+
+#: messages.py:1406
+msgid "It might be easier to write the program without repeats or procedures then create 3 separate procedures from the patterns that your see."
+msgstr ""
+
+#: messages.py:1412
+msgid "T - time"
+msgstr ""
+
+#: messages.py:1416 messages.py:1430 messages.py:1444 messages.py:1458
+#: messages.py:1472 messages.py:1500 messages.py:1514 messages.py:1528
+#: messages.py:1570
+msgid "Can you find the shortest route?"
+msgstr ""
+
+#: messages.py:1426
+msgid "Duck pond dodge"
+msgstr ""
+
+#: messages.py:1440
+msgid "Winter wonderland"
+msgstr ""
+
+#: messages.py:1454
+msgid "Frozen challenge"
+msgstr ""
+
+#: messages.py:1468
+msgid "Can Wes Find his lunch?"
+msgstr ""
+
+#: messages.py:1482
+msgid "Traffic light freeze up!"
+msgstr ""
+
+#: messages.py:1486
+msgid "Can you find the shortest algorithm?"
+msgstr ""
+
+#: messages.py:1496
+msgid "Pandemonium"
+msgstr ""
+
+#: messages.py:1510
+msgid "Kirsty's maze time"
+msgstr ""
+
+#: messages.py:1524
+msgid "Cannot turn left!"
+msgstr ""
+
+#: messages.py:1533
+msgid "What is that? A barn for ANTS!?"
+msgstr ""
+
+#: messages.py:1538
+msgid "G Force"
+msgstr ""
+
+#: messages.py:1542
+msgid "Can you get the van to the house?"
+msgstr ""
+
+#: messages.py:1547
+msgid "Heard of recursion?"
+msgstr ""
+
+#: messages.py:1552
+msgid "Wandering Phil"
+msgstr ""
+
+#: messages.py:1556
+msgid "Can you get Phil to the house?"
+msgstr ""
+
+#: messages.py:1561
+msgid "Repeat while not dead end... turn around..."
+msgstr ""
+
+#: messages.py:1566
+msgid "Muddy Mayhem"
+msgstr ""
+
+#: messages.py:1580
+msgid "Here's Python!"
+msgstr ""
+
+#: messages.py:1584 messages.py:1598 messages.py:1612
+msgid "As you create your program using Blockly see what it looks like in the Python programming language. Can you tell which Python statement matches which block?"
+msgstr ""
+
+#: messages.py:1594
+msgid "Matching Blockly"
+msgstr ""
+
+#: messages.py:1608
+msgid "Don't forget to find the shortest route"
+msgstr ""
+
+#: messages.py:1622
+msgid "Repeating yourself in Python looks different"
+msgstr ""
+
+#: messages.py:1626 messages.py:1640
+msgid "As you create your program using Blockly see what it looks like in the Python programming language. Try adding a <b>repeat</b> block and watch what happens in Python."
+msgstr ""
+
+#: messages.py:1636
+msgid "Repeat and watch."
+msgstr ""
+
+#: messages.py:1650
+msgid "Looks easy but use repeat until and see what happens?"
+msgstr ""
+
+#: messages.py:1654
+msgid "As you create your program using Blockly see what it looks like in the Python programming language. Try adding a <b>repeat</b> until block and watch what happens in Python."
+msgstr ""
+
+#: messages.py:1665
+msgid "See what the if blocks looks like in Python"
+msgstr ""
+
+#: messages.py:1669
+msgid "As you create your program using Blockly see what it looks like in the Python programming language. Try adding an <b>if</b> block and watch what happens in Python."
+msgstr ""
+
+#: messages.py:1679
+msgid "Don't forget to use else if"
+msgstr ""
+
+#: messages.py:1683 messages.py:1698 messages.py:1713
+msgid "As you create your program using Blockly see what it looks like in the Python programming language. Try adding an <b>if</b> block and watch what happens in Python particularly with <b>else if</b> and <b>else</b> statements."
+msgstr ""
+
+#: messages.py:1694
+msgid "See what happens when you add Traffic lights"
+msgstr ""
+
+#: messages.py:1709
+msgid "Watch carefully as you have another go"
+msgstr ""
+
+#: messages.py:1724
+msgid "Have a go at procedures - what do they look like in Python?"
+msgstr ""
+
+#: messages.py:1728 messages.py:1743
+msgid "As you create your program using Blockly see what it looks like in the Python language. Try adding a procedure and watch what happens in Python."
+msgstr ""
+
+#: messages.py:1734 messages.py:1749
+msgid "Don't forget to name your procedure and see what happens in Python."
+msgstr ""
+
+#: messages.py:1739
+msgid "Put it all together"
+msgstr ""
+
+#: messages.py:1754
+msgid "Start with the basics, <b>forward</b>, <b>left</b> and <b>right</b>"
+msgstr ""
+
+#: messages.py:1758
+msgid "Now you are coding in Python! This is what real developers do!! To start you off, the van object has been created for you already. Under this you need to add the correct Python statements to instruct the van to drive to the destination.<br>For more information about coding in Python refer to <a href='http://www.diveintopython.net/' target='_blank'>www.diveintopython.net</a>."
+msgstr ""
+
+#: messages.py:1767
+msgid "Try using the following commands:<br><pre>v.move_forwards()<br>v.turn_left()<br>v.turn_right()</pre>"
+msgstr ""
+
+#: messages.py:1773
+msgid "Keep it simple"
+msgstr ""
+
+#: messages.py:1777
+msgid "Try this road. Under the van object you need to add the correct Python statements to instruct the van to drive to the destination."
+msgstr ""
+
+#: messages.py:1783 messages.py:1801
+msgid ""
+"Try using the following commands:\n"
+"<pre>v.move_forwards()\n"
+"v.turn_left()\n"
+"v.turn_right()</pre>"
+msgstr ""
+
+#: messages.py:1791
+msgid "Take the shortest route."
+msgstr ""
+
+#: messages.py:1795
+msgid "You're getting good at this! Can you drive the van along this road using the correct Python statements."
+msgstr ""
+
+#: messages.py:1809
+msgid "Count and repeat"
+msgstr ""
+
+#: messages.py:1813
+msgid "Now try to use a <b>repeat</b> loop to solve this level. Look back at level 83 to see what this could look like in Python."
+msgstr ""
+
+#: messages.py:1819 messages.py:1839
+msgid ""
+"To repeat some statements a set number of times you can use something like the following:\n"
+"<pre>for count in range(3):\n"
+"    v.turn left\n"
+"    print count</pre>\n"
+"The print statement will output the value of count to the console."
+msgstr ""
+
+#: messages.py:1828
+msgid "Count and repeat is easy"
+msgstr ""
+
+#: messages.py:1832
+msgid "Now try to use a <b>repeat loop</b> to solve this level. Look back at level 83 to see what this could look like in Python. This time you could use 2 loops, 1 for each straight piece of road."
+msgstr ""
+
+#: messages.py:1848
+msgid "Loop the loop"
+msgstr ""
+
+#: messages.py:1852
+msgid "Now try to use a loop within a loop, known as a 'nested loop'. Look back at level 84 to see what this could look like in Python."
+msgstr ""
+
+#: messages.py:1858
+msgid ""
+"To repeat within a repeats a set number of times you can use something like the following:\n"
+"<pre>for i in range(3):\n"
+"    for j in range(5):\n"
+"        v.turn left\n"
+"        print count</pre>\n"
+"The print statement will output the value of count to the console."
+msgstr ""
+
+#: messages.py:1868
+msgid "Repeat and check"
+msgstr ""
+
+#: messages.py:1872
+msgid "Try to solve this level by repeatedly moving until the van is at the destination. Also, check whether the van can move forward or else must turn left. Now try and write the Python code. Look back at level 86 to give you an idea of what this could look like."
+msgstr ""
+
+#: messages.py:1880
+msgid ""
+"To repeat while a condition is met you can use something like the following:\n"
+"<pre>while not v.at_destination():\n"
+"    v.move_forwards()</pre>\n"
+"To check whether a condition is met you can use something like the following:\n"
+"<pre>if v.is_road_forward():\n"
+"    v.move_forwards()</pre>\n"
+"You may also need to use the <b>else</b> statement."
+msgstr ""
+
+#: messages.py:1891
+msgid "Find a general solution"
+msgstr ""
+
+#: messages.py:1895
+msgid "Now try using what you have just learnt to solve this level. You could also try using the <b>if</b>, <b>elif</b> and <b>else</b> statements. Look back at level 86 to give you an idea of what this could look like."
+msgstr ""
+
+#: messages.py:1902
+msgid ""
+"To repeat while a condition is met you can use something like the following:\n"
+"<pre>while not v.at_destination():\n"
+"    v.move_forwards()</pre>\n"
+"To check whether a condition is met you can use something like the following:\n"
+"<pre>if v.is_road_forward():\n"
+"    v.move_forwards()</pre>\n"
+"You may also need to use the <b>elif</b> and <b>else</b> statements."
+msgstr ""
+
+#: messages.py:1913
+msgid "Watch out for the dead end!"
+msgstr ""
+
+#: messages.py:1917
+msgid "Practice your new Python skills on this road to get the van to the destination. Look back at level 88 for a dead end check."
+msgstr ""
+
+#: messages.py:1923
+msgid "Try using<br><pre>if v.at_dead_end():</pre><br>to check if the van is at a dead end."
+msgstr ""
+
+#: messages.py:1928
+msgid "Function or Junction?"
+msgstr ""
+
+#: messages.py:1932
+msgid "Try defining your own procedure to solve this level. In Python procedures are generally called functions. Look back at level 90 for an example of how to define a function in Python."
+msgstr ""
+
+#: messages.py:1939
+msgid ""
+"To define a function in Python you could do something like:\n"
+"<pre>def my_function():\n"
+"    print 'test'</pre>\n"
+"To call a defined function you could do something like:\n"
+"<pre>my_function()</pre>\n"
+"Remember, you must define a function before you call it."
+msgstr ""
+
+#: messages.py:1949
+msgid "Watch for the patterns"
+msgstr ""
+
+#: messages.py:1953
+msgid "For this level try defining more than one function. Try to look for a repeating pattern to simplify your program."
+msgstr ""
+
+#: messages.py:1959
+msgid ""
+"To define a function in Python you could do something like:\n"
+"<pre>def my_function():\n"
+"    print 'test'</pre>\n"
+"To call a defined function you could do something like:\n"
+"<pre>my_function()</pre>"
+msgstr ""
+
+#: messages.py:1968
+msgid "Patterns within patterns."
+msgstr ""
+
+#: messages.py:1972 messages.py:1995
+msgid "For this level try to define 2 or more functions where inside one function you call another function."
+msgstr ""
+
+#: messages.py:1978 messages.py:2001
+msgid ""
+"To define a function that calls another function you could do something like:\n"
+"<pre>def my_function():\n"
+"    print 'test'\n"
+"\n"
+"def my_other_function():\n"
+"    for i in range(3):\n"
+"        my_function()\n"
+"\n"
+"my_other_function()</pre>"
+msgstr ""
+
+#: messages.py:1991
+msgid "Can you see the repeating pattern?"
+msgstr ""
+
+#: messages.py:2014
+msgid "Find the shortest route."
+msgstr ""
+
+#: messages.py:2018
+msgid "For this level try to implement a general algorithm. Keep the van going until it arrives at the destination, checking for traffic lights and junctions."
+msgstr ""
+
+#: messages.py:2024
+msgid "For this you will have to use a combination of the <b>while</b> and <b>if</b> statements."
+msgstr ""
+
+#: messages.py:2029
+msgid "Spiral and add"
+msgstr ""
+
+#: messages.py:2033
+msgid "For this level the van needs to travel in a spiral. The number of grid squares the van has to move keeps increasing by 1 on each turn. To do this you can have a loop that makes use of a variable to track the length of the road you need to travel after each turn."
+msgstr ""
+
+#: messages.py:2041
+msgid ""
+"To use a variable to store the number of grid squares the van has to move you can do something like the following:\n"
+"<pre>n = 1\n"
+"while not v.at_destination():\n"
+"    print n\n"
+"    n += 1</pre>\n"
+"Variables can be used in place of constants when calling functions. For example to repeat something n times you can do something like the following:\n"
+"<pre>for count in range(n):</pre>"
+msgstr ""
+
+#: messages.py:2052
+msgid "Spiral and double"
+msgstr ""
+
+#: messages.py:2056
+msgid "For this level try something similar to what you have just learnt. This time the straight sections of road are doubling in length after each turn."
+msgstr ""
+
+#: messages.py:2062
+msgid "To double the value of a variable you can do something like the following:<br><pre>n *= 2</pre>"
+msgstr ""
+
+#: messages.py:2067
+msgid "Think less"
+msgstr ""
+
+#: messages.py:2071
+msgid "This time the straight sections of road decrease in length by 2 after each turn."
+msgstr ""
+
+#: messages.py:2076
+msgid "To decrease the value of a variable by an amount you can do something like the following:<br><pre>n -= 5</pre>"
+msgstr ""
+
+#: messages.py:2082
+msgid "Final challenge!"
+msgstr ""
+
+#: messages.py:2086
+msgid "For the last challenge, the road straight line sections of road start off increasing by 1 after each turn and then switch to dividing by 2 with a twist!"
+msgstr ""
+
+#: messages.py:2092
+msgid "To halve the value of a variable you can do something like the following:<br><pre>n /= 2</pre>"
+msgstr ""
+
+#: messages.py:2098
+msgid "Getting Started"
+msgstr ""
+
+#: messages.py:2099
+msgid "Shortest Route"
+msgstr ""
+
+#: messages.py:2100
+msgid "Loops and Repetitions"
+msgstr ""
+
+#: messages.py:2101
+msgid "Loops with Conditions"
+msgstr ""
+
+#: messages.py:2102
+msgid "If... Only"
+msgstr ""
+
+#: messages.py:2103
+msgid "Traffic Lights"
+msgstr ""
+
+#: messages.py:2104
+msgid "Limited Blocks"
+msgstr ""
+
+#: messages.py:2105
+msgid "Procedures"
+msgstr ""
+
+#: messages.py:2106
+msgid "Blockly Brain Teasers"
+msgstr ""
+
+#: messages.py:2107
+msgid "Introduction to Python"
+msgstr ""
+
+#: messages.py:2108 templates/game/game.html:158
+#: templates/game/level_editor.html:411
+msgid "Python"
+msgstr ""
+
+#: models.py:90
+#, python-format
+msgid "Episode: %(episode_name)s"
+msgstr ""
+
+#: models.py:132
+#, python-format
+msgid "Level %(level_name)s"
+msgstr ""
+
+#: templates/game/base.html:34 templates/game/level_selection.html:41
+#: templates/game/level_selection.html:46
+msgid "Levels"
+msgstr ""
+
+#: templates/game/base.html:37
+msgid "Create"
+msgstr ""
+
+#: templates/game/base.html:41 templates/game/scoreboard.html:84
+#: templates/game/scoreboard.html:89
+msgid "Scoreboard"
+msgstr ""
+
+#: templates/game/base.html:46 templates/game/level_moderation.html:25
+msgid "Moderate"
+msgstr ""
+
+#: templates/game/game.html:151 templates/game/level_editor.html:409
+msgid "Blockly"
+msgstr ""
+
+#: templates/game/game.html:166
+msgid "Clear"
+msgstr ""
+
+#: templates/game/game.html:176 templates/game/level_editor.html:138
+#: templates/game/level_moderation.html:75 views/level_moderation.py:121
+msgid "Play"
+msgstr ""
+
+#: templates/game/game.html:185
+msgid "Fast"
+msgstr ""
+
+#: templates/game/game.html:193
+msgid "Stop"
+msgstr ""
+
+#: templates/game/game.html:201
+msgid "Step"
+msgstr ""
+
+#: templates/game/game.html:211
+msgid "Solve"
+msgstr ""
+
+#: templates/game/game.html:219 templates/game/game.html:341
+#: templates/game/game.html:370 templates/game/level_editor.html:198
+#: templates/game/level_editor.html:502 templates/game/level_editor.html:548
+msgid "Load"
+msgstr ""
+
+#: templates/game/game.html:227 templates/game/game.html:377
+#: templates/game/game.html:398 templates/game/level_editor.html:206
+#: templates/game/level_editor.html:554 templates/game/level_editor.html:584
+msgid "Save"
+msgstr ""
+
+#: templates/game/game.html:245 templates/game/level_editor.html:224
+msgid "Help"
+msgstr ""
+
+#: templates/game/game.html:261
+msgid "Mute"
+msgstr ""
+
+#: templates/game/game.html:270
+msgid "Day"
+msgstr ""
+
+#: templates/game/game.html:273
+msgid "Night"
+msgstr ""
+
+#: templates/game/game.html:282 templates/game/level_editor.html:232
+msgid "Quit"
+msgstr ""
+
+#: templates/game/game.html:302
+msgid "This is what your program would look like in Python:"
+msgstr ""
+
+#: templates/game/game.html:309
+msgid "Python Program"
+msgstr ""
+
+#: templates/game/game.html:312
+msgid "Convert from Blockly"
+msgstr ""
+
+#: templates/game/game.html:318
+msgid "Use the Python editor below to design your program, and then click play to try it out!"
+msgstr ""
+
+#: templates/game/game.html:321
+msgid "Commands"
+msgstr ""
+
+#: templates/game/game.html:329
+msgid "Console Output"
+msgstr ""
+
+#: templates/game/game.html:332
+msgid "Clear console"
+msgstr ""
+
+#: templates/game/game.html:342
+msgid "Here you can load a program you've previously saved!"
+msgstr ""
+
+#: templates/game/game.html:345
+msgid "You don't have any programs to load yet. Try saving one!"
+msgstr ""
+
+#: templates/game/game.html:351 templates/game/game.html:383
+#: templates/game/level_editor.html:524 templates/game/level_editor.html:563
+#: templates/game/level_editor.html:616 views/scoreboard.py:54
+#: views/scoreboard.py:57 views/scoreboard_csv.py:42
+#: views/scoreboard_csv.py:44
+msgid "Name"
+msgstr ""
+
+#: templates/game/game.html:365 templates/game/level_editor.html:543
+#: templates/game/level_moderation.html:76 views/level_moderation.py:122
+msgid "Delete"
+msgstr ""
+
+#: templates/game/game.html:378
+msgid "Here you can save your program so you can retrieve it later!"
+msgstr ""
+
+#: templates/game/level_editor.html:129
+msgid "Delete Road"
+msgstr ""
+
+#: templates/game/level_editor.html:146
+msgid "Play Night"
+msgstr ""
+
+#: templates/game/level_editor.html:156 templates/game/level_editor.html:241
+msgid "Map"
+msgstr ""
+
+#: templates/game/level_editor.html:164 templates/game/level_editor.html:298
+msgid "Scenery"
+msgstr ""
+
+#: templates/game/level_editor.html:172 templates/game/level_editor.html:383
+msgid "Character"
+msgstr ""
+
+#: templates/game/level_editor.html:180 templates/game/level_editor.html:400
+msgid "Code"
+msgstr ""
+
+#: templates/game/level_editor.html:188 templates/game/level_editor.html:453
+msgid "Random"
+msgstr ""
+
+#: templates/game/level_editor.html:214 templates/game/level_editor.html:589
+msgid "Share"
+msgstr ""
+
+#: templates/game/level_editor.html:242
+msgid "Here you can design your level! What sort of road will you make?"
+msgstr ""
+
+#: templates/game/level_editor.html:247
+msgid "Max fuel:"
+msgstr ""
+
+#: templates/game/level_editor.html:257
+msgid "Add road"
+msgstr ""
+
+#: templates/game/level_editor.html:263
+msgid "Delete road"
+msgstr ""
+
+#: templates/game/level_editor.html:271
+msgid "Mark start"
+msgstr ""
+
+#: templates/game/level_editor.html:277
+msgid "Mark end"
+msgstr ""
+
+#: templates/game/level_editor.html:285
+msgid "Clear all"
+msgstr ""
+
+#: templates/game/level_editor.html:299
+msgid "Here you can liven up your level by choosing the theme and adding scenery! Will you create beautiful countryside or a bustling city?"
+msgstr ""
+
+#: templates/game/level_editor.html:306
+msgid "Theme:"
+msgstr ""
+
+#: templates/game/level_editor.html:316 templates/game/level_editor.html:484
+msgid "Scenery:"
+msgstr ""
+
+#: templates/game/level_editor.html:326
+msgid "Traffic lights:"
+msgstr ""
+
+#: templates/game/level_editor.html:332
+msgid "Cows:"
+msgstr ""
+
+#: templates/game/level_editor.html:337
+msgid "Advanced"
+msgstr ""
+
+#: templates/game/level_editor.html:345
+msgid "Advanced options"
+msgstr ""
+
+#: templates/game/level_editor.html:363
+msgid "How many cows should appear for this group?"
+msgstr ""
+
+#: templates/game/level_editor.html:365
+msgid "Min:"
+msgstr ""
+
+#: templates/game/level_editor.html:366
+msgid "Max:"
+msgstr ""
+
+#: templates/game/level_editor.html:384
+msgid "Here you can choose your character. Who will you play as?"
+msgstr ""
+
+#: templates/game/level_editor.html:387
+msgid "Character:"
+msgstr ""
+
+#: templates/game/level_editor.html:401
+msgid "Here you can select the code you can use while playing your new level!"
+msgstr ""
+
+#: templates/game/level_editor.html:407
+msgid "Language:"
+msgstr ""
+
+#: templates/game/level_editor.html:410
+msgid "Blockly With Python View"
+msgstr ""
+
+#: templates/game/level_editor.html:412
+msgid "Both"
+msgstr ""
+
+#: templates/game/level_editor.html:422
+msgid "Select all"
+msgstr ""
+
+#: templates/game/level_editor.html:454
+msgid "Here you can generate a random map. Try changing some of the parameters below and see what you get!"
+msgstr ""
+
+#: templates/game/level_editor.html:459
+msgid "Size:"
+msgstr ""
+
+#: templates/game/level_editor.html:463
+msgid "Branchiness:"
+msgstr ""
+
+#: templates/game/level_editor.html:467
+msgid "Loopiness:"
+msgstr ""
+
+#: templates/game/level_editor.html:471
+msgid "Curviness:"
+msgstr ""
+
+#: templates/game/level_editor.html:475
+msgid "Traffic Lights:"
+msgstr ""
+
+#: templates/game/level_editor.html:478 templates/game/level_editor.html:487
+msgid "Yes"
+msgstr ""
+
+#: templates/game/level_editor.html:479 templates/game/level_editor.html:488
+msgid "No"
+msgstr ""
+
+#: templates/game/level_editor.html:495
+msgid "Generate"
+msgstr ""
+
+#: templates/game/level_editor.html:503
+msgid "Here you can load in levels created by you and your friends! Select a level in the table and press load."
+msgstr ""
+
+#: templates/game/level_editor.html:508
+msgid "You don't have any levels to load yet. Try saving one!"
+msgstr ""
+
+#: templates/game/level_editor.html:513
+msgid "Load:"
+msgstr ""
+
+#: templates/game/level_editor.html:515
+msgid "your own levels"
+msgstr ""
+
+#: templates/game/level_editor.html:516
+msgid "shared levels"
+msgstr ""
+
+#: templates/game/level_editor.html:525 templates/game/level_editor.html:564
+msgid "Owner"
+msgstr ""
+
+#: templates/game/level_editor.html:555
+msgid "Here you can save your new level. Enter a name below and hit save. Alternatively click on an existing level to update it."
+msgstr ""
+
+#: templates/game/level_editor.html:556
+msgid "To play your level and be tracked, first <b>Quit</b> the Level Editor and select your level from the 'Levels created by you' section."
+msgstr ""
+
+#: templates/game/level_editor.html:576
+msgid "Name:"
+msgstr ""
+
+#: templates/game/level_editor.html:592
+msgid "Here you can share your level with your classes or your fellow teachers."
+msgstr ""
+
+#: templates/game/level_editor.html:594
+msgid "Here you can share your level with your classmates. Try clicking in the Shared column!"
+msgstr ""
+
+#: templates/game/level_editor.html:600
+msgid "Share with:"
+msgstr ""
+
+#: templates/game/level_editor.html:602
+msgid "Classes"
+msgstr ""
+
+#: templates/game/level_editor.html:603
+msgid "Teachers"
+msgstr ""
+
+#: templates/game/level_editor.html:608
+#: templates/game/level_moderation.html:41
+msgid "Class:"
+msgstr ""
+
+#: templates/game/level_editor.html:617
+msgid "Shared"
+msgstr ""
+
+#: templates/game/level_editor.html:631
+msgid "Share with all"
+msgstr ""
+
+#: templates/game/level_moderation.html:30
+msgid "Level moderation"
+msgstr ""
+
+#: templates/game/level_moderation.html:35
+msgid "Filter levels"
+msgstr ""
+
+#: templates/game/level_moderation.html:36
+msgid "Filter the levels by class and student, and click 'Submit' to see the student's levels."
+msgstr ""
+
+#: templates/game/level_moderation.html:46
+msgid "Student:"
+msgstr ""
+
+#: templates/game/level_moderation.html:51
+msgid "Submit"
+msgstr ""
+
+#: templates/game/level_moderation.html:84
+msgid "No levels found."
+msgstr ""
+
+#: templates/game/level_moderation.html:86
+msgid "Select a class and student to view their created levels."
+msgstr ""
+
+#: templates/game/level_selection.html:55
+#, python-format
+msgid "Levels %(first_level)s-%(last_level)s"
+msgstr ""
+
+#: templates/game/level_selection.html:78
+msgid "Random: Try your hand at a random level."
+msgstr ""
+
+#: templates/game/level_selection.html:92
+msgid "Levels created by you"
+msgstr ""
+
+#: templates/game/level_selection.html:108
+msgid "No levels have been created by you yet."
+msgstr ""
+
+#: templates/game/level_selection.html:117
+msgid "Levels shared with you"
+msgstr ""
+
+#: templates/game/level_selection.html:134
+msgid "No levels have been shared with you yet."
+msgstr ""
+
+#: templates/game/scoreboard.html:51
+msgid "No data available in table"
+msgstr ""
+
+#: templates/game/scoreboard.html:52 templates/game/scoreboard.html:53
+#, python-format
+msgid "Showing %(start)s to %(end)s of %(total)s entries"
+msgstr ""
+
+#: templates/game/scoreboard.html:54
+#, python-format
+msgid "(filtered from %(max)s total entries)"
+msgstr ""
+
+#: templates/game/scoreboard.html:55
+msgid "Loading..."
+msgstr ""
+
+#: templates/game/scoreboard.html:56
+msgid "Processing..."
+msgstr ""
+
+#: templates/game/scoreboard.html:57
+msgid "Search:"
+msgstr ""
+
+#: templates/game/scoreboard.html:58
+msgid "No matching records found"
+msgstr ""
+
+#: templates/game/scoreboard.html:95
+msgid "Select Classes"
+msgstr ""
+
+#: templates/game/scoreboard.html:101
+msgid "Select all Classes"
+msgstr ""
+
+#: templates/game/scoreboard.html:113
+msgid "Select Levels"
+msgstr ""
+
+#: templates/game/scoreboard.html:119
+msgid "Select all Levels"
+msgstr ""
+
+#: templates/game/scoreboard.html:144
+msgid "Export results"
+msgstr ""
+
+#: templates/game/scoreboard.html:147
+msgid "View results"
+msgstr ""
+
+#: templates/game/scoreboard.html:161
+#, python-format
+msgid "Colours explained:&#013;Red: Number of levels which student has started but not submitted a working solution &#013;Orange: Number of levels which student has scored below 50%% &#013;Green: Number of levels which student has scored above 50%%"
+msgstr ""
+
+#: theme.py:57
+msgid "Grass"
+msgstr ""
+
+#: theme.py:58
+msgid "Snow"
+msgstr ""
+
+#: theme.py:59
+msgid "Farm"
+msgstr ""
+
+#: theme.py:60
+msgid "City"
+msgstr ""
+
+#: views/level_moderation.py:121
+msgid "Student"
+msgstr ""
+
+#: views/level_moderation.py:121
+msgid "Level name"
+msgstr ""
+
+#: views/level_moderation.py:121
+msgid "Shared with"
+msgstr ""
+
+#: views/scoreboard.py:54 views/scoreboard.py:57 views/scoreboard_csv.py:42
+#: views/scoreboard_csv.py:44
+msgid "Class"
+msgstr ""
+
+#: views/scoreboard.py:54 views/scoreboard_csv.py:42
+msgid "Score"
+msgstr ""
+
+#: views/scoreboard.py:55 views/scoreboard.py:58 views/scoreboard_csv.py:43
+#: views/scoreboard_csv.py:45
+msgid "Total Time"
+msgstr ""
+
+#: views/scoreboard.py:55 views/scoreboard_csv.py:43
+msgid "Start Time"
+msgstr ""
+
+#: views/scoreboard.py:55 views/scoreboard_csv.py:43
+msgid "Finish Time"
+msgstr ""
+
+#: views/scoreboard.py:56
+msgid "Progress"
+msgstr ""
+
+#: views/scoreboard.py:57 views/scoreboard_csv.py:44
+msgid "Total Score"
+msgstr ""
+
+#: views/scoreboard_csv.py:45
+msgid "Started Levels %"
+msgstr ""
+
+#: views/scoreboard_csv.py:46
+msgid "Attempted levels %"
+msgstr ""
+
+#: views/scoreboard_csv.py:46
+msgid "Finished levels %"
+msgstr ""
+
+#: widgets.py:57
+#, python-format
+msgid "%(selected)s of %(total)s selected"
+msgstr ""
+
+#: widgets.py:59
+msgid "Select All"
+msgstr ""
