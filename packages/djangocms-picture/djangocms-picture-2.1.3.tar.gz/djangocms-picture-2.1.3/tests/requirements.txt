@@ -1,0 +1,7 @@
+# requirements from setup.py
+django-filer>=1.3.0
+djangocms-attributes-field>=0.4.0
+# other requirements
+djangocms-helper
+tox
+coverage

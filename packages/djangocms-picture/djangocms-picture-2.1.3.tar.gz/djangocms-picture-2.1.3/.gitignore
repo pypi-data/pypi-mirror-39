@@ -1,0 +1,10 @@
+*.pyc
+*.egg-info
+.DS_Store
+.idea/
+.tox/
+.eggs/
+dist/
+build/
+.coverage
+local.sqlite
