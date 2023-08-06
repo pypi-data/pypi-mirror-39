@@ -1,0 +1,14 @@
+README.rst
+setup.py
+sdsu/__init__.py
+sdsu.egg-info/PKG-INFO
+sdsu.egg-info/SOURCES.txt
+sdsu.egg-info/dependency_links.txt
+sdsu.egg-info/requires.txt
+sdsu.egg-info/top_level.txt
+sdsu/security/certificate.pem
+sdsu/security/credentials.csv
+sdsu/security/key.pem
+sdsu/static/index.css
+sdsu/static/index.html
+sdsu/static/splash.html
