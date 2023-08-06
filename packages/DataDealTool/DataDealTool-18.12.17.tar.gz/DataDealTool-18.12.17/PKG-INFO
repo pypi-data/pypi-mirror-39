@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: DataDealTool
+Version: 18.12.17
+Summary: The package for csv and excel converting
+Home-page: https://github.com/lijiacaigit/DataDealTool
+Author: Lijiacai
+Author-email: 1050518702@qq.com
+License: MIT License
+Description: This package implements the conversion between CSV files and Excel files.dictorder provide ordered Dictionaries and return a Dictionaries too.
+Keywords: excel,Data,csv,xlsx
+Platform: any
