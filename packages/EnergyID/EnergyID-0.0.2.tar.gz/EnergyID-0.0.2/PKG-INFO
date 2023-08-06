@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: EnergyID
+Version: 0.0.2
+Summary: A python API wrapper for EnergyID
+Home-page: https://github.com/EnergieID/energyid-py
+Author: EnergieID.be
+Author-email: jan@energieid.be
+License: MIT
+Description: # energyid-py
+        Python interface for the EnergyID API and Webhooks
+        
+Keywords: EnergyID API Webhooks Python
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
