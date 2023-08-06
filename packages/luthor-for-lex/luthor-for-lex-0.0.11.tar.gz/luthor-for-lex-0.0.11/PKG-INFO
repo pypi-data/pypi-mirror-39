@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: luthor-for-lex
+Version: 0.0.11
+Summary: Easy Lex bot manager
+Home-page: https://github.com/troylar/luthor-for-lex
+Author: Troy Larson
+Author-email: troylar@gmail.com
+License: UNKNOWN
+Description: # ez-lex-bot-manager
+        Manage Lex bots quickly and easily
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
