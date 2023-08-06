@@ -1,0 +1,3 @@
+[mkdocs.plugins]
+bootstrap-tables = mkdocs_bootstrap_tables_plugin.plugin:BootstrapTablesPlugin
+
