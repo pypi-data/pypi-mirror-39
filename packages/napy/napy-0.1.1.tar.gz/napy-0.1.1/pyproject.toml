@@ -1,0 +1,81 @@
+[tool.poetry]
+name = "napy"
+version = "0.1.1"
+description = "Everything you frequently use when you use python."
+authors = ["Nasy <nasyxx+napy@gmail.com>"]
+license = "GPL-3.0+"
+keywords = ["crawler", "math", "utility", "lib"]
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities"
+]
+readme = "README.md"
+include = ["CHANGELOG", "poetry.lock", "README.org", "README.html"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+better_exceptions = "^0.2.1"
+cleo = "^0.7.2"
+
+requests_html = "^0.9.0"
+requests = "^2.21"
+
+numpy = {version = "^1.15",optional = true}
+jupyter = {version = "^1.0",optional = true}
+sympy = {version = "^1.3",optional = true}
+pandas = {version = "^0.23.4",optional = true}
+
+pendulum = {version = "^2.0",optional = true}
+tqdm = {version = "^4.28",optional = true}
+bs4 = {version = "^0.0.1",optional = true}
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+isort = "^4.3"
+
+[tool.poetry.scripts]
+napy = "napy.console:run"
+
+[tool.black]
+line-length = 79
+
+[tool.pytest]
+filterwarnings = "ignore:.*invalid escape sequence.*:DeprecationWarning"
+
+[tool.isort]
+line_length = 79
+multi_line_output = 3
+balanced_wrapping = true
+
+import_heading_typdef = "Type Definition"
+known_typdef = ["typing", "typdefs"]
+
+import_heading_stdlib = "Standard Library"
+
+import_heading_pandas = "Mathematic Packages"
+known_pandas = ["pandas", "numpy", "scipy"]
+
+import_heading_web = "Web Packages"
+known_web = ["requests", "requests_html", "bs4"]
+
+import_heading_aio = "Async Packages"
+known_aio = ["aiohttp", "aiofile"]
+
+import_heading_clt = "Command Line Tools"
+known_clt = ["click", "cleo", "fire"]
+
+import_heading_tpkg = "This Package"
+known_tpkg = ["napy"]
+
+import_heading_thirdparty = "Other Packages"
+
+import_heading_localfolder = "Local Packages"
+
+sections = ["FUTURE", "TYPDEF", "STDLIB", "PANDAS", "WEB", "AIO", "CLT", "THIRDPARTY", "FIRSTPARTY", "TPKG", "LOCALFOLDER"]
+
+length_sort = true
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
