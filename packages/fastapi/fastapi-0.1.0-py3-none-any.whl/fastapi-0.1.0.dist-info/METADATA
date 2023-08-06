@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: fastapi
+Version: 0.1.0
+Summary: Fast API framework, high performance, fast to learn, fast to code, fast to production
+Home-page: https://github.com/tiangolo/fastapi
+License: UNKNOWN
+Author: Sebastián Ramírez
+Author-email: tiangolo@gmail.com
+Requires-Python: >=3.6
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: starlette >=0.9.7
+Requires-Dist: pydantic >=0.16
+Provides-Extra: .none
