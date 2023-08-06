@@ -1,0 +1,7 @@
+setuptools
+structlog
+tornado
+pycurl
+
+[vercmp]
+pyalpm
