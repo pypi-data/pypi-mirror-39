@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: markdown-iconfonts
+Version: 2.1.1
+Summary: Easily display icon fonts in markdown.
+Home-page: https://github.com/MadLittleMods/markdown-icons
+Author: Eric Eastwoord
+Author-email: UNKNOWN
+License: UNKNOWN
+Keywords: markdown,icons,fontawesome,bootstrap
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: markdown
+Requires-Dist: six
+
+UNKNOWN
+
+
