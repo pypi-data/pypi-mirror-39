@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: zklibweb
+Version: 0.3.2
+Summary: Library for read data from zklib maquines, using selenium and requests
+Home-page: http://github.com/franzemil/zklibweb
+Author: Franz Emil Eulate Chacolla
+Author-email: franzemil35@gmail.com
+License: MIT
+Keywords: zklib web mopsv
+Platform: UNKNOWN
+Requires-Dist: requests (==2.20.1)
+Requires-Dist: selenium (==3.141.0)
+
+ZKLIBWEB
+========
+
+zklib library for read attendace data through selenium app
+
+
