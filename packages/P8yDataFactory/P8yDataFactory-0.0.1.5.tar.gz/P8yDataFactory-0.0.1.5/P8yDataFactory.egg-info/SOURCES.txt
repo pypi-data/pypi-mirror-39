@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+P8yDataFactory/__init__.py
+P8yDataFactory/query.py
+P8yDataFactory.egg-info/PKG-INFO
+P8yDataFactory.egg-info/SOURCES.txt
+P8yDataFactory.egg-info/dependency_links.txt
+P8yDataFactory.egg-info/top_level.txt
