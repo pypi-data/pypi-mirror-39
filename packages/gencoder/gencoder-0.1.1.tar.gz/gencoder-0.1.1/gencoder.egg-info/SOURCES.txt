@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+gencoder/__init__.py
+gencoder/polycoder.py
+gencoder/source.py
+gencoder.egg-info/PKG-INFO
+gencoder.egg-info/SOURCES.txt
+gencoder.egg-info/dependency_links.txt
+gencoder.egg-info/top_level.txt
