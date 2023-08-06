@@ -1,0 +1,12 @@
+README.md
+setup.py
+gspread_db/__init__.py
+gspread_db/client.py
+gspread_db/models.py
+gspread_db.egg-info/PKG-INFO
+gspread_db.egg-info/SOURCES.txt
+gspread_db.egg-info/dependency_links.txt
+gspread_db.egg-info/requires.txt
+gspread_db.egg-info/top_level.txt
+tests/__init__.py
+tests/models_tests.py
