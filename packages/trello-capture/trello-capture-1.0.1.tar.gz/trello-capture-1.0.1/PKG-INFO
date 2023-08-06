@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: trello-capture
+Version: 1.0.1
+Summary: Add cards to your Inbox from command line
+Home-page: https://github.com/egegunes/trello-capture
+Author: Ege Güneş
+Author-email: egegunes@gmail.com
+License: GPLv3
+Description: # Trello Capture
+        
+        This is a little tool to add cards to your Inbox from your terminal.
+        
+        ## Installation
+        
+        ```
+        $ pip install --user trello-capture
+        ```
+        
+        ## Configuration
+        
+        Create a file named ".trello" in your $HOME.
+        
+        ```
+        [trello]
+        key=KEY
+        token=TOKEN
+        listID=INBOXLISTID
+        ```
+        
+        ## Usage
+        
+        ```
+        $ capture Buy coffee beans
+        ```
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
