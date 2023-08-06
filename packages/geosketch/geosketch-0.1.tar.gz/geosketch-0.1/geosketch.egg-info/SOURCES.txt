@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+geosketch/__init__.py
+geosketch/kmeanspp.py
+geosketch/sketch.py
+geosketch/utils.py
+geosketch.egg-info/PKG-INFO
+geosketch.egg-info/SOURCES.txt
+geosketch.egg-info/dependency_links.txt
+geosketch.egg-info/requires.txt
+geosketch.egg-info/top_level.txt
