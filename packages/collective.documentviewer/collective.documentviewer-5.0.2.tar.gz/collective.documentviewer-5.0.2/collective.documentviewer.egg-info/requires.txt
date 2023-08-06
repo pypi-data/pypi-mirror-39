@@ -1,0 +1,11 @@
+setuptools
+Products.CMFPlone
+zope.browserresource
+repoze.catalog
+plone.app.z3cform
+collective.monkeypatcher
+plone.app.contenttypes
+
+[test]
+plone.api
+plone.app.testing
