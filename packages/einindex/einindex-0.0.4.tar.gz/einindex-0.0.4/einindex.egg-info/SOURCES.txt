@@ -1,0 +1,12 @@
+README.md
+setup.py
+einindex/__init__.py
+einindex/core.py
+einindex/grammar.lark
+einindex/py.typed
+einindex/test_main.py
+einindex.egg-info/PKG-INFO
+einindex.egg-info/SOURCES.txt
+einindex.egg-info/dependency_links.txt
+einindex.egg-info/requires.txt
+einindex.egg-info/top_level.txt
