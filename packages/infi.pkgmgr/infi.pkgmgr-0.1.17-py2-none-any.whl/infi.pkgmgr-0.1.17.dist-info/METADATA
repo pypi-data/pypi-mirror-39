@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: infi.pkgmgr
+Version: 0.1.17
+Summary: A simple wrapper for some Linux package managers.
+Home-page: https://github.com/Infinidat/infi.pkgmgr
+Author: Arnon Yaari
+Author-email: arnony@infinidat.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: infi.execute
+Requires-Dist: infi.os-info
+Requires-Dist: infi.run-as-root
+Requires-Dist: munch
+Requires-Dist: setuptools
+
+A simple wrapper for some Linux package managers. Currently supports Ubuntu (apt-get) and Red Hat (yum)
+
+
