@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: newsreader
+Version: 0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: urwid
+Requires-Dist: requests
+Requires-Dist: requests-cache
+Requires-Dist: beautifulsoup4
+
+UNKNOWN
+
+
