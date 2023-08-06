@@ -1,0 +1,16 @@
+README.md
+setup.py
+src/infi/__init__.py
+src/infi.greeter.egg-info/PKG-INFO
+src/infi.greeter.egg-info/SOURCES.txt
+src/infi.greeter.egg-info/dependency_links.txt
+src/infi.greeter.egg-info/entry_points.txt
+src/infi.greeter.egg-info/namespace_packages.txt
+src/infi.greeter.egg-info/not-zip-safe
+src/infi.greeter.egg-info/requires.txt
+src/infi.greeter.egg-info/top_level.txt
+src/infi/greeter/__init__.py
+src/infi/greeter/__version__.py
+src/infi/greeter/greeter.py
+src/infi/greeter/install.py
+src/infi/greeter/scripts.py
