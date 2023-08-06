@@ -1,0 +1,15 @@
+nose
+numpy
+six
+tqdm
+humanize
+msprime
+zarr
+lmdb
+sortedcontainers
+attrs
+# Needed for evaluation script.
+pandas
+matplotlib
+seaborn
+colorama
