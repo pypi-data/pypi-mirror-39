@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+setup.py
+bnmutils/__init__.py
+bnmutils/__version__.py
+bnmutils/configparser.py
+bnmutils/exceptions.py
+bnmutils/novelty.py
+bnmutils.egg-info/PKG-INFO
+bnmutils.egg-info/SOURCES.txt
+bnmutils.egg-info/dependency_links.txt
+bnmutils.egg-info/top_level.txt
