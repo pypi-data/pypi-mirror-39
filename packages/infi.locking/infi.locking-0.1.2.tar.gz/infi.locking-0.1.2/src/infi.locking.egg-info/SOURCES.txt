@@ -1,0 +1,13 @@
+README.md
+setup.py
+src/infi/__init__.py
+src/infi.locking.egg-info/PKG-INFO
+src/infi.locking.egg-info/SOURCES.txt
+src/infi.locking.egg-info/dependency_links.txt
+src/infi.locking.egg-info/entry_points.txt
+src/infi.locking.egg-info/namespace_packages.txt
+src/infi.locking.egg-info/not-zip-safe
+src/infi.locking.egg-info/requires.txt
+src/infi.locking.egg-info/top_level.txt
+src/infi/locking/__init__.py
+src/infi/locking/__version__.py
