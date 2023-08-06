@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--File version: 5-->
+<xs:schema xmlns:ocl="xmlns://afsprakenstelsel.medmij.nl/oauthclientlist/release2/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="xmlns://afsprakenstelsel.medmij.nl/oauthclientlist/release2/" elementFormDefault="qualified">
+    <!--Root element-->
+    <xs:element name="OAuthclientlist" type="ocl:OAuthclientlist"></xs:element>
+    <!--Logische klassen-->
+    <xs:complexType name="OAuthclientlist">
+        <xs:sequence>
+            <xs:element name="Tijdstempel" type="ocl:DatumTijd"></xs:element>
+            <xs:element name="Volgnummer" type="ocl:Positiefnummer"></xs:element>
+            <xs:element name="OAuthclients" type="ocl:OAuthclients">
+                <xs:unique name="Unieke_OAuthclient">
+                    <xs:selector xpath="ocl:OAuthclient/ocl:Hostname"/>
+                    <xs:field xpath="."/>
+                </xs:unique>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="OAuthclients">
+        <xs:sequence>
+            <xs:element name="OAuthclient" maxOccurs="unbounded" minOccurs="0" type="ocl:OAuthclient"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="OAuthclient">
+        <xs:sequence>
+            <xs:element name="Hostname" type="ocl:Hostname"></xs:element>
+            <xs:element name="OAuthclientOrganisatienaam" type="ocl:OAuthclientOrganisatienaam"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Basisklassen-->
+    <xs:simpleType name="DatumTijd">
+        <xs:restriction base="xs:dateTime">
+            <xs:pattern value=".{20,}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Positiefnummer">
+        <xs:restriction base="xs:positiveInteger"></xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Hostname">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(([a-z0-9])([a-z0-9-])*(\.))+([a-z0-9])([a-z0-9-])*([a-z0-9])"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="OAuthclientOrganisatienaam">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="3"></xs:minLength>
+            <xs:maxLength value="50"></xs:maxLength>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
