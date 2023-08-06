@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+include VERSION
+recursive-include rh_util/static *
+recursive-include rh_util/templates *
+recursive-include docs *
