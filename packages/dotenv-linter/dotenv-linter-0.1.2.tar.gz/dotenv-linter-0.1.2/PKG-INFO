@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: dotenv-linter
+Version: 0.1.2
+Summary: Linting dotenv files like a charm!
+Home-page: https://dotenv-linter.readthedocs.io
+Author: sobolevn
+Author-email: mail@sobolevn.me
+Keywords: dotenv,linter,wemake.services,code quality
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: click_default_group (>=1.2,<2.0)
+Requires-Dist: dataclasses (>=0.6,<0.7); python_version < "3.7"
+Requires-Dist: ply (>=3.11,<4.0)
+Requires-Dist: typing_extensions (>=3.6,<4.0)
+Project-URL: Repository, https://github.com/wemake-services/dotenv-linter
