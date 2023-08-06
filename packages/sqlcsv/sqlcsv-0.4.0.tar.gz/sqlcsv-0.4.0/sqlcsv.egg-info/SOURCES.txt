@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+sqlcsv/__init__.py
+sqlcsv/casting.py
+sqlcsv/cli.py
+sqlcsv/command.py
+sqlcsv.egg-info/PKG-INFO
+sqlcsv.egg-info/SOURCES.txt
+sqlcsv.egg-info/dependency_links.txt
+sqlcsv.egg-info/entry_points.txt
+sqlcsv.egg-info/requires.txt
+sqlcsv.egg-info/top_level.txt

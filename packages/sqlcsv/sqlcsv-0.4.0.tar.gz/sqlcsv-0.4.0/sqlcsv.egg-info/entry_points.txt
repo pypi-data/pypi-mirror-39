@@ -1,0 +1,3 @@
+[console_scripts]
+sqlcsv = sqlcsv.cli:cli
+
