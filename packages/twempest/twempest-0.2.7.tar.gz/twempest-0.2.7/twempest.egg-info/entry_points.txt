@@ -1,0 +1,3 @@
+[console_scripts]
+twempest = twempest.__main__:twempest
+
