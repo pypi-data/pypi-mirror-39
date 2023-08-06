@@ -1,0 +1,15 @@
+setup.py
+lesspass/__init__.py
+lesspass/cli.py
+lesspass/clipboard.py
+lesspass/core.py
+lesspass/help.py
+lesspass/password.py
+lesspass/profile.py
+lesspass/validator.py
+lesspass/version.py
+lesspass.egg-info/PKG-INFO
+lesspass.egg-info/SOURCES.txt
+lesspass.egg-info/dependency_links.txt
+lesspass.egg-info/entry_points.txt
+lesspass.egg-info/top_level.txt
