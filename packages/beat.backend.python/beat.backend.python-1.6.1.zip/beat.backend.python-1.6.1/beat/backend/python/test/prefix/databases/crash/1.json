@@ -1,0 +1,27 @@
+{
+  "root_folder": "/tmp/foo/bar",
+  "protocols": [
+    {
+      "name": "protocol",
+      "template": "template",
+      "sets": [
+        {
+          "name": "index_crashes",
+          "template": "set",
+          "view": "IndexCrashes",
+          "outputs": {
+            "out": "user/single_integer/1"
+          }
+        },
+        {
+          "name": "get_crashes",
+          "template": "set",
+          "view": "GetCrashes",
+          "outputs": {
+            "out": "user/single_integer/1"
+          }
+        }
+      ]
+    }
+  ]
+}

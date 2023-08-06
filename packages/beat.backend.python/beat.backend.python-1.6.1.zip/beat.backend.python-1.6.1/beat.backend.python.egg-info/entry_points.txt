@@ -1,0 +1,7 @@
+[console_scripts]
+databases_provider = beat.backend.python.scripts.databases_provider:main
+describe = beat.backend.python.scripts.describe:main
+execute = beat.backend.python.scripts.execute:main
+index = beat.backend.python.scripts.index:main
+loop_execute = beat.backend.python.scripts.loop_execute:main
+

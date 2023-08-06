@@ -1,0 +1,276 @@
+{
+  "language": "python",
+  "splittable": false,
+  "groups": [
+    {
+      "inputs": {
+        "images": {
+          "type": "user/2d_array_of_integers/1"
+        },
+        "labels": {
+          "type": "user/floats/1"
+        }
+      },
+      "outputs": {
+        "features": {
+          "type": "user/1d_array_of_integers/1"
+        }
+      }
+    }
+  ],
+  "parameters": {
+    "int8_value": {
+      "default": "5",
+      "type": "int8",
+      "description": "Some comment"
+    },
+    "int8_range": {
+      "default": "6",
+      "range": [
+        0,
+        "10"
+      ],
+      "type": "int8",
+      "description": "Another comment"
+    },
+    "int8_choices": {
+      "default": "4",
+      "type": "int8",
+      "choice": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "10"
+      ]
+    },
+    "int16_value": {
+      "default": "500",
+      "type": "int16"
+    },
+    "int16_range": {
+      "default": "300",
+      "type": "int16",
+      "range": [
+        "0",
+        "1000"
+      ]
+    },
+    "int16_choices": {
+      "default": "400",
+      "type": "int16",
+      "choice": [
+        "200",
+        "400",
+        "600",
+        "800",
+        "1000"
+      ]
+    },
+    "int16_choices2": {
+      "default": "400",
+      "type": "int16",
+      "choice": [
+        "600",
+        "400"
+      ]
+    },
+    "int32_value": {
+      "default": "500000",
+      "type": "int32"
+    },
+    "int32_range": {
+      "default": "500000",
+      "type": "int32",
+      "range": [
+        "0",
+        "1000000"
+      ]
+    },
+    "int32_choices": {
+      "default": "400000",
+      "type": "int32",
+      "choice": [
+        "200000",
+        "400000",
+        "600000",
+        "800000",
+        "1000000"
+      ]
+    },
+    "int64_value": {
+      "default": "5000000000",
+      "type": "int64"
+    },
+    "int64_range": {
+      "default": "5000000000",
+      "type": "int64",
+      "range": [
+        "0",
+        "10000000000"
+      ]
+    },
+    "int64_choices": {
+      "default": "4000000000",
+      "type": "int64",
+      "choice": [
+        "2000000000",
+        "4000000000",
+        "6000000000",
+        "8000000000",
+        "10000000000"
+      ]
+    },
+    "uint8_value": {
+      "default": "5",
+      "type": "uint8"
+    },
+    "uint8_range": {
+      "default": "6",
+      "type": "uint8",
+      "range": [
+        "0",
+        "10"
+      ]
+    },
+    "uint8_choices": {
+      "default": "4",
+      "type": "uint8",
+      "choice": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "10"
+      ]
+    },
+    "uint16_value": {
+      "default": "500",
+      "type": "uint16"
+    },
+    "uint16_range": {
+      "default": "500",
+      "type": "uint16",
+      "range": [
+        "0",
+        "1000"
+      ]
+    },
+    "uint16_choices": {
+      "default": "400",
+      "type": "uint16",
+      "choice": [
+        "200",
+        "400",
+        "600",
+        "800",
+        "1000"
+      ]
+    },
+    "uint32_value": {
+      "default": "500000",
+      "type": "uint32"
+    },
+    "uint32_range": {
+      "default": "500000",
+      "type": "uint32",
+      "range": [
+        "0",
+        "1000000"
+      ]
+    },
+    "uint32_choices": {
+      "default": "400000",
+      "type": "uint32",
+      "choice": [
+        "200000",
+        "400000",
+        "600000",
+        "800000",
+        "1000000"
+      ]
+    },
+    "uint64_value": {
+      "default": "5000000000",
+      "type": "uint64"
+    },
+    "uint64_range": {
+      "default": "5000000000",
+      "type": "uint64",
+      "range": [
+        "0",
+        "10000000000"
+      ]
+    },
+    "uint64_choices": {
+      "default": "4000000000",
+      "type": "uint64",
+      "choice": [
+        "2000000000",
+        "4000000000",
+        "6000000000",
+        "8000000000",
+        "10000000000"
+      ]
+    },
+    "float32_value": {
+      "default": "0.0",
+      "type": "float32"
+    },
+    "float32_range": {
+      "default": "0.0",
+      "type": "float32",
+      "range": [
+        "-10.0",
+        "10.0"
+      ]
+    },
+    "float32_choices": {
+      "default": "0.0",
+      "type": "float32",
+      "choice": [
+        "-10.0",
+        "-5.0",
+        "0.0",
+        "5.0",
+        "10.0"
+      ]
+    },
+    "float64_value": {
+      "default": "0.0",
+      "type": "float64"
+    },
+    "float64_range": {
+      "default": "0.0",
+      "type": "float64",
+      "range": [
+        "-100.0",
+        "100.0"
+      ]
+    },
+    "float64_choices": {
+      "default": "0.0",
+      "type": "float64",
+      "choice": [
+        -10.0,
+        -5.0,
+        0.0,
+        5.0,
+        10.0
+      ]
+    },
+    "bool_value": {
+      "default": true,
+      "type": "bool"
+    },
+    "string_value": {
+      "default": "choice1",
+      "type": "string",
+      "choice": [
+        "choice1",
+        "choice2",
+        "choice3"
+      ]
+    }
+  }
+}

@@ -1,0 +1,3 @@
+include LICENSE.AGPL README.rst buildout.cfg version.txt requirements.txt
+recursive-include doc conf.py *.rst *.png *.ico
+recursive-include beat/backend/python/test/prefix *.json *.py

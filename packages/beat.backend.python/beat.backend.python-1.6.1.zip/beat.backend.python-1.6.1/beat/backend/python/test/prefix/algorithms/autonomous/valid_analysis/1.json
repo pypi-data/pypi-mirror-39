@@ -1,0 +1,28 @@
+{
+    "schema_version": 2,
+    "language": "python",
+    "api_version": 2,
+    "type": "autonomous",
+    "groups": [
+        {
+            "inputs": {
+                "images": {
+                    "type": "user/2d_array_of_integers/1"
+                },
+                "labels": {
+                    "type": "user/floats/1"
+                }
+            }
+        }
+    ],
+    "results": {
+        "c": {
+            "type": "plot/scatter/1",
+            "display": false
+        },
+        "v": {
+            "type": "float32",
+            "display": true
+        }
+    }
+}
