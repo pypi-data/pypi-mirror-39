@@ -1,0 +1,51 @@
+Metadata-Version: 2.0
+Name: kanirequests
+Version: 0.1.0
+Summary: ''
+Home-page: https://github.com/fx-kirin/kanirequests
+Author: fx-kirin
+Author-email: ono.kirin@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+
+pyhttp
+======
+
+.. image:: https://img.shields.io/pypi/v/kanirequests.svg
+    :target: https://pypi.python.org/pypi/kanirequests
+    :alt: Latest PyPI version
+
+.. image:: ''.png
+   :target: ''
+   :alt: Latest Travis CI build status
+
+''
+
+Usage
+-----
+
+Installation
+------------
+
+Requirements
+^^^^^^^^^^^^
+
+Compatibility
+-------------
+
+Licence
+-------
+
+Authors
+-------
+
+`kanirequests` was written by `fx-kirin <ono.kirin@gmail.com>`_.
+
+
