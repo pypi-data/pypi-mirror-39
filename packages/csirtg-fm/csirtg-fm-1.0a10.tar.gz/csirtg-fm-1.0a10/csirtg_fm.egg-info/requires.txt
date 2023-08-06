@@ -1,0 +1,16 @@
+csirtg_indicator>=2.0a1
+ipaddress
+feedparser
+requests
+arrow
+python-magic
+pyaml
+chardet
+lxml
+tzlocal
+SQLAlchemy
+tornado
+nltk
+csirtg-domainsml-tf
+csirtg-urlsml-tf
+csirtg-ipsml-tf
