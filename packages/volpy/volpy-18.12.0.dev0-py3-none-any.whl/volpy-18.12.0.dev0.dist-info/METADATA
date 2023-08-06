@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: volpy
+Version: 18.12.0.dev0
+Summary: volpy: Volume calculations in Python
+Home-page: https://github.com/agu3rra/volpy/
+Author: Andre Guerra
+Author-email: agu3rra@gmail.com
+License: GPL
+Keywords: gps volume terrain survey
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: utm
+Requires-Dist: sympy
+Requires-Dist: plotly
+
+Calculate volumes out of a Digital Elevation Model (DEM) represented by Triangulated Irregular Network
+
+
