@@ -1,0 +1,12 @@
+README.md
+setup.py
+GdDownloader.egg-info/PKG-INFO
+GdDownloader.egg-info/SOURCES.txt
+GdDownloader.egg-info/dependency_links.txt
+GdDownloader.egg-info/requires.txt
+GdDownloader.egg-info/top_level.txt
+gddownloader/__init__.py
+gddownloader/__tests__/__init__.py
+gddownloader/core/__init__.py
+gddownloader/core/cli.py
+gddownloader/core/downloader.py
