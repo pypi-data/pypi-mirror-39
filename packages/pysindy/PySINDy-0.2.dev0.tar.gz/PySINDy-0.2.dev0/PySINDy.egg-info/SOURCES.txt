@@ -1,0 +1,17 @@
+setup.py
+PySINDy.egg-info/PKG-INFO
+PySINDy.egg-info/SOURCES.txt
+PySINDy.egg-info/dependency_links.txt
+PySINDy.egg-info/requires.txt
+PySINDy.egg-info/top_level.txt
+pySINDy/__init__.py
+pySINDy/isindy.py
+pySINDy/sindy.py
+pySINDy/sindybase.py
+pySINDy/sindypde.py
+pySINDy/version.py
+pySINDy/tests/__init__.py
+pySINDy/tests/test_isindy.py
+pySINDy/tests/test_sindy.py
+pySINDy/tests/test_sindybase.py
+pySINDy/tests/test_sindypde.py
