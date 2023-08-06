@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: disk-bench
+Version: 0.1.1
+Summary: CLI tool to benchmark drive performance
+Home-page: https://github.com/rsyring/disk-bench
+Author: Randy Syring
+Author-email: randy@thesyrings.us
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: click
+Requires-Dist: sh
+Requires-Dist: tableprint
+
+.. default-role:: code
+
+Disk Bench
+##########
+
+Designed to run similar tests as Crystal Disk Mark using fio with user friendly output options.
+
+Tests ran:
+
+* Sequential read/write w/ 1MB block size
+* Random read/write w/ 512K block size
+* Queue depth 32 random read/write 4K blocks size
+
+Install
+=======
+
+::
+
+    # system install
+    $ sudo pip3 install disk-bench
+
+    # user install
+    $ pip3 install --user disk-bench
+
+Usage
+=====
+
+::
+
+    $ disk-bench --help
+
+    # Default runs fio w/ --loops=3 and --size=1G
+    $ disk-bench /mnt/disk-to-test/whatever
+
+    # Show CSV output (for easy copy/paste into Excel or Google Sheets)
+    $ disk-bench /mnt/disk-to-test/whatever --style=csv
+
+    # Quick
+    $ disk-bench /mnt/disk-to-test/whatever --loops=1 --size=1M
+
+
+Changelog
+=========
+
+0.1.1 released 2018-12-20
+-------------------------
+
+- fix pypi name (10d6115_)
+
+.. _10d6115: https://github.com/rsyring/disk-bench/commit/10d6115
+
+0.1.0 released 2018-12-20
+-------------------------
+
+- add tox & CI (12cfca5_)
+- fix json bytes/text for Python 3.5 (475e3ee_)
+- add tox improve package (ee8efc4_)
+
+.. _12cfca5: https://github.com/rsyring/disk-bench/commit/12cfca5
+.. _475e3ee: https://github.com/rsyring/disk-bench/commit/475e3ee
+.. _ee8efc4: https://github.com/rsyring/disk-bench/commit/ee8efc4
+
+
+
