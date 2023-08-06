@@ -1,0 +1,24 @@
+Metadata-Version: 2.0
+Name: pytext-nlp
+Version: 0.1.1
+Summary: pytorch modeling framework and model zoo for text models
+Home-page: https://github.com/facebookresearch/PyText
+Author: Facebook
+Author-email: UNKNOWN
+License: BSD
+Platform: UNKNOWN
+Requires-Dist: click
+Requires-Dist: future
+Requires-Dist: hypothesis
+Requires-Dist: joblib
+Requires-Dist: numpy
+Requires-Dist: onnx
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: scipy
+Requires-Dist: tensorboardX
+Requires-Dist: torchtext
+
+UNKNOWN
+
+
