@@ -1,0 +1,129 @@
+Metadata-Version: 2.1
+Name: cdl2r
+Version: 0.1.2
+Summary: Combination Dependent Learning to Rank
+Home-page: https://github.com/moriaki3193/cdl2r
+Author: Moriaki Saigusa
+Author-email: moriaki3193@gmail.com
+License: Type license() to see the full license text
+Keywords: cdl2r L2R LETOR
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+# cdl2r
+Combination Dependent Learning to Rank (組合せ依存型ランキング学習).
+
+## requirements
+- Python 3.6.x ~, 3.7.x ~
+
+## dependencies
+- NumPy
+- Pandas
+
+## installation
+```shell
+$ pip install cdl2r
+```
+
+## usage
+### 1. prepare your dataset
+The dataset format is like SVM-rank one.
+The difference is `eid` must be specified in a line.
+Here is a definition of a line.
+`|` symbol means `OR` (so `<str>|<int>` means the value must have either str or int type).
+
+```txt
+<line>     .=. <label> qid:<qid> eid:<eid> <features>#<comments>
+
+<label>    .=. <float>|<str as a class>
+<qid>      .=. <str>|<int>
+<eid>      .=. <str>|<int>
+<features> .=. <dim>:<value>
+<dim>      .=. <0 or Natural Number>
+<value>    .=. <float>
+<comments> .=. <Any text will do>
+```
+
+Let me show you an example.
+
+```txt
+0.5 qid:1 eid:x 1:0.1 2:-0.2 3:0.3#comment A
+0.0 qid:1 eid:y 1:-0.1 2:0.2 4:0.4
+-0.5 qid:1 eid:z 2:-0.2 3:0.3 4:-0.4#comment C
+0.5 qid:2 eid:y 1:0.1 2:-0.2 3:0.3
+0.0 qid:2 eid:z 1:-0.1 2:0.2 4:0.4
+-0.5 qid:2 eid:w 2:-0.2 3:0.3 4:-0.4#comment E
+```
+
+### 2. loading your dataset
+```python
+from cdl2r.dataset import load_data
+
+# loading dataset as a DataFrame object
+data_path = '/path/to/dataset'
+n_dimensions = 10
+train = load_data(data_path, n_dimensions)
+# train.columns
+# >>> Index(['label', 'qid', 'eid', 'features'], dtype='object')
+```
+
+### 3. fitting the model
+```python
+from cdl2r.models import CDFMRegressor
+
+# define your model
+model = CDFMRegressor(n_factors=8, n_iterations=300, init_eta=1e-2)
+# fitting, printing out epoch losses if verbose is True
+model.fit(train, verbose=True)
+```
+
+### 4. save the model
+```python
+import pickle
+
+with open('/path/to/file.pkl', mode='wb') as fp:
+    pickle.dump(model, fp)
+```
+
+### 5. make prediction
+```python
+# loading test dataset
+test = load_data(test_path, n_dimensions)
+pred = model.predict(test)
+# pred.columns
+# >>> Index(['pred_label', 'qid', 'eid', 'features'], dtype='object')
+```
+
+## development
+### build Cython modules
+```shell
+$ python setup.py build_ext --inplace
+```
+
+### profiling
+```shell
+# decorate a method with `@profile` in a script where you want to profile.
+$ kernprof -l -v <script>.py
+```
+
+### pylint
+- max-line-length: 130
+- disable snake-case
+
+### release
+```shell
+# build
+$ python setup.py bdist_whell
+
+# testing upload
+$ twine upload --repository testpypi dist/<cdl2r-version-pkg>
+$ pip install --index-url https://test.pypi.org/simple/<cdl2r-version-pkg>
+
+# upload
+$ twine upload --repository pypi dist<cdl2r-version-pkg>
+```
+
+
