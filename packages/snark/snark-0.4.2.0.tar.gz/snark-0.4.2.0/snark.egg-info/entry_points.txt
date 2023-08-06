@@ -1,0 +1,5 @@
+[console_scripts]
+snark = snark.main:cli
+snark-dev = snark.development.dev:cli
+snark-local = snark.development.local:cli
+
