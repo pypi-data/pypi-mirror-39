@@ -1,0 +1,16 @@
+recursive-include zeus_log_parser *.py
+include README.md
+include *.py
+include *.txt
+include MANIFEST
+include LICENSE
+include *.md
+include Makefile
+recursive-include docs *.md
+
+global-exclude *.swp
+
+recursive-exclude zeus_log_parser *.pyc
+
+prune config
+prune tests
