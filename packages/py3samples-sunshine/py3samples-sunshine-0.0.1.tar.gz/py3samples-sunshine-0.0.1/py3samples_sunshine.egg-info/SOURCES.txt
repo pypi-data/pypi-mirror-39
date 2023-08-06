@@ -1,0 +1,10 @@
+README.md
+setup.py
+py3samples_sunshine.egg-info/PKG-INFO
+py3samples_sunshine.egg-info/SOURCES.txt
+py3samples_sunshine.egg-info/dependency_links.txt
+py3samples_sunshine.egg-info/top_level.txt
+samples/__init__.py
+samples/classes.py
+samples/num.py
+samples/regex.py
