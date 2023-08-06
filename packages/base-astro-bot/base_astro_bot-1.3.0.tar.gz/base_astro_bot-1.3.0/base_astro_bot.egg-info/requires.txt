@@ -1,0 +1,12 @@
+pafy==0.5.4
+pymongo==3.7.2
+requests==2.20.1
+SQLAlchemy==1.2.14
+tabulate==0.8.2
+youtube-dl==2018.11.23
+
+[:"linux" in sys_platform]
+websocket-client==0.44.0
+
+[:sys_platform == "win32"]
+websocket-client==0.46.0
