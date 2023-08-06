@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+DBAPI_OpenTracing.egg-info/PKG-INFO
+DBAPI_OpenTracing.egg-info/SOURCES.txt
+DBAPI_OpenTracing.egg-info/dependency_links.txt
+DBAPI_OpenTracing.egg-info/requires.txt
+DBAPI_OpenTracing.egg-info/top_level.txt
+dbapi_opentracing/__init__.py
+dbapi_opentracing/tracing.py
