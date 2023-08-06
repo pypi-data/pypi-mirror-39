@@ -1,0 +1,11 @@
+kinematics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kinematics/attitude.py,sha256=hGx8XM6GPpEO2oc1SLSYith0v_kkpxE3kXxH9W5VyG8,15293
+kinematics/sphere.py,sha256=UAbe5xu3lmZ2lkodHmtyNZJQFtPljWQjsbeU4AFzk1w,2535
+kinematics/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kinematics/tests/test_attitude.py,sha256=PCgoVViFTdJDCnd1Y071MZo5wa5PBHx0uHbXsfCJr0E,8048
+kinematics/tests/test_sphere.py,sha256=dYxg87KwDSTHc7gvvWZgMkgYQCrGhl64DLWbffvwRoU,905
+kinematics-0.1.0.dist-info/LICENSE,sha256=xh8S2nza1Sa9y-1HpMCmA-YNu_2vi2aTPNCI6RMsMD8,32472
+kinematics-0.1.0.dist-info/METADATA,sha256=_yD298usccWCf5vFFx8Uk6lGJRb_YNLnuLJ1wa9FJMA,3026
+kinematics-0.1.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+kinematics-0.1.0.dist-info/top_level.txt,sha256=1inpW8do1lnR6SK-rcjX7wDlADGND8OmE85bIya0eNA,11
+kinematics-0.1.0.dist-info/RECORD,,
