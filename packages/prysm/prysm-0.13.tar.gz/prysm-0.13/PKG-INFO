@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: prysm
+Version: 0.13
+Summary: A python optics module
+Home-page: https://github.com/brandondube/prysm
+Author: Brandon Dube
+Author-email: brandondube@gmail.com
+License: MIT
+Description: Uses geometrical and fourier optics to model optical systems
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: Mx
+Provides-Extra: deconv
+Provides-Extra: img
+Provides-Extra: cpu+
+Provides-Extra: mtf+
+Provides-Extra: cuda
