@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: vserialport
+Version: 0.1.1
+Summary: Uma livraria de controle das portas seriais
+Home-page: UNKNOWN
+License: UNKNOWN
+Author: Flavio Vilante
+Author-email: fvilante1@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pyserial (>=3.4,<4.0)
