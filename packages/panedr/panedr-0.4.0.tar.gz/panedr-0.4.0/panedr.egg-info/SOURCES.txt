@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+panedr/VERSION
+panedr/__init__.py
+panedr/panedr.py
+panedr.egg-info/PKG-INFO
+panedr.egg-info/SOURCES.txt
+panedr.egg-info/dependency_links.txt
+panedr.egg-info/requires.txt
+panedr.egg-info/top_level.txt
+tests/__init__.py
+tests/test_edr.py
