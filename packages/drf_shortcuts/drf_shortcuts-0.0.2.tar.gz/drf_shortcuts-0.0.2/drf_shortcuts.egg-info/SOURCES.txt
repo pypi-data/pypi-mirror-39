@@ -1,0 +1,12 @@
+README.md
+setup.py
+drf_shortcuts/__init__.py
+drf_shortcuts/serializers.py
+drf_shortcuts/urls.py
+drf_shortcuts/views.py
+drf_shortcuts.egg-info/PKG-INFO
+drf_shortcuts.egg-info/SOURCES.txt
+drf_shortcuts.egg-info/dependency_links.txt
+drf_shortcuts.egg-info/not-zip-safe
+drf_shortcuts.egg-info/requires.txt
+drf_shortcuts.egg-info/top_level.txt
