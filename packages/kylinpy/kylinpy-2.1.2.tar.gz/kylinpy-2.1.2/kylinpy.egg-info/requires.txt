@@ -1,0 +1,4 @@
+click<7,>=6.7
+
+[sqlalchemy]
+sqlalchemy>=1.1.0
