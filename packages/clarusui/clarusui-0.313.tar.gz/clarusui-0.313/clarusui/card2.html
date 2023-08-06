@@ -1,0 +1,11 @@
+<div class="card {{card.cssClass}}" {{card._get_custom_css()|safe}}>
+  <h4 class="card-header">
+  {% if card._get_icon() is not none %}   
+  <span class="fa {{card._get_icon()}}" style="float:right; color:{{card._get_icon_colour()}}"></span>
+  {% endif %}
+  {{card._get_header()|safe}}
+  </h4>
+  <div class="card-body">
+    <h5 class="card-title"><strong>{{card._get_body()|safe}}</strong></h5>
+  </div>
+</div>
