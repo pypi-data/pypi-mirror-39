@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: aiolambda
+Version: 0.2.6
+Summary: Python async microservices fasts!
+Home-page: http://github.com/pando85/aiolambda
+Author: Pando85
+Author-email: pand855@gmail.com
+License: GPLv3+
+Keywords: aiolambda asyncio aiohttp asyncpg aio-pika
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp (==3.4.4)
+Requires-Dist: asyncpg (==0.18.2)
+Requires-Dist: cchardet (==2.1.4)
+Requires-Dist: passlib (==1.7.1)
+Requires-Dist: uvloop (==0.11.3)
+Requires-Dist: aio-pika (==4.8.0)
+Requires-Dist: docopt (==0.6.2)
+Requires-Dist: Jinja2 (==2.10)
+Requires-Dist: pathlib (==1.0.1)
+Requires-Dist: connexion (==2.1.0)
+
+# aiolambda [![Build Status](https://travis-ci.org/pando85/aiolambda.svg?branch=master)](https://travis-ci.org/pando85/aiolambda) [![License](https://img.shields.io/github/license/pando85/aiolambda.svg)](https://github.com/pando85/aiolambda/blob/master/LICENSE) [![Documentation Status](https://readthedocs.org/projects/aiolambda/badge/?version=latest)](https://aiolambda.readthedocs.io/en/latest/?badge=latest)
+
+Python async microservices fasts and functional!
+
+## Technologies
+
+### Python libraries
+
+- [connexion](https://github.com/zalando/connexion)
+- [aiohttp](https://github.com/aio-libs/aiohttp)
+- [asyncpg](https://github.com/MagicStack/asyncpg)
+- [aio-pika](https://github.com/mosquito/aio-pika)
+
+### Software
+- [Docker](https://www.docker.com/)
+- [travis-ci](https://travis-ci.org/)
+
+
