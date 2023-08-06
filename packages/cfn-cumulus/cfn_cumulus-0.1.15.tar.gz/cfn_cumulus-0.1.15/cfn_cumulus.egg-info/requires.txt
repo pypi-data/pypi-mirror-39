@@ -1,0 +1,15 @@
+troposphere
+awacs
+termcolor
+enum34
+
+[test]
+pytest
+pytest-runner
+stacker
+flake8
+pytest-watch
+pytest-cov
+coveralls
+awscli
+mock
