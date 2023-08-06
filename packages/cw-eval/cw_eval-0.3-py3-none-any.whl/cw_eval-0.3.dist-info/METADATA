@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: cw-eval
+Version: 0.3
+Summary: Provide Evaluation Metrics for Machine Learning Challenges
+Home-page: https://github.com/CosmiQ/cw_eval
+Author: David Lindenbaum and Nicholas Weir
+Author-email: dlindenbaum@iqt.org
+License: Apache-2.0
+Keywords: spacenet machinelearning iou aws
+Platform: UNKNOWN
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Scientific/Engineering :: GIS
+Requires-Dist: shapely
+Requires-Dist: rtree
+Requires-Dist: tqdm
+Requires-Dist: geopandas
+Requires-Dist: pandas
+Provides-Extra: test
+Requires-Dist: mock ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: codecov ; extra == 'test'
+
+UNKNOWN
+
+
