@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: shell-scripting
+Version: 0.0.2
+Summary: Shortcut functions for shell scripting on Python 3.7+
+Home-page: https://bitbucket.org/whoizit/shell-scripting
+Author: whoami
+Author-email: whoami@systemli.org
+License: UNLICENSE
+Description: ```
+        #!/usr/bin/env python3.7
+        
+        from shell_scripting import run, shell, shell_list
+        
+        run("date | sed s/2018/2019/ > test.out")
+        
+        print(shell("env | grep USER").stdout.split("\n"))
+        
+        print(shell("cat /root/file"))
+        
+        r = shell("cat /root/file")
+        print(
+            f"""\
+            args: {r.args}
+            returncode: {r.returncode}
+            stdout: {r.stdout}
+            stderr: {r.stderr}\
+        """,
+            end="",
+        )
+        
+        for x in shell_list("env"):
+            print(x)
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
