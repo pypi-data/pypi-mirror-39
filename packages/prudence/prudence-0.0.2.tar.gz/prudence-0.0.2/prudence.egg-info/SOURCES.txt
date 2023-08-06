@@ -1,0 +1,13 @@
+CHANGES.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+prudence/__init__.py
+prudence/__version__.py
+prudence.egg-info/PKG-INFO
+prudence.egg-info/SOURCES.txt
+prudence.egg-info/dependency_links.txt
+prudence.egg-info/entry_points.txt
+prudence.egg-info/not-zip-safe
+prudence.egg-info/top_level.txt
