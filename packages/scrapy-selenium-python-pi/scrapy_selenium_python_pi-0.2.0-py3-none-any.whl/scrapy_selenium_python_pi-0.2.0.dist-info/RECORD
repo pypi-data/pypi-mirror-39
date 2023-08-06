@@ -1,0 +1,12 @@
+scrapy_selenium_python_pi/__init__.py,sha256=YzzGPQNth40taRf7VhMxxTSowuF3Yt-qY97fmeFuDFA,78
+scrapy_selenium_python_pi/http.py,sha256=xD0yyYc97D8SV6NB7TtvHp_x_rZCSmNSoABrKktVlG8,958
+scrapy_selenium_python_pi/middlewares.py,sha256=zHFrpSRq1C_fHKFCKwX48AkwR5zfwv2EsTaaHdB6foM,3707
+scrapy_selenium_python_pi-0.2.0.dist-info/DESCRIPTION.rst,sha256=U5JPrsWX-r88hA8Xp84xFihnn8YjtcUpaoI9keAJCu0,2699
+scrapy_selenium_python_pi-0.2.0.dist-info/METADATA,sha256=vejn-BPZ2AEfAVj8fJGM4OWAoyZkwIN8oCc0GAnf7hU,3002
+scrapy_selenium_python_pi-0.2.0.dist-info/RECORD,,
+scrapy_selenium_python_pi-0.2.0.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+scrapy_selenium_python_pi-0.2.0.dist-info/metadata.json,sha256=kxU4flF3BDVks9iPYSPE9zM8BJ20dIti57VcxZtA1AU,418
+scrapy_selenium_python_pi-0.2.0.dist-info/top_level.txt,sha256=RGNoU66MoiySfBOtZUWWhvvtWTCEzQUp8w7kd2F1phk,32
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_cases.py,sha256=ClRZAJv4v9ACiPkkwgTBei4RUdkNlT-yU1eHJT08atc,860
+tests/test_middlewares.py,sha256=gv-D_e8F0tGn7q5Oy-U-rYZmCZc8U1a50Mhi9O0aqvY,3837
