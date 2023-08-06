@@ -1,0 +1,264 @@
+#include "libneuralnet.h"
+
+int NextInstance() {
+	if (vNetI.size() == 0) {
+		return 0;
+	} else {
+		return MaxInstance()+1;
+	}
+}
+
+int MaxInstance() { 
+	int i, n, mx = 0;
+	n = vNetI.size();
+	for (i=0;i<n;i++) {
+		if (vNetI[i] > mx) {
+			mx = vNetI[i];
+		}
+	}
+	return mx;
+}
+
+int InstanceIndex(int ins) {
+	int i, n;
+	n = vNetI.size();
+	for (i=0;i<n;i++) {
+		if (vNetI[i] == ins) {
+			return i;
+		}
+	}
+	return -1;	
+}
+
+
+int NextInstanceA() {
+	if (vNetAI.size() == 0) {
+		return 0;
+	} else {
+		return MaxInstanceA()+1;
+	}
+}
+
+int MaxInstanceA() { 
+	int i, n, mx = 0;
+	n = vNetAI.size();
+	for (i=0;i<n;i++) {
+		if (vNetAI[i] > mx) {
+			mx = vNetAI[i];
+		}
+	}
+	return mx;
+}
+
+int InstanceIndexA(int ins) {
+	int i, n;
+	n = vNetAI.size();
+	for (i=0;i<n;i++) {
+		if (vNetAI[i] == ins) {
+			return i;
+		}
+	}
+	return -1;	
+}
+
+
+
+int CreateNetwork(int nLayers, int *Layers, float Lambda, float ThetaRange) {
+	int instance;
+	instance = NextInstance();
+	vNetI.push_back(instance);
+	vNet.push_back(new Network(nLayers,Layers,Lambda,ThetaRange));
+	return instance;
+	
+}
+
+int CreateNetworkArray(int n, int *nLayers, int *Layers, float *Lambda, float *ThetaRange) {
+	int instance, ind;
+	instance = NextInstanceA();
+	vNetAI.push_back(instance);
+	ind = InstanceIndexA(instance);
+	vnA.push_back(n);	
+	int i, p = 0;
+	vNetA.push_back(new Network*[n]);
+	for (i=0;i<n;i++) {
+		vNetA[ind][i] = new Network(nLayers[i],&Layers[p],Lambda[i],ThetaRange[i]);
+		p += nLayers[i];
+	}
+	return instance;
+}
+
+void DestroyNetwork(int instance) {
+	int ind;
+	ind = InstanceIndex(instance);
+	delete vNet[ind];
+	vNetI.erase(vNetI.begin()+ind);
+	vNet.erase(vNet.begin()+ind);
+}
+
+void DestroyNetworkArray(int instance) {
+	int i, ind;
+	ind = InstanceIndexA(instance);	
+	for (i=0;i<vnA[ind];i++) {
+		delete vNetA[ind][i];
+	}
+	delete[] vNetA[ind];
+	vNetAI.erase(vNetAI.begin()+ind);
+	vNetA.erase(vNetA.begin()+ind);	
+	vnA.erase(vnA.begin()+ind);
+}
+
+
+int LoadNetwork(const char *fname) {
+	int instance;
+	instance = NextInstance();
+	vNetI.push_back(instance);	
+	vNet.push_back(new Network(fname));
+	return instance;
+}
+
+int LoadNetworkArray(int n, const char **fname) {
+	int instance;
+	vnA.push_back(n);
+	int i, ind;
+	instance = NextInstanceA();
+	vNetAI.push_back(instance);
+	vNetA.push_back(new Network*[n]);
+	ind = InstanceIndexA(instance);
+	for (i=0;i<n;i++) {
+		vNetA[ind][i] = new Network(fname[i]);
+	}
+	return instance;
+}
+
+void SaveNetwork(int instance, const char *fname) {
+	int ind;
+	ind = InstanceIndex(instance);
+	vNet[ind]->Save(fname);
+}
+
+void SaveNetworkArray(int instance, const char **fname) {
+	int i, ind;
+	ind = InstanceIndexA(instance);
+	for (i=0;i<vnA[ind];i++) {
+		vNetA[ind][i]->Save(fname[i]);
+	}
+}
+
+
+
+void InputTrainingData(int instance, int *xshape, float *xin, int ylen, int *yin) {
+	int ind;
+	ind = InstanceIndex(instance);
+	vNet[ind]->InputTrainingData(xshape,xin,ylen,yin);
+	
+}
+
+
+void InputTrainingDataArray(int instance, int i, int *xshape, float *xin, int ylen, int *yin) {
+	int ind;
+	ind = InstanceIndexA(instance);
+	vNetA[ind][i]->InputTrainingData(xshape,xin,ylen,yin);
+	
+}
+
+
+void InputCrossValidationData(int instance, int *xshape, float *xin, int ylen, int *yin) {
+	int ind;
+	ind = InstanceIndex(instance);
+	vNet[ind]->InputCrossValidationData(xshape,xin,ylen,yin);
+	
+}
+
+
+void InputCrossValidationDataArray(int instance, int i, int *xshape, float *xin, int ylen, int *yin) {
+	int ind;
+	ind = InstanceIndexA(instance);	
+	vNetA[ind][i]->InputCrossValidationData(xshape,xin,ylen,yin);
+	
+}
+
+void TrainGradientDescent(int instance, int MaxIter, float Alpha) {
+	int ind;
+	ind = InstanceIndex(instance);
+	vNet[ind]->TrainGradientDescent(MaxIter,Alpha);
+	
+}
+
+void TrainGradientDescentArray(int instance, int MaxIter, float Alpha) {
+	int ind;
+	ind = InstanceIndexA(instance);
+	int i;
+	for (i=0;i<vnA[ind];i++) {
+		printf("Training Network %d of %d\n",i+1,vnA[ind]);
+		vNetA[ind][i]->TrainGradientDescent(MaxIter,Alpha);
+	}
+	
+}
+
+void GetnSteps(int instance, int *nSteps) {
+	int ind;
+	ind = InstanceIndex(instance);
+	*nSteps = vNet[ind]->nSteps;
+}
+
+void GetnStepsArray(int instance, int *nSteps) {
+	int ind;
+	ind = InstanceIndexA(instance);
+	int i;
+	for (i=0;i<vnA[ind];i++) {
+		nSteps[i] = vNetA[ind][i]->nSteps;
+	}
+}
+
+void GetTrainingProgress(int instance, float *Jt, float *Acct) {
+	int ind;
+	ind = InstanceIndex(instance);
+	int i;
+	for (i=0;i<vNet[ind]->nSteps;i++) {
+		Jt[i] = vNet[ind]->Jt[i];
+		Acct[i] = vNet[ind]->Acct[i];
+	}
+}
+
+void GetCrossValidationProgress(int instance, float *Jcv, float *Acccv) {
+	int ind;
+	ind = InstanceIndex(instance);
+	int i;
+	for (i=0;i<vNet[ind]->nSteps;i++) {
+		Jcv[i] = vNet[ind]->Jcv[i];
+		Acccv[i] = vNet[ind]->Acccv[i];
+	}
+}
+
+void GetTrainingProgressArray(int instance, int i, float *Jt, float *Acct) {
+	int ind;
+	ind = InstanceIndexA(instance);
+	int j;
+	for (j=0;j<vNetA[ind][i]->nSteps;j++) {
+		Jt[j] = vNetA[ind][i]->Jt[j];
+		Acct[j] = vNetA[ind][i]->Acct[j];
+	}
+}
+
+void GetCrossValidationProgressArray(int instance, int i, float *Jcv, float *Acccv) {
+	int ind;
+	ind = InstanceIndexA(instance);
+	int j;
+	for (j=0;j<vNetA[ind][i]->nSteps;j++) {
+		Jcv[j] = vNetA[ind][i]->Jcv[j];
+		Acccv[j] = vNetA[ind][i]->Acccv[j];
+	}
+}
+
+void ClassifyData(int instance, int *xshape, float *xin, int m, int *yout, float *SMout) {
+	int ind;
+	ind = InstanceIndex(instance);	
+	vNet[ind]->ClassifyData(xshape,xin,m,yout,SMout);
+	
+}
+
+void ClassifyDataArray(int instance, int i, int *xshape, float *xin, int m, int *yout, float *SMout) {
+	int ind;
+	ind = InstanceIndexA(instance);
+	vNetA[ind][i]->ClassifyData(xshape,xin,m,yout,SMout);
+}
