@@ -1,0 +1,3 @@
+[console_scripts]
+stpmex = stpmex.__main__:main
+
