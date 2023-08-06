@@ -1,0 +1,2 @@
+GRANULARITY = 1
+DICT_FILE_DIR = "Sources"
