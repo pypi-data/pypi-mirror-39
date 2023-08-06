@@ -1,0 +1,46 @@
+#viewlet-disclaimer {
+    background: #000;
+    bottom: 0;
+    box-sizing: border-box;
+    color: #fff;
+    left: 0;
+    margin: 0 auto;
+    opacity: .92;
+    padding: 1em 2em 1em 1em;
+    position: fixed;
+    right: 0;
+    text-align: left;
+    vertical-align: baseline;
+    width: 100%;
+    z-index: 20180509;
+}
+.disclaimer-text {
+    display: inline-block;
+}
+button[name="collective.disclaimer.ok"] {
+    display: inline-block;
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    background: #00FF00;
+    color: black;
+    border: none;
+}
+button[name="collective.disclaimer.ok"]:hover {
+    color: white;
+}
+.disclaimer-title {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+#viewlet-disclaimer p {
+    border-bottom: 0;
+    padding-bottom: 0;
+    text-align: left;
+}
+#viewlet-disclaimer p a:link,
+#viewlet-disclaimer p a:visited,
+#viewlet-disclaimer p a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
