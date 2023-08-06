@@ -1,0 +1,11 @@
+README.md
+setup.py
+srmap/__init__.py
+srmap/actor.py
+srmap/level.py
+srmap/property.py
+srmap/tilemap.py
+srmap.egg-info/PKG-INFO
+srmap.egg-info/SOURCES.txt
+srmap.egg-info/dependency_links.txt
+srmap.egg-info/top_level.txt
