@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: aiotrello
+Version: 0.0.2
+Summary: Async Trello library
+Home-page: https://github.com/bloxlink/aiotrello
+Author: tigerism
+Author-email: admin@blox.link
+License: MIT
+Description: # aiotrello
+        
+        docs coming soon
+Keywords: async,trello
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
