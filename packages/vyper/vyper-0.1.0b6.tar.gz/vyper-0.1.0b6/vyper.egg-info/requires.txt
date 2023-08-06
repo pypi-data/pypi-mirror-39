@@ -1,0 +1,8 @@
+pycryptodome<4,>=3.5.1
+
+[test]
+pytest
+pytest-cov
+py-evm==0.2.0a34
+eth-tester==0.1.0b33
+web3==4.8.2
