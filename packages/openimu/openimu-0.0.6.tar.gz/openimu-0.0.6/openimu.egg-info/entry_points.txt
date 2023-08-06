@@ -1,0 +1,3 @@
+[console_scripts]
+openimu = openimu.__main__:main
+
