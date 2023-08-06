@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: PyLIME
+Version: 0.1.4
+Summary: Python LIME file format library
+Home-page: http://th.physik.uni-frankfurt.de/~palao/software/PyLIME
+Author: David Palao
+Author-email: david.palao@gmail.com
+License: UNKNOWN
+Description: PyLIME
+        ======
+        
+        PyLIME is an implementation of LIME written in Python.
+        
+Keywords: LIME LQCD Lattice QCD
+Platform: GNU/Linux
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries
+Provides: pylime
+Description-Content-Type: text/x-rst
