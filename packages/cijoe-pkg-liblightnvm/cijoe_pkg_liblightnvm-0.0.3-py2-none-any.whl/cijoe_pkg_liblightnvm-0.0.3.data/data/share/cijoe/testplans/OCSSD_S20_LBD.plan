@@ -1,0 +1,11 @@
+descr: liblightnvm testplan for Open-Channel 2.0 devices
+descr_long: |
+  Run the liblightnvm test-suites using only the Linux Block Device backend
+hooks: [ sysinf, dmesg ]
+testsuites:
+  - name: OCSSD
+    alias: "OCSSD via Linux Block Device"
+    evars: { NVM_CLI_BE_ID: 2 }
+  - name: OCSSD_S20
+    alias: "OCSSD 2.0 via Linux Block Device"
+    evars: { NVM_CLI_BE_ID: 2 }

@@ -1,0 +1,25 @@
+descr: liblightnvm testplan for Open-Channel 2.0 devices
+descr_long: |
+  Run the liblightnvm test-suites using all the different library backends
+hooks: [ sysinf, dmesg ]
+testsuites:
+  - name: OCSSD
+    alias: "OCSSD via IOCTL"
+    evars: { NVM_CLI_BE_ID: 1 }
+  - name: OCSSD
+    alias: "OCSSD via Linux Block Device"
+    evars: { NVM_CLI_BE_ID: 2 }
+  - name: OCSSD
+    alias: "OCSSD via SPDK"
+    evars: { NVM_CLI_BE_ID: 4 }
+    hooks: ["spdk"]
+  - name: OCSSD_S20
+    alias: "OCSSD 2.0 via IOCTL"
+    evars: { NVM_CLI_BE_ID: 1 }
+  - name: OCSSD_S20
+    alias: "OCSSD 2.0 via Linux Block Device"
+    evars: { NVM_CLI_BE_ID: 2 }
+  - name: OCSSD_S20
+    alias: "OCSSD 2.0 via SPDK"
+    evars: { NVM_CLI_BE_ID: 4 }
+    hooks: ["spdk"]
