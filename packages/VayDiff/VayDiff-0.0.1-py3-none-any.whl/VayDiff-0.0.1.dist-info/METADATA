@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: VayDiff
+Version: 0.0.1
+Summary: Python package for Automatic Differentiation
+Home-page: https://github.com/cs207-group-11/cs207-FinalProject
+Author: Abhimanyu Vasishth, Zheyu Wu, Yiming Xu
+Author-email: 
+License: MIT
+Keywords: Python,Automatic differentiation
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+
+[![Build Status](https://travis-ci.com/cs207-group-11/cs207-FinalProject.svg?branch=master)](https://travis-ci.com/cs207-group-11/cs207-FinalProject)
+
+[![Coverage Status](https://coveralls.io/repos/github/cs207-group-11/cs207-FinalProject/badge.svg?branch=master)](https://coveralls.io/github/cs207-group-11/cs207-FinalProject?branch=master)
+
+# CS 207 Final Project
+
+## Group Number: 11
+
+## Group Members
+
+1. Abhimanyu Vasishth
+2. Zheyu Wu
+3. Yiming Xu
+
+
