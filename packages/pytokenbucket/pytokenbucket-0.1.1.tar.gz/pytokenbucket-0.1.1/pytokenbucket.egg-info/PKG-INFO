@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: pytokenbucket
+Version: 0.1.1
+Summary: A token bucket implementation for Python which only uses the standard library
+Home-page: https://github.com/cmeister2/pytokenbucket
+Author: Max Dymond
+Author-email: cmeister2@gmail.com
+License: MIT license
+Description: # pyTokenBucket
+        
+        [![pypi version](https://img.shields.io/pypi/v/pytokenbucket.svg)](https://pypi.python.org/pypi/pytokenbucket)
+        [![Travis Status](https://img.shields.io/travis/cmeister2/pytokenbucket.svg)](https://travis-ci.org/cmeister2/pytokenbucket)
+        [![Documentation Status](https://readthedocs.org/projects/pytokenbucket/badge/?version=latest)](https://pytokenbucket.readthedocs.io/en/latest/?badge=latest)
+        
+        A token bucket implementation for Python which only uses the standard
+        library.
+        
+          - Free software: MIT license
+          - Documentation: <https://pytokenbucket.readthedocs.io>.
+        
+        ## Features
+        - Threaded token bucket which refreshes tokens at a given rate.
+        
+        ## Credits
+        
+        This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [cmeister2/cookiecutter-pypackage](https://github.com/cmeister2/cookiecutter-pypackage) project template.
+        
+        
+        # Changelog
+        All notable changes to this project will be documented in this file.
+        
+        The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+        and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+        
+        ## [Unreleased]
+        ### Changed
+        
+        ## [0.1.1] - 2018-12-19
+        ### Changed
+        - Move from rst to markdown for CHANGELOG and README.
+        - Remove dependence on `six`.
+        
+        ## [0.1.0] - 2018-12-18
+        ### Added
+        - Initial commit of all code.
+        
+        [Unreleased]: https://github.com/cmeister2/pytokenbucket/compare/v0.1.1...HEAD
+        [0.1.1]: https://github.com/cmeister2/pytokenbucket/compare/v0.1.0...v0.1.1
+        [0.1.0]: https://github.com/cmeister2/pytokenbucket/tree/v0.1.0
+        
+Keywords: pytokenbucket
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
