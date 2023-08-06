@@ -1,0 +1,30 @@
+sudo: false
+language: python
+cache: pip
+
+script:
+  - tox
+
+addons:
+  apt:
+    packages:
+      - slapd
+      - ldap-utils
+
+install:
+  - pip install tox
+
+matrix:
+  include:
+    - python: "3.5"
+      env: TOXENV=py35-django2
+    - python: "3.6"
+      env: TOXENV=py36-django2
+
+    # Linting
+    - python: "3.6"
+      env: TOXENV=lint
+
+notifications:
+  email: false
+  irc: "irc.freenode.org#polyconseil"
