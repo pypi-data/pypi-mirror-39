@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+aioevent/__init__.py
+aioevent/emitter.py
+aioevent/event.py
+aioevent.egg-info/PKG-INFO
+aioevent.egg-info/SOURCES.txt
+aioevent.egg-info/dependency_links.txt
+aioevent.egg-info/top_level.txt
+test/__init__.py
+test/test_emitter.py
+test/test_proxy.py
