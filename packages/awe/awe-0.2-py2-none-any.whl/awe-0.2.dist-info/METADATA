@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: awe
+Version: 0.2
+Summary: Dynamically updated web based reports/dashboards in python.
+Home-page: UNKNOWN
+Author: Dan Kilman
+Author-email: UNKNOWN
+License: MIT License
+Platform: UNKNOWN
+Requires-Dist: bottle
+Requires-Dist: autobahn[twisted]
+Requires-Dist: twisted
+Requires-Dist: pydash
+Requires-Dist: typing
+
+UNKNOWN
+
+
