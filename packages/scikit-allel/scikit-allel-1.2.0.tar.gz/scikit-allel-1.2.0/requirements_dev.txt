@@ -1,0 +1,18 @@
+# required
+cython==0.29.2
+numpy==1.15.4
+dask[array]==1.0.0
+# optional
+scipy==1.2.0
+matplotlib==2.2.3
+seaborn==0.9.0
+pandas==0.23.4
+scikit-learn==0.20.2
+h5py==2.9.0
+numexpr==2.6.8
+bcolz==1.2.1
+zarr==2.2.0
+hmmlearn==0.2.1
+# install problems on windows, skip for now
+# https://github.com/jmschrei/pomegranate/issues/333#issuecomment-449151227
+#pomegranate==0.10.0
