@@ -1,0 +1,17 @@
+numpy
+scipy
+setuptools>=3.3
+pyyaml
+ckmutil
+wilson>=1.4.1
+
+[plotting]
+matplotlib>=1.4
+
+[sampling]
+pypmc>=1.1
+emcee
+iminuit
+
+[testing]
+nose
