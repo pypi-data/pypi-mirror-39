@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: mltb
+Version: 0.0.8
+Summary: Machine Learning Tool Box
+Home-page: https://github.com/PhilipMay/mltb/tree/master/mltb
+Author: Philip May
+Author-email: pm@eniak.de
+Maintainer: Philip May
+License: UNKNOWN
+Description: # Machine Learning Tool Box
+        This is the machine learning tool box. A collection of userful machine learning tools intended for reuse and extension.
+Keywords: keras metric
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
