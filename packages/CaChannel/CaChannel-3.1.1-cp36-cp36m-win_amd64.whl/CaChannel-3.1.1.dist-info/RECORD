@@ -1,0 +1,16 @@
+ca.py,sha256=bd3SG_nTv3hEQop2GnsQnq25ffVKTq_ewX8N1NtQuI8,27
+epicsMotor.py,sha256=7Fw23gTYKgJKBHbSCqaTtb46rBoaY7UoT2oZNaZBkhc,13664
+epicsPV.py,sha256=mfBNpVJP1EzgGtt6O87wbaBbtB8C0yamhrMpJIcr6CU,11369
+CaChannel/CaChannel.py,sha256=LJzNetigF5yYXhGrH3adaBkhkiv7BxA9m6XhCssVvJM,54280
+CaChannel/Com.dll,sha256=qV4XvSPKTpayjx2_0rRP7J1ROwUYxnoe_xwJ2_MzXYs,334336
+CaChannel/__init__.py,sha256=mRPQnX5l--xZ6_BeolCCEV-gPIz0WoJ45aj8VqWCwEU,193
+CaChannel/_ca.cp36-win_amd64.pyd,sha256=eacaAoLyh2dq0WH0J2_CoyzkL9y8tc9jgvIcz27iUHU,90112
+CaChannel/_version.py,sha256=GbkJjHlm2yNaRO8ZvkEFJa0tQepUl1ioeG4l4gsKsuU,74
+CaChannel/ca.dll,sha256=3klQTdSFIKx2P2NUfDRicIa8IBk_ll1DTrB01fvQzd4,319488
+CaChannel/ca.py,sha256=iGO7mXUZnA7DKFDRxD8eHmtAyoCWNVeS4V6JZuI4yAk,425
+CaChannel/util.py,sha256=tycneW5nc0B2uabrjYigSfEI65EuTEEIo9YgoQXuKAc,6688
+CaChannel-3.1.1.dist-info/LICENSE,sha256=84iO70TWE9QHY5RbgKv4Us7pr9mfooMNsP5UtOINkDE,1786
+CaChannel-3.1.1.dist-info/METADATA,sha256=4v3ar6qUNm93f1SauTo1_mBc1rNyXaOZTI39HsDdxFE,1860
+CaChannel-3.1.1.dist-info/WHEEL,sha256=NGBd8VpwAMkmGKuUIURJaMXNI6PaAo_v5wy1RzFtRN4,106
+CaChannel-3.1.1.dist-info/top_level.txt,sha256=c-dPOFlublWqbOPOTXNZw0SOmSFFMJlhLjP-xP0EfTM,32
+CaChannel-3.1.1.dist-info/RECORD,,
