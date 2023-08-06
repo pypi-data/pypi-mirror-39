@@ -1,0 +1,9 @@
+bidso
+nibabel
+wonambi
+nipype
+
+[test]
+pytest
+pytest-cov
+codecov

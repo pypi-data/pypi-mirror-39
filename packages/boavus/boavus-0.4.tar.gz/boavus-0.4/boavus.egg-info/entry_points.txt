@@ -1,0 +1,3 @@
+[console_scripts]
+boavus = boavus.command:boavus
+

@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: boavus
+Version: 0.4
+Summary: Tools to analyze data structured as BIDS in Python
+Home-page: https://github.com/gpiantoni/boavus
+Author: Gio Piantoni
+Author-email: boavus@gpiantoni.com
+License: MIT
+Description: BOAVUS
+        ======
+        Analysis of ECoG and fMRI data in Python based on BIDS
+        
+        Features
+        --------
+        - Pure Python
+        
+        Installation
+        ------------
+        Install won by running:
+        
+            pip install boavus
+        
+        Requirements
+        ------------
+        - Python 3.6
+        - bidso
+        - fsl
+        - freesurfer
+        
+        License
+        -------
+        The project is licensed under the MIT license.
+        
+Keywords: bids
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: test
