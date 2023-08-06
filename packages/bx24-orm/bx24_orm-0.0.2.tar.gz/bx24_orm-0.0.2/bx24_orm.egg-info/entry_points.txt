@@ -1,0 +1,3 @@
+[console_scripts]
+bx24_cmd = bx24_orm.scripts.command_line:bx24_cmd
+
