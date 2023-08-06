@@ -1,0 +1,12 @@
+autodiffpy/__init__.py,sha256=es5oFgEBNREn624DKtsUvx2gEYVX9iO6K-gMjRe4Jko,51
+autodiffpy/autodiff.py,sha256=4PUA3MB9RhNbneDjf55BNeeZazdTyt9Z_a3n-5Xe8Bo,20295
+autodiffpy/autodiff_math.py,sha256=Tn_apgf62rkCH31heJzzwgmZfYkXW0LWJxvQubTJ-EI,17313
+autodiffpy/autodiffmod.py,sha256=N3f3OFJAhRL-udsGhpJutsJLWBWNAjmWiwsEKfDOKnA,22312
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/autodiff_math_test.py,sha256=je0Og8_ysKHOescBfBOssU5GMsuBEV0grTd9Eow2Uaw,9168
+tests/autodiff_test.py,sha256=cefF7azmDb7U7Q9Rh55DIrarEUbLuD3KoDFDNS_Wxyc,11694
+autodiffpy-1.2.7.dist-info/LICENSE,sha256=5kRMynyaxbnnaAIAxMKG4nImI9huIe35NMp2nLOGyfw,1086
+autodiffpy-1.2.7.dist-info/METADATA,sha256=hYUaUPjD9Drjz591sB681t4AKfthTtVJVtPpGh8ECl4,1134
+autodiffpy-1.2.7.dist-info/WHEEL,sha256=QPE_11_7wuOefQDKs5Bl8Ok4CQXtYxkCDKluPK64n2c,116
+autodiffpy-1.2.7.dist-info/top_level.txt,sha256=-Ycadoy2H-5c75gimA_Xv7q9tMe1sgsG9LY3j80nmt4,17
+autodiffpy-1.2.7.dist-info/RECORD,,
