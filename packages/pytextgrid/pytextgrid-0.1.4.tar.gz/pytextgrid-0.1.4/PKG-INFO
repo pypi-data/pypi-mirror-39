@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pytextgrid
+Version: 0.1.4
+Summary: A toolbox for manipulating praat textgrid in python: creation, modification, analysis
+Home-page: https://github.com/DavidDoukhan/pytextgrid
+Author: David Doukhan
+Author-email: david.doukhan@gmail.com
+License: MIT
+Description: A toolbox for manipulating praat textgrid in python: creation, modification, analysis
+Keywords: praat,textgrid,python,phonetics
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Multimedia :: Sound/Audio :: Analysis
+Classifier: Topic :: Multimedia :: Sound/Audio :: Speech
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
