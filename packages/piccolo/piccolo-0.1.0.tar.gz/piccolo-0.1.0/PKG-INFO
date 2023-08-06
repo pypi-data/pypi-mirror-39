@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: piccolo
+Version: 0.1.0
+Summary: A fast, user friendly ORM which supports asyncio.
+Home-page: https://github.com/telerytech/piccolo
+Author: Daniel Townsend
+Author-email: dan@dantownsend.co.uk
+License: MIT
+Description: # Piccolo
+        
+        A fast, user friendly ORM which supports asyncio.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
