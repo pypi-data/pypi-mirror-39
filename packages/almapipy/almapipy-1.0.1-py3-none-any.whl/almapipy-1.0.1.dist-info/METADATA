@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: almapipy
+Version: 1.0.1
+Summary: Python requests wrapper for the Ex Libris Alma API
+Home-page: https://github.com/UCDavisLibrary/almapipy
+Author: Steve Pelkey
+Author-email: spelkey@ucdavis.edu
+License: MIT
+Requires-Dist: requests
+
+almapipy: Python Wrapper for Alma API
+
+
