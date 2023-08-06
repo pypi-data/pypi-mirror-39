@@ -1,0 +1,5 @@
+docutils>=0.11
+pygments
+
+[test]
+pytest
