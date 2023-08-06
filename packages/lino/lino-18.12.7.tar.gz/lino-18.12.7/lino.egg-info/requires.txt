@@ -1,0 +1,24 @@
+Django
+atelier
+unipath
+python_dateutil
+dateparser
+etgen
+Babel
+lxml
+beautifulsoup4
+pisa
+jinja2
+pytidylib
+PyYAML
+clint
+django-localflavor
+openpyxl
+html2text
+schedule
+django-wkhtmltopdf
+beautifulsoup4
+django-mailbox@ git+https://github.com/cylonoven/django-mailbox#egg=django-mailbox
+reportlab
+weasyprint
+appy@ svn+https://svn.forge.pallavi.be/appy-dev/dev1
