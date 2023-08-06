@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: fdnutil
+Version: 0.0.4
+Summary: FDN Common utilities
+Home-page: UNKNOWN
+Author: Ykäz Mihar
+Author-email: zaky@femaledaily.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: tinydb
+Requires-Dist: python-telegram-bot
+
+Heron is FDN own simple data tokenizer
+
+
