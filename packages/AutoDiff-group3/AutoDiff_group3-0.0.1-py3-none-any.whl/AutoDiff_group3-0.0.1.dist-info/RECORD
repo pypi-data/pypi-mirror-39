@@ -1,0 +1,13 @@
+tests/__init__.py,sha256=c3aje-XkwrJBNF2NZnBV2SMj28J5F2Ha5Y86JwbPlcc,15
+tests/integration_test.py,sha256=lxHhT6ajIPz9drUiiLCx8EBw9Aovf63cBwgHCiSuzRM,1983
+tests/numpy_test.py,sha256=MV7CLeh3azCsamP-ZXFqb8zYhlLqnhBkl5D3xA7WuL8,11380
+tests/test_binary_functions.py,sha256=Ya-yphTkcyKQQlEq20CfYkoCuF6plUt3xV6hLgFj8fo,5360
+tests/test_corner_cases.py,sha256=x4tkBGCoKX4Rzoh822A_tfZUBKbHDJxuED1LzWgnXyk,3575
+tests/test_equalities.py,sha256=oN39ySO2bOMYY1XcS0voX05qBpfPLi_5aqqpVjCibjU,3990
+tests/test_unary_functions.py,sha256=tE1WLbLNFHQyYTJbVgk86Y6SmqlMA8MORgYO0Nozfk4,27835
+tests/write_unary.py,sha256=kPumAk5LEY2Z5vLhw5GBuHUa2CCW9-wLQUE5hWi-wAk,4847
+AutoDiff_group3-0.0.1.dist-info/LICENSE,sha256=qAjxgV2KBVAIOv2gEN4BmvWhHe8eJ-WCYa4hDGmz5a0,1113
+AutoDiff_group3-0.0.1.dist-info/METADATA,sha256=LexVf-m_0iH_if1GlxdiWGTrHCYddJmft2976U1J5uE,3004
+AutoDiff_group3-0.0.1.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+AutoDiff_group3-0.0.1.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+AutoDiff_group3-0.0.1.dist-info/RECORD,,
