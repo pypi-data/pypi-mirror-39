@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README
+setup.py
+kjkiss_game.egg-info/PKG-INFO
+kjkiss_game.egg-info/SOURCES.txt
+kjkiss_game.egg-info/dependency_links.txt
+kjkiss_game.egg-info/top_level.txt
+wargame/__init__.py
+wargame/abstractgameunit.py
+wargame/attackoftheorcs.py
+wargame/gameuniterror.py
+wargame/gameutils.py
+wargame/hut.py
+wargame/knight.py
+wargame/orcrider.py
