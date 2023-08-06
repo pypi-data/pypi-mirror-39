@@ -1,0 +1,3 @@
+[console_scripts]
+msspeak = msspeak.command_line:main
+
