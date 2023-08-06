@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        photofinish=photofinish.app:run
+    
