@@ -1,0 +1,7 @@
+[console_scripts]
+swarmer = swarmer.swarmer:main
+
+[swarmer.credentials]
+aws = auth.aws.awsecr:AwsAuthenticator [aws]
+basic = auth.basic.basicauth:BasicAuthenticator
+
