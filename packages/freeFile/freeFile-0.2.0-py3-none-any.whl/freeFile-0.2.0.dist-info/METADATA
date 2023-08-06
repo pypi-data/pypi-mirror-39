@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: freeFile
+Version: 0.2.0
+Summary: command line tool for auto update/download program.
+Home-page: https://github.com/import-yuefeng/freeFile.git
+Author: Cat.1
+Author-email: git@gansi.me
+License: UNKNOWN
+Download-URL: https://github.com/import-yuefeng/freeFile/archive/master.zip
+Keywords: command,line,tool,oss,update,download
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: argparse
+Requires-Dist: configparser
+Requires-Dist: six
+Requires-Dist: sh
+
+UNKNOWN
+
+
