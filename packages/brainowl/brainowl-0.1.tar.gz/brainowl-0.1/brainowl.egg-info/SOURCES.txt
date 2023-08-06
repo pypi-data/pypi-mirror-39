@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+brainowl/__init__.py
+brainowl/brainowl.py
+brainowl/solver.py
+brainowl.egg-info/PKG-INFO
+brainowl.egg-info/SOURCES.txt
+brainowl.egg-info/dependency_links.txt
+brainowl.egg-info/requires.txt
+brainowl.egg-info/top_level.txt
