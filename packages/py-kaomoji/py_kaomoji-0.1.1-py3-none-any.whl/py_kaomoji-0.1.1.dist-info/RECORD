@@ -1,0 +1,17 @@
+data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+data/kaomojis.yml,sha256=7KSxWYLlsIuVh0gHJ8MSqeYv-xBK0PzIR7-VB_ZyjRM,11276
+data/load_kaomojis.py,sha256=h1pRvqAxfceWtrChuZZd61dH-RDD-axhzyynkOBtUUc,259
+data/__pycache__/__init__.cpython-36.pyc,sha256=9ixGKGhRrzNlmX2hWdN9ESyF4_5tDeLsujKaFAZDk48,132
+data/__pycache__/load_kaomojis.cpython-36.pyc,sha256=Dkd6wYXYDbGs9F86NTfMuIPTXNpNapHlg9PZO1bIgc4,474
+kaomoji/__init__.py,sha256=qN_q5S78VPb3vPKhGYkQz4IOzvZ-gPAQxr-hmbihVF0,153
+kaomoji/__main__.py,sha256=5x7NTSFTk-bFZZzNOS-Jrt4DWCuSp1wrE6PCfiC93us,72
+kaomoji/kaomoji.py,sha256=-uUDk14Lel46VSycS3_6HSqONsaRzhU9tYPAaA7Fdqs,1645
+py_kaomoji-0.1.1.dist-info/DESCRIPTION.rst,sha256=_1bNknoqsyfNCJZNm_cdGUkoUdCZ41dxCyLaYicabQ8,75
+py_kaomoji-0.1.1.dist-info/METADATA,sha256=U2I36-X5VSyoBQQWWg_zcOLdllNsTQxUIr1QuzSNqeg,627
+py_kaomoji-0.1.1.dist-info/RECORD,,
+py_kaomoji-0.1.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+py_kaomoji-0.1.1.dist-info/entry_points.txt,sha256=FKLx7P9oR4ykdbU3-YvTXxgSC68HANIAX65384jBGYM,46
+py_kaomoji-0.1.1.dist-info/metadata.json,sha256=vU_A2yG0ferKMQ9a5m23LH7NeH-Li7DsZRomdoQoMIY,837
+py_kaomoji-0.1.1.dist-info/top_level.txt,sha256=7i1q7ytC0lJNnHSey7aUl19xj5oGyOdjwFgg_G8QU0c,18
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_kaomoji.py,sha256=ruSKhmtsp9b2KOAefRP6BzCeOhv5PSh9QIf7-sYOPZw,1888
