@@ -1,0 +1,12 @@
+include .coveragerc
+include *requirements.in
+include pyproject.toml
+include *requirements.txt
+include .pre-commit-config.yaml
+include LICENSE
+include Makefile
+include tox.ini
+recursive-include tests *.py
+include versioneer.py
+include src/workout/_version.py
+include *.md
