@@ -1,0 +1,3 @@
+[console_scripts]
+dpup = dotpup.cli:cli
+

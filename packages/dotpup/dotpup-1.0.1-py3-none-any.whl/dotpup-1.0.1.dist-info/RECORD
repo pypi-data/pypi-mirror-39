@@ -1,0 +1,16 @@
+dotpup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dotpup/cli.py,sha256=d_1J1GWuFl5sb4YhMyI64ZhZYXVvRCq9Tn9_Cr8DQYU,1159
+dotpup/config.py,sha256=cVxRvi3lX-3lKr2tVQkuPH6KIgypa062XovRZwAZcGU,492
+dotpup/output.py,sha256=ppln8KOzbpciU6qIchWbZ-gSIxF7uHYo9oxZBGYkB_c,271
+dotpup/utils.py,sha256=akNJXwpqcmI35Ny-0JKwqsvwaNw2AciAV9yX8VhU-kU,1462
+dotpup/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dotpup/commands/base.py,sha256=uezhz32uQ-bZPPvVtR18boM55mDJP2PUibFQAI8GJkk,905
+dotpup/commands/link.py,sha256=VxS9TXvKSUYjPYoR4XuceZWK4L0hSYHYS-psx6tQilY,906
+dotpup/commands/store.py,sha256=92iyzn983f0pfV5e7HaWeMXLpeSStj6QqER7bs6tEUM,924
+dotpup/commands/update.py,sha256=oGOvUE6T1OA0h6r0MJPnlG_91X7jAimifCEf7OoI0VM,2032
+dotpup-1.0.1.dist-info/LICENSE,sha256=d9joucXBaSn9YYOmdGgvqIHMbvFI52FCR60bYuMVSX8,1057
+dotpup-1.0.1.dist-info/METADATA,sha256=i-VJr_8HGUqmXYQxF8hhhDdQep5781MXGxae5q7TYkM,2227
+dotpup-1.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+dotpup-1.0.1.dist-info/entry_points.txt,sha256=ZSM9MHGWaq9KGjQuyhizY3BGPBeaJjSqiDwCMpWPoMA,41
+dotpup-1.0.1.dist-info/top_level.txt,sha256=apCE24fP-XaoouUbTLSr3Sdl4lxbCkVo_dmwLsnHLsw,7
+dotpup-1.0.1.dist-info/RECORD,,
