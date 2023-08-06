@@ -1,0 +1,30 @@
+{
+	"metadata": {
+		"Unit": {
+			"project_nature": "unit",
+			"Coef_nature": "unit"
+		},
+		"Source": {
+			"project_nature": "SIA380-1",
+			"Coef_nature": "SIA380-1"
+		}
+	},
+	"data": {
+		"New_build": {
+			"project_nature": 1,
+			"Coef_nature": 1
+		},
+		"Extension": {
+			"project_nature": 2,
+			"Coef_nature": 1
+		},
+		"New_affect": {
+			"project_nature": 3,
+			"Coef_nature": 1.25
+		},
+		"Refurbishment": {
+			"project_nature": 4,
+			"Coef_nature": 1.25
+		}
+	}
+}

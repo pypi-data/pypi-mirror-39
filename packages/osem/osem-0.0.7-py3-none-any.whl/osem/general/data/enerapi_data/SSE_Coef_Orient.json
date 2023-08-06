@@ -1,0 +1,30 @@
+{
+    "Born1": {
+        "Level": 0,
+        "OrientMin": 0,
+        "OrientMax": 89,
+        "a": 0.004111111,
+        "b": 0.2
+    },
+    "Born2": {
+        "Level": 1,
+        "OrientMin": 90,
+        "OrientMax": 179,
+        "a": 0.005888889,
+        "b": 0.04
+    },
+    "Born3": {
+        "Level": 2,
+        "OrientMin": 180,
+        "OrientMax": 269,
+        "a": -0.005888889,
+        "b": 2.16
+    },
+    "Born4": {
+        "Level": 3,
+        "OrientMin": 270,
+        "OrientMax": 359,
+        "a": -0.004111111,
+        "b": 1.68
+    }
+}

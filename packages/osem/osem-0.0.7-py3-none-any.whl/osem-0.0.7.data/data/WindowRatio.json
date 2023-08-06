@@ -1,0 +1,50 @@
+{
+    "Range0": {
+        "num": 0,
+        "Coord_Min": 0,
+        "Coord_Max": 44,
+        "Win_Ratio": 0.15
+    },
+    "Range1": {
+        "num": 1,
+        "Coord_Min": 45,
+        "Coord_Max": 89,
+        "Win_Ratio": 0.2
+    },
+    "Range2": {
+        "num": 2,
+        "Coord_Min": 90,
+        "Coord_Max": 134,
+        "Win_Ratio": 0.25
+    },
+    "Range3": {
+        "num": 3,
+        "Coord_Min": 135,
+        "Coord_Max": 179,
+        "Win_Ratio": 0.3
+    },
+    "Range4": {
+        "num": 4,
+        "Coord_Min": 180,
+        "Coord_Max": 224,
+        "Win_Ratio": 0.3
+    },
+    "Range5": {
+        "num": 5,
+        "Coord_Min": 225,
+        "Coord_Max": 269,
+        "Win_Ratio": 0.25
+    },
+    "Range6": {
+        "num": 6,
+        "Coord_Min": 270,
+        "Coord_Max": 314,
+        "Win_Ratio": 0.2
+    },
+    "Range7": {
+        "num": 7,
+        "Coord_Min": 315,
+        "Coord_Max": 359,
+        "Win_Ratio": 0.15
+    }
+}

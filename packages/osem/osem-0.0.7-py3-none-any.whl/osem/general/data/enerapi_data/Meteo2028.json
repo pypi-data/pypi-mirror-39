@@ -1,0 +1,56 @@
+{
+	"metadata": {
+		"Unit": {
+			"Weather_Station_ref": "unit",
+			"Text_Min": "degC",
+			"Text_Moy": "degC"
+		},
+		"Source": {
+			"Weather_Station_ref": "SIA380-1",
+			"Text_Min": "SIA380-1",
+			"Text_Moy": "SIA380-1"
+		}
+	},
+	"data": {
+		"Pully": {
+			"Weather_Station_ref": 1,
+			"Text_Min": -9.7,
+			"Text_Moy": 11
+		},
+		"Payerne": {
+			"Weather_Station_ref": 2,
+			"Text_Min": -12.5,
+			"Text_Moy": 9.4
+		},
+		"La_Fretaz": {
+			"Weather_Station_ref": 3,
+			"Text_Min": -16.8,
+			"Text_Moy": 6.1
+		},
+		"Aigle": {
+			"Weather_Station_ref": 4,
+			"Text_Min": -12.8,
+			"Text_Moy": 10.1
+		},
+		"Sion": {
+			"Weather_Station_ref": 5,
+			"Text_Min": -12.1,
+			"Text_Moy": 10.1
+		},
+		"Montana": {
+			"Weather_Station_ref": 6,
+			"Text_Min": -15.8,
+			"Text_Moy": 5.9
+		},
+		"Zermatt": {
+			"Weather_Station_ref": 7,
+			"Text_Min": -17.1,
+			"Text_Moy": 4.4
+		},
+		"Grand-St-Bernard": {
+			"Weather_Station_ref": 8,
+			"Text_Min": -21.8,
+			"Text_Moy": -0.4
+		}
+	}
+}

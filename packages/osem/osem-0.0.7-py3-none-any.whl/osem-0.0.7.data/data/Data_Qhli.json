@@ -1,0 +1,76 @@
+{
+	"metadata": {
+		"Unit": {
+			"SIA_cat": "unit",
+			"Qhli0": "MJ/m2",
+			"DQhli": "MJ/m2"
+		},
+		"Source": {
+			"SIA_cat": "SIA380-1",
+			"Qhli0": "SIA380-1",
+			"DQhli": "SIA380-1"
+		}
+	},
+	"data": {
+		"lgt_Coll.": {
+			"SIA_cat": 1,
+			"Qhli0": 55,
+			"DQhli": 65
+		},
+		"Maison_Ind.": {
+			"SIA_cat": 2,
+			"Qhli0": 65,
+			"DQhli": 65
+		},
+		"Admin.": {
+			"SIA_cat": 3,
+			"Qhli0": 65,
+			"DQhli": 85
+		},
+		"Ecoles": {
+			"SIA_cat": 4,
+			"Qhli0": 70,
+			"DQhli": 70
+		},
+		"Commerces": {
+			"SIA_cat": 5,
+			"Qhli0": 50,
+			"DQhli": 65
+		},
+		"Restau.": {
+			"SIA_cat": 6,
+			"Qhli0": 95,
+			"DQhli": 75
+		},
+		"Rassembl.": {
+			"SIA_cat": 7,
+			"Qhli0": 95,
+			"DQhli": 75
+		},
+		"Hopitaux": {
+			"SIA_cat": 8,
+			"Qhli0": 80,
+			"DQhli": 80
+		},
+		"Industries": {
+			"SIA_cat": 9,
+			"Qhli0": 60,
+			"DQhli": 70
+		},
+		"Depots": {
+			"SIA_cat": 10,
+			"Qhli0": 60,
+			"DQhli": 70
+		},
+		"Instal._Sportives": {
+			"SIA_cat": 11,
+			"Qhli0": 75,
+			"DQhli": 70
+		},
+		"Piscines_Couv": {
+			"SIA_cat": 12,
+			"Qhli0": 70,
+			"DQhli": 90
+		}
+	}
+}

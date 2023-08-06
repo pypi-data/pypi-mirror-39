@@ -1,0 +1,100 @@
+{
+    "Lgt_Coll.": {
+        "SIA_cat": 1,
+        "hS_ratio": 1,
+        "hW_ratio": 1,
+        "elec_ratio": 1,
+        "h_full_ch": 2300
+    },
+    "Maison_Ind.": {
+        "SIA_cat": 2,
+        "hS_ratio": 1.281,
+        "hW_ratio": 0.667,
+        "elec_ratio": 0.8,
+        "h_full_ch": 2300
+    },
+    "Admin.": {
+        "SIA_cat": 3,
+        "hS_ratio": 1.167,
+        "hW_ratio": 0.333,
+        "elec_ratio": 0.8,
+        "h_full_ch": 1900
+    },
+    "Ecoles": {
+        "SIA_cat": 4,
+        "hS_ratio": 1.104,
+        "hW_ratio": 0.333,
+        "elec_ratio": 0.4,
+        "h_full_ch": 1900
+    },
+    "Commerces": {
+        "SIA_cat": 5,
+        "hS_ratio": 0.824,
+        "hW_ratio": 0.333,
+        "elec_ratio": 1.2,
+        "h_full_ch": 1900
+    },
+    "Restau.": {
+        "SIA_cat": 6,
+        "hS_ratio": 1.487,
+        "hW_ratio": 2.667,
+        "elec_ratio": 1.2,
+        "h_full_ch": 2300
+    },
+    "Rassembl.": {
+        "SIA_cat": 7,
+        "hS_ratio": 1.326,
+        "hW_ratio": 0.667,
+        "elec_ratio": 0.6,
+        "h_full_ch": 1900
+    },
+    "Hopitaux": {
+        "SIA_cat": 8,
+        "hS_ratio": 1.032,
+        "hW_ratio": 1.333,
+        "elec_ratio": 1,
+        "h_full_ch": 2500
+    },
+    "Industries": {
+        "SIA_cat": 9,
+        "hS_ratio": 1.333,
+        "hW_ratio": 0.333,
+        "elec_ratio": 0.6,
+        "h_full_ch": 1900
+    },
+    "Depots": {
+        "SIA_cat": 10,
+        "hS_ratio": 1.434,
+        "hW_ratio": 0.067,
+        "elec_ratio": 0.2,
+        "h_full_ch": 1900
+    },
+    "Instal._Sportives": {
+        "SIA_cat": 11,
+        "hS_ratio": 1.742,
+        "hW_ratio": 4,
+        "elec_ratio": 0.2,
+        "h_full_ch": 2100
+    },
+    "Piscines_Couv.": {
+        "SIA_cat": 12,
+        "hS_ratio": 2.115,
+        "hW_ratio": 4,
+        "elec_ratio": 2,
+        "h_full_ch": 1900
+    },
+    "Inc1": {
+        "SIA_cat": 100,
+        "hS_ratio": 100,
+        "hW_ratio": 0.5,
+        "elec_ratio": 0.5,
+        "h_full_ch": 3000
+    },
+    "Inc2": {
+        "SIA_cat": 101,
+        "hS_ratio": 100,
+        "hW_ratio": 0.5,
+        "elec_ratio": 0.5,
+        "h_full_ch": 2000
+    }
+}

@@ -1,0 +1,10 @@
+{"tol_mat_mass": "Convergence criteria of the system of equations for the mass. Correspond to atol and btol from scipy.sparse.linalg.lsqr. The error on the mass will be 1-2 order of magnitude larger.", 
+"tol_mat_pres": "Convergence criteria of the system of equations for the pressure.Correspond to atol and btol from scipy.sparse.linalg.lsqr. The error on the pressure will be 1-2 order of magnitude larger.", 
+"tol_mat_load_est": "Convergence criteria of the system of equations for the mass.Similar to tol_mat_mass but used during the minimisation.Because the minimisation called the function many time and because the precision is less important during the minimisation, it can behigher than tol_mat_mass.Correspond to atol and btol from scipy.sparse.linalg.lsqr. The error on the mass will be 1-2 order of magnitude larger.",
+ "tol_pres_load_est": "Convergence criteria of the system of equations for the pressure.Similar to tol_mat_pres but used during the minimisation.Because the minimisation called the function many time and becausethe precision is less important during the minimisation, it can behigher than tol_mat_pres.Correspond to atol and btol from scipy.sparse.linalg.lsqr. The error on the mass will be 1-2 order of magnitude larger.",
+ "maxiter": "The maximum iteration called by the minimisation solver. Correspond to maxiter of scipy.minimize",
+ "gtol": "Stopping criteria for the minimisation function. Correspondond to gtol of scipy.minimize for the method BFGS.",
+ "min_residual": "the sum of the residual for the equations related to pressure under which the solver will not try to find a smaller value.", 
+ "disp": "If True, it prints additional convergence message.",
+ "round_num": "The rounding precision of the simulation result.",
+ "iter_print": "the current state of the minization is print once every *iter_print* iteration. "}

@@ -1,0 +1,830 @@
+{
+    "metadata": {
+        "sources": {
+            "niv_t": "CREM_intern_and_Smart_Heat_Design",
+            "n": "CREM_intern",
+            "em_techno": "CREM_intern"
+        }
+    },
+    "data": {
+        "Avant_1919": {
+            "GBAUP": 8011,
+            "Sans_AE": {
+                "GENHZ-WW": 7200,
+                "niv_t": 0,
+                "n": 0,
+                "em_techno": "None"
+            },
+            "Mazout": {
+                "GENHZ-WW": 7201,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Charbon": {
+                "GENHZ-WW": 7202,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Gaz": {
+                "GENHZ-WW": 7203,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Electricite": {
+                "GENHZ-WW": 7204,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Bois": {
+                "GENHZ-WW": 7205,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "PAC": {
+                "GENHZ-WW": 7206,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "Capt_Solaire": {
+                "GENHZ-WW": 7207,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "CAD": {
+                "GENHZ-WW": 7208,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Autre_AE": {
+                "GENHZ-WW": 7209,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            }
+        },
+        "1919-1945": {
+            "GBAUP": 8012,
+            "Sans_AE": {
+                "GENHZ-WW": 7200,
+                "niv_t": 0,
+                "n": 0,
+                "em_techno": "None"
+            },
+            "Mazout": {
+                "GENHZ-WW": 7201,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Charbon": {
+                "GENHZ-WW": 7202,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Gaz": {
+                "GENHZ-WW": 7203,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Electricite": {
+                "GENHZ-WW": 7204,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Bois": {
+                "GENHZ-WW": 7205,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "PAC": {
+                "GENHZ-WW": 7206,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "Capt_Solaire": {
+                "GENHZ-WW": 7207,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "CAD": {
+                "GENHZ-WW": 7208,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Autre_AE": {
+                "GENHZ-WW": 7209,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            }
+        },
+        "1946-1960": {
+            "GBAUP": 8013,
+            "Sans_AE": {
+                "GENHZ-WW": 7200,
+                "niv_t": 0,
+                "n": 0,
+                "em_techno": "None"
+            },
+            "Mazout": {
+                "GENHZ-WW": 7201,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Charbon": {
+                "GENHZ-WW": 7202,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Gaz": {
+                "GENHZ-WW": 7203,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Electricite": {
+                "GENHZ-WW": 7204,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Bois": {
+                "GENHZ-WW": 7205,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "PAC": {
+                "GENHZ-WW": 7206,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "Capt_Solaire": {
+                "GENHZ-WW": 7207,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "CAD": {
+                "GENHZ-WW": 7208,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Autre_AE": {
+                "GENHZ-WW": 7209,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            }
+        },
+        "1961-1970": {
+            "GBAUP": 8014,
+            "Sans_AE": {
+                "GENHZ-WW": 7200,
+                "niv_t": 0,
+                "n": 0,
+                "em_techno": "None"
+            },
+            "Mazout": {
+                "GENHZ-WW": 7201,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Charbon": {
+                "GENHZ-WW": 7202,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Gaz": {
+                "GENHZ-WW": 7203,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Electricite": {
+                "GENHZ-WW": 7204,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Bois": {
+                "GENHZ-WW": 7205,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "PAC": {
+                "GENHZ-WW": 7206,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "Capt_Solaire": {
+                "GENHZ-WW": 7207,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "CAD": {
+                "GENHZ-WW": 7208,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Autre_AE": {
+                "GENHZ-WW": 7209,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            }
+        },
+        "1971-1980": {
+            "GBAUP": 8015,
+            "Sans_AE": {
+                "GENHZ-WW": 7200,
+                "niv_t": 0,
+                "n": 0,
+                "em_techno": "None"
+            },
+            "Mazout": {
+                "GENHZ-WW": 7201,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Charbon": {
+                "GENHZ-WW": 7202,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Gaz": {
+                "GENHZ-WW": 7203,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Electricite": {
+                "GENHZ-WW": 7204,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Bois": {
+                "GENHZ-WW": 7205,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "PAC": {
+                "GENHZ-WW": 7206,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "Capt_Solaire": {
+                "GENHZ-WW": 7207,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "CAD": {
+                "GENHZ-WW": 7208,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Autre_AE": {
+                "GENHZ-WW": 7209,
+                "niv_t": 70,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            }
+        },
+        "1981-1985": {
+            "GBAUP": 8016,
+            "Sans_AE": {
+                "GENHZ-WW": 7200,
+                "niv_t": 0,
+                "n": 0,
+                "em_techno": "None"
+            },
+            "Mazout": {
+                "GENHZ-WW": 7201,
+                "niv_t": 40,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            },
+            "Charbon": {
+                "GENHZ-WW": 7202,
+                "niv_t": 40,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Gaz": {
+                "GENHZ-WW": 7203,
+                "niv_t": 40,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            },
+            "Electricite": {
+                "GENHZ-WW": 7204,
+                "niv_t": 40,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            },
+            "Bois": {
+                "GENHZ-WW": 7205,
+                "niv_t": 40,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            },
+            "PAC": {
+                "GENHZ-WW": 7206,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "Capt_Solaire": {
+                "GENHZ-WW": 7207,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "CAD": {
+                "GENHZ-WW": 7208,
+                "niv_t": 40,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            },
+            "Autre_AE": {
+                "GENHZ-WW": 7209,
+                "niv_t": 40,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            }
+        },
+        "1986-1990": {
+            "GBAUP": 8017,
+            "Sans_AE": {
+                "GENHZ-WW": 7200,
+                "niv_t": 0,
+                "n": 0,
+                "em_techno": "None"
+            },
+            "Mazout": {
+                "GENHZ-WW": 7201,
+                "niv_t": 40,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            },
+            "Charbon": {
+                "GENHZ-WW": 7202,
+                "niv_t": 40,
+                "n": 1.55,
+                "em_techno": "Rad_THT"
+            },
+            "Gaz": {
+                "GENHZ-WW": 7203,
+                "niv_t": 40,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            },
+            "Electricite": {
+                "GENHZ-WW": 7204,
+                "niv_t": 40,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            },
+            "Bois": {
+                "GENHZ-WW": 7205,
+                "niv_t": 40,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            },
+            "PAC": {
+                "GENHZ-WW": 7206,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "Capt_Solaire": {
+                "GENHZ-WW": 7207,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "CAD": {
+                "GENHZ-WW": 7208,
+                "niv_t": 40,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            },
+            "Autre_AE": {
+                "GENHZ-WW": 7209,
+                "niv_t": 40,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            }
+        },
+        "1991-1995": {
+            "GBAUP": 8018,
+            "Sans_AE": {
+                "GENHZ-WW": 7200,
+                "niv_t": 0,
+                "n": 0,
+                "em_techno": "None"
+            },
+            "Mazout": {
+                "GENHZ-WW": 7201,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "Charbon": {
+                "GENHZ-WW": 7202,
+                "niv_t": 55,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            },
+            "Gaz": {
+                "GENHZ-WW": 7203,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "Electricite": {
+                "GENHZ-WW": 7204,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "Bois": {
+                "GENHZ-WW": 7205,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "PAC": {
+                "GENHZ-WW": 7206,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "Capt_Solaire": {
+                "GENHZ-WW": 7207,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "CAD": {
+                "GENHZ-WW": 7208,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "Autre_AE": {
+                "GENHZ-WW": 7209,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            }
+        },
+        "1996-2000": {
+            "GBAUP": 8019,
+            "Sans_AE": {
+                "GENHZ-WW": 7200,
+                "niv_t": 0,
+                "n": 0,
+                "em_techno": "None"
+            },
+            "Mazout": {
+                "GENHZ-WW": 7201,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "Charbon": {
+                "GENHZ-WW": 7202,
+                "niv_t": 55,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            },
+            "Gaz": {
+                "GENHZ-WW": 7203,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "Electricite": {
+                "GENHZ-WW": 7204,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "Bois": {
+                "GENHZ-WW": 7205,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "PAC": {
+                "GENHZ-WW": 7206,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Capt_Solaire": {
+                "GENHZ-WW": 7207,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "CAD": {
+                "GENHZ-WW": 7208,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            },
+            "Autre_AE": {
+                "GENHZ-WW": 7209,
+                "niv_t": 55,
+                "n": 1.29,
+                "em_techno": "Rad_MT"
+            }
+        },
+        "2001-2005": {
+            "GBAUP": 8020,
+            "Sans_AE": {
+                "GENHZ-WW": 7200,
+                "niv_t": 0,
+                "n": 0,
+                "em_techno": "None"
+            },
+            "Mazout": {
+                "GENHZ-WW": 7201,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Charbon": {
+                "GENHZ-WW": 7202,
+                "niv_t": 40,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            },
+            "Gaz": {
+                "GENHZ-WW": 7203,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Electricite": {
+                "GENHZ-WW": 7204,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Bois": {
+                "GENHZ-WW": 7205,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "PAC": {
+                "GENHZ-WW": 7206,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Capt_Solaire": {
+                "GENHZ-WW": 7207,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "CAD": {
+                "GENHZ-WW": 7208,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Autre_AE": {
+                "GENHZ-WW": 7209,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            }
+        },
+        "2006-2010": {
+            "GBAUP": 8021,
+            "Sans_AE": {
+                "GENHZ-WW": 7200,
+                "niv_t": 0,
+                "n": 0,
+                "em_techno": "None"
+            },
+            "Mazout": {
+                "GENHZ-WW": 7201,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Charbon": {
+                "GENHZ-WW": 7202,
+                "niv_t": 40,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            },
+            "Gaz": {
+                "GENHZ-WW": 7203,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Electricite": {
+                "GENHZ-WW": 7204,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Bois": {
+                "GENHZ-WW": 7205,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "PAC": {
+                "GENHZ-WW": 7206,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Capt_Solaire": {
+                "GENHZ-WW": 7207,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "CAD": {
+                "GENHZ-WW": 7208,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Autre_AE": {
+                "GENHZ-WW": 7209,
+                "niv_t": 40,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            }
+        },
+        "2011-2015": {
+            "GBAUP": 8022,
+            "Sans_AE": {
+                "GENHZ-WW": 7200,
+                "niv_t": 0,
+                "n": 0,
+                "em_techno": "None"
+            },
+            "Mazout": {
+                "GENHZ-WW": 7201,
+                "niv_t": 35,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Charbon": {
+                "GENHZ-WW": 7202,
+                "niv_t": 35,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            },
+            "Gaz": {
+                "GENHZ-WW": 7203,
+                "niv_t": 35,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Electricite": {
+                "GENHZ-WW": 7204,
+                "niv_t": 35,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Bois": {
+                "GENHZ-WW": 7205,
+                "niv_t": 35,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "PAC": {
+                "GENHZ-WW": 7206,
+                "niv_t": 35,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Capt_Solaire": {
+                "GENHZ-WW": 7207,
+                "niv_t": 35,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "CAD": {
+                "GENHZ-WW": 7208,
+                "niv_t": 35,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Autre_AE": {
+                "GENHZ-WW": 7209,
+                "niv_t": 35,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            }
+        },
+        "2016-2020": {
+            "GBAUP": 8023,
+            "Sans_AE": {
+                "GENHZ-WW": 7200,
+                "niv_t": 0,
+                "n": 0,
+                "em_techno": "None"
+            },
+            "Mazout": {
+                "GENHZ-WW": 7201,
+                "niv_t": 35,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Charbon": {
+                "GENHZ-WW": 7202,
+                "niv_t": 35,
+                "n": 1.31,
+                "em_techno": "Rad_HT"
+            },
+            "Gaz": {
+                "GENHZ-WW": 7203,
+                "niv_t": 35,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Electricite": {
+                "GENHZ-WW": 7204,
+                "niv_t": 35,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Bois": {
+                "GENHZ-WW": 7205,
+                "niv_t": 35,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "PAC": {
+                "GENHZ-WW": 7206,
+                "niv_t": 35,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Capt_Solaire": {
+                "GENHZ-WW": 7207,
+                "niv_t": 35,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "CAD": {
+                "GENHZ-WW": 7208,
+                "niv_t": 35,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            },
+            "Autre_AE": {
+                "GENHZ-WW": 7209,
+                "niv_t": 35,
+                "n": 0.7,
+                "em_techno": "Chauff_sol"
+            }
+        }
+    }
+}

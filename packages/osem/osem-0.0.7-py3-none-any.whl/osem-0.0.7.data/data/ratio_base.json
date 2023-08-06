@@ -1,0 +1,13 @@
+{
+    "std_ratio": {
+        "SIA": 1,
+        "Minergie": 0.9,
+        "MinergieP": 0.6
+    },
+    "base_value": {
+        "hS": 39,
+        "hW": 21,
+        "elec": 28
+    },
+    "refurbished_ratio": 1.25
+}

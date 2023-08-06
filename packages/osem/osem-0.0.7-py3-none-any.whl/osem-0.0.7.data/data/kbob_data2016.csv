@@ -1,0 +1,109 @@
+,LCA_UB,EP_Global,EP_Renew,EP_Nonrenew,EP_Renew_Onsite,CO2,EnerType,FRA,EP_Percent_Renew,GER,ENG
+0,234.0,1.24,0.00902,1.23,0.0,0.301,final,Mazout EL,0.7274193548387097,Heizöl EL,Oil EL
+1,137.0,1.07,0.00447,1.06,0.0,0.228,final,Gaz naturel,0.4177570093457944,Erdgas,Natural gas
+2,200.0,1.16,0.00841,1.15,0.0,0.273,final,Propane/butane,0.7250000000000001,Propan/Butan,Propane/butane
+3,477.0,1.47,0.0132,1.45,0.0,0.439,final,Coke de houille,0.8979591836734694,Kohle Koks,Coal coke
+4,456.0,1.2,0.00831,1.2,0.0,0.399,final,Briquette de houille,0.6925,Kohle Brikett,Briquette of coal
+5,93.1,1.11,0.994,0.116,0.0,0.0274,final,Bûches de bois,89.54954954954954,Stückholz,Logs of wood
+6,88.2,1.11,0.994,0.119,0.0,0.0275,final,Bûches de bois avec filtre à particules,89.54954954954954,Stückholz mit Partikelfilter,Logs of wood with particle filter
+7,80.8,1.11,1.05,0.0628,0.0,0.0107,final,Particules de bois,94.5945945945946,Holzschnitzel,Particles of wood
+8,73.7,1.12,1.05,0.0651,0.0,0.0108,final,Particules de bois avec filtre à particules,93.75,Holzschnitzel mit Partikelfilter,Particles of wood with particle filter
+9,81.1,1.2,1.04,0.157,0.0,0.0272,final,Granules (pellets),86.66666666666667,Pellets,Pellets
+10,76.8,1.2,1.04,0.16,0.0,0.0273,final,Granules (pellets) avec filtre à particules,86.66666666666667,Pellets mit Partikelfilter,Pellets with particle filter
+11,109.0,0.332,0.0321,0.299,0.0,0.13,final,Biogaz,9.66867469879518,Biogas,biogas
+12,109.0,0.332,0.0321,0.299,0.0,0.13,final,Biogaz,9.66867469879518,Biogas,biogas
+13,309.0,0.811,0.0773,0.733,0.0,0.358,final,Biogaz,9.531442663378543,Biogas,biogas
+14,309.0,0.811,0.0773,0.733,0.0,0.358,final,Biogaz,9.531442663378543,Biogas,biogas
+15,341.0,1.7,0.0155,1.68,0.0,0.408,final,Centrale de chauffage - pétrole,0.9117647058823529,Heizzentrale Oel,Central heating oil
+16,194.0,1.52,0.0147,1.51,0.0,0.314,final,Centrale de chauffage - gaz,0.9671052631578947,Heizzentrale Gas,Central heating gas
+17,120.0,1.72,1.58,0.143,0.0,0.0496,final,Centrale de chauffage - bois,91.86046511627907,Heizzentrale Holz,Central heating wood
+18,102.0,1.46,1.33,0.128,0.0,0.0423,final,Centrale à cogénération - bois,91.09589041095892,Heizkraftwerk Holz,Cogeneration (CHP) plant wood
+19,102.0,1.46,1.33,0.128,0.0,0.0423,final,Centrale à cogénération - bois,91.09589041095892,Heizkraftwerk Holz,Cogeneration (CHP) plant - wood
+20,295.0,3.88,3.64,0.24,0.0,0.118,final,Centrale à cogénération - bois,93.81443298969073,Heizkraftwerk Holz,Cogeneration (CHP) plant wood
+21,295.0,3.88,3.64,0.24,0.0,0.118,final,Centrale à cogénération - bois,93.81443298969073,Heizkraftwerk Holz,Cogeneration (CHP) plant - wood
+22,186.0,2.13,0.991,1.14,0.0,0.078,final,Centrale de chauffage PACE - air/eau (COPA 2.8),46.525821596244135,Heizzentrale EWP Luft/Wasser (JAZ 2.8),Central Heating Heat Pump air / water (COPA 2.8)
+23,124.0,1.07,0.172,0.894,0.0,0.0408,final,Centrale de chauffage PACE - eaux usées (COPA 3.4),16.074766355140184,Heizzentrale EWP Abwasser (JAZ 3.4),Central Heating Heat Pump Wastewater (COPA 3.4)
+24,155.0,1.99,1.03,0.963,0.0,0.062,final,Centrale de chauffage PACE - eaux souterraines (COPA 3.4),51.75879396984925,Heizzentrale EWP Grundwasser (JAZ 3.4),Central Heating Heat Pump groundwater (COPA 3.4)
+25,139.0,1.9,1.05,0.849,0.0,0.0574,final,Centrale de chauffage PACE - sonde géothermique (COPA 3.9),55.26315789473685,Heizzentrale EWP Erdsonde (JAZ 3.9),Central Heating Heat Pump geothermal probe (COPA 3.9)
+26,67.3,1.52,1.36,0.162,0.0,0.0207,final,Centrale de chauffage - géothermie,89.47368421052632,Heizzentrale Geothermie,Central heating  geothermal
+27,47.6,0.59,0.465,0.125,0.0,0.0148,final,Centrale à cogénération - géothermie,78.81355932203391,Heizkraftwerk Geothermie,Cogeneration (CHP) plant  geothermal
+28,47.6,0.59,0.465,0.125,0.0,0.0148,final,Centrale à cogénération - géothermie,78.81355932203391,Heizkraftwerk Geothermie,Cogeneration (CHP) plant - geothermal
+29,103.0,3.36,3.17,0.191,0.0,0.0309,final,Centrale à cogénération - géothermie,94.34523809523809,Heizkraftwerk Geothermie,Cogeneration (CHP) plant  geothermal
+30,103.0,3.36,3.17,0.191,0.0,0.0309,final,Centrale à cogénération - géothermie,94.34523809523809,Heizkraftwerk Geothermie,Cogeneration (CHP) plant - geothermal
+31,7.31,0.0597,0.00931,0.0504,0.0,0.0027,final,Incinération des ordures ménagères,15.594639865996651,Kehrichtverbrennung,Incineration of household waste
+32,7.31,0.0597,0.00931,0.0504,0.0,0.0027,final,Incinération des ordures ménagères,15.594639865996651,Kehrichtverbrennung,Incineration of household waste
+33,32.0,0.0179,0.00227,0.0156,0.0,0.00693,final,Incinération des ordures ménagères,12.681564245810057,Kehrichtverbrennung,Incineration of household waste
+34,32.0,0.0179,0.00227,0.0156,0.0,0.00693,final,Incinération des ordures ménagères,12.681564245810057,Kehrichtverbrennung,Incineration of household waste
+35,120.0,0.628,0.0115,0.617,0.0,0.145,final,Centrale à cogénération - diesel,1.8312101910828025,Blockheizkraftwerk Diesel,Cogeneration (CHP) plant diesel
+36,120.0,0.628,0.0115,0.617,0.0,0.145,final,Centrale à cogénération - diesel,1.8312101910828025,Blockheizkraftwerk Diesel,Cogeneration (CHP) plant - diesel
+37,677.0,3.28,0.0135,3.27,0.0,0.823,final,Centrale à cogénération - diesel,0.41158536585365857,Blockheizkraftwerk Diesel,Cogeneration (CHP) plant diesel
+38,677.0,3.28,0.0135,3.27,0.0,0.823,final,Centrale à cogénération - diesel,0.41158536585365857,Blockheizkraftwerk Diesel,Cogeneration (CHP) plant - diesel
+39,84.0,0.607,0.0105,0.596,0.0,0.127,final,Centrale à cogénération - gaz,1.7298187808896213,Blockheizkraftwerk Gas,Cogeneration (CHP) plant gas
+40,84.0,0.607,0.0105,0.596,0.0,0.127,final,Centrale à cogénération - gaz,1.7298187808896213,Blockheizkraftwerk Gas,Cogeneration (CHP) plant - gas
+41,440.0,2.94,0.00786,2.94,0.0,0.669,final,Centrale à cogénération - gaz,0.26734693877551025,Blockheizkraftwerk Gas,Cogeneration (CHP) plant gas
+42,440.0,2.94,0.00786,2.94,0.0,0.669,final,Centrale à cogénération - gaz,0.26734693877551025,Blockheizkraftwerk Gas,Cogeneration (CHP) plant - gas
+43,72.9,0.232,0.0257,0.207,0.0,0.0785,final,Centrale à cogénération - biogaz,11.077586206896552,Blockheizkraftwerk Biogas,Cogeneration (CHP) plant biogas
+44,72.9,0.232,0.0257,0.207,0.0,0.0785,final,Centrale à cogénération - biogaz,11.077586206896552,Blockheizkraftwerk Biogas,Cogeneration (CHP) plant - biogas
+45,374.0,0.915,0.0878,0.827,0.0,0.403,final,Centrale à cogénération - biogaz,9.595628415300546,Blockheizkraftwerk Biogas,Cogeneration (CHP) plant biogas
+46,374.0,0.915,0.0878,0.827,0.0,0.403,final,Centrale à cogénération - biogaz,9.595628415300546,Blockheizkraftwerk Biogas,Cogeneration (CHP) plant - biogas
+47,28.2,0.0802,0.0135,0.0667,0.0,0.0205,final,Centrale à cogénération - biogaz agricole,16.83291770573566,Blockheizkraftwerk Biogas - Landwirtschaft,Cogeneration (CHP) plant agricultural biogas
+48,28.2,0.0802,0.0135,0.0667,0.0,0.0205,final,Centrale à cogénération - biogaz agricole,16.83291770573566,Blockheizkraftwerk Biogas - Landwirtschaft,Cogeneration (CHP) plant - agricultural biogas
+49,230.0,0.194,0.0415,0.152,0.0,0.177,final,Centrale à cogénération - biogaz agricole,21.39175257731959,Blockheizkraftwerk Biogas - Landwirtschaft,Cogeneration (CHP) plant agricultural biogas
+50,230.0,0.194,0.0415,0.152,0.0,0.177,final,Centrale à cogénération - biogaz agricole,21.39175257731959,Blockheizkraftwerk Biogas - Landwirtschaft,Cogeneration (CHP) plant - agricultural biogas
+51,92.9,0.875,0.326,0.549,0.0,0.108,final,Chauffage à distance - moyenne réseaux CH,37.25714285714286,Fernwärme Durchschnitt Netze CH,Remote heating - mean of swiss networks
+52,75.5,0.717,0.264,0.452,0.0,0.0888,final,Chauffage à distance de l'incinération des ordures - moyenne réseaux CH,36.82008368200837,Fernwärme mit Nutzung Kehrichtwärme - Durchschnitt Netze CH,Remote heating of garbage incineration - mean of swiss networks
+53,251.0,1.31,0.00659,1.3,0.0,0.322,useful,Chaudière - mazout EL,0.5030534351145038,Heizkessel Heizöl EL,Boiler oil EL
+54,151.0,1.17,0.00528,1.16,0.0,0.249,useful,Chaudière - gaz naturel,0.45128205128205134,Heizkessel Erdgas,Boiler gas
+55,219.0,1.26,0.00953,1.26,0.0,0.296,useful,Chaudière - propane/butane,0.7563492063492063,Heizkessel Propan / Butan,Boiler propane / butane
+56,708.0,2.05,0.0198,2.03,0.0,0.649,useful,Chaudière - coke de houille,0.9658536585365856,Heizkessel Kohle Koks,Boiler coal coke
+57,676.0,1.53,0.0125,1.52,0.0,0.59,useful,Chaudière - briquette de houille,0.8169934640522877,Heizkessel Kohle Brikett,Boiler coal briquette
+58,152.0,1.77,1.58,0.194,0.0,0.0454,useful,Chaudière - bûches de bois,89.26553672316385,Heizkessel Stückholz,Boiler firewood
+59,144.0,1.78,1.58,0.198,0.0,0.0456,useful,Chaudière - bûches de bois avec filtre à particules,88.76404494382022,Heizkessel Stückholz mit Partikelfilter,Boiler firewood with particle filter
+60,116.0,1.52,1.42,0.0971,0.0,0.0198,useful,Chaudière - particules de bois,93.42105263157893,Heizkessel Holzschnitzel,Boiler wood chips
+61,106.0,1.52,1.42,0.1,0.0,0.0199,useful,Chaudière - particules de bois avec filtre à particules,93.42105263157893,Heizkessel Holzschnitzel mit Partikelfilter,Boiler wood chips with particle filter
+62,108.0,1.53,1.32,0.21,0.0,0.0382,useful,Chaudière - granules (pellets),86.27450980392157,Heizkessel Pellets,Boiler pellets
+63,103.0,1.54,1.32,0.213,0.0,0.0383,useful,Chaudière - granules (pellets) avec filtre à particules,85.71428571428572,Heizkessel Pellets mit Partikelfilter,Boiler pellets with particle filter
+64,121.0,0.365,0.0353,0.33,0.0,0.142,useful,Chaudière - biogaz,9.671232876712327,Heizkessel Biogas,Boiler biogas
+65,149.0,1.73,0.818,0.908,0.643,0.0628,useful,Pompe à chaleur électrique air-eau (COPA 2.8),47.28323699421965,Elektrowärmepumpe Luft / Wasser (JAZ 2.8),Electric air-water heat pump (COPA 2.8)
+66,110.0,1.53,0.87,0.665,0.744,0.0456,useful,Pompe à chaleur électrique sondes géothermiques (COPA 3.9),56.86274509803921,Elektrowärmepumpe Erdsonden (JAZ 3.9),Electric Heat Pump Geothermal Probes (COPA 3.9)
+67,123.0,1.61,0.85,0.76,0.706,0.0494,useful,Pompe à chaleur électrique eaux souterraines (COPA 3.4),52.79503105590062,Elektrowärmepumpe Grundwasser (JAZ 3.4),Groundwater Electric Heat Pump (COPA 3.4)
+68,102.0,1.6,1.33,0.275,1.28,0.0366,useful,Collecteurs solaires plan - eau chaude maison individuelle,83.125,Flachkollektor für Warmwasser EFH,Flat solar collectors - hot water individual house
+69,90.0,1.83,1.61,0.221,1.57,0.0337,useful,Collecteurs solaires plan - chaleur et eau chaude maison individuelle,87.97814207650273,Flachkollektor für Raumheizung und Warmwasser EFH,Flat solar collectors - heat and hot water - individual house
+70,40.7,1.23,1.14,0.0859,1.13,0.0139,useful,Collecteurs solaires plan - eau chaude immeuble locatif,92.68292682926828,Flachkollektor für Warmwasser MFH,Solar collectors plan - hot water rental building
+71,76.5,1.73,1.54,0.193,1.51,0.0308,useful,Collecteurs solaires à tubes - chaleur et eau chaude maison individuelle,89.01734104046243,Röhrenkollektor für Raumheizung und Warmwasser EFH,Solar collectors with tubes - heat and hot water - individual house
+72,70.5,0.504,0.00197,0.502,0.0,0.111,useful,Centrale à cogénération - petite - gaz,0.3908730158730158,Kleinblockheizkraftwerk - Erdgas,Cogeneration (CHP) plant - small - gas
+73,70.5,0.504,0.00197,0.502,0.0,0.111,useful,Centrale à cogénération - petite - gaz,0.3908730158730158,Kleinblockheizkraftwerk - Erdgas,Cogeneration (CHP) plant - small gas
+74,447.0,3.4,0.00704,3.39,0.0,0.749,final,Centrale à cogénération - petite - gaz,0.2070588235294118,Kleinblockheizkraftwerk - Erdgas,Cogeneration (CHP) plant - small - gas
+75,447.0,3.4,0.00704,3.39,0.0,0.749,final,Centrale à cogénération - petite - gaz,0.2070588235294118,Kleinblockheizkraftwerk - Erdgas,Cogeneration (CHP) plant - small gas
+76,453.0,4.21,0.00508,4.21,0.0,0.0233,final,Centrale nucléaire,0.12066508313539194,Atomkraftwerk,Nuclear plant
+77,308.0,2.22,0.00585,2.22,0.0,0.466,final,Centrale combinée gaz naturel G+V,0.2635135135135135,Erdgaskombikraftwerk GuD,Combined Natural Gas Plant
+78,793.0,3.95,0.0116,3.94,0.0,1.36,final,Centrale au lignite,0.2936708860759493,Braunkohlekraftwerk,Lignite plant
+79,768.0,3.94,0.0331,3.91,0.0,1.24,final,Centrale au charbon,0.8401015228426395,Steinkohlekraftwerk,Coal power station
+80,1090.0,3.83,0.0129,3.82,0.0,1.01,final,Centrale - pétrole,0.33681462140992163,Kraftwerk Schweröl,Central - oil
+81,174.0,1.56,1.22,0.334,0.0,0.0964,final,Photovoltaïque,78.2051282051282,Photovoltaik,Photovoltaic (PV)
+82,174.0,1.56,1.22,0.334,0.0,0.0964,final,Photovoltaïque,78.2051282051282,Photovoltaik,Photovoltaic (PV)
+83,129.0,1.4,1.11,0.289,1.07,0.0812,final,Photovoltaïque,79.28571428571429,Photovoltaik,Photovoltaic (PV)
+84,129.0,1.4,1.11,0.289,1.07,0.0812,final,Photovoltaïque,79.28571428571429,Photovoltaik,Photovoltaic (PV)
+85,169.0,1.54,1.22,0.318,0.0,0.0914,final,Photovoltaïque toiture inclinée,79.2207792207792,Photovoltaik Schrägdach,Photovoltaic (PV) pitched roof
+86,169.0,1.54,1.22,0.318,0.0,0.0914,final,Photovoltaïque toiture inclinée,79.2207792207792,Photovoltaik Schrägdach,Photovoltaic (PV) pitched roof
+87,124.0,1.38,1.11,0.275,1.07,0.0767,final,Photovoltaïque toiture inclinée,80.43478260869567,Photovoltaik Schrägdach,Photovoltaic (PV) pitched roof
+88,124.0,1.38,1.11,0.275,1.07,0.0767,final,Photovoltaïque toiture inclinée,80.43478260869567,Photovoltaik Schrägdach,Photovoltaic (PV) pitched roof
+89,156.0,1.55,1.22,0.324,0.0,0.0958,final,Photovoltaïque toiture plate,78.70967741935485,Photovoltaik Flachdach,Photovoltaic (PV) flat roof
+90,156.0,1.55,1.22,0.324,0.0,0.0958,final,Photovoltaïque toiture plate,78.70967741935485,Photovoltaik Flachdach,Photovoltaic (PV) flat roof
+91,112.0,1.39,1.11,0.28,1.07,0.0807,final,Photovoltaïque toiture plate,79.85611510791368,Photovoltaik Flachdach,Photovoltaic (PV) flat roof
+92,112.0,1.39,1.11,0.28,1.07,0.0807,final,Photovoltaïque toiture plate,79.85611510791368,Photovoltaik Flachdach,Photovoltaic (PV) flat roof
+93,225.0,1.7,1.24,0.461,0.0,0.135,final,Photovoltaïque façade,72.94117647058823,Photovoltaik Fassade,Photovoltaic (PV) wall
+94,225.0,1.7,1.24,0.461,0.0,0.135,final,Photovoltaïque façade,72.94117647058823,Photovoltaik Fassade,Photovoltaic (PV) wall
+95,175.0,1.52,1.12,0.402,1.07,0.115,final,Photovoltaïque façade,73.6842105263158,Photovoltaik Fassade,Photovoltaic (PV) wall
+96,175.0,1.52,1.12,0.402,1.07,0.115,final,Photovoltaïque façade,73.6842105263158,Photovoltaik Fassade,Photovoltaic (PV) wall
+97,74.0,1.29,1.2,0.0937,0.0,0.026,final,Energie éolienne,93.02325581395348,Windkraft,Wind power
+98,74.0,1.29,1.2,0.0937,0.0,0.026,final,Energie éolienne,93.02325581395348,Windkraft,Wind power
+99,38.1,1.16,1.09,0.0709,1.08,0.0173,final,Energie éolienne,93.96551724137933,Windkraft,Wind power
+100,38.1,1.16,1.09,0.0709,1.08,0.0173,final,Energie éolienne,93.96551724137933,Windkraft,Wind power
+101,43.8,1.2,1.17,0.029,0.0,0.0122,final,Energie hydraulique,97.5,Wasserkraft,Hydro-electric power
+102,451.0,3.9,0.631,3.26,0.0,0.139,final,Accumulation par pompage,16.17948717948718,Pumpspeicherung,Pumped accumulation
+103,229.0,2.5,0.657,1.85,0.0,0.0268,final,Mix de production CH,26.280000000000005,CH-Produktionsmix,Swiss production mix
+104,47.8,1.21,1.17,0.0359,0.0,0.0153,final,Mix de produits des énergies renouvelables CH,96.69421487603306,Mix Stromprodukte aus erneuerbaren Energien,Mix of renewable energy  Swiss
+105,347.0,3.0,0.488,2.52,0.0,0.102,final,Mix consommateur CH3,16.266666666666666,CH-Verbrauchermix3,Swiss consumer mix
+106,548.0,3.18,0.299,2.89,0.0,0.524,final,Mix ENTSO-E (anc. mix UCTE) ,9.40251572327044,ENTSO-E-Mix (ehemals UCTE-Mix),Mix ENTSO-E (former mix UCTE)
+107,179.0,0.16,0.0356,0.124,0.0,0.155,final,Biogaz agricole,22.25,Biogas - Landwirtschaft,Agricultural biogas

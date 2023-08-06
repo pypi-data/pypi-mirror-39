@@ -1,0 +1,174 @@
+{
+    "metadata": {
+        "Unit": {
+            "SIA_cat": "unit",
+            "t_heat_set_point": "deg",
+            "t_cool_set_point": "deg",
+            "surf_pers": "m2/p",
+            "heat_pers": "W/p",
+            "pres_pers": "h/d",
+            "elec_cons": "kWh/m2/year",
+            "elec_heat_fac": "ratio",
+            "air_flow": "m3air/h/m2surf",
+            "hw_needs": "kWh/m2/y"
+        },
+        "Source": {
+            "SIA_cat": "SIA380-1",
+            "t_heat_set_point": "SIA380-1",
+            "t_cool_set_point": "NO_SIA_FP",
+            "surf_pers": "SIA380-1",
+            "heat_pers": "SIA380-1",
+            "pres_pers": "SIA380-1",
+            "elec_cons": "SIA380-1",
+            "elec_heat_fac": "SIA380-1",
+            "air_flow": "SIA380-1",
+            "hw_needs": "SIA380-1"
+        }
+    },
+    "data": {
+        "Lgt_Coll.": {
+            "SIA_cat": 1,
+            "t_heat_set_point": 20,
+            "t_cool_set_point": 26,
+            "surf_pers": 40,
+            "heat_pers": 70,
+            "pres_pers": 12,
+            "elec_cons": 28,
+            "elec_heat_fac": 0.7,
+            "air_flow": 0.7,
+            "hw_needs": 21
+        },
+        "Maison_Ind.": {
+            "SIA_cat": 2,
+            "t_heat_set_point": 20,
+            "t_cool_set_point": 26,
+            "surf_pers": 60,
+            "heat_pers": 70,
+            "pres_pers": 12,
+            "elec_cons": 22.4,
+            "elec_heat_fac": 0.7,
+            "air_flow": 0.7,
+            "hw_needs": 14
+        },
+        "Admin.": {
+            "SIA_cat": 3,
+            "t_heat_set_point": 20,
+            "t_cool_set_point": 26,
+            "surf_pers": 20,
+            "heat_pers": 80,
+            "pres_pers": 6,
+            "elec_cons": 22.4,
+            "elec_heat_fac": 0.9,
+            "air_flow": 0.7,
+            "hw_needs": 7
+        },
+        "Ecoles": {
+            "SIA_cat": 4,
+            "t_heat_set_point": 20,
+            "t_cool_set_point": 26,
+            "surf_pers": 10,
+            "heat_pers": 70,
+            "pres_pers": 4,
+            "elec_cons": 11.2,
+            "elec_heat_fac": 0.9,
+            "air_flow": 0.7,
+            "hw_needs": 7
+        },
+        "Commerces": {
+            "SIA_cat": 5,
+            "t_heat_set_point": 20,
+            "t_cool_set_point": 26,
+            "surf_pers": 10,
+            "heat_pers": 90,
+            "pres_pers": 4,
+            "elec_cons": 33.6,
+            "elec_heat_fac": 0.8,
+            "air_flow": 0.7,
+            "hw_needs": 7
+        },
+        "Restau.": {
+            "SIA_cat": 6,
+            "t_heat_set_point": 20,
+            "t_cool_set_point": 26,
+            "surf_pers": 5,
+            "heat_pers": 100,
+            "pres_pers": 3,
+            "elec_cons": 33.6,
+            "elec_heat_fac": 0.7,
+            "air_flow": 1.2,
+            "hw_needs": 56
+        },
+        "Rassembl.": {
+            "SIA_cat": 7,
+            "t_heat_set_point": 20,
+            "t_cool_set_point": 26,
+            "surf_pers": 5,
+            "heat_pers": 80,
+            "pres_pers": 3,
+            "elec_cons": 16.8,
+            "elec_heat_fac": 0.8,
+            "air_flow": 1,
+            "hw_needs": 14
+        },
+        "Hopitaux": {
+            "SIA_cat": 8,
+            "t_heat_set_point": 22,
+            "t_cool_set_point": 26,
+            "surf_pers": 30,
+            "heat_pers": 80,
+            "pres_pers": 16,
+            "elec_cons": 28,
+            "elec_heat_fac": 0.7,
+            "air_flow": 1,
+            "hw_needs": 28
+        },
+        "Industries": {
+            "SIA_cat": 9,
+            "t_heat_set_point": 18,
+            "t_cool_set_point": 26,
+            "surf_pers": 20,
+            "heat_pers": 100,
+            "pres_pers": 6,
+            "elec_cons": 16.8,
+            "elec_heat_fac": 0.9,
+            "air_flow": 0.7,
+            "hw_needs": 7
+        },
+        "Depots": {
+            "SIA_cat": 10,
+            "t_heat_set_point": 18,
+            "t_cool_set_point": 26,
+            "surf_pers": 100,
+            "heat_pers": 100,
+            "pres_pers": 6,
+            "elec_cons": 5.6,
+            "elec_heat_fac": 0.9,
+            "air_flow": 0.3,
+            "hw_needs": 1.4
+        },
+        "Instal._Sportives": {
+            "SIA_cat": 11,
+            "t_heat_set_point": 18,
+            "t_cool_set_point": 26,
+            "surf_pers": 20,
+            "heat_pers": 100,
+            "pres_pers": 6,
+            "elec_cons": 5.6,
+            "elec_heat_fac": 0.9,
+            "air_flow": 0.7,
+            "hw_needs": 84
+        },
+        "Piscines_Couv": {
+            "SIA_cat": 12,
+            "t_heat_set_point": 28,
+            "t_cool_set_point": 45,
+            "surf_pers": 20,
+            "heat_pers": 60,
+            "pres_pers": 4,
+            "elec_cons": 56,
+            "elec_heat_fac": 0.7,
+            "air_flow": 0.7,
+            "hw_needs": 84
+        }
+    }
+}

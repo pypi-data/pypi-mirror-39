@@ -1,0 +1,81 @@
+English_Name,LCA_UB,EP_Global,EP_Renew,EP_Nonrenew,EP_Renew_Onsite,CO2,French_Name
+Oil EL,234.0,1.24,0.00902,1.23,0.0,0.301,Mazout EL
+Natural gas,137.0,1.07,0.00447,1.06,0.0,0.228,Gaz naturel
+Propane / butane,200.0,1.16,0.00841,1.15,0.0,0.273,Propane/butane
+Coal coke,477.0,1.47,0.0132,1.45,0.0,0.439,Coke de houille
+Briquette of coal,456.0,1.2,0.00831,1.2,0.0,0.399,Briquette de houille
+Logs of wood,93.1,1.11,0.994,0.116,0.0,0.0274,Bûches de bois
+Logs of wood with particle filter,88.2,1.11,0.994,0.119,0.0,0.0275,Bûches de bois avec filtre à particules
+Particles of wood,80.8,1.11,1.05,0.0628,0.0,0.0107,Particules de bois
+Particles of wood with particle filter,73.7,1.12,1.05,0.0651,0.0,0.0108,Particules de bois avec filtre à particules
+Pellets,81.1,1.2,1.04,0.157,0.0,0.0272,Granules (pellets)
+Pellets with particle filter,76.8,1.2,1.04,0.16,0.0,0.0273,Granules (pellets) avec filtre à particules
+biogas,109.0,0.332,0.0321,0.299,0.0,0.13,Biogaz
+Central heating oil,341.0,1.7,0.0155,1.68,0.0,0.408,Centrale de chauffage - pétrole
+Central heating gas,194.0,1.52,0.0147,1.51,0.0,0.314,Centrale de chauffage - gaz
+Central heating wood,120.0,1.72,1.58,0.143,0.0,0.0496,Centrale de chauffage - bois
+Cogeneration (CHP) plant wood,102.0,1.46,1.33,0.128,0.0,0.0423,Centrale à cogénération - bois
+Central Heating Heat Pump air / water (COPA 2.8),186.0,2.13,0.991,1.14,0.0,0.078,Centrale de chauffage PACE - air/eau (COPA 2.8)
+Central Heating Heat Pump Wastewater (COPA 3.4),124.0,1.07,0.172,0.894,0.0,0.0408,Centrale de chauffage PACE - eaux usées (COPA 3.4)
+Central Heating Heat Pump groundwater (COPA 3.4),155.0,1.99,1.03,0.963,0.0,0.062,Centrale de chauffage PACE - eaux souterraines (COPA 3.4)
+Central Heating Heat Pump geothermal probe (COPA 3.9),139.0,1.9,1.05,0.849,0.0,0.0574,Centrale de chauffage PACE - sonde géothermique (COPA 3.9)
+Central heating  geothermal,67.3,1.52,1.36,0.162,0.0,0.0207,Centrale de chauffage - géothermie
+Cogeneration (CHP) plant  geothermal,47.6,0.59,0.465,0.125,0.0,0.0148,Centrale à cogénération - géothermie
+Incineration of household waste,7.31,0.0597,0.00931,0.0504,0.0,0.0027,Incinération des ordures ménagères
+Cogeneration (CHP) plant diesel,120.0,0.628,0.0115,0.617,0.0,0.145,Centrale à cogénération - diesel
+Cogeneration (CHP) plant gas,84.0,0.607,0.0105,0.596,0.0,0.127,Centrale à cogénération - gaz
+Cogeneration (CHP) plant biogas,72.9,0.232,0.0257,0.207,0.0,0.0785,Centrale à cogénération - biogaz
+Cogeneration (CHP) plant agricultural biogas,28.2,0.0802,0.0135,0.0667,0.0,0.0205,Centrale à cogénération - biogaz agricole
+Remote heating - mean of swiss networks,92.9,0.875,0.326,0.549,0.0,0.108,Chauffage à distance - moyenne réseaux CH
+Remote heating of garbage incineration - mean of swiss networks,75.5,0.717,0.264,0.452,0.0,0.0888,Chauffage à distance de l'incinération des ordures - moyenne réseaux CH
+Boiler oil EL,251.0,1.31,0.00659,1.3,0.0,0.322,Chaudière - mazout EL
+Boiler natural gas,151.0,1.17,0.00528,1.16,0.0,0.249,Chaudière - gaz naturel
+Boiler propane / butane,219.0,1.26,0.00953,1.26,0.0,0.296,Chaudière - propane/butane
+Boiler coal coke,708.0,2.05,0.0198,2.03,0.0,0.649,Chaudière - coke de houille
+Boiler coal briquette,676.0,1.53,0.0125,1.52,0.0,0.59,Chaudière - briquette de houille
+Boiler firewood,152.0,1.77,1.58,0.194,0.0,0.0454,Chaudière - bûches de bois
+Boiler firewood with particle filter,144.0,1.78,1.58,0.198,0.0,0.0456,Chaudière - bûches de bois avec filtre à particules
+Boiler wood chips,116.0,1.52,1.42,0.0971,0.0,0.0198,Chaudière - particules de bois
+Boiler wood chips with particle filter,106.0,1.52,1.42,0.1,0.0,0.0199,Chaudière - particules de bois avec filtre à particules
+Boiler pellets,108.0,1.53,1.32,0.21,0.0,0.0382,Chaudière - granules (pellets)
+Boiler pellets with particle filter,103.0,1.54,1.32,0.213,0.0,0.0383,Chaudière - granules (pellets) avec filtre à particules
+Boiler biogas,121.0,0.365,0.0353,0.33,0.0,0.142,Chaudière - biogaz
+Electric air-water heat pump (COPA 2.8),149.0,1.73,0.818,0.908,0.643,0.0628,Pompe à chaleur électrique air-eau (COPA 2.8)
+Electric Heat Pump Geothermal Probes (COPA 3.9),110.0,1.53,0.87,0.665,0.744,0.0456,Pompe à chaleur électrique sondes géothermiques (COPA 3.9)
+Groundwater Electric Heat Pump (COPA 3.4),123.0,1.61,0.85,0.76,0.706,0.0494,Pompe à chaleur électrique eaux souterraines (COPA 3.4)
+Flat solar collectors - hot water individual house,102.0,1.6,1.33,0.275,1.28,0.0366,Collecteurs solaires plan - eau chaude maison individuelle
+Flat solar collectors - heat and hot water - individual house,90.0,1.83,1.61,0.221,1.57,0.0337,Collecteurs solaires plan - chaleur et eau chaude maison individuelle
+Solar collectors plan - hot water rental building,40.7,1.23,1.14,0.0859,1.13,0.0139,Collecteurs solaires plan - eau chaude immeuble locatif
+Solar collectors with tubes - heat and hot water - individual house,76.5,1.73,1.54,0.193,1.51,0.0308,Collecteurs solaires à tubes - chaleur et eau chaude maison individuelle
+Cogeneration (CHP) plant - small - gas,70.5,0.504,0.00197,0.502,0.0,0.111,Centrale à cogénération - petite - gaz
+Nuclear plant,453.0,4.21,0.00508,4.21,0.0,0.0233,Centrale nucléaire
+Combined Natural Gas Plant,308.0,2.22,0.00585,2.22,0.0,0.466,Centrale combinée gaz naturel G+V
+Lignite plant,793.0,3.95,0.0116,3.94,0.0,1.36,Centrale au lignite
+Coal power station,768.0,3.94,0.0331,3.91,0.0,1.24,Centrale au charbon
+Central - oil,1090.0,3.83,0.0129,3.82,0.0,1.01,Centrale - pétrole
+Incineration of household waste,32.0,0.0179,0.00227,0.0156,0.0,0.00693,Incinération des ordures ménagères
+Cogeneration (CHP) plant - wood,295.0,3.88,3.64,0.24,0.0,0.118,Centrale à cogénération - bois
+Cogeneration (CHP) plant - diesel,677.0,3.28,0.0135,3.27,0.0,0.823,Centrale à cogénération - diesel
+Cogeneration (CHP) plant - gas,440.0,2.94,0.00786,2.94,0.0,0.669,Centrale à cogénération - gaz
+Cogeneration (CHP) plant - biogas,374.0,0.915,0.0878,0.827,0.0,0.403,Centrale à cogénération - biogaz
+Cogeneration (CHP) plant - agricultural biogas,230.0,0.194,0.0415,0.152,0.0,0.177,Centrale à cogénération - biogaz agricole
+Photovoltaic (PV),174.0,1.56,1.22,0.334,0.0,0.0964,Photovoltaïque
+Photovoltaic (PV) pitched roof,169.0,1.54,1.22,0.318,0.0,0.0914,Photovoltaïque toiture inclinée
+Photovoltaic (PV) flat roof,156.0,1.55,1.22,0.324,0.0,0.0958,Photovoltaïque toiture plate
+Photovoltaic (PV) wall,225.0,1.7,1.24,0.461,0.0,0.135,Photovoltaïque façade
+Wind power,74.0,1.29,1.2,0.0937,0.0,0.026,Energie éolienne
+Hydro-electric power,43.8,1.2,1.17,0.029,0.0,0.0122,Energie hydraulique
+Pumped accumulation,451.0,3.9,0.631,3.26,0.0,0.139,Accumulation par pompage
+Cogeneration (CHP) plant - geothermal,103.0,3.36,3.17,0.191,0.0,0.0309,Centrale à cogénération - géothermie
+Swiss production mix,229.0,2.5,0.657,1.85,0.0,0.0268,Mix de production CH
+Mix of renewable energy  Swiss,47.8,1.21,1.17,0.0359,0.0,0.0153,Mix de produits des énergies renouvelables CH
+Swiss consumer mix,347.0,3.0,0.488,2.52,0.0,0.102,Mix consommateur CH3
+Mix ENTSO-E (former mix UCTE),548.0,3.18,0.299,2.89,0.0,0.524,Mix ENTSO-E (anc. mix UCTE) 
+Photovoltaic (PV),129.0,1.4,1.11,0.289,1.07,0.0812,Photovoltaïque
+Photovoltaic (PV) pitched roof,124.0,1.38,1.11,0.275,1.07,0.0767,Photovoltaïque toiture inclinée
+Photovoltaic (PV) flat roof,112.0,1.39,1.11,0.28,1.07,0.0807,Photovoltaïque toiture plate
+Photovoltaic (PV) wall,175.0,1.52,1.12,0.402,1.07,0.115,Photovoltaïque façade
+Wind power,38.1,1.16,1.09,0.0709,1.08,0.0173,Energie éolienne
+biogas,309.0,0.811,0.0773,0.733,0.0,0.358,Biogaz
+Agricultural biogas,179.0,0.16,0.0356,0.124,0.0,0.155,Biogaz agricole
+Cogeneration (CHP) plant - small gas,447.0,3.4,0.00704,3.39,0.0,0.749,Centrale à cogénération - petite - gaz

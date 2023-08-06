@@ -1,0 +1,21 @@
+{
+    "metadata": {
+        "sources": {
+            "efficiency": "CREM_intern_and_PlanETer"
+        }
+    },
+    "data": {
+        "Mazout": {
+            "GENHZ-WW": 7201,
+            "efficiency": 0.9
+        },
+        "Gaz": {
+            "GENHZ-WW": 7203,
+            "efficiency": 0.9
+        },
+        "Bois": {
+            "GENHZ-WW": 7205,
+            "efficiency": 0.75
+        }
+    }
+}
