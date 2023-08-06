@@ -1,0 +1,3 @@
+[console_scripts]
+tmpld = tmpld.cli.main:main
+
