@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: pydtnsim
+Version: 0.1.0
+Summary: A discrete event simulation library for DTN
+Home-page: https://github.com/ducktec/pydtnsim
+Author: Robert Wiewel
+Author-email: dev@ducktec.de
+License: MIT
+Project-URL: Source Code, https://github.com/ducktec/pydtnsim
+Project-URL: Bug Tracker, https://github.com/ducktec/pydtnsim/issues
+Keywords: delay-tolerant-networking,routing,simulation,dtn,cgr
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+Requires-Dist: networkx (<3.0,>=2.0)
+Requires-Dist: tqdm (<5.0,>=4.0)
+Requires-Dist: jsonschema (<3.0,>=2.0)
+Provides-Extra: dev
+Requires-Dist: pytest (<4.0,>=3.0) ; extra == 'dev'
+Requires-Dist: Sphinx (<2.0,>=1.0) ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme (==0.4.2) ; extra == 'dev'
+Requires-Dist: pylint (<3.0,>=2.0) ; extra == 'dev'
+Requires-Dist: pydocstyle (<3.0,>2.0) ; extra == 'dev'
+Requires-Dist: termcolor (<2.0,>=1.0) ; extra == 'dev'
+
+# PyDTNsim
+
+## Introduction
+
+This python module contains a simulation environment that allows the simulation of arbitrary Delay Tolerant Networking (DTN) scenarios on a packet (DTN terminology: bundle) level. *PyDTNsim* provides users with the ability to evaluate the performance of various routing approaches and to detect possibly occurring overload situations. Currently, the focus lies on deterministic Contact-Graph-based routing approaches, but there might be other
+approaches available in the future. The clear modularization allows users to easily implement routing approaches on their own.
+
+## More Information
+Please refer to the Github repository for a more detailed overview of the module and tutorials on how to get started.
+
+
