@@ -1,0 +1,9 @@
+include dash_custom_components/dash_custom_components.min.js
+include dash_custom_components/dash_custom_components.dev.js
+include dash_custom_components/metadata.json
+include dash_custom_components/package.json
+include dash_custom_components/1_bootstrap.min.css
+include dash_custom_components/4_style.default.css
+include dash_custom_components/5_custom.css
+include README.md
+include version.py
