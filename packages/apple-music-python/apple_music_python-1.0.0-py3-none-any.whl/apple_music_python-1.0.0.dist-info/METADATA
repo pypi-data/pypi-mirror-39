@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: apple-music-python
+Version: 1.0.0
+Summary: A python wrapper for the Apple Music API
+Home-page: UNKNOWN
+Author: Matt Palazzolo
+Author-email: mattpalazzolo@gmail.com
+License: LICENSE.txt
+Platform: UNKNOWN
+Requires-Dist: requests (>=2.20.1)
+Requires-Dist: pyjwt (>=1.6.4)
+
+UNKNOWN
+
+
