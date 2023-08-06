@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: PrefectDecorator
+Version: 0.0.1
+Summary: Some convenient decorators.
+Home-page: https://github.com/RankoHata/PrefectDecorator
+Author: RankoHata
+Author-email: san332627946@gmail.com
+Maintainer: RankoHata
+Maintainer-email: san332627946@gmail.com
+License: MIT License
+Description: UNKNOWN
+Platform: all
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Topic :: Software Development :: Libraries
