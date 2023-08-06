@@ -1,0 +1,11 @@
+README.md
+setup.py
+pikalang/__init__.py
+pikalang/cli.py
+pikalang/interpreter.py
+pikalang.egg-info/PKG-INFO
+pikalang.egg-info/SOURCES.txt
+pikalang.egg-info/dependency_links.txt
+pikalang.egg-info/entry_points.txt
+pikalang.egg-info/requires.txt
+pikalang.egg-info/top_level.txt
