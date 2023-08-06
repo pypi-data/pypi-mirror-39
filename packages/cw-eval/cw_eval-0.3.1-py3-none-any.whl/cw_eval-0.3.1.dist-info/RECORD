@@ -1,0 +1,17 @@
+cw_eval/__init__.py,sha256=ENUXC7ysxNRSTesfTp1_w7FW95evXhVsnYIfR9D91dg,38
+cw_eval/baseeval.py,sha256=E6e8xkAP1tT8MesiEX3deAXeliSBJWNG9eaTiSGcBD8,18187
+cw_eval/evalfunctions.py,sha256=2mgwfC6GLz0FTqy83FMw0JInCW5ZrzHjNy8Uja0OBLc,2801
+cw_eval/challenge_eval/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cw_eval/challenge_eval/off_nadir_dataset.py,sha256=pbR7mvTGxiYxDJwlLTkp803CmCqLCj9WjPOmU2zVU1Y,5787
+cw_eval/challenge_eval/spacenet_eval.py,sha256=HMhLYKj9RDWukPNSxivMkyToPYqa-iXk7lYOMTXpIx0,1878
+cw_eval/data/__init__.py,sha256=nR0zS5EASMM0wKfcPRVC_AqrOJH0o8KVNeceRu6cFEA,479
+cw_eval/data/empty.geojson,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cw_eval/data/gt.geojson,sha256=H2Sja24Fwz-WADwvEwt7tdJWfphfSAceJgmKgRqAKA4,47952
+cw_eval/data/overlap_test.geojson,sha256=hnIKhGktKb31N8GdELcB5eSVAgez2ynLRWJqxIxoPiM,1651
+cw_eval/data/pred.geojson,sha256=R7W1B3ew1MBOtEumtk89KTr49xwR8Y5BJNXCdS2sb7w,11595
+cw_eval-0.3.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+cw_eval-0.3.1.dist-info/METADATA,sha256=zYPwfou5iipS17en77mrLZjgBTpL2WMM7QWufqWf_ic,936
+cw_eval-0.3.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+cw_eval-0.3.1.dist-info/entry_points.txt,sha256=OSu35Nh21Iqv68NoHjSGEGYRu9nNKatutotOlcH2bxA,77
+cw_eval-0.3.1.dist-info/top_level.txt,sha256=UpBzbCwajDpsZpBGMaoNtUbBnEpJf1FT40B4VCl-hv0,8
+cw_eval-0.3.1.dist-info/RECORD,,
