@@ -1,0 +1,13 @@
+machfs/__init__.py,sha256=92CRc5XNByLCazFfBJfn6CA3YOl-cHKhxnoNmNgFPWg,109
+machfs/bitmanip.py,sha256=uKqtpv194jSO6yDrZ8KF0QLJJyS1zi2Fh_UEL_Xr9uI,923
+machfs/btree.py,sha256=rwfzZmn0eexYJ7SQKkk6qOEiMi7dy1Oo-zDi39nXnuc,6642
+machfs/directory.py,sha256=fEREeRHVjdSZfse4ONN4aJea8JdQpOV-Ui_3FOSQD2I,8015
+machfs/main.py,sha256=NxTWPPBTEaGkWKcC5M3RD9ScRUqii7kiEEldlKPs0Uw,18358
+machfs/sync.py,sha256=lrcGzFyunFDZOhUTo22xT6mIEGsLNcz5yrDlaL0g-yE,28
+machfs-1.2.data/scripts/DumpHFS,sha256=-LY1LyoXA0Y9r3OSbiIKmKT8bdBh7be_FSmg6OsWBiE,388
+machfs-1.2.data/scripts/MakeHFS,sha256=M8iVWqDP87gPSecs0nNvmkb17F6njShs6z-zmLgI3FU,4249
+machfs-1.2.dist-info/LICENSE,sha256=HfiCBCy2fAi02Ls-1I9PS2L0A_PD597iFRpN1ThRPc8,1068
+machfs-1.2.dist-info/METADATA,sha256=AV1IEVzbHZObA7xiEzWImX9vOBvFSUXjIQBxK5a231o,3686
+machfs-1.2.dist-info/WHEEL,sha256=8T8fxefr_r-A79qbOJ9d_AaEgkpCGmEPHc-gpCq5BRg,110
+machfs-1.2.dist-info/top_level.txt,sha256=A60v16G0hQlcyNVJaK62Z_coJQ7fBSosdBJPdJWhcps,7
+machfs-1.2.dist-info/RECORD,,
