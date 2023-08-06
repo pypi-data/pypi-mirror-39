@@ -1,0 +1,13 @@
+[console_scripts]
+brender = examples.brender:main
+editvcp = qtpyvcp.tools.editvcp:main
+mini = examples.mini:main
+probebasic = examples.probe_basic:main
+qcompile = qtpyvcp.tools.qcompile:main
+qtpyvcp = qtpyvcp:main
+
+[qtpyvcp.example_vcp]
+brender = examples.brender
+mini = examples.mini
+probebasic = examples.probe_basic
+
