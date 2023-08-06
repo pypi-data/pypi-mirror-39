@@ -1,0 +1,140 @@
+.codeclimate.yml
+.gitignore
+.travis.yml
+LICENSE
+MANIFEST.in
+README.md
+__init__.py
+cli.py
+requirements-dev.txt
+requirements.txt
+setup.py
+examples/template/README.md
+examples/template/build_spreadsheet.py
+examples/template/my_tabs_config.yaml
+examples/template/schema_to_template.py
+examples/template/tabs_human_10x.yaml
+hca_ingest.egg-info/PKG-INFO
+hca_ingest.egg-info/SOURCES.txt
+hca_ingest.egg-info/dependency_links.txt
+hca_ingest.egg-info/requires.txt
+hca_ingest.egg-info/top_level.txt
+ingest/__init__.py
+ingest/api/__init__.py
+ingest/api/dssapi.py
+ingest/api/ingestapi.py
+ingest/api/stagingapi.py
+ingest/exporter/__init__.py
+ingest/exporter/ingestexportservice.py
+ingest/importer/__init__.py
+ingest/importer/data_node.py
+ingest/importer/importer.py
+ingest/importer/spreadsheetUploadError.py
+ingest/importer/submission.py
+ingest/importer/conversion/__init__.py
+ingest/importer/conversion/column_specification.py
+ingest/importer/conversion/conversion_strategy.py
+ingest/importer/conversion/data_converter.py
+ingest/importer/conversion/exceptions.py
+ingest/importer/conversion/metadata_entity.py
+ingest/importer/conversion/template_manager.py
+ingest/importer/conversion/utils.py
+ingest/importer/spreadsheet/__init__.py
+ingest/importer/spreadsheet/ingest_workbook.py
+ingest/template/__init__.py
+ingest/template/schema_template.py
+ingest/template/spreadsheet_builder.py
+ingest/template/tabs.py
+ingest/utils/__init__.py
+ingest/utils/bundlevalidator.py
+ingest/utils/dcp_auth_client.py
+ingest/utils/doctict.py
+ingest/utils/errorreport.py
+ingest/utils/s2s_token_client.py
+ingest/utils/token_manager.py
+ingest/utils/validationreport.py
+tests/__init__.py
+tests/api/__init__.py
+tests/api/test_ingestapi.py
+tests/exporter/__init__.py
+tests/exporter/test_exporter.py
+tests/exporter/bundles/analysis/expected/Mouse Melanoma_biomaterial_bundle.json
+tests/exporter/bundles/analysis/expected/Mouse Melanoma_bundleManifest.json
+tests/exporter/bundles/analysis/expected/Mouse Melanoma_file_bundle.json
+tests/exporter/bundles/analysis/expected/Mouse Melanoma_links_bundle.json
+tests/exporter/bundles/analysis/expected/Mouse Melanoma_process_bundle.json
+tests/exporter/bundles/analysis/expected/Mouse Melanoma_project_bundle.json
+tests/exporter/bundles/analysis/expected/Mouse Melanoma_protocol_bundle.json
+tests/exporter/bundles/assay/expected/Mouse Melanoma_biomaterial_bundle.json
+tests/exporter/bundles/assay/expected/Mouse Melanoma_bundleManifest.json
+tests/exporter/bundles/assay/expected/Mouse Melanoma_file_bundle.json
+tests/exporter/bundles/assay/expected/Mouse Melanoma_links_bundle.json
+tests/exporter/bundles/assay/expected/Mouse Melanoma_process_bundle.json
+tests/exporter/bundles/assay/expected/Mouse Melanoma_project_bundle.json
+tests/exporter/bundles/assay/expected/Mouse Melanoma_protocol_bundle.json
+tests/exporter/bundles/ingest-data/biomaterials/mock_cell_suspension.json
+tests/exporter/bundles/ingest-data/biomaterials/mock_cell_suspension_derived_by_processes.json
+tests/exporter/bundles/ingest-data/biomaterials/mock_donor.json
+tests/exporter/bundles/ingest-data/biomaterials/mock_specimen.json
+tests/exporter/bundles/ingest-data/biomaterials/mock_specimen_derived_by_processes.json
+tests/exporter/bundles/ingest-data/bundleManifests/mock_bundle_manifest.json
+tests/exporter/bundles/ingest-data/files/mock_fastq_read1.json
+tests/exporter/bundles/ingest-data/files/mock_fastq_read1_derived_by_processes.json
+tests/exporter/bundles/ingest-data/files/mock_fastq_read2.json
+tests/exporter/bundles/ingest-data/files/mock_fastq_read2_derived_by_processes.json
+tests/exporter/bundles/ingest-data/processes/mock_analysis_process.json
+tests/exporter/bundles/ingest-data/processes/mock_analysis_process_derived_files.json
+tests/exporter/bundles/ingest-data/processes/mock_analysis_process_input_bundle_manifests.json
+tests/exporter/bundles/ingest-data/processes/mock_analysis_process_input_files.json
+tests/exporter/bundles/ingest-data/processes/mock_dissociation_process.json
+tests/exporter/bundles/ingest-data/processes/mock_dissociation_process_protocols.json
+tests/exporter/bundles/ingest-data/processes/mock_encrichment_process.json
+tests/exporter/bundles/ingest-data/processes/mock_enrichment_process_protocols.json
+tests/exporter/bundles/ingest-data/processes/mock_lib_prep_process.json
+tests/exporter/bundles/ingest-data/processes/mock_lib_prep_process_protocols.json
+tests/exporter/bundles/ingest-data/processes/mock_sampling_process.json
+tests/exporter/bundles/ingest-data/processes/mock_sampling_process_derived_biomaterials.json
+tests/exporter/bundles/ingest-data/processes/mock_sampling_process_input_biomaterial.json
+tests/exporter/bundles/ingest-data/processes/mock_sequencing_process.json
+tests/exporter/bundles/ingest-data/processes/mock_sequencing_process_protocols.json
+tests/exporter/bundles/ingest-data/processes/wrapper_process_dissociation_and_enrichment.json
+tests/exporter/bundles/ingest-data/processes/wrapper_process_dissociation_and_enrichment_chained_processes.json
+tests/exporter/bundles/ingest-data/processes/wrapper_process_dissociation_and_enrichment_derived_biomaterial.json
+tests/exporter/bundles/ingest-data/processes/wrapper_process_dissociation_and_enrichment_input_biomaterial.json
+tests/exporter/bundles/ingest-data/processes/wrapper_process_lib_prep_and_sequencing.json
+tests/exporter/bundles/ingest-data/processes/wrapper_process_lib_prep_and_sequencing_chained_processes.json
+tests/exporter/bundles/ingest-data/processes/wrapper_process_lib_prep_and_sequencing_derived_files.json
+tests/exporter/bundles/ingest-data/processes/wrapper_process_lib_prep_and_sequencing_input_biomaterial.json
+tests/exporter/bundles/ingest-data/projects/mock_project.json
+tests/exporter/bundles/ingest-data/protocols/mock_facs_sorting_protocol.json
+tests/exporter/bundles/ingest-data/protocols/mock_smart_seq_2_protocol_lib_prep.json
+tests/exporter/bundles/ingest-data/protocols/mock_smart_seq_2_protocol_sequencing.json
+tests/exporter/bundles/ingest-data/protocols/mock_tissue_dissociation_protocol.json
+tests/importer/__init__.py
+tests/importer/glioblastoma_v5_plainHeaders_small_2cells.xlsx
+tests/importer/metadata_spleen_new_protocols.xlsx
+tests/importer/test_data_node.py
+tests/importer/test_importer.py
+tests/importer/test_submission.py
+tests/importer/conversion/__init__.py
+tests/importer/conversion/test_column_specification.py
+tests/importer/conversion/test_conversion_strategy.py
+tests/importer/conversion/test_data_converter.py
+tests/importer/conversion/test_metadata_entity.py
+tests/importer/conversion/test_template_manager.py
+tests/importer/conversion/test_utils.py
+tests/importer/data/HCA_metadata_Tissue_Stability_20180402_preview_release.xlsx
+tests/importer/data/HCA_metadata_Tissue_Stability_20180402_preview_release_new_headers.xlsx
+tests/importer/data/human_10_x_template.yaml
+tests/importer/data/project_core.json
+tests/importer/data/project_type.json
+tests/importer/data/spleen_config.yaml
+tests/importer/spreadsheet/__init__.py
+tests/importer/spreadsheet/test_ingest_workbook.py
+tests/template/__init__.py
+tests/template/schema_mock_utils.py
+tests/template/test_schematemplate.py
+tests/template/test_spreadsheet_builder.py
+tests/utils/__init__.py
+tests/utils/test_s2s_token_client.py
+tests/utils/test_token_manager.py
