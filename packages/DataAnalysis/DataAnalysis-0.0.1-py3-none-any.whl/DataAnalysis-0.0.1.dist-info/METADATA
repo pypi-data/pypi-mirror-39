@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: DataAnalysis
+Version: 0.0.1
+Summary: Pacote de pré-processamento de texto
+Home-page: https://github.com/karinatk/DataAnalysis
+Author: Karina Tiemi Kato, Renan Santos Mendes
+Author-email: karinatkato@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+A partir de uma tabela csv de entrada podem ser realizados diversos tipos de prÃ©-processamento: 
+
+
