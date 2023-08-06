@@ -1,0 +1,13 @@
+README.md
+setup.py
+build_dist_package/__init__.py
+build_dist_package/build_dist_package.py
+build_dist_package.egg-info/PKG-INFO
+build_dist_package.egg-info/SOURCES.txt
+build_dist_package.egg-info/dependency_links.txt
+build_dist_package.egg-info/entry_points.txt
+build_dist_package.egg-info/requires.txt
+build_dist_package.egg-info/top_level.txt
+build_dist_package/bin/__init__.py
+build_dist_package/bin/build.py
+tests/__init__.py
