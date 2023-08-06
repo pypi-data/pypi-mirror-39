@@ -1,0 +1,245 @@
+    #根据url,自定义的params,headers,用不用proxy去获取一个url页面的源码.
+    def getpage(url,params= None,headers = None,useProxy=False):
+        if headers != None:
+            HEAD = {
+                'USER-AGENT': 'MOZILLA/5.0 (WINDOWS NT 6.1; WOW64; RV:52.0) GECKO/20100101 FIREFOX/52.0',
+                'ACCEPT-LANGUAGE': 'ZH-CN,ZH;Q=0.8,EN-US;Q=0.5,EN;Q=0.3',
+                'CONNECTION': 'KEEP-ALIVE'
+            }
+        else:
+            HEAD = headers
+        Cfg_TimeoutDelay = 10
+        resp_text = ""
+        err_text = "error"
+        dolog = False
+        resp_status_code = 200
+        try_count = 0
+        proxytype = "p0"
+        for k in range(1,9):
+            try:
+                #首先使用代理池,不行使用本机裸爬,不行再使用代理.
+                randProxy = None
+                if useProxy == True:
+                    if k >= 1 and k< 7:
+                        proxytype = "p1"
+                        randProxy = Wcc.getrandproxy()
+                        #randProxy = Wcc.getgoodproxy()
+                    elif k == 7:
+                        proxytype = "p2"
+                        randProxy = Wcc.getgoodproxy()
+                    else:
+                        proxytype = "p0"
+                        randProxy = None
+                    #print("proxy:" +str(randProxy))
+                request = requests.get(url,params,timeout=Cfg_TimeoutDelay,headers=HEAD,proxies=randProxy)
+                if request.status_code != 200:
+                    resp_status_code = request.status_code
+                    print(url+" status_code:"+str(resp_status_code))
+                    #raise Exception("错误的status_code"+str(request.status_code),request)
+                    continue
+                else:
+                    resp_text = request.text
+                    try_count = k
+                    break
+            except requests.exceptions.ConnectTimeout:
+                err_text = "ConnectTimeout"
+            except requests.exceptions.Timeout:
+                err_text = "Timeout"
+            except Exception as err:
+                err_text = str(err)
+            time.sleep(0.1*k)
+            try_count = k
+            dolog = True
+        if dolog == True and resp_text != "":
+            print(url+" ok"+"("+str(try_count)+" th) "+proxytype)
+
+        if resp_status_code == 503:
+            print("503错误,您的IP可能被封")
+        if resp_status_code == 504:
+            print("504错误,您的IP可能被封")
+
+        return resp_text
+    
+    @staticmethod
+    def urlpost(url,payload={},headers={}):
+        fixed_HEAD = {
+            'USER-AGENT': 'MOZILLA/5.0 (WINDOWS NT 6.1; WOW64; RV:52.0) GECKO/20100101 FIREFOX/52.0',
+            'ACCEPT-LANGUAGE': 'ZH-CN,ZH;Q=0.8,EN-US;Q=0.5,EN;Q=0.3',
+            'CONNECTION': 'KEEP-ALIVE'
+        }
+        if headers !={}:
+            HEAD = headers
+        else:
+            HEAD = fixed_HEAD
+
+        Cfg_TimeoutDelay = 10
+        resp_json = None
+        err_text = "error"
+        dolog = False
+        response = None
+        for k in range(1,6):
+            try:
+                response = requests.post(url,data=payload,timeout=Cfg_TimeoutDelay,headers=HEAD)
+                if response.status_code != 200:
+                    print(response.content)
+                    raise Exception("错误返回代码"+str(response.status_code),response.content)
+                else:
+                    try:
+                        resp_json = response.json()
+                    except Exception as err:
+                        resp_json = None
+                break
+            except requests.exceptions.ConnectTimeout:
+                err_text = "ConnectTimeout"
+            except requests.exceptions.Timeout:
+                err_text = "Timeout"
+            except Exception as err:
+                err_text = str(err)
+                #fixme:想办法在这里解决ip被封后回来的例外是response.json()出错
+                # Expecting value: line 1 column 1 (char 0)
+                #print(str(response)+":"+response.content)
+            resp_json = None
+            time.sleep(0.1*k)
+            print(url+" err("+str(k)+") "+err_text)
+            dolog = True
+        if dolog == True and resp_json != None:
+            print(url+" ok")
+        return resp_json
+    
+
+    @staticmethod
+    def getjson(url,payload={},headers=None,useProxy=False):
+        fixed_HEAD = {
+            'USER-AGENT': 'MOZILLA/5.0 (WINDOWS NT 6.1; WOW64; RV:52.0) GECKO/20100101 FIREFOX/52.0',
+            'ACCEPT-LANGUAGE': 'ZH-CN,ZH;Q=0.8,EN-US;Q=0.5,EN;Q=0.3',
+            'CONNECTION': 'KEEP-ALIVE'
+        }
+        if headers !=None:
+            HEAD = headers
+        else:
+            HEAD = fixed_HEAD
+
+        Cfg_TimeoutDelay = 10
+        resp_json = None
+        err_text = "error"
+        dolog = False
+        response = None
+        proxytype = "p0"
+        for k in range(1,9):
+            try:
+                randProxy = None
+                if useProxy == True:
+                    if k >= 1 and k <7:
+                        proxytype = "p1"
+                        randProxy = Wcc.getrandproxy()
+                    elif k == 7:
+                        proxytype = "p2"
+                        randProxy = Wcc.getgoodproxy()
+                    else:
+                        proxytype = "p0"
+                        randProxy = None
+                    #print("proxy:"+str(randProxy))
+                response = requests.get(url,params=payload,timeout=Cfg_TimeoutDelay,headers=HEAD,proxies=randProxy)
+                if response.status_code != 200:
+                    print(url+" "+str(response.status_code))
+                    #raise Exception("错误返回代码"+str(response.status_code),response.text)
+                    resp_json = None
+                    continue
+                else:
+                    try:
+                        resp_json = response.json()
+                    except Exception as err:
+                        resp_json = None
+                        continue
+                break
+            except requests.exceptions.ConnectTimeout:
+                err_text = "ConnectTimeout"
+            except requests.exceptions.Timeout:
+                err_text = "Timeout"
+            except Exception as err:
+                err_text = str(err)
+                #fixme:想办法在这里解决ip被封后回来的例外是response.json()出错
+                # Expecting value: line 1 column 1 (char 0)
+                #print(str(response)+":"+response.content)
+            resp_json = None
+            time.sleep(k*1)
+            print(url+" err("+str(k)+") "+proxytype+" "+err_text)
+            dolog = True
+        if dolog == True and resp_json != None:
+            print(url+" ok"+"("+str(k)+" th) "+proxytype)
+        return resp_json
+
+    @staticmethod
+    def webget(url,params=None,headers=None,useProxy = False):
+        cap = webdriver.DesiredCapabilities.PHANTOMJS
+        if headers != None:
+            HEAD = {
+                'USER-AGENT': 'MOZILLA/5.0 (WINDOWS NT 6.1; WOW64; RV:52.0) GECKO/20100101 FIREFOX/52.0',
+                'ACCEPT-LANGUAGE': 'ZH-CN,ZH;Q=0.8,EN-US;Q=0.5,EN;Q=0.3',
+                'CONNECTION': 'KEEP-ALIVE'
+            }
+        else:
+            HEAD = headers
+        Cfg_TimeoutDelay = 10
+        resp_text = ""
+        err_text = "error"
+        dolog = False
+        resp_status_code = 200
+        try_count = 0
+        proxytype = "p0"
+        for k in range(1,8):
+            try:
+                #首先使用代理池,不行使用本机裸爬,不行再使用代理.
+                randProxy = None
+                if useProxy == True:
+                    if k >= 1 and k< 7:
+                        proxytype = "p1"
+                        randProxy = Wcc.getrandproxy()
+                        #randProxy = Wcc.getgoodproxy()
+                    elif k == 7:
+                        proxytype = "p2"
+                        randProxy = Wcc.getgoodproxy()
+                    else:
+                        proxytype = "p0"
+                        randProxy = None
+                    #print("proxy:" +str(randProxy))
+                cap["phantomjs.page.settings.resourceTimeout"] = 60
+                cap["phantomjs.page.settings.loadImages"] = False
+                cap["phantomjs.page.settings.localToRemoteUrlAccessEnabled"] = True
+                #driver = webdriver.PhantomJS(desired_capabilities=cap)
+                #dcap = dict(DesiredCapabilities.PHANTOMJS)
+                ##从USER_AGENTS列表中随机选一个浏览器头，伪装浏览器
+                #dcap["phantomjs.page.settings.userAgent"] = (random.choice(USER_AGENTS))
+                ## 不载入图片，爬页面速度会快很多
+                #dcap["phantomjs.page.settings.loadImages"] = False
+                ## 设置代理
+                proxy_url = randProxy['http'].replace('http://','')
+                proxy_args = '--proxy='+ proxy_url
+                service_args = [proxy_args,'--proxy-type=http']
+                ##打开带配置信息的phantomJS浏览器
+               # print(cap)
+               # print(service_args)
+                driver = webdriver.PhantomJS(desired_capabilities=cap,service_args=service_args)                
+                ## 隐式等待5秒，可以自己调节
+                #driver.implicitly_wait(5)
+                ## 设置10秒页面超时返回，类似于requests.get()的timeout选项，driver.get()没有timeout选项
+                ## 以前遇到过driver.get(url)一直不返回，但也不报错的问题，这时程序会卡住，设置超时选项能解决这个问题。
+                #driver.set_page_load_timeout(10)
+                ## 设置10秒脚本超时时间
+                #driver.set_script_timeout(10)
+                # 隐式等待5秒，可以自己调节
+                driver.implicitly_wait(1)
+                driver.get(url)
+                resp_text = driver.page_source
+                driver.close()
+                break
+            except Exception as err:
+                #有时候会返回例外selenium.common.exceptions.WebDriverException: Message: Service phantomjs unexpectedly exited.
+                exc_type, exc_obj, exc_tb = sys.exc_info()
+                fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+                print(exc_type, fname, exc_tb.tb_lineno)
+                print(url+"webget error "+str(err))
+                resp_text = None
+        return resp_text
+
+

@@ -1,0 +1,97 @@
+#Wikicivi Crawler Client SDK
+import os,time
+import threading
+import datetime
+import urllib
+import oss2
+import shelve
+import socket
+import requests
+import traceback
+from hashlib import md5
+from datetime import date
+import os,sys
+import struct
+import random
+import json
+#pip install Pillow
+from PIL import Image
+from io import BytesIO
+#tinytag对有些mp3读不出duration,我备用eyed3试下,eyed3不行的话,用mutagen
+from tinytag import TinyTag
+#pip3 install eyeD3(注意大小写)
+import eyed3
+from mutagen.mp3 import MP3  
+import mutagen.id3  
+from mutagen.id3 import ID3
+from mutagen.easyid3 import EasyID3  
+import re
+import types
+import traceback
+import getopt
+from tinytag    import TinyTag
+from .osskey    import Osskey
+from .utils     import *
+from .urllibx   import *
+from selenium import webdriver
+from .ArtDB import Furlinfo
+import imageio
+
+
+import traceback
+import sys
+import time
+from aliyun.log.logitem import LogItem
+from aliyun.log.logclient import LogClient
+from aliyun.log.getlogsrequest import GetLogsRequest
+from aliyun.log.putlogsrequest import PutLogsRequest
+from aliyun.log.listlogstoresrequest import ListLogstoresRequest
+from aliyun.log.gethistogramsrequest import GetHistogramsRequest
+
+
+class Wcc:
+    def __init__(self):
+        self.apimap = {}
+    wcc_headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36',
+    }
+
+    """
+    把file_url的文件下载到本地,文件命名是:local_path,比如是"image/test.jpg".
+    这个接口有变动,换成file_url和local_path
+    这个接口改成kwargs这种方式,关于参数的python实现,参考:
+    https://www.cnblogs.com/xuyuanyuan123/p/6674645.html
+    **kwargs
+    """
+    @staticmethod
+    def downloadFile(file_url,local_path,**kwargs):
+        return doDownloadFile(file_url,local_path,**kwargs);
+
+    """
+    把file_path上传到oss_bucket
+    """
+    @staticmethod
+    def uploadFile(file_path,oss_bucket,**kwargs):
+        return doUploadFile(file_path,oss_bucket,kwargs);
+
+    """
+    获取网络上一个url文件的信息.在这个过程中要把url转移到oss上.
+    返回retinfo结构.
+    
+    通过file_url获取file_url这个文件的 mime_type,file_ext,file_size
+    mime_type是"image/jpeg"这种
+    file_ext 是"jpg"/"png"/"mp4"这种
+    file_size是文件大小
+    """
+    @staticmethod
+    def getFurlInfo(file_url,bucket,**kwargs):
+        return doGetFurlInfo()            
+
+    """
+    把互联网上的一个url文件下载下来并上传到OSS上.
+    """
+    @staticmethod
+    def ossMoveFurl(file_url,bucket,**kwargs):
+        return doOssMoveFurl(file_url,bucket,kwargs)            
+
+
