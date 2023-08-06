@@ -1,0 +1,16 @@
+README.rst
+setup.py
+frisbee/__init__.py
+frisbee/utils.py
+frisbee.egg-info/PKG-INFO
+frisbee.egg-info/SOURCES.txt
+frisbee.egg-info/dependency_links.txt
+frisbee.egg-info/entry_points.txt
+frisbee.egg-info/not-zip-safe
+frisbee.egg-info/requires.txt
+frisbee.egg-info/top_level.txt
+frisbee/cli/__init__.py
+frisbee/cli/client.py
+frisbee/modules/__init__.py
+frisbee/modules/base.py
+frisbee/modules/bing.py
