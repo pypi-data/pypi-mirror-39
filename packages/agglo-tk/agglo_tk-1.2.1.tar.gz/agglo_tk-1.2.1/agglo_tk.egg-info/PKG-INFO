@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: agglo-tk
+Version: 1.2.1
+Summary: Library of various utils: io management, data selector, design patterns...
+Home-page: http://sourceforge.net/projects/agglo/
+Author: toubab
+Author-email: eti.laurent@gmail.com
+License: GPL/Proprietary
+Description: agglo_tool_kit is a library embedding various utils:
+        * io management : generic, string, scapy
+        * generic data selector
+        
+        you can install it with
+        <pre>
+        pip install agglo_tool_kit
+        <pre>
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 3 - Alpha
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development
