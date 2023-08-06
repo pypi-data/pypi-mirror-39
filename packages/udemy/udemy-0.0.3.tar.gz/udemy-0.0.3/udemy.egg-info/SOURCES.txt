@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+udemy/__init__.py
+udemy/udemy.py
+udemy.egg-info/PKG-INFO
+udemy.egg-info/SOURCES.txt
+udemy.egg-info/dependency_links.txt
+udemy.egg-info/not-zip-safe
+udemy.egg-info/requires.txt
+udemy.egg-info/top_level.txt
