@@ -1,0 +1,3 @@
+include generalobj/templates/*.html
+include generalobj/templates/blocks/*.html
+include generalobj/templatetags/*.py
