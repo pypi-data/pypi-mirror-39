@@ -1,0 +1,3 @@
+[console_scripts]
+db-check = db_check.__main__:run_db_check
+
