@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction &mdash; specviz v0.6.dev01880</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/astropy_logo.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> specviz
+          
+
+          
+            
+            <img src="_static/logo_icon.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6.dev01880
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launching.html">Launching SpecViz</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit_conversion.html">Unit Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arithmetic-layer.html">Arithmetic Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loader_wizard.html">Loader Wizard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_fitting.html">Model Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">Spectrum Statistics</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">specviz</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <img alt="_images/title_horizontal.png" src="_images/title_horizontal.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>SpecViz is a tool for visualization and quick-look analysis of 1D astronomical
+spectra. It is written in the Python programming language, and therefore can be
+run anywhere Python is supported (see <a class="reference internal" href="installation.html#specviz-installation"><span class="std std-ref">Installation</span></a>). It is based
+on the <a class="reference external" href="https://specutils.rtfd.io">Astropy Specutils packgage</a>. SpecViz is
+capable of reading data from FITS and ASCII tables, and supports the creation
+of custom loaders for user-specific data sets.</p>
+<p>SpecViz allows spectra to be easily plotted and examined. It supports
+flexible spectral units conversions, custom plotting attributes, interactive
+selections, multiple plots, and other features.</p>
+<p>SpecViz notably includes a measurement tool for spectral lines which
+enables the user, with a few mouse actions, to perform and record measurements.
+It has a model fitting capability that enables the user to create simple
+(e.g., single Gaussian) or multi-component models (e.g., multiple Gaussians for
+emission and absorption lines in addition to regions of flat continuua).
+SpecViz incorporates various methods for fitting such models to data. For more
+details, see <a class="reference internal" href="model_fitting.html#doc-model-fitting"><span class="std std-ref">Model Fitting</span></a>. The ability to overlay line label values
+is also supported. SpecViz also allows for overplotting or combining of spectra.</p>
+<p>SpecViz will soon include the ability to:</p>
+<ul class="simple">
+<li>Measure the average of multiple spectra, detrending, and apply Fourier filters.</li>
+<li>Interactively renormalize data from spectral templates.</li>
+<li>And more…</li>
+</ul>
+<div class="section" id="installation-and-setup">
+<h2>Installation and Setup<a class="headerlink" href="#installation-and-setup" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#install-via-anaconda">Install via Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#install-via-source">Install via source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#known-issues">Known Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="launching.html">Launching SpecViz</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="using-specviz">
+<h2>Using SpecViz<a class="headerlink" href="#using-specviz" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#loading-a-basic-spectrum">Loading a Basic Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#exporting-spectra">Exporting Spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#workspaces-and-plots">Workspaces and Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#using-regions">Using Regions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="unit_conversion.html">Unit Conversion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="unit_conversion.html#how-unit-conversion-works">How Unit Conversion Works</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arithmetic-layer.html">Arithmetic Widget</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arithmetic-layer.html#launching-arithmetic-editor">Launching Arithmetic Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arithmetic-layer.html#adding-arithmetic">Adding Arithmetic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="loader_wizard.html">Loader Wizard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_fitting.html">Model Fitting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="model_fitting.html#equation-editor">Equation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_fitting.html#model-names">Model names</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">Spectrum Statistics</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JDADF Developers
+      Last updated on 30 Nov 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

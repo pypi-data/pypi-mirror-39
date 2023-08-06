@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>test &mdash; specviz v0.6.dev01880</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/astropy_logo.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> specviz
+          
+
+          
+            
+            <img src="../_static/logo_icon.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6.dev01880
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../launching.html">Launching SpecViz</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_conversion.html">Unit Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arithmetic-layer.html">Arithmetic Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loader_wizard.html">Loader Wizard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model_fitting.html">Model Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics.html">Spectrum Statistics</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">specviz</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>test</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/specviz.test.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="test">
+<h1>test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="specviz.test">
+<code class="descclassname">specviz.</code><code class="descname">test</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/spacetelescope/specviz/tree/master/specviz/_astropy_init.py#L821" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#specviz.test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the tests for the package.</p>
+<p>This method builds arguments for and then calls <code class="docutils literal notranslate"><span class="pre">pytest.main</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>package</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str, optional</span></dt>
+<dd><p class="first last">The name of a specific package to test, e.g. ‘io.fits’ or
+‘utils’. Accepts comma separated string to specify multiple
+packages. If nothing is specified all default tests are run.</p>
+</dd>
+<dt><strong>args</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str, optional</span></dt>
+<dd><p class="first last">Additional arguments to be passed to <code class="docutils literal notranslate"><span class="pre">pytest.main</span></code> in the <code class="docutils literal notranslate"><span class="pre">args</span></code>
+keyword argument.</p>
+</dd>
+<dt><strong>docs_path</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str, optional</span></dt>
+<dd><p class="first last">The path to the documentation .rst files.</p>
+</dd>
+<dt><strong>open_files</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool, optional</span></dt>
+<dd><p class="first last">Fail when any tests leave files open.  Off by default, because
+this adds extra run time to the test suite.  Requires the
+<code class="docutils literal notranslate"><span class="pre">psutil</span></code> package.</p>
+</dd>
+<dt><strong>parallel</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int or ‘auto’, optional</span></dt>
+<dd><p class="first last">When provided, run the tests in parallel on the specified
+number of CPUs.  If parallel is <code class="docutils literal notranslate"><span class="pre">'auto'</span></code>, it will use the all
+the cores on the machine.  Requires the <code class="docutils literal notranslate"><span class="pre">pytest-xdist</span></code> plugin.</p>
+</dd>
+<dt><strong>pastebin</strong> <span class="classifier-delimiter">:</span> <span class="classifier">(‘failed’, ‘all’, None), optional</span></dt>
+<dd><p class="first last">Convenience option for turning on py.test pastebin output. Set to
+‘failed’ to upload info for failed tests, or ‘all’ to upload info
+for all tests.</p>
+</dd>
+<dt><strong>pdb</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool, optional</span></dt>
+<dd><p class="first last">Turn on PDB post-mortem analysis for failing tests. Same as
+specifying <code class="docutils literal notranslate"><span class="pre">--pdb</span></code> in <code class="docutils literal notranslate"><span class="pre">args</span></code>.</p>
+</dd>
+<dt><strong>pep8</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool, optional</span></dt>
+<dd><p class="first last">Turn on PEP8 checking via the pytest-pep8 plugin and disable normal
+tests. Same as specifying <code class="docutils literal notranslate"><span class="pre">--pep8</span> <span class="pre">-k</span> <span class="pre">pep8</span></code> in <code class="docutils literal notranslate"><span class="pre">args</span></code>.</p>
+</dd>
+<dt><strong>plugins</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list, optional</span></dt>
+<dd><p class="first last">Plugins to be passed to <code class="docutils literal notranslate"><span class="pre">pytest.main</span></code> in the <code class="docutils literal notranslate"><span class="pre">plugins</span></code> keyword
+argument.</p>
+</dd>
+<dt><strong>remote_data</strong> <span class="classifier-delimiter">:</span> <span class="classifier">{‘none’, ‘astropy’, ‘any’}, optional</span></dt>
+<dd><p class="first last">Controls whether to run tests marked with &#64;pytest.mark.remote_data. This can be
+set to run no tests with remote data (<code class="docutils literal notranslate"><span class="pre">none</span></code>), only ones that use
+data from <a class="reference external" href="http://data.astropy.org">http://data.astropy.org</a> (<code class="docutils literal notranslate"><span class="pre">astropy</span></code>), or all tests that
+use remote data (<code class="docutils literal notranslate"><span class="pre">any</span></code>). The default is <code class="docutils literal notranslate"><span class="pre">none</span></code>.</p>
+</dd>
+<dt><strong>repeat</strong> <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt>
+<dd><p class="first last">If set, specifies how many times each test should be run. This is
+useful for diagnosing sporadic failures.</p>
+</dd>
+<dt><strong>skip_docs</strong> <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional</span></dt>
+<dd><p class="first last">When <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.7)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, skips running the doctests in the .rst files.</p>
+</dd>
+<dt><strong>test_path</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str, optional</span></dt>
+<dd><p class="first last">Specify location to test by path. May be a single file or
+directory. Must be specified absolutely or relative to the
+calling directory.</p>
+</dd>
+<dt><strong>verbose</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool, optional</span></dt>
+<dd><p class="first last">Convenience option to turn on verbose output from py.test. Passing
+True is the same as specifying <code class="docutils literal notranslate"><span class="pre">-v</span></code> in <code class="docutils literal notranslate"><span class="pre">args</span></code>.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JDADF Developers
+      Last updated on 30 Nov 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Loader Wizard &mdash; specviz v0.6.dev01880</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/astropy_logo.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Model Fitting" href="model_fitting.html" />
+    <link rel="prev" title="Arithmetic Widget" href="arithmetic-layer.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> specviz
+          
+
+          
+            
+            <img src="_static/logo_icon.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6.dev01880
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launching.html">Launching SpecViz</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit_conversion.html">Unit Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arithmetic-layer.html">Arithmetic Widget</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Loader Wizard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_fitting.html">Model Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">Spectrum Statistics</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">specviz</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Loader Wizard</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/loader_wizard.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="loader-wizard">
+<span id="doc-loader-wizard"></span><h1>Loader Wizard<a class="headerlink" href="#loader-wizard" title="Permalink to this headline">¶</a></h1>
+<p>The loader wizard will assist users in generating a custom data loader. After
+working through the wizard a new loader python file can be saved to a
+directory of the user’s choice (default is the <code class="docutils literal notranslate"><span class="pre">~/.specutils</span></code> directory). The
+written loader will then be automatically added to the specutils loader
+registry and accessible from the file open dialog.</p>
+<img alt="_images/loader_wizard.png" src="_images/loader_wizard.png" />
+<p>The top field of the wizard requires additional parameters that may be needed
+by <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.table.Table.html#astropy.table.Table.read" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.table.Table.read</span></code></a> to open the data file.  The syntax of this field
+should match the syntax following the filename parameter in an
+<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.table.Table.html#astropy.table.Table.read" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.table.Table.read</span></code></a> call. For example, the grayed
+out text in the above figure shows an additional parameter of
+<code class="docutils literal notranslate"><span class="pre">format=&quot;ascii&quot;</span></code>.  For multiple additional parameters you should include
+commas, i.e. <code class="docutils literal notranslate"><span class="pre">format</span> <span class="pre">=</span> <span class="pre">&quot;ascii&quot;,</span> <span class="pre">comment</span> <span class="pre">=</span> <span class="pre">&quot;*&quot;</span></code>. See the <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.table.Table.html#astropy.table.Table" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.table.Table</span></code></a>
+documentation for the available options. Once this field is filled out, you can
+press the Refresh Data button and the wizard will reload the table from the
+provided file. If the <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.table.Table.html#astropy.table.Table.read" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code></a> command was
+successful, the remaining sections of the wizard will be populated.</p>
+<p>The bottom left field for the Loader Name determines the label assigned to the
+saved loader. When the <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">.py</span></code> button is clicked, it will open a new
+dialog for saving the loader file on your machine.  The loader label name and
+the filename can be different.</p>
+<p>You will not be able to save your new loader without valid units defined for
+the data section and the dispersion section. You can see a preview of the
+generated loader wizard by clicking on the <code class="docutils literal notranslate"><span class="pre">Preview</span> <span class="pre">.py</span></code> button.</p>
+<p>The wizard is only able to handle table data, and will not properly handle FITS
+image data.  Additionally, although not currently
+implemented, we plan on supporting bit masks in a future release.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="model_fitting.html" class="btn btn-neutral float-right" title="Model Fitting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="arithmetic-layer.html" class="btn btn-neutral" title="Arithmetic Widget" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JDADF Developers
+      Last updated on 30 Nov 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

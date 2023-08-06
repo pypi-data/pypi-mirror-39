@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Spectrum Statistics &mdash; specviz v0.6.dev01880</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/astropy_logo.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Model Fitting" href="model_fitting.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> specviz
+          
+
+          
+            
+            <img src="_static/logo_icon.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6.dev01880
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launching.html">Launching SpecViz</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit_conversion.html">Unit Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arithmetic-layer.html">Arithmetic Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loader_wizard.html">Loader Wizard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_fitting.html">Model Fitting</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Spectrum Statistics</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">specviz</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Spectrum Statistics</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/statistics.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="spectrum-statistics">
+<span id="specviz-stats-sidebar"></span><h1>Spectrum Statistics<a class="headerlink" href="#spectrum-statistics" title="Permalink to this headline">¶</a></h1>
+<p>11 statistic/analysis functions are calculated using the input spectrum
+or
+specified region of interest, depending on what is selected in the
+left side bar.  If a region of interest is selected, the statistic
+calculations are updated when that region of interest is changed.</p>
+<p>Calculations are done using the following functions:</p>
+<dl class="docutils">
+<dt>Mean</dt>
+<dd><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity.mean" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.units.Quantity.mean</span></code></a></dd>
+<dt>Median:</dt>
+<dd><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.median.html#numpy.median" title="(in NumPy v1.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.median</span></code></a></dd>
+<dt>Std Dev:</dt>
+<dd><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity.std" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.units.Quantity.std</span></code></a></dd>
+<dt>Centroid:</dt>
+<dd><a class="reference external" href="https://specutils.readthedocs.io/en/latest/api/specutils.analysis.centroid.html#specutils.analysis.centroid" title="(in specutils v0.6.dev1462)"><code class="xref py py-func docutils literal notranslate"><span class="pre">specutils.analysis.centroid()</span></code></a></dd>
+<dt>RMS:</dt>
+<dd>numpy.sqrt(flux.dot(flux) / len(flux))</dd>
+<dt>SNR:</dt>
+<dd><a class="reference external" href="https://specutils.readthedocs.io/en/latest/api/specutils.analysis.snr.html#specutils.analysis.snr" title="(in specutils v0.6.dev1462)"><code class="xref py py-func docutils literal notranslate"><span class="pre">specutils.analysis.snr()</span></code></a></dd>
+<dt>FWHM:</dt>
+<dd><a class="reference external" href="https://specutils.readthedocs.io/en/latest/api/specutils.analysis.fwhm.html#specutils.analysis.fwhm" title="(in specutils v0.6.dev1462)"><code class="xref py py-func docutils literal notranslate"><span class="pre">specutils.analysis.fwhm()</span></code></a></dd>
+<dt>Eq Width:</dt>
+<dd><a class="reference external" href="https://specutils.readthedocs.io/en/latest/api/specutils.analysis.equivalent_width.html#specutils.analysis.equivalent_width" title="(in specutils v0.6.dev1462)"><code class="xref py py-func docutils literal notranslate"><span class="pre">specutils.analysis.equivalent_width()</span></code></a></dd>
+<dt>Max:</dt>
+<dd><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.quantity.Quantity.html#astropy.units.quantity.Quantity.max" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.units.quantity.Quantity.max</span></code></a></dd>
+<dt>Min:</dt>
+<dd><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.quantity.Quantity.html#astropy.units.quantity.Quantity.min" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.units.quantity.Quantity.min</span></code></a></dd>
+<dt>Count Total:</dt>
+<dd><a class="reference external" href="https://specutils.readthedocs.io/en/latest/api/specutils.analysis.line_flux.html#specutils.analysis.line_flux" title="(in specutils v0.6.dev1462)"><code class="xref py py-func docutils literal notranslate"><span class="pre">specutils.analysis.line_flux()</span></code></a></dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="model_fitting.html" class="btn btn-neutral" title="Model Fitting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JDADF Developers
+      Last updated on 30 Nov 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

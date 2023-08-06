@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Model Fitting &mdash; specviz v0.6.dev01880</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/astropy_logo.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Spectrum Statistics" href="statistics.html" />
+    <link rel="prev" title="Loader Wizard" href="loader_wizard.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> specviz
+          
+
+          
+            
+            <img src="_static/logo_icon.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6.dev01880
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launching.html">Launching SpecViz</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit_conversion.html">Unit Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arithmetic-layer.html">Arithmetic Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loader_wizard.html">Loader Wizard</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Model Fitting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#equation-editor">Equation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#model-names">Model names</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">Spectrum Statistics</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">specviz</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Model Fitting</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/model_fitting.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="model-fitting">
+<span id="doc-model-fitting"></span><h1>Model Fitting<a class="headerlink" href="#model-fitting" title="Permalink to this headline">¶</a></h1>
+<p>SpecViz utilizes
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">Astropy</span> <span class="pre">Models</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecUtils</span> <span class="pre">Fitting</span></code>
+to fit models to its spectra. For example, you can fit one model to the
+continuum, another to an emission line of interest, and yet another to an
+absorption line.</p>
+<p>Currently, the following models are available:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SpecViz Model Name</th>
+<th class="head">Astropy Model Class</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Const</td>
+<td><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.modeling.functional_models.Const1D.html#astropy.modeling.functional_models.Const1D" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Const1D</span></code></a></td>
+</tr>
+<tr class="row-odd"><td>Gaussian</td>
+<td><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.modeling.functional_models.Gaussian1D.html#astropy.modeling.functional_models.Gaussian1D" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gaussian1D</span></code></a></td>
+</tr>
+<tr class="row-even"><td>Linear</td>
+<td><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.modeling.functional_models.Linear1D.html#astropy.modeling.functional_models.Linear1D" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Linear1D</span></code></a></td>
+</tr>
+<tr class="row-odd"><td>Lorentz</td>
+<td><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.modeling.functional_models.Lorentz1D.html#astropy.modeling.functional_models.Lorentz1D" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Lorentz1D</span></code></a></td>
+</tr>
+<tr class="row-even"><td>Voigt</td>
+<td><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.modeling.functional_models.Voigt1D.html#astropy.modeling.functional_models.Voigt1D" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Voigt1D</span></code></a></td>
+</tr>
+<tr class="row-odd"><td>Polynomial</td>
+<td><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.modeling.polynomial.Polynomial1D.html#astropy.modeling.polynomial.Polynomial1D" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Polynomial1D</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The models can be fitted with the following fitters:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SpecViz Fitter Name</th>
+<th class="head">Astropy Fitter Class</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Levenberg-Marquardt</td>
+<td><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.modeling.fitting.LevMarLSQFitter.html#astropy.modeling.fitting.LevMarLSQFitter" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LevMarLSQFitter</span></code></a></td>
+</tr>
+<tr class="row-odd"><td>Simplex</td>
+<td><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.modeling.fitting.SimplexLSQFitter.html#astropy.modeling.fitting.SimplexLSQFitter" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SimplexLSQFitter</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>To use a model:</p>
+<ol class="arabic simple">
+<li>Create a new <code class="docutils literal notranslate"><span class="pre">model</span> <span class="pre">data</span> <span class="pre">item</span></code> by clicking on the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Model</span></code> button on the WorkSpace toolbar.</li>
+<li>Select the layer you wish to operate on from the combination box at the
+bottom of the fitting window. For example, you can choose the layer containing your emission
+or absorption line.</li>
+<li>Create and position a region of interest (ROI). Multiple ROIs can be used. SpecViz fits the data under all the ROIs.</li>
+<li>Select the desired model from the green <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Model</span></code> drop-down box to add it to <code class="docutils literal notranslate"><span class="pre">Current</span> <span class="pre">Models</span></code>.</li>
+<li>If desired, repeat the above step to add additional models.</li>
+</ol>
+<p>To edit model parameters or enter a better first estimate of the model
+parameters:</p>
+<ol class="arabic simple">
+<li>If desired, double-click on the model name to rename it. When you see a
+blinking cursor, enter its new name and press “Enter”.</li>
+<li>Expand the model listing under the model name.</li>
+<li>Double-click on the desired model parameter value in the listing.
+When you see a blinking cursor, enter the new value and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</li>
+</ol>
+<p>To fit a model:</p>
+<ol class="arabic simple">
+<li>Select the layer you wish to operate on from the combination box at the
+bottom of the fitting window.</li>
+<li>Adjust model parameter values to approximate fit.</li>
+<li>Click the lock icon next to any parameter to choose whether it should be kept
+fixed (closed lock) or allowed to vary (open lock) during fitting.</li>
+<li>Click on the settings icon at the bottom of the model fitting window select options such as the desired fitter and maximum iterations.</li>
+<li>Check the model’s <code class="docutils literal notranslate"><span class="pre">Equation</span> <span class="pre">Editor</span></code> by clicking the calculator button. It will pop up with the current model arithmetic. Review. edit and press ok when done.</li>
+<li>Click the blue <code class="docutils literal notranslate"><span class="pre">Fit</span> <span class="pre">Model</span></code> button at the bottom of the fitting window.</li>
+<li>The associated model parameters will be adjusted accordingly.</li>
+</ol>
+<div class="section" id="equation-editor">
+<h2>Equation Editor<a class="headerlink" href="#equation-editor" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">Equation</span> <span class="pre">Editor</span></code> text box is used to define the relationship between
+different models for the same <code class="docutils literal notranslate"><span class="pre">model</span> <span class="pre">data</span> <span class="pre">item</span></code>. The editor can be launched by clicking the calculator Botton at the bottom of the model fitting window. If nothing is defined, the default is to
+add all the models together. To describe a non-default model relationship,
+adjust the math operators, as shown in the examples below and
+then press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> to produce the compound model:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Linear1</span> <span class="o">+</span> <span class="n">Gaussian1</span>
+</pre></div>
+</div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Linear1</span> <span class="o">*</span> <span class="n">Gaussian1</span>
+</pre></div>
+</div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Gaussian1</span> <span class="o">-</span> <span class="n">Gaussian2</span>
+</pre></div>
+</div>
+<p>The entity that results from lumping together all the models, and combining them
+either using the arithmetic behavior expression, or just adding them all together,
+is called a “compound model”.</p>
+</div>
+<div class="section" id="model-names">
+<h2>Model names<a class="headerlink" href="#model-names" title="Permalink to this headline">¶</a></h2>
+<p>When added to the <code class="docutils literal notranslate"><span class="pre">Current</span> <span class="pre">Models</span></code> list, a model will receive a default name
+that is generated from the model type (as listed in the drop down model selector)
+plus a running numerical suffix.</p>
+<p>These names can be changed by clicking on the default name and entering a new
+name. Note that changing model names will require that any expression in
+the <code class="docutils literal notranslate"><span class="pre">Equation</span> <span class="pre">Editor</span></code> text box be edited accordingly.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="statistics.html" class="btn btn-neutral float-right" title="Spectrum Statistics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="loader_wizard.html" class="btn btn-neutral" title="Loader Wizard" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JDADF Developers
+      Last updated on 30 Nov 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

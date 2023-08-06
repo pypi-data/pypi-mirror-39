@@ -1,0 +1,184 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Getting Started &#8212; specviz v0.6.dev01879</title>
+    <link rel="stylesheet" href="_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <link rel="shortcut icon" href="_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Unit Conversion" href="unit_conversion.html" />
+    <link rel="prev" title="Launching SpecViz" href="launching.html" />
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+<script type="text/javascript" src="_static/copybutton.js"></script>
+
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="index.html"><span id="logotext1">spec</span><span id="logotext2">viz</span><span id="logotext3">:docs</span></a>
+  <ul>
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="genindex.html">Index</a></li>
+    <li><a title="Module Index" href="py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li class="right">
+	<a href="unit_conversion.html" title="Unit Conversion">
+	  next &raquo;
+	</a>
+      </li>
+      <li class="right">
+	<a href="launching.html" title="Launching SpecViz">
+	  &laquo; previous
+	</a>
+	 |
+      </li>
+      <li>
+	<a href="index.html">specviz v0.6.dev01879</a>
+	 &#187;
+      </li>
+      
+      <li>Getting Started</li> 
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="getting-started">
+<span id="specviz-start"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="loading-a-basic-spectrum">
+<h2>Loading a Basic Spectrum<a class="headerlink" href="#loading-a-basic-spectrum" title="Permalink to this headline">¶</a></h2>
+<p>Lets start by loading a simple, known spectrum. If you followed the steps in
+<a class="reference internal" href="launching.html#specviz-launching"><span class="std std-ref">Launching SpecViz</span></a>, you should see the specviz window up, but without a
+spectrum.</p>
+<p>There are two options to load a spectrum data file:</p>
+<ol class="arabic simple">
+<li>Load the spectrum with a pre-defined data loader, or a custom
+user-defined data loader.</li>
+<li>Utilize the <a class="reference internal" href="loader_wizard.html"><span class="doc">Loader Wizard</span></a> to create a new
+custom loader, and use that to load your data.</li>
+</ol>
+<p>Either way, the specific loader for your data can be selected from the drop
+down list in the open file dialog</p>
+<img alt="_images/open_file_dialog.png" src="_images/open_file_dialog.png" />
+<img alt="_images/loader_select.png" src="_images/loader_select.png" />
+<p>Once the file has been loaded, you will be greeted with a plotted spectrum.</p>
+</div>
+<div class="section" id="exporting-spectra">
+<h2>Exporting Spectra<a class="headerlink" href="#exporting-spectra" title="Permalink to this headline">¶</a></h2>
+<p>A user can export a given spectrum in the data list by highlighting the
+spectrum and clicking the <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">Data</span></code> button in the main toolbar. This
+will provide the user with a save file dialog where they may choose where to
+save the exported spectrum file.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.io.ascii.Ecsv.html">ECSV</a>
+is currently the only supported export format. This will change in the
+future as more exporting formats are supported in the specutils package.</p>
+</div>
+</div>
+<div class="section" id="workspaces-and-plots">
+<h2>Workspaces and Plots<a class="headerlink" href="#workspaces-and-plots" title="Permalink to this headline">¶</a></h2>
+<p>Loaded data is added to the global data list for the entire workspace. A
+workspace is the currently instance of the SpecViz application, and more can
+be created by selecting <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">New</span> <span class="pre">Workspace</span></code>. Workspaces are completely
+independent of one another, and the user can have as many workspaces are they
+wish.</p>
+<p>Plots are the visual representation of a selection of data items within a
+particular workspace. A user can have as many plots as they wish, and new plots
+can be created by clicking the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Plot</span></code> button in the main toolbar.
+Likewise, plot windows can be removed by clicking the <code class="docutils literal notranslate"><span class="pre">X</span></code> button in the plot
+tab.</p>
+<p>Plots all share the same data list within a workspace. The caveat is that plots
+can only show data that have equivalent units. Any data that cannot be added
+to a plot will show as disabled in the data list.</p>
+<img alt="_images/disabled_data_item.png" src="_images/disabled_data_item.png" />
+<p>Clicking the checkbox next to an item in the data list will plot the data
+item on the current plot.</p>
+</div>
+<div class="section" id="using-regions">
+<h2>Using Regions<a class="headerlink" href="#using-regions" title="Permalink to this headline">¶</a></h2>
+<p>Interesting regions can be defined by adding an ROI to the plot. This is done
+via the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Region</span></code> button in the plot toolbar. Multiple regions can be
+utilized when defining e.g. areas the user might wish to use for model fitting.</p>
+<p>A blue highlighted region is considered the _active_ region, and will in cases
+where it is imported (e.g. statistics), will be used to define the region
+used in the calculations.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently, only one region can be the “selected” region. This will change
+in the future to allow a subset of plotted region to be defined as
+“selected”.</p>
+</div>
+<p>Removing a region is accomplished by clicking the <code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">Region</span></code> button.
+Only the currently selected region is removed.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/specviz_logo.png" alt="Logo"/>
+            </a></p><h3>Page Contents</h3>
+<ul>
+<li><a class="reference internal" href="#">Getting Started</a><ul>
+<li><a class="reference internal" href="#loading-a-basic-spectrum">Loading a Basic Spectrum</a></li>
+<li><a class="reference internal" href="#exporting-spectra">Exporting Spectra</a></li>
+<li><a class="reference internal" href="#workspaces-and-plots">Workspaces and Plots</a></li>
+<li><a class="reference internal" href="#using-regions">Using Regions</a></li>
+</ul>
+</li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right">
+    <a href="http://github.com/spacetelescope/specviz/tree/master/docs/getting-started.rst">Edit This Page on Github</a> &nbsp;
+    <a href="_sources/getting-started.rst.txt"
+       rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2018, JDADF Developers.<br/>
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.2. &nbsp;
+    Last built 30 Nov 2018. <br/>
+  </p>
+</footer>
+  </body>
+</html>

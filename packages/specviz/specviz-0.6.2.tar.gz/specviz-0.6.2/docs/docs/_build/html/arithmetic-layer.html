@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Arithmetic Widget &mdash; specviz v0.6.dev01880</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/astropy_logo.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Loader Wizard" href="loader_wizard.html" />
+    <link rel="prev" title="Unit Conversion" href="unit_conversion.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> specviz
+          
+
+          
+            
+            <img src="_static/logo_icon.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6.dev01880
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launching.html">Launching SpecViz</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit_conversion.html">Unit Conversion</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Arithmetic Widget</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#launching-arithmetic-editor">Launching Arithmetic Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-arithmetic">Adding Arithmetic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="loader_wizard.html">Loader Wizard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_fitting.html">Model Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">Spectrum Statistics</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">specviz</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Arithmetic Widget</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/arithmetic-layer.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="arithmetic-widget">
+<span id="specviz-arithmetic"></span><h1>Arithmetic Widget<a class="headerlink" href="#arithmetic-widget" title="Permalink to this headline">¶</a></h1>
+<p>The Arithmetic widget allows users to perform basic arithmetic on their spectra
+that are loaded into Specviz. The arithmetic editor accepts data loaded into the
+Specviz session and only outputs type <a class="reference external" href="https://specutils.readthedocs.io/en/latest/api/specutils.Spectrum1D.html">specutils.Spectrum1D</a>.
+This means the editor allows users to perform the same arithmatic operations that are available with
+<a class="reference external" href="https://specutils.readthedocs.io/en/latest/api/specutils.Spectrum1D.html#specutils.Spectrum1D" title="(in specutils v0.6.dev1462)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">specutils.Spectrum1D</span></code></a> objects.</p>
+<div class="section" id="launching-arithmetic-editor">
+<h2>Launching Arithmetic Editor<a class="headerlink" href="#launching-arithmetic-editor" title="Permalink to this headline">¶</a></h2>
+<p>Lets start by loading the arithmetic layer widget located on the tool bar.
+Upon clicking you will be prompted with the arithmetic dialog</p>
+<img alt="_images/arithmetic-layer.png" src="_images/arithmetic-layer.png" />
+<p>From this dialog you can add, edit or remove arithmetic items from the
+editor. We will start by clicking the New Arithmetic Attribute button located in
+top left hand corner of the Editor dialog. Upon clicking you will be prompted with
+the editor dialog</p>
+<img alt="_images/equation_editor.png" src="_images/equation_editor.png" />
+</div>
+<div class="section" id="adding-arithmetic">
+<h2>Adding Arithmetic<a class="headerlink" href="#adding-arithmetic" title="Permalink to this headline">¶</a></h2>
+<p>Once the Arithmetic widget is launched, spectra and their components can be added
+here by typing the names directly surrounded by ‘{}’ or by selecting the spectrum
+in the dropdown bar and clicking insert. We are going to take the preloaded spectrum
+(<code class="docutils literal notranslate"><span class="pre">science_spectrum</span></code>) and create a new spectrum that is double the flux of <code class="docutils literal notranslate"><span class="pre">science_spectrum</span></code>
+and call it <code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">science_spectrum</span></code>.</p>
+<img alt="_images/valid_expression.png" src="_images/valid_expression.png" />
+<p>To validate arithmetic, click the OK button located at the bottom right hand corner of the
+dialog box.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If the python syntax is invalid, the editor will not allow you to continue! The editor
+can only return <a class="reference external" href="https://specutils.readthedocs.io/en/latest/api/specutils.Spectrum1D.html">SpecUtils Spectrum1D</a>
+objects.</p>
+</div>
+<p>Now, there will be a new data item located in the data collection called <code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">science_spectrum</span></code>.</p>
+<img alt="_images/new_expression.png" src="_images/new_expression.png" />
+<p>To show the result in the plotting window, select the data item by clicking the box next <code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">science_spectrum</span></code>.</p>
+<img alt="_images/plotted_expression.png" src="_images/plotted_expression.png" />
+<p>This is a very simple example of the arithmetic you can perform with the SpecViz arithmetic editor. There are more example
+expressions located at the bottom of the <code class="docutils literal notranslate"><span class="pre">equation</span> <span class="pre">editor</span></code> dialog.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="loader_wizard.html" class="btn btn-neutral float-right" title="Loader Wizard" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="unit_conversion.html" class="btn btn-neutral" title="Unit Conversion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JDADF Developers
+      Last updated on 30 Nov 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

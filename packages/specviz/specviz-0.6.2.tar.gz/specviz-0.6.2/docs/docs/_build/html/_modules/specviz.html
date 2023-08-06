@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>specviz &mdash; specviz v0.6.dev01880</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/astropy_logo.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> specviz
+          
+
+          
+            
+            <img src="../_static/logo_icon.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6.dev01880
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../launching.html">Launching SpecViz</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_conversion.html">Unit Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arithmetic-layer.html">Arithmetic Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loader_wizard.html">Loader Wizard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model_fitting.html">Model Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics.html">Spectrum Statistics</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">specviz</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Module code</a> &raquo;</li>
+        
+      <li>specviz</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for specviz</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Licensed under a 3-clause BSD style license - see LICENSE.rst</span>
+
+<span class="c1"># Packages may add whatever they like to this file, but</span>
+<span class="c1"># should keep this content at the top.</span>
+<span class="c1"># ----------------------------------------------------------------------------</span>
+<span class="kn">from</span> <span class="nn">._astropy_init</span> <span class="k">import</span> <span class="o">*</span>
+<span class="c1"># ----------------------------------------------------------------------------</span>
+
+<span class="c1"># Enforce Python version check during package import.</span>
+<span class="c1"># This is the same check as the one at the top of setup.py</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="n">__minimum_python_version__</span> <span class="o">=</span> <span class="s2">&quot;3.5&quot;</span>
+
+<div class="viewcode-block" id="UnsupportedPythonError"><a class="viewcode-back" href="../api/specviz.UnsupportedPythonError.html#specviz.UnsupportedPythonError">[docs]</a><span class="k">class</span> <span class="nc">UnsupportedPythonError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">pass</span></div>
+
+<span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&lt;</span> <span class="nb">tuple</span><span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">__minimum_python_version__</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">))):</span>
+    <span class="k">raise</span> <span class="n">UnsupportedPythonError</span><span class="p">(</span><span class="s2">&quot;specviz does not support Python &lt; </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">__minimum_python_version__</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">_ASTROPY_SETUP_</span><span class="p">:</span>
+
+    <span class="kn">import</span> <span class="nn">pyqtgraph</span> <span class="k">as</span> <span class="nn">pg</span>
+    <span class="kn">from</span> <span class="nn">configparser</span> <span class="k">import</span> <span class="n">ConfigParser</span>
+
+    <span class="c1"># Setup logging level and display</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;specviz [</span><span class="si">%(levelname)-8s</span><span class="s1">]: </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span>
+                        <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+
+<div class="viewcode-block" id="load_settings"><a class="viewcode-back" href="../api/specviz.load_settings.html#specviz.load_settings">[docs]</a>    <span class="k">def</span> <span class="nf">load_settings</span><span class="p">():</span>
+        <span class="c1"># Get the path relative to the user&#39;s home directory</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s2">&quot;~/.specviz&quot;</span><span class="p">)</span>
+
+        <span class="c1"># If the directory doesn&#39;t exist, create it</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="c1"># Parse user settings</span>
+        <span class="n">parser</span> <span class="o">=</span> <span class="n">ConfigParser</span><span class="p">()</span>
+        <span class="n">parser</span><span class="p">[</span><span class="s1">&#39;PyQtGraph&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># Check if there already exists a pyqtgraph settings file</span>
+        <span class="n">user_settings_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;user_settings.ini&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">user_settings_path</span><span class="p">):</span>
+            <span class="n">parser</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">user_settings_path</span><span class="p">)</span>
+
+        <span class="n">pyqtgraph_settings</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;leftButtonPan&#39;</span><span class="p">:</span> <span class="n">parser</span><span class="p">[</span><span class="s1">&#39;PyQtGraph&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">getboolean</span><span class="p">(</span><span class="s1">&#39;leftbuttonpan&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+            <span class="s1">&#39;foreground&#39;</span><span class="p">:</span> <span class="n">parser</span><span class="p">[</span><span class="s1">&#39;PyQtGraph&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;foreground&#39;</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;background&#39;</span><span class="p">:</span> <span class="n">parser</span><span class="p">[</span><span class="s1">&#39;PyQtGraph&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;background&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;antialias&#39;</span><span class="p">:</span> <span class="n">parser</span><span class="p">[</span><span class="s1">&#39;PyQtGraph&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">getboolean</span><span class="p">(</span><span class="s1">&#39;antialias&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+            <span class="s1">&#39;imageAxisOrder&#39;</span><span class="p">:</span> <span class="n">parser</span><span class="p">[</span><span class="s1">&#39;PyQtGraph&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;imageaxisorder&#39;</span><span class="p">,</span> <span class="s1">&#39;col-major&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;useWeave&#39;</span><span class="p">:</span> <span class="n">parser</span><span class="p">[</span><span class="s1">&#39;PyQtGraph&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">getboolean</span><span class="p">(</span><span class="s1">&#39;useweave&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+            <span class="s1">&#39;weaveDebug&#39;</span><span class="p">:</span> <span class="n">parser</span><span class="p">[</span><span class="s1">&#39;PyQtGraph&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">getboolean</span><span class="p">(</span><span class="s1">&#39;weavedebug&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+            <span class="s1">&#39;useOpenGL&#39;</span><span class="p">:</span> <span class="n">parser</span><span class="p">[</span><span class="s1">&#39;PyQtGraph&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">getboolean</span><span class="p">(</span><span class="s1">&#39;useopengl&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">user_settings_path</span><span class="p">):</span>
+            <span class="n">parser</span><span class="p">[</span><span class="s1">&#39;PyQtGraph&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pyqtgraph_settings</span>
+
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">user_settings_path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">config_file</span><span class="p">:</span>
+                <span class="n">parser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span>
+
+        <span class="c1"># Set the pyqtgraph options</span>
+        <span class="n">pg</span><span class="o">.</span><span class="n">setConfigOptions</span><span class="p">(</span><span class="o">**</span><span class="n">pyqtgraph_settings</span><span class="p">)</span></div>
+
+    <span class="n">load_settings</span><span class="p">()</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JDADF Developers
+      Last updated on 30 Nov 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

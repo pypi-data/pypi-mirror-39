@@ -1,0 +1,135 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Right Sidebar Statistics Display &#8212; specviz v0.6.dev01879</title>
+    <link rel="stylesheet" href="_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <link rel="shortcut icon" href="_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Model Fitting" href="model_fitting.html" />
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+<script type="text/javascript" src="_static/copybutton.js"></script>
+
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="index.html"><span id="logotext1">spec</span><span id="logotext2">viz</span><span id="logotext3">:docs</span></a>
+  <ul>
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="genindex.html">Index</a></li>
+    <li><a title="Module Index" href="py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li class="right">
+	<a href="model_fitting.html" title="Model Fitting">
+	  &laquo; previous
+	</a>
+	
+      </li>
+      <li>
+	<a href="index.html">specviz v0.6.dev01879</a>
+	 &#187;
+      </li>
+      
+      <li>Right Sidebar Statistics Display</li> 
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="right-sidebar-statistics-display">
+<span id="specviz-stats-sidebar"></span><h1>Right Sidebar Statistics Display<a class="headerlink" href="#right-sidebar-statistics-display" title="Permalink to this headline">¶</a></h1>
+<p>11 statistic/analysis functions are calculated using the input spectrum
+or
+specified region of interest, depending on what is selected in the
+left side bar.  If a region of interest is selected, the statistic
+calculations are updated when that region of interest is changed.</p>
+<p>Calculations are done using the following functions:</p>
+<dl class="docutils">
+<dt>Mean</dt>
+<dd><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity.mean" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.units.Quantity.mean</span></code></a></dd>
+<dt>Median:</dt>
+<dd><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.median.html#numpy.median" title="(in NumPy v1.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.median</span></code></a></dd>
+<dt>Std Dev:</dt>
+<dd><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity.std" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.units.Quantity.std</span></code></a></dd>
+<dt>Centroid:</dt>
+<dd><a class="reference external" href="https://specutils.readthedocs.io/en/latest/api/specutils.analysis.centroid.html#specutils.analysis.centroid" title="(in specutils v0.6.dev1462)"><code class="xref py py-func docutils literal notranslate"><span class="pre">specutils.analysis.centroid()</span></code></a></dd>
+<dt>RMS:</dt>
+<dd>numpy.sqrt(flux.dot(flux) / len(flux))</dd>
+<dt>SNR:</dt>
+<dd><a class="reference external" href="https://specutils.readthedocs.io/en/latest/api/specutils.analysis.snr.html#specutils.analysis.snr" title="(in specutils v0.6.dev1462)"><code class="xref py py-func docutils literal notranslate"><span class="pre">specutils.analysis.snr()</span></code></a></dd>
+<dt>FWHM:</dt>
+<dd><a class="reference external" href="https://specutils.readthedocs.io/en/latest/api/specutils.analysis.fwhm.html#specutils.analysis.fwhm" title="(in specutils v0.6.dev1462)"><code class="xref py py-func docutils literal notranslate"><span class="pre">specutils.analysis.fwhm()</span></code></a></dd>
+<dt>Eq Width:</dt>
+<dd><a class="reference external" href="https://specutils.readthedocs.io/en/latest/api/specutils.analysis.equivalent_width.html#specutils.analysis.equivalent_width" title="(in specutils v0.6.dev1462)"><code class="xref py py-func docutils literal notranslate"><span class="pre">specutils.analysis.equivalent_width()</span></code></a></dd>
+<dt>Max:</dt>
+<dd><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.quantity.Quantity.html#astropy.units.quantity.Quantity.max" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.units.quantity.Quantity.max</span></code></a></dd>
+<dt>Min:</dt>
+<dd><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.quantity.Quantity.html#astropy.units.quantity.Quantity.min" title="(in Astropy v3.0.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.units.quantity.Quantity.min</span></code></a></dd>
+<dt>Count Total:</dt>
+<dd><a class="reference external" href="https://specutils.readthedocs.io/en/latest/api/specutils.analysis.line_flux.html#specutils.analysis.line_flux" title="(in specutils v0.6.dev1462)"><code class="xref py py-func docutils literal notranslate"><span class="pre">specutils.analysis.line_flux()</span></code></a></dd>
+</dl>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/specviz_logo.png" alt="Logo"/>
+            </a></p><h3>Page Contents</h3>
+<ul>
+<li><a class="reference internal" href="#">Right Sidebar Statistics Display</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right">
+    <a href="http://github.com/spacetelescope/specviz/tree/master/docs/stats_sidebar.rst">Edit This Page on Github</a> &nbsp;
+    <a href="_sources/stats_sidebar.rst.txt"
+       rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2018, JDADF Developers.<br/>
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.2. &nbsp;
+    Last built 30 Nov 2018. <br/>
+  </p>
+</footer>
+  </body>
+</html>

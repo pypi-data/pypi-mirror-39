@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation &mdash; specviz v0.6.dev01880</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/astropy_logo.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Launching SpecViz" href="launching.html" />
+    <link rel="prev" title="Introduction" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> specviz
+          
+
+          
+            
+            <img src="_static/logo_icon.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6.dev01880
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install-via-anaconda">Install via Anaconda</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#uninstalling">Uninstalling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#install-via-source">Install via source</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#by-using-pip">By using <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#by-cloning">By cloning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyqt-bindings">PyQt bindings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Uninstalling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#known-issues">Known Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="launching.html">Launching SpecViz</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit_conversion.html">Unit Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arithmetic-layer.html">Arithmetic Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loader_wizard.html">Loader Wizard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_fitting.html">Model Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">Spectrum Statistics</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">specviz</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<span id="specviz-installation"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>As a Python package, SpecViz is installable via any approach that is available
+for installing Python packages.  In practice the easiest way is often using the
+the <a class="reference external" href="https://anaconda.org">Anaconda</a> package manager, but several other
+options are available.  These are detailed below</p>
+<p>distributed through the <a class="reference external" href="https://anaconda.org">Anaconda</a> package
+manager. Specifically, it lives within Space Telescope Science Institute’s
+<a class="reference external" href="https://astroconda.readthedocs.io/">AstroConda</a> channel.</p>
+<div class="section" id="install-via-anaconda">
+<h2>Install via Anaconda<a class="headerlink" href="#install-via-anaconda" title="Permalink to this headline">¶</a></h2>
+<p>If you do not have Anaconda, please follow the <a class="reference external" href="https://www.continuum.io/downloads">instructions here</a> to install it, or scroll down for
+manual installation of SpecViz.</p>
+<p>If you are using the Space Telescope Science Institute’s
+<a class="reference external" href="https://astroconda.readthedocs.io/">AstroConda</a> channel,  then all you have
+to do to install SpecViz is simply type the following at any Bash terminal
+prompt:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda install specviz
+</pre></div>
+</div>
+<p>If you do not have AstroConda installed, you can still install SpecViz from
+AstrocConda by specifying the channel in your install command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda install --channel http://ssb.stsci.edu/astroconda specviz
+</pre></div>
+</div>
+<p>At this point, you’re done! You can launch SpecViz by typing the following at
+any terminal:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> specviz
+</pre></div>
+</div>
+<div class="section" id="uninstalling">
+<h3>Uninstalling<a class="headerlink" href="#uninstalling" title="Permalink to this headline">¶</a></h3>
+<p>To uninstall via Anaconda, simply type the following at a command line:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda uninstall specviz
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="install-via-source">
+<h2>Install via source<a class="headerlink" href="#install-via-source" title="Permalink to this headline">¶</a></h2>
+<p>SpecViz can also be installed manually using the source code followint the
+instructions below. The dependencies are listed in the <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> file, and
+therefore most of them will be handled automatically by the setup functions,
+the exception to this is  the exception of PyQt, which may require manual
+installation.</p>
+<div class="section" id="by-using-pip">
+<h3>By using <code class="docutils literal notranslate"><span class="pre">pip</span></code><a class="headerlink" href="#by-using-pip" title="Permalink to this headline">¶</a></h3>
+<p>Clone the SpecViz repository somewhere on your system, and install locally using
+<code class="docutils literal notranslate"><span class="pre">pip</span></code>. If you are using an Anaconda virtual environment, please be sure to
+activate it first before installing: <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">source</span> <span class="pre">activate</span> <span class="pre">&lt;environment_name&gt;</span></code>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install git+http://github.com/spacetelescope/specviz.git@v0.4.4
+</pre></div>
+</div>
+<p>This uses the <code class="docutils literal notranslate"><span class="pre">pip</span></code> installation system, so please note that</p>
+<ol class="arabic simple">
+<li>You need to have <code class="docutils literal notranslate"><span class="pre">pip</span></code> installed (included in most Python installations).</li>
+<li>You do <strong>not</strong> need to run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">install</span></code>.</li>
+<li>You do <strong>not</strong> need to install the dependencies by hand (except for PyQt).</li>
+</ol>
+<p>Likewise, the <code class="docutils literal notranslate"><span class="pre">pip</span></code> command will use your default Python to install.
+You can specify by using <code class="docutils literal notranslate"><span class="pre">pip2</span></code> or <code class="docutils literal notranslate"><span class="pre">pip3</span></code>, if you’re not using a virtual
+environment.</p>
+</div>
+<div class="section" id="by-cloning">
+<h3>By cloning<a class="headerlink" href="#by-cloning" title="Permalink to this headline">¶</a></h3>
+<p>You may also install by cloning the repository directly</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git clone https://github.com/spacetelescope/specviz.git
+<span class="gp">$</span> <span class="nb">cd</span> specviz
+<span class="gp">$</span> git checkout tags/v0.3.0
+<span class="gp">$</span> python setup.py install
+</pre></div>
+</div>
+</div>
+<div class="section" id="pyqt-bindings">
+<h3>PyQt bindings<a class="headerlink" href="#pyqt-bindings" title="Permalink to this headline">¶</a></h3>
+<p>SpecViz requires PyQt. Currently, only python environments with 3.5 or higher
+installed can use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install PyQt5, in which case simply type:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install pyqt5
+</pre></div>
+</div>
+<p>to install it on your system.</p>
+<p>In any other case, PyQt can be installed via anaconda:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda install pyqt
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Uninstalling<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>To uninstall via <code class="docutils literal notranslate"><span class="pre">pip</span></code>, simply type the following at a command line:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip uninstall specviz
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="known-issues">
+<h2>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
+<p>On a Mac with Qt5, depending on exactly how you have set up Anaconda, you might
+see the following error after following the above instructions:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">This application failed to start because it could not find or load the Qt platform plugin &quot;cocoa&quot;.</span>
+
+<span class="go">Reinstalling the application may fix this problem.</span>
+</pre></div>
+</div>
+<p>If you see this message, you have encountered an incompatibility between
+Anaconda’s packaging of Qt4 and Qt5. The workaround is to uninstall Qt4 with the
+following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda uninstall pyqt qt
+</pre></div>
+</div>
+<p>and SpecViz should now happily run.</p>
+<p>Conversely, if you’ve had PyQt5 installed previously and you wish to run the
+PyQt4 version, you may run into a similar error:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> RuntimeError: the PyQt4.QtCore and PyQt5.QtCore modules both wrap the
+<span class="go">QObject class</span>
+</pre></div>
+</div>
+<p>This issue can be solved with the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda uninstall pyqt5 qt5
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="launching.html" class="btn btn-neutral float-right" title="Launching SpecViz" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JDADF Developers
+      Last updated on 30 Nov 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

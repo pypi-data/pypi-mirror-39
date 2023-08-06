@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting Started &mdash; specviz v0.6.dev01880</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/astropy_logo.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Unit Conversion" href="unit_conversion.html" />
+    <link rel="prev" title="Launching SpecViz" href="launching.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> specviz
+          
+
+          
+            
+            <img src="_static/logo_icon.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6.dev01880
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launching.html">Launching SpecViz</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#loading-a-basic-spectrum">Loading a Basic Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exporting-spectra">Exporting Spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#workspaces-and-plots">Workspaces and Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-regions">Using Regions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="unit_conversion.html">Unit Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arithmetic-layer.html">Arithmetic Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loader_wizard.html">Loader Wizard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_fitting.html">Model Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">Spectrum Statistics</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">specviz</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Getting Started</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/getting_started.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started">
+<span id="specviz-start"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="loading-a-basic-spectrum">
+<h2>Loading a Basic Spectrum<a class="headerlink" href="#loading-a-basic-spectrum" title="Permalink to this headline">¶</a></h2>
+<p>Lets start by loading a simple, known spectrum. If you followed the steps in
+<a class="reference internal" href="launching.html#specviz-launching"><span class="std std-ref">Launching SpecViz</span></a>, you should see the specviz window up, but without a
+spectrum.</p>
+<p>There are two options to load a spectrum data file:</p>
+<ol class="arabic simple">
+<li>Load the spectrum with a pre-defined data loader, or a custom user-defined data loader.</li>
+<li>Utilize the <a class="reference internal" href="loader_wizard.html"><span class="doc">Loader Wizard</span></a> to create a new custom loader, and use that to load your data.</li>
+</ol>
+<p>Either way, the specific loader for your data can be selected from the drop
+down list in the open file dialog</p>
+<img alt="_images/open_file_dialog.png" src="_images/open_file_dialog.png" />
+<img alt="_images/loader_select.png" src="_images/loader_select.png" />
+<p>Once the file has been loaded, you will be greeted with a plotted spectrum.</p>
+</div>
+<div class="section" id="exporting-spectra">
+<h2>Exporting Spectra<a class="headerlink" href="#exporting-spectra" title="Permalink to this headline">¶</a></h2>
+<p>A user can export a given spectrum in the data list by highlighting the
+spectrum and clicking the <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">Data</span></code> button in the main toolbar. This
+will provide the user with a save file dialog where they may choose where to
+save the exported spectrum file.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.io.ascii.Ecsv.html">ECSV</a>
+is currently the only supported export format. This will change in the
+future as more exporting formats are supported in the specutils package.</p>
+</div>
+</div>
+<div class="section" id="workspaces-and-plots">
+<h2>Workspaces and Plots<a class="headerlink" href="#workspaces-and-plots" title="Permalink to this headline">¶</a></h2>
+<p>Loaded data is added to the global data list for the entire workspace. A
+workspace is the currently instance of the SpecViz application, and more can
+be created by selecting <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">New</span> <span class="pre">Workspace</span></code>. Workspaces are completely
+independent of one another, and the user can have as many workspaces are they
+wish.</p>
+<p>Plots are the visual representation of a selection of data items within a
+particular workspace. A user can have as many plots as they wish, and new plots
+can be created by clicking the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Plot</span></code> button in the main toolbar.
+Likewise, plot windows can be removed by clicking the <code class="docutils literal notranslate"><span class="pre">X</span></code> button in the plot
+tab.</p>
+<p>Plots all share the same data list within a workspace. The caveat is that plots
+can only show data that have equivalent units. Any data that cannot be added
+to a plot will show as disabled in the data list.</p>
+<img alt="_images/disabled_data_item.png" src="_images/disabled_data_item.png" />
+<p>Clicking the checkbox next to an item in the data list will plot the data
+item on the current plot.</p>
+</div>
+<div class="section" id="using-regions">
+<h2>Using Regions<a class="headerlink" href="#using-regions" title="Permalink to this headline">¶</a></h2>
+<p>Interesting regions can be defined by adding an ROI to the plot. This is done
+via the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Region</span></code> button in the plot toolbar. Multiple regions can be
+utilized when defining e.g. areas the user might wish to use for model fitting.</p>
+<p>A blue highlighted region is considered the _active_ region, and will in cases
+where it is imported (e.g. statistics), will be used to define the region
+used in the calculations.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently, only one region can be the “selected” region. This will change
+in the future to allow a subset of plotted region to be defined as
+“selected”.</p>
+</div>
+<p>Removing a region is accomplished by clicking the <code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">Region</span></code> button.
+Only the currently selected region is removed.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="unit_conversion.html" class="btn btn-neutral float-right" title="Unit Conversion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="launching.html" class="btn btn-neutral" title="Launching SpecViz" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JDADF Developers
+      Last updated on 30 Nov 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
