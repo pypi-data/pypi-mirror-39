@@ -1,0 +1,29 @@
+Metadata-Version: 1.1
+Name: scb-import
+Version: 0.0.1
+Summary: Tools for using the SCB open API.
+Home-page: https://github.com/tsvenson/scb_import
+Author: Thomas Svenson
+Author-email: thomas@tsvenson.com
+License: MIT
+Description: SCB Import
+        ==========
+        
+        Tools for using the SCB open data API.
+        
+        Developed on Linux and is work in progress.
+        
+        **References**
+        
+        - Swedish - `SCB:s statistik tillgänglig via API <https://www.scb.se/om-scb/om-scb.se-och-anvandningsvillkor/oppna-data-api/>`_
+        - English - `Statistics Sweden is statistics accessible via API <https://www.scb.se/en/About-us/about-the-website-and-terms-of-use/open-data-api/>`_
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
