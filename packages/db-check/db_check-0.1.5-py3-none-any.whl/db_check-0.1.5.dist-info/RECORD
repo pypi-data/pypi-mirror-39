@@ -1,0 +1,16 @@
+db_check/__init__.py,sha256=DckDnIkOGGkqO0yyBvvmEYPcTloylj7kPYXlR4MFCEs,22
+db_check/__main__.py,sha256=ftJpWcFuV83vEleKActk-AtB1Qko3RlGYywdurkFtFw,3875
+db_check/checklist.py,sha256=fqoYw0ewwKK5f0dYvOFRHrjHxxIiH3y18HnQYFAbCUk,3624
+db_check/clustering.py,sha256=jAD-EiHt-IlaGjbvogMYSqb1QL8D8HIhp_niUXq2id0,1379
+db_check/messages.py,sha256=dKcpp-PVJ6W5omTxw0Xf2PviXHnqUKBK0mG6yVhCDn4,339
+db_check/parsers.py,sha256=Dvzz8noyWPJjszBeOG-RMLgD-f9GCYiLnxnWs4nbYKQ,3516
+db_check/report.py,sha256=OLXH1gb-3mNn1reoTu9bYFxdU2kRupzFFHAHBPh9FvA,5779
+db_check/examples/example_db.fasta,sha256=ZAci5meX4dCa09ZDXiS6RZGjlkJkLN1Rk0sTgBydvoc,514
+db_check/examples/example_db_pipe.fasta,sha256=1u9pqH3ry2LN2JXJmThJgvAC_UEIjakcv50jIIYlgRk,506
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_parsers.py,sha256=BAxWiH2sUrOZqfnFm3LOUqdfadco9PrS9fzSkvJI58c,881
+db_check-0.1.5.dist-info/METADATA,sha256=elmpfA66EiG9bnnngMMEi6kP9eEE7UMOR0gtjLkn3rc,6370
+db_check-0.1.5.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+db_check-0.1.5.dist-info/entry_points.txt,sha256=is1Fi4uR1D6z5N1g7iF6KzBRkgGphWIxtGWeWhKSrac,61
+db_check-0.1.5.dist-info/top_level.txt,sha256=Mei9-UyJ3-UQsvdhktRVsHDthX2lv1BCxBl-ufEKfkk,15
+db_check-0.1.5.dist-info/RECORD,,
