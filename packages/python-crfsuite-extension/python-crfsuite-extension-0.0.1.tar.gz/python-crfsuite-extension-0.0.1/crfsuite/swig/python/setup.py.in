@@ -1,0 +1,60 @@
+#!/usr/bin/env python
+
+"""
+setup.py file for SWIG example
+"""
+
+##################################################################
+# Imports
+from distutils.core import setup, Extension
+import os
+import os.path
+import re
+import sys
+
+def get_rootdir():
+    return '@prefix@'
+def get_includedir():
+    return os.path.join(get_rootdir(), 'include')
+def get_librarydir():
+    return os.path.join(get_rootdir(), 'lib')
+
+##################################################################
+# Variables and Constants
+ABS_TOP_SRCDIR_RE = re.compile(r"[$][{]abs_top_srcdir[}]")
+ABS_SRCDIR_RE = re.compile(r"[$][{]abs_srcdir[}]")
+
+os.environ["CC"] = "@CC@"
+os.environ["CXX"] = "@CXX@ @CXXFLAGS@"
+os.environ["CPP"] = "@CPP@"
+os.environ["CPPFLAGS"] = ABS_TOP_SRCDIR_RE.sub("@abs_top_srcdir@", "@CPPFLAGS@")
+os.environ["CPPFLAGS"] = ABS_SRCDIR_RE.sub("@abs_srcdir@", os.environ["CPPFLAGS"])
+os.environ["LDSHARED"] = "@CC@ @LDFLAGS@"
+
+crfsuite_module = Extension(
+    "_crfsuite",
+    sources = [
+        "crfsuite.cpp",
+        "export_wrap.cpp",
+        ],
+    include_dirs=[get_includedir(),],
+    library_dirs=[get_librarydir(),],
+    extra_link_args=["-shared"],
+    libraries=["crfsuite"],
+    language="c++",
+    )
+
+##################################################################
+# Methods
+
+##################################################################
+# Setup
+setup(
+    name = "@PACKAGE@",
+    version = "@VERSION@",
+    author = "Naoaki Okazaki",
+    description = "CRFSuite Python module",
+    ext_modules = [crfsuite_module],
+    py_modules = ["crfsuite"],
+    )
+
