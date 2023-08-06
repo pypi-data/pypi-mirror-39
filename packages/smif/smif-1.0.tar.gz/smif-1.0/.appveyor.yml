@@ -1,0 +1,44 @@
+build: false
+services:
+  - postgresql96
+environment:
+  global:
+    PGUSER: postgres
+    PGHOST: localhost
+    PGPORT: 5432
+    PGPASSWORD: Password12!
+  matrix:
+    - PYTHON_VERSION: 3.6
+      MINICONDA: C:\Miniconda3-x64
+init:
+  - "ECHO %PYTHON_VERSION% %MINICONDA%"
+install:
+  - "set PATH=%MINICONDA%;%MINICONDA%\\Scripts;%PATH%"
+  - conda config --set always_yes yes --set changeps1 no
+  - conda config --add channels conda-forge
+  - conda info -a
+  - "conda create -n testenv --yes python=%PYTHON_VERSION% \
+        fiona \
+        flask \
+        gdal \
+        isodate \
+        libgdal \
+        networkx \
+        numpy \
+        pandas \
+        pint \
+        psycopg2 \
+        pyarrow \
+        pytest \
+        python-dateutil \
+        ruamel.yaml \
+        rtree \
+        shapely \
+        xarray"
+  - activate testenv
+  - python setup.py develop
+before_test:
+  - PATH=C:\Program Files\PostgreSQL\9.6\bin\;%PATH%
+  - createdb -e test_smif
+test_script:
+  - python setup.py test
