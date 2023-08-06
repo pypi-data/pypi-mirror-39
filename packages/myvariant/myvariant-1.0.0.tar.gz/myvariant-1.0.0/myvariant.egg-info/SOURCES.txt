@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+myvariant/__init__.py
+myvariant.egg-info/PKG-INFO
+myvariant.egg-info/SOURCES.txt
+myvariant.egg-info/dependency_links.txt
+myvariant.egg-info/requires.txt
+myvariant.egg-info/top_level.txt
