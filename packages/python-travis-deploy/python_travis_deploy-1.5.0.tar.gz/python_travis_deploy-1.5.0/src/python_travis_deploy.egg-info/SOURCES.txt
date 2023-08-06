@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+src/python_travis_deploy/__init__.py
+src/python_travis_deploy.egg-info/PKG-INFO
+src/python_travis_deploy.egg-info/SOURCES.txt
+src/python_travis_deploy.egg-info/dependency_links.txt
+src/python_travis_deploy.egg-info/top_level.txt
