@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+labelops/LabelOps.py
+labelops/__init__.py
+labelops/version.py
+labelops.egg-info/PKG-INFO
+labelops.egg-info/SOURCES.txt
+labelops.egg-info/dependency_links.txt
+labelops.egg-info/requires.txt
+labelops.egg-info/top_level.txt
