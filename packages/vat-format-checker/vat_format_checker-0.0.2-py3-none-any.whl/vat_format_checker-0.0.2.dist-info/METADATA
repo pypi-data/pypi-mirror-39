@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: vat-format-checker
+Version: 0.0.2
+Summary: A library for checking on European VAT formats
+Home-page: https://github.com/agilegeeks/pyVat
+Author: Radu Boncea
+Author-email: radu.boncea@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Office/Business :: Financial :: Accounting
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+
+# A library for checking on European VAT formats
+
+[![Build Status](https://api.travis-ci.com/agilegeeks/pyVat.svg?branch=master)](https://travis-ci.com/agilegeeks/pyVat)
+
+pyVat is a complete library that validates vat number formats in EU member countries. The algorithms used are described in /doc/VIES-VAT Validation Routines-v15.0.doc
+
+## Compatibility
+Python >= 2.7
+
+## Installation
+    $ pip install vat-format-checker
+
+## Usage
+```python
+from pyVat.api import Validator
+validator = Validator('ATU10223006')
+if validator.validate() is True:
+    print ("The VAT number has a valid format")
+else:
+    print ("Invalid VAT number format for country %s" % validator.country_code)
+
+```
+## Issues
+- The Croatian format is missing the algorithm. The validations is done purely based on regular expressions.
+
+
