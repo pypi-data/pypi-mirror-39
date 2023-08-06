@@ -1,0 +1,14 @@
+README.md,sha256=_HeeIXfGCHwCJnzJllUFowNlaBUVRLvcbEY-sUw2Syg,3286
+aria2p.py,sha256=WDb6Xe0k_uEUs635qq38rluPwxEKhMI5gjWIkpYdeYY,82
+pyproject.toml,sha256=Pg_7p395V99Qnk9qr0EceUNTODu4Y04IuaNaM86s00A,692
+src/aria2p/__init__.py,sha256=G-faQrzCyCpnBZZddRGtqDfRlUuALKk63DucYTT30xA,279
+src/aria2p/api.py,sha256=9yZG6ynKEn3SyfZzDe5uI3s0A6FXqhKTH8KXlN8f3cU,3042
+src/aria2p/cli.py,sha256=xhZmYyL1KPMJBJqDKdvLmDzeJo1dxBYqkF2xFAKILbk,1993
+src/aria2p/client.py,sha256=SgcSpV0x3NYii-D6jU2a6nScnzwQ-l322QzVPnnfOw4,59090
+src/aria2p/downloads.py,sha256=6Ky9JKUKUNnZf5Ra1zNMpZm-T1OXtGhPc-9jmNWNoOE,6699
+src/aria2p/options.py,sha256=f9Z4yavhx3N8H-28cpv6R-2Awv4-TMAnyQcznqJ1W1k,71833
+src/aria2p/stats.py,sha256=0XYZJ5eTz5oCGa2vs3RyubHSF7teiof427RGcJ1L9Nw,841
+aria2p-0.1.0.dist-info/entry_points.txt,sha256=Y9zZ5FMtLxRm5BiiOmTiEnu8FQTyKclCRB7uxyLFJuU,41
+aria2p-0.1.0.dist-info/WHEEL,sha256=OyjuYVC9vVJqb-Aqln3fyrroYJ4WrcSwx2msO2AokVc,85
+aria2p-0.1.0.dist-info/METADATA,sha256=GKSUh3uFZtrehkyeDnGwR_naPYk8LmZjWDCNVWaHPFY,3869
+aria2p-0.1.0.dist-info/RECORD,,
