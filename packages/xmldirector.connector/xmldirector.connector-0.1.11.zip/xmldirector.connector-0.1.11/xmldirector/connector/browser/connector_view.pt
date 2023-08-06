@@ -1,0 +1,145 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="xmldirector.connector">
+<body>
+
+    <metal:main fill-slot="main" tal:define="subpath view/subpath; page_size request/page_size|string:15">
+
+    <link rel="stylesheet" tal:attributes="href string:$portal_url/++resource++xmldirector.connector/tabulator.min.css">
+    <link rel="stylesheet" tal:attributes="href string:$portal_url/++resource++xmldirector.connector/dropzone.css">
+    <link rel="stylesheet" tal:attributes="href string:$portal_url/++resource++xmldirector.connector/styles.css">
+
+    <script>
+        window.__define = window.define;
+        window.__require = window.require;
+        window.define = undefined;
+        window.require = undefined;
+    </script>
+    <script type="text/javascript" tal:attributes="src string:$portal_url/++resource++xmldirector.connector/clipboard.min.js"></script>
+    <script type="text/javascript" tal:attributes="src string:$portal_url/++resource++xmldirector.connector/moment-with-locales.js"></script>
+    <script type="text/javascript" tal:attributes="src string:$portal_url/++resource++xmldirector.connector/tabulator.min.js"></script>
+    <script type="text/javascript" tal:attributes="src string:$portal_url/++resource++xmldirector.connector/dropzone.js"></script>
+    <script type="text/javascript" tal:attributes="src string:$portal_url/++resource++xmldirector.connector/connector.js"> </script>
+    <script type="text/javascript" tal:attributes="src string:$portal_url/++resource++xmldirector.connector/jquery.blockUI.js"> </script>
+    <script type="text/javascript" tal:content="string: var PAGE_SIZE = '${page_size}'"></script>
+    <script type="text/javascript" tal:content="string: var URL = '${context/absolute_url}'"></script>
+    <script type="text/javascript" tal:content="string: var UPLOAD_URL = '${context/absolute_url}/@@connector-upload'"></script>
+    <script type="text/javascript" tal:content="string: var SUBPATH = '${view/subpath}'"></script>
+    <script>
+        window.define = window.__define;
+        window.require = window.__require;
+        window.__define = undefined;
+        window.__require = undefined;
+    </script>
+
+
+    <div>
+        <div id="breadcrumbs">
+            <span i18n:translate="">Path:</span>
+            <span id="breadcrumbs-generated"></span>
+        </div>
+        <div id="pagination" style="display: none">
+            <span i18n:translate="">Items per page</span>:
+            <select name="page_size" id="page_size">
+                <option value="15" i18n:translate="">15</option>
+                <option value="50" i18n:translate="">50</option>
+                <option value="100" i18n:translate="">100</option>
+                <option value="250" i18n:translate="">250</option>
+                <option value="500" i18n:translate="">500</option>
+                <option value="99999999" i18n:translate="">unlimited</option>
+            </select>
+            <a id="table-refresh" i18n:translate="" title="Refresh" alt="Refresh">&nbsp;</a>
+            <div id="connector-url" tal:condition="view/can_edit" style="display: none">
+                <span tal:content="view/connector_url"/>
+            </div>
+        </div>
+        <div id="table-message"></div>
+    </div>
+    <div class="clear"></div>
+
+    <div tal:condition="view/is_readonly" id="connector-readonly" style="display: none">
+        <span i18n:translate="">Connector is readonly</span>
+    </div>
+
+    <div id="files-table"></div>
+
+    <div id="actions" tal:condition="view/can_edit">
+        <a id="action-new-folder" i18n:translate="">New folder</a>
+        <a id="action-zip-import" i18n:translate="">ZIP import</a>
+        <a id="action-upload" i18n:translate="">Upload</a>
+    </div>
+
+    <div id="action-forms" 
+        tal:condition="view/can_edit"
+        tal:define="UPLOAD_URL string:${context/absolute_url}/@@connector-upload">
+
+      <fieldset id="new-folder">
+          <legend>
+              <span i18n:translate="">New folder</span>
+            <a class="legend-close" title="Close" i18n:attributes="title"></a>
+          </legend>
+          <form method="POST" tal:attributes="action string:${context/absolute_url}/connector-new-folder">
+              <div>
+                  <input type="name" name="name:unicode" size="60" id="name" />
+                  <input type="hidden" name="subpath" tal:attributes="value view/subpath | nothing" placeholder="Folder name" i18n:attributes="placeholder"/>
+              </div>
+              <div style="margin-top: 1em;margin-bottom: 2em">
+                  <input type="submit" class="context" i18n:attributes="value" value="New folder" />
+              </div>
+          </form>
+      </fieldset>
+
+      <fieldset id="zip-upload">
+          <legend>
+              <span i18n:translate="">ZIP import</span>
+            <a class="legend-close" title="Close" i18n:attributes="title"></a>
+          </legend>
+          <div class="help" i18n:translate="">
+              Use this form for uploading a ZIP file. The ZIP file will be
+              unzipped. 
+              <br/>
+              The ZIP file may contain nested directories.
+          </div>
+          <form method="POST" tal:attributes="action string:${context/absolute_url}/connector-zip-upload" enctype="multipart/form-data">
+              <div>
+                  <label for="zip-file" i18n:translate="">ZIP file</label>
+                  <input type="file" name="zipfile" size="60" id="zipfile" />
+                  <input type="hidden" name="subpath" tal:attributes="value view/subpath | nothing" />
+              </div>
+              <div style="margin-top: 1em;margin-bottom: 2em">
+                  <input class="zip-upload" type="submit" class="context" i18n:attributes="value" value="UPLOAD" />
+              </div>
+          </form>
+      </fieldset>
+
+      <fieldset id="uploadify">
+          <legend>
+              <span i18n:translate="">Multi/single file upload</span>
+            <a class="legend-close" title="Close" i18n:attributes="title"></a>
+          </legend>
+          <div class="help" i18n:translate="">
+              Use this form for uploading a single or multiple files.
+          </div>
+
+          <form tal:attributes="action UPLOAD_URL" class="dropzone" id="dropzone" init="foo">
+            <div class="dz-message" i18n:translate="">Drop file here or click to upload</div>
+            <div class="fallback">
+                <input name="file" type="file" multiple />
+            </div>
+            <input type="hidden" name="subpath" tal:attributes="value view/subpath | nothing" />
+          </form>
+          <div id="upload-message"></div>
+      </fieldset>
+    </div>
+
+    <div class="clear"></div>
+
+  </metal:main>
+
+</body>
+</html>
+

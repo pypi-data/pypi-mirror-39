@@ -1,0 +1,29 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
+
+    <genericsetup:registerProfile
+        name="default"
+        title="XML-Director Connector"
+        description="Mounts storages over WebDAV, S3, SSH/SFTP oder local filesystem into Plone"
+        directory="profiles/default"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+    <genericsetup:registerProfile
+        name="uninstall"
+        title="XML-Director Connector (uninstall)"
+        directory="profiles/uninstall"
+        description="XML-Director Connector (uninstall)"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+   
+    <genericsetup:registerProfile
+        name="testing"
+        title="XML-Director Connector (testing)"
+        directory="profiles/testing"
+        description="XML-Director Connector (testing)"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+</configure>
