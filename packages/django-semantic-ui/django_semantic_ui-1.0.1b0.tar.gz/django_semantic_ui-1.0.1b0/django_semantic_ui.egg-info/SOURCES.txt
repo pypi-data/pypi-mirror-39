@@ -1,0 +1,12 @@
+README.md
+setup.py
+django_semantic_ui/__init__.py
+django_semantic_ui/exceptions.py
+django_semantic_ui/models.py
+django_semantic_ui.egg-info/PKG-INFO
+django_semantic_ui.egg-info/SOURCES.txt
+django_semantic_ui.egg-info/dependency_links.txt
+django_semantic_ui.egg-info/top_level.txt
+django_semantic_ui/management/__init__.py
+django_semantic_ui/management/commands/__init__.py
+django_semantic_ui/management/commands/semantic_ui.py
