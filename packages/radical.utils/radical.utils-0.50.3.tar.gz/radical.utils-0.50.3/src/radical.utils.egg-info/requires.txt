@@ -1,0 +1,11 @@
+colorama
+future
+netifaces
+setproctitle
+
+[nose]
+coverage
+nose
+
+[pymongo]
+pymongo
