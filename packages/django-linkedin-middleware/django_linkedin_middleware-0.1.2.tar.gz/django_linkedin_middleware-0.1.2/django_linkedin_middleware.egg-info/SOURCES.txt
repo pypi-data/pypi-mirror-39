@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+django_linkedin_middleware/__init__.py
+django_linkedin_middleware/middleware.py
+django_linkedin_middleware/settings.py
+django_linkedin_middleware.egg-info/PKG-INFO
+django_linkedin_middleware.egg-info/SOURCES.txt
+django_linkedin_middleware.egg-info/dependency_links.txt
+django_linkedin_middleware.egg-info/requires.txt
+django_linkedin_middleware.egg-info/top_level.txt
+django_linkedin_middleware/tests/__init__.py
+django_linkedin_middleware/tests/settings.py
+django_linkedin_middleware/tests/test_middleware.py
