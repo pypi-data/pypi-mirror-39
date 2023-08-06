@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: arxivtorm
+Version: 0.1
+Summary: Gets papers from ArXiv and puts them on your remarkable
+Home-page: UNKNOWN
+Author: Naren Dasan
+Author-email: naren@narendasan.com
+License: NCSA
+Platform: UNKNOWN
+Requires-Dist: arxiv
+
+Make sure to install https://github.com/juruen/rmapi
+
+
