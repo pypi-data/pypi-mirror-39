@@ -1,0 +1,14 @@
+name: specviz
+
+channels:
+    - astropy
+
+dependencies:
+    - python>=3.6
+    - astropy
+    - Cython
+    - matplotlib
+    - numpy
+    - pip:
+        - sphinx-astropy
+        - sphinx-rtd-theme
