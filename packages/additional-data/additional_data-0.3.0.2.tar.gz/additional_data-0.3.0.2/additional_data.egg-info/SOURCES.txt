@@ -1,0 +1,16 @@
+README.rst
+setup.py
+additional_data/__init__.py
+additional_data/additional_data_util.py
+additional_data/adxml.py
+additional_data/pdfmanipulator.py
+additional_data.egg-info/PKG-INFO
+additional_data.egg-info/SOURCES.txt
+additional_data.egg-info/dependency_links.txt
+additional_data.egg-info/entry_points.txt
+additional_data.egg-info/not-zip-safe
+additional_data.egg-info/requires.txt
+additional_data.egg-info/top_level.txt
+additional_data/tests/__init__.py
+additional_data/tests/test_ad_class.py
+additional_data/tests/test_adutil_samples.py
