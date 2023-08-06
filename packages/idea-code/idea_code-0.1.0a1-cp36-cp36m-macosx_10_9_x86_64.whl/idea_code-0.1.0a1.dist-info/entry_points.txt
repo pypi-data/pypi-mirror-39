@@ -1,0 +1,6 @@
+[console_scripts]
+idea-examples = iDEA.cli:examples_cli
+idea-optimize = iDEA.cli:optimize_cli
+idea-run = iDEA.cli:run_cli
+idea-video = iDEA.cli:video_cli
+
