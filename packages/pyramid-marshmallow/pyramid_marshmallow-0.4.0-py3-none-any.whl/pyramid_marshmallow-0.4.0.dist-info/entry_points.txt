@@ -1,0 +1,3 @@
+[console_scripts]
+generate-spec=pyramid_marshmallow.generatespec:generate
+
