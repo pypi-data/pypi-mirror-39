@@ -1,0 +1,17 @@
+JAVASCRIPT_FILTERS = [
+    "pids",
+    "lib-cov",
+    ".nyc-output",
+    ".grunt",
+    "bower-components",
+    "node_modules",
+    "jspm_packages",
+    "typings",
+    ".npm",
+    ".eslintcache",
+    ".env",
+    "node_repl_history",
+    ".cache",
+    ".next",
+    ".nuxt",
+]
