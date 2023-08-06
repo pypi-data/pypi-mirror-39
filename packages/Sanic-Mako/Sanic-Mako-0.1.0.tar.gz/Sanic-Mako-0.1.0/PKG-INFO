@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: Sanic-Mako
+Version: 0.1.0
+Summary: Mako templating support for Sanic.
+Home-page: https://github.com/dongweiming/sanic-mako
+Author: DongWeiming
+Author-email: ciici123@gmail.com
+License: Apache 2
+Description: 
+        sanic-mako
+        ----------
+        
+        
+Platform: any
+Classifier: Framework :: AsyncIO
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
