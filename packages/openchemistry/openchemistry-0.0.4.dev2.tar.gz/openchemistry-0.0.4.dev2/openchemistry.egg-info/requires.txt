@@ -1,0 +1,4 @@
+girder_client>=2.3.0
+jinja2
+jsonpath-rw
+avogadro
