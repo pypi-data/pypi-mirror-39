@@ -1,0 +1,7 @@
+Click>=6.0
+scipy>=1.0.0
+mahotas>=1.4.4
+numpy>=1.9.0
+scikit-image>=0.14
+networkx>=1.11
+matplotlib<3.0
