@@ -1,0 +1,12 @@
+{% extends 'ef_basic_input.html' %}
+
+{% block form_control %}
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	{{ super() }}
+{% endblock form_control %}
+
+{% block input %}
+	<div class="g-recaptcha {% if field.error %}{{ field.input_classes }}{% endif %}"
+	     style="padding: 0; height: auto;"
+	     data-sitekey="{{ field.site_key }}"></div>
+{% endblock input %}

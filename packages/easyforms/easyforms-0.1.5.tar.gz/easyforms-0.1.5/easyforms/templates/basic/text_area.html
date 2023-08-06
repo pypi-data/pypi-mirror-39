@@ -1,0 +1,8 @@
+{% extends 'ef_basic_input.html' %}
+
+{% block input %}
+	<textarea class="{{ field.input_classes }}" name="{{ field.name }}"
+			  id="{{ field.id }}" placeholder="{{ field.placeholder|sn }}" rows="{{ field.rows }}"
+			  {% if field.readonly %}readonly{% endif %}
+			  {% if field.maxlength %}maxlength="{{ field.maxlength }}"{% endif %}>{{ field.value|sn }}</textarea>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'ef_basic_input.html' %}
+
+{% block input_column %}
+	<div {{ field.input_column_attributes }} id="{{ field.id }}">
+		{% for value in field.values %}
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" name="{{ field.name }}" value="{{ value.select_value }}"
+						   {% if value.select_value in field._checked_select_values %}checked{% endif %}
+						   {% if field.readonly %}disabled{% endif %}
+						   >
+					{{ value.select_name }}
+				</label>
+			</div>
+		{% endfor %}
+		
+		{% if field.style == styles.BOOTSTRAP_4 %}
+			{% if field.error %}
+				<span class="{{ field.input_classes }}" style="display: none;"></span>
+			{% endif %}
+			{% block bs4_error %}
+				{{ ef_macros.bs4_error(field) }}
+			{% endblock bs4_error %}
+			{% block bs4_help_text %}
+				{{ ef_macros.bs4_help_text(field) }}
+			{% endblock bs4_help_text %}
+		{% endif %}
+	</div>
+{% endblock input_column %}
