@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: gypse
+Version: 0.1
+Summary: Project and Code Analysis tool to find things out about your code
+Home-page: https://gypse.readthedocs.org
+Author: David G. Daniel
+Author-email: davydany@aeroxis.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Dist: click
+Requires-Dist: coloredlogs (==10.0)
+Requires-Dist: humanfriendly (==4.17)
+Provides-Extra: dev
+Requires-Dist: bumpversion ; extra == 'dev'
+Requires-Dist: click ; extra == 'dev'
+Requires-Dist: coloredlogs (==10.0) ; extra == 'dev'
+Requires-Dist: humanfriendly (==4.17) ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cache ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Provides-Extra: lint
+Requires-Dist: flake8 ; extra == 'lint'
+Requires-Dist: black ; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cache ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+
+gypsy
+#############################
+
+
+.. image:: https://travis-ci.org/aeroxis/gypsy.svg?branch=master
+   :target: https://travis-ci.org/aeroxis/gypsy
+
+.. image:: https://media.githubusercontent.com/media/aeroxis/gypsy/master/images/gypsy_screenshot.png
+    :target: https://github.com/aeroxis/gypsy
+
+License
+-------
+
+This code is licensed under the `MIT License`_.
+
+.. _`MIT License`: https://github.com/aeroxis/gypsy/blob/master/LICENSE
+
+
+Getting Started
+---------------
+
+    pip install gypsy
+
+Usage
+-----
+
+Gypsy comes with some sample data that you can clone and play with.
+
+    git clone https://github.com/aeroxis/gypsy /tmp/gypsy
+    cd /tmp/gypsy
+    gypsy url-extractor ./samples/ --margins 5
+
+This will yield something like the following:
+
