@@ -1,0 +1,52 @@
+
+- instance:
+    input:
+        name: genetalk_db_machine 
+        image_id: ami-b807eac2 
+        keyname: gcta-us-east-1-access-key 
+        subnet_id:
+            value: subnet-83950fe6 
+        number: 1
+        instance_type: r4.large 
+        security_group_ids:
+            value: [sg-9f3a7ee3]
+        tags:
+            - tag:
+                key: Name
+                value: glusterfs_api_instance 
+        private_ip: 172.31.78.124
+        spot:
+            price: 1
+            wait_until_complete: 1
+
+    volumes:
+        - volume:
+            name: "/dev/sdb"
+            size: 100 
+            auto_delete: 1
+
+- instance:
+    input:
+        name: genetalk_db_machine 
+        image_id: ami-cd0ae7b7 
+        keyname: gcta-us-east-1-access-key 
+        subnet_id:
+            value: subnet-83950fe6 
+        number: 2 
+        instance_type: r4.large 
+        security_group_ids:
+            value: [sg-9f3a7ee3]
+        tags:
+            - tag:
+                key: Name
+                value: glusterfs_volume_instance 
+
+        spot:
+            price: 1
+            wait_until_complete: 1
+    volumes:
+        - volume:
+            name: "/dev/sdb"
+            size: 100 
+            auto_delete: 1
+

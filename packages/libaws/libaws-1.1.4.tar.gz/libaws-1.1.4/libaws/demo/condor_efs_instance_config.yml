@@ -1,0 +1,47 @@
+
+- instance:
+    input:
+        name: genetalk_db_machine 
+        image_id: ami-9be5e2e0 
+        keyname: gcta-us-east-1-access-key 
+        subnet_id:
+            value: subnet-83950fe6 
+        number: 1
+        instance_type: r4.2xlarge 
+        security_group_ids:
+            value: [sg-9f3a7ee3]
+        tags:
+            - tag:
+                key: Name
+                value: pagasus_condor_submit 
+
+        spot:
+            price: 1
+            wait_until_complete: 1
+    #  volumes:
+    #       value: [vol-03c044b95b80ce2d1]
+
+        private_ip: 172.31.74.224
+    #        public_ip: 52.87.131.40 
+
+
+- instance:
+    input:
+        name: genetalk_db_machine 
+        image_id: ami-9ce5e2e7 
+        keyname: gcta-us-east-1-access-key 
+        subnet_id:
+            value: subnet-83950fe6 
+        number: 1 
+        instance_type: r4.2xlarge 
+        security_group_ids:
+            value: [sg-9f3a7ee3]
+        tags:
+            - tag:
+                key: Name
+                value: pagasus_condor_execution 
+
+        spot:
+            price: 1
+            wait_until_complete: 1
+

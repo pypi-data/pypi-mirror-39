@@ -1,0 +1,47 @@
+
+- instance:
+    input:
+        name: genetalk_db_machine 
+        image_id: ami-3221b348 
+        keyname: gcta-us-east-1-access-key 
+        subnet_id:
+            value: subnet-83950fe6 
+        number: 1
+        instance_type: r4.4xlarge 
+        security_group_ids:
+            value: [sg-9f3a7ee3]
+        tags:
+            - tag:
+                key: Name
+                value: gtxcloud_demo_submit 
+
+        spot:
+            price: 2
+            wait_until_complete: 1
+    #  volumes:
+    #       value: [vol-03c044b95b80ce2d1]
+
+        private_ip: 172.31.74.224
+    #        public_ip: 52.87.131.40 
+
+
+- instance:
+    input:
+        name: genetalk_db_machine 
+        image_id: ami-b7353dcc 
+        keyname: gcta-us-east-1-access-key 
+        subnet_id:
+            value: subnet-83950fe6 
+        number: 1 
+        instance_type: r4.4xlarge 
+        security_group_ids:
+            value: [sg-9f3a7ee3]
+        tags:
+            - tag:
+                key: Name
+                value: gtxcloud_demo_worker 
+
+        spot:
+            price: 2
+            wait_until_complete: 1
+

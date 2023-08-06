@@ -1,0 +1,21 @@
+
+- instance:
+    input:
+        name: genetalk_db_machine 
+        image_id: ami-877974fc 
+        keyname: gcta-us-east-1-access-key 
+        subnet_id:
+            value: subnet-83950fe6 
+        number: 3 
+        instance_type: r4.2xlarge 
+        security_group_ids:
+            value: [sg-9f3a7ee3]
+        tags:
+            - tag:
+                key: Name
+                value: gtxcloud_condor_execution 
+
+        spot:
+            price: 1
+            wait_until_complete: 1
+

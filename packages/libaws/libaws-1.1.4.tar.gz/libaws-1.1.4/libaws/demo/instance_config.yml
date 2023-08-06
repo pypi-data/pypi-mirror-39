@@ -1,0 +1,34 @@
+
+- instance:
+    input:
+        name: genetalk_db_machine 
+        image_id: ami-fce3c696 
+        keyname: default_test_access_key
+        subnet_id:
+            value:  subnet-0a570552
+        number: 1
+        instance_type: t2.micro 
+        security_group_ids:
+            value: [sg-5a1f6821]
+        tags:
+            - tag:
+                key: Name
+                value: genetalk_test_instance 
+
+        #spot:
+            #            price: 0.0176
+            #           availability_zone_group: ggg
+            #   duration: 6
+
+#    vpc:
+#       from_config: ./libaws/demo/vpc_config.yaml
+#    
+#    keypair:
+#        key: genetalk_access_key   
+#        delete_exists: True
+#
+# volumes:
+#       - volume:
+#           size: 20
+#           name: /dev/sda1
+
