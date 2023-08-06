@@ -1,0 +1,13 @@
+README.md
+setup.py
+myFitness.egg-info/PKG-INFO
+myFitness.egg-info/SOURCES.txt
+myFitness.egg-info/dependency_links.txt
+myFitness.egg-info/top_level.txt
+myfitness/__init__.py
+myfitness/healthdata/__init__.py
+myfitness/healthdata/chart.py
+myfitness/healthdata/data.py
+myfitness/summary/__init__.py
+myfitness/summary/maxmin.py
+myfitness/summary/table.py
