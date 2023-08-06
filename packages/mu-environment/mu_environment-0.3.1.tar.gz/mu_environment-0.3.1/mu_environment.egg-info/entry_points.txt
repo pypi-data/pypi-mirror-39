@@ -1,0 +1,3 @@
+[console_scripts]
+omnicache = MuEnvironment.Omnicache:main
+
