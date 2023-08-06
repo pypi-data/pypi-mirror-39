@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pyshuttlis
+Version: 0.1.0
+Summary: Utilities
+Home-page: https://github.com/shuttl-tech/pyshuttlis
+Author: Shuttl
+Author-email: sherub.thakur@shuttl.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: boto3
+
+UNKNOWN
+
+

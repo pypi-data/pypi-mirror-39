@@ -1,0 +1,17 @@
+shuttlis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shuttlis/geography.py,sha256=QqKSRY-VzaiPuRr1c1KbnB6muoLIqh9v1sFNuesWjhA,691
+shuttlis/pagination.py,sha256=mL5OwtpAGsqnijjDkKrE3l2itOrcgZBZV37IvYtGg5Y,706
+shuttlis/serialization.py,sha256=skU56iop5Inxzbbl0mFZZQT-ZcQ8UlupV44Y8p05Qrc,769
+shuttlis/utils.py,sha256=zmURFHr2cWijb1UVEqTYB6-6mitnjwUEDacxPM8COzc,640
+shuttlis/time/__init__.py,sha256=7BScMbDjtp08Mlr-Vl03l7UiSssUekpJym9JzPvxO3c,52
+shuttlis/time/military_time.py,sha256=6X3C_gssikLSuJ-Noc4zeI7t1Fn0ZOKrbsBZA_ho-tc,1482
+shuttlis/time/weekday.py,sha256=B8q0XeW6twXioEVWYfJcd4jmdvbOQW_TrW7b9woUcw0,482
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_geography.py,sha256=VnzqGE4N9W0-bJcMi284Tbi1V9uMDeC0gcBgNOQwmEE,534
+tests/test_serialization.py,sha256=DKMhwIUa10kXEgQYiZWFB5itGpalAniFgDBxj9mQUtw,386
+tests/test_time.py,sha256=VLIRGps2xlu0tDqNhrEmzUM10JmeXLXUGC3uz-ummX0,1005
+tests/test_utils.py,sha256=QtUeXOR913Beygz8Unnb4dikyT0XJc-GOAfFbV4Slu4,1054
+pyshuttlis-0.1.0.dist-info/METADATA,sha256=lJjgVNjknYOHNWaQsps1cPNywHy2icvFfgWfdOssRMk,293
+pyshuttlis-0.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pyshuttlis-0.1.0.dist-info/top_level.txt,sha256=uoSOQyU_ttw3QDfYZ8zKSiC39fQl5I0He1CE8JB3S2s,15
+pyshuttlis-0.1.0.dist-info/RECORD,,
