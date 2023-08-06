@@ -1,0 +1,3 @@
+[console_scripts]
+icaclswrap = icaclswrap.cli:main
+
