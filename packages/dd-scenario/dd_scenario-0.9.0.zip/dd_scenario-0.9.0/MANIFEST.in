@@ -1,0 +1,3 @@
+recursive-include dd_scenario *.py
+include setup.py
+include LICENSE.txt
