@@ -1,0 +1,3 @@
+[console_scripts]
+serpentine = serpentine.serpentine:_main
+
