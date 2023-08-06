@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: freqtrade
+Version: 0.17.1
+Summary: Simple High Frequency Trading Bot for crypto currencies
+Home-page: https://github.com/freqtrade/freqtrade
+Author: gcarq and contributors
+Author-email: michael.egger@tsn.at
+License: GPLv3
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Intended Audience :: Science/Research
