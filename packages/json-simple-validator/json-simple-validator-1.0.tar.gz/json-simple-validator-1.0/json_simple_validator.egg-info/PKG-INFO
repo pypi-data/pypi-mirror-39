@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: json-simple-validator
+Version: 1.0
+Summary: A simple JSON validator for use in Flask projects. (Built in Python 3)
+Home-page: https://github.com/M69k65y/json-simple-validator
+Author: M69k65y
+Author-email: UNKNOWN
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: flask json validation validator
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Flask
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
