@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        minimizer=minimizer.cli:run
+    
