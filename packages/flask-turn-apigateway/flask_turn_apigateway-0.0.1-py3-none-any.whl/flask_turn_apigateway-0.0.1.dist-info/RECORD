@@ -1,0 +1,12 @@
+apigateway/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apigateway/default.py,sha256=Hfk1-tt6lPrZNDN2slKhLIotQVe99TrbnZ47uH4fYmQ,605
+apigateway/event.py,sha256=uUbUvYC9Y1NFbLnfh5TiMkGjGDIGUgzA1-Y4iFeKb9o,744
+apigateway/request.py,sha256=DN4kYvsuR3e4YokRYpAUrw7nTQXRkF6dvl4jFIns5mI,1346
+apigateway/response.py,sha256=CEOYOMi1THPvKj48WAf5MvD4aZAwEFbJWnlKsdfj-t4,960
+apigateway/startup.py,sha256=eY6x8H7DDGDo_rei6Am0Rgk3O6GUXDfkvXNEJL-JZwg,996
+apigateway/utils.py,sha256=goPOj8EyWxbmeKRqjOvAAw3K0eFNS6MlwAMQHQ44pHs,131
+apigateway/views.py,sha256=DMc8GwjM9Avl4gOFBxKjACYl5s4jnPfglqJM1EIswmE,2378
+flask_turn_apigateway-0.0.1.dist-info/METADATA,sha256=5JO28DITURDFaJ02TNtNGP77drhPJVILUWVVRwV9Dm0,302
+flask_turn_apigateway-0.0.1.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+flask_turn_apigateway-0.0.1.dist-info/top_level.txt,sha256=eafHRZ9bYBbOy5OME3zFRjethUTL1Ia8QcZ7TCRlVs4,11
+flask_turn_apigateway-0.0.1.dist-info/RECORD,,
