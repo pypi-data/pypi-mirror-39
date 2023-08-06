@@ -1,0 +1,12 @@
+zs_preflight-0.0.7b0.data/scripts/preflight,sha256=yWMGqUl47TMl7-GOxXIGYc0ZG4Dl93N8YdDAGrzbeII,6600
+zs_preflight-0.0.7b0.data/scripts/zspreflight,sha256=7HGadWR1co07k1NvZpNMFl_CV91-Lo9DBHxmk4fLFQs,4045
+zs_preflight-0.0.7b0.dist-info/METADATA,sha256=kqNqii5o8cHXPAw10_bJlpQUDRy68_Oz_pXE91cI6NQ,3157
+zs_preflight-0.0.7b0.dist-info/RECORD,,
+zs_preflight-0.0.7b0.dist-info/WHEEL,sha256=_V8uWu5F_h-lvAz5Mbq4oZqV_uCfL4cHgm4IIlDevzU,92
+zs_preflight-0.0.7b0.dist-info/top_level.txt,sha256=kr98hhouEOK0PLLoY18j7-pnZqyzBDxdzXZwJXLvwhw,12
+zspreflight/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zspreflight/compute.py,sha256=iXwixpHHm-UA8D-praSWMlP97BaQaHmXvy0wWYEtA7k,5863
+zspreflight/connector.py,sha256=LDYj0EuNFFeynX22a7hFJZOav0Alj50Zl2bP1dE43ng,1933
+zspreflight/host.py,sha256=dP1dQDdQf9KGse7QPO9IPD0_zNsNrXyIWk3LWHeci5o,3303
+zspreflight/network.py,sha256=PDubz5nm_KvsGJKi_pKBuZI5M3emeCW607kyMsgkshY,6914
+zspreflight/storage.py,sha256=TXxgp3G6hgiT39K1goBlIcpV8XnWGl2-xg0SX1wb4oM,6048
