@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+pytextgrid/Intensity.py
+pytextgrid/PraatTextGrid.py
+pytextgrid/PraatTierIterator.py
+pytextgrid/__init__.py
+pytextgrid/get_named_value.py
+pytextgrid/timeside2praat.py
+pytextgrid.egg-info/PKG-INFO
+pytextgrid.egg-info/SOURCES.txt
+pytextgrid.egg-info/dependency_links.txt
+pytextgrid.egg-info/top_level.txt
