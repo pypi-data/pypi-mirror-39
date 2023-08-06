@@ -1,0 +1,24 @@
+language: python
+
+dist: xenial
+sudo: true
+
+python:
+  - "3.5"
+  - "3.6"
+  - "3.7"
+
+install:
+  - pip install -e .
+
+before_script:
+  - sudo apt-get install -y graphviz
+  - pip install coveralls pytest
+  - curl -sSfL -o cif.tar.xz https://github.com/17451k/cif/releases/download/2018-09-17/cif-20180917-linux.tar.xz
+  - tar xf cif.tar.xz
+
+script:
+  - PATH=$TRAVIS_BUILD_DIR/cif/bin:$PATH coverage run -m pytest && coverage combine
+
+after_success:
+  - coveralls

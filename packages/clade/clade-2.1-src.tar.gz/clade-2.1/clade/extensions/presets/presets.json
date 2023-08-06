@@ -1,0 +1,93 @@
+{
+    "base": {
+        "extends": [],
+        "log_level": "INFO",
+        "CC.ignore_cc1": true,
+        "CC.filter_deps": true,
+        "CC.store_deps": true,
+        "CC.with_system_header_files": true,
+        "CmdGraph.requires": ["AR", "AS", "CC", "LD", "MV", "Objcopy"],
+        "CmdGraph.as_picture": false,
+        "Common.filter": [],
+        "Common.filter_in": [],
+        "Common.filter_out": [],
+        "Common.save_unparsed_cmds": true,
+        "Common.with_opts": true,
+        "Info.extra_CIF_opts": [],
+        "PidGraph.as_picture": false,
+        "PidGraph.filter_cmds_by_pid": true,
+        "AR.which_list": ["^.*?ar$"],
+        "AS.which_list": ["^.*?as$"],
+        "CC.which_list": ["^.*cc$", "^.*[mg]cc(-?\\d+(\\.\\d+){0,2})?$", "^.*clang(-?\\d+(\\.\\d+){0,2})?$"],
+        "LD.which_list": ["^.*?ld$"],
+        "MV.which_list": ["^.*?mv$"],
+        "Objcopy.which_list": ["^.*?objcopy$"]
+    },
+    "base_print": {
+        "extends": ["base"],
+        "CmdGraph.as_picture": true,
+        "PidGraph.as_picture": true,
+        "SrcGraph.as_picture": true
+    },
+    "linux_kernel": {
+        "extends": ["base"],
+        "CmdGraph.requires": ["AR", "CC", "LD", "MV", "Objcopy"],
+        "Common.filter": [
+            ".*?\\.tmp$"
+        ],
+        "Common.filter_in": [
+            "-",
+            "/dev/null",
+            "scripts/(?!mod/empty\\.c)",
+            "kernel/.*?bounds.*?",
+            "arch/x86/tools/relocs",
+            "arch/x86/kernel/asm-offsets.c",
+            ".*\\.mod\\.c",
+            ".*?\\.tmp\\w+\\.s",
+            ".*\\.S"
+        ],
+        "Common.filter_out": [
+            "/dev/null",
+            "scripts/(?!mod/.*empty\\.o)",
+            ".*?\\.cmd$",
+            "vmlinux"
+        ]
+    },
+    "busybox_linux": {
+        "extends": ["base_print"],
+        "Common.filter": [],
+        "Common.filter_in": [
+            ".*?\\.tmp$",
+            "tmp\\.\\w+\\.c$",
+            "^tmp.*?\\.c$",
+            "/tmp/\\w+.o",
+            "-",
+            "/dev/null",
+            ".*?built-in\\.o$"
+        ],
+        "Common.filter_out": [
+            "/dev/null",
+            ".*?\\.cmd$",
+            "tmp\\.\\w+"
+        ]
+    },
+    "apache_linux": {
+        "extends": ["base_print"],
+        "Common.filter": [
+            "/tmp/.*"
+        ],
+        "Common.filter_in": [
+            ".*?\\.tmp$",
+            "tmp\\.\\w+\\.c$",
+            "^tmp.*?\\.c$",
+            "-",
+            "/dev/null",
+            ".*?built-in\\.o$"
+        ],
+        "Common.filter_out": [
+            "/dev/null",
+            ".*?\\.cmd$",
+            "tmp\\.\\w+"
+        ]
+    }
+}
