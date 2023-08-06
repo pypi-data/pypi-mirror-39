@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: aioauth2
+Version: 0.1.0
+Summary: Asynchronous OAuth Python library
+Home-page: https://github.com/rominf/aioauth2
+Author: Roman Inflianskas
+Author-email: infroma@gmail.com
+Keywords: oauth,oauth2,async,asyncio
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: aioify
+Requires-Dist: oauth2 (>=1.9,<2.0)
+Requires-Dist: poetry-version (>=0.1.2,<0.2.0)
+Project-URL: Repository, https://github.com/rominf/aioauth2
