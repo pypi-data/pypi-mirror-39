@@ -1,0 +1,17 @@
+LICENSE.TXT
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+hsgconv/__init__.py
+hsgconv/hsgconv.py
+hsgconv.egg-info/PKG-INFO
+hsgconv.egg-info/SOURCES.txt
+hsgconv.egg-info/dependency_links.txt
+hsgconv.egg-info/not-zip-safe
+hsgconv.egg-info/top_level.txt
+hsgconv/data/LocalGrid_DataBands.csv
+hsgconv/data/LocalGrid_DataParams.csv
+hsgconv/data/he_bands.json
+hsgconv/data/he_grids.json
+test/test1.py
