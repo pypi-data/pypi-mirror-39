@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: starlette-api
+Version: 0.2.0
+Summary: Starlette API layer inherited from APIStar
+Home-page: https://github.com/PeRDy/starlette-api
+License: GPL-3.0+
+Keywords: starlette,api,apistar,components,schema
+Author: José Antonio Perdiguero López
+Author-email: perdy@perdy.io
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: marshmallow (>2)
+Requires-Dist: starlette (>=0.9.0)
+Project-URL: Repository, https://github.com/PeRDy/starlette-api
+Description-Content-Type: text/markdown
+
+# Starlette API
+[![Build Status](https://travis-ci.org/PeRDy/starlette-api.svg?branch=master)](https://travis-ci.org/PeRDy/starlette-api)
+[![codecov](https://codecov.io/gh/PeRDy/starlette-api/branch/master/graph/badge.svg)](https://codecov.io/gh/PeRDy/starlette-api)
+[![PyPI version](https://badge.fury.io/py/starlette-api.svg)](https://badge.fury.io/py/starlette-api)
+
+* **Version:** 0.2.0
+* **Status:** Production/Stable
+* **Author:** José Antonio Perdiguero López
+
+## Features
+
+That library aims to bring a layer on top of Starlette framework to provide useful mechanism for building APIs. It's 
+based on API Star, inheriting some nice ideas like:
+
+* **Schema system** based on [Marshmallow](https://github.com/marshmallow-code/marshmallow/) that allows to **declare**
+the inputs and outputs of endpoints and provides a reliable way of **validate** data against those schemas.
+* **Dependency Injection** that ease the process of managing parameters needed in endpoints.
+* **Components** as the base of the plugin ecosystem, allowing you to create custom or use those already defined in 
+your endpoints, injected as parameters.
+* **Starlette ASGI** objects like `Request`, `Response`, `Session` and so on are defined as components and ready to be 
+injected in your endpoints.
+
+## Credits
+
+That library started mainly as extracted pieces from [APIStar](https://github.com/encode/apistar) and adapted to work 
+with [Starlette](https://github.com/encode/starlette).
+
