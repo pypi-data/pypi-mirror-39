@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: spaced
+Version: 0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Click
+Requires-Dist: pyyaml
+Requires-Dist: pytest
+Requires-Dist: pyreadline
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
