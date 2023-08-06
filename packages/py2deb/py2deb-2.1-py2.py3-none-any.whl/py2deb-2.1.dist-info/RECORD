@@ -1,0 +1,13 @@
+py2deb/__init__.py,sha256=df4DP2OQGuuLPTDw0w7G4TFZ38uDHy69QHmkCbvNjSE,406
+py2deb/cli.py,sha256=n8m6HJKd1nkLiUtuMfj2AMcqhT7Zf-ifq1TMmiIsbX0,8001
+py2deb/converter.py,sha256=GIXqLbjZcSbJpC8KgDM8xMh-XZwovmfSWc9uDPDfIV4,42948
+py2deb/hooks.py,sha256=dVZHih8sxGdwPXN751c3O7xBXca6W7VhVCgZummaSEo,14757
+py2deb/package.py,sha256=SrOyz8rAB1hO8Kvc9oJcBqiYNfSUdfvrFongXDK7RxQ,34991
+py2deb/tests.py,sha256=5S7ALicfLqk3OZvqTrG4k6eqTewYPyXsa55hsER4zP8,43633
+py2deb/utils.py,sha256=DsKFbyaMSoqC75jcJxHrWgd0ysfSWeiwECeAsIakfJQ,16255
+py2deb-2.1.dist-info/LICENSE.txt,sha256=1QXV0ZsZRGHhr0oeRzHQtgTOlxgT-M0cBtni4U_uLPY,1097
+py2deb-2.1.dist-info/METADATA,sha256=-MYzC4107Qqc2Ns1UR06dk80LOvyB17zasRQcTHXe24,12046
+py2deb-2.1.dist-info/WHEEL,sha256=CihQvCnsGZQBGAHLEUMf0IdA4fRduS_NBUTMgCTtvPM,110
+py2deb-2.1.dist-info/entry_points.txt,sha256=qtFRtZULuf6dkHR8PfojmzHG8woax4wJQ6S5nNbj9Mg,44
+py2deb-2.1.dist-info/top_level.txt,sha256=vSpjErH_obMr7znQ0HLBXT20b8scB7VSUMUm7npp8Aw,7
+py2deb-2.1.dist-info/RECORD,,
