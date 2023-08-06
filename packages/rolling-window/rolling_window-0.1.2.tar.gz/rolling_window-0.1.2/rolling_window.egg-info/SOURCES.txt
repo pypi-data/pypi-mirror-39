@@ -1,0 +1,12 @@
+README.md
+setup.py
+rolling_window/__init__.py
+rolling_window/helpers.py
+rolling_window/peristance.py
+rolling_window/rolling_window.py
+rolling_window/test_rolling_window.py
+rolling_window.egg-info/PKG-INFO
+rolling_window.egg-info/SOURCES.txt
+rolling_window.egg-info/dependency_links.txt
+rolling_window.egg-info/requires.txt
+rolling_window.egg-info/top_level.txt
