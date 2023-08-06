@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: robots-txt-parser
+Version: 1.0.0
+Summary: A Robot Exclusion Rules Parser for Python
+Home-page: https://github.com/katoni/robotexclusionrulesparser
+Author: Philip Semanchuk
+Author-email: philip@pyspoken.com
+Maintainer: Martin Skovvang Petersen
+Maintainer-email: martin@katoni.dk
+License: BSD
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+
+# robots-txt-parser-python
+A Robot Exclusion Rules Parser for Python
+
+https://bitbucket.org/philip_semanchuk/robotexclusionrulesparser
+
