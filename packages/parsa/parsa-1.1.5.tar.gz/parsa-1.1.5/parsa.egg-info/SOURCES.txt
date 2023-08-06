@@ -1,0 +1,14 @@
+README.md
+setup.py
+parsa/__init__.py
+parsa/parsa.py
+parsa.egg-info/PKG-INFO
+parsa.egg-info/SOURCES.txt
+parsa.egg-info/dependency_links.txt
+parsa.egg-info/entry_points.txt
+parsa.egg-info/not-zip-safe
+parsa.egg-info/top_level.txt
+parsa/utils/__init__.py
+parsa/utils/cli.py
+parsa/utils/filesystem.py
+parsa/utils/text.py
