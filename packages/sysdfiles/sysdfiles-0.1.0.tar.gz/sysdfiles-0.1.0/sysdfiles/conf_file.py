@@ -1,0 +1,61 @@
+from .ini_file import IniFile
+
+
+# =============================================================================
+# ConfFile
+# =============================================================================
+class ConfFile(IniFile):
+
+    def __init__(self, file_name=''):
+        IniFile.__init__(self, file_name)
+        self.add_properties('manager',
+                            [['capability_bounding_set', 'l'],
+                             ['cpu_affinity', 'l'],
+                             ['crash_change_vt', 'b'],
+                             ['crash_reboot', 'b'],
+                             ['crash_shell', 'b'],
+                             ['ctrl_alt_del_burst_action'],
+                             ['default_block_io_accounting', 'b'],
+                             ['default_cpu_accounting', 'b'],
+                             ['default_environment', 'l'],
+                             ['default_ip_accounting', 'b'],
+                             ['default_limit_as'],
+                             ['default_limit_core'],
+                             ['default_limit_cpu'],
+                             ['default_limit_data'],
+                             ['default_limit_fsize'],
+                             ['default_limit_locks'],
+                             ['default_limit_mem_lock'],
+                             ['default_limit_msg_queue'],
+                             ['default_limit_nice'],
+                             ['default_limit_no_file'],
+                             ['default_limit_nproc'],
+                             ['default_limit_rss'],
+                             ['default_limit_rt_prio'],
+                             ['default_limit_rt_time'],
+                             ['default_limit_sig_pending'],
+                             ['default_limit_stack'],
+                             ['default_memory_accounting', 'b'],
+                             ['default_restart_sec', 'ns'],
+                             ['default_standard_error'],
+                             ['default_standard_output'],
+                             ['default_start_limit_burst', 'i'],
+                             ['default_start_limit_interval_sec', 'ns'],
+                             ['default_tasks_accounting', 'b'],
+                             ['default_tasks_max'],
+                             ['default_timer_accuracy_sec', 'ns'],
+                             ['default_timeout_start_sec', 'ns'],
+                             ['default_timeout_stop_sec', 'ns'],
+                             ['dump_core', 'b'],
+                             ['join_controllers', 'l'],
+                             ['log_color'],
+                             ['log_level'],
+                             ['log_location'],
+                             ['log_target'],
+                             ['no_new_privileges', 'b'],
+                             ['runtime_watchdog_sec', 'ns'],
+                             ['show_status', 'b'],
+                             ['shutdown_watchdog_sec', 'ns'],
+                             ['system_call_architectures', 'l'],
+                             ['timer_slack_nsec', 'ns', '', IniFile.SECONDS_PER_NS],
+                             ['watchdog_device']])
