@@ -1,0 +1,12 @@
+typing>=3.6.6
+wagtail>=1.11
+
+[docs]
+Sphinx>=1.7
+sphinx_rtd_theme>=0.4.0
+
+[test]
+tox
+pytest>=3.5
+pytest-django>=3.2
+pytest-pythonpath>=0.7.2
