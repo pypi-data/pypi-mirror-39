@@ -1,0 +1,34 @@
+Metadata-Version: 1.1
+Name: terra-common
+Version: 0.1.0
+Summary: The Terra API
+Home-page: https://gitlab.makina-corpus.net/Terralego/Core/terra-back/
+Author: Terralego
+Author-email: terralego-pypi@makina-corpus.com
+License: UNKNOWN
+Description: This is the Terra API.
+        
+        ## Requirements
+        
+        On Ubuntu, do not use the system packages, which are too old.
+        * **docker-ce**: https://docs.docker.com/install/linux/docker-ce/ubuntu/
+        * **docker-compose**: `sudo pip3 install docker-compose`
+        
+        
+        ## Usage
+        
+        ### First launch
+        Create a docker.env file:
+        * `mv docker.env.dist docker.env`
+        * Edit the settings
+        
+        ### Running the project
+        `docker-compose up`
+        
+        ### Applying Django migrations
+        `docker-compose run --rm django /code/venv/bin/python3.6 ./manage.py migrate`
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
