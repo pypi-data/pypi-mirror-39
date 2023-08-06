@@ -1,0 +1,11 @@
+deb_subscription-0.0.0.1.data/scripts/deb_subscription,sha256=Vx9DM1tBFTp1gkTwv3TUZ5LuVixmPmDaSEBC2iNB5xM,7833
+deb_subscription_lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deb_subscription_lib/models.py,sha256=REdzCQPMMlNhZQ2t4mK8NXfxsLEkVSrmXxIJzeNiOlQ,7548
+deb_subscription_lib/utils.py,sha256=qdkZhMIjt1dkWDx0yl6pCRLFjzMH8I3cDKIBaNejbyU,3202
+deb_subscription_lib/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deb_subscription_lib/templates/custom-apt-conf.j2,sha256=UQUl1bc-0_IVmD2wk--0BOeOQ5RRVCwQrnePn69DS7k,105
+deb_subscription-0.0.0.1.dist-info/LICENSE,sha256=5X8cMguM-HmKfS_4Om-eBqM6A1hfbgZf6pfx2G24QFI,35150
+deb_subscription-0.0.0.1.dist-info/METADATA,sha256=Ayc87OeXgrx2S7K-GoR3EoFlG5x7iSgyXLY3xRtkAj0,1246
+deb_subscription-0.0.0.1.dist-info/WHEEL,sha256=ZvfnntGaZglpRLAKVkx18HrxfMwCXrA0b-ARJVnnMrw,92
+deb_subscription-0.0.0.1.dist-info/top_level.txt,sha256=FQHbR9KNzciZ5iZEudMhA_nZOWR8DoGaq7Yruf9JT2A,21
+deb_subscription-0.0.0.1.dist-info/RECORD,,

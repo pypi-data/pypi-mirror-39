@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: deb-subscription
+Version: 0.0.0.1
+Summary: A tool for to add katello repositories to debian hosts and to register debian host to katello
+Home-page: https://github.com/smehboub/deb_subscription
+Author: Sophian Mehboub
+Author-email: sophienmehboub@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: python-gnupg
+Requires-Dist: jinja2
+Requires-Dist: docopts
+
+# deb_subscription
+
+>It's a tool for to add katello repositories to debian host and to register debian host to katello"    
+>This tool work with python2 or python3   
+>Tested with Python 2.7.13 and Python 3.5.3 on Debian 9   
+
+## Installation and Use
+```
+apt update   
+apt install -y apt-transport-https gnupg  
+apt install python-pip 
+
+# add to /etc/hosts
+# <ip_katello> <fqdn_katello>
+
+pip install deb-subscription   
+
+deb_subscription --fqdn katello.domain.tld --organization ORG --location LOC --activation_key ACT_KEY --username admin --password xxxxxxxx   
+```
+
+
