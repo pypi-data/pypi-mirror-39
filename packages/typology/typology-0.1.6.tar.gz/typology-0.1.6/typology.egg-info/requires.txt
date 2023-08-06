@@ -1,0 +1,12 @@
+metawiki
+requests
+bs4
+mistune
+PyYAML
+python-slugify
+boltons
+
+[test]
+coverage
+pytest
+pytest-cov
