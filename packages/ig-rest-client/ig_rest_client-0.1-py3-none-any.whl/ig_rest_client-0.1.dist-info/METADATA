@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: ig-rest-client
+Version: 0.1
+Summary: IG REST trading API client
+Home-page: https://github.com/wjszlachta/ig-rest-client
+Author: Wojciech Szlachta
+Author-email: wojciech@szlachta.net
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/wjszlachta/ig-rest-client/issues
+Project-URL: Source, https://github.com/wjszlachta/ig-rest-client
+Keywords: IG trading
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Office/Business :: Financial
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# IG REST trading API client
+
+Small Python library to connect to [IG](https://www.ig.com/) REST trading API (more information and API reference is available on [IG Labs](https://labs.ig.com/) website).
+
+## Installation
+
+To use most recent release:
+
+```bash
+pip install ig-rest-client
+```
+
+To use current master branch:
+
+```bash
+pip install git+https://github.com/wjszlachta/ig-rest-client.git
+```
+
+## Usage
+
+For demo account:
+
+```python
+from ig_rest_client import IgRestSession
+
+api_key = '...'
+account_id = '...'
+rest_api_username = '...'
+rest_api_password = '...'
+
+session = IgRestSession(api_key, account_id, rest_api_username, rest_api_password)
+
+print(session.session_details())
+
+session.log_out()
+```
+
+For live account:
+
+```python
+from ig_rest_client import IgRestSession, IG_REST_TRADING_API_LIVE_URL
+
+api_key = '...'
+account_id = '...'
+rest_api_username = '...'
+rest_api_password = '...'
+
+session = IgRestSession(api_key, account_id, rest_api_username, rest_api_password, rest_api_url=IG_REST_TRADING_API_LIVE_URL)
+
+print(session.session_details())
+
+session.log_out()
+```
+
+
