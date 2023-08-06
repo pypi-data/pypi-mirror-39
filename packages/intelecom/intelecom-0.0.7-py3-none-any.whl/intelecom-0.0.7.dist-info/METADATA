@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: intelecom
+Version: 0.0.7
+Summary: Huawei IN interface library
+Home-page: https://github.com/joeseggie/intelecom
+Author: Joseph G. Serunjogi
+Author-email: joeseggie@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# IN Telecom package
+
+This is a package to handle connections to IN. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
