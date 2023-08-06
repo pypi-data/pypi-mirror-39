@@ -1,0 +1,2 @@
+include versioneer.py
+include equilibrator_cache/_version.py

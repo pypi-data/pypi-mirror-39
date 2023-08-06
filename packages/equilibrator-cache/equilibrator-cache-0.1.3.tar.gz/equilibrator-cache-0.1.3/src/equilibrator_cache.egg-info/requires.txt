@@ -1,0 +1,7 @@
+importlib_resources
+numpy>=1.14.0
+scipy>=1.0.0
+pandas>=0.23
+bioservices>=1.5
+openbabel>=2.4.1
+requests
