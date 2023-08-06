@@ -1,0 +1,3 @@
+[console_scripts]
+src = msn.command_line:main
+
