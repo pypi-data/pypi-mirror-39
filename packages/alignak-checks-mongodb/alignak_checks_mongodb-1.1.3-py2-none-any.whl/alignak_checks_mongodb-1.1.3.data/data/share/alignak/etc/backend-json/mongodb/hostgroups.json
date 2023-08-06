@@ -1,0 +1,14 @@
+[
+    {
+        "_realm": "All",
+        "_sub_realm": true,
+        "action_url": "",
+        "alias": "MongoDB hosts",
+        "hostgroups": [],
+        "hosts": [],
+        "imported_from": "alignak-checks-mongodb",
+        "name": "mongodb",
+        "notes": "This group contains all the MongoDB servers.",
+        "notes_url": ""
+    }
+]
