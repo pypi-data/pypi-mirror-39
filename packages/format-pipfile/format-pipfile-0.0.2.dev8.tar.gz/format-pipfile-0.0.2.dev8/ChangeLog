@@ -1,0 +1,23 @@
+CHANGES
+=======
+
+* add a test
+* remove need for modified pbr
+* add travis deploy
+* move pbr again
+* move forked pbr
+* try to resolve some build errors
+* tox.ini
+* bumpversion config
+
+v0.0.1
+------
+
+* travis config
+* fill in remaining badges
+* remove erroneous hyphen
+* ignore AUTHORS
+* ignore changelog
+* add code!
+* start up some readme badges
+* initial commit
