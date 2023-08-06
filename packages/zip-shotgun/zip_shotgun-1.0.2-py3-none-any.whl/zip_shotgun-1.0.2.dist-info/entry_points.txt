@@ -1,0 +1,3 @@
+[console_scripts]
+zip-shotgun = zip_shotgun.zip_shotgun_main:zip_shotgun_cli
+
