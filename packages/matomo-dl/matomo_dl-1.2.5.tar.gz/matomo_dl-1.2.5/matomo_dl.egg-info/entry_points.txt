@@ -1,0 +1,4 @@
+[console_scripts]
+matomo-dl = matomo_dl.__main__:cli
+matomo_dl = matomo_dl.__main__:cli
+
