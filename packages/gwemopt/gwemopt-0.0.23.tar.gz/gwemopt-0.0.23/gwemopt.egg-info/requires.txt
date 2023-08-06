@@ -1,0 +1,13 @@
+numpy>=1.7.1
+scipy>=0.12.1
+matplotlib>=1.2.0
+astropy>=1.1.1
+astropy-healpix
+lscsoft-glue
+python-dateutil
+mocpy
+astroquery
+astroplan
+pyephem
+pyyaml
+VOEventLib
