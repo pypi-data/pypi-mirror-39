@@ -1,0 +1,19 @@
+Metadata-Version: 1.0
+Name: gitlab-job-exporter
+Version: 0.0.3
+Summary: Package to scrape running_time, duration_time, status, etc. of Gitlab jobs using prometheus time series format
+Home-page: https://gitlab.codecentric.de/cloudcentric/openstack-gitlab-runner
+Author: Sven Hertzberg
+Author-email: sven.hertzberg@codecentric.cloud
+License: MIT
+Description: # Gitlab job exporter
+        
+        This package provides some Gitlab metrics using prometheus time series format.
+        
+        ## Installation
+        ```
+        pip install gitlab_job_exporter
+        ```
+        
+        
+Platform: UNKNOWN
