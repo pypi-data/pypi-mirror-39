@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pysyncdroid
+Version: 1.1.0
+Summary: A simple way to synchronize an Android device connected to a Linux PC via MTP over USB
+Home-page: https://github.com/DusanMadar/PySyncDroid
+Author: Dusan Madar
+Author-email: madar.dusan@gmail.com
+License: MIT
+Keywords: linux android synchronize usb mtp
+Platform: linux
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Desktop Environment :: File Managers
+
+A simple way to synchronize an Android device connected to a Linux PC via MTP over USB
+
+

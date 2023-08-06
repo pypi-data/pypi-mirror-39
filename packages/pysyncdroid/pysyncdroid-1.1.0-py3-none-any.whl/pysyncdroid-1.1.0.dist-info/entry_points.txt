@@ -1,0 +1,3 @@
+[console_scripts]
+pysyncdroid = pysyncdroid.cli:main
+
