@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ColorString
+Version: 0.0.2
+Summary: A simple utility to change the color of text within a terminal.
+Home-page: https://github.com/mattkjames7/ColorString
+Author: Matthew Knight James
+Author-email: mattkjames7@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Description-Content-Type: text/markdown
+
+# ColorString
+Simple python utility to allow the colouring of strings within the terminal
+
+
