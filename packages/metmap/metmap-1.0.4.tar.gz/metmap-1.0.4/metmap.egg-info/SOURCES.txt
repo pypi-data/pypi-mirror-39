@@ -1,0 +1,10 @@
+README.md
+setup.py
+bin/run_metmap.py
+metmap/__init__.py
+metmap/metmap.py
+metmap.egg-info/PKG-INFO
+metmap.egg-info/SOURCES.txt
+metmap.egg-info/dependency_links.txt
+metmap.egg-info/requires.txt
+metmap.egg-info/top_level.txt
