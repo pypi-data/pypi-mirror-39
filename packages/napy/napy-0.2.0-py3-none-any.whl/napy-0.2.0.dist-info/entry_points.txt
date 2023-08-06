@@ -1,0 +1,3 @@
+[console_scripts]
+napy=napy.console:run
+
