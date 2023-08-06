@@ -1,0 +1,17 @@
+README.rst
+setup.py
+sense_django/__init__.py
+sense_django/admin.py
+sense_django/apps.py
+sense_django/middleware.py
+sense_django/models.py
+sense_django/request_utils.py
+sense_django/services.py
+sense_django/tests.py
+sense_django/utils.py
+sense_django/views.py
+sense_django.egg-info/PKG-INFO
+sense_django.egg-info/SOURCES.txt
+sense_django.egg-info/dependency_links.txt
+sense_django.egg-info/requires.txt
+sense_django.egg-info/top_level.txt
