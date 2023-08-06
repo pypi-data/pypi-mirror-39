@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: pybv
+Version: 0.0.0
+Summary: A lightweight I/O utility for the BrainVision data format.
+Home-page: https://github.com/bids-standard/pybv
+Maintainer: Stefan Appelhoff
+Maintainer-email: stefan.appelhoff@mailbox.org
+License: BSD (3-clause)
+Download-URL: https://github.com/bids-standard/pybv
+Project-URL: Documentation, https://pybv.readthedocs.io
+Project-URL: Bug Reports, https://github.com/bids-standard/pybv/issues
+Project-URL: Source, https://github.com/bids-standard/pybv
+Keywords: Brain Products BrainVision vhdr vmrk eeg
+Platform: any
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+[![CircleCI](https://circleci.com/gh/bids-standard/pybv.svg?style=svg)](https://circleci.com/gh/bids-standard/pybv)
+
+# pybv
+
+A lightweight I/O utility for the BrainVision data format, written in Python.
+
+**See the [pybv documentation](https://pybv.readthedocs.io) for more
+information.**
+
+**ALPHA SOFTWARE**. This package is currently in its early stages of iteration.
+It may change both its internals or its user-facing API in the near future. Any
+feedback and ideas on how to improve either of these is more than welcome!
+
+## Acknowledgements
+
+This package was originally adapted from
+[palday](https://palday.bitbucket.io/)'s
+[Philistine package](https://gitlab.com/palday/philistine). It copies much of
+the BrainVision exporting code, removes the dependence on MNE, and focuses the
+code around BrainVision I/O.
+
+
