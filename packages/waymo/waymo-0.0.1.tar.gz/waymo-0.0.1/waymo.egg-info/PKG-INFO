@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: waymo
+Version: 0.0.1
+Summary: Waymo pip package
+Home-page: https://github.com/GooglexTeam/waymo-py
+Author: cc189
+Author-email: cc189dev@example.com
+License: UNKNOWN
+Description: # waymo-py
+        
+        ## License
+        
+        MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
