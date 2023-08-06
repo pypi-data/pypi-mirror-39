@@ -1,0 +1,10 @@
+setup.py
+src/pygatherer/__init__.py
+src/pygatherer.egg-info/PKG-INFO
+src/pygatherer.egg-info/SOURCES.txt
+src/pygatherer.egg-info/dependency_links.txt
+src/pygatherer.egg-info/requires.txt
+src/pygatherer.egg-info/top_level.txt
+src/pygatherer/utils/__init__.py
+src/pygatherer/utils/constants.py
+src/pygatherer/utils/parser.py
