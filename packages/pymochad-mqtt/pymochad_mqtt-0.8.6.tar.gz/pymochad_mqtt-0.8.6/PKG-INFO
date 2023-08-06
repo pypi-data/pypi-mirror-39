@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pymochad_mqtt
+Version: 0.8.6
+Summary: Mochad wrapper in Python with mqtt interface
+Home-page: https://github.com/aosadchyy/pymochad_mqtt
+Author: Alex Osadchyy
+Author-email: aosadchyy@outlook.com
+License: UNKNOWN
+Description: # pymochad_mqtt
+        Mochad wrapper in Python with mqtt interface for a simplified send and receive of X10 messages
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
