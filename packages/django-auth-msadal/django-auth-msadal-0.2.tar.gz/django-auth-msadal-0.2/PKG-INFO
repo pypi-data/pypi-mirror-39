@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: django-auth-msadal
+Version: 0.2
+Summary: very simple authentication module for python3 / django / Azur AD - Office365 using MS ADAL Lib
+Home-page: https://github.com/Lucterios2/django_auth_adal
+Author: Pierre-Olivier VERSCHOORE
+Author-email: po.verschoore@sd-libre.fr
+License: GPL V3
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django :: 2.0
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python

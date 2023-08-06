@@ -1,0 +1,12 @@
+setup.py
+django_auth_msadal/MSAdalAuth.py
+django_auth_msadal/__init__.py
+django_auth_msadal/models.py
+django_auth_msadal/msgraph.py
+django_auth_msadal/urls.py
+django_auth_msadal/views.py
+django_auth_msadal.egg-info/PKG-INFO
+django_auth_msadal.egg-info/SOURCES.txt
+django_auth_msadal.egg-info/dependency_links.txt
+django_auth_msadal.egg-info/requires.txt
+django_auth_msadal.egg-info/top_level.txt
