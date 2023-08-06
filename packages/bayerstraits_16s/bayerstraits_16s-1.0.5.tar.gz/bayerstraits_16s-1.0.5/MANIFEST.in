@@ -1,0 +1,4 @@
+include bayerstraits_16s/scripts/*
+include bayerstraits_16s/data/*
+include bayerstraits_16s/example/*
+include README.md
