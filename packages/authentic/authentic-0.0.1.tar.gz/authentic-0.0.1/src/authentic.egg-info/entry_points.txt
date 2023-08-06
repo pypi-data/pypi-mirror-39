@@ -1,0 +1,3 @@
+[console_scripts]
+authentic = authentic.cli:main
+
