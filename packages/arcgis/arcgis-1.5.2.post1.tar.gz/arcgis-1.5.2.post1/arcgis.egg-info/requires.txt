@@ -1,0 +1,15 @@
+six
+ipywidgets>=7
+widgetsnbextension>=3
+pandas>=0.23
+numpy
+pyshp
+matplotlib
+keyring
+jupyterlab
+
+[:platform_system == "Windows"]
+winkerberos
+
+[gp]
+dill
