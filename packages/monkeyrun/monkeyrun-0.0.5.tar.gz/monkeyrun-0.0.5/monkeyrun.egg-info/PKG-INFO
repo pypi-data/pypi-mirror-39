@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: monkeyrun
+Version: 0.0.5
+Summary: MonkeyRunnerTestCase
+Home-page: https://github.com/pypa/sampleproject
+Author: wanghan
+Author-email: wanghan0406@autohome.com.cn
+License: UNKNOWN
+Description: README
+        ====
+        
+        - 待完成
+        
+        适配window和mac系统 > 已完成
+        
+        对接接口，上传数据 
+        
+        对接GUI
+        
+        - 功能
+        
+        对APP进行滑动点击操作后，收集应用的错误日志及性能数据（cpu,memery）
+        
+        - 安装
+        
+        ```shell
+        pip install monkeyrun
+        ```
+        
+        - 执行
+        
+        ```python
+        from monkeyrun import run
+        
+        run.run(device=devices, fpath=fpath, scheme=scheme, activity=activity, m=5)
+        ```
+        
+        - 参数解释
+        
+        ```markdown
+            :param device: the devices of android 设备token
+            :param fpath: the path of apk package apk包远程下载地址
+            :param scheme: the scheme of your business line scheme地址
+            :param activity: the activity of you scheme scheme对应的activity名
+            :param d: day 日
+            :param h: hour 时
+            :param m: minus 分
+            :param s: second 秒
+        ```
+        
+        - APK
+        
+        将apk文件下载到执行目录，执行结束后删除
+        
+        - LOG
+        
+        执行log生成于你的执行目录，log/*.log
+        
+        - DB
+        
+        会在执行目录下生成DB文件
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
