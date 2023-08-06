@@ -1,0 +1,93 @@
+{% extends 'booru/base.html' %}
+
+{% block css %}
+    {% load staticfiles %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block body %}
+{% load crispy_forms_tags %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form method="get">
+                {{ form |crispy }}
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="table" class="col mt-3">
+            <table class="table table-striped table-hover text-center">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">From</th>
+                        <th scope="col">To</th>
+                        <th scope="col">Approver</th>
+                        <th scope="col">Status</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for implication in object_list %}
+                    <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>
+                            <a class="font-weight-bold" style="color: #{{implication.from_tag.category.color}};" href="{% url 'booru:tag_detail' implication.from_tag.id %}">?</a>
+                            <a href="{{ implication.from_tag.get_search_url }}" style="color: #{{implication.from_tag.category.color}};">{{implication.from_tag}}</a> 
+                            <span class="text-muted">{{implication.from_tag.get_count}}</span>
+                        </td>
+                        <td>
+                            <a class="font-weight-bold" style="color: #{{implication.to_tag.category.color}};" href="{% url 'booru:tag_detail' implication.to_tag.id %}">?</a>
+                            <a href="{{ implication.to_tag.get_search_url }}" style="color: #{{implication.to_tag.category.color}};">{{implication.to_tag}}</a> 
+                            <span class="text-muted">{{implication.to_tag.get_count}}</span>
+                        </td>
+                        <td><a href="{{implication.approver.get_absolute_url}}">{{implication.approver}}</a></td>
+                        <td>{{implication.get_status_display}}</td>
+                        <td><a href="{% url 'booru:implication-detail' implication.id %}">Show</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <nav aria-label="..." class="mt-4">
+                <ul class="pagination">
+                    {% if page_obj.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{page_obj.previous_page_number}}" tabindex="-1">Previous</a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                    {% endif %}
+                    {% for i in page_obj.paginator.page_range %}
+                        {% if page_obj.number == i %}
+                        <li class="page-item active">
+                            <a class="page-link" href="{% url 'booru:tags_page_list' i %}">{{i}} <span class="sr-only">(current)</span></a>
+                        </li>
+                        {% elif i > page_obj.number|add:'-3' and i < page_obj.number|add:'3' %}
+                        <li class="page-item">
+                            <a class="page-link" href="{% url 'booru:tags_page_list' i %}">{{i}}</a>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if page_obj.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{page_obj.next_page_number}}">Next</a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock %}
