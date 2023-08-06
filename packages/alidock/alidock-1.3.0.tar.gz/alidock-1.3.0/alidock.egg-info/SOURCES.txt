@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+alidock/__init__.py
+alidock/log.py
+alidock/util.py
+alidock.egg-info/PKG-INFO
+alidock.egg-info/SOURCES.txt
+alidock.egg-info/dependency_links.txt
+alidock.egg-info/entry_points.txt
+alidock.egg-info/requires.txt
+alidock.egg-info/top_level.txt
+alidock/helpers/__init__.py
+alidock/helpers/init-inside.sh.j2
+alidock/helpers/init-outside.sh.j2
