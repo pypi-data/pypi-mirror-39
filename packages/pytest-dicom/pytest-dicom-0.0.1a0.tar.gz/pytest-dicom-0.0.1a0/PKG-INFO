@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pytest-dicom
+Version: 0.0.1a0
+Summary: pytest plugin to provide DICOM fixtures
+Home-page: https://github.com/suever/pytest-dicom
+Author: Jonathan Suever
+Author-email: suever@gmail.com
+License: UNKNOWN
+Description: # pytest-dicom
+        pytest plugin to provide DICOM-specific fixtures
+        
+Keywords: pytest dicom testing
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
