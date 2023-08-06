@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: meshparty
+Version: 0.2.1
+Summary: a service to work with meshes
+Home-page: https://github.com/sdorkenw/MeshParty.git
+Author: Sven Dorkenwald
+Author-email: svenmd@princeton.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: plyfile
+Requires-Dist: h5py
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: sklearn
+Requires-Dist: networkx
+Requires-Dist: multiwrapper
+Requires-Dist: trimesh
+Requires-Dist: cloud-volume (==0.31.2)
+Requires-Dist: pyassimp
+Requires-Dist: pymeshfix
+
+UNKNOWN
+
+
