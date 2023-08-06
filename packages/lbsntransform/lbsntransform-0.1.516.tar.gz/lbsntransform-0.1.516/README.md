@@ -1,0 +1,89 @@
+# LBSNTRANSFORM
+
+A python package that uses the [common location based social network (LBSN) data structure concept](https://gitlab.vgiscience.de/lbsn/concept) (ProtoBuf) to import, transform and export Social Media data such as Twitter and Flickr.
+
+## Description
+
+This tool enables data import from a Postgres database, JSON, or CSV and export to CSV, [LBSN ProtoBuf](https://gitlab.vgiscience.de/lbsn/concept) or a [LBSN prepared Postgres Database](https://gitlab.vgiscience.de/lbsn/database-setup).
+The tool will map Social Media Endpoints (e.g. Twitter tweets) to a common [LBSN Interchange Structure](https://gitlab.vgiscience.de/lbsn/concept) format in ProtoBuf. The tool can also be imported to other Python projects with `import lbsntransform` for on-the-fly conversion. 
+The goal is to provide a common interface to handle Social Media Data, without custom adjustment to the myriad API Endpoints available. As an example, consider the ProtoBuf spec "Post", which can be a Tweet on Twitter, a Photo shared on Flickr, or a post on Reddit. This tool is based on a 4-Facet conceptual framework for LBSN, introduced in a paper by [Dunkel et al. (2018)](https://www.tandfonline.com/doi/full/10.1080/13658816.2018.1546390). 
+
+## Quick Start
+
+You can install the newest version with all its dependencies directly from the Git Repository:
+```shell
+pip install --upgrade git+git://gitlab.vgiscience.de:lbsn/lbsntransform.git
+```
+
+or install latest release using pip:
+```shell
+pip install lbsntransform
+```
+
+.. for non-developers, another option is to simply download the latest build and run with custom args,  
+e.g. with the following command line args
+
+```shell
+lbsntransform.exe --Origin 3 --LocalInput --LocalFileType '*.json' --transferlimit 1000 --CSVOutput
+```
+
+.. with the above input args, the the tool will: 
+- read local json from /01_Input/  
+- and store lbsn records as CSV and ProtoBuf in /02_Output/  
+
+For a full list of possible input args and descriptions see [config.py](/lbsntransform/config/config.py).
+
+## Built With
+
+* [lbsnstructure](https://pypi.org/project/lbsnstructure/) - A common language independend and cross-network social-media datascheme
+* [protobuf](https://github.com/google/protobuf) - Google's data interchange format
+* [psycopg2](https://github.com/psycopg/psycopg2) - Python-PostgreSQL Database Adapter
+* [ppygis3](https://github.com/AlexImmer/ppygis3) - A PPyGIS port for Python
+* [shapely](https://github.com/Toblerity/Shapely) - Geometric objects processing in Python
+* [emoji](https://github.com/carpedm20/emoji/) - Emoji handling in Python
+
+## Contributing
+
+Field mapping from and to ProtoBuffers from different Social Media sites is provided in classes [field_mapping_xxx.py](/lbsntransform/classes/field_mapping_twitter.py).  
+As an example, mapping of the Twitter json structure is given (see class `FieldMappingTwitter`). This class may be used to extend  
+functionality to cover other networks such as Flickr or Foursquare.  
+
+For development & testing, make a local clone of this repository  
+```shell
+git clone git@gitlab.vgiscience.de:lbsn/lbsntransform.git
+```
+..and create package in develop mode to symlink the folder to your  
+Python's site-packages folder with:  
+```shell
+python setup.py develop
+```
+(use `python setup.py develop --uninstall` to uninstall tool in develop mode)
+
+Now you can run tool in your shell with (Origin 3 = Twitter):  
+```shell
+lbsntransform --Origin 3 --LocalInput --LocalFileType '*.json' --transferlimit 1000 --CSVOutput
+```
+
+..or import the package to other python projects with:  
+```python
+import lbsntransform
+```
+
+## Versioning and Changelog, and Download
+
+For the releases available, see the [tags on this repository](/../tags). 
+See [version file](VERSION) for latest available version. The latest windows build that is available for download is [0.1.4](https://cloudstore.zih.tu-dresden.de/index.php/s/MqtlCyqLbxmnnxr/download).
+For all other systems use cx_freeze to build executable:
+```shell
+python cx_setup.py build
+```
+
+## Authors
+
+* **Alexander Dunkel** - Initial work
+
+See also the list of [contributors](/../graphs/master).  
+
+## License
+
+This project is licensed under the GNU GPLv3 or any higher - see the [LICENSE.md](LICENSE.md) file for details.
