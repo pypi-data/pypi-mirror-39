@@ -1,0 +1,13 @@
+setup.cfg
+setup.py
+fritz/__init__.py
+fritz.egg-info/PKG-INFO
+fritz.egg-info/SOURCES.txt
+fritz.egg-info/dependency_links.txt
+fritz.egg-info/not-zip-safe
+fritz.egg-info/requires.txt
+fritz.egg-info/top_level.txt
+fritz/client/__init__.py
+fritz/client/api_client.py
+fritz/keras/__init__.py
+fritz/keras/model_checkpoint.py
