@@ -1,0 +1,4 @@
+[devconfig]
+extend = devconfig [extend.yml]
+fstring = devconfig.fstring
+
