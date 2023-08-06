@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d2100b7"],{b5e3:function(t,n,o){"use strict";o.r(n);o("cadf"),o("551c"),o("097d");var s={methods:{slotConnected:function(){this.connected=!0},slotDisconnected:function(){this.connected=!1},slotShowMemoryStatus:function(t){this.memoryStatus=t.data},slotShowSysInfo:function(t){this.sysInfo=t.data,"esp8266"===t.data.platform&&this.$send(this.SIGNAL_ADJUST_MEMLIMIT(this))}}};n["default"]=s}}]);
+//# sourceMappingURL=chunk-2d2100b7.9fda0203.js.map
