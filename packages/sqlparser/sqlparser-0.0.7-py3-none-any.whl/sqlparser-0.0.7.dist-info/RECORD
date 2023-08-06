@@ -1,0 +1,11 @@
+sqlparser/SqlParser.py,sha256=7u4o-2hOyGIi4V7JXhyMirAJwu2gZ-AFwT6W8PYDE1c,7197
+sqlparser/__init__.py,sha256=CK10SRb0TNl91Lep52PxhCQQrJslNE90qVqNYFI3LZM,31
+sqlparser/tests/TestSqlParser.py,sha256=jrdRkhXlA-fuHNuskpTzqq10uGYCch6gCcrZqxZe1mY,2233
+sqlparser/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlparser/tests/mock_jaydebeapi.py,sha256=FWT_UL5EQhO9Ul17-Q1H112QUIXCj7Qy9VJ4re9BZ8E,979
+sqlparser-0.0.7.dist-info/COPYING,sha256=LW1Kpv6MBmQ6qblKLJpLQDFLI0b7tk1Bi7pUG9M6MO4,35142
+sqlparser-0.0.7.dist-info/COPYING.LESSER,sha256=6or154nLLU6bELzjh0mCreFjt0m2v72zLi3yHE0QbeE,7650
+sqlparser-0.0.7.dist-info/METADATA,sha256=Jbv7TfPXHTM8A-jESCNnntg1RiPGlVWsTjMkkE6MISY,3716
+sqlparser-0.0.7.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+sqlparser-0.0.7.dist-info/top_level.txt,sha256=TzvuAIrNFZ7xsoHmUrp2cAyUhy2ZzVw2yR8-MpEbyxM,10
+sqlparser-0.0.7.dist-info/RECORD,,
