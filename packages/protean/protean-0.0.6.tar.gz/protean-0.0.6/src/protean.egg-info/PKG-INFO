@@ -1,0 +1,101 @@
+Metadata-Version: 1.1
+Name: protean
+Version: 0.0.6
+Summary: Protean Application Framework
+Home-page: https://github.com/proteanhq/protean
+Author: Subhash Bhushan C
+Author-email: subhash@team8solutions.com
+License: BSD 3-Clause License
+Description: *****************************************
+        Protean: The Clean Architecture Framework
+        *****************************************
+        
+        .. image:: https://readthedocs.org/projects/protean/badge/?style=flat
+            :target: https://readthedocs.org/projects/protean
+        .. image:: https://img.shields.io/pypi/l/protean.svg
+            :target: https://pypi.org/project/protean/
+        .. image:: https://img.shields.io/pypi/v/protean.svg
+            :target: https://pypi.org/project/protean/
+        .. image:: https://img.shields.io/pypi/wheel/protean.svg
+            :target: https://pypi.org/project/protean/
+        .. image:: https://img.shields.io/pypi/pyversions/protean.svg
+            :target: https://pypi.org/project/protean/
+        .. image:: https://img.shields.io/pypi/implementation/protean.svg
+            :target: https://pypi.org/project/protean/
+        .. image:: https://api.codacy.com/project/badge/Grade/826792451bd94ec6a8b46a3887443e93
+            :target: https://www.codacy.com/app/subhashb/protean?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=proteanhq/protean&amp;utm_campaign=Badge_Grade
+        .. image:: https://codecov.io/gh/proteanhq/protean/branch/master/graph/badge.svg
+            :target: https://codecov.io/gh/proteanhq/protean
+        
+        Installation
+        ############
+        
+        ::
+        
+            pip install protean
+        
+        Read the Docs
+        #############
+        
+        Online docs are available at: https://protean.readthedocs.io/en/latest/
+        
+        Development
+        ###########
+        
+        ::
+        
+            pyenv virtualenv -p python3.6 3.6.5 protean-dev
+        
+        To run the all tests run::
+        
+            tox
+        
+        
+        Changelog
+        =========
+        
+        0.0.1 (2018-07-15)
+        ------------------
+        
+        * First release on PyPI.
+        
+        0.0.2 (2018-07-19)
+        ------------------
+        
+        * Entity Base Class
+        
+        0.0.3 (2018-07-20)
+        ------------------
+        
+        * Add `bleach` as a setup requirement
+        * Add GeoPoint and Decimal Data Types to Entities
+        
+        0.0.4 (2018-07-20)
+        ------------------
+        
+        * UseCase Utility Classes
+        * Repository Abstract Classes
+        
+        0.0.5 (2018-)
+        ------------------
+        
+        * Context Class
+        
+        0.0.6 (2018-12-12)
+        ------------------
+        
+        * Repository rewritten from the ground up
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: OS/2
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
