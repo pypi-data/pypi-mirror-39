@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: steelscript.packets
+Version: 1.8
+Summary: Base PCAP and inet packet classes.
+Home-page: http://pythonhosted.org/steelscript
+Author: Riverbed Technology
+Author-email: eng-github@riverbed.com
+License: MIT
+Description: 
+        steelscript.packets
+        ====================
+        Cython implemented classes for reading and, in most cases writing pcap, pcapng
+        Ethernet, IP, TCP, and UDP. Plus other packet data like MPLS, ARP and a subset
+        of SMB (at time of writing).
+        
+        
+Platform: Linux
+Platform: Mac OS
+Platform: Windows
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: System :: Networking
