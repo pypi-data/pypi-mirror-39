@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: bin2fasta
+Version: 0.0.2
+Summary: Store any file as a fasta file
+Home-page: https://github.com/kpj/bin2fasta
+Author: kpj
+Author-email: kpjkpjkpjkpjkpjkpj@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: tqdm (>=4.28,<5.0)
+Project-URL: Repository, https://github.com/kpj/bin2fasta
