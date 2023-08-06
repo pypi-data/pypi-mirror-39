@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+even_tester/__init__.py
+even_tester/even.cpp
+even_tester/installer.py
+even_tester.egg-info/PKG-INFO
+even_tester.egg-info/SOURCES.txt
+even_tester.egg-info/dependency_links.txt
+even_tester.egg-info/entry_points.txt
+even_tester.egg-info/requires.txt
+even_tester.egg-info/top_level.txt
+even_tester/binaries/even_validator
