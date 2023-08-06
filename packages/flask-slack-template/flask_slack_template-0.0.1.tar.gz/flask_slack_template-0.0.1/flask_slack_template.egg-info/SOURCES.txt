@@ -1,0 +1,11 @@
+README.md
+setup.py
+flask_slack_template.egg-info/PKG-INFO
+flask_slack_template.egg-info/SOURCES.txt
+flask_slack_template.egg-info/dependency_links.txt
+flask_slack_template.egg-info/requires.txt
+flask_slack_template.egg-info/top_level.txt
+flaskslack/__init__.py
+flaskslack/attachment.py
+flaskslack/flaskslack.py
+flaskslack/slack.py
