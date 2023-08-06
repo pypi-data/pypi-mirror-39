@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: hailstorms
+Version: 1.1.0
+Summary: Distributed load testing framework
+Home-page: https://github.com/romramse/hailstorms
+Author: Mikael Larsson
+Author-email: mikael.larsson@romram.se
+License: MIT
+Description: Hailstorm is a simplified config based, distributed load testing framework
+Keywords: loadtest,locustio,hailstorm,hailstorms
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Testing :: Traffic Generation
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
