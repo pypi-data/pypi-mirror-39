@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+sorch/__init__.py
+sorch.egg-info/PKG-INFO
+sorch.egg-info/SOURCES.txt
+sorch.egg-info/dependency_links.txt
+sorch.egg-info/requires.txt
+sorch.egg-info/top_level.txt
+sorch/trainer/__init__.py
+sorch/trainer/trainer.py
