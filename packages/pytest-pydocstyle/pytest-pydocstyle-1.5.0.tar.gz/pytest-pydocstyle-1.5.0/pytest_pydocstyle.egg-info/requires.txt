@@ -1,0 +1,6 @@
+pytest
+pydocstyle
+
+[tests]
+pytest-codestyle
+pytest-isort
