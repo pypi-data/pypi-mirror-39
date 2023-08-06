@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: bq-tools-dirupload
+Version: 0.1.2
+Summary: Upload files to bisque/ViQi in parallel
+Home-page: https://www.viqi.org
+Author: ViQi Inc
+Author-email: support@viqi.org
+License: BSD
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Requires-Dist: bisque-api
+Requires-Dist: future
+Requires-Dist: configparser
+
+bq-dirupload
+
+Directory uploader utility
+
+
+Example:
+
+bq-dirupload --skip --include *.JPG --tag activity:bear  --re-tags "(?P<location>\w+)_(?P<camera>\w+)__(?P<date>[\d-]+)__(?P<time>[\d-]+).*" ~/Desktop/pics/bears/
+
+
+sage: Upload files to bisque [-h] [-c CONFIG] [--profile PROFILE] [-n] [-d]
+                              [-q] [-a CREDENTIALS]
+                              [--bisque-host BISQUE_HOST] [--tag TAG]
+                              [--path-tags PATH_TAGS] [--re-tags RE_TAGS]
+                              [--include INCLUDE] [--exclude EXCLUDE]
+                              [--dataset DATASET] [--threads THREADS] [-s]
+                              directories [directories ...]
+
+positional arguments:
+  directories           director(ies) to upload
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c CONFIG, --config CONFIG
+                        bisque config (default: ~/.bisque/config)
+  --profile PROFILE     Profile to use in bisque config (default: default)
+  -n, --dry-run         report actions w/o changes (default: False)
+  -d, --debug           print debugging info (default: False)
+  -q, --quiet           print actions (default: False)
+  -a CREDENTIALS, --credentials CREDENTIALS
+                        A bisque login.. admin (default: None)
+  --bisque-host BISQUE_HOST
+                        Default bisque server to connect to (default: None)
+  --tag TAG             fixed name:value pair. Any number allow (default: [])
+  --path-tags PATH_TAGS
+                        tag names for a parsible path i.e.
+                        /project/date/subject/ (default: )
+  --re-tags RE_TAGS     re expressions for tags i.e.
+                        (?P<location>\w+)--(?P<date>[\d-]+) (default: None)
+  --include INCLUDE     shell expression for files to include. Can be repeated
+                        (default: [])
+  --exclude EXCLUDE     shell expression for files to exclude. Can be repeated
+                        (default: [])
+  --dataset DATASET     create dataset and add files to it (default: None)
+  --threads THREADS     set number of uploader threads (default: 8)
+  -s, --skip            Skip upload if there is file with the same name
+                        already present on the server (default: False)
+
+
