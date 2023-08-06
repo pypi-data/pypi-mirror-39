@@ -1,0 +1,9 @@
+README.rst
+setup.py
+./agglo_tt/__init__.py
+./agglo_tt/fixtures.py
+agglo_tt.egg-info/PKG-INFO
+agglo_tt.egg-info/SOURCES.txt
+agglo_tt.egg-info/dependency_links.txt
+agglo_tt.egg-info/requires.txt
+agglo_tt.egg-info/top_level.txt
