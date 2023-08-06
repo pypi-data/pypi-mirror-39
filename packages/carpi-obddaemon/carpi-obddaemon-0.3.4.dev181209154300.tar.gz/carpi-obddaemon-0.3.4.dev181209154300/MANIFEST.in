@@ -1,0 +1,5 @@
+include README.md
+include LICENSE
+include VERSION.txt
+include SHORT_DESCRIPTION.txt
+include VERSION.autobuild.txt
