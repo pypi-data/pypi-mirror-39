@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+pyautodiff/__init__.py
+pyautodiff/admath.py
+pyautodiff/dual.py
+pyautodiff/interface.py
+pyautodiff/optimizer.py
+pyautodiff.egg-info/PKG-INFO
+pyautodiff.egg-info/SOURCES.txt
+pyautodiff.egg-info/dependency_links.txt
+pyautodiff.egg-info/top_level.txt
+test/test_admath.py
+test/test_dual.py
+test/test_interface.py
+test/test_optimizer.py
