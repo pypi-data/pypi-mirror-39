@@ -1,0 +1,340 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+macdaily/__init__.py
+macdaily/__main__.py
+macdaily 2/__init__.py
+macdaily 2/__main__.py
+macdaily 2/api/archive 2.py
+macdaily 2/api/archive.py
+macdaily 2/api/bundle 2.py
+macdaily 2/api/bundle.py
+macdaily 2/api/cleanup 2.py
+macdaily 2/api/cleanup.py
+macdaily 2/api/config 2.py
+macdaily 2/api/config.py
+macdaily 2/api/dependency 2.py
+macdaily 2/api/dependency.py
+macdaily 2/api/help 2.py
+macdaily 2/api/help.py
+macdaily 2/api/install 2.py
+macdaily 2/api/install.py
+macdaily 2/api/launch 2.py
+macdaily 2/api/launch.py
+macdaily 2/api/logging 2.py
+macdaily 2/api/logging.py
+macdaily 2/api/postinstall 2.py
+macdaily 2/api/postinstall.py
+macdaily 2/api/reinstall 2.py
+macdaily 2/api/reinstall.py
+macdaily 2/api/uninstall 2.py
+macdaily 2/api/uninstall.py
+macdaily 2/api/update 2.py
+macdaily 2/api/update.py
+macdaily 2/cli/archive 2.py
+macdaily 2/cli/archive.py
+macdaily 2/cli/bundle 2.py
+macdaily 2/cli/bundle.py
+macdaily 2/cli/cleanup 2.py
+macdaily 2/cli/cleanup.py
+macdaily 2/cli/config 2.py
+macdaily 2/cli/config.py
+macdaily 2/cli/dependency 2.py
+macdaily 2/cli/dependency.py
+macdaily 2/cli/help 2.py
+macdaily 2/cli/help.py
+macdaily 2/cli/install 2.py
+macdaily 2/cli/install.py
+macdaily 2/cli/launch 2.py
+macdaily 2/cli/launch.py
+macdaily 2/cli/logging 2.py
+macdaily 2/cli/logging.py
+macdaily 2/cli/postinstall 2.py
+macdaily 2/cli/postinstall.py
+macdaily 2/cli/reinstall 2.py
+macdaily 2/cli/reinstall.py
+macdaily 2/cli/uninstall 2.py
+macdaily 2/cli/uninstall.py
+macdaily 2/cli/update 2.py
+macdaily 2/cli/update.py
+macdaily 2/cls/command 2.py
+macdaily 2/cls/command.py
+macdaily 2/cls/bundle/dump 2.py
+macdaily 2/cls/bundle/dump.py
+macdaily 2/cls/bundle/load 2.py
+macdaily 2/cls/bundle/load.py
+macdaily 2/cls/cleanup/brew 2.py
+macdaily 2/cls/cleanup/brew 3.py
+macdaily 2/cls/cleanup/brew.py
+macdaily 2/cls/cleanup/cask 2.py
+macdaily 2/cls/cleanup/cask 3.py
+macdaily 2/cls/cleanup/cask.py
+macdaily 2/cls/cleanup/npm 2.py
+macdaily 2/cls/cleanup/npm 3.py
+macdaily 2/cls/cleanup/npm.py
+macdaily 2/cls/cleanup/pip 2.py
+macdaily 2/cls/cleanup/pip.py
+macdaily 2/cls/dependency/brew 2.py
+macdaily 2/cls/dependency/brew.py
+macdaily 2/cls/dependency/pip 2.py
+macdaily 2/cls/dependency/pip.py
+macdaily 2/cls/install/apm 2.py
+macdaily 2/cls/install/apm.py
+macdaily 2/cls/install/brew 2.py
+macdaily 2/cls/install/brew.py
+macdaily 2/cls/install/cask 2.py
+macdaily 2/cls/install/cask.py
+macdaily 2/cls/install/gem 2.py
+macdaily 2/cls/install/gem.py
+macdaily 2/cls/install/mas 2.py
+macdaily 2/cls/install/mas.py
+macdaily 2/cls/install/npm 2.py
+macdaily 2/cls/install/npm.py
+macdaily 2/cls/install/pip 2.py
+macdaily 2/cls/install/pip.py
+macdaily 2/cls/install/system 2.py
+macdaily 2/cls/install/system.py
+macdaily 2/cls/logging/apm 2.py
+macdaily 2/cls/logging/apm.py
+macdaily 2/cls/logging/app 2.py
+macdaily 2/cls/logging/app.py
+macdaily 2/cls/logging/brew 2.py
+macdaily 2/cls/logging/brew.py
+macdaily 2/cls/logging/cask 2.py
+macdaily 2/cls/logging/cask.py
+macdaily 2/cls/logging/gem 2.py
+macdaily 2/cls/logging/gem.py
+macdaily 2/cls/logging/mas 2.py
+macdaily 2/cls/logging/mas.py
+macdaily 2/cls/logging/npm 2.py
+macdaily 2/cls/logging/npm.py
+macdaily 2/cls/logging/pip 2.py
+macdaily 2/cls/logging/pip.py
+macdaily 2/cls/logging/tap 2.py
+macdaily 2/cls/logging/tap.py
+macdaily 2/cls/reinstall/brew 2.py
+macdaily 2/cls/reinstall/brew.py
+macdaily 2/cls/reinstall/cask 2.py
+macdaily 2/cls/reinstall/cask.py
+macdaily 2/cls/uninstall/brew 2.py
+macdaily 2/cls/uninstall/brew.py
+macdaily 2/cls/uninstall/cask 2.py
+macdaily 2/cls/uninstall/cask.py
+macdaily 2/cls/uninstall/pip 2.py
+macdaily 2/cls/uninstall/pip.py
+macdaily 2/cls/update/apm 2.py
+macdaily 2/cls/update/apm.py
+macdaily 2/cls/update/brew 2.py
+macdaily 2/cls/update/brew.py
+macdaily 2/cls/update/cask 2.py
+macdaily 2/cls/update/cask.py
+macdaily 2/cls/update/gem 2.py
+macdaily 2/cls/update/gem.py
+macdaily 2/cls/update/mas 2.py
+macdaily 2/cls/update/mas.py
+macdaily 2/cls/update/npm 2.py
+macdaily 2/cls/update/npm.py
+macdaily 2/cls/update/pip 2.py
+macdaily 2/cls/update/pip.py
+macdaily 2/cls/update/system 2.py
+macdaily 2/cls/update/system.py
+macdaily 2/cmd/archive 2.py
+macdaily 2/cmd/archive.py
+macdaily 2/cmd/bundle 2.py
+macdaily 2/cmd/bundle.py
+macdaily 2/cmd/cleanup 2.py
+macdaily 2/cmd/cleanup.py
+macdaily 2/cmd/config 2.py
+macdaily 2/cmd/config.py
+macdaily 2/cmd/dependency 2.py
+macdaily 2/cmd/dependency.py
+macdaily 2/cmd/install 2.py
+macdaily 2/cmd/install.py
+macdaily 2/cmd/launch 2.py
+macdaily 2/cmd/launch.py
+macdaily 2/cmd/logging 2.py
+macdaily 2/cmd/logging.py
+macdaily 2/cmd/postinstall 2.py
+macdaily 2/cmd/postinstall.py
+macdaily 2/cmd/reinstall 2.py
+macdaily 2/cmd/reinstall.py
+macdaily 2/cmd/uninstall 2.py
+macdaily 2/cmd/uninstall.py
+macdaily 2/cmd/update 2.py
+macdaily 2/cmd/update.py
+macdaily 2/core/apm 2.py
+macdaily 2/core/apm.py
+macdaily 2/core/brew 2.py
+macdaily 2/core/brew.py
+macdaily 2/core/cask 2.py
+macdaily 2/core/cask.py
+macdaily 2/core/gem 2.py
+macdaily 2/core/gem.py
+macdaily 2/core/mas 2.py
+macdaily 2/core/mas.py
+macdaily 2/core/npm 2.py
+macdaily 2/core/npm.py
+macdaily 2/core/pip 2.py
+macdaily 2/core/pip.py
+macdaily 2/core/system 2.py
+macdaily 2/core/system.py
+macdaily 2/res/find 2.py
+macdaily 2/res/find.py
+macdaily 2/util/const 2.py
+macdaily 2/util/const.py
+macdaily 2/util/error 2.py
+macdaily 2/util/error 3.py
+macdaily 2/util/error.py
+macdaily 2/util/misc 2.py
+macdaily 2/util/misc.py
+macdaily.egg-info/PKG-INFO
+macdaily.egg-info/SOURCES.txt
+macdaily.egg-info/dependency_links.txt
+macdaily.egg-info/entry_points.txt
+macdaily.egg-info/requires.txt
+macdaily.egg-info/top_level.txt
+macdaily.egg-info/zip-safe
+macdaily/api/archive.py
+macdaily/api/bundle.py
+macdaily/api/cleanup.py
+macdaily/api/config.py
+macdaily/api/dependency.py
+macdaily/api/help.py
+macdaily/api/install.py
+macdaily/api/launch.py
+macdaily/api/logging.py
+macdaily/api/postinstall.py
+macdaily/api/reinstall.py
+macdaily/api/uninstall.py
+macdaily/api/update.py
+macdaily/cli/archive.py
+macdaily/cli/bundle.py
+macdaily/cli/cleanup.py
+macdaily/cli/config.py
+macdaily/cli/dependency.py
+macdaily/cli/help.py
+macdaily/cli/install.py
+macdaily/cli/launch.py
+macdaily/cli/logging.py
+macdaily/cli/postinstall.py
+macdaily/cli/reinstall.py
+macdaily/cli/uninstall.py
+macdaily/cli/update.py
+macdaily/cls/command.py
+macdaily/cls/bundle/dump.py
+macdaily/cls/bundle/load.py
+macdaily/cls/cleanup/brew.py
+macdaily/cls/cleanup/cask.py
+macdaily/cls/cleanup/npm.py
+macdaily/cls/cleanup/pip.py
+macdaily/cls/dependency/brew.py
+macdaily/cls/dependency/pip.py
+macdaily/cls/install/apm.py
+macdaily/cls/install/brew.py
+macdaily/cls/install/cask.py
+macdaily/cls/install/gem.py
+macdaily/cls/install/mas.py
+macdaily/cls/install/npm.py
+macdaily/cls/install/pip.py
+macdaily/cls/install/system.py
+macdaily/cls/logging/apm.py
+macdaily/cls/logging/app.py
+macdaily/cls/logging/brew.py
+macdaily/cls/logging/cask.py
+macdaily/cls/logging/gem.py
+macdaily/cls/logging/mas.py
+macdaily/cls/logging/npm.py
+macdaily/cls/logging/pip.py
+macdaily/cls/logging/tap.py
+macdaily/cls/reinstall/brew.py
+macdaily/cls/reinstall/cask.py
+macdaily/cls/uninstall/brew.py
+macdaily/cls/uninstall/cask.py
+macdaily/cls/uninstall/pip.py
+macdaily/cls/update/apm.py
+macdaily/cls/update/brew.py
+macdaily/cls/update/cask.py
+macdaily/cls/update/gem.py
+macdaily/cls/update/mas.py
+macdaily/cls/update/npm.py
+macdaily/cls/update/pip.py
+macdaily/cls/update/system.py
+macdaily/cmd/archive.py
+macdaily/cmd/bundle.py
+macdaily/cmd/cleanup.py
+macdaily/cmd/config.py
+macdaily/cmd/dependency.py
+macdaily/cmd/install.py
+macdaily/cmd/launch.py
+macdaily/cmd/logging.py
+macdaily/cmd/postinstall.py
+macdaily/cmd/reinstall.py
+macdaily/cmd/uninstall.py
+macdaily/cmd/update.py
+macdaily/core/apm.py
+macdaily/core/brew.py
+macdaily/core/cask.py
+macdaily/core/gem.py
+macdaily/core/mas.py
+macdaily/core/npm.py
+macdaily/core/pip.py
+macdaily/core/system.py
+macdaily/img/askpass.icns
+macdaily/img/confirm.icns
+macdaily/man/macdaily-archive.1
+macdaily/man/macdaily-cleanup-brew.1
+macdaily/man/macdaily-cleanup-cask.1
+macdaily/man/macdaily-cleanup-npm.1
+macdaily/man/macdaily-cleanup-pip.1
+macdaily/man/macdaily-cleanup.1
+macdaily/man/macdaily-config.1
+macdaily/man/macdaily-dependency-brew.1
+macdaily/man/macdaily-dependency-pip.1
+macdaily/man/macdaily-dependency.1
+macdaily/man/macdaily-help.1
+macdaily/man/macdaily-install-apm.1
+macdaily/man/macdaily-install-brew.1
+macdaily/man/macdaily-install-cask.1
+macdaily/man/macdaily-install-gem.1
+macdaily/man/macdaily-install-mas.1
+macdaily/man/macdaily-install-npm.1
+macdaily/man/macdaily-install-pip.1
+macdaily/man/macdaily-install-system.1
+macdaily/man/macdaily-install.1
+macdaily/man/macdaily-launch.1
+macdaily/man/macdaily-logging-apm.1
+macdaily/man/macdaily-logging-app.1
+macdaily/man/macdaily-logging-brew.1
+macdaily/man/macdaily-logging-cask.1
+macdaily/man/macdaily-logging-gem.1
+macdaily/man/macdaily-logging-mas.1
+macdaily/man/macdaily-logging-npm.1
+macdaily/man/macdaily-logging-pip.1
+macdaily/man/macdaily-logging-tap.1
+macdaily/man/macdaily-logging.1
+macdaily/man/macdaily-postinstall.1
+macdaily/man/macdaily-reinstall-brew.1
+macdaily/man/macdaily-reinstall-cask.1
+macdaily/man/macdaily-reinstall.1
+macdaily/man/macdaily-uninstall-brew.1
+macdaily/man/macdaily-uninstall-cask.1
+macdaily/man/macdaily-uninstall-pip.1
+macdaily/man/macdaily-uninstall.1
+macdaily/man/macdaily-update-apm.1
+macdaily/man/macdaily-update-brew.1
+macdaily/man/macdaily-update-cask.1
+macdaily/man/macdaily-update-gem.1
+macdaily/man/macdaily-update-mas.1
+macdaily/man/macdaily-update-npm.1
+macdaily/man/macdaily-update-pip.1
+macdaily/man/macdaily-update-system.1
+macdaily/man/macdaily-update.1
+macdaily/man/macdaily.1
+macdaily/res/askpass.applescript
+macdaily/res/confirm.applescript
+macdaily/res/find.py
+macdaily/util/const.py
+macdaily/util/error.py
+macdaily/util/misc.py
