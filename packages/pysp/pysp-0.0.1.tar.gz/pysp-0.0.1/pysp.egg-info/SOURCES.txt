@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+Makefile
+README.md
+VERSION
+setup.cfg
+setup.py
+pysp/__init__.py
+pysp/string.py
+pysp.egg-info/PKG-INFO
+pysp.egg-info/SOURCES.txt
+pysp.egg-info/dependency_links.txt
+pysp.egg-info/requires.txt
+pysp.egg-info/top_level.txt
+pysp/test/__init__.py
+pysp/test/test_keyexpend.py
