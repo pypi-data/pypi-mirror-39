@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: phasme
+Version: 0.0.14
+Summary: CLI endpoint to handle (ASP encoded) graphs
+Home-page: https://github.com/aluriak/phasme
+Author: Lucas Bourneuf
+Author-email: lucas.bourneuf@laposte.net
+License: GPL
+Keywords: graph,Answer Set Programming
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: clyngor (>=0.3.10)
+Requires-Dist: networkx (>=2.1)
+Requires-Dist: pydot (==1.2.4)
+
+# Phasme
+Graph with ASP made easy.
+
+
+
+## Use cases
+
+### Write an ASP graph into gexf
+
+    phasme convert data.lp target.gexf
+
+### Rewrite a gml graph with normalized node names
+
+    phasme convert data.gml --normalized
+
+### Extract the biggest cc, write it anonymized in gml
+
+    phasme split data.lp --biggest-first "data_cc.lp" --slice 0 1
+    phasme convert data_cc_1.lp target.gml --anonymized
+
+### Generate a small world graph in gml
+
+    phasme generate data.gml erdos_renyi_graph n=100 p=0.01
+
+
+## Packaging
+
+    pip install phasme
+
+Will also populate your env with the executable `phasme`,
+enabling access to the CLI.
+
+
+## CLI commands
+CLI provides access to higher level [routines](phasme/routines.py).
+
+- `split`: split by connected component.
+- `info`: give info about given graph.
+- `convert`: rewrite, anonymize, normalize or convert the graph to (clean) ASP or standard format.
+- `generate`: generate a graph using a given generation method.
+<!-- - `compress`: produce the powergraph compression of given graph as a bubble file -->
+<!-- - ``:  -->
+
+### Other examples
+
+    # split a graph by cc
+    python -m phasme split data.lp -o "data_{}.lp"
+
+    # get infos
+    python -m phasme infos data.lp --graph-properties
+
+    # there is a shitload of options
+    python -m phasme infos --help
+
+    # conversions between formats
+    python -m phasme convert data.lp data.gml --anonymize
+
+    # generation of new graphs to play with
+    python -m phasme generate graph.gml powerlaw_cluster_graph n=5 m=2 p=0.01
+
+    # ready-to-draw tikz visualization of ASP graph
+    python -m phasme convert data.lp graph-in-latex-tikz.tex
+
+    # randomize a graph, keeping the same degree distribution, using switching method
+    python -m phasme randomize data.lp randomized-graph.gml
+
+
+## Changelog
+
+- 0.0.14
+- 0.0.13
+    - randomize: `--per-cc` option to run it on each connected component independantly
+- 0.0.12
+    - new subcommand: *randomize*, to build a random graph based on another
+    - new subcommand: *extract*, to extract subgraphs based on their nodes
+    - convert: new output format: latex/tikz
+    - infos: give infos on articulation points
+    - infos: indicate number of self loops, if any, or give property 'no loop'
+
+
