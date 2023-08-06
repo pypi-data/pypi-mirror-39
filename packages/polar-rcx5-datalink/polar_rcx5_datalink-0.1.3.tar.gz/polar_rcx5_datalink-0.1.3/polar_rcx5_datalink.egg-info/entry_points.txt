@@ -1,0 +1,3 @@
+[console_scripts]
+rcx5 = polar_rcx5_datalink.cli:main
+
