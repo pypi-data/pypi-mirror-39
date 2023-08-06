@@ -1,0 +1,69 @@
+CHANGES
+=======
+
+* Addapted flame to openstacksdk and shade
+* Adding --exclude-secgroup option
+* Two way SSL connection with the identity service
+* Fix unassociated floating list
+* Add an extract-ports flag
+* Parallelize API calls for resources fetching
+* Update flake8 ignore list
+* Update the format of flame generate-stack-data
+* Add the server-group feature
+* Sync the usage doc with the actual options
+* Use block\_device\_mapping\_v2 when exporting servers
+* Don't fail if volume has no name or description
+* Use a single keystone instance for all the clients
+* Update requirements
+* Remove argparse from requirements
+* use keystoneclient exceptions instead of oslo-incubator code
+* py26 is no longer supported by Infra's CI
+* remove python 2.6 trove classifier
+* Update the novaclient version from 1.1 to 2
+* Change repository from stackforge to openstack
+* Update .gitreview for new namespace
+* Change ignore-errors to ignore\_errors
+* Add new option to exclude key pairs from template
+* Make the command line use Client
+* Add endpoint\_type option in client
+* Handle endpoint\_type attribute
+* Update README.rst
+* Allow to use flame in dev mode
+* Remove useless initialization
+* Add unit tests for Resource class
+* Introduce Resource class in flame
+* Remove unused flameclient.openstack package
+* Reduce code duplication in tests
+* Add .gitreview file
+* Correct heat/stack\_data template print
+* Support OpenStack deployment without cinder
+* Support region
+* Respect flake8/pep8 rules
+* Refactored the managers to allow to add library clients
+* Fix refactoring bugs that broke the command line
+* Refactor the TemplateGenerator class
+* Refactor the TemplateGenerator class
+* Added option generate-stack-data to usage
+* Add documentation on how to use flame
+* Added a missing colon to the function definition
+* Refactor the code to match the openstack code structure
+* Do not keep protocol 'any' for security group rule
+* Add floating ip association for servers
+* update readme
+* Add tests for stack data file generation
+* Update readme
+* Add stack data file generation, update some tests, put default values for all parameters
+* Add keypair test, clean constraint for volume test
+* Add some more tests, disable constraints cause bug heat #1314240
+* Add test for server when volume are excluded
+* Update resource name for network resource
+* Fix conflicts
+* Added router tests
+* Tests for server networks
+* Add test for metadata
+* Add test for config drive, cleanups
+* Improve README syntax
+* Rename README
+* Adds test for server security groups
+* Added tests for servers: test\_server\_keypair, test\_server\_volume\_attached and test\_server\_boot\_from\_volume
+* Initial commit
