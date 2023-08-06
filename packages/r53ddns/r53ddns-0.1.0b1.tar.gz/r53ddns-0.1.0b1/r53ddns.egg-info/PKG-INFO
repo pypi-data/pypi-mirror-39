@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: r53ddns
+Version: 0.1.0b1
+Summary: Route 53 Dynamic DNS Update Client
+Home-page: UNKNOWN
+Author: Zachery Brady
+Author-email: bradyzp@dynamicgravitysytems.com
+License: UNKNOWN
+Description: Simple AWS Route 53 DNS Updater.
+        Dynamically update a Route 53 DNS record to the current public IP of the 
+        computer/network it is executed on. Records will only be modified if the 
+        current value and public IP differ.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.6
