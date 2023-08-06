@@ -1,0 +1,14 @@
+[console_scripts]
+scanpy-filter-cells = scanpy_scripts.scanpy_filter_cells:main
+scanpy-filter-genes = scanpy_scripts.scanpy_filter_genes:main
+scanpy-find-cluster = scanpy_scripts.scanpy_find_cluster:main
+scanpy-find-markers = scanpy_scripts.scanpy_find_markers:main
+scanpy-find-variable-genes = scanpy_scripts.scanpy_find_variable_genes:main
+scanpy-neighbours = scanpy_scripts.scanpy_neighbours:main
+scanpy-normalise-data = scanpy_scripts.scanpy_normalise_data:main
+scanpy-read-10x = scanpy_scripts.scanpy_read_10x:main
+scanpy-run-pca = scanpy_scripts.scanpy_run_pca:main
+scanpy-run-tsne = scanpy_scripts.scanpy_run_tsne:main
+scanpy-run-umap = scanpy_scripts.scanpy_run_umap:main
+scanpy-scale-data = scanpy_scripts.scanpy_scale_data:main
+

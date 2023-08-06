@@ -1,0 +1,267 @@
+#!/usr/bin/env bats
+
+# Extract the test data
+
+@test "Extract .mtx matrix from archive" {
+    if [ "$use_existing_outputs" = 'true' ] && [ -f "$raw_matrix" ]; then
+        skip "$raw_matrix exists and use_existing_outputs is set to 'true'"
+    fi
+
+    run rm -f $raw_matrix && \
+        tar -xvzf $test_data_archive --strip-components 2 -C $data_dir
+
+    [ "$status" -eq 0 ]
+    [ -f "$raw_matrix" ]
+}
+
+# Read 10x dataset
+
+@test "Scanpy object creation from 10x" {
+    if [ "$use_existing_outputs" = 'true' ] && [ -f "$input_object" ]; then
+        skip "$input_object exists and use_existing_outputs is set to 'true'"
+    fi
+
+    run rm -f $input_object && \
+        scanpy-read-10x -d $data_dir/ -o $input_object
+
+    [ "$status" -eq 0 ]
+    [ -f  "$input_object" ]
+}
+
+
+# Filter cells
+
+@test "Filter cells from a raw object" {
+    if [ "$use_existing_outputs" = 'true' ] && [ -f "$filtered_cells_object" ]; then
+        skip "$filtered_cells_object exists and use_existing_outputs is set to 'true'"
+    fi
+
+    run rm -f $filtered_cells_object && \
+        scanpy-filter-cells -i $input_object \
+            -o $filtered_cells_object \
+            -p $FC_parameters \
+            -l $FC_min_genes \
+            -j $FC_max_genes
+
+    [ "$status" -eq 0 ]
+    [ -f  "$filtered_cells_object" ]
+}
+
+# Filter genes
+
+@test "Filter genes from a cell-filtered object" {
+    if [ "$use_existing_outputs" = 'true' ] && [ -f "$filtered_genes_object" ]; then
+        skip "$filtered_genes_object exists and use_existing_outputs is set to 'true'"
+    fi
+
+    run rm -f $filtered_genes_object && \
+        scanpy-filter-genes -i $filtered_cells_object \
+            -o $filtered_genes_object \
+            -p $FT_parameters \
+            -l $FT_min_cells
+
+    [ "$status" -eq 0 ]
+    [ -f  "$filtered_genes_object" ]
+}
+
+# Normalise data
+
+@test "Normalise expression values per cell" {
+    if [ "$use_existing_outputs" = 'true' ] && [ -f "$normalised_object" ]; then
+        skip "$normalised_object exists and use_existing_outputs is set to 'true'"
+    fi
+
+    run rm -f $normalised_object && \
+        scanpy-normalise-data -i $filtered_genes_object \
+            -o $normalised_object \
+            -s $ND_scale_factor
+
+    [ "$status" -eq 0 ]
+    [ -f  "$normalised_object" ]
+}
+
+# Find variable genes
+
+@test "Find variable genes" {
+    if [ "$use_existing_outputs" = 'true' ] && [ -f "$variable_genes_object" ]; then
+        skip "$variable_genes_object exists and use_existing_outputs is set to 'true'"
+    fi
+
+    run rm -f $variable_genes_object $variable_image_file && \
+        scanpy-find-variable-genes -i $normalised_object \
+            -o $variable_genes_object \
+            --flavor $FVG_flavor \
+            -b $FVG_nbins \
+            -p $FVG_parameters \
+            -l $FVG_low_mean,$FVG_low_disp \
+            -j $FVG_high_mean,$FVG_high_disp \
+            -P $variable_image_file
+
+    [ "$status" -eq 0 ]
+    [ -f  "$variable_genes_object" ] && [ -f "$variable_image_file" ]
+}
+
+
+# Scale expression values
+
+@test "Scale expression values" {
+    if [ "$use_existing_outputs" = 'true' ] && [ -f "$scaled_object" ]; then
+        skip "$scaled_object exists and use_existing_outputs is set to 'true'"
+    fi
+
+    run rm -f $scaled_object && \
+        scanpy-scale-data -i $variable_genes_object \
+            -x $SD_scale_max \
+            -o $scaled_object \
+            -V $SD_vars_to_regress \
+            $SD_zero_center
+
+    [ "$status" -eq 0 ]
+    [ -f  "$scaled_object" ]
+}
+
+# Run PCA
+
+@test "Run principal component analysis" {
+    if [ "$use_existing_outputs" = 'true' ] && [ -f "$pca_object" ]; then
+        skip "$pca_object exists and use_existing_outputs is set to 'true'"
+    fi
+
+    run rm -f $pca_object $pca_image_file && \
+        scanpy-run-pca -i $scaled_object \
+            -o $pca_object \
+            --output-embeddings-file $pca_embeddings_file \
+            --output-loadings-file $pca_loadings_file \
+            --output-stdev-file $pca_stdev_file \
+            --output-var-ratio-file $pca_var_ratio_file \
+            -n $PCA_npcs \
+            --svd-solver $PCA_svd_solver \
+            -s $PCA_random_seed \
+            -P $pca_image_file \
+            --color $PCA_color \
+            --projection $PCA_projection \
+            $PCA_frameon
+
+    [ "$status" -eq 0 ]
+    [ -f  "$pca_object" ] && [ -f "$pca_image_file" ] && \
+        [ -f "$pca_embeddings_file" ] && [ -f "$pca_loadings_file" ] && \
+        [ -f "$pca_stdev_file" ] && [ -f "$pca_var_ratio_file" ]
+}
+
+# Compute graph
+
+@test "Run compute neighbor graph" {
+    if [ "$use_existing_outputs" = 'true' ] && [ -f "$graph_object" ]; then
+        skip "$scaled_object exists and use_existing_outputs is set to 'true'"
+    fi
+
+    run rm -f $graph_object $graph_image_file && \
+        scanpy-neighbours -i $pca_object \
+            -o $graph_object \
+            -N $CG_nneighbor \
+            -n $CG_npcs \
+            -s $CG_random_seed \
+            --method $CG_method \
+            $CG_knn
+
+    [ "$status" -eq 0 ]
+    [ -f  "$graph_object" ]
+}
+
+# Find clusters
+
+@test "Run find cluster" {
+    if [ "$use_existing_outputs" = 'true' ] && [ -f "$cluster_object" ]; then
+        skip "$cluster_object exists and use_existing_outputs is set to 'true'"
+    fi
+
+    run rm -f $cluster_object $cluster_text_file && \
+        scanpy-find-cluster -i $graph_object \
+            -o $cluster_object \
+            --output-text-file $cluster_text_file \
+            --flavor $FC_flavor \
+            --resolution $FC_resolution \
+            --key-added $FC_key_added \
+            -s $FC_random_seed \
+            $FC_use_weight
+
+    [ "$status" -eq 0 ]
+    [ -f  "$cluster_object" ] && [ -f "$cluster_text_file" ]
+}
+
+# Run UMAP
+
+@test "Run UMAP analysis" {
+    if [ "$use_existing_outputs" = 'true' ] && [ -f "$umap_object" ]; then
+        skip "$umap_object exists and use_existing_outputs is set to 'true'"
+    fi
+
+    run rm -f $umap_object $umap_image_file $umap_embeddings_file && \
+        scanpy-run-umap -i $cluster_object -o $umap_object \
+            --output-embeddings-file $umap_embeddings_file \
+            -s $UMAP_random_seed \
+            -n $UMAP_ncomp \
+            --min-dist $UMAP_min_dist \
+            --spread $UMAP_spread \
+            --alpha $UMAP_alpha \
+            --gamma $UMAP_gamma \
+            --init-pos $UMAP_initpos \
+            -P $umap_image_file \
+            --color $UMAP_color \
+            --projection $UMAP_projection \
+            $UMAP_frameon
+
+    [ "$status" -eq 0 ]
+    [ -f  "$umap_object" ] && [ -f "$umap_image_file" ] && [ -f "$umap_embeddings_file" ]
+}
+
+# Run TSNE
+
+@test "Run TSNE analysis" {
+    if [ "$use_existing_outputs" = 'true' ] && [ -f "$tsne_object" ]; then
+        skip "$tsne_object exists and use_existing_outputs is set to 'true'"
+    fi
+
+    run rm -f $tsne_object $tsne_image_file $tsne_embeddings_file && \
+        scanpy-run-tsne -i $cluster_object -o $tsne_object \
+            --output-embeddings-file $tsne_embeddings_file \
+            -s $TSNE_random_seed \
+            --perplexity $TSNE_perplexity \
+            --early-exaggeration $TSNE_early_exaggeration \
+            --learning-rate $TSNE_learning_rate \
+            -P $tsne_image_file \
+            --color $TSNE_color \
+            --projection $TSNE_projection \
+            $TSNE_frameon
+
+    [ "$status" -eq 0 ]
+    [ -f  "$tsne_object" ] && [ -f "$tsne_image_file" ] && [ -f "$tsne_embeddings_file" ]
+}
+
+# Find markers
+
+@test "Run find markers" {
+    if [ "$use_existing_outputs" = 'true' ] && [ -f "$marker_object" ]; then
+        skip "$marker_object exists and use_existing_outputs is set to 'true'"
+    fi
+
+    run rm -f $marker_object $marker_image_file $marker_text_file && \
+        scanpy-find-markers -i $cluster_object -o $marker_object \
+            --output-text-file $marker_text_file \
+            --groupby $FM_groupby \
+            --groups $FM_groups \
+            --reference $FM_reference \
+            --n-genes $FM_n_genes \
+            --method $FM_method \
+            -P $marker_image_file \
+            --show-n-genes $FM_show_n_genes \
+            --debug \
+            --key $FM_key
+
+    [ "$status" -eq 0 ]
+    [ -f  "$marker_object" ] && [ -f "$marker_image_file" ] && [ -f "$marker_text_file" ]
+}
+
+# Local Variables:
+# mode: sh
+# End:
