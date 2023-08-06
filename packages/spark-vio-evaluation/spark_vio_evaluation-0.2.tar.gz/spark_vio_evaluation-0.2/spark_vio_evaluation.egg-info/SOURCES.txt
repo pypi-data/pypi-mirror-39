@@ -1,0 +1,13 @@
+README.md
+setup.py
+evaluation/__init__.py
+evaluation/main_evaluation.py
+evaluation/tools/__init__.py
+evaluation/tools/plotter.py
+evaluation/tools/user.py
+spark_vio_evaluation.egg-info/PKG-INFO
+spark_vio_evaluation.egg-info/SOURCES.txt
+spark_vio_evaluation.egg-info/dependency_links.txt
+spark_vio_evaluation.egg-info/not-zip-safe
+spark_vio_evaluation.egg-info/requires.txt
+spark_vio_evaluation.egg-info/top_level.txt
