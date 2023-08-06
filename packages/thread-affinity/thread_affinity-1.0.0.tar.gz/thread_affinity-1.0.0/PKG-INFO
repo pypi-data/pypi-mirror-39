@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: thread_affinity
+Version: 1.0.0
+Summary: A wrapper to call set & get affinity from python (linux only). Tested on HPC environments.
+Home-page: https://github.com/bsc-wdc/thread_affinity
+Author: The COMPSs Team
+Author-email: support-compss@bsc.es
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
