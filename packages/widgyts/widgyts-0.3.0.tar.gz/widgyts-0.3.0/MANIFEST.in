@@ -1,0 +1,2 @@
+recursive-include widgyts/static *.*
+recursive-include jupyter-config *.json
