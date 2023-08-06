@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Vega Chart Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="ui/bootstraptheme.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex mb-3">
+    <a class="navbar-brand" href="gallery.html">Vega Gallery</a>
+  </nav>
+  <div class="gallery container">
+    <script type="text/html">
+      <% order.forEach(function(category) { %>
+        <h2 class="mt-4"><%= category %></h2>
+        <% data[category].forEach(function(item) { %>
+        <div class="d-inline-flex p-1">
+          <a href="example.html?chart=<%- item.chart %>" class="">
+            <img class="shadow" src="assets/images/<%- item.chart %>.png" title="<%- item.title %>" alt="<%- item.title %>" width="300">
+          </a>
+        </div>
+        <% }) %>
+      <% }) %>
+    </script>
+  </div>
+  <footer class="border-top mt-5 pt-3">
+    <div class="container">
+      <small>
+        This page is synchronized with the <a href="https://gramener.invisionapp.com/d/main#/projects/prototypes/7709561">Visualization
+          Charts Library</a> on Invision (for those with access.)
+      </small>
+    </div>
+  </footer>
+</body>
+<script src="ui/jquery/dist/jquery.min.js"></script>
+<script src="ui/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="ui/lodash/lodash.min.js"></script>
+<script src="ui/g1/dist/g1.min.js"></script>
+<script>
+  $.getJSON('examples.json')
+    .done(function(data) {
+      render({data: data})
+    })
+    .fail(function(xhr, status, message) {
+      $('div.gallery').html('Failed: ' + message)
+    })
+
+  function render(options) {
+    var data = _.groupBy(options.data, 'category')
+    var order = options.order || _.keys(data)
+    $('script[type="text/html"]').template({data: data, order: order})
+  }
+</script>
+</html>
