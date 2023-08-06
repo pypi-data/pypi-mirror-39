@@ -1,0 +1,11 @@
+include AUTHORS ChangeLog CODE_OF_CONDUCT.md CONTRIBUTING.rst LICENSE README.rst
+include requirements*.txt
+
+graft ldapdb
+graft tests
+graft examples
+
+global-exclude *.py[cod] __pycache__ .*swp
+prune .github
+
+include Makefile manage_dev.py tox.ini .flake8
