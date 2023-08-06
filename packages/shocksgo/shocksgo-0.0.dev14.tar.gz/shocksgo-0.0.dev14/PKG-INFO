@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: shocksgo
+Version: 0.0.dev14
+Summary: Simple Harmonic Oscillator celerite kernels for stellar granulation and oscillations
+Home-page: https://github.com/bmorris3/shocksgo
+Author: Brett Morris
+Author-email: morrisbrettm@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: Generate light curves of stars with granulation and stellar oscillations using celerite's simple harmonic oscillator kernels
+Platform: UNKNOWN
+Requires-Python: >=3.5
