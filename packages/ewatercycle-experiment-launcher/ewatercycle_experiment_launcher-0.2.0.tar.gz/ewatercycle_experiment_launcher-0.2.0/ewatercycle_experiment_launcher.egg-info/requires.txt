@@ -1,0 +1,9 @@
+nbformat
+requests
+connexion[swagger-ui]
+connexion
+gunicorn
+decorator
+simplepam
+flask-cors
+jsonschema==2.6.0
