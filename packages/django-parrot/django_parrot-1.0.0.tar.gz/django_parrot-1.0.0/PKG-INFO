@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: django_parrot
+Version: 1.0.0
+Summary: Parrot facilitates replaying requests arrived at a server on another server
+Home-page: https://github.com/miare-ir/parrot
+Author: Miare
+Author-email: UNKNOWN
+License: MIT License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
