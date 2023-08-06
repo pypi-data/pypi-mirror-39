@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: motorcortex-python
+Version: 0.9.15
+Summary: Python bindings for Motorcortex Engine
+Home-page: https://www.motorcortex.io
+Author: Alexey Zakharov
+Author-email: alexey.zakharov@vectioneer.com
+License: MIT
+Description: Motorcortex Python is a communication library to develop Python client 
+        applications for the Motorcortex Core. Motorcortex Python provides an 
+        implementation of the low-level API defined in motorcortex.proto. 
+        
+        In addition there is an implementation of higher-level API to control 
+        a robotic arm. This API allows for switching between control modes, creating 
+        and executing motion programs.
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

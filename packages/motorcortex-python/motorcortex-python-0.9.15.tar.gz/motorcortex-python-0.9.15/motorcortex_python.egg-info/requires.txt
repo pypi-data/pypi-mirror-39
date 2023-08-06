@@ -1,0 +1,6 @@
+motorcortex-nanomsg
+protobuf
+
+[:python_version == "2.7"]
+futures
+future
