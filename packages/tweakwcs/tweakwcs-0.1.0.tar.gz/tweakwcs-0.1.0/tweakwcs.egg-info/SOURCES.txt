@@ -1,0 +1,17 @@
+README.rst
+setup.cfg
+setup.py
+src/carrutils.c
+tweakwcs/__init__.py
+tweakwcs/groupwcs.py
+tweakwcs/imalign.py
+tweakwcs/linearfit.py
+tweakwcs/matchutils.py
+tweakwcs/tpwcs.py
+tweakwcs/version.py
+tweakwcs/wcsimage.py
+tweakwcs.egg-info/PKG-INFO
+tweakwcs.egg-info/SOURCES.txt
+tweakwcs.egg-info/dependency_links.txt
+tweakwcs.egg-info/requires.txt
+tweakwcs.egg-info/top_level.txt
