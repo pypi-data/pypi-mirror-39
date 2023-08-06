@@ -1,0 +1,13 @@
+MANIFEST.in
+VERSION
+setup.py
+avocado_framework_plugin_varianter_cit.egg-info/PKG-INFO
+avocado_framework_plugin_varianter_cit.egg-info/SOURCES.txt
+avocado_framework_plugin_varianter_cit.egg-info/dependency_links.txt
+avocado_framework_plugin_varianter_cit.egg-info/entry_points.txt
+avocado_framework_plugin_varianter_cit.egg-info/requires.txt
+avocado_framework_plugin_varianter_cit.egg-info/top_level.txt
+avocado_varianter_cit/__init__.py
+tests/__init__.py
+tests/test_functional.py
+tests/test_unit.py
