@@ -1,0 +1,288 @@
+Metadata-Version: 2.1
+Name: i3configger
+Version: 0.9.0
+Summary: i3 config manipulation tool
+Home-page: https://github.com/obestwalter/i3configger
+Author: Oliver Bestwalter
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Console
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: psutil
+Requires-Dist: python-daemon
+Provides-Extra: docs
+Requires-Dist: mkdocs ; extra == 'docs'
+Requires-Dist: mkdocs-material ; extra == 'docs'
+Provides-Extra: lint
+Requires-Dist: pre-commit ; extra == 'lint'
+Provides-Extra: release
+Requires-Dist: plumbum ; extra == 'release'
+Requires-Dist: twine ; extra == 'release'
+Requires-Dist: readme-renderer[md] ; extra == 'release'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+[![Build Status](https://travis-ci.org/obestwalter/i3configger.svg?branch=master)](https://travis-ci.org/obestwalter/i3configger)
+[![PyPI version](https://badge.fury.io/py/i3configger.svg)](https://pypi.org/project/i3configger/)
+[![Documentation](https://img.shields.io/badge/docs-sure!-brightgreen.svg)](http://oliver.bestwalter.de/i3configger)
+[![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+
+# i3configger
+
+**Disclaimer:** this is a tool aimed at users who already know how the configuration of [i3](https://i3wm.org) works (as described in the [excellent docs](https://i3wm.org/docs/userguide.html)). `i3configger` is an independent add-on, not directly affiliated with the project and in no way necessary to use i3 productively.
+
+**NOTE** using `i3configger` will replace your existing config files (`config` and optional status bar configs), but it will move them to `<original-name>.bak` if no backup exists yet, so that you can easily revert the damage if you want to go back to your old files.
+
+## Why?
+
+I wanted to be able to switch between different color themes and do things like hide the i3bar with a keyboard shortcut. `i3configger` makes this and other dynamic changes possible without changing i3wm itself.
+
+## Main characteristics
+
+* [same config language as i3](https://i3wm.org/docs/userguide.html#configuring) with these differences:
+    * possibility to spread config over several files
+    * possibility to assign variables to variables
+    * variables in i3status configs are also resolved (set them anywhere in the sources)
+* additional configuration of `i3configger` itself and persistence of changes to the i3 configuration is achieved by sprinkling a bit of json on top of the config files.
+* command line driven - activities can be bound to keyboard shortcuts directly or as part of a [binding mode](https://i3wm.org/docs/userguide.html#binding_modes)
+
+## How?
+
+In the end i3wm needs a config file it can cope with and it needs to reload or restart, when something changes.
+
+This is realized by adding a build step that can be triggered by calling `i3configger` directly or by running it as a \[daemonized\] watcher process that automatically rebuilds and reloads when source files change or messages are sent.
+
+## What can I do with it?
+
+### Switch between arbitrary "schemes"
+
+You can switch sub configurations (e.g. different color schemes) that conform with a simple naming convention (`config.d/<key>.<value1>.conf`, `config.d/<key>.<value2>.conf`, etc.) by invoking e.g. `i3configger select-next <key>` or `i3configger select <key> <value2>`.
+
+To get an idea what can be done, have a look at the [examples](https://github.com/obestwalter/i3configger/tree/master/examples) and [read the docs](http://oliver.bestwalter.de/i3configger).
+
+### Override any variable
+
+You can change any variable you have defined in the configuration by invoking `i3configger set <variable name> <new value>`. These changes are persisted not in the config itself but in an additional file.
+
+See [i3configger docs](http://oliver.bestwalter.de/i3configger/concept/) for a detailed explanation of the concept and other possible commands.
+
+### Usage example
+
+Here is a snippet from an i3 config that uses a mode to alter itself by sending messages to `i3configger`:
+
+```text
+set $i3cBin ~/.virtualenvs/i3/bin/i3configger
+
+bindsym $win+w mode "i3configger"
+mode "i3configger" {
+    bindsym Right exec "$i3cBin select-next colors --i3-refresh-msg restart"
+    bindsym Left exec "$i3cBin select-previous colors --i3-refresh-msg restart"
+    bindsym Up exec "$i3cBin shadow bars:targets:laptop:mode dock"
+    bindsym Down exec "$i3cBin shadow bars:targets:laptop:mode hide"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+```
+
+**Explanation of the messages used:**
+
+* `select[...]` integrates different config partials and can therefore make broad changes. In this case for example there are different `colors.<value>.conf` partials that activate different color schemes
+* `shadow` adds an overlay that in this case changes the mode of the laptop bar between `hide` and `dock`
+
+## Installation
+
+    $ pip install i3configger
+
+See [docs](http://oliver.bestwalter.de/i3configger/installation) For more details and different ways of installation.
+
+## Some inspiration from the i3 project
+
+... that I would also like to heed for this project:
+
+> * Never break configuration files or existing workflows. Breaking changes require a major version bump (v4 → v5).
+> * Keep mental complexity low: once you know i3’s key features, other features should be easy to understand.
+> * Only add features which benefit many people, instead of going to great lengths to support rarely used workflows.
+> * Only documented behavior is supported. Clear documentation is a requirement for contributions.
+
+
+# CHANGELOG
+
+## 0.9.0 (A new beginning) - 2018-12-19
+## Added
+
+* where it makes sense, defaults for command line settings can be changed in i3configger.json (command line overrides settings in config)
+* make status command configurable (for refresh)
+* off-switch for ipc configuration (for easier testing)
+* functional tests for main cli functionality
+
+## Changed
+
+* keep Python version in sync with Arch system Python: test with Python 3.7
+* breaking changes in i3configger.json - check examples to see what is different. Easiest way to upgrade is to move your old config to the side, run i3configger to generate a new default config and add your settings from the old config back in.
+* terminology: i3status -> i3bar
+* terminology: value -> select
+* internal modernization and refactoring
+
+## Fixed
+
+* wrong use of reversed in select-next/previous
+
+## Removed
+
+* option for different config has no real use and unnecessarily complicates things
+
+## 0.8.0 (Naming things is hard) - 2017-06-20
+## Changed
+
+* Name for i3bar key is fixed to `i3bar` - no need to be configurable
+
+## Fixed
+* don't crash if no i3bar config file was yet generated
+* terminology i3status -> i3bar
+
+## 0.7.7 (It's just getting better and better) - 2017-06-16
+### Added
+
+- resolve variables with as many levels of indirections as you want
+- if resolving fails proper feedback about the failing path is given
+- better error handling/notification, when config is broken
+- tests for resolving contexts
+
+### Fixed
+
+- watch process does not crash anymore but gives proper feedback
+- don't crash if switching without a default in .messages.json
+
+## 0.7.6 (The devil is in the detail) - 2017-06-11
+### Changed
+
+- do not add partial into config if it purely contains set statements
+- strip empty lines from beginning and end of partials
+
+## 0.7.5 (Time to make an -git AUR?) - 2017-06-11
+### Changed
+
+- make checks more forgiving if no i3 is installed - for testing a complete run after a PKGBUILD
+
+## 0.7.4 (Packaging is fun and good for testing) - 2017-06-11
+### Changed
+
+- improve ipc handling - fix setting methods too late
+
+## 0.7.3 (Do the right thing) - 2017-06-11
+### Fixed
+
+- use actual partials path for initialization instead of assuming that parent of config path == partials path
+
+## 0.7.2 (Need for speed) - 2017-06-11
+### Changed
+
+- shave off a few hundred precious milliseconds startup time, by moving the very expensive version fetching into a function that is only called, when the version is really needed.
+- help the user, when they use a non existing command
+- remove unwanted side effects from message
+- when config.d already exists, but no i3configger.json exists yet, it is automatically created now
+- better examples/tests
+
+## 0.7.1 (The great packaging adventure begins) - 2017-06-10
+### Changed
+
+- (internal) vendor in a different inotify library that  makes it easier to package for Archlinux
+
+## 0.7.0 (Better safe than sorry) - 2017-06-10
+### Changed
+
+- always create a backup of the users files if it does not exist already. Do **not** clobber it on subsequent builds to make sure you can always go back to your old files if needed, even if they have no external backups or SCM in place.
+
+## 0.6.0 (Command & Conquer) - 2017-06-10
+### Fixed
+
+- wrong ordering of context merges (set was not working in all cases)
+
+### Added
+
+- new command: shadow - shadow arbitrary entries in `i3configger.json`
+- new command: merge - merge a `.json` file into `.messages.json`
+- new command: prune - opposite of merge: remove all keys from a given `.json` file in `.messages.json`
+
+### Changed
+
+- renamed file containing frozen messages from `.state.json` to `.messages.json`
+
+## 0.5.3 (KISS) - 2017-06-09
+### Changed
+
+- de-rocket-science release process
+- change description of tool
+
+## 0.5.2 (Releasing correctly is hard) - 2017-06-09
+### Fixed
+
+- wrong CHANGELOG :)
+
+## 0.5.1 (Maybe I should test more) - 2017-06-09
+### Fixed
+
+- #4 repair watch and daemon mode
+
+## 0.5.0 (Half way there) - 2017-06-08
+### Added
+
+- proper documentation at http://oliver.bestwalter.de/i3configger/
+- copy user or default config into `config.d` on initialization
+
+### Removed
+
+- end of line comments are not supported anymore (too much bug potential - would need some form of parsing already to make it work -> not worth the fuzz)
+
+### Changed
+
+- comments are not stripped from the build anymore
+- notification is off by default: cli arg changed from `--no-notify-` to `--notify`
+
+### Fixed
+
+- checking the config with `i3 -C` did not work because `-c` (small c) was not passed and the passed path to the new config was silently ignored and the active config was checked instead
+
+## 0.4.4 (I am not alone) - 2017-06-05
+### Fixed
+
+- #2 - fails if not using i3status. Fixed by making the refresh call ignore any errors - not nice, just a quick fix.
+
+## 0.4.3 - (The Curious Incident of the Dog in the Night-Time) - 2017-06-04
+### Added
+
+* examples that are used as test cases
+
+### Fixed
+
+* some small fixes regarding selection
+
+## 0.4.2 (The answer) - 2017-06-03
+### Basic implementation
+
+* build main config and one or several i3status configs from the same sources
+* variables are handled slightly more intelligently than i3 does it (variables assigned to other variables are resolved)
+* end of line comments are possible (removed at build time)
+* variables in i3status configs are also resolved (set anywhere in the sources)
+* reload or restart i3 when a change has been done (using `i3-msg`)
+* notify when new config has been created and activated (using `notify-send`)
+* simple way to render partials based on key value pairs in file name
+* simple way to change the configuration by sending messages
+* build config as one shot script or watch for changes
+* send messages to watching i3configger process
+* if `i3 -C fails` with the newly rendered config, the old config will be kept, no harm done
+
+---
+
+**Note:** format based on: [Keep a Changelog](http://keepachangelog.com/) project adheres to [Semantic Versioning](http://semver.org/).
+
+
