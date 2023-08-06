@@ -1,0 +1,12 @@
+MANIFEST.in
+Pipfile.lock
+README.md
+setup.py
+pyeventdispatcher/__init__.py
+pyeventdispatcher/event_dispatcher.py
+pyeventdispatcher.egg-info/PKG-INFO
+pyeventdispatcher.egg-info/SOURCES.txt
+pyeventdispatcher.egg-info/dependency_links.txt
+pyeventdispatcher.egg-info/top_level.txt
+test/__init__.py
+test/test_pyeventdispatcher.py
