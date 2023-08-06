@@ -1,0 +1,41 @@
+{% extends 'main/base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+{% block sidebar %}
+{% endblock sidebar %}
+{% block content %}
+
+        <div class="container">
+            <div class="row">
+                <h1>{% trans "Связаться с нами" %}</h1>
+                <div class="col-md-12 border">
+                    <form method="post" action="" class="form-signin">
+                        {% csrf_token %}
+
+                        <div class="col">
+                            <div class="col-md-12 mt-4">
+                                {% bootstrap_field form.from_email %}
+                            </div>
+
+                            <div class="col-md-12 mt-4">
+                                {% bootstrap_field form.subject %}
+                            </div>
+                            <div class="col-md-12 mt-4">
+                                {% bootstrap_field form.feed_back_type %}
+                            </div>
+                            <div class="col-md-12 mt-4">
+                                {% bootstrap_field form.message %}
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary col-md-4 offset-md-3 mt-4">Отправить</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+
+
