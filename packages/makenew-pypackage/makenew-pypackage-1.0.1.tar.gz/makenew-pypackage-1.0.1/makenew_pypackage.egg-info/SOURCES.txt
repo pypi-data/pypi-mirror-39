@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+makenew_pypackage/__init__.py
+makenew_pypackage/todo.py
+makenew_pypackage/todo_test.py
+makenew_pypackage.egg-info/PKG-INFO
+makenew_pypackage.egg-info/SOURCES.txt
+makenew_pypackage.egg-info/dependency_links.txt
+makenew_pypackage.egg-info/top_level.txt
