@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+AutoDiff_group3.egg-info/PKG-INFO
+AutoDiff_group3.egg-info/SOURCES.txt
+AutoDiff_group3.egg-info/dependency_links.txt
+AutoDiff_group3.egg-info/top_level.txt
+tests/__init__.py
+tests/integration_test.py
+tests/numpy_test.py
+tests/test_binary_functions.py
+tests/test_corner_cases.py
+tests/test_equalities.py
+tests/test_unary_functions.py
+tests/write_unary.py
