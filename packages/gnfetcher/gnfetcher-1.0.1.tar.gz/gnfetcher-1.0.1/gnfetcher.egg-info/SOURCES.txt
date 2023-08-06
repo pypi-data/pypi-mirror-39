@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+setup.py
+bin/gnews-gui
+gnfetcher/__init__.py
+gnfetcher/gnfetcher.py
+gnfetcher/userexception.py
+gnfetcher/utils.py
+gnfetcher.egg-info/PKG-INFO
+gnfetcher.egg-info/SOURCES.txt
+gnfetcher.egg-info/dependency_links.txt
+gnfetcher.egg-info/entry_points.txt
+gnfetcher.egg-info/not-zip-safe
+gnfetcher.egg-info/requires.txt
+gnfetcher.egg-info/top_level.txt
+gnfetcher/scripts/__init__.py
+gnfetcher/scripts/gnews.py
