@@ -1,0 +1,3 @@
+[console_scripts]
+pynta = pynta.__main__:main
+
