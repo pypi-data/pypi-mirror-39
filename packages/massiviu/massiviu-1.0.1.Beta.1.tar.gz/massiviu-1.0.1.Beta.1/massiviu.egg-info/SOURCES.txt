@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+massiviu/__init__.py
+massiviu/configure_app.py
+massiviu/context.py
+massiviu/db_context.py
+massiviu/exceptions.py
+massiviu/item_cache.py
+massiviu/model_context.py
+massiviu/operations.py
+massiviu/testsuite.py
+massiviu.egg-info/PKG-INFO
+massiviu.egg-info/SOURCES.txt
+massiviu.egg-info/dependency_links.txt
+massiviu.egg-info/top_level.txt
