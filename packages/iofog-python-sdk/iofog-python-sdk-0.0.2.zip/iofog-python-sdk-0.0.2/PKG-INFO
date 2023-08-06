@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: iofog-python-sdk
+Version: 0.0.2
+Summary: Native python SDK for Eclipse ioFog development.
+Home-page: https://github.com/ioFog/iofog-python-sdk
+Author: Eclipse ioFog
+Author-email: edgemaster@iofog.org
+License: EPL-2.0
+Description: UNKNOWN
+Keywords: iofog IoT Eclipse fog computing edgeworx
+Platform: UNKNOWN
+Requires: ws4py
