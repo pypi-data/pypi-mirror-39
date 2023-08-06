@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: aria2p
+Version: 0.1.5
+Summary: Command-line tool and library to interact with an aria2c daemon process with JSON-RPC.
+Home-page: https://github.com/pawamoy/aria2p
+Author: Timothée Mazzucotelli
+Author-email: pawamoy@pm.me
+Keywords: aria2,aria2c,aria2-cli
+Requires-Python: >=3.6,<3.7
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: requests
+Project-URL: Repository, https://github.com/pawamoy/aria2p
