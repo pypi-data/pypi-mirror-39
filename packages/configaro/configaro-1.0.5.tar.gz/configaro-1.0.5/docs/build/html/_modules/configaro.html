@@ -1,0 +1,738 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>configaro &mdash; configaro 1.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> configaro
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../releases.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">configaro</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Module code</a> &raquo;</li>
+        
+      <li>configaro</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for configaro</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Configaro Python configuration library.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">ast</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">importlib</span> <span class="k">import</span> <span class="n">import_module</span>
+<span class="kn">from</span> <span class="nn">importlib.abc</span> <span class="k">import</span> <span class="n">FileLoader</span><span class="p">,</span> <span class="n">SourceLoader</span>
+<span class="kn">from</span> <span class="nn">types</span> <span class="k">import</span> <span class="n">CodeType</span><span class="p">,</span> <span class="n">ModuleType</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="kn">from</span> <span class="nn">munch</span> <span class="k">import</span> <span class="n">Munch</span><span class="p">,</span> <span class="n">munchify</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;ConfigError&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ConfigModuleNotFoundError&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ConfigModuleNotValidError&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ConfigObjectNotInitializedError&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ConfigPropertyNotFoundError&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ConfigPropertyNotScalarError&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ConfigUpdateNotValidError&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;get&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;init&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;put&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<span class="n">DEFAULTS_CONFIG_MODULE_NAME</span> <span class="o">=</span> <span class="s1">&#39;defaults&#39;</span>
+<span class="n">LOCALS_CONFIG_MODULE_NAME</span> <span class="o">=</span> <span class="s1">&#39;locals&#39;</span>
+
+<span class="n">_CONFIG_DATA</span> <span class="o">=</span> <span class="n">munchify</span><span class="p">({})</span>
+
+
+<div class="viewcode-block" id="ConfigError"><a class="viewcode-back" href="../api.html#configaro.ConfigError">[docs]</a><span class="k">class</span> <span class="nc">ConfigError</span><span class="p">(</span><span class="ne">BaseException</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Configaro base configuration error class.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize new ConfigError object.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            message: error message</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span></div>
+
+
+<div class="viewcode-block" id="ConfigObjectNotInitializedError"><a class="viewcode-back" href="../api.html#configaro.ConfigObjectNotInitializedError">[docs]</a><span class="k">class</span> <span class="nc">ConfigObjectNotInitializedError</span><span class="p">(</span><span class="n">ConfigError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Config object not initialized error.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize new ConfigObjectNotInitializedError object.&quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;config object not initialized&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ConfigModuleNotFoundError"><a class="viewcode-back" href="../api.html#configaro.ConfigModuleNotFoundError">[docs]</a><span class="k">class</span> <span class="nc">ConfigModuleNotFoundError</span><span class="p">(</span><span class="n">ConfigError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Config module not found error.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize new ConfigModuleNotFoundError object.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            path: config module path</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;config module not found: </span><span class="si">{path}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">path</span></div>
+
+
+<div class="viewcode-block" id="ConfigModuleNotValidError"><a class="viewcode-back" href="../api.html#configaro.ConfigModuleNotValidError">[docs]</a><span class="k">class</span> <span class="nc">ConfigModuleNotValidError</span><span class="p">(</span><span class="n">ConfigError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Config module does not contain a &#39;config&#39; attribute of &#39;dict&#39; type error.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize new ConfigModuleNotValidError object.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            path: config module path</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;config module not valid: </span><span class="si">{path}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">path</span></div>
+
+
+<div class="viewcode-block" id="ConfigPropertyNotFoundError"><a class="viewcode-back" href="../api.html#configaro.ConfigPropertyNotFoundError">[docs]</a><span class="k">class</span> <span class="nc">ConfigPropertyNotFoundError</span><span class="p">(</span><span class="n">ConfigError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Config property not found error.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Munch</span><span class="p">,</span> <span class="n">prop_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize new ConfigPropertyNotFoundError object.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: config object data</span>
+<span class="sd">            prop_name: config property name</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;config property not found: </span><span class="si">{prop_name}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prop_name</span> <span class="o">=</span> <span class="n">prop_name</span></div>
+
+
+<div class="viewcode-block" id="ConfigPropertyNotScalarError"><a class="viewcode-back" href="../api.html#configaro.ConfigPropertyNotScalarError">[docs]</a><span class="k">class</span> <span class="nc">ConfigPropertyNotScalarError</span><span class="p">(</span><span class="n">ConfigError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Config property not scalar error.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Munch</span><span class="p">,</span> <span class="n">prop_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize new ConfigPropertyNotScalarError object.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: config object data</span>
+<span class="sd">            prop_name: config property name</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;config property not scalar: </span><span class="si">{prop_name}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prop_name</span> <span class="o">=</span> <span class="n">prop_name</span></div>
+
+
+<div class="viewcode-block" id="ConfigUpdateNotValidError"><a class="viewcode-back" href="../api.html#configaro.ConfigUpdateNotValidError">[docs]</a><span class="k">class</span> <span class="nc">ConfigUpdateNotValidError</span><span class="p">(</span><span class="n">ConfigError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Config update not valid error.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">update</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize new ConfigUpdateNotValidError object.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            update: config update</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;config update not valid: </span><span class="si">{update}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update</span> <span class="o">=</span> <span class="n">update</span></div>
+
+
+<div class="viewcode-block" id="init"><a class="viewcode-back" href="../api.html#configaro.init">[docs]</a><span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="n">config_package</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">locals_path</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">locals_env_var</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Initialize the config object.</span>
+
+<span class="sd">    The config object must be initialized before use and is built from one or</span>
+<span class="sd">    two config modules.  A config module is simply any Python module with a</span>
+<span class="sd">    module attribute named **config**.  The config object loaded from the</span>
+<span class="sd">    **defaults** config module, as well as any **locals** config module found.</span>
+
+<span class="sd">    The **defaults** config module is always loaded.  The required *config_package*</span>
+<span class="sd">    argument is used to define the package in which the **defaults** config</span>
+<span class="sd">    module, named ``defaults.py``, is loaded from::</span>
+
+<span class="sd">        init(&#39;my_project.config&#39;)</span>
+
+<span class="sd">    The **locals** config module is loaded, next if it exists, from the following</span>
+<span class="sd">    locations, in precedence order from highest to lowest:</span>
+
+<span class="sd">    - one found at path specified by locals path</span>
+<span class="sd">    - one found at path specified by locals env var</span>
+<span class="sd">    - one found in config package</span>
+
+<span class="sd">    If no other options are provided, the **locals** config module will be loaded,</span>
+<span class="sd">    if it exists, from the *config_package*.</span>
+
+<span class="sd">    If the optional *locals_path* argument is provided it will be used, if it</span>
+<span class="sd">    exists, instead of any ``locals.py`` config module in the config package::</span>
+
+<span class="sd">        init(&#39;my_project.config&#39;, locals_path=&#39;/path/to/my/alternatively_named_locals.py&#39;)</span>
+
+<span class="sd">    If the optional *locals_env_var* argument is provided it will be used as a</span>
+<span class="sd">    an environment variable configuring the path of the locals config module to</span>
+<span class="sd">    load, if the module exists::</span>
+
+<span class="sd">        init(&#39;my_project.config&#39;, locals_env_var=&#39;MY_PROJECT_CONFIG_LOCALS&#39;)</span>
+
+<span class="sd">    Repeated initialization has no effect.  You can not re-initialize with</span>
+<span class="sd">    different values.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        config_package: package to search for config modules</span>
+<span class="sd">        locals_path: path to locals config module</span>
+<span class="sd">        locals_env_var: name of environment variable providing path to locals config module</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">_CONFIG_DATA</span>
+    <span class="k">if</span> <span class="n">_CONFIG_DATA</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">_config_module_paths</span><span class="p">(</span><span class="n">config_package</span><span class="p">,</span> <span class="n">locals_path</span><span class="p">,</span> <span class="n">locals_env_var</span><span class="p">):</span>
+        <span class="n">deltas</span> <span class="o">=</span> <span class="n">_load</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="n">merged</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">_merge</span><span class="p">(</span><span class="n">_CONFIG_DATA</span><span class="p">,</span> <span class="n">deltas</span><span class="p">))</span>
+        <span class="n">_CONFIG_DATA</span> <span class="o">=</span> <span class="n">merged</span>
+    <span class="n">_CONFIG_DATA</span> <span class="o">=</span> <span class="n">munchify</span><span class="p">(</span><span class="n">_CONFIG_DATA</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get"><a class="viewcode-back" href="../api.html#configaro.get">[docs]</a><span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="o">*</span><span class="n">prop_names</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Munch</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+    <span class="sd">&quot;&quot;&quot;Query config values in config object.</span>
+
+<span class="sd">    The config object must be initialized with :meth:`configaro.init` before use.</span>
+
+<span class="sd">    If no *prop_names* are provided, returns the config root config object::</span>
+
+<span class="sd">        config = get()</span>
+
+<span class="sd">    If one property name is provided, returns that sub config object::</span>
+
+<span class="sd">        prop = get(&#39;prop&#39;)</span>
+
+<span class="sd">    If multiple property names are provided, returns a tuple of sub config objects::</span>
+
+<span class="sd">        prop1, prop2 = get(&#39;prop1&#39;, &#39;prop2&#39;)</span>
+
+<span class="sd">    Multiple property names can also be provided in a single string argument as well::</span>
+
+<span class="sd">        prop1, prop2 = get(&#39;prop1 prop2&#39;)</span>
+
+<span class="sd">    If a property name is not found, configaro.ConfigPropertyNotFoundError is raised,</span>
+<span class="sd">    unless a *default* keyword argument is provided::</span>
+
+<span class="sd">        prop = get(&#39;prop&#39;, default=None)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        prop_names: config property names</span>
+<span class="sd">        kwargs: config property names and values keyword args</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        property values</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        configaro.ConfigObjectNotInitializedError: if config object has not been initialized</span>
+<span class="sd">        configaro.ConfigPropertyNotFoundError: if a config property in *prop_names* is not found</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">_CONFIG_DATA</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ConfigObjectNotInitializedError</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">prop_names</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">prop_names</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">prop_names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_CONFIG_DATA</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">prop_names</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_get</span><span class="p">(</span><span class="n">_CONFIG_DATA</span><span class="p">,</span> <span class="n">prop_names</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">tuple</span><span class="p">([</span><span class="n">_get</span><span class="p">(</span><span class="n">_CONFIG_DATA</span><span class="p">,</span> <span class="n">prop_name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">for</span> <span class="n">prop_name</span> <span class="ow">in</span> <span class="n">prop_names</span><span class="p">])</span></div>
+
+
+<div class="viewcode-block" id="put"><a class="viewcode-back" href="../api.html#configaro.put">[docs]</a><span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Modify config values in config object.</span>
+
+<span class="sd">    The config object must be initialized with :meth:`configaro.init` before use.</span>
+
+<span class="sd">    This function supports many expressive styles of usage.</span>
+
+<span class="sd">    The entire config object can be updated with a single dict data argument::</span>
+
+<span class="sd">        put({&#39;prop_a&#39;: True, &#39;prop_b&#39;: 23})</span>
+
+<span class="sd">    Similarly, any sub config object can be updated with a string property and</span>
+<span class="sd">    dict data argument::</span>
+
+<span class="sd">        put(prop={&#39;prop_a&#39;: True, &#39;prop_b&#39;: 23})</span>
+<span class="sd">        put(&#39;nested.prop&#39;, {&#39;prop_a&#39;: True, &#39;prop_b&#39;: 23})</span>
+
+<span class="sd">    Updates can also be specified by ``name=value`` update strings.  If one or</span>
+<span class="sd">    more string arguments are passed, the updates described by those update</span>
+<span class="sd">    strings will be applied to the config object::</span>
+
+<span class="sd">        put(&#39;prop_a=True&#39;)</span>
+<span class="sd">        put(&#39;prop_b=23&#39;)</span>
+
+<span class="sd">    Update strings allow hierarchical configs to be updated::</span>
+
+<span class="sd">        put(&#39;prop.nested=awesome&#39;)</span>
+
+<span class="sd">    You can also batch up multiple updates in a single update string::</span>
+
+<span class="sd">        put(&#39;prop_a=True prop.nested=awesome&#39;)</span>
+
+<span class="sd">    If you are updating root config properties you can simply use keyword</span>
+<span class="sd">    arguments::</span>
+
+<span class="sd">        put(prop_a=True, prop_d={&#39;greeting&#39;: &#39;Hello&#39;, &#39;subject&#39;: &#39;world&#39;})</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        args: config dict object or one or more &#39;some.knob=value&#39; update strings</span>
+<span class="sd">        kwargs: config property names and values keyword args</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        configaro.ConfigObjectNotInitializedError: if config object has not been initialized</span>
+<span class="sd">        configaro.ConfigPropertyNotScalarError: if config property is not a scalar</span>
+<span class="sd">        configaro.ConfigUpdateNotValidError: if config update string is not valid</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">_CONFIG_DATA</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ConfigObjectNotInitializedError</span><span class="p">()</span>
+
+    <span class="c1"># Handle passing in a single dict arg.</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="n">_CONFIG_DATA</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">return</span>
+
+    <span class="c1"># Handle passing in a prop name and an update value of any sort other than string.</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">_put</span><span class="p">(</span><span class="n">_CONFIG_DATA</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">return</span>
+
+    <span class="c1"># Handle positional string arguments.  If the caller wishes to modify</span>
+    <span class="c1"># nested properties, they must be passed in as update strings, such as</span>
+    <span class="c1"># &#39;log.level=INFO&#39;.  Values will be cast from strings to their appropriate</span>
+    <span class="c1"># type.  Multiple updates can be specified in a single string separated by</span>
+    <span class="c1"># whitespace.</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">prop_name</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)</span>
+            <span class="n">prop_value</span> <span class="o">=</span> <span class="n">_cast</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+            <span class="n">_put</span><span class="p">(</span><span class="n">_CONFIG_DATA</span><span class="p">,</span> <span class="n">prop_name</span><span class="p">,</span> <span class="n">prop_value</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigUpdateNotValidError</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+
+    <span class="c1"># Handle any keyword arguments.  If the caller doesn&#39;t care about nested</span>
+    <span class="c1"># property updates, property names and values may be passed in keyword args.</span>
+    <span class="k">for</span> <span class="n">prop_name</span><span class="p">,</span> <span class="n">prop_value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">_put</span><span class="p">(</span><span class="n">_CONFIG_DATA</span><span class="p">,</span> <span class="n">prop_name</span><span class="p">,</span> <span class="n">prop_value</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">_config_module_paths</span><span class="p">(</span><span class="n">config_package</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">locals_path</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">locals_env_var</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Config module paths accessor.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        config module paths</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        configaro.ConfigModuleNotFoundError: if config module not found</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">config_paths</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">package_dir</span> <span class="o">=</span> <span class="n">_config_package_dir</span><span class="p">(</span><span class="n">config_package</span><span class="p">)</span>
+
+    <span class="c1"># Start by adding the &#39;defaults&#39; config module in the config package.</span>
+    <span class="n">defaults_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">package_dir</span><span class="p">,</span> <span class="n">f</span><span class="s1">&#39;</span><span class="si">{DEFAULTS_CONFIG_MODULE_NAME}</span><span class="s1">.py&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">defaults_path</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">ConfigModuleNotFoundError</span><span class="p">(</span><span class="n">defaults_path</span><span class="p">)</span>
+    <span class="n">config_paths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">defaults_path</span><span class="p">)</span>
+
+    <span class="c1"># Continue by adding the &#39;locals&#39; config module from.</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">locals_path</span> <span class="ow">and</span> <span class="n">locals_env_var</span><span class="p">:</span>
+        <span class="n">locals_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">locals_env_var</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">locals_path</span><span class="p">:</span>
+        <span class="n">locals_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">package_dir</span><span class="p">,</span> <span class="n">f</span><span class="s1">&#39;</span><span class="si">{LOCALS_CONFIG_MODULE_NAME}</span><span class="s1">.py&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">locals_path</span><span class="p">):</span>
+        <span class="n">config_paths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">locals_path</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">config_paths</span>
+
+
+<span class="k">def</span> <span class="nf">_config_package_dir</span><span class="p">(</span><span class="n">config_package</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Config package directory accessor.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        config package directory</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ImportError: if config package defaults cannot be loaded.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">module</span> <span class="o">=</span> <span class="n">import_module</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{config_package}</span><span class="s1">.defaults&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">module</span><span class="o">.</span><span class="vm">__file__</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_cast</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Cast string property value to real type.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        value: property value to cast</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        casted property value</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Handle None type values</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;None&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="c1"># Handle Boolean type values</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;False&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">elif</span> <span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;True&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="c1"># Handle numeric type values.</span>
+    <span class="n">types</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">type_</span> <span class="ow">in</span> <span class="n">types</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">type_</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">pass</span>
+    <span class="c1"># Must be a string.</span>
+    <span class="k">return</span> <span class="n">value</span>
+
+
+<span class="k">def</span> <span class="nf">_get</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Munch</span><span class="p">,</span> <span class="n">prop_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">Munch</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Get config value identified by config property in config data.</span>
+
+
+<span class="sd">    Arg:</span>
+<span class="sd">        data: config data</span>
+<span class="sd">        prop_name: config property name</span>
+<span class="sd">        kwargs: keyword arguments</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        config value</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        configaro.ConfigPropertyNotFoundError: if property is not found and *default* keyword arg is not present</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">eval</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;data.</span><span class="si">{prop_name}</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># NOTE: do not remove the &#39;data&#39; parameter in function as it is used here!</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigPropertyNotFoundError</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">prop_name</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_put</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Munch</span><span class="p">,</span> <span class="n">prop_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">prop_value</span><span class="o">=</span><span class="n">Any</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Put config value identified by config property in config data.</span>
+
+<span class="sd">    Arg:</span>
+<span class="sd">        data: config data</span>
+<span class="sd">        prop_name: config property name</span>
+<span class="sd">        prop_value: config value</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        configaro.ConfigPropertyNotFoundError: if config property is not found</span>
+<span class="sd">        configaro.ConfigPropertyNotScalarError: if config property is not scalar and non-dict value is provided</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">prop_parts</span> <span class="o">=</span> <span class="n">prop_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">prop_parts</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">parent_prop_name</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">prop_parts</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">prop_name</span> <span class="o">=</span> <span class="n">prop_parts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">config</span> <span class="o">=</span> <span class="n">_get</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">parent_prop_name</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">config</span> <span class="o">=</span> <span class="n">data</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="n">prop_name</span><span class="p">],</span> <span class="n">Munch</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">prop_value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">ConfigPropertyNotScalarError</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">prop_name</span><span class="p">)</span>
+    <span class="n">config</span><span class="p">[</span><span class="n">prop_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">prop_value</span>
+
+
+<span class="k">def</span> <span class="nf">_load</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Load config values from file.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        path: config file path</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        config data</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ImportError: if module cannot be imported</span>
+<span class="sd">        configaro.ConfigModuleNotValidError is module does not contain a &#39;config&#39; dict attribute.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">module_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="n">module_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.py&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="n">module</span> <span class="o">=</span> <span class="n">_import_module</span><span class="p">(</span><span class="n">module_dir</span><span class="p">,</span> <span class="n">module_name</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">ConfigModuleNotValidError</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">module</span><span class="o">.</span><span class="n">config</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ConfigModuleNotValidError</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_merge</span><span class="p">(</span><span class="n">original</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">deltas</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Merge two dictionaries.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        original: original data</span>
+<span class="sd">        deltas: deltas data</span>
+
+<span class="sd">    Yields:</span>
+<span class="sd">        merged keys and values</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">original</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">deltas</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">original</span> <span class="ow">and</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">deltas</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">original</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="nb">dict</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">deltas</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="k">yield</span> <span class="n">k</span><span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">_merge</span><span class="p">(</span><span class="n">original</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">deltas</span><span class="p">[</span><span class="n">k</span><span class="p">]))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># If one of the values is not a dict, you can&#39;t continue merging it.</span>
+                <span class="c1"># Value from second dict overrides one in first and we move on.</span>
+                <span class="k">yield</span> <span class="n">k</span><span class="p">,</span> <span class="n">deltas</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+                <span class="c1"># Alternatively, replace this with exception raiser to alert you of value conflicts</span>
+        <span class="k">elif</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">original</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">k</span><span class="p">,</span> <span class="n">original</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">k</span><span class="p">,</span> <span class="n">deltas</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">_import_module</span><span class="p">(</span><span class="n">module_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ModuleType</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Import module from directory.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        module_dir: module directory path</span>
+<span class="sd">        module_name: name of module to import from *module_dir*</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">         imported module</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ImportError: if module cannot be imported</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">_module_path</span><span class="p">(</span><span class="n">module_dir</span><span class="p">,</span> <span class="n">module_name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">module_name</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">module_name</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">_ConfigLoader</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_module_path</span><span class="p">(</span><span class="n">module_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Get module path..</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        module_dir: module directory</span>
+<span class="sd">        module_name: module name</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">         module file path</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">module_dir</span><span class="p">,</span> <span class="o">*</span><span class="n">module_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;__init__.py&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">else</span> <span class="n">f</span><span class="s1">&#39;</span><span class="si">{filename}</span><span class="s1">.py&#39;</span>
+
+
+<span class="k">class</span> <span class="nc">_ConfigLoader</span><span class="p">(</span><span class="n">FileLoader</span><span class="p">,</span> <span class="n">SourceLoader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Config module loader class.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">get_code</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullname</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CodeType</span><span class="p">:</span>
+        <span class="n">source</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_source</span><span class="p">(</span><span class="n">fullname</span><span class="p">)</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_filename</span><span class="p">(</span><span class="n">fullname</span><span class="p">)</span>
+        <span class="n">parsed</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">compile</span><span class="p">(</span><span class="n">parsed</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="s1">&#39;exec&#39;</span><span class="p">,</span> <span class="n">dont_inherit</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">module_repr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">ModuleType</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">f</span><span class="s1">&#39;&lt;config module </span><span class="si">{module.__name__}</span><span class="s1"> at </span><span class="si">{module.__file__}</span><span class="s1">&gt;&#39;</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

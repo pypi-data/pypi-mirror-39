@@ -1,0 +1,404 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>configaro &mdash; configaro 1.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Docs" href="api.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> configaro
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">configaro</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>configaro</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="configaro">
+<span id="configaro-docs"></span><h1>configaro<a class="headerlink" href="#configaro" title="Permalink to this headline">¶</a></h1>
+<p><strong>configaro</strong> is a Python 3.6 configuration library that’s music to your ears.</p>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<p><strong>configaro</strong> has been created with the following design goals in mind:</p>
+<blockquote>
+<div><ul class="simple">
+<li>provide a single file library with minimal dependencies</li>
+<li>provide one with a simple, expressive API that is easy to use and gets out of your way</li>
+<li>provide one that allows for hierarchical config data with dot-addressable access</li>
+<li>provide one that allows for config data defaults and local overrides</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="concepts">
+<h2>Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
+<p><strong>configaro</strong> provides a <strong>config object</strong> loaded from a <em>defaults</em>
+<strong>config module</strong> in the <strong>config package</strong> and an optional <em>locals</em>
+<strong>config module</strong> in the <strong>config package</strong> or other directory.</p>
+<p>A <strong>config package</strong> is the name of a Python package to search for
+<em>defaults</em> and <em>locals</em> <strong>config modules</strong>.</p>
+<p>A <strong>config module</strong> is a Python module containing <strong>config data</strong> in a
+<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#dict" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> module attribute named <em>config</em>. Values found in a <em>locals</em>
+<strong>config module</strong> will override those found in the <em>defaults</em> <strong>config module</strong>.</p>
+<p>A <strong>config object</strong> is a <a class="reference external" href="https://github.com/Infinidat/munch">dot-addressable dict</a>
+containing <strong>config data</strong> loaded from a <em>defaults</em> and optional <em>locals</em>
+<strong>config modules</strong>.  The config object is built by calling the <a class="reference internal" href="api.html#configaro.init" title="configaro.init"><code class="xref py py-meth docutils literal notranslate"><span class="pre">configaro.init()</span></code></a>
+API.  After initialization the config object, or any portion of it, may be
+queried with the <a class="reference internal" href="api.html#configaro.get" title="configaro.get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">configaro.get()</span></code></a> API or modified with the
+<a class="reference internal" href="api.html#configaro.put" title="configaro.put"><code class="xref py py-meth docutils literal notranslate"><span class="pre">configaro.put()</span></code></a> API.</p>
+<p>A <strong>config property</strong> is a string identifying a config object or config
+config value in a dot-addressable format, such as <code class="docutils literal notranslate"><span class="pre">inner.prop</span></code>.</p>
+<p>A <strong>config value</strong> is a scalar value of some type, typically <em>None</em>, <em>bool</em>,
+<em>float</em>, <em>int</em> or <em>str</em> type, accessed by <strong>config property</strong>.</p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="add-configaro-to-your-project">
+<h3>Add configaro to your project<a class="headerlink" href="#add-configaro-to-your-project" title="Permalink to this headline">¶</a></h3>
+<p><strong>configaro</strong> must be added to your project before use.</p>
+<p>Add the package dependency using <a class="reference external" href="https://docs.pipenv.org/">pipenv</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd ~/projects/demo_prj
+$ pipenv install configaro
+</pre></div>
+</div>
+<p>Alternatively, add it to your <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file and <code class="docutils literal notranslate"><span class="pre">pip3</span></code> install
+it into your Python environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip3 install -r requirements.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-defaults-config-module-to-your-project">
+<h3>Add defaults config module to your project<a class="headerlink" href="#add-defaults-config-module-to-your-project" title="Permalink to this headline">¶</a></h3>
+<p>Add a <em>defaults</em> config module to your config package directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mypkg/config/defaults.py</span>
+<span class="n">config</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;inner&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;prop&#39;</span><span class="p">:</span> <span class="s1">&#39;some_value&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="import-configaro">
+<h3>Import configaro<a class="headerlink" href="#import-configaro" title="Permalink to this headline">¶</a></h3>
+<p>All APIs are provided by the <strong>configaro</strong> module:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">configaro</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="initialize-the-config-object">
+<h3>Initialize the config object<a class="headerlink" href="#initialize-the-config-object" title="Permalink to this headline">¶</a></h3>
+<p>The config object must be initialized before use.  At a minimum, it requires
+the name of the config package containing the <em>defaults</em> config module
+<code class="docutils literal notranslate"><span class="pre">defaults.py</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">configaro</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="s1">&#39;mypkg.config&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The config data provided by the <em>defaults</em> config module may be overridden
+with config data provided by a <em>locals</em> config module.  This module, if it
+exists, is loaded from one of the following locations in precedence order from
+highest to lowest:</p>
+<ul class="simple">
+<li>locals path</li>
+<li>locals env var</li>
+<li><code class="docutils literal notranslate"><span class="pre">locals.py</span></code> file in config package</li>
+</ul>
+<p>The locals path and locals env var can optionally be passed as keyword
+arguments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">configaro</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="s1">&#39;mypkg.config&#39;</span><span class="p">,</span> <span class="n">locals_path</span><span class="o">=</span><span class="s1">&#39;/etc/mypkg/locals.py&#39;</span><span class="p">,</span> <span class="n">locals_env_var</span><span class="o">=</span><span class="s1">&#39;MYPKG_LOCALS_PATH&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Once initialized, the config object may be queried with the <a class="reference internal" href="api.html#configaro.get" title="configaro.get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">configaro.get()</span></code></a>
+function and modified with the <a class="reference internal" href="api.html#configaro.put" title="configaro.put"><code class="xref py py-meth docutils literal notranslate"><span class="pre">configaro.put()</span></code></a> function.</p>
+</div>
+<div class="section" id="query-the-config-object">
+<h3>Query the config object<a class="headerlink" href="#query-the-config-object" title="Permalink to this headline">¶</a></h3>
+<p>To query the initialized config object, call <a class="reference internal" href="api.html#configaro.get" title="configaro.get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">configaro.get()</span></code></a> with no
+arguments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span> <span class="o">=</span> <span class="n">configaro</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The returned config object provides dot-addressable config data access:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">inner</span><span class="o">.</span><span class="n">prop</span>
+</pre></div>
+</div>
+<p>You can query any portion of the config object my name.
+Scalar config properties can be queried:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="n">configaro</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;inner.prop&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Nested config objects can also be queried:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inner</span> <span class="o">=</span> <span class="n">configaro</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">inner</span><span class="o">.</span><span class="n">prop</span>
+</pre></div>
+</div>
+<p>Multiple items can be returned at once by passing multiple positional
+arguments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inner</span><span class="p">,</span> <span class="n">another</span> <span class="o">=</span> <span class="n">configaro</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="s1">&#39;another&#39;</span><span class="p">)</span>
+<span class="n">inner</span><span class="p">,</span> <span class="n">another</span> <span class="o">=</span> <span class="n">configaro</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;inner another&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modify-the-config-object">
+<h3>Modify the config object<a class="headerlink" href="#modify-the-config-object" title="Permalink to this headline">¶</a></h3>
+<p>To modify the initialized config object, use the <a class="reference internal" href="api.html#configaro.put" title="configaro.put"><code class="xref py py-meth docutils literal notranslate"><span class="pre">configaro.put()</span></code></a>
+function.  To modify the entire config object, provide one dict argument:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">configaro</span><span class="o">.</span><span class="n">put</span><span class="p">({</span>
+    <span class="s1">&#39;inner&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;prop&#39;</span><span class="p">:</span> <span class="s1">&#39;some value&#39;</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;another&#39;</span><span class="p">:</span> <span class="s1">&#39;another_value&#39;</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>Any portion of of the config object can be similarly modified with a property
+name and dict argument:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">configaro</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;prop&#39;</span><span class="p">:</span> <span class="s1">&#39;some_value&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>Scalar config data can be modified with an update string:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">configaro</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s1">&#39;inner.prop=some_value&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Multiple items can be modified at once by passing multiple update strings:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">configaro</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s1">&#39;inner.prop=some_value&#39;</span><span class="p">,</span> <span class="s1">&#39;another=another_value&#39;</span><span class="p">)</span>
+<span class="n">configaro</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s1">&#39;inner.prop=some_value another=another_value&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Update string values will be cast to None, bool, int and float values before
+updating the config object.</p>
+<p>Root config properties can also be modified by passing keyword arguments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">configaro</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">another</span><span class="o">=</span><span class="s1">&#39;another_value&#39;</span><span class="p">,</span> <span class="n">inner</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;prop&#39;</span><span class="p">:</span> <span class="s1">&#39;some_value&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="caveats">
+<h2>Caveats<a class="headerlink" href="#caveats" title="Permalink to this headline">¶</a></h2>
+<p><strong>configaro</strong> uses Python 3.6 features and I have zero interest in supporting
+earlier versions.  If you are still using them then move along – there’s
+nothing to see here.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#errors">Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="releases.html#configaro-release-1-0-1">1.0.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="releases.html#configaro-release-1-0-0">1.0.0</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api.html" class="btn btn-neutral float-right" title="API Docs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

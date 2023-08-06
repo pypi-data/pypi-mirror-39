@@ -1,0 +1,446 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API Docs &mdash; configaro 1.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Release Notes" href="releases.html" />
+    <link rel="prev" title="configaro" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> configaro
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#errors">Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">configaro</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>API Docs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-docs">
+<span id="configaro-api"></span><h1>API Docs<a class="headerlink" href="#api-docs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#configaro.init" title="configaro.init"><code class="xref py py-meth docutils literal notranslate"><span class="pre">configaro.init()</span></code></a></li>
+<li><a class="reference internal" href="#configaro.get" title="configaro.get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">configaro.get()</span></code></a></li>
+<li><a class="reference internal" href="#configaro.put" title="configaro.put"><code class="xref py py-meth docutils literal notranslate"><span class="pre">configaro.put()</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="errors">
+<h2>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#configaro.ConfigError" title="configaro.ConfigError"><code class="xref py py-class docutils literal notranslate"><span class="pre">configaro.ConfigError</span></code></a></li>
+<li><a class="reference internal" href="#configaro.ConfigModuleNotFoundError" title="configaro.ConfigModuleNotFoundError"><code class="xref py py-class docutils literal notranslate"><span class="pre">configaro.ConfigModuleNotFoundError</span></code></a></li>
+<li><a class="reference internal" href="#configaro.ConfigModuleNotValidError" title="configaro.ConfigModuleNotValidError"><code class="xref py py-class docutils literal notranslate"><span class="pre">configaro.ConfigModuleNotValidError</span></code></a></li>
+<li><a class="reference internal" href="#configaro.ConfigObjectNotInitializedError" title="configaro.ConfigObjectNotInitializedError"><code class="xref py py-class docutils literal notranslate"><span class="pre">configaro.ConfigObjectNotInitializedError</span></code></a></li>
+<li><a class="reference internal" href="#configaro.ConfigPropertyNotFoundError" title="configaro.ConfigPropertyNotFoundError"><code class="xref py py-class docutils literal notranslate"><span class="pre">configaro.ConfigPropertyNotFoundError</span></code></a></li>
+<li><a class="reference internal" href="#configaro.ConfigPropertyNotScalarError" title="configaro.ConfigPropertyNotScalarError"><code class="xref py py-class docutils literal notranslate"><span class="pre">configaro.ConfigPropertyNotScalarError</span></code></a></li>
+<li><a class="reference internal" href="#configaro.ConfigUpdateNotValidError" title="configaro.ConfigUpdateNotValidError"><code class="xref py py-class docutils literal notranslate"><span class="pre">configaro.ConfigUpdateNotValidError</span></code></a></li>
+</ul>
+<span class="target" id="module-configaro"></span><p>Configaro Python configuration library.</p>
+<dl class="exception">
+<dt id="configaro.ConfigError">
+<em class="property">exception </em><code class="descclassname">configaro.</code><code class="descname">ConfigError</code><span class="sig-paren">(</span><em>message: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/configaro.html#ConfigError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#configaro.ConfigError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configaro base configuration error class.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="configaro.ConfigModuleNotFoundError">
+<em class="property">exception </em><code class="descclassname">configaro.</code><code class="descname">ConfigModuleNotFoundError</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/configaro.html#ConfigModuleNotFoundError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#configaro.ConfigModuleNotFoundError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Config module not found error.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="configaro.ConfigModuleNotValidError">
+<em class="property">exception </em><code class="descclassname">configaro.</code><code class="descname">ConfigModuleNotValidError</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/configaro.html#ConfigModuleNotValidError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#configaro.ConfigModuleNotValidError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Config module does not contain a ‘config’ attribute of ‘dict’ type error.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="configaro.ConfigObjectNotInitializedError">
+<em class="property">exception </em><code class="descclassname">configaro.</code><code class="descname">ConfigObjectNotInitializedError</code><a class="reference internal" href="_modules/configaro.html#ConfigObjectNotInitializedError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#configaro.ConfigObjectNotInitializedError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Config object not initialized error.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="configaro.ConfigPropertyNotFoundError">
+<em class="property">exception </em><code class="descclassname">configaro.</code><code class="descname">ConfigPropertyNotFoundError</code><span class="sig-paren">(</span><em>data: munch.Munch</em>, <em>prop_name: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/configaro.html#ConfigPropertyNotFoundError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#configaro.ConfigPropertyNotFoundError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Config property not found error.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="configaro.ConfigPropertyNotScalarError">
+<em class="property">exception </em><code class="descclassname">configaro.</code><code class="descname">ConfigPropertyNotScalarError</code><span class="sig-paren">(</span><em>data: munch.Munch</em>, <em>prop_name: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/configaro.html#ConfigPropertyNotScalarError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#configaro.ConfigPropertyNotScalarError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Config property not scalar error.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="configaro.ConfigUpdateNotValidError">
+<em class="property">exception </em><code class="descclassname">configaro.</code><code class="descname">ConfigUpdateNotValidError</code><span class="sig-paren">(</span><em>update: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/configaro.html#ConfigUpdateNotValidError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#configaro.ConfigUpdateNotValidError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Config update not valid error.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="configaro.get">
+<code class="descclassname">configaro.</code><code class="descname">get</code><span class="sig-paren">(</span><em>*prop_names</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; Tuple[Union[munch.Munch, Any]]<a class="reference internal" href="_modules/configaro.html#get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#configaro.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query config values in config object.</p>
+<p>The config object must be initialized with <a class="reference internal" href="#configaro.init" title="configaro.init"><code class="xref py py-meth docutils literal notranslate"><span class="pre">configaro.init()</span></code></a> before use.</p>
+<p>If no <em>prop_names</em> are provided, returns the config root config object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span> <span class="o">=</span> <span class="n">get</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>If one property name is provided, returns that sub config object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prop</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="s1">&#39;prop&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If multiple property names are provided, returns a tuple of sub config objects:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prop1</span><span class="p">,</span> <span class="n">prop2</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="s1">&#39;prop1&#39;</span><span class="p">,</span> <span class="s1">&#39;prop2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Multiple property names can also be provided in a single string argument as well:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prop1</span><span class="p">,</span> <span class="n">prop2</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="s1">&#39;prop1 prop2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If a property name is not found, configaro.ConfigPropertyNotFoundError is raised,
+unless a <em>default</em> keyword argument is provided:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prop</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="s1">&#39;prop&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>prop_names</strong> – config property names</li>
+<li><strong>kwargs</strong> – config property names and values keyword args</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">property values</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="#configaro.ConfigObjectNotInitializedError" title="configaro.ConfigObjectNotInitializedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">configaro.ConfigObjectNotInitializedError</span></code></a> – if config object has not been initialized</li>
+<li><a class="reference internal" href="#configaro.ConfigPropertyNotFoundError" title="configaro.ConfigPropertyNotFoundError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">configaro.ConfigPropertyNotFoundError</span></code></a> – if a config property in <em>prop_names</em> is not found</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="configaro.init">
+<code class="descclassname">configaro.</code><code class="descname">init</code><span class="sig-paren">(</span><em>config_package: str</em>, <em>locals_path: str = None</em>, <em>locals_env_var: str = None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/configaro.html#init"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#configaro.init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the config object.</p>
+<p>The config object must be initialized before use and is built from one or
+two config modules.  A config module is simply any Python module with a
+module attribute named <strong>config</strong>.  The config object loaded from the
+<strong>defaults</strong> config module, as well as any <strong>locals</strong> config module found.</p>
+<p>The <strong>defaults</strong> config module is always loaded.  The required <em>config_package</em>
+argument is used to define the package in which the <strong>defaults</strong> config
+module, named <code class="docutils literal notranslate"><span class="pre">defaults.py</span></code>, is loaded from:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">init</span><span class="p">(</span><span class="s1">&#39;my_project.config&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <strong>locals</strong> config module is loaded, next if it exists, from the following
+locations, in precedence order from highest to lowest:</p>
+<ul class="simple">
+<li>one found at path specified by locals path</li>
+<li>one found at path specified by locals env var</li>
+<li>one found in config package</li>
+</ul>
+<p>If no other options are provided, the <strong>locals</strong> config module will be loaded,
+if it exists, from the <em>config_package</em>.</p>
+<p>If the optional <em>locals_path</em> argument is provided it will be used, if it
+exists, instead of any <code class="docutils literal notranslate"><span class="pre">locals.py</span></code> config module in the config package:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">init</span><span class="p">(</span><span class="s1">&#39;my_project.config&#39;</span><span class="p">,</span> <span class="n">locals_path</span><span class="o">=</span><span class="s1">&#39;/path/to/my/alternatively_named_locals.py&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If the optional <em>locals_env_var</em> argument is provided it will be used as a
+an environment variable configuring the path of the locals config module to
+load, if the module exists:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">init</span><span class="p">(</span><span class="s1">&#39;my_project.config&#39;</span><span class="p">,</span> <span class="n">locals_env_var</span><span class="o">=</span><span class="s1">&#39;MY_PROJECT_CONFIG_LOCALS&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Repeated initialization has no effect.  You can not re-initialize with
+different values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>config_package</strong> – package to search for config modules</li>
+<li><strong>locals_path</strong> – path to locals config module</li>
+<li><strong>locals_env_var</strong> – name of environment variable providing path to locals config module</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="configaro.put">
+<code class="descclassname">configaro.</code><code class="descname">put</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/configaro.html#put"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#configaro.put" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modify config values in config object.</p>
+<p>The config object must be initialized with <a class="reference internal" href="#configaro.init" title="configaro.init"><code class="xref py py-meth docutils literal notranslate"><span class="pre">configaro.init()</span></code></a> before use.</p>
+<p>This function supports many expressive styles of usage.</p>
+<p>The entire config object can be updated with a single dict data argument:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">put</span><span class="p">({</span><span class="s1">&#39;prop_a&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;prop_b&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>Similarly, any sub config object can be updated with a string property and
+dict data argument:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">put</span><span class="p">(</span><span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;prop_a&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;prop_b&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">})</span>
+<span class="n">put</span><span class="p">(</span><span class="s1">&#39;nested.prop&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;prop_a&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;prop_b&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>Updates can also be specified by <code class="docutils literal notranslate"><span class="pre">name=value</span></code> update strings.  If one or
+more string arguments are passed, the updates described by those update
+strings will be applied to the config object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">put</span><span class="p">(</span><span class="s1">&#39;prop_a=True&#39;</span><span class="p">)</span>
+<span class="n">put</span><span class="p">(</span><span class="s1">&#39;prop_b=23&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Update strings allow hierarchical configs to be updated:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">put</span><span class="p">(</span><span class="s1">&#39;prop.nested=awesome&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can also batch up multiple updates in a single update string:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">put</span><span class="p">(</span><span class="s1">&#39;prop_a=True prop.nested=awesome&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you are updating root config properties you can simply use keyword
+arguments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">put</span><span class="p">(</span><span class="n">prop_a</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">prop_d</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;greeting&#39;</span><span class="p">:</span> <span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;subject&#39;</span><span class="p">:</span> <span class="s1">&#39;world&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>args</strong> – config dict object or one or more ‘some.knob=value’ update strings</li>
+<li><strong>kwargs</strong> – config property names and values keyword args</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="#configaro.ConfigObjectNotInitializedError" title="configaro.ConfigObjectNotInitializedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">configaro.ConfigObjectNotInitializedError</span></code></a> – if config object has not been initialized</li>
+<li><a class="reference internal" href="#configaro.ConfigPropertyNotScalarError" title="configaro.ConfigPropertyNotScalarError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">configaro.ConfigPropertyNotScalarError</span></code></a> – if config property is not a scalar</li>
+<li><a class="reference internal" href="#configaro.ConfigUpdateNotValidError" title="configaro.ConfigUpdateNotValidError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">configaro.ConfigUpdateNotValidError</span></code></a> – if config update string is not valid</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="releases.html" class="btn btn-neutral float-right" title="Release Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="configaro" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
