@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+sphinxcontrib/__init__.py
+sphinxcontrib/lastupdate.py
+sphinxcontrib_lastupdate.egg-info/PKG-INFO
+sphinxcontrib_lastupdate.egg-info/SOURCES.txt
+sphinxcontrib_lastupdate.egg-info/dependency_links.txt
+sphinxcontrib_lastupdate.egg-info/namespace_packages.txt
+sphinxcontrib_lastupdate.egg-info/not-zip-safe
+sphinxcontrib_lastupdate.egg-info/requires.txt
+sphinxcontrib_lastupdate.egg-info/top_level.txt
