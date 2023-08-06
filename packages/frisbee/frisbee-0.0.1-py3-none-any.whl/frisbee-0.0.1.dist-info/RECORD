@@ -1,0 +1,14 @@
+frisbee/__init__.py,sha256=232qR8_E0mc_gQTXBZ5oEaEWWujny3Hpr0nuPE2D1Ow,5143
+frisbee/exceptions.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+frisbee/utils.py,sha256=dbVTXI4dsaQ5PIi4tqk1gUfP52rLwvD4sXAoB3ZmrQY,1332
+frisbee/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+frisbee/cli/client.py,sha256=aTyaPJ1hP80eZDxarhsiVWs3OGFtBmnIUgBBtAwp1fY,2426
+frisbee/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+frisbee/modules/base.py,sha256=hsTC0wu57KTkvOYwZSDTLwUIJ7-4RzmEvsQw7et5Llw,2741
+frisbee/modules/bing.py,sha256=ucHa6YDK0q0GWhCVGVo9fEIVc9wKEMKhAakNLWu_xHI,3544
+frisbee-0.0.1.dist-info/LICENSE,sha256=MT_czA-nJ4Bjun0euP6-giQ7kYosXPYtrdzC9N5mX2Y,1073
+frisbee-0.0.1.dist-info/METADATA,sha256=ZsgnVj9Ig9PlBjlebx96Jcq_mPxkGEtwQoRWAM5hqlY,3108
+frisbee-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+frisbee-0.0.1.dist-info/entry_points.txt,sha256=2pp_upQO3Px5uT8h35wCM7h8yNodyMN_fd8so4vWmFs,53
+frisbee-0.0.1.dist-info/top_level.txt,sha256=AATaHmZLKeogUcvseKcYyeVCQb30RCya_erVXYBJsDU,8
+frisbee-0.0.1.dist-info/RECORD,,
