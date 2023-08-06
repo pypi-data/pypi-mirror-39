@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: yamz
+Version: 0.0.1
+Summary: A super hacky way to manage environment specific configuration
+Home-page: https://github.com/rhymiz/yamz
+Author: Lemuel Boyce
+Author-email: lemuelboyce@gmail.com
+License: MIT
+Description: ## Yamz
+        A hacky way to manage environment specific configuration in Python using PyYAML.
+        
+        
+        ### How to use
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
