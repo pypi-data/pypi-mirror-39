@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dagstermill
+Version: 0.3.0a13
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Elementl
+Author-email: UNKNOWN
+License: Apache-2.0
+Platform: UNKNOWN
+Requires-Dist: enum34 (>=1.1.6)
+Requires-Dist: future (>=0.16.0)
+Requires-Dist: papermill (>=0.15.0)
+Requires-Dist: ipykernel (>=4.9.0)
+
+UNKNOWN
+
+
