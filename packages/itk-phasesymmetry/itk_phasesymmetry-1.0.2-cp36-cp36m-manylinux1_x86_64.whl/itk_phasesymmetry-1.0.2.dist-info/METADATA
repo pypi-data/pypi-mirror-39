@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: itk-phasesymmetry
+Version: 1.0.2
+Summary: ITK classes for computing phase symmetry using multi-scale steerable filters
+Home-page: https://github.com/KitwareMedical/ITKPhaseSymmetry
+Author: Charles Hatt
+Author-email: hatt@wisc.edu
+License: Apache
+Download-URL: https://github.com/KitwareMedical/ITKPhaseSymmetry
+Keywords: ITK InsightToolkit Phase-symmetry Multi-scale Fourier-domain
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: C++
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Operating System :: Android
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Dist: itk (>=5.0b01)
+
+ITKPhaseSymmetry provides multi-scale steerable filtersfor computing phase symmetry (PS) in the image Fouriertransform domain.
+Please refer to:
+C. Hatt, “Multi-scale Steerable Phase-Symmetry Filters for ITK.”,Insight Journal, July-December 2011, http://hdl.handle.net/10380/3330.
+
