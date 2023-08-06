@@ -1,0 +1,10 @@
+setup.py
+distributions_haolin/Binomialdistribution.py
+distributions_haolin/Gaussiandistribution.py
+distributions_haolin/Generaldistribution.py
+distributions_haolin/__init__.py
+distributions_haolin.egg-info/PKG-INFO
+distributions_haolin.egg-info/SOURCES.txt
+distributions_haolin.egg-info/dependency_links.txt
+distributions_haolin.egg-info/not-zip-safe
+distributions_haolin.egg-info/top_level.txt
