@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pandera
+Version: 0.0.5
+Summary: A pandas data structure validation library
+Home-page: https://github.com/cosmicBboy/pandera
+Author: Niels Bantilan
+Author-email: niels.bantilan@gmail.com
+License: MIT
+Keywords: pandas,validation,data-structures
+Platform: UNKNOWN
+Requires-Dist: enum34
+Requires-Dist: numpy (>=1.9.0)
+Requires-Dist: pandas (>=0.23.0)
+Requires-Dist: schema (>=0.6.8)
+Requires-Dist: wrapt
+
+UNKNOWN
+
+
