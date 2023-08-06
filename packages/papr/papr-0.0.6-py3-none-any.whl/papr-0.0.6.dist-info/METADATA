@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: papr
+Version: 0.0.6
+Summary: A command line tool to manage scientific papers.
+Home-page: https://github.com/daniel-e/papr
+Author: Daniel Etzold
+Author-email: detzold@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: bs4
+Requires-Dist: termcolor
+
+A tool to manage scientific papers.
+
+
