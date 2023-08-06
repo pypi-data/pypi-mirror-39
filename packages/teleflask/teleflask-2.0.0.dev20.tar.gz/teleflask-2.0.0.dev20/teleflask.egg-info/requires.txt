@@ -1,0 +1,11 @@
+flask
+pytgbot>=4.0
+DictObject
+luckydonald-utils>=0.57
+python-magic
+backoff>=1.4.1
+requests
+requests[security]
+
+[dev]
+bump2version
