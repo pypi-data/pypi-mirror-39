@@ -1,0 +1,17 @@
+CHANGELOG,sha256=Y2LkaPhWCOQqpXH7x9oesYD0QoyNGv_0TDm0Fz32eQk,119
+README.html,sha256=KsTTvZvIwvkZz8Kzb5GE8QIgvGmVxpuNwiC2eTSkl3E,17786
+README.org,sha256=8R4QfPV2CAv4tPgfcxYFlbtRPm9jj6RjxWb0iailGB4,3380
+napy/__init__.py,sha256=wEmtQd35FDi2zkbdI-pe31c05d5_HIDEOuoCqiwGH1s,1164
+napy/console/__init__.py,sha256=txNV0u-zgO5a6Yvsodc9kbHKEgX_j37NX6RG4CAVvpg,1457
+napy/console/template.py,sha256=nJ4tK2cvtk4eK5mLA-Db73U2Nlm7y3zUDuQkXtUhXmM,2889
+napy/ipyext/__init__.py,sha256=IjWfqTA-YFGsBzlHsTrx5O5v2ThM38PC6jV1VOtu0js,1212
+napy/ipyext/b_e.py,sha256=tqlxGle7ngYTLpN2Zcid0X_7-saclIWDZkeWdflT6zg,2239
+napy/ipyext/ns.py,sha256=8A3FgD8jhRb4S01gyW7W-sRE2Ka4LjtLg9quprVM0ds,2166
+napy/template/__init__.py,sha256=jYUvjxDHNUzaJTMM1Jgi2qX2TvVITWbcaILU7I5GnYM,1454
+napy/template/template.py,sha256=FOXoHuKWkwNzl8DKATEHVsqsmwSzdXY3bmQwkLkSDMo,3056
+poetry.lock,sha256=UCCm3G2FMgbaMNo10KgXBb7hGUAYv--9VoZV_de3jmw,41493
+napy-0.1.1.dist-info/entry_points.txt,sha256=67US61aymWYfY39rl6N5AVUsF-SGF6RDWUP10codX3g,41
+napy-0.1.1.dist-info/LICENSE,sha256=P36FyeZP-2_PiP7ma1VbslA8kfMGi8pNpe2D6tsMBjY,35047
+napy-0.1.1.dist-info/WHEEL,sha256=OyjuYVC9vVJqb-Aqln3fyrroYJ4WrcSwx2msO2AokVc,85
+napy-0.1.1.dist-info/METADATA,sha256=RsfRJXLPvmK0WYmY0vYtm_DBn0D4QFFYoVXxZIb90u4,5245
+napy-0.1.1.dist-info/RECORD,,
