@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: quickcnn
+Version: 0.0.12
+Summary: ConvNet architectures on Google-Colaboratory
+Home-page: https://github.com/CG1507/quickcnn
+Author: Ghanshyam Chodavadiya
+Author-email: g8ghanshym@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+Main idea of QuickCNN is to train deep ConvNet without diving into architectural details. QuickCNN works as an interactive tool for transfer learning, finetuning, and scratch training with custom datasets. It has pretrained model zoo and also works with your custom keras model architecture.
+
+

@@ -1,0 +1,14 @@
+quickcnn/__init__.py,sha256=5AHPktTB2E1hW3zKe1TH1pRoFSY0dTxZb5mz2eXnNzQ,22
+quickcnn/ckpt_callback.py,sha256=QAG-hjpsA8xDneFz5q49MsHjx1YS4qUoqR2ba3szgaw,3518
+quickcnn/data_split.py,sha256=JDtXPcWSYnHvjK3hYGljtjYSP1RXRiVGemevju10xSs,3113
+quickcnn/hist_callback.py,sha256=4dxgCpIDblFjtiHelIxLQpWlXyUmwWcl4H919tuCiTE,42529
+quickcnn/retrain.py,sha256=MEn30tpJ81G4ipDfZs2whlIqWBuhGcgXhaiRxjHlt68,45378
+quickcnn/setup_tbc.py,sha256=ViDE3iwFSlBV7vgx4PMtTNuNjzHIZReEUArZyJ2-ldM,2610
+quickcnn/tbc_callback.py,sha256=p2lUtCO2MJXgGfdeXhPVPK5ucAjTwRAetTqUpG1Edak,2425
+quickcnn/write_result.py,sha256=ai7_1rFfG3PJV9iNen2vqL_zkS2bMsK13ig7lrwrHBE,1957
+quickcnn-0.0.12.dist-info/DESCRIPTION.rst,sha256=2Yj_K5OhSqjUKhWZnIFlh27LtTKid3zlGr1NXSnOlVY,294
+quickcnn-0.0.12.dist-info/METADATA,sha256=nXwhaCZPb_8OnZLgo-rw2RWowBHO6YyrxmPvpDJL9cQ,734
+quickcnn-0.0.12.dist-info/RECORD,,
+quickcnn-0.0.12.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+quickcnn-0.0.12.dist-info/metadata.json,sha256=At7zXeI67x8d0ZurDriopwlzo1Ps8b7gU6FBiIkBBrw,599
+quickcnn-0.0.12.dist-info/top_level.txt,sha256=xm5pYyKYcqBvkHgGN0BI7CSpSuOL6-VWy3VmS508hto,9
