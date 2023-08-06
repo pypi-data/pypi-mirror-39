@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+autoasm/__init__.py
+autoasm/config.py
+autoasm/core.py
+autoasm/execptions.py
+autoasm.egg-info/PKG-INFO
+autoasm.egg-info/SOURCES.txt
+autoasm.egg-info/dependency_links.txt
+autoasm.egg-info/top_level.txt
+tests/__init__.py
+tests/test_injector.py
