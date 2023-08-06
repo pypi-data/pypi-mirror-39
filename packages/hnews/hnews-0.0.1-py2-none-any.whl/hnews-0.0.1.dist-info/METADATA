@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: hnews
+Version: 0.0.1
+Summary: CLI to browse content of HackerNews
+Home-page: https://github.com/plant99/hackernews-cli
+Author: plant99
+Author-email: shivashispadhi@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Hackernews_CLI_v2
+A command line interface to browse content of Hacker News, built with Python. Unlike other CLIs for HackerNews, this one isn't a wrapper over it's Official API, rather the contents are scraped from the HTML page, thus is more efficient and fast. It lessens the server-client interaction thus saving bandwidth.
+
+# usage
+- pip install hnews
+- hnews -h to browse functionalities
+
