@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: joshuaavalon-favicon
+Version: 1.0.0
+Summary: Download favicon from urls
+Home-page: https://github.com/joshuaavalon/favicon
+Author: Joshua Avalon
+License: UNKNOWN
+Description: # favicon
+        
+        Download favicon from urls
+        
+        ## Usage
+        
+        ```
+        usage: __main__.py [-h] [-s SIZE] urls [urls ...]
+        
+        Download favicon from urls
+        
+        positional arguments:
+          urls                  Urls to be downloaded
+        
+        optional arguments:
+          -h, --help            show this help message and exit
+          -s SIZE, --size SIZE  Icon maximum size
+        
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
