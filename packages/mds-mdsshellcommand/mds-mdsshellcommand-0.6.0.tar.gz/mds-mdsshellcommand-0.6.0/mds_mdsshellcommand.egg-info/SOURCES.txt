@@ -1,0 +1,11 @@
+README.rst
+setup.py
+mds_mdsshellcommand.egg-info/PKG-INFO
+mds_mdsshellcommand.egg-info/SOURCES.txt
+mds_mdsshellcommand.egg-info/dependency_links.txt
+mds_mdsshellcommand.egg-info/not-zip-safe
+mds_mdsshellcommand.egg-info/requires.txt
+mds_mdsshellcommand.egg-info/top_level.txt
+mdsshellcommand/__init__.py
+mdsshellcommand/libcommandrun.py
+mdsshellcommand/runexample.py
