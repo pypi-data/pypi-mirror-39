@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+bin/chron
+chronologicon/__init__.py
+chronologicon/input.py
+chronologicon/maintenance.py
+chronologicon/output.py
+chronologicon/strings.py
+chronologicon/terminalsize.py
+chronologicon.egg-info/PKG-INFO
+chronologicon.egg-info/SOURCES.txt
+chronologicon.egg-info/dependency_links.txt
+chronologicon.egg-info/not-zip-safe
+chronologicon.egg-info/requires.txt
+chronologicon.egg-info/top_level.txt
