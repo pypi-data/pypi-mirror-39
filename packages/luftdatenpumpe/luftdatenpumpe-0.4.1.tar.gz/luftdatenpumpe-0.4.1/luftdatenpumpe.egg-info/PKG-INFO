@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: luftdatenpumpe
+Version: 0.4.1
+Summary: Process data from live API of luftdaten.info
+Home-page: https://hiveeyes.org/
+Author: Andreas Motl
+Author-email: andreas@hiveeyes.org
+License: AGPL 3, EUPL 1.2
+Description: Request data from live API of luftdaten.info, enrich with geospatial information and publish to MQTT bus.
+Keywords: luftdaten.info opendata data acquisition mqtt http rest sql influxdb mosquitto grafana
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Manufacturing
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: Topic :: Communications
+Classifier: Topic :: Database
+Classifier: Topic :: Internet
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Archiving
+Classifier: Topic :: System :: Networking :: Monitoring
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Provides-Extra: test
