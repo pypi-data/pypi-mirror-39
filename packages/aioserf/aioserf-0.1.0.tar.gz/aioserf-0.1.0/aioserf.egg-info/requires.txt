@@ -1,0 +1,4 @@
+msgpack>=0.5.0
+anyio
+outcome
+async_generator
