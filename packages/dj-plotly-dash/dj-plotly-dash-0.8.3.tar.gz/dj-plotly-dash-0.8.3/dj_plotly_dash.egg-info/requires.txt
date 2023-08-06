@@ -1,0 +1,16 @@
+Django<2.2,>=1.9
+plotly>=2.0.8
+
+[all]
+box2d-py>=2.3.5
+atari_py>=0.1.4
+Pillow
+PyOpenGL
+
+[atari]
+atari_py>=0.1.4
+Pillow
+PyOpenGL
+
+[box2d]
+box2d-py>=2.3.5
