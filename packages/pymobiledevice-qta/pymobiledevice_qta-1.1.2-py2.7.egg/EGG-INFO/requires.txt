@@ -1,0 +1,8 @@
+construct>=2.9.29
+pyasn1
+future
+six
+biplist
+
+[:sys_platform != "win32"]
+M2Crypto
