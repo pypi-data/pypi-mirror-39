@@ -1,0 +1,29 @@
+
+<!-- Kubernetes Engine clusters partial -->
+<script id="services.kubernetesengine.clusters.partial" type="text/x-handlebars-template">
+    <div class="list-group-item active">
+        <h4 class="list-group-item-heading">{{name}}</h4>
+    </div>
+    <div class="list-group-item">
+        <h4 class="list-group-item-heading">Information</h4>
+        <div class="list-group-item-text item-margin">Cluster Name: <span id="kubernetesengine.clusters.{{@key}}.name">{{name}}</span></div>
+        <!--<div class="list-group-item-text item-margin">Description: <span id="kubernetesengine.clusters.{{@key}}.description">{{description}}</span></div>-->
+        <!--<div class="list-group-item-text item-margin">Project ID: <span id="kubernetesengine.clusters.{{@key}}.project_id">{{project_id}}</span></div>-->
+        <!--<div class="list-group-item-text item-margin">Creation Date: <span id="kubernetesengine.clusters.{{@key}}.creation_timestamp">{{creation_timestamp}}</span></div>-->
+        <!--<div class="list-group-item-text item-margin">Status: <span id="kubernetesengine.clusters.{{@key}}.status">{{status}}</span></div>-->
+        <!--<div class="list-group-item-text item-margin">Deletion Protection: <span id="kubernetesengine.clusters.{{@key}}.deletion_protection">{{deletion_protection}}</span></div>-->
+    </div>
+</script>
+
+<script>
+    Handlebars.registerPartial("services.kubernetesengine.clusters", $("#services\\.kubernetesengine\\.clusters\\.partial").html());
+</script>
+
+<!-- Single kubernetesengine cluster template -->
+<script id="single_kubernetesengine_cluster-template" type="text/x-handlebars-template">
+    <div style="text-align: right; padding-right: 10px; text-weight: bold;"><a href="javascript:hidePopup()">X</a></div>
+    {{> services.kubernetesengine.clusters}}
+</script>
+<script>
+    var single_kubernetesengine_cluster_template = Handlebars.compile($("#single_kubernetesengine_cluster-template").html());
+</script>
