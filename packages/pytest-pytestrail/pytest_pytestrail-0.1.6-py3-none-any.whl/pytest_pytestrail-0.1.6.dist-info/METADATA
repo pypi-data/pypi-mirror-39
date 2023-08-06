@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: pytest-pytestrail
+Version: 0.1.6
+Summary: pytest plugin for interaction with TestRail
+Home-page: https://github.com/tolstislon/pytest-pytestrail
+Author: tolstislon
+Author-email: tolstislon@gmail.com
+License: MIT License
+Keywords: testrail,pytest,pytest-testrail,pytest-pytestrail,testrail_api
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Pytest
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Testing
+Requires-Python: >=3.6
+Requires-Dist: pytest (>=4.0.1)
+Requires-Dist: testrail-api (>=1.0.0)
+Requires-Dist: colorama (>=0.4.1)
+
+=================
+pytest-pytestrail
+=================
+
+Pytest plugin for interaction with TestRail
+
+
+-----------------
+Install
+-----------------
+
+::
+
+    pip install pytest-pytestrail
+
+
+-----------------
+Example
+-----------------
+
+::
+
+    from pytest_pytestrail import pytestrail
+
+
+    @pytestrail.case('C12')
+    def test_one():
+        ...  # test code
+
+    @pytestrail.case('C13', 'C14')
+    def test_two():
+        ... # test code
+
+
+
+-----------------
+Configuration
+-----------------
+
+Config file
+
+`pytest.ini` or `setup.cfg` `pytest configuration <https://docs.pytest.org/en/latest/customize.html>`_
+
+::
+
+    [pytest]
+    pytestrail = True
+    pytestrail-url = https://exemle.testrail.com/
+    pytestrail-email = exemle@mail.com
+    pytestrail-password = password
+    pytestrail-test-run = 12
+    pytestrail-no-decorator-skip = True
+    pytestrail-report = True
+
+
+or
+
+Command line options
+
+::
+
+    --pytestrail            Enable plugin
+    --tr-url=URL            TestRail address
+    --tr-email=EMAIL        Email for the account on the TestRail
+    --tr-password=PASSWORD  Password for the account on the TestRail
+    --tr-test-run=12        ID testrun
+    --tr-no-decorator-skip  Skip tests without decorator
+    --tr-report             Enable report
+
