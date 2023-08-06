@@ -1,0 +1,22 @@
+sudo: false
+language: python
+python:
+  - "pypy"
+  - "3.6"
+  - "3.5"
+before_install:
+  - wget https://releases.hashicorp.com/serf/0.7.0/serf_0.7.0_linux_amd64.zip
+  - unzip serf_0.7.0_linux_amd64.zip
+  - ./serf agent &
+  - sleep 1 ; ./serf tags -set foo=bar
+install:
+  - pip install 'coverage<4.0.0' coveralls pep8
+  - python setup.py develop
+script:
+  - coverage run --source=aioserf setup.py test
+  - coverage report -m
+  - pep8 --repeat --show-source aioserf tests
+after_success:
+  - coveralls
+notifications:
+  email: false
