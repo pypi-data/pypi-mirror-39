@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: build-dist-package
+Version: 0.1.6
+Summary: Fast build distribute package structure
+Home-page: https://github.com/hotbaby/build-dist-package
+Author: Meng yangyang
+Author-email: mengyy_linux@163.com
+License: MIT
+Description: # build-dist-package
+        
+        快速构建Python发布包
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

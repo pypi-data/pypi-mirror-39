@@ -1,0 +1,3 @@
+[console_scripts]
+build-dist-package = build_dist_package.bin.build:cli
+
