@@ -1,0 +1,14 @@
+django_tree_queries-0.3.2.dist-info/DESCRIPTION.rst,sha256=4lNmj3f-esgILV9FSVja_2m6ABt6yPGAnVOCJLNYsvQ,2377
+django_tree_queries-0.3.2.dist-info/METADATA,sha256=AMf6fo6PNNzuqEori364Wj9OFC662jc37paphSWHcMA,3366
+django_tree_queries-0.3.2.dist-info/RECORD,,
+django_tree_queries-0.3.2.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+django_tree_queries-0.3.2.dist-info/metadata.json,sha256=q4dr3Htyc72Uqyc26PAQ0yp7u_NS5Iz4fErWdVrNSX4,1094
+django_tree_queries-0.3.2.dist-info/top_level.txt,sha256=W0duPCvuR7c_zXdfcJzxmdTpLnZ0310MRC1MiJEVj-k,13
+tree_queries/__init__.py,sha256=og7DIqHNEcSJw-fw16QWRimCHYo8DPYICUPrr4TJEcU,62
+tree_queries/compiler.py,sha256=UWDdLbQIeNkHXFoaJSp53JlbZgSAzzhwH9iGUb6KZyQ,5752
+tree_queries/fields.py,sha256=4gvq6fKN8dQUGGAJL6FRy5obPQoydAsJJTGTZVizmvI,496
+tree_queries/forms.py,sha256=AIyHJFuPlRZ0Ryrf6p76yaUnzy-2DmhBrE1SOX9kasg,797
+tree_queries/models.py,sha256=lmZM0BZtIgyhDm81KQeBBwKiPYG-MxtyGxFUCSTKTiM,1661
+tree_queries/query.py,sha256=pAsHwIkRfq5iieSdlhVdYtJoBM90BO3H_K7W2MN75b4,2835
+tree_queries/locale/de/LC_MESSAGES/django.mo,sha256=envNDVm49Wz43hGIeyEftIJdQuezrxxNbUSXQ-dXpec,545
+tree_queries/locale/de/LC_MESSAGES/django.po,sha256=PEzPxRId69_N1c3YAEKHutx0RJ4u7JWGRNcUVa75x2I,820
