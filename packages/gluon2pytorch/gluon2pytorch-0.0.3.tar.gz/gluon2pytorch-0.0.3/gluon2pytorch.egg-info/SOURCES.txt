@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+gluon2pytorch/__init__.py
+gluon2pytorch/gluon2pytorch.py
+gluon2pytorch/layers.py
+gluon2pytorch/pytorch_model_template.py
+gluon2pytorch.egg-info/PKG-INFO
+gluon2pytorch.egg-info/SOURCES.txt
+gluon2pytorch.egg-info/dependency_links.txt
+gluon2pytorch.egg-info/not-zip-safe
+gluon2pytorch.egg-info/requires.txt
+gluon2pytorch.egg-info/top_level.txt
