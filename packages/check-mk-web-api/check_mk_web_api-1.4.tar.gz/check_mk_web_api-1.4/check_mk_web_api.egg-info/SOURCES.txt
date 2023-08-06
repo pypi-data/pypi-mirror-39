@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+check_mk_web_api/__init__.py
+check_mk_web_api/exception.py
+check_mk_web_api/test_WebApi.py
+check_mk_web_api.egg-info/PKG-INFO
+check_mk_web_api.egg-info/SOURCES.txt
+check_mk_web_api.egg-info/dependency_links.txt
+check_mk_web_api.egg-info/requires.txt
+check_mk_web_api.egg-info/top_level.txt
