@@ -1,0 +1,17 @@
+odoo10_addon_base_business_document_import-10.0.1.0.0.99.dev22-py2.7-nspkg.pth,sha256=BRP8mvEvEhIFmA57wbSTfAVbaAesjZh6WbtWMKUVv1c,1118
+odoo/addons/base_business_document_import/README.rst,sha256=wxOpneWsPh9gYIlGJlDxyXIAfniOWb0yWK-rOftJggg,1897
+odoo/addons/base_business_document_import/__init__.py,sha256=Ax4qLxdb9ATk05MF7cSQ0BdpYCpGVYFy9n4U4zODf9o,46
+odoo/addons/base_business_document_import/__manifest__.py,sha256=bcsrCZRoAtzAj_fsWoLUsLIoCuZqACYDYMWKSi2JgWE,679
+odoo/addons/base_business_document_import/i18n/base_business_document_import.pot,sha256=Risldgzu1c7kKM0z5GdwUQjiRnkVrQ8vhcMpQjDGljg,10307
+odoo/addons/base_business_document_import/i18n/es.po,sha256=GVt8_vGj07F729sc_HyZrt_5QtO5j-BlGYF0XvuRohY,10777
+odoo/addons/base_business_document_import/i18n/fr.po,sha256=C3uYnobpBAInkjHOis9zy1zcrpic_Qu3yyZI3F6NdS4,10759
+odoo/addons/base_business_document_import/i18n/pt.po,sha256=-Ze4YE46i6Yco0BBLfDbMSvAEycv7HnGj-1Bs_DeIdM,10373
+odoo/addons/base_business_document_import/models/__init__.py,sha256=bT14oweT9fj_FOrqDxToFecuE42C-0rPvWi3QxOn0ps,64
+odoo/addons/base_business_document_import/models/business_document_import.py,sha256=b7KzwthVRpusOCrJ6Ipf2iomWd5R8TuA9wU9A2mOpq0,39393
+odoo/addons/base_business_document_import/tests/__init__.py,sha256=RXTkfT4OVRbwVEUdxT5HOnw6HMjgJTwIPq3DRGk2ihQ,69
+odoo/addons/base_business_document_import/tests/test_business_document_import.py,sha256=t0Lv1Tqo4RX4kCv7sDkTN-j1_5O_6VW5lAh2nq9vsUc,9601
+odoo10_addon_base_business_document_import-10.0.1.0.0.99.dev22.dist-info/METADATA,sha256=zOBnkrCsYDbH0mJycaumdKloUCeNIuGrEfm7H-Vk3-U,2608
+odoo10_addon_base_business_document_import-10.0.1.0.0.99.dev22.dist-info/RECORD,,
+odoo10_addon_base_business_document_import-10.0.1.0.0.99.dev22.dist-info/WHEEL,sha256=_V8uWu5F_h-lvAz5Mbq4oZqV_uCfL4cHgm4IIlDevzU,92
+odoo10_addon_base_business_document_import-10.0.1.0.0.99.dev22.dist-info/namespace_packages.txt,sha256=igDP6S4ywc6jzcMqzrKZpRtAUXrS-iYaA_Hu1EtlI48,17
+odoo10_addon_base_business_document_import-10.0.1.0.0.99.dev22.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
