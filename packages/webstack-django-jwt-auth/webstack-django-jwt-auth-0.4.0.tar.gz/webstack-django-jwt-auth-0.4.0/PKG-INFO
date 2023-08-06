@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: webstack-django-jwt-auth
+Version: 0.4.0
+Summary: JSON Web Token based authentication for Django
+Home-page: https://github.com/webstack/django-jwt-auth
+Author: Stéphane Raimbault
+Author-email: stephane.raimbault@webstack.fr
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP
