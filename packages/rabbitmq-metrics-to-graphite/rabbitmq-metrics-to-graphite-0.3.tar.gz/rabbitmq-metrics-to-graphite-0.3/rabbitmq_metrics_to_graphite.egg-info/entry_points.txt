@@ -1,0 +1,4 @@
+
+      [console_scripts]
+      rabbitmq-metrics-to-graphite=rabbitmq_metrics_to_graphite:main
+      
