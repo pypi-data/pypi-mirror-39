@@ -1,0 +1,101 @@
+[
+    {
+        "_is_template": true,
+
+        "check_interval": 720,
+        "check_period": "24x7",
+        "max_check_attempts": 3,
+        "retry_interval": 1,
+
+        "check_command": "check_dns",
+        "check_command_args": "",
+        "host": "dns-host",
+        "name": "Dns"
+    },
+    {
+        "_is_template": true,
+
+        "check_interval": 15,
+        "check_period": "24x7",
+        "max_check_attempts": 3,
+        "retry_interval": 1,
+
+        "check_command": "check_ssh",
+        "check_command_args": "",
+        "host": "ssh-host",
+        "name": "Ssh"
+    },
+    {
+        "_is_template": true,
+
+        "check_interval": 15,
+        "check_period": "24x7",
+        "max_check_attempts": 3,
+        "retry_interval": 1,
+
+        "check_command": "check_ftp",
+        "check_command_args": "",
+        "host": "ftp-host",
+        "name": "Ftp"
+    },
+    {
+        "_is_template": true,
+
+        "check_interval": 15,
+        "check_period": "24x7",
+        "max_check_attempts": 3,
+        "retry_interval": 1,
+
+        "check_command": "check_http",
+        "check_command_args": "",
+        "host": "http-host",
+        "name": "Host Http"
+    },
+    {
+        "_is_template": true,
+
+        "check_interval": 15,
+        "check_period": "24x7",
+        "max_check_attempts": 3,
+        "retry_interval": 1,
+
+        "check_command": "check_https",
+        "check_command_args": "",
+        "host": "https-host",
+        "name": "Host Https"
+    },
+    {
+        "_is_template": true,
+
+        "check_interval": 15,
+        "check_period": "24x7",
+        "max_check_attempts": 3,
+        "retry_interval": 1,
+
+        "check_command": "check_http_service",
+        "check_command_args": "",
+        "customs": {
+            "_CHECK_HTTP_PORT": "80",
+            "_CHECK_HTTP_URI": "/"
+        },
+        "host": "_dummy",
+        "name": "Http"
+    },
+    {
+        "_is_template": true,
+
+        "check_interval": 15,
+        "check_period": "24x7",
+        "max_check_attempts": 3,
+        "retry_interval": 1,
+
+        "check_command": "check_https_service",
+        "check_command_args": "",
+        "customs": {
+            "_CHECK_HTTP_PORT": "443",
+            "_CHECK_HTTP_URI": "/"
+        },
+        "host": "_dummy",
+        "name": "Https"
+    }
+]
