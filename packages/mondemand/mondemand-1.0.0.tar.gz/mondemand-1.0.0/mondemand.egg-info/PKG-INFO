@@ -1,0 +1,46 @@
+Metadata-Version: 1.2
+Name: mondemand
+Version: 1.0.0
+Summary: MonDemand python bindings
+Home-page: https://github.com/mondemand/mondemand-python
+Maintainer: Derek Kulinski
+Maintainer-email: d@kulinski.us
+License: BSD
+Description: 
+        REQUIREMENTS
+        ============
+        * [mondemand library](https://github.com/mondemand/mondemand)
+        * [lwes library](https://github.com/lwes)
+        
+        INSTALL
+        =======
+        
+        Run `pip install .`
+        
+        Example Run
+        ===========
+        
+        Start lwes-event-printing-listener to echo out all data that the lwes
+        receives from the mondemand client.
+        
+        ```shell
+        lwes-event-printing-listener -m 0.0.0.0 -p 10201
+        python demo.py
+        ```
+        
+        Investigate demo.py for more examples.
+        
+Platform: POSIX
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=2.7, !=3.0, !=3.1, !=3.2, !=3.3, !=3.4

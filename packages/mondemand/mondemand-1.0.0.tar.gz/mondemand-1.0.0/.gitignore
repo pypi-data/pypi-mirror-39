@@ -1,0 +1,9 @@
+/.eggs/
+/.idea/
+/build/
+/*.egg-info/
+__pycache__/
+*.c
+*.o
+*.pyc
+*.so
