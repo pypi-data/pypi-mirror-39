@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:struct="http://portonvictor.org/ns/myxhtml/struct"
+      xmlns:syntax="http://portonvictor.org/ns/syntax">
+<head>
+    <meta charset="UTF-8"/>
+    <title>XML Boiler Documentation</title>
+    <link rel="Stylesheet" href="syntax.css"/>
+</head>
+<body>
+
+    <h1>XML Boiler program</h1>
+
+    <h2>Table of Contents</h2>
+
+    <struct:toc/>
+
+    <p><a href="https://github.com/vporton/xml-boiler">XML Boiler</a> is a command line program (in the future I am going to make also HTTP(S) proxy interface)
+    which automatically processes XML based on its namespaces.</p>
+
+    <p>This is a rough alpha (not thoroughly tested) release.</p>
+
+    <p>This program (well, almost) conforms to
+        <a href="https://en.wikiversity.org/wiki/Automatic_transformation_of_XML_namespaces">the specification</a>.
+    See the specification for more details of what this program does and what is its purpose.</p>
+
+    <struct:section>
+        <struct:title>Introduction</struct:title>
+
+        <p>Consider an XML file with XInclude:</p>
+
+        <pre syntax:format="xml">
+&lt;y xmlns:xi="http://www.w3.org/2001/XInclude"&gt;
+    &lt;xi:include href="simple.xml"/&gt;
+&lt;/y&gt;
+        </pre>
+
+        <p>We run XML Boiler as follows:</p>
+        <pre>xmlboiler -r order chain tests/core/data/xml/xinclude.xml -u http://portonvictor.org/ns/trans/precedence-include</pre>
+    </struct:section>
+
+    <struct:section>
+        <struct:title>Command line</struct:title>
+
+        <struct:section>
+            <struct:title>Common options</struct:title>
+
+            <dl>
+                <dt><code>-h</code>, <code>--help</code></dt>
+                <dd>Help message</dd>
+                <dt><code>-l <i>{DEBUG,INFO,WARNING,ERROR,CRITICAL}</i></code>, <code>--log-level <i>{DEBUG,INFO,WARNING,ERROR,CRITICAL}</i></code></dt>
+                <dd>Set log level.</dd>
+                <dt><code>-p <i>NAMESPACE</i></code>, <code>--preload <i>NAMESPACE</i></code></dt>
+                <dd>Load the specified asset before the main loop.</dd>
+                <dt><code>-r <i>{none,breadth,depth}</i></code>, <code>--recursive <i>{none,breadth,depth}</i></code></dt>
+                <dd>recursive download mode (none, breadth-first, depth-first)</dd>
+                <dt><code>-y <i>NAME</i>=<i>DIR</i></code>, <code>--directory <i>NAME</i>=<i>DIR</i></code></dt>
+                <dd>additional directory with assets</dd>
+                <dt><code>-d <i>DOWNLOADERS</i></code>, <code>--downloaders <i>DOWNLOADERS</i></code></dt>
+                <dd>assets to be loaded before the main loop; a plus-separated list of comma-separated lists of
+                    "builtin","<i>DIR</i>" (<i>DIR</i> is given by <code>--directory</code> option,
+                    "builtin" is the assets distributed with XML Boiler)</dd>
+            </dl>
+        </struct:section>
+        <struct:section>
+            <struct:title>Chain</struct:title>
+
+            <p><code>chain</code> or <code>c</code> command (<code>boiler chain ...</code>) runs an automatic
+                transformation pipeline (see the specification). It accepts the name of the input file
+                (none or <code>-</code> for stdin) and the following options:</p>
+            <dl>
+                <dt><code>-o <i>OUTPUT</i></code></dt>
+                <dd>output file (defaults to stdout)</dd>
+                <dt><code>-t <i>NAMESPACE</i></code>, <code>--target <i>NAMESPACE</i></code></dt>
+                <dd>target namespace (often the XHTML namespace <code>http://www.w3.org/1999/xhtml</code>)</dd>
+                <dt><code>-s <i>{precedence,doc}</i></code>, <code>--next-script <i>{precedence,doc}</i></code></dt>
+                <dd><q>next script</q> algorithm (<q>precedence</q> is not supported)</dd>
+                <dt><code>-n <i>{ignore,remove,error}</i></code>, <code>--not-in-target <i>{ignore,remove,error}</i></code></dt>
+                <dd>What to do if the result XML file contains namespaces not in the target. <q>remove</q> is
+                not supported.</dd>
+                <dt><code>-u <i>URL</i></code>, <code>--universal-precedence <i>URL</i></code></dt>
+                <dd>universal precedence (see the specification)</dd>
+                <dt><code>--software <i>{package,executable,both}</i></code></dt>
+                <dd>determine installed software by package manager and/or
+                        executables in PATH. 'package' are now supported only
+                        on Debian-based systems. Defaults to 'both' on Debian-
+                        based and 'executable' on others.</dd>
+            </dl>
+        </struct:section>
+    </struct:section>
+
+    <struct:section>
+        <struct:title>Supported namespaces</struct:title>
+
+        <p>It produces the file with namespaces (in our case the namespace <code>xi:</code>) of priority above
+            <code>http://portonvictor.org/ns/trans/precedence-include</code> to be automatically processed.</p>
+
+        <p>We support also the following namespaces:</p>
+
+        <struct:section id="xinclude"> <!-- id just for testing -->
+            <struct:title><code>http://www.w3.org/2001/XInclude</code> (XInclude)</struct:title>
+            <p><a href="https://en.wikipedia.org/wiki/XInclude">See Wikipedia.</a></p>
+        </struct:section>
+
+        <struct:section>
+            <struct:title><code>http://portonvictor.org/ns/comment</code> (Comment)</struct:title>
+            <p>Tags <code>c:comment</code> of this namespace are simply removed from the XML.</p>
+        </struct:section>
+
+        <struct:section>
+            <struct:title><code>http://portonvictor.org/ns/myxhtml/struct</code> (Structure)</struct:title>
+            <p>See the <a href="https://github.com/vporton/xml-boiler/blob/master/xmlboiler/doc/index.html">source
+                of this document</a> for an example. <code>&lt;h?&gt;</code> tags of the correct nesting are
+            automatically created. This allows to generate <code>&lt;h?&gt;</code> tags of correct nesting.</p>
+            <p><code>&lt;struct:toc/&gt;</code> automatically generates a table of contents.</p>
+        </struct:section>
+
+        <struct:section>
+            <struct:title><code>http://portonvictor.org/ns/syntax</code> (Syntax highlighting)</struct:title>
+            <pre syntax:format="xml">&lt;pre syntax:format="JavaScript">function() { return 123 }&lt;/pre&gt;</pre>
+            <p>produces</p>
+            <pre syntax:format="JavaScript">function() { return 123 }</pre>
+        </struct:section>
+
+    </struct:section>
+
+    <hr/>
+
+    <p>Copyright &#169; Victor Porton 2018</p>
+
+</body>
+</html>
