@@ -1,0 +1,11 @@
+README.md
+setup.py
+mgdl/__init__.py
+mgdl/cli_entry.py
+mgdl.egg-info/PKG-INFO
+mgdl.egg-info/SOURCES.txt
+mgdl.egg-info/dependency_links.txt
+mgdl.egg-info/entry_points.txt
+mgdl.egg-info/not-zip-safe
+mgdl.egg-info/requires.txt
+mgdl.egg-info/top_level.txt
