@@ -1,0 +1,3 @@
+[console_scripts]
+pymod-init = pymod_init.cli:init
+
