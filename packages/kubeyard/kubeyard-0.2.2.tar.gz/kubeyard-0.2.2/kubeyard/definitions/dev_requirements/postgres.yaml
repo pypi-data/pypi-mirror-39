@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-postgres
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: dev-postgres
+  template:
+    metadata:
+      labels:
+        app: dev-postgres
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:9.6.6
+        ports:
+        - containerPort: 5432
+          name: postgresql
+        volumeMounts:
+        - name: data
+          mountPath: /var/lib/postgresql/data
+      volumes:
+      - name: data
+        emptyDir: {}
