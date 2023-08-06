@@ -1,0 +1,24 @@
+---
+openshift-new:
+  topology:
+    topology_name: openshift
+    resource_groups:
+      - resource_group_name: test1
+        resource_group_type: openshift
+        resource_definitions:
+          - name: testsecret
+            role: openshift_inline
+            namespace: continuous-infra
+            definition:
+              apiVersion: v1
+              data:
+                password: dGVzdHBhc3N3b3Jk  # creates a secret with testpassword as password
+                username: dGVzdHVzZXJuYW1l  # creates a secret with testusername as username
+              kind: Secret
+              metadata:
+                name: testsecret
+                namespace: continuous-infra
+              type: kubernetes.io/basic-auth
+        credentials:
+          filename: upshift.yaml # fetched from --creds-path is provided
+          profile: default
