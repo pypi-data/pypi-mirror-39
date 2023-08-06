@@ -1,0 +1,3 @@
+[console_scripts]
+mdium = mdium.cli:main
+
