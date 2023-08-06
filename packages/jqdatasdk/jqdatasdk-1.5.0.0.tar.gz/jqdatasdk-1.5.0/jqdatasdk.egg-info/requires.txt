@@ -1,0 +1,7 @@
+SQLAlchemy>=1.2.8
+msgpack>=0.4.7
+numpy>=1.9.2
+pandas>=0.16.2
+pymysql>=0.7.6
+six
+thriftpy>=0.3.9
