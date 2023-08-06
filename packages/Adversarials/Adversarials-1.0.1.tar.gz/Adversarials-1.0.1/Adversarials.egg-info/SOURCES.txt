@@ -1,0 +1,15 @@
+README.md
+setup.py
+Adversarials.egg-info/PKG-INFO
+Adversarials.egg-info/SOURCES.txt
+Adversarials.egg-info/dependency_links.txt
+Adversarials.egg-info/requires.txt
+Adversarials.egg-info/top_level.txt
+adversarials/__init__.py
+adversarials/core/__init__.py
+adversarials/core/arch.py
+adversarials/core/base.py
+adversarials/core/config.py
+adversarials/core/consts.py
+adversarials/core/utils.py
+adversarials/tests/__init__.py
