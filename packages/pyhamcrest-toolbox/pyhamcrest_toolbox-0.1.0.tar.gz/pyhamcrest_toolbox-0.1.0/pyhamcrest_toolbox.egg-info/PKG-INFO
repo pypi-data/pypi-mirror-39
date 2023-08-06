@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pyhamcrest-toolbox
+Version: 0.1.0
+Summary: A library that makes writing pyhamcrest matchers easier and more fun.
+Home-page: https://github.com/ibolit/pyhamcrest_toolbox
+Author: Timofey Danshin
+Author-email: t.danshin@gmail.com
+License: BSD
+Description: .. include:: docs/source/index.rst
+        
+Keywords: pyhamcrest,hamcrest,testing,matchers,test,pytest,unittest
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development
+Requires-Python: >=2.7
+Description-Content-Type: text/x-rst
