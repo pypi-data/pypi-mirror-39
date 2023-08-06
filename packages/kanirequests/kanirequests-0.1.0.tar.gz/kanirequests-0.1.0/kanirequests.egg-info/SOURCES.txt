@@ -1,0 +1,9 @@
+README.rst
+setup.py
+kanirequests/__init__.py
+kanirequests.egg-info/PKG-INFO
+kanirequests.egg-info/SOURCES.txt
+kanirequests.egg-info/dependency_links.txt
+kanirequests.egg-info/top_level.txt
+tests/__init__.py
+tests/test_sample.py
