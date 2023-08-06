@@ -1,0 +1,14 @@
+setup.py
+side_kick.egg-info/PKG-INFO
+side_kick.egg-info/SOURCES.txt
+side_kick.egg-info/dependency_links.txt
+side_kick.egg-info/top_level.txt
+sidekick/__init__.py
+sidekick/apps.py
+sidekick/decorators.py
+sidekick/services/__init__.py
+sidekick/services/cron_files.py
+sidekick/services/crontab.py
+sidekick/services/helpers.py
+sidekick/signals/__init__.py
+sidekick/signals/post_save.py
