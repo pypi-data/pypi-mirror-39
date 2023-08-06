@@ -1,0 +1,4 @@
+[console_scripts]
+dlpipeline = sample_experiments.simple:main
+dlpipeline-dog-vs-cat = sample_experiments.dog_or_cat:main
+
