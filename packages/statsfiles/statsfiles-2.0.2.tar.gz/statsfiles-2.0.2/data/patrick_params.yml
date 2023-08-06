@@ -1,0 +1,37 @@
+---
+obs_files:
+  - k.dat
+  - n.dat
+  - energy.dat
+  - amagn.dat
+  - docc.dat
+  - sign.dat
+  - ChiSz.dat
+
+array_files:
+  names:
+    - green
+    - self
+    - hyb
+  middles:
+    - ""
+    - Up
+    - Down
+
+param_files:
+  names:
+    - params
+  parameters:
+    - - beta
+      - mu
+      - tp
+      - U
+      - n
+      - S
+      - delta
+      - weightR
+      - WeightI
+      - EGreen
+      - EHyb
+      - EObs
+      - theta
