@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: totembionet
+Version: 3
+Summary: TotemBionet interactive notebook.
+Home-page: https://github.com/clement-alexandre/TotemBionet
+Author: Alexandre Clement
+Author-email: alexandre.clement@etu.unice.fr
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: docker
+Requires-Dist: docker-compose
+
+UNKNOWN
+
+
