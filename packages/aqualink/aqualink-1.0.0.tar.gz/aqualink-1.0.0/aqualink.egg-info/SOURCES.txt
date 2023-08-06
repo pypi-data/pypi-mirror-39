@@ -1,0 +1,13 @@
+README.md
+setup.py
+aqualink/__init__.py
+aqualink/connection.py
+aqualink/eq.py
+aqualink/exceptions.py
+aqualink/player.py
+aqualink/track.py
+aqualink.egg-info/PKG-INFO
+aqualink.egg-info/SOURCES.txt
+aqualink.egg-info/dependency_links.txt
+aqualink.egg-info/requires.txt
+aqualink.egg-info/top_level.txt
