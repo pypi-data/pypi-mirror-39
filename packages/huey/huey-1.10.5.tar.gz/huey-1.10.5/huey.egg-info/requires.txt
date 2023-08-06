@@ -1,0 +1,14 @@
+
+[backends]
+peewee
+redis>=3.0.0
+simpledb
+
+[redis]
+redis>=3.0.0
+
+[simpledb]
+simpledb
+
+[sqlite]
+peewee
