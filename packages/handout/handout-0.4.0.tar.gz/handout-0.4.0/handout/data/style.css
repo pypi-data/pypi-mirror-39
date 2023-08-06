@@ -1,0 +1,45 @@
+@media print {
+  html, article {
+    background: #fff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: auto !important;
+    border: none !important;
+  }
+}
+
+html {
+  background: #eee;
+}
+
+article {
+  max-width: 48.5em;  /* Fit 79 characters. */
+  margin: 2em auto;
+  padding: 3em;
+  text-align: center;
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+  background: #fff;
+  border-radius: .3em;
+  border: 1px solid #ddd;
+}
+
+article > * {
+  text-align: left;
+}
+
+code {
+  text-align: left;
+  border-radius: .25em;
+  border: 1px solid #eee;
+}
+
+.message {
+  overflow: auto;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}
