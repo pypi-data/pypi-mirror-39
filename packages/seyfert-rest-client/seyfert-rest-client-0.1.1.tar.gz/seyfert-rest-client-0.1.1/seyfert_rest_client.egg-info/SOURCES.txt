@@ -1,0 +1,9 @@
+README.md
+setup.py
+seyfert_rest_client.egg-info/PKG-INFO
+seyfert_rest_client.egg-info/SOURCES.txt
+seyfert_rest_client.egg-info/dependency_links.txt
+seyfert_rest_client.egg-info/top_level.txt
+seypert/__init__.py
+seypert/client.py
+tests/__init__.py
