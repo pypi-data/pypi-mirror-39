@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+pindo_cli/__init__.py
+pindo_cli/http.py
+pindo_cli.egg-info/PKG-INFO
+pindo_cli.egg-info/SOURCES.txt
+pindo_cli.egg-info/dependency_links.txt
+pindo_cli.egg-info/entry_points.txt
+pindo_cli.egg-info/not-zip-safe
+pindo_cli.egg-info/requires.txt
+pindo_cli.egg-info/top_level.txt
