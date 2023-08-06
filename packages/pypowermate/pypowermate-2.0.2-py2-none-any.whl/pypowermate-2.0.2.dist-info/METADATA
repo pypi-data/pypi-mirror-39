@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pypowermate
+Version: 2.0.2
+Summary: Encapsulates access to the Griffin USB PowerMate "knob" device
+Home-page: https://github.com/blastur/pypowermate
+Author: Magnus Olsson
+Author-email: magnus@minimum.se
+License: UNKNOWN
+Download-URL: https://github.com/blastur/pypowermate/tarball/2.0.2
+Keywords: powermate,knob,griffin
+Platform: UNKNOWN
+Requires-Dist: evdev
+Requires-Dist: future
+
+UNKNOWN
+
+
