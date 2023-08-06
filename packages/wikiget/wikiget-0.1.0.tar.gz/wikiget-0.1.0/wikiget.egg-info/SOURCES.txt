@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+test/test_wikiget.py
+wikiget/__init__.py
+wikiget/version.py
+wikiget/wikiget.py
+wikiget.egg-info/PKG-INFO
+wikiget.egg-info/SOURCES.txt
+wikiget.egg-info/dependency_links.txt
+wikiget.egg-info/entry_points.txt
+wikiget.egg-info/requires.txt
+wikiget.egg-info/top_level.txt
