@@ -1,0 +1,7 @@
+nose2
+Pillow==5.2.0
+line-bot-sdk
+flask==0.11.1
+arrow==0.10.0
+six
+peewee==3.7.1
