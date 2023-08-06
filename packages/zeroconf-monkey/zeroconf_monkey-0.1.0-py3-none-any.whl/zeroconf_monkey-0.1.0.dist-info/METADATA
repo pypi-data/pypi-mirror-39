@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: zeroconf-monkey
+Version: 0.1.0
+Summary: A thin wrapper on top of Zeroconf to override validation
+Home-page: https://github.com/bbc/zeroconf_monkey
+Author: Peter Brightwell
+Author-email: peter.brightwell@bbc.co.uk
+License: LGPL
+Platform: UNKNOWN
+Requires-Dist: zeroconf (>=0.17.7)
+
+A thin wrapper on top of Zeroconf to override validation
+
+
