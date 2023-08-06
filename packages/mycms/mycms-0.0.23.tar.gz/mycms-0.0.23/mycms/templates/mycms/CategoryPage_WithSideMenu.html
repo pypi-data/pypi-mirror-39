@@ -1,0 +1,265 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load mycms_tags %}
+
+{%block PAGE_HEADER %}
+
+<link type="text/css" rel="stylesheet" hrefp="/static/mycms/css/pageadmin.css">
+<link type="text/css" rel="stylesheet" href="/static/mycms/editor/editor.css">
+
+<script>
+var view_json = {{view_object.json_data | safe }}
+</script>
+
+{% endblock PAGE_HEADER %}
+
+{%block META_DESCRIPTION %}{{view_object.introduction}}{% endblock META_DESCRIPTION %}
+{% block TITLE%} {{view_object.title}}{% endblock TITLE %}
+{% block BODY_TITLE%} {{view_object.title}}{% endblock BODY_TITLE %}
+
+
+{% block PAGE_CONTENT %}
+
+<div class="container">
+
+<div class="row">
+    <!-- page content-->
+    <section class="col-md-9">
+        <div class="ctaBox ctaBox2Cols color1 mb15">
+            <div class="ctaBoxText">
+                <h1> SysAdmin or Devops ... </h1>
+                <h2>or just someone learning about computer systems, you will find here
+                tips & tricks, command line  commands, opensource tools and server
+                administration on opensource technologies.
+                </h2>
+            </div>
+        </div>
+
+        {% comment %}..
+        Iterate over the child categories of this category. A child_category is an instance of
+        mycms.models.CMSEntries. If you need to access the view_object then you can do by:
+        child_category.view_object.
+
+        {% endcomment %}
+
+        {% for child_category in view_object.categories %}
+        <div class="row" style=" margin-bottom:  10px;">
+
+            <div class="col-md-3">
+                <div class="imgBorder"><a href="linux"><img src="{{child_category.logo_url}}" alt="mysql" class="img-responsive"></a></div>
+            </div>
+
+            <div class = "col-md-9">
+                <h2><a href="{{child_category.get_absolute_url}}">{{child_category.title}}</a></h2>
+                {{child_category.view_object.html_content|safe}}
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    {% if  child_category.view_object.all_sub_articles %} {# only iterate if we do have results.#}
+                                    <ul>
+                                        {% for article in child_category.view_object.all_sub_articles|slice:":5" %}
+                                              <li><a href="{{article.get_absolute_url}}">{{article.title}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                     {% if child_category.view_object.all_sub_articles|length > 5 %}
+                                        <p><a href="{{child_category.get_absolute_url}}">List more articles published under: {{child_category.title}}</a></>
+                                     {% endif%}
+                                    {%else %}
+                                    {% endif %}
+                               </div>
+                            </div>
+            </div>
+        </div>
+       {% endfor %}
+
+
+        </section>
+
+
+            <!-- sidebar -->
+            <aside id="sidebar" class="col-md-3">
+                    <div class="boxFocus  color1">
+
+                     <h3>Categories</h3>
+                            <ul class="list-unstyled iconList">
+                               {% for child in view_object.categories %}
+                                   <li style="list-style:none;">
+                                           {% if child.categories %}
+                                                   <a href="/cms{{child.path}}" class="firstLevel">{{child.title}}</a>
+                                                   <ul style="padding-left: 20px;">
+                                                   {% for gchild in child.categories %}
+                                                       {% if gchild.categories %}
+                                                       <li style="list-style:none;">
+                                                           <a href="/cms{{gchild.path}}" class="hasSubMenu">{{gchild.title}}</a>
+                                                                <ul style="padding-left: 20px;">
+                                                                {%for ggchild in gchild.categories %}
+                                                                   <li style="list-style:none;"><a href="/cms{{ggchild.path}}">{{ggchild.title}}</a></li>
+                                                               {%endfor%}
+                                                               </ul>
+                                                       </li>
+                                                       {% else %}
+                                                       <li style="list-style:none;"><a href="/cms{{gchild.path}}">{{gchild.title}}</a></li>
+                                                       {% endif %}
+
+                                                    {%endfor%}
+                                                   </ul>
+                                           {% else %}
+                                                   <a href="/cms{{child.path}}" class="firstLevel">{{child.title}}</a>
+                                           {% endif %}
+                                   </li>
+                                   {%endfor%}
+                               </ul>
+                            <!--h3>Get in touch with us</h3>
+                            <img src="/static/images/portfolio/vign1.jpg" alt="sidebar image Little neko" class="mb15 img-responsive">
+                            <p> facilisis porttitor nisl. Nulla scelerisque lectus id ipsum sollicitudin euismod. Mauris fermentum erat a ante tincidunt id condimentum lorem sodales. Nam lacus justo, porttitor sit amet egestas sit amet, scelerisque non nibh. Ut ultricies orci vitae nisl viverra quis tempus nulla ultricies. Etiam lorem tellus, porttitor nec fermentum sed, scelerisque eget sapien. Fusce quam turpis, bibendum eu pretium ut, vehicula eget mi. Aliquam erat volutpat. </p>
+                            <a href="" class="btn btn-lg btn-primary">Contact us</a -->
+                    </div>
+            </aside>
+            <!-- end sidebar -->
+            <!--end page content-->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- end of contents -->
+
+
+
+
+    {% if view_object.request.user.username == "admin" %}
+    <div id="overlay">
+        <div class="row-fluid">
+            <div class="col-md-12 page-content" id="page_editor" style="margin-top:10px;">
+
+                <!-- START PAGE_CONTENT -->
+                <!--div id="info-container">
+                    <div class="alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                    </div>
+                </div-->
+                <div style="box-shadow: 0px 5px 26px 1px rgba(0,0,0,0.75); border-radius: 5px;">
+                    <ul class="nav nav-pills" id="admin-tabs">
+                       <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+                       <li><a data-toggle="pill" href="#menu1">Page Assets</a></li>
+                       <li><a data-toggle="pill" href="#menu2">Page Meta</a></li>
+                       <li id="close-admin"><img id="close-admin-overlay-button" src="/static/mycms/editor/close-window-50.png"/ ></li>
+                    </ul>
+
+                    <div class="tab-content" style="background:#ccc;">
+                        <div id="home" class="tab-pane fade in active" style="background: #ccc;">
+
+
+                            <!-- put this in a template later???-->
+                            <div class="row" id="category_form">
+                                <form class="form" id="createpage_form">
+                                    <div class="col-sm-4">
+                                        <input id="createpage_title" type="text" placeholder="title" class="form-control">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input id="createpage_slug" type="text" placeholder="slug" class="form-control">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select id="createpage_pagetype_select" name="createpage_pagetype_select" type="text" class="form-control">
+                                            <option value="1">Single Page HTML</option>
+                                            <option value="2">Category Page</option>
+                                            <option value="3">MultPage Article</option>
+                                            <option value="4">MemberPage Article</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button class="btn btn-primary" type="button" id="create_page_button">Create Page</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            {% comment %}
+                            Edit the content of the category
+                            {% endcomment %}
+
+                             <!-- div class="row">
+                                <div class="col-sm-6"> left </div>
+                                <div class="col-sm-6"> right </div>
+                            </div -->
+
+                            <!-- end put in tempalte -->
+                            <div id="category_editor">
+                                <div col-sm-6> left </div>
+                                <div col-sm-6> right </div>
+                            </div>
+                    </div>
+
+                    <div id="menu1" class="tab-pane fade">
+                        <!-- will be loaded as a temlate-->
+                        {% file_upload %}
+                    </div>
+
+
+                    <div id="menu2" class="tab-pane fade">
+                        <h3>Article Meta Info</h3>
+                        <p>Not Implemented Yet.</p>
+                    </div>
+
+                </div>
+            <!-- END PAGE_CONTENT -->
+            </div>
+
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+</div>
+
+
+{% if view_object.request.user.username == "admin" %}
+
+    {% verbatim %}
+
+    <script type="text/dust" id="empty_category_editor_template">
+        <div class="row" style="background: #bbb; border-top: 1px solid #dddddd; margin:0px;" >
+            <div class="col-md-2">Category Title</div>
+            <div class="col-md-4">Path URL</div>
+        </div>
+
+        <div class="row" style="background:#ccc; border-top: 1px solid #dddddd; margin:0px;" >
+            <div class="col-md-12">There are no sub categories!</div>
+        </div>
+
+    </script>
+    {% endverbatim %}
+
+    {% Script type="text/javascript" src="/static/mycms/dustjs/dust-full.js" priority=8888 %}
+    {% Script type="text/javascript" src="/static/mycms/templates.js" priority=8889 %}
+    {% Script type="text/javascript" src="/static/mycms/editor/category.editor.js" priority=8889 %}
+
+{% endif %}
+{% endblock PAGE_CONTENT %}
+
+
+
+{% block PAGE_BOTTOM %}
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+</script>
+
+{% endblock PAGE_BOTTOM %}

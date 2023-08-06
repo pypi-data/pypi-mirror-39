@@ -1,0 +1,78 @@
+#category_editor_container {
+    margin:20px auto;
+    padding:5px;/*workaround for textarea margin*/
+    background:#FFF;
+    
+   
+}
+#category_texteditor_area {
+   
+    box-sizing:border-box;
+    display:block;/*reset from inline*/
+    width:100%;
+    margin-top:10px;/*remove defaults*/
+    padding:4px;
+    overflow-y:auto;/*resets IE*/
+    overflow-x:hidden;/*resets IE*/
+    cols: 
+}
+
+hr{
+
+margin-right:15px;
+margin-left:15px;
+margin-top:5px;
+margin-bottom:5px;
+}
+
+
+.float-right{ 
+    float: right;
+    }
+    
+.margin-left-10px{
+    margin-left: 10px;
+}
+
+
+
+
+.rect_container {
+  height: 42px;
+  border: 1px solid #dedede;
+  padding-top: 5px;
+  padding-right: 5px;
+  background: #eee;
+  border-radius: 5px;
+
+}
+
+
+#create_entry_form{ 
+
+
+
+}
+
+
+#create_entry_form input{ 
+    display: inline-block;
+    width: 22%;
+
+}
+
+
+#create_entry_form select{ 
+    display: inline-block;
+    width: 22%;
+    padding: 0px;
+    margin:0px;
+
+}
+
+
+#create_entry_form button{ 
+    display: inline-block:
+    float: right;
+
+}

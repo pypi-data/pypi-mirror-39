@@ -1,0 +1,32 @@
+{% extends "base_footer_fixed.html" %}
+
+{%block TITLE%} Login {%endblock TITLE %}
+{% block BODY_TITLE%} Site Login {% endblock BODY_TITLE%}
+
+{%block PAGE_CONTENT %}
+<div class="container">
+        <div class="login-form">
+            <div class="main-div">
+                <div class="panel">
+                    <h2>Admin Login</h2>
+                    <p>Please enter your email and password</p>
+               </div>
+                <form id="Login" action="/login/" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="username" class="form-control" id="inputUsername" placeholder="username" name="username">    
+                    </div>
+            
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password">
+                    </div>
+                    <div class="forgot">
+                        <a href="reset.html">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{%endblock PAGE_CONTENT %}

@@ -1,0 +1,248 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load mycms_tags %}
+
+{%block PAGE_HEADER %}
+
+<link type="text/css" rel="stylesheet" hrefp="/static/mycms/css/pageadmin.css">
+<link type="text/css" rel="stylesheet" href="/static/mycms/editor/editor.css">
+
+<script>
+var view_json = {{view_object.json_data | safe }}
+</script>
+
+{% endblock PAGE_HEADER %}
+
+{%block META_DESCRIPTION %}{{view_object.introduction}}{% endblock META_DESCRIPTION %}
+{% block TITLE%} {{view_object.title}}{% endblock TITLE %}
+{% block BODY_TITLE%} {{view_object.title}}{% endblock BODY_TITLE %}
+
+
+{% block PAGE_CONTENT %}
+
+<div class="container">
+    <div class="row-fluid">
+
+        <!-- Contents -->
+        <div class="col-md-12 page-content" id="page_content" >
+
+    {% for article in view_object.articles %}
+            <article class="post clearfix">
+                <div class="row">
+                    <section class="col-sm-11 col-xs-10 article-summary">
+                        <h2><a class="frontpage" href="/cms{{article.path}}">{{article.title}}</a></h2>
+                            <p style="display: inline">{{ article.introduction|safe|truncatewords_html:50 }}</p>
+                            <ul class="entry-meta">
+                                <li class="entry-date"><a href="#"><i class="icon-pin"></i>&nbsp;{{article.created_timestamp_str}}</a></li>
+                                <li class="entry-category"><a href="{{article.parent.path}}"><i class="icon-th-list"></i>&nbsp;{{article.page_object.parent.title}}</a></li>
+                                <li class="entry-author"><a href="#"><i class="icon-male"></i>&nbsp;Admin</a></li>
+                                <li class="entry-date"><a href="/cms/{{article.page_object.parent.path}}" class="readMore">read more</a></li>
+                                <!-- li class="entry-comments"><a href="#"><i class="icon-comment-1"></i>&nbsp;12 comments</a></li -->
+                            </ul>
+                    </section>
+                </div>
+            </article>
+        {% endfor %}
+
+
+
+        </div>
+        <!-- end of contents -->
+    </div>
+
+
+
+    {% if view_object.request.user.username == "admin" %}
+    <div id="overlay">
+        <div class="row-fluid">
+            <div class="col-md-12 page-content" id="page_editor" style="margin-top:10px;">
+
+                <!-- START PAGE_CONTENT -->
+                <!--div id="info-container">
+                    <div class="alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                    </div>
+                </div-->
+                <div style="box-shadow: 0px 5px 26px 1px rgba(0,0,0,0.75); border-radius: 5px;">
+                    <ul class="nav nav-pills" id="admin-tabs">
+                       <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+                       <li><a data-toggle="pill" href="#sub_pages">Sub Pages</a></li>
+                       <li><a data-toggle="pill" href="#file_upload">File Upload</a></li>
+                       <li id="close-admin"><img id="close-admin-overlay-button" src="/static/mycms/editor/close-window-50.png"/ ></li>
+                    </ul>
+
+                    <div class="tab-content" style="background:#fff;">
+                        <div id="home" class="tab-pane fade in active" style="background: #fff;">
+
+
+                            <div class="row"><hr></div>
+
+
+
+
+                            <!-- end put in tempalte -->
+                             <div class="row"><hr></div>
+                            <div class="row" id="category_editor_container">
+                                <div class="col-md-1">Content</div>
+                                <div class="col-md-8">
+                                        <textarea id="category_texteditor_area" data-gramm_editor="false" rows="10"></textarea>
+                                </div>
+                                 <div class="col-md-3"> right </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="rect_container">
+                                        <div id="editor_message_pane"></div>
+                                        <button class="btn btn-primary float-right margin-left-10px" type="button" id="save_content_button">Save Content</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <div class="row"><hr></div>
+
+
+
+
+
+
+
+                    </div>
+
+                    <div id="sub_pages" class="tab-pane fade">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="rect_container">
+                                       <form class="form" id="create_entry_form">
+
+                                       <input id="createpage_title" type="text" placeholder="title" class="form-control">
+                                       <input id="createpage_slug" type="text" placeholder="slug" class="form-control">
+                                        <select id="createpage_pagetype_select" name="createpage_pagetype_select" type="text" class="form-control">
+                                               <option value="1">Single Page HTML Update</option>
+                                               <option value="2">Category Page</option>
+                                               <option value="3">MultPage Article</option>
+                                               <option value="4">MemberPage Article</option>
+                                           </select>
+                                        <button class="btn btn-primary float-right" type="button" id="create_page_button">Create Page</button>
+                                       </form>
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-sm-12">
+                            {# contains a list of immediate sub articles #}
+                                <table class="table" id="CMSEntriesTable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Title</th>
+                                            <th>PageType</th>
+                                            <th>Published</th>
+                                            <th>Front Page</th>
+                                            <th>Date Created</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
+                    </div>
+
+                    <div id="file_upload" class="tab-pane fade">
+                        <!-- will be loaded as a temlate-->
+                        {% file_upload %}
+                    </div>
+
+
+                    <div id="menu2" class="tab-pane fade">
+                        <h3>Article Meta Info</h3>
+                        <p>Not Implemented Yet.</p>
+                    </div>
+
+                </div>
+            <!-- END PAGE_CONTENT -->
+            </div>
+
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+</div>
+
+
+{% if view_object.request.user.username == "admin" %}
+
+    {% verbatim %}
+
+    <script type="text/dust" id="empty_category_editor_template">
+        <div class="row" style="background: #bbb; border-top: 1px solid #dddddd; margin:0px;" >
+            <div class="col-md-2">Category Title</div>
+            <div class="col-md-4">Path URL</div>
+        </div>
+
+        <div class="row" style="background:#ccc; border-top: 1px solid #dddddd; margin:0px;" >
+            <div class="col-md-12">There are no sub categories!</div>
+        </div>
+
+    </script>
+    {% endverbatim %}
+
+    {% Script type="text/javascript" src="/static/mycms/dustjs/dust-full.js" priority=8888 %}
+    {% Script type="text/javascript" src="/static/mycms/templates.js" priority=8889 %}
+    {% Script type="text/javascript" src="/static/mycms/editor/category.editor.js" priority=8889 %}
+
+
+
+
+
+{% endif %}
+{% endblock PAGE_CONTENT %}
+
+
+
+{% block PAGE_BOTTOM %}
+
+
+{% if view_object.request.user.username == "admin" %}
+    <script type="text/javascript" src="/static/mycms/editor/category.editor.js"></script>
+    <script type="text/javascript" src="/static/mycms/dustjs/dust-full.js"></script>
+    <script type="text/javascript" src="https://blueimp.github.io/JavaScript-Templates/js/tmpl.min.js"></script>
+    <script type="text/javascript" src="https://blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+    <script type="text/javascript" src="https://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
+    <script type="text/javascript" src="https://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.iframe-transport.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.fileupload.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.fileupload-process.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.fileupload-image.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.fileupload-audio.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.fileupload-video.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.fileupload-validate.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.fileupload-ui.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.fileupload-jquery-ui.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/main.js"></script>
+    <script type="text/javascript" src="/static/mycms/templates.js"></script>
+ {%endif%}
+
+
+
+    <script type="text/javascript">
+
+    $( document ).ready(function() {
+    console.log( "ready!" );
+    //on();
+
+     loadCMSContentToTextArea();
+
+        getChildCMSEntries();
+    });
+    </script>
+
+
+
+
+
+{% endblock PAGE_BOTTOM %}

@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load mycms_tags %}
+
+
+
+{%block PAGE_HEADER %}
+
+<link type="text/css" rel="stylesheet" href="/static/mycms/editor/editor.css">
+
+<script>
+    var view_json = {{view_object.json_data | safe }}
+</script>
+{% endblock PAGE_HEADER %}
+
+
+
+{%block META_DESCRIPTION %}{{view_object.introduction}}{% endblock META_DESCRIPTION %}
+{% block TITLE%} {{view_object.title}}{% endblock TITLE %}
+{% block BODY_TITLE%} {{view_object.title}}{% endblock BODY_TITLE %}
+
+
+{% block PAGE_CONTENT %}
+
+<div class="container">
+
+
+
+    <div class="row-fluid">
+    
+        <>
+        
+        
+        <!-- Contents -->
+        <div class="col-md-12">
+        <h2>Unpublished</h2>
+        </div>
+        
+       
+        <div class="col-md-12 page-content" id="page_content" >
+       
+                <div class="table-responsive table-striped">
+                         <table class="table table-bordered">
+                                 <thead>
+                                         <tr>
+                                                 <th>#</th>
+                                                 <th>Table heading</th>
+                                                 <th>Table heading</th>
+                                                 <th>Table heading</th>
+                                                 <th>Table heading</th>
+                                                 <th>Table heading</th>
+                                                 <th>Table heading</th>
+                                         </tr>
+                                 </thead>
+                                 <tbody>
+                                         <tr>
+                                                 <td>1</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                         </tr>
+                                         <tr>
+                                                 <td>2</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                         </tr>
+                                         <tr>
+                                                 <td>3</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                         </tr>
+                                 </tbody>
+                         </table>
+                 </div>
+        </div>
+
+
+
+         <div class="col-md-12">
+        <h2>Unpublished</h2>
+        </div>
+        
+        <div class="col-md-12 page-content" id="page_content" >
+       
+                <div class="table-responsive table-striped">
+                         <table class="table table-bordered">
+                                 <thead>
+                                         <tr>
+                                                 <th>#</th>
+                                                 <th>Table heading</th>
+                                                 <th>Table heading</th>
+                                                 <th>Table heading</th>
+                                                 <th>Table heading</th>
+                                                 <th>Table heading</th>
+                                                 <th>Table heading</th>
+                                         </tr>
+                                 </thead>
+                                 <tbody>
+                                         <tr>
+                                                 <td>1</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                         </tr>
+                                         <tr>
+                                                 <td>2</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                         </tr>
+                                         <tr>
+                                                 <td>3</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                                 <td>Table cell</td>
+                                         </tr>
+                                 </tbody>
+                         </table>
+                 </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- end of contents -->
+    </div>    
+</div>
+{% endblock PAGE_CONTENT %}  
+
+
+{% block PAGE_BOTTOM %}
+<script> </script>
+{% endblock PAGE_BOTTOM %}

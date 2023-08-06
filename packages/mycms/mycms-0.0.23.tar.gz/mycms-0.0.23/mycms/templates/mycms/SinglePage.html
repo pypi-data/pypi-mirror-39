@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load mycms_tags %}
+
+
+
+{%block PAGE_HEADER %}
+
+<link type="text/css" rel="stylesheet" href="/static/mycms/editor/editor.css">
+
+<script>
+    var view_json = {{view_object.json_data | safe }}
+</script>
+{% endblock PAGE_HEADER %}
+
+
+
+{%block META_DESCRIPTION %}{{view_object.introduction}}{% endblock META_DESCRIPTION %}
+{% block TITLE%} {{view_object.title}}{% endblock TITLE %}
+{% block BODY_TITLE%} {{view_object.title}}{% endblock BODY_TITLE %}
+
+
+{% block PAGE_CONTENT %}
+
+<div class="container">
+    <div class="row-fluid">
+      
+        <!-- Contents -->
+        <div class="col-md-12 page-content" id="page_content" >
+        {{view_object.html_content | safe }}
+        </div>
+        <!-- end of contents -->
+    </div>    
+    
+    {% if view_object.request.user.username == "admin" %}
+    <div id="overlay">
+        <div class="row-fluid">
+            <div class="col-md-12 page-content" id="page_editor" style="margin-top:10px;">
+                <!-- START PAGE_CONTENT -->    
+                <div id="admin-message-panel"></div>
+                <!--div id="info-container">
+                    <div class="alert alert-warning alert-dismissible" role="alert" _vimium-has-onclick-listener="">
+                       <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                       <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                   </div>
+                </div-->
+                
+                <div style="box-shadow: 0px 5px 26px 1px rgba(0,0,0,0.75); border-radius: 5px;">
+                    <ul class="nav nav-pills" id="admin-tabs">
+                       <li class="active"><a data-toggle="pill" href="#home">Content Editor</a></li>
+                        <li><a data-toggle="pill" href="#menu3">Content Preview</a></li>
+                       <li><a data-toggle="pill" href="#menu1">Page Assets</a></li>
+                       <li><a data-toggle="pill" href="#menu2">Page Meta</a></li>
+                       
+                       <li id="close-admin"><img id="close-admin-overlay-button" src="/static/mycms/editor/close-window-50.png"/ ></li>
+                    </ul>
+             
+                    <div class="tab-content" style="background:#ccc;">
+                       <div id="home" class="tab-pane fade in active">     
+                         {% article_editor %}
+                        </div>
+                       <div id="menu1" class="tab-pane fade">
+                          <!-- will be loaded as a temlate-->
+                          {% file_upload %}
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+                            <h3>Article Meta Info</h3>
+                            <p>Not Implemented Yet.</p>
+                        </div>
+                         <div id="menu3" class="tab-pane fade">
+                            <div id="page_preview"> </div>
+                        </div>
+
+                    </div>           
+                </div>
+            </div>
+        </div>        
+    </div>
+    {% endif %}
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables 
+**/
+
+var disqus_config = function () {
+this.page.url = "https://www.jnvilo.com/cms/testpage";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "testpage"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://jnvilo-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+{% endblock PAGE_CONTENT %}  
+
+{% Script type="text/javascript" src="/static/mycms/csrf.js" priority=8888 %}
+{% Script type="text/javascript" src="/static/mycms/notifications.js" priority=8888 %}s
+{% Script type="text/javascript" src="/static/mycms/dustjs/dust-full.js" priority=8888 %} 
+{% Script type="text/javascript" src="/static/mycms/mycms.js" priority=8888 %}  
+{% Script type="text/javascript" src="/static/mycms/templates.js" priority=8888 %}  
+{% Script type="text/javascript" src="/static/mycms/editor/article.editor.js" priority=8888 %}
+
+
+{% block PAGE_BOTTOM %}
+
+
+{% if view_object.request.user.username == "admin" %}
+    <script type="text/javascript" src="/static/mycms/editor/article.editor.js"></script>
+    <script type="text/javascript" src="/static/mycms/dustjs/dust-full.js"></script>
+    <script type="text/javascript" src="https://blueimp.github.io/JavaScript-Templates/js/tmpl.min.js"></script>
+    <script type="text/javascript" src="https://blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+    <script type="text/javascript" src="https://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
+    <script type="text/javascript" src="https://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.iframe-transport.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.fileupload.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.fileupload-process.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.fileupload-image.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.fileupload-audio.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.fileupload-video.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.fileupload-validate.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.fileupload-ui.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/jquery.fileupload-jquery-ui.js"></script>
+    <script type="text/javascript" src="/static/mycms/file-upload/js/main.js"></script>
+    <script type="text/javascript" src="/static/mycms/templates.js"></script>
+ {%endif%}
+
+
+<script>
+$('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
+  var target = $(e.target).attr("href") // activated tab
+  
+  if (target =="#menu3"){
+
+    previewCMSContent(1);
+        
+
+    };
+  
+});
+
+</script>
+
+{% endblock PAGE_BOTTOM %}
