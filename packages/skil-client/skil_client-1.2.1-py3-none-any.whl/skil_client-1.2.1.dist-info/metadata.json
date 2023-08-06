@@ -1,0 +1,1 @@
+{"extensions": {"python.details": {"document_names": {"description": "DESCRIPTION.rst"}}}, "extras": [], "generator": "bdist_wheel (0.29.0)", "keywords": ["Swagger", "Endpoints"], "metadata_version": "2.0", "name": "skil-client", "run_requires": [{"requires": ["certifi", "python-dateutil", "six (>=1.10)", "urllib3 (>=1.15)"]}], "summary": "Endpoints", "version": "1.2.1"}
