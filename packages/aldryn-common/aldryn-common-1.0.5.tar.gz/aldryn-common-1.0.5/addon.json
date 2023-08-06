@@ -1,0 +1,16 @@
+{
+	"name": "Aldryn Common",
+	"description": "Common utilities",
+	"url": "https://github.com/aldryn/aldryn-common",
+	"package-name": "aldryn-common",
+	"installed-apps": [
+		"aldryn_common"
+	],
+	"author": {
+		"name": "Divio AG",
+		"url": "divio.ch"
+	},
+	"license": {
+		"name": "BSD"
+	}
+}
