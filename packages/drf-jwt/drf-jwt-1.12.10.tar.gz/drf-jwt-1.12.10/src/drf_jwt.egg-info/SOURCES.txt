@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+src/drf_jwt.egg-info/PKG-INFO
+src/drf_jwt.egg-info/SOURCES.txt
+src/drf_jwt.egg-info/dependency_links.txt
+src/drf_jwt.egg-info/not-zip-safe
+src/drf_jwt.egg-info/requires.txt
+src/drf_jwt.egg-info/top_level.txt
+src/rest_framework_jwt/__init__.py
+src/rest_framework_jwt/authentication.py
+src/rest_framework_jwt/models.py
+src/rest_framework_jwt/serializers.py
+src/rest_framework_jwt/settings.py
+src/rest_framework_jwt/utils.py
+src/rest_framework_jwt/views.py
