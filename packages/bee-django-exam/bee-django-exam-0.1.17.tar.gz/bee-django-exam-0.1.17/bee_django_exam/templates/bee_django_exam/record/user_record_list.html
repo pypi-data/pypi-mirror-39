@@ -1,0 +1,85 @@
+{% extends "bee_django_exam/base.html" %}
+{% load bee_django_exam_filter %}
+
+{% block content %}
+    <div class="text-center"><h3>
+        {% if user %}{{ user }}的{% endif %}考级列表
+    </h3>
+    </div>
+    {% if not user %}
+        {% include 'bee_django_exam/record/user_record_search.html' %}
+    {% else %}
+        {% if perms.bee_django_exam.add_userexamrecord %}
+            <div>
+                <a href="{% url 'bee_django_exam:user_exam_record_add' user.id %}" class="btn btn-danger">添加</a>
+            </div>
+        {% endif %}
+    {% endif %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th>学生姓名</th>
+            <th>添加时间</th>
+            <th>考级级别</th>
+            <th>状态</th>
+            <th></th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for record in record_list %}
+            <tr>
+                <td><a href="{{ record.user.get_user_search_link }}">{{ record.user }}</a>
+                    {#                    {% if record.user.id|get_icon %}#}
+                    {#                        <img src="{{ record.user.id|get_icon }}" alt="" style="height: 20px;">#}
+                    {#                    {% endif %}#}
+                </td>
+                <td>{{ record.created_at|date:"Y-m-d H:i" }}</td>
+                <td>{{ record.grade_name }}</td>
+                <td>{{ record.get_status_text }}
+                    {% if record.status == 1 %}
+                        {% if record.cert %}
+                            <a href="{{ record.cert }}" target="_blank">证书图片</a>
+
+                        {% endif %}
+                        {% if perms.bee_django_exam.create_cert %}
+                        <button class="btn btn-success"
+                                data-confirm="{% url "bee_django_exam:user_cert_create" record.id %}"
+                                onclick="click_create_cert(this)">生成证书
+                        </button>
+                            {% endif %}
+                    {% elif record.status == -1 %}
+                        <a href="{% url 'bee_django_exam:user_exam_notice' record.id %}">报名链接</a>
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{% url 'bee_django_exam:user_exam_record_detail' record.id %}"
+                       class="btn btn-default">详情</a>
+                    {% if perms.bee_django_exam.change_userexamrecord %}
+                    <a href="{% url 'bee_django_exam:user_exam_record_update' record.id %}"
+                       class="btn btn-default">操作</a>
+                    {% endif %}
+
+                </td>
+
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+    {% include 'bee_django_exam/paginator.html' %}
+{% endblock %}
+{% block scripts %}
+    <script>
+        function click_create_cert(_this) {
+            var url = $(_this).attr('data-confirm');
+            $.post(url).done(function (data) {
+                alert(data.msg);
+                if (data.res) {
+                    location.reload();
+                }
+            });
+        }
+
+    </script>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "bee_django_exam/base.html" %}
+{% load static %}
+{% load bootstrap3 %}
+{% block content %}
+    <form method="post"  enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {% bootstrap_form form %}
+        {% bootstrap_button '提交' %}
+
+    </form>
+{#    {% if cert %}#}
+{#        预览图:#}
+{#        {{ cert }}#}
+{#    {% endif %}#}
+{% endblock %}
+
+
+{% block scripts %}
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+{% endblock %}
