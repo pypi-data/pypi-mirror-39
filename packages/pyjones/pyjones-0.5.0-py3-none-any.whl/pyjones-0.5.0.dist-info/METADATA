@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyjones
+Version: 0.5.0
+Summary: A package for calculating light polarizations
+Home-page: UNKNOWN
+Author: Nicolas Tolazzi
+Author-email: nicolas.tolazzi@googlemail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
