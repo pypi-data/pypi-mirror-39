@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: sorting-asmaa
+Version: 0.2.8
+Summary: A sorting  package
+Home-page: https://github.com/asmaaalaa99/sorting
+Author: Asmaa Aly
+Author-email: asmaa.ali@minerva.kgi.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+# Project Title
+sorting_asmaa is a Python package that gives the user options to sort different types of inputs. The package includes [quick sort](https://en.wikipedia.org/wiki/Quicksort), [K-way merge sort](https://en.wikipedia.org/wiki/K-way_merge_algorithm), [introsort](https://en.wikipedia.org/wiki/Introsort),[Bucket sort](https://en.wikipedia.org/wiki/Bucket_sort),[shell sort](https://en.wikipedia.org/wiki/Shellsort), and [Radix sort
+](https://en.wikipedia.org/wiki/Radix_sort).
+## Getting Started
+### Prerequisites
+
+Before proceeding with the package installation, the following packages are needed:
+[Math](https://docs.python.org/2/library/math.html) and [timeit](https://docs.python.org/2/library/timeit.html)
+### Installing
+
+On command prompt 
+```
+$ pip install sorting_asmaa
+```
+
+## Usage
+To use quicksort,
+```
+import sorting_asmaa
+slist=[1,3,4,5] #add your list
+sorting_asmaa.quicksort_asmaa(slist)
+```
+To use shell sort,
+```
+slist=[1,3,4,5] #add your list
+print(sorting_asmaa.shellsort_asmaa(slist))
+```
+To use k-way merge sort
+```
+k=2 #add the value of k
+slist=[1,3,4,5] #add your list
+sorting_asmaa.kmerge_asmaa(slist)
+```
+
+
+To use bucket sort
+```
+slist=[1,3,4,5] #add your list
+sorting_asmaa.bucketsort_asmaa(slist)
+```
+To use radix  sort
+```
+slist=[1,3,4,5] #add your non-negative input
+sorting_asmaa.radixsort_asmaa(slist)
+```
+To use intro sort
+```
+slist=[1,3,4,5] #add your input
+sorting_asmaa.introsort_asmaa(slist)
+```
+## Built With
+
+
+
+* [Dillinger](https://dillinger.io/) - Readme framework used
+
+## Analysis for each fucntion
+Bucket sort:
+This algorithm is non-comparison based. It is best used when the input is uniformly distributed over a specific range. For example, the input is the list of numbers between 0.1 and 1.0. Thus, the algorithm is not efficient when the input is not uniformly distributed as more element are going to be in the same bucket.
+The average time complexity for Bucket Sort is Î˜(n + k), which is faster than quicksort. The worst time complexity is O(nÂ²), where k is the number of buckets and n is the number of input.
+#### Intro sort:
+This algorithm is making use of the using heapsort and quicksort to have a logistic worst-case run time. The implementation of the algorithm gives an advantage to it over quicksort as introsort can sort negative float numbers as well as integers without the need to use other libraries like numpy. The worst scenario run time is O(nlogn) and the average is Î˜(nlogn).
+#### Radixsort:
+It is a comparative algorithm. It relied on having gaps to stores pairs of elements at a time, then progressively reducing the gap between elements to be compared. Starting with far apart elements, it can move some out-of-place elements into position faster than a simple nearest neighbor exchange. Practically, it performs as well as quicksort. However, when the list gets bigger, quicksort is better in time. Average case is Î˜(n(log(n))^2) and worst case is O(n(log(n))^2).
+#### Shell method:
+It is a comparative algorithm. It relied on having gaps to stores pairs of elements at a time, then progressively reducing the gap between elements to be compared. Starting with far apart elements, it can move some out-of-place elements into position faster than a simple nearest neighbor exchange. Practically, it performs as well as quicksort. However, when the list gets bigger, quicksort is better in time. Average case is Î˜(n(log(n))^2) and worst case is O(n(log(n))^2).
+#### k-way merge sort:
+The implementation uses a heap data structure to support the split of the list into the k versions. The implementation has a heapify function also to sort each sub-problem. The complexity of the algorithm is O(n log_k(n) where k is the number of ways. The algorithm is faster than merge sort but still slower than quicksort.
+
+
+## Authors
+
+* **Asmaa Aly** - *Initial work* 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+
+
+
