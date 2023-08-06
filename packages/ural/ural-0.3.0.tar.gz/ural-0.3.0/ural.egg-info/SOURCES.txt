@@ -1,0 +1,14 @@
+README.md
+setup.py
+ural/__init__.py
+ural/ensure_protocol.py
+ural/force_protocol.py
+ural/is_url.py
+ural/normalize_url.py
+ural/patterns.py
+ural/strip_protocol.py
+ural.egg-info/PKG-INFO
+ural.egg-info/SOURCES.txt
+ural.egg-info/dependency_links.txt
+ural.egg-info/top_level.txt
+ural.egg-info/zip-safe
