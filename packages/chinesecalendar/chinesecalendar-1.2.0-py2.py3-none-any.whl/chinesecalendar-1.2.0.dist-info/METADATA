@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: chinesecalendar
+Version: 1.2.0
+Summary: check if some day is holiday in China
+Home-page: https://github.com/LKI/chinese-calendar
+Author: Lirian Su
+Author-email: liriansu@gmail.com
+License: MIT License
+Requires-Dist: enum34 (>=1.1.4) ; python_version < "3.4"
+
+中国节假日
+
+
