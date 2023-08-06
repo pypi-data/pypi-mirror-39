@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+texoid/__init__.py
+texoid/__main__.py
+texoid/main.py
+texoid/server.py
+texoid/utils.py
+texoid.egg-info/PKG-INFO
+texoid.egg-info/SOURCES.txt
+texoid.egg-info/dependency_links.txt
+texoid.egg-info/entry_points.txt
+texoid.egg-info/requires.txt
+texoid.egg-info/top_level.txt
