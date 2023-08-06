@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: slovnik-seznam
+Version: 0.0.3
+Summary: Translate from/to Czech language
+Home-page: https://gitlab.com/mcepl/slovnik-seznam.git
+Author: Matěj Cepl
+Author-email: mcepl@cepl.eu
+License: UNKNOWN
+Description: 
+        Jednoduchý skript který z výstupu webu https://slovnik.seznam.cz vrací
+        jednoduchý textový výstup. Zároveň je přiložen jednoduchý vim skript pro
+        použití z vimu.
+        
+        Je toho spousta, co by bylo možno přidat (pull requesty jsou vítány!)
+        ... konfigurace pro jiné jazyky (v současné chvíli má skript zadrátováno
+        cs->en), ``setup.py``, moduly pro jiné editory (zejména Emacs
+        a Sublime Text by byly vítány!), etc.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Markup

@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+slovnik.py
+plugin/slovnik.vim
+slovnik_seznam.egg-info/PKG-INFO
+slovnik_seznam.egg-info/SOURCES.txt
+slovnik_seznam.egg-info/dependency_links.txt
+slovnik_seznam.egg-info/entry_points.txt
+slovnik_seznam.egg-info/requires.txt
+slovnik_seznam.egg-info/top_level.txt
