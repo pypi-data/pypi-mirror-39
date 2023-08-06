@@ -1,0 +1,102 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    >
+
+    <browser:page
+        for="xmldirector.connector.connector.IConnector"
+        name="connector-folder-contents"
+        class=".connector.Connector"
+        attribute="folder_contents"
+        permission="zope2.View"
+        layer="xmldirector.connector.interfaces.IBrowserLayer"
+    />
+
+    <browser:page
+        for="xmldirector.connector.connector.IConnector"
+        name="view"
+        class=".connector.Connector"
+        template="connector_view.pt"
+        permission="zope2.View"
+        layer="xmldirector.connector.interfaces.IBrowserLayer"
+    />
+
+    <browser:page
+        for="xmldirector.connector.connector.IConnector"
+        name="raw"
+        class=".connector.RawConnector"
+        permission="zope2.View"
+        layer="xmldirector.connector.interfaces.IBrowserLayer"
+    />
+
+    <browser:page
+        for="xmldirector.connector.connector.IConnector"
+        name="highlight"
+        class=".connector.HighlightConnector"
+        template="connector_highlight.pt"
+        permission="zope2.View"
+        layer="xmldirector.connector.interfaces.IBrowserLayer"
+    />
+
+    <browser:page
+        name="connector-remove"
+        for="xmldirector.connector.connector.IConnector"
+        class=".connector.Connector"
+        attribute="remove"
+        permission="cmf.ModifyPortalContent"
+        layer="xmldirector.connector.interfaces.IBrowserLayer"
+    />
+
+    <browser:page
+        name="connector-rename"
+        for="xmldirector.connector.connector.IConnector"
+        class=".connector.Connector"
+        attribute="rename"
+        permission="cmf.ModifyPortalContent"
+        layer="xmldirector.connector.interfaces.IBrowserLayer"
+    />
+
+    <browser:page
+        name="connector-upload"
+        for="xmldirector.connector.connector.IConnector"
+        class=".connector.Connector"
+        attribute="upload_file"
+        permission="cmf.ModifyPortalContent"
+        layer="xmldirector.connector.interfaces.IBrowserLayer"
+    />
+
+    <browser:page
+        name="connector-new-folder"
+        for="xmldirector.connector.connector.IConnector"
+        class=".connector.Connector"
+        attribute="new_folder"
+        permission="cmf.ModifyPortalContent"
+        layer="xmldirector.connector.interfaces.IBrowserLayer"
+    />
+
+
+    <browser:page
+        for="xmldirector.connector.connector.IConnector"
+        name="connector-zip-upload"
+        class=".connector.Connector"
+        attribute="zip_import"
+        permission="cmf.ModifyPortalContent"
+        layer="xmldirector.connector.interfaces.IBrowserLayer"
+    />
+
+    <browser:page
+        name="connector-settings"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".controlpanel.DBSettingsControlPanel"
+        permission="cmf.ManagePortal"
+        layer="xmldirector.connector.interfaces.IBrowserLayer"
+    />
+
+    <browser:resourceDirectory
+        name="xmldirector.connector"
+        directory="resources"
+        layer="xmldirector.connector.interfaces.IBrowserLayer"
+    />
+
+</configure>
