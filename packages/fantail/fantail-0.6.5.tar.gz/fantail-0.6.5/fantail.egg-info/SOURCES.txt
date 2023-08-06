@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+fantail/__init__.py
+fantail/cli.py
+fantail.egg-info/PKG-INFO
+fantail.egg-info/SOURCES.txt
+fantail.egg-info/dependency_links.txt
+fantail.egg-info/requires.txt
+fantail.egg-info/top_level.txt
+fantail/conf/__init__.py
+fantail/conf/core.py
+fantail/conf/stack.py
+fantail/conf/util.py
