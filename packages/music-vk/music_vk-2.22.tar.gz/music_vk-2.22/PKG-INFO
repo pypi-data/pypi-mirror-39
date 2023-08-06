@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: music_vk
+Version: 2.22
+Summary: Приложение music_vk
+Home-page: https://music_vk.com/
+Author: ivan martemyanov
+Author-email: imartemy152@gmail.com
+License: MIT
+Description: Приложение music_vk
+Keywords: music,vk,music_vk
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Text Processing :: Linguistic
