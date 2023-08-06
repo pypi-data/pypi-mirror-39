@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+pytest_picked/__init__.py
+pytest_picked/modes.py
+pytest_picked/plugin.py
+pytest_picked.egg-info/PKG-INFO
+pytest_picked.egg-info/SOURCES.txt
+pytest_picked.egg-info/dependency_links.txt
+pytest_picked.egg-info/entry_points.txt
+pytest_picked.egg-info/requires.txt
+pytest_picked.egg-info/top_level.txt
