@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: pwbmutils
+Version: 0.92
+Summary: Collection of cross-component utility functions
+Home-page: https://github.com/PennWhartonBudgetModel/Utilities
+Author: Penn Wharton Budget Model
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: luigi
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: portalocker
+
+UNKNOWN
+
+
