@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+autodiffpy/__init__.py
+autodiffpy/autodiff.py
+autodiffpy/autodiff_math.py
+autodiffpy.egg-info/PKG-INFO
+autodiffpy.egg-info/SOURCES.txt
+autodiffpy.egg-info/dependency_links.txt
+autodiffpy.egg-info/requires.txt
+autodiffpy.egg-info/top_level.txt
+tests/__init__.py
+tests/autodiff_math_test.py
+tests/autodiff_test.py
