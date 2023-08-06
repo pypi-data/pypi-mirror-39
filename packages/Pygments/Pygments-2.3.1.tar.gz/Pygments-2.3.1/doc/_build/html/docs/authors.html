@@ -1,0 +1,340 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Full contributor list &#8212; Pygments 2.3.0 documentation</title>
+    <link rel="stylesheet" href="../_static/pygments14.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Pygments changelog" href="changelog.html" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:300,400,700'
+          rel='stylesheet' type='text/css'>
+ 
+    <style type="text/css">
+      table.right { float: right; margin-left: 20px; }
+      table.right td { border: 1px solid #ccc; }
+      
+    </style>
+    <script type="text/javascript">
+      // intelligent scrolling of the sidebar content
+      $(window).scroll(function() {
+        var sb = $('.sphinxsidebarwrapper');
+        var win = $(window);
+        var sbh = sb.height();
+        var offset = $('.sphinxsidebar').position()['top'];
+        var wintop = win.scrollTop();
+        var winbot = wintop + win.innerHeight();
+        var curtop = sb.position()['top'];
+        var curbot = curtop + sbh;
+        // does sidebar fit in window?
+        if (sbh < win.innerHeight()) {
+          // yes: easy case -- always keep at the top
+          sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
+                                $(document).height() - sbh - 200]));
+        } else {
+          // no: only scroll if top/bottom edge of sidebar is at
+          // top/bottom edge of window
+          if (curtop > wintop && curbot > winbot) {
+            sb.css('top', $u.max([wintop - offset - 10, 0]));
+          } else if (curtop < wintop && curbot < winbot) {
+            sb.css('top', $u.min([winbot - sbh - offset - 20,
+                                  $(document).height() - sbh - 200]));
+          }
+        }
+      });
+    </script>
+
+  </head><body>
+<div class="outerwrapper">
+<div class="pageheader">
+  <ul>
+    <li><a href="../index.html">Home</a></li>
+    
+    <li><a href="../languages.html">Languages</a></li>
+    <li><a href="../faq.html">FAQ</a></li>
+    <li><a href="../download.html">Get it</a></li>
+    <li><a href="index.html">Docs</a></li>
+  </ul>
+  <div>
+    <a href="../index.html">
+      <img src="../_static/logo.png" alt="Pygments logo" />
+    </a>
+  </div>
+</div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+
+
+<strong>&laquo; <a href="index.html">Back to docs index</a></strong>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="full-contributor-list">
+<h1>Full contributor list<a class="headerlink" href="#full-contributor-list" title="Permalink to this headline">¶</a></h1>
+<p>Pygments is written and maintained by Georg Brandl &lt;<a class="reference external" href="mailto:georg&#37;&#52;&#48;python&#46;org">georg<span>&#64;</span>python<span>&#46;</span>org</a>&gt;.</p>
+<p>Major developers are Tim Hatch &lt;<a class="reference external" href="mailto:tim&#37;&#52;&#48;timhatch&#46;com">tim<span>&#64;</span>timhatch<span>&#46;</span>com</a>&gt; and Armin Ronacher
+&lt;<a class="reference external" href="mailto:armin&#46;ronacher&#37;&#52;&#48;active-4&#46;com">armin<span>&#46;</span>ronacher<span>&#64;</span>active-4<span>&#46;</span>com</a>&gt;.</p>
+<p>Other contributors, listed alphabetically, are:</p>
+<ul class="simple">
+<li>Sam Aaron – Ioke lexer</li>
+<li>Ali Afshar – image formatter</li>
+<li>Thomas Aglassinger – Easytrieve, JCL, Rexx and Transact-SQL lexers</li>
+<li>Muthiah Annamalai – Ezhil lexer</li>
+<li>Kumar Appaiah – Debian control lexer</li>
+<li>Andreas Amann – AppleScript lexer</li>
+<li>Timothy Armstrong – Dart lexer fixes</li>
+<li>Jeffrey Arnold – R/S, Rd, BUGS, Jags, and Stan lexers</li>
+<li>Jeremy Ashkenas – CoffeeScript lexer</li>
+<li>José Joaquín Atria – Praat lexer</li>
+<li>Stefan Matthias Aust – Smalltalk lexer</li>
+<li>Lucas Bajolet – Nit lexer</li>
+<li>Ben Bangert – Mako lexers</li>
+<li>Max Battcher – Darcs patch lexer</li>
+<li>Thomas Baruchel – APL lexer</li>
+<li>Tim Baumann – (Literate) Agda lexer</li>
+<li>Paul Baumgart, 280 North, Inc. – Objective-J lexer</li>
+<li>Michael Bayer – Myghty lexers</li>
+<li>Thomas Beale – Archetype lexers</li>
+<li>John Benediktsson – Factor lexer</li>
+<li>Trevor Bergeron – mIRC formatter</li>
+<li>Vincent Bernat – LessCSS lexer</li>
+<li>Christopher Bertels – Fancy lexer</li>
+<li>Sébastien Bigaret – QVT Operational lexer</li>
+<li>Jarrett Billingsley – MiniD lexer</li>
+<li>Adam Blinkinsop – Haskell, Redcode lexers</li>
+<li>Frits van Bommel – assembler lexers</li>
+<li>Pierre Bourdon – bugfixes</li>
+<li>Matthias Bussonnier – ANSI style handling for terminal-256 formatter</li>
+<li>chebee7i – Python traceback lexer improvements</li>
+<li>Hiram Chirino – Scaml and Jade lexers</li>
+<li>Mauricio Caceres – SAS and Stata lexers.</li>
+<li>Ian Cooper – VGL lexer</li>
+<li>David Corbett – Inform, Jasmin, JSGF, Snowball, and TADS 3 lexers</li>
+<li>Leaf Corcoran – MoonScript lexer</li>
+<li>Christopher Creutzig – MuPAD lexer</li>
+<li>Daniël W. Crompton – Pike lexer</li>
+<li>Pete Curry – bugfixes</li>
+<li>Bryan Davis – EBNF lexer</li>
+<li>Bruno Deferrari – Shen lexer</li>
+<li>Giedrius Dubinskas – HTML formatter improvements</li>
+<li>Owen Durni – Haxe lexer</li>
+<li>Alexander Dutton, Oxford University Computing Services – SPARQL lexer</li>
+<li>James Edwards – Terraform lexer</li>
+<li>Nick Efford – Python 3 lexer</li>
+<li>Sven Efftinge – Xtend lexer</li>
+<li>Artem Egorkine – terminal256 formatter</li>
+<li>Matthew Fernandez – CAmkES lexer</li>
+<li>Michael Ficarra – CPSA lexer</li>
+<li>James H. Fisher – PostScript lexer</li>
+<li>William S. Fulton – SWIG lexer</li>
+<li>Carlos Galdino – Elixir and Elixir Console lexers</li>
+<li>Michael Galloy – IDL lexer</li>
+<li>Naveen Garg – Autohotkey lexer</li>
+<li>Laurent Gautier – R/S lexer</li>
+<li>Alex Gaynor – PyPy log lexer</li>
+<li>Richard Gerkin – Igor Pro lexer</li>
+<li>Alain Gilbert – TypeScript lexer</li>
+<li>Alex Gilding – BlitzBasic lexer</li>
+<li>Bertrand Goetzmann – Groovy lexer</li>
+<li>Krzysiek Goj – Scala lexer</li>
+<li>Andrey Golovizin – BibTeX lexers</li>
+<li>Matt Good – Genshi, Cheetah lexers</li>
+<li>Michał Górny – vim modeline support</li>
+<li>Alex Gosse – TrafficScript lexer</li>
+<li>Patrick Gotthardt – PHP namespaces support</li>
+<li>Olivier Guibe – Asymptote lexer</li>
+<li>Phil Hagelberg – Fennel lexer</li>
+<li>Florian Hahn – Boogie lexer</li>
+<li>Martin Harriman – SNOBOL lexer</li>
+<li>Matthew Harrison – SVG formatter</li>
+<li>Steven Hazel – Tcl lexer</li>
+<li>Dan Michael Heggø – Turtle lexer</li>
+<li>Aslak Hellesøy – Gherkin lexer</li>
+<li>Greg Hendershott – Racket lexer</li>
+<li>Justin Hendrick – ParaSail lexer</li>
+<li>Jordi Gutiérrez Hermoso – Octave lexer</li>
+<li>David Hess, Fish Software, Inc. – Objective-J lexer</li>
+<li>Varun Hiremath – Debian control lexer</li>
+<li>Rob Hoelz – Perl 6 lexer</li>
+<li>Doug Hogan – Mscgen lexer</li>
+<li>Ben Hollis – Mason lexer</li>
+<li>Max Horn – GAP lexer</li>
+<li>Alastair Houghton – Lexer inheritance facility</li>
+<li>Tim Howard – BlitzMax lexer</li>
+<li>Dustin Howett – Logos lexer</li>
+<li>Ivan Inozemtsev – Fantom lexer</li>
+<li>Hiroaki Itoh – Shell console rewrite, Lexers for PowerShell session,
+MSDOS session, BC, WDiff</li>
+<li>Brian R. Jackson – Tea lexer</li>
+<li>Christian Jann – ShellSession lexer</li>
+<li>Dennis Kaarsemaker – sources.list lexer</li>
+<li>Dmitri Kabak – Inferno Limbo lexer</li>
+<li>Igor Kalnitsky – vhdl lexer</li>
+<li>Alexander Kit – MaskJS lexer</li>
+<li>Pekka Klärck – Robot Framework lexer</li>
+<li>Gerwin Klein – Isabelle lexer</li>
+<li>Eric Knibbe – Lasso lexer</li>
+<li>Stepan Koltsov – Clay lexer</li>
+<li>Adam Koprowski – Opa lexer</li>
+<li>Benjamin Kowarsch – Modula-2 lexer</li>
+<li>Domen Kožar – Nix lexer</li>
+<li>Oleh Krekel – Emacs Lisp lexer</li>
+<li>Alexander Kriegisch – Kconfig and AspectJ lexers</li>
+<li>Marek Kubica – Scheme lexer</li>
+<li>Jochen Kupperschmidt – Markdown processor</li>
+<li>Gerd Kurzbach – Modelica lexer</li>
+<li>Jon Larimer, Google Inc. – Smali lexer</li>
+<li>Olov Lassus – Dart lexer</li>
+<li>Matt Layman – TAP lexer</li>
+<li>Kristian Lyngstøl – Varnish lexers</li>
+<li>Sylvestre Ledru – Scilab lexer</li>
+<li>Chee Sing Lee – Flatline lexer</li>
+<li>Mark Lee – Vala lexer</li>
+<li>Valentin Lorentz – C++ lexer improvements</li>
+<li>Ben Mabey – Gherkin lexer</li>
+<li>Angus MacArthur – QML lexer</li>
+<li>Louis Mandel – X10 lexer</li>
+<li>Louis Marchand – Eiffel lexer</li>
+<li>Simone Margaritelli – Hybris lexer</li>
+<li>Kirk McDonald – D lexer</li>
+<li>Gordon McGregor – SystemVerilog lexer</li>
+<li>Stephen McKamey – Duel/JBST lexer</li>
+<li>Brian McKenna – F# lexer</li>
+<li>Charles McLaughlin – Puppet lexer</li>
+<li>Lukas Meuser – BBCode formatter, Lua lexer</li>
+<li>Cat Miller – Pig lexer</li>
+<li>Paul Miller – LiveScript lexer</li>
+<li>Hong Minhee – HTTP lexer</li>
+<li>Michael Mior – Awk lexer</li>
+<li>Bruce Mitchener – Dylan lexer rewrite</li>
+<li>Reuben Morais – SourcePawn lexer</li>
+<li>Jon Morton – Rust lexer</li>
+<li>Paulo Moura – Logtalk lexer</li>
+<li>Mher Movsisyan – DTD lexer</li>
+<li>Dejan Muhamedagic – Crmsh lexer</li>
+<li>Ana Nelson – Ragel, ANTLR, R console lexers</li>
+<li>Kurt Neufeld – Markdown lexer</li>
+<li>Nam T. Nguyen – Monokai style</li>
+<li>Jesper Noehr – HTML formatter “anchorlinenos”</li>
+<li>Mike Nolta – Julia lexer</li>
+<li>Jonas Obrist – BBCode lexer</li>
+<li>Edward O’Callaghan – Cryptol lexer</li>
+<li>David Oliva – Rebol lexer</li>
+<li>Pat Pannuto – nesC lexer</li>
+<li>Jon Parise – Protocol buffers and Thrift lexers</li>
+<li>Benjamin Peterson – Test suite refactoring</li>
+<li>Ronny Pfannschmidt – BBCode lexer</li>
+<li>Dominik Picheta – Nimrod lexer</li>
+<li>Andrew Pinkham – RTF Formatter Refactoring</li>
+<li>Clément Prévost – UrbiScript lexer</li>
+<li>Tanner Prynn – cmdline -x option and loading lexers from files</li>
+<li>Oleh Prypin – Crystal lexer (based on Ruby lexer)</li>
+<li>Elias Rabel – Fortran fixed form lexer</li>
+<li>raichoo – Idris lexer</li>
+<li>Kashif Rasul – CUDA lexer</li>
+<li>Nathan Reed – HLSL lexer</li>
+<li>Justin Reidy – MXML lexer</li>
+<li>Norman Richards – JSON lexer</li>
+<li>Corey Richardson – Rust lexer updates</li>
+<li>Lubomir Rintel – GoodData MAQL and CL lexers</li>
+<li>Andre Roberge – Tango style</li>
+<li>Georg Rollinger – HSAIL lexer</li>
+<li>Michiel Roos – TypoScript lexer</li>
+<li>Konrad Rudolph – LaTeX formatter enhancements</li>
+<li>Mario Ruggier – Evoque lexers</li>
+<li>Miikka Salminen – Lovelace style, Hexdump lexer, lexer enhancements</li>
+<li>Stou Sandalski – NumPy, FORTRAN, tcsh and XSLT lexers</li>
+<li>Matteo Sasso – Common Lisp lexer</li>
+<li>Joe Schafer – Ada lexer</li>
+<li>Ken Schutte – Matlab lexers</li>
+<li>René Schwaiger – Rainbow Dash style</li>
+<li>Sebastian Schweizer – Whiley lexer</li>
+<li>Tassilo Schweyer – Io, MOOCode lexers</li>
+<li>Ted Shaw – AutoIt lexer</li>
+<li>Joerg Sieker – ABAP lexer</li>
+<li>Robert Simmons – Standard ML lexer</li>
+<li>Kirill Simonov – YAML lexer</li>
+<li>Corbin Simpson – Monte lexer</li>
+<li>Alexander Smishlajev – Visual FoxPro lexer</li>
+<li>Steve Spigarelli – XQuery lexer</li>
+<li>Jerome St-Louis – eC lexer</li>
+<li>Camil Staps – Clean and NuSMV lexers</li>
+<li>James Strachan – Kotlin lexer</li>
+<li>Tom Stuart – Treetop lexer</li>
+<li>Colin Sullivan – SuperCollider lexer</li>
+<li>Ben Swift – Extempore lexer</li>
+<li>Edoardo Tenani – Arduino lexer</li>
+<li>Tiberius Teng – default style overhaul</li>
+<li>Jeremy Thurgood – Erlang, Squid config lexers</li>
+<li>Brian Tiffin – OpenCOBOL lexer</li>
+<li>Bob Tolbert – Hy lexer</li>
+<li>Matthias Trute – Forth lexer</li>
+<li>Erick Tryzelaar – Felix lexer</li>
+<li>Alexander Udalov – Kotlin lexer improvements</li>
+<li>Thomas Van Doren – Chapel lexer</li>
+<li>Daniele Varrazzo – PostgreSQL lexers</li>
+<li>Abe Voelker – OpenEdge ABL lexer</li>
+<li>Pepijn de Vos – HTML formatter CTags support</li>
+<li>Matthias Vallentin – Bro lexer</li>
+<li>Benoît Vinot – AMPL lexer</li>
+<li>Linh Vu Hong – RSL lexer</li>
+<li>Nathan Weizenbaum – Haml and Sass lexers</li>
+<li>Nathan Whetsell – Csound lexers</li>
+<li>Dietmar Winkler – Modelica lexer</li>
+<li>Nils Winter – Smalltalk lexer</li>
+<li>Davy Wybiral – Clojure lexer</li>
+<li>Whitney Young – ObjectiveC lexer</li>
+<li>Diego Zamboni – CFengine3 lexer</li>
+<li>Enrique Zamudio – Ceylon lexer</li>
+<li>Alex Zimin – Nemerle lexer</li>
+<li>Rob Zimmerman – Kal lexer</li>
+<li>Vincent Zurczak – Roboconf lexer</li>
+</ul>
+<p>Many thanks for all contributions!</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo">
+      &copy; Copyright 2006-2017, Georg Brandl and Pygments contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.2. <br/>
+      Pygments logo created by <a href="http://joelunger.com">Joel Unger</a>.
+      Backgrounds from <a href="http://subtlepatterns.com">subtlepatterns.com</a>.
+    </div>
+  </div> 
+
+  </body>
+</html>

@@ -1,0 +1,1138 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Pygments changelog &#8212; Pygments 2.3.0 documentation</title>
+    <link rel="stylesheet" href="../_static/pygments14.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Full contributor list" href="authors.html" />
+    <link rel="prev" title="Using Pygments in various scenarios" href="integrate.html" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:300,400,700'
+          rel='stylesheet' type='text/css'>
+ 
+    <style type="text/css">
+      table.right { float: right; margin-left: 20px; }
+      table.right td { border: 1px solid #ccc; }
+      
+    </style>
+    <script type="text/javascript">
+      // intelligent scrolling of the sidebar content
+      $(window).scroll(function() {
+        var sb = $('.sphinxsidebarwrapper');
+        var win = $(window);
+        var sbh = sb.height();
+        var offset = $('.sphinxsidebar').position()['top'];
+        var wintop = win.scrollTop();
+        var winbot = wintop + win.innerHeight();
+        var curtop = sb.position()['top'];
+        var curbot = curtop + sbh;
+        // does sidebar fit in window?
+        if (sbh < win.innerHeight()) {
+          // yes: easy case -- always keep at the top
+          sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
+                                $(document).height() - sbh - 200]));
+        } else {
+          // no: only scroll if top/bottom edge of sidebar is at
+          // top/bottom edge of window
+          if (curtop > wintop && curbot > winbot) {
+            sb.css('top', $u.max([wintop - offset - 10, 0]));
+          } else if (curtop < wintop && curbot < winbot) {
+            sb.css('top', $u.min([winbot - sbh - offset - 20,
+                                  $(document).height() - sbh - 200]));
+          }
+        }
+      });
+    </script>
+
+  </head><body>
+<div class="outerwrapper">
+<div class="pageheader">
+  <ul>
+    <li><a href="../index.html">Home</a></li>
+    
+    <li><a href="../languages.html">Languages</a></li>
+    <li><a href="../faq.html">FAQ</a></li>
+    <li><a href="../download.html">Get it</a></li>
+    <li><a href="index.html">Docs</a></li>
+  </ul>
+  <div>
+    <a href="../index.html">
+      <img src="../_static/logo.png" alt="Pygments logo" />
+    </a>
+  </div>
+</div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Pygments changelog</a><ul>
+<li><a class="reference internal" href="#version-2-3-0">Version 2.3.0</a></li>
+<li><a class="reference internal" href="#version-2-2-0">Version 2.2.0</a></li>
+<li><a class="reference internal" href="#version-2-1-3">Version 2.1.3</a></li>
+<li><a class="reference internal" href="#version-2-1-2">Version 2.1.2</a></li>
+<li><a class="reference internal" href="#version-2-1-1">Version 2.1.1</a></li>
+<li><a class="reference internal" href="#version-2-1">Version 2.1</a></li>
+<li><a class="reference internal" href="#version-2-0-2">Version 2.0.2</a></li>
+<li><a class="reference internal" href="#version-2-0-1">Version 2.0.1</a></li>
+<li><a class="reference internal" href="#version-2-0">Version 2.0</a></li>
+<li><a class="reference internal" href="#version-2-0rc1">Version 2.0rc1</a></li>
+<li><a class="reference internal" href="#version-1-6">Version 1.6</a></li>
+<li><a class="reference internal" href="#version-1-6rc1">Version 1.6rc1</a></li>
+<li><a class="reference internal" href="#version-1-5">Version 1.5</a></li>
+<li><a class="reference internal" href="#version-1-4">Version 1.4</a></li>
+<li><a class="reference internal" href="#version-1-3-1">Version 1.3.1</a></li>
+<li><a class="reference internal" href="#version-1-3">Version 1.3</a></li>
+<li><a class="reference internal" href="#version-1-2-2">Version 1.2.2</a></li>
+<li><a class="reference internal" href="#version-1-2-1">Version 1.2.1</a></li>
+<li><a class="reference internal" href="#version-1-2">Version 1.2</a></li>
+<li><a class="reference internal" href="#version-1-1-1">Version 1.1.1</a></li>
+<li><a class="reference internal" href="#version-1-1">Version 1.1</a></li>
+<li><a class="reference internal" href="#version-1-0">Version 1.0</a></li>
+<li><a class="reference internal" href="#version-0-11-1">Version 0.11.1</a></li>
+<li><a class="reference internal" href="#version-0-11">Version 0.11</a></li>
+<li><a class="reference internal" href="#version-0-10">Version 0.10</a></li>
+<li><a class="reference internal" href="#version-0-9">Version 0.9</a></li>
+<li><a class="reference internal" href="#version-0-8-1">Version 0.8.1</a></li>
+<li><a class="reference internal" href="#version-0-8">Version 0.8</a></li>
+<li><a class="reference internal" href="#version-0-7-1">Version 0.7.1</a></li>
+<li><a class="reference internal" href="#version-0-7">Version 0.7</a></li>
+<li><a class="reference internal" href="#version-0-6">Version 0.6</a></li>
+<li><a class="reference internal" href="#version-0-5-1">Version 0.5.1</a></li>
+<li><a class="reference internal" href="#version-0-5">Version 0.5</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+<strong>&laquo; <a href="index.html">Back to docs index</a></strong>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pygments-changelog">
+<h1>Pygments changelog<a class="headerlink" href="#pygments-changelog" title="Permalink to this headline">¶</a></h1>
+<p>Issue numbers refer to the tracker at
+&lt;<a class="reference external" href="https://bitbucket.org/birkenfeld/pygments-main/issues">https://bitbucket.org/birkenfeld/pygments-main/issues</a>&gt;,
+pull request numbers to the requests at
+&lt;<a class="reference external" href="https://bitbucket.org/birkenfeld/pygments-main/pull-requests/merged">https://bitbucket.org/birkenfeld/pygments-main/pull-requests/merged</a>&gt;.</p>
+<div class="section" id="version-2-3-0">
+<h2>Version 2.3.0<a class="headerlink" href="#version-2-3-0" title="Permalink to this headline">¶</a></h2>
+<p>(not released yet)</p>
+<ul class="simple">
+<li>Added lexers:<ul>
+<li>Fennel (PR#783)</li>
+<li>HLSL (PR#675)</li>
+</ul>
+</li>
+<li>Added Python 3.7 support (PR#772)</li>
+<li>Fix incorrect token type in SCSS for single-quote strings (#1322)</li>
+<li>Use <cite>terminal256</cite> formatter if <cite>TERM</cite> contains <cite>256</cite> (PR#666)</li>
+</ul>
+</div>
+<div class="section" id="version-2-2-0">
+<h2>Version 2.2.0<a class="headerlink" href="#version-2-2-0" title="Permalink to this headline">¶</a></h2>
+<p>(release Jan 22, 2017)</p>
+<ul class="simple">
+<li>Added lexers:<ul>
+<li>AMPL</li>
+<li>TypoScript (#1173)</li>
+<li>Varnish config (PR#554)</li>
+<li>Clean (PR#503)</li>
+<li>WDiff (PR#513)</li>
+<li>Flatline (PR#551)</li>
+<li>Silver (PR#537)</li>
+<li>HSAIL (PR#518)</li>
+<li>JSGF (PR#546)</li>
+<li>NCAR command language (PR#536)</li>
+<li>Extempore (PR#530)</li>
+<li>Cap’n Proto (PR#595)</li>
+<li>Whiley (PR#573)</li>
+<li>Monte (PR#592)</li>
+<li>Crystal (PR#576)</li>
+<li>Snowball (PR#589)</li>
+<li>CapDL (PR#579)</li>
+<li>NuSMV (PR#564)</li>
+<li>SAS, Stata (PR#593)</li>
+</ul>
+</li>
+<li>Added the ability to load lexer and formatter classes directly from files
+with the <cite>-x</cite> command line option and the <cite>lexers.load_lexer_from_file()</cite>
+and <cite>formatters.load_formatter_from_file()</cite> functions. (PR#559)</li>
+<li>Added <cite>lexers.find_lexer_class_by_name()</cite>. (#1203)</li>
+<li>Added new token types and lexing for magic methods and variables in Python
+and PHP.</li>
+<li>Added a new token type for string affixes and lexing for them in Python, C++
+and Postgresql lexers.</li>
+<li>Added a new token type for heredoc (and similar) string delimiters and
+lexing for them in C++, Perl, PHP, Postgresql and Ruby lexers.</li>
+<li>Styles can now define colors with ANSI colors for use in the 256-color
+terminal formatter. (PR#531)</li>
+<li>Improved the CSS lexer. (#1083, #1130)</li>
+<li>Added “Rainbow Dash” style. (PR#623)</li>
+<li>Delay loading <cite>pkg_resources</cite>, which takes a long while to import. (PR#690)</li>
+</ul>
+</div>
+<div class="section" id="version-2-1-3">
+<h2>Version 2.1.3<a class="headerlink" href="#version-2-1-3" title="Permalink to this headline">¶</a></h2>
+<p>(released Mar 2, 2016)</p>
+<ul class="simple">
+<li>Fixed regression in Bash lexer (PR#563)</li>
+</ul>
+</div>
+<div class="section" id="version-2-1-2">
+<h2>Version 2.1.2<a class="headerlink" href="#version-2-1-2" title="Permalink to this headline">¶</a></h2>
+<p>(released Feb 29, 2016)</p>
+<ul class="simple">
+<li>Fixed Python 3 regression in image formatter (#1215)</li>
+<li>Fixed regression in Bash lexer (PR#562)</li>
+</ul>
+</div>
+<div class="section" id="version-2-1-1">
+<h2>Version 2.1.1<a class="headerlink" href="#version-2-1-1" title="Permalink to this headline">¶</a></h2>
+<p>(relased Feb 14, 2016)</p>
+<ul class="simple">
+<li>Fixed Jython compatibility (#1205)</li>
+<li>Fixed HTML formatter output with leading empty lines (#1111)</li>
+<li>Added a mapping table for LaTeX encodings and added utf8 (#1152)</li>
+<li>Fixed image formatter font searching on Macs (#1188)</li>
+<li>Fixed deepcopy-ing of Token instances (#1168)</li>
+<li>Fixed Julia string interpolation (#1170)</li>
+<li>Fixed statefulness of HttpLexer between get_tokens calls</li>
+<li>Many smaller fixes to various lexers</li>
+</ul>
+</div>
+<div class="section" id="version-2-1">
+<h2>Version 2.1<a class="headerlink" href="#version-2-1" title="Permalink to this headline">¶</a></h2>
+<p>(released Jan 17, 2016)</p>
+<ul class="simple">
+<li>Added lexers:<ul>
+<li>Emacs Lisp (PR#431)</li>
+<li>Arduino (PR#442)</li>
+<li>Modula-2 with multi-dialect support (#1090)</li>
+<li>Fortran fixed format (PR#213)</li>
+<li>Archetype Definition language (PR#483)</li>
+<li>Terraform (PR#432)</li>
+<li>Jcl, Easytrieve (PR#208)</li>
+<li>ParaSail (PR#381)</li>
+<li>Boogie (PR#420)</li>
+<li>Turtle (PR#425)</li>
+<li>Fish Shell (PR#422)</li>
+<li>Roboconf (PR#449)</li>
+<li>Test Anything Protocol (PR#428)</li>
+<li>Shen (PR#385)</li>
+<li>Component Pascal (PR#437)</li>
+<li>SuperCollider (PR#472)</li>
+<li>Shell consoles (Tcsh, PowerShell, MSDOS) (PR#479)</li>
+<li>Elm and J (PR#452)</li>
+<li>Crmsh (PR#440)</li>
+<li>Praat (PR#492)</li>
+<li>CSound (PR#494)</li>
+<li>Ezhil (PR#443)</li>
+<li>Thrift (PR#469)</li>
+<li>QVT Operational (PR#204)</li>
+<li>Hexdump (PR#508)</li>
+<li>CAmkES Configuration (PR#462)</li>
+</ul>
+</li>
+<li>Added styles:<ul>
+<li>Lovelace (PR#456)</li>
+<li>Algol and Algol-nu (#1090)</li>
+</ul>
+</li>
+<li>Added formatters:<ul>
+<li>IRC (PR#458)</li>
+<li>True color (24-bit) terminal ANSI sequences (#1142)
+(formatter alias: “16m”)</li>
+</ul>
+</li>
+<li>New “filename” option for HTML formatter (PR#527).</li>
+<li>Improved performance of the HTML formatter for long lines (PR#504).</li>
+<li>Updated autopygmentize script (PR#445).</li>
+<li>Fixed style inheritance for non-standard token types in HTML output.</li>
+<li>Added support for async/await to Python 3 lexer.</li>
+<li>Rewrote linenos option for TerminalFormatter (it’s better, but slightly
+different output than before) (#1147).</li>
+<li>Javascript lexer now supports most of ES6 (#1100).</li>
+<li>Cocoa builtins updated for iOS 8.1 (PR#433).</li>
+<li>Combined BashSessionLexer and ShellSessionLexer, new version should support
+the prompt styles of either.</li>
+<li>Added option to pygmentize to show a full traceback on exceptions.</li>
+<li>Fixed incomplete output on Windows and Python 3 (e.g. when using iPython
+Notebook) (#1153).</li>
+<li>Allowed more traceback styles in Python console lexer (PR#253).</li>
+<li>Added decorators to TypeScript (PR#509).</li>
+<li>Fix highlighting of certain IRC logs formats (#1076).</li>
+</ul>
+</div>
+<div class="section" id="version-2-0-2">
+<h2>Version 2.0.2<a class="headerlink" href="#version-2-0-2" title="Permalink to this headline">¶</a></h2>
+<p>(released Jan 20, 2015)</p>
+<ul class="simple">
+<li>Fix Python tracebacks getting duplicated in the console lexer (#1068).</li>
+<li>Backquote-delimited identifiers are now recognized in F# (#1062).</li>
+</ul>
+</div>
+<div class="section" id="version-2-0-1">
+<h2>Version 2.0.1<a class="headerlink" href="#version-2-0-1" title="Permalink to this headline">¶</a></h2>
+<p>(released Nov 10, 2014)</p>
+<ul class="simple">
+<li>Fix an encoding issue when using <code class="docutils literal notranslate"><span class="pre">pygmentize</span></code> with the <code class="docutils literal notranslate"><span class="pre">-o</span></code> option.</li>
+</ul>
+</div>
+<div class="section" id="version-2-0">
+<h2>Version 2.0<a class="headerlink" href="#version-2-0" title="Permalink to this headline">¶</a></h2>
+<p>(released Nov 9, 2014)</p>
+<ul class="simple">
+<li>Default lexer encoding is now “guess”, i.e. UTF-8 / Locale / Latin1 is
+tried in that order.</li>
+<li>Major update to Swift lexer (PR#410).</li>
+<li>Multiple fixes to lexer guessing in conflicting cases:<ul>
+<li>recognize HTML5 by doctype</li>
+<li>recognize XML by XML declaration</li>
+<li>don’t recognize C/C++ as SystemVerilog</li>
+</ul>
+</li>
+<li>Simplified regexes and builtin lists.</li>
+</ul>
+</div>
+<div class="section" id="version-2-0rc1">
+<h2>Version 2.0rc1<a class="headerlink" href="#version-2-0rc1" title="Permalink to this headline">¶</a></h2>
+<p>(released Oct 16, 2014)</p>
+<ul class="simple">
+<li>Dropped Python 2.4 and 2.5 compatibility.  This is in favor of single-source
+compatibility between Python 2.6, 2.7 and 3.3+.</li>
+<li>New website and documentation based on Sphinx (finally!)</li>
+<li>Lexers added:<ul>
+<li>APL (#969)</li>
+<li>Agda and Literate Agda (PR#203)</li>
+<li>Alloy (PR#355)</li>
+<li>AmbientTalk</li>
+<li>BlitzBasic (PR#197)</li>
+<li>ChaiScript (PR#24)</li>
+<li>Chapel (PR#256)</li>
+<li>Cirru (PR#275)</li>
+<li>Clay (PR#184)</li>
+<li>ColdFusion CFC (PR#283)</li>
+<li>Cryptol and Literate Cryptol (PR#344)</li>
+<li>Cypher (PR#257)</li>
+<li>Docker config files</li>
+<li>EBNF (PR#193)</li>
+<li>Eiffel (PR#273)</li>
+<li>GAP (PR#311)</li>
+<li>Golo (PR#309)</li>
+<li>Handlebars (PR#186)</li>
+<li>Hy (PR#238)</li>
+<li>Idris and Literate Idris (PR#210)</li>
+<li>Igor Pro (PR#172)</li>
+<li>Inform 6/7 (PR#281)</li>
+<li>Intel objdump (PR#279)</li>
+<li>Isabelle (PR#386)</li>
+<li>Jasmin (PR#349)</li>
+<li>JSON-LD (PR#289)</li>
+<li>Kal (PR#233)</li>
+<li>Lean (PR#399)</li>
+<li>LSL (PR#296)</li>
+<li>Limbo (PR#291)</li>
+<li>Liquid (#977)</li>
+<li>MQL (PR#285)</li>
+<li>MaskJS (PR#280)</li>
+<li>Mozilla preprocessors</li>
+<li>Mathematica (PR#245)</li>
+<li>NesC (PR#166)</li>
+<li>Nit (PR#375)</li>
+<li>Nix (PR#267)</li>
+<li>Pan</li>
+<li>Pawn (PR#211)</li>
+<li>Perl 6 (PR#181)</li>
+<li>Pig (PR#304)</li>
+<li>Pike (PR#237)</li>
+<li>QBasic (PR#182)</li>
+<li>Red (PR#341)</li>
+<li>ResourceBundle (#1038)</li>
+<li>Rexx (PR#199)</li>
+<li>Rql (PR#251)</li>
+<li>Rsl</li>
+<li>SPARQL (PR#78)</li>
+<li>Slim (PR#366)</li>
+<li>Swift (PR#371)</li>
+<li>Swig (PR#168)</li>
+<li>TADS 3 (PR#407)</li>
+<li>Todo.txt todo lists</li>
+<li>Twig (PR#404)</li>
+</ul>
+</li>
+<li>Added a helper to “optimize” regular expressions that match one of many
+literal words; this can save 20% and more lexing time with lexers that
+highlight many keywords or builtins.</li>
+<li>New styles: “xcode” and “igor”, similar to the default highlighting of
+the respective IDEs.</li>
+<li>The command-line “pygmentize” tool now tries a little harder to find the
+correct encoding for files and the terminal (#979).</li>
+<li>Added “inencoding” option for lexers to override “encoding” analogous
+to “outencoding” (#800).</li>
+<li>Added line-by-line “streaming” mode for pygmentize with the “-s” option.
+(PR#165)  Only fully works for lexers that have no constructs spanning
+lines!</li>
+<li>Added an “envname” option to the LaTeX formatter to select a replacement
+verbatim environment (PR#235).</li>
+<li>Updated the Makefile lexer to yield a little more useful highlighting.</li>
+<li>Lexer aliases passed to <code class="docutils literal notranslate"><span class="pre">get_lexer_by_name()</span></code> are now case-insensitive.</li>
+<li>File name matching in lexers and formatters will now use a regex cache
+for speed (PR#205).</li>
+<li>Pygments will now recognize “vim” modelines when guessing the lexer for
+a file based on content (PR#118).</li>
+<li>Major restructure of the <code class="docutils literal notranslate"><span class="pre">pygments.lexers</span></code> module namespace.  There are now
+many more modules with less lexers per module.  Old modules are still around
+and re-export the lexers they previously contained.</li>
+<li>The NameHighlightFilter now works with any Name.* token type (#790).</li>
+<li>Python 3 lexer: add new exceptions from PEP 3151.</li>
+<li>Opa lexer: add new keywords (PR#170).</li>
+<li>Julia lexer: add keywords and underscore-separated number
+literals (PR#176).</li>
+<li>Lasso lexer: fix method highlighting, update builtins. Fix
+guessing so that plain XML isn’t always taken as Lasso (PR#163).</li>
+<li>Objective C/C++ lexers: allow “&#64;” prefixing any expression (#871).</li>
+<li>Ruby lexer: fix lexing of Name::Space tokens (#860) and of symbols
+in hashes (#873).</li>
+<li>Stan lexer: update for version 2.4.0 of the language (PR#162, PR#255, PR#377).</li>
+<li>JavaScript lexer: add the “yield” keyword (PR#196).</li>
+<li>HTTP lexer: support for PATCH method (PR#190).</li>
+<li>Koka lexer: update to newest language spec (PR#201).</li>
+<li>Haxe lexer: rewrite and support for Haxe 3 (PR#174).</li>
+<li>Prolog lexer: add different kinds of numeric literals (#864).</li>
+<li>F# lexer: rewrite with newest spec for F# 3.0 (#842), fix a bug with
+dotted chains (#948).</li>
+<li>Kotlin lexer: general update (PR#271).</li>
+<li>Rebol lexer: fix comment detection and analyse_text (PR#261).</li>
+<li>LLVM lexer: update keywords to v3.4 (PR#258).</li>
+<li>PHP lexer: add new keywords and binary literals (PR#222).</li>
+<li>external/markdown-processor.py updated to newest python-markdown (PR#221).</li>
+<li>CSS lexer: some highlighting order fixes (PR#231).</li>
+<li>Ceylon lexer: fix parsing of nested multiline comments (#915).</li>
+<li>C family lexers: fix parsing of indented preprocessor directives (#944).</li>
+<li>Rust lexer: update to 0.9 language version (PR#270, PR#388).</li>
+<li>Elixir lexer: update to 0.15 language version (PR#392).</li>
+<li>Fix swallowing incomplete tracebacks in Python console lexer (#874).</li>
+</ul>
+</div>
+<div class="section" id="version-1-6">
+<h2>Version 1.6<a class="headerlink" href="#version-1-6" title="Permalink to this headline">¶</a></h2>
+<p>(released Feb 3, 2013)</p>
+<ul class="simple">
+<li>Lexers added:<ul>
+<li>Dylan console (PR#149)</li>
+<li>Logos (PR#150)</li>
+<li>Shell sessions (PR#158)</li>
+</ul>
+</li>
+<li>Fix guessed lexers not receiving lexer options (#838).</li>
+<li>Fix unquoted HTML attribute lexing in Opa (#841).</li>
+<li>Fixes to the Dart lexer (PR#160).</li>
+</ul>
+</div>
+<div class="section" id="version-1-6rc1">
+<h2>Version 1.6rc1<a class="headerlink" href="#version-1-6rc1" title="Permalink to this headline">¶</a></h2>
+<p>(released Jan 9, 2013)</p>
+<ul class="simple">
+<li>Lexers added:<ul>
+<li>AspectJ (PR#90)</li>
+<li>AutoIt (PR#122)</li>
+<li>BUGS-like languages (PR#89)</li>
+<li>Ceylon (PR#86)</li>
+<li>Croc (new name for MiniD)</li>
+<li>CUDA (PR#75)</li>
+<li>Dg (PR#116)</li>
+<li>IDL (PR#115)</li>
+<li>Jags (PR#89)</li>
+<li>Julia (PR#61)</li>
+<li>Kconfig (#711)</li>
+<li>Lasso (PR#95, PR#113)</li>
+<li>LiveScript (PR#84)</li>
+<li>Monkey (PR#117)</li>
+<li>Mscgen (PR#80)</li>
+<li>NSIS scripts (PR#136)</li>
+<li>OpenCOBOL (PR#72)</li>
+<li>QML (PR#123)</li>
+<li>Puppet (PR#133)</li>
+<li>Racket (PR#94)</li>
+<li>Rdoc (PR#99)</li>
+<li>Robot Framework (PR#137)</li>
+<li>RPM spec files (PR#124)</li>
+<li>Rust (PR#67)</li>
+<li>Smali (Dalvik assembly)</li>
+<li>SourcePawn (PR#39)</li>
+<li>Stan (PR#89)</li>
+<li>Treetop (PR#125)</li>
+<li>TypeScript (PR#114)</li>
+<li>VGL (PR#12)</li>
+<li>Visual FoxPro (#762)</li>
+<li>Windows Registry (#819)</li>
+<li>Xtend (PR#68)</li>
+</ul>
+</li>
+<li>The HTML formatter now supports linking to tags using CTags files, when the
+python-ctags package is installed (PR#87).</li>
+<li>The HTML formatter now has a “linespans” option that wraps every line in a
+&lt;span&gt; tag with a specific id (PR#82).</li>
+<li>When deriving a lexer from another lexer with token definitions, definitions
+for states not in the child lexer are now inherited.  If you override a state
+in the child lexer, an “inherit” keyword has been added to insert the base
+state at that position (PR#141).</li>
+<li>The C family lexers now inherit token definitions from a common base class,
+removing code duplication (PR#141).</li>
+<li>Use “colorama” on Windows for console color output (PR#142).</li>
+<li>Fix Template Haskell highlighting (PR#63).</li>
+<li>Fix some S/R lexer errors (PR#91).</li>
+<li>Fix a bug in the Prolog lexer with names that start with ‘is’ (#810).</li>
+<li>Rewrite Dylan lexer, add Dylan LID lexer (PR#147).</li>
+<li>Add a Java quickstart document (PR#146).</li>
+<li>Add a “external/autopygmentize” file that can be used as .lessfilter (#802).</li>
+</ul>
+</div>
+<div class="section" id="version-1-5">
+<h2>Version 1.5<a class="headerlink" href="#version-1-5" title="Permalink to this headline">¶</a></h2>
+<p>(codename Zeitdilatation, released Mar 10, 2012)</p>
+<ul class="simple">
+<li>Lexers added:<ul>
+<li>Awk (#630)</li>
+<li>Fancy (#633)</li>
+<li>PyPy Log</li>
+<li>eC</li>
+<li>Nimrod</li>
+<li>Nemerle (#667)</li>
+<li>F# (#353)</li>
+<li>Groovy (#501)</li>
+<li>PostgreSQL (#660)</li>
+<li>DTD</li>
+<li>Gosu (#634)</li>
+<li>Octave (PR#22)</li>
+<li>Standard ML (PR#14)</li>
+<li>CFengine3 (#601)</li>
+<li>Opa (PR#37)</li>
+<li>HTTP sessions (PR#42)</li>
+<li>JSON (PR#31)</li>
+<li>SNOBOL (PR#30)</li>
+<li>MoonScript (PR#43)</li>
+<li>ECL (PR#29)</li>
+<li>Urbiscript (PR#17)</li>
+<li>OpenEdge ABL (PR#27)</li>
+<li>SystemVerilog (PR#35)</li>
+<li>Coq (#734)</li>
+<li>PowerShell (#654)</li>
+<li>Dart (#715)</li>
+<li>Fantom (PR#36)</li>
+<li>Bro (PR#5)</li>
+<li>NewLISP (PR#26)</li>
+<li>VHDL (PR#45)</li>
+<li>Scilab (#740)</li>
+<li>Elixir (PR#57)</li>
+<li>Tea (PR#56)</li>
+<li>Kotlin (PR#58)</li>
+</ul>
+</li>
+<li>Fix Python 3 terminal highlighting with pygmentize (#691).</li>
+<li>In the LaTeX formatter, escape special &amp;, &lt; and &gt; chars (#648).</li>
+<li>In the LaTeX formatter, fix display problems for styles with token
+background colors (#670).</li>
+<li>Enhancements to the Squid conf lexer (#664).</li>
+<li>Several fixes to the reStructuredText lexer (#636).</li>
+<li>Recognize methods in the ObjC lexer (#638).</li>
+<li>Fix Lua “class” highlighting: it does not have classes (#665).</li>
+<li>Fix degenerate regex in Scala lexer (#671) and highlighting bugs (#713, 708).</li>
+<li>Fix number pattern order in Ocaml lexer (#647).</li>
+<li>Fix generic type highlighting in ActionScript 3 (#666).</li>
+<li>Fixes to the Clojure lexer (PR#9).</li>
+<li>Fix degenerate regex in Nemerle lexer (#706).</li>
+<li>Fix infinite looping in CoffeeScript lexer (#729).</li>
+<li>Fix crashes and analysis with ObjectiveC lexer (#693, #696).</li>
+<li>Add some Fortran 2003 keywords.</li>
+<li>Fix Boo string regexes (#679).</li>
+<li>Add “rrt” style (#727).</li>
+<li>Fix infinite looping in Darcs Patch lexer.</li>
+<li>Lots of misc fixes to character-eating bugs and ordering problems in many
+different lexers.</li>
+</ul>
+</div>
+<div class="section" id="version-1-4">
+<h2>Version 1.4<a class="headerlink" href="#version-1-4" title="Permalink to this headline">¶</a></h2>
+<p>(codename Unschärfe, released Jan 03, 2011)</p>
+<ul class="simple">
+<li>Lexers added:<ul>
+<li>Factor (#520)</li>
+<li>PostScript (#486)</li>
+<li>Verilog (#491)</li>
+<li>BlitzMax Basic (#478)</li>
+<li>Ioke (#465)</li>
+<li>Java properties, split out of the INI lexer (#445)</li>
+<li>Scss (#509)</li>
+<li>Duel/JBST</li>
+<li>XQuery (#617)</li>
+<li>Mason (#615)</li>
+<li>GoodData (#609)</li>
+<li>SSP (#473)</li>
+<li>Autohotkey (#417)</li>
+<li>Google Protocol Buffers</li>
+<li>Hybris (#506)</li>
+</ul>
+</li>
+<li>Do not fail in analyse_text methods (#618).</li>
+<li>Performance improvements in the HTML formatter (#523).</li>
+<li>With the <code class="docutils literal notranslate"><span class="pre">noclasses</span></code> option in the HTML formatter, some styles
+present in the stylesheet were not added as inline styles.</li>
+<li>Four fixes to the Lua lexer (#480, #481, #482, #497).</li>
+<li>More context-sensitive Gherkin lexer with support for more i18n translations.</li>
+<li>Support new OO keywords in Matlab lexer (#521).</li>
+<li>Small fix in the CoffeeScript lexer (#519).</li>
+<li>A bugfix for backslashes in ocaml strings (#499).</li>
+<li>Fix unicode/raw docstrings in the Python lexer (#489).</li>
+<li>Allow PIL to work without PIL.pth (#502).</li>
+<li>Allow seconds as a unit in CSS (#496).</li>
+<li>Support <code class="docutils literal notranslate"><span class="pre">application/javascript</span></code> as a JavaScript mime type (#504).</li>
+<li>Support <a class="reference external" href="http://offload.codeplay.com">Offload</a> C++ Extensions as
+keywords in the C++ lexer (#484).</li>
+<li>Escape more characters in LaTeX output (#505).</li>
+<li>Update Haml/Sass lexers to version 3 (#509).</li>
+<li>Small PHP lexer string escaping fix (#515).</li>
+<li>Support comments before preprocessor directives, and unsigned/
+long long literals in C/C++ (#613, #616).</li>
+<li>Support line continuations in the INI lexer (#494).</li>
+<li>Fix lexing of Dylan string and char literals (#628).</li>
+<li>Fix class/procedure name highlighting in VB.NET lexer (#624).</li>
+</ul>
+</div>
+<div class="section" id="version-1-3-1">
+<h2>Version 1.3.1<a class="headerlink" href="#version-1-3-1" title="Permalink to this headline">¶</a></h2>
+<p>(bugfix release, released Mar 05, 2010)</p>
+<ul class="simple">
+<li>The <code class="docutils literal notranslate"><span class="pre">pygmentize</span></code> script was missing from the distribution.</li>
+</ul>
+</div>
+<div class="section" id="version-1-3">
+<h2>Version 1.3<a class="headerlink" href="#version-1-3" title="Permalink to this headline">¶</a></h2>
+<p>(codename Schneeglöckchen, released Mar 01, 2010)</p>
+<ul class="simple">
+<li>Added the <code class="docutils literal notranslate"><span class="pre">ensurenl</span></code> lexer option, which can be used to suppress the
+automatic addition of a newline to the lexer input.</li>
+<li>Lexers added:<ul>
+<li>Ada</li>
+<li>Coldfusion</li>
+<li>Modula-2</li>
+<li>Haxe</li>
+<li>R console</li>
+<li>Objective-J</li>
+<li>Haml and Sass</li>
+<li>CoffeeScript</li>
+</ul>
+</li>
+<li>Enhanced reStructuredText highlighting.</li>
+<li>Added support for PHP 5.3 namespaces in the PHP lexer.</li>
+<li>Added a bash completion script for <cite>pygmentize</cite>, to the external/
+directory (#466).</li>
+<li>Fixed a bug in <cite>do_insertions()</cite> used for multi-lexer languages.</li>
+<li>Fixed a Ruby regex highlighting bug (#476).</li>
+<li>Fixed regex highlighting bugs in Perl lexer (#258).</li>
+<li>Add small enhancements to the C lexer (#467) and Bash lexer (#469).</li>
+<li>Small fixes for the Tcl, Debian control file, Nginx config,
+Smalltalk, Objective-C, Clojure, Lua lexers.</li>
+<li>Gherkin lexer: Fixed single apostrophe bug and added new i18n keywords.</li>
+</ul>
+</div>
+<div class="section" id="version-1-2-2">
+<h2>Version 1.2.2<a class="headerlink" href="#version-1-2-2" title="Permalink to this headline">¶</a></h2>
+<p>(bugfix release, released Jan 02, 2010)</p>
+<ul class="simple">
+<li>Removed a backwards incompatibility in the LaTeX formatter that caused
+Sphinx to produce invalid commands when writing LaTeX output (#463).</li>
+<li>Fixed a forever-backtracking regex in the BashLexer (#462).</li>
+</ul>
+</div>
+<div class="section" id="version-1-2-1">
+<h2>Version 1.2.1<a class="headerlink" href="#version-1-2-1" title="Permalink to this headline">¶</a></h2>
+<p>(bugfix release, released Jan 02, 2010)</p>
+<ul class="simple">
+<li>Fixed mishandling of an ellipsis in place of the frames in a Python
+console traceback, resulting in clobbered output.</li>
+</ul>
+</div>
+<div class="section" id="version-1-2">
+<h2>Version 1.2<a class="headerlink" href="#version-1-2" title="Permalink to this headline">¶</a></h2>
+<p>(codename Neujahr, released Jan 01, 2010)</p>
+<ul class="simple">
+<li>Dropped Python 2.3 compatibility.</li>
+<li>Lexers added:<ul>
+<li>Asymptote</li>
+<li>Go</li>
+<li>Gherkin (Cucumber)</li>
+<li>CMake</li>
+<li>Ooc</li>
+<li>Coldfusion</li>
+<li>Haxe</li>
+<li>R console</li>
+</ul>
+</li>
+<li>Added options for rendering LaTeX in source code comments in the
+LaTeX formatter (#461).</li>
+<li>Updated the Logtalk lexer.</li>
+<li>Added <cite>line_number_start</cite> option to image formatter (#456).</li>
+<li>Added <cite>hl_lines</cite> and <cite>hl_color</cite> options to image formatter (#457).</li>
+<li>Fixed the HtmlFormatter’s handling of noclasses=True to not output any
+classes (#427).</li>
+<li>Added the Monokai style (#453).</li>
+<li>Fixed LLVM lexer identifier syntax and added new keywords (#442).</li>
+<li>Fixed the PythonTracebackLexer to handle non-traceback data in header or
+trailer, and support more partial tracebacks that start on line 2 (#437).</li>
+<li>Fixed the CLexer to not highlight ternary statements as labels.</li>
+<li>Fixed lexing of some Ruby quoting peculiarities (#460).</li>
+<li>A few ASM lexer fixes (#450).</li>
+</ul>
+</div>
+<div class="section" id="version-1-1-1">
+<h2>Version 1.1.1<a class="headerlink" href="#version-1-1-1" title="Permalink to this headline">¶</a></h2>
+<p>(bugfix release, released Sep 15, 2009)</p>
+<ul class="simple">
+<li>Fixed the BBCode lexer (#435).</li>
+<li>Added support for new Jinja2 keywords.</li>
+<li>Fixed test suite failures.</li>
+<li>Added Gentoo-specific suffixes to Bash lexer.</li>
+</ul>
+</div>
+<div class="section" id="version-1-1">
+<h2>Version 1.1<a class="headerlink" href="#version-1-1" title="Permalink to this headline">¶</a></h2>
+<p>(codename Brillouin, released Sep 11, 2009)</p>
+<ul class="simple">
+<li>Ported Pygments to Python 3.  This needed a few changes in the way
+encodings are handled; they may affect corner cases when used with
+Python 2 as well.</li>
+<li>Lexers added:<ul>
+<li>Antlr/Ragel, thanks to Ana Nelson</li>
+<li>(Ba)sh shell</li>
+<li>Erlang shell</li>
+<li>GLSL</li>
+<li>Prolog</li>
+<li>Evoque</li>
+<li>Modelica</li>
+<li>Rebol</li>
+<li>MXML</li>
+<li>Cython</li>
+<li>ABAP</li>
+<li>ASP.net (VB/C#)</li>
+<li>Vala</li>
+<li>Newspeak</li>
+</ul>
+</li>
+<li>Fixed the LaTeX formatter’s output so that output generated for one style
+can be used with the style definitions of another (#384).</li>
+<li>Added “anchorlinenos” and “noclobber_cssfile” (#396) options to HTML
+formatter.</li>
+<li>Support multiline strings in Lua lexer.</li>
+<li>Rewrite of the JavaScript lexer by Pumbaa80 to better support regular
+expression literals (#403).</li>
+<li>When pygmentize is asked to highlight a file for which multiple lexers
+match the filename, use the analyse_text guessing engine to determine the
+winner (#355).</li>
+<li>Fixed minor bugs in the JavaScript lexer (#383), the Matlab lexer (#378),
+the Scala lexer (#392), the INI lexer (#391), the Clojure lexer (#387)
+and the AS3 lexer (#389).</li>
+<li>Fixed three Perl heredoc lexing bugs (#379, #400, #422).</li>
+<li>Fixed a bug in the image formatter which misdetected lines (#380).</li>
+<li>Fixed bugs lexing extended Ruby strings and regexes.</li>
+<li>Fixed a bug when lexing git diffs.</li>
+<li>Fixed a bug lexing the empty commit in the PHP lexer (#405).</li>
+<li>Fixed a bug causing Python numbers to be mishighlighted as floats (#397).</li>
+<li>Fixed a bug when backslashes are used in odd locations in Python (#395).</li>
+<li>Fixed various bugs in Matlab and S-Plus lexers, thanks to Winston Chang (#410,
+#411, #413, #414) and fmarc (#419).</li>
+<li>Fixed a bug in Haskell single-line comment detection (#426).</li>
+<li>Added new-style reStructuredText directive for docutils 0.5+ (#428).</li>
+</ul>
+</div>
+<div class="section" id="version-1-0">
+<h2>Version 1.0<a class="headerlink" href="#version-1-0" title="Permalink to this headline">¶</a></h2>
+<p>(codename Dreiundzwanzig, released Nov 23, 2008)</p>
+<ul>
+<li><p class="first">Don’t use join(splitlines()) when converting newlines to <code class="docutils literal notranslate"><span class="pre">\n</span></code>,
+because that doesn’t keep all newlines at the end when the
+<code class="docutils literal notranslate"><span class="pre">stripnl</span></code> lexer option is False.</p>
+</li>
+<li><p class="first">Added <code class="docutils literal notranslate"><span class="pre">-N</span></code> option to command-line interface to get a lexer name
+for a given filename.</p>
+</li>
+<li><p class="first">Added Tango style, written by Andre Roberge for the Crunchy project.</p>
+</li>
+<li><p class="first">Added Python3TracebackLexer and <code class="docutils literal notranslate"><span class="pre">python3</span></code> option to
+PythonConsoleLexer.</p>
+</li>
+<li><p class="first">Fixed a few bugs in the Haskell lexer.</p>
+</li>
+<li><p class="first">Fixed PythonTracebackLexer to be able to recognize SyntaxError and
+KeyboardInterrupt (#360).</p>
+</li>
+<li><p class="first">Provide one formatter class per image format, so that surprises like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pygmentize</span> <span class="o">-</span><span class="n">f</span> <span class="n">gif</span> <span class="o">-</span><span class="n">o</span> <span class="n">foo</span><span class="o">.</span><span class="n">gif</span> <span class="n">foo</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>creating a PNG file are avoided.</p>
+</li>
+<li><p class="first">Actually use the <cite>font_size</cite> option of the image formatter.</p>
+</li>
+<li><p class="first">Fixed numpy lexer that it doesn’t listen for <cite>*.py</cite> any longer.</p>
+</li>
+<li><p class="first">Fixed HTML formatter so that text options can be Unicode
+strings (#371).</p>
+</li>
+<li><p class="first">Unified Diff lexer supports the “udiff” alias now.</p>
+</li>
+<li><p class="first">Fixed a few issues in Scala lexer (#367).</p>
+</li>
+<li><p class="first">RubyConsoleLexer now supports simple prompt mode (#363).</p>
+</li>
+<li><p class="first">JavascriptLexer is smarter about what constitutes a regex (#356).</p>
+</li>
+<li><p class="first">Add Applescript lexer, thanks to Andreas Amann (#330).</p>
+</li>
+<li><p class="first">Make the codetags more strict about matching words (#368).</p>
+</li>
+<li><p class="first">NginxConfLexer is a little more accurate on mimetypes and
+variables (#370).</p>
+</li>
+</ul>
+</div>
+<div class="section" id="version-0-11-1">
+<h2>Version 0.11.1<a class="headerlink" href="#version-0-11-1" title="Permalink to this headline">¶</a></h2>
+<p>(released Aug 24, 2008)</p>
+<ul class="simple">
+<li>Fixed a Jython compatibility issue in pygments.unistring (#358).</li>
+</ul>
+</div>
+<div class="section" id="version-0-11">
+<h2>Version 0.11<a class="headerlink" href="#version-0-11" title="Permalink to this headline">¶</a></h2>
+<p>(codename Straußenei, released Aug 23, 2008)</p>
+<p>Many thanks go to Tim Hatch for writing or integrating most of the bug
+fixes and new features.</p>
+<ul class="simple">
+<li>Lexers added:<ul>
+<li>Nasm-style assembly language, thanks to delroth</li>
+<li>YAML, thanks to Kirill Simonov</li>
+<li>ActionScript 3, thanks to Pierre Bourdon</li>
+<li>Cheetah/Spitfire templates, thanks to Matt Good</li>
+<li>Lighttpd config files</li>
+<li>Nginx config files</li>
+<li>Gnuplot plotting scripts</li>
+<li>Clojure</li>
+<li>POV-Ray scene files</li>
+<li>Sqlite3 interactive console sessions</li>
+<li>Scala source files, thanks to Krzysiek Goj</li>
+</ul>
+</li>
+<li>Lexers improved:<ul>
+<li>C lexer highlights standard library functions now and supports C99
+types.</li>
+<li>Bash lexer now correctly highlights heredocs without preceding
+whitespace.</li>
+<li>Vim lexer now highlights hex colors properly and knows a couple
+more keywords.</li>
+<li>Irc logs lexer now handles xchat’s default time format (#340) and
+correctly highlights lines ending in <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>.</li>
+<li>Support more delimiters for perl regular expressions (#258).</li>
+<li>ObjectiveC lexer now supports 2.0 features.</li>
+</ul>
+</li>
+<li>Added “Visual Studio” style.</li>
+<li>Updated markdown processor to Markdown 1.7.</li>
+<li>Support roman/sans/mono style defs and use them in the LaTeX
+formatter.</li>
+<li>The RawTokenFormatter is no longer registered to <code class="docutils literal notranslate"><span class="pre">*.raw</span></code> and it’s
+documented that tokenization with this lexer may raise exceptions.</li>
+<li>New option <code class="docutils literal notranslate"><span class="pre">hl_lines</span></code> to HTML formatter, to highlight certain
+lines.</li>
+<li>New option <code class="docutils literal notranslate"><span class="pre">prestyles</span></code> to HTML formatter.</li>
+<li>New option <em>-g</em> to pygmentize, to allow lexer guessing based on
+filetext (can be slowish, so file extensions are still checked
+first).</li>
+<li><code class="docutils literal notranslate"><span class="pre">guess_lexer()</span></code> now makes its decision much faster due to a cache
+of whether data is xml-like (a check which is used in several
+versions of <code class="docutils literal notranslate"><span class="pre">analyse_text()</span></code>.  Several lexers also have more
+accurate <code class="docutils literal notranslate"><span class="pre">analyse_text()</span></code> now.</li>
+</ul>
+</div>
+<div class="section" id="version-0-10">
+<h2>Version 0.10<a class="headerlink" href="#version-0-10" title="Permalink to this headline">¶</a></h2>
+<p>(codename Malzeug, released May 06, 2008)</p>
+<ul class="simple">
+<li>Lexers added:<ul>
+<li>Io</li>
+<li>Smalltalk</li>
+<li>Darcs patches</li>
+<li>Tcl</li>
+<li>Matlab</li>
+<li>Matlab sessions</li>
+<li>FORTRAN</li>
+<li>XSLT</li>
+<li>tcsh</li>
+<li>NumPy</li>
+<li>Python 3</li>
+<li>S, S-plus, R statistics languages</li>
+<li>Logtalk</li>
+</ul>
+</li>
+<li>In the LatexFormatter, the <em>commandprefix</em> option is now by default
+‘PY’ instead of ‘C’, since the latter resulted in several collisions
+with other packages.  Also, the special meaning of the <em>arg</em>
+argument to <code class="docutils literal notranslate"><span class="pre">get_style_defs()</span></code> was removed.</li>
+<li>Added ImageFormatter, to format code as PNG, JPG, GIF or BMP.
+(Needs the Python Imaging Library.)</li>
+<li>Support doc comments in the PHP lexer.</li>
+<li>Handle format specifications in the Perl lexer.</li>
+<li>Fix comment handling in the Batch lexer.</li>
+<li>Add more file name extensions for the C++, INI and XML lexers.</li>
+<li>Fixes in the IRC and MuPad lexers.</li>
+<li>Fix function and interface name highlighting in the Java lexer.</li>
+<li>Fix at-rule handling in the CSS lexer.</li>
+<li>Handle KeyboardInterrupts gracefully in pygmentize.</li>
+<li>Added BlackWhiteStyle.</li>
+<li>Bash lexer now correctly highlights math, does not require
+whitespace after semicolons, and correctly highlights boolean
+operators.</li>
+<li>Makefile lexer is now capable of handling BSD and GNU make syntax.</li>
+</ul>
+</div>
+<div class="section" id="version-0-9">
+<h2>Version 0.9<a class="headerlink" href="#version-0-9" title="Permalink to this headline">¶</a></h2>
+<p>(codename Herbstzeitlose, released Oct 14, 2007)</p>
+<ul class="simple">
+<li>Lexers added:<ul>
+<li>Erlang</li>
+<li>ActionScript</li>
+<li>Literate Haskell</li>
+<li>Common Lisp</li>
+<li>Various assembly languages</li>
+<li>Gettext catalogs</li>
+<li>Squid configuration</li>
+<li>Debian control files</li>
+<li>MySQL-style SQL</li>
+<li>MOOCode</li>
+</ul>
+</li>
+<li>Lexers improved:<ul>
+<li>Greatly improved the Haskell and OCaml lexers.</li>
+<li>Improved the Bash lexer’s handling of nested constructs.</li>
+<li>The C# and Java lexers exhibited abysmal performance with some
+input code; this should now be fixed.</li>
+<li>The IRC logs lexer is now able to colorize weechat logs too.</li>
+<li>The Lua lexer now recognizes multi-line comments.</li>
+<li>Fixed bugs in the D and MiniD lexer.</li>
+</ul>
+</li>
+<li>The encoding handling of the command line mode (pygmentize) was
+enhanced. You shouldn’t get UnicodeErrors from it anymore if you
+don’t give an encoding option.</li>
+<li>Added a <code class="docutils literal notranslate"><span class="pre">-P</span></code> option to the command line mode which can be used to
+give options whose values contain commas or equals signs.</li>
+<li>Added 256-color terminal formatter.</li>
+<li>Added an experimental SVG formatter.</li>
+<li>Added the <code class="docutils literal notranslate"><span class="pre">lineanchors</span></code> option to the HTML formatter, thanks to
+Ian Charnas for the idea.</li>
+<li>Gave the line numbers table a CSS class in the HTML formatter.</li>
+<li>Added a Vim 7-like style.</li>
+</ul>
+</div>
+<div class="section" id="version-0-8-1">
+<h2>Version 0.8.1<a class="headerlink" href="#version-0-8-1" title="Permalink to this headline">¶</a></h2>
+<p>(released Jun 27, 2007)</p>
+<ul class="simple">
+<li>Fixed POD highlighting in the Ruby lexer.</li>
+<li>Fixed Unicode class and namespace name highlighting in the C# lexer.</li>
+<li>Fixed Unicode string prefix highlighting in the Python lexer.</li>
+<li>Fixed a bug in the D and MiniD lexers.</li>
+<li>Fixed the included MoinMoin parser.</li>
+</ul>
+</div>
+<div class="section" id="version-0-8">
+<h2>Version 0.8<a class="headerlink" href="#version-0-8" title="Permalink to this headline">¶</a></h2>
+<p>(codename Maikäfer, released May 30, 2007)</p>
+<ul class="simple">
+<li>Lexers added:<ul>
+<li>Haskell, thanks to Adam Blinkinsop</li>
+<li>Redcode, thanks to Adam Blinkinsop</li>
+<li>D, thanks to Kirk McDonald</li>
+<li>MuPad, thanks to Christopher Creutzig</li>
+<li>MiniD, thanks to Jarrett Billingsley</li>
+<li>Vim Script, by Tim Hatch</li>
+</ul>
+</li>
+<li>The HTML formatter now has a second line-numbers mode in which it
+will just integrate the numbers in the same <code class="docutils literal notranslate"><span class="pre">&lt;pre&gt;</span></code> tag as the
+code.</li>
+<li>The <cite>CSharpLexer</cite> now is Unicode-aware, which means that it has an
+option that can be set so that it correctly lexes Unicode
+identifiers allowed by the C# specs.</li>
+<li>Added a <cite>RaiseOnErrorTokenFilter</cite> that raises an exception when the
+lexer generates an error token, and a <cite>VisibleWhitespaceFilter</cite> that
+converts whitespace (spaces, tabs, newlines) into visible
+characters.</li>
+<li>Fixed the <cite>do_insertions()</cite> helper function to yield correct
+indices.</li>
+<li>The ReST lexer now automatically highlights source code blocks in
+“.. sourcecode:: language” and “.. code:: language” directive
+blocks.</li>
+<li>Improved the default style (thanks to Tiberius Teng). The old
+default is still available as the “emacs” style (which was an alias
+before).</li>
+<li>The <cite>get_style_defs</cite> method of HTML formatters now uses the
+<cite>cssclass</cite> option as the default selector if it was given.</li>
+<li>Improved the ReST and Bash lexers a bit.</li>
+<li>Fixed a few bugs in the Makefile and Bash lexers, thanks to Tim
+Hatch.</li>
+<li>Fixed a bug in the command line code that disallowed <code class="docutils literal notranslate"><span class="pre">-O</span></code> options
+when using the <code class="docutils literal notranslate"><span class="pre">-S</span></code> option.</li>
+<li>Fixed a bug in the <cite>RawTokenFormatter</cite>.</li>
+</ul>
+</div>
+<div class="section" id="version-0-7-1">
+<h2>Version 0.7.1<a class="headerlink" href="#version-0-7-1" title="Permalink to this headline">¶</a></h2>
+<p>(released Feb 15, 2007)</p>
+<ul class="simple">
+<li>Fixed little highlighting bugs in the Python, Java, Scheme and
+Apache Config lexers.</li>
+<li>Updated the included manpage.</li>
+<li>Included a built version of the documentation in the source tarball.</li>
+</ul>
+</div>
+<div class="section" id="version-0-7">
+<h2>Version 0.7<a class="headerlink" href="#version-0-7" title="Permalink to this headline">¶</a></h2>
+<p>(codename Faschingskrapfn, released Feb 14, 2007)</p>
+<ul class="simple">
+<li>Added a MoinMoin parser that uses Pygments. With it, you get
+Pygments highlighting in Moin Wiki pages.</li>
+<li>Changed the exception raised if no suitable lexer, formatter etc. is
+found in one of the <cite>get_*_by_*</cite> functions to a custom exception,
+<cite>pygments.util.ClassNotFound</cite>. It is, however, a subclass of
+<cite>ValueError</cite> in order to retain backwards compatibility.</li>
+<li>Added a <cite>-H</cite> command line option which can be used to get the
+docstring of a lexer, formatter or filter.</li>
+<li>Made the handling of lexers and formatters more consistent. The
+aliases and filename patterns of formatters are now attributes on
+them.</li>
+<li>Added an OCaml lexer, thanks to Adam Blinkinsop.</li>
+<li>Made the HTML formatter more flexible, and easily subclassable in
+order to make it easy to implement custom wrappers, e.g. alternate
+line number markup. See the documentation.</li>
+<li>Added an <cite>outencoding</cite> option to all formatters, making it possible
+to override the <cite>encoding</cite> (which is used by lexers and formatters)
+when using the command line interface. Also, if using the terminal
+formatter and the output file is a terminal and has an encoding
+attribute, use it if no encoding is given.</li>
+<li>Made it possible to just drop style modules into the <cite>styles</cite>
+subpackage of the Pygments installation.</li>
+<li>Added a “state” keyword argument to the <cite>using</cite> helper.</li>
+<li>Added a <cite>commandprefix</cite> option to the <cite>LatexFormatter</cite> which allows
+to control how the command names are constructed.</li>
+<li>Added quite a few new lexers, thanks to Tim Hatch:<ul>
+<li>Java Server Pages</li>
+<li>Windows batch files</li>
+<li>Trac Wiki markup</li>
+<li>Python tracebacks</li>
+<li>ReStructuredText</li>
+<li>Dylan</li>
+<li>and the Befunge esoteric programming language (yay!)</li>
+</ul>
+</li>
+<li>Added Mako lexers by Ben Bangert.</li>
+<li>Added “fruity” style, another dark background originally vim-based
+theme.</li>
+<li>Added sources.list lexer by Dennis Kaarsemaker.</li>
+<li>Added token stream filters, and a pygmentize option to use them.</li>
+<li>Changed behavior of <cite>in</cite> Operator for tokens.</li>
+<li>Added mimetypes for all lexers.</li>
+<li>Fixed some problems lexing Python strings.</li>
+<li>Fixed tickets: #167, #178, #179, #180, #185, #201.</li>
+</ul>
+</div>
+<div class="section" id="version-0-6">
+<h2>Version 0.6<a class="headerlink" href="#version-0-6" title="Permalink to this headline">¶</a></h2>
+<p>(codename Zimtstern, released Dec 20, 2006)</p>
+<ul class="simple">
+<li>Added option for the HTML formatter to write the CSS to an external
+file in “full document” mode.</li>
+<li>Added RTF formatter.</li>
+<li>Added Bash and Apache configuration lexers (thanks to Tim Hatch).</li>
+<li>Improved guessing methods for various lexers.</li>
+<li>Added <cite>&#64;media</cite> support to CSS lexer (thanks to Tim Hatch).</li>
+<li>Added a Groff lexer (thanks to Tim Hatch).</li>
+<li>License change to BSD.</li>
+<li>Added lexers for the Myghty template language.</li>
+<li>Added a Scheme lexer (thanks to Marek Kubica).</li>
+<li>Added some functions to iterate over existing lexers, formatters and
+lexers.</li>
+<li>The HtmlFormatter’s <cite>get_style_defs()</cite> can now take a list as an
+argument to generate CSS with multiple prefixes.</li>
+<li>Support for guessing input encoding added.</li>
+<li>Encoding support added: all processing is now done with Unicode
+strings, input and output are converted from and optionally to byte
+strings (see the <code class="docutils literal notranslate"><span class="pre">encoding</span></code> option of lexers and formatters).</li>
+<li>Some improvements in the C(++) lexers handling comments and line
+continuations.</li>
+</ul>
+</div>
+<div class="section" id="version-0-5-1">
+<h2>Version 0.5.1<a class="headerlink" href="#version-0-5-1" title="Permalink to this headline">¶</a></h2>
+<p>(released Oct 30, 2006)</p>
+<ul class="simple">
+<li>Fixed traceback in <code class="docutils literal notranslate"><span class="pre">pygmentize</span> <span class="pre">-L</span></code> (thanks to Piotr Ozarowski).</li>
+</ul>
+</div>
+<div class="section" id="version-0-5">
+<h2>Version 0.5<a class="headerlink" href="#version-0-5" title="Permalink to this headline">¶</a></h2>
+<p>(codename PyKleur, released Oct 30, 2006)</p>
+<ul class="simple">
+<li>Initial public release.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo">
+      &copy; Copyright 2006-2017, Georg Brandl and Pygments contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.2. <br/>
+      Pygments logo created by <a href="http://joelunger.com">Joel Unger</a>.
+      Backgrounds from <a href="http://subtlepatterns.com">subtlepatterns.com</a>.
+    </div>
+  </div> 
+
+  </body>
+</html>
