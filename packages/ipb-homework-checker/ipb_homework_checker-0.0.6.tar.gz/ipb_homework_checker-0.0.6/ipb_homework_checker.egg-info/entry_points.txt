@@ -1,0 +1,4 @@
+[console_scripts]
+check_homework = ipb_homework_checker.check_homework:main
+print_repo_name = ipb_homework_checker.print_repo_name:main
+
