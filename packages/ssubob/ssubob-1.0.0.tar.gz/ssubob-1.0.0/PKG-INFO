@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: ssubob
+Version: 1.0.0
+Summary: YOUR DESCRIPTION HERE
+Home-page: https://github.com/gomjellie/ssubob
+Author: oh inkyu
+Author-email: gomjellie@gmail.com
+License: MIT LICENSE
+Download-URL: https://pypi.python.org/pypi/ssubob
+Description: # ssubob
+        ssu food parser
+        
+        ## test
+        
+        ```sh
+        python setup.py test
+        ```
+        
+        ## install
+        
+        ```sh
+        pip install ssubob
+        ```
+        
+        ## install (for developer)
+        
+        ```sh
+        pip install .
+        ```
+        
+Platform: Posix; MacOS X; Windows
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Software Development :: Testing
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Description-Content-Type: text/markdown
