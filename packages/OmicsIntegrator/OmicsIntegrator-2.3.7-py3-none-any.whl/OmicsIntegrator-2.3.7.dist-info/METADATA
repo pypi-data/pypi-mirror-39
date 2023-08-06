@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: OmicsIntegrator
+Version: 2.3.7
+Summary: UNKNOWN
+Home-page: https://github.com/fraenkel-lab/OmicsIntegrator2
+Author: zfrenchee
+Author-email: alex@lenail.org
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: numpy
+Requires-Dist: pandas (==0.23.4)
+Requires-Dist: networkx (==2.1)
+Requires-Dist: pcst-fast (==1.0.7)
+Requires-Dist: python-louvain
+Requires-Dist: goenrich
+Requires-Dist: sklearn
+Requires-Dist: axial
+
+UNKNOWN
+
+
