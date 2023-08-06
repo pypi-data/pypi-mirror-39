@@ -1,0 +1,17 @@
+translation_finder/__init__.py,sha256=YbDeI6t6rHV4Y27lXufZSZxhQZ4ZGxaUUkF1ALYvGCY,989
+translation_finder/api.py,sha256=TMD4j8aOeP3eyt9m15MqvX8KrREt238mtWQD9a4ECak,2549
+translation_finder/finder.py,sha256=L-G52Q_Unr8sHiqNkNQDi7qlxGYjMY3s9Se0s0wKKX8,3240
+translation_finder/languages.py,sha256=n81czM-Wr44iH05VtByZq2ldh1CB-07gHVdT6sijw2Y,7488
+translation_finder/test_api.py,sha256=ktHWfbvARDuTTVP9xn_9KMpc35gR_pG0kiolMGzN9wI,3252
+translation_finder/test_discovery.py,sha256=2umj2Lz-RH8DNwMYYCSNIHOpg8kGJIdq7ZaRY8Xjbi8,12241
+translation_finder/test_finder.py,sha256=5sRb5oAbOx4ELHcWZgH1CTwh52wjUUcLqw9MqSo8LXk,1286
+translation_finder/discovery/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+translation_finder/discovery/base.py,sha256=hdbJXrEA3xhiQ6gWXEXAlPW51NnLjhgt77O2p7Y3DDQ,5711
+translation_finder/discovery/files.py,sha256=lINXVyop5apPlMzRCiKa0t2xhGP2FwjIepGazk4f57U,4610
+translation_finder/discovery/transifex.py,sha256=kLQOy44jo1F9Cl_rwXJl1Z_x2t5toLityuQHOJlAegk,2937
+translation_finder-0.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+translation_finder-0.3.dist-info/METADATA,sha256=VXiSv28yPX-dN1Kb8aDaH_UaMh_kw6UwJHolMF82FSo,3498
+translation_finder-0.3.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+translation_finder-0.3.dist-info/entry_points.txt,sha256=phUEXELNyPiZL7Sf7SY7T-EGAgaNxRP5f7TH7ndd8WA,65
+translation_finder-0.3.dist-info/top_level.txt,sha256=hru_9ex9L9FgHhSvpwU8lhBmk5PUEMEI8dpWyCD1_eA,19
+translation_finder-0.3.dist-info/RECORD,,
