@@ -1,0 +1,11 @@
+{
+    "format": "v1",
+    "major": "0",
+    "minor": "5",
+    "patch": "6",
+    "pre_release": ["beta", "20181210"],
+    "build_info": ["8c2664a1c7"],
+    "version": "0.5.6-beta.20181210+8c2664a1c7",
+    "dockertag": "0.5.6-beta.20181210-8c2664a1c7",
+    "python": "0.5.6b20181210"
+}
