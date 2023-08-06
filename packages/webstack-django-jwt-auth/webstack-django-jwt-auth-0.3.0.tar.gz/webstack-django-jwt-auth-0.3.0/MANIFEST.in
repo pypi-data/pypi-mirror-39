@@ -1,0 +1,5 @@
+include README.md
+include LICENSE
+include MANIFEST.in
+recursive-include jwt_auth *.py
+recursive-include jwt_auth/locale/ *.mo
