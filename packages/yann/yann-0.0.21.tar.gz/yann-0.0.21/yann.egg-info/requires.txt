@@ -1,0 +1,12 @@
+numpy
+scipy
+scikit-learn
+torch>=0.4.0
+matplotlib
+torchvision
+
+[cli]
+click>=6.7
+
+[pretrainedmodels]
+pretrainedmodels
