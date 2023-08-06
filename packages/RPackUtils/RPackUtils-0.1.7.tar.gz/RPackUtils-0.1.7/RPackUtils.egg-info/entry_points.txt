@@ -1,0 +1,12 @@
+[console_scripts]
+rpackbioc = rpackutils.cli.cliBioc:rpacks_bioc
+rpackc = rpackutils.cli.cliClone:rpacks_clone
+rpackcc = rpackutils.cli.cliConfigCheck:rpacks_config_check
+rpackd = rpackutils.cli.cliDownload:rpacks_download
+rpackg = rpackutils.cli.cliDepsGraph:rpacks_deps_graph
+rpacki = rpackutils.cli.cliInstall:rpacks_install
+rpackm = rpackutils.cli.cliMirror:rpacks_mirror
+rpackmran = rpackutils.cli.cliMran:rpacks_mran
+rpackq = rpackutils.cli.cliQuery:rpacks_query
+rpackscan = rpackutils.cli.cliScan:rpacks_scan
+
