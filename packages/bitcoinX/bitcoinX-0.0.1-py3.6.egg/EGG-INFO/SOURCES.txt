@@ -1,0 +1,10 @@
+README.rst
+setup.py
+bitcoinX.egg-info/PKG-INFO
+bitcoinX.egg-info/SOURCES.txt
+bitcoinX.egg-info/dependency_links.txt
+bitcoinX.egg-info/requires.txt
+bitcoinX.egg-info/top_level.txt
+bitcoinx/__init__.py
+bitcoinx/hashes.py
+bitcoinx/packing.py
