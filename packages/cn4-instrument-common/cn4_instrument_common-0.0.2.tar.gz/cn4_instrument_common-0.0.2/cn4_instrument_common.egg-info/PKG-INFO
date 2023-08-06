@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: cn4-instrument-common
+Version: 0.0.2
+Summary: Package with support functions and artifacts for measuring instrument     development
+Home-page: UNKNOWN
+Author: cinderella
+License: UNKNOWN
+Description: # Cn4InstrumentCommon
+        
+        Common functions and types for other instrument tools and applications.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
