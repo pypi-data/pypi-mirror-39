@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: streamrandom
+Version: 0.0.1
+Summary: Sometimes you want randomness that is I{unpredictable}, but still
+Home-page: https://github.com/glyph/streamrandom
+License: UNKNOWN
+Author: Glyph
+Author-email: glyph@twistedmatrix.com
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: cryptography
+Requires-Dist: publication
+Provides-Extra: .none
+
+# StreamRandom
+
+Produce a Python random number generator from a stream of bits, and implement a
+stream cipher that is a useful stream of bits for said purpose.
+
