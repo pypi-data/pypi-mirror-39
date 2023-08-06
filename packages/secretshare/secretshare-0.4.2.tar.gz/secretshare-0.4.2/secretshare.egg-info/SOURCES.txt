@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+README.rst
+setup.cfg
+setup.py
+secretshare/__init__.py
+secretshare/calc.py
+secretshare/secretshare.py
+secretshare.egg-info/PKG-INFO
+secretshare.egg-info/SOURCES.txt
+secretshare.egg-info/dependency_links.txt
+secretshare.egg-info/not-zip-safe
+secretshare.egg-info/requires.txt
+secretshare.egg-info/top_level.txt
