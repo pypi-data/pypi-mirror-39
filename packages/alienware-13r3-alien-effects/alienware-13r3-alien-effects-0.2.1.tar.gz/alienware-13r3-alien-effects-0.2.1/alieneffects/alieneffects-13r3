@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+
+from alieneffects.theme import AlienwareTheme
+import logging
+import argparse
+
+from alieneffects.tui import AlienwareTUI
+from os import path
+
+home = path.expanduser('~')
+logfile = path.join(home, '.alieneffects-13r3.log')
+logging.basicConfig(filename=logfile, level=logging.ERROR, format='%(asctime)s %(levelname)-8s %(message)s',
+                    datefmt='%dth %H:%M:%S:')
+
+# argument parsing
+parser = argparse.ArgumentParser()
+parser.add_argument('--THEME_FILE')
+args = parser.parse_args()
+
+if args.THEME_FILE:
+    theme = AlienwareTheme(args.THEME_FILE)
+    theme.apply()
+else:
+    # default behaviour is to open TUI
+    AlienwareTUI().run()
