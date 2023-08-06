@@ -1,0 +1,16 @@
+.2-n_solitaire.conf
+README.md
+setup.py
+solitaire.py
+twn_solitaire.egg-info/PKG-INFO
+twn_solitaire.egg-info/SOURCES.txt
+twn_solitaire.egg-info/dependency_links.txt
+twn_solitaire.egg-info/requires.txt
+twn_solitaire.egg-info/top_level.txt
+twnsol/__init__.py
+twnsol/config.py
+twnsol/constants.py
+twnsol/game.py
+twnsol/assets/Jellee-Roman/Jellee-Roman.otf
+twnsol/assets/Jellee-Roman/OFL-FAQ.txt
+twnsol/assets/Jellee-Roman/OFL.txt
