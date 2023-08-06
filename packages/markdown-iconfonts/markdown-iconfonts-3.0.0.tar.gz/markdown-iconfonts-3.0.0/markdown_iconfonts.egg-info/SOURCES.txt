@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+iconfonts.py
+setup.cfg
+setup.py
+markdown_iconfonts.egg-info/PKG-INFO
+markdown_iconfonts.egg-info/SOURCES.txt
+markdown_iconfonts.egg-info/dependency_links.txt
+markdown_iconfonts.egg-info/requires.txt
+markdown_iconfonts.egg-info/top_level.txt
+tests/__init__.py
+tests/test_iconfonts.py
