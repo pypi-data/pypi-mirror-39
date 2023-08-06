@@ -1,0 +1,50 @@
+Metadata-Version: 1.1
+Name: streamsx.database
+Version: 0.1.0
+Summary: IBM Streams Database integration
+Home-page: https://github.com/IBMStreams/streamsx.database
+Author: IBM Streams @ github.com
+Author-email: hegermar@de.ibm.com
+License: Apache License - Version 2.0
+Description: Overview
+        ========
+        
+        Provides functions to run SQL statements to a IBM Db2 Warehouse on Cloud.
+        This package exposes the `com.ibm.streamsx.jdbc` toolkit as Python methods for services on IBM Cloud.
+        
+        * `IBM Streaming Analytics <https://www.ibm.com/cloud/streaming-analytics>`_
+        * `IBM Db2 Warehouse <https://www.ibm.com/cloud/db2-warehouse-on-cloud>`_
+        
+        
+        Sample
+        ======
+        
+        A simple hello world example of a Streams application that creates a table, inserts a row and deletes the table::
+        
+            from streamsx.topology.topology import *
+            from streamsx.topology.schema import CommonSchema, StreamSchema
+            from streamsx.topology.context import submit
+            import streamsx.database as db
+        
+            topo = Topology()
+            sql_create = 'CREATE TABLE RUN_SAMPLE (A CHAR(10), B CHAR(10))'
+            sql_insert = 'INSERT INTO RUN_SAMPLE (A, B) VALUES (\'hello\', \'world\')'
+            sql_drop = 'DROP TABLE RUN_SAMPLE'
+            s = topo.source([sql_create, sql_insert, sql_drop]).as_string()
+            res_sql = db.run_statement(s, credentials)
+            res_sql.print()
+            submit('STREAMING_ANALYTICS_SERVICE', topo)
+        
+        
+        Documentation
+        =============
+        
+        * `streamsx.database package documentation <http://streamsxdatabase.readthedocs.io/en/pypackage/>`_
+        
+Keywords: streams,ibmstreams,streaming,analytics,streaming-analytics,db2,database
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
