@@ -1,0 +1,13 @@
+Metadata-Version: 1.0
+Name: marketo-tronok
+Version: 0.2.4
+Summary: marketo-python is a python query client that wraps the Marketo SOAP API.
+Home-page: https://github.com/tronok/marketo-python
+Author: Dmitry Kalashnikov
+Author-email: kalashnikovdm@gmail.com
+License: MIT License
+Description: 
+        marketo-python is a python query client that wraps the Marketo SOAP API.
+        For sending data to Marketo, check out https://segment.io.
+        
+Platform: UNKNOWN
