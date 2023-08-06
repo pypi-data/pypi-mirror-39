@@ -1,0 +1,22 @@
+
+[build]
+sphinx
+pkginfo
+setuptools-git
+wheel
+twine
+
+[test]
+pytest>=3.6
+sybil
+coverage
+coveralls
+zope.component
+pytest-django
+
+[test:python_version < "3"]
+mock
+django<2
+
+[test:python_version >= "3"]
+django
