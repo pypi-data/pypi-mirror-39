@@ -1,0 +1,34 @@
+CHANGES
+=======
+
+0.1.0
+-----
+
+* fix tox python3 overrides
+* add python 3.6 unit test job
+* import zuul job settings from project-config
+* Update openstackclient-check-plugins to honor constraints
+* Switch to stestr
+* Trivial: Update pypi url to new url
+* Add python-qinlingclient to zuul job
+* Zuul: Remove project name
+* Update homepage url
+* Fix check plugins: zuul.projects is now a dict
+* Zuul: add file extension to playbook path
+* Always find the test python module in this repo
+* Add OSC plugin job
+* Updated from global requirements
+* Add python-octaviaclient
+* Updated from global requirements
+* Updated from global requirements
+* Explicitly depend on python-openstackclient
+* Updated from global requirements
+* Updated from global requirements
+* add new plugins to requirements.txt
+* Fix for Sphinx 1.5 and pbr 1.10
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Initial commit for the OSC metapackage repo
+* Added .gitreview
