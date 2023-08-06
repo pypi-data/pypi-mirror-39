@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: XiaoweiLib
+Version: 1.2.8
+Summary: Common codes used by Xiaowei
+Home-page: https://github.com/zhanxw/XiaoweiLib
+Author: Xiaowei Zhan
+Author-email: zhanxw@gmail.com
+License: UNKNOWN
+Description: Common Codes Used by Xiaowei
+        -------------------------------------
+        
+        Python library for Xiaowei's daily work.
+        
+        Example of `myopen`
+        
+            for ln in myopen('input.gz'):
+                print ln
+        
+        For details, please read source codes.
+        
+        Contact
+        -------
+        Xiaowei Zhan<zhanxw[at]gmail.com>
+        
+        
+Keywords: zhanxw,library,python,utility
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Testing
+Description-Content-Type: text/markdown
