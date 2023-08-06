@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: vyper-debug
+Version: 0.1.2b4
+Summary: vyper-debug: Easy to use Vyper debugger | vdb
+Home-page: https://github.com/ethereum/vyper-debug
+Author: Jacques Wagener
+Author-email: jacques+pip@dilectum.co.za
+License: MIT
+Description: vyper-debug
+        ===========
+        
+        |Join the chat at https://gitter.im/status-im/vyper-debug| |Build
+        Status| |PyPI version| |Python versions| |Docs build|
+        
+        Easy to use Vyper debugger \| vdb
+        
+        Read more in the `documentation on
+        ReadTheDocs <https://vyper-debug.readthedocs.io/>`__. `View the change
+        log <https://vyper-debug.readthedocs.io/en/latest/releases.html>`__.
+        
+        Quickstart
+        ----------
+        
+        .. code:: sh
+        
+            pip install vyper-debug
+        
+        Developer Setup
+        ---------------
+        
+        If you would like to hack on vyper-debug, please check out the `Ethereum
+        Development Tactical
+        Manual <https://github.com/pipermerriam/ethereum-dev-tactical-manual>`__
+        for information on how we do:
+        
+        -  Testing
+        -  Pull Requests
+        -  Code Style
+        -  Documentation
+        
+        .. |Join the chat at https://gitter.im/status-im/vyper-debug| image:: https://badges.gitter.im/status-im/vyper-debug.svg
+           :target: https://gitter.im/status-im/vyper-debug?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+        .. |Build Status| image:: https://circleci.com/gh/status-im/vyper-debug.svg?style=shield
+           :target: https://circleci.com/gh/status-im/vyper-debug
+        .. |PyPI version| image:: https://badge.fury.io/py/vyper-debug.svg
+           :target: https://badge.fury.io/py/vyper-debug
+        .. |Python versions| image:: https://img.shields.io/pypi/pyversions/vyper-debug.svg
+           :target: https://pypi.python.org/pypi/vyper-debug
+        .. |Docs build| image:: https://readthedocs.org/projects/vyper-debug/badge/?version=latest
+           :target: http://vyper-debug.readthedocs.io/en/latest/?badge=latest
+        
+Keywords: ethereum
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6, <4
+Provides-Extra: lint
+Provides-Extra: doc
+Provides-Extra: test
+Provides-Extra: dev
