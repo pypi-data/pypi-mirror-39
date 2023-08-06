@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <dependencies>
+      <dependency>profile-Products.AddRemoveWidget:default</dependency>
+      <dependency>profile-ftw.keywordwidget:default</dependency>
+  </dependencies>
+</metadata>

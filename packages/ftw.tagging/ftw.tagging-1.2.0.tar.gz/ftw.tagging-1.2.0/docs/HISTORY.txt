@@ -1,0 +1,92 @@
+Changelog
+=========
+
+
+1.2.0 (2018-12-10)
+------------------
+
+- Fix DecodeUnicodeError in the tag cloud portlet. [mbaechtold]
+
+- Convert index values to UTF8 byte strings. [mbaechtold]
+
+- Remove superfluous space after linked tag. [mbaechtold]
+
+- Drop support for Plone 4.2. [mbaechtold]
+
+- Add support for Dexterity. [mbaechtold]
+
+- Drop Plone 4.0 and 4.1 support.
+  [jone]
+
+
+1.1.1 (2014-09-23)
+------------------
+
+- Lowering tags for sorting.
+  [mathias.leimgruber]
+
+
+1.1.0 (2013-08-29)
+------------------
+
+- Add Spanish translations.
+  [spanish]
+
+
+1.0.3 (2013-04-17)
+------------------
+
+- Updates in tests, readme and buildout.
+  [jone]
+
+
+1.0.2 (2012-02-28)
+------------------
+
+- Fixed MANIFEST.in: Include README.rst, no longer exclude .mo files.
+  [Thomas Buchberger]
+
+
+1.0.1 (2012-02-27)
+------------------
+
+- Add english translations.
+  [jone]
+
+
+1.0 (2011-02-25)
+----------------
+
+- Made getTagRootTags() method more robust and more efficient.
+  [buchi]
+
+
+1.0b1
+-----
+
+- Fix portlet html structure
+  [mathias.leimgruber]
+
+
+1.0a3
+-----
+
+
+1.0a2
+-----
+
+- Fixed MANIFEST.in - again
+  [jone]
+
+
+1.0a1
+-----
+
+- Fixed MANIFEST.in
+  [jone]
+
+
+0.1
+---
+
+- Initial release
