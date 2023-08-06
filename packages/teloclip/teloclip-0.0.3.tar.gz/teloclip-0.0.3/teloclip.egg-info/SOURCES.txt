@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+teloclip/__init__.py
+teloclip/run_extract.py
+teloclip/run_self.py
+teloclip/wrappers.py
+teloclip.egg-info/PKG-INFO
+teloclip.egg-info/SOURCES.txt
+teloclip.egg-info/dependency_links.txt
+teloclip.egg-info/entry_points.txt
+teloclip.egg-info/not-zip-safe
+teloclip.egg-info/top_level.txt

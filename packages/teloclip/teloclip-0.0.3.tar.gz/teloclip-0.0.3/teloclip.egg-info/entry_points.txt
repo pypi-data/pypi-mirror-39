@@ -1,0 +1,4 @@
+[console_scripts]
+teloclip = teloclip.run_self:main
+teloclip-extract = teloclip.run_extract:main
+
