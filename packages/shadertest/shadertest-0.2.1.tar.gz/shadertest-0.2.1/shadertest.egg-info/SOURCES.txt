@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+shadertest/__init__.py
+shadertest/builder.py
+shadertest/graphics_context.py
+shadertest/shader_function.py
+shadertest/shader_parser.py
+shadertest/type_map.py
+shadertest.egg-info/PKG-INFO
+shadertest.egg-info/SOURCES.txt
+shadertest.egg-info/dependency_links.txt
+shadertest.egg-info/requires.txt
+shadertest.egg-info/top_level.txt
