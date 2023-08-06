@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: robotframework-zeep
+Version: 0.1.1
+Summary: Web service testing library for Robot Framework
+Home-page: https://github.com/knightdave/robotframework-zeep
+Author: Dawid Rycerz
+Author-email: kontakt@dawidrycerz.pl
+License: GPLv3+
+Description: Web service testing library for Robot Framework with modern SOAP client.
+Keywords: robotframework testing test automation soap client zeep suds
+Platform: any
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Testing
