@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: kubeyard
+Version: 0.2.0
+Summary: A utility to develop, test and deploy Kubernetes microservices.
+Home-page: https://github.com/socialwifi/kubeyard
+Author: Social WiFi
+Author-email: it@socialwifi.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6

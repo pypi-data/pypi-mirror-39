@@ -1,0 +1,45 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ KUBE_SERVICE_NAME }}-development
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  template:
+    metadata:
+      labels:
+        app: {{ KUBE_SERVICE_NAME }}-development
+    spec:
+      containers:
+      - name: {{ KUBE_SERVICE_NAME }}-development
+        image: "{{ DOCKER_REGISTRY_NAME }}/{{ DOCKER_IMAGE_NAME }}"
+        command: [bash, -c, 'exec ember serve --port {{ KUBE_SERVICE_PORT }} --live-reload-port {{ KUBE_LIVE_RELOAD_PORT }}']
+        ports:
+        - containerPort: {{ KUBE_SERVICE_PORT }}
+        - containerPort: {{ KUBE_LIVE_RELOAD_PORT }}
+        resources:
+          requests:
+            cpu: 10m
+        volumeMounts:
+        - name: dev-app-volume
+          mountPath: /ember-app/app
+        - name: dev-test-volume
+          mountPath: /ember-app/tests
+        - name: dev-config-volume
+          mountPath: /ember-app/config
+        - name: dev-mirage-volume
+          mountPath: /ember-app/mirage
+        - name: dev-package-json-volume
+          mountPath: /ember-app/package.json
+          subPath: package.json
+        - name: dev-yarn-lock-volume
+          mountPath: /ember-app/yarn.lock
+          subPath: yarn.lock
+        - name: dev-bower-json-volume
+          mountPath: /ember-app/bower.json
+          subPath: bower.json
+        - name: dev-ember-cli-build-js-volume
+          mountPath: /ember-app/ember-cli-build.js
+          subPath: ember-cli-build.js
+      imagePullSecrets:
+      - name: {{ DOCKER_REGISTRY_DOMAIN }}
