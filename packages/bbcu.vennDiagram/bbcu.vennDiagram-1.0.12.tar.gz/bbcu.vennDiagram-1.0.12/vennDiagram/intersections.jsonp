@@ -1,0 +1,6 @@
+var sets = [{"size": 438, "sets": [0], "label": "a"}, {"size": 437, "sets": [1], "label": "b"}, {"size": 348, "sets": [2], "label": "c"}, {"size": 378, "sets": [3], "label": "d"},
+ {"size": 348, "sets": [0, 2], "percent": "44.27", "label": "a c"}, {"size": 437, "sets": [0, 1], "percent": "49.94", "label": "a b"}, {"size": 378, "sets": [0, 3], "percent": "46.32", "label": "a d"}, 
+ {"size": 347, "sets": [1, 2], "percent": "44.20", "label": "b c"}, {"size": 288, "sets": [2, 3], "percent": "39.67", "label": "c d"}, {"size": 377, "sets": [1, 3], "percent": "46.26", "label": "b d"}, 
+ {"size": 347, "sets": [0, 1, 2], "percent": "28.37", "label": "a b c"}, {"size": 288, "sets": [0, 2, 3], "percent": "24.74", "label": "a c d"}, 
+ {"size": 377, "sets": [0, 1, 3], "percent": "30.09", "label": "a b d"}, {"size": 287, "sets": [1, 2, 3], "percent": "24.68", "label": "b c d"}, 
+ {"size": 287, "sets": [0, 1, 2, 3], "percent": "17.93", "label": "a b c d"}]
