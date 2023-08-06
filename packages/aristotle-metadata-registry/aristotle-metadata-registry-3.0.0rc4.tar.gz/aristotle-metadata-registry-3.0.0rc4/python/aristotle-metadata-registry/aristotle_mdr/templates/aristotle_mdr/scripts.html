@@ -1,0 +1,26 @@
+{% load bootstrap3 %}
+{% load static %}
+{% load notifications_tags %}
+<!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+<![endif]-->
+
+{% comment %}
+{{ form.media }}
+{{ formset.media }}
+{% endcomment %}
+<script>
+  {# This needs to be set for ckeditor4 to work #}
+  var CKEDITOR_BASEPATH="{% get_static_prefix %}ckeditor/ckeditor/"
+</script>
+
+
+{% block extra_alwayson_scripts %}
+{% endblock %}
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'aristotle_mdr/aristotle.ie8.css' %}" />
+<![endif]-->

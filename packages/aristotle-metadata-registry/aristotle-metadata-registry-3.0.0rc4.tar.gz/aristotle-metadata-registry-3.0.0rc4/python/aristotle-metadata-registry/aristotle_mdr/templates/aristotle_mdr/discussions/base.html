@@ -1,0 +1,31 @@
+{% extends "aristotle_mdr/user/userHome.html" %}
+
+{% load static from staticfiles %}
+{% load render_bundle from webpack_loader %}
+
+{% block title %}All Discussions{% endblock %}
+
+{% block webpack_css_bundle %}
+  {% render_bundle 'discussions' 'css' %}
+{% endblock %}
+
+{% block webpack_bundle %}
+  {% render_bundle 'discussions' 'js' %}
+{% endblock %}
+
+{% block sidebar %}
+    {% include "aristotle_mdr/user/userSideBar.html" with activeTab='discussions' %}
+{% endblock %}
+
+{% block page %}
+    <h1>{% block discussions_header %}All Discussions{% endblock %}</h1>
+
+    <ol class="breadcrumb">
+        <li><a href="{% url 'aristotle:discussions' %}">All Discussions</a></li>
+        {% block breadcrumbs %}
+        {% endblock %}
+    </ol>
+
+    {% block discussion_content %}
+    {% endblock %}
+{% endblock %}

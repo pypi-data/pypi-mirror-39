@@ -1,0 +1,48 @@
+Metadata-Version: 1.1
+Name: django-aristotle-mdr-api
+Version: 0.1
+Summary: UNKNOWN
+Home-page: https://github.com/aristotle-mdr/aristotle-mdr-api
+Author: Samuel Spencer
+Author-email: sam@sqbl.org
+License: BSD Licence
+Description: Aristotle-MDR API
+        =================
+        
+        .. image:: https://travis-ci.org/aristotle-mdr/aristotle-mdr-api.svg?branch=master
+            :target: https://travis-ci.org/aristotle-mdr/aristotle-mdr-api
+        
+        .. image:: https://coveralls.io/repos/aristotle-mdr/aristotle-mdr-api/badge.svg
+            :target: https://coveralls.io/r/aristotle-mdr/aristotle-mdr-api
+        
+        The Aristotle-MDR API provides a self-documenting JSON API for retrieving content
+        from thean Aristotle-MeteData-Registry
+        
+        Quick start
+        -----------
+        
+        1. Add `aristotle_mdr_api` and `rest_framework`  to your INSTALLED_APPS setting::
+        
+                INSTALLED_APPS = (
+                    ...
+                    'aristotle_mdr',
+                    'aristotle_mdr_api',
+                    'rest_framework',
+                    ...
+                )
+        
+        #. Include the API URL definitions in your Django URLconf file ::
+        
+                url(r'^api/', include('aristotle_mdr_api.urls',app_name="aristotle_mdr_api",namespace="aristotle"))),
+        
+        #. Run ``python manage.py migrate`` to update the database to include the models for the API.
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content

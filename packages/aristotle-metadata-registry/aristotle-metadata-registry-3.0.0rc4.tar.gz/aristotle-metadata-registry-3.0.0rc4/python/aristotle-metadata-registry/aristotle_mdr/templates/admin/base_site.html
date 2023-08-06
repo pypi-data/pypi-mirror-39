@@ -1,0 +1,25 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+{% load staticfiles bootstrap3 %}
+{% load notifications_tags webpack_loader %}
+
+{% block title %}{{ title }} - {{ config.SITE_NAME }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">
+    {{ site_header|default:_('Django administration') }} - {{ config.SITE_NAME }}</a></h1>
+{% endblock %}
+
+{% block extrahead %}
+    {% render_bundle 'common' 'js' %}
+    {% render_bundle 'admin' 'js' %}
+    {% include 'autocomplete_light/static.html' %}
+{% endblock %}
+
+
+{% block userlinks %}
+    <!-- Documentation -->
+    {% url 'django-admindocs-docroot' as docsroot %}
+    <a href="/account" title={% trans 'Return to Dashboard' %}>{% trans 'Return to Dashboard' %}</a>
+        <a href="{{ docsroot }}" title={% trans 'Browse live documentation' %}>{% trans 'Documentation' %}</a>
+{% endblock %}

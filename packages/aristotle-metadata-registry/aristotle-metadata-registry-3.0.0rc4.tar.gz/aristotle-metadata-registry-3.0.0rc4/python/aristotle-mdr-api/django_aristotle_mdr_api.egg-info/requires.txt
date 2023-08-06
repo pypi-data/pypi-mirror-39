@@ -1,0 +1,4 @@
+djangorestframework>=3.8
+django-rest-swagger
+django_filter
+django-jsonforms
