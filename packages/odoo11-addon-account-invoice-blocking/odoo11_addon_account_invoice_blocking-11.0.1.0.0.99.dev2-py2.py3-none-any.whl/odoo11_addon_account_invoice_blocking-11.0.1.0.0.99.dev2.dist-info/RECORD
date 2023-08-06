@@ -1,0 +1,15 @@
+odoo/addons/account_invoice_blocking/README.rst,sha256=lrWVWbti7slbriCZScCjXETDjFjBvVFE5JvavoXj87Y,1847
+odoo/addons/account_invoice_blocking/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+odoo/addons/account_invoice_blocking/__manifest__.py,sha256=pic5tanxm0bc79hfSWCIGbJWNqj_iy9XVbKlufDFHso,498
+odoo/addons/account_invoice_blocking/i18n/account_invoice_blocking.pot,sha256=a_5xQxDj-JrLkNKWeVEKTtxaCFKgttFLDsumJV7aNsE,986
+odoo/addons/account_invoice_blocking/i18n/nl.po,sha256=XMhyGOnYChAudcpoZF0xhUEndmvt2iFuLhZfIzZ0XeU,1053
+odoo/addons/account_invoice_blocking/models/__init__.py,sha256=bQkNRiIHrpHzF-638gjXJb-rIrcikJixGxuUUPJk3ZU,30
+odoo/addons/account_invoice_blocking/models/account_invoice.py,sha256=Xr8rB0IBamVaRzeWj0zU4N6H7q4a5qHa5M9JvHDn2uo,2891
+odoo/addons/account_invoice_blocking/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/account_invoice_blocking/tests/__init__.py,sha256=FUI7VSGDiQHJLT9Rf3J4C5FrkeYSGt1G21mOL0WMHZ8,44
+odoo/addons/account_invoice_blocking/tests/test_account_invoice_blocking.py,sha256=T5-e9sy0tvGSvuaJPJlRdRQlKaJUHh6nLsz-8HzbMfc,3254
+odoo/addons/account_invoice_blocking/views/account_invoice.xml,sha256=KB27x90DmlTlABuIxtvQf5Y1UvSEnYqwqQBN9yB7aWY,676
+odoo11_addon_account_invoice_blocking-11.0.1.0.0.99.dev2.dist-info/METADATA,sha256=OZh8CmOH7F5U7yM1JjvnrJ4Tcn4kfgh7mVFqsOKnRBs,2438
+odoo11_addon_account_invoice_blocking-11.0.1.0.0.99.dev2.dist-info/RECORD,,
+odoo11_addon_account_invoice_blocking-11.0.1.0.0.99.dev2.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+odoo11_addon_account_invoice_blocking-11.0.1.0.0.99.dev2.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
