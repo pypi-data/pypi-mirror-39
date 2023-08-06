@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        dodoo-tester=src.tester:main
+    
