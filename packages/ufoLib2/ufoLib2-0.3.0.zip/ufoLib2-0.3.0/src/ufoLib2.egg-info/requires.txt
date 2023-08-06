@@ -1,0 +1,8 @@
+fonttools[lxml,ufo]>=3.34.0
+attrs>=18.2.0
+
+[:python_version < "3.4"]
+enum34
+
+[:python_version < "3.5"]
+typing
