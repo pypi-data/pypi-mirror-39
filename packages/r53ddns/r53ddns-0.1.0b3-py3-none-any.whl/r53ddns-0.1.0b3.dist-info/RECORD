@@ -1,0 +1,14 @@
+dnsupdater/__init__.py,sha256=apgBuK0GjdYwTG1hQgeAgDj11F0E_o6F2zgPpFLO-ko,633
+dnsupdater/__main__.py,sha256=NV8U-kH4Qfnjaohw6vjUH67Uz8oKSBGED3TNygtotAE,127
+dnsupdater/dnsupdater.py,sha256=8PwAPz_jbdnBDa7HuynY2DQvfsAVEkzX_CclFFpmYvo,7624
+dnsupdater/sns_notify.py,sha256=AkARZx8aosj1h0HyGuW_sx7DavwX63aqPjs4RFfibQk,690
+r53ddns/__init__.py,sha256=zKyEuro-QeEQB7IRGC-1o8Mz4cXpVDPAsBeoO3PLJ7Q,299
+r53ddns/__main__.py,sha256=NV8U-kH4Qfnjaohw6vjUH67Uz8oKSBGED3TNygtotAE,127
+r53ddns/r53ddns.py,sha256=0PzFwz_I_IPoP2xbY6de3_i_-8_H59okPMOPjSLts0Y,7666
+r53ddns/sns_notify.py,sha256=AkARZx8aosj1h0HyGuW_sx7DavwX63aqPjs4RFfibQk,690
+r53ddns-0.1.0b3.dist-info/LICENSE.txt,sha256=Mypb5AgVLfAuMj-mR4YNK16LCvbLr7sbRiD9C05q12Q,1072
+r53ddns-0.1.0b3.dist-info/METADATA,sha256=kgJ-cqhoqnsruAdlQB3UQtB0UKbRdClOgCx7Rv_77-g,3212
+r53ddns-0.1.0b3.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+r53ddns-0.1.0b3.dist-info/entry_points.txt,sha256=ekuUl4Y66fytkdRepRCpJRXy7gU3voKJJQD8PSakDTA,49
+r53ddns-0.1.0b3.dist-info/top_level.txt,sha256=3hIIVShH3yky_Njn4cKC_CjUSB03BB2CNXyTjwOCB04,8
+r53ddns-0.1.0b3.dist-info/RECORD,,
