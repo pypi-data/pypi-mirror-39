@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: loap
+Version: 0.2.3
+Summary: LogOptionsArgumentParser: add --debug and --quiet options with std logging module.
+Home-page: https://github.com/nejucomo/loap
+Author: Nathan Wilcox
+Author-email: nejucomo@gmail.com
+License: GPLv3
+Platform: UNKNOWN
+Requires-Dist: mock
+
+UNKNOWN
+
+
