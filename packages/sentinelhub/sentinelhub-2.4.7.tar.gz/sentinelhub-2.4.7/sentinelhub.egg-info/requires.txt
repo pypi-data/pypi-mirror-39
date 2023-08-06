@@ -1,0 +1,24 @@
+wheel
+requests
+click
+numpy
+tifffile
+pillow
+python-dateutil
+utm
+shapely
+boto3
+botocore
+
+[:python_version < "3.7"]
+pyproj
+
+[:python_version >= "3.7"]
+cython
+
+[DEV]
+pytest>=3.0.0
+pytest-cov
+pylint
+twine
+radon
