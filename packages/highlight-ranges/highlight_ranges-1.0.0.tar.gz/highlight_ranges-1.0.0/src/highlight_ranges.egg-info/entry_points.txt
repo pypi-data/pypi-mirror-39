@@ -1,0 +1,6 @@
+[pygments.filters]
+highlight-ranges = highlight_ranges.filters:SporRangeFilter
+
+[pygments.styles]
+highlight-ranges-black-on-red = highlight_ranges.styles:BlackOnRed
+
