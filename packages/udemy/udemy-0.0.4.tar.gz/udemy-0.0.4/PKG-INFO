@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: udemy
+Version: 0.0.4
+Summary: Python library for interacting with the udemy API 2.0!
+Home-page: https://github.com/r3ap3rpy/udemy
+Author: Szabó Dániel Ernő
+Author-email: r3ap3rpy@gmail.com
+License: MIT
+Description: Python library for interacting with the udemy API 2.0!
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
