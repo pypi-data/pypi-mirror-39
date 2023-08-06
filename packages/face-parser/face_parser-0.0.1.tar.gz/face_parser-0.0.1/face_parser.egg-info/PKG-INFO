@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: face-parser
+Version: 0.0.1
+Summary: A small package to turn dlib's facial landmarks into more interesting values
+Home-page: https://github.com/balbatross/dlib-face-parser
+Author: Ross Leitch
+Author-email: ross@end-game.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
