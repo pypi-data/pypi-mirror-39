@@ -1,0 +1,3 @@
+[console_scripts]
+filetransfer = filetransfer.__main__:main
+

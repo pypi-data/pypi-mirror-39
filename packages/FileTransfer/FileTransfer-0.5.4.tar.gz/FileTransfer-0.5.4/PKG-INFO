@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: FileTransfer
+Version: 0.5.4
+Summary: Application and library for file transfer.
+Home-page: https://andreas19.github.io/FileTransfer/
+Author: Andreas19
+Author-email: andreas19@posteo.eu
+License: BSD-3-Clause
+Project-URL: Source code, https://github.com/andreas19/FileTransfer/
+Description: # FileTransfer
+        
+        Application and library for file transfer.
+        
+        For more information visit the [documentation](https://andreas19.github.io/FileTransfer/overview.html).
+        
+        History
+        -------
+        
+        **2018-12-16 (0.5.4)**
+        - Improve usage message and documentation
+        
+        
+        **2018-09-24 (0.5.3)**
+        
+        - Some minor corrections
+        - Improve API
+        
+        
+        **2018-09-20 (0.5.1)**
+        
+        - Bugfix: When using the API in a script only one SFTP transfer succeeded and the others failed.
+        
+        
+        **2018-09-04 (0.5.0)**
+        
+        - First public release.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
