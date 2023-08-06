@@ -1,0 +1,17 @@
+AUTHORS.rst
+CONTRIBUTING.rst
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+django_endesive/__init__.py
+django_endesive/apps.py
+django_endesive/pdf.py
+django_endesive.egg-info/PKG-INFO
+django_endesive.egg-info/SOURCES.txt
+django_endesive.egg-info/dependency_links.txt
+django_endesive.egg-info/not-zip-safe
+django_endesive.egg-info/requires.txt
+django_endesive.egg-info/top_level.txt
