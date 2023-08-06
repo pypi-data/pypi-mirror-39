@@ -1,0 +1,4 @@
+[console_scripts]
+oml = openml_cli.cli.__main__:main
+openml = openml_cli.cli.__main__:main
+
