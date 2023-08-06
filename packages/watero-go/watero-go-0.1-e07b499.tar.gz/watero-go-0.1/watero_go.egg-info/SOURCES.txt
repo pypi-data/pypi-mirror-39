@@ -1,0 +1,15 @@
+README.md
+setup.py
+utils/__init__.py
+utils/error.py
+utils/log.py
+utils/mac_addr.py
+watero_go/__init__.py
+watero_go/agent_client.py
+watero_go/agent_control_service.py
+watero_go/agent_data_service.py
+watero_go.egg-info/PKG-INFO
+watero_go.egg-info/SOURCES.txt
+watero_go.egg-info/dependency_links.txt
+watero_go.egg-info/requires.txt
+watero_go.egg-info/top_level.txt
