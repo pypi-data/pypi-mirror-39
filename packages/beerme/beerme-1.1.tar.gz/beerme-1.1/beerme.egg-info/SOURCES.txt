@@ -1,0 +1,11 @@
+README.md
+setup.py
+beerme/__init__.py
+beerme/beerme.py
+beerme.egg-info/PKG-INFO
+beerme.egg-info/SOURCES.txt
+beerme.egg-info/dependency_links.txt
+beerme.egg-info/entry_points.txt
+beerme.egg-info/not-zip-safe
+beerme.egg-info/requires.txt
+beerme.egg-info/top_level.txt
