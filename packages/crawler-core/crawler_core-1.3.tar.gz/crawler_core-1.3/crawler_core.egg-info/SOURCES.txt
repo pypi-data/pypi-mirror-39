@@ -1,0 +1,16 @@
+setup.py
+core/__init__.py
+core/database.py
+core/proxies.py
+core/request.py
+core/settings.py
+core/thread_pool.py
+core/tor_network.py
+core/torrc.py
+core/user_agent.py
+crawler_core.egg-info/PKG-INFO
+crawler_core.egg-info/SOURCES.txt
+crawler_core.egg-info/dependency_links.txt
+crawler_core.egg-info/not-zip-safe
+crawler_core.egg-info/requires.txt
+crawler_core.egg-info/top_level.txt
