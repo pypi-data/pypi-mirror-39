@@ -1,0 +1,4 @@
+[console_scripts]
+pru = prudence:main
+prudence = prudence:main
+
