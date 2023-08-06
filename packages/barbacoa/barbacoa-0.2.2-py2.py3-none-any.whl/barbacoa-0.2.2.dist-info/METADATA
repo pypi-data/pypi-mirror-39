@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: barbacoa
+Version: 0.2.2
+Summary: Asynchronous task manager using asyncio
+Home-page: https://github.com/SADevs/barbacoa
+License: UNKNOWN
+Author: Daniel Wallace
+Author-email: daniel@gtmanfred.com
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Clustering
+Classifier: Topic :: System :: Distributed Computing
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: setuptools_scm; extra == "dev"
+Provides-Extra: .none
+Provides-Extra: dev
+Provides-Extra: test

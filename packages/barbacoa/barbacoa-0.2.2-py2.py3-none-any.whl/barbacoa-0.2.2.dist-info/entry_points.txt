@@ -1,0 +1,6 @@
+[barbacoa.loader]
+backends=barbacoa.backends
+queues=barbacoa.queues
+storage=barbacoa.storage
+tasks=barbacoa.tasks
+
