@@ -1,0 +1,6 @@
+aiohttp
+cssselect
+lxml
+
+[uvloop]
+uvloop
