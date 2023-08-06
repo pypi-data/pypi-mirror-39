@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: articlemetaapi
+Version: 1.26.5
+Summary: SciELO ArticleMeta SDK for Python
+Home-page: http://github.com/scieloorg/articlemetaapi
+Author: SciELO
+Author-email: scielo-dev@googlegroups.com
+Maintainer: Gustavo Fonseca
+Maintainer-email: fabio.batalha@scielo.org
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
