@@ -1,0 +1,13 @@
+MANIFEST.in
+README.MD
+README.md
+setup.py
+mass_replace/__init__.py
+mass_replace/__version__.py
+mass_replace/mass_replace.py
+mass_replace.egg-info/PKG-INFO
+mass_replace.egg-info/SOURCES.txt
+mass_replace.egg-info/dependency_links.txt
+mass_replace.egg-info/entry_points.txt
+mass_replace.egg-info/requires.txt
+mass_replace.egg-info/top_level.txt
