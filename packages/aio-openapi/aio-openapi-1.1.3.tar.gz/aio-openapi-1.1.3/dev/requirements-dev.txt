@@ -1,0 +1,12 @@
+# devs
+flake8
+coverage
+mypy
+pytest
+pytest-cov
+pytest-aiohttp
+pytest-mock
+twine
+agile-toolkit
+asynctest
+raven-aiohttp
