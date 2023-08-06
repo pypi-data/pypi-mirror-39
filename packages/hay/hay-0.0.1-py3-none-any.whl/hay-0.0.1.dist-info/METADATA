@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: hay
+Version: 0.0.1
+Summary: 基于pyppeteer的chromenium操控库
+Home-page: https://github.com/oldlwhite/hay
+Author: 白旭东,储国庆
+Author-email: 2216403312@qq.com
+License: UNKNOWN
+Requires-Dist: pyppeteer
+
+<h1>这是一个操控chromenium的库</h1>
+
+
