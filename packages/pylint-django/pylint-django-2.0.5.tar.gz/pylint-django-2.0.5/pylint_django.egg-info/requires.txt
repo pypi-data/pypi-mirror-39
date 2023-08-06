@@ -1,0 +1,14 @@
+pylint-plugin-utils>=0.4
+pylint>=2.0
+
+[for_tests]
+coverage
+djangorestframework
+django-model-utils
+django-tables2
+factory-boy
+psycopg2
+pytest
+
+[with_django]
+Django
