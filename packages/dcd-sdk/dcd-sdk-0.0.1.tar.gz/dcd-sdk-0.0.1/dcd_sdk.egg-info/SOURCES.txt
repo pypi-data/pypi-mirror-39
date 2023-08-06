@@ -1,0 +1,15 @@
+README.md
+setup.py
+dcd/__init__.py
+dcd/entities/__init__.py
+dcd/entities/person.py
+dcd/entities/property.py
+dcd/entities/property_type.py
+dcd/entities/thing.py
+dcd/examples/__init__.py
+dcd/examples/notebook_example.py
+dcd/examples/thing_example.py
+dcd_sdk.egg-info/PKG-INFO
+dcd_sdk.egg-info/SOURCES.txt
+dcd_sdk.egg-info/dependency_links.txt
+dcd_sdk.egg-info/top_level.txt
