@@ -1,0 +1,213 @@
+operationId: match_trials
+parameters:
+- collectionFormat: multi
+  description: Alterations to matches. Use 'ANY' to matches on any alteration.
+  in: query
+  items:
+    type: string
+  name: alterations
+  type: array
+- collectionFormat: multi
+  description: g. notation of alterations to matches.
+  in: query
+  items:
+    type: string
+  name: hgvs_g
+  type: array
+- collectionFormat: multi
+  description: Diseases to matches. Use 'ANY' to matches on any disease.
+  in: query
+  items:
+    type: string
+  name: diseases
+  required: true
+  type: array
+- collectionFormat: multi
+  description: Fields to do facet counting.
+  in: query
+  items:
+    type: string
+  name: facets
+  type: array
+- collectionFormat: multi
+  description: Genes in SNV Panel. Leave blank to ignore panel.
+  in: query
+  items:
+    type: string
+  name: snv_panel
+  type: array
+- description: Name of concept list that contains SNV panel genes
+  in: query
+  name: snv_panel_name
+  required: false
+  type: string
+- collectionFormat: multi
+  description: Pipe-separated mapping of alteration to gene variant modifier.
+  in: query
+  items:
+    type: string
+  name: gene_variant_modifiers
+  type: array
+- collectionFormat: multi
+  description: List of benign alterations to filter trials. benign alterations are not expanded with their relevant alterations.
+  in: query
+  items:
+    type: string
+  name: benign_alterations
+  type: array
+- collectionFormat: multi
+  description: List of manually added trials to filter trials. manually added trials are returned in the results even if they don''t meet the matches or filter criteria.
+  in: query
+  items:
+    type: string
+  name: manually_added_trials
+  type: array
+- collectionFormat: multi
+  description: List of selected trials to filter trials. selected trials are displayed above the non-selected ones.
+  in: query
+  items:
+    type: string
+  name: selected_trials
+  type: array
+- collectionFormat: multi
+  description: List of institutional trial institution names to filter trials. institutions whose trials should be displayed above the non-institutional ones.
+  in: query
+  items:
+    type: string
+  name: institutional_trials_list
+  type: array
+- description: Value of blacklist name to filter trialsblacklisted trials are displayed after non-blacklisted ones.'
+  in: query
+  name: blacklist_name
+  type: string
+- description: Enter true or 1 to filter out trials that are not in the institutional trials list
+  in: query
+  name: institutional_trials_only
+  enum: [true, false, ]
+  type: boolean
+  default: ""
+- description: Enter true or 1 to include descendant diseases in the pre-matches disease
+    expansion step
+  in: query
+  name: include_descendant_diseases
+  enum: [true, false, ]
+  type: boolean
+- description: Return all trials relevant to the disease
+  format: boolean
+  in: query
+  name: skip_alteration_match
+  enum: [true, false, ]
+  type: boolean
+- description: Zip code is used for calculating distance from the trial locations
+  in: query
+  name: zip
+  type: string
+- collectionFormat: multi
+  description: List of matched genes to filter trials
+  in: query
+  items:
+    type: string
+  name: matched_genes
+  type: array
+- description: Perform matches at gene level instead of alteration
+  in: query
+  name: gene_only_match
+  enum: [true, false, ]
+  type: boolean
+- description: Perform matches without the exclusion criteria
+  in: query
+  name: inclusion_only_match
+  enum: [true, false, ]
+  type: boolean
+- description: Value of gender to filter trials (possible values are Male or Female)
+  in: query
+  enum: [Female, Male, ]
+  name: gender
+  type: string
+- description: Value of date of birth to filter trials
+  in: query
+  name: date_of_birth
+  type: string
+- description: Return only trials within this distance in miles from the zip code entered. Empty or 0 to ignore.
+  format: int32
+  in: query
+  name: distance_miles
+  type: integer
+- description: Enter a trial ID value to get the details for that trial
+  in: query
+  name: nct_id
+  type: string
+- collectionFormat: multi
+  description: List of genes to filter trials
+  in: query
+  items:
+    type: string
+  name: genes
+  type: array
+- collectionFormat: multi
+  description: List of disease conditions to filter trials
+  in: query
+  items:
+    type: string
+  name: conditions
+  type: array
+- collectionFormat: multi
+  description: List of phases to filter trials
+  in: query
+  items:
+    type: string
+  name: phase
+  type: array
+- collectionFormat: multi
+  description: List of recruiting statuses to filter trials
+  in: query
+  items:
+    type: string
+  name: recruiting_status
+  type: array
+- collectionFormat: multi
+  description: List of drug categories to filter trials
+  in: query
+  items:
+    type: string
+  name: drug_categories
+  type: array
+- collectionFormat: multi
+  description: List of interventions to filter trials
+  in: query
+  items:
+    type: string
+  name: interventions
+  type: array
+- collectionFormat: multi
+  description: List of countries to filter trials
+  in: query
+  items:
+    type: string
+  name: countries
+  type: array
+- collectionFormat: multi
+  description: List of states to filter trials
+  in: query
+  items:
+    type: string
+  name: states
+  type: array
+- collectionFormat: multi
+  description: List of data_sets to filter trials
+  in: query
+  items:
+    type: string
+  name: data_set
+  type: array
+responses:
+  '200':
+    description: OK
+    schema:
+      $ref: '#/definitions/TrialsDocumentList'
+  default:
+    description: Error
+    schema:
+      $ref: '#/definitions/Error'
+tags:
+- trials
