@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: tracebackturbo
+Version: 0.3
+Summary: Patched version of traceback, also dumps local and global scope vars.
+Home-page: https://github.com/cxcv/python-tracebackturbo
+Author: Benjamin Schweizer
+Author-email: cxcv@cxcv.de
+License: PSF
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
