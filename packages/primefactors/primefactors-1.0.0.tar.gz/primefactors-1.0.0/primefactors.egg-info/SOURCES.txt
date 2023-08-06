@@ -1,0 +1,10 @@
+README.md
+setup.py
+primefactors/__init__.py
+primefactors/__main__.py
+primefactors/formatters.py
+primefactors.egg-info/PKG-INFO
+primefactors.egg-info/SOURCES.txt
+primefactors.egg-info/dependency_links.txt
+primefactors.egg-info/top_level.txt
+test/test_factorize.py
