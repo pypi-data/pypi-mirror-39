@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: logagg-collector
+Version: 0.0.1
+Summary: logs aggregation framework
+Home-page: https://github.com/deep-compute/logagg/logagg_collector
+Author: Deep Compute, LLC
+Author-email: contact@deepcompute.com
+License: MIT
+Keywords: logagg
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: kwikapi (==0.4.6)
+Requires-Dist: kwikapi-tornado (==0.3.3)
+Requires-Dist: basescript (==0.2.9)
+Requires-Dist: diskdict (==0.2.4)
+Requires-Dist: ujson (==1.35)
+Requires-Dist: logagg-utils (==0.5.0)
+Requires-Dist: fuse-python (==0.3.1)
+
+UNKNOWN
+
+

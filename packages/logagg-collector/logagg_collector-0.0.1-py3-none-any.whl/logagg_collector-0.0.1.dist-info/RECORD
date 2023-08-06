@@ -1,0 +1,13 @@
+logagg_collector/__init__.py,sha256=2LKT62LluAn49vAFk3u_Ghu2NxEdJucLRhGGsvH610Q,97
+logagg_collector/collector.py,sha256=8IzWiz-aDjX4DZi7NCRd_1sI6HCQutIaOgiF4BzEUHw,37417
+logagg_collector/collector_command.py,sha256=1NVQerQ04Wh0brdVkRq6IKBYt0VMz5pAxRJS1nPCBPk,3883
+logagg_collector/formatters.py,sha256=Kk1q0mbqbKY2Ar9h7HebxNh6zZh42PZMxcOl_BddVQo,9956
+logagg_fs/__init__.py,sha256=2lPdXd8h27rfRT1DK7mBQmLoVb_T2euiF1LfnUeWBG0,21
+logagg_fs/fs.py,sha256=Iqe84uEY2EuCjcsIIWz4hNA8hXhnOfyacTUyXl0VLuc,8429
+logagg_fs/mirrorfs.py,sha256=angQHfY_E2vsT3rgP1cgDXlPwibgSG97K6EnZvS9Sc8,8712
+logagg_collector-0.0.1.dist-info/METADATA,sha256=eBBCY5fAgKcdKWYomFMEDh3xIdGX0cRug5XDMQXfkFE,845
+logagg_collector-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+logagg_collector-0.0.1.dist-info/dependency_links.txt,sha256=veMZhv9J1F0oW0toc0v07R_J7MGcx7cEgpVxDsryJ6s,130
+logagg_collector-0.0.1.dist-info/entry_points.txt,sha256=D1Kz0YY3EESfxGv7lLSf1uX5U4RFtydPnuX3F1QniYI,87
+logagg_collector-0.0.1.dist-info/top_level.txt,sha256=UapAfqUjXFqIcPBDyAQPrkkXeDTHKmUFGgj_9TdYk7A,27
+logagg_collector-0.0.1.dist-info/RECORD,,
