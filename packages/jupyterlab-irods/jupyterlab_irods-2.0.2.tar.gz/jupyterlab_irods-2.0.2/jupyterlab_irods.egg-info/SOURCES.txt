@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+jupyterlab_irods/__init__.py
+jupyterlab_irods/irods.py
+jupyterlab_irods.egg-info/PKG-INFO
+jupyterlab_irods.egg-info/SOURCES.txt
+jupyterlab_irods.egg-info/dependency_links.txt
+jupyterlab_irods.egg-info/requires.txt
+jupyterlab_irods.egg-info/top_level.txt
