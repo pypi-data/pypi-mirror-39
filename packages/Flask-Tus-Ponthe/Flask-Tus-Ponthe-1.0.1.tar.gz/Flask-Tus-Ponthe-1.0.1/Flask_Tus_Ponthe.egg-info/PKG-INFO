@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: Flask-Tus-Ponthe
+Version: 1.0.1
+Summary: TUS protocol implementation fork for ENPC club Ponthe
+Home-page: https://github.com/PhilippeFerreiraDeSousa/Flask-Tus
+Author: Philippe Ferreira De Sousa
+Author-email: philippe@fdesousa.fr
+License: MIT
+Description: 
+        Flask-Tus
+        -------------
+        
+        Implements the tus.io server-side file-upload protocol
+        visit http://tus.io for more information
+        
+        
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
