@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: skil-client
+Version: 1.2.0b0
+Summary: Endpoints
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Keywords: Swagger,Endpoints
+Platform: UNKNOWN
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+Requires-Dist: six (>=1.10)
+Requires-Dist: urllib3 (>=1.15)
+
+Endpoints API for different services in SKIL  # noqa: E501
+
+
