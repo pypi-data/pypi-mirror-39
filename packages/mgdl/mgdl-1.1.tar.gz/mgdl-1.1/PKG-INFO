@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: mgdl
+Version: 1.1
+Summary: CLI Manga Downloader
+Home-page: https://github.com/FR0ST1N/mgdl
+Author: FR0ST1N
+Author-email: iamfrostin@gmail.com
+License: MIT
+Description: # mgdl
+        
+        ![pyversions](https://img.shields.io/pypi/pyversions/mgdl.svg) ![pypi](https://img.shields.io/pypi/v/mgdl.svg) ![license](https://img.shields.io/pypi/l/mgdl.svg)
+        
+        CLI Manga Downloader.
+        
+        ## Install
+        
+        `pip install mgdl`
+        
+        ## Usage
+        
+        `mgdl name start end path`
+        
+        ### Example
+        
+        `mgdl naruto 10 20 /home/FR0ST1N/Downloads`
+        
+        ## Dependencies
+        * [beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
+        * [pyprind](https://pypi.org/project/PyPrind/)
+        
+        ## License
+        
+         [**MIT**](https://github.com/FR0ST1N/mgdl/blob/master/LICENSE)
+Keywords: cli anime manga downloader
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
