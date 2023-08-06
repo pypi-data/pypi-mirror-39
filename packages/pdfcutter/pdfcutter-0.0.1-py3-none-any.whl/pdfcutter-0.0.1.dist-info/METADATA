@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: pdfcutter
+Version: 0.0.1
+Summary: Find and extract content in PDFs converted to XML
+Home-page: https://github.com/stefanw/pdfcutter
+Author: Stefan Wehrmeyer
+Author-email: mail@stefanwehrmeyer.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+Requires-Dist: lxml
+
+# PDFCutter
+
+There are better ways than storing data in a PDF.
+**pdfcutter** is for when you need to get it out again.
+
+Works on XML output of `pdftohtml` which belongs to `poppler-utils`.
+
+
+```python
+
+import pdfcutter
+
+cutter = pdfcutter.PDFCutter(filename='./some.pdf')
+
+name_label = cutter.filter(page=1, search='Name:')
+name = cutter.filter(page=1).strictly_right_of(name_label).text()
+```
+
+
+
