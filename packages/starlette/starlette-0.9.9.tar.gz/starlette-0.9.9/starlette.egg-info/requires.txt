@@ -1,0 +1,12 @@
+
+[full]
+aiofiles
+asyncpg
+graphene
+itsdangerous
+jinja2
+python-multipart
+pyyaml
+requests
+sqlalchemy
+ujson
