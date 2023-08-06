@@ -1,0 +1,162 @@
+Metadata-Version: 2.1
+Name: reagex
+Version: 0.1.0
+Summary: Utility functions for writing readable regular expressions in a hierarchical way
+Home-page: https://github.com/janluke/python-reagex
+Author: Gianluca Gippetto
+Author-email: gianluca.gippetto@gmail.com
+License: BSD 2-Clause License
+Keywords: regular-expression,regex,pattern,readable,readability
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+
+========
+Overview
+========
+
+
+
+
+The goal of ``reagex`` (from `"readable regular expression"`)
+is to suggest a way for writing complex regular expressions with
+many capturing groups in a readable way.
+
+At the moment, it contains just one very simple function
+(called ``reagex``) and an utility function, but any function
+which could be useful for writing readable patterns is welcome.
+
+**Note:** Publishing this ridiculously small project is an excuse to familiarize
+with python packaging, DevOps tools and the entire workflow behind the publication
+of an open-source project.
+The project template was generated using https://github.com/ionelmc/cookiecutter-pylibrary/
+which is obviously an overkill for a "one-function-project".
+
+* Free software: BSD 2-Clause License
+
+Usage
+=====
+The core function ``reagex`` is just a wrapper of ``str.format`` and it works
+in the same way. See the example
+
+.. code-block:: python
+
+    import re
+    from reagex import reagex
+
+    # A sloppy pattern for an italian address (just to show how it works)
+    pattern = reagex(
+        '{_address}, {postcode} {city} {province}',
+        # groups starting with "_" are non-capturing
+        _address = reagex(
+            '{street} {number}',
+            street = '(via|contrada|c/da|c.da|piazza|p.za) [a-zA-Z]+',
+            number = 'snc|[0-9]+'
+        ),
+        postcode = '[0-9]{5}',
+        city = '[A-Za-z]+',
+        province = '[A-Z]{2}'
+    )
+
+    matcher = re.compile(pattern)
+    match = matcher.fullmatch('via Roma 123, 12345 Napoli NA')
+    print(match.groupdict())
+
+    # prints:
+    #   {'city': 'Napoli',
+    #    'number': '123',
+    #    'postcode': '12345',
+    #    'province': 'NA',
+    #    'street': 'via Roma'}
+
+
+Groups starting by ``'_'`` are non-capturing. The rest are all named capturing
+groups.
+
+Why not...
+===========
+Why not using just re.VERBOSE?
+------------------------------
+I think ``reagex`` is easier to write and to read:
+
+* with reagex, you first describe the structure of the pattern in terms of groups,
+  `then` you provide a pattern for each group;
+  with re.VERBOSE you have to define the groups in the exact position they
+  must be matched: to get the high-level structure of the pattern you may need
+  to read multiple lines at the same indentation level
+* with re.VERBOSE you just write a big string; with reagex you get
+  syntax highlighting which helps readability
+* white-spaces don't need any special treatment
+* "{group_name}" is nicer than "(?P<group_name>)"
+
+
+Installation
+============
+::
+
+    pip install reagex
+
+
+Documentation
+=============
+
+https://python-reagex.readthedocs.io/
+
+
+Development
+===========
+Possible improvements:
+
+1. make some meaningful use of the ``format_spec``
+   in ``{group_name:format_spec}``
+
+2. add utility functions like ``repeated`` to help writing
+   common patterns in a readable way
+
+
+Testing
+-------
+To run all the tests::
+
+    tox
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
+
+Changelog
+=========
+
+0.1.0 (2018-12-08)
+------------------
+
+* First release on PyPI.
+
+
