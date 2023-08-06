@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: fam
+Version: 2.0.10
+Summary: Simple Python ORM for CouchDB, and Sync Gateway
+Home-page: https://github.com/paulharter/fam
+Author: Paul Harter
+Author-email: paul@glowinthedark.co.uk
+License: LICENSE
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
