@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: nedoc
+Version: 0.2
+Summary: Generator for API documentation
+Home-page: https://github.com/spirali/nedoc
+Author: Stanislav Bohm
+Author-email: spirali@kreatrix.org
+License: MIT
+Platform: UNKNOWN
+Provides: nedoc
+Requires-Dist: asttokens
+Requires-Dist: mako
+Requires-Dist: tqdm
+Requires-Dist: htmlmin
+Requires-Dist: pygments
+
+
+See https://github.com/spirali/nedoc for more details.
+
