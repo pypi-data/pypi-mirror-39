@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: carpi-redisdatabus
+Version: 0.2.3.dev181208170817
+Summary: Redis Data Bus (inspired by CAN-BUS, developed for CarPi)
+Home-page: https://gitlab.com/rGunti/CarPi-RedisDataBus
+Author: rGunti
+Author-email: raphael@rgunti.ch
+License: MIT
+Description: # Redis Data Bus (for CarPi)
+        "Redis Data Bus" is a Python library built for the CarPi project.
+        The intent of the "Redis Data Bus" is data exchange between different 
+        processes without having to resort to reading and writing files.
+        
+        ## LICENSE
+        This project is licensed under the MIT license as described in the
+        [LICENSE](LICENSE) file.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
