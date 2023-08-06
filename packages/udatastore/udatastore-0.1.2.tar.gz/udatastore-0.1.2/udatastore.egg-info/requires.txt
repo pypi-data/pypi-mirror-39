@@ -1,0 +1,6 @@
+umongo
+pymongo
+google-cloud-datastore>=1.7.0
+
+[test]
+nox
