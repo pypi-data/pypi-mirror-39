@@ -1,0 +1,13 @@
+Metadata-Version: 2.0
+Name: pyxdf
+Version: 1.14.0
+Summary: Python library for importing XDF (Extensible Data Format)
+Home-page: https://github.com/sccn/xdf
+Author: Christian Kothe, Alejandro Ojeda
+Author-email: christiankothe@gmail.com
+License: BSD
+Requires-Dist: numpy
+
+Extensible Data Format (XDF)
+
+
