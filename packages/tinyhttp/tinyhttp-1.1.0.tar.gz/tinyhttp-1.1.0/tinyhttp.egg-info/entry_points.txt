@@ -1,0 +1,3 @@
+[console_scripts]
+tinyhttp = tinyhttp.async.asyncserver:main
+
