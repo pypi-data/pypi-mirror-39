@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+korp/__init__.py
+korp/api7_help.json
+korp/api_help.json
+korp/korp.py
+korp.egg-info/PKG-INFO
+korp.egg-info/SOURCES.txt
+korp.egg-info/dependency_links.txt
+korp.egg-info/requires.txt
+korp.egg-info/top_level.txt
