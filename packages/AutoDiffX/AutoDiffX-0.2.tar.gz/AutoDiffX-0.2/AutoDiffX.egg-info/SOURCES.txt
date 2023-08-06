@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+AutoDiffX.egg-info/PKG-INFO
+AutoDiffX.egg-info/SOURCES.txt
+AutoDiffX.egg-info/dependency_links.txt
+AutoDiffX.egg-info/top_level.txt
+ad/__init__.py
+ad/activation_ops.py
+ad/ad.py
+ad/simple_ops.py
