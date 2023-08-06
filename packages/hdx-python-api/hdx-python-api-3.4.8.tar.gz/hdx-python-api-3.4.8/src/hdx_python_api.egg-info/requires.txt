@@ -1,0 +1,7 @@
+ckanapi>=4.1
+hdx-python-country>=1.5.4
+ndg-httpsclient
+pyasn1
+pyOpenSSL
+python-dateutil
+scraperwiki>=0.5.1
