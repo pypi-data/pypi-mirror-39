@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: typegql
+Version: 1.0.8
+Summary: A Python GraphQL library that makes use of type hinting and concurrency support with the new async/await syntax.
+Home-page: https://github.com/cipriantarta/typegql
+Author: Ciprian Tarta
+Author-email: ciprian@cipriantarta.ro
+Keywords: graphql,python,asyncio,generics,typing
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: client
+Requires-Dist: aiohttp (>=3.4,<4.0); extra == "client"
+Requires-Dist: graphql-core-next (>=1.0,<2.0)
+Requires-Dist: uvloop (>=0.11.2,<0.12.0)
+Project-URL: Repository, https://github.com/cipriantarta/typegql
