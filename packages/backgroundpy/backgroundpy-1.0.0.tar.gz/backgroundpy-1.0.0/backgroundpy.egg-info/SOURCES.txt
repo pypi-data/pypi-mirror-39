@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+backgroundpy/__init__.py
+backgroundpy/__main__.py
+backgroundpy.egg-info/PKG-INFO
+backgroundpy.egg-info/SOURCES.txt
+backgroundpy.egg-info/dependency_links.txt
+backgroundpy.egg-info/top_level.txt
