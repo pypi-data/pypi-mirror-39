@@ -1,0 +1,10 @@
+panflute>=1.10
+pypandoc>=1.4
+
+[dev]
+check-manifest
+Sphinx>=1.8.0
+sphinx_rtd_theme>=0.4
+
+[test]
+tox
