@@ -1,0 +1,19 @@
+{% load static from staticfiles %}<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="{% static "js/jquery.min.js" %}"></script>
+    {{ form.media }}
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <form method="POST">
+      {% csrf_token %}
+      <table>
+        {{ form.as_table }}
+        <tr>
+          <th></th><td><input type="submit"></input></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
