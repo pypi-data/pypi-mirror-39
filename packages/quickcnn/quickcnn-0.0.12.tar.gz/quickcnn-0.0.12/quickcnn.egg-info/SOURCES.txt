@@ -1,0 +1,14 @@
+README.md
+setup.py
+quickcnn/__init__.py
+quickcnn/ckpt_callback.py
+quickcnn/data_split.py
+quickcnn/hist_callback.py
+quickcnn/retrain.py
+quickcnn/setup_tbc.py
+quickcnn/tbc_callback.py
+quickcnn/write_result.py
+quickcnn.egg-info/PKG-INFO
+quickcnn.egg-info/SOURCES.txt
+quickcnn.egg-info/dependency_links.txt
+quickcnn.egg-info/top_level.txt
