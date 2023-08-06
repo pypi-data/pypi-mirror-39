@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: p2pclient
+Version: 0.0.1
+Summary: The libp2p daemon bindings for Python
+Home-page: https://github.com/mhchia/py-libp2p-daemon-bindings
+Author: Kevin Mai-Hsuan Chia
+Author-email: kevin.mh.chia@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: base58
+Requires-Dist: py-multiaddr
+Requires-Dist: protobuf
+
+# py-libp2p-daemon-bindings
+
+[![Build Status](https://travis-ci.org/mhchia/py-libp2p-daemon-bindings.svg?branch=master)](https://travis-ci.org/mhchia/py-libp2p-daemon-bindings)
+
+> The [libp2p daemon](https://github.com/libp2p/go-libp2p-daemon) bindings for Python
+
+Have aligned with the go-client now!
+
+Methods
+- [x] `Identify`
+- [x] `Connect`
+- [x] `StreamOpen`
+- [x] `StreamHandler` - Register
+- [x] `StreamHandler` - Inbound stream
+- [x] DHT ops
+- [x] Conn manager ops
+- [x] PubSub ops
+
+
