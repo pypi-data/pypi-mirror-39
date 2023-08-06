@@ -1,0 +1,16 @@
+BeaconTau.cpp
+FileReader.cpp
+FileReader.h
+MANIFEST.in
+README.md
+setup.py
+BeaconTau/DataDirectory.py
+BeaconTau/EventAnalyzer.py
+BeaconTau/RunAnalyzer.py
+BeaconTau/Viewer.py
+BeaconTau/__init__.py
+BeaconTau.egg-info/PKG-INFO
+BeaconTau.egg-info/SOURCES.txt
+BeaconTau.egg-info/dependency_links.txt
+BeaconTau.egg-info/requires.txt
+BeaconTau.egg-info/top_level.txt

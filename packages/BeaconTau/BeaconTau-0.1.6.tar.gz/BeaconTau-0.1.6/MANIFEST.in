@@ -1,0 +1,4 @@
+include README.md
+include BeaconTau.cpp
+include FileReader.h
+include FileReader.cpp
