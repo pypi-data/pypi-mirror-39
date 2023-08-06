@@ -1,0 +1,6 @@
+[console_scripts]
+EMBL2checklists_CLI = EMBL2checklists.CLIOps:start_EMBL2checklists_CLI
+
+[gui_scripts]
+EMBL2checklists_GUI = EMBL2checklists.GUIOps:start_EMBL2checklists_GUI
+
