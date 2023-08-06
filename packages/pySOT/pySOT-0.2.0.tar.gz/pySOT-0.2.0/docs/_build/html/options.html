@@ -1,0 +1,440 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Options &mdash; pySOT  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="POAP" href="poap.html" />
+    <link rel="prev" title="Surrogate optimization" href="surrogate_optimization.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pySOT
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="surrogate_optimization.html">Surrogate optimization</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#optimization-problem">Optimization problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#experimental-design">Experimental design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#surrogate-model">Surrogate model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#strategy">Strategy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="poap.html">POAP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source_code.html">Source code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes.html">Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributors.html">Contributors</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pySOT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Options</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/options.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="options">
+<h1>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="optimization-problem">
+<h2>Optimization problem<a class="headerlink" href="#optimization-problem" title="Permalink to this headline">¶</a></h2>
+<p>The optimization problem is its own object and must have certain attributes and methods
+in order to work with the framework. We start by giving an example of a mixed-integer
+optimization problem with constraints. The following attributes and methods must
+always be specified in the optimization problem class:</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>Attributes</strong></dt>
+<dd><ul class="first last">
+<li>lb: Lower bounds for the variables.</li>
+<li>ub: Upper bounds for the variables.</li>
+<li>dim: Number of dimensions</li>
+<li>int_var: Specifies the integer variables. If no variables have
+discrete, set to []</li>
+<li>cont_var: Specifies the continuous variables. If no variables
+are continuous, set to []</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Required methods</strong></dt>
+<dd><ul class="first last">
+<li>eval: Takes one input in the form of an numpy.ndarray with
+shape (1, dim), which corresponds to one point in dim dimensions. Returns the
+value (a scalar) of the objective function at this point.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="experimental-design">
+<h2>Experimental design<a class="headerlink" href="#experimental-design" title="Permalink to this headline">¶</a></h2>
+<p>The experimental design generates the initial points to be evaluated. A well-chosen
+experimental design is critical in order to fit a surrogate model that captures the behavior
+of the underlying objective function. Any implementation must have the following attributes
+and method:</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Attributes:</dt>
+<dd><ul class="first last">
+<li>dim: Dimensionality</li>
+<li>num_pts: Number of points in the design</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Required methods</dt>
+<dd><ul class="first last">
+<li>generate_points(): Returns an experimental design of size num_pts x dim where
+num_pts is the number of points in the initial design, which was specified
+when the object was created.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>The following experimental designs are supported:</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>LatinHypercube:</strong></dt>
+<dd><p class="first">A Latin hypercube design</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pySOT</span> <span class="kn">import</span> <span class="n">LatinHypercube</span>
+<span class="n">exp_des</span> <span class="o">=</span> <span class="n">LatinHypercube</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">npts</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="last">creates a Latin hypercube design with 10 points in 3 dimensions</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>SymmetricLatinHypercube</strong></dt>
+<dd><p class="first">A symmetric Latin hypercube design</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pySOT</span> <span class="kn">import</span> <span class="n">SymmetricLatinHypercube</span>
+<span class="n">exp_des</span> <span class="o">=</span> <span class="n">SymmetricLatinHypercube</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">npts</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="last">creates a symmetric Latin hypercube design with 10 points in 3 dimensions</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>TwoFactorial</strong></dt>
+<dd><p class="first">The corners of the unit hypercube</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pySOT</span> <span class="kn">import</span> <span class="n">TwoFactorial</span>
+<span class="n">exp_des</span> <span class="o">=</span> <span class="n">TwoFactorial</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="last">creates a symmetric Latin hypercube design with 8 points in 3 dimensions</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="surrogate-model">
+<h2>Surrogate model<a class="headerlink" href="#surrogate-model" title="Permalink to this headline">¶</a></h2>
+<p>The surrogate model approximates the underlying objective function given all of the
+points that have been evaluated. Any implementation of a surrogate model must
+have the following attributes and methods</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Attributes:</dt>
+<dd><ul class="first last">
+<li>dim: Number of dimensions</li>
+<li>num_pts: Number of points in the surrogate model</li>
+<li>X: Data points, of size num_pts x dim, currently incorporated in the model</li>
+<li>fX: Function values at the data points</li>
+<li>updated: True if all information is incorporated in the model, else a new fit will be triggered</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Required methods</dt>
+<dd><ul class="first last">
+<li>reset(): Resets the surrogate model</li>
+<li>add_points(x, fx): Adds point(s) x with value(s) fx to the surrogate model. This SHOULD NOT trigger a new fit of the model.</li>
+<li>predict(x): Evaluates the surrogate model at points x</li>
+<li>predict_deriv(x): Evaluates the derivative of surrogate model at points x</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Optional methods</dt>
+<dd><ul class="first last">
+<li>predict_std(x): Evaluates the uncertainty of the surrogate model at points x</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>The following surrogate models are supported:</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>RBFInterpolant:</strong></dt>
+<dd><p class="first">A radial basis function interpolant.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pySOT.surrogate</span> <span class="kn">import</span> <span class="n">RBFInterpolant</span><span class="p">,</span> <span class="n">CubicKernel</span><span class="p">,</span> <span class="n">LinearTail</span>
+<span class="n">fhat</span> <span class="o">=</span> <span class="n">RBFInterpolant</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="n">dim</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="n">CubicKernel</span><span class="p">(),</span> <span class="n">tail</span><span class="o">=</span><span class="n">LinearTail</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="n">dim</span><span class="p">))</span>
+</pre></div>
+</div>
+<p class="last">creates a cubic RBF with a linear tail in dim dimensions.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>GPRegressor:</strong></dt>
+<dd><p class="first">Generate a Gaussian process regression object.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pySOT.surrogate</span> <span class="kn">import</span> <span class="n">GPRegressor</span>
+<span class="n">surrogate</span> <span class="o">=</span> <span class="n">GPRegressor</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="n">dim</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="last">creates a GPRegressor object in dim dimensions.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>MARSInterpolant:</strong></dt>
+<dd><p class="first">Generate a Multivariate Adaptive Regression Splines (MARS) model.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This implementation depends on the py-earth module (see <a class="reference internal" href="quickstart.html#quickstart-label"><span class="std std-ref">Dependencies</span></a>)</p>
+</div>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pySOT.surrogate</span> <span class="kn">import</span> <span class="n">MARSInterpolant</span>
+<span class="n">surrogate</span> <span class="o">=</span> <span class="n">MARSInterpolant</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="n">dim</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="last">creates a MARS interpolant in dim dimensions.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>PolyRegressor:</strong></dt>
+<dd><p class="first">Multivariate polynomial regression.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pySOT.surrogate</span> <span class="kn">import</span> <span class="n">PolyRegressor</span>
+<span class="n">surrogate</span> <span class="o">=</span> <span class="n">PolyRegressor</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="n">dim</span><span class="p">,</span> <span class="n">degree</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="last">creates a polynomial regressor of degree 2.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="strategy">
+<h2>Strategy<a class="headerlink" href="#strategy" title="Permalink to this headline">¶</a></h2>
+<p>We provide implementations of Stochastic RBF (SRBF), DYCORS,
+Expected Improvement (EI), lower confidence bound (LCB) and random search (RS).
+EI can only be used in combination with GPRegressor since uncertainty predictions
+are necessary. All strategies support running in serial, batch synchronous parallel,
+and asynchronous parallel.</p>
+<p>New optimization strategies can be implemented by inheriting from SurrogateBaseStrategy
+and implementing the abstract generate_evals method that proposes num_pts
+new sample points:</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Required methods</dt>
+<dd><ul class="first last">
+<li>generate_evals(num_pts): Proposes num_pts new samples.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="poap.html" class="btn btn-neutral float-right" title="POAP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="surrogate_optimization.html" class="btn btn-neutral" title="Surrogate optimization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, David Bindel, David Eriksson, Christine Shoemaker
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

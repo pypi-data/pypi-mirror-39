@@ -1,0 +1,3264 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Source code &mdash; pySOT  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Changes" href="changes.html" />
+    <link rel="prev" title="Logging" href="logging.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pySOT
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="surrogate_optimization.html">Surrogate optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="poap.html">POAP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Source code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-pySOT.auxiliary_problems">pySOT.auxiliary_problems module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pySOT.controller">pySOT.controller module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pySOT.experimental_design">pySOT.experimental_design module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pySOT.optimization_problems">pySOT.optimization_problems module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pySOT.strategy">pySOT.strategy module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pySOT.surrogate">pySOT.surrogate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pySOT.utils">pySOT.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changes.html">Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributors.html">Contributors</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pySOT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Source code</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/source_code.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="source-code">
+<h1>Source code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="module-pySOT.auxiliary_problems">
+<span id="pysot-auxiliary-problems-module"></span><h2>pySOT.auxiliary_problems module<a class="headerlink" href="#module-pySOT.auxiliary_problems" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-auxiliary_problems"></span><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Module:</th><td class="field-body">auxiliary_problems</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Author:</th><td class="field-body">David Eriksson &lt;<a class="reference external" href="mailto:dme65&#37;&#52;&#48;cornell&#46;edu">dme65<span>&#64;</span>cornell<span>&#46;</span>edu</a>&gt;,</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="pySOT.auxiliary_problems.candidate_dycors">
+<code class="descclassname">pySOT.auxiliary_problems.</code><code class="descname">candidate_dycors</code><span class="sig-paren">(</span><em>num_pts</em>, <em>opt_prob</em>, <em>surrogate</em>, <em>X</em>, <em>fX</em>, <em>weights</em>, <em>prob_perturb</em>, <em>Xpend=None</em>, <em>sampling_radius=0.2</em>, <em>subset=None</em>, <em>dtol=0.001</em>, <em>num_cand=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.auxiliary_problems.candidate_dycors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select new evaluations using DYCORS.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>num_pts</strong> (<em>int</em>) – Number of points to generate</li>
+<li><strong>opt_prob</strong> (<em>object</em>) – Optimization problem</li>
+<li><strong>surrogate</strong> (<em>object</em>) – Surrogate model object</li>
+<li><strong>X</strong> (<em>numpy.array</em>) – Previously evaluated points, of size n x dim</li>
+<li><strong>fX</strong> (<em>numpy.array</em>) – Values at previously evaluated points, of size n x 1</li>
+<li><strong>weights</strong> (<em>list</em><em> or </em><em>numpy.array</em>) – num_pts weights in [0, 1] for merit function</li>
+<li><strong>prob_perturb</strong> (<em>list</em><em> or </em><em>numpy.array</em>) – Probability to perturb a given coordinate</li>
+<li><strong>Xpend</strong> (<em>numpy.array</em>) – Pending evaluations</li>
+<li><strong>sampling_radius</strong> (<em>float</em>) – Perturbation radius</li>
+<li><strong>subset</strong> (<em>list</em><em> or </em><em>numpy.array</em>) – Coordinates that should be perturbed, use None for all</li>
+<li><strong>dtol</strong> (<em>float</em>) – Minimum distance between evaluated and pending points</li>
+<li><strong>num_cand</strong> (<em>int</em>) – Number of candidate points</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pySOT.auxiliary_problems.candidate_srbf">
+<code class="descclassname">pySOT.auxiliary_problems.</code><code class="descname">candidate_srbf</code><span class="sig-paren">(</span><em>num_pts</em>, <em>opt_prob</em>, <em>surrogate</em>, <em>X</em>, <em>fX</em>, <em>weights</em>, <em>Xpend=None</em>, <em>sampling_radius=0.2</em>, <em>subset=None</em>, <em>dtol=0.001</em>, <em>num_cand=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.auxiliary_problems.candidate_srbf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select new evaluations using Stochastic RBF (SRBF).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>num_pts</strong> (<em>int</em>) – Number of points to generate</li>
+<li><strong>opt_prob</strong> (<em>object</em>) – Optimization problem</li>
+<li><strong>surrogate</strong> (<em>object</em>) – Surrogate model object</li>
+<li><strong>X</strong> (<em>numpy.array</em>) – Previously evaluated points, of size n x dim</li>
+<li><strong>fX</strong> (<em>numpy.array</em>) – Values at previously evaluated points, of size n x 1</li>
+<li><strong>weights</strong> (<em>list</em><em> or </em><em>numpy.array</em>) – num_pts weights in [0, 1] for merit function</li>
+<li><strong>Xpend</strong> (<em>numpy.array</em>) – Pending evaluation, of size k x dim</li>
+<li><strong>sampling_radius</strong> (<em>float</em>) – Perturbation radius</li>
+<li><strong>subset</strong> (<em>list</em><em> or </em><em>numpy.array</em>) – Coordinates that should be perturbed, use None for all</li>
+<li><strong>dtol</strong> (<em>float</em>) – Minimum distance between evaluated and pending points</li>
+<li><strong>num_cand</strong> (<em>int</em>) – Number of candidate points</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pySOT.auxiliary_problems.candidate_uniform">
+<code class="descclassname">pySOT.auxiliary_problems.</code><code class="descname">candidate_uniform</code><span class="sig-paren">(</span><em>num_pts</em>, <em>opt_prob</em>, <em>surrogate</em>, <em>X</em>, <em>fX</em>, <em>weights</em>, <em>Xpend=None</em>, <em>subset=None</em>, <em>dtol=0.001</em>, <em>num_cand=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.auxiliary_problems.candidate_uniform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select new evaluations from uniform candidate points.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>num_pts</strong> (<em>int</em>) – Number of points to generate</li>
+<li><strong>opt_prob</strong> (<em>object</em>) – Optimization problem</li>
+<li><strong>surrogate</strong> (<em>object</em>) – Surrogate model object</li>
+<li><strong>X</strong> (<em>numpy.array</em>) – Previously evaluated points, of size n x dim</li>
+<li><strong>fX</strong> (<em>numpy.array</em>) – Values at previously evaluated points, of size n x 1</li>
+<li><strong>weights</strong> (<em>list</em><em> or </em><em>numpy.array</em>) – num_pts weights in [0, 1] for merit function</li>
+<li><strong>Xpend</strong> (<em>numpy.array</em>) – Pending evaluations</li>
+<li><strong>subset</strong> (<em>list</em><em> or </em><em>numpy.array</em>) – Coordinates that should be perturbed, use None for all</li>
+<li><strong>dtol</strong> (<em>float</em>) – Minimum distance between evaluated and pending points</li>
+<li><strong>num_cand</strong> (<em>int</em>) – Number of candidate points</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pySOT.auxiliary_problems.ei_merit">
+<code class="descclassname">pySOT.auxiliary_problems.</code><code class="descname">ei_merit</code><span class="sig-paren">(</span><em>X</em>, <em>surrogate</em>, <em>fX</em>, <em>XX=None</em>, <em>dtol=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.auxiliary_problems.ei_merit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the expected improvement merit function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>X</strong> (<em>numpy.array</em>) – Points where to compute EI, of size n x dim</li>
+<li><strong>surrogate</strong> (<em>object</em>) – Surrogate model object, must implement predict_std</li>
+<li><strong>fX</strong> (<em>numpy.array</em>) – Values at previously evaluated points, of size m x 1</li>
+<li><strong>XX</strong> (<em>numpy.array</em>) – Previously evaluated points, of size m x 1</li>
+<li><strong>dtol</strong> (<em>float</em>) – Minimum distance between evaluated and pending points</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pySOT.auxiliary_problems.expected_improvement_ga">
+<code class="descclassname">pySOT.auxiliary_problems.</code><code class="descname">expected_improvement_ga</code><span class="sig-paren">(</span><em>num_pts</em>, <em>opt_prob</em>, <em>surrogate</em>, <em>X</em>, <em>fX</em>, <em>Xpend=None</em>, <em>dtol=0.001</em>, <em>ei_tol=1e-06</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.auxiliary_problems.expected_improvement_ga" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximize EI using a genetic algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>num_pts</strong> (<em>int</em>) – Number of points to generate</li>
+<li><strong>opt_prob</strong> (<em>object</em>) – Optimization problem</li>
+<li><strong>surrogate</strong> (<em>object</em>) – Surrogate model object</li>
+<li><strong>X</strong> (<em>numpy.array</em>) – Previously evaluated points, of size n x dim</li>
+<li><strong>fX</strong> (<em>numpy.array</em>) – Values at previously evaluated points, of size n x 1</li>
+<li><strong>Xpend</strong> (<em>numpy.array</em>) – Pending evaluations</li>
+<li><strong>dtol</strong> (<em>float</em>) – Minimum distance between evaluated and pending points</li>
+<li><strong>ei_tol</strong> (<em>float</em>) – Return None if we don’t find an EI of at least this value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pySOT.auxiliary_problems.expected_improvement_uniform">
+<code class="descclassname">pySOT.auxiliary_problems.</code><code class="descname">expected_improvement_uniform</code><span class="sig-paren">(</span><em>num_pts</em>, <em>opt_prob</em>, <em>surrogate</em>, <em>X</em>, <em>fX</em>, <em>Xpend=None</em>, <em>dtol=0.001</em>, <em>ei_tol=1e-06</em>, <em>num_cand=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.auxiliary_problems.expected_improvement_uniform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximize EI from a uniform set of points.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>num_pts</strong> (<em>int</em>) – Number of points to generate</li>
+<li><strong>opt_prob</strong> (<em>object</em>) – Optimization problem</li>
+<li><strong>surrogate</strong> (<em>object</em>) – Surrogate model object</li>
+<li><strong>X</strong> (<em>numpy.array</em>) – Previously evaluated points, of size n x dim</li>
+<li><strong>fX</strong> (<em>numpy.array</em>) – Values at previously evaluated points, of size n x 1</li>
+<li><strong>Xpend</strong> (<em>numpy.array</em>) – Pending evaluations</li>
+<li><strong>dtol</strong> (<em>float</em>) – Minimum distance between evaluated and pending points</li>
+<li><strong>ei_tol</strong> (<em>float</em>) – Return None if we can’t reach this threshold</li>
+<li><strong>num_cand</strong> (<em>int</em>) – Number of candidate points</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pySOT.auxiliary_problems.lcb_merit">
+<code class="descclassname">pySOT.auxiliary_problems.</code><code class="descname">lcb_merit</code><span class="sig-paren">(</span><em>X</em>, <em>surrogate</em>, <em>fX</em>, <em>XX=None</em>, <em>dtol=0.0</em>, <em>kappa=2.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.auxiliary_problems.lcb_merit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the expected improvement merit function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>X</strong> (<em>numpy.array</em>) – Points where to compute EI, of size n x dim</li>
+<li><strong>surrogate</strong> (<em>object</em>) – Surrogate model object, must implement predict_std</li>
+<li><strong>fX</strong> (<em>numpy.array</em>) – Values at previously evaluated points, of size m x 1</li>
+<li><strong>XX</strong> (<em>numpy.array</em>) – Previously evaluated points, of size m x 1</li>
+<li><strong>dtol</strong> (<em>float</em>) – Minimum distance between evaluated and pending points</li>
+<li><strong>kappa</strong> (<em>float</em>) – Constant in front of standard deviation
+Default: 2.0</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pySOT.auxiliary_problems.lower_confidence_bound_ga">
+<code class="descclassname">pySOT.auxiliary_problems.</code><code class="descname">lower_confidence_bound_ga</code><span class="sig-paren">(</span><em>num_pts</em>, <em>opt_prob</em>, <em>surrogate</em>, <em>X</em>, <em>fX</em>, <em>Xpend=None</em>, <em>kappa=2.0</em>, <em>dtol=0.001</em>, <em>lcb_target=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.auxiliary_problems.lower_confidence_bound_ga" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximize EI using a genetic algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>num_pts</strong> (<em>int</em>) – Number of points to generate</li>
+<li><strong>opt_prob</strong> (<em>object</em>) – Optimization problem</li>
+<li><strong>surrogate</strong> (<em>object</em>) – Surrogate model object</li>
+<li><strong>X</strong> (<em>numpy.array</em>) – Previously evaluated points, of size n x dim</li>
+<li><strong>fX</strong> (<em>numpy.array</em>) – Values at previously evaluated points, of size n x 1</li>
+<li><strong>Xpend</strong> (<em>numpy.array</em>) – Pending evaluations</li>
+<li><strong>dtol</strong> (<em>float</em>) – Minimum distance between evaluated and pending points</li>
+<li><strong>lcb_target</strong> (<em>float</em>) – Return None if we don’t find an LCB value &lt;= lcb_target</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pySOT.auxiliary_problems.weighted_distance_merit">
+<code class="descclassname">pySOT.auxiliary_problems.</code><code class="descname">weighted_distance_merit</code><span class="sig-paren">(</span><em>num_pts</em>, <em>surrogate</em>, <em>X</em>, <em>fX</em>, <em>cand</em>, <em>weights</em>, <em>Xpend=None</em>, <em>dtol=0.001</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.auxiliary_problems.weighted_distance_merit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the weighted distance merit function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>num_pts</strong> (<em>int</em>) – Number of points to generate</li>
+<li><strong>surrogate</strong> (<em>object</em>) – Surrogate model object</li>
+<li><strong>X</strong> (<em>numpy.array</em>) – Previously evaluated points, of size n x dim</li>
+<li><strong>fX</strong> (<em>numpy.array</em>) – Values at previously evaluated points, of size n x 1</li>
+<li><strong>cand</strong> (<em>numpy.array</em>) – Candidate points to select from, of size m x dim</li>
+<li><strong>weights</strong> (<em>list</em><em> or </em><em>numpy.array</em>) – num_pts weights in [0, 1] for merit function</li>
+<li><strong>Xpend</strong> (<em>numpy.array</em>) – Pending evaluation, of size k x dim</li>
+<li><strong>dtol</strong> (<em>float</em>) – Minimum distance between evaluated and pending points</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pySOT.controller">
+<span id="pysot-controller-module"></span><h2>pySOT.controller module<a class="headerlink" href="#module-pySOT.controller" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-controller"></span><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Module:</th><td class="field-body">controller</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Author:</th><td class="field-body">David Eriksson &lt;<a class="reference external" href="mailto:dme65&#37;&#52;&#48;cornell&#46;edu">dme65<span>&#64;</span>cornell<span>&#46;</span>edu</a>&gt;,</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="pySOT.controller.CheckpointController">
+<em class="property">class </em><code class="descclassname">pySOT.controller.</code><code class="descname">CheckpointController</code><span class="sig-paren">(</span><em>controller</em>, <em>fname='checkpoint.pysot'</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.controller.CheckpointController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checkpoint controller</p>
+<p>Controller that uses dill to take snapshots of the strategy each time
+an evaluation is completed, killed, or the run is terminated. We assume
+that the strategy can be pickled, or this won’t work. We currently do not
+respect potential termination callbacks and failed evaluation callbacks.
+The strategy needs to implement a resume method that is called when a run
+is resumed. The strategy object can assume that all pending evaluations
+have been killed and that their respective callbacks won’t be executed</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>controller</strong> (<em>Controller</em>) – POAP controller</li>
+<li><strong>fname</strong> (<em>string</em>) – Filename for checkpoint file (file cannot exist for new run)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="#module-controller" title="controller: pySOT controllers"><strong>controller</strong></a> – POAP controller</li>
+<li><strong>fname</strong> – Filename for snapshot</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.controller.CheckpointController.on_cancel">
+<code class="descname">on_cancel</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.controller.CheckpointController.on_cancel" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Handle record cancelled.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>record</strong> (<em>EvalRecord</em>) – Evaluation record</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.controller.CheckpointController.on_complete">
+<code class="descname">on_complete</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.controller.CheckpointController.on_complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle feval completion.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>record</strong> (<em>EvalRecord</em>) – Evaluation record</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.controller.CheckpointController.on_kill">
+<code class="descname">on_kill</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.controller.CheckpointController.on_kill" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Handle record killed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>record</strong> (<em>EvalRecord</em>) – Evaluation record</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.controller.CheckpointController.on_new_feval">
+<code class="descname">on_new_feval</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.controller.CheckpointController.on_new_feval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle new function evaluation request.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>record</strong> (<em>EvalRecord</em>) – Evaluation record</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.controller.CheckpointController.on_terminate">
+<code class="descname">on_terminate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.controller.CheckpointController.on_terminate" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Handle termination.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.controller.CheckpointController.on_update">
+<code class="descname">on_update</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.controller.CheckpointController.on_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle feval update.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>record</strong> (<em>EvalRecord</em>) – Evaluation record</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.controller.CheckpointController.resume">
+<code class="descname">resume</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.controller.CheckpointController.resume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resume an optimization run.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The record corresponding to the best solution</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">EvalRecord</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.controller.CheckpointController.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.controller.CheckpointController.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start the optimization run.</p>
+<p>Make sure we do not overwrite any existing checkpointing files</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The record corresponding to the best solution</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">EvalRecord</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pySOT.experimental_design">
+<span id="pysot-experimental-design-module"></span><h2>pySOT.experimental_design module<a class="headerlink" href="#module-pySOT.experimental_design" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-experimental_design"></span><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Module:</th><td class="field-body">experimental_design</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Author:</th><td class="field-body">David Eriksson &lt;<a class="reference external" href="mailto:dme65&#37;&#52;&#48;cornell&#46;edu">dme65<span>&#64;</span>cornell<span>&#46;</span>edu</a>&gt;
+Yi Shen &lt;<a class="reference external" href="mailto:ys623&#37;&#52;&#48;cornell&#46;edu">ys623<span>&#64;</span>cornell<span>&#46;</span>edu</a>&gt;</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="pySOT.experimental_design.ExperimentalDesign">
+<em class="property">class </em><code class="descclassname">pySOT.experimental_design.</code><code class="descname">ExperimentalDesign</code><a class="headerlink" href="#pySOT.experimental_design.ExperimentalDesign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for experimental designs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>num_pts</strong> – Number of points in the experimental design</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.experimental_design.ExperimentalDesign.generate_points">
+<code class="descname">generate_points</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.experimental_design.ExperimentalDesign.generate_points" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.experimental_design.LatinHypercube">
+<em class="property">class </em><code class="descclassname">pySOT.experimental_design.</code><code class="descname">LatinHypercube</code><span class="sig-paren">(</span><em>dim</em>, <em>num_pts</em>, <em>criterion='c'</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.experimental_design.LatinHypercube" title="Permalink to this definition">¶</a></dt>
+<dd><p>Latin Hypercube experimental design.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>dim</strong> (<em>int</em>) – Number of dimensions</li>
+<li><strong>num_pts</strong> (<em>int</em>) – Number of desired sampling points</li>
+<li><strong>criterion</strong> (<em>string</em>) – <p>Sampling criterion</p>
+<ul>
+<li><dl class="first docutils">
+<dt>”center” or “c”</dt>
+<dd>Center the points within the sampling intervals</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>”maximin” or “m”</dt>
+<dd>Maximize the minimum distance between points, but place
+the point in a randomized location within its interval</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>”centermaximin” or “cm”</dt>
+<dd>Same as “maximin”, but centered within the intervals</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>”correlation” or “corr”</dt>
+<dd>Minimize the maximum correlation coefficient</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>num_pts</strong> – Number of points in the experimental design</li>
+<li><strong>criterion</strong> – Criterion for generating the design</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.experimental_design.LatinHypercube.generate_points">
+<code class="descname">generate_points</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.experimental_design.LatinHypercube.generate_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a Latin hypercube design in the unit hypercube.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Latin hypercube design in unit hypercube of size num_pts x dim</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.experimental_design.SymmetricLatinHypercube">
+<em class="property">class </em><code class="descclassname">pySOT.experimental_design.</code><code class="descname">SymmetricLatinHypercube</code><span class="sig-paren">(</span><em>dim</em>, <em>num_pts</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.experimental_design.SymmetricLatinHypercube" title="Permalink to this definition">¶</a></dt>
+<dd><p>Symmetric Latin hypercube experimental design.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>dim</strong> (<em>int</em>) – Number of dimensions</li>
+<li><strong>num_pts</strong> (<em>int</em>) – Number of desired sampling points</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>num_pts</strong> – Number of points in the experimental design</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.experimental_design.SymmetricLatinHypercube.generate_points">
+<code class="descname">generate_points</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.experimental_design.SymmetricLatinHypercube.generate_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a symmetric Latin hypercube design in the unit hypercube.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Symmetric Latin hypercube design in the unit hypercube
+of size num_pts x dim</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.experimental_design.TwoFactorial">
+<em class="property">class </em><code class="descclassname">pySOT.experimental_design.</code><code class="descname">TwoFactorial</code><span class="sig-paren">(</span><em>dim</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.experimental_design.TwoFactorial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Two-factorial experimental design.</p>
+<p>The two-factorial experimental design consists of the corners
+of the unit hypercube, and hence <span class="math notranslate nohighlight">\(2^{dim}\)</span> points.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>dim</strong> (<em>int</em>) – Number of dimensions</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>num_pts</strong> – Number of points in the experimental design</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>ValueError</strong> – If dim &gt;= 15</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.experimental_design.TwoFactorial.generate_points">
+<code class="descname">generate_points</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.experimental_design.TwoFactorial.generate_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a two factorial design in the unit hypercube.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Two factorial design in unit hypercube of size num_pts x dim</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pySOT.optimization_problems">
+<span id="pysot-optimization-problems-module"></span><h2>pySOT.optimization_problems module<a class="headerlink" href="#module-pySOT.optimization_problems" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-optimization_problems"></span><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Module:</th><td class="field-body">optimization_problems</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Author:</th><td class="field-body">David Eriksson &lt;<a class="reference external" href="mailto:dme65&#37;&#52;&#48;cornell&#46;edu">dme65<span>&#64;</span>cornell<span>&#46;</span>edu</a>&gt;,
+David Bindel &lt;<a class="reference external" href="mailto:bindel&#37;&#52;&#48;cornell&#46;edu">bindel<span>&#64;</span>cornell<span>&#46;</span>edu</a>&gt;</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="pySOT.optimization_problems.Ackley">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">Ackley</code><span class="sig-paren">(</span><em>dim=10</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Ackley" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ackley function</p>
+<div class="math notranslate nohighlight">
+\[f(x_1,\ldots,x_n) = -20\exp\left( -0.2 \sqrt{\frac{1}{n}         \sum_{j=1}^n x_j^2} \right) -\exp \left( \frac{1}{n}         \sum{j=1}^n \cos(2 \pi x_j) \right) + 20 - e\]</div>
+<p>subject to</p>
+<div class="math notranslate nohighlight">
+\[-15 \leq x_i \leq 20\]</div>
+<p>Global optimum: <span class="math notranslate nohighlight">\(f(0,0,...,0)=0\)</span></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+<li><strong>int_var</strong> – Integer variables</li>
+<li><strong>cont_var</strong> – Continuous variables</li>
+<li><strong>min</strong> – Global minimum value</li>
+<li><strong>minimum</strong> – Global minimizer</li>
+<li><strong>info</strong> – String with problem info</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.optimization_problems.Ackley.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Ackley.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Ackley function  at x</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.Branin">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">Branin</code><a class="headerlink" href="#pySOT.optimization_problems.Branin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Branin function</p>
+<p>Details: <a class="reference external" href="http://www.sfu.ca/~ssurjano/branin.html">http://www.sfu.ca/~ssurjano/branin.html</a></p>
+<p>Global optimum: <span class="math notranslate nohighlight">\(f(-\pi,12.275)=0.397887\)</span></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+<li><strong>int_var</strong> – Integer variables</li>
+<li><strong>cont_var</strong> – Continuous variables</li>
+<li><strong>min</strong> – Global minimum value</li>
+<li><strong>minimum</strong> – Global minimizer</li>
+<li><strong>info</strong> – String with problem info</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.optimization_problems.Branin.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Branin.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Branin function at x</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.Exponential">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">Exponential</code><span class="sig-paren">(</span><em>dim=10</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Exponential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exponential function</p>
+<div class="math notranslate nohighlight">
+\[f(x_1,\ldots,x_n) = \sum_{j=1}^n e^{jx_j} - \sum_{j=1} e^{-5.12 j}\]</div>
+<p>subject to</p>
+<div class="math notranslate nohighlight">
+\[-5.12 \leq x_i \leq 5.12\]</div>
+<p>Global optimum: <span class="math notranslate nohighlight">\(f(0,0,...,0)=0\)</span></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+<li><strong>int_var</strong> – Integer variables</li>
+<li><strong>cont_var</strong> – Continuous variables</li>
+<li><strong>min</strong> – Global minimum value</li>
+<li><strong>minimum</strong> – Global minimizer</li>
+<li><strong>info</strong> – String with problem info</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.optimization_problems.Exponential.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Exponential.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Exponential function  at x.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.GoldsteinPrice">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">GoldsteinPrice</code><a class="headerlink" href="#pySOT.optimization_problems.GoldsteinPrice" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pySOT.optimization_problems.GoldsteinPrice.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.GoldsteinPrice.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the GoldStein Price function at x</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.Griewank">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">Griewank</code><span class="sig-paren">(</span><em>dim=10</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Griewank" title="Permalink to this definition">¶</a></dt>
+<dd><p>Griewank function</p>
+<div class="math notranslate nohighlight">
+\[f(x_1,\ldots,x_n) = 1 + \frac{1}{4000} \sum_{j=1}^n x_j^2 -         \prod_{j=1}^n \cos \left( \frac{x_i}{\sqrt{i}} \right)\]</div>
+<p>subject to</p>
+<div class="math notranslate nohighlight">
+\[-512 \leq x_i \leq 512\]</div>
+<p>Global optimum: <span class="math notranslate nohighlight">\(f(0,0,...,0)=0\)</span></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+<li><strong>int_var</strong> – Integer variables</li>
+<li><strong>cont_var</strong> – Continuous variables</li>
+<li><strong>min</strong> – Global minimum value</li>
+<li><strong>minimum</strong> – Global minimizer</li>
+<li><strong>info</strong> – String with problem info</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.optimization_problems.Griewank.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Griewank.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Griewank function at x.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.Hartman3">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">Hartman3</code><a class="headerlink" href="#pySOT.optimization_problems.Hartman3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hartman 3 function</p>
+<p>Details: <a class="reference external" href="http://www.sfu.ca/~ssurjano/hart3.html">http://www.sfu.ca/~ssurjano/hart3.html</a></p>
+<p>Global optimum: <span class="math notranslate nohighlight">\(f(0.114614,0.555649,0.852547)=-3.86278\)</span></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+<li><strong>int_var</strong> – Integer variables</li>
+<li><strong>cont_var</strong> – Continuous variables</li>
+<li><strong>min</strong> – Global minimum value</li>
+<li><strong>minimum</strong> – Global minimizer</li>
+<li><strong>info</strong> – String with problem info</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.optimization_problems.Hartman3.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Hartman3.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Hartman 3 function at x</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.Hartman6">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">Hartman6</code><a class="headerlink" href="#pySOT.optimization_problems.Hartman6" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hartman 6 function</p>
+<p>Details: <a class="reference external" href="http://www.sfu.ca/~ssurjano/hart6.html">http://www.sfu.ca/~ssurjano/hart6.html</a></p>
+<p>Global optimum: <span class="math notranslate nohighlight">\(f(0.201,0.150,0.476,0.275,0.311,0.657)=-3.322\)</span></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+<li><strong>int_var</strong> – Integer variables</li>
+<li><strong>cont_var</strong> – Continuous variables</li>
+<li><strong>min</strong> – Global minimum value</li>
+<li><strong>minimum</strong> – Global minimizer</li>
+<li><strong>info</strong> – String with problem info</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.optimization_problems.Hartman6.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Hartman6.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Hartman 6 function at x</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.Himmelblau">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">Himmelblau</code><span class="sig-paren">(</span><em>dim=10</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Himmelblau" title="Permalink to this definition">¶</a></dt>
+<dd><p>Himmelblau function</p>
+<div class="math notranslate nohighlight">
+\[f(x_1,\ldots,x_n) = 10n -
+    \frac{1}{2n} \sum_{i=1}^n (x_i^4 - 16x_i^2 + 5x_i)\]</div>
+<p>Global optimum: <span class="math notranslate nohighlight">\(f(-2.903,...,-2.903)=-39.166\)</span></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+<li><strong>int_var</strong> – Integer variables</li>
+<li><strong>cont_var</strong> – Continuous variables</li>
+<li><strong>min</strong> – Global minimum value</li>
+<li><strong>minimum</strong> – Global minimizer</li>
+<li><strong>info</strong> – String with problem info</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.optimization_problems.Himmelblau.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Himmelblau.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Himmelblau function at x.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.Levy">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">Levy</code><span class="sig-paren">(</span><em>dim=10</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Levy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Levy function</p>
+<p>Details: <a class="reference external" href="https://www.sfu.ca/~ssurjano/levy.html">https://www.sfu.ca/~ssurjano/levy.html</a></p>
+<p>Global optimum: <span class="math notranslate nohighlight">\(f(1,1,...,1)=0\)</span></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+<li><strong>int_var</strong> – Integer variables</li>
+<li><strong>cont_var</strong> – Continuous variables</li>
+<li><strong>min</strong> – Global minimum value</li>
+<li><strong>minimum</strong> – Global minimizer</li>
+<li><strong>info</strong> – String with problem info</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.optimization_problems.Levy.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Levy.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Levy function at x.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.Michalewicz">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">Michalewicz</code><span class="sig-paren">(</span><em>dim=10</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Michalewicz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Michalewicz function</p>
+<div class="math notranslate nohighlight">
+\[f(x_1,\ldots,x_n) = -\sum_{i=1}^n \sin(x_i) \sin^{20}
+    \left( \frac{ix_i^2}{\pi} \right)\]</div>
+<p>subject to</p>
+<div class="math notranslate nohighlight">
+\[0 \leq x_i \leq \pi\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+<li><strong>int_var</strong> – Integer variables</li>
+<li><strong>cont_var</strong> – Continuous variables</li>
+<li><strong>min</strong> – Global minimum value</li>
+<li><strong>minimum</strong> – Global minimizer</li>
+<li><strong>info</strong> – String with problem info</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.optimization_problems.Michalewicz.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Michalewicz.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Michalewicz function  at x.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.OptimizationProblem">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">OptimizationProblem</code><a class="headerlink" href="#pySOT.optimization_problems.OptimizationProblem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for optimization problems.</p>
+<dl class="method">
+<dt id="pySOT.optimization_problems.OptimizationProblem.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.OptimizationProblem.eval" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.Perm">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">Perm</code><span class="sig-paren">(</span><em>dim=10</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Perm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perm function</p>
+<p>Global optimum: <span class="math notranslate nohighlight">\(f(1,1/2,1/3,...,1/n)=0\)</span></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+<li><strong>int_var</strong> – Integer variables</li>
+<li><strong>cont_var</strong> – Continuous variables</li>
+<li><strong>min</strong> – Global minimum value</li>
+<li><strong>minimum</strong> – Global minimizer</li>
+<li><strong>info</strong> – String with problem info</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.optimization_problems.Perm.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Perm.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Perm function at x.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.Rastrigin">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">Rastrigin</code><span class="sig-paren">(</span><em>dim=10</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Rastrigin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rastrigin function</p>
+<div class="math notranslate nohighlight">
+\[f(x_1,\ldots,x_n)=10n-\sum_{i=1}^n (x_i^2 - 10 \cos(2 \pi x_i))\]</div>
+<p>subject to</p>
+<div class="math notranslate nohighlight">
+\[-5.12 \leq x_i \leq 5.12\]</div>
+<p>Global optimum: <span class="math notranslate nohighlight">\(f(0,0,...,0)=0\)</span></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+<li><strong>int_var</strong> – Integer variables</li>
+<li><strong>cont_var</strong> – Continuous variables</li>
+<li><strong>min</strong> – Global minimum value</li>
+<li><strong>minimum</strong> – Global minimizer</li>
+<li><strong>info</strong> – String with problem info</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.optimization_problems.Rastrigin.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Rastrigin.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Rastrigin function  at x</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.Rosenbrock">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">Rosenbrock</code><span class="sig-paren">(</span><em>dim=10</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Rosenbrock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rosenbrock function</p>
+<div class="math notranslate nohighlight">
+\[f(x_1,\ldots,x_n) = \sum_{j=1}^{n-1}         \left( 100(x_j^2-x_{j+1})^2 + (1-x_j)^2 \right)\]</div>
+<p>subject to</p>
+<div class="math notranslate nohighlight">
+\[-2.048 \leq x_i \leq 2.048\]</div>
+<p>Global optimum: <span class="math notranslate nohighlight">\(f(1,1,...,1)=0\)</span></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+<li><strong>int_var</strong> – Integer variables</li>
+<li><strong>cont_var</strong> – Continuous variables</li>
+<li><strong>min</strong> – Global minimum value</li>
+<li><strong>minimum</strong> – Global minimizer</li>
+<li><strong>info</strong> – String with problem info</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.optimization_problems.Rosenbrock.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Rosenbrock.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Rosenbrock function at x</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.Schwefel">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">Schwefel</code><span class="sig-paren">(</span><em>dim=10</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Schwefel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Schwefel function</p>
+<div class="math notranslate nohighlight">
+\[f(x_1,\ldots,x_n) = \sum_{j=1}^{n}         \left( -x_j \sin(\sqrt{|x_j|}) \right) + 418.982997 n\]</div>
+<p>subject to</p>
+<div class="math notranslate nohighlight">
+\[-512 \leq x_i \leq 512\]</div>
+<p>Global optimum: <span class="math notranslate nohighlight">\(f(420.968746,420.968746,...,420.968746)=0\)</span></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+<li><strong>int_var</strong> – Integer variables</li>
+<li><strong>cont_var</strong> – Continuous variables</li>
+<li><strong>min</strong> – Global minimum value</li>
+<li><strong>minimum</strong> – Global minimizer</li>
+<li><strong>info</strong> – String with problem info</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.optimization_problems.Schwefel.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Schwefel.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Schwefel function at x.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.SixHumpCamel">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">SixHumpCamel</code><a class="headerlink" href="#pySOT.optimization_problems.SixHumpCamel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Six-hump camel function</p>
+<p>Details: <a class="reference external" href="https://www.sfu.ca/~ssurjano/camel6.html">https://www.sfu.ca/~ssurjano/camel6.html</a></p>
+<p>Global optimum: <span class="math notranslate nohighlight">\(f(0.0898,-0.7126)=-1.0316\)</span></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+<li><strong>int_var</strong> – Integer variables</li>
+<li><strong>cont_var</strong> – Continuous variables</li>
+<li><strong>min</strong> – Global minimum value</li>
+<li><strong>minimum</strong> – Global minimizer</li>
+<li><strong>info</strong> – String with problem info</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.optimization_problems.SixHumpCamel.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.SixHumpCamel.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Six Hump Camel function at x</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.Sphere">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">Sphere</code><span class="sig-paren">(</span><em>dim=10</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Sphere" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sphere function</p>
+<div class="math notranslate nohighlight">
+\[f(x_1,\ldots,x_n) = \sum_{j=1}^n x_j^2\]</div>
+<p>subject to</p>
+<div class="math notranslate nohighlight">
+\[-5.12 \leq x_i \leq 5.12\]</div>
+<p>Global optimum: <span class="math notranslate nohighlight">\(f(0,0,...,0)=0\)</span></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+<li><strong>int_var</strong> – Integer variables</li>
+<li><strong>cont_var</strong> – Continuous variables</li>
+<li><strong>min</strong> – Global minimum value</li>
+<li><strong>minimum</strong> – Global minimizer</li>
+<li><strong>info</strong> – String with problem info</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.optimization_problems.Sphere.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Sphere.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Sphere function at x.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.SumOfSquares">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">SumOfSquares</code><span class="sig-paren">(</span><em>dim=10</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.SumOfSquares" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sum of squares function</p>
+<div class="math notranslate nohighlight">
+\[f(x_1,\ldots,x_n)=\sum_{i=1}^n ix_i^2\]</div>
+<p>Global optimum: <span class="math notranslate nohighlight">\(f(0,0,...,0)=0\)</span></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+<li><strong>int_var</strong> – Integer variables</li>
+<li><strong>cont_var</strong> – Continuous variables</li>
+<li><strong>min</strong> – Global minimum value</li>
+<li><strong>minimum</strong> – Global minimizer</li>
+<li><strong>info</strong> – String with problem info</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.optimization_problems.SumOfSquares.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.SumOfSquares.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Sum of squares function at x.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.Weierstrass">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">Weierstrass</code><span class="sig-paren">(</span><em>dim=10</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Weierstrass" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pySOT.optimization_problems.Weierstrass.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Weierstrass.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Weierstrass function at x.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.optimization_problems.Zakharov">
+<em class="property">class </em><code class="descclassname">pySOT.optimization_problems.</code><code class="descname">Zakharov</code><span class="sig-paren">(</span><em>dim=10</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Zakharov" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zakharov function</p>
+<p>Global optimum: <span class="math notranslate nohighlight">\(f(0,0,...,0)=1\)</span></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+<li><strong>int_var</strong> – Integer variables</li>
+<li><strong>cont_var</strong> – Continuous variables</li>
+<li><strong>min</strong> – Global minimum value</li>
+<li><strong>minimum</strong> – Global minimizer</li>
+<li><strong>info</strong> – String with problem info</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.optimization_problems.Zakharov.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.optimization_problems.Zakharov.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Zakharov function at x.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Data point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Value at x</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pySOT.strategy">
+<span id="pysot-strategy-module"></span><h2>pySOT.strategy module<a class="headerlink" href="#module-pySOT.strategy" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-strategy"></span><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Module:</th><td class="field-body">strategy</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Author:</th><td class="field-body">David Eriksson &lt;<a class="reference external" href="mailto:dme65&#37;&#52;&#48;cornell&#46;edu">dme65<span>&#64;</span>cornell<span>&#46;</span>edu</a>&gt;
+David Bindel &lt;<a class="reference external" href="mailto:bindel&#37;&#52;&#48;cornell&#46;edu">bindel<span>&#64;</span>cornell<span>&#46;</span>edu</a>&gt;,</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="pySOT.strategy.DYCORSStrategy">
+<em class="property">class </em><code class="descclassname">pySOT.strategy.</code><code class="descname">DYCORSStrategy</code><span class="sig-paren">(</span><em>max_evals</em>, <em>opt_prob</em>, <em>exp_design</em>, <em>surrogate</em>, <em>asynchronous=True</em>, <em>batch_size=None</em>, <em>extra_points=None</em>, <em>extra_vals=None</em>, <em>weights=None</em>, <em>num_cand=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.DYCORSStrategy" title="Permalink to this definition">¶</a></dt>
+<dd><p>DYCORS optimization strategy.</p>
+<p>This is an implementation of the DYCORS strategy by Regis and Shoemaker:</p>
+<p>Rommel G Regis and Christine A Shoemaker.
+Combining radial basis function surrogates and dynamic coordinate         search in high-dimensional expensive black-box optimization.
+Engineering Optimization, 45(5): 529–555, 2013.</p>
+<p>This is an extension of the SRBF strategy that changes how the candidate
+points are generated. The main idea is that many objective functions depend
+only on a few directions so it may be advantageous to perturb only a few
+directions. In particular, we use a perturbation probability to perturb a
+given coordinate and decrease this probability after each function
+evaluation so fewer coordinates are perturbed later in the optimization.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>max_evals</strong> (<em>int</em>) – Evaluation budget</li>
+<li><strong>opt_prob</strong> (<a class="reference internal" href="#pySOT.optimization_problems.OptimizationProblem" title="pySOT.optimization_problems.OptimizationProblem"><em>OptimizationProblem</em></a>) – Optimization problem object</li>
+<li><strong>exp_design</strong> (<a class="reference internal" href="#pySOT.experimental_design.ExperimentalDesign" title="pySOT.experimental_design.ExperimentalDesign"><em>ExperimentalDesign</em></a>) – Experimental design object</li>
+<li><strong>surrogate</strong> (<a class="reference internal" href="#pySOT.surrogate.Surrogate" title="pySOT.surrogate.Surrogate"><em>Surrogate</em></a>) – Surrogate object</li>
+<li><strong>asynchronous</strong> (<em>bool</em>) – Whether or not to use asynchrony (True/False)</li>
+<li><strong>batch_size</strong> (<em>int</em>) – Size of the batch (use 1 for serial, ignored if async)</li>
+<li><strong>extra_points</strong> (<em>numpy.array of size n x dim</em>) – Extra points to add to the experimental design</li>
+<li><strong>extra_vals</strong> (<em>numpy.array of size n x 1</em>) – Values for extra_points (np.nan/np.inf if unknown)</li>
+<li><strong>reset_surrogate</strong> (<em>bool</em>) – Whether or not to reset surrogate model</li>
+<li><strong>weights</strong> (<em>list of np.array</em>) – Weights for merit function, default = [0.3, 0.5, 0.8, 0.95]</li>
+<li><strong>num_cand</strong> (<em>int</em>) – Number of candidate points, default = 100*dim</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.strategy.DYCORSStrategy.generate_evals">
+<code class="descname">generate_evals</code><span class="sig-paren">(</span><em>num_pts</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.DYCORSStrategy.generate_evals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the next adaptive sample points.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.strategy.EIStrategy">
+<em class="property">class </em><code class="descclassname">pySOT.strategy.</code><code class="descname">EIStrategy</code><span class="sig-paren">(</span><em>max_evals</em>, <em>opt_prob</em>, <em>exp_design</em>, <em>surrogate</em>, <em>asynchronous=True</em>, <em>batch_size=None</em>, <em>extra_points=None</em>, <em>extra_vals=None</em>, <em>reset_surrogate=True</em>, <em>ei_tol=None</em>, <em>dtol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.EIStrategy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expected Improvement strategy.</p>
+<p>This is an implementation of Expected Improvement (EI), arguably the most
+popular acquisition function in Bayesian optimization. Under a Gaussian
+process (GP) prior, the expected value of the improvement:</p>
+<p>I(x) := max(f_best - f(x), 0)
+EI[x] := E[I(x)]</p>
+<p>can be computed analytically, where f_best is the best observed function
+value.EI is one-step optimal in the sense that selecting the maximizer of
+EI is the optimal action if we have exactly one function value remaining
+and must return a solution with a known function value.</p>
+<p>When using parallelism, we constrain each new evaluation to be a distance
+dtol away from previous and pending evaluations to avoid that the same
+point is being evaluated multiple times. We use a default value of
+dtol = 1e-3 * norm(ub - lb), but note that this value has not been
+tuned carefully and may be far from optimal.</p>
+<p>The optimization strategy terminates when the evaluatio budget has been
+exceeded or when the EI of the next point falls below some threshold,
+where the default threshold is 1e-6 * (max(fX) -  min(fX)).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>max_evals</strong> (<em>int</em>) – Evaluation budget</li>
+<li><strong>opt_prob</strong> (<a class="reference internal" href="#pySOT.optimization_problems.OptimizationProblem" title="pySOT.optimization_problems.OptimizationProblem"><em>OptimizationProblem</em></a>) – Optimization problem object</li>
+<li><strong>exp_design</strong> (<a class="reference internal" href="#pySOT.experimental_design.ExperimentalDesign" title="pySOT.experimental_design.ExperimentalDesign"><em>ExperimentalDesign</em></a>) – Experimental design object</li>
+<li><strong>surrogate</strong> (<a class="reference internal" href="#pySOT.surrogate.Surrogate" title="pySOT.surrogate.Surrogate"><em>Surrogate</em></a>) – Surrogate object</li>
+<li><strong>asynchronous</strong> (<em>bool</em>) – Whether or not to use asynchrony (True/False)</li>
+<li><strong>batch_size</strong> (<em>int</em>) – Size of the batch (use 1 for serial, ignored if async)</li>
+<li><strong>extra_points</strong> (<em>numpy.array of size n x dim</em>) – Extra points to add to the experimental design</li>
+<li><strong>extra_vals</strong> (<em>numpy.array of size n x 1</em>) – Values for extra_points (np.nan/np.inf if unknown)</li>
+<li><strong>reset_surrogate</strong> (<em>bool</em>) – Whether or not to reset surrogate model</li>
+<li><strong>ei_tol</strong> (<em>float</em>) – Terminate if the largest EI falls below this threshold
+Default: 1e-6 * (max(fX) -  min(fX))</li>
+<li><strong>dtol</strong> (<em>float</em>) – Minimum distance between new and pending evaluations
+Default: 1e-3 * norm(ub - lb)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.strategy.EIStrategy.check_input">
+<code class="descname">check_input</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.EIStrategy.check_input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the inputs to the optimization strategt.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.EIStrategy.generate_evals">
+<code class="descname">generate_evals</code><span class="sig-paren">(</span><em>num_pts</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.EIStrategy.generate_evals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the next adaptive sample points.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.strategy.LCBStrategy">
+<em class="property">class </em><code class="descclassname">pySOT.strategy.</code><code class="descname">LCBStrategy</code><span class="sig-paren">(</span><em>max_evals</em>, <em>opt_prob</em>, <em>exp_design</em>, <em>surrogate</em>, <em>asynchronous=True</em>, <em>batch_size=None</em>, <em>extra_points=None</em>, <em>extra_vals=None</em>, <em>reset_surrogate=True</em>, <em>kappa=2.0</em>, <em>dtol=None</em>, <em>lcb_tol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.LCBStrategy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lower confidence bound strategy.</p>
+<p>This is an implementation of Lower Confidence Bound (LCB), a
+popular acquisition function in Bayesian optimization. The main idea
+is to minimize:</p>
+<p>LCB(x) := E[x] - kappa * sqrt(V[x])</p>
+<p>where E[x] is the predicted function value, V[x] is the predicted
+variance, and kappa is a constant that balances exploration and
+exploitation. We use a default value of kappa = 2.</p>
+<p>When using parallelism, we constrain each new evaluation to be a distance
+dtol away from previous and pending evaluations to avoid that the same
+point is being evaluated multiple times. We use a default value of
+dtol = 1e-3 * norm(ub - lb), but note that this value has not been
+tuned carefully and may be far from optimal.</p>
+<p>The optimization strategy terminates when the evaluatio budget has been
+exceeded or when the LCB of the next point falls below some threshold,
+where the default threshold is 1e-6 * (max(fX) -  min(fX)).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>max_evals</strong> (<em>int</em>) – Evaluation budget</li>
+<li><strong>opt_prob</strong> (<a class="reference internal" href="#pySOT.optimization_problems.OptimizationProblem" title="pySOT.optimization_problems.OptimizationProblem"><em>OptimizationProblem</em></a>) – Optimization problem object</li>
+<li><strong>exp_design</strong> (<a class="reference internal" href="#pySOT.experimental_design.ExperimentalDesign" title="pySOT.experimental_design.ExperimentalDesign"><em>ExperimentalDesign</em></a>) – Experimental design object</li>
+<li><strong>surrogate</strong> (<a class="reference internal" href="#pySOT.surrogate.Surrogate" title="pySOT.surrogate.Surrogate"><em>Surrogate</em></a>) – Surrogate object</li>
+<li><strong>asynchronous</strong> (<em>bool</em>) – Whether or not to use asynchrony (True/False)</li>
+<li><strong>batch_size</strong> (<em>int</em>) – Size of the batch (use 1 for serial, ignored if async)</li>
+<li><strong>extra_points</strong> (<em>numpy.array of size n x dim</em>) – Extra points to add to the experimental design</li>
+<li><strong>extra_vals</strong> (<em>numpy.array of size n x 1</em>) – Values for extra_points (np.nan/np.inf if unknown)</li>
+<li><strong>reset_surrogate</strong> (<em>bool</em>) – Whether or not to reset surrogate model</li>
+<li><strong>kappa</strong> (<em>float</em>) – Constant in front of sigma(x)</li>
+<li><strong>dtol</strong> (<em>float</em>) – Minimum distance between new and pending evaluations
+Default: 1e-3 * norm(ub - lb)</li>
+<li><strong>lcb_tol</strong> (<em>float</em>) – Terminate if max(fX) - min(LCB(x)) &lt; lcb_tol
+Default: 1e-6 * (max(fX) -  min(fX))</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.strategy.LCBStrategy.check_input">
+<code class="descname">check_input</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.LCBStrategy.check_input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the inputs to the optimization strategt.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.LCBStrategy.generate_evals">
+<code class="descname">generate_evals</code><span class="sig-paren">(</span><em>num_pts</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.LCBStrategy.generate_evals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the next adaptive sample points.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.strategy.RandomSampling">
+<em class="property">class </em><code class="descclassname">pySOT.strategy.</code><code class="descname">RandomSampling</code><span class="sig-paren">(</span><em>max_evals</em>, <em>opt_prob</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.RandomSampling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Random sampling strategy.</p>
+<p>We generate and evaluate a fixed number of points using all resources.
+The optimization problem must implement OptimizationProblem and max_evals
+must be a positive integer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>max_evals</strong> (<em>int</em>) – Evaluation budget</li>
+<li><strong>opt_prob</strong> (<a class="reference internal" href="#pySOT.optimization_problems.OptimizationProblem" title="pySOT.optimization_problems.OptimizationProblem"><em>OptimizationProblem</em></a>) – Optimization problem</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.strategy.RandomSampling.propose_action">
+<code class="descname">propose_action</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.RandomSampling.propose_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Propose an action based on outstanding points.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.strategy.SRBFStrategy">
+<em class="property">class </em><code class="descclassname">pySOT.strategy.</code><code class="descname">SRBFStrategy</code><span class="sig-paren">(</span><em>max_evals</em>, <em>opt_prob</em>, <em>exp_design</em>, <em>surrogate</em>, <em>asynchronous=True</em>, <em>batch_size=None</em>, <em>extra_points=None</em>, <em>extra_vals=None</em>, <em>reset_surrogate=True</em>, <em>weights=None</em>, <em>num_cand=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SRBFStrategy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stochastic RBF (SRBF) optimization strategy.</p>
+<p>This is an implementation of the SRBF strategy by Regis and Shoemaker:</p>
+<p>Rommel G Regis and Christine A Shoemaker.
+A stochastic radial basis function method for the         global optimization of expensive functions.
+INFORMS Journal on Computing, 19(4): 497–509, 2007.</p>
+<p>Rommel G Regis and Christine A Shoemaker.
+Parallel stochastic global optimization using radial basis functions.
+INFORMS Journal on Computing, 21(3):411–426, 2009.</p>
+<p>The main idea is to pick the new evaluations from a set of candidate
+points where each candidate point is generated as an N(0, sigma^2)
+distributed perturbation from the current best solution. The value of
+sigma is modified based on progress and follows the same logic as in many
+trust region methods; we increase sigma if we make a lot of progress
+(the surrogate is accurate) and decrease sigma when we aren’t able to
+make progress (the surrogate model is inaccurate). More details about how
+sigma is updated is given in the original papers.</p>
+<p>After generating the candidate points we predict their objective function
+value and compute the minimum distance to previously evaluated point. Let
+the candidate points be denoted by C and let the function value predictions
+be s(x_i) and the distance values be d(x_i), both rescaled through a linear
+transformation to the interval [0,1]. This is done to put the values on the
+same scale. The next point selected for evaluation is the candidate point
+x that minimizes the weighted-distance merit function:</p>
+<p>merit(x) := w * s(x) + (1 - w) * (1 - d(x))</p>
+<p>where 0 &lt;= w &lt;= 1. That is, we want a small function value prediction and a
+large minimum distance from previously evalauted points. The weight w is
+commonly cycled between a few values to achieve both exploitation and
+exploration. When w is close to zero we do pure exploration while w close
+to 1 corresponds to explotation.</p>
+<p>This strategy has two additional arguments than the base class:</p>
+<dl class="docutils">
+<dt>weights:  Specify a list of weights to cycle through</dt>
+<dd>Default = [0.3, 0.5, 0.8, 0.95]</dd>
+<dt>num_cand: Number of candidate to use when generating new evaluations</dt>
+<dd>Default = 100 * dim</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>max_evals</strong> (<em>int</em>) – Evaluation budget</li>
+<li><strong>opt_prob</strong> (<a class="reference internal" href="#pySOT.optimization_problems.OptimizationProblem" title="pySOT.optimization_problems.OptimizationProblem"><em>OptimizationProblem</em></a>) – Optimization problem object</li>
+<li><strong>exp_design</strong> (<a class="reference internal" href="#pySOT.experimental_design.ExperimentalDesign" title="pySOT.experimental_design.ExperimentalDesign"><em>ExperimentalDesign</em></a>) – Experimental design object</li>
+<li><strong>surrogate</strong> (<a class="reference internal" href="#pySOT.surrogate.Surrogate" title="pySOT.surrogate.Surrogate"><em>Surrogate</em></a>) – Surrogate object</li>
+<li><strong>asynchronous</strong> (<em>bool</em>) – Whether or not to use asynchrony (True/False)</li>
+<li><strong>batch_size</strong> (<em>int</em>) – Size of the batch (use 1 for serial, ignored if async)</li>
+<li><strong>extra_points</strong> (<em>numpy.array of size n x dim</em>) – Extra points to add to the experimental design</li>
+<li><strong>extra_vals</strong> (<em>numpy.array of size n x 1</em>) – Values for extra_points (np.nan/np.inf if unknown)</li>
+<li><strong>reset_surrogate</strong> (<em>bool</em>) – Whether or not to reset surrogate model</li>
+<li><strong>weights</strong> (<em>list of np.array</em>) – Weights for merit function, default = [0.3, 0.5, 0.8, 0.95]</li>
+<li><strong>num_cand</strong> (<em>int</em>) – Number of candidate points, default = 100*dim</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.strategy.SRBFStrategy.adjust_step">
+<code class="descname">adjust_step</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SRBFStrategy.adjust_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adjust the sampling radius sigma.</p>
+<p>After succtol successful steps, we cut the sampling radius;
+after failtol failed steps, we double the sampling radius.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SRBFStrategy.check_input">
+<code class="descname">check_input</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SRBFStrategy.check_input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check inputs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SRBFStrategy.generate_evals">
+<code class="descname">generate_evals</code><span class="sig-paren">(</span><em>num_pts</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SRBFStrategy.generate_evals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the next adaptive sample points.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SRBFStrategy.get_weights">
+<code class="descname">get_weights</code><span class="sig-paren">(</span><em>num_pts</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SRBFStrategy.get_weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the nextw weights.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SRBFStrategy.on_adapt_completed">
+<code class="descname">on_adapt_completed</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SRBFStrategy.on_adapt_completed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle completed evaluation.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.strategy.SurrogateBaseStrategy">
+<em class="property">class </em><code class="descclassname">pySOT.strategy.</code><code class="descname">SurrogateBaseStrategy</code><span class="sig-paren">(</span><em>max_evals</em>, <em>opt_prob</em>, <em>exp_design</em>, <em>surrogate</em>, <em>asynchronous=True</em>, <em>batch_size=None</em>, <em>extra_points=None</em>, <em>extra_vals=None</em>, <em>reset_surrogate=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.adapt_proposal">
+<code class="descname">adapt_proposal</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.adapt_proposal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Propose a point from the batch_queue.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.check_input">
+<code class="descname">check_input</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.check_input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the inputs to the optimization strategt.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.generate_evals">
+<code class="descname">generate_evals</code><span class="sig-paren">(</span><em>num_pts</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.generate_evals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.init_proposal">
+<code class="descname">init_proposal</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.init_proposal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Propose a point from the initial experimental design.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.log_completion">
+<code class="descname">log_completion</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.log_completion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Record a completed evaluation to the log.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>record</strong> (<em>EvalRecord</em>) – Record of the function evaluation</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.make_proposal">
+<code class="descname">make_proposal</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.make_proposal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create proposal and update counters and budgets.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.on_adapt_aborted">
+<code class="descname">on_adapt_aborted</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.on_adapt_aborted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle aborted feval from sampling phase.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.on_adapt_accept">
+<code class="descname">on_adapt_accept</code><span class="sig-paren">(</span><em>proposal</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.on_adapt_accept" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle accepted proposal from sampling phase.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.on_adapt_completed">
+<code class="descname">on_adapt_completed</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.on_adapt_completed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle completion of feval from sampling phase.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.on_adapt_proposal">
+<code class="descname">on_adapt_proposal</code><span class="sig-paren">(</span><em>proposal</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.on_adapt_proposal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle accept/reject of proposal from sampling phase.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.on_adapt_reject">
+<code class="descname">on_adapt_reject</code><span class="sig-paren">(</span><em>proposal</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.on_adapt_reject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle rejected proposal from sampling phase.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.on_adapt_update">
+<code class="descname">on_adapt_update</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.on_adapt_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle update of feval from sampling phase.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.on_initial_aborted">
+<code class="descname">on_initial_aborted</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.on_initial_aborted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle aborted feval from initial design.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.on_initial_accepted">
+<code class="descname">on_initial_accepted</code><span class="sig-paren">(</span><em>proposal</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.on_initial_accepted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle proposal accept from initial design.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.on_initial_completed">
+<code class="descname">on_initial_completed</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.on_initial_completed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle successful completion of feval from initial design.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.on_initial_proposal">
+<code class="descname">on_initial_proposal</code><span class="sig-paren">(</span><em>proposal</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.on_initial_proposal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle accept/reject of proposal from initial design.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.on_initial_rejected">
+<code class="descname">on_initial_rejected</code><span class="sig-paren">(</span><em>proposal</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.on_initial_rejected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle proposal rejection from initial design.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.on_initial_update">
+<code class="descname">on_initial_update</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.on_initial_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle update of feval from initial design.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.propose_action">
+<code class="descname">propose_action</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.propose_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Propose an action.</p>
+<p>NB: We allow workers to continue to the adaptive phase if
+the initial queue is empty. This implies that we need enough
+points in the experimental design for us to construct a
+surrogate.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.remove_pending">
+<code class="descname">remove_pending</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.remove_pending" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a pending point from self.Xpend.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.resume">
+<code class="descname">resume</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.resume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resume a terminated run.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.sample_initial">
+<code class="descname">sample_initial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.sample_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate and queue an initial experimental design.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.strategy.SurrogateBaseStrategy.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>fname</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.strategy.SurrogateBaseStrategy.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the state of the strategy.</p>
+<dl class="docutils">
+<dt>We do this in a 3-step procedure</dt>
+<dd><ol class="first last arabic simple">
+<li>Save to temp file</li>
+<li>Move temp file to save file</li>
+<li>Remove temp file</li>
+</ol>
+</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>fname</strong> (<em>string</em>) – Filename</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pySOT.surrogate">
+<span id="pysot-surrogate-module"></span><h2>pySOT.surrogate module<a class="headerlink" href="#module-pySOT.surrogate" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-surrogate"></span><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Module:</th><td class="field-body">surrogate</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Author:</th><td class="field-body">David Eriksson &lt;<a class="reference external" href="mailto:dme65&#37;&#52;&#48;cornell&#46;edu">dme65<span>&#64;</span>cornell<span>&#46;</span>edu</a>&gt;</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="pySOT.surrogate.ConstantTail">
+<em class="property">class </em><code class="descclassname">pySOT.surrogate.</code><code class="descname">ConstantTail</code><span class="sig-paren">(</span><em>dim</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.ConstantTail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant polynomial tail.</p>
+<p>Constant polynomial in d-dimension, built from the basis <span class="math notranslate nohighlight">\(\{ 1 \}\)</span>.</p>
+<dl class="method">
+<dt id="pySOT.surrogate.ConstantTail.deriv">
+<code class="descname">deriv</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.ConstantTail.deriv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the derivative of the constant polynomial tail.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Point to evaluate, of size (1, dim) or (dim,)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A numpy.array of size dim_tail x dim</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.ConstantTail.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.ConstantTail.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the constant polynomial tail.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>X</strong> (<em>numpy.array</em>) – Points to evaluate, of size num_pts x dim</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A numpy.array of size num_pts x dim_tail(dim)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.surrogate.CubicKernel">
+<em class="property">class </em><code class="descclassname">pySOT.surrogate.</code><code class="descname">CubicKernel</code><a class="headerlink" href="#pySOT.surrogate.CubicKernel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cubic RBF kernel</p>
+<p>This is a class for the Cubic RBF kernel: <span class="math notranslate nohighlight">\(\varphi(r) = r^3\)</span> which
+is conditionally positive definite of order 2.</p>
+<dl class="method">
+<dt id="pySOT.surrogate.CubicKernel.deriv">
+<code class="descname">deriv</code><span class="sig-paren">(</span><em>dists</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.CubicKernel.deriv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the derivative of the Cubic kernel for a distance matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dists</strong> (<em>numpy.array</em>) – Distance input matrix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a matrix where element <span class="math notranslate nohighlight">\((i,j)\)</span> is
+<span class="math notranslate nohighlight">\(3 \| x_i - x_j \|^2\)</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.CubicKernel.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>dists</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.CubicKernel.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the Cubic kernel for a distance matrix</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dists</strong> (<em>numpy.array</em>) – Distance input matrix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a matrix where element <span class="math notranslate nohighlight">\((i,j)\)</span> is
+<span class="math notranslate nohighlight">\(\|x_i - x_j \|^3\)</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.surrogate.GPRegressor">
+<em class="property">class </em><code class="descclassname">pySOT.surrogate.</code><code class="descname">GPRegressor</code><span class="sig-paren">(</span><em>dim</em>, <em>gp=None</em>, <em>n_restarts_optimizer=3</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.GPRegressor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gaussian process (GP) regressor.</p>
+<p>Wrapper around the GPRegressor in scikit-learn.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>dim</strong> (<em>int</em>) – Number of dimensions</li>
+<li><strong>gp</strong> (<em>object</em>) – GPRegressor model</li>
+<li><strong>n_restarts_optimizer</strong> (<em>int</em>) – Number of restarts in hyperparam fitting</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>num_pts</strong> – Number of points in surrogate model</li>
+<li><strong>X</strong> – Point incorporated in surrogate model (num_pts x dim)</li>
+<li><strong>fX</strong> – Function values in surrogate model (num_pts x 1)</li>
+<li><strong>updated</strong> – True if model is up-to-date (no refit needed)</li>
+<li><strong>model</strong> – GPRegressor object</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.surrogate.GPRegressor.predict">
+<code class="descname">predict</code><span class="sig-paren">(</span><em>xx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.GPRegressor.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the GP regressor at the points xx.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xx</strong> (<em>numpy.ndarray</em>) – Prediction points, must be of size num_pts x dim or (dim, )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Prediction of size num_pts x 1</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.GPRegressor.predict_deriv">
+<code class="descname">predict_deriv</code><span class="sig-paren">(</span><em>xx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.GPRegressor.predict_deriv" title="Permalink to this definition">¶</a></dt>
+<dd><p>TODO: Not implemented</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.GPRegressor.predict_std">
+<code class="descname">predict_std</code><span class="sig-paren">(</span><em>xx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.GPRegressor.predict_std" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict standard deviation at points xx.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xx</strong> (<em>numpy.ndarray</em>) – Prediction points, must be of size num_pts x dim or (dim, )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Predicted standard deviation, of size num_pts x 1</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.surrogate.Kernel">
+<em class="property">class </em><code class="descclassname">pySOT.surrogate.</code><code class="descname">Kernel</code><a class="headerlink" href="#pySOT.surrogate.Kernel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for a radial kernel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>order</strong> – Order of the conditionally positive definite kernel</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.surrogate.Kernel.deriv">
+<code class="descname">deriv</code><span class="sig-paren">(</span><em>dists</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.Kernel.deriv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate derivatives of radial kernel wrt distance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dists</strong> (<em>numpy.ndarray</em>) – Array of size n x n with pairwise distances</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Array of size n x n with kernel derivatives</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.Kernel.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>dists</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.Kernel.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the radial kernel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dists</strong> (<em>numpy.ndarray</em>) – Array of size n x n with pairwise distances</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Array of size n x n with kernel values</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.surrogate.LinearKernel">
+<em class="property">class </em><code class="descclassname">pySOT.surrogate.</code><code class="descname">LinearKernel</code><a class="headerlink" href="#pySOT.surrogate.LinearKernel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Linear RBF kernel.</p>
+<p>This is a basic class for the Linear RBF kernel:
+<span class="math notranslate nohighlight">\(\varphi(r) = r\)</span> which is
+conditionally positive definite of order 1.</p>
+<dl class="method">
+<dt id="pySOT.surrogate.LinearKernel.deriv">
+<code class="descname">deriv</code><span class="sig-paren">(</span><em>dists</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.LinearKernel.deriv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the derivative of the Linear kernel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dists</strong> (<em>numpy.array</em>) – Distance input matrix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a matrix where element <span class="math notranslate nohighlight">\((i,j)\)</span> is 1</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.LinearKernel.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>dists</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.LinearKernel.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the Linear kernel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dists</strong> (<em>numpy.array</em>) – Distance input matrix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a matrix where element <span class="math notranslate nohighlight">\((i,j)\)</span> is
+<span class="math notranslate nohighlight">\(\|x_i - x_j \|\)</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.surrogate.LinearTail">
+<em class="property">class </em><code class="descclassname">pySOT.surrogate.</code><code class="descname">LinearTail</code><span class="sig-paren">(</span><em>dim</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.LinearTail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Linear polynomial tail.</p>
+<p>This is a standard linear polynomial in d-dimension, built from
+the basis <span class="math notranslate nohighlight">\(\{1,x_1,x_2,\ldots,x_d\}\)</span>.</p>
+<dl class="method">
+<dt id="pySOT.surrogate.LinearTail.deriv">
+<code class="descname">deriv</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.LinearTail.deriv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the derivative of the linear polynomial tail</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.array</em>) – Point to evaluate, of size (1, dim) or (dim,)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A numpy.array of size dim_tail x dim</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.LinearTail.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.LinearTail.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the linear polynomial tail.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>X</strong> (<em>numpy.array</em>) – Points to evaluate, of size num_pts x dim</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A numpy.array of size num_pts x dim_tail</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.surrogate.MARSInterpolant">
+<em class="property">class </em><code class="descclassname">pySOT.surrogate.</code><code class="descname">MARSInterpolant</code><span class="sig-paren">(</span><em>dim</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.MARSInterpolant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute and evaluate a MARS interpolant</p>
+<p>MARS builds a model of the form</p>
+<div class="math notranslate nohighlight">
+\[\hat{f}(x) = \sum_{i=1}^{k} c_i B_i(x).\]</div>
+<p>The model is a weighted sum of basis functions <span class="math notranslate nohighlight">\(B_i(x)\)</span>. Each basis
+function <span class="math notranslate nohighlight">\(B_i(x)\)</span> takes one of the following three forms:</p>
+<ol class="arabic simple">
+<li>a constant 1.</li>
+<li>a hinge function of the form <span class="math notranslate nohighlight">\(\max(0, x - const)\)</span> or        <span class="math notranslate nohighlight">\(\max(0, const - x)\)</span>. MARS automatically selects variables        and values of those variables for knots of the hinge functions.</li>
+<li>a product of two or more hinge functions. These basis functions c        an model interaction between two or more variables.</li>
+</ol>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>dim</strong> (<em>int</em>) – Number of dimensions</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>num_pts</strong> – Number of points in surrogate model</li>
+<li><strong>X</strong> – Point incorporated in surrogate model (num_pts x dim)</li>
+<li><strong>fX</strong> – Function values in surrogate model (num_pts x 1)</li>
+<li><strong>updated</strong> – True if model is up-to-date (no refit needed)</li>
+<li><strong>model</strong> – Earth object</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.surrogate.MARSInterpolant.predict">
+<code class="descname">predict</code><span class="sig-paren">(</span><em>xx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.MARSInterpolant.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the MARS interpolant at the points xx</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xx</strong> (<em>numpy.ndarray</em>) – Prediction points, must be of size num_pts x dim or (dim, )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Prediction of size num_pts x 1</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.MARSInterpolant.predict_deriv">
+<code class="descname">predict_deriv</code><span class="sig-paren">(</span><em>xx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.MARSInterpolant.predict_deriv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the derivative of the MARS interpolant at points xx</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xx</strong> (<em>numpy.array</em>) – Prediction points, must be of size num_pts x dim or (dim, )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Derivative of the RBF interpolant at xx</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.surrogate.PolyRegressor">
+<em class="property">class </em><code class="descclassname">pySOT.surrogate.</code><code class="descname">PolyRegressor</code><span class="sig-paren">(</span><em>dim</em>, <em>degree=2</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.PolyRegressor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Polynomial regression with cross-terms</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>dim</strong> (<em>int</em>) – Number of dimensions</li>
+<li><strong>degree</strong> – Polynomial degree</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>num_pts</strong> – Number of points in surrogate model</li>
+<li><strong>X</strong> – Point incorporated in surrogate model (num_pts x dim)</li>
+<li><strong>fX</strong> – Function values in surrogate model (num_pts x 1)</li>
+<li><strong>updated</strong> – True if model is up-to-date (no refit needed)</li>
+<li><strong>model</strong> – scikit-learn pipeline for polynomial regression</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.surrogate.PolyRegressor.predict">
+<code class="descname">predict</code><span class="sig-paren">(</span><em>xx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.PolyRegressor.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the polynomial regressor at the points xx</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xx</strong> (<em>numpy.ndarray</em>) – Prediction points, must be of size num_pts x dim or (dim, )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Prediction of size num_pts x 1</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.PolyRegressor.predict_deriv">
+<code class="descname">predict_deriv</code><span class="sig-paren">(</span><em>xx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.PolyRegressor.predict_deriv" title="Permalink to this definition">¶</a></dt>
+<dd><p>TODO: Not implemented</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.surrogate.RBFInterpolant">
+<em class="property">class </em><code class="descclassname">pySOT.surrogate.</code><code class="descname">RBFInterpolant</code><span class="sig-paren">(</span><em>dim</em>, <em>kernel=None</em>, <em>tail=None</em>, <em>eta=1e-06</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.RBFInterpolant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute and evaluate RBF interpolant.</p>
+<p>Manages an expansion of the form</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \sum_j c_j \phi(\|x-x_j\|) + \sum_j \lambda_j p_j(x)\]</div>
+<p>where the functions <span class="math notranslate nohighlight">\(p_j(x)\)</span> are low-degree polynomials.
+The fitting equations are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix} \eta I &amp; P^T \\ P &amp; \Phi+\eta I \end{bmatrix}
+\begin{bmatrix} \lambda \\ c \end{bmatrix} =
+\begin{bmatrix} 0 \\ f \end{bmatrix}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(P_{ij} = p_j(x_i)\)</span> and <span class="math notranslate nohighlight">\(\Phi_{ij}=\phi(\|x_i-x_j\|)\)</span>
+The regularization parameter <span class="math notranslate nohighlight">\(\eta\)</span> allows us to avoid problems
+with potential poor conditioning of the system. Consider using the
+SurrogateUnitBox wrapper or manually scaling the domain to the unit
+hypercube to avoid issues with the domain scaling.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>dim</strong> (<em>int</em>) – Number of dimensions</li>
+<li><strong>kernel</strong> (<a class="reference internal" href="#pySOT.surrogate.Kernel" title="pySOT.surrogate.Kernel"><em>Kernel</em></a>) – RBF kernel object</li>
+<li><strong>tail</strong> (<a class="reference internal" href="#pySOT.surrogate.Tail" title="pySOT.surrogate.Tail"><em>Tail</em></a>) – RBF polynomial tail object</li>
+<li><strong>eta</strong> (<em>float or</em>) – Regularization parameter</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>num_pts</strong> – Number of points in surrogate model</li>
+<li><strong>X</strong> – Point incorporated in surrogate model (num_pts x dim)</li>
+<li><strong>fX</strong> – Function values in surrogate model (num_pts x 1)</li>
+<li><strong>updated</strong> – True if model is up-to-date (no refit needed)</li>
+<li><strong>kernel</strong> – RBF kernel</li>
+<li><strong>tail</strong> – RBF tail</li>
+<li><strong>eta</strong> – Regularization parameter</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.surrogate.RBFInterpolant.predict">
+<code class="descname">predict</code><span class="sig-paren">(</span><em>xx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.RBFInterpolant.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the RBF interpolant at the points xx</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xx</strong> (<em>numpy.ndarray</em>) – Prediction points, must be of size num_pts x dim or (dim, )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Prediction of size num_pts x 1</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.RBFInterpolant.predict_deriv">
+<code class="descname">predict_deriv</code><span class="sig-paren">(</span><em>xx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.RBFInterpolant.predict_deriv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the derivative of the RBF interpolant at a point xx</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xx</strong> (<em>numpy.array</em>) – Prediction points, must be of size num_pts x dim or (dim, )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Derivative of the RBF interpolant at xx</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.RBFInterpolant.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.RBFInterpolant.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the RBF interpolant.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.surrogate.Surrogate">
+<em class="property">class </em><code class="descclassname">pySOT.surrogate.</code><code class="descname">Surrogate</code><a class="headerlink" href="#pySOT.surrogate.Surrogate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for a surrogate model.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>num_pts</strong> – Number of points in surrogate model</li>
+<li><strong>X</strong> – Point incorporated in surrogate model (num_pts x dim)</li>
+<li><strong>fX</strong> – Function values in surrogate model (num_pts x 1)</li>
+<li><strong>updated</strong> – True if model is up-to-date (no refit needed)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.surrogate.Surrogate.add_points">
+<code class="descname">add_points</code><span class="sig-paren">(</span><em>xx</em>, <em>fx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.Surrogate.add_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new function evaluations.</p>
+<p>This method SHOULD NOT trigger a new fit, it just updates X
+and fX but leaves the original surrogate object intact</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>xx</strong> (<em>numpy.ndarray</em>) – Points to add</li>
+<li><strong>fx</strong> (<em>numpy.array</em><em> or </em><em>float</em>) – The function values of the point to add</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.Surrogate.predict">
+<code class="descname">predict</code><span class="sig-paren">(</span><em>xx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.Surrogate.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate surroagte at points xx.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xx</strong> (<em>numpy.ndarray</em>) – xx must be of size num_pts x dim or (dim, )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Surrogate predictions, of size num_pts x 1</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.Surrogate.predict_deriv">
+<code class="descname">predict_deriv</code><span class="sig-paren">(</span><em>xx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.Surrogate.predict_deriv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate derivative of interpolant at points xx.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xx</strong> (<em>numpy.ndarray</em>) – xx must be of size num_pts x dim or (dim, )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Surrogate derivative predictions, of size num_pts x dim</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.Surrogate.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.Surrogate.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the surrogate.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.surrogate.SurrogateCapped">
+<em class="property">class </em><code class="descclassname">pySOT.surrogate.</code><code class="descname">SurrogateCapped</code><span class="sig-paren">(</span><em>model</em>, <em>transformation=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.SurrogateCapped" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for tranformation of function values.</p>
+<p>This adapter takes an existing surrogate model and replaces it
+with a modified version where the function values are replaced
+according to some transformation. A common transformation
+is replacing all values above the median by the median
+to reduce the influence of large function values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>model</strong> (<em>object</em>) – Original surrogate model (must implement Surrogate)</li>
+<li><strong>transformation</strong> (<em>function</em>) – Function that transforms the function values</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>num_pts</strong> – Number of points in surrogate model</li>
+<li><strong>X</strong> – Point incorporated in surrogate model (num_pts x dim)</li>
+<li><strong>fX</strong> – Function values in surrogate model (num_pts x 1)</li>
+<li><strong>updated</strong> – True if model is up-to-date (no refit needed)</li>
+<li><strong>model</strong> – scikit-learn pipeline for polynomial regression</li>
+<li><strong>transformation</strong> – Transformation function</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.surrogate.SurrogateCapped.add_points">
+<code class="descname">add_points</code><span class="sig-paren">(</span><em>xx</em>, <em>fx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.SurrogateCapped.add_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new function evaluations.</p>
+<p>This method SHOULD NOT trigger a new fit, it just updates X and
+fX but leaves the original surrogate object intact</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>xx</strong> (<em>numpy.ndarray</em>) – Points to add</li>
+<li><strong>fx</strong> (<em>numpy.array</em><em> or </em><em>float</em>) – The function values of the point to add</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.SurrogateCapped.predict">
+<code class="descname">predict</code><span class="sig-paren">(</span><em>xx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.SurrogateCapped.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the surrogate model at the points xx</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xx</strong> (<em>numpy.ndarray</em>) – Prediction points, must be of size num_pts x dim or (dim, )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Prediction of size num_pts x 1</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.SurrogateCapped.predict_deriv">
+<code class="descname">predict_deriv</code><span class="sig-paren">(</span><em>xx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.SurrogateCapped.predict_deriv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the derivative of the surrogate model at points xx.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xx</strong> (<em>numpy.array</em>) – Prediction points, must be of size num_pts x dim or (dim, )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Derivative of the RBF interpolant at xx</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.SurrogateCapped.predict_std">
+<code class="descname">predict_std</code><span class="sig-paren">(</span><em>xx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.SurrogateCapped.predict_std" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict standard deviation at points xx.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xx</strong> (<em>numpy.ndarray</em>) – Prediction points, must be of size num_pts x dim or (dim, )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Predicted standard deviation, of size num_pts x 1</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.SurrogateCapped.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.SurrogateCapped.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the surrogate.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.surrogate.SurrogateUnitBox">
+<em class="property">class </em><code class="descclassname">pySOT.surrogate.</code><code class="descname">SurrogateUnitBox</code><span class="sig-paren">(</span><em>model</em>, <em>lb</em>, <em>ub</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.SurrogateUnitBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unit box adapter for surrogate models.</p>
+<p>This adapter takes an existing surrogate model and replaces it
+by a modified version where the domain is rescaled to the unit
+hypercube. This is useful for surrogate models that are sensitive to
+scaling, such as RBFs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>model</strong> (<em>object</em>) – Original surrogate model (must implement Surrogate)</li>
+<li><strong>lb</strong> (<em>function</em>) – Lower variable bounds, of size 1 x dim</li>
+<li><strong>ub</strong> (<em>function</em>) – Upper variable bounds, of size 1 x dim</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dim</strong> – Number of dimensions</li>
+<li><strong>num_pts</strong> – Number of points in surrogate model</li>
+<li><strong>X</strong> – Point incorporated in surrogate model (num_pts x dim)</li>
+<li><strong>fX</strong> – Function values in surrogate model (num_pts x 1)</li>
+<li><strong>updated</strong> – True if model is up-to-date (no refit needed)</li>
+<li><strong>model</strong> – scikit-learn pipeline for polynomial regression</li>
+<li><strong>lb</strong> – Lower variable bounds</li>
+<li><strong>ub</strong> – Upper variable bounds</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.surrogate.SurrogateUnitBox.add_points">
+<code class="descname">add_points</code><span class="sig-paren">(</span><em>xx</em>, <em>fx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.SurrogateUnitBox.add_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new function evaluations.</p>
+<p>This method SHOULD NOT trigger a new fit, it just updates X and
+fX but leaves the original surrogate object intact</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>xx</strong> (<em>numpy.ndarray</em>) – Points to add</li>
+<li><strong>fx</strong> (<em>numpy.array</em><em> or </em><em>float</em>) – The function values of the point to add</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.SurrogateUnitBox.predict">
+<code class="descname">predict</code><span class="sig-paren">(</span><em>xx</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.SurrogateUnitBox.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the surrogate model at the points xx</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xx</strong> (<em>numpy.ndarray</em>) – Prediction points, must be of size num_pts x dim or (dim, )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Prediction of size num_pts x 1</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.SurrogateUnitBox.predict_deriv">
+<code class="descname">predict_deriv</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.SurrogateUnitBox.predict_deriv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the derivative of the surrogate model at points xx</p>
+<dl class="docutils">
+<dt>Remember the chain rule:</dt>
+<dd>f’(x) = (d/dx) g((x-a)/(b-a)) = g’((x-a)/(b-a)) * 1/(b-a)</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xx</strong> (<em>numpy.array</em>) – Prediction points, must be of size num_pts x dim or (dim, )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Derivative of the RBF interpolant at xx</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.SurrogateUnitBox.predict_std">
+<code class="descname">predict_std</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.SurrogateUnitBox.predict_std" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict standard deviation at points xx.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xx</strong> (<em>numpy.ndarray</em>) – Prediction points, must be of size num_pts x dim or (dim, )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Predicted standard deviation, of size num_pts x 1</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.SurrogateUnitBox.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.SurrogateUnitBox.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the surrogate model.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.surrogate.TPSKernel">
+<em class="property">class </em><code class="descclassname">pySOT.surrogate.</code><code class="descname">TPSKernel</code><a class="headerlink" href="#pySOT.surrogate.TPSKernel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thin-plate spline RBF kernel.</p>
+<p>This is a basic class for the TPS RBF kernel:
+<span class="math notranslate nohighlight">\(\varphi(r) = r^2 \log(r)\)</span> which is
+conditionally positive definite of order 2.</p>
+<dl class="method">
+<dt id="pySOT.surrogate.TPSKernel.deriv">
+<code class="descname">deriv</code><span class="sig-paren">(</span><em>dists</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.TPSKernel.deriv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the derivative of the TPS kernel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dists</strong> (<em>numpy.array</em>) – Distance input matrix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a matrix where element <span class="math notranslate nohighlight">\((i,j)\)</span> is
+<span class="math notranslate nohighlight">\(\|x_i - x_j \|(1 + 2 \log (\|x_i - x_j \|) )\)</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.TPSKernel.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>dists</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.TPSKernel.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the TPS kernel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dists</strong> (<em>numpy.array</em>) – Distance input matrix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a matrix where element <span class="math notranslate nohighlight">\((i,j)\)</span> is
+<span class="math notranslate nohighlight">\(\|x_i - x_j \|^2 \log (\|x_i - x_j \|)\)</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pySOT.surrogate.Tail">
+<em class="property">class </em><code class="descclassname">pySOT.surrogate.</code><code class="descname">Tail</code><a class="headerlink" href="#pySOT.surrogate.Tail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for a polynomial tail.</p>
+<p>“ivar dim: Dimensionality of the original space
+:ivar dim_tail: Dimensionality of the polynomial space         (number of basis functions)</p>
+<dl class="method">
+<dt id="pySOT.surrogate.Tail.deriv">
+<code class="descname">deriv</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.Tail.deriv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate derivative of the polynomial tail.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.ndarray</em>) – Array of size 1 x dim or (dim,)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Array of size dim_tail x dim</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pySOT.surrogate.Tail.eval">
+<code class="descname">eval</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.surrogate.Tail.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the polynomial tail.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>X</strong> (<em>numpy.ndarray</em>) – Array of size num_pts x dim</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Array of size num_pts x dim_tail</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pySOT.utils">
+<span id="pysot-utils-module"></span><h2>pySOT.utils module<a class="headerlink" href="#module-pySOT.utils" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-utils"></span><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Module:</th><td class="field-body">utils</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Author:</th><td class="field-body">David Eriksson &lt;<a class="reference external" href="mailto:dme65&#37;&#52;&#48;cornell&#46;edu">dme65<span>&#64;</span>cornell<span>&#46;</span>edu</a>&gt;</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="pySOT.utils.GeneticAlgorithm">
+<em class="property">class </em><code class="descclassname">pySOT.utils.</code><code class="descname">GeneticAlgorithm</code><span class="sig-paren">(</span><em>function</em>, <em>dim</em>, <em>lb</em>, <em>ub</em>, <em>int_var=None</em>, <em>pop_size=100</em>, <em>num_gen=100</em>, <em>start='SLHD'</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.utils.GeneticAlgorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Genetic algorithm.</p>
+<p>Implementation of the real-valued Genetic algorithm. The mutations are
+normally distributed perturbations, the selection mechanism is a tournament
+selection, and the crossover oepration is the standard linear combination
+taken at a randomly generated cutting point.</p>
+<p>The total number of evaluations are popsize x ngen</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>function</strong> (<em>Object</em>) – Function that can be used to evaluate the entire
+population. It needs to take an input of size pop_size x dim and
+return a numpy.array of size pop_size x 1</li>
+<li><strong>dim</strong> (<em>int</em>) – Number of dimensions</li>
+<li><strong>lb</strong> (<em>numpy.array</em>) – Lower variable bounds, of length dim</li>
+<li><strong>ub</strong> (<em>numpy.array</em>) – Lower variable bounds, of length dim</li>
+<li><strong>int_var</strong> (<em>list</em>) – List of indices with the integer valued variables
+(e.g., [0, 1, 5])</li>
+<li><strong>pop_size</strong> (<em>int</em>) – Population size</li>
+<li><strong>num_gen</strong> (<em>int</em>) – Number of generations</li>
+<li><strong>start</strong> (<em>string</em>) – Method for generating the initial population</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>nvariables</strong> – Number of variables (dimensions)</li>
+<li><strong>nindividuals</strong> – population size</li>
+<li><strong>lower_boundary</strong> – lower bounds for the optimization problem</li>
+<li><strong>upper_boundary</strong> – upper bounds for the optimization problem</li>
+<li><strong>integer_variables</strong> – List of variables that are integer valued</li>
+<li><strong>start</strong> – Method for generating the initial population</li>
+<li><strong>sigma</strong> – Perturbation radius. Each pertubation is N(0, sigma)</li>
+<li><strong>p_mutation</strong> – Mutation probability (1/dim)</li>
+<li><strong>tournament_size</strong> – Size of the tournament (5)</li>
+<li><strong>p_cross</strong> – Cross-over probability (0.9)</li>
+<li><strong>ngenerations</strong> – Number of generations</li>
+<li><strong>function</strong> – Object that can be used to evaluate the objective function</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pySOT.utils.GeneticAlgorithm.optimize">
+<code class="descname">optimize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.utils.GeneticAlgorithm.optimize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method used to run the Genetic algorithm</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Returns the best individual and its function value</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">numpy.array, float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pySOT.utils.check_opt_prob">
+<code class="descclassname">pySOT.utils.</code><code class="descname">check_opt_prob</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.utils.check_opt_prob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check an implementation of the optimization problem.</p>
+<p>This method checks everything, but can’t make sure that the objective
+function returns values of the correct type since this would involve
+actually evaluating the objective function, which isn’t feasible when
+the evaluations are expensive. If some test fails, an exception is raised.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>obj</strong> (<em>Object</em>) – Optimization problem</td>
+</tr>
+</tbody>
+</table>
+<p>:raise Appropriate error if object doesn’t follow the pySOT standard</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pySOT.utils.from_unit_box">
+<code class="descclassname">pySOT.utils.</code><code class="descname">from_unit_box</code><span class="sig-paren">(</span><em>x</em>, <em>lb</em>, <em>ub</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.utils.from_unit_box" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maps a set of points from the unit box to the original domain</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>numpy.array</em>) – Points to be mapped from the unit box, of size npts x dim</li>
+<li><strong>lb</strong> (<em>numpy.array</em>) – Lower bounds, of size 1 x dim</li>
+<li><strong>ub</strong> (<em>numpy.array</em>) – Upper bounds, of size 1 x dim</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Points mapped to the original domain</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pySOT.utils.progress_plot">
+<code class="descclassname">pySOT.utils.</code><code class="descname">progress_plot</code><span class="sig-paren">(</span><em>controller</em>, <em>title=''</em>, <em>interactive=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.utils.progress_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a progress plot from a POAP controller.</p>
+<p>This method requires matplotlib and will terminate if matplotlib.pyplot
+is unavailable.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>controller</strong> (<em>Object</em>) – POAP controller object</li>
+<li><strong>title</strong> (<em>string</em>) – Title of the plot</li>
+<li><strong>interactive</strong> (<em>bool</em>) – True if the plot should be interactive</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pySOT.utils.round_vars">
+<code class="descclassname">pySOT.utils.</code><code class="descname">round_vars</code><span class="sig-paren">(</span><em>x</em>, <em>int_var</em>, <em>lb</em>, <em>ub</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.utils.round_vars" title="Permalink to this definition">¶</a></dt>
+<dd><p>Round integer variables to closest integer in the domain.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>numpy.array</em>) – Set of points, of size npts x dim</li>
+<li><strong>int_var</strong> (<em>numpy.array</em>) – Set of indices of integer variables</li>
+<li><strong>lb</strong> (<em>numpy.array</em>) – Lower bounds, of size 1 x dim</li>
+<li><strong>ub</strong> (<em>numpy.array</em>) – Upper bounds, of size 1 x dim</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The set of points with the integer variables
+rounded to the closest integer in the domain</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pySOT.utils.to_unit_box">
+<code class="descclassname">pySOT.utils.</code><code class="descname">to_unit_box</code><span class="sig-paren">(</span><em>x</em>, <em>lb</em>, <em>ub</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.utils.to_unit_box" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maps a set of points to the unit box</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>numpy.array</em>) – Points to be mapped to the unit box, of size npts x dim</li>
+<li><strong>lb</strong> (<em>numpy.array</em>) – Lower bounds, of size 1 x dim</li>
+<li><strong>ub</strong> (<em>numpy.array</em>) – Upper bounds, of size 1 x dim</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Points mapped to the unit box</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pySOT.utils.unit_rescale">
+<code class="descclassname">pySOT.utils.</code><code class="descname">unit_rescale</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pySOT.utils.unit_rescale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shift and rescale elements of a vector to the unit interval</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>numpy.ndarray</em>) – array that should be rescaled to the unit interval</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">array scaled to the unit interval</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="changes.html" class="btn btn-neutral float-right" title="Changes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="logging.html" class="btn btn-neutral" title="Logging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, David Bindel, David Eriksson, Christine Shoemaker
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

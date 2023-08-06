@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>POAP &mdash; pySOT  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Logging" href="logging.html" />
+    <link rel="prev" title="Options" href="options.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pySOT
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="surrogate_optimization.html">Surrogate optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">POAP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#controller">Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#strategy">Strategy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#workers">Workers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#communication-between-poap-and-pysot">Communication between POAP and pySOT</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source_code.html">Source code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes.html">Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributors.html">Contributors</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pySOT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>POAP</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/poap.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="poap">
+<h1>POAP<a class="headerlink" href="#poap" title="Permalink to this headline">¶</a></h1>
+<p>pySOT uses POAP, which an event-driven framework for building and combining
+asynchronous optimization strategies. There are two main components in POAP,
+namely controllers and strategies. The controller is  capable of asking workers to
+run function evaluations and the strategy decides where to evaluate next. POAP
+works with external black-box objective functions and handles potential crashes
+in the objective function evaluation. There is also a logfile from which all function
+evaluations can be accessed after the run finished. In its simplest form, an
+optimization code with POAP that evaluates a function predetermined set of
+points using NUM_WORKERS threads may look the following way:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">poap.strategy</span> <span class="kn">import</span> <span class="n">FixedSampleStrategy</span>
+<span class="kn">from</span> <span class="nn">poap.strategy</span> <span class="kn">import</span> <span class="n">CheckWorkStrategy</span>
+<span class="kn">from</span> <span class="nn">poap.controller</span> <span class="kn">import</span> <span class="n">ThreadController</span>
+<span class="kn">from</span> <span class="nn">poap.controller</span> <span class="kn">import</span> <span class="n">BasicWorkerThread</span>
+
+<span class="c1"># samples = list of sample points ...</span>
+
+<span class="n">controller</span> <span class="o">=</span> <span class="n">ThreadController</span><span class="p">()</span>
+<span class="n">sampler</span> <span class="o">=</span> <span class="n">FixedSampleStrategy</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
+<span class="n">controller</span><span class="o">.</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">CheckWorkerStrategy</span><span class="p">(</span><span class="n">controller</span><span class="p">,</span> <span class="n">sampler</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">NUM_WORKERS</span><span class="p">):</span>
+   <span class="n">t</span> <span class="o">=</span> <span class="n">BasicWorkerThread</span><span class="p">(</span><span class="n">controller</span><span class="p">,</span> <span class="n">objective</span><span class="p">)</span>
+   <span class="n">controller</span><span class="o">.</span><span class="n">launch_worker</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">controller</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="k">print</span> <span class="s1">&#39;Best result: {0} at {1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="controller">
+<h2>Controller<a class="headerlink" href="#controller" title="Permalink to this headline">¶</a></h2>
+<p>The controller is responsible for accepting or rejecting proposals by the strategy object,
+controlling and monitoring the workers, and informing the strategy object of relevant events.
+Examples of relevant events are the processing of a proposal, or status updates on a function
+evaluation. Interactions between controller and the strategies are organized around proposals
+and evaluation records. At the beginning of the optimization and on any later change to the
+system state, the controller requests a proposal from the strategy. The proposal consists of an
+action (evaluate a function, kill a function, or terminate the optimization), a list of parameters,
+and a list of callback functions to be executed once the proposal is processed. The controller
+then either accepts the proposal (and sends a command to the worker), or rejects the proposal.</p>
+<p>When the controller accepts a proposal to start a function evaluation, it creates an evaluation
+record to share information about the status of the evaluation with the strategy. The evaluation
+record includes the evaluation point, the status of the evaluation, the value (if completed),
+and a list of callback functions to be executed on any update. Once a proposal has been accepted
+or rejected, the controller processes any pending system events (e.g. completed or canceled
+function evaluations), notifies the strategy about updates, and requests the next proposed action.</p>
+<p>POAP comes with a serial controller which is the controller of choice when objective function
+evaluations are carried out in serial. There is also a threaded controller that dispatches work
+to a queue of workers where each worker is able to handle evaluation and kill requests. The
+requests are asynchronous in the sense that the workers are not required to complete the
+evaluation or termination requests. The worker is forced to respond to evaluation requests, but
+may ignore kill requests. When receiving an evaluation request, the worker should either attempt
+the evaluation or mark the record as killed. The worker sends status updates back to the controller
+by updating the relevant record. There is also a third controller that uses simulated time, which
+is very useful for testing asynchronous optimization strategies.</p>
+</div>
+<div class="section" id="strategy">
+<h2>Strategy<a class="headerlink" href="#strategy" title="Permalink to this headline">¶</a></h2>
+<p>The strategy is the heart of the optimization algorithm, since it is responsible for choosing
+new evaluations, killing evaluations, and terminating the optimization run when a stopping
+criteria is reached. POAP provides some basic default strategies based on non-adaptive sampling
+and serial optimization routines and also some strategies that adapt or combine other strategies.</p>
+<p>Different strategies can be composed by combining their control actions, which can be used to
+let a strategy cycle through a list of optimization strategies and select the most promising
+of their proposals. Strategies can also subscribe to be informed of all new function evaluations
+so they incorporate any new function information, even though the evaluation was proposed by another
+strategy. This makes it possible to start several independent strategies while still allowing each
+strategy to look at the function information that comes from function evaluations proposed by other
+strategies. As an example we can have a local optimizer strategy running a gradient based method
+where the starting point can be selected based on the best point found by any other strategy. The
+flexibility of the POAP framework makes combined strategies like these very straightforward.</p>
+</div>
+<div class="section" id="workers">
+<h2>Workers<a class="headerlink" href="#workers" title="Permalink to this headline">¶</a></h2>
+<p>The multi-threaded controller employs a set of workers that are capable of managing concurrent
+function evaluations. Each worker does not provide parallelism on its own, but the worker itself
+is allowed to exploit parallelism by separate external processes.</p>
+<p>There are workers that are capable of calling Python objective function when asked to do an
+evaluation, which only results in parallelism if the objective function implementation itself
+allows parallelism. There are workers that use subprocesses in order to carry out external
+objective function evaluations that are not necessarily in Python. The user is responsible
+for specifying how to evaluate the objective function and how to parse partial information
+if available.</p>
+<p>POAP is also capable of having workers connect to a specified TCP/IP port in order to communicate
+with the controller. This functionality is useful in a cluster setting, for example, where the workers
+should run on compute nodes distinct from the node where the controller is running. It is also very
+useful in a setting where the workers run on a supercomputer that has a restriction on the number
+of hours per job submission. Having the controller run on a separate machine will allow the
+controller to keep running and the workers to reconnect and continue carrying out evaluations.</p>
+</div>
+<div class="section" id="communication-between-poap-and-pysot">
+<h2>Communication between POAP and pySOT<a class="headerlink" href="#communication-between-poap-and-pysot" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/communication.png" src="_images/communication.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="logging.html" class="btn btn-neutral float-right" title="Logging" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="options.html" class="btn btn-neutral" title="Options" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, David Bindel, David Eriksson, Christine Shoemaker
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

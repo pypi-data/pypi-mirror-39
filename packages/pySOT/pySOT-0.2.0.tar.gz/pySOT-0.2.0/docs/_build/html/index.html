@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to the pySOT documentation! &mdash; pySOT  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Quickstart" href="quickstart.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> pySOT
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="surrogate_optimization.html">Surrogate optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="poap.html">POAP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source_code.html">Source code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes.html">Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributors.html">Contributors</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">pySOT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Welcome to the pySOT documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-the-pysot-documentation">
+<h1>Welcome to the pySOT documentation!<a class="headerlink" href="#welcome-to-the-pysot-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This is the documentation for the Surrogate Optimization Toolbox (pySOT) for
+global deterministic optimization problems. pySOT is hosted on GitHub:
+<a class="reference external" href="https://github.com/dme65/pySOT">https://github.com/dme65/pySOT</a>.</p>
+<p>The main purpose of the toolbox is for optimization of computationally
+expensive black-box objective functions with continuous and/or integer
+variables.
+All variables are assumed to have bound constraints in some form where none
+of the bounds are infinity. The tighter the bounds, the more efficient are
+the algorithms since it reduces the search region and increases the quality
+of the constructed surrogate.
+This toolbox may not be very efficient for problems with computationally cheap
+function evaluations. Surrogate models are intended to be used when function
+evaluations take from several minutes to several hours or more.</p>
+<p>For easier understanding of the algorithms in this toolbox, it is recommended
+and helpful to read these papers. If you have any questions, or you encounter
+any bugs, please feel free to either submit a bug report on GitHub (recommended)
+or to contact me at the email address: <a class="reference external" href="mailto:dme65&#37;&#52;&#48;cornell&#46;edu">dme65<span>&#64;</span>cornell<span>&#46;</span>edu</a>. Keep an eye on the
+GitHub repository for updates and changes to both the toolbox and the documentation.</p>
+<p>The toolbox is based on the following published papers: [<a class="reference internal" href="#id1">1</a>], [<a class="reference internal" href="#id2">2</a>], [<a class="reference internal" href="#id3">3</a>].</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#installation">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="surrogate_optimization.html">Surrogate optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="options.html#optimization-problem">Optimization problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options.html#experimental-design">Experimental design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options.html#surrogate-model">Surrogate model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options.html#strategy">Strategy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="poap.html">POAP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="poap.html#controller">Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poap.html#strategy">Strategy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poap.html#workers">Workers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poap.html#communication-between-poap-and-pysot">Communication between POAP and pySOT</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source_code.html">Source code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source_code.html#module-pySOT.auxiliary_problems">pySOT.auxiliary_problems module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code.html#module-pySOT.controller">pySOT.controller module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code.html#module-pySOT.experimental_design">pySOT.experimental_design module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code.html#module-pySOT.optimization_problems">pySOT.optimization_problems module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code.html#module-pySOT.strategy">pySOT.strategy module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code.html#module-pySOT.surrogate">pySOT.surrogate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code.html#module-pySOT.utils">pySOT.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changes.html">Changes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v-0-2-0-2018-12-06">v.0.2.0,  2018-12-06</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v-0-1-36-2017-07-20">v.0.1.36, 2017-07-20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v-0-1-35-2017-04-29">v.0.1.35, 2017-04-29</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v-0-1-34-2017-03-28">v.0.1.34, 2017-03-28</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v-0-1-33-2016-12-27">v.0.1.33, 2016-12-27</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v-0-1-32-2016-12-07">v.0.1.32, 2016-12-07</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v-0-1-31-2016-11-23">v.0.1.31, 2016-11-23</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v-0-1-30-2016-11-18">v.0.1.30, 2016-11-18</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-29-2016-10-20">v0.1.29, 2016-10-20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-28-2016-10-20">v0.1.28, 2016-10-20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-27-2016-10-18">v0.1.27, 2016-10-18</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-26-2016-10-14">v0.1.26, 2016-10-14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-25-2016-09-14">v0.1.25, 2016-09-14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-24-2016-08-04">v0.1.24, 2016-08-04</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-23-2016-07-28">v0.1.23, 2016-07-28</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#id1">v0.1.23, 2016-07-28</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-22-2016-06-27">v0.1.22, 2016-06-27</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-21-2016-06-23">v0.1.21, 2016-06-23</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-20-2016-06-18">v0.1.20, 2016-06-18</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-19-2016-01-30">v0.1.19, 2016-01-30</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-18-2016-01-24">v0.1.18, 2016-01-24</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-17-2016-01-13">v0.1.17, 2016-01-13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-16-2016-01-06">v0.1.16, 2016-01-06</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-15-2015-09-23">v0.1.15, 2015-09-23</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-14-2015-09-22">v0.1.14, 2015-09-22</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-13-2015-09-03">v0.1.13, 2015-09-03</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-12-2015-07-23">v0.1.12, 2015-07-23</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-11-2015-07-22">v0.1.11, 2015-07-22</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-10-2015-07-14">v0.1.10, 2015-07-14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-9-2015-07-13">v0.1.9, 2015-07-13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-8-2015-07-01">v0.1.8, 2015-07-01</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-7-2015-06-30">v0.1.7, 2015-06-30</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-6-2015-06-28">v0.1.6, 2015-06-28</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-5-2015-06-28">v0.1.5, 2015-06-28</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-4-2015-06-26">v0.1.4, 2015-06-26</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-3-2015-06-26">v0.1.3, 2015-06-26</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-2-2015-06-24">v0.1.2, 2015-06-24</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-1-2015-06-21">v0.1.1, 2015-06-21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#v0-1-0-2015-06-03">v0.1.0, 2015-06-03</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributors.html">Contributors</a></li>
+</ul>
+</div>
+<table class="docutils footnote" frame="void" id="id1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td>Rommel G Regis and Christine A Shoemaker.
+A stochastic radial basis function method for the global optimization of expensive functions.
+INFORMS Journal on Computing, 19(4): 497–509, 2007.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[2]</td><td>Rommel G Regis and Christine A Shoemaker.
+Parallel stochastic global optimization using radial basis functions.
+INFORMS Journal on Computing, 21(3):411–426, 2009.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[3]</td><td>Rommel G Regis and Christine A Shoemaker.
+Combining radial basis function surrogates and dynamic coordinate search in high-dimensional expensive black-box optimization.
+Engineering Optimization, 45(5): 529–555, 2013.</td></tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="quickstart.html" class="btn btn-neutral float-right" title="Quickstart" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, David Bindel, David Eriksson, Christine Shoemaker
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
