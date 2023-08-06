@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: andrew-anderson-utils
+Version: 0.3.0
+Summary: A package with Andrew Anderson's modules
+Home-page: https://github.com/Mr-Andersen/session_protocol
+Author: Andrew Anderson
+Author-email: andrew-anderson.neo@yandex.ru
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pycrypto
+Requires-Dist: requests
+
+# Andrew Anderson's utils
+
+session_protocol:
+  Contents protocol class (socket subclass), which is designed for safe client-server communications.
+
+dbtools:
+  Inspired by jQuery.
+  Made for SQL.
+  Enjoy.
+
+x_structs:
+  Contains implementetions of XDict and XList structs
+
+
