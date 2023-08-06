@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ezgame
+Version: 0.0.1
+Summary: Small layer over pygame to make its usage more transparent.
+Home-page: https://github.com/SplinterDev/ezgame
+Author: Fabricio J.C. Montenegro
+Author-email: fabriciojcmontenegro@gmail.com
+License: UNKNOWN
+Description: # ezgame
+        Small layer over pygame to make its usage more transparent.
+        
+        ## Warning
+        This code is unfinished and might be unstable. It was made available for collaboration purposes only.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Multimedia :: Graphics :: Viewers
+Description-Content-Type: text/markdown
