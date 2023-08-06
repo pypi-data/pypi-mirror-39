@@ -1,0 +1,41 @@
+trio-click (1:7.0~dev5-1) unstable; urgency=medium
+
+  * fix version
+
+ -- Matthias Urlichs <matthias@urlichs.de>  Tue, 12 Jun 2018 05:41:03 +0200
+
+trio-click (1:7.0~dev4-1) unstable; urgency=medium
+
+  * Updated README
+
+ -- Matthias Urlichs <matthias@urlichs.de>  Fri, 08 Jun 2018 12:09:19 +0200
+
+trio-click (1:7.0~dev3-1) unstable; urgency=medium
+
+  * Merge to current Upstream.
+
+ -- Matthias Urlichs <matthias@urlichs.de>  Mon, 28 May 2018 03:38:15 +0200
+
+trio-click (7.0+trio-dev3-1) unstable; urgency=medium
+
+  * Merge to current Upstream.
+
+ -- Matthias Urlichs <matthias@urlichs.de>  Mon, 28 May 2018 03:38:15 +0200
+
+trio-click (7.0+trio-dev2-1) unstable; urgency=medium
+
+  * Merge to current Upstream.
+
+ -- Matthias Urlichs <matthias@urlichs.de>  Wed, 11 Apr 2018 06:19:22 +0200
+
+trio-click (7.0+trio-dev1-1) unstable; urgency=medium
+
+  * Updated version number to something trackable
+
+ -- Matthias Urlichs <matthias@urlichs.de>  Sun, 28 Jan 2018 09:59:28 +0100
+
+trio-click (7.0~dev0-1) smurf; urgency=low
+
+  * source package automatically created by stdeb 0.8.5
+
+ -- Matthias Urlichs <matthias@urlichs.de>  Wed, 24 Jan 2018 22:45:37 +0100

@@ -1,0 +1,10 @@
+trio>=0.9
+
+[dev]
+pytest>=3
+coverage
+tox
+sphinx
+
+[docs]
+sphinx
