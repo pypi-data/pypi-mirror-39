@@ -1,0 +1,8 @@
+future
+
+[flake8]
+flake8
+
+[tests]
+pytest!=3.3.0
+psutil
