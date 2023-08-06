@@ -1,0 +1,17 @@
+ugetcli/__init__.py,sha256=2Ulil4xmERMTF23PyaOfinMs0sydQF03Gis_BNwIqXo,160
+ugetcli/__main__.py,sha256=igpuezoVwKvi1rTfAS7ycQEYQZHwB-K1Zuq-PD2k4co,266
+ugetcli/cli.py,sha256=ipOMI0JB_Dl90srMKTCZfCbgRs6w7c__1t11UZAbiYc,8620
+ugetcli/csproj.py,sha256=Q3JdMj96JvmP3YLkvy6c1fkAFg5u-wixlQe1zg47DSk,2904
+ugetcli/msbuild.py,sha256=pMGTx-3tdHjGpd-t8QTe0v8PFxpS17yULpW0H97S4w4,2726
+ugetcli/nuget.py,sha256=MzXb_j3O0Qxz2yzYeflacY_PqBMkO-rA5afOsGSCSPw,2760
+ugetcli/nuspec.py,sha256=RD7C0kLkHv9fB-FkR6iBjAeZXlYLuHq9c58-RwHrdQU,1915
+ugetcli/uget.py,sha256=7RmKyXcfQPEGFkD-2vsYoiTU_vRTtmLGlWF_d8uZvVE,15015
+ugetcli/unity.py,sha256=jkhCDD_pT94qRhyd1YD_qvvsbZxIDdUUBTBqvOr1fzA,2070
+ugetcli/utils.py,sha256=dKC-JAl4fYqBciNcSLfNWdyXCAOWlTcT6BE3gC4Iczw,3239
+ugetcli-0.1.2.dist-info/AUTHORS.rst,sha256=G565_vllDVPvx9m9GdvF08GSUa9OdemMgJMPsn2eUFA,192
+ugetcli-0.1.2.dist-info/LICENSE,sha256=pa8c34q6Sk2MKcemspHJs_oLJWFM50sk82l6kF-rVcA,1519
+ugetcli-0.1.2.dist-info/METADATA,sha256=hALQWwES9dGDHgvWLXj3ZpX8gjCQEex-Wt0vGehpyh8,6003
+ugetcli-0.1.2.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+ugetcli-0.1.2.dist-info/entry_points.txt,sha256=oD0H34u_eLa5Bb_F1uTMMgQkxcSsRz5a33CiTIICwOw,48
+ugetcli-0.1.2.dist-info/top_level.txt,sha256=7YyG9pLMcQre8B7J6mOserGsnLxbZZ0_ch0582oQTHw,8
+ugetcli-0.1.2.dist-info/RECORD,,
