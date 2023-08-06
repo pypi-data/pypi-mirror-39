@@ -1,0 +1,12 @@
+MANIFEST.in
+egihash.cpp
+nrghashmodule.cpp
+setup.py
+include/egihash.h
+include/keccak-tiny.c
+include/keccak-tiny.h
+include/secure_memzero.h
+nrghash.egg-info/PKG-INFO
+nrghash.egg-info/SOURCES.txt
+nrghash.egg-info/dependency_links.txt
+nrghash.egg-info/top_level.txt
