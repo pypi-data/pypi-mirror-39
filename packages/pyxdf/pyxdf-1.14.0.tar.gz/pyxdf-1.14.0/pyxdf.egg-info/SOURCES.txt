@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+pyxdf/__init__.py
+pyxdf/pyxdf.py
+pyxdf.egg-info/PKG-INFO
+pyxdf.egg-info/SOURCES.txt
+pyxdf.egg-info/dependency_links.txt
+pyxdf.egg-info/requires.txt
+pyxdf.egg-info/top_level.txt
+pyxdf/test/__init__.py
