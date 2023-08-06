@@ -1,0 +1,13 @@
+flask_authentic/__init__.py,sha256=qZ40BeXFBR45oOOyazPgobeCCIfKvrr7NASfZpDT7Bc,195
+flask_authentic/__main__.py,sha256=wZ1M2S3YfXfvDM84HqPN6lMNUt8yfY3tofoOs9pPjxA,377
+flask_authentic/cli.py,sha256=mEUeF7oGkR9vNyqQciQ2DNoSq7CsMGgtyV_CAGwmkSE,747
+flask_authentic/config.py,sha256=4J64oKR4pPIYtdBc-I7kkp8D4NGngVnvtBYDaOjT9E4,231
+flask_authentic/decorators.py,sha256=P_ELDMqoUh6q7vKbM_u9a891_2NvgKWyJEeIbYAoVeM,3333
+flask_authentic/account/__init__.py,sha256=WPFj5OYQfQw5hyXhh-ZFI5vyyN_mqld49b7Vx7HKaOk,124
+flask_authentic/account/blueprint.py,sha256=PTNmZSz4RNsRjbP0lrA3w7OCSPKryp1pQ7BcH1m-GO0,2267
+flask_authentic/account/views.py,sha256=n_ZQwJM2yG0-fmVHCb5l1QfNrysBA-S4cEYi5qWUBVk,5907
+flask_authentic-0.0.1.dist-info/METADATA,sha256=wFy_Teqk2HeqjW537Q5m8hl-7HHJbn0ZeIfsJJMF3v4,1709
+flask_authentic-0.0.1.dist-info/RECORD,,
+flask_authentic-0.0.1.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+flask_authentic-0.0.1.dist-info/entry_points.txt,sha256=UkQmbPF2KiGVO46oAcLX4bQF7ELw1mN-p73i5T0TNIc,62
+flask_authentic-0.0.1.dist-info/top_level.txt,sha256=N4ooKerzdzLVDkGKPl5w1L-TCznjfpKcvZw195ErEjw,16
