@@ -1,0 +1,11 @@
+README.md
+setup.py
+src/futebol_apis.egg-info/PKG-INFO
+src/futebol_apis.egg-info/SOURCES.txt
+src/futebol_apis.egg-info/dependency_links.txt
+src/futebol_apis.egg-info/not-zip-safe
+src/futebol_apis.egg-info/requires.txt
+src/futebol_apis.egg-info/top_level.txt
+src/nerds/__init__.py
+src/nerds/futebol/__init__.py
+src/nerds/futebol/api_pb2.py
