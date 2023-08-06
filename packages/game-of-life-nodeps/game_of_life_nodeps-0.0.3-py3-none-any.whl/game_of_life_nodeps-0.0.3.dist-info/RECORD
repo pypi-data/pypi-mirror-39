@@ -1,0 +1,12 @@
+game_of_life/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+game_of_life/__main__.py,sha256=orBe5spsgUvWaVTKm00zfAvxY2ILnD_PkMarq5MVPKY,132
+game_of_life/cli.py,sha256=muPYSkqw5Sn_IBDnrabnboUmMNkih00dm0BoPRlasck,180
+game_of_life/model.py,sha256=KxC7u8SCXj1v1df7-9kxw01nx26v9Z6ThZ6C19xPaKw,3970
+game_of_life/presenter.py,sha256=AExp8ASoziWuWu3hGNNJ9e99GQ8xjYU1duHCUn5RpMc,3372
+game_of_life/view.py,sha256=2ADF0Nd_GvR_ts9wtWtxBpWojKHnCoZ4vA6I-Gkd1xM,7756
+game_of_life_nodeps-0.0.3.dist-info/LICENSE.txt,sha256=13dULTchYr0hr2lrVSAZk1O-2H2kGMkAe58KWPEzmXQ,1075
+game_of_life_nodeps-0.0.3.dist-info/METADATA,sha256=BvwUXdcS4nDeRQcJTp091O-1vfh49i341kvJ6GlFBog,1052
+game_of_life_nodeps-0.0.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+game_of_life_nodeps-0.0.3.dist-info/entry_points.txt,sha256=3QG3BMo-K3d09tka2l0VJPTXYRzVgmMm_SO0sPSUR38,56
+game_of_life_nodeps-0.0.3.dist-info/top_level.txt,sha256=dH05u5RceeuDJ6AyRTgN_oc8tziO5VCxF6nLhZUOTis,13
+game_of_life_nodeps-0.0.3.dist-info/RECORD,,
