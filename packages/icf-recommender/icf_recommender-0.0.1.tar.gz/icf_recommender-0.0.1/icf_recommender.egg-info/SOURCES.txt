@@ -1,0 +1,11 @@
+README.md
+setup.py
+icf_recommender/__init__.py
+icf_recommender/item_collaborative_filtering.py
+icf_recommender.egg-info/PKG-INFO
+icf_recommender.egg-info/SOURCES.txt
+icf_recommender.egg-info/dependency_links.txt
+icf_recommender.egg-info/requires.txt
+icf_recommender.egg-info/top_level.txt
+tests/__init__.py
+tests/test_item_collaborative_filtering.py
