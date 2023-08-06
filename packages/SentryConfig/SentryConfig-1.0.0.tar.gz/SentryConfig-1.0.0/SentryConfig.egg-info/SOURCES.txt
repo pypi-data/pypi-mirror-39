@@ -1,0 +1,11 @@
+README.md
+setup.py
+SentryConfig.egg-info/PKG-INFO
+SentryConfig.egg-info/SOURCES.txt
+SentryConfig.egg-info/dependency_links.txt
+SentryConfig.egg-info/top_level.txt
+sentry_config/__init__.py
+sentry_config/config.py
+sentry_config/criteria.py
+sentry_config/exceptions.py
+sentry_config/validators.py

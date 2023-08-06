@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: SentryConfig
+Version: 1.0.0
+Summary: Lightweight project configuration management/parsing package.
+Home-page: https://github.com/AWilliams17/SentryConfig/
+Author: Austin Williams
+Author-email: awilliams17412@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/AWilliams17/SentryConfig/issues
+Project-URL: Source, https://github.com/AWilliams17/SentryConfig/
+Description: UNKNOWN
+Keywords: config configuration configuration-manager
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: Freeware
+Classifier: Topic :: Other/Nonlisted Topic
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.7
