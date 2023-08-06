@@ -1,0 +1,31 @@
+Metadata-Version: 2.0
+Name: shepherd
+Version: 1.0.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Ilya Kreymer
+Author-email: ikreymer@gmail.com
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Provides: shepherd
+Requires-Dist: six
+Requires-Dist: docker
+Requires-Dist: marshmallow (>=3.0.0b)
+Requires-Dist: redis
+Requires-Dist: apispec (<1.0)
+Requires-Dist: flask
+Requires-Dist: gevent
+Requires-Dist: pyyaml
+
+UNKNOWN
+
+
