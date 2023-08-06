@@ -1,0 +1,14 @@
+CHANGELOG.rst
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+src/publicsuffix2/__init__.py
+src/publicsuffix2/mpl-2.0.LICENSE
+src/publicsuffix2/public_suffix_list.ABOUT
+src/publicsuffix2/public_suffix_list.dat
+src/publicsuffix2.egg-info/PKG-INFO
+src/publicsuffix2.egg-info/SOURCES.txt
+src/publicsuffix2.egg-info/dependency_links.txt
+src/publicsuffix2.egg-info/not-zip-safe
+src/publicsuffix2.egg-info/top_level.txt

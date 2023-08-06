@@ -1,0 +1,6 @@
+graft src
+
+include CHANGELOG.rst
+include README.rst
+
+global-exclude *.py[co] __pycache__ *.so *.pyd
