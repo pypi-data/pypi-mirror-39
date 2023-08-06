@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: parallelic
+Version: 0.1.2
+Summary: Hyper-parallel multi-node task execution engine
+Home-page: https://gitlab.com/OnDev-Project/parallelic
+Author: golyalpha
+Author-email: golyalpha@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pytest-cov (>=2.6,<3.0)
+Requires-Dist: pyzmq (>=17.1,<18.0)
