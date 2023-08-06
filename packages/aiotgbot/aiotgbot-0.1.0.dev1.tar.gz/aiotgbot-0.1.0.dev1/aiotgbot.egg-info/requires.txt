@@ -1,0 +1,8 @@
+aiohttp
+aiojobs
+attrs
+backoff
+ujson
+
+[sqlite]
+aiosqlite
