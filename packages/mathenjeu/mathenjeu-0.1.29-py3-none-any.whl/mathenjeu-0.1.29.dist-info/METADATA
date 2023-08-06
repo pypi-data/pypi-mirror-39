@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: mathenjeu
+Version: 0.1.29
+Summary: Lectures about programming mostly in Python.
+Home-page: http://www.xavierdupre.fr/app/mathenjeu/helpsphinx/index.html
+Author: Xavier Dupré
+Author-email: xavier.dupre@gmail.com
+License: MIT
+Download-URL: https://github.com/sdpython/mathenjeu/
+Keywords: mathenjeu,Xavier Dupré
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Dist: aiofiles
+Requires-Dist: itsdangerous
+Requires-Dist: jinja2
+Requires-Dist: lightmlrestapi
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: python-multipart
+Requires-Dist: starlette
+Requires-Dist: hypercorn
+Requires-Dist: pyopenssl
+
+
+.. _l-README:
+
+README
+======
+
+.. image:: https://travis-ci.org/sdpython/mathenjeu.svg?branch=master
+    :target: https://travis-ci.org/sdpython/mathenjeu
+    :alt: Build status
+
+.. image:: https://ci.appveyor.com/api/projects/status/kewttt58ejfwduao?svg=true
+    :target: https://ci.appveyor.com/project/sdpython/mathenjeu
+    :alt: Build Status Windows
+
+.. image:: https://circleci.com/gh/sdpython/mathenjeu/tree/master.svg?style=svg
+    :target: https://circleci.com/gh/sdpython/mathenjeu/tree/master
+
+.. image:: https://badge.fury.io/py/mathenjeu.svg
+    :target: https://pypi.org/project/mathenjeu/
+
+.. image:: https://img.shields.io/badge/license-MIT-blue.svg
+    :alt: MIT License
+    :target: http://opensource.org/licenses/MIT
+
+.. image:: https://requires.io/github/sdpython/mathenjeu/requirements.svg?branch=master
+     :target: https://requires.io/github/sdpython/mathenjeu/requirements/?branch=master
+     :alt: Requirements Status
+
+.. image:: https://codecov.io/github/sdpython/mathenjeu/coverage.svg?branch=master
+    :target: https://codecov.io/github/sdpython/mathenjeu?branch=master
+
+.. image:: https://badge.waffle.io/sdpython/mathenjeu.png?label=ready&title=Ready
+    :alt: Waffle
+    :target: https://waffle.io/sdpython/mathenjeu
+
+.. image:: http://img.shields.io/github/issues/sdpython/mathenjeu.svg
+    :alt: GitHub Issues
+    :target: https://github.com/sdpython/mathenjeu/issues
+
+.. image:: http://www.xavierdupre.fr/app/mathenjeu/helpsphinx/_images/nbcov.png
+    :target: http://www.xavierdupre.fr/app/mathenjeu/helpsphinx/all_notebooks_coverage.html
+    :alt: Notebook Coverage
+
+**Links:**
+
+* `GitHub/mathenjeu <https://github.com/sdpython/mathenjeu/>`_
+* `documentation <http://www.xavierdupre.fr/app/mathenjeu/helpsphinx/index.html>`_
+* `Blog <http://www.xavierdupre.fr/app/mathenjeu/helpsphinx/blog/main_0000.html#ap-main-0>`_
+
+**mathenjeu**
+
+Web application to retrieve answers to questions, maybe more.
+Some content are in French. Relies on *starlette*, *uvicorn*,
+*hypercorn*.
+
+.. _l-HISTORY:
+
+=======
+History
+=======
+
+current - 2018-09-23 - 0.00Mb
+=============================
+
+* `10`: talk about warnings (2018-09-23)
+* `6`: remove double entries in index (website) (2018-09-23)
+* `9`: move pandas_groupby_nan to pandas_streaming (2018-05-17)
+* `8`: talk about protobuf (2018-04-21)
+* `7`: talk about serialization (2018-04-20)
+* `5`: fix .. only:: html in readme.rst (2018-03-29)
+
+0.1.175 - 2017-10-05 - 6.43Mb
+=============================
+
+* `2`: finish the migration of latex (2017-06-10)
+* `1`: completed completion (2016-09-25)
+
+

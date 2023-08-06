@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<main role="main">
+
+<script>
+document.onfocusin = document.onfocusout = onChangeFocus
+
+function onChangeFocus() {
+    var focus = document.hasFocus();
+    var theUrl = "/event?game={{game}}&qn={{qn}}&focus=" + String(focus);
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.send(null);
+};
+</script>
+
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+    <div class="col">
+      <h1 class="display-4">Question - {{number}}/{{nbnumber}}</h1>
+      <p>{{question}}</p>
+      </div>
+  {% if image %}
+    <div class="col">
+    <img src="{{image}}" height="200" />
+      </div>
+    {% endif %}
+    </div>
+    </div>
+
+  <div class="container">
+  {% if description %}
+    <div class="row">
+    {{description}}
+    </div>    
+    {% endif %}
+    </div>
+    </div>
+
+    <div class="container"> 
+    <form method="post" name="qa" id="qa" onsubmit="get_form_action(this, '{{game}}', '{{qn}}', '{{next_button}}')">
+    <div class="form-group row">
+      <div class="col-sm-10">
+        {% if answers %}
+    {% for k, v in answers.items() %}    
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" id="{{k}}" name="{{k}}"            
+              onclick='handleClick("{{k}}");'> {{v}}
+          </label>
+        </div>
+    {% endfor %}
+        {% else %}
+    <label for="{{k}}">{{v}}</label>
+    <textarea type="text" class="form-control" id="ANS" name="ANS" cols="40" rows="3" 
+          style="width:50%; height:75px;"> </textarea>
+        {% endif %}
+      </div>
+    </div>
+    </p>
+
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="ok" name="b">Valider</button>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="skip" name="b">Passer</button>
+          </div>
+          </div>
+        </form>      
+    </div>  
+
+    <hr />
+
+  <div class="container">
+  
+    <div class="row">
+    {% if has_previous_button %}
+      <div class="col-md-4">
+        <p><a class="btn btn-secondary" onclick="get_link(this, '{{game}}', '{{previous_button}}')" role="button">&laquo; Précédent</a></p>
+      </div>
+      {% endif %}
+    {% if has_next_button %}
+      <div class="col-md-4">
+        <p><a class="btn btn-secondary" onclick="get_link(this, '{{game}}', '{{next_button}}')" role="button">Suivant &raquo;</a></p>
+      </div>
+      {% endif %}
+    </div>
+
+    <hr />
+
+  </div> <!-- /container -->
+
+</main>
+    
+{% endblock %}
+
