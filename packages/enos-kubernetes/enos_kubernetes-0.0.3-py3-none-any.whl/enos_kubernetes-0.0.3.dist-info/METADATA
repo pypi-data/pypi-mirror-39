@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: enos-kubernetes
+Version: 0.0.3
+Summary: UNKNOWN
+Home-page: https://gitlab.inria.fr/msimonin/enos-kubernetes
+Author: Matthieu Simonin
+Author-email: matthieu.simonin@inria.fr
+License: UNKNOWN
+Keywords: enoslib,evaluation,reproducible research,Grid5000,Chameleon Cloud,Vagrant
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: enoslib (<2.1.0,>=2.0.0)
+Requires-Dist: click (<7,>=6.7)
+Requires-Dist: virtualenv
+
+enos-kubernetes
+===============
+
+Deploys Kubernetes on vagrant, g5k and beyond...
+
+
