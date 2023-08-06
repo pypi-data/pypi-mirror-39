@@ -1,0 +1,8 @@
+slack_alerts/__init__.py,sha256=tN0uS9g9_gLXZNp4k23OCn0Ch8RfZiERrr6LJj1dWpQ,86
+slack_alerts/alerter.py,sha256=_ZjOyBqxQX3G-kekERGN9VlB1euulLs1irQflb9fdn0,3824
+slack_alerts/elements.py,sha256=o-5iA3LFyymN18EfKfs0Entup-ez4NR2sjy7HK3eDF8,1717
+slack_alerts/exceptions.py,sha256=hqr15yN2BYICTmv6WCe626__UyCyAH-bi16Sd6gsUCA,187
+slack_alerts/utils.py,sha256=sfkosrxJYIk1rWafphrb7ZaPKmIxl3U0kuPw5aDra58,351
+slack_alerts-1.0.0.dist-info/WHEEL,sha256=OyjuYVC9vVJqb-Aqln3fyrroYJ4WrcSwx2msO2AokVc,85
+slack_alerts-1.0.0.dist-info/METADATA,sha256=jw88rJNEbwtgG8wzAD_TGQCcQ856MFNcj0A3XgcP13Q,3153
+slack_alerts-1.0.0.dist-info/RECORD,,
