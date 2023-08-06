@@ -1,0 +1,5 @@
+include LICENSE.AGPL README.rst version.txt requirements.txt
+include buildout.cfg develop.cfg
+recursive-include scripts *.sh
+recursive-include doc conf.py *.rst *.png *.ico *.pdf
+recursive-include beat *.checksum *.index *.json *.data

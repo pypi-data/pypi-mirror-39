@@ -1,0 +1,8 @@
+setuptools
+beat.core
+beat.backend.python
+oset
+termcolor
+docopt
+click
+click-plugins
