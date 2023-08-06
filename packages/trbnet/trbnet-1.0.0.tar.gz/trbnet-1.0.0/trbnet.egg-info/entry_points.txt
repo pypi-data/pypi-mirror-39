@@ -1,0 +1,3 @@
+[console_scripts]
+trbcmd.py = trbnet.util.trbcmd:cli
+
