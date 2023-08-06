@@ -1,0 +1,27 @@
+CHANGE LOG
+==========
+
+0.5.1
+-----
+- Added tests for grammar
+- Added back explicit support for python2.7 on Django 1.11
+
+0.5.0
+-----
+- Added a group grammar for parsing group pushes
+
+0.4.1
+-----
+- Docs changes
+
+0.4.0
+-----
+** BREAKING CHANGES **
+- Port to Python 3.6, drop support for anything less than Python 3.6
+- Port to Django 1.11+, drop support for anything less than Django 1.11
+
+** NON BREAKING CHANGES **
+- change accuracy of timestamp from micro- to milli-second
+- Upgrade dateutil library
+- Support Django 2.0.0
+
