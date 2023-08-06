@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: armapy
+Version: 0.8.4
+Summary: Package to calculate magnitudes from a spectra
+Home-page: UNKNOWN
+Author: Patrick Rauer
+Author-email: j.p.rauer@sron.nl
+License: GPL
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires: astropy
+Requires: numpy
+Requires: scipy
