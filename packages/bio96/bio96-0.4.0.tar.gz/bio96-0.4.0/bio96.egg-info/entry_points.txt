@@ -1,0 +1,3 @@
+[console_scripts]
+bio96 = bio96.verify:main
+

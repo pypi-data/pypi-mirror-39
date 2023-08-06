@@ -1,0 +1,11 @@
+pandas
+toml>=0.10
+nonstdlib>=1.12
+docopt
+matplotlib
+colorcet
+
+[docs]
+setuptools>=31.0.1
+sphinxcontrib-programoutput
+sphinx_rtd_theme
