@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: odoo10-addons-oca-stock-logistics-warehouse
+Version: 10.0.20181210.0
+Summary: Meta package for oca-stock-logistics-warehouse Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-account-move-line-product
+Requires-Dist: odoo10-addon-account-move-line-stock-info
+Requires-Dist: odoo10-addon-packaging-uom
+Requires-Dist: odoo10-addon-procurement-auto-create-group
+Requires-Dist: odoo10-addon-purchase-packaging
+Requires-Dist: odoo10-addon-sale-packaging
+Requires-Dist: odoo10-addon-stock-account-change-product-valuation
+Requires-Dist: odoo10-addon-stock-account-quant-merge
+Requires-Dist: odoo10-addon-stock-available
+Requires-Dist: odoo10-addon-stock-available-immediately
+Requires-Dist: odoo10-addon-stock-available-product-expiry
+Requires-Dist: odoo10-addon-stock-available-sale
+Requires-Dist: odoo10-addon-stock-available-unreserved
+Requires-Dist: odoo10-addon-stock-change-qty-reason
+Requires-Dist: odoo10-addon-stock-cycle-count
+Requires-Dist: odoo10-addon-stock-demand-estimate
+Requires-Dist: odoo10-addon-stock-inventory-chatter
+Requires-Dist: odoo10-addon-stock-inventory-discrepancy
+Requires-Dist: odoo10-addon-stock-inventory-exclude-sublocation
+Requires-Dist: odoo10-addon-stock-inventory-lockdown
+Requires-Dist: odoo10-addon-stock-inventory-preparation-filter
+Requires-Dist: odoo10-addon-stock-inventory-revaluation
+Requires-Dist: odoo10-addon-stock-inventory-verification-request
+Requires-Dist: odoo10-addon-stock-location-lockdown
+Requires-Dist: odoo10-addon-stock-lot-sale-tracking
+Requires-Dist: odoo10-addon-stock-mts-mto-rule
+Requires-Dist: odoo10-addon-stock-operation-package-mandatory
+Requires-Dist: odoo10-addon-stock-orderpoint-automatic-creation
+Requires-Dist: odoo10-addon-stock-orderpoint-manual-procurement
+Requires-Dist: odoo10-addon-stock-orderpoint-manual-procurement-uom
+Requires-Dist: odoo10-addon-stock-orderpoint-uom
+Requires-Dist: odoo10-addon-stock-putaway-product
+Requires-Dist: odoo10-addon-stock-quant-manual-assign
+Requires-Dist: odoo10-addon-stock-quant-merge
+Requires-Dist: odoo10-addon-stock-quant-reserved-qty-uom
+Requires-Dist: odoo10-addon-stock-removal-location-by-priority
+Requires-Dist: odoo10-addon-stock-reserve
+Requires-Dist: odoo10-addon-stock-warehouse-orderpoint-stock-info
+Requires-Dist: odoo10-addon-stock-warehouse-orderpoint-stock-info-unreserved
+
+UNKNOWN
+
+
