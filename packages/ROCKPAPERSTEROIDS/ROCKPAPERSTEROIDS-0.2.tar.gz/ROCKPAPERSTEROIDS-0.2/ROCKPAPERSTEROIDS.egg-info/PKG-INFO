@@ -1,0 +1,23 @@
+Metadata-Version: 1.0
+Name: ROCKPAPERSTEROIDS
+Version: 0.2
+Summary: an extended game of rock paper scissor 
+Home-page: https://github.com/MUSSONT/ROCKPAPERSTEROIDS
+Author: Thomas Musson
+Author-email: UNKNOWN
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Description: # ROCKPAPERSTEROIDS PACKAGE
+        
+        This package contains everything necessary for an extended version of the rock paper scissors game
+        
+        #files 
+        
+        python_code - contains all working code
+        
+        #installation 
+        pip install ROCKPAPERSTEROIDS
+        
+        # TO PLAY 
+        from ROCKPAPERSTEROIDS IMPORT play
+Platform: UNKNOWN
