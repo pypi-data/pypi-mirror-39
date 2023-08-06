@@ -1,0 +1,39 @@
+Metadata-Version: 1.1
+Name: sphinx-test-reports
+Version: 0.2.0
+Summary: Sphinx extension for showing test results and test environment information inside sphinx documentations
+Home-page: http://github.com/useblocks/sphinx-test-reports
+Author: team useblocks
+Author-email: info@useblocks.com
+License: MIT
+Download-URL: http://pypi.python.org/pypi/sphinx-test-reports
+Description: Sphinx-Test-Reports
+        ===================
+        
+        .. image:: docs/source/static/sphinx-test-reports-logo.png
+        
+        Sphinx-Test-Reports shows test results of your unit tests inside your sphinx documentation.
+        
+        
+        Functions
+        ---------
+        
+        * Shows test results of **junit based test xml reports** as table
+        * Shows test environment information of **tox-envreport based json reports** as table
+        
+        
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Documentation
+Classifier: Topic :: Utilities
