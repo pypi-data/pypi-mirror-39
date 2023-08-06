@@ -1,0 +1,3 @@
+from fritz.keras.fritz_keras_checkpoint import FritzModelCheckpoint
+
+assert FritzModelCheckpoint
