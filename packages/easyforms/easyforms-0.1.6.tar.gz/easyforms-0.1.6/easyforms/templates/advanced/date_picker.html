@@ -1,0 +1,7 @@
+{% extends 'ef_basic_input.html' %}
+
+{% block input %}
+    <input type="text" class="{{ field.input_classes }}" name="{{ field.name }}"
+				       id="{{ field.id }}" value="{{ date|sn }}"
+				       {% if field.readonly %}readonly{% endif %}>
+{% endblock input %}

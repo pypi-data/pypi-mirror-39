@@ -1,0 +1,17 @@
+{% extends 'ef_basic_input.html' %}
+
+{% block input %}
+	{% if field.readonly %}
+		<input type="hidden" name="{{ field.name }}-hour" value="{{ field.value.hour() if field.value else '' }}">
+		<input type="hidden" name="{{ field.name }}-minute" value="{{ field.value.minut() if field.value else '' }}">
+		<input type="text" disabled value="{{ field.value.strftime('%H:%M') if field.value else '' }}">
+	{% else %}
+		<input type="number" class="{{ field.input_classes }}" name="{{ field.name }}-hour"
+				   id="{{ field.id }}-hour" value="{{ field.value.hour if field.value != None else '' }}"
+				   placeholder="Hour" min="0" max="23" style="width: 100px; display: inline">
+		:
+		<input type="number" class="{{ field.input_classes }}" name="{{ field.name }}-minute"
+				   id="{{ field.id }}-minute" value="{{ field.value.minute if field.value != None else '' }}"
+				   placeholder="Minute" min="0" max="59" style="width: 100px; display: inline">
+	{% endif %}
+{% endblock input %}
