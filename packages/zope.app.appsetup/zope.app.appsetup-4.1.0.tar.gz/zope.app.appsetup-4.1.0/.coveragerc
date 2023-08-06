@@ -1,0 +1,15 @@
+[run]
+branch = True
+source = zope.app.appsetup
+
+[report]
+precision = 2
+
+[html]
+directory = htmlcov
+
+[paths]
+source =
+   src/zope/app/appsetup
+   .tox/*/lib/python*/site-packages/zope/app/appsetup
+   .tox/pypy*/site-packages/zope/app/appsetup
