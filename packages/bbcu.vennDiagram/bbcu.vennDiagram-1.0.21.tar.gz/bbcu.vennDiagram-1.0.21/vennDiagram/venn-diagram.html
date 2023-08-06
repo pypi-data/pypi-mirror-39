@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Intersection Tooltip venn.js example</title>
+<style>
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+.venntooltip {
+  position: absolute;
+  text-align: center;
+  width: 600px;
+  height: 16px;
+  background: #333;
+  color: #ddd;
+  padding: 2px;
+  border: 0px;
+  border-radius: 8px;
+  opacity: 0;
+}
+
+</style>
+</head>
+
+<body>
+    <body onload="runVenn(false)">
+
+    <div id="venn"></div>
+    <div style="float:left;padding:20px">
+        <table>
+        <tr>
+          <td>
+              <input type="checkbox" class="fullLabel" id="fullLabel" onclick="changeDiagram()">Show percents<br>
+              <input type="checkbox" class="intersectLabel" id="intersectLabel" onclick="changeDiagram()">Show intersects labels<br>
+          </td>
+        </tr>
+        </table>
+    </div>
+    <div style="clear: both;"></div>
+
+</body>
+
+<div>
+	<br>
+	<div class="container">
+		<div class="text-muted">
+			<div class="row">
+				<div class="col-md-3">
+					<img src="wis_logo_heb_v1.png" height="40" width="250" />
+				</div>
+				<div class="col-md-3">
+					<br size="1">Developed by <b><a href="mailto:refael.kohen@weizmann.ac.il">Refael Kohen</a></b> <br>Bioinformatics unit at Life Sciences Core Facilities (LSCF)<br>Weizmann Institute of Science&nbsp&nbsp&nbsp&nbsp<br>The venn diagram based on the package:<a href="https://github.com/benfred/venn.js">venn.js</a></font>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+<script src="./d3.v4.js"></script>
+<script src="./venn.v1.js"></script>
+<script src="./intersections.jsonp"></script>
+
+<script>
+
+
+
+function changeDiagram() {
+    runVenn(document.getElementById('fullLabel').checked, document.getElementById('intersectLabel').checked);
+};
+
+function runVenn(fullLabel, intersectLabel) {
+    document.getElementById('fullLabel').checked = fullLabel;
+    document.getElementById('intersectLabel').checked = intersectLabel;
+
+    var chart = venn.VennDiagram()
+                     .width(1500)
+                     .height(600);
+
+    var div = d3.select("#venn")
+    div.datum(sets).call(chart);
+
+    var tooltip = d3.select("body").append("div")
+        .attr("class", "venntooltip");
+
+    div.selectAll("path")
+        .style("stroke-opacity", 0)
+        .style("stroke", "#fff")
+        .style("stroke-width", 3)
+
+    div.selectAll("g")
+        .on("mouseover", function(d, i) {
+            // sort all the areas relative to the current item
+            venn.sortAreas(div, d);
+
+            // Display a tooltip with the current size
+            tooltip.transition().duration(400).style("opacity", .9);
+            if (d.percent) {
+                tooltip.text(d.percent + ", size: " + d.size + ", expected:" + d.expected);
+            } else {
+                tooltip.text(d.label + ", size: " + d.size);
+            }
+            // highlight the current path
+            var selection = d3.select(this).transition("tooltip").duration(400);
+            selection.select("path")
+                .style("fill-opacity", d.sets.length == 1 ? .4 : .1)
+                .style("stroke-opacity", 1);
+        })
+
+        .on("mousemove", function() {
+            tooltip.style("left", (d3.event.pageX) + "px")
+                   .style("top", (d3.event.pageY - 28) + "px");
+        })
+
+        .on("mouseout", function(d, i) {
+            tooltip.transition().duration(400).style("opacity", 0);
+            var selection = d3.select(this).transition("tooltip").duration(400);
+            selection.select("path")
+                .style("fill-opacity", d.sets.length == 1 ? .25 : .0)
+                .style("stroke-opacity", 0);
+        });
+}
+</script>
+</html>
