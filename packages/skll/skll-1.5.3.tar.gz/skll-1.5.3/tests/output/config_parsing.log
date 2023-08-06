@@ -1,0 +1,28 @@
+2018-12-03 14:37:31,000 - WARNING - The metric "mean_squared_error" is deprecated and will be removed in the next release, please use the metric "neg_mean_squared_error" instead.
+2018-12-03 14:37:31,023 - WARNING - The following are specified both as objective functions and evaluation metrics: {'f1_score_micro'}. They will be used as the former.
+2018-12-03 14:37:31,040 - WARNING - The following are specified both as objective functions and evaluation metrics: {'accuracy'}. They will be used as the former.
+2018-12-03 14:37:31,046 - WARNING - The following are specified both as objective functions and evaluation metrics: {'f1_score_micro'}. They will be used as the former.
+2018-12-03 14:37:31,061 - WARNING - The following are specified both as objective functions and evaluation metrics: {'accuracy'}. They will be used as the former.
+2018-12-03 14:37:31,134 - WARNING - Specifying "folds_file" overrides both explicit and default "grid_search_folds".
+2018-12-03 14:37:31,140 - WARNING - Specifying "folds_file" overrides both explicit and default "grid_search_folds".
+2018-12-03 14:37:31,147 - WARNING - Specifying "folds_file" overrides both explicit and default "grid_search_folds".
+2018-12-03 14:37:31,153 - WARNING - Specifying "folds_file" overrides both explicit and default "grid_search_folds".
+2018-12-03 14:37:31,159 - WARNING - Specifying "folds_file" overrides both explicit and default "grid_search_folds".
+2018-12-03 14:37:31,165 - WARNING - Specifying "folds_file" overrides both explicit and default "grid_search_folds".
+2018-12-03 14:37:31,235 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 14:37:31,241 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 14:37:31,247 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 14:37:31,247 - WARNING - The specified "folds_file" will not be used for inner grid search.
+2018-12-03 14:37:31,253 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 14:37:31,260 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 14:37:31,266 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 14:37:31,266 - WARNING - The specified "folds_file" will not be used for inner grid search.
+2018-12-03 14:37:31,281 - WARNING - Since "grid_search" is set to False, the specified "param_grids" will be ignored.
+2018-12-03 14:37:31,291 - WARNING - The "objectives" option is deprecated for the learning_curve task and will not be supported after the next release; please use the "metrics" option in the [Output] section instead.
+2018-12-03 14:37:31,297 - WARNING - The "objectives" option is deprecated for the learning_curve task and will not be supported after the next release; please use the "metrics" option in the [Output] section instead.
+2018-12-03 14:37:31,303 - WARNING - Ignoring "objectives" for the learning_curve task since "metrics" is already specified.
+2018-12-03 14:37:31,309 - WARNING - Ignoring "objectives" for the learning_curve task since "metrics" is already specified.
+2018-12-03 14:37:31,314 - WARNING - The "objectives" option is deprecated for the learning_curve task and will not be supported after the next release; please use the "metrics" option in the [Output] section instead.
+2018-12-03 14:37:31,319 - WARNING - The "objectives" option is deprecated for the learning_curve task and will not be supported after the next release; please use the "metrics" option in the [Output] section instead.
+2018-12-03 14:37:31,330 - WARNING - Since "grid_search" is set to False, the specified "param_grids" will be ignored.
+2018-12-03 14:37:31,337 - WARNING - Note that "grid_search" is set to True and "fixed_parameters" is also specified. If there is a conflict between the grid search parameter space and the fixed parameter values, the fixed parameter values will take precedence.

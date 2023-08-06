@@ -1,0 +1,4 @@
+2018-12-05 15:39:43,003 - INFO - Task: train
+2018-12-05 15:39:43,003 - INFO - Training on train, feature set ['family.csv', 'misc.csv', 'socioeconomic.csv', 'vitals.csv'] ...
+2018-12-05 15:39:43,107 - INFO - Featurizing and training new RandomForestClassifier model
+2018-12-05 15:39:44,076 - INFO - Hyperparameters: bootstrap: True, class_weight: None, criterion: gini, max_depth: None, max_features: auto, max_leaf_nodes: None, min_impurity_decrease: 0.0, min_impurity_split: None, min_samples_leaf: 1, min_samples_split: 2, min_weight_fraction_leaf: 0.0, n_estimators: 500, n_jobs: None, oob_score: False, random_state: 123456789, verbose: 0, warm_start: False

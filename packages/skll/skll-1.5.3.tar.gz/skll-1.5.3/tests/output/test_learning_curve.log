@@ -1,0 +1,4 @@
+2018-12-03 14:07:59,621 - WARNING - Ignoring "objectives" for the learning_curve task since "metrics" is already specified.
+2018-12-03 14:07:59,621 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 14:08:49,692 - WARNING - The "objectives" option is deprecated for the learning_curve task and will not be supported after the next release; please use the "metrics" option in the [Output] section instead.
+2018-12-03 14:08:49,693 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.

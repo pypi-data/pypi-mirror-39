@@ -1,0 +1,8 @@
+2018-12-03 14:38:06,937 - WARNING - The parameter "cv_folds_file" is deprecated and will be removed in the next release, please use "folds_file" instead.
+2018-12-03 14:38:06,939 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 14:38:06,939 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 14:38:07,005 - WARNING - The parameter "cv_folds_file" is deprecated and will be removed in the next release, please use "folds_file" instead.
+2018-12-03 14:38:07,007 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 14:38:07,007 - WARNING - The specified "folds_file" will not be used for inner grid search.
+2018-12-03 14:38:07,007 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 14:38:07,259 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.

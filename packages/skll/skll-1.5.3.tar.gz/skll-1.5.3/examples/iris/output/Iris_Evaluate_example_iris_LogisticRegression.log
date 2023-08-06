@@ -1,0 +1,7 @@
+2018-12-14 13:06:08,024 - INFO - Task: evaluate
+2018-12-14 13:06:08,024 - INFO - Training on train, Test on test, feature set ['example_iris_features'] ...
+2018-12-14 13:06:08,030 - INFO - Featurizing and training new LogisticRegression model
+2018-12-14 13:06:08,030 - WARNING - Training data will be shuffled to randomize grid search folds.  Shuffling may yield different results compared to scikit-learn.
+2018-12-14 13:06:08,065 - INFO - Best f1_score_micro grid search score: 0.95
+2018-12-14 13:06:08,065 - INFO - Hyperparameters: C: 100.0, class_weight: None, dual: False, fit_intercept: True, intercept_scaling: 1, max_iter: 100, multi_class: auto, n_jobs: None, penalty: l2, random_state: 123456789, solver: liblinear, tol: 0.0001, verbose: 0, warm_start: False
+2018-12-14 13:06:08,065 - INFO - Evaluating predictions

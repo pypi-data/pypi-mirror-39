@@ -1,0 +1,36 @@
+Experiment Name: Iris_Evaluate
+SKLL Version: 1.5.3
+Training Set: train
+Training Set Size: 100
+Test Set: test
+Test Set Size: 50
+Shuffle: False
+Feature Set: ["example_iris_features"]
+Learner: LogisticRegression
+Task: evaluate
+Feature Scaling: none
+Grid Search: True
+Grid Search Folds: 3
+Grid Objective Function: f1_score_micro
+Scikit-learn Version: 0.20.1
+Start Timestamp: 14 Dec 2018 13:06:08.024674
+End Timestamp: 14 Dec 2018 13:06:08.067627
+Total Time: 0:00:00.042953
+
+
+Fold: 
+Model Parameters: {"C": 100.0, "class_weight": null, "dual": false, "fit_intercept": true, "intercept_scaling": 1, "max_iter": 100, "multi_class": "auto", "n_jobs": null, "penalty": "l2", "random_state": 123456789, "solver": "liblinear", "tol": 0.0001, "verbose": 0, "warm_start": false}
+Grid Objective Score (Train) = 0.95
++------------+--------+------------+-----------+-----------+--------+-----------+
+|            | setosa | versicolor | virginica | Precision | Recall | F-measure |
++------------+--------+------------+-----------+-----------+--------+-----------+
+|     setosa |   [19] |          0 |         0 |     1.000 |  1.000 |     1.000 |
++------------+--------+------------+-----------+-----------+--------+-----------+
+| versicolor |      0 |       [15] |         0 |     0.938 |  1.000 |     0.968 |
++------------+--------+------------+-----------+-----------+--------+-----------+
+|  virginica |      0 |          1 |      [15] |     1.000 |  0.938 |     0.968 |
++------------+--------+------------+-----------+-----------+--------+-----------+
+(row = reference; column = predicted)
+Accuracy = 0.98
+Objective Function Score (Test) = 0.98
+

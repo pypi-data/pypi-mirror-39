@@ -1,0 +1,7 @@
+2018-12-03 14:38:06,939 - INFO - Task: cross_validate
+2018-12-03 14:38:06,939 - INFO - Cross-validating (5 folds) on f0.jsonlines, feature set ['train_f0.jsonlines'] ...
+2018-12-03 14:38:06,961 - INFO - Cross-validating
+2018-12-03 14:38:07,007 - INFO - Task: cross_validate
+2018-12-03 14:38:07,008 - INFO - Cross-validating (5 folds) on f0.jsonlines, feature set ['train_f0.jsonlines'] ...
+2018-12-03 14:38:07,027 - INFO - Cross-validating
+2018-12-03 14:38:07,027 - WARNING - Training data will be shuffled to randomize grid search folds. Shuffling may yield different results compared to scikit-learn.

@@ -1,0 +1,90 @@
+2018-12-03 13:06:36,157 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:06:43,929 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:06:44,344 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:06:44,344 - WARNING - Not enough featuresets for ablation. Ignoring.
+2018-12-03 13:06:50,088 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:06:50,374 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:06:50,687 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:06:50,723 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:06:52,488 - WARNING - The parameter "cv_folds_file" is deprecated and will be removed in the next release, please use "folds_file" instead.
+2018-12-03 13:06:52,490 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 13:06:52,491 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:06:52,557 - WARNING - The parameter "cv_folds_file" is deprecated and will be removed in the next release, please use "folds_file" instead.
+2018-12-03 13:06:52,558 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 13:06:52,559 - WARNING - The specified "folds_file" will not be used for inner grid search.
+2018-12-03 13:06:52,559 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:06:52,841 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:42,588 - WARNING - The metric "mean_squared_error" is deprecated and will be removed in the next release, please use the metric "neg_mean_squared_error" instead.
+2018-12-03 13:11:42,609 - WARNING - The following are specified both as objective functions and evaluation metrics: {'f1_score_micro'}. They will be used as the former.
+2018-12-03 13:11:42,623 - WARNING - The following are specified both as objective functions and evaluation metrics: {'accuracy'}. They will be used as the former.
+2018-12-03 13:11:42,628 - WARNING - The following are specified both as objective functions and evaluation metrics: {'f1_score_micro'}. They will be used as the former.
+2018-12-03 13:11:42,644 - WARNING - The following are specified both as objective functions and evaluation metrics: {'accuracy'}. They will be used as the former.
+2018-12-03 13:11:42,712 - WARNING - Specifying "folds_file" overrides both explicit and default "grid_search_folds".
+2018-12-03 13:11:42,719 - WARNING - Specifying "folds_file" overrides both explicit and default "grid_search_folds".
+2018-12-03 13:11:42,725 - WARNING - Specifying "folds_file" overrides both explicit and default "grid_search_folds".
+2018-12-03 13:11:42,731 - WARNING - Specifying "folds_file" overrides both explicit and default "grid_search_folds".
+2018-12-03 13:11:42,737 - WARNING - Specifying "folds_file" overrides both explicit and default "grid_search_folds".
+2018-12-03 13:11:42,743 - WARNING - Specifying "folds_file" overrides both explicit and default "grid_search_folds".
+2018-12-03 13:11:42,811 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 13:11:42,818 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 13:11:42,824 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 13:11:42,824 - WARNING - The specified "folds_file" will not be used for inner grid search.
+2018-12-03 13:11:42,830 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 13:11:42,836 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 13:11:42,841 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 13:11:42,842 - WARNING - The specified "folds_file" will not be used for inner grid search.
+2018-12-03 13:11:42,858 - WARNING - Since "grid_search" is set to False, the specified "param_grids" will be ignored.
+2018-12-03 13:11:42,869 - WARNING - The "objectives" option is deprecated for the learning_curve task and will not be supported after the next release; please use the "metrics" option in the [Output] section instead.
+2018-12-03 13:11:42,875 - WARNING - The "objectives" option is deprecated for the learning_curve task and will not be supported after the next release; please use the "metrics" option in the [Output] section instead.
+2018-12-03 13:11:42,880 - WARNING - Ignoring "objectives" for the learning_curve task since "metrics" is already specified.
+2018-12-03 13:11:42,885 - WARNING - Ignoring "objectives" for the learning_curve task since "metrics" is already specified.
+2018-12-03 13:11:42,891 - WARNING - The "objectives" option is deprecated for the learning_curve task and will not be supported after the next release; please use the "metrics" option in the [Output] section instead.
+2018-12-03 13:11:42,896 - WARNING - The "objectives" option is deprecated for the learning_curve task and will not be supported after the next release; please use the "metrics" option in the [Output] section instead.
+2018-12-03 13:11:42,907 - WARNING - Since "grid_search" is set to False, the specified "param_grids" will be ignored.
+2018-12-03 13:11:42,913 - WARNING - Note that "grid_search" is set to True and "fixed_parameters" is also specified. If there is a conflict between the grid search parameter space and the fixed parameter values, the fixed parameter values will take precedence.
+2018-12-03 13:11:43,328 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:44,328 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:45,307 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:46,465 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:47,327 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 13:11:47,328 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:48,089 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 13:11:48,090 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:48,830 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 13:11:48,831 - WARNING - The specified "folds_file" will not be used for inner grid search.
+2018-12-03 13:11:48,831 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:49,156 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 13:11:49,157 - WARNING - The specified "folds_file" will not be used for inner grid search.
+2018-12-03 13:11:49,157 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:49,442 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:49,880 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:50,219 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:50,596 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:50,948 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 13:11:50,949 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:51,026 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 13:11:51,026 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:51,085 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 13:11:51,086 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:51,161 - WARNING - Specifying "folds_file" overrides both explicit and default "num_cv_folds".
+2018-12-03 13:11:51,162 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:51,222 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:51,300 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:51,365 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:51,439 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:11:58,000 - WARNING - Ignoring "objectives" for the learning_curve task since "metrics" is already specified.
+2018-12-03 13:11:58,001 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:12:40,999 - WARNING - Raw data for the learning curve saved in /Users/nmadnani/work/skll/tests/output/test_learning_curve_summary.tsv. No plots were generated since pandas and seaborn are not installed. 
+2018-12-03 13:12:46,400 - WARNING - The "objectives" option is deprecated for the learning_curve task and will not be supported after the next release; please use the "metrics" option in the [Output] section instead.
+2018-12-03 13:12:46,401 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:13:29,724 - WARNING - Raw data for the learning curve saved in /Users/nmadnani/work/skll/tests/output/test_learning_curve_summary.tsv. No plots were generated since pandas and seaborn are not installed. 
+2018-12-03 13:13:35,004 - WARNING - Ignoring "objectives" for the learning_curve task since "metrics" is already specified.
+2018-12-03 13:13:35,005 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:14:18,628 - WARNING - Raw data for the learning curve saved in /Users/nmadnani/work/skll/tests/output/test_learning_curve_summary.tsv. No plots were generated since pandas and seaborn are not installed. 
+2018-12-03 13:14:23,675 - WARNING - The "objectives" option is deprecated for the learning_curve task and will not be supported after the next release; please use the "metrics" option in the [Output] section instead.
+2018-12-03 13:14:23,676 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:15:06,511 - WARNING - Raw data for the learning curve saved in /Users/nmadnani/work/skll/tests/output/test_learning_curve_summary.tsv. No plots were generated since pandas and seaborn are not installed. 
+2018-12-03 13:15:06,598 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:15:06,679 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:17:28,565 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.
+2018-12-03 13:17:29,322 - WARNING - gridmap 0.10.1+ not available. Forcing local mode.  To run things on a DRMAA-compatible cluster, install gridmap>=0.10.1 via pip.

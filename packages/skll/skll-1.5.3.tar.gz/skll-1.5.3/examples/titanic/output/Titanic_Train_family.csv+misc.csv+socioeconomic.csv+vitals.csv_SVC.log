@@ -1,0 +1,4 @@
+2018-12-05 15:39:44,077 - INFO - Task: train
+2018-12-05 15:39:44,077 - INFO - Training on train, feature set ['family.csv', 'misc.csv', 'socioeconomic.csv', 'vitals.csv'] ...
+2018-12-05 15:39:44,179 - INFO - Featurizing and training new SVC model
+2018-12-05 15:39:56,572 - INFO - Hyperparameters: C: 1.0, cache_size: 1000, class_weight: None, coef0: 0.0, decision_function_shape: ovr, degree: 3, gamma: auto, kernel: linear, max_iter: -1, probability: False, random_state: 123456789, shrinking: True, tol: 0.001, verbose: False

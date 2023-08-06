@@ -1,0 +1,36 @@
+Experiment Name: Iris_Evaluate
+SKLL Version: 1.5.3
+Training Set: train
+Training Set Size: 100
+Test Set: test
+Test Set Size: 50
+Shuffle: False
+Feature Set: ["example_iris_features"]
+Learner: MultinomialNB
+Task: evaluate
+Feature Scaling: none
+Grid Search: True
+Grid Search Folds: 3
+Grid Objective Function: f1_score_micro
+Scikit-learn Version: 0.20.1
+Start Timestamp: 14 Dec 2018 13:06:08.068547
+End Timestamp: 14 Dec 2018 13:06:08.111563
+Total Time: 0:00:00.043016
+
+
+Fold: 
+Model Parameters: {"alpha": 0.1, "class_prior": null, "fit_prior": true}
+Grid Objective Score (Train) = 0.93
++------------+--------+------------+-----------+-----------+--------+-----------+
+|            | setosa | versicolor | virginica | Precision | Recall | F-measure |
++------------+--------+------------+-----------+-----------+--------+-----------+
+|     setosa |   [19] |          0 |         0 |     1.000 |  1.000 |     1.000 |
++------------+--------+------------+-----------+-----------+--------+-----------+
+| versicolor |      0 |       [15] |         0 |     0.882 |  1.000 |     0.938 |
++------------+--------+------------+-----------+-----------+--------+-----------+
+|  virginica |      0 |          2 |      [14] |     1.000 |  0.875 |     0.933 |
++------------+--------+------------+-----------+-----------+--------+-----------+
+(row = reference; column = predicted)
+Accuracy = 0.96
+Objective Function Score (Test) = 0.96
+
