@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: bisque-api
+Version: 0.5.10.1
+Summary: Bisque Module API
+Home-page: http://biodev.ece.ucsb.edu/projects/bisque
+Author: Center for Bioimage informatics
+Author-email: cbi@biodev.ece.ucsb.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Provides-Extra: CAS
+Provides-Extra: table
+Provides-Extra: image_service
+Provides-Extra: lxml
+Provides-Extra: feature
+Requires-Dist: six
+Requires-Dist: requests (>=2.4.1)
+Requires-Dist: requests-toolbelt (>=0.6.2)
+Provides-Extra: CAS
+Requires-Dist: BeautifulSoup4; extra == 'CAS'
+Provides-Extra: feature
+Requires-Dist: tables; extra == 'feature'
+Provides-Extra: image_service
+Requires-Dist: tifffile; extra == 'image_service'
+Requires-Dist: tables; extra == 'image_service'
+Provides-Extra: lxml
+Requires-Dist: lxml; extra == 'lxml'
+Provides-Extra: table
+Requires-Dist: tables; extra == 'table'
+
+UNKNOWN
+
+
