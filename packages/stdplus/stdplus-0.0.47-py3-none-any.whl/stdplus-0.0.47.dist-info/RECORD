@@ -1,0 +1,17 @@
+stdplus/__init__.py,sha256=p2C0cA0h23G0FwqWykE1UQt3tKS4rzhi6GLdIUmhT8k,1396
+stdplus/_defaultify.py,sha256=IbZ5VYlv5QSW_aU2jvO__I48PKfAu_CcFe69lFQkDt0,472
+stdplus/_fexecvp.py,sha256=emDWsRF9ehpqf8U_mNNDDZT5kgp4DKLFtZclkLj6PYY,177
+stdplus/_fnmatches.py,sha256=cHAK9sWUVCHVH4Gok7Au4yicSyzJwUOIixs7NERBz0w,169
+stdplus/_isInt.py,sha256=lLuIS7tXu_2-OyeoYDrEALlCgIWq7EBLUD0SHvDjDQY,102
+stdplus/_isString.py,sha256=rtY4Wr2CxYfqb9fi1UsFpD4UiCBOKz4LRdInfCmB7Cc,47
+stdplus/_readfile.py,sha256=pvBC7j7nIj2rwTA74yp4gBWHw-l3ygvFxQA7YCSgwAE,151
+stdplus/_removeRoot.py,sha256=uUxZP720JNCNxllmzKEP1uew1N2DUmkZvI52YWh1TwM,285
+stdplus/_run_cmd.py,sha256=CHsofiv_v-DVvjReepRtK9AiqEIMGMfCxfHjBkqMo8E,3508
+stdplus/_sshConfig.py,sha256=S40VTuztB80PmwVVy6WCP-dWupc9DF3ZLE2HA6VJyIg,4022
+stdplus/_writefile.py,sha256=MZcdFTrpxLogDeZRs6tbf2TqI5gDFmBSFeNjNSjRh5o,156
+stdplus-0.0.47.dist-info/LICENSE,sha256=bb7z0_JlXygeXy8fJ99ymRuwKjWSNn2NGTTf_IdWEko,1071
+stdplus-0.0.47.dist-info/METADATA,sha256=zPvlXsqwzYSYQ36iVRwdDdHZmi-sRvqoLi6B9d7NJGM,1670
+stdplus-0.0.47.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+stdplus-0.0.47.dist-info/entry_points.txt,sha256=IRGC5vvxcFp7yjFi0NdPQVA9DM7q-GEgzHi0hm96CTs,47
+stdplus-0.0.47.dist-info/top_level.txt,sha256=-E0AHD8gqpQsPVfZgyl_lBRYQfpbXnnWNgUxugjAl-Q,8
+stdplus-0.0.47.dist-info/RECORD,,
