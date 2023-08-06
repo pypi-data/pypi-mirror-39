@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+atalaya/__init__.py
+atalaya/logger.py
+atalaya.egg-info/PKG-INFO
+atalaya.egg-info/SOURCES.txt
+atalaya.egg-info/dependency_links.txt
+atalaya.egg-info/not-zip-safe
+atalaya.egg-info/requires.txt
+atalaya.egg-info/top_level.txt
+atalaya/grapher/__init__.py
+atalaya/grapher/grapher.py
+atalaya/grapher/visdom_writer.py
