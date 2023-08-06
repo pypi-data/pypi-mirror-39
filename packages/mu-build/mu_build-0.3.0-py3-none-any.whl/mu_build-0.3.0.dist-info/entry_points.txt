@@ -1,0 +1,3 @@
+[console_scripts]
+mu_build = MuBuild.MuBuild:main
+
