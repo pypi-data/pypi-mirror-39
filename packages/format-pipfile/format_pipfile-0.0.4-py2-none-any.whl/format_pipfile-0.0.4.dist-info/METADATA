@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: format-pipfile
+Version: 0.0.4
+Summary: A Python utility to format TOML Pipfiles with some very opinionated rules.
+Home-page: https://github.com/demosdemon/format-pipfile
+Author: Brandon LeBlanc
+Author-email: projects+format-pipfile@leblanc.codes
+License: MIT
+Project-URL: Bug Tracker, https://github.com/demosdemon/format-pipfile/issues
+Project-URL: Documentation, https://format-pipfile.readthedocs.io/en/latest/
+Project-URL: Source Code, https://github.com/demosdemon/format-pipfile#README
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development
+Description-Content-Type: text/x-rst; charset=UTF-8
+Requires-Dist: click
+Requires-Dist: delegator-py
+Requires-Dist: future
+Requires-Dist: packaging
+Requires-Dist: path.py
+Requires-Dist: requirementslib
+Requires-Dist: tomlkit
+Requires-Dist: typing ; (python_version < '3.6')
+
+A Python utility to format TOML Pipfiles with some very opinionated rules.
+
+
