@@ -1,0 +1,13 @@
+-r requirements.txt
+codeclimate-test-reporter
+coverage>=4.0,<4.4
+mock
+pacifica-archiveinterface
+pacifica-metadata
+pacifica-policy
+pacifica-uniqueid
+pep257
+pre-commit
+pylint<2.0
+pytest
+radon

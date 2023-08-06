@@ -1,0 +1,7 @@
+celery
+cherrypy
+peewee>2
+pymysql
+requests
+setuptools
+six
