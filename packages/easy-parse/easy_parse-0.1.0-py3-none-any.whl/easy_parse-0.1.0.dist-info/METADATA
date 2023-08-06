@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: easy-parse
+Version: 0.1.0
+Summary: Easy parsing for xml and json
+Home-page: https://github.com/uncmath25/easy-parse
+Author: Colton Willig
+Author-email: coltonwillig@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# easy-parse
+
+[![Build Status](https://travis-ci.org/uncmath25/easy-parse.svg?branch=patch)](https://travis-ci.org/uncmath25/easy-parse)
+
+*Easy parsing for xml and json*
+
+
+### Usage:
+Parse a given xml file to json
+``` python
+from easyparse import xml_to_json
+xml_to_json('input.xml', 'output.json')
+```
+
+
