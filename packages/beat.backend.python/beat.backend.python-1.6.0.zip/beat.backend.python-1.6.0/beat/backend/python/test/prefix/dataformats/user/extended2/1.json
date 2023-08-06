@@ -1,0 +1,4 @@
+{
+    "#extends": "user/extended/1",
+    "value3": "float32"
+}

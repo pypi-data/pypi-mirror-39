@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "language": "python",
+  "description": "A valid analyzer with documentation for tests",
+  "groups": [
+    {
+      "inputs": {
+        "images": {
+          "type": "user/2d_array_of_integers/1"
+        },
+        "labels": {
+          "type": "user/floats/1"
+        }
+      }
+    }
+  ],
+  "results": {
+    "c": {
+      "type": "plot/scatter/1",
+      "display": false
+    },
+    "v": {
+      "type": "float32",
+      "display": true
+    }
+  }
+}

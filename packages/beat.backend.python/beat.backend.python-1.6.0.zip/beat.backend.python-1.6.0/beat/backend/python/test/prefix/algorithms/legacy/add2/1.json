@@ -1,0 +1,25 @@
+{
+    "language": "python",
+    "splittable": false,
+    "groups": [
+        {
+            "inputs": {
+                "in1": {
+                    "type": "user/single_integer/1"
+                }
+            },
+            "outputs": {
+                "out": {
+                    "type": "user/single_integer/1"
+                }
+            }
+        },
+        {
+            "inputs": {
+                "in2": {
+                    "type": "user/single_integer/1"
+                }
+            }
+        }
+    ]
+}

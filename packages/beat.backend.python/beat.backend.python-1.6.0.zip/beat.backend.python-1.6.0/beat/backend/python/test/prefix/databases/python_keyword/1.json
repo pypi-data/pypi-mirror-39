@@ -1,0 +1,21 @@
+{
+    "root_folder": "/tmp/path/not/set",
+    "protocols": [
+        {
+            "name": "keyword",
+            "template": "keyword",
+            "sets": [
+                {
+                    "name": "keyword",
+                    "template": "keyword",
+                    "view": "Keyword",
+                    "outputs": {
+                        "def": "user/single_integer/1",
+                        "class": "user/single_integer/1",
+                        "sum": "user/single_integer/1"
+                    }
+                }
+            ]
+        }
+    ]
+}

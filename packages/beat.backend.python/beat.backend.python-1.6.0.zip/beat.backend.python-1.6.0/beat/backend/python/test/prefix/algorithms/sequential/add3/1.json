@@ -1,0 +1,31 @@
+{
+    "schema_version": 2,
+    "language": "python",
+    "api_version": 2,
+    "type": "sequential",
+    "splittable": false,
+    "groups": [
+        {
+            "inputs": {
+                "value": {
+                    "type": "user/single_integer/1"
+                },
+                "offset_index": {
+                    "type": "user/single_integer/1"
+                }
+            },
+            "outputs": {
+                "out": {
+                    "type": "user/single_integer/1"
+                }
+            }
+        },
+        {
+            "inputs": {
+                "offset": {
+                    "type": "user/single_integer/1"
+                }
+            }
+        }
+    ]
+}

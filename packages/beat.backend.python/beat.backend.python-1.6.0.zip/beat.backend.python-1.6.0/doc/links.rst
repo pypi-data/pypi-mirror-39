@@ -1,0 +1,1 @@
+.. _Algorithms: https://www.idiap.ch/software/beat/docs/beat/docs/master/beat/algorithms.html

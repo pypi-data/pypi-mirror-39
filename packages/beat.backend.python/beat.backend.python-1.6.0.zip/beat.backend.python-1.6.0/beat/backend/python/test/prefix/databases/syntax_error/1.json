@@ -1,0 +1,19 @@
+{
+  "root_folder": "/tmp/foo/bar",
+  "protocols": [
+    {
+      "name": "protocol",
+      "template": "template",
+      "sets": [
+        {
+          "name": "set",
+          "template": "set",
+          "view": "View",
+          "outputs": {
+            "out": "user/single_integer/1"
+          }
+        }
+      ]
+    }
+  ]
+}
