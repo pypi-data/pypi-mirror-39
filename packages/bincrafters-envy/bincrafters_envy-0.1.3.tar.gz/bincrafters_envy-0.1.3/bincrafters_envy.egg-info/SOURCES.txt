@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+bincrafters_envy/__init__.py
+bincrafters_envy/bincrafters_envy.py
+bincrafters_envy/main.py
+bincrafters_envy/requirements.txt
+bincrafters_envy/requirements_test.txt
+bincrafters_envy.egg-info/PKG-INFO
+bincrafters_envy.egg-info/SOURCES.txt
+bincrafters_envy.egg-info/dependency_links.txt
+bincrafters_envy.egg-info/entry_points.txt
+bincrafters_envy.egg-info/requires.txt
+bincrafters_envy.egg-info/top_level.txt

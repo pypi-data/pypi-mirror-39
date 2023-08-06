@@ -1,0 +1,3 @@
+[console_scripts]
+bincrafters-envy = bincrafters_envy.main:run
+
