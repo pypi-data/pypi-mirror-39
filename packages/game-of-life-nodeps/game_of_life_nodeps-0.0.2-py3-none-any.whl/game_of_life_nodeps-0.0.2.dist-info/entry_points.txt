@@ -1,0 +1,3 @@
+[console_scripts]
+game-of-life = game_of_life.cli:main
+
