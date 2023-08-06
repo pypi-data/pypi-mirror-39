@@ -1,0 +1,22 @@
+.middle {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}
+
+.viewer-link {
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.viewer-sections {
+    margin-top: 20px;
+}
+
+.btn-download-template {
+    height: 70px;
+    min-width: 300px;
+    text-align: center;
+    line-height: 60px;
+    margin: 0 auto;
+}

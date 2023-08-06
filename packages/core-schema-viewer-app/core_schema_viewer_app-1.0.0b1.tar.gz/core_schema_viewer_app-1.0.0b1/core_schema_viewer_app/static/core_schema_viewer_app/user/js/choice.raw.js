@@ -1,0 +1,1 @@
+var generateChoiceUrl = "{% url 'core_schema_viewer_sandbox_generate_choice' data.data_structure_id %}";

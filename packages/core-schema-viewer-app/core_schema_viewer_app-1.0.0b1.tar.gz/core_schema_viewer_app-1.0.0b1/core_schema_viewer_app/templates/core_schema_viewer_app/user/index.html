@@ -1,0 +1,49 @@
+{% load staticfiles %}
+
+<h1 class="page-header">Schema Views and Download Page</h1>
+<div class="row">
+    <div class="col-md-5">
+        <p style="color: grey; font-style: italic">
+            Select the version of the schema you would like to view or download.<br/>
+            Click on one of the three provided views to browse the AMMD Schema.<br/>
+            Click to the right to directly download the AMMD xsd file.
+        </p>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <form>
+                {% csrf_token %}
+                {{ data.form }}
+            </form>
+        </div>
+    </div>
+    <div class="col-md-4 text-center">
+        <a class="btn btn-warning btn-download-template">
+            <i class="fa fa-download"></i> Download selected schema
+        </a>
+    </div>
+</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row viewer-sections">
+    <div class="col-md-4 text-center">
+        <a id="oxygen-viewer" class="viewer-link" href="">
+            <img src="{% static 'core_schema_viewer_app/user/img/oxygen_logo.png' %}"
+                 class="reduced" alt="oxygen_view"/>
+        </a>
+    </div>
+    <div class="col-md-4 text-center middle">
+        <a id="schema_view" class="viewer-link">
+            <img src="{% static 'core_schema_viewer_app/user/img/tabbed_logo.png' %}"
+                 class="reduced"
+                 alt="tabbed_view"/>
+        </a>
+    </div>
+    <div class="col-md-4 text-center">
+        <a id="sandbox_view" class="viewer-link" href="#">
+            <img src="{% static 'core_schema_viewer_app/user/img/under_construction_logo.png' %}"
+                 class="reduced"
+                 alt="under_construction"/>
+        </a>
+    </div>
+</div>

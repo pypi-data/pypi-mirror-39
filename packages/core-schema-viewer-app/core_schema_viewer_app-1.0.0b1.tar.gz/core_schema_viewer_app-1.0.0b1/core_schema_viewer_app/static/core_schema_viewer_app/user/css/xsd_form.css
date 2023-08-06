@@ -1,0 +1,16 @@
+/* NOTE: sandbox needs same CSS as curate, but does not have a dependency to curate*/
+#xsd_form ul{
+	padding-left: 30px;
+}
+
+#xsd_form input{
+	width: 300px;
+	height: 30px;
+	margin: 0.3em;
+	padding: 0em;
+	display: inline;
+}
+
+#xsd_form select{
+	margin: 0.3em;
+}

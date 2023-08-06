@@ -1,0 +1,20 @@
+<h1>Sandbox View</h1>
+
+<div class="btn-group pull-right">
+    <button class="btn btn-danger clear-fields"><i class="fa fa-eraser"></i> Clear Fields </button>
+    <a class="btn btn-default download"
+       href="{% url 'core_schema_viewer_sandbox_download_xml' data.data_structure_id %}">
+        <i class="fa fa-download"></i> Download
+    </a>
+    <a class="btn btn-default preview"
+       href="{% url 'core_schema_viewer_sandbox_preview_xml' data.data_structure_id %}"
+       target="_blank">
+        <i class="fa fa-file-code-o"></i> Preview Document
+    </a>
+</div>
+<br/><br/>
+
+<div id="xsd_form">
+    {{ data.xsd_form | safe }}
+</div>
+<div id="data_structure_id" class="hidden">{{data.data_structure_id}}</div>
