@@ -1,0 +1,111 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'D:\Project\QuantStudio\QuantStudio\Tools\QtGUI\ResultDlg.ui'
+#
+# Created by: PyQt5 UI code generator 5.11.3
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_ResultDlg(object):
+    def setupUi(self, ResultDlg):
+        ResultDlg.setObjectName("ResultDlg")
+        ResultDlg.resize(925, 644)
+        ResultDlg.setSizeGripEnabled(True)
+        self.horizontalLayout = QtWidgets.QHBoxLayout(ResultDlg)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.MainResultTable = QtWidgets.QTableWidget(ResultDlg)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.MainResultTable.sizePolicy().hasHeightForWidth())
+        self.MainResultTable.setSizePolicy(sizePolicy)
+        self.MainResultTable.setMinimumSize(QtCore.QSize(731, 0))
+        self.MainResultTable.setContextMenuPolicy(QtCore.Qt.ActionsContextMenu)
+        self.MainResultTable.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.MainResultTable.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectColumns)
+        self.MainResultTable.setObjectName("MainResultTable")
+        self.MainResultTable.setColumnCount(0)
+        self.MainResultTable.setRowCount(0)
+        self.horizontalLayout.addWidget(self.MainResultTable)
+        self.gridLayout = QtWidgets.QGridLayout()
+        self.gridLayout.setObjectName("gridLayout")
+        self.label = QtWidgets.QLabel(ResultDlg)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
+        self.label.setSizePolicy(sizePolicy)
+        self.label.setObjectName("label")
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 3)
+        self.GenTableButton = QtWidgets.QPushButton(ResultDlg)
+        self.GenTableButton.setObjectName("GenTableButton")
+        self.gridLayout.addWidget(self.GenTableButton, 4, 0, 1, 1)
+        self.TransposeButton = QtWidgets.QPushButton(ResultDlg)
+        self.TransposeButton.setObjectName("TransposeButton")
+        self.gridLayout.addWidget(self.TransposeButton, 4, 1, 1, 2)
+        self.PlotButton = QtWidgets.QPushButton(ResultDlg)
+        self.PlotButton.setObjectName("PlotButton")
+        self.gridLayout.addWidget(self.PlotButton, 5, 0, 1, 1)
+        self.ExportButton = QtWidgets.QPushButton(ResultDlg)
+        self.ExportButton.setObjectName("ExportButton")
+        self.gridLayout.addWidget(self.ExportButton, 5, 1, 1, 2)
+        self.RowLimitCheckBox = QtWidgets.QCheckBox(ResultDlg)
+        self.RowLimitCheckBox.setChecked(False)
+        self.RowLimitCheckBox.setObjectName("RowLimitCheckBox")
+        self.gridLayout.addWidget(self.RowLimitCheckBox, 2, 0, 1, 1)
+        self.RowLimitSpinBox = QtWidgets.QSpinBox(ResultDlg)
+        self.RowLimitSpinBox.setMaximum(9999)
+        self.RowLimitSpinBox.setProperty("value", 100)
+        self.RowLimitSpinBox.setObjectName("RowLimitSpinBox")
+        self.gridLayout.addWidget(self.RowLimitSpinBox, 2, 1, 1, 2)
+        self.ColumnLimitCheckBox = QtWidgets.QCheckBox(ResultDlg)
+        self.ColumnLimitCheckBox.setChecked(True)
+        self.ColumnLimitCheckBox.setObjectName("ColumnLimitCheckBox")
+        self.gridLayout.addWidget(self.ColumnLimitCheckBox, 3, 0, 1, 1)
+        self.ColumnLimitSpinBox = QtWidgets.QSpinBox(ResultDlg)
+        self.ColumnLimitSpinBox.setMaximum(9999)
+        self.ColumnLimitSpinBox.setProperty("value", 20)
+        self.ColumnLimitSpinBox.setObjectName("ColumnLimitSpinBox")
+        self.gridLayout.addWidget(self.ColumnLimitSpinBox, 3, 1, 1, 2)
+        self.MainResultTree = QtWidgets.QTreeWidget(ResultDlg)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.MainResultTree.sizePolicy().hasHeightForWidth())
+        self.MainResultTree.setSizePolicy(sizePolicy)
+        self.MainResultTree.setContextMenuPolicy(QtCore.Qt.ActionsContextMenu)
+        self.MainResultTree.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
+        self.MainResultTree.setObjectName("MainResultTree")
+        self.gridLayout.addWidget(self.MainResultTree, 1, 0, 1, 3)
+        self.horizontalLayout.addLayout(self.gridLayout)
+        self.label.setBuddy(self.MainResultTable)
+
+        self.retranslateUi(ResultDlg)
+        QtCore.QMetaObject.connectSlotsByName(ResultDlg)
+        ResultDlg.setTabOrder(self.MainResultTree, self.GenTableButton)
+        ResultDlg.setTabOrder(self.GenTableButton, self.MainResultTable)
+
+    def retranslateUi(self, ResultDlg):
+        _translate = QtCore.QCoreApplication.translate
+        ResultDlg.setWindowTitle(_translate("ResultDlg", "测试结果"))
+        self.label.setText(_translate("ResultDlg", "<html><head/><body><p align=\"center\">主要结果</p></body></html>"))
+        self.GenTableButton.setText(_translate("ResultDlg", "<<"))
+        self.TransposeButton.setText(_translate("ResultDlg", "转置"))
+        self.PlotButton.setText(_translate("ResultDlg", "绘制图像"))
+        self.ExportButton.setText(_translate("ResultDlg", "导出数据"))
+        self.RowLimitCheckBox.setText(_translate("ResultDlg", "显示行数"))
+        self.ColumnLimitCheckBox.setText(_translate("ResultDlg", "显示列数"))
+        self.MainResultTree.headerItem().setText(0, _translate("ResultDlg", "变量"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    ResultDlg = QtWidgets.QDialog()
+    ui = Ui_ResultDlg()
+    ui.setupUi(ResultDlg)
+    ResultDlg.show()
+    sys.exit(app.exec_())
+
