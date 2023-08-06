@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+requirements/requirements.txt
+scrapy_selenium_python_pi/__init__.py
+scrapy_selenium_python_pi/http.py
+scrapy_selenium_python_pi/middlewares.py
+scrapy_selenium_python_pi.egg-info/PKG-INFO
+scrapy_selenium_python_pi.egg-info/SOURCES.txt
+scrapy_selenium_python_pi.egg-info/dependency_links.txt
+scrapy_selenium_python_pi.egg-info/requires.txt
+scrapy_selenium_python_pi.egg-info/top_level.txt
+tests/__init__.py
+tests/test_cases.py
+tests/test_middlewares.py
