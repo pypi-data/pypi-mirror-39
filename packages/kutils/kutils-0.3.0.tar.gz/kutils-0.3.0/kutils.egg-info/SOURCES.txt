@@ -1,0 +1,9 @@
+README.rst
+setup.py
+kutils/__init__.py
+kutils/dicts.py
+kutils/stats.py
+kutils.egg-info/PKG-INFO
+kutils.egg-info/SOURCES.txt
+kutils.egg-info/dependency_links.txt
+kutils.egg-info/top_level.txt
