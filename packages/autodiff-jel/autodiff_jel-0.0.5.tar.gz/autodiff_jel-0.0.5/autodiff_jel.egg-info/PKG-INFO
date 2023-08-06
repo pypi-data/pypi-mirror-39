@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: autodiff-jel
+Version: 0.0.5
+Summary: Python library for Automatic Differentiation
+Home-page: https://github.com/teamjel/cs207-FinalProject
+Author: Team JEL
+Author-email: 
+License: UNKNOWN
+Description: Automatic Differentiation (AD)
+        ===================
+        
+        ### Team JLE (Group 24): Jaemin Cheun, Lily Zhao, and Eagon Meng.
+        
+        [![Build Status](https://travis-ci.org/teamjel/cs207-FinalProject.svg?branch=master)](https://travis-ci.org/teamjel/cs207-FinalProject.svg?branch=master)
+        [![Coverage Status](https://coveralls.io/repos/github/teamjel/cs207-FinalProject/badge.svg?branch=master)](https://coveralls.io/github/teamjel/cs207-FinalProject?branch=master)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
