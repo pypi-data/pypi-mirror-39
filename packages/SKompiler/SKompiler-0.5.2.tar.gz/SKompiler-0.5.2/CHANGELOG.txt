@@ -1,0 +1,37 @@
+Version 0.5-0.5.2
+-----------------
+
+    - Changed skompile call signature
+    - Fixed Excel code generation
+    - Changed SQLAlchemy translator
+    - multistage=True is the default now for SQL and Excel
+    - Improved code organization
+    - Nicer DSL for generating SKAST, basic symbolic processing and type checking
+    - New algorithms: AdaBoostClassifier, KMeans, PCA, MLPClassifier, MLPRegressor,
+      Normalizer, StandardScaler, MinMaxScaler, MaxAbsScaler, Binarizer
+    - (0.5.1) Rudimentary support for Keras MLP models.
+    - (0.5.2) Fixes issue #1
+
+Version 0.4
+-------------
+
+    - More logical set of SK AST nodes, proper handling of Let nodes
+    - Support for Pipeline objects
+
+Version 0.3-0.3.1
+-------------
+
+    - Multi-stage Excel code generation
+
+Version 0.2
+-------------
+
+    - Multi-stage SQL code generation
+
+Version 0.1
+-------------
+
+    - First prototype. Supports:
+      * Inputs: linear models, trees, random forest and gradient boosting (partial)
+      * Outputs: string, python, excel, sqlalchemy, sympy
+
