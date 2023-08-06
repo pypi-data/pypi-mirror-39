@@ -1,0 +1,15 @@
+CHANGELOG.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+django_project_home_templatetags.egg-info/PKG-INFO
+django_project_home_templatetags.egg-info/SOURCES.txt
+django_project_home_templatetags.egg-info/dependency_links.txt
+django_project_home_templatetags.egg-info/requires.txt
+django_project_home_templatetags.egg-info/top_level.txt
+project_home_tags/__init__.py
+project_home_tags/apps.py
+project_home_tags/templatetags/__init__.py
+project_home_tags/templatetags/project_home.py
