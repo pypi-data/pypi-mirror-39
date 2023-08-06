@@ -1,0 +1,17 @@
+global-include *.py
+global-include *.cfg
+global-include *.rst
+global-include *.html
+global-include *.css
+
+include demo/*.json
+include demo/populate.sh
+inclue doc/*.rst
+
+include MANIFEST.in
+include LICENSE
+include COPYRIGHT
+include requirements.txt
+include version
+
+global-exclude *.pyc
