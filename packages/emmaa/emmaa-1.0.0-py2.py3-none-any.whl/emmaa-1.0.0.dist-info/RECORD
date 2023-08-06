@@ -1,0 +1,16 @@
+emmaa/__init__.py,sha256=M8RHh2Z_7jWvA1XeEHYKkkrYwWoaqBJFS_W9DAarmN4,236
+emmaa/model.py,sha256=10N2jsYCV8m2npMIu4i856bXReUNkdz34z3vkKu5Hb8,4882
+emmaa/statements.py,sha256=A24J6bUAhRERV6hY1hUmGCyeLkbQqwjMgopHnDnPwk4,560
+emmaa/priors/__init__.py,sha256=HrU38SE96BcJcgIwO1-Cy04XClKy7Z-JoWoCdaU9U8w,1305
+emmaa/priors/cancer_prior.py,sha256=-VdwdkQounVBZ712RC4ySf4ib7KiYEWNQPHL1TLsrwM,10127
+emmaa/priors/prior_stmts.py,sha256=ErNJXu5Ll2bJgLeNhXGv7f46iq_0S8BwDLbhxOD3Ix0,1237
+emmaa/readers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+emmaa/readers/aws_reader.py,sha256=8OZALGZd3DomXk7_CkKAaiQVEt-UdOKGWT-U_wFIzxA,2228
+emmaa/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+emmaa/tests/test_model.py,sha256=VmO8rlm3tdWs9gFWiK37Vil1n_P6ek8462OE9vOD65U,951
+emmaa-1.0.0.dist-info/DESCRIPTION.rst,sha256=2J22ezM5gEuk227mzQ1cd7IfQUXz1rW4ZB_SQO_e16g,1550
+emmaa-1.0.0.dist-info/METADATA,sha256=3ZNSG0vx177O-J0-sdmR-vD0xi7PLA9xfBykWUnCNo4,2093
+emmaa-1.0.0.dist-info/RECORD,,
+emmaa-1.0.0.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+emmaa-1.0.0.dist-info/metadata.json,sha256=DlNfLPIAJyIG6vdmHKMjityWPGaUXOL_Kvcyl8O-NZU,714
+emmaa-1.0.0.dist-info/top_level.txt,sha256=_3YPLx17CNV0Q9U2sE6YsD25BUGC0kuLzrTeKaPMFfA,6
