@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ryf
+Version: 0.7
+Summary: A programming language written in python
+Home-page: https://github.com/bm20894/ryf
+Author: Miles Boswell
+Author-email: milesboz@me.com
+License: UNKNOWN
+Description: # ryf
+        Ryf language interpreter written in Python.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
