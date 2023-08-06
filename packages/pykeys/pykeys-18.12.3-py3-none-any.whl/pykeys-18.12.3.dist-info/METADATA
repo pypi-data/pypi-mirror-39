@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pykeys
+Version: 18.12.3
+Summary: pykeys: secure API keys use
+Home-page: https://github.com/agu3rra/pykeys/
+Author: Andre Guerra
+Author-email: agu3rra@gmail.com
+License: MIT
+Keywords: encryption secure coding api key token secret
+Platform: UNKNOWN
+Requires-Dist: cryptography
+
+Securely store and use your API keys.
+
+
