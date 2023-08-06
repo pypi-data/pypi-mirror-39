@@ -1,0 +1,12 @@
+#!python
+
+import sys
+
+
+
+import matplotlib
+matplotlib.use('PS')
+import visbeat
+
+
+print('Argument List: {}'.format(str(sys.argv));
