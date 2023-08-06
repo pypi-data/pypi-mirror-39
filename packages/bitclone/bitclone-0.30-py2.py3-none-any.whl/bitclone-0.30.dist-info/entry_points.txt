@@ -1,0 +1,3 @@
+[console_scripts]
+bitclone = bitclone.__main__:main
+
