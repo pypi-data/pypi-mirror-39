@@ -1,0 +1,24 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.smartlink">
+
+
+  <browser:page
+      name="link_redirect_view"
+      for="collective.smartlink.behaviors.interfaces.ISmartLinkExtension"
+      class=".view.LinkRedirectView"
+      layer="collective.smartlink.interfaces.ICollectiveSmartlinkLayer"
+      permission="zope2.View"
+      menu="plone_displayviews"
+      title="View Link"
+      />
+
+  <!-- Publish static files -->
+  <browser:resourceDirectory
+      name="collective.smartlink"
+      directory="static"
+      />
+
+</configure>

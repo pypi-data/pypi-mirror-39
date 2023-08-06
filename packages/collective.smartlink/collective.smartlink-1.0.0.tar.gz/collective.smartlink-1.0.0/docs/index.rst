@@ -1,0 +1,5 @@
+====================
+collective.smartlink
+====================
+
+User documentation

@@ -1,0 +1,143 @@
+Metadata-Version: 2.1
+Name: collective.smartlink
+Version: 1.0.0
+Summary: An add-on for Plone 5
+Home-page: https://pypi.python.org/pypi/collective.smartlink
+Author: RedTurtle Technology
+Author-email: sviluppoplone@redturtle.it
+License: GPL version 2
+Description: .. This README is meant for consumption by humans and pypi. Pypi can render rst files so please do not use Sphinx features.
+           If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide_addons.html
+           This text does not appear on pypi or github. It is a comment.
+        
+        ==============================================================================
+        collective.smartlink
+        ==============================================================================
+        
+        
+        Features
+        --------
+        
+        - Adds an output filter that changes all the internal link in a page (the ones
+          with `resolveuid`) to the absolute url of that plone object.
+        - Adds the `ILeadImage` behavior to the Link content type so you can add an
+          image to a link object.
+        - If the link is internal to the site, the page template of the actual link
+          (if you have the right permissions) shows the absolute url of the linked
+          object.
+        
+        
+        Notes on upgrading this add-on
+        ------------------------------
+        
+        If you come from a `0.1.x` version, make sure to upgrade to the `2.0` and run
+        the upgrade step before upgrading further to avoid issues.
+        
+        
+        Installation
+        ------------
+        
+        Install collective.smartlink by adding it to your buildout::
+        
+            [buildout]
+        
+            ...
+        
+            eggs =
+                collective.smartlink
+        
+        
+        and then running ``bin/buildout``
+        
+        
+        Contribute
+        ----------
+        
+        - Issue Tracker: https://github.com/RedTurtle/collective.smartlink/issues
+        - Source Code: https://github.com/RedTurtle/collective.smartlink
+        
+        
+        Support
+        -------
+        
+        If you are having issues, please let us know.
+        
+        
+        License
+        -------
+        
+        The project is licensed under the GPLv2.
+        
+        Contributors
+        ============
+        
+        - RedTurtle Technology, sviluppoplone@redturtle.it
+        
+        Changelog
+        =========
+        
+        
+        1.0.0 (2018-12-14)
+        ------------------
+        
+        - Version bump that needed to be done in the previous release :)
+          [arsenico13]
+        - Fixed the upgrade step from 1000 to 1100: the upgrade now works even if the
+          Link objects points to a deleted resource.
+          When you run the upgrade, check the logs for more info.
+          [arsenico13]
+        - Changes to link.pt to show a message if the internal link is broken and user
+          can edit
+          [arsenico13]
+        - Raise 404 if an internal link is broken and user can't edit
+          [arsenico13]
+        - Reviewed some italian translations
+          [arsenico13]
+        
+        
+        0.2.0 (2018-12-13)
+        ------------------
+        
+        Upgrade step required.
+        
+        - Removed override for Link add/edit forms
+          [arsenico13]
+        - Removed changes to the link schema (the 'schema' folder is still in the
+          product just for avoid errors while upgrading: will be removed at the next
+          version of the add-on)
+          [arsenico13]
+        - Removed indexers
+          [arsenico13]
+        - NEW: Added an output filter that changes every `resolveuid` for an internal
+          link found in a page with the absolute_url of that plone object.
+          [arsenico13]
+        - NEW: No more 'internal_link' field. Right now, all is done with the field
+          `remoteUrl` as the standard Plone Link type.
+          [arsenico13]
+        - link.pt: when the link is internal, the template shows the absolute url to
+          the linked object. It's more human readable than the `resolveuid` link...
+          [arsenico13]
+        
+        
+        0.1.1 (2018-09-28)
+        ------------------
+        
+        - Fixed view when link is broken [daniele]
+        
+        
+        0.1.0 (2017-09-13)
+        ------------------
+        
+        - Removed plone directives form deprecated [fdelia]
+        
+        
+Keywords: Python Plone
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 5.1
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Provides-Extra: test

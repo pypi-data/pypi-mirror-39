@@ -1,0 +1,12 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:plone="http://namespaces.plone.org/plone"
+  i18n_domain="collective.smartlink">
+
+  <plone:behavior
+    title="Behavior for Link objects"
+    description="Just a marker interface"
+    provides=".interfaces.ISmartLinkExtension"
+    />
+
+</configure>
