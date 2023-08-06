@@ -1,0 +1,5 @@
+# Top-level packages.
+cutadapt==1.16 --hash=sha256:bc55341181ae07029f3c8a2038fa5ea2a91a6f0de8600a80f253675ea1a287c9
+dexseq_prepare_annotation2==1.0.0 --hash=sha256:f2e28771a755f57af22af4eb565a5757e1ef22c03b905e12f1c3417c6b6f3889
+pyarrow==0.9.0 --hash=sha256:515b7d614fc5a6953f12bd986a64cf139a6fa36131cc57e0658550b6a047f730
+xopen==0.3.2 --hash=sha256:7a166bd5c94cf57999e102acb51f91856bcb5a17964adedcb0f41e86c4a950ec
