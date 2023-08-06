@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: Qasim
+Version: 1.7.1
+Summary: Generate diploid mutations and simulate HTS reads
+Home-page: https://github.com/delocalizer/qasim
+Author: Conrad Leonard
+Author-email: conrad.leonard@hotmail.com
+License: MIT
+Description: Generate diploid mutations and simulate HTS reads
+Platform: linux
+Requires: numpy
+Requires: setuptools
