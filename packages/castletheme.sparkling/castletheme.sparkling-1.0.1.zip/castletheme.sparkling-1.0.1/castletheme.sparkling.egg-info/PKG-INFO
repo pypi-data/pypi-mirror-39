@@ -1,0 +1,46 @@
+Metadata-Version: 1.1
+Name: castletheme.sparkling
+Version: 1.0.1
+Summary: Implementation of the WordPress Sparkling theme for CastleCMS
+Home-page: https://www.wildcardcorp.com
+Author: Wildcard Corp.
+Author-email: corporate@wildcardcorp.com
+License: GPLv3+
+Description-Content-Type: UNKNOWN
+Description: ![Original work by wildcardcorp.com](https://www.wildcardcorp.com/logo.png)
+        
+        For access to Castle Cloud (our hosted CastleCMS service) or to request customizations or demos, please contact us at https://castlecms.io or https://wildcardcorp.com
+        
+        info@wildcardcorp.com
+        
+        +1 (715) 869-3440
+        
+        
+        # castletheme.sparkling
+        
+        Implementation of the WordPress open source [Sparkling theme](https://wordpress.org/themes/sparkling/)
+        for CastleCMS.
+        
+        Changes for castletheme.sparkling
+        =================================
+        
+        
+        1.0.1 (2018-12-12)
+        ------------------
+        
+        - packaging updates
+        
+        
+        1.0.0 (2016-06-07)
+        ------------------
+        
+        - initial release
+        
+Keywords: castlecms plone theme
+Platform: UNKNOWN
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 5.0
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
