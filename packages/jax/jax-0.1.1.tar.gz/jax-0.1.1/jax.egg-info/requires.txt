@@ -1,0 +1,5 @@
+numpy>=1.12
+six
+protobuf
+absl-py
+opt_einsum
