@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: andrew-anderson-utils
+Version: 0.3.1
+Summary: A package with Andrew Anderson's modules
+Home-page: https://github.com/Mr-Andersen/andrew_anderson_utils
+Author: Andrew Anderson
+Author-email: andrew-anderson.neo@yandex.ru
+License: MIT
+Description: # Andrew Anderson's utils
+        
+        session_protocol:
+          Contents protocol class (socket subclass), which is designed for safe client-server communications.
+        
+        dbtools:
+          Inspired by jQuery.
+          Made for SQL.
+          Enjoy.
+        
+        x_structs:
+          Contains implementetions of XDict and XList structs
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
