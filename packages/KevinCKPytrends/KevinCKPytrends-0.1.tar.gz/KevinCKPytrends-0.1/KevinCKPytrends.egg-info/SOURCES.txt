@@ -1,0 +1,12 @@
+setup.py
+KevinCKPytrends/__init__.py
+KevinCKPytrends/dailydata.py
+KevinCKPytrends/exceptions.py
+KevinCKPytrends/request.py
+KevinCKPytrends/test_trendReq.py
+KevinCKPytrends.egg-info/PKG-INFO
+KevinCKPytrends.egg-info/SOURCES.txt
+KevinCKPytrends.egg-info/dependency_links.txt
+KevinCKPytrends.egg-info/not-zip-safe
+KevinCKPytrends.egg-info/requires.txt
+KevinCKPytrends.egg-info/top_level.txt
