@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+pynamodb_attributes/__init__.py
+pynamodb_attributes/integer.py
+pynamodb_attributes/integer_date.py
+pynamodb_attributes/unicode_delimited_tuple.py
+pynamodb_attributes/unicode_enum.py
+pynamodb_attributes.egg-info/PKG-INFO
+pynamodb_attributes.egg-info/SOURCES.txt
+pynamodb_attributes.egg-info/dependency_links.txt
+pynamodb_attributes.egg-info/requires.txt
+pynamodb_attributes.egg-info/top_level.txt
