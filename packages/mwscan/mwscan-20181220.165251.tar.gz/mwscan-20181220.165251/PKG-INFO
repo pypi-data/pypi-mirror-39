@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: mwscan
+Version: 20181220.165251
+Summary: Find malware in web documents.
+Home-page: https://github.com/gwillem/magento-malware-scanner
+Author: Willem de Groot
+Author-email: gwillem@gmail.com
+License: GPLv3
+Download-URL: https://github.com/gwillem/magento-malware-scanner/tarball/20181220.165251
+Description: A Yara wrapper to identify malware, with support for incremental scans, extension filtering and efficient hash whitelisting.
+Keywords: yara,malware,magento
+Platform: UNKNOWN
