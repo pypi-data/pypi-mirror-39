@@ -1,0 +1,61 @@
+Metadata-Version: 1.1
+Name: pandoc-plantuml-latex
+Version: 0.2.1
+Summary: Pandoc filter for PlantUML code blocks
+Home-page: https://github.com/ninjaneers-team/pandoc-plantuml-filter
+Author: Claus Strasburger
+Author-email: info@ninjaneers.de
+License: MIT
+Description: # pandoc-plantuml-filter
+        
+        Pandoc filter which converts PlantUML code blocks to PlantUML images.
+        
+        ````
+        ```plantuml
+        Alice -> Bob: Authentication Request
+        Bob --> Alice: Authentication Response
+        
+        Alice -> Bob: Another authentication Request
+        Alice <-- Bob: another authentication Response
+        ```
+        ````
+        
+        ## Usage
+        
+        Install it with pip:
+        
+        ```
+        pip install pandoc-plantuml-latex
+        ```
+        
+        And use it like any other pandoc filter:
+        
+        ```
+        pandoc tests/sample.md -o sample.pdf --filter pandoc-plantuml
+        ```
+        
+        The PlantUML binary must be in your `$PATH` or can be set with the
+        `PLANTUML_BIN` environment variable.
+        
+        ## Differences from [pandoc-plantuml-filter](https://github.com/timofurrer/pandoc-plantuml-filter)
+        
+        - merged pull request [Raw latex support](https://github.com/timofurrer/pandoc-plantuml-filter/pull/4)  
+          see [tests/](tests/)
+        
+        - also generate vector images for latex `beamer` template
+        
+        - added debugging environment variable `DEBUG=1`
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
