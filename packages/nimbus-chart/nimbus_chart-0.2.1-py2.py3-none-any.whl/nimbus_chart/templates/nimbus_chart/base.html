@@ -1,0 +1,30 @@
+{% load i18n %}
+{% load staticfiles %}
+{% get_current_language as LANGUAGE %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE|default:"en" }}">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    {% block extrastyle %}
+    {% endblock %}
+    {% block extrajs %}
+        <script src="{% static "nimbus_chart/js/jquery-3.2.1.min.js" %}"></script>
+    {% endblock %}
+    {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE"/>{% endblock %}
+</head>
+<body>
+{% block body %}
+    {% block content %}
+    {% endblock %}
+    {% block extrabody %}
+    {% endblock %}
+{% endblock %}
+</body>
+</html>
