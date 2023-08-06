@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pykrx
+Version: 0.0.2
+Summary: KRX scraping
+Home-page: https://github.com/sharebook-kr/pykrx
+Author: Lukas Yoo
+Author-email: jonghun.yoo@outlook.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: pandas
+
+UNKNOWN
+
+
