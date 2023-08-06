@@ -1,0 +1,12 @@
+README.md
+setup.py
+pandas_dedupe/__init__.py
+pandas_dedupe/dedupe_dataframe.py
+pandas_dedupe/link_dataframes.py
+pandas_dedupe/utility_functions.py
+pandas_dedupe.egg-info/PKG-INFO
+pandas_dedupe.egg-info/SOURCES.txt
+pandas_dedupe.egg-info/dependency_links.txt
+pandas_dedupe.egg-info/not-zip-safe
+pandas_dedupe.egg-info/requires.txt
+pandas_dedupe.egg-info/top_level.txt
