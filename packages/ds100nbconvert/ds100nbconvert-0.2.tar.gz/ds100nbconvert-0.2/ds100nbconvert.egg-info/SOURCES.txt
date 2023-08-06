@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+ds100nbconvert/__init__.py
+ds100nbconvert.egg-info/PKG-INFO
+ds100nbconvert.egg-info/SOURCES.txt
+ds100nbconvert.egg-info/dependency_links.txt
+ds100nbconvert.egg-info/entry_points.txt
+ds100nbconvert.egg-info/not-zip-safe
+ds100nbconvert.egg-info/requires.txt
+ds100nbconvert.egg-info/top_level.txt
