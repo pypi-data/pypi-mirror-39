@@ -1,0 +1,4 @@
+[console_scripts]
+aps_bluesky_tools = APS_BlueSky_tools.demo:main
+bluesky_snapshot = APS_BlueSky_tools.snapshot:snapshot_cli
+
