@@ -1,0 +1,3 @@
+[console_scripts]
+polr = polr.cli:polr
+
