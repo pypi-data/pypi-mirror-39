@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: btctrade
+Version: 0.1.7
+Summary: Api for site btc-trade.com.ua/
+Home-page: http://github.com/FerumFlex/btctrade
+Author: FerumFlex
+Author-email: ferumflex@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: requests
+
+About
+=====
+
+Python bindings for btc-trade.com.ua. I am Not associated -- use at your own risk, etc.
+
+Installation
+============
+
+::
+
+  pip install btctrade
+
+Using
+=====
+
+::
+
+  import btctrade
+
+  btc = btctrade.Btctrade('YOUR PUBLIC KEY', 'YOUR PRIVATE KEY')
+
+  btc.get_my_orders('btc_uah')
+
+
+Supported calls
+===============
+
+Public methods (you can call these method without public and private keys)
+
+- get_deals(pair)
+- get_sell_trades(pair)
+- get_buy_trades(pair)
+- get_japan_stats(pair)
+
+
+Private methods(public and private keys are required)
+
+- get_balance()
+- sell(pair, price, amount)
+- buy(pair, price, amount)
+- get_my_orders(pair)
+- get_order_status(order_id)
+- remove_order(order_id)
+- bid(pair, amount)
+- ask(pair, amount)
+
+
+Donations
+=========
+
+- BTC: 1J2ZSc97yzrGihULVMPCtEZs7zUDD6j7v
+- ETH: 0x86735BCB1990CE2E2C264F850732255a7D9dEC21
+
+
