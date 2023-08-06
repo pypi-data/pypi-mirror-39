@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: DLPipeline
+Version: 0.1.20181206134413
+Summary: Platform for experimenting and Prototyping with Deeplearning.
+Home-page: https://bitbucket.com/alexandra-institute/dlpipeline
+Author: Christian Heider Nielsen
+Author-email: cnheider@yandex.com
+Maintainer: Christian Heider Nielsen
+Maintainer-email: cnheider@yandex.com
+License: Apache License, Version 2.0
+Download-URL: https://bitbucket.com/alexandra-institute/dlpipeline/releases
+Keywords: python deep learning interface api
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Natural Language :: English
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: sklearn
+Requires-Dist: albumentations
+Requires-Dist: Augmentor
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: Cython
+Requires-Dist: tqdm
+Requires-Dist: h5py
+Requires-Dist: scipy
+Requires-Dist: tensornets
+Requires-Dist: tensorflow
+Requires-Dist: scikit-image
+Requires-Dist: tensorflow-hub
+Requires-Dist: warg
+Provides-Extra: all
+
+
+# [Innovativ brug af Big Data: Deep learning-baseretbilledanalyse](https://confluence.alexandra.dk/display/IBBD5/IBBD5+-+Deep+Learning+baseret+billedanalyse)
+
+| [![Alexandra Institute](  .bitbucket/images/Alexandra_Instituttet_B-logo_BLACK_red-IT_UK.svg)](https://alexandra.dk)  | [![ApplicateIt](.bitbucket/images/applicateit-favicon.png)](http://applicateit.dk)  | [![GameScoreKeeper](.bitbucket/images/gamescorekeeper-favivon.png)](http://gamescorekeeper.com)  |  [![RetinaLyze](.bitbucket/images/retinalyze-favicon.png)](https://www.retinalyze.com) | [![Worksystems](.bitbucket/images/worksystems-favicon.png)](http://www.worksystems.dk) |
+|---|---|---|---|---|
+
+## DLpipeline
+
+### Projektbeskrivelse
+Deep learning har revolutioneret den måde, vi arbejder med billeder og data generelt på. I gamle dage skulle man være computer vision ekspert for at trække meningsfuld information ud af billeder. I  dag - takket være deep learning - findes der mange offentligt tilgængelige værktøjer, som kan løse meget komplekse problemer for én, og som man må bruge kvit og frit på sine egne billeddata. Denne data-drevne måde at arbejde med billeder på har åbnet op for en masse nye muligheder, dels fordi deep learning kan løse computer vision problemer, man ikke kunne løse for bare 5-6 år siden, og dels fordi teknologierne er blevet tilgængelige for alle. Det sidste har især medført, at der begynder at opstå rigtig mange ideer til nye forretninger, produkter, ydelser hos folk, som ikke har baggrund inden for computer vision-området. Det er vigtigt for væksten i Danmark, at virksomheder og vidensinstitutioner står sammen og griber disse ideer, når de opstår. Der har virksomhederne især brug for at kunne trække på den nyeste viden og forskning fra vidensinstitutionerne. Samtidig er det hele så nyt, at vi endnu ikke har lært, hvordan vi bedst understøtter hinanden i forhold til deling af viden, kompetencer og erfaringer. Der skal der øget fokus på samarbejdet mellem virksomheder og videninstitutioner, hvis Danmark skal stå stærkt i den globale konkurrence med store IT-giganter som Google og Amazon. Så dette er den overordnede tanke bag projektet; at skabe et forum, hvor virksomheder og vidensinstitutioner står sammen om at udvikle nye deep  learning-baserede teknologier og (på sigt) produkter relateret til computer vision.
+
+Vi har samlet fire virksomheder, som har det til fælles, at de hver især står med en udfordring inden for billedbehandling, som bedst løses ved hjælp af deep learning, men hvor virksomhederne i varierende grad mangler praktisk erfaring med og viden om teknologien og har brug for hjælp til at komme i gang selv. For at understøtte denne proces vil vi oprette en wiki eller et chat-forum, hvor virksomhederne kan stille spørgsmål til hinanden (og vidensinstitutionerne) og dele deres resultater, viden og erfaringer med hinanden. Vidensinstitutionerne vil skabe det nødvendige fundament af kildekode for, at hvert af de fire delprojekter beskrevet nedenfor kan komme i gang. De konkrete deep learning-algoritmer skal tilpasses hver enkelt virksomheds unikke problem, men den underliggende kildekode vil være næsten identisk. En del af synergien i  projektet består derfor i  at arbejde sammen omkring den fælles kodebase.
+
+
+|  [![Python](.bitbucket/images/python.svg)](https://www.python.org/)|[![TensorFlow](.bitbucket/images/tensorflow.svg)](https://www.tensorflow.org/)|
+|---|---|
+
+### Features
+
+- Data Indlæsning
+- Augmentering
+- Klassificering
+
+### Installation
+
+```bash
+  pip3 install dlpipeline -U
+```
+
+eller hvis du har hentet repositoriet ned kan du bruge
+
+```bash
+  python3 setup.py install
+```
+
+#### DLpipeline Udviklings Miljø
+Du kan også vælge at lave et udviklings setup hvor du nemt kan ændre koden i dette projekt og lade andre 
+drage nytte af dine ændringer, hvis du engang vælger at dele dem. Dette kan du gøre ved at bruge kommandoen:
+
+```bash
+  python3 setup.py develop
+```
+
+og så senere dele dem med også andre ved f.eks.
+
+```bash
+  git add -A
+  git commit -m"Jeg har lavet [disse ændringer]"
+  git push origin
+```
+
