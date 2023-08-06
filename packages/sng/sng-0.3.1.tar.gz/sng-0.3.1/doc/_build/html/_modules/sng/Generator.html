@@ -1,0 +1,483 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sng.Generator &mdash; Startup Name Generator (sng) 0.3 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Startup Name Generator (sng)
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/01_quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../discussion.html">Discussion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">Modules</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Startup Name Generator (sng)</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>sng.Generator</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for sng.Generator</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding: utf-8</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+
+<span class="kn">from</span> <span class="nn">.Config</span> <span class="k">import</span> <span class="n">Config</span>
+<span class="kn">from</span> <span class="nn">.helpers</span> <span class="k">import</span> <span class="n">temp_scale</span>
+
+<span class="kn">import</span> <span class="nn">keras</span>
+<span class="kn">from</span> <span class="nn">keras.preprocessing.text</span> <span class="k">import</span> <span class="n">text_to_word_sequence</span>
+<span class="kn">from</span> <span class="nn">keras.models</span> <span class="k">import</span> <span class="n">Sequential</span>
+<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Activation</span>
+<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">LSTM</span><span class="p">,</span> <span class="n">TimeDistributed</span>  <span class="c1"># , SimpleRNN, GRU</span>
+<span class="kn">from</span> <span class="nn">keras.callbacks</span> <span class="k">import</span> <span class="n">LambdaCallback</span>
+
+
+<div class="viewcode-block" id="Generator"><a class="viewcode-back" href="../../modules.html#sng.Generator.Generator">[docs]</a><span class="k">class</span> <span class="nc">Generator</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Main class that holds the config, wordlist, and the trained model.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    config : sng.Config, optional</span>
+<span class="sd">        A Config instance specifying training and simulation parameters.</span>
+<span class="sd">        If not supplied, a default configuration will be created.</span>
+<span class="sd">    wordlist_file : str</span>
+<span class="sd">        Path to a textfile holding the text corpus you want to use.</span>
+<span class="sd">    wordlist : list of strings</span>
+<span class="sd">        Alternatively to ``wordlist_file``, you can provide the already</span>
+<span class="sd">        processed wordlist, a list of (ideally unique) strings.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    config : sng.Config</span>
+<span class="sd">        The Config object supplied, or a default object if none was supplied</span>
+<span class="sd">        at initialization.</span>
+<span class="sd">    wordlist : list of strings</span>
+<span class="sd">        A processed list of unique words, each ending in a newline.</span>
+<span class="sd">        This is the input to the neural network.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    You can create a word generator like this::</span>
+
+<span class="sd">        import sng</span>
+<span class="sd">        cfg = sng.Config()</span>
+
+<span class="sd">        # Folder for pre-installed wordlists:</span>
+<span class="sd">        wordlist_folder = os.path.join(</span>
+<span class="sd">            os.path.dirname(os.path.abspath(sng.__file__)), &#39;wordlists&#39;)</span>
+<span class="sd">        sample_wordlist = os.path.join(wordlist_folder, &#39;latin.txt&#39;)</span>
+
+<span class="sd">        # Create a Generator object with some wordlist:</span>
+<span class="sd">        gen = sng.Generator(wordlist_file=sample_wordlist, config=cfg)</span>
+
+<span class="sd">        # Train the model:</span>
+<span class="sd">        gen.fit()</span>
+
+<span class="sd">        # Get a few name suggestions:</span>
+<span class="sd">        gen.simulate(n=5)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">Config</span><span class="p">(),</span> <span class="n">wordlist_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">wordlist</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">config</span>
+
+        <span class="k">if</span> <span class="n">wordlist_file</span><span class="p">:</span>
+            <span class="c1"># text_to_word_sequence only splits by space, not newline.</span>
+            <span class="c1"># Make all word separators spaces:</span>
+            <span class="n">contents</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">wordlist_file</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+            <span class="n">wordlist</span> <span class="o">=</span> <span class="n">text_to_word_sequence</span><span class="p">(</span>
+                <span class="n">contents</span><span class="p">,</span>
+                <span class="n">filters</span><span class="o">=</span><span class="s1">&#39;!&quot;#$%&amp;()*+,-./:;&lt;=&gt;?@[\]^_`{|}~0123456789–…</span><span class="se">\&#39;\&quot;</span><span class="s1">’«·»&#39;</span>
+            <span class="p">)</span>
+
+        <span class="c1"># Keep only unique words:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wordlist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">wordlist</span><span class="p">))</span>
+        <span class="c1"># Terminate each word with a newline:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wordlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">wordlist</span><span class="p">]</span>
+
+        <span class="c1"># Generate the set of unique characters (including newline)</span>
+        <span class="c1"># https://stackoverflow.com/questions/952914/making-a-flat-list-out-of-list-of-lists-in-python</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chars</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">char</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">wordlist</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">word</span><span class="p">]</span>
+        <span class="p">)))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chars</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corpus_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wordlist</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">ix_to_char</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">ix</span><span class="p">:</span> <span class="n">char</span> <span class="k">for</span> <span class="n">ix</span><span class="p">,</span> <span class="n">char</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chars</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">char_to_ix</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">char</span><span class="p">:</span> <span class="n">ix</span> <span class="k">for</span> <span class="n">ix</span><span class="p">,</span> <span class="n">char</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chars</span><span class="p">)</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">corpus_size</span><span class="p">,</span> <span class="s2">&quot;words</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chars</span><span class="p">),</span> <span class="s2">&quot;characters, including the </span><span class="se">\\</span><span class="s2">n:&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chars</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">First two sample words:&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wordlist</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+
+<div class="viewcode-block" id="Generator.fit"><a class="viewcode-back" href="../../modules.html#sng.Generator.Generator.fit">[docs]</a>    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Fit the model. Adds the &#39;model&#39; attribute to itself.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">corpus_size</span><span class="p">,</span>
+                      <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">max_word_len</span><span class="p">,</span>
+                      <span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span><span class="p">))</span>
+        <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">corpus_size</span><span class="p">,</span>
+                      <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">max_word_len</span><span class="p">,</span>
+                      <span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">word_i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">corpus_size</span><span class="p">):</span>
+            <span class="n">word</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wordlist</span><span class="p">[</span><span class="n">word_i</span><span class="p">]</span>
+            <span class="n">chars</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">char_j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">max_word_len</span><span class="p">)):</span>
+                <span class="n">char</span> <span class="o">=</span> <span class="n">chars</span><span class="p">[</span><span class="n">char_j</span><span class="p">]</span>
+                <span class="n">char_ix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">char_to_ix</span><span class="p">[</span><span class="n">char</span><span class="p">]</span>
+                <span class="n">X</span><span class="p">[</span><span class="n">word_i</span><span class="p">,</span> <span class="n">char_j</span><span class="p">,</span> <span class="n">char_ix</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">char_j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="c1"># the &#39;next char&#39; at time point char_j</span>
+                    <span class="n">Y</span><span class="p">[</span><span class="n">word_i</span><span class="p">,</span> <span class="n">char_j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">char_ix</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+        <span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LSTM</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">hidden_dim</span><span class="p">,</span>
+                       <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span><span class="p">),</span>
+                       <span class="n">return_sequences</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">n_layers</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LSTM</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">hidden_dim</span><span class="p">,</span> <span class="n">return_sequences</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">TimeDistributed</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span><span class="p">)))</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s1">&#39;softmax&#39;</span><span class="p">))</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s2">&quot;categorical_crossentropy&quot;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s2">&quot;rmsprop&quot;</span><span class="p">)</span>
+
+        <span class="c1"># TODO how to move this function into helpers.py?</span>
+        <span class="k">def</span> <span class="nf">on_epoch_end</span><span class="p">(</span><span class="n">epoch</span><span class="p">,</span> <span class="n">logs</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">epoch</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;epoch &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">epoch</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; words: &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+                    <span class="n">word</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_word</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">word</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;loss: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">logs</span><span class="p">[</span><span class="s1">&#39;loss&#39;</span><span class="p">],</span> <span class="mi">4</span><span class="p">)))</span>
+
+        <span class="n">print_callback</span> <span class="o">=</span> <span class="n">LambdaCallback</span><span class="p">(</span><span class="n">on_epoch_end</span><span class="o">=</span><span class="n">on_epoch_end</span><span class="p">)</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                  <span class="n">epochs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">epochs</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">print_callback</span><span class="p">])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span></div>
+
+<div class="viewcode-block" id="Generator.simulate"><a class="viewcode-back" href="../../modules.html#sng.Generator.Generator.simulate">[docs]</a>    <span class="k">def</span> <span class="nf">simulate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">min_word_len</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">max_word_len</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Use the trained model to simulate a few name suggestions.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">        n : int</span>
+<span class="sd">            The number of name suggestions to simulate</span>
+<span class="sd">        temperature : float or None</span>
+<span class="sd">            Sampling temperature. Lower values are &quot;colder&quot;, i.e.</span>
+<span class="sd">            sampling probabilities will be more conservative.</span>
+<span class="sd">            If None, will use the value specified in self.config.</span>
+<span class="sd">        min_word_len : int or None</span>
+<span class="sd">            Minimum word length of the simulated names.</span>
+<span class="sd">            If None, will use the value specified in self.config.</span>
+<span class="sd">        max_word_len : int or None</span>
+<span class="sd">            Maximum word length of the simulated names.</span>
+<span class="sd">            If None, will use the value specified in self.config.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">temperature</span> <span class="o">=</span> <span class="n">temperature</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">temperature</span>
+        <span class="n">min_word_len</span> <span class="o">=</span> <span class="n">min_word_len</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">min_word_len</span>
+        <span class="n">max_word_len</span> <span class="o">=</span> <span class="n">max_word_len</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">max_word_len</span>
+
+        <span class="k">assert</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;model&#39;</span><span class="p">),</span> <span class="s1">&#39;Call the fit() method first!&#39;</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">word</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_word</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
+            <span class="n">words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">suffix</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">words</span></div>
+
+<div class="viewcode-block" id="Generator.save"><a class="viewcode-back" href="../../modules.html#sng.Generator.Generator.save">[docs]</a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directory</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Save the model into a folder.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        directory : str</span>
+<span class="sd">            The folder to store the generator in. Should be non-existing.</span>
+<span class="sd">        overwrite : bool</span>
+<span class="sd">            If True, the folder contents will be overwritten if it already</span>
+<span class="sd">            exists. Not recommended, though.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">overwrite</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">directory</span><span class="p">),</span> <span class="s1">&#39;Directory already &#39;</span> <span class="o">+</span> \
+                <span class="s1">&#39;exists! Please choose a non-existing path.&#39;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">directory</span><span class="p">)</span>
+
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span>
+                    <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="s1">&#39;config.pkl&#39;</span><span class="p">),</span>
+                         <span class="s2">&quot;wb&quot;</span><span class="p">),</span> <span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wordlist</span><span class="p">,</span>
+                    <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="s1">&#39;wordlist.pkl&#39;</span><span class="p">),</span>
+                         <span class="s2">&quot;wb&quot;</span><span class="p">),</span> <span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="s1">&#39;model.h5&#39;</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Generator.load"><a class="viewcode-back" href="../../modules.html#sng.Generator.Generator.load">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">directory</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a Generator object from a stored folder.</span>
+
+<span class="sd">        Arguments</span>
+<span class="sd">        ---------</span>
+<span class="sd">        directory : str</span>
+<span class="sd">            Folder where you used Generator.save() to store the contents in.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">config</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span>
+            <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="s1">&#39;config.pkl&#39;</span><span class="p">),</span> <span class="s1">&#39;rb&#39;</span><span class="p">))</span>
+        <span class="n">wordlist</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span>
+            <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="s1">&#39;wordlist.pkl&#39;</span><span class="p">),</span> <span class="s1">&#39;rb&#39;</span><span class="p">))</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="s1">&#39;model.h5&#39;</span><span class="p">))</span>
+        <span class="n">generator</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">,</span> <span class="n">wordlist</span><span class="o">=</span><span class="n">wordlist</span><span class="p">)</span>
+        <span class="n">generator</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="k">return</span> <span class="n">generator</span></div>
+
+    <span class="k">def</span> <span class="nf">_generate_word</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+
+        <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">max_word_len</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span><span class="p">))</span>
+
+        <span class="c1"># sample the first character</span>
+        <span class="n">initial_char_distribution</span> <span class="o">=</span> <span class="n">temp_scale</span><span class="p">(</span>
+            <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="p">:])</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">temperature</span>
+        <span class="p">)</span>
+
+        <span class="n">ix</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c1"># make sure the initial character is not a newline (i.e. index 0)</span>
+        <span class="k">while</span> <span class="n">ix</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">ix</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                                      <span class="n">p</span><span class="o">=</span><span class="n">initial_char_distribution</span><span class="p">))</span>
+
+        <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ix</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+        <span class="c1"># start with first character, then later successively append chars</span>
+        <span class="n">generated_word</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">ix_to_char</span><span class="p">[</span><span class="n">ix</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()]</span>
+
+        <span class="c1"># sample all remaining characters</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">max_word_len</span><span class="p">):</span>
+            <span class="n">next_char_distribution</span> <span class="o">=</span> <span class="n">temp_scale</span><span class="p">(</span>
+                <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="n">i</span><span class="p">,</span> <span class="p">:])[:,</span> <span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">temperature</span>
+            <span class="p">)</span>
+
+            <span class="n">ix_choice</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">next_char_distribution</span>
+            <span class="p">)</span>
+
+            <span class="n">ctr</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">while</span> <span class="n">ix_choice</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">min_word_len</span><span class="p">:</span>
+                <span class="n">ctr</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="c1"># sample again if you picked the end-of-word token too early</span>
+                <span class="n">ix_choice</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">next_char_distribution</span>
+                <span class="p">)</span>
+                <span class="k">if</span> <span class="n">ctr</span> <span class="o">&gt;</span> <span class="mi">1000</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;caught in a near-infinite loop.&quot;</span>
+                          <span class="s2">&quot;You might have picked too low a temperature &quot;</span>
+                          <span class="s2">&quot;and the sampler just keeps sampling </span><span class="se">\\</span><span class="s2">n&#39;s&quot;</span><span class="p">)</span>
+                    <span class="k">break</span>
+
+            <span class="n">next_ix</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ix_choice</span><span class="p">)</span>
+            <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">next_ix</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">next_ix</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">generated_word</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ix_to_char</span><span class="p">[</span><span class="n">next_ix</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">generated_word</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Alexander Engelhardt
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

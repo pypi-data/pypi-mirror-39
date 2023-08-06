@@ -1,0 +1,69 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter B
+  \item \spxentry{batch\_size}\spxextra{sng.Config.Config attribute}, \hyperpage{13}
+
+  \indexspace
+  \bigletter C
+  \item \spxentry{Config}\spxextra{class in sng.Config}, \hyperpage{13}
+
+  \indexspace
+  \bigletter D
+  \item \spxentry{debug}\spxextra{sng.Config.Config attribute}, \hyperpage{13}
+
+  \indexspace
+  \bigletter E
+  \item \spxentry{epochs}\spxextra{sng.Config.Config attribute}, \hyperpage{13}
+
+  \indexspace
+  \bigletter F
+  \item \spxentry{fit()}\spxextra{sng.Generator.Generator method}, \hyperpage{14}
+
+  \indexspace
+  \bigletter G
+  \item \spxentry{Generator}\spxextra{class in sng.Generator}, \hyperpage{14}
+
+  \indexspace
+  \bigletter H
+  \item \spxentry{hidden\_dim}\spxextra{sng.Config.Config attribute}, \hyperpage{13}
+
+  \indexspace
+  \bigletter L
+  \item \spxentry{load()}\spxextra{sng.Generator.Generator class method}, \hyperpage{14}
+  \item \spxentry{load\_builtin\_wordlist()}\spxextra{in module sng.wordlists.wordlists}, 
+		\hyperpage{15}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{max\_word\_len}\spxextra{sng.Config.Config attribute}, \hyperpage{13}
+  \item \spxentry{min\_word\_len}\spxextra{sng.Config.Config attribute}, \hyperpage{13}
+
+  \indexspace
+  \bigletter N
+  \item \spxentry{n\_layers}\spxextra{sng.Config.Config attribute}, \hyperpage{13}
+
+  \indexspace
+  \bigletter S
+  \item \spxentry{save()}\spxextra{sng.Generator.Generator method}, \hyperpage{14}
+  \item \spxentry{show\_builtin\_wordlists()}\spxextra{in module sng.wordlists.wordlists}, 
+		\hyperpage{15}
+  \item \spxentry{simulate()}\spxextra{sng.Generator.Generator method}, \hyperpage{15}
+  \item \spxentry{sng.Config}\spxextra{module}, \hyperpage{13}
+  \item \spxentry{sng.Generator}\spxextra{module}, \hyperpage{14}
+  \item \spxentry{sng.wordlists.wordlists}\spxextra{module}, \hyperpage{15}
+  \item \spxentry{suffix}\spxextra{sng.Config.Config attribute}, \hyperpage{13}
+
+  \indexspace
+  \bigletter T
+  \item \spxentry{temperature}\spxextra{sng.Config.Config attribute}, \hyperpage{13}
+  \item \spxentry{to\_dict()}\spxextra{sng.Config.Config method}, \hyperpage{14}
+
+  \indexspace
+  \bigletter V
+  \item \spxentry{verbose}\spxextra{sng.Config.Config attribute}, \hyperpage{14}
+
+\end{sphinxtheindex}
