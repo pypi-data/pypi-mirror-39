@@ -1,0 +1,4 @@
+[console_scripts]
+pip-negotiator = pip_negotiator.pip_negotiator:main
+pip_negotiator = pip_negotiator.pip_negotiator:main
+
