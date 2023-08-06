@@ -1,0 +1,16 @@
+licant/__init__.py,sha256=3HVpAV7Gpp1Ojlv1uP9L08yHIhjG3hXNkT4NcILkngk,792
+licant/cache.py,sha256=OH1vd6f_5CQyq6aGFGNFsa_UCkzwn2CnW5tOhbb1REw,550
+licant/cli.py,sha256=ZYc3ibwyadtJudCRzt5QrWCHcTSR9_TYROfYsxo3Gxc,3312
+licant/core.py,sha256=IpvWGbLg8ojmk15Qo4qvpzpfTZDmC2vHRoFTfL93EGc,9266
+licant/cxx_make.py,sha256=8Q9-Tw6QWiTnzcS_E5-o9KU2RLxUMV_7e4HXPJbZWl0,5212
+licant/cxx_modules.py,sha256=Yha2C7VzmqKoWQf0UfMQv5zM1b9oWRtciS2d-Z86DIU,11750
+licant/libs.py,sha256=Zq6bGCDfqh18lZrW6mxg8LM0X9s_qmb1H6QJ4u-6dFM,1095
+licant/make.py,sha256=UWKx3SQpxqghKRnz3rnJLDQxxiKHDPU-GvOt79yHeu4,4493
+licant/modules.py,sha256=gsGv7_SHRKVU9d9INd3H_Xp9n-EQ-cwS6zYMZsf3eZA,3680
+licant/scripter.py,sha256=gsjh8dEPFUfyIj8UYD9Z4GkK9zZ0WVMaJ5FnPGGOwdE,882
+licant/util.py,sha256=EUGrSzaiRsIqFIJfyJDV4xf1xCDy8Oi0nQCNWMXT3mE,5125
+licant-1.1.0.data/scripts/licant-config,sha256=vNGG5lPwa1vQU7OKZuVAxqxmoTLG3Ghtq73yiqym1FQ,1435
+licant-1.1.0.dist-info/METADATA,sha256=Gh7ShAbh4MPdAwpC60zDR--mklMlYpAG6i8V8rxpprU,244
+licant-1.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+licant-1.1.0.dist-info/top_level.txt,sha256=lOwdV8NcrU3AfrNQYqmLtoC6ygucpBlAexHVG0oPsug,7
+licant-1.1.0.dist-info/RECORD,,
