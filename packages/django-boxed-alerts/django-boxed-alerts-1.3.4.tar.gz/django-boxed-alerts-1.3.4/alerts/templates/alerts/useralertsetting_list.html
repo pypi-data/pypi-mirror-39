@@ -1,0 +1,9 @@
+{% extends "alerts/base.html" %}
+{% load i18n %}
+
+{% block "dialog-body" %}
+  {% for alert in object_list %}
+    <a class="btn btn-{% if alert.setting %}primary{% else %}default{% endif %} btn-lg btn-block" href="{% url "alert.settings" alert.slug %}?next={% url "alert.settings" %}">{{ alert }}<br/><small class="text-muted">{{ alert.desc }}</small></a>
+  {% endfor %}
+{% endblock %}
+
