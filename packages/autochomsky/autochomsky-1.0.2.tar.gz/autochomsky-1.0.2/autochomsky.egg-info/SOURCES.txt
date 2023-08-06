@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+README.txt
+requirements.txt
+setup.cfg
+setup.py
+autochomsky/__init__.py
+autochomsky.egg-info/PKG-INFO
+autochomsky.egg-info/SOURCES.txt
+autochomsky.egg-info/dependency_links.txt
+autochomsky.egg-info/requires.txt
+autochomsky.egg-info/top_level.txt
