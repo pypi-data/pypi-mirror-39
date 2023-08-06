@@ -1,0 +1,17 @@
+pyfftw/__init__.py,sha256=Asy5WSKZC4zi-uCbWBPubNZGXvHvo4WBKhceLpJMa5E,1320
+pyfftw/config.py,sha256=IbC8M5JF3fK8MuncD53XOq2-Jjk3DzdVTJnGFTPaYzM,2743
+pyfftw/_version.py,sha256=5A6RSRiUb-FAOrWggDEvHj7DBwbmrisdx_DRJRFnzNo,498
+pyfftw/pyfftw.cpython-35m-x86_64-linux-gnu.so,sha256=XYtK5AzrcoTeJaso99IiyMshyz1yWi3h4GydZoz4MnY,6753185
+pyfftw/builders/builders.py,sha256=zmRg6peQgtLYJfpvUpxT95uEqr2X7kiGQHUvBt2122c,21156
+pyfftw/builders/__init__.py,sha256=ZTVR7Kayt8zgxlugbTOVcPkp-416fdiTQZzbIX3xuYI,123
+pyfftw/builders/_utils.py,sha256=7Zkhv74uhS94fC-rQlAvg7kVC1EVAzp_wmkEjrpZfRo,16499
+pyfftw/interfaces/dask_fft.py,sha256=AMxcydMLhJH_Xy5sJE3lH7-FO8RgYEwrNeCGJClSGxs,3173
+pyfftw/interfaces/scipy_fftpack.py,sha256=bso0Wa8XVLEnfn7xNa-Ct0Sd5NZt2EpM_Srtc-1XnNc,12721
+pyfftw/interfaces/__init__.py,sha256=NUJzc8sbN1XMhKshPvG_JjIba5ApqaVfFx_0k745Vt4,10300
+pyfftw/interfaces/_utils.py,sha256=oxzZEi7lkCqlNkGGPiVxaZsHZGubvjvO9fu8PT6ESzc,5399
+pyfftw/interfaces/cache.py,sha256=JRs4JBiFwob-C2Z4-tO7gUeO1Q9Yf-K2B6rG98MvB5M,9271
+pyfftw/interfaces/numpy_fft.py,sha256=hvH0xZIVEgvf0dlRirbtQZ4dTPawmrdQkSNtq62PE1I,14297
+pyFFTW-0.11.1.dist-info/WHEEL,sha256=c8uKbdQypV832y6wpTaH7LmB9UQOPgqCSt-bcR7krHw,109
+pyFFTW-0.11.1.dist-info/top_level.txt,sha256=PLhKgyeQKkevaanX8WjVgqcZo1tRC3ejj72xC0Sk7FQ,7
+pyFFTW-0.11.1.dist-info/METADATA,sha256=notha00-UPgmVxrY-xWsXgwNtRwjY5gK1HkJi3wYhk0,2317
+pyFFTW-0.11.1.dist-info/RECORD,,
