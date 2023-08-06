@@ -1,0 +1,14 @@
+README
+setup.py
+customquery/__init__.py
+customquery/exceptions.py
+customquery/parser.py
+django_custom_query.egg-info/PKG-INFO
+django_custom_query.egg-info/SOURCES.txt
+django_custom_query.egg-info/dependency_links.txt
+django_custom_query.egg-info/requires.txt
+django_custom_query.egg-info/top_level.txt
+tests/__init__.py
+tests/models.py
+tests/settings.py
+tests/test_parser.py

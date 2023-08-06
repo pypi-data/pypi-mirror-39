@@ -1,0 +1,29 @@
+Metadata-Version: 1.1
+Name: django-custom-query
+Version: 0.3.0
+Summary: Custom user query parser for Django ORM
+Home-page: http://django-custom-query.readthedocs.io/
+Author: Luis Fagundes
+Author-email: lhfagundes@gmail.com
+License: The MIT License
+Description: 
+        django-custom-query is a python module to write user provided search queries, using AND, OR and parenthesis grouping. This module will translate those to Django ORM Q objects.
+        
+        Documentation is available at http://django-custom-query.readthedocs.io/ or else, you can build it from source like this::
+        
+            $ easy_install Sphinx
+            $ cd docs
+            $ make html
+        
+        then open _build/html/index.html in your web browser.
+        
+        To run tests:
+        
+            $ python3 run_tests.py
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
