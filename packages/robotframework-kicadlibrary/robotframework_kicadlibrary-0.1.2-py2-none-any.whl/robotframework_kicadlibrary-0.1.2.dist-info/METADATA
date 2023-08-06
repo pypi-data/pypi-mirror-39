@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: robotframework-kicadlibrary
+Version: 0.1.2
+Summary: Robot Framework KiCAD library
+Home-page: https://github.com/madworx/robotframework-kicadlibrary
+Author: Martin Kjellstrand
+Author-email: martin.kjellstrand@madworx.se
+License: GPL
+Platform: UNKNOWN
+Requires-Dist: robotframework (<=3.0.4)
+
+UNKNOWN
+
+
