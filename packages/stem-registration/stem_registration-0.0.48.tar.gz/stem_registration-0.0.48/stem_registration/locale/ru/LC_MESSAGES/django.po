@@ -1,0 +1,318 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-07 12:55+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%"
+"100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\mysite\settings.py:118
+msgid "Ukraine"
+msgstr "Украинский"
+
+#: .\mysite\settings.py:119
+msgid "Russian"
+msgstr "Русский"
+
+#: .\mysite\settings.py:120
+msgid "English"
+msgstr "Английский"
+
+#: .\stem_registration\forms.py:18 .\stem_registration\models.py:14
+msgid "Компания"
+msgstr "Компания"
+
+#: .\stem_registration\forms.py:20 .\stem_registration\forms.py:33
+#: .\stem_registration\models.py:34 .\stem_registration\models.py:45
+#: .\stem_registration\models.py:46
+msgid "Адрес"
+msgstr "Адрес"
+
+#: .\stem_registration\forms.py:21 .\stem_registration\forms.py:34
+msgid "Адрес дополнительно"
+msgstr "Адрес дополнительно"
+
+#: .\stem_registration\forms.py:22 .\stem_registration\forms.py:35
+#: .\stem_registration\models.py:41 .\stem_registration\models.py:47
+msgid "Город"
+msgstr "Город"
+
+#: .\stem_registration\forms.py:30 .\stem_registration\forms.py:36
+msgid "Индекс"
+msgstr "Индекс"
+
+#: .\stem_registration\forms.py:31
+msgid "Same"
+msgstr "Тот же"
+
+#: .\stem_registration\forms.py:45 .\stem_registration\models.py:56
+msgid "Номер телефона"
+msgstr "Номер телефона"
+
+#: .\stem_registration\forms.py:46 .\stem_registration\models.py:73
+msgid "ИНН"
+msgstr "ИНН"
+
+#: .\stem_registration\forms.py:53 .\stem_registration\models.py:67
+msgid "Полное наименование"
+msgstr "Полное наименование"
+
+#: .\stem_registration\forms.py:54 .\stem_registration\models.py:60
+msgid "ЕГРПОУ"
+msgstr "ЕГРПОУ"
+
+#: .\stem_registration\models.py:13
+msgid "Частное лицо"
+msgstr "Частное лицо"
+
+#: .\stem_registration\models.py:15
+msgid "Частный предприниматель"
+msgstr "Частный предприниматель"
+
+#: .\stem_registration\models.py:21
+msgid "Тип контрагента"
+msgstr "Тип контрагента"
+
+#: .\stem_registration\models.py:23
+msgid ""
+"<details><ul><li>Частное лицо: заполняем ФИО, ИНН - не обязательно. "
+"Наименование  = ФИО</li><li>Частный предприниматель: заполняем ФИО, ИНН, "
+"полное наименование. Наименование  = ФИО (СПД-ФЛ)</li><li>Компания: "
+"заполняем Наименование, Полное наименование, ИНН, ЕГРПОУ</li></ul></details>"
+msgstr ""
+
+#: .\stem_registration\models.py:35
+msgid "Адрес (доп.)"
+msgstr ""
+
+#: .\stem_registration\models.py:38 .\stem_registration\models.py:51
+msgid "Страна"
+msgstr ""
+
+#: .\stem_registration\models.py:39 .\stem_registration\models.py:52
+msgid "Страна происхождения контрагента"
+msgstr ""
+
+#: .\stem_registration\models.py:42 .\stem_registration\models.py:48
+msgid "Почтовый индекс"
+msgstr ""
+
+#: .\stem_registration\models.py:62
+msgid ""
+"<details>для других страни или не используется или как-то иначе называется</"
+"details>"
+msgstr ""
+
+#: .\stem_registration\models.py:68
+msgid ""
+"<details>Юридическое название компании, частного или индивидуального "
+"предпринимателя.<br>Для Частный лиц указывайте ФИО полностью<br>Это поле "
+"используется при формировании печатных форм документов</details>"
+msgstr ""
+
+#: .\stem_registration\models.py:78
+msgid "ИНН должен содержать 10 символов"
+msgstr ""
+
+#: .\stem_registration\models.py:80
+msgid "ИНН должен содержать 12 символов"
+msgstr ""
+
+#: .\stem_registration\templates\registration\activate.html:4
+msgid "Activation Failure"
+msgstr "Ошибка активации"
+
+#: .\stem_registration\templates\registration\activate.html:7
+msgid "Account activation failed."
+msgstr "Ошибка активации учетной записи."
+
+#: .\stem_registration\templates\registration\activate.html:10
+msgid "Не удалось активировать учетную запись"
+msgstr ""
+
+#: .\stem_registration\templates\registration\activate.html:15
+msgid "Попробуйте пройти регистрацию повторно"
+msgstr ""
+
+#: .\stem_registration\templates\registration\activate.html:16
+msgid ""
+"Если проблемы с активацией останутся, обратитесь в службу поддержки клиентов "
+"по любому из контактных номеров."
+msgstr ""
+
+#: .\stem_registration\templates\registration\activation_complete.html:5
+msgid "Account activated"
+msgstr "Учетная запись активирована"
+
+#: .\stem_registration\templates\registration\activation_complete.html:12
+msgid "Активация завершена"
+msgstr ""
+
+#: .\stem_registration\templates\registration\activation_complete.html:13
+msgid "Спасибо за регистрацию!"
+msgstr ""
+
+#: .\stem_registration\templates\registration\login.html:5
+#: .\stem_registration\templates\registration\login.html:40
+msgid "Log in"
+msgstr "Войти"
+
+#: .\stem_registration\templates\registration\login.html:13
+msgid "Hello"
+msgstr "Привет"
+
+#: .\stem_registration\templates\registration\login.html:14
+msgid "Log out"
+msgstr "Выйти"
+
+#: .\stem_registration\templates\registration\login.html:20
+msgid "Please sign in"
+msgstr "Пожалуйста, авторизируйтесь."
+
+#: .\stem_registration\templates\registration\login.html:24
+msgid "Invalid login or password."
+msgstr "Неправильный логин или пароль."
+
+#: .\stem_registration\templates\registration\login.html:36
+msgid "Remember me"
+msgstr "Запомнить меня"
+
+#: .\stem_registration\templates\registration\login.html:42
+msgid "Forgot your password?"
+msgstr "Забыли пароль?"
+
+#: .\stem_registration\templates\registration\login.html:43
+msgid "Sign up?"
+msgstr "Зарегистрироваться?"
+
+#: .\stem_registration\templates\registration\password_reset_complete.html:5
+msgid "Password reset complete"
+msgstr "Сброс пароля завершен"
+
+#: .\stem_registration\templates\registration\password_reset_complete.html:11
+msgid "Ваш пароль был обновлен!"
+msgstr ""
+
+#: .\stem_registration\templates\registration\password_reset_complete.html:12
+msgid "Теперь вы можете"
+msgstr ""
+
+#: .\stem_registration\templates\registration\password_reset_complete.html:12
+msgid "войти в систему."
+msgstr ""
+
+#: .\stem_registration\templates\registration\password_reset_confirm.html:6
+#: .\stem_registration\templates\registration\password_reset_done.html:5
+msgid "Password reset"
+msgstr "Восстановление пароля"
+
+#: .\stem_registration\templates\registration\password_reset_done.html:13
+msgid ""
+"We have sent you an email with a link to reset your password. Please check "
+"your email and click the link to continue."
+msgstr ""
+"Мы отправили вам электронное письмо со ссылкой для сброса пароля. пожалуйста, проверьте"
+"почту и нажмите на ссылку, чтобы продолжить."
+
+#: .\stem_registration\templates\registration\password_reset_form.html:5
+msgid "Restore your password"
+msgstr "Восстановить пароль"
+
+#: .\stem_registration\templates\registration\password_reset_form.html:13
+msgid "Forgot password?"
+msgstr "Забыли пароль?"
+
+#: .\stem_registration\templates\registration\password_reset_form.html:18
+msgid ""
+"\n"
+"                                    We're sorry. We weren't able to identify "
+"you given the information provided.\n"
+"                                    Please, check your email address or "
+"create a new account.\n"
+"                                "
+msgstr ""
+
+#: .\stem_registration\templates\registration\password_reset_form.html:31
+msgid "Send me recovery link"
+msgstr "Отправить ссылку для восстановления"
+
+#: .\stem_registration\templates\registration\password_reset_form.html:35
+msgid "Sing in"
+msgstr "Войти в систему"
+
+#: .\stem_registration\templates\registration\password_reset_form.html:36
+msgid "Sign up"
+msgstr "Зарегистрироваться"
+
+#: .\stem_registration\templates\registration\registration_base.html:34
+msgid "Developed by Stem SC"
+msgstr "Разработано Stem SC"
+
+#: .\stem_registration\templates\registration\registration_complete.html:4
+msgid "Activation email sent"
+msgstr "Отправлено письмо активации"
+
+#: .\stem_registration\templates\registration\registration_complete.html:10
+msgid "Thank you for registration."
+msgstr "Благодарим вас за регистрацию."
+
+#: .\stem_registration\templates\registration\registration_complete.html:11
+msgid "Please check your email to complete the registration process."
+msgstr "Пожалуйста, проверьте электронную почту, чтобы завершить процесс регистрации."
+
+#: .\stem_registration\templates\registration\registration_complete.html:13
+msgid ""
+"Если Вы не получили письмо от нас, проверьте Ваши спам фильтры (папки). "
+"Если\n"
+"                    все-таки письмо не доставлено, обратитесь с службу\n"
+"                    технической поддержки, e-mail: <a href=\"\">test</a>"
+msgstr ""
+
+#: .\stem_registration\templates\registration\registration_form.html:6
+msgid "Create new account (registration) - Dropshipping"
+msgstr "Создать новую учетную запись (регистрация) - Dropshipping"
+
+#: .\stem_registration\templates\registration\registration_form.html:27
+msgid "Create a New Account"
+msgstr "Создать новый аккаунт"
+
+#: .\stem_registration\templates\registration\registration_form.html:29
+msgid "Create your ..."
+msgstr "Создайте свой ..."
+
+#: .\stem_registration\templates\registration\registration_form.html:43
+msgid "Account data"
+msgstr "Данные учетной записи"
+
+#: .\stem_registration\templates\registration\registration_form.html:77
+msgid "Company  "
+msgstr "Компания"
+
+#: .\stem_registration\templates\registration\registration_form.html:144
+msgid "Passport copy page"
+msgstr "Копия страницы паспорта"
+
+#: .\stem_registration\templates\registration\registration_form.html:214
+msgid "I agree with"
+msgstr "Я согласен с"
+
+#: .\stem_registration\templates\registration\registration_form.html:216
+msgid "terms of service"
+msgstr "условиями обслуживания"
+
+#: .\stem_registration\templates\registration\registration_form.html:219
+msgid "Save"
+msgstr "Сохранить"
