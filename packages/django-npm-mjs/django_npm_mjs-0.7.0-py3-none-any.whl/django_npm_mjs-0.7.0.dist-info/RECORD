@@ -1,0 +1,15 @@
+django_npm_mjs-0.7.0.dist-info/METADATA,sha256=Y7VRHpkSLR1nY3AnIsFE7iRQSnkCKjd_fecQ_LZllTw,6405
+django_npm_mjs-0.7.0.dist-info/RECORD,,
+django_npm_mjs-0.7.0.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+django_npm_mjs-0.7.0.dist-info/top_level.txt,sha256=u3cutRWNeNiolXHo9pDCypPctLmyXlXclf574QuRlk0,8
+npm_mjs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+npm_mjs/package.json,sha256=K5EUzUy2Xfp8hswdn1WC9vjH6m7SzSZAchFpTO29YZs,1023
+npm_mjs/signals.py,sha256=ntpBMvN1JTEAiBGAwtcl2MufWpiTdZoORfjitmDmQQo,90
+npm_mjs/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+npm_mjs/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+npm_mjs/management/commands/create_package_json.py,sha256=sZ-5ske8AGPPW7Qu0fE0yHvK8eCHbbfkLo2KYE7nSV4,1833
+npm_mjs/management/commands/npm_install.py,sha256=xQ4vsOwJDRoqyIt5mM3JBBhbHlYaxXY43NMmplcZYEc,2137
+npm_mjs/management/commands/transpile.py,sha256=4GcnK0SMPFwl9bSiJ7CcOHHbzj1Eewk10i8ykoNZ3ng,10450
+npm_mjs/templates/npm_mjs/static_urls_js.html,sha256=ELCIVpE8dIE0SJOzOxzBEtVVMV1Hw30nUQ2kQiJgKRc,235
+npm_mjs/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+npm_mjs/templatetags/transpile.py,sha256=SLzxzoWTpds78UYVKWljC-rTZ04LLv7yqyecZZPa1PI,2244
