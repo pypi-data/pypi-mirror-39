@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: txt-util-kr
+Version: 0.0.1
+Summary: 한국어 파일 입출력, 코사인 유사도, 절대 경로, json 로딩, kkma 태거를 사용한 한국어 형태소 분석, 시간 프린트 하기 등 util 파일들
+Home-page: https://github.com/meeyeong11/txt_util/
+Author: Meeyeong Im
+Author-email: meeyeong1211@gmail.com
+License: BSD
+Keywords: some txt parsing util
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: >=2.6
+Requires-Dist: konlpy
+Requires-Dist: numpy
+
+# txt_util
+
+
