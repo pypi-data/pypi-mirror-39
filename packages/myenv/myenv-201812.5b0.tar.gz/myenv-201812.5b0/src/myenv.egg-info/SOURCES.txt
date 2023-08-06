@@ -1,0 +1,14 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+requirements/pypi.txt
+src/myenv/__init__.py
+src/myenv.egg-info/PKG-INFO
+src/myenv.egg-info/SOURCES.txt
+src/myenv.egg-info/dependency_links.txt
+src/myenv.egg-info/top_level.txt
+src/myenv.egg-info/zip-safe
+test/test_myenv.py
