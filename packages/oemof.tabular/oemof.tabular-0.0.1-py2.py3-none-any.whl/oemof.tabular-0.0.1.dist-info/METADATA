@@ -1,0 +1,104 @@
+Metadata-Version: 2.1
+Name: oemof.tabular
+Version: 0.0.1
+Summary: Load oemof energy systems from tabular data sources.
+Home-page: https://github.com/oemof/oemof-tabular
+Author: Stephan Günther, Simon Hilpert, Martin Söthe, Cord Kaldemeyer
+Author-email: gnn.code@gmail.com
+License: BSD 3-Clause License
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Utilities
+Requires-Dist: datapackage
+Requires-Dist: oemof (==0.2.4.dev0)
+
+========
+Overview
+========
+
+
+
+Load oemof energy systems from tabular data sources.
+
+* Free software: BSD 3-Clause License
+
+Installation
+============
+
+::
+
+    pip install --process-dependency-links oemof.tabular
+
+Unfortunately you need the :code:`--process-dependency-links` flag until
+`oemof` releases a version after :code:`v0.2.3`.
+
+Documentation
+=============
+
+
+https://oemof-tabular.readthedocs.io/
+
+
+Development
+===========
+
+To run the all tests run::
+
+    tox
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
+
+Changelog
+=========
+
+0.0.1 (2018-12-12)
+------------------
+* Moved the datapackage reader from core `oemof` into this package.
+  That means the basic functionality of deserializing energy systems
+  from datapackages has finally arrived.
+* Moved `Facade` classes from `renpass` into this package.
+  The `Facade` classes are designed to complement the datapackage
+  reader, by enabling easy construction of energy system components from
+  simple tabular data sources.
+* Also moved the example datapackages from `renpass` into this package.
+  These datapackages provide a good way of at least testing, that the
+  datapackage reader doesn't throw errors.
+
+0.0.0 (2018-11-23)
+------------------
+
+* First release on PyPI.
+  Pretty much non functional because it only consists of the package
+  boilerplate and nothing else. But this is what a version zero is for,
+  IMHO.
+
+
+
