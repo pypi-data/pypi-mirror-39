@@ -1,0 +1,5 @@
+[console_scripts]
+safewise-agent = safewise_agent:ssh_agent
+safewise-gpg = safewise_agent:gpg_tool
+safewise-gpg-agent = safewise_agent:gpg_agent
+
