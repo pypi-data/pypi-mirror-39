@@ -1,0 +1,45 @@
+{% extends 'layouts/two_pane_single.html' %}
+{% load i18n %}
+{% load bulma_tags %}
+
+{% block content_main %}
+  <h1 class="title">{% trans 'Profile' %}</h1>
+
+  <h2 class="sutitle">{% trans 'Basic information' %}</h2>
+  <div class="content">
+    <table>
+      <tbody>
+        <tr><th>ID</th><td>{{ request.user.id }}</td></tr>
+        <tr><th>{% trans 'Username' %}</th><td>{{ request.user.username }}</td></tr>
+        <tr><th>{% trans 'Email address' %}</th><td>{{ request.user.email }}</td></tr>
+        <tr><th>{% trans 'Full name' %}</th><td>{{ request.user.get_full_name }}</td></tr>
+      </tbody>
+    </table>
+    <a class="button" href="{% url 'accounts:profile-edit' %}">
+        {% trans 'Edit profile' %}
+    </a>
+  </div>
+
+  <h2 class="subtitle">{% trans 'Set language' %}</h2>
+  <div class="content">
+    <div>
+      <form class="form-inline" action="{% url 'set_language' %}" method="post">
+        {% csrf_token %}
+        {{ language_form|bulma_inline }}
+        <button class="button" type="submit">{% trans 'Apply' %}</button>
+      </form>
+    </div>
+  </div>
+
+  <h2 class="subtitle">{% trans 'Set timezone' %}</h2>
+  <div class="content">
+    <div>
+      <form class="form-inline" action="{% url 'accounts:set-timezone' %}" method="post">
+        {% csrf_token %}
+        {{ timezone_form|bulma_inline }}
+        <button class="button" type="submit">{% trans 'Apply' %}</button>
+      </form>
+      </form>
+    </div>
+  </div>
+{% endblock %}
