@@ -1,0 +1,11 @@
+autodiffpy/__init__.py,sha256=ipF2SyY3XRq8xx_Ncb7XESvxQFmWiYO5pQ4kBGNoNis,44
+autodiffpy/autodiff.py,sha256=7S7CVY9wpsZOpH-UtPQTvR1AQxvOAAu4eCehSe0g7S4,13849
+autodiffpy/autodiff_math.py,sha256=7wy6OWL-Iuhdaen0kBaRRm7EqLwcuUqfMEZvuV65WhA,14477
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/autodiff_math_test.py,sha256=_MVnTQpbnRNuNghTHxki_qhX7Ug3PTeM-VenNroWLTk,5767
+tests/autodiff_test.py,sha256=62fhSO8doG6E0c_SGe0apQNREN9J2PDTW7DoRll6b3w,6521
+autodiffpy-0.0.1.dist-info/LICENSE,sha256=5kRMynyaxbnnaAIAxMKG4nImI9huIe35NMp2nLOGyfw,1086
+autodiffpy-0.0.1.dist-info/METADATA,sha256=PheuLmLyEtMy_hZdftDoJeLgByNB8ukaBmYtF8_zYdM,536
+autodiffpy-0.0.1.dist-info/WHEEL,sha256=QPE_11_7wuOefQDKs5Bl8Ok4CQXtYxkCDKluPK64n2c,116
+autodiffpy-0.0.1.dist-info/top_level.txt,sha256=-Ycadoy2H-5c75gimA_Xv7q9tMe1sgsG9LY3j80nmt4,17
+autodiffpy-0.0.1.dist-info/RECORD,,
