@@ -1,0 +1,6 @@
+backports-datetime-fromisoformat
+dulwich==0.18.6
+jsonschema>=2.6
+python-dateutil==2.6.1
+toolz>=0.8.2
+ujson==1.35
