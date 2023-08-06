@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: buildSIMPLE
+Version: 0.0.0
+Summary: buildSIMPLE is an open-source project dedicated to the development and maintenance of a python library for building performance modeling with full built-in support for the bsim data model.
+Home-page: https://www.neumodlabs.com
+Author: Sagar Rao
+Author-email: sagar.rao@neumodlabs.com
+License: Mozilla Public License, v. 2.0
+Download-URL: https://github.com/neumodlabs/buildSIMPLE
+Description: UNKNOWN
+Keywords: building performance modeling,energyplus,equest,ccbec,energy modeling
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
