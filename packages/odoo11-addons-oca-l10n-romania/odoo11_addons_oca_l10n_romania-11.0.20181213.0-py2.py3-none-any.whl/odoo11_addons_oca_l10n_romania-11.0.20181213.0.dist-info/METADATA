@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: odoo11-addons-oca-l10n-romania
+Version: 11.0.20181213.0
+Summary: Meta package for oca-l10n-romania Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo11-addon-currency-rate-update-RO-BNR
+Requires-Dist: odoo11-addon-l10n-ro-account-bank-statement-import-mt940-brd
+Requires-Dist: odoo11-addon-l10n-ro-account-period-close
+Requires-Dist: odoo11-addon-l10n-ro-address-extended
+Requires-Dist: odoo11-addon-l10n-ro-config
+Requires-Dist: odoo11-addon-l10n-ro-fiscal-validation
+Requires-Dist: odoo11-addon-l10n-ro-hr
+Requires-Dist: odoo11-addon-l10n-ro-hr-contract
+Requires-Dist: odoo11-addon-l10n-ro-hr-medical-holidays
+Requires-Dist: odoo11-addon-l10n-ro-partner-create-by-vat
+Requires-Dist: odoo11-addon-l10n-ro-partner-unique
+Requires-Dist: odoo11-addon-l10n-ro-report-D300
+Requires-Dist: odoo11-addon-l10n-ro-report-trial-balance
+Requires-Dist: odoo11-addon-l10n-ro-siruta
+Requires-Dist: odoo11-addon-l10n-ro-vat-on-payment
+
+UNKNOWN
+
+
