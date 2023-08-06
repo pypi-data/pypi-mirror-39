@@ -1,0 +1,195 @@
+Metadata-Version: 2.1
+Name: flython
+Version: 0.0.0
+Summary: Static functional purity analysis for Python.
+Home-page: https://github.com/brandtbucher/flython
+Author: Brandt Bucher
+Author-email: brandtbucher@gmail.com
+License: MIT
+Description: <div align=justify>
+        
+        <div align=center>
+        
+        <h1 align=center>Flython</h1>
+        
+        [![latest version](https://img.shields.io/github/release-pre/brandtbucher/flython.svg?style=for-the-badge&label=latest)![latest release date](https://img.shields.io/github/release-date-pre/brandtbucher/flython.svg?style=for-the-badge&label=released)](https://github.com/brandtbucher/flython/releases)[![build status](https://img.shields.io/travis/com/brandtbucher/flython/master.svg?style=for-the-badge)](https://travis-ci.com/brandtbucher/flython)[![issues](https://img.shields.io/github/issues-raw/brandtbucher/flython.svg?label=issues&style=for-the-badge)](https://github.com/brandtbucher/flython/issues)[![badges](https://img.shields.io/badge/badges-5-magenta.svg?style=for-the-badge)](https://shields.io)
+        
+        </div>
+        
+        ---
+        
+        **Flython is still in an unstable development phase. Many features do not work perfectly (if at all), and interfaces are still being tweaked and played with. Bug reports, questions, feedback, fixes, and other contributions on [GitHub](https://github.com/brandtbucher/flython) are _greatly_ appreciated – just open an [issue](https://github.com/brandtbucher/flython/issues/new) or [pull request](https://github.com/brandtbucher/flython/compare)!**
+        
+        ---
+        
+        About
+        -----
+        
+        Python is an _incredibly_ dynamic language. While this is one of its greatest strengths, it also tends to create difficulties for engineers who wish to program in a strictly functional paradigm. Flython provides tools that statically analyze compiled CPython bytecode for near-perfect protection against statefulness, side-effects, mutation, and other sources of functional breakdown.
+        
+        Flython's design is inspired by (and modeled after) [mypy](https://github.com/python/mypy). If you've ever used similar static analysis tools, integrating Flython into your workflow will feel familiar and natural.
+        
+        Examples
+        --------
+        
+        The easiest way to install flython is with `pip`:
+        
+        ```
+        $ pip install flython
+        ```
+        
+        When your code is functionally pure, Flython stays invisible:
+        
+        ```
+        $ flython pure.py
+        ```
+        
+        When it's not, Flython warns you. Consider the following module, `impure.py`:
+        
+        ```py
+        def modify_object(target):
+            """Mutate target."""
+        
+            target.foo = "bar"
+            del target.baz
+        
+        
+        def modify_object_sneaky(target):
+            """Mutate target in a hard-to-catch way."""
+        
+            setter, deleter = setattr, delattr
+        
+            setter(target, "foo", "bar")
+            deleter(target, "baz")
+        
+        
+        # Create some mutable objects:
+        my_list = [*range(3)]
+        my_set = {i for i in range(3, 6)}
+        my_dict = dict((("six", 6), ("seven", 7), ("eight", 8)))
+        
+        # Mutate those objects:
+        my_list[0] = "zero"
+        my_set -= my_set
+        del my_dict["eight"]
+        ```
+        
+        When we run Flython, it catches quite a bit of the impurity:
+        
+        ```
+        $ flython impure.py
+        Attempt to store value 'bar' to variable attribute target.foo. (impure.py, line 4)
+        Attempt to delete variable attribute target.baz. (impure.py, line 5)
+        Attempt to store value 'zero' to contained item my_list[0]. (impure.py, line 23)
+        Attempt to modify variable. Use normal assignment (my_set = my_set - my_set) instead of augmented assignment (my_set -= my_set). (impure.py, line 24)
+        Attempt to delete contained item my_dict['eight']. (impure.py, line 25)
+        ```
+        
+        Using `--strict`, though, catches _all_ of its issues:
+        
+        ```
+        $ flython impure.py --strict
+        Attempt to store value 'bar' to variable attribute target.foo. (impure.py, line 4)
+        Attempt to delete variable attribute target.baz. (impure.py, line 5)
+        Attempt to load dynamic function 'setattr'. (impure.py, line 11)
+        Attempt to load dynamic function 'delattr'. (impure.py, line 11)
+        Attempt to use mutable built-in type 'list'. (impure.py, line 18)
+        Attempt to use mutable built-in type 'set'. (impure.py, line 19)
+        Attempt to use mutable built-in type 'dict'. (impure.py, line 20)
+        Attempt to store value 'zero' to contained item my_list[0]. (impure.py, line 23)
+        Attempt to modify variable. Use normal assignment (my_set = my_set - my_set) instead of augmented assignment (my_set -= my_set). (impure.py, line 24)
+        Attempt to delete contained item my_dict['eight']. (impure.py, line 25)
+        ```
+        
+        Features
+        --------
+        
+        ### Command-Line Tool
+        
+        ```sh
+        $ flython MODULE [ MODULE ... ]
+        ```
+        
+        Execute the `flython` package directly with a list of modules to statically analyze them. It accepts some basic options:
+        
+        ```
+        $ flython --help
+        
+        Static functional purity analysis for Python.
+        
+        Options:
+        
+          --no-dynamic    Don't allow "breakpoint" (Python 3.7+), "delattr", "eval", "exec", "globals", "locals", or "setattr".
+          --no-io         Don't allow "input", "open", or "print".
+          --no-mutables   Don't allow mutable built-in types.
+          --no-raise      Don't allow "raise" statements.
+          --skip-imports  Don't check imports.
+          --strict        Same as --no-dynamic --no-io --no-mutables --no-raise.
+         ```
+        
+        ### Flython Comments
+        
+        ```py
+        ... # flython: ignore
+        ```
+        
+        Indicate that Flython should silence any errors occurring on this line.
+        
+        Note that this does not silence followed imports. Users should skip imports with `# flython: skip` if they do not wish for them to be analyzed.
+        
+        ```py
+        ... # flython: skip
+        ```
+        
+        Indicate that Flython shouldn't check any new code objects defined on this line. This includes imports, class definitions, function definitions, generator expressions, or `list`/`dict`/`set` comprehensions.
+        
+        ### Programmatic Interface
+        
+        ```
+        flython.main(*modules: str, **options: bool) -> Generator[Union[OSError, SyntaxError], None, None]
+        ```
+        
+        The `main` function takes any number of string filepaths and yields `Exception` objects identical to those reported by the command-line interface.
+        
+        Requirements
+        ------------
+        
+        Flython officially supports CPython 3.4+ on Linux. It also attempts to maintain compatibility with PyPy 3.5 and all development versions of CPython 3.5+ (including unstable branches). It has no external dependencies.
+        
+        Python 3.6+ is recommended for Flython development work, along with the latest versions of the packages in `requirements.txt`.
+        
+        Contributing
+        ------------
+        
+        Contributions are welcome! See `CONTRIBUTING.md` for more info.
+        
+        </div>
+        
+        <div align=justify>
+        
+        <h1 align=center>The MIT License</h1>
+        
+        <h3 align=center>Copyright © 2018 Gary Brandt Bucher, II.</h3>
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of
+        this software and associated documentation files (the "Software"), to deal in
+        the Software without restriction, including without limitation the rights to
+        use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+        of the Software, and to permit persons to whom the Software is furnished to do
+        so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+        </div>
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
