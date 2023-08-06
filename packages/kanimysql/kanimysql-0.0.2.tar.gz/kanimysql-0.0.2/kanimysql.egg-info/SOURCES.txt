@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+kanimysql.egg-info/PKG-INFO
+kanimysql.egg-info/SOURCES.txt
+kanimysql.egg-info/dependency_links.txt
+kanimysql.egg-info/requires.txt
+kanimysql.egg-info/top_level.txt
