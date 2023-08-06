@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: stonesthrow
+Version: 0.1
+Summary: A rudimentary peer-to-peer API for sending data, easily.
+Home-page: https://github.com/c4syner/Stonesthrow
+Author: Cliff Syner
+Author-email: UNKNOWN
+License: MIT
+Download-URL: https://github.com/c4syner/Stonesthrow/archive/v0.1-alpha.tar.gz
+Description: UNKNOWN
+Keywords: API,DATA,NETWORKING
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
