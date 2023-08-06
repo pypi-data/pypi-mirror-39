@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pystu
+Version: 0.9.3
+Summary: Python library for Studuino&ArtecRobo
+Home-page: https://github.com/artec-kk/pystuduino
+Author: Artec Co., Ltd.
+Author-email: support@artec-kk.co.jp
+Maintainer: Artec Co., Ltd.
+Maintainer-email: support@artec-kk.co.jp
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pyserial
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
