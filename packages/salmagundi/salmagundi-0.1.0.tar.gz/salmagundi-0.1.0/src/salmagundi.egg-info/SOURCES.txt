@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/salmagundi/__init__.py
+src/salmagundi/colors.py
+src/salmagundi/files.py
+src/salmagundi.egg-info/PKG-INFO
+src/salmagundi.egg-info/SOURCES.txt
+src/salmagundi.egg-info/dependency_links.txt
+src/salmagundi.egg-info/top_level.txt
