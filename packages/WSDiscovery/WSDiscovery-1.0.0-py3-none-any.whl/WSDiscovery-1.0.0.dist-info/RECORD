@@ -1,0 +1,16 @@
+wsdiscovery/__init__.py,sha256=qP8pV5jp-HVKLGwFAZhnFj1bAiVN12aqDof2dTItyoU,83
+wsdiscovery/daemon.py,sha256=_EIEh4y-eSl_YH2ImNL4Wm1LISia222QV8I-MzAbfnY,19263
+wsdiscovery/envelope.py,sha256=Eo8CSjD0nU6iLjlbHm7q7TvI1-9ovMCK_YLAE38JGGI,2579
+wsdiscovery/message.py,sha256=zOOyv0LHPlEH6DxWd6fvdaJ8WgbDVSZgJsehgAp9a9U,1759
+wsdiscovery/namespaces.py,sha256=XrFIHdhNQTYEO2R4RqF36fxhLq9qi7DUeixbYIlbmKk,192
+wsdiscovery/qname.py,sha256=vUJThECpT1zxTWqJ5liyZRvXB552s8ACIlc2pOQCMrc,443
+wsdiscovery/scope.py,sha256=luSnFZCbbCqBmtu5wllQ_rb57J-aBAoLkCTCNHjRKbM,558
+wsdiscovery/service.py,sha256=cdn7PjETYPRoCoIv9_1WE1mwz1kjKyCREFkXEHpWDUg,1806
+wsdiscovery/udp.py,sha256=WbC8I45iO0oeVogI2KbcnVS6i0OhgZgB_Z0YT7Sko5Y,2027
+wsdiscovery/uri.py,sha256=Vcvpa1ut0WbIAgsR9QyNtYPbqaszeNVkJXpCWf5WPVs,921
+wsdiscovery/util.py,sha256=V2DELgHcqYGQCkBOCm6bFYdUrl2L0gR-J5qeNZ7iIbU,6589
+WSDiscovery-1.0.0.dist-info/LICENSE,sha256=nM8mz-hF4OuLtYBT5HNm56traXrgEPdlCXjUtxt9H8E,7637
+WSDiscovery-1.0.0.dist-info/METADATA,sha256=qSu9wkxdjAKUjxp_jLZJmwnkXYggJU0HlC0mW-TORUE,2781
+WSDiscovery-1.0.0.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+WSDiscovery-1.0.0.dist-info/top_level.txt,sha256=n6WnAkXB7OHdGJbKpM-aI1ffJiak6dJX_mn76fQ84-o,12
+WSDiscovery-1.0.0.dist-info/RECORD,,
