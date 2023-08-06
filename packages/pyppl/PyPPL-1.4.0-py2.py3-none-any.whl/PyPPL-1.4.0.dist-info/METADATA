@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: PyPPL
+Version: 1.4.0
+Summary: A Python PiPeLine framework
+Home-page: https://github.com/pwwang/PyPPL
+Author: pwwang
+Author-email: pwwang@pwwang.com
+License: Apache License Version 2.0
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: filelock
+Requires-Dist: futures
+Requires-Dist: liquidpy
+
+https://github.com/pwwang/PyPPL
+
+
