@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Operations -->
+    <record id="fsm_order_form" model="ir.ui.view">
+        <field name="name">fsm.order.form</field>
+        <field name="model">fsm.order</field>
+        <field name="arch" type="xml">
+            <form string="Orders">
+                <header>
+                    <button id="action_confirm"
+                            name="action_confirm" string="Confirm"
+                            class="oe_highlight"
+                            type="object" groups="fieldservice.group_fsm_dispatcher"
+                            attrs="{'invisible': [('stage_id', '!=', %(fieldservice.fsm_stage_new)d)]}"/>
+                    <button id="action_schedule"
+                            name="action_schedule" string="Schedule"
+                            class="oe_highlight"
+                            type="object" groups="fieldservice.group_fsm_dispatcher"
+                            attrs="{'invisible': [('stage_id', '!=', %(fieldservice.fsm_stage_confirmed)d)]}"/>
+                    <button id="action_assign"
+                            name="action_assign" string="Assign"
+                            class="oe_highlight"
+                            type="object" groups="fieldservice.group_fsm_dispatcher"
+                            attrs="{'invisible': [('stage_id', '!=', %(fieldservice.fsm_stage_scheduled)d)]}"/>
+                    <button id="action_plan"
+                            name="action_plan" string="Plan"
+                            class="oe_highlight"
+                            type="object" groups="fieldservice.group_fsm_dispatcher"
+                            attrs="{'invisible': [('stage_id', '!=', %(fieldservice.fsm_stage_assigned)d)]}"/>
+                    <button id="action_enroute"
+                            name="action_enroute" string="En Route"
+                            class="oe_highlight"
+                            type="object" groups="fieldservice.group_fsm_dispatcher"
+                            attrs="{'invisible': [('stage_id', '!=', %(fieldservice.fsm_stage_planned)d)]}"/>
+                    <button id="action_start"
+                            name="action_start" string="Start"
+                            class="oe_highlight"
+                            type="object" groups="fieldservice.group_fsm_dispatcher"
+                            attrs="{'invisible': [('stage_id', '!=', %(fieldservice.fsm_stage_enroute)d)]}"/>
+                    <button id="action_complete"
+                            name="action_complete" string="Complete"
+                            class="oe_highlight"
+                            type="object" groups="fieldservice.group_fsm_dispatcher"
+                            attrs="{'invisible': [('stage_id', '!=', %(fieldservice.fsm_stage_started)d)]}"/>
+                    <button id="action_cancel"
+                            name="action_cancel" string="Cancel"
+                            type="object" groups="fieldservice.group_fsm_dispatcher"
+                            attrs="{'invisible': [('stage_id', '=', %(fieldservice.fsm_stage_completed)d)]}"/>
+                    <field name="stage_id" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="customer_id"/>
+                            <field name="fsm_location_id"/>
+                        </group>
+                        <group>
+                            <field name="priority"/>
+                            <field name="tag_ids"
+                                   widget="many2many_tags"
+                                   options="{'color_field': 'color', 'no_create_edit': True}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Request">
+                            <group>
+                                <group>
+                                    <field name="requested_date"/>
+                                </group>
+                                <group>
+                                    <field name="origin"/>
+                                </group>
+                            </group>
+                            <group string="Description">
+                                <field name="description"
+                                       nolabel="1"
+                                       widget="html"/>
+                            </group>
+                        </page>
+                        <page string="Planning">
+
+                            <group>
+                                <group>
+                                    <field name="fsm_person_id"/>
+                                </group>
+                                <group>
+                                    <field name="scheduled_date_start"/>
+                                    <field name="scheduled_duration"/>
+                                    <field name="scheduled_date_end"
+                                           readonly="1"/>
+                                </group>
+                            </group>
+                            <group string="Instructions">
+                                <field name="todo"
+                                       nolabel="1"
+                                       widget="html"/>
+                            </group>
+                        </page>
+                        <page string="Execution">
+                            <group>
+                                <group>
+                                    <field name="date_start" readonly="1"/>
+                                    <field name="date_end" readonly="1"/>
+                                </group>
+                                <group></group>
+                            </group>
+                            <group string="Activity Log">
+                                <field name="log"
+                                       nolabel="1"
+                                       widget="html"/>
+                            </group>
+                        </page>
+                        <page name="map" string="Map">
+                            <field name='shape' widget="geo_edit_map"/>
+                            <button
+                                string="GeoCode Location"
+                                name="geo_localize"
+                                colspan="2"
+                                icon="fa-check"
+                                type="object"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread" options="{'post_refresh': 'recipients'}"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="fsm_order_tree_view" model="ir.ui.view">
+        <field name="name">fsm.order.tree</field>
+        <field name="model">fsm.order</field>
+        <field name="arch" type="xml">
+            <tree string="Order" default_order="scheduled_date_start">
+                <field name="scheduled_date_start"/>
+                <field name="name"/>
+                <field name="customer_id"/>
+                <field name="fsm_location_id"/>
+                <field name="fsm_person_id"/>
+                <field name="stage_id" string="Stage"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_fsm_operation_order" model="ir.actions.act_window">
+        <field name="name">Orders</field>
+        <field name="res_model">fsm.order</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create an Order.
+            </p>
+        </field>
+    </record>
+
+    <!-- Dashboard -->
+    <record id="fsm_order_kanban_view" model="ir.ui.view">
+        <field name="name">fsm.order.kanban</field>
+        <field name="model">fsm.order</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="stage_id" class="o_kanban_small_column">
+                <field name="stage_id"
+                       options='{"group_by_tooltip": {"legend_priority": "Use of stars"}}'/>
+                <field name="name"/>
+                <field name="priority"/>
+                <field name="customer_id"/>
+                <field name="fsm_location_id"/>
+                <field name="fsm_person_id"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="#{kanban_color(record.color)} oe_kanban_global_click">
+                            <div class="o_dropdown_kanban dropdown">
+                                <a class="dropdown-toggle btn" data-toggle="dropdown" href="#" >
+                                    <span class="fa fa-ellipsis-v"/>
+                                </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                    <t t-if="widget.editable"><li><a type="edit">Edit</a></li></t>
+                                    <t t-if="widget.deletable"><li><a type="delete">Delete</a></li></t>
+                                    <li><ul class="oe_kanban_colorpicker" data-field="color"/></li>
+                                </ul>
+                            </div>
+                            <div class="oe_kanban_content">
+                                <div>
+                                    <strong class="o_kanban_record_title"><field name="name"/></strong>
+                                </div>
+                                <div>
+                                    <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                                </div>
+                                <div class="text-muted o_kanban_record_subtitle">
+                                    <span t-if="record.customer_id.value">
+                                        <t t-esc="record.customer_id.value"/>
+                                    </span>
+                                </div>
+                                <div>
+                                    <field name="fsm_location_id"/>
+                                </div>
+                                <div class="o_kanban_record_bottom">
+                                    <div class="oe_kanban_bottom_left">
+                                        <field name="priority" widget="priority"
+                                               groups="fieldservice.group_fsm_dispatcher"/>
+                                    </div>
+                                    <div class="oe_kanban_bottom_right">
+                                        <img t-att-src="kanban_image('fsm_person', 'image_small', record.fsm_person_id.name)"
+                                             t-att-title="record.fsm_person_id.name"
+                                             width="24"
+                                             height="24"
+                                             class="oe_kanban_avatar"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="oe_clear"></div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <template id="assets_backend" name="web_timeline_custom assets"
+              inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript"
+                    src="/fsm_gantt/static/src/js/fsm_gantt.js"/>
+            <link rel="stylesheet"
+                  href="/fsm_gantt/static/src/less/fsm_gantt_person_filter.less"/>
+            <script type="text/javascript"
+                    src="/fsm_gantt/static/src/js/fsm_gantt_person_filter.js"/>
+        </xpath>
+    </template>
+
+    <!-- Search for fsm.order-->
+    <record id="fsm_order_search_view" model="ir.ui.view">
+        <field name="name">fsm.order.search</field>
+        <field name="model">fsm.order</field>
+        <field name="arch" type="xml">
+            <search string="FSM Orders">
+                <field name="name"
+                       filter_domain="['|', ('name', 'ilike', self), ('code', '=like', str(self) + '%')]"
+                       string="FSM Order Name"/>
+                <field name="fsm_location_id"/>
+                <field name="branch_id"/>
+                <field name="district_id"/>
+                <field name="region_id"/>
+                <group expand="0" string="Group By">
+                    <filter string="Region" domain="" context="{'group_by':'region_id'}"/>
+                    <filter string="District" domain="" context="{'group_by':'district_id'}"/>
+                    <filter string="Branch" domain="" context="{'group_by':'branch_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="fsm_order_timeline_view" model="ir.ui.view">
+        <field name="name">fsm.order.timeline</field>
+        <field name="model">fsm.order</field>
+        <field name="type">timeline</field>
+        <field name="arch" type="xml">
+            <timeline date_start="scheduled_date_start"
+                      date_stop="scheduled_date_end"
+                      string="Orders"
+                      default_group_by="fsm_person_id"
+                      event_open_popup="true"
+                      colors="#ffffff:stage_id=='New'#ffffff:stage_id=='Confirmed';#00ff00:stage_id=='Scheduled';#add8e6:stage_id=='Assigned';#ff00ff:stage_id=='Planned';#9370DB:stage_id=='En Route';#4B0082:stage_id=='Started';#808080:stage_id=='Completed';#D3D3D3:stage_id=='Cancelled';">
+            </timeline>
+        </field>
+    </record>
+
+    <record id="action_fsm_dash_order" model="ir.actions.act_window">
+        <field name="name">Orders</field>
+        <field name="res_model">fsm.order</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">kanban,timeline,tree,geoengine,form</field>
+        <field name="search_view_id" ref="fsm_order_search_view"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create an Order.
+            </p>
+        </field>
+    </record>
+
+    <!-- Reporting -->
+    <record id="fsm_order_graph_view" model="ir.ui.view">
+        <field name="name">fsm.order.graph</field>
+        <field name="model">fsm.order</field>
+        <field name="arch" type="xml">
+            <graph string="Service Requests" type="bar">
+                <field name="stage_id" type="row"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="fsm_order_pivot_view" model="ir.ui.view">
+        <field name="name">fsm.order.pivot</field>
+        <field name="model">fsm.order</field>
+        <field name="arch" type="xml">
+            <pivot string="Service Requests" display_quantity="true">
+                <field name="stage_id" type="row"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="action_fsm_report_order" model="ir.actions.act_window">
+        <field name="name">Orders</field>
+        <field name="res_model">fsm.order</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">graph,pivot</field>
+        <field name="help" type="html">
+            <p>
+                Orders Reports.
+            </p>
+        </field>
+    </record>
+
+        <!-- GeoEngine views -->
+    <record id="ir_ui_view_fsm_order_map" model="ir.ui.view">
+        <field name="name">ir.ui.view.fsm.order.map</field>
+        <field name="arch" type="xml">
+            <geoengine>
+                <field name="name" select="1"/>
+                <field name="display_name"/>
+                <field name="phone"/>
+                <field name="mobile"/>
+                <field name="street"/>
+                <field name="street2"/>
+                <field name="city"/>
+                <field name="state_name"/>
+                <field name='zip'/>
+                <field name="country_name"/>
+                <field name='stage_name'/>
+                <field name="shape"/>  
+            </geoengine>
+        </field>
+        <field eval="16" name="priority"/>
+        <field name="model">fsm.order</field>
+    </record>
+    
+    <!--Unique value symbology not working so commented out -->
+    
+    <record id="geoengine_vector_layer_fsm0" model="geoengine.vector.layer">
+        <field name="geo_field_id" ref="fieldservice.field_fsm_order_shape"/>
+        <field name="name">FSM Order Point</field>
+        <field name="classification">unique</field>
+        <field eval="6" name="sequence"/>
+        <field name="view_id" ref="ir_ui_view_fsm_order_map"/>
+        <field name="geo_repr">colored</field>
+        <field eval="1" name="nb_class"/>
+        <field name="attribute_field_id" ref="fieldservice.field_fsm_order_stage_name"/>
+        <field name="begin_color">#0AFF68</field>
+    </record>
+    
+    <record id="geoengine_raster_layer_retailmachineosm" model="geoengine.raster.layer">
+        <field name="raster_type">osm</field>
+        <field name="name">Open Street Map</field>
+        <field name="view_id" ref="ir_ui_view_fsm_order_map"/>
+        <field eval="0" name="overlay"/>
+    </record>
+
+    <record id="geoengine_raster_layer_basic0" model="geoengine.raster.layer">
+        <field name="raster_type">d_wms</field>
+        <field name="name">basic</field>
+        <field name="url">vmap0.tiles.osgeo.org/wms/vmap0</field>
+        <field name="view_id" ref="ir_ui_view_fsm_order_map"/>
+        <field eval="1" name="overlay"/>
+    </record>
+
+</odoo>
