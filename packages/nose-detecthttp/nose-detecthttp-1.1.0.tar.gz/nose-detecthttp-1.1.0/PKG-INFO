@@ -1,0 +1,108 @@
+Metadata-Version: 1.1
+Name: nose-detecthttp
+Version: 1.1.0
+Summary: A nose plugin to detect tests making http calls.
+Home-page: https://github.com/venmo/nose-detecthttp
+Author: Simon Weber
+Author-email: simon@venmo.com
+License: MIT
+Description: nose-detecthttp
+        ===============
+        
+        A nose and pytest plugin that can detect tests making external http calls.
+        With nose, it adds a single artificial failure with all the results::
+            
+            $ nosetests -v --with-detecthttp example.py
+            test_that_makes_request (example.ExampleTests) ... ok
+            test_with_no_request (example.ExampleTests) ... ok
+        
+            ======================================================================
+            FAIL: Tests made external http calls
+            ----------------------------------------------------------------------
+            - example.ExampleTests:
+        
+                test_that_makes_request:
+                  GET http://example.com/
+        
+        
+            ----------------------------------------------------------------------
+            Ran 2 tests in 0.063s
+        
+            FAILED (failures=1)
+        
+        With pytest, failures are added to individual tests::
+        
+            $ pytest --with-detecthttp example.py
+            ...
+        
+            item = <TestCaseFunction 'test_that_makes_request'>
+        
+                def pytest_runtest_teardown(item):
+                    # Note unmocked interactions collected during runtest_call.
+                    # This is raised here so that pytest doesn't mark it as an internal error.
+        
+                    report = item.config._detecthttp_reports.pop(item.nodeid, None)
+                    if item.config._detecthttp_enabled and report:
+            >           raise report
+            E           UnmockedRequestsDetected: detecthttp noticed the following requests during this test:
+            E                 GET http://example.com/
+        
+            detecthttp/pytest.py:82: UnmockedRequestsDetected
+            ...2 passed, 1 error in 0.35 seconds
+        
+        
+        Localhost is automatically ignored.
+        To ignore other hosts, use the `--vcr-ignore-host` option, which takes a comma-delimited list::
+        
+            $ nosetests -v --with-detecthttp --vcr-ignore-host=example.com example.py
+            test_that_makes_request (example.ExampleTests) ... ok
+            test_with_no_request (example.ExampleTests) ... ok
+        
+            ----------------------------------------------------------------------
+            Ran 2 tests in 0.110s
+        
+            OK
+        
+        Under the hood, this wraps every test in a separate `VCR.py cassette <https://github.com/kevin1024/vcrpy>`__.
+        Since VCR.py's hooks are in the stdlib, this approach won't detect requests made with clients like PycURL.
+        
+        
+        History
+        -------
+        
+        1.1.0
+        +++++
+        released 2018-12-18
+        
+        - add pytest support
+        
+        1.0.0
+        +++++
+        released 2018-09-12
+        
+        - breaking: ignore host flag now accepts comma-separated values rather than being provided multiple times
+        
+        0.2.0
+        +++++
+        released 2017-08-15
+        
+        - add --vcr-ignore-host option to ignore custom hosts
+        
+        0.1.3
+        +++++
+        released 2015-10-16
+        
+        - python 3 support
+        
+        0.1.1
+        +++++
+        released 2014-11-24
+        
+        - initial release
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7

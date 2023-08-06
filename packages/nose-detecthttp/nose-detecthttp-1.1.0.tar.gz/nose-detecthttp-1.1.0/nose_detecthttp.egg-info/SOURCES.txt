@@ -1,0 +1,16 @@
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+detecthttp/__init__.py
+detecthttp/_version.py
+detecthttp/plugin.py
+detecthttp/pytest.py
+nose_detecthttp.egg-info/PKG-INFO
+nose_detecthttp.egg-info/SOURCES.txt
+nose_detecthttp.egg-info/dependency_links.txt
+nose_detecthttp.egg-info/entry_points.txt
+nose_detecthttp.egg-info/not-zip-safe
+nose_detecthttp.egg-info/requires.txt
+nose_detecthttp.egg-info/top_level.txt
