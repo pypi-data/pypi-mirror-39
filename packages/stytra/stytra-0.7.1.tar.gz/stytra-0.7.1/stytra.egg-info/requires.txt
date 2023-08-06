@@ -1,0 +1,15 @@
+pyqtgraph>=0.10.0
+numpy
+numba
+pandas
+qdarkstyle
+qimage2ndarray
+deepdish
+pims
+GitPython
+colorspacious
+arrayqueues>=1.1.0b0
+pillow
+scikit-image
+imageio
+lightparam>=0.3.5
