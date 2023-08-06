@@ -1,0 +1,13 @@
+README.rst
+setup.cfg
+setup.py
+grg_mp2grg/__init__.py
+grg_mp2grg/common.py
+grg_mp2grg/exception.py
+grg_mp2grg/io.py
+grg_mp2grg/struct.py
+grg_mp2grg.egg-info/PKG-INFO
+grg_mp2grg.egg-info/SOURCES.txt
+grg_mp2grg.egg-info/dependency_links.txt
+grg_mp2grg.egg-info/requires.txt
+grg_mp2grg.egg-info/top_level.txt

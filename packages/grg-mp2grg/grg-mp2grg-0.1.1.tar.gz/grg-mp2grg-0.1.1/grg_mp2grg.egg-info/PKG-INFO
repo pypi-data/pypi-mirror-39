@@ -1,0 +1,78 @@
+Metadata-Version: 1.1
+Name: grg-mp2grg
+Version: 0.1.1
+Summary: Data structures and methods for translating Matpower and GRG data files
+Home-page: https://github.com/lanl-ansi/grg-mp2grg
+Author: Carleton Coffrin
+Author-email: cjc@lanl.gov
+License: BSD
+Description: ============
+        grg-mp2grg
+        ============
+        
+        **release:**
+        
+        .. image:: https://badge.fury.io/py/grg-mp2grg.svg
+            :target: https://badge.fury.io/py/grg-mp2grg
+        
+        .. image:: https://readthedocs.org/projects/grg-mp2grg/badge/?version=stable
+          :target: http://grg-mp2grg.readthedocs.io/en/stable/?badge=stable
+          :alt: Documentation Status
+        
+        **dev status:**
+        
+        .. image:: https://travis-ci.org/lanl-ansi/grg-mp2grg.svg?branch=master
+          :target: https://travis-ci.org/lanl-ansi/grg-mp2grg
+          :alt: Build Report
+        .. image:: https://codecov.io/gh/lanl-ansi/grg-mp2grg/branch/master/graph/badge.svg
+          :target: https://codecov.io/gh/lanl-ansi/grg-mp2grg
+          :alt: Coverage Report
+        .. image:: https://readthedocs.org/projects/grg-mp2grg/badge/?version=latest
+          :target: http://grg-mp2grg.readthedocs.io/en/latest/?badge=latest
+          :alt: Documentation Status
+        
+        
+        grg-mp2grg is a python package for translating between with Matpower and GRG data files.
+        
+        The package can be installed via::
+        
+            pip install grg-mp2grg
+        
+        
+        License
+        ------------
+        This package is developed at Los Alamos National Laboratory and is provided under a BSD-3 license as part of the Grid Research for Good Software Tools (C18036), see the `LICENSE` file for the full text.
+        
+        
+        Changelog
+        ------------
+        
+        **staged**
+        
+        - nothing
+        
+        **v0.1.1**
+        
+        - fixed grg2mp bug when adding bus names
+        - fixed grg2mp bug when no groups were present
+        
+        **v0.1.0**
+        
+        - Initial release
+        
+        **v0.0.1**
+        
+        - Initial test tag
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
