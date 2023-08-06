@@ -1,0 +1,30 @@
+numpy
+psutil
+six
+
+[birds]
+pyserial
+
+[cyberglove]
+pyserial
+
+[force]
+
+[force:platform_system == "Windows"]
+nidaqmx
+
+[full]
+hidapi
+pyusb
+pyserial
+pynput
+
+[full:platform_system == "Windows"]
+nidaqmx
+
+[hand]
+hidapi
+pyusb
+
+[keyboard]
+pynput
