@@ -1,0 +1,3 @@
+[console_scripts]
+protean-flask = protean_flask.cli:main
+
