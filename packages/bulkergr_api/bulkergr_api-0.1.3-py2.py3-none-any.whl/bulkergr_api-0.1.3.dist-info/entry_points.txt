@@ -1,0 +1,3 @@
+[console_scripts]
+bulkergr_api = bulkergr_api.cli:main
+
