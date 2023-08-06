@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: github-wrapper
+Version: 0.0.9
+Summary: UNKNOWN
+Home-page: https://github.com/py-nayls/github-wrapper
+Author: Gagarin Svyatoslav
+Author-email: nayls@bk.ru
+Maintainer: Gagarin Svyatoslav
+Maintainer-email: nayls@bk.ru
+License: UNKNOWN
+Description: # github-wrapper
+        
+        [![Build Status](https://travis-ci.org/py-nayls/github-wrapper.svg?branch=master)](https://travis-ci.org/py-nayls/github-wrapper)
+        
+        ### install
+        
+        > https://pypi.org/project/github-wrapper/
+        ```sh
+        pip github-wrapper
+        ```
+        
+        
+        ### build & deploy
+        
+        > requirements
+        
+        ```sh
+        pip install setuptools twine
+        ```
+        
+        
+        > build
+        
+        ```sh
+        python setup.py build
+        python setup.py sdist
+        ```
+        
+        > deploy
+        
+        ```sh
+        twine upload dist/*
+        ```
+        
+Platform: UNKNOWN
+Classifier: Framework :: Pytest
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
