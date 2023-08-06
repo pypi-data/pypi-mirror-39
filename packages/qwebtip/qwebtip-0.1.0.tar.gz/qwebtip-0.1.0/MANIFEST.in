@@ -1,0 +1,22 @@
+graft src
+graft ci
+graft tests
+
+exclude .pydocstylerc
+exclude docs/spelling_wordlist.txt
+
+include .bumpversion.cfg
+include .coveragerc
+include .cookiecutterrc
+include .editorconfig
+
+include AUTHORS.rst
+include CHANGELOG.rst
+include CONTRIBUTING.rst
+include LICENSE
+include README.rst
+
+include tox.ini
+include requirements.txt
+
+global-exclude *.py[cod] __pycache__ *.so *.dylib
