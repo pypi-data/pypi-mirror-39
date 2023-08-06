@@ -1,0 +1,3 @@
+[console_scripts]
+sg = sougou.sougou:main
+
