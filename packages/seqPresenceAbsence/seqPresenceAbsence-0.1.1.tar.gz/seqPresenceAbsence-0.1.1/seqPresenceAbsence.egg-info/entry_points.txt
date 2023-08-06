@@ -1,0 +1,3 @@
+[console_scripts]
+seqPresenceAbsence = SeqPresenceAbsence.SeqPresenceAbsence:cli
+
