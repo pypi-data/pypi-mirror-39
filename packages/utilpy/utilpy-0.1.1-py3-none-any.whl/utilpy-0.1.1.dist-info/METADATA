@@ -1,0 +1,72 @@
+Metadata-Version: 2.0
+Name: utilpy
+Version: 0.1.1
+Summary: Collection of utils that we use often. 
+Home-page: https://github.com/BkrmDahal/utilpy
+Author: Bikram Dahal (Arch analytics)
+Author-email: bikram@archanalaytics.ai
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: PyYAML
+Requires-Dist: beautifulsoup4
+Requires-Dist: patool
+Requires-Dist: requests
+
+# Welcome to utilspy documentation!
+[![Documentation Status](https://readthedocs.org/projects/utilspy/badge/?version=latest)](https://utilspy.readthedocs.io/en/latest/?badge=latest)
+
+Collection of python utils.
+
+For detail [Here is Documentation](https://utilspy.readthedocs.io/en/latest/index.html)
+
+# Install 
+```bash
+pip install git+https://github.com/BkrmDahal/utilspy.git
+```
+
+____
+
+## utilspy package
+
+```python
+
+import time
+
+from utilspy import log, files, decorator
+
+# logger function 
+logs = log.Logger()
+
+logs.log("< started >")
+time.sleep(2)
+logs.log("running..")
+time.sleep(1)
+logs.log("</>")
+
+
+# timeout
+@decorator.timeout(5)
+def add(x, y):
+    return x+y
+
+# other useful utils
+files = utils.walk_directory('.')
+
+```
+
+____
+
