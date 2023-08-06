@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+requirements.txt
+setup.cfg
+setup.py
+pipeGraph.egg-info/PKG-INFO
+pipeGraph.egg-info/SOURCES.txt
+pipeGraph.egg-info/dependency_links.txt
+pipeGraph.egg-info/requires.txt
+pipeGraph.egg-info/top_level.txt
+pipegraph/__init__.py
+pipegraph/adapters.py
+pipegraph/base.py
+pipegraph/demo_blocks.py
