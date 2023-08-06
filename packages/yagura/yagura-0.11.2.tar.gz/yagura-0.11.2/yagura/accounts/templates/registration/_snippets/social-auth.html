@@ -1,0 +1,9 @@
+{% load social_labels %}
+
+<div class="tile is-vertical">
+  {% for backend in backends.backends %}
+    <div class="tile is-child box">
+      <p><a href="{% url 'social:begin' backend %}">{{ backend|social_title }}</a></p>
+    </div>
+  {% endfor %}
+  </div>
