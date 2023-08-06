@@ -1,0 +1,3 @@
+[console_scripts]
+PStock = base.__main__:main
+

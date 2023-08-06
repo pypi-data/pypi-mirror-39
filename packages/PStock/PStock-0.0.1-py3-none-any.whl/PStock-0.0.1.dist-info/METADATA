@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: PStock
+Version: 0.0.1
+Summary: Commandline utility to check stock details
+Home-page: https://github.com/lladhibhutall
+Author: lladhibhutall
+Author-email: debjyoti.biswas@outlook.com
+License: Apache2
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: plotille
+
+UNKNOWN
+
+
