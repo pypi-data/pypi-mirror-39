@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: gdrive-deploy
+Version: 1.0.1
+Summary: Tiny utility to deploy file by name to google drive
+Home-page: https://www.github.com/keni7385/gdrive-deploy
+Author: keni7385
+Author-email: andrea.corsini@outlook.com
+License: MIT
+Project-URL: Source, https://github.com/keni7385/gdrive_deploy
+Project-URL: Tracker, https://github.com/pypa/gdrive_deploy/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: System :: Installation/Setup
+Description-Content-Type: text/markdown
+Requires-Dist: google-api-python-client
+Requires-Dist: httplib2
+Requires-Dist: oauth2client
+
+# Deploy files to google drive
+
+Add the file `credentials.json` to the current directory or specify its path as 4-th parameter.
+
+The file is to be generated from google drive api platform.
+
+## Usage
+
+`gdrive-deploy`
+
