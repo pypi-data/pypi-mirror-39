@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: edgepy
+Version: 0.1.9.dev0
+Summary: UNKNOWN
+Home-page: http://pypi.python.org/pypi/edgepy/
+Author: Alex Summers
+Author-email: asummers.edgepy@gmail.com
+License: LICENSE.txt
+Platform: UNKNOWN
+Requires-Dist: biopython (>=1.71)
+Requires-Dist: xmltodict
+Requires-Dist: pandas
+
+
+
+
