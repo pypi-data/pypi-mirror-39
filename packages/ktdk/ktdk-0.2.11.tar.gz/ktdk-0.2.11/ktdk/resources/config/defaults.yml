@@ -1,0 +1,70 @@
+#
+# Locations
+#
+
+# Location of the tests files directory
+test_files: 'test_files'
+# Location of the workspace for the tests evaluation
+workspace: 'workspace'
+# Location of the submitted solution
+submission: 'submission'
+# Location of the kontr_tests directory relative to the test_files
+kontr_tests: 'kontr_tests'
+# Name of the entrypoint file, with the scenario definition
+entry_point: 'instructions.py'
+# Results dir, if empty or null, the location is `$workspace/results`
+results: null
+
+#
+# Suite configuration
+#
+
+# Global timeout for the commands
+timeout: 300  # seconds
+suite_timeout: 3000
+# Global tags configured for the suite
+tags: []
+# If true, it will also dump the big result json with complete tree
+dump_result: false
+# If true the log is also dumped to the results
+dump_log: false
+# It true, passed tasks will be dumped to the stats
+dump_passed: false
+# If true, unique suffixes will be added to to outputs
+safe_suffixes: false
+
+#
+# Webhooks config
+#
+
+# Webhooks support is currently not supported
+# Webhook url -- defines where to send the request that testing is done
+webhook_url: null
+webhook_token: None # Optional token added to the authorization header
+# CPP SPECIFIC
+cpp_compiler: 'clang++'
+cpp_compiler_flags: ['-std=c++17', '-Wall', '-Wextra', '-pedantic']
+# C SPECIFIC
+c_compiler: 'clang'
+c_compiler_flags: ['-std=c99', '-Wall', '-Wextra', '-pedantic']
+# Valgrind
+valgrind_penalization: 0.7
+valgrind_args: ['--leak-check=full', '--track-fds=yes']
+
+# Make
+make_command: 'make'
+make_timeout: 300 # Command specific timeout -- for the make
+make_args: []
+
+# Cmake
+cmake_command: 'cmake'
+cmake_timeout: 300 # Command specific timeout -- for the cmake
+cmake_args: []
+
+# Submission configuration
+submission_config_file: 'submission_config.yml'
+# Clang specific variables
+clang_format_style: 'pb161'
+clang_format_styles_dir: 'codestyles'
+clang_format_avail_styles: ['PB071', 'PB161', 'LLVM', 'Google', 'Chromium', 'Mozilla',
+                            'WebKit', 'Mesos', 'VisualStudio', 'Linux']
