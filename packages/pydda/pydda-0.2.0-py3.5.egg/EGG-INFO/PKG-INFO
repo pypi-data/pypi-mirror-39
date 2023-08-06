@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pydda
+Version: 0.2.0
+Summary: Py-DDA
+Home-page: https://openradarscience.org/PyDDA
+Author: Bobby Jackson
+Author-email: rjackson@anl.gov
+License: BSD
+Project-URL: Bug Reports, https://github.com/openradar/PyDDA/issues
+Project-URL: Source, https://github.com/openradar/PyDDA
+Description: A package for the multi-Doppler analysis of radar radial velocity data. 
+        
+        
+Platform: Linux
+Platform: Windows
+Platform: OSX
+Description-Content-Type: text/markdown
