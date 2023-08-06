@@ -1,0 +1,11 @@
+aioapp_pg/__init__.py,sha256=7P-ptmaAnOqIkbDWzini0hcrou_SLQ73Sz8-2NslKDM,21604
+tests/__init__.py,sha256=tl2hK64aWuMnprPko4Zhuk8zy5JXI-dbeGA9z6CN6C8,61
+tests/conftest.py,sha256=s8-Wc3tE1G9b4V11UNFWdx177ddQddyZ4q4Cqk5qTOQ,4350
+tests/docker-compose.yml,sha256=mLFHeTob_1xYCFMwvxUa7PHBwJ0PrMRIIcAwinxOvbY,96
+tests/test_db.py,sha256=pmoN80ovQL-3rRbfhAQIF6dYwb9QVIVXRmSHIz3CkCk,4866
+aioapp_pg-0.0.1b4.dist-info/AUTHORS.rst,sha256=A_OrxmxEnO_JQMklng2KeYuPLwMwtRP97iWkSS-BYVc,142
+aioapp_pg-0.0.1b4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+aioapp_pg-0.0.1b4.dist-info/METADATA,sha256=ZWZBcH3kRVbvVi_tblUhMtA2PXHhIH1sjAP1j96_Y50,1340
+aioapp_pg-0.0.1b4.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+aioapp_pg-0.0.1b4.dist-info/top_level.txt,sha256=AJSJtWGmqKosfTet4m2jX2X_Ybfd51dCvaqfhQfX6xw,16
+aioapp_pg-0.0.1b4.dist-info/RECORD,,
