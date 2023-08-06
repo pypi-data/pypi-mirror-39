@@ -1,0 +1,4 @@
+#!python
+
+import visbeat
+print('hello this is the dancefer script')
