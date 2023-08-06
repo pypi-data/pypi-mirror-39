@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: gandi-update-dns
+Version: 0.1.2
+Summary: Yet another tool to update DNS zone in gandi provider
+Home-page: https://gitlab.com/aloha68/gandi-update-dns
+Author: Aloha68
+Author-email: dev@aloha.im
+Requires-Python: >=3.4,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: Name Service (DNS)
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Systems Administration
+Provides-Extra: send-sms
+Requires-Dist: send-sms-freemobile (>=0.1.0,<0.2.0); extra == "send-sms"
+Requires-Dist: xdg (>=3.0,<4.0)
+Project-URL: Repository, https://gitlab.com/aloha68/gandi-update-dns
