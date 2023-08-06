@@ -1,0 +1,10 @@
+MANIFEST.in
+README
+README.md
+setup.cfg
+setup.py
+Dumper.egg-info/PKG-INFO
+Dumper.egg-info/SOURCES.txt
+Dumper.egg-info/dependency_links.txt
+Dumper.egg-info/top_level.txt
+dumper/__init__.py
