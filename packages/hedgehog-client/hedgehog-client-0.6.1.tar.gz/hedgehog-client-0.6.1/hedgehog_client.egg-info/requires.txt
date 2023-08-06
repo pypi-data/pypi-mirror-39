@@ -1,0 +1,6 @@
+hedgehog-protocol<0.7
+hedgehog-utils[discovery]<0.5
+pycreate2
+
+[test]
+hedgehog-server<0.7
