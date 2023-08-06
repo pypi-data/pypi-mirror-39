@@ -1,0 +1,3 @@
+[console_scripts]
+jsspp-osp = jsspp.osp.cli:main
+
