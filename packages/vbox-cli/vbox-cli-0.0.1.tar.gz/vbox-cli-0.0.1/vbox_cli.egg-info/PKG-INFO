@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: vbox-cli
+Version: 0.0.1
+Summary: Wrapper for VBoxManage to list, start, stop and attach/detach ISOs
+Home-page: https://github.com/manuelcarrizo/vbox
+Author: Manuel Carrizo
+Author-email: manuelcarrizo@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
