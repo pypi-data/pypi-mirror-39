@@ -1,0 +1,3 @@
+[console_scripts]
+seaviz = seaviz.__main__:base_command
+

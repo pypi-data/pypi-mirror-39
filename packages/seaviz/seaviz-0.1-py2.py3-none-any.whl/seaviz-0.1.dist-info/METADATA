@@ -1,0 +1,55 @@
+Metadata-Version: 2.0
+Name: seaviz
+Version: 0.1
+Summary: Play around with seaborn plots from a cli
+Home-page: https://github.com/moonso/seaviz
+Author: Måns Magnusson
+Author-email: mans.magnusson@scilifelab.com
+License: MIT
+Keywords: vcf,variants,str
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Unix
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.6.0
+Requires-Dist: click
+Requires-Dist: coloredlogs
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: seaborn
+
+
+# Seaviz
+
+Cli to test some stuff from the [seaborn tutorial][seaborn_tut].
+Some of the functions are more developed than others atm...
+
+## Installation
+
+In you favourite environment:
+
+```
+git clone https://github.com/moonso/seaviz
+cd seaviz
+python setup.py install
+```
+
+## Run
+
+```
+seaviz --help
+```
+
+
+
+
+
+[seaborn_tut]: https://seaborn.pydata.org/tutorial.html
+
