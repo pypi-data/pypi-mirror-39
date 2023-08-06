@@ -1,0 +1,15 @@
+fluidfoam/__init__.py,sha256=jsehoAfCDksrp77C_PgDSP_CF8v_5HZsjmk3xdgQ8Vs,694
+fluidfoam/_version.py,sha256=LAELBzpwbfmdvq1Fn4pQOPhqb_yz_GoWDgT2k83dzH0,343
+fluidfoam/meshdesign.py,sha256=gQoWaJVLBwPYN297WREgpt6ddsE4X6fxOwSCWowiG1E,2577
+fluidfoam/processing1d.py,sha256=OCpiMauJko7LnBncxzl-sg7_jScFJbimuU9ms22VOS0,5080
+fluidfoam/readof.py,sha256=J4HOOOfLpkpDtISm0_uctm3j0xaX9o8AZ6Zuk2Geg98,29946
+fluidfoam/readpostpro.py,sha256=rglqMFSPKMxlFYnEIh6XFlHnXhY16uts687MoMOw7sM,2063
+fluidfoam/test_create1dprofil.py,sha256=_TWF6v3qHyuSa5zsNOOApKxz56zLONek8ju0h8XCiZM,648
+fluidfoam/test_meshdesign.py,sha256=eJtFVlBuQ0jykt_65AMpg8BlpoCl8-OOCacObAE_DEE,353
+fluidfoam/test_read.py,sha256=rKeGaH8TEfijeLtxCeCDcsyds8hSBGBhPstkJjlvbOY,2718
+fluidfoam/test_readpostpro.py,sha256=sz0w1yTSWfrG6a8XoENzqIDKJbWlzGqviqLEbx--Oho,288
+fluidfoam-0.1.4.dist-info/LICENSE.txt,sha256=WQuEvaYaFWLCYFAarGh2nddRygd9Yd1jR5fqhYmB7uw,21394
+fluidfoam-0.1.4.dist-info/METADATA,sha256=ZkyXCVjINhiQmMMjoiaprZLW8JHOooXplRlQ6q0dOsA,1048
+fluidfoam-0.1.4.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+fluidfoam-0.1.4.dist-info/top_level.txt,sha256=HEhuraZVHEEN2hk-yhX9KKUKui7HePGPU-EKM6NGxnA,10
+fluidfoam-0.1.4.dist-info/RECORD,,
