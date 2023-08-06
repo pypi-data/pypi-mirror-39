@@ -1,0 +1,15 @@
+README.md
+setup.py
+p2pclient/__init__.py
+p2pclient/config.py
+p2pclient/datastructures.py
+p2pclient/p2pclient.py
+p2pclient/serialization.py
+p2pclient.egg-info/PKG-INFO
+p2pclient.egg-info/SOURCES.txt
+p2pclient.egg-info/dependency_links.txt
+p2pclient.egg-info/requires.txt
+p2pclient.egg-info/top_level.txt
+p2pclient/pb/__init__.py
+p2pclient/pb/crypto_pb2.py
+p2pclient/pb/p2pd_pb2.py
