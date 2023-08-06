@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: django-envcrypto
+Version: 0.8.6
+Summary: A safe way to store Django environmental Variables
+Home-page: https://github.com/candeias/django-envcrypto
+Author: Rogerio Candeias
+Author-email: rogerio.candeias@gmail.com
+License: BSD2
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: cryptography (>=2.1.4)
+
+Store Django environmental Variables for multiple deployments, easy and securely.
+
+
