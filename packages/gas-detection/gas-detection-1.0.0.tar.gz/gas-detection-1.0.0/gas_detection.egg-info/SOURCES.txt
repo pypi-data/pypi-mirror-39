@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+example.py
+setup.py
+gas_detection/__init__.py
+gas_detection/__main__.py
+gas_detection.egg-info/PKG-INFO
+gas_detection.egg-info/SOURCES.txt
+gas_detection.egg-info/dependency_links.txt
+gas_detection.egg-info/entry_points.txt
+gas_detection.egg-info/requires.txt
+gas_detection.egg-info/top_level.txt
