@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: Lightflow-Filesystem
+Version: 1.6.1
+Summary: A filesystem extension for Lightflow.
+Home-page: https://stash.synchrotron.org.au/projects/DR/repos/lightflow-filesystem/browse
+Author: The Australian Synchrotron Python Group
+Author-email: python@synchrotron.org.au
+License: UNKNOWN
+Description: 
+        Lightflow-Filesystem
+        -----
+        
+        A filesystem extension for Lightflow.
+        
+        It adds tasks for common filesystem operations and rsync as well as a trigger task
+        that watches a folder and starts a new dag based on changes to files and folders.
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
