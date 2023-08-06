@@ -1,0 +1,43 @@
+{% extends "bee_django_message/custom_base.html" %}
+{% load bee_django_message_filter %}
+
+{% block content %}
+    <div style="margin: 5px auto;">
+        <a href="{% url 'bee_django_message:custom_user_record_list' user_id=request.user.id %}">返回消息中心</a>
+    </div>
+    <h4>原消息</h4>
+
+    <table class="table">
+
+        <tr>
+            <td class="col-xs-3">标题</td>
+            <td>{{ record.title }}</td>
+        </tr>
+        <tr>
+            <td>内容</td>
+            <td>{{ record.info|default:"" }}</td>
+        </tr>
+        <tr>
+            <td>发送时间</td>
+            <td>{{ record.sent_at }}</td>
+        </tr>
+
+    </table>
+    <h4>处理结果</h4>
+    {% if record.message.need_done %}
+        <table class="table">
+        <tr>
+            <td class="col-xs-3">处理结果</td>
+            <td>{{ record.done_info|default:"" }}</td>
+        </tr>
+        <tr>
+            <td>处理时间</td>
+            <td>{{ record.done_at|default:"" }}</td>
+        </tr>
+        <tr>
+            <td>处理人</td>
+            <td>{{ record.done_by|get_name_detail:False }}</td>
+        </tr>
+    {% endif %}
+</table>
+{% endblock %}

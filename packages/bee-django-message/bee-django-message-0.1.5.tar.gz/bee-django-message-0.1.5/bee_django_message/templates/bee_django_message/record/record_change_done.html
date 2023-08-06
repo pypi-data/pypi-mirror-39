@@ -1,0 +1,33 @@
+{% extends "bee_django_message/base.html" %}
+{% load bootstrap3 %}
+{% block content %}
+    <h4>详情</h4>
+
+
+    <table class="table">
+        <tr>
+            <td class="col-xs-3">发送人</td>
+            <td>{{ record.from_user }}</td>
+        </tr>
+        <tr>
+            <td>标题</td>
+            <td>{{ record.title }}</td>
+        </tr>
+        <tr>
+            <td>内容</td>
+            <td>{{ record.info }}</td>
+        </tr>
+        <tr>
+            <td>发送时间</td>
+            <td>{{ record.sent_at }}</td>
+        </tr>
+
+    </table>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% bootstrap_button '处理' %}
+        </form>
+    </div>
+{% endblock %}
