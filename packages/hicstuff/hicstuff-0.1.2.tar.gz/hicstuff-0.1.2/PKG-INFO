@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: hicstuff
+Version: 0.1.2
+Summary: General purpose stuff to generate and handle Hi-C data in its simplest form.
+Home-page: https://github.com/baudrly/hicstuff
+Author: lyam.baudry@pasteur.fr
+License: GPLv3
+Description: # hicstuff
+        
+        [![PyPI version](https://badge.fury.io/py/hicstuff.svg)](https://badge.fury.io/py/hicstuff)
+        ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/hicstuff.svg)
+        [![Read the docs](https://readthedocs.org/projects/hicstuff/badge)](https://hicstuff.readthedocs.io)
+        [![License: GPLv3](https://img.shields.io/badge/License-GPL%203-0298c3.svg)](https://opensource.org/licenses/GPL-3.0)
+        [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+        
+        A lightweight library that generates and handles Hi-C contact maps in either CSV or [instaGRAAL](https://github.com/koszullab/instaGRAAL) format.
+        
+        ## Installation
+        
+        ```sh
+           pip3 install hicstuff
+        ```
+        
+        ## Usage
+        
+        ### Contact map generation
+        
+        ```sh
+            yahcp -1 reads_forward.fastq -2 reads_reverse.fastq -f genome.fa [-s size] [-o output_directory] [-e enzyme] [-q quality_min] [--duplicates] [--clean-up]
+        ```
+        
+        See [yahcp](https://github.com/baudrly/yahcp) for more information.
+        
+        ### Contact map visualization
+        
+        ```sh
+            vizmap -h
+        ```
+        
+        ### Library
+        
+        See the documentation on [reathedocs](https://hicstuff.readthedocs.io).
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
