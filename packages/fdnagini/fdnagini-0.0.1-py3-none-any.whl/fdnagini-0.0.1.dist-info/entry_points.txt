@@ -1,0 +1,3 @@
+[console_scripts]
+nagini=fdnagini.main:main
+
