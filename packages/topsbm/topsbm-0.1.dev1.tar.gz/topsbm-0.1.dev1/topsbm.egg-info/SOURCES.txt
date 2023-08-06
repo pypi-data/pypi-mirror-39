@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+requirements.txt
+setup.cfg
+setup.py
+topsbm/__init__.py
+topsbm/transformer.py
+topsbm.egg-info/PKG-INFO
+topsbm.egg-info/SOURCES.txt
+topsbm.egg-info/dependency_links.txt
+topsbm.egg-info/requires.txt
+topsbm.egg-info/top_level.txt
+topsbm/tests/__init__.py
+topsbm/tests/test_common.py
