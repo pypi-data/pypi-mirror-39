@@ -1,0 +1,15 @@
+setup.py
+seco/__init__.py
+seco/range/__init__.py
+seco/range/sync/__init__.py
+seco/range/sync/constants.py
+seco/range/sync/git_sync.py
+seco/range/sync/http.py
+seco/range/sync/index.py
+seco/range/sync/local.py
+seco/range/sync/svn.py
+seco/range/sync/version.py
+seco_range.egg-info/PKG-INFO
+seco_range.egg-info/SOURCES.txt
+seco_range.egg-info/dependency_links.txt
+seco_range.egg-info/top_level.txt
