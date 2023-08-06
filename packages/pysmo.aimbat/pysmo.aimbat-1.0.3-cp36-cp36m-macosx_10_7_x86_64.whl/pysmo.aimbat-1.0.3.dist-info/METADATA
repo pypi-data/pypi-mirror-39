@@ -1,0 +1,33 @@
+Metadata-Version: 2.0
+Name: pysmo.aimbat
+Version: 1.0.3
+Summary: 
+Home-page: http://www.earth.northwestern.edu/~xlou/aimbat.html
+Author: Xiaoting Lou
+Author-email: xlou@u.northwestern.edu
+License: GNU General Public License, Version 3 (GPLv3)
+Description-Content-Type: UNKNOWN
+Platform: Mac OS X
+Platform: Linux/Unix
+Platform: Windows
+Requires-Dist: pysmo (>=0.7.3)
+Requires-Dist: scipy (==1.1)
+Requires-Dist: numpy (~=1.15)
+Requires-Dist: matplotlib (~=2.2)
+Requires-Dist: future (>=0.16.0)
+Requires-Dist: pyqtgraph (>=0.10.0)
+
+
+AIMBAT is an open-source software package for efficiently measuring teleseismic 
+body wave arrival times for large seismic arrays (Lou et al., 2013). It is 
+based on a widely used method called MCCC (multi-channel cross-correlation) 
+developed by VanDecar and Crosson (1990). The package is automated in the 
+sense of initially aligning seismograms for MCCC which is achieved by an 
+ICCS (iterative cross-correlation and stack) algorithm. Meanwhile, a 
+graphical user interface is built to perform seismogram quality control 
+interactively. Therefore, user processing time is reduced while valuable 
+input from a user's expertise is retained. As a byproduct, SAC (Goldstein 
+et al., 2003) plotting and phase picking functionalities are replicated 
+and enhanced.
+
+
