@@ -1,0 +1,14 @@
+README.md
+setup.py
+OmicsIntegrator.egg-info/PKG-INFO
+OmicsIntegrator.egg-info/SOURCES.txt
+OmicsIntegrator.egg-info/dependency_links.txt
+OmicsIntegrator.egg-info/entry_points.txt
+OmicsIntegrator.egg-info/requires.txt
+OmicsIntegrator.egg-info/top_level.txt
+src/__init__.py
+src/__main__.py
+src/graph.py
+src/gslr_macro.py
+src/annotation/final_annotation.pickle
+test/test_graph.py
