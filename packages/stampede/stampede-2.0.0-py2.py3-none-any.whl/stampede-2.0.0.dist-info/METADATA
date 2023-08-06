@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: stampede
+Version: 2.0.0
+Summary: A really simple job queue. Uses a rudimentary event loop and runs tasks in subprocesses (managed with signalfd). Doesn't support task arguments. Task results are rudimentary (only succcess or failure with exit code). When multiple requests are made for the same task they are collapsed into a single request.
+Home-page: https://github.com/ionelmc/python-stampede
+Author: Ionel Cristian Mărieș
+Author-email: contact@ionelmc.ro
+License: BSD 2-Clause License
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+Requires-Dist: signalfd
+Requires-Dist: subprocess32
+
+========
+Overview
+========
+
+
+
+A really simple job queue. Uses a rudimentary event loop and runs tasks in subprocesses (managed with signalfd).
+Doesn't support task arguments. Task results are rudimentary (only succcess or failure with exit code). When multiple
+requests are made for the same task they are collapsed into a single request.
+
+* Free software: BSD 2-Clause License
+
+Installation
+============
+
+::
+
+    pip install stampede
+
+Documentation
+=============
+
+
+To use the project:
+
+.. code-block:: python
+
+    import stampede
+
+
+    class MyWorker(StampedeWorker):
+
+        def handle_task(self, name):
+            print("Perfoming work for task:", name)
+
+
+Development
+===========
+
+To run the all tests run::
+
+    tox
+
+
+Changelog
+=========
+
+2.0.0 (2018-12-17)
+------------------
+
+* Use more robust collection of child exit codes. Turns out that if there's enough pressure of the signalfd is fills up and
+  needs extra ``os.waitpid()`` calls to collect the orphans.
+* Add a request API (``stampede.request``).
+* Add a request API that also spawns the daemon if not running (``stampede.request_and_spawn``).
+* Changed ``do_work`` to ``handle_task`` in StampedeWorker. **BACKWARDS INCOMPATIBLE**
+* Update test grid to include Python 3.7 and PyPy3.
+* Changed how results are passed to the client (JSON instead of some crappy custom text format).
+
+1.0.0 (2015-10-19)
+------------------
+
+* Switch to `signalfd <https://pypi.python.org/pypi/signalfd>`_
+  (from the unmaintained `python-signalfd <https://pypi.python.org/pypi/python-signalfd>`_).
+* Switch to pytest.
+
+0.0.1 (2013-10-30)
+------------------
+
+* ?
+
+0.0.1 (2013-10-28)
+------------------
+
+* First release on PyPI.
+
+
