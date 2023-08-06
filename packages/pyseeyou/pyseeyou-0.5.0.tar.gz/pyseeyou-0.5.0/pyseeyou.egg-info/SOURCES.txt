@@ -1,0 +1,15 @@
+README.rst
+setup.py
+pyseeyou/__init__.py
+pyseeyou/grammar.py
+pyseeyou/locales.py
+pyseeyou/node_visitor.py
+pyseeyou.egg-info/PKG-INFO
+pyseeyou.egg-info/SOURCES.txt
+pyseeyou.egg-info/dependency_links.txt
+pyseeyou.egg-info/requires.txt
+pyseeyou.egg-info/top_level.txt
+test/__init__.py
+test/test_format.py
+test/test_locales.py
+test/test_node_visitor.py
