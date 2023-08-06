@@ -1,0 +1,3 @@
+[console_scripts]
+terminator3_cli = terminator3.main:entry_point
+
