@@ -1,0 +1,14 @@
+README.md
+setup.py
+fbmmsg.egg-info/PKG-INFO
+fbmmsg.egg-info/SOURCES.txt
+fbmmsg.egg-info/dependency_links.txt
+fbmmsg.egg-info/requires.txt
+fbmmsg.egg-info/top_level.txt
+fbmsg/__init__.py
+fbmsg/errors.py
+fbmsg/facebook_client.py
+fbmsg/models/__init__.py
+fbmsg/models/incoming.py
+fbmsg/models/messages.py
+fbmsg/models/settings.py
