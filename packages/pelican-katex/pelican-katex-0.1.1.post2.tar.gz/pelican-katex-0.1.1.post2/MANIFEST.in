@@ -1,0 +1,5 @@
+# Include the README
+include README.md
+
+# Include the javascript parts
+include *.js
