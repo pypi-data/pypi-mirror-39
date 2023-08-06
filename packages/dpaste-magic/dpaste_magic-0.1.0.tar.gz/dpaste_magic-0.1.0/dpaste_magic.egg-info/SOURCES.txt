@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+README.rst
+setup.py
+dpaste_magic/__init__.py
+dpaste_magic/dpaste_magic.py
+dpaste_magic.egg-info/PKG-INFO
+dpaste_magic.egg-info/SOURCES.txt
+dpaste_magic.egg-info/dependency_links.txt
+dpaste_magic.egg-info/not-zip-safe
+dpaste_magic.egg-info/requires.txt
+dpaste_magic.egg-info/top_level.txt
