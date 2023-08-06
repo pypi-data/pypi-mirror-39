@@ -1,0 +1,5 @@
+[MASTER]
+persistent=yes
+jobs=1
+disable=
+   duplicate-code
