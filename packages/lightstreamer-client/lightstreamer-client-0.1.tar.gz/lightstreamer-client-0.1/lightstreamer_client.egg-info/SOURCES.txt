@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+lightstreamer_client/__init__.py
+lightstreamer_client.egg-info/PKG-INFO
+lightstreamer_client.egg-info/SOURCES.txt
+lightstreamer_client.egg-info/dependency_links.txt
+lightstreamer_client.egg-info/top_level.txt
