@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+selsunpool/__init__.py
+selsunpool/executor.py
+selsunpool.egg-info/PKG-INFO
+selsunpool.egg-info/SOURCES.txt
+selsunpool.egg-info/dependency_links.txt
+selsunpool.egg-info/requires.txt
+selsunpool.egg-info/top_level.txt
+tests/__init__.py
+tests/context.py
+tests/testbasic.py

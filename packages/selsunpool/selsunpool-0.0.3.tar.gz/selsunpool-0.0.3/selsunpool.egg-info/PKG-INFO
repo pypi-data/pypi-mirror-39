@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: selsunpool
+Version: 0.0.3
+Summary: A local selenium pool executor
+Home-page: https://gitlab.com/nicholishen/selsunpool
+Author: nicholishen
+Author-email: nicholishen@tutanota.com
+License: UNKNOWN
+Description: SelsunPool: a local selenium webdriver pool executor. 
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
