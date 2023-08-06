@@ -1,0 +1,14 @@
+CHANGES.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+epl/__init__.py
+epl/__version__.py
+epl/virtual.py
+epl.egg-info/PKG-INFO
+epl.egg-info/SOURCES.txt
+epl.egg-info/dependency_links.txt
+epl.egg-info/entry_points.txt
+epl.egg-info/not-zip-safe
+epl.egg-info/top_level.txt
