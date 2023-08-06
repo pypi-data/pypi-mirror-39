@@ -1,0 +1,143 @@
+Metadata-Version: 2.1
+Name: oceans
+Version: 0.7.0
+Summary: Misc functions for oceanographic data analysis
+Home-page: https://pypi.python.org/pypi/oceans/
+Author: ['André Palóczy', 'Arnaldo Russo', 'Filipe Fernandes']
+Author-email: ocefpaf@gmail.com
+Maintainer: Filipe Fernandes
+Maintainer-email: ocefpaf@gmail.com
+License: Copyright (c) 2016, Filipe Fernandes
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Description: |PyPI| |Travis| |DOI|
+        
+        .. |PyPI| image:: https://img.shields.io/pypi/v/oceans.svg
+           :target: https://pypi.org/project/oceans/
+           :alt: PyPI Package
+        
+        .. |Travis| image:: https://travis-ci.org/pyoceans/python-oceans.svg?branch=master
+           :target: https://travis-ci.org/pyoceans/python-oceans
+           :alt: Travis Build Status
+        
+        .. |DOI| image:: https://zenodo.org/badge/11956337.svg
+           :target: https://zenodo.org/badge/latestdoi/11956337
+           :alt: DOI
+        
+        python-oceans
+        =============
+        
+        Misc helper functions for ocean sciences.
+        
+        Most of the functions here are Python versions of some common MatlabTM functions.
+        They are untested and probably buggy. Use with caution!
+        
+        Changelog
+        ---------
+        
+        Version 0.7.0
+        
+        * Added an updated version of the O2SAT function.
+        
+        
+        Version 0.6.0
+        
+        * Re-factored datasets and fixed data sources URLs.
+        
+        Version 0.5.1
+        
+        * Fix find packages in setup.py #57.
+        
+        Version 0.5.0
+        
+        * Fixed pandas rolling_mean deprecation #54.
+        * Fixed failing tests.
+        * Added NaN support for MLD #53 and #56.
+        
+        Version 0.4.1
+        
+        * Replaced custom smooth filter for `scipy`'s `ndimage` filter.
+        * Re-factor `datasets` to avoid the `basemap` syntax in favor of a `bbox` like syntax.
+        * Re-factor `ff_tools` into a single `ocfis` module.
+        * Moved `compass` to plotting.
+        * Added `get_gebco15` function to extract gebco15 bathymetry.
+        * Removed `teaching` and `smoothers` modules as they were here only for learning purposes.
+        * Removed `shapely` and use `matplotlib.path.Path` in `in_polygon` instead.
+        * Many speed improvements via lazy imports and updates.
+        * Re-added a re-factored version of the filters module.
+        * Re-factored datasets and fixed many data sources.
+        
+        Version 0.4.0
+        
+        * Re-written `get_isobath` function that uses latest matplotlib contour machinery.
+        * Use integer indexes to fix `numpy` deprecations.
+        * Change license from MIT to BSD 3-Clause.
+        
+        Version 0.3.0
+        
+        * Fix `nanmean` and `nanstd` removed from latest `scipy`.
+        
+        Version 0.2.5
+        
+        * Lazy imports.
+        * Several minor bug fixes.
+        
+        Version 0.2.4, 05-May-2015.
+        
+        * Added `woa_profile`.
+        * Re-write of `woa_subset` to use iris instead of Pandas.
+        * Deprecate 'state' option in soundspeed.
+        
+        Version 0.2.3
+        
+        * Several small bugs and typos fixes.
+        
+        Version 0.2.2
+        
+        * Mixed Layer Depth functions.
+        * Critical depth and Light extinction coefficient.
+        * Contributor: arnaldorusso@gmail.com | github.com/arnaldorusso
+        
+        Version 0.2.1, 07-Apr-2014.
+        
+        * Python3 support.
+        
+        Version 0.2.0
+        
+        * Moved CTDProfile to a separated module (python-ctd).
+        
+        Version 0.1.0
+        
+        * Added several of new functions and sub-modules
+        * CTDProfile class (pandas DataFrame for CTDs).
+        * time_series methods to extend pandas Series.
+        
+        Version 0.0.1
+        
+        * Initial release.
+Keywords: oceanography,data analysis
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: full
