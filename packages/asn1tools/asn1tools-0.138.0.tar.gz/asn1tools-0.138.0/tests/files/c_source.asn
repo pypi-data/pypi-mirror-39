@@ -1,0 +1,69 @@
+CSource DEFINITIONS AUTOMATIC TAGS ::=
+
+BEGIN
+
+IMPORTS
+
+    Int8,
+    Int16,
+    Int32,
+    Int64,
+    Uint8,
+    Uint16,
+    Uint32,
+    Uint64,
+    Float,
+    Double,
+    Bool,
+    String,
+    Bytes
+FROM ProgrammingTypes;
+
+A ::= SEQUENCE {
+    a    Int8,
+    b    Int16,
+    c    Int32,
+    d    Int64,
+    e    Uint8,
+    f    Uint16,
+    g    Uint32,
+    h    Uint64,
+    i    Float,
+    j    Double,
+    k    Bool,
+    l    Bytes  (SIZE(11))
+}
+
+B ::= CHOICE {
+    a    Int8,
+    b    A
+}
+
+C ::= SEQUENCE (SIZE(0..2)) OF B
+
+D ::= SEQUENCE (SIZE(1..10)) OF SEQUENCE {
+    a SEQUENCE {
+        b CHOICE {
+            c INTEGER (0..1),
+            d BOOLEAN
+        },
+        e SEQUENCE (SIZE(3..4)) OF NULL,
+        f NULL
+    },
+    f SEQUENCE {
+        g ENUMERATED {
+            h, i, j
+        },
+        k OCTET STRING (SIZE(1..2))
+    },
+    l SEQUENCE {
+        m BOOLEAN OPTIONAL,
+        n INTEGER (-3..3) DEFAULT 3,
+        o SEQUENCE {
+            p OCTET STRING (SIZE(5)),
+            q BOOLEAN OPTIONAL
+        } OPTIONAL
+    }
+}
+
+END
