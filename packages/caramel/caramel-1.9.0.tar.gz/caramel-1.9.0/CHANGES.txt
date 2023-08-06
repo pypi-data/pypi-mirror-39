@@ -1,0 +1,31 @@
+1.7
+---
+
+- Change data model from pem being Text to pem being Binary. There are no
+  automatic Migrations, so either dump & restore or revamp.
+
+1.6
+---
+
+- Adding root ca to public api
+- Adding bundle ca to public api (not quite present)
+
+1.4
+---
+
+- Autosign daemon
+- subjectAltName extension added to signed certs
+- refresh improvements
+
+1.0
+---
+
+-  Capable of running in production for both servers & embedded clients
+-  Matches the CA cert for "enforced" Subject lines, and adds the appropriate
+   X509 extensions to certificates.
+
+
+0.0
+---
+
+-  Initial version
