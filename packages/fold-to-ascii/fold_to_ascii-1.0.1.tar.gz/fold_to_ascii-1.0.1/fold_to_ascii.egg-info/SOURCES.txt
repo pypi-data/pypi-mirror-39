@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+fold_to_ascii/__init__.py
+fold_to_ascii/core.py
+fold_to_ascii/mapping.py
+fold_to_ascii.egg-info/PKG-INFO
+fold_to_ascii.egg-info/SOURCES.txt
+fold_to_ascii.egg-info/dependency_links.txt
+fold_to_ascii.egg-info/top_level.txt
+tests/__init__.py
+tests/context.py
+tests/test_basic.py
+tests/test_comprehensive.py

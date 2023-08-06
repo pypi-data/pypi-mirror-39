@@ -1,0 +1,65 @@
+Metadata-Version: 1.0
+Name: fold_to_ascii
+Version: 1.0.1
+Summary: A Python port of the Apache Lucene ASCII Folding Filter that converts alphabetic, numeric, and symbolic Unicode characters which are not in the first 127 ASCII characters (the ‘Basic Latin’ Unicode block) into ASCII equivalents, if they exist.
+Home-page: https://github.com/spanishdict/fold_to_ascii
+Author: William Bert
+Author-email: william@spanishdict.com
+License: MIT License
+
+Copyright (c) 2017 SpanishDict
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Description: # fold_to_ascii
+        
+        A Python port of the [Apache Lucene ASCII Folding
+        Filter](https://lucene.apache.org/core/4_0_0/analyzers-common/org/apache/lucene/analysis/miscellaneous/ASCIIFoldingFilter.html)
+        that converts alphabetic, numeric, and symbolic Unicode characters which are not
+        in the first 127 ASCII characters (the "Basic Latin" Unicode block) into ASCII
+        equivalents, if they exist.
+        
+        ## Usage
+        
+        ``` python
+        > from fold_to_ascii import fold
+        > s = u'Astroturf® paté'
+        > fold(s)
+        u'Astroturf pate'
+        > fold(s, u'?')
+        u'Astroturf? pate'
+        ```
+        
+        ## Differences from [JS fold-to-ascii](https://www.npmjs.com/package/fold-to-ascii)
+        
+        This library **always** removes astral characters, even when a replacement
+        character is specified. PRs welcome if you want to fix this.
+        
+        ## Differences from unidecode
+        
+        There are a few Python unidecode libraries out there
+        ([1](https://pypi.python.org/pypi/text-unidecode),
+        [2](https://pypi.python.org/pypi/Unidecode/)). They are based on a Perl program
+        that makes some interesting choices about what to replace, for example, `£`
+        (`POUND SIGN`) is replaced with the string `PS`. Also, they do not allow
+        specifying a replacement character to use other than the empty string for
+        unmapped characters.
+        
+Keywords: ascii unicode sanitize diacritics fold folding ligatures
+Platform: UNKNOWN
