@@ -1,0 +1,17 @@
+ost_kyc_sdk_python/__init__.py,sha256=wuJCCgNB-WY1Iut7V6CsX5wMOxYq8AqL6S2gFgdWRvs,58
+ost_kyc_sdk_python/services.py,sha256=YOw0UYA8UGbYfTT9IlSNZw8g2GPz7zXTN53z_mdZ8wU,489
+ost_kyc_sdk_python/saas/__init__.py,sha256=xUBpFuxhit8bZN-L7CQkWipy3dVVzAm_teIB_iHwCQ0,13
+ost_kyc_sdk_python/saas/base.py,sha256=L4WocU4w3WGAPQuelT1vXUTtF04QC__q1nFpXlXAoYc,1052
+ost_kyc_sdk_python/saas/manifest.py,sha256=WuVMI21beVdRXIJzAJ9p7ed07FBaCU_uk_7Pv_T7iGc,377
+ost_kyc_sdk_python/saas/users.py,sha256=uzU9ax05M-K3XsaMOGkKqKcQjRSY0a0d1qYfF9b3Guw,1027
+ost_kyc_sdk_python/saas/users_kyc.py,sha256=yWuTmsXxHFDph0DLfYf4dcl5vlvwgMtFrXK2QzFgDDk,1983
+ost_kyc_sdk_python/saas/users_kyc_details.py,sha256=rsRqoq86d6UQhhg7auIOvgZLFb9Lc9_qJkbu0_ZmKxw,637
+ost_kyc_sdk_python/saas/validators.py,sha256=kHODgx7bu2QGUZu-MH-zU8xbfETkCcmCkfprkXBryRE,433
+ost_kyc_sdk_python/util/__init__.py,sha256=X0627sYP019CIba6-7NObUUhgOmHMPFzI3mPsrWjh5c,13
+ost_kyc_sdk_python/util/http_helper.py,sha256=2bHYEFMZvg86340UBnLKmKhVUMDTY78bsIV4bc8lSVA,8124
+ost_kyc_sdk_python/util/python_version.py,sha256=aIlP728kqv0en10VkCXnhpQviK6p-evMNlsl_c1twLI,134
+ost_kyc_sdk_python-2.0.0b0.dist-info/LICENSE.txt,sha256=Yf8Q8voNKaYtEGSvW_OAPDjCv1GwqSEf8BJIs_zvVPE,1069
+ost_kyc_sdk_python-2.0.0b0.dist-info/METADATA,sha256=Jxvivo_L28Z_u55O-F8mfKJ-s6By8RYGNEJlXB1Rhh8,3869
+ost_kyc_sdk_python-2.0.0b0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+ost_kyc_sdk_python-2.0.0b0.dist-info/top_level.txt,sha256=UEvdSq-EKOGgweCgqnw70SuZlskmOGYmfufyjI27bWg,19
+ost_kyc_sdk_python-2.0.0b0.dist-info/RECORD,,
