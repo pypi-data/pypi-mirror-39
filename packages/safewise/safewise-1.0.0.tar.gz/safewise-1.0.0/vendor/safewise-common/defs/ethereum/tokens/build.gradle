@@ -1,0 +1,49 @@
+buildscript {
+    ext {
+        KOTLIN_VERSION = "1.2.41"
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${KOTLIN_VERSION}"
+    }
+}
+
+apply plugin: "kotlin"
+apply plugin: 'application'
+
+mainClassName = "org.ethereum.lists.tokens.MainKt"
+
+repositories {
+    jcenter()
+    maven { url 'https://jitpack.io' }
+}
+
+task correctFileNames(type: JavaExec) {
+    main = "org.ethereum.lists.tokens.CorrectFileNamesKt"
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task correctDecimals(type: JavaExec) {
+    main = "org.ethereum.lists.tokens.CorrectDecimalsKt"
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task importMEW(type: JavaExec) {
+    main = "org.ethereum.lists.tokens.ImportKt"
+    classpath = sourceSets.main.runtimeClasspath
+    if (project.hasProperty("importPath")) {
+        args importPath
+    }
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:${KOTLIN_VERSION}"
+    compile "com.github.ethereum-lists:cilib:0.1"
+    compile "com.github.walleth.kethereum:erc55:0.38"
+    compile 'com.beust:klaxon:0.30'
+}
+

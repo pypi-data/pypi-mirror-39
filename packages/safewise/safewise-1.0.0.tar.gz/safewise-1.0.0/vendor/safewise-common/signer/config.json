@@ -1,0 +1,29 @@
+{
+	"whitelist_urls": [
+		"https?://localhost(:\\d+)?(/.*)?",
+		"https?://localhost\\.mysafewise\\.com(:\\d+)?(/.*)?",
+		"https://mysafewise\\.com(/.*)?",
+		"https://[\\w\\.-]+\\.mysafewise\\.com(/.*)?",
+		"https://safewise\\.io(/.*)?",
+		"https://[\\w\\.-]+\\.safewise\\.io(/.*)?",
+		"https://trezor\\.github\\.io(/.*)?",
+		"https://greenaddress\\.it(/.*)?",
+		"https://[\\w\\.-]+\\.greenaddress\\.it(/.*)?",
+		"https://coinprism\\.com(/.*)?",
+		"https://[\\w\\.-]+\\.coinprism\\.com(/.*)?",
+		"https://bitex\\.la(/.*)?",
+		"https://[\\w\\.-]+\\.bitex\\.la(/.*)?",
+		"https://dash\\.run(/.*)?",
+		"https://[\\w\\.-]+\\.dash\\.run(/.*)?",
+		"https://0xproject\\.com(/.*)?",
+		"https://[\\w\\.-]+\\.unchained-capital\\.com(/.*)?",
+		"chrome-extension://jcjjhjgimijdkoamemaghajlhegmoclj(/.*)?"
+		],
+	"blacklist_urls": [
+	],
+	"known_devices": [
+		["0x1209", "0xabba", "SafeWISE"],
+		["0xffff", "0x53c0", "SafeWISE2 Bootloader"],
+		["0xffff", "0x53c1", "SafeWISE2"]
+	]
+}

@@ -1,0 +1,9 @@
+recursive-include bash_completion.d *.sh
+include tools/*
+recursive-include safewiselib *
+
+recursive-include vendor/safewise-common *
+exclude vendor/safewise-common/.*
+
+include AUTHORS README.md COPYING CHANGELOG.md
+include requirements*.txt
