@@ -1,0 +1,12 @@
+MANIFEST.in
+setup.py
+Data/font.ttf
+Data/Memes/DisloyalBoyfriend.meme
+DotMeme/__init__.py
+DotMeme.egg-info/PKG-INFO
+DotMeme.egg-info/SOURCES.txt
+DotMeme.egg-info/dependency_links.txt
+DotMeme.egg-info/requires.txt
+DotMeme.egg-info/top_level.txt
+data/font.ttf
+data/Memes/DisloyalBoyfriend.meme
