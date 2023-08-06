@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: podiant-workflows-client
+Version: 3.0.0
+Summary: A set of tools for creating a Flask app compatible with the Podiant workflows API
+Home-page: https://git.steadman.io/podiant/podiant-workflows-client
+Author: Mark Steadman
+Author-email: mark@podiant.co
+License: MIT
+Description: Podiant workflows client
+        ========================
+        
+        ![Build](https://git.steadman.io/podiant/podiant-workflows-client/badges/master/build.svg)
+        ![Coverage](https://git.steadman.io/podiant/podiant-workflows-client/badges/master/coverage.svg)
+        
+        A set of tools for creating a Flask app compatible with the Podiant workflows API
+        
+        ## Quickstart
+        
+        Install Workflows Client:
+        
+        ```sh
+        pip install podiant-workflows-client
+        ```
+        
+        ## Running tests
+        
+        Does the code actually work?
+        
+        ```
+        pytest --cov workflows tests
+        ```
+        
+        ## Credits
+        
+        Tools used in rendering this package:
+        
+        - [Cookiecutter](https://github.com/audreyr/cookiecutter)
+        - [`cookiecutter-djangopackage`](https://github.com/pydanny/cookiecutter-djangopackage)
+        
+Keywords: podiant-workflows
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
