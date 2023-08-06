@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: openTSNE
+Version: 0.3.0
+Summary: UNKNOWN
+Home-page: https://github.com/pavlin-policar/openTSNE
+Author: Pavlin Poličar
+Author-email: pavlin.g.p@gmail.com
+License: BSD-3-Clause
+Project-URL: Documentation, https://opentsne.readthedocs.io/
+Project-URL: Source, https://github.com/pavlin-policar/openTSNE
+Project-URL: Issue Tracker, https://github.com/pavlin-policar/openTSNE/issues
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
