@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: volux
+Version: 0.8.6
+Summary: Audio Control Interface
+Home-page: https://github.com/DrTexxOfficial/volux
+Author: Denver P
+Author-email: UNKNOWN
+License: UNKNOWN
+Project-URL: Source, https://github.com/DrTexxOfficial/volux/
+Project-URL: Bug Reports, https://github.com/DrTexxOfficial/volux/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: plyer (==1.3.2)
+Requires-Dist: psutil (==5.4.8)
+Requires-Dist: pyalsaaudio (==0.8.4)
+
+# volux
+
+
