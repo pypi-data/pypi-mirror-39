@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+test-requirements.txt
+ssubob/__init__.py
+ssubob/api.py
+ssubob/parser.py
+ssubob.egg-info/PKG-INFO
+ssubob.egg-info/SOURCES.txt
+ssubob.egg-info/dependency_links.txt
+ssubob.egg-info/not-zip-safe
+ssubob.egg-info/requires.txt
+ssubob.egg-info/top_level.txt
