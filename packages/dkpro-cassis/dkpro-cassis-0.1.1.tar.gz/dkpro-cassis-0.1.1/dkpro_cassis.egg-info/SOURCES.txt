@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+cassis/__init__.py
+cassis/__version__.py
+cassis/cas.py
+cassis/typesystem.py
+cassis/xmi.py
+dkpro_cassis.egg-info/PKG-INFO
+dkpro_cassis.egg-info/SOURCES.txt
+dkpro_cassis.egg-info/dependency_links.txt
+dkpro_cassis.egg-info/requires.txt
+dkpro_cassis.egg-info/top_level.txt
