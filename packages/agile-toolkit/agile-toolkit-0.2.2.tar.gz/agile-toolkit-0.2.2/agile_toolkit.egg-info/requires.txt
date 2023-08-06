@@ -1,0 +1,8 @@
+click
+python-dotenv
+pyyaml
+requests
+jinja2
+slackclient
+aio-kong>=0.3.3
+dataclasses

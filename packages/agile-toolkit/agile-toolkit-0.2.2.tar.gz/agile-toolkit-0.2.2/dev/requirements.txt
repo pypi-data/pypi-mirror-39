@@ -1,0 +1,12 @@
+#
+# tools
+click
+python-dotenv
+pyyaml
+requests
+jinja2
+#
+# slack
+slackclient
+#
+aio-kong>=0.3.3
