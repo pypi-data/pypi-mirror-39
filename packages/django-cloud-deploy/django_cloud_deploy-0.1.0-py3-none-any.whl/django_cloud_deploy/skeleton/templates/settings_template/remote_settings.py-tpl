@@ -1,0 +1,63 @@
+# Copyright 2018 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+import json
+from google.cloud import storage
+
+from .extra_settings import *
+
+def get_database_password():
+    client = storage.Client()
+    bucket = client.get_bucket('secrets-{{ project_id }}')
+    blob = bucket.get_blob('secrets/cloudsql.json')
+    creds = json.loads(blob.download_as_string())
+    return creds['password']
+
+
+# SECURITY WARNING: If you deploy a Django app to production, make sure to set
+# an appropriate host here.
+# See https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/
+ALLOWED_HOSTS = ['*']
+
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+
+
+# Database
+# https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#databases
+if os.getenv('GAE_APPLICATION', None):
+    # Running on production App Engine, so connect to Google Cloud SQL using
+    # the unix socket at /cloudsql/<your-cloudsql-connection string>
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+	        'NAME': '{{ database_name }}',
+            'USER': os.environ['DATABASE_USER'],
+            'PASSWORD': get_database_password(),
+            'HOST': '/cloudsql/{{ cloud_sql_connection }}',
+        }
+    }
+else:
+	DATABASES = {
+	    'default': {
+	        'ENGINE': 'django.db.backends.postgresql',
+	        'NAME': '{{ database_name }}',
+	        'USER': os.getenv('DATABASE_USER'),
+	        'PASSWORD': os.getenv('DATABASE_PASSWORD'),
+	        'HOST': '127.0.0.1',
+	        'PORT': os.environ.get('CLOUD_SQL_PROXY_PORT') or '5432',
+	    }
+	}
+
+STATIC_URL = 'https://storage.googleapis.com/{{ bucket_name }}/static/'
