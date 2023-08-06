@@ -1,0 +1,6 @@
+requests==2.19.1
+configparser==3.5.0
+
+[test]
+pytest==3.8.1
+pytest-cov==2.6.0
