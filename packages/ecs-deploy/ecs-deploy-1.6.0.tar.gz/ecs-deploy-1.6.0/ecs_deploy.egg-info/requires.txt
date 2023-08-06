@@ -1,0 +1,5 @@
+click<7.0.0
+botocore
+boto3>=1.4.7
+future
+requests
