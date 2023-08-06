@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: witwidget
+Version: 0.1.0a0
+Summary: What-If Tool jupyter widget
+Home-page: https://github.com/tensorflow/tensorboard/tensorboard/plugins/interactive_inference
+Author: Google LLC
+Author-email: UNKNOWN
+License: Apache 2.0
+Description: What-If Tool jupyter widget
+Keywords: ipython,jupyter,widgets
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: IPython
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5

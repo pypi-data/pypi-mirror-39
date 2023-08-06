@@ -1,0 +1,4 @@
+ipywidgets>=7.0.0
+jupyter<2,>=1.0
+tensorflow>=1.12.0
+tensorflow-serving-api>=1.12.0
