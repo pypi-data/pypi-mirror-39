@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: sleepy-install
+Version: 0.0.2
+Summary: Waits for 300 seconds during package install. No other features; use for testing time-dependent automation.
+Home-page: https://github.com/pypa/sampleproject
+Author: Jon Peck
+Author-email: peckjon@gmail.com
+License: UNKNOWN
+Description: Wait for several minutes during package installation.
+        
+        No other features; use for testing time-dependent automation.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
