@@ -1,0 +1,6 @@
+vaex-core>=0.6
+vaex-viz
+bqplot>=0.10.1
+ipyvolume>=0.4
+ipyleaflet
+ipympl
