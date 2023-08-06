@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ansible-jupyter-widgets
+Version: 1.0
+Summary: Jupyter Widgets for Ansible Jupyter Kernel
+Home-page: UNKNOWN
+Author: Ben Thomasson
+Author-email: benthomasson@redhat.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: ipywidgets
+
+UNKNOWN
+
+
