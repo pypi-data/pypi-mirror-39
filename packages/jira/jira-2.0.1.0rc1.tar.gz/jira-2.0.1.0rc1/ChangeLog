@@ -1,0 +1,62 @@
+CHANGES
+=======
+
+2.0.1rc1
+--------
+
+* Fix worklog timezone handling (#720)
+* Kerberos auth in jirashell (#590)
+* Removed whitespaces
+* Corrected if statement style
+* Fixed create\_board to support location\_id set to None
+* Fix create\_board failure
+* Restore the \`username\` on the regular expression for User resource
+* Fix User regular expression to proper identify the User resource
+* Update the Atlassian SDK repositories based on latest info from https://developer.atlassian.com/server/framework/atlassian-sdk/install-the-atlassian-sdk-on-a-linux-or-mac-system/
+* Make JIRA resources work with pickle
+* Improve support for passing list-like objects as fields
+* Install wheel for ci Build
+* Start/end sprint fix (#692)
+* Fix Issue comparsion with None (#674)
+* Raise JIRA Error for deactivate\_user and add documentation
+* Removed debug code; changed print for logging.error
+* Use cookies to authenticate user deactivations in cloud instances
+* Add documentation to jira/client.py
+* Add type hints for jira/exceptions.py
+* Add type hints for the generic jira.resources.Resource
+* Document that when searching, by default all fields are included
+* Fix several invalid escape sequence
+* Fix socket leak in \_\_del\_\_() of client.py
+* Fix ResourceWarning: unclosed file in test.py
+* Add documentation line and fix non-default-to None param
+* Add projectKeyOrID param to boards() as a search filter param
+* Avoid UnicodeDecodeErrors when printing exceptions
+* refactor retrieving of project templates and their use
+* build: spell fixes
+* build: remove xfails from tests
+* build: limit each test duration to 60s
+* build: avoid missing to install new deps
+* set reload delays to zero by default
+* build: update only insecure dependencies
+* codecov: disabled comment
+* Configure pyup bot settings
+* Remove wrong requirements from setup.py (#648)
+* Add StatusCategory resource (#596)
+* upgraded pre-commit hooks (#640)
+* Update issue templates
+* minor docs fixes
+* Add description for notify parameter in Issue.update method
+
+2.0.0
+-----
+
+* fix pypi classifiers (#634)
+* ResultList class to support the iterator interface
+* Async improvement: Allow setting the number of worker threads for JIRA.\_fetch\_pages
+* Add Group resource
+* Changed fields type checks into single if/elif block following PR feedback
+* Create copy of fields list in JIRA.search\_issues to prevent mutating the original list
+* update pyyaml dependency
+* build: cleanup
+* Update Travis badge to travis.com
+* avoid pycrypto dependency
