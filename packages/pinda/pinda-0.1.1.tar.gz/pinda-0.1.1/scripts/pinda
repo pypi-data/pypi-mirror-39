@@ -1,0 +1,81 @@
+#!/usr/bin/env python
+
+import argparse
+import os
+import yaml
+from pinda._version import __version__
+from pinda import commands, utilities
+
+parser = argparse.ArgumentParser(description='Pip-INstallable Dockerized Applications')
+parser.add_argument('-V', '--version', action='version', version=__version__)
+subparsers = parser.add_subparsers(dest='subparser_name')
+
+list_parser = subparsers.add_parser('list', description='List available and installed packages', help='list available and installed packages')
+
+template_parser = subparsers.add_parser('template', description='Provide a template for a new database entry', help='provide a YAML template for a new database entry')
+
+update_parser = subparsers.add_parser('update', description='Update the database with information about a new or updated package', help='update the database with information about a new or updated package')
+update_parser.add_argument('yamlfile', help='YAML format file with package data - use \'pinda template\' to generate a template')
+update_parser.add_argument('-f', '--force', action='store_true', help='Allow over-writing of information about an existing package, if one exists')
+
+info_parser = subparsers.add_parser('info', description='Information about a package', help='information about a package')
+info_parser.add_argument('package')
+info_parser.add_argument('version')
+
+install_parser = subparsers.add_parser('install', description='Install a package', help='install a package')
+install_parser.add_argument('package')
+install_parser.add_argument('version')
+install_parser.add_argument('-s', '--sudo', action='store_true', help='Attempt to install as root')
+install_parser.add_argument('-u', '--user', action='store_true', help='Install just for this user')
+
+uninstall_parser = subparsers.add_parser('uninstall', description='Uninstall a package', help='uninstall a package')
+uninstall_parser.add_argument('package')
+uninstall_parser.add_argument('version')
+args = parser.parse_args()
+
+if args.subparser_name == 'list':
+    result = commands.list()
+    print(result)
+    if not utilities.docker_installed():
+        print('*NOTE: You do not seem to currently have Docker')
+        print('       installed - pinda will not work without it.')
+        print('       Visit http://docker.com for installation instructions.')
+
+elif args.subparser_name == 'info':
+    if not utilities.is_available(args.package, args.version):
+        print('Error - {} {} is not an available package'.format(args.package, args.version))
+        exit(1)
+    info = commands.info(args.package, args.version)
+    print(info)
+    
+elif args.subparser_name == 'install':
+    if not utilities.is_available(args.package, args.version):
+        print('Error - {} {} is not an available package'.format(args.package, args.version))
+        exit(1)
+    try:
+        commands.install(args.package, args.version, args.sudo, args.user)
+    except ValueError:
+        print('Error - Install failed')
+    else:
+        print('Succesfully installed {} {}'.format(args.package, args.version))
+
+elif args.subparser_name == 'uninstall':
+    result = commands.uninstall(args.package, args.version)
+    if result is False:
+        print('Error - uninstall failed')
+
+elif args.subparser_name == 'template':
+    result = commands.template()
+    print(result)
+
+elif args.subparser_name == 'update':
+    if not os.path.exists(args.yamlfile):
+        print('Error: cannot find {}'.format(yamlfile))
+        exit(1)
+    try:
+        commands.update_from(yamlfile, overwrite=args.force)
+    except KeyError as e:
+        print(e)
+    except ValueError as e:
+        print(e)
+    
