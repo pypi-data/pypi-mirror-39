@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: osgeo-manager
+Version: 0.2.0
+Summary: Cartoview is a GIS web mapping application framework to     easily share and deploy apps based on Geonode
+Home-page: https://github.com/cartologic/osgeo-manager
+Author: Cartologic
+Author-email: info@cartologic.com
+License: BSD
+Keywords: cartologic,cartoview,gis,geonode,django,web mapping,applications,apps,application management
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django :: 1.8
+Classifier: Topic :: Scientific/Engineering :: GIS
+Description-Content-Type: text/markdown
+Requires-Dist: geonode (>=2.8rc11)
+Requires-Dist: esridump (==1.8.0)
+Requires-Dist: ags2sld (==0.1.0)
+
+# osgeo-manager
+
+
