@@ -1,0 +1,14 @@
+[
+    {
+        "_realm": "All",
+        "_sub_realm": true,
+        "action_url": "",
+        "alias": "Alignak hosts",
+        "hostgroups": [],
+        "hosts": [],
+        "imported_from": "alignak-checks-alignak",
+        "name": "alignak",
+        "notes": "This group contains all the Alignak hosts.",
+        "notes_url": ""
+    }
+]

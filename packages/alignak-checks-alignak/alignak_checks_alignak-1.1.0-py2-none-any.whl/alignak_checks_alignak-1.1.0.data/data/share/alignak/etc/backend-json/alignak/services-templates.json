@@ -1,0 +1,74 @@
+[
+    {
+        "_is_template": true,
+        "aggregation": "alignak",
+        "alias": "Alignak arbiter",
+        "check_command": "check_tcp",
+        "check_command_args": "",
+        "customs": {
+            "_CHECKED_PORT": "7770"
+        },
+        "host": "alignak-main",
+        "name": "Alignak-arbiter"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "alignak",
+        "alias": "Alignak scheduler",
+        "check_command": "check_tcp",
+        "check_command_args": "",
+        "customs": {
+            "_CHECKED_PORT": "7768"
+        },
+        "host": "alignak",
+        "name": "Alignak-scheduler"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "alignak",
+        "alias": "Alignak broker",
+        "check_command": "check_tcp",
+        "check_command_args": "",
+        "customs": {
+            "_CHECKED_PORT": "7772"
+        },
+        "host": "alignak",
+        "name": "Alignak-broker"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "alignak",
+        "alias": "Alignak poller",
+        "check_command": "check_tcp",
+        "check_command_args": "",
+        "customs": {
+            "_CHECKED_PORT": "7771"
+        },
+        "host": "alignak",
+        "name": "Alignak-poller"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "alignak",
+        "alias": "Alignak reactionner",
+        "check_command": "check_tcp",
+        "check_command_args": "",
+        "customs": {
+            "_CHECKED_PORT": "7769"
+        },
+        "host": "alignak",
+        "name": "Alignak-reactionner"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "alignak",
+        "alias": "Alignak receiver",
+        "check_command": "check_tcp",
+        "check_command_args": "",
+        "customs": {
+            "_CHECKED_PORT": "7773"
+        },
+        "host": "alignak",
+        "name": "Alignak-receiver"
+    }
+]
