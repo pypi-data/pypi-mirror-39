@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: mhclovac
+Version: 1.0.0
+Summary: MHC binding prediction based on modeled physicochemical properties of peptides
+Home-page: https://github.com/stefs304/mhclovac
+Author: Stefan Stojanovic
+Author-email: stefs304@gmail.com
+License: UNKNOWN
+Description: # MHCLovac
+        MHC binding prediction based on modeled physicochemical properties of peptides
+        
+        * [About](#about)
+        * [Installation](#installation)
+        * [Usage](#usage)
+        
+        <hr>
+        
+        <a name='about'></a>
+        ### About 
+        
+        MHCLovac is based on modeling each peptide as a **signal** of a certain 
+        physicochemical property. Each amino acid that 
+         comprises a peptide encodes specific combination of physicochemical properties
+          that determine physicochemical properties of the peptide at a given position.
+          By modelling amino acids properties in a smart way, MHCLovac obtains a unique 
+          physicochemical signal, or **profile** of each peptide 
+          *(1.a)*. This 
+        is done for variety of physicochemical properties including hydrophobicity, 
+          charge, isoelectric point, donor and acceptor hydrogen bonds etc. Finally, 
+          by averaging out profiles of ligands known to bind certain HLA 
+          type, an HLA-specific profile for each physicochemical property is obtained. 
+          *(1.c)*
+          
+        ![physicochemical profile](https://raw.githubusercontent.com/stefs304/mhclovac/master/resources/plots/example.png)
+         
+          MHCLovac works by first building a *reference profile database*, containing 
+          profiles specific to each HLA type. This database is compiled based on 
+          experimentally confirmed ligands for each HLA type 
+          ([resources/training_data](https://github.com/stefs304/mhclovac/tree/master/resources/training_data)) 
+          and physicochemical propery schemas 
+          ([resources/schemas](https://github.com/stefs304/mhclovac/tree/master/resources/schemas)).
+          MHCLovac package includes `mhclovac-build` tool, used for compiling a 
+          reference
+          database and offers variety of options for choosing appropriate parameters.  
+           Prebuilt databases for four species (human, chimpanzee, macaque, mouse) are 
+           included in the package.
+          
+          Once the reference database is compiled, MHC binding prediction can be 
+          preformed by scoring similarity of each potential ligand to precompiled 
+          HLA-specific profile (for each physicochemical property included in the profile 
+          database). Scoring is based on correlation coefficients, with the 
+          availability of assigning weights to each physicochemical schema used. MHCLovac
+           offers degree of flexibility with regard to scoring.
+           
+        * Research and description of the tool will be available soon on 
+        [wiki](https://github.com/stefs304/mhclovac/wiki) pages.
+           
+        
+        <a name='installation'></a>
+        ### Installation
+        
+        Install from PyPI repository
+        ```
+        pip install mhclovac
+        ```
+        
+        Download and install from git repository
+        ```
+        git clone https://github.com/stefs304/mhclovac
+        cd mhclovac
+        pip install .
+        ```
+        
+        <a name='usage'></a>
+        ### Usage
+        ```
+        mhclovac --fasta example.fasta 
+                 --hla HLA-A*02:01 
+                 --peptide_length 9
+                 --reference_data human
+                 --output output.txt
+        ```
+        To build reference profiles use `mhclovac-build` which is included in the 
+        package.
+        ```
+        mhclovac-build --input_data binding_data.tsv
+                       --schemas h:hydrophobicity.csv i:isoelectric.csv
+                       --species human
+                       --output human.hdf5
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Description-Content-Type: text/markdown
