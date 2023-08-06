@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: openml-cli
+Version: 0.1.0
+Summary: Use the command line tool `oml` or `openml` to interact with the official API of OpenML.
+Home-page: https://github.com/nok/openml-cli
+Author: Darius Morawiec
+Author-email: mail@nok.onl
+License: MIT
+Keywords: openml,openscience,cli,datasets
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: six
+Requires-Dist: tqdm
+Requires-Dist: requests
+Requires-Dist: bravado
+Requires-Dist: tabulate
+
+UNKNOWN
+
+

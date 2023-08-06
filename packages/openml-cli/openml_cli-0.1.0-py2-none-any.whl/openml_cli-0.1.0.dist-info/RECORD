@@ -1,0 +1,17 @@
+openml_cli/__init__.py,sha256=JYv2AfbPfropLv0AnWEPoEn07ZqtaXRey8a989J8_O4,544
+openml_cli/__version__.txt,sha256=6d2FB_S_DG9CRY5BrqgzrQvT9hJycjNe7pv01YVB7Wc,6
+openml_cli/swagger.yml,sha256=nBS5gmnsZhO8Nl_Mi5Cq-8CXN6-ZKq7V6NaCXC0Ve8U,4218
+openml_cli/api/API.py,sha256=NGAGAeXAKseDoEkYsz-r36Ba5r8DnOgVdMWi5zvS8YQ,828
+openml_cli/api/Config.py,sha256=R824h9WPAyVQvVFspBW8gM3zjYduHBhA5imOEIneOFg,2768
+openml_cli/api/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+openml_cli/cli/__init__.py,sha256=VT8YUR_9t_I3dah8kFxYknqVxzQ_SaPnUYCFhGeGxho,145
+openml_cli/cli/__main__.py,sha256=MxXojWco8RXCbY0ZZBL4e1a9SR6LETj_HaGIuvL_gZQ,7264
+openml_cli/cli/main_config.py,sha256=HMTGjgRWCrb01hrZb4rH4ZkdUjol6GHQeu0t1nXvL10,410
+openml_cli/cli/main_dataset.py,sha256=8fuHVrXHZwLWP4JkKm-RtkXdzxOYcZuiIWNZHLtKHnY,7835
+openml_cli/utils/__init__.py,sha256=1J-0cL2dBms1iIY9DVEnwA8mkEGfXDIqL0N8rGQSmmw,349
+openml_cli-0.1.0.dist-info/LICENSE.txt,sha256=fsdGb-7uWvE0ptav97cDfvG1JFELZ2t3vsuRQoB9qBo,1056
+openml_cli-0.1.0.dist-info/METADATA,sha256=YBUvdoJFQINkv_yA6mYSFmD60x5X-TNsM58ITaSXHOg,642
+openml_cli-0.1.0.dist-info/RECORD,,
+openml_cli-0.1.0.dist-info/WHEEL,sha256=_V8uWu5F_h-lvAz5Mbq4oZqV_uCfL4cHgm4IIlDevzU,92
+openml_cli-0.1.0.dist-info/entry_points.txt,sha256=WBHZlCVAwCMp944F50IcFBWV7kXMSm-a04Af88VBtmU,92
+openml_cli-0.1.0.dist-info/top_level.txt,sha256=wA_wl9GMc3voi3Y-IaIu9H7Orzph36PrhYK2ZL3SKrQ,11
