@@ -1,0 +1,33 @@
+Metadata-Version: 2.0
+Name: pycsoap
+Version: 0.1.0
+Summary: Generation of SOAP descriptors.
+Home-page: https://gitlab.com/andrewhuynguyen/pycsoap
+Author: Andrew H Nguyen
+Author-email: andrewhuynguyen10@gmail.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: pyparsing
+Requires-Dist: argparse
+Requires-Dist: termcolor
+Requires-Dist: six
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+# pycsoap
+
+
+
