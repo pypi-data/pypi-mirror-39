@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: open_tracer
+Version: 1.5
+Summary: Open-tracer : To trace every applications request
+Home-page: https://github.com/rsarun-uninstallio/open_tracer
+Author: arun.rs
+Author-email: arunrs@uninstall.io
+License: MIT
+Download-URL: https://github.com/rsarun-uninstallio/open_tracer/archive/v1.5.tar.gz
+Description: UNKNOWN
+Keywords: tracing,open_tracing,open_tracer
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
