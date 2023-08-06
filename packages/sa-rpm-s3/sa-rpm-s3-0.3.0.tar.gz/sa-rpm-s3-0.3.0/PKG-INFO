@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: sa-rpm-s3
+Version: 0.3.0
+Summary: This small tool allows you to maintain YUM repositories of RPM packages on S3. The advantage of this tool is that it does not need a full copy of the repo to operate. Just give it the new package to add, and it will just update the repodata metadata, and upload the given rpm file.
+Home-page: https://github.com/Voronenko/rpm-s3
+Author: Cyril Rohr - Portions (c) 2013, rockpack ltd, light mods by Vyacheslav Voronenko
+Author-email: git@voronenko.info
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
