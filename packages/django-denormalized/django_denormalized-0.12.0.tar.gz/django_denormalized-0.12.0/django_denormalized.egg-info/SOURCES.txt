@@ -1,0 +1,11 @@
+README.md
+setup.py
+denormalized/__init__.py
+denormalized/models.py
+denormalized/tracker.py
+denormalized/types.py
+django_denormalized.egg-info/PKG-INFO
+django_denormalized.egg-info/SOURCES.txt
+django_denormalized.egg-info/dependency_links.txt
+django_denormalized.egg-info/requires.txt
+django_denormalized.egg-info/top_level.txt
