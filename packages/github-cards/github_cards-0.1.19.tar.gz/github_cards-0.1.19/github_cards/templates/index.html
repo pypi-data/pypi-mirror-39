@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+    div#chrome-printable {
+        position: relative;
+        -webkit-print-color-adjust: exact;
+    }
+
+    @page {
+        size: landscape;
+        margin: 0;
+    }
+
+    html {
+        font-family: "Bradley Hand", "Lucida Handwriting", sans-serif;
+    }
+
+    .page {
+        display: grid;
+        grid-template-columns: repeat({{cards_per_row}}, 1fr);
+        grid-template-rows: repeat({{cards_per_column}}, 1fr);
+        page-break-inside: avoid;
+        height: 20.7cm;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        outline: 1px dotted;
+        padding: 0.5cm;
+        margin-top: 1px;
+        margin-left: 1px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .label {
+        border-radius: 8px;
+        padding: 3px 10px;
+        margin-right: 0.2cm;
+        font-size: 1.7em;
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .card-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 1cm;
+    }
+
+    .number {
+        float: right;
+        font-size: 1.7em;
+    }
+
+    .label-wrapper {
+        float: left;
+    }
+
+    .assignee-wrapper {
+        float: right;
+        display: inline;
+    }
+
+    .assignee > img {
+        height: 1cm;
+    }
+
+</style>
+
+<body>
+<div id="chrome-printable">
+    {% for issue in issues %}
+
+        {% if loop.index0 % (cards_per_row * cards_per_column) == 0 %}
+            <div class="page">
+        {% endif %}
+
+    <div class="card">
+        <div class="card-header">
+            <div class="number">
+                #{{ issue.number }}
+            </div>
+        </div>
+        <div class="card-content">
+            <div class="title">
+                {{ issue.title }}
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="label-wrapper">
+                {% for label in issue.original_labels %}
+                    <span style="background-color: #{{ label.color }}; color: #{{ label.color|readable_font_color }}" class="label">
+                {{ label.name }}
+            </span>
+                {% endfor %}
+            </div>
+
+            <div class="assignee-wrapper">
+                {% for assignee in issue.assignees %}
+                    <span class="assignee">
+                <img src="{{ assignee.avatar_url }}"/>
+            </span>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% if loop.index0 % (cards_per_row * cards_per_column) == cards_per_row * cards_per_column - 1 or loop.last %}
+        </div>
+    {% endif %}
+
+    {% endfor %}
+</div>
+</body>
+</html>
