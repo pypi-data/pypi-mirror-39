@@ -1,0 +1,11 @@
+MANIFEST.in
+build_crc32c.c
+build_crc32c.py
+crc32c.py
+setup.py
+test.py
+pycrc32c.egg-info/PKG-INFO
+pycrc32c.egg-info/SOURCES.txt
+pycrc32c.egg-info/dependency_links.txt
+pycrc32c.egg-info/requires.txt
+pycrc32c.egg-info/top_level.txt

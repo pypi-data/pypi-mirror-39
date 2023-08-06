@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: pycrc32c
+Version: 2.0.2
+Summary: crc32c for Python; uses the Intel CRC32 instruction and thus requires SSE4.2
+Home-page: https://github.com/ludios/pycrc32c
+Author: Ivan Kozik
+Author-email: ivan@ludios.org
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
