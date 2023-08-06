@@ -1,0 +1,3 @@
+[console_scripts]
+format-pipfile = format_pipfile.cli:main
+
