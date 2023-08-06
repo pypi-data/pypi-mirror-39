@@ -1,0 +1,10 @@
+CHANGES
+=======
+
+1.0.0
+-----
+
+* Change openstack-dev to openstack-discuss
+* Initial provider driver library checkin
+* Initial cookie-cutter commit for octavia-lib
+* Added .gitreview
