@@ -1,0 +1,3 @@
+[console_scripts]
+scavager = scavager.search:run
+
