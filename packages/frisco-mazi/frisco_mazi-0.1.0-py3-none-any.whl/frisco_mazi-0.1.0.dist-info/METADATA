@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: frisco-mazi
+Version: 0.1.0
+Summary: An idiosyncratic tool for parsing products list from Frisco confirmation e-mails
+Home-page: UNKNOWN
+License: MIT
+Author: Tadek Teleżyński
+Author-email: tadekte@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: xlsxwriter (>=1.1,<2.0)
