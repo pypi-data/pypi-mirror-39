@@ -1,0 +1,13 @@
+README.rst
+setup.py
+canonicalwebteam/__init__.py
+canonicalwebteam.django_views.egg-info/PKG-INFO
+canonicalwebteam.django_views.egg-info/SOURCES.txt
+canonicalwebteam.django_views.egg-info/dependency_links.txt
+canonicalwebteam.django_views.egg-info/requires.txt
+canonicalwebteam.django_views.egg-info/top_level.txt
+canonicalwebteam/django_views/__init__.py
+tests/__init__.py
+tests/test_template_finder.py
+tests/fixtures/__init__.py
+tests/fixtures/urls.py
