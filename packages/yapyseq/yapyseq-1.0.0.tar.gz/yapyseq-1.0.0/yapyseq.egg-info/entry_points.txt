@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        yapyseq=yapyseq.cli:yapyseq_main_cli
+    

@@ -1,0 +1,16 @@
+README.md
+VERSION
+setup.py
+yapyseq/__init__.py
+yapyseq/cli.py
+yapyseq/functiongrabber.py
+yapyseq/nodes.py
+yapyseq/seq_schema.yaml
+yapyseq/sequencereader.py
+yapyseq/sequencerunner.py
+yapyseq.egg-info/PKG-INFO
+yapyseq.egg-info/SOURCES.txt
+yapyseq.egg-info/dependency_links.txt
+yapyseq.egg-info/entry_points.txt
+yapyseq.egg-info/requires.txt
+yapyseq.egg-info/top_level.txt
