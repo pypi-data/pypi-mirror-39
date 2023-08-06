@@ -1,0 +1,15 @@
+MANIFEST.in
+setup.cfg
+setup.py
+tests/data.dat
+zklibweb/__init__.py
+zklibweb/client.py
+zklibweb/domain.py
+zklibweb/exceptions.py
+zklibweb/utils.py
+zklibweb.egg-info/PKG-INFO
+zklibweb.egg-info/SOURCES.txt
+zklibweb.egg-info/dependency_links.txt
+zklibweb.egg-info/not-zip-safe
+zklibweb.egg-info/requires.txt
+zklibweb.egg-info/top_level.txt
