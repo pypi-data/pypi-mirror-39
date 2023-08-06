@@ -1,0 +1,11 @@
+README.rst
+setup.py
+git_annex_adapter/__init__.py
+git_annex_adapter/exceptions.py
+git_annex_adapter/process.py
+git_annex_adapter/repo.py
+git_annex_adapter.egg-info/PKG-INFO
+git_annex_adapter.egg-info/SOURCES.txt
+git_annex_adapter.egg-info/dependency_links.txt
+git_annex_adapter.egg-info/requires.txt
+git_annex_adapter.egg-info/top_level.txt
