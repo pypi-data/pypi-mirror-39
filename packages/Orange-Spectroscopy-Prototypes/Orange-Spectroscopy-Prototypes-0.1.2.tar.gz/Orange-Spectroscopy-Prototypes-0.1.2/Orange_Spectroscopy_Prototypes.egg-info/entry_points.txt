@@ -1,0 +1,12 @@
+[orange.canvas.help]
+html-index = orangecontrib.protospec.widgets:WIDGET_HELP_PATH
+
+[orange.widgets]
+Spectroscopy Prototypes = orangecontrib.protospec.widgets
+
+[orange.widgets.tutorials]
+protospec_tutorials = orangecontrib.protospec.tutorials
+
+[orange3.addon]
+protospec = orangecontrib.protospec
+
