@@ -1,0 +1,13 @@
+MANIFEST.in
+README.txt
+setup.cfg
+setup.py
+fonts/STHeiti Light.ttc
+verifycode/__init__.py
+verifycode/generator.py
+verifycode/test_generator.py
+verifycode.egg-info/PKG-INFO
+verifycode.egg-info/SOURCES.txt
+verifycode.egg-info/dependency_links.txt
+verifycode.egg-info/requires.txt
+verifycode.egg-info/top_level.txt
