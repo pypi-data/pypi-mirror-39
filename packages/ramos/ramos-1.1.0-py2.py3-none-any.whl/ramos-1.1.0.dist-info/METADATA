@@ -1,0 +1,125 @@
+Metadata-Version: 2.1
+Name: ramos
+Version: 1.1.0
+Summary: Generic backend pool 
+Home-page: https://github.com/luizalabs/ramos
+Author: LuizaLabs
+Author-email: pypi@luizalabs.com
+License: UNKNOWN
+Keywords: django backends pool
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: django
+Requires-Dist: Django (>=1.8) ; extra == 'django'
+Provides-Extra: simple_settings
+Requires-Dist: simple-settings ; extra == 'simple_settings'
+
+Ramos
+=====
+
+.. image:: https://travis-ci.org/luizalabs/ramos.svg?branch=master
+    :target: https://travis-ci.org/luizalabs/ramos
+
+.. image:: https://codecov.io/gh/luizalabs/ramos/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/luizalabs/ramos
+
+
+Generic backend pool for Django
+
+
+Setup
+-----
+
+.. code:: bash
+
+    pip install ramos
+
+
+Development setup
+-----------------
+
+.. code:: bash
+
+    make install
+
+
+Usage
+-----
+
+.. code:: python
+
+    import ramos
+
+    ramos.configure(pools={
+        'backend_type': [
+            'path.to.backend_a',
+            'path.to.backend_b',
+        ]
+    })
+
+
+Integrations
+~~~~~~~~~~~~
+
+Ramos can uses `Django`_ or `Simple Settings`_ to get backends
+configurations if set settings.POOL_OF_RAMOS:
+
+.. code:: python
+
+    POOL_OF_RAMOS = {
+        'backend_type': [
+            'path.to.backend_a',
+            'path.to.backend_b',
+        ]
+    }
+
+
+Backend Implementations
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: python
+
+    from ramos.mixins import ThreadSafeCreateMixin
+
+
+    class BackendA(ThreadSafeCreateMixin):
+        id = 'backend_a'
+        def say(self):
+            return 'A'
+
+
+    class BackendB(ThreadSafeCreateMixin):
+        id = 'backend_b'
+        def say(self):
+            return 'B'
+
+
+Backend Pool
+~~~~~~~~~~~~
+
+.. code:: python
+
+    from ramos.pool import BackendPool
+
+
+    class BackendTypePool(BackendPool)
+        backend_type = 'backend_type'
+
+
+    backends = BackendTypePool.all()
+
+    for backend in backends:
+        print(backend.say())
+
+
+    # backend_a = BackendTypePool.get('backend_a')
+    # backend_b = BackendTypePool.get('backend_b')
+
+.. _Django: https://github.com/django/django
+.. _Simple Settings: https://github.com/drgarcia1986/simple-settings
+
+
