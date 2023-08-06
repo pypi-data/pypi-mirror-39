@@ -1,0 +1,29 @@
+- project:
+    templates:
+      - check-requirements
+      - openstack-cover-jobs
+      - openstack-lower-constraints-jobs
+      - openstack-python-jobs
+      - openstack-python35-jobs
+      - openstack-python36-jobs
+      - publish-openstack-docs-pti
+      - release-notes-jobs-python3
+    check:
+      jobs:
+        - ironic-inspector-grenade-dsvm
+        - ironic-inspector-tempest-dsvm-discovery
+        - ironic-inspector-tempest-dsvm-python3
+        - openstack-tox-functional
+        - openstack-tox-functional-py35
+        - ironic-tempest-dsvm-ironic-inspector
+        - bifrost-integration-tinyipa-ubuntu-xenial
+    gate:
+      queue: ironic
+      jobs:
+        - ironic-inspector-grenade-dsvm
+        - ironic-inspector-tempest-dsvm-discovery
+        - ironic-inspector-tempest-dsvm-python3
+        - openstack-tox-functional
+        - openstack-tox-functional-py35
+        - ironic-tempest-dsvm-ironic-inspector
+        - bifrost-integration-tinyipa-ubuntu-xenial
