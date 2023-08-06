@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+ambsql/__init__.py
+ambsql/ambsql.py
+ambsql.egg-info/PKG-INFO
+ambsql.egg-info/SOURCES.txt
+ambsql.egg-info/dependency_links.txt
+ambsql.egg-info/top_level.txt
