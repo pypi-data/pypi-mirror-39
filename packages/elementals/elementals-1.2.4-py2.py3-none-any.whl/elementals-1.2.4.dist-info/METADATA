@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: elementals
+Version: 1.2.4
+Summary: Basic utilities for CTF (or exploit) scripts
+Home-page: https://github.com/eyalitki/elementals
+Author: Eyal Itkin
+Author-email: eyal.itkin@gmail.com
+License: GPL
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: colorama
+Requires-Dist: hexdump
+Requires-Dist: pydocstyle
+Requires-Dist: flake8
+
+# elementals
+Python package with basic utilities for CTF scripts (works well for exploit PoCs too).
+
+## Install
+```pip install elementals```
+
+## Read The Docs
+https://elementals.readthedocs.io/
+
+## Github
+https://github.com/eyalitki/elementals
+
+## Brief
+The **elementals** python package is a utility package with handy tools for CTF scripts and PoC-style scripts. What was first implemented for personal use in small research scripts was now upgraded to be used by security researchers as a lightweight substitute to the famous pwntools package.
+
+The features included in **elementals** are:
+* **Logger:** Basic (logging based) logger - configured and ready to use 
+* **Prompter:** Metasploit based stdout wrapper for the logger
+* **ProgressBar:** User-friendly graphical progress bar
+* **StatusBar:** User-friendly graphical status bar
+* **createAnchor:** Creates a time-stamped output directory for all script outputs
+* **hexDump:** Stylized hex dump for binary blobs / strings
+
+## Used by
+The **elementals** package is used in most of my scripts and also in my public Github projects:
+* **Scout Debugger** - https://github.com/CheckPointSW/Scout
+* **Karta (IDA Plugin)** - (soon to be released)
+
+## References
+* Twitter: [@EyalItkin](https://twitter.com/EyalItkin)
+* E-mail: eyal dot itkin at gmail dot com
+
