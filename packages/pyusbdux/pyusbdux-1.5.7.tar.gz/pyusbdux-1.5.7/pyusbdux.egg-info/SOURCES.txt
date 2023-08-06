@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+pyusbdux.cpp
+pyusbdux.h
+pyusbdux.i
+pyusbdux.py
+setup.py
+pyusbdux.egg-info/PKG-INFO
+pyusbdux.egg-info/SOURCES.txt
+pyusbdux.egg-info/dependency_links.txt
+pyusbdux.egg-info/top_level.txt
