@@ -1,0 +1,14 @@
+README.md
+setup.py
+./ff
+client/freeFile.py
+client/initConfig.py
+client/API/ApplyApi.py
+client/API/CreateArchive.py
+client/API/PullArchive.py
+client/API/PushArchive.py
+freeFile.egg-info/PKG-INFO
+freeFile.egg-info/SOURCES.txt
+freeFile.egg-info/dependency_links.txt
+freeFile.egg-info/requires.txt
+freeFile.egg-info/top_level.txt
