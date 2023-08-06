@@ -1,0 +1,30 @@
+language: python
+sudo: false
+cache: pip
+python:
+- 2.7
+- 3.4
+- 3.5
+- 3.6
+- pypy
+install:
+- pip install tox-travis
+script:
+- tox
+stages:
+- test
+- deploy
+jobs:
+  include:
+  - stage: deploy
+    python: 3.6
+    install: skip  # no tests, no depedencies needed
+    script: skip  # we're not running tests
+    deploy:
+      provider: pypi
+      user: stephenfin
+      password:
+        secure: "gEpwszsB3/LaCCoYtSzKvESzdSel9M8WSUAduTbjxCWFzV5Uuti3EeWDRLIZbotGwVPWTstUulquLwjzvYwXsrW+Lk/J+k4kI1UXMKlW/IOiOdJm7fLq2Pd9/RjuJm6RmRLe2AVy2+99zbTwBWu9Kpfivid1EuITTJBSCvLv4IthyR1wbNHTNEd/zrAS2Nd9Zr4wYs8aa7vjKFon24VOTn5KfOsHODzJCfvePEvXY2Bek/4peFH2rxWGZQL7aMmMtd+x5Z+dMSbIYn4JjelT2zi2JTwOwvXr1ZZ7sQYyniIueQEVHiCm6RVvX+QgkVDfy+xF7A4Tu1rADwGrs8T8DZtD8/pHXto0K4F1jUYA93ECAHSbr9J214yT/3notvstFVMOYpgIwM2Ob6KYNdsocCZSaIJq2dsUbR8ZBJJGwe3mUiN5PsE0ZalZz5UrqaMXAOZw/uL1IR7ETVpkgdPJpGL3gF6v6ebD3SaMZT+lr6spjU0KznF6/3Aq4xMnsMIZ4dpGCHYijb0elLYY1BtUWZDeGH9tcsKLc3ACMUFD2m9pSEQDkrv/qXx24Mxofj7WRefgoLp4Q0xw0j/LrDTfgMsBwWSXmEbf5XaeLPrqdgxCHsFbpxBYaVR1rLO62s0kYEzCW+5T7mmhrFNrTFR+jOJahaTBZBKwvwsH5q52E48="
+      on:
+        tags: true
+      distributions: sdist bdist_wheel

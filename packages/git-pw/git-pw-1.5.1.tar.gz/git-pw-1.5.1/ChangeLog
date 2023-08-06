@@ -1,0 +1,76 @@
+CHANGES
+=======
+
+1.5.1
+-----
+
+* Fix help text for --format to refer to pw.format
+* travis: Update (encrypted) password
+
+1.5.0
+-----
+
+* Remove support for 'PW\_FORMAT' environment variable
+* requirements: Add support for click 7.0
+* Indicate values loaded from git-config
+* Extract pagination parameters to common decorator
+* Add support for configurable output columns
+* Add support for multiple output formats
+* Handle bytestring decode in 'git\_config' helper
+* requirements: Make requirements less strict
+* docs: Remove unnecessary settings from 'conf.py'
+* api: Rename 'put' -> 'patch'
+* Revert "travis: Start testing Python 3.7, PyPy"
+* travis: Use travis to publish packages
+* travis: Start testing Python 3.7, PyPy
+
+1.4.0
+-----
+
+* Don't exit if multiple matches found for a filter
+* Add support for filtering by user/submitter ID
+* Re-add support for filtering by submitter name, user email
+* Fix a simple typo
+
+1.3.0
+-----
+
+* docs: Split into multiple pages
+* tests: Validate unescaped arguments
+* tox: Start running unit tests in Travis
+* Display warning when using multiple filters with API v1.0
+* tests: Move to top-level directory
+* Add swp files to .gitignore
+* tests: Add 'bundle' tests
+* tests: Add 'patch' tests
+* tests: Add 'series' tests
+* bundle: 'api.download' returns a string
+* patch: Remove duplication
+* tests: Don't reuse the same name
+* Specify what ARGS argument for 'apply' commands means
+* Don't require escaping arguments
+* Add missing argument for \_echo\_via\_pager call
+* tests: Add tests for 'utils.git\_config'
+* Abide by git's pager settings
+
+1.2.0
+-----
+
+* Add initial unit tests
+* README: Replace backticks with asterisks
+* Resolve TODO
+* Take advantage of features from API v1.1
+* Prepare for required server version
+* Handle additional error codes
+* Allow users to show, download and apply bundles by name
+* docs: Modernize build process
+* docs: Use RTD theme locally
+* Save to file by default
+* Lower logging levels for some messages
+* Allow bulk updating
+* Fix type signatures
+
+1.1.2
+-----
+
+* Add missing release notes for last few bugfixes
