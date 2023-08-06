@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: spaken
+Version: 0.1.6
+Summary: Spaken
+
+======
+
+
+
+Spaken is a tool to optimize ci/cd workflows for Python applications. It does
+
+this by collecting all the dependencies (python packages) and convert them to
+
+wheel files to store on AWS S3.
+
+
+
+.. image:: docs/demo.gif
+
+Home-page: https://github.com/labd/spaken
+Author: Michael van Tellingen
+Author-email: michaelvantellingen@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
