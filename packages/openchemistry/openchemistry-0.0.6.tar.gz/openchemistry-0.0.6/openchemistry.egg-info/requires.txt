@@ -1,0 +1,7 @@
+girder_client>=2.3.0
+jinja2
+jsonpath-rw
+avogadro
+cclib==1.6.1
+IPython
+ipykernel
