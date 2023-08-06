@@ -1,0 +1,9 @@
+# license file
+include LICENSE
+
+# readme file
+include README.md
+
+include setup.py
+include setup.cfg
+include MANIFEST.in
