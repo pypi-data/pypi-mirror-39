@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: cle-rabbit
+Version: 0.0.1
+Summary: Connect with RabbitMQ
+Home-page: https://github.com/pypa/sampleproject
+Author: Mikhail Kedrovskiy
+Author-email: author@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pika
+
+pip install cle-rabbit
+
+
