@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: minbc-lib
+Version: 0.11b0
+Summary: Package Dependency: Validates package requirements
+Home-page: https://github.com/shibats/minbc_lib
+Author: ats
+Author-email: shibata@m-info.co.jp
+Maintainer: ats
+Maintainer-email: shibata@m-info.co.jp
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
