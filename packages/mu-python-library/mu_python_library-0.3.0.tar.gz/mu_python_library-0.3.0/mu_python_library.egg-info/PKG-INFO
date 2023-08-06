@@ -1,0 +1,35 @@
+Metadata-Version: 1.1
+Name: mu-python-library
+Version: 0.3.0
+Summary: Python library supporting Project Mu components (EDKII, TPM, Capsules, etc.)
+Home-page: https://github.com/microsoft/mu_pip_python_library
+Author: Project Mu Team
+Author-email: maknutse@microsoft.com
+License: BSD2
+Description: =================
+        MU Python Library
+        =================
+        
+        About
+        =====
+        
+        Python files describing various miscellaneous components from the TPM and EDKII specs.
+        Please see Project Mu for details https://microsoft.github.io/mu
+        
+        Version History
+        ===============
+        
+        0.3.0
+        -----
+        
+        Updated documentation and release process.  Transition to Beta.
+        
+        < 0.3.0
+        -------
+        
+        Alpha development
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
