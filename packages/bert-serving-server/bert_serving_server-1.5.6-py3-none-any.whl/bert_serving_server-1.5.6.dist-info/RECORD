@@ -1,0 +1,14 @@
+bert_serving/__init__.py,sha256=jv2YF__bseklT3OWEzlqJ5qE24c4aWd5F4r0TTjOrWQ,65
+bert_serving/server/__init__.py,sha256=kzDU_mKDiQtoys3-lLcbJ7UuznS7tOjzeeoBkQnHuHY,15899
+bert_serving/server/graph.py,sha256=YZgoTjMw9P-cKbT2F8_PnxSC-6c3hLD78urAffoD3sI,5258
+bert_serving/server/helper.py,sha256=pjzyZRbr04t2iHUXDD3i0Y3W05kgdBh0os2iYuhI3-0,3913
+bert_serving/server/bert/__init__.py,sha256=FtTA73ZT6lZtjfvIPuWAwSoOOhwBwa5FDVmMI97RNBI,615
+bert_serving/server/bert/extract_features.py,sha256=qm14QBsraC9l_dF0aJi6lffXWjSscI8ha-z5p8QObKY,6664
+bert_serving/server/bert/modeling.py,sha256=0C1mZL9iRBjJtHcnf5fygKppeLJSMJmBIpTrJ_wUjxM,40947
+bert_serving/server/bert/optimization.py,sha256=aai2-Oj9E9Ldtom-ncIsNzJ7CVxD1h6ZZirKgw6QnRc,6466
+bert_serving/server/bert/tokenization.py,sha256=FmnMo0GUQ5eF5gunu1dbKxAqdkUD9johDnRvcrtnXbM,11870
+bert_serving_server-1.5.6.data/scripts/bert-serving-start,sha256=bUh7Hri2xDtKDJir2XQD03rPwQ0_fDW5MH0XKiqZ3Ec,700
+bert_serving_server-1.5.6.dist-info/METADATA,sha256=rebFesmAesRCvM485WQpPLmlZxYJtOcpacTwWYLutFA,42214
+bert_serving_server-1.5.6.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+bert_serving_server-1.5.6.dist-info/top_level.txt,sha256=NYt1YsDmeWD8eRgd32wVePtU0KwkVHnSTFCIhR-9Pmk,13
+bert_serving_server-1.5.6.dist-info/RECORD,,
