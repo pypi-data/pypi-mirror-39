@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: PyQuickstep
+Version: 1.0.0
+Summary: Pure Python MySQL Driver
+Home-page: https://github.com/raghu1994/PyQuickstep
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Keywords: Quickstep
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Database
+Requires-Dist: cryptography
+Requires-Dist: google
+Requires-Dist: protobuf
+Requires-Dist: grpc
+Requires-Dist: grpcio
+Requires-Dist: grpcio-tools
+
+# PyQuickstep
+Python Interface for Quickstep Database
+
+
