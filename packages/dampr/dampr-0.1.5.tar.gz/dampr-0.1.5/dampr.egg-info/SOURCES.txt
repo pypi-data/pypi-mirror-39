@@ -1,0 +1,14 @@
+README.md
+setup.py
+dampr/__init__.py
+dampr/base.py
+dampr/dampr.py
+dampr/dataset.py
+dampr/inputs.py
+dampr/runner.py
+dampr.egg-info/PKG-INFO
+dampr.egg-info/SOURCES.txt
+dampr.egg-info/dependency_links.txt
+dampr.egg-info/top_level.txt
+tests/__init__.py
+tests/test_dampr.py
