@@ -1,0 +1,3 @@
+[console_scripts]
+utf_remote = utf_remote.app:main
+
