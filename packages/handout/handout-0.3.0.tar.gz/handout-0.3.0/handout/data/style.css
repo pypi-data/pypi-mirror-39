@@ -1,0 +1,40 @@
+@media print {
+   html, html > body {
+     background: #fff !important;
+     margin: 0;
+     padding: 0;
+     max-width: auto;
+     border: none;
+   }
+}
+
+html {
+  background: #eee;
+}
+
+body {
+  max-width: 45em;
+  margin: 2em auto;
+  padding: 3em;
+  text-align: center;
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+  background: #fff;
+  border-radius: .3em;
+  border: 1px solid #ddd;
+}
+
+code {
+  text-align: left;
+  border-radius: .25em;
+  border: 1px solid #eee;
+}
+
+p, .markdown {
+  text-align: left;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}
