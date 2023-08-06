@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ren_salesforce_reporting/__init__.py
+ren_salesforce_reporting/login.py
+ren_salesforce_reporting/parsers.py
+ren_salesforce_reporting.egg-info/PKG-INFO
+ren_salesforce_reporting.egg-info/SOURCES.txt
+ren_salesforce_reporting.egg-info/dependency_links.txt
+ren_salesforce_reporting.egg-info/requires.txt
+ren_salesforce_reporting.egg-info/top_level.txt
+test/test_login.py
+test/test_matrix_parser.py
+test/test_report_parser.py
