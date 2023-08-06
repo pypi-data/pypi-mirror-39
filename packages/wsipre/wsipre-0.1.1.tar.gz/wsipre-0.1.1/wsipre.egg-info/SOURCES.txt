@@ -1,0 +1,11 @@
+README.md
+setup.py
+wsipre/__init__.py
+wsipre/annotation.py
+wsipre/show.py
+wsipre/slide.py
+wsipre/tissue.py
+wsipre.egg-info/PKG-INFO
+wsipre.egg-info/SOURCES.txt
+wsipre.egg-info/dependency_links.txt
+wsipre.egg-info/top_level.txt
