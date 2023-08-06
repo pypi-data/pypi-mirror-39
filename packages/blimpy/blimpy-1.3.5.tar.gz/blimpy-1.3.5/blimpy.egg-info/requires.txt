@@ -1,0 +1,16 @@
+numpy
+cython
+h5py
+scipy
+
+[:python_version == "2.7"]
+matplotlib<3.0
+astropy<3.0
+
+[:python_version > "2.7"]
+matplotlib
+astropy
+
+[full]
+bitshuffle
+pyslalib
