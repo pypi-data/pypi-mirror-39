@@ -1,0 +1,9 @@
+README.md
+setup.py
+bin/curltopy
+curltopy/__init__.py
+curltopy/convert.py
+curltopy.egg-info/PKG-INFO
+curltopy.egg-info/SOURCES.txt
+curltopy.egg-info/dependency_links.txt
+curltopy.egg-info/top_level.txt
