@@ -1,0 +1,13 @@
+MANIFEST.in
+README.txt
+requirements.txt
+setup.py
+ftpservercontext/__init__.py
+ftpservercontext/console_scripts.py
+ftpservercontext.egg-info/PKG-INFO
+ftpservercontext.egg-info/SOURCES.txt
+ftpservercontext.egg-info/dependency_links.txt
+ftpservercontext.egg-info/entry_points.txt
+ftpservercontext.egg-info/not-zip-safe
+ftpservercontext.egg-info/requires.txt
+ftpservercontext.egg-info/top_level.txt
