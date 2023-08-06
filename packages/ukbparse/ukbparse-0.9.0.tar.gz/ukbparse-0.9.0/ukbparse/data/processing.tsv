@@ -1,0 +1,8 @@
+Variable	Process
+40001	binariseCategorical(acrossInstances=True, acrossVisits=True, nameFormat='{vid}{value}')
+40002	binariseCategorical(acrossInstances=True, acrossVisits=True, nameFormat='{vid}{value}')
+40006	binariseCategorical(acrossInstances=True, acrossVisits=True, nameFormat='{vid}{value}')
+41202	binariseCategorical(acrossInstances=True,                    nameFormat='{vid}{value}-{visit}')
+41204	binariseCategorical(acrossInstances=True,                    nameFormat='{vid}{value}-{visit}')
+all_independent	removeIfSparse(minpres=51, maxcat=0.99)
+all	removeIfRedundant(0.99, 0.2)
