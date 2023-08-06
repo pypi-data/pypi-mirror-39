@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cntkx
+Version: 0.0.1
+Summary: Extension library of Microsoft Cognitive Toolkit
+Home-page: https://github.com/delzac/cntkx
+Author: delzac
+Author-email: delzac.jh@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# CNTKx
+Deep learning library that builds on Microsoft [CNTK](https://github.com/Microsoft/CNTK). 
+This library is in active development, more models and pre-built components coming soon!
+
