@@ -1,0 +1,3 @@
+[mkdocs.plugins]
+abs-to-rel = mkdocs_abs_rel_plugin.plugin:AbsToRelPlugin
+
