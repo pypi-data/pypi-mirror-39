@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: nephos
+Version: 0.1.0
+Summary: Deployer for Hyperledger Fabric networks onto Kubernetes
+Home-page: https://github.com/aidtechnology/nephos
+Author: Alejandro (Sasha) Vicente Grabovetsky
+Author-email: sasha@aid.technology
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+Requires-Dist: blessings
+Requires-Dist: click
+Requires-Dist: kubernetes
+Requires-Dist: pygments
+
+
+# nephos
+
+Library to deploy Hyperledger Fabric projects to a Kubernetes cloud
+
+   * [Prerequisites](#prerequisites)
+   * [Installation](#installation)
+      * [Virtual environment](#virtual-environment)
+      * [Requirements](#requirements)
+   * [Testing](#testing)
+      * [Unit tests](#unit-tests)
+   * [Usage](#usage)
+
+## Prerequisites
+
+This library requires an existing Kubernetes cluster.
+
+For best results, use a real cluster (e.g. on a cloud like AWS, GCP, Azure, IBM Cloud, etc.). However, you may also use [Minikube](https://kubernetes.io/docs/setup/minikube/).
+
+Either way, you will need to have the following tools installed:
+
+- [python 3.7.0](https://www.python.org/downloads/release/python-370/) or above
+- [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- [helm](https://docs.helm.sh/using_helm/#installing-helm)
+
+## Installation
+
+### Virtual environment
+
+This library currently only supports Python 3:
+
+    python3 -m venv ./venv
+
+    source ./venv/bin/activate
+
+### Requirements
+
+All requirments are held in the requirements.txt file
+
+    pip install -r requirements.txt
+
+## Testing
+
+### Unit tests
+
+Once you have all requirments installed, all the unit tests should pass:
+
+    PYTHONPATH=. pytest --cov=. --cov-report term-missing
+
+## Usage
+
+To use *nephos*, run the `deploy.py` executable CLI script.
+
+For instance, you can see available commands/options by running:
+
+    ./nephos/deploy.py --help
+
+To install a full end-to-end fabric network, you can run:
+
+    ./nephos/deploy.py -f ./PATH_TO_YOUR_SETTINGS/file.yaml fabric
+
+You can also upgrade a network:
+
+    ./nephos/deploy.py --upgrade -f ./PATH_TO_YOUR_SETTINGS/file.yaml fabric
+
+> Example of development/production networks will be provided in future
+
+
