@@ -1,0 +1,7 @@
+Pint==0.8.1
+future==0.16.0
+
+[docs]
+Sphinx<2,>=1.7
+sphinx-rtd-theme
+releases
