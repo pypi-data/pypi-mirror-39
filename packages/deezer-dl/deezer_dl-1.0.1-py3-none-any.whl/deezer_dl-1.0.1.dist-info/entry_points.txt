@@ -1,0 +1,3 @@
+[console_scripts]
+deezer_dl = deezer_dl.deezer_dl:deezer_dl
+
