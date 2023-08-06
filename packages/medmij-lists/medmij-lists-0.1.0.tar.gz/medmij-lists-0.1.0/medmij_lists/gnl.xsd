@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--File version: 7-->
+<xs:schema xmlns:gnl="xmlns://afsprakenstelsel.medmij.nl/gegevensdienstnamenlijst/release1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="xmlns://afsprakenstelsel.medmij.nl/gegevensdienstnamenlijst/release1/" elementFormDefault="qualified">
+    <!--Root element-->
+    <xs:element name="Gegevensdienstnamenlijst" type="gnl:Gegevensdienstnamenlijst"></xs:element>
+    <!--Logische klassen-->
+    <xs:complexType name="Gegevensdienstnamenlijst">
+        <xs:sequence>
+            <xs:element name="Tijdstempel" type="gnl:DatumTijd"></xs:element>
+            <xs:element name="Volgnummer" type="gnl:Positiefnummer"></xs:element>
+            <xs:element name="Gegevensdiensten" type="gnl:Gegevensdiensten">
+                <xs:unique name="Unieke_Gegevensdienst">
+                    <xs:selector xpath="gnl:Gegevensdienst/gnl:GegevensdienstId"></xs:selector>
+                    <xs:field xpath="."></xs:field>
+                </xs:unique>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Gegevensdiensten">
+        <xs:sequence>
+            <xs:element name="Gegevensdienst" type="gnl:Gegevensdienst" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Gegevensdienst">
+        <xs:sequence>
+            <xs:element name="GegevensdienstId" type="gnl:GegevensdienstId"></xs:element>
+            <xs:element name="Weergavenaam" type="gnl:Weergavenaam"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Basisklassen-->
+    <xs:simpleType name="DatumTijd">
+        <xs:restriction base="xs:dateTime">
+            <xs:pattern value=".{20,}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Positiefnummer">
+        <xs:restriction base="xs:positiveInteger"></xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="GegevensdienstId">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"></xs:minLength>
+            <xs:maxLength value="30"></xs:maxLength>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Weergavenaam">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="3"></xs:minLength>
+            <xs:maxLength value="50"></xs:maxLength>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
