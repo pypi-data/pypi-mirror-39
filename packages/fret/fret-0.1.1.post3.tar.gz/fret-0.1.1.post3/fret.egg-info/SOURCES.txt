@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+fret/__init__.py
+fret/__main__.py
+fret/cli.py
+fret/common.py
+fret/util.py
+fret.egg-info/PKG-INFO
+fret.egg-info/SOURCES.txt
+fret.egg-info/dependency_links.txt
+fret.egg-info/entry_points.txt
+fret.egg-info/requires.txt
+fret.egg-info/top_level.txt
