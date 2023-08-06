@@ -1,0 +1,7 @@
+twisted>=18.7
+autobahn>=0.18
+
+[tests]
+hypothesis
+pytest
+pytest-asyncio~=0.8
