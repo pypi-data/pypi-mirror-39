@@ -1,0 +1,8 @@
+channels:
+    - bioconda
+    - r
+    - ruby-lang
+    - conda-forge
+    - defaults
+dependencies:
+    - das_tool=1.1.1
