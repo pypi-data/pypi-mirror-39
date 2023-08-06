@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: magestore-aim
+Version: 1.1.4
+Summary: Magento source sample data option (False or None will be no sample data
+Home-page: https://github.com/Magestore/go-environment
+Author: Mars
+Author-email: mars@trueplus.vn
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+
+## ENV
+Prepare your server information file  
+USER = <username>  
+PASSWORD = <your_local_password>  
+BACKUP_ADDRESS = <ip_address>  
+BACKUP_USER = <user>  
+BACKUP_PASSWORD = <password>  
+BACKUP_SOURCE_PATH = <source_magento_path>  
+
+## server-info
+update this file for local deploy server and source server
+
