@@ -1,0 +1,42 @@
+Metadata-Version: 1.2
+Name: pyhandlers
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/_/pyhandlers
+Author: Bharath G.S
+Author-email: royalkingpin@gmail.com
+Maintainer: Bharath G.S
+Maintainer-email: royalkingpin@gmail.com
+License: MIT
+Description: # pyhandlers
+        
+        -----
+        
+        **Table of Contents**
+        
+        * [Installation](#installation)
+        * [License](#license)
+        
+        ## Installation
+        
+        pyhandlers is distributed on [PyPI](https://pypi.org) as a universal
+        wheel and is available on Linux/macOS and Windows and supports
+        Python 3.6+.
+        
+        ```bash
+        $ pip install pyhandlers
+        ```
+        
+        ## License
+        
+        pyhandlers is distributed under the terms of the
+        [MIT License](https://choosealicense.com/licenses/mit).
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
