@@ -1,0 +1,15 @@
+README.md
+VERSION
+setup.cfg
+setup.py
+archive_manager/__init__.py
+archive_manager/archive_manager.py
+archive_manager/interface.py
+archive_manager/module.py
+archive_manager/test_archive_manager.py
+archive_manager.egg-info/PKG-INFO
+archive_manager.egg-info/SOURCES.txt
+archive_manager.egg-info/dependency_links.txt
+archive_manager.egg-info/entry_points.txt
+archive_manager.egg-info/requires.txt
+archive_manager.egg-info/top_level.txt
