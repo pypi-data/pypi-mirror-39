@@ -1,0 +1,7 @@
+protobuf>=3.4.0
+dateparser
+requests
+six
+python-dateutil
+elasticsearch<7.0.0,>=6.0.0
+jmespath
