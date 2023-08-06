@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: pystack-cli
+Version: 1.0.0
+Summary: PyStack micro-framework command line interface
+Home-page: https://github.com/zoltancsontos/pystack.sh-cli
+Author: Zoltan Csontos
+Author-email: zoltan.csontos.dev@gmail.com
+License: UNKNOWN
+Description: # PyStack cli
+        
+        PyStack micro-framework command line interface.
+        
+        #### Installation:
+        ```pip install pystack-cli```
+        
+        #### Usage
+        * Create a new PyStack application:
+        ```pystack create app nameOfApp```
+        * Create a new Rest API resource: 
+        ```pystack create resource nameOfResource api/v1/some-url```
+        * Create a new page:
+        ```pystack create page PageName page-url```
+        * Runs the PyStack application on the provided port number:
+        ```pystack run --port=5555```
+        
+        Framework documentation: https://pystack.net
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
