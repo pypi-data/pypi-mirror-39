@@ -1,0 +1,3 @@
+[console_scripts]
+tsunami = tsunami.core.management:execute_from_command_line
+
