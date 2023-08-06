@@ -1,0 +1,52 @@
+Metadata-Version: 2.0
+Name: mds-mdsbackuplib
+Version: 0.5.3
+Summary: Library to backup virtual qemu/kvm machines
+Home-page: https://www.m-ds.de/
+Author: martin-data services
+Author-email: service@m-ds.de
+License: GPL-3
+Description-Content-Type: UNKNOWN
+Keywords: backup qemu/kvm virtual machine
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: mds-mdsshellcommand (>=0.6)
+Requires-Dist: mds-mdslogger (>=0.5.2)
+Requires-Dist: mds-mdslibvirt (>=0.1.0)
+
+mdsbackuplib
+============
+Stores QEMU/KVM-instances to a tar-archive, compressed, encrypted,
+upload to backupserver
+
+
+Install
+=======
+pip install mds-mdsbackuplib
+
+Requires
+========
+tar, gpg, curl
+
+Changes
+=======
+
+*0.5.3 - 21.12.2018*
+
+ - fix: removed unnecessary imports
+ - added protocols for upload
+
+*0.5.2 - 20.12.2018*
+
+ - public version
+
+
