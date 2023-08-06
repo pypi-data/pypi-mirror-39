@@ -1,0 +1,3 @@
+[console_scripts]
+fast2webp = fast2webp.__main__:main
+

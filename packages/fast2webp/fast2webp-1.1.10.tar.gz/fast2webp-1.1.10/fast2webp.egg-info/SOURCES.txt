@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+fast2webp/__init__.py
+fast2webp/__main__.py
+fast2webp.egg-info/PKG-INFO
+fast2webp.egg-info/SOURCES.txt
+fast2webp.egg-info/dependency_links.txt
+fast2webp.egg-info/entry_points.txt
+fast2webp.egg-info/top_level.txt
+fast2webp.egg-info/zip-safe
