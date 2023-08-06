@@ -1,0 +1,6 @@
+[
+  "test_manager.py::test_pipeline", 
+  "test_manager.py::test_cluster_call", 
+  "test_manager.py::test_get_prof", 
+  "test_manager.py::test_printargs"
+]
