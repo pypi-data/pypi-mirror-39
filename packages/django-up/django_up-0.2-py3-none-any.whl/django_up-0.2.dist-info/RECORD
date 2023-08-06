@@ -1,0 +1,14 @@
+djangoup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangoup/apps.py,sha256=xcLInJGmwE1UeP-fiHNcOGQ8JgW0malFRuzXXUjFQ5U,91
+djangoup/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+djangoup/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangoup/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangoup/management/commands/deploy.example.yml,sha256=qJmWkhmW26KBe01gKTK-IFiuQKJ6GBZ5dL4Z2VmO_8g,804
+djangoup/management/commands/deploy.py,sha256=8neN5iE66v_1GIjYwtrT-4-CDo8wvhzaAnCBUGt_3K0,21729
+djangoup/management/commands/gunicorn.conf.py,sha256=BDSC7PeAsOvzBgD8BD1FCVNKAgCT7u9jLeEayH91hyA,6690
+djangoup/management/commands/settings_init.example.py,sha256=4U6RDIGPPhKIowq9trgk9-8IhYvhGiIiMnMl7T1iBqg,99
+django_up-0.2.dist-info/LICENSE,sha256=smADv3I95lbgwQi0ZoFWgHp1VTFKgMVNn9CO_u_smQk,1088
+django_up-0.2.dist-info/METADATA,sha256=qs7bXSF9bN7MGLpIvLKKIVgJcuO-fOmdM17JhMruCq0,1389
+django_up-0.2.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+django_up-0.2.dist-info/top_level.txt,sha256=x0N429IY1BhbNvDShC4kZQo9IOq62yLNttyTfmeEMjU,9
+django_up-0.2.dist-info/RECORD,,
