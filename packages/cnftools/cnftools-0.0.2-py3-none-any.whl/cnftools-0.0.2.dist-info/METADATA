@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: cnftools
+Version: 0.0.2
+Summary: A collection of tools for working with and generating Dimacs CNF files.
+Home-page: https://github.com/easyas314159/cnftools
+Author: Kevin Loney
+Author-email: kevin.loney@brainsinjars.com
+License: MIT
+Keywords: dimacs cnf sat 3-cnf 3-sat 3cnf 3sat
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.4
+Requires-Dist: networkx (>=2.2)
+
+========
+cnftools
+========
+
+.. image:: https://circleci.com/gh/easyas314159/cnftools/tree/master.svg?style=svg
+    :target: https://circleci.com/gh/easyas314159/cnftools/tree/master
+
+A collection of tools for working with and generating Dimacs CNF files.
+
+------------
+Installation
+------------
+
+::
+
+	pip install cnftools
+
+``cnftools`` is listed in `PyPI <https://pypi.org/project/cnftools/>`_ and
+can be installed with ``pip``.
+
+-----
+Usage
+-----
+
+``cnftools`` exposes the ``cnf`` command-line interface for quickly generating
+Dimacs CNF files typically for use with a SAT solver.
+
+3cnf
+====
+
+Apply the Tseytin transformation [TSEY1970]_ to a CNF file producing an output
+where all clauses contain 3 or fewer literals.
+
+::
+
+	cnf 3cnf -i [input.cnf]
+
+simplify
+========
+
+Simply the input CNF file.
+
+::
+
+	cnf simplify -i [input.cnf] -o [output.cnf]
+
+stats
+=====
+
+Provide details about contents of a CNF file. This includes the number of literals,
+the total number of clauses, as well as a histogram of clause lengths.
+
+::
+
+	cnf stats -i [input.cnf]
+
+karps21
+=======
+
+This sub-command exposes utilities for generating CNF files based on
+Karp's 21 NP-Complete problems [KARP1972]_. For more details on this utility
+use the ``-h``/``--help`` option.
+
+::
+
+	cnf karps21 --help
+
+----------
+References
+----------
+
+.. [TSEY1970] Tseitin, Grigori. "On the complexity of derivation in propositional calculus." *Studies in constructive mathematics and mathematical logic* (1968): 115-125.
+.. [COOK1971] Cook, Stephen A. "The complexity of theorem-proving procedures." *Proceedings of the third annual ACM symposium on Theory of computing*. ACM, 1971.
+.. [KARP1972] Karp, Richard M. "Reducibility among combinatorial problems." *Complexity of computer computations*. Springer, Boston, MA, 1972. 85-103.
+
+
