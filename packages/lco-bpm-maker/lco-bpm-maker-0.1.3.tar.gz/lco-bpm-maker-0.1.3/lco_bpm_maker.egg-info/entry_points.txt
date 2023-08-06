@@ -1,0 +1,3 @@
+[console_scripts]
+lco_bpm_maker = bpm.generate_bpm:generate_bpm
+
