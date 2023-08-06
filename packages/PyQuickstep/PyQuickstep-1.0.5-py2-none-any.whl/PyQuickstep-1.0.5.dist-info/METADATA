@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: PyQuickstep
+Version: 1.0.5
+Summary: Pure Python Quickstep Driver
+Home-page: https://github.com/raghu1994/PyQuickstep
+Author: Raghavan
+Author-email: raghavan.eshwar94@gmail.com
+License: "MIT"
+Keywords: Quickstep
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Database
+Requires-Dist: cryptography
+Requires-Dist: google
+Requires-Dist: protobuf
+Requires-Dist: grpcio
+Requires-Dist: grpcio-tools
+
+# PyQuickstep
+Python Interface for Quickstep Database
+
+
