@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: seki
+Version: 0.1.2
+Summary: Automated security tools made easy.
+Home-page: https://github.com/oscarbc96/seki
+Author: Oscar Blanco Castan
+Author-email: oscarbc1996@gmail.com
+License: MIT
+Description: 
+        # Seki
+        Automated security tools made easy.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+Provides-Extra: dev
