@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pyverm
+Version: 0.0.3
+Summary: Modul for geodetic and surveying calculations
+Home-page: https://doppelmeter.github.io/pyverm/index.html
+Author: Marius Huerzeler
+Author-email: huerzeler.marius@gmail.com
+License: GNU GPLv3+
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3
+
+UNKNOWN
+
+
