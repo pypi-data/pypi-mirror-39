@@ -1,0 +1,4 @@
+pymodaq>=1.0.1
+pyvisa
+pyDAQmx
+opencv-python
