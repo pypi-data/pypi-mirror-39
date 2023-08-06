@@ -1,0 +1,3 @@
+[console_scripts]
+tps = tps.tps:main
+
