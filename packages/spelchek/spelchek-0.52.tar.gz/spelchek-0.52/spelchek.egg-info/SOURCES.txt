@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+setup.py
+spelchek/__init__.py
+spelchek/checker.py
+spelchek/corpus.txt
+spelchek.egg-info/PKG-INFO
+spelchek.egg-info/SOURCES.txt
+spelchek.egg-info/dependency_links.txt
+spelchek.egg-info/top_level.txt
