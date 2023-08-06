@@ -1,0 +1,6 @@
+pip>1.5
+click>6.0
+peewee>2.0
+qrcode>5.0
+requests>2.0
+librpi2caster>=2.0
