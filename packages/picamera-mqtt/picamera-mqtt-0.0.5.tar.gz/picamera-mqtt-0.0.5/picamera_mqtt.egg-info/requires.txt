@@ -1,0 +1,8 @@
+paho-mqtt
+pillow
+
+[mock_camera_client]
+numpy
+
+[picamera_client]
+picamera
