@@ -1,0 +1,3 @@
+[console_scripts]
+parsl-visualize = parsl.monitoring.web_app.index:cli_run
+
