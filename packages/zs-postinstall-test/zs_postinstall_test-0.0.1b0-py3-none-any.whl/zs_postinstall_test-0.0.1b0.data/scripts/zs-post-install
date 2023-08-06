@@ -1,0 +1,401 @@
+#!python
+
+import sys
+import os
+import requests
+import uuid
+import pprint
+import json
+import time
+
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+class color:
+   PURPLE = '\033[95m'
+   CYAN = '\033[96m'
+   DARKCYAN = '\033[36m'
+   BLUE = '\033[94m'
+   GREEN = '\033[92m'
+   YELLOW = '\033[93m'
+   RED = '\033[91m'
+   BOLD = '\033[1m'
+   UNDERLINE = '\033[4m'
+   END = '\033[0m'
+
+print "Run the ZeroStack post install tests."
+proceed1 = raw_input("Do you want to proceed? (yes/no): ")
+
+if(str(proceed1).lower() == 'y' or str(proceed1).lower() == 'yes'):
+    print "\n\nThe "+color.GREEN+"ZeroStack"+color.END+" post install test will run calls against the ZeroStack API\nto ensure the ZeroStack cloud platform is operational.\n\n"
+
+    print "Is the "+color.GREEN+"ZeroStack"+color.END+" RC file and certificate file present, \nand has the RC file been sourced?\n"
+    print "If not log into the "+color.GREEN+"ZeroStack"+color.END+" cloud as the cloud admin, \nand download the credentials file from the admin.local BU.\n\n"
+    proceed2 = raw_input("Do you want to proceed? (yes/no): ")
+    if(str(proceed2).lower() == 'y' or str(proceed2).lower() == 'yes'):
+        print "\n\n"+color.PURPLE+"Running the post install tests"+color.END+"\n\n"
+
+        #########Change these variables if need be############
+        zsbuname = 'PostInstallBU'
+        zsbuusername = 'buadmin'
+        zsbupassword = 'password'
+        zsbuemail = 'buadmin@email.com'
+
+        auth_username = os.getenv('OS_USERNAME',None)
+        auth_password = os.getenv('OS_PASSWORD',None)
+        auth_url = os.getenv('OS_AUTH_URL',None)
+        project_name = os.getenv('OS_PROJECT_NAME',None)
+        user_domain_name = os.getenv('OS_USER_DOMAIN_NAME',None)
+        project_domain_name = os.getenv('OS_PROJECT_DOMAIN_NAME',None)
+        cacert = os.getenv('OS_CACERT',None)
+        user_region = os.getenv('OS_REGION',None)
+
+        if(auth_username == None or auth_password == None or auth_url == None or \
+            project_name == None or user_region == None or user_domain_name == None or \
+            project_domain_name == None or cacert == None):
+             print "\n"+color.RED+"OS_REGION environment variable not set, source the rc file."+color.END+"\n"
+             sys.exit(1)
+
+        if(user_region == None):
+            print "\n"+color.RED+"Add user region variable OS_REGION to the Zerostack rc file and re-export, or export OS_REGION as an environment variable."+color.END+"\n"
+            sys.exit(1)
+
+        #get the region ID
+        regionsplit = auth_url.split('/')
+        region_id = regionsplit[6]
+
+        #get the base url
+        baseurl = auth_url[:-12]
+
+        #get the login token
+        try:
+            body = '{"auth":{"identity":{"methods":["password"],"password":{"user":{"domain":{"name":"%s"},"name":"%s","password":"%s"}}},"scope":{"domain":{"name":"%s"}}}}' \
+                    %(project_domain_name,auth_username,auth_password,project_domain_name)
+            token_url = auth_url+'/auth/tokens'
+            trequest = requests.post(token_url,verify = False,data = body,headers={"content-type":"application/json"})
+            jtoken = json.loads(trequest.text)
+            admin_user_id = jtoken['token']['user']['id']
+            token = trequest.headers.get('X-Subject-Token')
+            print "Create Cloud Admin Login: "+color.GREEN+"PASS"+color.END
+        except Exception as e:
+            print "Create Cloud Admin Login: "+color.RED+"FAIL"+color.END
+            print "\tReason: %s"%(e)
+            sys.exit(1)
+
+        #Create a new BU
+        domain_id = None
+        try:
+            send_url = auth_url + '/domains'
+            data = '{"domain":{"name":"%s","description":"Post Install Test BU.","ldapSet":false}}'%(zsbuname)
+            r = requests.post(send_url,verify = False,data = data,headers={"content-type":"application/json","X-Auth-Token":token})
+            j = json.loads(r.text)
+            #get the domain id
+            domain_id = j['domain']['id']
+            if(isinstance(uuid.UUID(domain_id), uuid.UUID)):
+                print "Create BU: "+color.GREEN+"PASS"+color.END
+            else:
+                print "Create BU: "+color.RED+"FAIL"+color.END
+        except Exception as e:
+            print "Create BU: "+color.RED+"FAIL"+color.END
+            print "\tReason: %s"%(e)
+            sys.exit(1)
+
+        user_id = None
+        try:
+            send_url = auth_url + '/users'
+            data = '{"user":{"email":"%s","enabled":true,"name":"%s","domain_id":"%s","password":"%s"}}'%(zsbuemail,zsbuusername,domain_id,zsbupassword)
+            r = requests.post(send_url,verify = False,data = data,headers={"content-type":"application/json","X-Auth-Token":token})
+            j = json.loads(r.text)
+            user_id = j['user']['id']
+            if(isinstance(uuid.UUID(user_id), uuid.UUID)):
+                print "Create BU Admin: "+color.GREEN+"PASS"+color.END
+            else:
+                print "Create BU Admin: "+color.RED+"FAIL"+color.END
+        except Exception as e:
+            print "Create BU Admin: "+color.RED+"FAIL"+color.END
+            print "\tReason: %s"%(e)
+            sys.exit(1)
+
+        project_id = None
+        try:
+            send_url = 'https://console.zerostack.com/v2/clusters/%s/projects'%(region_id)
+            data = '{"description":"Post Install Project.","domain_id":"%s","name":"PostInstallProject","finite_duration":false,\
+                   "metadata":{"templateId":"Large","custom_template":"true"},\
+                   "quota":{"compute_quota":{"cores":128,"floating_ips":64,"injected_file_content_bytes":-1,"injected_file_path_bytes":-1,"injected_files":-1,"instances":64,"key_pairs":-1,"metadata_items":-1,"ram":262144},\
+                   "storage_quota":{"backup_gigabytes":-1,"backups":-1,"snapshots":640,"volumes":640,"gigabytes":25600},\
+                   "network_quota":{"subnet":-1,"router":20,"port":-1,"network":64,"floatingip":64,"vip":-1,"pool":-1}}}'%(domain_id)
+            r = requests.post(send_url,verify = False,data = data,headers={"content-type":"application/json","X-Auth-Token":token})
+            j = json.loads(r.text)
+            project_id = j['id']
+            if(isinstance(uuid.UUID(domain_id), uuid.UUID)):
+               print "Create BU Project: "+color.GREEN+"PASS"+color.END
+            else:
+               print "Create BU Project: "+color.RED+"FAIL"+color.END
+        except Exception as e:
+            print "Create BU Project: "+color.RED+"FAIL"+color.END
+            print "\tReason: %s"%(e)
+            sys.exit(1)
+
+        #get the roles and find the Admin role ID
+        admin_id = None
+        try:
+            send_url = auth_url + '/roles'
+            r = requests.get(send_url,verify = False,headers={"content-type":"application/json","X-Auth-Token":token})
+            j = json.loads(r.text)
+            for role in j['roles']:
+                if(role['name'] == 'admin'):
+                    admin_id = role['id']
+        except Exception as e:
+            print e
+            sys.exit(1)
+
+
+        #add the admin
+        try:
+            send_url = auth_url + '/projects/%s/users/%s/roles/%s'%(project_id,user_id,admin_id)
+            r = requests.put(send_url,verify = False,headers={"content-type":"application/json","X-Auth-Token":token})
+        except Exception as e:
+            print e
+            sys.exit(1)
+
+        secgroup_id = None
+        try:
+            send_url = baseurl + '/neutron/v2.0/security-groups'
+            data = '{"security_group":{"name":"Basic","description":"security group Basic","tenant_id":"%s"}}'%(project_id)
+            r = requests.post(send_url,verify = False,data = data,headers={"content-type":"application/json","X-Auth-Token":token})
+            j = json.loads(r.text)
+            secgroup_id = j['security_group']['id']
+            if(isinstance(uuid.UUID(domain_id), uuid.UUID)):
+               ports = [{'icmp':'null'},{'tcp':'22'},{'tcp':'80'}]
+               for port in ports:
+                   try:
+                       send_url = baseurl + '/neutron/v2.0/security-group-rules'
+                       data = '{"security_group_rule":{"direction":"ingress","port_range_min":%s,"ethertype":"IPv4","port_range_max":%s,"protocol":"%s","security_group_id":"%s","tenant_id":"%s"}}'%(port.values()[0],port.values()[0],port.keys()[0],secgroup_id,project_id)
+                       r = requests.post(send_url,verify = False,data = data,headers={"content-type":"application/json","X-Auth-Token":token})
+                       j = json.loads(r.text.encode('latin-1'))
+                   except Exception as e:
+                       print e
+                       sys.exit(1)
+               print "Create Project Security Group: "+color.GREEN+"PASS"+color.END
+            else:
+               print "Create Project Security Group: "+color.RED+"FAIL"+color.END
+        except Exception as e:
+            print "Create Project Security Group: "+color.RED+"FAIL"+color.END
+            print "\tReason: %s"%(e)
+            sys.exit(1)
+
+        project_token = None
+        try:
+            send_url = auth_url+"/auth/tokens"
+            data = '{"auth":{"scope":{"project":{"id":"%s"}},"identity":{"methods":["token"],"token":{"id":"%s"}}}}'%(project_id,token)
+            r = requests.post(send_url,verify = False,data = data,headers={"content-type":"application/json","X-Auth-Token":token})
+            project_token = r.headers.get('X-Subject-Token')
+        except Exception as e:
+            print e
+            sys.exit(1)
+
+        post_key = "%s_keypair"%(zsbuname)
+        try:
+            send_url = baseurl+"/nova/v2/%s/os-keypairs"%(project_id)
+            data = '{"keypair":{"name":"%s_keypair"}}'%(zsbuname)
+            r = requests.post(send_url,verify = False,data = data,headers={"content-type":"application/json","X-Auth-Token":project_token})
+            keyinfo = json.loads(r.text.encode('latin-1'))
+            print "Create Project Security Key: "+color.GREEN+"PASS"+color.END
+        except Exception as e:
+            print "Project Project Security Key: "+color.RED+"FAIL"+color.END
+            print "\tReason: %s"%(e)
+            sys.exit(1)
+
+        time.sleep(2)
+        keypair = keyinfo['keypair']
+
+        #update the project
+        try:
+            send_url = 'https://console.zerostack.com/v2/clusters/%s/projects/%s'%(region_id,project_id)
+            data = '{"description":"Post Install Project.","domain_id":"%s","name":"PostInstallProject","finite_duration":false,\
+                 "metadata":{"templateId":"Large","custom_template":"true","userName":"%s","user_id":"%s","fingerprint":"%s","keypairName":"%s","private_key":%s,"public_key":"%s"},\
+                 "quota":{"compute_quota":{"cores":128,"floating_ips":64,"injected_file_content_bytes":-1,"injected_file_path_bytes":-1,"injected_files":-1,"instances":64,"key_pairs":-1,"metadata_items":-1,"ram":262144},\
+                 "storage_quota":{"backup_gigabytes":-1,"backups":-1,"snapshots":640,"volumes":640,"gigabytes":25600},\
+                 "network_quota":{"subnet":-1,"router":20,"port":-1,"network":64,"floatingip":64,"vip":-1,"pool":-1}}}'%(domain_id,auth_username,admin_user_id,keypair['fingerprint'],keypair['name'],json.dumps(keypair['private_key']),keypair['public_key'])
+            r = requests.patch(send_url,verify = False,data = data,headers={"content-type":"application/json","X-Auth-Token":token})
+            j = json.loads(r.text)
+            project_id = j['id']
+        except Exception as e:
+            print e
+            sys.exit(1)
+
+        network_id = None
+        subnet_id = None
+        try:
+            send_url = 'https://console.zerostack.com/v2/clusters/%s/networks'%(region_id)
+            data = '{"admin_state_up":true,"name":"PostInstall-network","subnets":[{"name":"Subnet1","enable_dhcp":true,"gateway_ip":"10.10.10.1","ip_version":4,"cidr":"10.10.10.0/24","allocation_pools":[{"start":"10.10.10.2","end":"10.10.10.254"}],"dns_nameservers":["8.8.8.8"],"tenant_id":"%s"}],"tenant_id":"%s","visibility":"buShared","visibility_scope":[{"domain_id":"%s"}],"project_id":"%s"}'%(project_id,project_id,region_id,project_id)
+            r = requests.post(send_url,verify = False,data = data,headers={"content-type":"application/json","X-Auth-Token":project_token})
+            j = json.loads(r.text)
+            network_id = j['id']
+            subnet_id = j['subnet_details'][0]['id']
+            if(isinstance(uuid.UUID(network_id), uuid.UUID) and isinstance(uuid.UUID(subnet_id), uuid.UUID)):
+                print "Create Project Network: "+color.GREEN+"PASS"+color.END
+            else:
+                print "Create Project Network: "+color.RED+"FAIL"+color.END
+        except Exception as e:
+            print "Project Project Network: "+color.RED+"FAIL"+color.END
+            print "\tReason: %s"%(e)
+            sys.exit(1)
+
+        #list the available external networks
+        ext_net_id = None
+        try:
+            send_url = 'https://console.zerostack.com/v2/clusters/%s/networks/?visibility=public&domain_id=%s&project_id=%s'%(region_id,domain_id,project_id)
+            r = requests.get(send_url,verify = False,headers={"content-type":"application/json","X-Auth-Token":token})
+            nets = json.loads(r.text)
+            for net in nets:
+                if(net['provider:physical_network'] == 'external' and net['router:external'] == True and net['shared'] == True):
+                    ext_net_id = net['id']
+            if(isinstance(uuid.UUID(ext_net_id), uuid.UUID)):
+                print "Find External Network: "+color.GREEN+"PASS"+color.END
+            else:
+                print "Find External Network: "+color.RED+"FAIL"+color.END
+        except Exception as e:
+            print "Find External Network: "+color.RED+"FAIL"+color.END
+            print "\tReason: %s"%(e)
+            sys.exit(1)
+
+        #add the router
+        router_id = None
+        try:
+            send_url = baseurl + '/neutron/v2.0/routers'
+            data = '{"router":{"name":"PostInstall-Router","external_gateway_info":{"network_id":"%s"},"tenant_id":"%s"}}'%(ext_net_id,project_id)
+            r = requests.post(send_url,verify = False,data = data,headers={"content-type":"application/json","X-Auth-Token":project_token})
+            j = json.loads(r.text)
+            router_id = j['router']['id']
+            if(isinstance(uuid.UUID(router_id), uuid.UUID)):
+                print "Create Network Router: "+color.GREEN+"PASS"+color.END
+            else:
+                print "Create Network Router: "+color.RED+"FAIL"+color.END
+        except Exception as e:
+            print "Create Network Router: "+color.RED+"FAIL"+color.END
+            print "\tReason: %s"%(e)
+            sys.exit(1)
+
+        #add the router interface to the network subnet
+        try:
+            send_url = baseurl + '/neutron/v2.0/routers/%s/add_router_interface'%(router_id)
+            data = '{"subnet_id":"%s"}'%(subnet_id)
+            r = requests.put(send_url,verify = False,data = data,headers={"content-type":"application/json","X-Auth-Token":project_token})
+            j = json.loads(r.text)
+        except Exception as e:
+            print e
+            sys.exit(1)
+
+        #add router gateway interface
+        try:
+            send_url = baseurl + '/neutron/v2.0/routers/%s'%(router_id)
+            data = '{"router":{"name":"PostInstall-Router","external_gateway_info":{"network_id":"%s"},"admin_state_up":true}}'%(ext_net_id)
+            r = requests.put(send_url,verify = False,data = data,headers={"content-type":"application/json","X-Auth-Token":project_token})
+            j = json.loads(r.text)
+        except Exception as e:
+            print e
+            sys.exit(1)
+
+        try:
+            send_url = 'https://console.zerostack.com/v2/clusters/%s/networks/%s'%(region_id,network_id)
+            data = '{"name":"PostInstall-network","router:external":false,"admin_state_up":true,"subnets":[{"id":"%s"}],"visibility":"buShared","visibility_scope":[{"domain_id":"%s"}]}'%(subnet_id,domain_id)
+            r = requests.put(send_url,verify = False,data = data,headers={"content-type":"application/json","X-Auth-Token":project_token})
+            j = json.loads(r.text)
+        except Exception as e:
+            print e
+            sys.exit(1)
+
+        image_id = None
+        try:
+            send_url = baseurl + '/glance/v2/images?visibility=public'
+            r = requests.get(send_url,verify = False,headers={"content-type":"application/json","X-Auth-Token":token})
+            images = json.loads(r.text)
+            count = 0
+            im = []
+            for image in images['images']:
+                im.append({'count':count,'imagename':image['name'],'imageid':image['id']})
+                count += 1
+            print "Query Image Catalog: "+color.GREEN+"PASS"+color.END
+        except Exception as e:
+            print "Query Image Catalog: "+color.RED+"FAIL"+color.END
+            print "\tReason: %s"%(e)
+            sys.exit(1)
+
+        print "\n"+color.BLUE+"Select an image to boot the Post Install VM from."+color.END+"\n"
+        for i in im:
+            print "ID: %s   Name: %s"%(i['count'],i['imagename'])
+
+        try:
+            imid = raw_input('Enter the ID of the image to use: ')
+            for i in im:
+                if(i['count'] == int(imid)):
+                    image_id = i['imageid']
+                    break
+        except Exception as e:
+            print e
+            sys.exit(1)
+
+        try:
+            send_url = 'https://console.zerostack.com/v2/clusters/%s/projects/%s/vm'%(region_id,project_id)
+            data = '{"name":"%s","resources":{"server":{"type":"OS::Nova::Server","os_req":{"server":{"name":"%s","flavorRef":"4","block_device_mapping_v2":[{"device_type":"disk","disk_bus":"virtio","device_name":"/dev/vda","source_type":"volume","destination_type":"volume","delete_on_termination":true,"boot_index":"0","uuid":"{{.bootVol}}"}],"networks":[{"uuid":"%s"}],"security_groups":[{"name":"Basic"}],"metadata":{"created_by":"%s","owner":"PostInstall","zs_internal_vm_ha":"false","delete_volume_on_termination":"true","isReservedFloatingIP":"false"},"user_data":"%s","delete_on_termination":true,"key_name":"%s"},"os:scheduler_hints":{"volume_id":"{{.bootVol}}"}}},"bootVol":{"type":"OS::Cinder::Volume","os_req":{"volume":{"availability_zone":null,"description":null,"size":20,"name":"bootVolume-ansible","volume_type":"relhighcap_type","disk_bus":"virtio","device_type":"disk","source_type":"image","device_name":"/dev/vda","bootable":true,"tenant_id":"%s","imageRef":"%s","enabled":true}}},"fip":{"type":"OS::Neutron::FloatingIP","os_req":{"floatingip":{"floating_network_id":"%s","tenant_id":"%s","port_id":"{{.port_id_0}}"}}}}}'%('PostInstallVM','PostInstallVM',network_id,zsbuusername,None,post_key,project_id,image_id,ext_net_id,project_id)
+            r = requests.post(send_url,verify = False,data = data,headers={"content-type":"application/json","X-Auth-Token":project_token})
+            vm_id = json.loads(r.text)
+            if(isinstance(uuid.UUID(vm_id), uuid.UUID)):
+                print "\nCreate VM: "+color.GREEN+"PASS"+color.END
+            else:
+                print "\nCreate VM: "+color.RED+"FAIL"+color.END
+        except Exception as e:
+            print "\nCreate VM: "+color.RED+"FAIL"+color.END
+            print "\tReason: %s"%(e)
+            sys.exit(1)
+
+        #create a block volume on SSD
+        try:
+            send_url = baseurl + '/cinder/v2/%s/volumes'%(project_id)
+            data = '{"volume":{"availability_zone":null,"source_volid":null,"description":null,"snapshot_id":null,"size":10,"name":"PostInstallVol","imageRef":null,"volume_type":"highiops_type","source_type":"Not Applicable","source_name":"Not Applicable","showNameError":false,"showBootVolumeSizeError":false}}'
+            r = requests.post(send_url,verify = False,data = data,headers={"content-type":"application/json","X-Auth-Token":project_token})
+            j = json.loads(r.text)
+            volume_id = j['volume']['id']
+            if(isinstance(uuid.UUID(volume_id), uuid.UUID)):
+                print "\nCreate Volume: "+color.GREEN+"PASS"+color.END
+            else:
+                print "\nCreate Volume: "+color.RED+"FAIL"+color.END
+        except Exception as e:
+            print "\nCreate Volume: "+color.RED+"FAIL"+color.END
+            print "\tReason: %s"%(e)
+            sys.exit(1)
+
+        #attach block volume
+        '''
+        try:
+            send_url = baseurl + '/nova/v2/%s/servers/%s/os-volume_attachments'%(project_id,vm_id)
+            print send_url
+            data = '{"volumeAttachment":{"volumeId":"%s","device":"/dev/vdb","disk_bus":"ide"}}'%(volume_id)
+            print data
+            r = requests.post(send_url,verify = False,data = data,headers={"content-type":"application/json","X-Auth-Token":project_token})
+            j = json.loads(r.text)
+            print j
+            att_id = j['volumeAttachment']['id']
+            if(isinstance(uuid.UUID(att_id), uuid.UUID)):
+                print "\nCreate Volume Attach: "+color.GREEN+"PASS"+color.END
+            else:
+                print "\nCreate Volume Attach: "+color.RED+"FAIL"+color.END
+        except Exception as e:
+            print "\nCreate Volume Attach: "+color.RED+"FAIL"+color.END
+            print "\tReason: %s"%(e)
+            sys.exit(1)
+        '''
+        print "\n\n"+color.PURPLE+"All post install test have run to completion."+color.END+"\n\n"
+    elif(proceed2.lower == 'n' or proceed2.lower == 'no'):
+        print "ZeroStack post install is exiting."
+        exit
+    else:
+        print "Unknown input given."
+        exit
+elif(proceed1.lower == 'n' or proceed1.lower == 'no'):
+    print "ZeroStack post install is exiting."
+    exit
+else:
+    print "Unknown input given."
+    exit
