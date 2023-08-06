@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load config %}
+{% block page_title %}
+    <h3>Hier siehst du die Zukunft {% enriched_organisation "G" %}</h3>
+{% endblock %}
+
+{% block content %}
+    <div class="row mb-3">
+        <div class="col-md-12">
+            Wenn jetzt alle gewünschten Änderungen der {% vocabulary "member_pl" %} in Kraft treten würden, dann
+            hätte {% enriched_organisation "N" %} die folgenden{% vocabulary "subscription_pl" %} und Zusatzabos.
+        </div>
+    </div>
+    <div class="row mb-1">
+        <label class="offset-md-4 col-md-4">Aktuell</label>
+        <label class="col-md-4">Zukunft</label>
+    </div>
+    {% for line in subscription_lines %}
+        <div class="row mb-1">
+            <label class="col-md-4">{{ line.name }}</label>
+            <label class="col-md-4">{{ line.now }}</label>
+            <label class="col-md-4">{{ line.future }}</label>
+        </div>
+    {% endfor %}
+    {% for line in extra_lines %}
+        <div class="row mb-1">
+            <label class="col-md-4">{{ line.name }}</label>
+            <label class="col-md-4">{{ line.now }}</label>
+            <label class="col-md-4">{{ line.future }}</label>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

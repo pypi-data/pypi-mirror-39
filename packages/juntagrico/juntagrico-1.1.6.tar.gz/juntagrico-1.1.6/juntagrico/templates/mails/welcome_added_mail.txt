@@ -1,0 +1,45 @@
+{% extends "mails/email.txt" %}
+{% load config %}
+{% block content %}
+{% config "enable_shares" as enable_shares %}
+Wir freuen uns, dich bei {% enriched_organisation "D" %} zu begrüssen.
+{% if enable_shares %}
+Soeben hat dich '{{name}}' zu ihrem/seinem GemüseAbo hinzugefügt und für dich {{ shares }} Anteilsscheine(e) bestellt.
+{% else %}
+Soeben hat dich '{{name}}' zu ihrem/seinem GemüseAbo hinzugefügt.
+{% endif %}
+
+Um dich auf {{serverurl}} einloggen zu können benutzte folgende Daten:
+Email: {{ username }}
+Passwort: {{ password }}
+Bitte setze dir hier gleich ein neues Passwort:
+{{serverurl}}/my/password
+
+{% if enable_shares %}
+Du erhälst für deine {% vocabulary "share_pl" %} separate Emails mit den Inforamtionen wie du diese bezalen kannst.
+{% endif %}
+{% if subscription is not None %}
+Sobald du {% vocabulary "member_type" %} bist, setzen wir dich auf die Warteliste für ein Gemüse-Abo. Wird eines frei, melden wir uns bei dir.
+
+{% endif %}
+Gerne darfst du im Garten vorbeikommen – schau dich auf der Online-Plattform {{serverurl}}/my/home um und melde dich für einen Einsatz an, wenn du Lust hast. 
+
+Damit wir dich als {% vocabulary "member_type" %} freischalten können nutze den Bestätigungslink um deine Email zu bestätigen.
+Bestätigungslink: {{ serverurl }}/my/confirm/{{ hash }}
+Damit bestätigst du, dass du damit einverstanden bist {% config "organisation_name" %}-{% vocabulary "member_type" %} zu werden,dem{% vocabulary "subscription" %} beizutreten, die bestellten {% vocabulary "share_pl" %} zu erwerben.
+Ebenfalls bestätigst du, dass du die Statuten ({% config "bylaws" as bylaws %}{{ bylaws|safe }})
+{% config "business_regulations" as business_regulations %}{% if business_regulations.strip %} und das Betriebsreglement({{ business_regulations|safe }}){% endif %}
+
+ gelesen hast.
+
+Solltest du irrtumlicherweise hier eingetragen worden sein melde dies bitte {% config "info_email" %}.
+
+{% config "faq_doc" as faq_doc %}
+{% if faq_doc.strip %}
+Für weitere Fragen schaust du in den FAQ ({{ faq_doc|safe }}) nach oder schreibst eine Mail an {% config "info_email" %}.
+{% else %}
+Für weitere Fragen schreibe eine Mail an {% config "info_email" %}.
+{% endif %}
+
+Bis bald und liebe Grüsse die {% config "organisation_name" %}-Betriebsgruppe
+{% endblock %}
