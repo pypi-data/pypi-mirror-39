@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: infi.locking
+Version: 0.1.2
+Summary: infi.locking module
+Home-page: https://git.infinidat.com/host-opensource/infi.locking
+Author: Arnon Yaari
+Author-email: arnony@infinidat.com
+License: PSF
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: setuptools
+Requires-Dist: infi.pyutils
+Requires-Dist: lockfile
+
+infi.locking is a modlue used to manage lock files in the Linux enviroment
+
+
