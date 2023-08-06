@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: sundry
+Version: 0.0.1
+Summary: miscellaneous code
+Home-page: https://github.com/jamesabel/sundry
+Author: James Abel
+Author-email: j@abel.co
+License: MIT License
+Download-URL: https://github.com/jamesabel/sundry/archive/master.zip
+Keywords: utility
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst
+Requires-Dist: python-dateutil
+
+
+Sundry
+======
+
+Miscellaneous Code
+
+
