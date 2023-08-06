@@ -1,0 +1,27 @@
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+# Actual ignores
+*.d
+*.o
+*.so
+*.root
+*.pdf
+*.pyc
+*.swp
+*.egg-info
+
+cython_debug/
+
+jppy.cpp
+
+.ropeproject
+dist
+
+jppy/*.cpp
