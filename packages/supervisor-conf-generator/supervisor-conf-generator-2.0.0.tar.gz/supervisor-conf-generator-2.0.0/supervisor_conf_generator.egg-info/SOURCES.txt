@@ -1,0 +1,9 @@
+README.md
+setup.py
+supervisor_conf_generator/__init__.py
+supervisor_conf_generator/supervisor_conf_generator.py
+supervisor_conf_generator.egg-info/PKG-INFO
+supervisor_conf_generator.egg-info/SOURCES.txt
+supervisor_conf_generator.egg-info/dependency_links.txt
+supervisor_conf_generator.egg-info/requires.txt
+supervisor_conf_generator.egg-info/top_level.txt
