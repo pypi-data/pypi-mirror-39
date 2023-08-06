@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: crawlera-session
+Version: 1.0.1
+Summary: Class that provides decorators and functions for easy handling of crawlera sessions in a scrapy spider.
+Home-page: https://github.com/kalessin/crawlera-sessions
+Author: Martin Olveyra
+Author-email: molveyra@gmail.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
