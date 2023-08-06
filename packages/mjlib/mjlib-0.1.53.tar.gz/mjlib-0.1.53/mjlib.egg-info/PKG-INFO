@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: mjlib
+Version: 0.1.53
+Summary: Matt's General Python Library
+Home-page: https://github.com/mgroth0/matt_py_tools
+Author: Matt Groth
+Author-email: mgroth49@gmail.com
+License: MIT
+Download-URL: https://github.com/mgroth0/matt_py_tools/releases/tag/0.1.53
+Description: UNKNOWN
+Keywords: matt,james,groth,library
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
