@@ -1,0 +1,116 @@
+Metadata-Version: 1.2
+Name: xml2rfc
+Version: 2.15.5
+Summary: Xml2rfc generates RFCs and IETF drafts from document source in XML according to the dtd in RFC2629.
+Home-page: https://tools.ietf.org/tools/xml2rfc/trac/
+Author: Henrik Levkowetz, Josh Bothun
+Author-email: tools-discuss@ietf.org
+Maintainer: Henrik Levkowetz
+Maintainer-email: henrik@levkowetz.com
+License: Simplified BSD Licence
+Download-URL: https://pypi.python.org/pypi/xml2rfc
+Description: Introduction
+        ============
+        
+        The IETF_ uses a specific format for the standards and other documents it
+        publishes as RFCs_, and for the draft documents which are produced when
+        developing documents for publications.  There exists a number of different
+        tools to facilitate the formatting of drafts and RFCs according to the
+        existing rules, and this tool, **xml2rfc**, is one of them.  It takes as input
+        an xml file which contains the text and meta-information about author names
+        etc., and transforms it into suitably formatted output.  The input xml file
+        should follow the DTD given in RFC2629_ (or it's `inofficial successor`_).
+        
+        The current incarnation of **xml2rfc** provides output in the following
+        formats: Paginated and unpaginated ascii text, html, nroff, and expanded xml.
+        Only the paginated text format is currently (January 2013) accepable as draft
+        submissions to the IETF.
+        
+        .. _IETF: https://www.ietf.org/
+        .. _RFCs: https://www.rfc-editor.org/
+        .. _RFC2629: https://tools.ietf.org/html/rfc2629
+        .. _inofficial successor: https://tools.ietf.org/html/draft-mrose-writing-rfcs
+        
+        Usage
+        =====
+        
+        xml2rfc accepts a single XML document as input and outputs to one or more conversion formats.
+        
+        **Basic Usage**: ``xml2rfc SOURCE [options] FORMATS...``
+        
+        Run ``xml2rfc --help`` for a full listing of command-line options.
+        
+        
+        Changelog
+        =========
+        
+        
+        Version 2.15.5 (21 Dec 2018)
+        ------------------------------------------------
+        
+        
+          * Added code to look for input marked as v3, and process that as v3 
+            without requiring an explicit --v3 switch.  This should make it easier to 
+            transition to v3 draft submissions.
+        
+          * Fixed a bug related to cref handling.  Fixes issue #389.
+        
+          * Ensured propagation of options to parser and url resolver, and improved 
+            the error message for externals without .xml extension that give 404.
+        
+          * Fixed an include without explicit extension in a test input file, in 
+            order to work with the stricter v3 formatter include processing.
+        
+        
+        
+        
+        
+        
+        Version 2.15.4 (18 Dec 2018)
+        ------------------------------------------------
+        
+        
+          * Tweaked the mkrelease script to prevent inclusion of temporary editor 
+            files.
+        
+          * Fixed a problem with string vs byte for referece file output.
+        
+          * Added a limitation on the intervaltree requirements to avoid a broken
+            version.
+        
+        
+        
+        
+        
+        
+        Version 2.15.3 (05 Dec 2018)
+        ------------------------------------------------
+        
+        
+          This release fixes some issues found when running the html renderer over
+          a corpus of all drafts submitted with xml format over the last 30 days,
+          and an installation issue.
+        
+          * Handled utf-8 reloading in setup.py under py27 without using six, which 
+            might be unavailable before the installation completes.
+        
+          * Always convert python lists to comma-separated strings before calling 
+            on i18n address validation.
+        
+          * Added some guards to prevent operations on None.
+        
+        
+        
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Markup :: XML
+Classifier: License :: OSI Approved :: BSD License
