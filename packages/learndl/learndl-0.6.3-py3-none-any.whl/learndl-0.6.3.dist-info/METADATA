@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: learndl
+Version: 0.6.3
+Summary: Deep Learning for beginners
+Home-page: https://github.com/mrcorecoder/learndl
+Author: indeep
+Author-email: qianshuai2018@aliyun.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+
+LearnDL: Deep Learning for beginners
+written in Python and NumPy.
+
+Just for learning Deep Learning.
+
+LearnDL is compatible with Python 3.6
+and is distributed under the Apache license 2.0.
+
+
