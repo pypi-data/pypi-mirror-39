@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+check-manifest = "*"
+coveralls = "*"
+enum34 = "*"
+flake8 = "*"
+kenlm = {git = "git://github.com/kpu/kenlm.git"}
+nltk = "*"
+pyroma = "*"
+pytest = "*"
+pytest-runner = "*"
+readme_renderer = {extras = ["md"],version = "*"}
+recommonmark = "*"
+sphinx = "*"
+twine = "*"
+yapf = "*"
+
+[packages]
+
+[requires]
+python_version = "2.7"
