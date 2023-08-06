@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+genice_rdf/__init__.py
+genice_rdf.egg-info/PKG-INFO
+genice_rdf.egg-info/SOURCES.txt
+genice_rdf.egg-info/dependency_links.txt
+genice_rdf.egg-info/entry_points.txt
+genice_rdf.egg-info/requires.txt
+genice_rdf.egg-info/top_level.txt
+genice_rdf/formats/_RDF.py
+genice_rdf/formats/__init__.py
