@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+func_analysis/__init__.py
+func_analysis/func_analysis.py
+func_analysis.egg-info/PKG-INFO
+func_analysis.egg-info/SOURCES.txt
+func_analysis.egg-info/dependency_links.txt
+func_analysis.egg-info/not-zip-safe
+func_analysis.egg-info/requires.txt
+func_analysis.egg-info/top_level.txt
+tests/__init__.py
+tests/test_all_analysis.py
