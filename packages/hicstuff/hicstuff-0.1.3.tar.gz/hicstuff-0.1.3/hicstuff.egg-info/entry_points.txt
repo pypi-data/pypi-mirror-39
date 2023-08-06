@@ -1,0 +1,4 @@
+[console_scripts]
+fraglist = hicstuff.fraglist:main
+vizmap = hicstuff.vizmap:main
+
