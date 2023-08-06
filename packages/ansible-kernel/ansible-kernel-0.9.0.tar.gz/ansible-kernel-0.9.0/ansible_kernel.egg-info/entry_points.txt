@@ -1,0 +1,5 @@
+[nbconvert.exporters]
+ansible_playbook = ansible_kernel.exporters:AnsiblePlaybookExporter
+ansible_tasks = ansible_kernel.exporters:AnsibleTasksExporter
+ansible_zip = ansible_kernel.exporters:AnsibleZipExporter
+

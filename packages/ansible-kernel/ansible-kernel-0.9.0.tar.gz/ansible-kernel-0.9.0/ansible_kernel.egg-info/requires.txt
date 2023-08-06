@@ -1,0 +1,9 @@
+ansible
+ansible-runner>=1.1.0
+PyYAML
+psutil
+jupyter
+tqdm
+docopt
+six
+ipywidgets
