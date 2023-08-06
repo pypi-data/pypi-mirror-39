@@ -1,0 +1,11 @@
+README.md
+setup.py
+marshmallow_dynamodb/__init__.py
+marshmallow_dynamodb/fields.py
+marshmallow_dynamodb.egg-info/PKG-INFO
+marshmallow_dynamodb.egg-info/SOURCES.txt
+marshmallow_dynamodb.egg-info/dependency_links.txt
+marshmallow_dynamodb.egg-info/requires.txt
+marshmallow_dynamodb.egg-info/top_level.txt
+test/test_deserialization.py
+test/test_serialization.py
