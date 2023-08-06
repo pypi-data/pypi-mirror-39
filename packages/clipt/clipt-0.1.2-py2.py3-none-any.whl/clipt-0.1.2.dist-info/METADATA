@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: clipt
+Version: 0.1.2
+Summary: clipt makes graphs using matplotlib from the command line
+Home-page: https://bitbucket.org/loisosubbelohde/clipt.git
+Author: Stephen Wasilewski
+Author-email: stephen@coolshadow.com
+License: Mozilla Public License 2.0 (MPL 2.0)
+Keywords: clipt
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Requires-Python: ~=2.7
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: clasp
+
+About
+-----
+Clipt (command line interface plotting tool) uses clasp and matplotlib
+to aid in plotting data files using matplotlib directly from the command
+line using a extensive set of options.  See the clasp documentation for
+imformation about using config files.
+
+
+Installation
+------------
+
+pip install clipt
+
+::
+
+    cd path/to/uncompressed/folder/
+    pip install .
+
+Autocomplete
+------------
+
+::
+
+    _RU_PLOT_COMPLETE=source ru_plot > clipt_complete.sh
+
+
+In your .bash_profile::
+
+    source path/to/bin/clipt_complete.sh
+
+
+Licence
+-------
+
+| Copyright (c) 2018 Stephen Wasilewski
+| This Source Code Form is subject to the terms of the Mozilla Public
+| License, v. 2.0. If a copy of the MPL was not distributed with this
+| file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+
+=======
+History
+=======
+
+0.1.2
+-----
+first release on pypi
+
+0.1.1
+-----
+remove dependency link from setup.py
+
+0.1.0
+-----
+first stable release
+
+0.0.1
+-----
+Initial setup of the directory
+
+
+
