@@ -1,0 +1,13 @@
+pyyaml
+future
+shutilwhich
+
+[pypi]
+docutils
+Pygments
+
+[test]
+pandocfilters
+configparser
+pytest-cov
+future
