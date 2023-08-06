@@ -1,0 +1,12 @@
+django_tempus_dominus-5.1.2.1.dist-info/METADATA,sha256=CRzPGzZIDKV7zHY4Q5rA4aLjHBWq5n0Xy4ik5QGCS8I,7139
+django_tempus_dominus-5.1.2.1.dist-info/RECORD,,
+django_tempus_dominus-5.1.2.1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+django_tempus_dominus-5.1.2.1.dist-info/top_level.txt,sha256=N_yjKb2lnmVgofur8eN8n2dO_6XeRzSq2XNcvmHvLjw,21
+tempus_dominus/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tempus_dominus/widgets.py,sha256=2guT-DM1_5RFaRtmyPzfc7MyLRsDbZYcRP5jgd2BiWY,6496
+tempus_dominus/templates/tempus_dominus/widget.html,sha256=dX0-rvyXlNde5xkKvN4bnd6LuTC6Wsf78axcohTtdiM,957
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/forms.py,sha256=1kyNi-WIdB2NmAwfe9HJnonbDT-XghObCNvG4qBOW34,1799
+tests/settings.py,sha256=jUA4ZdteP2eFYrseLrFQTxCHxriS_ihjXedaAdN7cGs,283
+tests/test_forms.py,sha256=gqbVN5c-RXmJc626Uxrt-cxkWbe5m42Pp6qSDRziQGE,2192
+tests/test_widgets.py,sha256=a_4pUVS3cm6_RoNyfYRHT40i0kj-arbBHE4tIn64JpQ,1264
