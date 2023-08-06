@@ -1,0 +1,15 @@
+<div class="col">
+    {% if user %}
+        <div class="col-md-7">Пользователь: {{ user }}</div>
+    {% endif %}
+
+    <div class="col-md-7">Email: {{ email }}</div>
+</div>
+<div class="col-md-7">
+    <th>Обратная связь</th>
+</div>
+<div class="col">
+    <div class="col-md-7">Тема: {{ subject }}</div>
+    <div class="col-md-7">Тип: {{ type }}</div>
+    <div class="col-md-7">Текст: {{ text }}</div>
+</div>
