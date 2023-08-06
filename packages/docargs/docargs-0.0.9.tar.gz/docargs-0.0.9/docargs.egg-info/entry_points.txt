@@ -1,0 +1,6 @@
+[console_scripts]
+docargs = docargs.cli:cli
+
+[flake8.extension]
+D00 = docargs.flake8:DocargsChecker
+
