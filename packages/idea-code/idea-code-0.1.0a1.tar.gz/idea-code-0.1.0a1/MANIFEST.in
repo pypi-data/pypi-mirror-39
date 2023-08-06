@@ -1,0 +1,5 @@
+include MIT
+recursive-include iDEA *pyx
+recursive-include examples *.ipynb
+recursive-include scripts *.py
+
