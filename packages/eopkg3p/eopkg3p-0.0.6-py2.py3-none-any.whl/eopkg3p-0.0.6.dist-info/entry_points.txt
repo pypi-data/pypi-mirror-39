@@ -1,0 +1,3 @@
+[console_scripts]
+eopkg3p = eopkg3p.cli:cli
+
