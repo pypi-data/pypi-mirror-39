@@ -1,0 +1,3 @@
+[console_scripts]
+rewrite_pdf = rewrite_pdf.bin.rewrite_pdf:main
+
