@@ -1,0 +1,9 @@
+[console_scripts]
+
+
+[glue.plugins]
+mosviz = mosviz.__init__:setup
+
+[gui_scripts]
+mosviz = mosviz.cli:main
+
