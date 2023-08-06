@@ -1,0 +1,10 @@
+setup.py
+flask_rabbitmq/RabbitMQ.py
+flask_rabbitmq/__init__.py
+flask_rabbitmq/constant.py
+flask_rabbitmq/queue.py
+flask_rabbitmq.egg-info/PKG-INFO
+flask_rabbitmq.egg-info/SOURCES.txt
+flask_rabbitmq.egg-info/dependency_links.txt
+flask_rabbitmq.egg-info/requires.txt
+flask_rabbitmq.egg-info/top_level.txt
