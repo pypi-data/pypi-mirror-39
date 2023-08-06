@@ -1,0 +1,4 @@
+[console_scripts]
+flask-deploy = flaskdeploy.scripts.deploy:cli
+flask-gen = flaskdeploy.scripts.gen:cli
+
