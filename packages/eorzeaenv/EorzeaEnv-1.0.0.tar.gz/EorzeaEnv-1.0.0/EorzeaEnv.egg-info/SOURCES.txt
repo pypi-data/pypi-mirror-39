@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+EorzeaEnv/EorzeaTime.py
+EorzeaEnv/EorzeaWeather.py
+EorzeaEnv/__init__.py
+EorzeaEnv.egg-info/PKG-INFO
+EorzeaEnv.egg-info/SOURCES.txt
+EorzeaEnv.egg-info/dependency_links.txt
+EorzeaEnv.egg-info/requires.txt
+EorzeaEnv.egg-info/top_level.txt
+test/__init__.py
+test/testforecast.py

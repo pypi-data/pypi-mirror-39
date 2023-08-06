@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: EorzeaEnv
+Version: 1.0.0
+Summary: Final Fantasy XIV weather & time tools.
+Home-page: https://github.com/EltonChou/EorzeaEnv
+Author: Elton H.Y. Chou
+Author-email: plscd748@gmail.com
+License: MIT
+Project-URL: Bug Reports, https://github.com/EltonChou/EorzeaEnv/issues
+Project-URL: Thanks!, https://github.com/Rogueadyn/SaintCoinach
+Project-URL: Source, https://github.com/EltonChou/EorzeaEnv
+Description: # EorzeaEnv
+        ## Installation
+        `pip install EorzeaEnv`
+        
+        ## Usage
+        ```python
+        from EorzeaEnv import EorzeaWeather, EorzeaTime
+        ```
+        ### Time
+        ```python
+        EorzeaTime.now() #EorzeaTime(13, 35)
+        EorzeaTime.now().hour #13
+        EorzeaTime.now().minute #35
+        ```
+        
+        ### Forecast
+        ```python
+        weather_list = []
+        
+        for t in EorzeaTime.next_weather_period_start():
+            weather = EorzeaWeather.forecast_weather("Eureka Pyros", t)
+            weather_list.append(weather)
+        
+        print(weather)
+        #['Heat Waves', 'Snow', 'Thunder', 'Thunder', 'Heat Waves']
+        ```
+        ## Thanks
+        - [Rogueadyn-SaintCoinach](https://github.com/Rogueadyn/SaintCoinach)
+Keywords: eorzea ffxiv ff14
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
