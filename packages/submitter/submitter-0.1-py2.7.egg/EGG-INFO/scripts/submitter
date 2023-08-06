@@ -1,0 +1,11 @@
+#!/data/snoplus/liggins/python/anaconda2/bin/python
+
+if __name__ == "__main__":
+  import os
+  from optparse import OptionParser
+  import configparser
+  from submitter import submitter
+  parser = OptionParser()
+  submitter.parseCommandLine(parser)
+  (options, args) = parser.parse_args()
+  submitter.main(options)
