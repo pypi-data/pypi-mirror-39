@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: goldencheetah-opendata
+Version: 0.2
+Summary: Python client library for the GoldenCheetah Open Data project
+Home-page: https://github.com/GoldenCheetah/OpenData
+Author: Aart Goossens
+Author-email: aart@goossens.me  
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/x-rst
+Requires-Dist: boto3
+Requires-Dist: pandas
+Requires-Dist: pkgsettings
+
+UNKNOWN
+
+
