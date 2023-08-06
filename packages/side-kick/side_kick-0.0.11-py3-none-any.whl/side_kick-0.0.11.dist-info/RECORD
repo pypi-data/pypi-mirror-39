@@ -1,0 +1,15 @@
+side_kick-0.0.11.dist-info/DESCRIPTION.rst,sha256=Fil4-_lVswzVcUmONHDfVQUxTQJoxapaMMi1XGOpmhY,8803
+side_kick-0.0.11.dist-info/METADATA,sha256=_QfBo7YxiylixAVU5nfJPtyADLdxJinM8fu3kfhkIZo,9220
+side_kick-0.0.11.dist-info/RECORD,,
+side_kick-0.0.11.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+side_kick-0.0.11.dist-info/metadata.json,sha256=RRoMBfsyuF6y6GhES1EVfXFcyvVRkW31otepnK0N7dA,571
+side_kick-0.0.11.dist-info/top_level.txt,sha256=LenxPH0P8fPcAOlCw81ZhOcXHRetizWIEzex1u_1kQA,9
+sidekick/__init__.py,sha256=Kpi0T-LPCicejYEc0_kIJrg99_rSUgsOJLYrYUH9huQ,52
+sidekick/apps.py,sha256=ir9ESN4GsZduOstaEUFWl_5UvsG-Nt8p8BvsneoqmYg,624
+sidekick/decorators.py,sha256=2TnAAPZUJEJfZUeTk9kLV0I5Xei-cmrHWleI1NWWpSw,1126
+sidekick/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sidekick/services/cron_files.py,sha256=a3uRkaK_19C6HdSoseSBRKP8o2hAtUW2CwJGzspQ9mo,1477
+sidekick/services/crontab.py,sha256=T8yYbTbx5pqDEETvYptpPtPHXsOdZReuQmttbrT4rp4,2186
+sidekick/services/helpers.py,sha256=mi4dtlku6rz9eLZUtMs0SwhzsPyqQJjYrtwoDUoeyps,281
+sidekick/signals/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sidekick/signals/post_save.py,sha256=p7td3ZAtPBSW9WJSBD6Je3ozEY09TF_2wVcS7pWQh0A,553
